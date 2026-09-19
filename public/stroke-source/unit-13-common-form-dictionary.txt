@@ -1,0 +1,2 @@
+{"character":"微","set":["hsk34","frequent2500"],"definition":"small, prefix micro-, trifling","pinyin":["wēi"],"radical":"彳","decomposition":"⿰彳𢼸","acjk":"微⿰彳.3𢼸10"}
+{"character":"波","set":["hsk36","frequent2500"],"definition":"waves, breakers; undulations","pinyin":["bō"],"radical":"氵 (水)","decomposition":"⿰氵皮","acjk":"波⿰氵.3皮5"}

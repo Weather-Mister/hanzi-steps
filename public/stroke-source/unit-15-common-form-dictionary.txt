@@ -1,0 +1,1 @@
+{"character":"真","set":["hsk31","frequent2500"],"definition":"real, actual, true, genuine","pinyin":["zhēn"],"radical":"目","decomposition":"⿱十具","acjk":"真⿱十2具⿳目.5一1八2"}

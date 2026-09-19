@@ -1,0 +1,23 @@
+{"character":"兄","set":["hsk34","frequent2500"],"definition":"elder brother","pinyin":["xiōng"],"radical":"儿","decomposition":"⿱口儿","acjk":"兄⿱口3儿.2"}
+{"character":"弟","set":["t31","taiwan4808"],"definition":"young brother; junior; I, me","radical":"弓","decomposition":"⿱丷𢎨","acjk":"弟⿱丷2𢎨⿹弔⿻弓.3丨1丿1"}
+{"character":"漂","set":["t32","taiwan4808"],"definition":"float, drift; tossed about","radical":"氵 (水)","decomposition":"⿰氵票","acjk":"漂⿰氵.3票11"}
+{"character":"亮","set":["t32","taiwan4808"],"definition":"bright, brilliant, radiant, light","radical":"亠","decomposition":"⿱亠⿳口冖几","acjk":"亮⿱亠.2⿳口3冖2几2"}
+{"character":"子","set":["t31","taiwan4808"],"definition":"child; first earthly branch; Kangxi radical 39","radical":"子","decomposition":"⿻了一","acjk":"子.⿻了2一1"}
+{"character":"老","set":["t31","taiwan4808"],"definition":"old, aged; experienced; Kangxi radical 125","radical":"老","decomposition":"⿱耂匕","acjk":"老.⿱耂4匕2"}
+{"character":"週","set":["t32","taiwan4808"],"definition":"week; turn, cycle; anniversary","radical":"⻎ (辵)","decomposition":"⿺⻎周","acjk":"週⿺周8⻎.4"}
+{"character":"做","set":["t31","taiwan4808"],"definition":"work, make; act","radical":"亻 (人)","decomposition":"⿰亻故","acjk":"做⿰亻.2故9"}
+{"character":"電","set":["t31","taiwan4808"],"definition":"electricity, electric; lightning","radical":"雨","decomposition":"⿱雨电","acjk":"電⿱雨.8电5"}
+{"character":"影","set":["t31","taiwan4808"],"definition":"shadow; image, reflection; photograph","radical":"彡","decomposition":"⿰景彡","acjk":"影⿰景12彡.3"}
+{"character":"籃","set":["t32","taiwan4808"],"definition":"basket","radical":"𥫗 (竹)","decomposition":"⿱𥫗監","acjk":"籃⿱𥫗.6監14"}
+{"character":"球","set":["t31","taiwan4808"],"definition":"ball, sphere, globe; round","radical":"王 (玉)","decomposition":"⿰王求","acjk":"球⿰王.4求7"}
+{"character":"踢","set":["taiwan4808","tu"],"definition":"kick","radical":"𧾷 (足)","decomposition":"⿰𧾷易","acjk":"踢⿰𧾷.7易8"}
+{"character":"游","set":["taiwan4808","tu"],"definition":"to swim; float, drift; wander, roam","radical":"氵 (水)","decomposition":"⿰氵斿","acjk":"游⿰氵.3斿9"}
+{"character":"還","set":["t31","taiwan4808"],"definition":"still, yet, also, besides","radical":"⻎ (辵)","decomposition":"⿺⻎睘","acjk":"還⿺睘13⻎.4"}
+{"character":"天","set":["t31","taiwan4808"],"definition":"sky, heaven; god, celestial","radical":"大","decomposition":"⿻一大","acjk":"天⿻一1大.3"}
+{"character":"上","set":["t31","taiwan4808"],"definition":"top; superior, highest; go up, send up","radical":"一","decomposition":"⿱⺊一","acjk":"上⿱⺊2一.1"}
+{"character":"覺","set":["t31","taiwan4808"],"definition":"to wake up from sleep; conscious","radical":"見","decomposition":"⿱𦥯見","acjk":"覺⿱𦥯13見.7"}
+{"character":"得","set":["t31","taiwan4808"],"definition":"obtain, get, gain, acquire","radical":"彳","decomposition":"⿰彳㝵","acjk":"得⿰彳.3㝵8"}
+{"character":"樣","set":["t31","taiwan4808"],"definition":"shape, form, pattern, style","radical":"木","decomposition":"⿰木羕","acjk":"樣⿰木.4羕11"}
+{"character":"啊","set":["t32","taiwan4808"],"definition":"exclamatory particle","radical":"口","decomposition":"⿰口阿","acjk":"啊⿰口.3阿8"}
+{"character":"吃","set":["hsk31","frequent2500"],"definition":"eat; drink; suffer, endure, bear","pinyin":["chī"],"radical":"口","decomposition":"⿰口乞","acjk":"吃⿰口.3乞3"}
+{"character":"以","set":["t32","taiwan4808"],"definition":"by means of; thereby, therefore; consider as; in order to","radical":"人","decomposition":"⿲⿱丨㇀丶人","acjk":"以⿲⿱丨1㇀1丶1人.2"}

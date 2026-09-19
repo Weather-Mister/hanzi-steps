@@ -1,0 +1,9 @@
+{"character":"吧","set":["t31","taiwan4808"],"definition":"emphatic final particle","radical":"口","decomposition":"⿰口巴","acjk":"吧⿰口.3巴4"}
+{"character":"常","set":["t31","taiwan4808"],"definition":"common, normal, frequent, regular","radical":"巾","decomposition":"⿳龸吊","acjk":"常⿳龸5吊⿱口3巾.3"}
+{"character":"幾","set":["t31","taiwan4808"],"definition":"how many? how much?; a few, some","radical":"幺","decomposition":"⿻𢆶戍","acjk":"幾⿻𢆶⿰幺.3幺3戍6"}
+{"character":"房","set":["t31","taiwan4808"],"definition":"house, building; room; 4th lunar mansion, determinative star π Scorpii","radical":"戶","decomposition":"⿸戶方","acjk":"房⿸戶.4方4"}
+{"character":"打","set":["t31","taiwan4808"],"definition":"strike, hit, beat; fight; attack","radical":"扌 (手)","decomposition":"⿰扌丁","acjk":"打⿰扌.3丁2"}
+{"character":"末","set":["t32","taiwan4808"],"definition":"final, last, end; insignificant","radical":"木","decomposition":"⿻一木","acjk":"末⿻一1木.4"}
+{"character":"泳","set":["t33","taiwan4808"],"definition":"dive; swim","radical":"氵 (水)","decomposition":"⿰氵永","acjk":"泳⿰氵.3永5"}
+{"character":"相","set":["t32","taiwan4808"],"definition":"mutual, reciprocal, each other","radical":"目","decomposition":"⿰木目","acjk":"相⿰木4目.5"}
+{"character":"足","set":["t33","taiwan4808"],"definition":"foot; attain, satisfy, enough; Kangxi radical 156","radical":"足","decomposition":"⿱口龰","acjk":"足.⿱口3龰4"}

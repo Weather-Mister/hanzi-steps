@@ -1,0 +1,9 @@
+{"character":"闆","set":["taiwan4808","tu"],"definition":"boss, the owner, person in charge","radical":"門","decomposition":"⿵門品","acjk":"闆⿵門.8品9"}
+{"character":"包","set":["t31","taiwan4808"],"definition":"wrap, pack, bundle; package","radical":"勹","decomposition":"⿹勹巳","acjk":"包⿹勹.2巳3"}
+{"character":"子","set":["t31","taiwan4808"],"definition":"child; first earthly branch; Kangxi radical 39","radical":"子","decomposition":"⿻了一","acjk":"子.⿻了2一1"}
+{"character":"幫","set":["t31","taiwan4808"],"definition":"to help, assist; to defend; shoe upper","radical":"巾","decomposition":"⿱封帛","acjk":"幫⿱封9帛⿱白5巾.3"}
+{"character":"百","set":["t31","taiwan4808"],"definition":"one hundred; numerous, many","radical":"白","decomposition":"⿱一白","acjk":"百⿱一1白.5"}
+{"character":"零","set":["t31","taiwan4808"],"definition":"zero; fragment, fraction","radical":"雨","decomposition":"⿱雨令","acjk":"零⿱雨.8令5"}
+{"character":"千","set":["t32","taiwan4808"],"definition":"thousand; many, numerous; very; (Cant.) a cheater, swindler","radical":"十","decomposition":"⿱丿十","acjk":"千⿱丿1十.2"}
+{"character":"萬","set":["t32","taiwan4808"],"definition":"ten thousand; innumerable","radical":"艹 (艸)","decomposition":"⿱艹禺","acjk":"萬⿱艹.4禺9"}
+{"character":"賣","set":["t32","taiwan4808"],"definition":"sell; betray; show off","radical":"貝","decomposition":"⿱士買","acjk":"賣⿱士3買⿱罒5貝.7"}

@@ -1,0 +1,9 @@
+{"character":"牛","set":["t31","taiwan4808"],"definition":"cow; 9th lunar mansion; Kangxi radical 93","radical":"牛","decomposition":"⿻𠂉十","acjk":"牛.⿻𠂉2十2"}
+{"character":"肉","set":["t31","taiwan4808"],"definition":"flesh; meat; Kangxi radical 130","radical":"肉","decomposition":"⿻冂仌","acjk":"肉.⿻冂2仌4"}
+{"character":"麵","set":["t31","taiwan4808"],"definition":"flour, dough, noodles","radical":"麥","decomposition":"⿰麥面","acjk":"麵⿰麥.11面9"}
+{"character":"湯","set":["t33","taiwan4808"],"definition":"hot water; soup, gravy, broth","radical":"氵 (水)","decomposition":"⿰氵昜","acjk":"湯⿰氵.3昜9"}
+{"character":"名","set":["t31","taiwan4808"],"definition":"name, rank, title, position","radical":"口","decomposition":"⿱夕口","acjk":"名⿱夕3口.3"}
+{"character":"店","set":["t31","taiwan4808"],"definition":"shop, store; inn, hotel","radical":"广","decomposition":"⿸广占","acjk":"店⿸广.3占5"}
+{"character":"最","set":["t31","taiwan4808"],"definition":"most, extremely, exceedingly","radical":"冂","decomposition":"⿱冃取","acjk":"最⿱冃⿵冂.2二2取8"}
+{"character":"點","set":["t31","taiwan4808"],"definition":"dot, speck, spot; point, degree","radical":"黑","decomposition":"⿰黑占","acjk":"點⿰黑.12占5"}
+{"character":"碗","set":["t32","taiwan4808"],"definition":"bowl, small dish","radical":"石","decomposition":"⿰石宛","acjk":"碗⿰石.5宛8"}

@@ -1,0 +1,9 @@
+{"character":"昨","set":["t31","taiwan4808"],"definition":"yesterday; in former times, past","radical":"日","decomposition":"⿰日乍","acjk":"昨⿰日.4乍5"}
+{"character":"餐","set":["t32","taiwan4808"],"definition":"eat, dine; meal; food","radical":"食","decomposition":"⿱𣦼食","acjk":"餐⿱𣦼7食.9"}
+{"character":"怕","set":["t32","taiwan4808"],"definition":"to fear, be afraid of; apprehensive","radical":"忄 (心)","decomposition":"⿰忄白","acjk":"怕⿰忄.3白5"}
+{"character":"所","set":["t32","taiwan4808"],"definition":"place, location; numerary adjunct","radical":"戶","decomposition":"⿰戶斤","acjk":"所⿰戶.4斤4"}
+{"character":"自","set":["t32","taiwan4808"],"definition":"self, private, personal; from; Kangxi radical 132","radical":"自","decomposition":"⿱丿目","acjk":"自.⿱丿1目5"}
+{"character":"己","set":["t32","taiwan4808"],"definition":"self; 6th heavenly stem; Kangxi radical 49","radical":"己","decomposition":"⿱⿱𠃍一乚","acjk":"己.⿱⿱𠃍1一1乚1"}
+{"character":"甜","set":["t33","taiwan4808"],"definition":"sweet, sweetness","radical":"甘","decomposition":"⿰舌甘","acjk":"甜⿰舌6甘.5"}
+{"character":"錯","set":["t31","taiwan4808"],"definition":"error, blunder, mistake, wrong","radical":"金","decomposition":"⿰金昔","acjk":"錯⿰金.8昔8"}
+{"character":"教","set":["taiwan4808","tu"],"definition":"teach, class","radical":"攵 (攴)","decomposition":"⿰孝攵","acjk":"教⿰孝7攵.4"}

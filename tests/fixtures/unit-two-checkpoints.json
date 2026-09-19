@@ -1,0 +1,815 @@
+[
+  {
+    "id": "u2-people",
+    "chars": [
+      "他",
+      "她"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "他",
+        "id": "u2-char-他-0"
+      },
+      {
+        "type": "trace",
+        "char": "他",
+        "id": "u2-char-他-1"
+      },
+      {
+        "type": "build",
+        "char": "他",
+        "id": "u2-char-他-2"
+      },
+      {
+        "type": "complete",
+        "char": "他",
+        "id": "u2-char-他-3"
+      },
+      {
+        "type": "memory",
+        "char": "他",
+        "id": "u2-char-他-4"
+      },
+      {
+        "type": "intro",
+        "char": "她",
+        "id": "u2-char-她-0"
+      },
+      {
+        "type": "trace",
+        "char": "她",
+        "id": "u2-char-她-1"
+      },
+      {
+        "type": "build",
+        "char": "她",
+        "id": "u2-char-她-2"
+      },
+      {
+        "type": "complete",
+        "char": "她",
+        "id": "u2-char-她-3"
+      },
+      {
+        "type": "memory",
+        "char": "她",
+        "id": "u2-char-她-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-pronouns",
+        "id": "u2-people-0"
+      },
+      {
+        "type": "match",
+        "chars": [
+          "他",
+          "她",
+          "你",
+          "我"
+        ],
+        "id": "u2-people-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-he",
+        "tokens": [
+          "是",
+          "她",
+          "學生",
+          "他"
+        ],
+        "id": "u2-people-2"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-she",
+        "tokens": [
+          "學生",
+          "她",
+          "他",
+          "是"
+        ],
+        "id": "u2-people-3"
+      }
+    ]
+  },
+  {
+    "id": "u2-together",
+    "chars": [
+      "們",
+      "也"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "們",
+        "id": "u2-char-們-0"
+      },
+      {
+        "type": "trace",
+        "char": "們",
+        "id": "u2-char-們-1"
+      },
+      {
+        "type": "build",
+        "char": "們",
+        "id": "u2-char-們-2"
+      },
+      {
+        "type": "complete",
+        "char": "們",
+        "id": "u2-char-們-3"
+      },
+      {
+        "type": "memory",
+        "char": "們",
+        "id": "u2-char-們-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-plurals",
+        "id": "u2-plural-first-0"
+      },
+      {
+        "type": "intro",
+        "char": "也",
+        "id": "u2-char-也-0"
+      },
+      {
+        "type": "trace",
+        "char": "也",
+        "id": "u2-char-也-1"
+      },
+      {
+        "type": "select",
+        "char": "也",
+        "prompt": "Which character means “also; too”?",
+        "answer": "也",
+        "options": [
+          "也",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "也 (yě) means also; too.",
+        "id": "u2-char-也-2"
+      },
+      {
+        "type": "complete",
+        "char": "也",
+        "id": "u2-char-也-3"
+      },
+      {
+        "type": "memory",
+        "char": "也",
+        "id": "u2-char-也-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-also",
+        "id": "u2-together-0"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-we",
+        "tokens": [
+          "是",
+          "我們",
+          "學生",
+          "你們"
+        ],
+        "id": "u2-together-1"
+      },
+      {
+        "type": "select",
+        "prompt": "Which word addresses more than one person: “you” (plural)?",
+        "options": [
+          "你們",
+          "我們",
+          "他們"
+        ],
+        "answer": "你們",
+        "explanation": "你們 (nǐmen) means you when you are speaking to a group.",
+        "grammarIds": [
+          "u2-plurals"
+        ],
+        "id": "u2-together-2"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-they-too",
+        "tokens": [
+          "也",
+          "學生",
+          "是",
+          "他們",
+          "我們"
+        ],
+        "id": "u2-together-3"
+      }
+    ]
+  },
+  {
+    "id": "u2-not",
+    "chars": [
+      "不"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "不",
+        "id": "u2-char-不-0"
+      },
+      {
+        "type": "trace",
+        "char": "不",
+        "id": "u2-char-不-1"
+      },
+      {
+        "type": "select",
+        "char": "不",
+        "prompt": "Which character means “not”?",
+        "answer": "不",
+        "options": [
+          "不",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "不 (bù) means not.",
+        "id": "u2-char-不-2"
+      },
+      {
+        "type": "complete",
+        "char": "不",
+        "id": "u2-char-不-3"
+      },
+      {
+        "type": "memory",
+        "char": "不",
+        "id": "u2-char-不-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-not",
+        "id": "u2-not-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "u2-not-student",
+        "id": "u2-not-1"
+      },
+      {
+        "type": "select",
+        "prompt": "Someone asks 你是學生嗎？ You are not a student. Which short answer fits?",
+        "options": [
+          "不是",
+          "是",
+          "也是"
+        ],
+        "answer": "不是",
+        "explanation": "不是 (bú shì) means no, I am not. Repeat 是 in its negative form.",
+        "grammarIds": [
+          "u2-not"
+        ],
+        "id": "u2-not-2"
+      },
+      {
+        "type": "select",
+        "prompt": "Which order means “is not either”?",
+        "options": [
+          "也不是",
+          "不也是",
+          "是也不"
+        ],
+        "answer": "也不是",
+        "explanation": "For this meaning, put 也 before 不, then 是: 也不是.",
+        "grammarIds": [
+          "u2-not",
+          "u2-also"
+        ],
+        "id": "u2-not-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-neither",
+        "tokens": [
+          "是",
+          "也",
+          "學生",
+          "她",
+          "不"
+        ],
+        "id": "u2-not-4"
+      }
+    ]
+  },
+  {
+    "id": "u2-mine",
+    "chars": [
+      "的"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "的",
+        "id": "u2-char-的-0"
+      },
+      {
+        "type": "trace",
+        "char": "的",
+        "id": "u2-char-的-1"
+      },
+      {
+        "type": "build",
+        "char": "的",
+        "id": "u2-char-的-2"
+      },
+      {
+        "type": "complete",
+        "char": "的",
+        "id": "u2-char-的-3"
+      },
+      {
+        "type": "memory",
+        "char": "的",
+        "id": "u2-char-的-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-possession",
+        "id": "u2-mine-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "u2-my-student",
+        "id": "u2-mine-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-your-student",
+        "tokens": [
+          "學生",
+          "的",
+          "我",
+          "你"
+        ],
+        "id": "u2-mine-2"
+      },
+      {
+        "type": "select",
+        "prompt": "What does 他的學生 mean?",
+        "options": [
+          "his student",
+          "he is a student",
+          "they are students"
+        ],
+        "answer": "his student",
+        "explanation": "他 + 的 + 學生 = his student. 的 links him to the noun; it is not the verb 是.",
+        "grammarIds": [
+          "u2-possession"
+        ],
+        "id": "u2-mine-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-she-my-student",
+        "tokens": [
+          "我",
+          "學生",
+          "她",
+          "的",
+          "是"
+        ],
+        "id": "u2-mine-4"
+      }
+    ]
+  },
+  {
+    "id": "u2-count",
+    "chars": [
+      "一",
+      "個",
+      "人"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "一",
+        "id": "u2-char-一-0"
+      },
+      {
+        "type": "trace",
+        "char": "一",
+        "id": "u2-char-一-1"
+      },
+      {
+        "type": "select",
+        "char": "一",
+        "prompt": "Which character means “one”?",
+        "answer": "一",
+        "options": [
+          "一",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "一 (yī) means one.",
+        "id": "u2-char-一-2"
+      },
+      {
+        "type": "complete",
+        "char": "一",
+        "id": "u2-char-一-3"
+      },
+      {
+        "type": "memory",
+        "char": "一",
+        "id": "u2-char-一-4"
+      },
+      {
+        "type": "intro",
+        "char": "個",
+        "id": "u2-char-個-0"
+      },
+      {
+        "type": "trace",
+        "char": "個",
+        "id": "u2-char-個-1"
+      },
+      {
+        "type": "build",
+        "char": "個",
+        "id": "u2-char-個-2"
+      },
+      {
+        "type": "complete",
+        "char": "個",
+        "id": "u2-char-個-3"
+      },
+      {
+        "type": "memory",
+        "char": "個",
+        "id": "u2-char-個-4"
+      },
+      {
+        "type": "intro",
+        "char": "人",
+        "id": "u2-char-人-0"
+      },
+      {
+        "type": "trace",
+        "char": "人",
+        "id": "u2-char-人-1"
+      },
+      {
+        "type": "select",
+        "char": "人",
+        "prompt": "Which character means “person; people”?",
+        "answer": "人",
+        "options": [
+          "人",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "人 (rén) means person; people.",
+        "id": "u2-char-人-2"
+      },
+      {
+        "type": "complete",
+        "char": "人",
+        "id": "u2-char-人-3"
+      },
+      {
+        "type": "memory",
+        "char": "人",
+        "id": "u2-char-人-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-counting",
+        "id": "u2-count-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "u2-one-person",
+        "id": "u2-count-1"
+      },
+      {
+        "type": "select",
+        "prompt": "Fill the measure-word slot: 一 __ 學生",
+        "options": [
+          "個",
+          "的",
+          "們"
+        ],
+        "answer": "個",
+        "explanation": "一個學生 = one student. 個 goes between the number and the person you are counting.",
+        "grammarIds": [
+          "u2-counting"
+        ],
+        "id": "u2-count-2"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-one-person",
+        "tokens": [
+          "人",
+          "個",
+          "一",
+          "的"
+        ],
+        "id": "u2-count-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-one-student",
+        "tokens": [
+          "個",
+          "學生",
+          "一",
+          "們"
+        ],
+        "id": "u2-count-4"
+      },
+      {
+        "type": "listen",
+        "char": "一",
+        "options": [
+          "一",
+          "人",
+          "個",
+          "也"
+        ],
+        "answer": "一",
+        "explanation": "一 is yī on its own: one. In 一個, its tone changes to yí.",
+        "grammarIds": [
+          "u2-counting"
+        ],
+        "id": "u2-count-5"
+      }
+    ]
+  },
+  {
+    "id": "u2-have",
+    "chars": [
+      "有",
+      "沒"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "有",
+        "id": "u2-char-有-0"
+      },
+      {
+        "type": "trace",
+        "char": "有",
+        "id": "u2-char-有-1"
+      },
+      {
+        "type": "build",
+        "char": "有",
+        "id": "u2-char-有-2"
+      },
+      {
+        "type": "complete",
+        "char": "有",
+        "id": "u2-char-有-3"
+      },
+      {
+        "type": "memory",
+        "char": "有",
+        "id": "u2-char-有-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-have",
+        "id": "u2-have-first-0"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-has-student",
+        "tokens": [
+          "個",
+          "她",
+          "一",
+          "學生",
+          "有",
+          "是"
+        ],
+        "id": "u2-have-first-1"
+      },
+      {
+        "type": "intro",
+        "char": "沒",
+        "id": "u2-char-沒-0"
+      },
+      {
+        "type": "trace",
+        "char": "沒",
+        "id": "u2-char-沒-1"
+      },
+      {
+        "type": "build",
+        "char": "沒",
+        "id": "u2-char-沒-2"
+      },
+      {
+        "type": "complete",
+        "char": "沒",
+        "id": "u2-char-沒-3"
+      },
+      {
+        "type": "memory",
+        "char": "沒",
+        "id": "u2-char-沒-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-no-have",
+        "id": "u2-have-0"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-no-students",
+        "tokens": [
+          "沒有",
+          "學生",
+          "我",
+          "不"
+        ],
+        "id": "u2-have-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-nobody",
+        "tokens": [
+          "人",
+          "是",
+          "沒有"
+        ],
+        "id": "u2-have-2"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u2-have-question",
+        "id": "u2-have-3"
+      },
+      {
+        "type": "select",
+        "prompt": "你有學生嗎？ You do not have any students. Choose the short answer.",
+        "options": [
+          "沒有",
+          "不是",
+          "有"
+        ],
+        "answer": "沒有",
+        "explanation": "This question uses 有 (have). Its negative answer is 沒有 (do not have). 不是 answers an identity question with 是.",
+        "grammarIds": [
+          "u2-have-question",
+          "u2-no-have"
+        ],
+        "id": "u2-have-4"
+      }
+    ]
+  },
+  {
+    "id": "u2-review",
+    "chars": [
+      "他",
+      "她",
+      "們",
+      "也",
+      "不",
+      "的",
+      "一",
+      "個",
+      "人",
+      "有",
+      "沒"
+    ],
+    "steps": [
+      {
+        "type": "match",
+        "chars": [
+          "他",
+          "她",
+          "人",
+          "也"
+        ],
+        "id": "u2-review-0"
+      },
+      {
+        "type": "build",
+        "char": "們",
+        "id": "u2-review-1"
+      },
+      {
+        "type": "build",
+        "char": "的",
+        "id": "u2-review-2"
+      },
+      {
+        "type": "memory",
+        "char": "他",
+        "id": "u2-review-3"
+      },
+      {
+        "type": "memory",
+        "char": "不",
+        "id": "u2-review-4"
+      },
+      {
+        "type": "memory",
+        "char": "個",
+        "id": "u2-review-5"
+      },
+      {
+        "type": "memory",
+        "char": "沒",
+        "id": "u2-review-6"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-not-student",
+        "tokens": [
+          "是",
+          "學生",
+          "不",
+          "我",
+          "也"
+        ],
+        "id": "u2-review-7"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-they-my-students",
+        "tokens": [
+          "我",
+          "是",
+          "學生",
+          "他們",
+          "的",
+          "也"
+        ],
+        "id": "u2-review-8"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-there-is",
+        "tokens": [
+          "有",
+          "人",
+          "個",
+          "一",
+          "是"
+        ],
+        "id": "u2-review-9"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-have-question",
+        "tokens": [
+          "嗎",
+          "學生",
+          "有",
+          "你",
+          "的"
+        ],
+        "id": "u2-review-10"
+      },
+      {
+        "type": "select",
+        "prompt": "Which pair correctly negates “is” and “have”?",
+        "options": [
+          "不是 · 沒有",
+          "沒是 · 不有",
+          "不的 · 沒個"
+        ],
+        "answer": "不是 · 沒有",
+        "explanation": "不 goes before 是. 有 is the exception you learned: its negative is 沒有.",
+        "grammarIds": [
+          "u2-not",
+          "u2-no-have"
+        ],
+        "id": "u2-review-11"
+      },
+      {
+        "type": "order",
+        "phrase": "u2-no-students",
+        "tokens": [
+          "我",
+          "學生",
+          "沒有",
+          "不",
+          "是"
+        ],
+        "id": "u2-review-12"
+      }
+    ]
+  }
+]

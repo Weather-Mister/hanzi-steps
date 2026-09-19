@@ -1,0 +1,13 @@
+{"character":"校","set":["t31","taiwan4808"],"definition":"school; military field officer","radical":"木","decomposition":"⿰木交","acjk":"校⿰木.4交6"}
+{"character":"現","set":["t31","taiwan4808"],"definition":"appear, manifest, become visible","radical":"王 (玉)","decomposition":"⿰王見","acjk":"現⿰王.4見7"}
+{"character":"山","set":["t31","taiwan4808"],"definition":"mountain; Kangxi radical 46","radical":"山","decomposition":"⿶凵丨","acjk":"山.⿶丨1凵2"}
+{"character":"海","set":["t32","taiwan4808"],"definition":"sea, ocean; maritime","radical":"氵 (水)","decomposition":"⿰氵每","acjk":"海⿰氵.3每7"}
+{"character":"風","set":["t31","taiwan4808"],"definition":"wind; air; manners, atmosphere; Kangxi radical 182","radical":"風","decomposition":"⿵𠘨䖝","acjk":"風.⿵𠘨2䖝7"}
+{"character":"景","set":["t33","taiwan4808"],"definition":"scenery, view; conditions","radical":"日","decomposition":"⿱日京","acjk":"景⿱日.4京8"}
+{"character":"美","set":["t33","taiwan4808"],"definition":"beautiful, pretty; pleasing","radical":"𦍌 (羊)","decomposition":"⿱𦍌大","acjk":"美⿱𦍌.6大3"}
+{"character":"地","set":["t31","taiwan4808"],"definition":"earth; soil, ground; region","radical":"土","decomposition":"⿰土也","acjk":"地⿰土.3也3"}
+{"character":"方","set":["t31","taiwan4808"],"definition":"square; direction; Kangxi radical 70","radical":"方","decomposition":"⿱丶万","acjk":"方.⿱丶1万3"}
+{"character":"面","set":["t31","taiwan4808"],"definition":"face; surface; plane; side, dimension; Kangxi radical 176","radical":"面","decomposition":"⿱丆囬","acjk":"面.⿱丆2囬7"}
+{"character":"圖","set":["t31","taiwan4808"],"definition":"diagram; chart, map, picture","radical":"囗","decomposition":"⿴囗啚","acjk":"圖⿴囗.:2啚11囗.:1"}
+{"character":"館","set":["t31","taiwan4808"],"definition":"public building","radical":"飠 (食)","decomposition":"⿰飠官","acjk":"館⿰飠.8官8"}
+{"character":"課","set":["t31","taiwan4808"],"definition":"lesson; course; classwork","radical":"言","decomposition":"⿰言果","acjk":"課⿰言.7果8"}

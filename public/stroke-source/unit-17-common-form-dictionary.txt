@@ -1,0 +1,4 @@
+{"character":"籠","set":["g7"],"definition":"cage; cage-like basket","kun":["かご","こめる","こもる"],"on":["ロウ"],"radical":"𥫗 (竹)","decomposition":"⿱𥫗龍","acjk":"籠⿱𥫗.6龍16"}
+{"character":"臭","set":["hsk35","frequent2500"],"definition":"smell, stink, emit foul odor","pinyin":["chòu"],"radical":"自","decomposition":"⿱自犬","acjk":"臭⿱自.6犬4"}
+{"character":"豆","set":["hsk34","frequent2500","radical"],"definition":"beans, peas; bean-shaped; Kangxi radical 151","pinyin":["dòu"],"radical":"豆","decomposition":"⿳一口䒑","acjk":"豆.⿳一1口3䒑3"}
+{"character":"腐","set":["hsk34","frequent2500"],"definition":"rot, decay, spoil; rotten","pinyin":["fǔ"],"radical":"月 (肉)","decomposition":"⿸府肉","acjk":"腐⿸府8肉.6"}

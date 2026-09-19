@@ -1,0 +1,13 @@
+{"character":"手","set":["t31","taiwan4808"],"definition":"hand; Kangxi radical 64","radical":"手","decomposition":"⿻𠂌一","acjk":"手.⿻𠂌3一1"}
+{"character":"機","set":["t31","taiwan4808"],"definition":"machine; moment, chance","radical":"木","decomposition":"⿰木幾","acjk":"機⿰木.4幾12"}
+{"character":"支","set":["t33","taiwan4808"],"definition":"branch; support; Kangxi radical 65","radical":"支","decomposition":"⿱十又","acjk":"支.⿱十2又2"}
+{"character":"新","set":["t31","taiwan4808"],"definition":"new, recent, fresh, modern","radical":"斤","decomposition":"⿰亲斤","acjk":"新⿰亲9斤.4"}
+{"character":"舊","set":["t33","taiwan4808"],"definition":"old, ancient; former, past","radical":"臼","decomposition":"⿱萑臼","acjk":"舊⿱萑12臼.6"}
+{"character":"貴","set":["t31","taiwan4808"],"definition":"expensive, costly, valuable","radical":"貝","decomposition":"⿱𠀐貝","acjk":"貴⿱𠀐5貝.7"}
+{"character":"便","set":["t32","taiwan4808"],"definition":"convenience, ease; expedient","radical":"亻 (人)","decomposition":"⿰亻更","acjk":"便⿰亻.2更7"}
+{"character":"宜","set":["t32","taiwan4808"],"definition":"suitable, right, fitting, proper","radical":"宀","decomposition":"⿱宀且","acjk":"宜⿱宀.3且5"}
+{"character":"種","set":["t33","taiwan4808"],"definition":"seed; race; offspring; to plant","radical":"禾","decomposition":"⿰禾重","acjk":"種⿰禾.5重9"}
+{"character":"太","set":["t31","taiwan4808"],"definition":"very, too, much; big; extreme","radical":"大","decomposition":"⿻大丶","acjk":"太⿻大.3丶1"}
+{"character":"了","set":["t31","taiwan4808"],"definition":"to finish; particle of completed action","radical":"亅","decomposition":"⿱乛亅","acjk":"了⿱乛1亅.1"}
+{"character":"為","set":["t32","taiwan4808"],"definition":"do, handle, govern, act; be","radical":"灬 (火)","decomposition":"⿵⿻⿻丶丿⿳𠃌𠃌𠃌灬","acjk":"為⿵⿻⿻丶1丿1⿳𠃌1𠃌1𠃌1灬.4"}
+{"character":"能","set":["t31","taiwan4808"],"definition":"to be able; can, permitted to; ability","radical":"月 (肉)","decomposition":"⿰䏍⿱匕匕","acjk":"能⿰䏍⿱厶2月.4⿱匕2匕2"}

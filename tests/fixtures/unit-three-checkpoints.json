@@ -1,0 +1,926 @@
+[
+  {
+    "id": "u3-point",
+    "chars": [
+      "這",
+      "那"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "這",
+        "id": "u3-char-這-0"
+      },
+      {
+        "type": "trace",
+        "char": "這",
+        "id": "u3-char-這-1"
+      },
+      {
+        "type": "build",
+        "char": "這",
+        "id": "u3-char-這-2"
+      },
+      {
+        "type": "complete",
+        "char": "這",
+        "id": "u3-char-這-3"
+      },
+      {
+        "type": "memory",
+        "char": "這",
+        "id": "u3-char-這-4"
+      },
+      {
+        "type": "intro",
+        "char": "那",
+        "id": "u3-char-那-0"
+      },
+      {
+        "type": "trace",
+        "char": "那",
+        "id": "u3-char-那-1"
+      },
+      {
+        "type": "build",
+        "char": "那",
+        "id": "u3-char-那-2"
+      },
+      {
+        "type": "complete",
+        "char": "那",
+        "id": "u3-char-那-3"
+      },
+      {
+        "type": "memory",
+        "char": "那",
+        "id": "u3-char-那-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-point",
+        "id": "u3-point-0"
+      },
+      {
+        "type": "match",
+        "chars": [
+          "這",
+          "那",
+          "我",
+          "你"
+        ],
+        "id": "u3-point-1"
+      },
+      {
+        "type": "select",
+        "prompt": "Fill the measure-word slot in “this person”: 這 __ 人",
+        "options": [
+          "個",
+          "的",
+          "們"
+        ],
+        "answer": "個",
+        "explanation": "這個人 = this person. The full pointing pattern is 這 + measure word + noun.",
+        "grammarIds": [
+          "u3-point"
+        ],
+        "id": "u3-point-2"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-this-person",
+        "tokens": [
+          "人",
+          "是",
+          "這",
+          "學生",
+          "個",
+          "那"
+        ],
+        "id": "u3-point-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-that-person",
+        "tokens": [
+          "的",
+          "那",
+          "學生",
+          "我",
+          "人",
+          "個",
+          "是"
+        ],
+        "id": "u3-point-4"
+      }
+    ]
+  },
+  {
+    "id": "u3-what",
+    "chars": [
+      "什",
+      "麼",
+      "書"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "什",
+        "id": "u3-char-什-0"
+      },
+      {
+        "type": "trace",
+        "char": "什",
+        "id": "u3-char-什-1"
+      },
+      {
+        "type": "build",
+        "char": "什",
+        "id": "u3-char-什-2"
+      },
+      {
+        "type": "complete",
+        "char": "什",
+        "id": "u3-char-什-3"
+      },
+      {
+        "type": "memory",
+        "char": "什",
+        "id": "u3-char-什-4"
+      },
+      {
+        "type": "intro",
+        "char": "麼",
+        "id": "u3-char-麼-0"
+      },
+      {
+        "type": "trace",
+        "char": "麼",
+        "id": "u3-char-麼-1"
+      },
+      {
+        "type": "build",
+        "char": "麼",
+        "id": "u3-char-麼-2"
+      },
+      {
+        "type": "complete",
+        "char": "麼",
+        "id": "u3-char-麼-3"
+      },
+      {
+        "type": "memory",
+        "char": "麼",
+        "id": "u3-char-麼-4"
+      },
+      {
+        "type": "intro",
+        "char": "書",
+        "id": "u3-char-書-0"
+      },
+      {
+        "type": "trace",
+        "char": "書",
+        "id": "u3-char-書-1"
+      },
+      {
+        "type": "build",
+        "char": "書",
+        "id": "u3-char-書-2"
+      },
+      {
+        "type": "complete",
+        "char": "書",
+        "id": "u3-char-書-3"
+      },
+      {
+        "type": "memory",
+        "char": "書",
+        "id": "u3-char-書-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-what",
+        "id": "u3-what-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "u3-what-this",
+        "id": "u3-what-1"
+      },
+      {
+        "type": "select",
+        "prompt": "You want to know what something is, not ask a yes/no question. Choose the question.",
+        "options": [
+          "這是什麼？",
+          "這是書嗎？",
+          "這是書。"
+        ],
+        "answer": "這是什麼？",
+        "explanation": "什麼 asks for the missing information. 這是書嗎？ only asks whether it is a book. Do not add 嗎 to the 什麼 question.",
+        "grammarIds": [
+          "u3-what"
+        ],
+        "id": "u3-what-2"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-what-that",
+        "tokens": [
+          "什麼",
+          "嗎",
+          "那",
+          "是",
+          "這"
+        ],
+        "id": "u3-what-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-that-my-book",
+        "tokens": [
+          "我",
+          "書",
+          "是",
+          "那",
+          "的",
+          "你"
+        ],
+        "id": "u3-what-4"
+      },
+      {
+        "type": "listen",
+        "char": "書",
+        "options": [
+          "書",
+          "是",
+          "這",
+          "那"
+        ],
+        "answer": "書",
+        "explanation": "書 is shū: book or books. Listen for its first tone.",
+        "id": "u3-what-5"
+      }
+    ]
+  },
+  {
+    "id": "u3-books",
+    "chars": [
+      "本",
+      "兩"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "本",
+        "id": "u3-char-本-0"
+      },
+      {
+        "type": "trace",
+        "char": "本",
+        "id": "u3-char-本-1"
+      },
+      {
+        "type": "select",
+        "char": "本",
+        "prompt": "Which character means “measure word for books”?",
+        "answer": "本",
+        "options": [
+          "本",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "本 (běn) means measure word for books.",
+        "id": "u3-char-本-2"
+      },
+      {
+        "type": "complete",
+        "char": "本",
+        "id": "u3-char-本-3"
+      },
+      {
+        "type": "memory",
+        "char": "本",
+        "id": "u3-char-本-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-books",
+        "id": "u3-books-first-0"
+      },
+      {
+        "type": "intro",
+        "char": "兩",
+        "id": "u3-char-兩-0"
+      },
+      {
+        "type": "trace",
+        "char": "兩",
+        "id": "u3-char-兩-1"
+      },
+      {
+        "type": "select",
+        "char": "兩",
+        "prompt": "Which character means “two (when counting things)”?",
+        "answer": "兩",
+        "options": [
+          "兩",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "兩 (liǎng) means two (when counting things).",
+        "id": "u3-char-兩-2"
+      },
+      {
+        "type": "complete",
+        "char": "兩",
+        "id": "u3-char-兩-3"
+      },
+      {
+        "type": "memory",
+        "char": "兩",
+        "id": "u3-char-兩-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-two",
+        "id": "u3-books-0"
+      },
+      {
+        "type": "select",
+        "prompt": "Fill the measure-word slot in “two books”: 兩 __ 書",
+        "options": [
+          "本",
+          "個",
+          "的"
+        ],
+        "answer": "本",
+        "explanation": "Books use 本: 兩本書. Keep 個 for people and students in this unit.",
+        "grammarIds": [
+          "u3-books",
+          "u3-two"
+        ],
+        "id": "u3-books-1"
+      },
+      {
+        "type": "select",
+        "prompt": "Which phrase means “two people”?",
+        "options": [
+          "兩個人",
+          "兩本人",
+          "一個人"
+        ],
+        "answer": "兩個人",
+        "explanation": "兩 means two before a measure word. People take 個: 兩個人.",
+        "grammarIds": [
+          "u3-two",
+          "u2-counting"
+        ],
+        "id": "u3-books-2"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-two-books",
+        "tokens": [
+          "本",
+          "有",
+          "我",
+          "書",
+          "兩",
+          "個"
+        ],
+        "id": "u3-books-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-that-book",
+        "tokens": [
+          "書",
+          "那",
+          "本",
+          "個",
+          "這"
+        ],
+        "id": "u3-books-4"
+      }
+    ]
+  },
+  {
+    "id": "u3-size",
+    "chars": [
+      "很",
+      "大",
+      "小"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "很",
+        "id": "u3-char-很-0"
+      },
+      {
+        "type": "trace",
+        "char": "很",
+        "id": "u3-char-很-1"
+      },
+      {
+        "type": "build",
+        "char": "很",
+        "id": "u3-char-很-2"
+      },
+      {
+        "type": "complete",
+        "char": "很",
+        "id": "u3-char-很-3"
+      },
+      {
+        "type": "memory",
+        "char": "很",
+        "id": "u3-char-很-4"
+      },
+      {
+        "type": "intro",
+        "char": "大",
+        "id": "u3-char-大-0"
+      },
+      {
+        "type": "trace",
+        "char": "大",
+        "id": "u3-char-大-1"
+      },
+      {
+        "type": "select",
+        "char": "大",
+        "prompt": "Which character means “big; large”?",
+        "answer": "大",
+        "options": [
+          "大",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "大 (dà) means big; large.",
+        "id": "u3-char-大-2"
+      },
+      {
+        "type": "complete",
+        "char": "大",
+        "id": "u3-char-大-3"
+      },
+      {
+        "type": "memory",
+        "char": "大",
+        "id": "u3-char-大-4"
+      },
+      {
+        "type": "intro",
+        "char": "小",
+        "id": "u3-char-小-0"
+      },
+      {
+        "type": "trace",
+        "char": "小",
+        "id": "u3-char-小-1"
+      },
+      {
+        "type": "select",
+        "char": "小",
+        "prompt": "Which character means “small; little”?",
+        "answer": "小",
+        "options": [
+          "小",
+          "我",
+          "是",
+          "好"
+        ],
+        "explanation": "小 (xiǎo) means small; little.",
+        "id": "u3-char-小-2"
+      },
+      {
+        "type": "complete",
+        "char": "小",
+        "id": "u3-char-小-3"
+      },
+      {
+        "type": "memory",
+        "char": "小",
+        "id": "u3-char-小-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-adjectives",
+        "id": "u3-size-positive-0"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-big-book",
+        "tokens": [
+          "大",
+          "這",
+          "書",
+          "本",
+          "很",
+          "是"
+        ],
+        "id": "u3-size-positive-1"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-not-size",
+        "id": "u3-size-0"
+      },
+      {
+        "type": "select",
+        "prompt": "What does 這本書不大 tell you?",
+        "options": [
+          "This book is not big.",
+          "This book must be small.",
+          "This is not a book."
+        ],
+        "answer": "This book is not big.",
+        "explanation": "不大 denies big. It does not necessarily mean small, and it does not deny that the object is a book.",
+        "grammarIds": [
+          "u3-not-size"
+        ],
+        "id": "u3-size-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-small-book",
+        "tokens": [
+          "書",
+          "小",
+          "那",
+          "本",
+          "很",
+          "大"
+        ],
+        "id": "u3-size-2"
+      },
+      {
+        "type": "listen",
+        "char": "大",
+        "options": [
+          "小",
+          "大",
+          "本",
+          "很"
+        ],
+        "answer": "大",
+        "explanation": "大 is dà, big, with a falling fourth tone. 小 (xiǎo) means small.",
+        "id": "u3-size-3"
+      }
+    ]
+  },
+  {
+    "id": "u3-here",
+    "chars": [
+      "在",
+      "裡"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "在",
+        "id": "u3-char-在-0"
+      },
+      {
+        "type": "trace",
+        "char": "在",
+        "id": "u3-char-在-1"
+      },
+      {
+        "type": "build",
+        "char": "在",
+        "id": "u3-char-在-2"
+      },
+      {
+        "type": "complete",
+        "char": "在",
+        "id": "u3-char-在-3"
+      },
+      {
+        "type": "memory",
+        "char": "在",
+        "id": "u3-char-在-4"
+      },
+      {
+        "type": "intro",
+        "char": "裡",
+        "id": "u3-char-裡-0"
+      },
+      {
+        "type": "trace",
+        "char": "裡",
+        "id": "u3-char-裡-1"
+      },
+      {
+        "type": "build",
+        "char": "裡",
+        "id": "u3-char-裡-2"
+      },
+      {
+        "type": "complete",
+        "char": "裡",
+        "id": "u3-char-裡-3"
+      },
+      {
+        "type": "memory",
+        "char": "裡",
+        "id": "u3-char-裡-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-location",
+        "id": "u3-here-place-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "u3-im-here",
+        "id": "u3-here-place-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-book-there",
+        "tokens": [
+          "在",
+          "書",
+          "我",
+          "那裡",
+          "的",
+          "有"
+        ],
+        "id": "u3-here-place-2"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-location-question",
+        "id": "u3-here-question-0"
+      },
+      {
+        "type": "select",
+        "prompt": "你的書在那裡嗎？ Your book is not there. Choose the short answer.",
+        "options": [
+          "不在",
+          "沒有",
+          "不是"
+        ],
+        "answer": "不在",
+        "explanation": "This is a 在 location question, so answer 不在 (no, it is not there). 沒有 answers a 有 question; 不是 answers a 是 question.",
+        "grammarIds": [
+          "u3-location-question",
+          "u2-have-question",
+          "u2-not"
+        ],
+        "id": "u3-here-question-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-is-book-there",
+        "tokens": [
+          "那裡",
+          "嗎",
+          "的",
+          "你",
+          "在",
+          "書"
+        ],
+        "id": "u3-here-question-2"
+      }
+    ]
+  },
+  {
+    "id": "u3-all",
+    "chars": [
+      "都"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "都",
+        "id": "u3-char-都-0"
+      },
+      {
+        "type": "trace",
+        "char": "都",
+        "id": "u3-char-都-1"
+      },
+      {
+        "type": "build",
+        "char": "都",
+        "id": "u3-char-都-2"
+      },
+      {
+        "type": "complete",
+        "char": "都",
+        "id": "u3-char-都-3"
+      },
+      {
+        "type": "memory",
+        "char": "都",
+        "id": "u3-char-都-4"
+      },
+      {
+        "type": "grammar",
+        "grammar": "u3-all",
+        "id": "u3-all-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "u3-all-here",
+        "id": "u3-all-1"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-all-students",
+        "tokens": [
+          "學生",
+          "都",
+          "他們",
+          "是",
+          "也"
+        ],
+        "id": "u3-all-2"
+      },
+      {
+        "type": "select",
+        "prompt": "In 我們都在這裡, who does 都 include?",
+        "options": [
+          "Everyone in our group.",
+          "Only me.",
+          "Everyone everywhere."
+        ],
+        "answer": "Everyone in our group.",
+        "explanation": "都 refers to the group before it: 我們. The sentence says all of us are here, not everyone in the world.",
+        "grammarIds": [
+          "u3-all"
+        ],
+        "id": "u3-all-3"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-both-there",
+        "tokens": [
+          "都",
+          "那裡",
+          "個",
+          "學生",
+          "兩",
+          "在"
+        ],
+        "id": "u3-all-4"
+      }
+    ]
+  },
+  {
+    "id": "u3-review",
+    "chars": [
+      "這",
+      "那",
+      "什",
+      "麼",
+      "書",
+      "本",
+      "兩",
+      "很",
+      "大",
+      "小",
+      "在",
+      "裡",
+      "都"
+    ],
+    "steps": [
+      {
+        "type": "match",
+        "chars": [
+          "這",
+          "那",
+          "大",
+          "小"
+        ],
+        "id": "u3-review-0"
+      },
+      {
+        "type": "match",
+        "chars": [
+          "書",
+          "本",
+          "兩",
+          "都"
+        ],
+        "id": "u3-review-1"
+      },
+      {
+        "type": "build",
+        "char": "裡",
+        "id": "u3-review-2"
+      },
+      {
+        "type": "build",
+        "char": "麼",
+        "id": "u3-review-3"
+      },
+      {
+        "type": "memory",
+        "char": "這",
+        "id": "u3-review-4"
+      },
+      {
+        "type": "memory",
+        "char": "書",
+        "id": "u3-review-5"
+      },
+      {
+        "type": "memory",
+        "char": "兩",
+        "id": "u3-review-6"
+      },
+      {
+        "type": "memory",
+        "char": "在",
+        "id": "u3-review-7"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-what-this",
+        "tokens": [
+          "是",
+          "什麼",
+          "這",
+          "嗎",
+          "那"
+        ],
+        "id": "u3-review-8"
+      },
+      {
+        "type": "select",
+        "prompt": "Choose the measure words for “one book” and “one person”, in that order.",
+        "options": [
+          "本 · 個",
+          "個 · 本",
+          "本 · 本"
+        ],
+        "answer": "本 · 個",
+        "explanation": "一本書 uses 本 for books. 一個人 uses 個 for people. Choose the measure word to match the noun.",
+        "grammarIds": [
+          "u3-books",
+          "u2-counting"
+        ],
+        "id": "u3-review-9"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-not-big",
+        "tokens": [
+          "本",
+          "不",
+          "書",
+          "大",
+          "這",
+          "很"
+        ],
+        "id": "u3-review-10"
+      },
+      {
+        "type": "listen",
+        "char": "都",
+        "options": [
+          "在",
+          "都",
+          "本",
+          "書"
+        ],
+        "answer": "都",
+        "explanation": "都 is dōu in this unit: all, or both for a group of two.",
+        "id": "u3-review-11"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-two-books",
+        "tokens": [
+          "有",
+          "書",
+          "兩",
+          "本",
+          "我",
+          "個"
+        ],
+        "id": "u3-review-12"
+      },
+      {
+        "type": "order",
+        "phrase": "u3-all-here",
+        "tokens": [
+          "這裡",
+          "我們",
+          "在",
+          "都",
+          "是"
+        ],
+        "id": "u3-review-13"
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{"character": "家", "set": ["t31", "taiwan4808"], "definition": "house, home, residence; family", "radical": "宀", "decomposition": "⿱宀豕", "acjk": "家⿱宀.3豕7"}
+{"character": "爸", "set": ["t31", "taiwan4808"], "definition": "father, papa", "radical": "父", "decomposition": "⿱父巴", "acjk": "爸⿱父.4巴4"}
+{"character": "媽", "set": ["t31", "taiwan4808"], "definition": "mother, mama", "radical": "女", "decomposition": "⿰女馬", "acjk": "媽⿰女.3馬10"}
+{"character": "哥", "set": ["t31", "taiwan4808"], "definition": "elder brother", "radical": "口", "decomposition": "⿱可可", "acjk": "哥⿱可⿹丁:1口.3丁:1可5"}
+{"character": "姐", "set": ["t31", "taiwan4808"], "definition": "elder sister, young lady", "radical": "女", "decomposition": "⿰女且", "acjk": "姐⿰女.3且5"}
+{"character": "妹", "set": ["t31", "taiwan4808"], "definition": "younger sister", "radical": "女", "decomposition": "⿰女未", "acjk": "妹⿰女.3未5"}
+{"character": "誰", "set": ["t31", "taiwan4808"], "definition": "who? whom? whose? anyone?", "radical": "言", "decomposition": "⿰言隹", "acjk": "誰⿰言.7隹8"}
+{"character": "照", "set": ["t32", "taiwan4808"], "definition": "shine, illumine, reflect", "radical": "灬 (火)", "decomposition": "⿱昭灬", "acjk": "照⿱昭9灬.4"}
+{"character": "片", "set": ["t32", "taiwan4808"], "definition": "slice; Kangxi radical 91", "radical": "片", "decomposition": "⿸⿻⿰丿丨一𠃍", "acjk": "片.⿸⿻⿰丿1丨1一1𠃍1"}
+{"character": "張", "set": ["t33", "taiwan4808"], "definition": "stretch, extend, expand; sheet; 26th lunar mansion, determinative star υ¹ Hydrae", "radical": "弓", "decomposition": "⿰弓長", "acjk": "張⿰弓.3長8"}

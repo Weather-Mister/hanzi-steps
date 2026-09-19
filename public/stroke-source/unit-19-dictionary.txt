@@ -1,0 +1,5 @@
+{"character":"朋","set":["t31","taiwan4808"],"definition":"friend, pal, acquaintance","radical":"月","decomposition":"⿰月月","acjk":"朋⿰月.4月4"}
+{"character":"友","set":["t31","taiwan4808"],"definition":"friend, companion; fraternity","radical":"又","decomposition":"⿱𠂇又","acjk":"友⿱𠂇2又.2"}
+{"character":"找","set":["t31","taiwan4808"],"definition":"search, seek, look for; find","radical":"扌 (手)","decomposition":"⿰扌戈","acjk":"找⿰扌.3戈4"}
+{"character":"東","set":["t31","taiwan4808"],"definition":"east, eastern, eastward","radical":"木","decomposition":"⿻木日","acjk":"東⿻木.:1日4木.:3"}
+{"character":"西","set":["t31","taiwan4808"],"definition":"west(ern); westward; occident; Kangxi radical 146","radical":"西","decomposition":"⿻兀口","acjk":"西.⿻兀:1口:2兀:2口:1"}

@@ -1,0 +1,8 @@
+{"character":"銀","set":["t32","taiwan4808"],"definition":"silver (element 47, Ag); cash, money, wealth","radical":"金","decomposition":"⿰金艮","acjk":"銀⿰金.8艮6"}
+{"character":"行","set":["t31","taiwan4808"],"definition":"going; Kangxi radical 144","radical":"行","decomposition":"⿰彳亍","acjk":"行.⿰彳3亍3"}
+{"character":"超","set":["t32","taiwan4808"],"definition":"jump over, leap over; surpass","radical":"走","decomposition":"⿺走召","acjk":"超⿺走.7召5"}
+{"character":"商","set":["t31","taiwan4808"],"definition":"commerce, business, trade","radical":"口","decomposition":"⿱⿱亠丷冏","acjk":"商⿱⿱亠2丷2冏⿵冂2㕣⿱八2口.3"}
+{"character":"附","set":["taiwan4808","tu"],"definition":"adhere to, append; rely on near to","radical":"阝 (阜)","decomposition":"⿰阝付","acjk":"附⿰阝.3付5"}
+{"character":"近","set":["t32","taiwan4808"],"definition":"near, close; approach; intimate","radical":"⻎ (辵)","decomposition":"⿺⻎斤","acjk":"近⿺斤4⻎.4"}
+{"character":"遠","set":["t31","taiwan4808"],"definition":"distant, remote, far; profound","radical":"⻎ (辵)","decomposition":"⿺⻎袁","acjk":"遠⿺袁10⻎.4"}
+{"character":"離","set":["t32","taiwan4808"],"definition":"leave, depart; go away; separate; trigram ☲; hexagram ䷝","radical":"隹","decomposition":"⿰离隹","acjk":"離⿰离11隹.8"}

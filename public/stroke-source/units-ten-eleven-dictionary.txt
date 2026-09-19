@@ -1,0 +1,10 @@
+{"character":"內","set":["t33","taiwan4808"],"definition":"inside, interior; domestic","radical":"入","decomposition":"⿻冂入","acjk":"內⿻冂2入.2"}
+{"character":"南","set":["t31","taiwan4808"],"definition":"south; southern part; southward","radical":"十","decomposition":"⿱十⿵冂𢆉","acjk":"南⿱十.2⿵冂2𢆉5"}
+{"character":"外","set":["t31","taiwan4808"],"definition":"out, outside, external; foreign","radical":"夕","decomposition":"⿰夕卜","acjk":"外⿰夕.3卜2"}
+{"character":"帶","set":["t32","taiwan4808"],"definition":"belt, girdle, band, strap, zone","radical":"巾","decomposition":"⿳⿻廿儿冖巾","acjk":"帶⿳⿻廿4儿2冖2巾.3"}
+{"character":"杯","set":["t31","taiwan4808"],"definition":"cup, glass","radical":"木","decomposition":"⿰木不","acjk":"杯⿰木.4不4"}
+{"character":"熱","set":["t31","taiwan4808"],"definition":"hot; heat; fever; restless; zeal","radical":"灬 (火)","decomposition":"⿱埶灬","acjk":"熱⿱埶11灬.4"}
+{"character":"用","set":["t31","taiwan4808"],"definition":"use; Kangxi radical 101","radical":"用","decomposition":"⿻月丨","acjk":"用.⿻月4丨1"}
+{"character":"菜","set":["t31","taiwan4808"],"definition":"vegetables; dish, order; food","radical":"艹 (艸)","decomposition":"⿰艹采","acjk":"菜⿰艹.4采8"}
+{"character":"買","set":["t31","taiwan4808"],"definition":"buy, purchase; bribe, persuade","radical":"貝","decomposition":"⿱罒貝","acjk":"買⿱罒5貝.7"}
+{"character":"越","set":["t32","taiwan4808"],"definition":"exceed, go beyond; the more ...","radical":"走","decomposition":"⿺走戉","acjk":"越⿺走.7戉5"}

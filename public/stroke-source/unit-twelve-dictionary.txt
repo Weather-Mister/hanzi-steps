@@ -1,0 +1,13 @@
+{"character":"七","set":["t31","taiwan4808"],"definition":"seven","radical":"一","decomposition":"⿻一乚","acjk":"七⿻一.1乚1"}
+{"character":"三","set":["t31","taiwan4808"],"definition":"three","radical":"一","decomposition":"⿳一一一","acjk":"三⿳一.1一1一1"}
+{"character":"九","set":["t31","taiwan4808"],"definition":"nine","radical":"乙","decomposition":"⿻丿乙","acjk":"九⿻丿1乙.1"}
+{"character":"五","set":["t31","taiwan4808"],"definition":"five; surname","radical":"二","decomposition":"⿱一𫝀","acjk":"五⿻二.:1𫝀:2𫝀:二.:1"}
+{"character":"八","set":["t31","taiwan4808"],"definition":"eight; all sides; Kangxi radical 12","radical":"八","decomposition":"⿹丿乀","acjk":"八.⿹丿1乀1"}
+{"character":"六","set":["t31","taiwan4808"],"definition":"number six","radical":"八","decomposition":"⿱亠八","acjk":"六⿱亠2八.2"}
+{"character":"共","set":["t32","taiwan4808"],"definition":"together with, all, total; to share","radical":"八","decomposition":"⿱龷八","acjk":"共⿱龷4八.2"}
+{"character":"十","set":["t31","taiwan4808"],"definition":"ten; complete; perfect; Kangxi radical 24","radical":"十","decomposition":"⿸一丨","acjk":"十.⿸一1丨1"}
+{"character":"四","set":["t31","taiwan4808"],"definition":"four","radical":"囗","decomposition":"⿴囗儿","acjk":"四⿴囗.:2儿2囗.:1"}
+{"character":"塊","set":["t31","taiwan4808"],"definition":"piece, lump; dollar","radical":"土","decomposition":"⿰土鬼","acjk":"塊⿰土.3鬼10"}
+{"character":"多","set":["t31","taiwan4808"],"definition":"much, many; more than, over","radical":"夕","decomposition":"⿱夕夕","acjk":"多⿱夕.3夕3"}
+{"character":"少","set":["t31","taiwan4808"],"definition":"few, less, inadequate","radical":"小","decomposition":"⿱小丿","acjk":"少⿱小.3丿1"}
+{"character":"錢","set":["t31","taiwan4808"],"definition":"money, currency, coins","radical":"金","decomposition":"⿰金戔","acjk":"錢⿰金.8戔8"}

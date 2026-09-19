@@ -1,0 +1,44 @@
+{"character": "你", "set": ["t31", "taiwan4808"], "definition": "you, second person pronoun", "radical": "亻 (人)", "decomposition": "⿰亻尔", "acjk": "你⿰亻.2尔5"}
+{"character": "嗎", "set": ["t31", "taiwan4808"], "definition": "final interrogative particle", "radical": "口", "decomposition": "⿰口馬", "acjk": "嗎⿰口.3馬10"}
+{"character": "好", "set": ["t31", "taiwan4808"], "definition": "good, excellent, fine; well", "radical": "女", "decomposition": "⿰女子", "acjk": "好⿰女.3子3"}
+{"character": "學", "set": ["t31", "taiwan4808"], "definition": "learning, knowledge; school", "radical": "子", "decomposition": "⿱𦥯子", "acjk": "學⿱𦥯13子.3"}
+{"character": "我", "set": ["t31", "taiwan4808"], "definition": "our, us, i, me, my, we", "radical": "戈", "decomposition": "⿻千戈", "acjk": "我⿻千:1戈.:1千:2戈.:3"}
+{"character": "是", "set": ["t31", "taiwan4808"], "definition": "indeed, yes, right; to be; demonstrative pronoun, this, that", "radical": "日", "decomposition": "⿱日𤴓", "acjk": "是⿱日.4𤴓5"}
+{"character": "生", "set": ["t31", "taiwan4808"], "definition": "life; birth; Kangxi radical 100", "radical": "生", "decomposition": "⿻𠂉土", "acjk": "生.⿻𠂉2土3"}
+{"character":"一","set":["t31","taiwan4808"],"definition":"one; Kangxi radical 1","radical":"一","decomposition":"","acjk":"一.1"}
+{"character":"不","set":["t31","taiwan4808"],"definition":"no, not; un-; negative prefix","radical":"一","decomposition":"⿸丆卜","acjk":"不⿸丆⿱一.1丿1卜2"}
+{"character":"也","set":["t31","taiwan4808"],"definition":"also; classical final particle of strong affirmation or identity","radical":"乚 (乙)","decomposition":"⿻乜丨","acjk":"也⿻乜:𠃌1丨1乜:乚.1"}
+{"character":"人","set":["t31","taiwan4808"],"definition":"person; man; people; mankind; someone else; Kangxi radical 9","radical":"人","decomposition":"⿸丿㇏","acjk":"人.⿸丿1㇏1"}
+{"character":"他","set":["t31","taiwan4808"],"definition":"other, another; he, she, it","radical":"亻 (人)","decomposition":"⿰亻也","acjk":"他⿰亻.2也3"}
+{"character":"個","set":["t31","taiwan4808"],"definition":"numerary adjunct, piece; single","radical":"亻 (人)","decomposition":"⿰亻固","acjk":"個⿰亻.2固8"}
+{"character":"們","set":["t31","taiwan4808"],"definition":"adjunct pronoun indicate plural","radical":"亻 (人)","decomposition":"⿰亻門","acjk":"們⿰亻.2門8"}
+{"character":"她","set":["t31","taiwan4808"],"definition":"she, her","radical":"女","decomposition":"⿰女也","acjk":"她⿰女.3也3"}
+{"character":"有","set":["t31","taiwan4808"],"definition":"have, own, possess; exist","radical":"月","decomposition":"⿱𠂇月","acjk":"有⿱𠂇2月.4"}
+{"character":"沒","set":["t31","taiwan4808"],"definition":"not, have not, none; to drown, sink","radical":"氵 (水)","decomposition":"⿰氵𠬛","acjk":"沒⿰氵.3𠬛4"}
+{"character":"的","set":["t31","taiwan4808"],"definition":"possessive, adjectival suffix","radical":"白","decomposition":"⿰白勺","acjk":"的⿰白.5勺3"}
+{"character":"麼","set":["t31","taiwan4808"],"definition":"interrogative final particle; insignificant, small, tiny","radical":"幺","decomposition":"⿸麻幺","acjk":"麼⿸麻11幺.3"}
+{"character":"兩","set":["t31","taiwan4808"],"definition":"two, both, pair, couple; ounce","radical":"入","decomposition":"⿻帀𠓜","acjk":"兩⿻帀4𠓜⿰入.2入2"}
+{"character":"大","set":["t31","taiwan4808"],"definition":"big; large; Kangxi radical 37","radical":"大","decomposition":"⿻一人","acjk":"大.⿻一1人2"}
+{"character":"書","set":["t31","taiwan4808"],"definition":"book, letter, document; writings","radical":"曰","decomposition":"⿱聿曰","acjk":"書⿱聿6曰.4"}
+{"character":"本","set":["t31","taiwan4808"],"definition":"root, origin, source; basis","radical":"木","decomposition":"⿻木一","acjk":"本⿻木.4一1"}
+{"character":"很","set":["t31","taiwan4808"],"definition":"very, quite, much","radical":"彳","decomposition":"⿰彳艮","acjk":"很⿰彳.3艮6"}
+{"character":"在","set":["t31","taiwan4808"],"definition":"be at, in, on; consist in, rest","radical":"土","decomposition":"⿱才土","acjk":"在⿱才3土.3"}
+{"character":"都","set":["t31","taiwan4808"],"definition":"metropolis, capital; all, the whole; elegant, refined","radical":"阝 (阜)","decomposition":"⿰者阝","acjk":"都⿰者8阝.3"}
+{"character":"裡","set":["t31","taiwan4808"],"definition":"inside, interior, within","radical":"衤 (衣)","decomposition":"⿰衤里","acjk":"裡⿰衤.5里7"}
+{"character":"那","set":["t31","taiwan4808"],"definition":"that, that one, those","radical":"阝 (阜)","decomposition":"⿰⿻刀二阝","acjk":"那⿰⿻刀:1二2刀:1阝.3"}
+{"character":"什","set":["t31","taiwan4808"],"definition":"file of ten soldiers; mixed, miscellaneous","radical":"亻 (人)","decomposition":"⿰亻十","acjk":"什⿰亻.2十2"}
+{"character":"小","set":["t31","taiwan4808"],"definition":"small; Kangxi radical 42","radical":"小","decomposition":"⿻亅八","acjk":"小.⿻亅1八2"}
+{"character":"這","set":["t31","taiwan4808"],"definition":"this, the, here","radical":"⻎ (辵)","decomposition":"⿺⻎言","acjk":"這⿺言7⻎.4"}
+{"character":"去","set":["t31","taiwan4808"],"definition":"go away, leave, depart","radical":"厶","decomposition":"⿱土厶","acjk":"去⿱土3厶.2"}
+{"character":"來","set":["t31","taiwan4808"],"definition":"come, coming; return, returning","radical":"人","decomposition":"⿻木从","acjk":"來⿻木:2从⿰人.2人2木:2"}
+{"character":"哪","set":["t31","taiwan4808"],"definition":"which? where? how?","radical":"口","decomposition":"⿰口那","acjk":"哪⿰口.3那7"}
+{"character":"看","set":["t31","taiwan4808"],"definition":"look, see; examine, scrutinize","radical":"目","decomposition":"⿱龵目","acjk":"看⿱龵4目.5"}
+{"character":"和","set":["t31","taiwan4808"],"definition":"harmony, peace; peaceful, calm","radical":"口","decomposition":"⿰禾口","acjk":"和⿰禾5口.3"}
+{"character":"中","set":["t31","taiwan4808"],"definition":"central; center, middle; in the midst of; hit (target); attain","radical":"丨","decomposition":"⿻口丨","acjk":"中⿻口3丨.1"}
+{"character":"文","set":["t31","taiwan4808"],"definition":"script; literature; sentence; Kangxi radical 67","radical":"文","decomposition":"⿱亠乂","acjk":"文.⿱亠2乂2"}
+{"character":"英","set":["t32","taiwan4808"],"definition":"petal, flower, leaf; brave, a hero; England, English","radical":"艹 (艸)","decomposition":"⿱艹央","acjk":"英⿱艹.4央5"}
+{"character":"說","set":["t31","taiwan4808"],"definition":"speak, say, talk; scold, upbraid","radical":"言","decomposition":"⿰言兌","acjk":"說⿰言.7兌7"}
+{"character":"聽","set":["t31","taiwan4808"],"definition":"hear, listen; understand; obey","radical":"耳","decomposition":"⿰⿹耳𡈼𢛳","acjk":"聽⿰⿹耳.6𡈼4𢛳12"}
+{"character":"想","set":["t31","taiwan4808"],"definition":"think, speculate, plan, consider","radical":"心","decomposition":"⿱相心","acjk":"想⿱相9心.4"}
+{"character":"要","set":["t31","taiwan4808"],"definition":"necessary, essential; necessity","radical":"覀 (襾)","decomposition":"⿱覀女","acjk":"要⿱覀.6女3"}
+{"character":"會","set":["t31","taiwan4808"],"definition":"to assemble, meet together; a meeting; an organization","radical":"曰","decomposition":"⿱曾曰","acjk":"會⿱曾9曰.4"}

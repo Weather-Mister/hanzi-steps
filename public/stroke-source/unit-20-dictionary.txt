@@ -1,0 +1,10 @@
+{"character":"宿","set":["hsk35","frequent2500"],"definition":"stop, rest, lodge, stay overnight; constellation","pinyin":["sù"],"radical":"宀","decomposition":"⿱宀佰","acjk":"宿⿱宀.3佰8"}
+{"character":"舍","set":["hsk35","frequent2500"],"definition":"house, dwelling; dwell, reside","pinyin":["shě","shè"],"radical":"舌","decomposition":"⿱𠆢舌","acjk":"舍⿱𠆢2舌.⿱一.1古.5"}
+{"character":"樓","set":["t31","taiwan4808"],"definition":"building of two or more stories","radical":"木","decomposition":"⿰木婁","acjk":"樓⿰木.4婁11"}
+{"character":"棟","set":["g7"],"definition":"the main beams supporting a house","kun":["むね"],"on":["トウ"],"radical":"木","decomposition":"⿰木東","acjk":"棟⿰木.4東8"}
+{"character":"後","set":["t31","taiwan4808"],"definition":"behind, rear, after; descendents","radical":"彳","decomposition":"⿰彳⿱幺夊","acjk":"後⿰彳.3⿱幺3夊3"}
+{"character":"旁","set":["t31","taiwan4808"],"definition":"side; by side, close by, near","radical":"方","decomposition":"⿳六冖方","acjk":"旁⿳六4冖2方.4"}
+{"character":"邊","set":["t31","taiwan4808"],"definition":"edge, margin, side, border","radical":"⻎ (辵)","decomposition":"⿺⻎臱","acjk":"邊⿺臱15⻎.4"}
+{"character":"室","set":["t32","taiwan4808"],"definition":"room, home, house, chamber; 13th lunar mansion, determinative star α Pegasi (Markab)","radical":"宀","decomposition":"⿱宀至","acjk":"室⿱宀.3至6"}
+{"character":"池","set":["hsk35","frequent2500"],"definition":"pool, pond; moat; cistern","pinyin":["chí"],"radical":"氵 (水)","decomposition":"⿰氵也","acjk":"池⿰氵.3也3"}
+{"character":"迎","set":["t32","taiwan4808"],"definition":"receive, welcome, greet","radical":"⻎ (辵)","decomposition":"⿺⻎卬","acjk":"迎⿺卬4⻎.4"}

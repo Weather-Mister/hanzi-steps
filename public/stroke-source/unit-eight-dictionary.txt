@@ -1,0 +1,8 @@
+{"character":"今","set":["t31","taiwan4808"],"definition":"now, today, modern era","radical":"𠆢 (人)","decomposition":"⿱亼㇇","acjk":"今⿱亼⿱𠆢.2一1㇇1"}
+{"character":"明","set":["t31","taiwan4808"],"definition":"bright, light, brilliant; clear","radical":"日","decomposition":"⿰日月","acjk":"明⿰日.4月4"}
+{"character":"早","set":["t31","taiwan4808"],"definition":"early; soon; morning","radical":"日","decomposition":"⿱日十","acjk":"早⿱日.4十2"}
+{"character":"玩","set":["t31","taiwan4808"],"definition":"play with, joke, enjoy","radical":"王 (玉)","decomposition":"⿰王元","acjk":"玩⿰王.4元4"}
+{"character":"起","set":["t31","taiwan4808"],"definition":"rise, stand up; go up; begin","radical":"走","decomposition":"⿺走巳","acjk":"起⿺走.7巳3"}
+{"character":"晚","set":["t31","taiwan4808"],"definition":"night, evening; late","radical":"日","decomposition":"⿰日免","acjk":"晚⿰日.4免7"}
+{"character":"飯","set":["t31","taiwan4808"],"definition":"cooked rice; food; meal","radical":"飠 (食)","decomposition":"⿰飠反","acjk":"飯⿰飠.8反4"}
+{"character":"可","set":["t32","taiwan4808"],"definition":"may, can, -able; possibly","radical":"口","decomposition":"⿹丁口","acjk":"可⿹丁:1口.3丁:1"}

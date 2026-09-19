@@ -1,0 +1,572 @@
+[
+  {
+    "id": "hello",
+    "chars": [
+      "你",
+      "好"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "你",
+        "id": "你-0"
+      },
+      {
+        "type": "trace",
+        "char": "你",
+        "id": "你-1"
+      },
+      {
+        "type": "parts",
+        "char": "你",
+        "prompt": "Which part of 你 is the person component?",
+        "options": [
+          "亻",
+          "尔",
+          "口"
+        ],
+        "answer": "亻",
+        "explanation": "亻 is the side form of 人 (person). It is the two-stroke component on the left.",
+        "id": "你-2"
+      },
+      {
+        "type": "build",
+        "char": "你",
+        "id": "你-3"
+      },
+      {
+        "type": "complete",
+        "char": "你",
+        "id": "你-4"
+      },
+      {
+        "type": "select",
+        "char": "你",
+        "prompt": "Which character means “you”?",
+        "answer": "你",
+        "options": [
+          "你",
+          "好",
+          "我",
+          "是"
+        ],
+        "explanation": "你 (nǐ) means you.",
+        "id": "你-5"
+      },
+      {
+        "type": "memory",
+        "char": "你",
+        "id": "你-6"
+      },
+      {
+        "type": "intro",
+        "char": "好",
+        "id": "好-0"
+      },
+      {
+        "type": "trace",
+        "char": "好",
+        "id": "好-1"
+      },
+      {
+        "type": "parts",
+        "char": "好",
+        "prompt": "Which component is on the right of 好?",
+        "options": [
+          "口",
+          "子",
+          "亻"
+        ],
+        "answer": "子",
+        "explanation": "好 has 女 (woman) on the left and 子 (child) on the right.",
+        "id": "好-2"
+      },
+      {
+        "type": "build",
+        "char": "好",
+        "id": "好-3"
+      },
+      {
+        "type": "complete",
+        "char": "好",
+        "id": "好-4"
+      },
+      {
+        "type": "select",
+        "char": "好",
+        "prompt": "Which character means “good; well”?",
+        "answer": "好",
+        "options": [
+          "好",
+          "你",
+          "我",
+          "是"
+        ],
+        "explanation": "好 (hǎo) means good; well.",
+        "id": "好-5"
+      },
+      {
+        "type": "memory",
+        "char": "好",
+        "id": "好-6"
+      },
+      {
+        "type": "match",
+        "chars": [
+          "你",
+          "好"
+        ],
+        "id": "hello-0"
+      },
+      {
+        "type": "phrase",
+        "phrase": "hello",
+        "id": "hello-1"
+      },
+      {
+        "type": "order",
+        "phrase": "hello",
+        "tokens": [
+          "好",
+          "你",
+          "我"
+        ],
+        "id": "hello-2"
+      }
+    ]
+  },
+  {
+    "id": "identity",
+    "chars": [
+      "我",
+      "是"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "我",
+        "id": "我-0"
+      },
+      {
+        "type": "trace",
+        "char": "我",
+        "id": "我-1"
+      },
+      {
+        "type": "complete",
+        "char": "我",
+        "id": "我-2"
+      },
+      {
+        "type": "select",
+        "char": "我",
+        "prompt": "Which character means “I; me”?",
+        "answer": "我",
+        "options": [
+          "我",
+          "你",
+          "好",
+          "是"
+        ],
+        "explanation": "我 (wǒ) means I; me.",
+        "id": "我-3"
+      },
+      {
+        "type": "memory",
+        "char": "我",
+        "id": "我-4"
+      },
+      {
+        "type": "intro",
+        "char": "是",
+        "id": "是-0"
+      },
+      {
+        "type": "trace",
+        "char": "是",
+        "id": "是-1"
+      },
+      {
+        "type": "parts",
+        "char": "是",
+        "prompt": "Which familiar shape is at the top of 是?",
+        "options": [
+          "日",
+          "子",
+          "女"
+        ],
+        "answer": "日",
+        "explanation": "The top four strokes are 日. This identifies the shape, not a literal sun-related meaning for 是.",
+        "id": "是-2"
+      },
+      {
+        "type": "build",
+        "char": "是",
+        "id": "是-3"
+      },
+      {
+        "type": "complete",
+        "char": "是",
+        "id": "是-4"
+      },
+      {
+        "type": "select",
+        "char": "是",
+        "prompt": "Which character means “am; is; are”?",
+        "answer": "是",
+        "options": [
+          "是",
+          "你",
+          "好",
+          "我"
+        ],
+        "explanation": "是 (shì) means am; is; are.",
+        "id": "是-5"
+      },
+      {
+        "type": "memory",
+        "char": "是",
+        "id": "是-6"
+      },
+      {
+        "type": "match",
+        "chars": [
+          "你",
+          "好",
+          "我",
+          "是"
+        ],
+        "id": "identity-0"
+      },
+      {
+        "type": "listen",
+        "char": "我",
+        "options": [
+          "是",
+          "好",
+          "我",
+          "你"
+        ],
+        "answer": "我",
+        "explanation": "我 is wǒ: I or me.",
+        "id": "identity-1"
+      }
+    ]
+  },
+  {
+    "id": "student",
+    "chars": [
+      "學",
+      "生"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "學",
+        "id": "學-0"
+      },
+      {
+        "type": "trace",
+        "char": "學",
+        "id": "學-1"
+      },
+      {
+        "type": "parts",
+        "char": "學",
+        "prompt": "Which component do 好 and 學 share?",
+        "options": [
+          "女",
+          "口",
+          "子"
+        ],
+        "answer": "子",
+        "explanation": "子 (child) is on the right of 好 and at the bottom of 學.",
+        "id": "學-2"
+      },
+      {
+        "type": "build",
+        "char": "學",
+        "id": "學-3"
+      },
+      {
+        "type": "complete",
+        "char": "學",
+        "id": "學-4"
+      },
+      {
+        "type": "select",
+        "char": "學",
+        "prompt": "Which character means “learn; study”?",
+        "answer": "學",
+        "options": [
+          "學",
+          "你",
+          "好",
+          "我"
+        ],
+        "explanation": "學 (xué) means learn; study.",
+        "id": "學-5"
+      },
+      {
+        "type": "memory",
+        "char": "學",
+        "id": "學-6"
+      },
+      {
+        "type": "intro",
+        "char": "生",
+        "id": "生-0"
+      },
+      {
+        "type": "trace",
+        "char": "生",
+        "id": "生-1"
+      },
+      {
+        "type": "complete",
+        "char": "生",
+        "id": "生-2"
+      },
+      {
+        "type": "select",
+        "char": "生",
+        "prompt": "Which character means “be born; life”?",
+        "answer": "生",
+        "options": [
+          "生",
+          "你",
+          "好",
+          "我"
+        ],
+        "explanation": "生 (shēng) means be born; life.",
+        "id": "生-3"
+      },
+      {
+        "type": "memory",
+        "char": "生",
+        "id": "生-4"
+      },
+      {
+        "type": "phrase",
+        "phrase": "student",
+        "id": "student-0"
+      },
+      {
+        "type": "order",
+        "phrase": "student",
+        "tokens": [
+          "生",
+          "是",
+          "學"
+        ],
+        "id": "student-1"
+      },
+      {
+        "type": "phrase",
+        "phrase": "identity",
+        "id": "student-2"
+      },
+      {
+        "type": "order",
+        "phrase": "identity",
+        "tokens": [
+          "學生",
+          "你",
+          "是",
+          "我"
+        ],
+        "id": "student-3"
+      }
+    ]
+  },
+  {
+    "id": "question",
+    "chars": [
+      "嗎"
+    ],
+    "steps": [
+      {
+        "type": "intro",
+        "char": "嗎",
+        "id": "嗎-0"
+      },
+      {
+        "type": "trace",
+        "char": "嗎",
+        "id": "嗎-1"
+      },
+      {
+        "type": "parts",
+        "char": "嗎",
+        "prompt": "What does 馬 contribute to 嗎?",
+        "options": [
+          "A clue to the sound ma",
+          "The meaning horse",
+          "A plural ending"
+        ],
+        "answer": "A clue to the sound ma",
+        "explanation": "馬 (mǎ) is a sound component in 嗎 (ma). 嗎 is a question particle; its meaning is not horse.",
+        "id": "嗎-2"
+      },
+      {
+        "type": "build",
+        "char": "嗎",
+        "id": "嗎-3"
+      },
+      {
+        "type": "complete",
+        "char": "嗎",
+        "id": "嗎-4"
+      },
+      {
+        "type": "select",
+        "char": "嗎",
+        "prompt": "Which character means “yes/no question particle”?",
+        "answer": "嗎",
+        "options": [
+          "嗎",
+          "你",
+          "好",
+          "我"
+        ],
+        "explanation": "嗎 (ma) means yes/no question particle.",
+        "id": "嗎-5"
+      },
+      {
+        "type": "memory",
+        "char": "嗎",
+        "id": "嗎-6"
+      },
+      {
+        "type": "phrase",
+        "phrase": "question",
+        "id": "question-0"
+      },
+      {
+        "type": "order",
+        "phrase": "question",
+        "tokens": [
+          "嗎",
+          "我",
+          "學生",
+          "是",
+          "你"
+        ],
+        "id": "question-1"
+      },
+      {
+        "type": "listen",
+        "char": "嗎",
+        "options": [
+          "我",
+          "嗎",
+          "生",
+          "好"
+        ],
+        "answer": "嗎",
+        "explanation": "嗎 is ma, the light-toned particle for yes/no questions.",
+        "id": "question-2"
+      }
+    ]
+  },
+  {
+    "id": "review",
+    "chars": [
+      "你",
+      "好",
+      "我",
+      "是",
+      "學",
+      "生",
+      "嗎"
+    ],
+    "steps": [
+      {
+        "type": "match",
+        "chars": [
+          "你",
+          "好",
+          "我",
+          "是"
+        ],
+        "id": "review-0"
+      },
+      {
+        "type": "match",
+        "chars": [
+          "學",
+          "生",
+          "嗎"
+        ],
+        "id": "review-1"
+      },
+      {
+        "type": "build",
+        "char": "好",
+        "id": "review-2"
+      },
+      {
+        "type": "build",
+        "char": "嗎",
+        "id": "review-3"
+      },
+      {
+        "type": "memory",
+        "char": "你",
+        "id": "review-4"
+      },
+      {
+        "type": "memory",
+        "char": "我",
+        "id": "review-5"
+      },
+      {
+        "type": "memory",
+        "char": "學",
+        "id": "review-6"
+      },
+      {
+        "type": "memory",
+        "char": "嗎",
+        "id": "review-7"
+      },
+      {
+        "type": "order",
+        "phrase": "identity",
+        "tokens": [
+          "你",
+          "學生",
+          "我",
+          "嗎",
+          "是"
+        ],
+        "id": "review-8"
+      },
+      {
+        "type": "order",
+        "phrase": "question",
+        "tokens": [
+          "學生",
+          "嗎",
+          "好",
+          "你",
+          "是"
+        ],
+        "id": "review-9"
+      },
+      {
+        "type": "listen",
+        "char": "生",
+        "options": [
+          "是",
+          "我",
+          "學",
+          "生"
+        ],
+        "answer": "生",
+        "explanation": "生 is shēng, as in 學生 (student).",
+        "id": "review-10"
+      }
+    ]
+  }
+]

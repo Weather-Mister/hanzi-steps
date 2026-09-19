@@ -1,0 +1,5 @@
+{"character":"音","set":["t32","taiwan4808"],"definition":"sound, tone, pitch, pronunciation; Kangxi radical 180","radical":"音","decomposition":"⿱立日","acjk":"音.⿱立5日4"}
+{"character":"樂","set":["t32","taiwan4808"],"definition":"happy, glad; enjoyable; music","radical":"木","decomposition":"⿱⿻𢆶白木","acjk":"樂⿱⿻白5𢆶6木.4"}
+{"character":"運","set":["t32","taiwan4808"],"definition":"luck, fortune; ship, transport","radical":"⻎ (辵)","decomposition":"⿺⻎軍","acjk":"運⿺軍9⻎.4"}
+{"character":"動","set":["t31","taiwan4808"],"definition":"move, happen; movement, action","radical":"力","decomposition":"⿰重力","acjk":"動⿰重9力.2"}
+{"character":"網","set":["t31","taiwan4808"],"definition":"net, web; network","radical":"糹 (糸)","decomposition":"⿰糹罔","acjk":"網⿰糹.6罔8"}

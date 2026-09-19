@@ -1,0 +1,2 @@
+{"character":"廳","set":["g8"],"definition":"hall, central room","kun":["やくしょ","いえ"],"on":["チョウ","テイ"],"radical":"广","decomposition":"⿸广聽","acjk":"廳⿸广.3聽22"}
+{"character":"辣","set":["hsk34","frequent2500"],"definition":"peppery, pungent, hot; cruel","pinyin":["là"],"radical":"辛","decomposition":"⿰辛束","acjk":"辣⿰辛.7束7"}

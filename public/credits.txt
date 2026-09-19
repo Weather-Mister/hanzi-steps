@@ -1,0 +1,202 @@
+Hanzi Steps — Book 1, Units 1–5
+
+Lessons and English explanations are original to this project. Common words and
+phrases include 你好, 學生, 我是學生, and 你是學生嗎.
+
+The interface contains no AI-generated images. Character drawings are rendered
+directly from licensed stroke geometry.
+
+Handwriting engine: Hanzi Writer 3.7.3 by David Chanin, MIT license.
+https://github.com/chanind/hanzi-writer
+License: /licenses/hanzi-writer.txt
+
+Traditional Taiwan stroke data: AnimCJK, Copyright 2016–2026 FM&SH.
+https://github.com/parsimonhi/animCJK
+Forty-four entries extracted from graphicsZhHant.txt: the first eighteen retrieved
+2026-09-08, with thirteen for Unit 3 and thirteen for Unit 4 retrieved 2026-09-09.
+Stroke paths and medians are unchanged and bundled locally; no character-data
+CDN is needed during practice. The original selected entries are included below.
+Source: /stroke-source/graphicsZhHant.txt
+Attribution: /licenses/animcjk.txt
+Character graphics: Arphic Public License, /licenses/arphic.txt
+Selected dictionary metadata: GNU LGPL v3+, /licenses/lgpl.txt
+Dictionary source: /stroke-source/dictionaryZhHant.txt
+
+Reference for contemporary character shapes and Taiwan stroke order:
+Taiwan Ministry of Education, https://stroke-order.learningweb.moe.edu.tw/
+Traditional character reference: https://dict.variants.moe.edu.tw/
+
+Component notes identify modern visible parts, meaning clues, and sound clues.
+Memory aids are labelled as such and are not presented as literal historical
+etymologies. The notes for 我 and 是 deliberately avoid a made-up meaning equation.
+
+Audio is device speech synthesis, with a Taiwanese Mandarin voice when available.
+No audio service key is required. If no suitable voice is available, a reading
+alternative is offered and marked as supported practice.
+
+Vocabulary selection in Units 2–4 is guided by the Sinica Corpus word-frequency table
+in Word List with Accumulated Word Frequency in Sinica Corpus, Table 2.
+https://www.aclclp.org.tw/doc/wlawf_abstract.pdf
+The sample gives the 100 most frequent word/POS entries in Sinica 3.0 (5 million
+words). Some spellings recur with different parts of speech. We count each taught
+surface word once, not each character or repeated POS entry. This is a guide to
+common vocabulary, not a universal ranking of every form of spoken Mandarin.
+Everyday extras (你好, 嗎, 你們, 書, 本, 小, 這裡, 那裡, 哪裡, 看, 中文, 英文, 學, 聽) are taught alongside
+the frequency-list words.
+Unit 2 adds 13 words/forms, 11 written characters, six lessons, and a review.
+Pronunciation reference for the spoken ending 們 (men): Taiwan Ministry of
+Education Concise Mandarin Dictionary, entry 45128.
+https://dict.concised.moe.edu.tw/dictView.jsp?ID=45128&la=0&powerMode=0
+
+Unit 3 adds 13 words/forms, 13 written characters, six lessons, and a review.
+It contributes 8 further unique surface words from the frequency table:
+這, 那, 什麼, 兩, 很, 大, 在, 都. The remaining five are supporting everyday words.
+Book classifier 本: Taiwan Ministry of Education Concise Mandarin Dictionary.
+https://dict.concised.moe.edu.tw/dictView.jsp?ID=1054&la=0&powerMode=0
+兩: Taiwan Ministry of Education Revised Mandarin Chinese Dictionary.
+https://dict.revised.moe.edu.tw/dictView.jsp?ID=3677&word=%3D%E5%85%A9
+
+Unit 4 adds 13 words/forms, 13 written characters, six lessons, and a review.
+It contributes 7 further unique surface words from the frequency table:
+去, 來, 和, 說, 想, 要, 會. The other six are supporting everyday words.
+學 was previously taught as a character inside 學生; Unit 4 teaches it as an
+independent verb. 中文, 英文, and 哪裡 each count once, not once per character.
+Pronunciations of 和 as and (hé and Taiwan hàn): Taiwan Ministry of Education
+Revised Mandarin Chinese Dictionary.
+https://dict.revised.moe.edu.tw/dictView.jsp?ID=4733&la=0&powerMode=0
+說 (shuō), Traditional spelling and Taiwan stroke count: Taiwan Ministry of
+Education Concise Mandarin Dictionary.
+https://dict.concised.moe.edu.tw/dictView.jsp?ID=35509&la=0&powerMode=0
+
+Book 1 alignment begins with Unit 5. Reference: A Course in Contemporary Chinese,
+Book 1, Lesson 1, using the publicly readable preview at https://www.cchatty.com/pdf/993
+(learning objectives, vocabulary, and grammar, including printed pages 6–15), read
+2026-09-09. New explanations and exercises are original; no textbook scans,
+dialogues, or exercise sets are redistributed. This is an independent study aid.
+Unit 5 adds 8 words/expressions and 9 characters, six lessons and a review.
+Nine additional unmodified AnimCJK graphics records, retrieved 2026-09-09:
+/stroke-source/unit-five-graphics.txt. The same Arphic license applies.
+
+Book 1 Unit 6 — My Family follows the approved implementation specification and
+A Course in Contemporary Chinese 1, Lesson 2, printed pp. 25–29 and 35–36.
+Original explanations and exercises; no textbook scans are redistributed.
+10 new words/forms and 10 new characters; 人 is reviewed from Unit 2.
+Ten additional unmodified Taiwan AnimCJK graphics records, retrieved 2026-09-09:
+/stroke-source/unit-six-graphics.txt (Arphic Public License).
+Corresponding component metadata: /stroke-source/unit-six-dictionary.txt (LGPL v3+).
+
+Book 1 Unit 7 — descriptions, hobbies and weekend plans follows the supplied
+A Course in Contemporary Chinese 1, printed pp. 24–30, 35–36 and 44–57.
+17 new words/activity chunks; nine selected writing characters. New explanations
+and exercises are original; no textbook scans are redistributed.
+Nine additional unmodified AnimCJK Traditional graphics, retrieved 2026-09-10:
+/stroke-source/unit-seven-graphics.txt (Arphic Public License).
+Corresponding dictionary rows: /stroke-source/unit-seven-dictionary.txt (LGPL v3+).
+
+Book 1 Unit 9 — Sports, Music & Choices
+Original teaching and exercises aligned to A Course in Contemporary Chinese 1,
+Lesson 3, printed pages 46, 48, 52–55 and 59. No textbook images are redistributed.
+Five additional Taiwan glyphs (音 樂 運 動 網) from AnimCJK graphicsZhHant.txt
+retrieved 2026-09-11; paths and medians unchanged. The six retained practice glyphs
+打 籃 球 踢 足 還 are reused exactly, now with formal teaching in Unit 9.
+Source: https://github.com/parsimonhi/animCJK
+Selected graphics: /stroke-source/unit-nine-graphics.txt
+Selected dictionary: /stroke-source/unit-nine-dictionary.txt
+Existing AnimCJK, Arphic and LGPL attribution and licenses apply.
+
+Book 2 Unit 3 — Past the second traffic light
+Original explanations and exercises aligned to A Course in Contemporary Chinese 2,
+Lesson 1, printed pages 2, 4–6. No textbook scans are redistributed.
+Eight unmodified Taiwan glyph records (下 二 第 紅 綠 燈 過 再), retrieved 2026-09-11:
+/stroke-source/book-two-unit-three-graphics.txt (Arphic Public License).
+/stroke-source/book-two-unit-three-dictionary.txt (LGPL v3+).
+Source: https://github.com/parsimonhi/animCJK (graphicsZhHant.txt and dictionaryZhHant.txt).
+Existing attribution and license files apply; paths and medians are unchanged.
+
+Book 1 Units 13–14 — shopping requests, larger prices and choosing a phone
+Original explanations and exercises verified against the supplied A Course in
+Contemporary Chinese 1, Lesson 4, printed pp. 66–80. No textbook scans, full
+dialogues or exercise sets are redistributed.
+10 and 13 new words/forms respectively; 12 and 13 first-time character cards.
+Taiwan AnimCJK entries: /stroke-source/unit-13-graphics.txt and
+/stroke-source/unit-14-graphics.txt, with their matching dictionary files.
+Retrieved 2026-09-12 from https://github.com/parsimonhi/animCJK .
+Existing AnimCJK, Arphic and LGPL licenses apply. The earlier licensed geometry
+for 問 and the retained standalone 子 is reused exactly.
+
+The same-form characters 微 and 波 are absent from AnimCJK's Hant subset.
+/stroke-source/unit-13-common-form-graphics.txt
+retains their original source records: 微 from graphicsJa.txt, and 波 from
+graphicsZhHans.txt. Micro's dictionary row and 波's row are retained in
+/stroke-source/unit-13-common-form-dictionary.txt from dictionaryZhHans.txt.
+Both were visually compared with Taiwan Ministry of Education stroke sequences:
+https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=24494
+https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=27874
+微 keeps its 13 original stroke outlines and medians. 波 keeps all eight original
+outlines and medians but swaps source strokes 4 and 5 (1-based) to follow Taiwan
+order: the long left-falling stroke of 皮 before its bent top stroke.
+No MOE graphic is redistributed. The Arphic license applies to these outlines.
+
+Book 1 Unit 15 — Food Favorites & Ordering
+Original teaching and exercises aligned with the supplied A Course in Contemporary
+Chinese 1, Lesson 5 pp. 86–88, and Lesson 4 pp. 77–78 for approximate quantities.
+12 new words/forms and 10 new character cards; 多's existing character is reviewed.
+Nine unmodified AnimCJK Taiwan glyphs and their dictionary rows, retrieved
+2026-09-12, are in /stroke-source/unit-15-graphics.txt and
+/stroke-source/unit-15-dictionary.txt. 真 is absent from the Hant subset; its
+unchanged graphicsZhHans.txt and dictionaryZhHans.txt rows are in
+/stroke-source/unit-15-common-form-graphics.txt and the matching dictionary file.
+真's outline and all ten strokes were compared visually with Taiwan MOE:
+https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=30495
+Source: https://github.com/parsimonhi/animCJK . Existing Arphic and LGPL licenses
+apply. No textbook scans or MOE artwork are redistributed.
+
+Book 1 Unit 16 — Spicy Food & Cooking Skills
+Original teaching and exercises aligned with the supplied A Course in Contemporary
+Chinese 1, Lesson 5, pp. 89–95 and 99. 13 new words/forms, 11 new character cards;
+the existing character 得 is reviewed while its performance-marker use is taught.
+Nine unmodified AnimCJK Taiwan glyphs and dictionary records, retrieved
+2026-09-12, are in /stroke-source/unit-16-graphics.txt and the matching dictionary
+file. The source is https://github.com/parsimonhi/animCJK .
+
+廳 and 辣 are absent from AnimCJK's Hant subset. Their original licensed records
+are retained in /stroke-source/unit-16-common-form-graphics.txt and the matching
+dictionary file: 廳 from graphicsJa.txt / dictionaryJa.txt; 辣 from graphicsZhHans.txt
+/ dictionaryZhHans.txt. Both were visually compared with Taiwan MOE:
+https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=24307
+https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=36771
+辣 uses its unchanged 14 outlines and medians. 廳 keeps all 25 original outlines
+and medians, reordered to Taiwan's ear and lower-left stroke sequence. Using
+1-based source indices, the runtime sequence is 1,2,3,4,5,9,6,7,8,10,12,11,13–25.
+The existing Arphic, AnimCJK and LGPL attribution and licenses apply.
+No textbook scans or MOE artwork are redistributed.
+
+Book 1 Unit 17 — Food Worth Trying
+Original teaching and exercises aligned with supplied A Course in Contemporary
+Chinese 1, Lesson 5 pp. 86–88 and 聽說 in Lesson 6 pp. 104–106.
+10 new words/forms and seven new characters; 少 is an existing character reviewed
+while its quantity meaning is extended. No textbook scans or dialogues are included.
+AnimCJK (https://github.com/parsimonhi/animCJK), retrieved 2026-09-13:
+知, 道, 定 use unmodified graphicsZhHant.txt records. 籠 uses graphicsJa.txt;
+臭, 豆, 腐 use graphicsZhHans.txt. All four common-form glyphs were compared
+stroke by stroke with Taiwan MOE. No changes to outlines or order were needed.
+Original selected graphics and dictionary records are in
+/stroke-source/unit-17-taiwan-graphics.txt and unit-17-taiwan-dictionary.txt,
+and unit-17-common-form-graphics.txt and unit-17-common-form-dictionary.txt.
+Existing Arphic Public License and LGPL v3+ notices apply.
+Taiwan MOE reference IDs: 籠 31840; 臭 33261; 豆 35910; 腐 33104 at
+https://stroke-order.learningweb.moe.edu.tw/dictView.jsp?ID=31840
+No MOE artwork is redistributed.
+
+Book 1 Unit 18 — Around the School
+Work began after Unit 17 was published successfully on 2026-09-13.
+Original teaching and exercises aligned with supplied A Course in Contemporary
+Chinese 1, Lesson 6 pp. 104–112 and 114–115; the place-before-action construction
+is also grounded in Dialogue II, pp. 107–109.
+12 new words/forms and 13 new characters. Thirteen unmodified AnimCJK Taiwan
+records from graphicsZhHant.txt, with matching dictionaryZhHant.txt metadata,
+retrieved 2026-09-13. Source: https://github.com/parsimonhi/animCJK .
+Original rows: /stroke-source/unit-18-graphics.txt and
+/stroke-source/unit-18-dictionary.txt. The existing Arphic Public License and
+LGPL v3+ attribution apply. All component groups and glyphs were visually checked.
+No textbook scans, complete dialogues or textbook exercise sets are redistributed.

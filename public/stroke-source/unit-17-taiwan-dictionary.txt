@@ -1,0 +1,3 @@
+{"character":"知","set":["t31","taiwan4808"],"definition":"know, perceive, comprehend","radical":"矢","decomposition":"⿰矢口","acjk":"知⿰矢.5口3"}
+{"character":"道","set":["t31","taiwan4808"],"definition":"path, road, street; method, way","radical":"⻎ (辵)","decomposition":"⿺⻎首","acjk":"道⿺首9⻎.4"}
+{"character":"定","set":["t32","taiwan4808"],"definition":"decide, settle, fix","radical":"宀","decomposition":"⿱宀𤴓","acjk":"定⿱宀.3𤴓5"}

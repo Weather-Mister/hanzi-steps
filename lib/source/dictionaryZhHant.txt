@@ -1,0 +1,21 @@
+{"character": "你", "set": ["t31", "taiwan4808"], "definition": "you, second person pronoun", "radical": "亻 (人)", "decomposition": "⿰亻尔", "acjk": "你⿰亻.2尔5"}
+{"character": "嗎", "set": ["t31", "taiwan4808"], "definition": "final interrogative particle", "radical": "口", "decomposition": "⿰口馬", "acjk": "嗎⿰口.3馬10"}
+{"character": "好", "set": ["t31", "taiwan4808"], "definition": "good, excellent, fine; well", "radical": "女", "decomposition": "⿰女子", "acjk": "好⿰女.3子3"}
+{"character": "學", "set": ["t31", "taiwan4808"], "definition": "learning, knowledge; school", "radical": "子", "decomposition": "⿱𦥯子", "acjk": "學⿱𦥯13子.3"}
+{"character": "我", "set": ["t31", "taiwan4808"], "definition": "our, us, i, me, my, we", "radical": "戈", "decomposition": "⿻千戈", "acjk": "我⿻千:1戈.:1千:2戈.:3"}
+{"character": "是", "set": ["t31", "taiwan4808"], "definition": "indeed, yes, right; to be; demonstrative pronoun, this, that", "radical": "日", "decomposition": "⿱日𤴓", "acjk": "是⿱日.4𤴓5"}
+{"character": "生", "set": ["t31", "taiwan4808"], "definition": "life; birth; Kangxi radical 100", "radical": "生", "decomposition": "⿻𠂉土", "acjk": "生.⿻𠂉2土3"}
+{"character":"到","set":["t31","taiwan4808"],"definition":"go to, arrive, been to","radical":"刂 (刀)","decomposition":"⿰至刂","acjk":"到⿰至6刂.2"}
+{"character":"前","set":["t31","taiwan4808"],"definition":"in front, forward; preceding","radical":"刂 (刀)","decomposition":"⿱䒑刖","acjk":"前⿱䒑3刖⿰月4刂.2"}
+{"character":"口","set":["t31","taiwan4808"],"definition":"mouth; entrance, gate; Kangxi radical 30","radical":"口","decomposition":"⿰丨⿱𠃍一","acjk":"口.⿰丨1⿱𠃍1一1"}
+{"character":"右","set":["t31","taiwan4808"],"definition":"right; west; right-wing","radical":"口","decomposition":"⿱𠂇口","acjk":"右⿱𠂇2口.3"}
+{"character":"問","set":["t31","taiwan4808"],"definition":"ask (about), inquire after","radical":"口","decomposition":"⿵門口","acjk":"問⿵門8口.3"}
+{"character":"左","set":["t31","taiwan4808"],"definition":"left; east; unorthodox, improper","radical":"工","decomposition":"⿱𠂇工","acjk":"左⿱𠂇2工.3"}
+{"character":"師","set":["t31","taiwan4808"],"definition":"teacher, master, specialist; multitude, troops; hexagram ䷆","radical":"巾","decomposition":"⿰𠂤帀","acjk":"師⿰𠂤6帀⿱一1巾.3"}
+{"character":"往","set":["t32","taiwan4808"],"definition":"go, depart; past, formerly","radical":"彳","decomposition":"⿰彳主","acjk":"往⿰彳.3主5"}
+{"character":"從","set":["t31","taiwan4808"],"definition":"from, by, since, whence, through","radical":"彳","decomposition":"⿰彳⿱从龰","acjk":"從⿰彳.3⿱从4龰4"}
+{"character":"怎","set":["t31","taiwan4808"],"definition":"what? why? how?","radical":"心","decomposition":"⿱乍心","acjk":"怎⿱乍5心.4"}
+{"character":"直","set":["t32","taiwan4808"],"definition":"straight, erect, vertical","radical":"目","decomposition":"⿱十⿴𠀃三","acjk":"直⿱十2⿴𠀃:2三3𠀃:1","acjks":"直⿱十2⿴𠀃.:1+𠀃:1𠀃.:1+𠀃:1三.3𠀃:1"}
+{"character":"走","set":["t31","taiwan4808"],"definition":"run; walk; Kangxi radical 156","radical":"走","decomposition":"⿱土龰","acjk":"走.⿱土3龰4"}
+{"character":"路","set":["t31","taiwan4808"],"definition":"road, path, street; journey","radical":"𧾷 (足)","decomposition":"⿰𧾷各","acjk":"路⿰𧾷.7各6"}
+{"character":"轉","set":["t33","taiwan4808"],"definition":"shift, move, turn","radical":"車","decomposition":"⿰車專","acjk":"轉⿰車.7專11"}
