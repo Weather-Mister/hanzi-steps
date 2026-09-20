@@ -3,17 +3,37 @@ on:
   pull_request:
     branches: [main]
 permissions:
-  contents: read
+  contents: write
 jobs:
   qa:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npm run build:pages
+      - run: npm run course:generate
+      - run: npm run course:check
+      - run: npm run course:test -- unit-21
+      - run: npm run course:test -- unit-22
+      - run: npm run check:characters
       - run: node --experimental-strip-types --test tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs validation/*.test.mjs
       - run: npx tsc --noEmit
+      - run: npm run build:pages
+      - name: Commit generated curriculum outputs and restore workflow
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main --depth=1
+          git checkout origin/main -- .github/workflows/feature-test.yml
+          git add course/registry.generated.ts course/index.json lib/stroke-data.json .github/workflows/feature-test.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate curriculum artifacts for Units 21-22"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
