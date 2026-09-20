@@ -1,119 +1,58 @@
 'use client';
 import {useMemo,useState} from 'react';
-import {ArrowLeft,Check,PenLine,Search,X} from 'lucide-react';
+import {PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {searchVocabulary,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
-import {WritingPad} from './writing-pad';
 
-const canPractice=(item:VocabularyLookupItem)=>
- item.characters.length>0&&item.characters.every(char=>Boolean(strokeData[char]));
+const practiceableCharacters=(item:VocabularyLookupItem)=>
+ item.characters.filter(char=>Boolean(strokeData[char]));
 
-export function PinyinSearch({open,onOpenChange,theme}:{open:boolean;onOpenChange:(open:boolean)=>void;theme:string}){
+export function PinyinSearch({
+ open,onOpenChange,theme,onPracticeCharacter,
+}:{
+ open:boolean;
+ onOpenChange:(open:boolean)=>void;
+ theme:string;
+ onPracticeCharacter:(char:string)=>void;
+}){
  const [query,setQuery]=useState('');
- const [practiceItem,setPracticeItem]=useState<VocabularyLookupItem|null>(null);
- const [practiceCharIndex,setPracticeCharIndex]=useState(0);
- const [practiceComplete,setPracticeComplete]=useState(false);
- const [practiceRound,setPracticeRound]=useState(0);
  const results=useMemo(()=>searchVocabulary(query),[query]);
  const trimmed=query.trim();
- const practiceChar=practiceItem?.characters[practiceCharIndex];
 
- function startPractice(item:VocabularyLookupItem){
-  if(!canPractice(item))return;
-  setPracticeItem(item);
-  setPracticeCharIndex(0);
-  setPracticeComplete(false);
-  setPracticeRound(round=>round+1);
+ function practice(char:string){
+  onOpenChange(false);
+  onPracticeCharacter(char);
  }
 
- function finishCharacter(){
-  if(!practiceItem)return;
-  if(practiceCharIndex+1<practiceItem.characters.length){
-   setPracticeCharIndex(index=>index+1);
-   return;
-  }
-  setPracticeComplete(true);
- }
-
- function restartPractice(){
-  setPracticeCharIndex(0);
-  setPracticeComplete(false);
-  setPracticeRound(round=>round+1);
- }
-
- function backToResults(){
-  setPracticeItem(null);
-  setPracticeCharIndex(0);
-  setPracticeComplete(false);
- }
-
- function handleOpenChange(nextOpen:boolean){
-  if(!nextOpen)backToResults();
-  onOpenChange(nextOpen);
- }
-
- return <Dialog open={open} onOpenChange={handleOpenChange}>
-  <DialogContent data-unit-theme={theme} className={`pinyin-search-dialog ${practiceItem?'practice-mode':''}`}>
-   {practiceItem?<>
-    <button className="text-button search-practice-back" onClick={backToResults}><ArrowLeft size={16}/>Back to results</button>
-    <div className="mega-title-row search-practice-heading">
-     <div>
-      <DialogTitle>Practice <span lang="zh-Hant-TW">{practiceItem.traditional}</span></DialogTitle>
-      <DialogDescription>Guided handwriting practice. This does not change lesson progress.</DialogDescription>
-     </div>
-     <PenLine size={28}/>
-    </div>
-
-    {practiceComplete?<section className="mega-complete search-practice-complete">
-     <Check size={42}/>
-     <h3>Practice complete</h3>
-     <p><span lang="zh-Hant-TW">{practiceItem.traditional}</span> · {practiceItem.pinyin} · {practiceItem.meaning}</p>
-     <div className="mega-confirm-actions">
-      <button className="secondary-button" onClick={backToResults}>Back to results</button>
-      <button className="primary-button" onClick={restartPractice}>Practice again</button>
-     </div>
-    </section>:practiceChar?<section className="mega-practice">
-     <div className="mega-prompt">
-      <p className="pinyin">{practiceItem.pinyin}</p>
-      <h2>{practiceItem.meaning}</h2>
-      <div className="mega-character-progress" aria-label={`Character ${practiceCharIndex+1} of ${practiceItem.characters.length}`}>
-       {practiceItem.characters.map((_,index)=><span key={index} className={index<practiceCharIndex?'done':index===practiceCharIndex?'current':''}/>)}
-      </div>
-      <p className="mega-character-label">Character {practiceCharIndex+1} of {practiceItem.characters.length}</p>
-     </div>
-     <WritingPad
-      key={practiceItem.id+':'+practiceRound+':'+practiceCharIndex}
-      char={practiceChar}
-      mode="trace"
-      onComplete={()=>finishCharacter()}
-     />
-    </section>:null}
-   </>:<>
-    <div className="pinyin-search-heading">
-     <DialogTitle>Find by pinyin</DialogTitle>
-     <DialogDescription>Type pinyin with or without tone marks. Search never changes your progress.</DialogDescription>
-    </div>
-    <div className="pinyin-search-box">
-     <Search size={18}/>
-     <input
-      value={query}
-      onChange={event=>setQuery(event.target.value)}
-      placeholder="shi, xihuan, xi3huan1, lv…"
-      autoFocus
-      autoCapitalize="none"
-      autoCorrect="off"
-      spellCheck={false}
-      aria-label="Search Hanzi Steps by pinyin"
-     />
-     {trimmed&&<button className="search-clear-button" aria-label="Clear pinyin search" onClick={()=>setQuery('')}><X size={16}/></button>}
-    </div>
-    <div className="pinyin-search-results" aria-live="polite">
-     {!trimmed?<p className="search-empty">Start typing a pronunciation.</p>:
-      results.length===0?<p className="search-empty">No Hanzi Steps vocabulary matches that pinyin.</p>:
-      <>
-       <p className="search-count">{results.length===80?'Showing the first 80 matches':results.length+' '+(results.length===1?'match':'matches')}</p>
-       <div className="search-result-list">{results.map(item=><article className="search-result-card" key={item.id}>
+ return <Dialog open={open} onOpenChange={onOpenChange}>
+  <DialogContent data-unit-theme={theme} className="pinyin-search-dialog">
+   <div className="pinyin-search-heading">
+    <DialogTitle>Find by pinyin</DialogTitle>
+    <DialogDescription>Type pinyin with or without tone marks. Character practice opens the same regular practice used everywhere else in Hanzi Steps.</DialogDescription>
+   </div>
+   <div className="pinyin-search-box">
+    <Search size={18}/>
+    <input
+     value={query}
+     onChange={event=>setQuery(event.target.value)}
+     placeholder="shi, xihuan, xi3huan1, lv…"
+     autoFocus
+     autoCapitalize="none"
+     autoCorrect="off"
+     spellCheck={false}
+     aria-label="Search Hanzi Steps by pinyin"
+    />
+    {trimmed&&<button className="search-clear-button" aria-label="Clear pinyin search" onClick={()=>setQuery('')}><X size={16}/></button>}
+   </div>
+   <div className="pinyin-search-results" aria-live="polite">
+    {!trimmed?<p className="search-empty">Start typing a pronunciation.</p>:
+     results.length===0?<p className="search-empty">No Hanzi Steps vocabulary matches that pinyin.</p>:
+     <>
+      <p className="search-count">{results.length===80?'Showing the first 80 matches':results.length+' '+(results.length===1?'match':'matches')}</p>
+      <div className="search-result-list">{results.map(item=>{
+       const chars=practiceableCharacters(item);
+       return <article className="search-result-card" key={item.id}>
         <div className="search-result-copy">
          <div className="search-result-title">
           <strong lang="zh-Hant-TW">{item.traditional}</strong>
@@ -122,18 +61,20 @@ export function PinyinSearch({open,onOpenChange,theme}:{open:boolean;onOpenChang
          <p>{item.meaning}</p>
          {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
         </div>
-        <button
-         className="secondary-button"
-         disabled={!canPractice(item)}
-         onClick={()=>startPractice(item)}
-         aria-label={'Practice writing '+item.traditional}
-        >
-         <PenLine size={15}/>{canPractice(item)?'Practice':'Unavailable'}
-        </button>
-       </article>)}</div>
-      </>}
-    </div>
-   </>}
+        {chars.length>0?<div className="search-practice-actions" aria-label={'Practice characters in '+item.traditional}>
+         {chars.map(char=><button
+          className="secondary-button"
+          key={char}
+          onClick={()=>practice(char)}
+          aria-label={'Open regular character practice for '+char}
+         >
+          <PenLine size={15}/>{chars.length===1?'Practice':<>Practice <span lang="zh-Hant-TW">{char}</span></>}
+         </button>)}
+        </div>:<span className="search-practice-unavailable">Writing practice unavailable</span>}
+       </article>;
+      })}</div>
+     </>}
+   </div>
   </DialogContent>
  </Dialog>;
 }
