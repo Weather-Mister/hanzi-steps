@@ -2,11 +2,14 @@ name: Feature QA
 on:
   pull_request:
     branches: [main]
+
 permissions:
   contents: write
+
 concurrency:
   group: feature-qa-${{ github.event.pull_request.number }}
   cancel-in-progress: true
+
 jobs:
   qa:
     if: github.event.pull_request.head.repo.full_name == github.repository
@@ -16,51 +19,64 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: npm
+
       - run: npm ci
+
       - name: Hydrate declared Traditional stroke sources
         run: node scripts/hydrate-stroke-source.mjs
+
       - name: Generate curriculum artifacts
-        shell: bash
-        run: |
-          set +e
-          npm run course:generate > qa-error.txt 2>&1
-          code=$?
-          cat qa-error.txt
-          if [ "$code" -ne 0 ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add qa-error.txt
-            git commit -m "[skip ci] capture curriculum validation failure"
-            git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
-            exit "$code"
-          fi
-          rm -f qa-error.txt
+        run: npm run course:generate
+
       - name: Validate curriculum graph
         run: npm run course:check
+
       - name: Run targeted tests for changed unit modules
         shell: bash
         run: |
           git fetch origin "${{ github.base_ref }}" --depth=1
           mapfile -t UNIT_PATHS < <(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -E '^course/book[0-9]+/unit[0-9]+\.ts$' || true)
-          if [ "${#UNIT_PATHS[@]}" -eq 0 ]; then exit 0; fi
+          if [ "${#UNIT_PATHS[@]}" -eq 0 ]; then
+            echo "No changed unit modules; skipping targeted unit tests."
+            exit 0
+          fi
           for path in "${UNIT_PATHS[@]}"; do
-            unit_id=$(node -e 'const fs=require("fs");const manifest=JSON.parse(fs.readFileSync("course/manifest.json","utf8"));const p=process.argv[1];for(const book of manifest.books){const hit=(book.units||[]).find(u=>u.path===p);if(hit){process.stdout.write(hit.id);process.exit(0)}}process.exit(2)' "$path")
+            unit_id=$(node -e '
+              const fs=require("fs");
+              const manifest=JSON.parse(fs.readFileSync("course/manifest.json","utf8"));
+              const p=process.argv[1];
+              for (const book of manifest.books) {
+                const hit=(book.units||[]).find(u=>u.path===p);
+                if (hit) { process.stdout.write(hit.id); process.exit(0); }
+              }
+              process.exit(2);
+            ' "$path")
+            echo "Testing $unit_id ($path)"
             npm run course:test -- "$unit_id"
           done
+
       - run: npm run check:characters
+
       - name: Run regression tests
         run: node --experimental-strip-types --test tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs validation/*.test.mjs
+
       - run: npx tsc --noEmit
+
       - run: npm run build:pages
+
       - name: Commit generated curriculum artifacts
         shell: bash
         run: |
           git add course/registry.generated.ts course/index.json lib/stroke-data.json course/book*/*.strokes.json
-          if git diff --cached --quiet; then exit 0; fi
+          if git diff --cached --quiet; then
+            echo "Generated curriculum artifacts already current."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Generate curriculum artifacts"
