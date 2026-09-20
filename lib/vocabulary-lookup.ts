@@ -53,7 +53,7 @@ export const vocabularyLookup:VocabularyLookupItem[]=vocabulary.flatMap(word=>{
  const book=unit?books.find(entry=>entry.unitIds.includes(unit.id)):undefined;
  const normalizedSpacedPinyin=normalizePinyin(word.pinyin);
  return [{
-  id:'v1:'+word.lessonId+':'+word.text+':'+normalizedSpacedPinyin.replace(/\s/g,'')+':'+word.meaning,
+  id:'v1:'+word.lessonId+':'+word.text+':'+normalizedSpacedPinyin.replace(/\s/g,''),
   traditional:word.text,
   pinyin:word.pinyin,
   normalizedPinyin:normalizedSpacedPinyin.replace(/\s/g,''),
