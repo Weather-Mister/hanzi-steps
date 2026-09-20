@@ -127,17 +127,19 @@ export function MegaChallenge({
    </section>:
    masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
    current&&currentChar?<section className="mega-practice">
-    <div className="mega-session-meta" aria-label="Mega Challenge status">
+    {!result&&<div className="mega-session-meta" aria-label="Mega Challenge status">
      <span><strong>{queue.length}</strong> {queue.length===1?'word':'words'} in rotation</span>
      <span>{masteredItems.length} mastered</span>
-    </div>
+    </div>}
     <div className="mega-prompt">
      <p className="pinyin">{current.pinyin}</p>
      <h2>{current.meaning}</h2>
-     <div className="mega-character-progress" aria-label={`Character ${charIndex+1} of ${current.characters.length}`}>
-      {current.characters.map((_,index)=><span key={index} className={index<charIndex||result&&index===charIndex?'done':index===charIndex?'current':''}/>)}
-     </div>
-     <p className="mega-character-label">{result?'Word complete':`Character ${charIndex+1} of ${current.characters.length}`}</p>
+     {!result&&<>
+      <div className="mega-character-progress" aria-label={`Character ${charIndex+1} of ${current.characters.length}`}>
+       {current.characters.map((_,index)=><span key={index} className={index<charIndex?'done':index===charIndex?'current':''}/>)}
+      </div>
+      <p className="mega-character-label">{`Character ${charIndex+1} of ${current.characters.length}`}</p>
+     </>}
     </div>
     <WritingPad
      key={current.id+':'+charIndex+':'+(gaveUp?'guided':'memory')}
