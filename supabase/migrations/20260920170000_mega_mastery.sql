@@ -6,7 +6,7 @@ create table if not exists hanzi_private.mastered_vocab (
   created_at timestamptz not null default now(),
   primary key (user_id, vocab_id),
   constraint mastered_vocab_user_id_check check (user_id ~ '^account-v1-[a-f0-9]{64}$'),
-  constraint mastered_vocab_vocab_id_check check (length(vocab_id) between 1 and 256)
+  constraint mastered_vocab_vocab_id_check check (length(vocab_id) between 1 and 1024)
 );
 
 alter table hanzi_private.mastered_vocab enable row level security;
@@ -53,7 +53,7 @@ begin
     raise exception 'Sign in to save mastered words.' using errcode = '28000';
   end if;
 
-  if p_vocab_id is null or length(p_vocab_id) not between 1 and 256 or p_mastered is null then
+  if p_vocab_id is null or length(p_vocab_id) not between 1 and 1024 or p_mastered is null then
     raise exception 'Invalid mastered word.' using errcode = '22023';
   end if;
 
