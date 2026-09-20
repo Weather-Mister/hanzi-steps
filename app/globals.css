@@ -547,6 +547,27 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .mega-character-label { color:#8491a4; font-size:.72rem; font-weight:700; }
 .mega-practice .strict-writing { max-width:380px; }
 .mega-know-button { margin-top:-2px; color:#6c7d95; }
+.mega-give-up-row {
+ min-height:36px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+.mega-give-up-button {
+ min-height:34px;
+ padding:5px 9px;
+ color:#8a5b3d;
+ font-size:.78rem;
+}
+.mega-give-up-button:hover:not(:disabled) {
+ background:#fff4ea;
+ color:#8a4a22;
+}
+.mega-guides-on {
+ color:#6f7f96;
+ font-size:.76rem;
+ font-weight:650;
+}
 
 .mega-result,.mega-complete {
  display:flex; flex-direction:column; align-items:center; text-align:center;
