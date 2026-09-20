@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue} from '@/lib/mega-challenge';
+import {advanceMegaQueue,combineWordPerfect,makeMegaQueue} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
 import {WritingPad} from './writing-pad';
@@ -15,7 +15,7 @@ export function MegaChallenge({
 }:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;userKey:string;theme:string}){
  const {mastered,loading:masteryLoading,saving,error,setMastered}=useMegaMastery(userKey);
  const learned=useMemo(()=>learnedVocabulary(completed),[completed]);
- const eligible=useMemo(()=>eligibleMegaVocabulary(completed,mastered),[completed,mastered]);
+ const eligible=useMemo(()=>learned.filter(item=>!mastered.has(item.id)),[learned,mastered]);
  const masteredItems=useMemo(()=>vocabularyLookup.filter(item=>mastered.has(item.id)),[mastered]);
  const [queue,setQueue]=useState<string[]|null>(null);
  const knownLearned=useRef<Set<string>>(new Set());
@@ -27,18 +27,19 @@ export function MegaChallenge({
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
-  if(queue===null){
-   setQueue(makeMegaQueue(eligible,Date.now().toString(36)+Math.random().toString(36)));
-   knownLearned.current=new Set(learned.map(item=>item.id));
-   return;
-  }
-  const fresh=eligible.filter(item=>!knownLearned.current.has(item.id));
-  if(fresh.length){
+  const learnedIds=new Set(learned.map(item=>item.id));
+  setQueue(currentQueue=>{
+   if(currentQueue===null){
+    return makeMegaQueue(eligible,Date.now().toString(36)+Math.random().toString(36));
+   }
+   const queued=new Set(currentQueue);
+   const fresh=eligible.filter(item=>!knownLearned.current.has(item.id)&&!queued.has(item.id));
+   if(!fresh.length)return currentQueue;
    const additions=makeMegaQueue(fresh,Date.now().toString(36)+Math.random().toString(36));
-   setQueue(current=>current?[...current,...additions]:additions);
-  }
-  knownLearned.current=new Set(learned.map(item=>item.id));
- },[open,masteryLoading,queue,eligible,learned]);
+   return [...currentQueue,...additions];
+  });
+  knownLearned.current=learnedIds;
+ },[open,masteryLoading,eligible,learned]);
 
  const current=queue?.length?itemById.get(queue[0]):undefined;
  const currentChar=current?.characters[charIndex];
@@ -121,7 +122,7 @@ export function MegaChallenge({
      </article>)}
    </section>:
    masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
-   current&&currentChar?<section className="mega-practice">
+   current&&currentChar?<section className={result?'mega-practice has-result':'mega-practice'}>
     {!result&&<div className="mega-session-meta" aria-label="Mega Challenge status">
      <span><strong>{queue.length}</strong> {queue.length===1?'word':'words'} in rotation</span>
      <span>{masteredItems.length} mastered</span>
