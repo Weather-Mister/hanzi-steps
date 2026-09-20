@@ -150,11 +150,11 @@ export function MegaChallenge({
      <div className="mega-inline-copy">
       <span className="mega-result-kicker">{result.perfect?'Perfect recall':'Completed with guides'}</span>
       <div><strong lang="zh-Hant-TW">{result.item.traditional}</strong><span className="pinyin">{result.item.pinyin}</span></div>
-      <p>{result.perfect?'Correct without help. Continue, or move it to Mastered.':'This word will stay in rotation and return later.'}</p>
+      <p>{result.perfect?'Correct without help. Continue, or move it to Mastered.':'This word will stay in rotation unless you move it to Mastered.'}</p>
      </div>
      <div className="mega-result-actions">
       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
-      {result.perfect&&<button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>}
+      <button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>:
     <div className="mega-give-up-row">
