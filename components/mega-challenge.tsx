@@ -131,14 +131,27 @@ export function MegaChallenge({
      <p className="mega-character-label">{result?'Word complete':`Character ${charIndex+1} of ${current.characters.length}`}</p>
     </div>
     <WritingPad key={current.id+':'+charIndex} char={currentChar} mode="memory" strict revealStrokeAfterMisses={5} completionDelayMs={900} onComplete={finishCharacter}/>
-    {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
+    {result?<><div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
      <div className="mega-inline-copy">
       <div><strong lang="zh-Hant-TW">{result.item.traditional}</strong><span className="pinyin">{result.item.pinyin}</span></div>
       <p>{result.perfect?'Perfect first pass. Cleared for this cycle.':'Finished with help. This word will return later.'}</p>
      </div>
-     <button className="primary-button" onClick={continueAfterResult}>Continue</button>
-    </div>:
+     <div className="mega-result-actions">
+      <button className="primary-button" onClick={continueAfterResult}>Continue</button>
+      {result.perfect&&!confirmItem&&<button className="text-button mega-know-button" disabled={saving} onClick={()=>setConfirmItem(result.item)}>I already know this</button>}
+     </div>
+    </div>
+    {result.perfect&&confirmItem&&<div className="mega-master-confirm" role="group" aria-label="Move word to Mastered">
+     <div>
+      <strong>Move <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
+      <p>It will stay out of Mega Challenge until you restore it.</p>
+     </div>
+     <div className="mega-master-confirm-actions">
+      <button className="text-button" disabled={saving} onClick={()=>setConfirmItem(null)}>Cancel</button>
+      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Move to Mastered'}</button>
+     </div>
+    </div>}</>:
     confirmItem?<div className="mega-master-confirm" role="group" aria-label="Move word to Mastered">
      <div>
       <strong>Move <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>

@@ -661,6 +661,19 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .mega-inline-copy .pinyin { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--unit-text); font-size:.85rem; }
 .mega-inline-copy p { margin-top:3px; color:#64748b; font-size:.78rem; line-height:1.4; }
 .mega-inline-result .primary-button { min-width:112px; min-height:40px; padding:8px 14px; }
+.mega-result-actions {
+ display:flex;
+ flex-direction:column;
+ align-items:stretch;
+ gap:4px;
+ min-width:112px;
+}
+.mega-result-actions .mega-know-button {
+ margin:0;
+ min-height:30px;
+ padding:3px 6px;
+ font-size:.73rem;
+}
 @keyframes mega-inline-result-in {
  from { opacity:0; transform:translateY(5px); }
  to { opacity:1; transform:translateY(0); }
