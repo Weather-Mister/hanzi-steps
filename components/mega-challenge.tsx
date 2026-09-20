@@ -110,7 +110,7 @@ export function MegaChallenge({
    {error&&<p className="mega-sync-note" role="status">{error}</p>}
 
    {view==='mastered'?<section className="mastered-list">
-    {masteredItems.length===0?<p className="search-empty">Words you move to Mastered will appear here.</p>:
+    {masteredItems.length===0?<p className="search-empty">Words you add to Mastered will appear here.</p>:
      masteredItems.map(item=><article className="mastered-card" key={item.id}>
       <div><strong lang="zh-Hant-TW">{item.traditional}</strong><span className="pinyin">{item.pinyin}</span><p>{item.meaning}</p></div>
       <button className="secondary-button" disabled={saving} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore'}</button>
