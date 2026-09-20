@@ -149,8 +149,9 @@ export function MegaChallenge({
     {result?<><div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
      <div className="mega-inline-copy">
+      <span className="mega-result-kicker">{result.perfect?'Perfect recall':'Completed with guides'}</span>
       <div><strong lang="zh-Hant-TW">{result.item.traditional}</strong><span className="pinyin">{result.item.pinyin}</span></div>
-      <p>{result.perfect?'Perfect first pass. Cleared for this cycle.':'Finished with help. This word will return later.'}</p>
+      <p>{result.perfect?'Correct without help. Continue, or move it to Mastered.':'This word will stay in rotation and return later.'}</p>
      </div>
      <div className="mega-result-actions">
       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
