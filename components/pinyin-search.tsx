@@ -72,7 +72,7 @@ export function PinyinSearch({open,onOpenChange,theme}:{open:boolean;onOpenChang
         <p>{item.meaning}</p>
         {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
         <button
-         className="search-practice-button"
+         className="secondary-button"
          disabled={!canPractice(item)}
          onClick={()=>startPractice(item)}
          aria-label={'Practice writing '+item.traditional}
@@ -86,31 +86,29 @@ export function PinyinSearch({open,onOpenChange,theme}:{open:boolean;onOpenChang
   </Dialog>
 
   <Dialog open={!!practiceItem} onOpenChange={nextOpen=>{if(!nextOpen)setPracticeItem(null)}}>
-   <DialogContent data-unit-theme={theme} className="search-practice-dialog">
+   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
     {practiceItem&&<>
-     <div className="search-practice-heading">
+     <div className="mega-title-row">
       <div>
        <DialogTitle>Practice <span lang="zh-Hant-TW">{practiceItem.traditional}</span></DialogTitle>
        <DialogDescription>Guided handwriting practice. This does not change lesson progress.</DialogDescription>
       </div>
-      <div className="search-practice-word">
-       <span className="pinyin">{practiceItem.pinyin}</span>
-       <strong>{practiceItem.meaning}</strong>
-      </div>
+      <PenLine size={28}/>
      </div>
 
-     {practiceComplete?<section className="search-practice-complete">
-      <span className="search-practice-check"><Check size={25}/></span>
+     {practiceComplete?<section className="mega-complete">
+      <Check size={42}/>
       <h3>Practice complete</h3>
-      <p lang="zh-Hant-TW">{practiceItem.traditional}</p>
-      <div className="search-practice-actions">
+      <p><span lang="zh-Hant-TW">{practiceItem.traditional}</span> · {practiceItem.pinyin} · {practiceItem.meaning}</p>
+      <div className="mega-confirm-actions">
        <button className="secondary-button" onClick={()=>setPracticeItem(null)}>Back to results</button>
        <button className="primary-button" onClick={restartPractice}>Practice again</button>
       </div>
-     </section>:practiceChar?<section className="search-practice-body">
-      <div className="search-practice-progress">
-       <span>Character {practiceCharIndex+1} of {practiceItem.characters.length}</span>
-       <strong lang="zh-Hant-TW">{practiceChar}</strong>
+     </section>:practiceChar?<section className="mega-practice">
+      <div className="mega-prompt">
+       <p className="pinyin">{practiceItem.pinyin}</p>
+       <h2>{practiceItem.meaning}</h2>
+       <p>Character {practiceCharIndex+1} of {practiceItem.characters.length} · <span lang="zh-Hant-TW">{practiceChar}</span></p>
       </div>
       <WritingPad
        key={practiceItem.id+':'+practiceRound+':'+practiceCharIndex}
