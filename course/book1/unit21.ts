@@ -1610,14 +1610,15 @@ const unit:UnitData = {
       "zhuyin": "ㄘㄨㄥˊ",
       "meaning": "from",
       "strokes": 11,
-      "note": "從 is second-tone cóng. It marks a starting point before 到 introduces the endpoint.",
-      "memory": "A narrow 彳 steps along the left while the right side stacks two person-like shapes above the finishing foot strokes.",
+      "layout": "side",
+      "note": "從 introduces the starting point of movement.",
+      "memory": "Remember 從 by 彳 on the left and two person-like shapes above the spreading lower strokes on the right.",
       "parts": [
         {
           "label": "彳",
           "name": "step component",
-          "role": "Movement cue",
-          "description": "The first three strokes form the narrow 彳 along the left edge.",
+          "role": "Visual component",
+          "description": "彳 is the narrow three-stroke component along the left edge.",
           "strokes": [
             0,
             1,
@@ -1628,7 +1629,7 @@ const unit:UnitData = {
           "label": "right",
           "name": "right group",
           "role": "Visual component",
-          "description": "The remaining eight strokes build two person-like upper shapes and the lower movement strokes, ending with a long rightward sweep.",
+          "description": "The right group has two person-like shapes at the top and a long stroke extending toward the lower right.",
           "strokes": [
             3,
             4,
@@ -1641,11 +1642,10 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "side",
       "example": {
-        "text": "從早上到中午",
-        "pinyin": "cóng zǎoshàng dào zhōngwǔ",
-        "meaning": "from morning to noon"
+        "text": "從這裡",
+        "pinyin": "cóng zhèlǐ",
+        "meaning": "from here"
       }
     },
     "空": {
