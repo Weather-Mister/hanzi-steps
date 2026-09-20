@@ -5,7 +5,7 @@ const makeCharacter = (
   memory:string, example:Character['example']
 ):Character => ({
   hanzi,pinyin,zhuyin,meaning,strokes,
-  note:`${hanzi} is taught here as a first-time character inside this unit's Lesson 8 vocabulary.`,
+  note:`${hanzi} is introduced here through ${example.text}: ${meaning}.`,
   memory,
   parts:[{
     label:hanzi,
@@ -129,13 +129,13 @@ const unit:UnitData = {
     {text:'計程車',pinyin:'jìchéngchē',meaning:'taxi',lessonId:'u25-rides',core:true,note:'Standard Taiwan Mandarin for taxi.'},
     {text:'差不多',pinyin:'chàbuduō',meaning:'about the same; almost',lessonId:'u25-visit',core:true}
   ],
-  reviewVocabulary:['坐','火車','跟','玩','怎麼','慢','比較','快','車票','又…又…','舒服','高鐵','學校','朋友','週末','去','可以','很','貴'],
+  reviewVocabulary:['坐','火車','跟','玩','慢','比較','快','車票','又…又…','舒服','高鐵','學校','朋友','週末','去','可以','很','貴'],
   newCharacters:['同','參','觀','騎','機','載','捷','公','計','程','差'],
   reviewCharacters:[],
   characters,
   grammarRules:{
     'u25-bi-comparison':{id:'u25-bi-comparison',title:'Explicit comparison with 比',pattern:'A + 比 + B + state verb / property',explanation:'Use 比 when you name both things being compared. A is described relative to B.',examples:[{text:'坐捷運比坐火車快。',pinyin:'Zuò jiéyùn bǐ zuò huǒchē kuài.',meaning:'Taking the MRT is faster than taking the train.'},{text:'我們學校比他們學校遠。',pinyin:'Wǒmen xuéxiào bǐ tāmen xuéxiào yuǎn.',meaning:'Our school is farther away than their school.'}],remember:'比較 can leave the comparison target understood; 比 explicitly names A and B.'},
-    'u25-bi-negation':{id:'u25-bi-negation',title:'Negating a 比 comparison',pattern:'A + 不比 / 不是比 + B + property',explanation:'The textbook allows either 不比 or 不是比 to negate an explicit comparison. 不比 says A is not more X than B; 不是比 explicitly rejects the proposed comparison.',examples:[{text:'坐公車不比坐計程車快。',pinyin:'Zuò gōngchē bù bǐ zuò jìchéngchē kuài.',meaning:'Taking the bus is not faster than taking a taxi.'},{text:'坐公車不是比坐計程車快。',pinyin:'Zuò gōngchē bú shì bǐ zuò jìchéngchē kuài.',meaning:'It is not the case that taking the bus is faster than taking a taxi.'}],remember:'Put the negative before 比, not after the comparison target.'},
+    'u25-bi-negation':{id:'u25-bi-negation',title:'Negating a 比 comparison',pattern:'A + 不比 / 不是比 + B + property',explanation:'The textbook allows either 不比 or 不是比 to negate an explicit comparison. 不比 says A is not more X than B; 不是比 explicitly rejects the proposed comparison.',examples:[{text:'坐公車不比坐計程車快。',pinyin:'Zuò gōngchē bù bǐ zuò jìchéngchē kuài.',meaning:'Taking the bus is not faster than taking a taxi.'},{text:'坐公車不是比坐計程車快。',pinyin:'Zuò gōngchē bù shì bǐ zuò jìchéngchē kuài.',meaning:'It is not the case that taking the bus is faster than taking a taxi.'}],remember:'Put the negative before 比, not after the comparison target.'},
     'u25-bi-degree':{id:'u25-bi-degree',title:'No 很 inside the basic 比 frame',pattern:'A + 比 + B + property',explanation:'In the basic 比 pattern taught here, degree adverbs such as 很, 真, and 非常 do not appear before the final state verb/property.',examples:[{text:'坐捷運比坐火車快。',pinyin:'Zuò jiéyùn bǐ zuò huǒchē kuài.',meaning:'Taking the MRT is faster than taking the train.'}],remember:'Say A 比 B 快, not A 比 B 很快.'}
   },
   grammarIntroductions:[
