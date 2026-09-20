@@ -1,0 +1,30 @@
+{
+  "name": "Hanzi Steps",
+  "short_name": "Hanzi Steps",
+  "description": "Traditional Chinese and Taiwanese Mandarin practice.",
+  "start_url": "/hanzi-steps/",
+  "scope": "/hanzi-steps/",
+  "display": "standalone",
+  "background_color": "#f8f7f3",
+  "theme_color": "#245ee8",
+  "icons": [
+    {
+      "src": "pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
