@@ -100,7 +100,6 @@ export function MegaChallenge({
   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
    <div className="mega-title-row">
     <div><DialogTitle>Mega Challenge</DialogTitle><DialogDescription>Recall learned words from pinyin and meaning alone.</DialogDescription></div>
-    <Trophy size={28}/>
    </div>
    <div className="mega-tabs" role="tablist" aria-label="Mega Challenge sections">
     <button className={view==='challenge'?'selected':''} onClick={()=>switchView('challenge')} role="tab" aria-selected={view==='challenge'}>Challenge</button>
