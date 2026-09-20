@@ -1042,7 +1042,6 @@ const unit:UnitData = {
     "這",
     "手機",
     "好玩",
-    "比",
     "比賽"
   ],
   "newCharacters": [
