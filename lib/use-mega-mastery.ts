@@ -46,14 +46,20 @@ export function useMegaMastery(userKey:string){
   return()=>{cancelled=true};
  },[userKey]);
 
- const setMasteredValue=useCallback(async(id:string,value:boolean)=>{
+ const applyLocal=useCallback((id:string,value:boolean)=>{
   setMastered(previous=>{
    const next=new Set(previous);
    if(value)next.add(id);else next.delete(id);
    writeLocal(userKey,next);
    return next;
   });
-  if(userKey==='signed-out')return true;
+ },[userKey]);
+
+ const setMasteredValue=useCallback(async(id:string,value:boolean)=>{
+  if(userKey==='signed-out'){
+   applyLocal(id,value);
+   return true;
+  }
   setSaving(true);
   const {error:saveError}=await supabase.rpc('hanzi_set_mastered',{
    expected_account:userKey,
@@ -62,12 +68,13 @@ export function useMegaMastery(userKey:string){
   });
   setSaving(false);
   if(saveError){
-   setError('Mastered words could not sync. Try again when you are online.');
+   setError('Mastered words could not sync. Nothing changed; try again when you are online.');
    return false;
   }
+  applyLocal(id,value);
   setError('');
   return true;
- },[userKey]);
+ },[userKey,applyLocal]);
 
  return {mastered,loading,saving,error,setMastered:setMasteredValue};
 }
