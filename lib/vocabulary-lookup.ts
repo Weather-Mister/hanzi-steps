@@ -42,6 +42,8 @@ export const compactPinyin=(value:string)=>normalizePinyin(value).replace(/\s/g,
 
 const lessonById=new Map(lessons.map(lesson=>[lesson.id,lesson]));
 const unitById=new Map(units.map(unit=>[unit.id,unit]));
+const bookByUnitId=new Map(books.flatMap(book=>book.unitIds.map(unitId=>[unitId,book] as const)));
+const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
 const seen=new Set<string>();
 
 export const vocabularyLookup:VocabularyLookupItem[]=vocabulary.flatMap(word=>{
@@ -50,7 +52,7 @@ export const vocabularyLookup:VocabularyLookupItem[]=vocabulary.flatMap(word=>{
  seen.add(dedupeKey);
  const lesson=lessonById.get(word.lessonId);
  const unit=lesson?.unitId?unitById.get(lesson.unitId):undefined;
- const book=unit?books.find(entry=>entry.unitIds.includes(unit.id)):undefined;
+ const book=unit?bookByUnitId.get(unit.id):undefined;
  const normalizedSpacedPinyin=normalizePinyin(word.pinyin);
  return [{
   id:'v1:'+word.lessonId+':'+word.text+':'+normalizedSpacedPinyin.replace(/\s/g,''),
@@ -59,7 +61,7 @@ export const vocabularyLookup:VocabularyLookupItem[]=vocabulary.flatMap(word=>{
   normalizedPinyin:normalizedSpacedPinyin.replace(/\s/g,''),
   normalizedSpacedPinyin,
   meaning:word.meaning,
-  characters:Array.from(word.text).filter(char=>/[\u3400-\u9fff\uf900-\ufaff]/.test(char)),
+  characters:Array.from(word.text).filter(char=>hanziPattern.test(char)),
   lessonId:word.lessonId,
   unitId:unit?.id,
   unitNumber:unit?.displayNumber??unit?.number,
