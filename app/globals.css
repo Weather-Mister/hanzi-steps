@@ -445,3 +445,21 @@ html[data-feedback-motion=off] button:is(:active,:hover) { transform: none !impo
 /* The page paints edge-to-edge; keep interactive content clear of device cutouts. */
 html { background: var(--background); }
 body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
+
+
+/* Lightweight Hanzi Steps username profiles (GitHub Pages). */
+.username-login { display:flex; align-items:center; gap:9px; flex-shrink:0; }
+.username-input {
+ min-width:180px; min-height:42px; padding:9px 12px;
+ border:1px solid var(--unit-border); border-radius:11px;
+ background:#fff; color:var(--foreground); font:inherit; font-size:.9rem;
+ outline:none;
+}
+.username-input::placeholder { color:#8a98aa; }
+.username-input:focus-visible { border-color:var(--unit-accent); box-shadow:0 0 0 3px var(--unit-tint); }
+.username-input:disabled { opacity:.65; background:#f7f8fb; }
+@media(max-width:700px) {
+ .username-login { width:100%; }
+ .username-input { min-width:0; flex:1; }
+ .username-login .primary-button { width:auto; }
+}
