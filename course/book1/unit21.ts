@@ -1481,50 +1481,6 @@ const unit:UnitData = {
         "meaning": "twenty minutes"
       }
     },
-    "從": {
-      "hanzi": "從",
-      "pinyin": "cóng",
-      "zhuyin": "ㄘㄨㄥˊ",
-      "meaning": "from",
-      "strokes": 11,
-      "note": "從 is second-tone cóng. It marks a starting point before 到 introduces the endpoint.",
-      "memory": "A narrow 彳 steps along the left while the right side stacks two person-like shapes above the finishing foot strokes.",
-      "parts": [
-        {
-          "label": "彳",
-          "name": "step component",
-          "role": "Movement cue",
-          "description": "The first three strokes form the narrow 彳 along the left edge.",
-          "strokes": [
-            0,
-            1,
-            2
-          ]
-        },
-        {
-          "label": "right",
-          "name": "right group",
-          "role": "Visual component",
-          "description": "The remaining eight strokes build two person-like upper shapes and the lower movement strokes, ending with a long rightward sweep.",
-          "strokes": [
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ]
-        }
-      ],
-      "layout": "side",
-      "example": {
-        "text": "從早上到中午",
-        "pinyin": "cóng zǎoshàng dào zhōngwǔ",
-        "meaning": "from morning to noon"
-      }
-    },
     "午": {
       "hanzi": "午",
       "pinyin": "wǔ",
@@ -1646,6 +1602,50 @@ const unit:UnitData = {
         "text": "什麼時候",
         "pinyin": "shénme shíhou",
         "meaning": "when"
+      }
+    },
+    "從": {
+      "hanzi": "從",
+      "pinyin": "cóng",
+      "zhuyin": "ㄘㄨㄥˊ",
+      "meaning": "from",
+      "strokes": 11,
+      "note": "從 is second-tone cóng. It marks a starting point before 到 introduces the endpoint.",
+      "memory": "A narrow 彳 steps along the left while the right side stacks two person-like shapes above the finishing foot strokes.",
+      "parts": [
+        {
+          "label": "彳",
+          "name": "step component",
+          "role": "Movement cue",
+          "description": "The first three strokes form the narrow 彳 along the left edge.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "right",
+          "name": "right group",
+          "role": "Visual component",
+          "description": "The remaining eight strokes build two person-like upper shapes and the lower movement strokes, ending with a long rightward sweep.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "從早上到中午",
+        "pinyin": "cóng zǎoshàng dào zhōngwǔ",
+        "meaning": "from morning to noon"
       }
     },
     "空": {
