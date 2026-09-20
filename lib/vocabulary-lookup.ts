@@ -1,4 +1,4 @@
-import {books,characters,lessons,units,vocabulary} from './curriculum';
+import {books,characters,lessons,units,vocabulary} from './curriculum.ts';
 
 export type VocabularyLookupItem={
  id:string;
