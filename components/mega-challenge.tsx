@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue} from '@/lib/mega-challenge';
@@ -8,6 +8,7 @@ import {useMegaMastery} from '@/lib/use-mega-mastery';
 import {WritingPad} from './writing-pad';
 
 type Result={item:VocabularyLookupItem;perfect:boolean};
+const itemById=new Map(vocabularyLookup.map(item=>[item.id,item]));
 
 export function MegaChallenge({
  open,onOpenChange,completed,userKey,theme,
@@ -15,11 +16,9 @@ export function MegaChallenge({
  const {mastered,loading:masteryLoading,saving,error,setMastered}=useMegaMastery(userKey);
  const learned=useMemo(()=>learnedVocabulary(completed),[completed]);
  const eligible=useMemo(()=>eligibleMegaVocabulary(completed,mastered),[completed,mastered]);
- const itemById=useMemo(()=>new Map(vocabularyLookup.map(item=>[item.id,item])),[]);
  const masteredItems=useMemo(()=>vocabularyLookup.filter(item=>mastered.has(item.id)),[mastered]);
- const learnedKey=learned.map(item=>item.id).join('|');
  const [queue,setQueue]=useState<string[]|null>(null);
- const [knownLearned,setKnownLearned]=useState<Set<string>>(new Set());
+ const knownLearned=useRef<Set<string>>(new Set());
  const [charIndex,setCharIndex]=useState(0);
  const [wordPerfect,setWordPerfect]=useState(true);
  const [result,setResult]=useState<Result|null>(null);
@@ -30,16 +29,16 @@ export function MegaChallenge({
   if(!open||masteryLoading)return;
   if(queue===null){
    setQueue(makeMegaQueue(eligible,Date.now().toString(36)+Math.random().toString(36)));
-   setKnownLearned(new Set(learned.map(item=>item.id)));
+   knownLearned.current=new Set(learned.map(item=>item.id));
    return;
   }
-  const fresh=eligible.filter(item=>!knownLearned.has(item.id));
+  const fresh=eligible.filter(item=>!knownLearned.current.has(item.id));
   if(fresh.length){
    const additions=makeMegaQueue(fresh,Date.now().toString(36)+Math.random().toString(36));
    setQueue(current=>current?[...current,...additions]:additions);
   }
-  setKnownLearned(new Set(learned.map(item=>item.id)));
- },[open,masteryLoading,learnedKey]);
+  knownLearned.current=new Set(learned.map(item=>item.id));
+ },[open,masteryLoading,queue,eligible,learned]);
 
  const current=queue?.length?itemById.get(queue[0]):undefined;
  const currentChar=current?.characters[charIndex];
@@ -146,7 +145,7 @@ export function MegaChallenge({
      completionDelayMs={900}
      onComplete={assisted=>finishCharacter(gaveUp||assisted)}
     />
-    {result?<><div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
+    {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
      <div className="mega-inline-copy">
       <span className="mega-result-kicker">{result.perfect?'Perfect recall':'Completed with guides'}</span>
@@ -157,8 +156,7 @@ export function MegaChallenge({
       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
       {result.perfect&&<button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>}
      </div>
-    </div>
-</>:
+    </div>:
     <div className="mega-give-up-row">
      {gaveUp?<span className="mega-guides-on" role="status">All guides are on.</span>:
       <button className="text-button mega-give-up-button" onClick={giveUp}>Give up · show all guides</button>}
