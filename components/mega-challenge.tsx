@@ -25,6 +25,7 @@ export function MegaChallenge({
  const [result,setResult]=useState<Result|null>(null);
  const [view,setView]=useState<'challenge'|'mastered'>('challenge');
  const [confirmItem,setConfirmItem]=useState<VocabularyLookupItem|null>(null);
+ const [gaveUp,setGaveUp]=useState(false);
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
@@ -49,6 +50,7 @@ export function MegaChallenge({
   setWordPerfect(true);
   setResult(null);
   setConfirmItem(null);
+  setGaveUp(false);
  }
 
  function finishCharacter(assisted:boolean){
@@ -56,6 +58,7 @@ export function MegaChallenge({
   const perfect=combineWordPerfect(wordPerfect,assisted);
   if(charIndex+1<current.characters.length){
    setWordPerfect(perfect);
+   setGaveUp(false);
    setCharIndex(index=>index+1);
    return;
   }
@@ -76,7 +79,14 @@ export function MegaChallenge({
 
  function switchView(next:'challenge'|'mastered'){
   setConfirmItem(null);
+  setGaveUp(false);
   setView(next);
+ }
+
+ function giveUp(){
+  if(result||gaveUp)return;
+  setConfirmItem(null);
+  setGaveUp(true);
  }
 
  async function markMastered(item:VocabularyLookupItem){
@@ -129,7 +139,15 @@ export function MegaChallenge({
      </div>
      <p className="mega-character-label">{result?'Word complete':`Character ${charIndex+1} of ${current.characters.length}`}</p>
     </div>
-    <WritingPad key={current.id+':'+charIndex} char={currentChar} mode="memory" strict revealStrokeAfterMisses={5} completionDelayMs={900} onComplete={finishCharacter}/>
+    <WritingPad
+     key={current.id+':'+charIndex+':'+(gaveUp?'guided':'memory')}
+     char={currentChar}
+     mode={gaveUp?'trace':'memory'}
+     strict={!gaveUp}
+     revealStrokeAfterMisses={gaveUp?undefined:5}
+     completionDelayMs={900}
+     onComplete={assisted=>finishCharacter(gaveUp||assisted)}
+    />
     {result?<><div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
      <div className="mega-inline-copy">
@@ -151,17 +169,10 @@ export function MegaChallenge({
       <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>}</>:
-    confirmItem?<div className="mega-master-confirm" role="group" aria-label="Add word to Mastered">
-     <div>
-      <strong>Add <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
-      <p>It will stay out of Mega Challenge until you restore it.</p>
-     </div>
-     <div className="mega-master-confirm-actions">
-      <button className="text-button" disabled={saving} onClick={()=>setConfirmItem(null)}>Cancel</button>
-      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Add to Mastered'}</button>
-     </div>
-    </div>:
-    <button className="text-button mega-know-button" onClick={()=>setConfirmItem(current)}>Add to Mastered</button>}
+    <div className="mega-give-up-row">
+     {gaveUp?<span className="mega-guides-on" role="status">All guides are on.</span>:
+      <button className="text-button mega-give-up-button" onClick={giveUp}>Give up · show all guides</button>}
+    </div>}
    </section>:
    eligible.length>0?<section className="mega-complete">
     <Trophy size={42}/>
