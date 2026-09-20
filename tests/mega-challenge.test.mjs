@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {advanceMegaQueue,eligibleMegaVocabulary,makeMegaQueue} from '../lib/mega-challenge.ts';
+import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue} from '../lib/mega-challenge.ts';
 import {vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 test('Mega Challenge eligibility follows completed lesson IDs and mastered exclusions',()=>{
@@ -26,4 +26,25 @@ test('challenge queue contains each eligible ID once',()=>{
  const queue=makeMegaQueue(items,'test-seed');
  assert.equal(queue.length,items.length);
  assert.equal(new Set(queue).size,items.length);
+});
+
+
+test('multi-character word is perfect only when every character is first-pass perfect',()=>{
+ let perfect=true;
+ perfect=combineWordPerfect(perfect,false);
+ assert.equal(perfect,true);
+ perfect=combineWordPerfect(perfect,true);
+ assert.equal(perfect,false);
+ perfect=combineWordPerfect(perfect,false);
+ assert.equal(perfect,false);
+});
+
+test('newly completed lessons automatically add their vocabulary to eligibility',()=>{
+ const first=vocabularyLookup.find(item=>item.characters.length>0);
+ const second=vocabularyLookup.find(item=>item.characters.length>0&&item.lessonId!==first?.lessonId);
+ assert.ok(first&&second);
+ const early=eligibleMegaVocabulary(new Set([first.lessonId]),new Set());
+ const later=eligibleMegaVocabulary(new Set([first.lessonId,second.lessonId]),new Set());
+ assert.ok(later.length>=early.length);
+ assert.ok(later.some(item=>item.lessonId===second.lessonId));
 });
