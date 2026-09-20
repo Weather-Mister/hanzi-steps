@@ -1,10 +1,1339 @@
 import type {UnitData} from '../schema.ts';
-const unit:UnitData={schemaVersion:1,bookId:'book-1',order:23,unit:{id:'unit-23',number:23,theme:'teal',label:'Method questions & familiar actions',title:'How Do You Do It?',description:'1 new word plus a new question pattern. Ask how an action is done and distinguish 怎麼 from 怎麼樣.',chars:[],lessonIds:['u23-method','u23-do','u23-play','u23-contrast','u23-order','u23-transfer','u23-review'],banner:{text:'這個怎麼做？',pinyin:'Zhè ge zěnme zuò?'},goal:{text:'你怎麼學中文？',pinyin:'Nǐ zěnme xué Zhōngwén?',meaning:'How do you study Chinese?'},grammarIds:['u23-how-zenme','u23-how-vs-zenmeyang'],bookReference:'A Course in Contemporary Chinese 1 · Lesson 8, pp. 160–175. 怎麼 grammar and communicative practice; original Hanzi Steps examples.'},reviewLessonId:'u23-review',lessons:[
-{id:'u23-method',title:'Ask How',subtitle:'Put 怎麼 before an action to ask about method.',chars:[],minutes:'7–9 min',unitId:'unit-23',review:false,steps:[{id:'u23-method-01',type:'grammar',grammar:'u23-how-zenme'},{id:'u23-method-02',type:'phrase',phrase:'u23-study'},{id:'u23-method-03',type:'order',phrase:'u23-study',tokens:['中文','學','怎麼','你']},{id:'u23-method-04',type:'select',prompt:'Where does 怎麼 go?',options:['before the action','after the object'],answer:'before the action',explanation:'怎麼 is an adverb placed before the action phrase.',grammarIds:['u23-how-zenme']}]},
-{id:'u23-do',title:'How Do You Do This?',subtitle:'Use 怎麼 with familiar actions.',chars:[],minutes:'7–9 min',unitId:'unit-23',review:false,steps:[{id:'u23-do-01',type:'phrase',phrase:'u23-do'},{id:'u23-do-02',type:'order',phrase:'u23-do',tokens:['做','怎麼','這個']},{id:'u23-do-03',type:'phrase',phrase:'u23-sing'},{id:'u23-do-04',type:'select',prompt:'Which asks for a method?',options:['這個怎麼做？','這個怎麼樣？'],answer:'這個怎麼做？',explanation:'怎麼 + 做 asks how to do or make it.',grammarIds:['u23-how-zenme']}]},
-{id:'u23-play',title:'Play & Have Fun',subtitle:'Use 玩 as an action verb.',chars:[],minutes:'6–8 min',unitId:'unit-23',review:false,steps:[{id:'u23-play-01',type:'phrase',phrase:'u23-play'},{id:'u23-play-02',type:'order',phrase:'u23-play',tokens:['玩','怎麼','這個']},{id:'u23-play-03',type:'select',prompt:'Which is the action “to play; have fun”?',options:['玩','好玩'],answer:'玩',explanation:'玩 is the action; 好玩 means fun or enjoyable.'},{id:'u23-play-04',type:'select',prompt:'Complete: 這個___玩？',options:['怎麼','怎麼樣'],answer:'怎麼',explanation:'An action follows, so use 怎麼.',grammarIds:['u23-how-zenme']}]},
-{id:'u23-contrast',title:'怎麼 or 怎麼樣?',subtitle:'Separate method from evaluation.',chars:[],minutes:'8–10 min',unitId:'unit-23',review:false,steps:[{id:'u23-contrast-01',type:'grammar',grammar:'u23-how-vs-zenmeyang'},{id:'u23-contrast-02',type:'phrase',phrase:'u23-opinion'},{id:'u23-contrast-03',type:'phrase',phrase:'u23-food-method'},{id:'u23-contrast-04',type:'select',prompt:'You want an opinion about a dish.',options:['這個菜怎麼樣？','這個菜怎麼做？'],answer:'這個菜怎麼樣？',explanation:'怎麼樣 asks for an evaluation.',grammarIds:['u23-how-vs-zenmeyang']}]},
-{id:'u23-order',title:'Keep the Action After 怎麼',subtitle:'Build clean method questions.',chars:[],minutes:'6–8 min',unitId:'unit-23',review:false,steps:[{id:'u23-order-01',type:'phrase',phrase:'u23-go'},{id:'u23-order-02',type:'order',phrase:'u23-go',tokens:['學校','去','怎麼','你']},{id:'u23-order-03',type:'phrase',phrase:'u23-food-method'},{id:'u23-order-04',type:'order',phrase:'u23-food-method',tokens:['做','怎麼','這個菜']}]},
-{id:'u23-transfer',title:'Method or Evaluation?',subtitle:'Decide what information is wanted.',chars:[],minutes:'6–8 min',unitId:'unit-23',review:false,steps:[{id:'u23-transfer-01',type:'phrase',phrase:'u23-sing'},{id:'u23-transfer-02',type:'phrase',phrase:'u23-opinion'},{id:'u23-transfer-03',type:'select',prompt:'Which expects instructions?',options:['這個怎麼做？','這個怎麼樣？'],answer:'這個怎麼做？',explanation:'怎麼 + action asks for a method.',grammarIds:['u23-how-vs-zenmeyang']},{id:'u23-transfer-04',type:'select',prompt:'Which expects an opinion?',options:['這個怎麼樣？','這個怎麼玩？'],answer:'這個怎麼樣？',explanation:'怎麼樣 asks how something is.',grammarIds:['u23-how-vs-zenmeyang']}]},
-{id:'u23-review',title:'Unit 23 Review',subtitle:'Method questions and the 怎麼/怎麼樣 contrast.',chars:[],minutes:'8–10 min',unitId:'unit-23',review:true,steps:[{id:'u23-review-01',type:'phrase',phrase:'u23-study'},{id:'u23-review-02',type:'order',phrase:'u23-study',tokens:['中文','學','怎麼','你']},{id:'u23-review-03',type:'select',prompt:'Method question:',options:['你怎麼學中文？','中文怎麼樣？'],answer:'你怎麼學中文？',explanation:'怎麼 modifies 學.',grammarIds:['u23-how-zenme']},{id:'u23-review-04',type:'select',prompt:'Opinion question:',options:['這個菜怎麼樣？','這個菜怎麼做？'],answer:'這個菜怎麼樣？',explanation:'怎麼樣 asks for an evaluation.',grammarIds:['u23-how-vs-zenmeyang']},{id:'u23-review-05',type:'phrase',phrase:'u23-play'}]}],newVocabulary:[{text:'玩',pinyin:'wán',meaning:'to play; have fun',lessonId:'u23-play',core:true}],reviewVocabulary:['你','我','這','個','做','唱歌','學','中文','去','學校','怎麼樣','菜','好玩'],newCharacters:[],reviewCharacters:[],characters:{},grammarRules:{'u23-how-zenme':{id:'u23-how-zenme',title:'Ask how with 怎麼',pattern:'Subject / Topic + 怎麼 + Action?',explanation:'怎麼 is a question adverb used to ask the way or method an action is carried out. Put it before the action verb or action phrase.',examples:[{text:'你怎麼學中文？',pinyin:'Nǐ zěnme xué Zhōngwén?',meaning:'How do you study Chinese?'},{text:'這個菜怎麼做？',pinyin:'Zhè ge cài zěnme zuò?',meaning:'How is this dish made?'}],remember:'If the answer would be a method or procedure, use 怎麼 before the action.',words:['怎麼']},'u23-how-vs-zenmeyang':{id:'u23-how-vs-zenmeyang',title:'怎麼 is not 怎麼樣',pattern:'怎麼 + Action?  vs.  Topic + 怎麼樣?',explanation:'怎麼 asks how to perform an action. 怎麼樣 asks how something is or what someone thinks of it. They are not interchangeable.',examples:[{text:'這個菜怎麼做？',pinyin:'Zhè ge cài zěnme zuò?',meaning:'How is this dish made?'},{text:'這個菜怎麼樣？',pinyin:'Zhè ge cài zěnmeyàng?',meaning:'How is this dish?'}],remember:'Action after the question word → 怎麼. Evaluation of a topic → 怎麼樣.',words:['怎麼','怎麼樣']}},grammarIntroductions:[{id:'u23-how-zenme',kind:'rule',ref:'u23-how-zenme',lessonId:'u23-method',stepId:'u23-method-01'},{id:'u23-how-vs-zenmeyang',kind:'rule',ref:'u23-how-vs-zenmeyang',lessonId:'u23-contrast',stepId:'u23-contrast-01'}],reviewGrammar:[],phrases:{'u23-study':{text:'你怎麼學中文？',pinyin:'Nǐ zěnme xué Zhōngwén?',meaning:'How do you study Chinese?',note:'怎麼 asks about the method.',tokens:['你','怎麼','學','中文'],grammarIds:['u23-how-zenme']},'u23-do':{text:'這個怎麼做？',pinyin:'Zhè ge zěnme zuò?',meaning:'How do you do/make this?',note:'怎麼 comes before 做.',tokens:['這個','怎麼','做'],grammarIds:['u23-how-zenme']},'u23-sing':{text:'這個歌怎麼唱？',pinyin:'Zhè ge gē zěnme chàng?',meaning:'How do you sing this song?',note:'Textbook-style method question.',tokens:['這個歌','怎麼','唱'],grammarIds:['u23-how-zenme']},'u23-play':{text:'這個怎麼玩？',pinyin:'Zhè ge zěnme wán?',meaning:'How do you play this?',note:'玩 is the action being asked about.',tokens:['這個','怎麼','玩'],grammarIds:['u23-how-zenme']},'u23-opinion':{text:'這個菜怎麼樣？',pinyin:'Zhè ge cài zěnmeyàng?',meaning:'How is this dish?',note:'怎麼樣 asks for an opinion.',tokens:['這個菜','怎麼樣'],grammarIds:['u23-how-vs-zenmeyang']},'u23-food-method':{text:'這個菜怎麼做？',pinyin:'Zhè ge cài zěnme zuò?',meaning:'How is this dish made?',note:'怎麼 asks about method.',tokens:['這個菜','怎麼','做'],grammarIds:['u23-how-zenme','u23-how-vs-zenmeyang']},'u23-go':{text:'你怎麼去學校？',pinyin:'Nǐ zěnme qù xuéxiào?',meaning:'How do you go to school?',note:'怎麼 precedes the action phrase 去學校.',tokens:['你','怎麼','去','學校'],grammarIds:['u23-how-zenme']}},revisionStepIds:['u23-contrast-02','u23-review-04']};
+
+const unit:UnitData = {
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 23,
+  "unit": {
+    "id": "unit-23",
+    "number": 23,
+    "theme": "teal",
+    "label": "Recent routines, useful expressions & permission",
+    "title": "Can I Go Check It Out?",
+    "description": "12 new words and forms. Finish Lesson 7 with recent routines, writing characters, useful everyday expressions, and asking or denying permission.",
+    "chars": [
+      "字",
+      "等",
+      "事",
+      "意",
+      "思",
+      "問"
+    ],
+    "lessonIds": [
+      "u23-method",
+      "u23-do",
+      "u23-play",
+      "u23-contrast",
+      "u23-order",
+      "u23-transfer",
+      "u23-review"
+    ],
+    "banner": {
+      "text": "我最近每天都很忙。",
+      "pinyin": "Wǒ zuìjìn měitiān dōu hěn máng."
+    },
+    "goal": {
+      "text": "我可不可以去看比賽？",
+      "pinyin": "Wǒ kě bù kěyǐ qù kàn bǐsài?",
+      "meaning": "May I go watch the game?"
+    },
+    "grammarIds": [
+      "u23-permission-keyi",
+      "u23-permission-negative",
+      "u23-permission-questions"
+    ],
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 7, pp. 135–145. Remaining dialogue vocabulary and permission use of 可以; original Hanzi Steps examples and exercises."
+  },
+  "reviewLessonId": "u23-review",
+  "lessons": [
+    {
+      "id": "u23-method",
+      "title": "Lately, Every Day",
+      "subtitle": "Finish the routine vocabulary from Lesson 7.",
+      "chars": [],
+      "minutes": "6–8 min",
+      "unitId": "unit-23",
+      "review": false,
+      "steps": [
+        {
+          "id": "u23-method-01",
+          "type": "phrase",
+          "phrase": "u23-recent-busy"
+        },
+        {
+          "id": "u23-method-02",
+          "type": "order",
+          "phrase": "u23-recent-busy",
+          "tokens": [
+            "忙",
+            "我",
+            "最近",
+            "很"
+          ]
+        },
+        {
+          "id": "u23-method-03",
+          "type": "phrase",
+          "phrase": "u23-everyday-class"
+        },
+        {
+          "id": "u23-method-04",
+          "type": "order",
+          "phrase": "u23-everyday-class",
+          "tokens": [
+            "上課",
+            "都",
+            "我",
+            "每天",
+            "晚上"
+          ]
+        },
+        {
+          "id": "u23-method-05",
+          "type": "select",
+          "prompt": "Which word means “recently; lately”? ",
+          "options": [
+            "最近",
+            "每天",
+            "晚上"
+          ],
+          "answer": "最近",
+          "explanation": "最近 means recently or lately."
+        },
+        {
+          "id": "u23-method-06",
+          "type": "select",
+          "prompt": "Which expression means “every day”? ",
+          "options": [
+            "每天",
+            "每",
+            "最近"
+          ],
+          "answer": "每天",
+          "explanation": "每天 combines 每 with 天 to mean every day.",
+          "grammarIds": [
+            "u22-every-dou"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u23-do",
+      "title": "Wait a Moment",
+      "subtitle": "Say you will do something later or that you are occupied.",
+      "chars": [
+        "等",
+        "事"
+      ],
+      "minutes": "10–12 min",
+      "unitId": "unit-23",
+      "review": false,
+      "steps": [
+        {
+          "id": "u23-do-等-intro",
+          "type": "intro",
+          "char": "等"
+        },
+        {
+          "id": "u23-do-等-trace",
+          "type": "trace",
+          "char": "等"
+        },
+        {
+          "id": "u23-do-等-build",
+          "type": "build",
+          "char": "等"
+        },
+        {
+          "id": "u23-do-等-complete",
+          "type": "complete",
+          "char": "等"
+        },
+        {
+          "id": "u23-do-等-memory",
+          "type": "memory",
+          "char": "等"
+        },
+        {
+          "id": "u23-do-事-intro",
+          "type": "intro",
+          "char": "事"
+        },
+        {
+          "id": "u23-do-事-trace",
+          "type": "trace",
+          "char": "事"
+        },
+        {
+          "id": "u23-do-事-build",
+          "type": "build",
+          "char": "事"
+        },
+        {
+          "id": "u23-do-事-complete",
+          "type": "complete",
+          "char": "事"
+        },
+        {
+          "id": "u23-do-事-memory",
+          "type": "memory",
+          "char": "事"
+        },
+        {
+          "id": "u23-do-01",
+          "type": "phrase",
+          "phrase": "u23-wait"
+        },
+        {
+          "id": "u23-do-02",
+          "type": "order",
+          "phrase": "u23-wait",
+          "tokens": [
+            "一下",
+            "等"
+          ]
+        },
+        {
+          "id": "u23-do-03",
+          "type": "phrase",
+          "phrase": "u23-have-business"
+        },
+        {
+          "id": "u23-do-04",
+          "type": "order",
+          "phrase": "u23-have-business",
+          "tokens": [
+            "有事",
+            "我",
+            "晚上"
+          ]
+        },
+        {
+          "id": "u23-do-05",
+          "type": "select",
+          "prompt": "A friend asks whether you are free tonight. Which answer says you have something to do?",
+          "options": [
+            "我晚上有事。",
+            "我晚上有空。"
+          ],
+          "answer": "我晚上有事。",
+          "explanation": "有事 means you have something to take care of."
+        },
+        {
+          "id": "u23-do-listen-等",
+          "type": "listen",
+          "char": "等",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "等",
+            "事",
+            "字",
+            "意"
+          ],
+          "answer": "等",
+          "explanation": "等 is děng, the first character of 等一下."
+        },
+        {
+          "id": "u23-do-listen-事",
+          "type": "listen",
+          "char": "事",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "事",
+            "等",
+            "思",
+            "字"
+          ],
+          "answer": "事",
+          "explanation": "事 is shì, the second character of 有事."
+        }
+      ]
+    },
+    {
+      "id": "u23-play",
+      "title": "Writing Characters",
+      "subtitle": "Talk about beginning to write and finding it interesting.",
+      "chars": [
+        "字",
+        "意",
+        "思"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-23",
+      "review": false,
+      "steps": [
+        {
+          "id": "u23-play-字-intro",
+          "type": "intro",
+          "char": "字"
+        },
+        {
+          "id": "u23-play-字-trace",
+          "type": "trace",
+          "char": "字"
+        },
+        {
+          "id": "u23-play-字-build",
+          "type": "build",
+          "char": "字"
+        },
+        {
+          "id": "u23-play-字-complete",
+          "type": "complete",
+          "char": "字"
+        },
+        {
+          "id": "u23-play-字-memory",
+          "type": "memory",
+          "char": "字"
+        },
+        {
+          "id": "u23-play-意-intro",
+          "type": "intro",
+          "char": "意"
+        },
+        {
+          "id": "u23-play-意-trace",
+          "type": "trace",
+          "char": "意"
+        },
+        {
+          "id": "u23-play-意-build",
+          "type": "build",
+          "char": "意"
+        },
+        {
+          "id": "u23-play-意-complete",
+          "type": "complete",
+          "char": "意"
+        },
+        {
+          "id": "u23-play-意-memory",
+          "type": "memory",
+          "char": "意"
+        },
+        {
+          "id": "u23-play-思-intro",
+          "type": "intro",
+          "char": "思"
+        },
+        {
+          "id": "u23-play-思-trace",
+          "type": "trace",
+          "char": "思"
+        },
+        {
+          "id": "u23-play-思-build",
+          "type": "build",
+          "char": "思"
+        },
+        {
+          "id": "u23-play-思-complete",
+          "type": "complete",
+          "char": "思"
+        },
+        {
+          "id": "u23-play-思-memory",
+          "type": "memory",
+          "char": "思"
+        },
+        {
+          "id": "u23-play-01",
+          "type": "phrase",
+          "phrase": "u23-just-started"
+        },
+        {
+          "id": "u23-play-02",
+          "type": "order",
+          "phrase": "u23-just-started",
+          "tokens": [
+            "寫字",
+            "我",
+            "剛開始"
+          ]
+        },
+        {
+          "id": "u23-play-03",
+          "type": "phrase",
+          "phrase": "u23-interesting"
+        },
+        {
+          "id": "u23-play-04",
+          "type": "order",
+          "phrase": "u23-interesting",
+          "tokens": [
+            "很有意思",
+            "我",
+            "覺得",
+            "寫字"
+          ]
+        },
+        {
+          "id": "u23-play-05",
+          "type": "select",
+          "prompt": "Which expression means “to write characters”? ",
+          "options": [
+            "寫字",
+            "有意思",
+            "剛開始"
+          ],
+          "answer": "寫字",
+          "explanation": "寫字 is the familiar verb 寫 plus the newly taught noun 字."
+        },
+        {
+          "id": "u23-play-06",
+          "type": "select",
+          "prompt": "Which sentence says you just started writing characters?",
+          "options": [
+            "我剛開始寫字。",
+            "我每天寫字。"
+          ],
+          "answer": "我剛開始寫字。",
+          "explanation": "剛開始 marks that something has just begun."
+        }
+      ]
+    },
+    {
+      "id": "u23-contrast",
+      "title": "Ask the Teacher",
+      "subtitle": "Use 問 and review a softened repeated action.",
+      "chars": [
+        "問"
+      ],
+      "minutes": "6–8 min",
+      "unitId": "unit-23",
+      "review": false,
+      "steps": [
+        {
+          "id": "u23-contrast-01",
+          "type": "phrase",
+          "phrase": "u23-ask-teacher"
+        },
+        {
+          "id": "u23-contrast-02",
+          "type": "order",
+          "phrase": "u23-ask-teacher",
+          "tokens": [
+            "老師",
+            "我要",
+            "問問"
+          ]
+        },
+        {
+          "id": "u23-contrast-03",
+          "type": "select",
+          "prompt": "What does 問 mean?",
+          "options": [
+            "to ask",
+            "to wait",
+            "to write"
+          ],
+          "answer": "to ask",
+          "explanation": "問 means to ask."
+        },
+        {
+          "id": "u23-contrast-04",
+          "type": "select",
+          "prompt": "Why is 問 repeated in 問問?",
+          "options": [
+            "It makes the action sound lighter or more tentative.",
+            "It changes 問 into a noun."
+          ],
+          "answer": "It makes the action sound lighter or more tentative.",
+          "explanation": "This reuses the softened action pattern taught earlier.",
+          "grammarIds": [
+            "u21-softened-action"
+          ]
+        },
+        {
+          "id": "u23-contrast-05",
+          "type": "phrase",
+          "phrase": "u23-ask"
+        },
+        {
+          "id": "u23-contrast-06",
+          "type": "order",
+          "phrase": "u23-ask",
+          "tokens": [
+            "老師",
+            "我",
+            "問"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u23-order",
+      "title": "You May Do It",
+      "subtitle": "Use 可以 to grant permission, not just possibility.",
+      "chars": [],
+      "minutes": "7–9 min",
+      "unitId": "unit-23",
+      "review": false,
+      "steps": [
+        {
+          "id": "u23-order-01",
+          "type": "grammar",
+          "grammar": "u23-permission-keyi"
+        },
+        {
+          "id": "u23-order-02",
+          "type": "phrase",
+          "phrase": "u23-may-write"
+        },
+        {
+          "id": "u23-order-03",
+          "type": "order",
+          "phrase": "u23-may-write",
+          "tokens": [
+            "寫字",
+            "你",
+            "在這裡",
+            "可以"
+          ]
+        },
+        {
+          "id": "u23-order-04",
+          "type": "select",
+          "prompt": "In this unit, what does 可以 express in 你可以在這裡寫字?",
+          "options": [
+            "permission",
+            "past time",
+            "comparison"
+          ],
+          "answer": "permission",
+          "explanation": "Here 可以 means that the action is permitted.",
+          "grammarIds": [
+            "u23-permission-keyi"
+          ]
+        },
+        {
+          "id": "u23-order-05",
+          "type": "phrase",
+          "phrase": "u23-may-watch"
+        },
+        {
+          "id": "u23-order-06",
+          "type": "order",
+          "phrase": "u23-may-watch",
+          "tokens": [
+            "看比賽",
+            "可以",
+            "你",
+            "去"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u23-transfer",
+      "title": "May I? / You May Not",
+      "subtitle": "Ask for permission and say an action is not allowed.",
+      "chars": [],
+      "minutes": "9–11 min",
+      "unitId": "unit-23",
+      "review": false,
+      "steps": [
+        {
+          "id": "u23-transfer-01",
+          "type": "grammar",
+          "grammar": "u23-permission-negative"
+        },
+        {
+          "id": "u23-transfer-02",
+          "type": "phrase",
+          "phrase": "u23-may-not-sing"
+        },
+        {
+          "id": "u23-transfer-03",
+          "type": "order",
+          "phrase": "u23-may-not-sing",
+          "tokens": [
+            "唱歌",
+            "你",
+            "在這裡",
+            "不可以"
+          ]
+        },
+        {
+          "id": "u23-transfer-04",
+          "type": "grammar",
+          "grammar": "u23-permission-questions"
+        },
+        {
+          "id": "u23-transfer-05",
+          "type": "phrase",
+          "phrase": "u23-can-i-game"
+        },
+        {
+          "id": "u23-transfer-06",
+          "type": "order",
+          "phrase": "u23-can-i-game",
+          "tokens": [
+            "看比賽",
+            "我",
+            "可不可以",
+            "去"
+          ]
+        },
+        {
+          "id": "u23-transfer-07",
+          "type": "phrase",
+          "phrase": "u23-can-i-game-ma"
+        },
+        {
+          "id": "u23-transfer-08",
+          "type": "order",
+          "phrase": "u23-can-i-game-ma",
+          "tokens": [
+            "嗎",
+            "看比賽",
+            "我",
+            "可以",
+            "去"
+          ]
+        },
+        {
+          "id": "u23-transfer-09",
+          "type": "select",
+          "prompt": "Which form says the action is not permitted?",
+          "options": [
+            "不可以",
+            "可不可以",
+            "可以嗎"
+          ],
+          "answer": "不可以",
+          "explanation": "不可以 is the negative permission form.",
+          "grammarIds": [
+            "u23-permission-negative"
+          ]
+        },
+        {
+          "id": "u23-transfer-10",
+          "type": "select",
+          "prompt": "Which two forms can ask for permission?",
+          "options": [
+            "可不可以 and 可以嗎",
+            "不可以 and 最近"
+          ],
+          "answer": "可不可以 and 可以嗎",
+          "explanation": "Both question forms can be used to ask whether an action is allowed.",
+          "grammarIds": [
+            "u23-permission-questions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u23-review",
+      "title": "Unit 23 Review",
+      "subtitle": "Recent routines, useful expressions, writing, and permission.",
+      "chars": [
+        "字",
+        "等",
+        "事",
+        "意",
+        "思",
+        "問"
+      ],
+      "minutes": "9–12 min",
+      "unitId": "unit-23",
+      "review": true,
+      "steps": [
+        {
+          "id": "u23-review-01",
+          "type": "match",
+          "chars": [
+            "字",
+            "等",
+            "事",
+            "意",
+            "思"
+          ]
+        },
+        {
+          "id": "u23-review-02",
+          "type": "build",
+          "char": "字"
+        },
+        {
+          "id": "u23-review-03",
+          "type": "build",
+          "char": "等"
+        },
+        {
+          "id": "u23-review-04",
+          "type": "phrase",
+          "phrase": "u23-interesting"
+        },
+        {
+          "id": "u23-review-05",
+          "type": "order",
+          "phrase": "u23-interesting",
+          "tokens": [
+            "很有意思",
+            "寫字",
+            "我",
+            "覺得"
+          ]
+        },
+        {
+          "id": "u23-review-06",
+          "type": "select",
+          "prompt": "Choose the permission question.",
+          "options": [
+            "我可不可以去看比賽？",
+            "我最近去看比賽。"
+          ],
+          "answer": "我可不可以去看比賽？",
+          "explanation": "可不可以 asks whether the action is permitted.",
+          "grammarIds": [
+            "u23-permission-questions"
+          ]
+        },
+        {
+          "id": "u23-review-07",
+          "type": "select",
+          "prompt": "Choose the sentence meaning “I have something to do tonight.”",
+          "options": [
+            "我晚上有事。",
+            "我晚上有空。"
+          ],
+          "answer": "我晚上有事。",
+          "explanation": "有事 means being occupied with something."
+        },
+        {
+          "id": "u23-review-08",
+          "type": "phrase",
+          "phrase": "u23-everyday-class"
+        },
+        {
+          "id": "u23-review-09",
+          "type": "memory",
+          "char": "意"
+        },
+        {
+          "id": "u23-review-10",
+          "type": "memory",
+          "char": "思"
+        }
+      ]
+    }
+  ],
+  "newVocabulary": [
+    {
+      "text": "最近",
+      "pinyin": "zuìjìn",
+      "meaning": "recently; lately",
+      "lessonId": "u23-method",
+      "core": true
+    },
+    {
+      "text": "每天",
+      "pinyin": "měitiān",
+      "meaning": "every day",
+      "lessonId": "u23-method",
+      "core": true
+    },
+    {
+      "text": "等一下",
+      "pinyin": "děng yíxià",
+      "meaning": "wait a moment; in a little while",
+      "lessonId": "u23-do",
+      "core": true
+    },
+    {
+      "text": "有事",
+      "pinyin": "yǒu shì",
+      "meaning": "to have something to do; be occupied",
+      "lessonId": "u23-do",
+      "core": true
+    },
+    {
+      "text": "字",
+      "pinyin": "zì",
+      "meaning": "written character; word",
+      "lessonId": "u23-play",
+      "core": true
+    },
+    {
+      "text": "寫字",
+      "pinyin": "xiě zì",
+      "meaning": "to write characters",
+      "lessonId": "u23-play",
+      "core": true
+    },
+    {
+      "text": "剛開始",
+      "pinyin": "gāng kāishǐ",
+      "meaning": "to have just started; just beginning",
+      "lessonId": "u23-play",
+      "core": true
+    },
+    {
+      "text": "有意思",
+      "pinyin": "yǒu yìsi",
+      "meaning": "interesting; engaging",
+      "lessonId": "u23-play",
+      "core": true
+    },
+    {
+      "text": "問",
+      "pinyin": "wèn",
+      "meaning": "to ask",
+      "lessonId": "u23-contrast",
+      "core": true
+    },
+    {
+      "text": "不可以",
+      "pinyin": "bù kěyǐ",
+      "meaning": "may not; not allowed",
+      "lessonId": "u23-transfer",
+      "core": true
+    },
+    {
+      "text": "可不可以",
+      "pinyin": "kě bù kěyǐ",
+      "meaning": "may/can …?",
+      "lessonId": "u23-transfer",
+      "core": true
+    },
+    {
+      "text": "可以嗎",
+      "pinyin": "kěyǐ ma",
+      "meaning": "may/can …?",
+      "lessonId": "u23-transfer",
+      "core": true
+    }
+  ],
+  "reviewVocabulary": [
+    "我",
+    "你",
+    "晚上",
+    "都",
+    "上課",
+    "書法",
+    "剛",
+    "開始",
+    "寫",
+    "忙",
+    "每",
+    "有",
+    "可以",
+    "有空",
+    "看",
+    "老師",
+    "學",
+    "中文",
+    "覺得",
+    "好",
+    "不",
+    "下課",
+    "比賽",
+    "唱歌",
+    "去"
+  ],
+  "newCharacters": [
+    "字",
+    "等",
+    "事",
+    "意",
+    "思"
+  ],
+  "reviewCharacters": [
+    "問"
+  ],
+  "characters": {
+    "字": {
+      "hanzi": "字",
+      "pinyin": "zì",
+      "zhuyin": "ㄗˋ",
+      "meaning": "written character; word",
+      "strokes": 6,
+      "note": "字 is fourth-tone zì. Here it means a written Chinese character, as in 寫字.",
+      "memory": "A three-stroke roof 宀 sits over the three-stroke 子. Keep the child component centered under the roof.",
+      "parts": [
+        {
+          "label": "宀",
+          "name": "roof",
+          "role": "Visual component",
+          "description": "The first three strokes form the roof across the top of 字.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "子",
+          "name": "child component",
+          "role": "Visual component",
+          "description": "The last three strokes form 子 beneath the roof, ending with the long horizontal.",
+          "strokes": [
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "寫字",
+        "pinyin": "xiě zì",
+        "meaning": "write characters"
+      }
+    },
+    "等": {
+      "hanzi": "等",
+      "pinyin": "děng",
+      "zhuyin": "ㄉㄥˇ",
+      "meaning": "wait",
+      "strokes": 12,
+      "note": "等 is third-tone děng. In 等一下 it means to wait a moment or do something a little later.",
+      "memory": "The six-stroke bamboo top 𥫗 sits over 寺. Think of waiting under the paired bamboo marks.",
+      "parts": [
+        {
+          "label": "𥫗",
+          "name": "bamboo top",
+          "role": "Visual component",
+          "description": "The first six strokes form the paired bamboo component across the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "寺",
+          "name": "lower component",
+          "role": "Shape component",
+          "description": "The final six strokes form 寺 underneath the bamboo top.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "等一下",
+        "pinyin": "děng yíxià",
+        "meaning": "wait a moment; later"
+      }
+    },
+    "事": {
+      "hanzi": "事",
+      "pinyin": "shì",
+      "zhuyin": "ㄕˋ",
+      "meaning": "matter; thing to do",
+      "strokes": 8,
+      "note": "事 is fourth-tone shì. 有事 literally means to have a matter to deal with, so it often means being occupied.",
+      "memory": "The middle box and hand-like strokes are crossed by a final vertical hook. Keep the whole eight-stroke form compact.",
+      "parts": [
+        {
+          "label": "main",
+          "name": "upper and middle frame",
+          "role": "Character-specific shape",
+          "description": "The first seven strokes build the top line, central 口-like box, and hand-shaped middle.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "亅",
+          "name": "final hook",
+          "role": "Finishing stroke",
+          "description": "The eighth stroke is the long central vertical hook that locks the form together.",
+          "strokes": [
+            7
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "有事",
+        "pinyin": "yǒu shì",
+        "meaning": "have something to do; be occupied"
+      }
+    },
+    "意": {
+      "hanzi": "意",
+      "pinyin": "yì",
+      "zhuyin": "ㄧˋ",
+      "meaning": "idea; meaning",
+      "strokes": 13,
+      "note": "意 is fourth-tone yì. In 有意思, it combines with 思 to describe something as interesting or engaging.",
+      "memory": "音 fills the upper nine strokes and 心 forms the four-stroke base. Keep the heart component broad enough to support the top.",
+      "parts": [
+        {
+          "label": "音",
+          "name": "sound component",
+          "role": "Upper component",
+          "description": "The first nine strokes form 音 at the top of 意.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "label": "心",
+          "name": "heart component",
+          "role": "Meaning/shape component",
+          "description": "The final four strokes form 心 across the bottom.",
+          "strokes": [
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "有意思",
+        "pinyin": "yǒu yìsi",
+        "meaning": "interesting; engaging"
+      }
+    },
+    "思": {
+      "hanzi": "思",
+      "pinyin": "sī",
+      "zhuyin": "ㄙ",
+      "meaning": "think; thought",
+      "strokes": 9,
+      "note": "思 is normally read sī on its own; in 意思 the second syllable is commonly neutral: yìsi.",
+      "memory": "田 forms the five-stroke top and 心 forms the four-stroke bottom. Keep the heart slightly wider than the box above.",
+      "parts": [
+        {
+          "label": "田",
+          "name": "field component",
+          "role": "Upper component",
+          "description": "The first five strokes form the square 田 at the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "心",
+          "name": "heart component",
+          "role": "Lower component",
+          "description": "The final four strokes form 心 under 田.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "意思",
+        "pinyin": "yìsi",
+        "meaning": "meaning; idea"
+      }
+    }
+  },
+  "grammarRules": {
+    "u23-permission-keyi": {
+      "id": "u23-permission-keyi",
+      "title": "Permission with 可以",
+      "pattern": "Subject + 可以 + Verb Phrase",
+      "explanation": "可以 was already used earlier for possibility. In Lesson 7 it also grants permission: the speaker says an action is allowed. As an auxiliary verb, 可以 comes before the action.",
+      "examples": [
+        {
+          "text": "你可以在這裡寫字。",
+          "pinyin": "Nǐ kěyǐ zài zhèlǐ xiě zì.",
+          "meaning": "You may write here."
+        },
+        {
+          "text": "你可以去看比賽。",
+          "pinyin": "Nǐ kěyǐ qù kàn bǐsài.",
+          "meaning": "You may go watch the game."
+        }
+      ],
+      "remember": "Permission 可以 comes before the action it allows.",
+      "words": [
+        "可以"
+      ]
+    },
+    "u23-permission-negative": {
+      "id": "u23-permission-negative",
+      "title": "Not permitted: 不可以",
+      "pattern": "Subject + 不可以 + Verb Phrase",
+      "explanation": "不可以 says an action is not permitted. The textbook specifically treats this negative form as permission/prohibition rather than the earlier possibility sense of 可以.",
+      "examples": [
+        {
+          "text": "你不可以在這裡唱歌。",
+          "pinyin": "Nǐ bù kěyǐ zài zhèlǐ chànggē.",
+          "meaning": "You may not sing here."
+        },
+        {
+          "text": "你不可以去看比賽。",
+          "pinyin": "Nǐ bù kěyǐ qù kàn bǐsài.",
+          "meaning": "You are not allowed to go watch the game."
+        }
+      ],
+      "remember": "不可以 = not allowed / may not.",
+      "words": [
+        "不可以"
+      ]
+    },
+    "u23-permission-questions": {
+      "id": "u23-permission-questions",
+      "title": "Ask permission",
+      "pattern": "可不可以 + VP? / 可以 + VP + 嗎?",
+      "explanation": "To ask whether an action is permitted, use the A-not-A form 可不可以 before the action, or use 可以 before the action and add 嗎 at the end. In other contexts the A-not-A form can also ask about possibility; here the situation makes the permission reading clear.",
+      "examples": [
+        {
+          "text": "我可不可以去看比賽？",
+          "pinyin": "Wǒ kě bù kěyǐ qù kàn bǐsài?",
+          "meaning": "May I go watch the game?"
+        },
+        {
+          "text": "我可以去看比賽嗎？",
+          "pinyin": "Wǒ kěyǐ qù kàn bǐsài ma?",
+          "meaning": "May I go watch the game?"
+        }
+      ],
+      "remember": "可不可以 goes before the action; 可以…嗎 keeps 嗎 at the end.",
+      "words": [
+        "可不可以",
+        "可以嗎"
+      ]
+    }
+  },
+  "grammarIntroductions": [
+    {
+      "id": "u23-permission-keyi",
+      "kind": "rule",
+      "ref": "u23-permission-keyi",
+      "lessonId": "u23-order",
+      "stepId": "u23-order-01"
+    },
+    {
+      "id": "u23-permission-negative",
+      "kind": "rule",
+      "ref": "u23-permission-negative",
+      "lessonId": "u23-transfer",
+      "stepId": "u23-transfer-01"
+    },
+    {
+      "id": "u23-permission-questions",
+      "kind": "rule",
+      "ref": "u23-permission-questions",
+      "lessonId": "u23-transfer",
+      "stepId": "u23-transfer-04"
+    }
+  ],
+  "reviewGrammar": [
+    "u22-every-dou",
+    "u21-softened-action"
+  ],
+  "phrases": {
+    "u23-recent-busy": {
+      "text": "我最近很忙。",
+      "pinyin": "Wǒ zuìjìn hěn máng.",
+      "meaning": "I have been very busy lately.",
+      "note": "最近 locates the situation in the recent period.",
+      "tokens": [
+        "我",
+        "最近",
+        "很",
+        "忙"
+      ]
+    },
+    "u23-everyday-class": {
+      "text": "我每天晚上都上課。",
+      "pinyin": "Wǒ měitiān wǎnshàng dōu shàngkè.",
+      "meaning": "I have class every evening.",
+      "note": "每天 sets the repeated time; 都 links the repeated set to the activity.",
+      "tokens": [
+        "我",
+        "每天",
+        "晚上",
+        "都",
+        "上課"
+      ],
+      "grammarIds": [
+        "u22-every-dou"
+      ]
+    },
+    "u23-wait": {
+      "text": "等一下。",
+      "pinyin": "Děng yíxià.",
+      "meaning": "Wait a moment.",
+      "note": "一下 makes the request/action bounded and light.",
+      "tokens": [
+        "等",
+        "一下"
+      ]
+    },
+    "u23-have-business": {
+      "text": "我晚上有事。",
+      "pinyin": "Wǒ wǎnshàng yǒu shì.",
+      "meaning": "I have something to do tonight.",
+      "note": "有事 is a common way to say you are occupied.",
+      "tokens": [
+        "我",
+        "晚上",
+        "有事"
+      ]
+    },
+    "u23-just-started": {
+      "text": "我剛開始寫字。",
+      "pinyin": "Wǒ gāng kāishǐ xiě zì.",
+      "meaning": "I just started writing characters.",
+      "note": "剛開始 introduces something that has only just begun.",
+      "tokens": [
+        "我",
+        "剛開始",
+        "寫字"
+      ]
+    },
+    "u23-interesting": {
+      "text": "我覺得寫字很有意思。",
+      "pinyin": "Wǒ juéde xiě zì hěn yǒu yìsi.",
+      "meaning": "I think writing characters is interesting.",
+      "note": "有意思 describes something as interesting or engaging.",
+      "tokens": [
+        "我",
+        "覺得",
+        "寫字",
+        "很有意思"
+      ]
+    },
+    "u23-ask-teacher": {
+      "text": "我要問問老師。",
+      "pinyin": "Wǒ yào wènwen lǎoshī.",
+      "meaning": "I want to ask the teacher.",
+      "note": "問問 repeats the action verb to make the action sound lighter/tentative.",
+      "tokens": [
+        "我要",
+        "問問",
+        "老師"
+      ],
+      "grammarIds": [
+        "u21-softened-action"
+      ]
+    },
+    "u23-ask": {
+      "text": "我問老師。",
+      "pinyin": "Wǒ wèn lǎoshī.",
+      "meaning": "I ask the teacher.",
+      "note": "問 directly takes the person being asked.",
+      "tokens": [
+        "我",
+        "問",
+        "老師"
+      ]
+    },
+    "u23-may-write": {
+      "text": "你可以在這裡寫字。",
+      "pinyin": "Nǐ kěyǐ zài zhèlǐ xiě zì.",
+      "meaning": "You may write here.",
+      "note": "Context makes 可以 permission: the action is allowed.",
+      "tokens": [
+        "你",
+        "可以",
+        "在這裡",
+        "寫字"
+      ],
+      "grammarIds": [
+        "u23-permission-keyi"
+      ]
+    },
+    "u23-may-watch": {
+      "text": "你可以去看比賽。",
+      "pinyin": "Nǐ kěyǐ qù kàn bǐsài.",
+      "meaning": "You may go watch the game.",
+      "note": "可以 precedes the permitted action.",
+      "tokens": [
+        "你",
+        "可以",
+        "去",
+        "看比賽"
+      ],
+      "grammarIds": [
+        "u23-permission-keyi"
+      ]
+    },
+    "u23-may-not-sing": {
+      "text": "你不可以在這裡唱歌。",
+      "pinyin": "Nǐ bù kěyǐ zài zhèlǐ chànggē.",
+      "meaning": "You may not sing here.",
+      "note": "不可以 prohibits the following action.",
+      "tokens": [
+        "你",
+        "不可以",
+        "在這裡",
+        "唱歌"
+      ],
+      "grammarIds": [
+        "u23-permission-negative"
+      ]
+    },
+    "u23-can-i-game": {
+      "text": "我可不可以去看比賽？",
+      "pinyin": "Wǒ kě bù kěyǐ qù kàn bǐsài?",
+      "meaning": "May I go watch the game?",
+      "note": "可不可以 is the A-not-A permission question.",
+      "tokens": [
+        "我",
+        "可不可以",
+        "去",
+        "看比賽"
+      ],
+      "grammarIds": [
+        "u23-permission-questions"
+      ]
+    },
+    "u23-can-i-game-ma": {
+      "text": "我可以去看比賽嗎？",
+      "pinyin": "Wǒ kěyǐ qù kàn bǐsài ma?",
+      "meaning": "May I go watch the game?",
+      "note": "The statement frame keeps 可以 before the action and adds 嗎 at the end.",
+      "tokens": [
+        "我",
+        "可以",
+        "去",
+        "看比賽",
+        "嗎"
+      ],
+      "grammarIds": [
+        "u23-permission-questions"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u23-method-03",
+    "u23-contrast-04",
+    "u23-review-08"
+  ]
+};
+
 export default unit;
