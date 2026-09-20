@@ -700,7 +700,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  font-weight:700;
 }
 .mega-practice .strict-writing { max-width:380px; }
-.mega-practice .writing-frame.is-done { width:min(250px,64vw,29dvh); }
+.mega-practice .writing-frame.is-done { width:min(320px,100%); }
 .mega-practice .writing-frame.is-done ~ .stroke-status,
 .mega-practice .writing-frame.is-done ~ .pad-message { display:none; }
 .mega-practice:has(.mega-inline-result) { gap:9px; }
@@ -1187,7 +1187,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
   font-size:.74rem;
  }
  .mega-practice .writing-frame { width:min(300px,82vw); }
- .mega-practice .writing-frame.is-done { width:min(215px,56vw,24dvh); }
+ .mega-practice .writing-frame.is-done { width:min(300px,82vw); }
 
  .mega-inline-result {
   width:100%;
@@ -1274,7 +1274,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .mega-prompt .pinyin { font-size:1.15rem; }
  .mega-character-progress { margin-top:9px; }
  .mega-practice .writing-frame { width:min(258px,72vw); }
- .mega-practice .writing-frame.is-done { width:min(190px,52vw,23dvh); }
+ .mega-practice .writing-frame.is-done { width:min(258px,72vw); }
 }
 
 @media(prefers-reduced-motion:reduce) {
