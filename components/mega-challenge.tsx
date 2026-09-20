@@ -76,14 +76,16 @@ export function MegaChallenge({
  }
 
  async function markMastered(item:VocabularyLookupItem){
-  await setMastered(item.id,true);
+  const saved=await setMastered(item.id,true);
+  if(!saved)return;
   setQueue(currentQueue=>currentQueue?.filter(id=>id!==item.id)??currentQueue);
   setConfirmItem(null);
   resetWord();
  }
 
  async function restore(item:VocabularyLookupItem){
-  await setMastered(item.id,false);
+  const saved=await setMastered(item.id,false);
+  if(!saved)return;
   setQueue(currentQueue=>{
    if(currentQueue===null)return currentQueue;
    if(currentQueue.includes(item.id))return currentQueue;
