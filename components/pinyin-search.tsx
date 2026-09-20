@@ -1,6 +1,6 @@
 'use client';
 import {useMemo,useState} from 'react';
-import {Check,PenLine,Search} from 'lucide-react';
+import {ArrowLeft,Check,PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {searchVocabulary,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
@@ -42,83 +42,98 @@ export function PinyinSearch({open,onOpenChange,theme}:{open:boolean;onOpenChang
   setPracticeRound(round=>round+1);
  }
 
- return <>
-  <Dialog open={open} onOpenChange={onOpenChange}>
-   <DialogContent data-unit-theme={theme} className="pinyin-search-dialog">
-    <DialogTitle>Find by pinyin</DialogTitle>
-    <DialogDescription>Type pinyin with or without tone marks. Search never changes your progress.</DialogDescription>
-    <label className="pinyin-search-box">
+ function backToResults(){
+  setPracticeItem(null);
+  setPracticeCharIndex(0);
+  setPracticeComplete(false);
+ }
+
+ function handleOpenChange(nextOpen:boolean){
+  if(!nextOpen)backToResults();
+  onOpenChange(nextOpen);
+ }
+
+ return <Dialog open={open} onOpenChange={handleOpenChange}>
+  <DialogContent data-unit-theme={theme} className={`pinyin-search-dialog ${practiceItem?'practice-mode':''}`}>
+   {practiceItem?<>
+    <button className="text-button search-practice-back" onClick={backToResults}><ArrowLeft size={16}/>Back to results</button>
+    <div className="mega-title-row search-practice-heading">
+     <div>
+      <DialogTitle>Practice <span lang="zh-Hant-TW">{practiceItem.traditional}</span></DialogTitle>
+      <DialogDescription>Guided handwriting practice. This does not change lesson progress.</DialogDescription>
+     </div>
+     <PenLine size={28}/>
+    </div>
+
+    {practiceComplete?<section className="mega-complete search-practice-complete">
+     <Check size={42}/>
+     <h3>Practice complete</h3>
+     <p><span lang="zh-Hant-TW">{practiceItem.traditional}</span> · {practiceItem.pinyin} · {practiceItem.meaning}</p>
+     <div className="mega-confirm-actions">
+      <button className="secondary-button" onClick={backToResults}>Back to results</button>
+      <button className="primary-button" onClick={restartPractice}>Practice again</button>
+     </div>
+    </section>:practiceChar?<section className="mega-practice">
+     <div className="mega-prompt">
+      <p className="pinyin">{practiceItem.pinyin}</p>
+      <h2>{practiceItem.meaning}</h2>
+      <div className="mega-character-progress" aria-label={`Character ${practiceCharIndex+1} of ${practiceItem.characters.length}`}>
+       {practiceItem.characters.map((_,index)=><span key={index} className={index<practiceCharIndex?'done':index===practiceCharIndex?'current':''}/>)}
+      </div>
+      <p className="mega-character-label">Character {practiceCharIndex+1} of {practiceItem.characters.length}</p>
+     </div>
+     <WritingPad
+      key={practiceItem.id+':'+practiceRound+':'+practiceCharIndex}
+      char={practiceChar}
+      mode="trace"
+      onComplete={()=>finishCharacter()}
+     />
+    </section>:null}
+   </>:<>
+    <div className="pinyin-search-heading">
+     <DialogTitle>Find by pinyin</DialogTitle>
+     <DialogDescription>Type pinyin with or without tone marks. Search never changes your progress.</DialogDescription>
+    </div>
+    <div className="pinyin-search-box">
      <Search size={18}/>
      <input
       value={query}
       onChange={event=>setQuery(event.target.value)}
       placeholder="shi, xihuan, xi3huan1, lv…"
+      autoFocus
       autoCapitalize="none"
       autoCorrect="off"
       spellCheck={false}
       aria-label="Search Hanzi Steps by pinyin"
      />
-    </label>
+     {trimmed&&<button className="search-clear-button" aria-label="Clear pinyin search" onClick={()=>setQuery('')}><X size={16}/></button>}
+    </div>
     <div className="pinyin-search-results" aria-live="polite">
      {!trimmed?<p className="search-empty">Start typing a pronunciation.</p>:
       results.length===0?<p className="search-empty">No Hanzi Steps vocabulary matches that pinyin.</p>:
       <>
        <p className="search-count">{results.length===80?'Showing the first 80 matches':results.length+' '+(results.length===1?'match':'matches')}</p>
        <div className="search-result-list">{results.map(item=><article className="search-result-card" key={item.id}>
-        <div>
-         <strong lang="zh-Hant-TW">{item.traditional}</strong>
-         <span className="pinyin">{item.pinyin}</span>
+        <div className="search-result-copy">
+         <div className="search-result-title">
+          <strong lang="zh-Hant-TW">{item.traditional}</strong>
+          <span className="pinyin">{item.pinyin}</span>
+         </div>
+         <p>{item.meaning}</p>
+         {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
         </div>
-        <p>{item.meaning}</p>
-        {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
         <button
          className="secondary-button"
          disabled={!canPractice(item)}
          onClick={()=>startPractice(item)}
          aria-label={'Practice writing '+item.traditional}
         >
-         <PenLine size={15}/>Practice
+         <PenLine size={15}/>{canPractice(item)?'Practice':'Unavailable'}
         </button>
        </article>)}</div>
       </>}
     </div>
-   </DialogContent>
-  </Dialog>
-
-  <Dialog open={!!practiceItem} onOpenChange={nextOpen=>{if(!nextOpen)setPracticeItem(null)}}>
-   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
-    {practiceItem&&<>
-     <div className="mega-title-row">
-      <div>
-       <DialogTitle>Practice <span lang="zh-Hant-TW">{practiceItem.traditional}</span></DialogTitle>
-       <DialogDescription>Guided handwriting practice. This does not change lesson progress.</DialogDescription>
-      </div>
-      <PenLine size={28}/>
-     </div>
-
-     {practiceComplete?<section className="mega-complete">
-      <Check size={42}/>
-      <h3>Practice complete</h3>
-      <p><span lang="zh-Hant-TW">{practiceItem.traditional}</span> · {practiceItem.pinyin} · {practiceItem.meaning}</p>
-      <div className="mega-confirm-actions">
-       <button className="secondary-button" onClick={()=>setPracticeItem(null)}>Back to results</button>
-       <button className="primary-button" onClick={restartPractice}>Practice again</button>
-      </div>
-     </section>:practiceChar?<section className="mega-practice">
-      <div className="mega-prompt">
-       <p className="pinyin">{practiceItem.pinyin}</p>
-       <h2>{practiceItem.meaning}</h2>
-       <p>Character {practiceCharIndex+1} of {practiceItem.characters.length} · <span lang="zh-Hant-TW">{practiceChar}</span></p>
-      </div>
-      <WritingPad
-       key={practiceItem.id+':'+practiceRound+':'+practiceCharIndex}
-       char={practiceChar}
-       mode="trace"
-       onComplete={()=>finishCharacter()}
-      />
-     </section>:null}
-    </>}
-   </DialogContent>
-  </Dialog>
- </>;
+   </>}
+  </DialogContent>
+ </Dialog>;
 }
