@@ -22,3 +22,9 @@ test('search returns all curriculum matches instead of choosing a tone',()=>{
  assert.ok(results.length>0);
  assert.ok(results.every(item=>item.normalizedPinyin.includes('shi')));
 });
+
+
+test('canonical lookup does not emit duplicate vocabulary results',()=>{
+ const results=searchVocabulary('shi');
+ assert.equal(new Set(results.map(item=>item.id)).size,results.length);
+});
