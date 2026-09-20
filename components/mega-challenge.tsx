@@ -59,14 +59,12 @@ export function MegaChallenge({
    return;
   }
   setResult({item:current,perfect});
-  setWordPerfect(true);
-  setCharIndex(0);
  }
 
  function continueAfterResult(){
   if(!result)return;
   setQueue(currentQueue=>currentQueue?advanceMegaQueue(currentQueue,result.perfect):currentQueue);
-  setResult(null);
+  resetWord();
  }
 
  function practiceAgain(){
@@ -115,25 +113,25 @@ export function MegaChallenge({
       </article>)}
     </section>:
     masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
-    result?<section className={'mega-result '+(result.perfect?'is-perfect':'is-retry')}>
-     <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={24}/>:<RotateCcw size={23}/>}</span>
-     <p className="mega-reveal" lang="zh-Hant-TW">{result.item.traditional}</p>
-     <p className="pinyin">{result.item.pinyin}</p>
-     <h3>{result.item.meaning}</h3>
-     <p>{result.perfect?'Perfect first pass. This word is cleared for this cycle.':'Finished, but not perfectly. This word will return later in the queue.'}</p>
-     <button className="primary-button" onClick={continueAfterResult}>Continue</button>
-    </section>:
     current&&currentChar?<section className="mega-practice">
      <div className="mega-prompt">
       <p className="pinyin">{current.pinyin}</p>
       <h2>{current.meaning}</h2>
       <div className="mega-character-progress" aria-label={`Character ${charIndex+1} of ${current.characters.length}`}>
-       {current.characters.map((_,index)=><span key={index} className={index<charIndex?'done':index===charIndex?'current':''}/>)}
+       {current.characters.map((_,index)=><span key={index} className={index<charIndex||result&&index===charIndex?'done':index===charIndex?'current':''}/>)}
       </div>
-      <p className="mega-character-label">Character {charIndex+1} of {current.characters.length}</p>
+      <p className="mega-character-label">{result?'Word complete':`Character ${charIndex+1} of ${current.characters.length}`}</p>
      </div>
      <WritingPad key={current.id+':'+charIndex} char={currentChar} mode="memory" strict revealStrokeAfterMisses={5} completionDelayMs={900} onComplete={finishCharacter}/>
-     <button className="text-button mega-know-button" onClick={()=>setConfirmItem(current)}>I know this</button>
+     {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
+      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
+      <div className="mega-inline-copy">
+       <div><strong lang="zh-Hant-TW">{result.item.traditional}</strong><span className="pinyin">{result.item.pinyin}</span></div>
+       <p>{result.perfect?'Perfect first pass. Cleared for this cycle.':'Finished with help. This word will return later.'}</p>
+      </div>
+      <button className="primary-button" onClick={continueAfterResult}>Continue</button>
+     </div>:
+     <button className="text-button mega-know-button" onClick={()=>setConfirmItem(current)}>I know this</button>}
     </section>:
     eligible.length>0?<section className="mega-complete">
      <Trophy size={42}/>
