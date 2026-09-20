@@ -24,7 +24,6 @@ export function MegaChallenge({
  const [wordPerfect,setWordPerfect]=useState(true);
  const [result,setResult]=useState<Result|null>(null);
  const [view,setView]=useState<'challenge'|'mastered'>('challenge');
- const [confirmItem,setConfirmItem]=useState<VocabularyLookupItem|null>(null);
  const [gaveUp,setGaveUp]=useState(false);
 
  useEffect(()=>{
@@ -49,7 +48,6 @@ export function MegaChallenge({
   setCharIndex(0);
   setWordPerfect(true);
   setResult(null);
-  setConfirmItem(null);
   setGaveUp(false);
  }
 
@@ -78,14 +76,12 @@ export function MegaChallenge({
  }
 
  function switchView(next:'challenge'|'mastered'){
-  setConfirmItem(null);
   setGaveUp(false);
   setView(next);
  }
 
  function giveUp(){
   if(result||gaveUp)return;
-  setConfirmItem(null);
   setGaveUp(true);
  }
 
@@ -106,7 +102,7 @@ export function MegaChallenge({
   });
  }
 
- return <Dialog open={open} onOpenChange={nextOpen=>{if(!nextOpen)setConfirmItem(null);onOpenChange(nextOpen)}}>
+ return <Dialog open={open} onOpenChange={onOpenChange}>
   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
    <div className="mega-title-row">
     <div><DialogTitle>Mega Challenge</DialogTitle><DialogDescription>Recall learned words from pinyin and meaning alone.</DialogDescription></div>
@@ -158,19 +154,10 @@ export function MegaChallenge({
      </div>
      <div className="mega-result-actions">
       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
-      {result.perfect&&!confirmItem&&<button className="text-button mega-know-button" disabled={saving} onClick={()=>setConfirmItem(result.item)}>Add to Mastered</button>}
+      {result.perfect&&<button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>}
      </div>
     </div>
-    {result.perfect&&confirmItem&&<div className="mega-master-confirm" role="group" aria-label="Add word to Mastered">
-     <div>
-      <strong>Add <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
-      <p>It will stay out of Mega Challenge until you restore it.</p>
-     </div>
-     <div className="mega-master-confirm-actions">
-      <button className="text-button" disabled={saving} onClick={()=>setConfirmItem(null)}>Cancel</button>
-      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Add to Mastered'}</button>
-     </div>
-    </div>}</>:
+</>:
     <div className="mega-give-up-row">
      {gaveUp?<span className="mega-guides-on" role="status">All guides are on.</span>:
       <button className="text-button mega-give-up-button" onClick={giveUp}>Give up · show all guides</button>}
