@@ -9,6 +9,10 @@ export function makeMegaQueue(items:VocabularyLookupItem[],seed:string):string[]
  return shuffled(items.map(item=>item.id),seed);
 }
 
+export function combineWordPerfect(perfectSoFar:boolean,assisted:boolean):boolean{
+ return perfectSoFar&&!assisted;
+}
+
 export function advanceMegaQueue(queue:string[],perfect:boolean):string[]{
  if(!queue.length)return [];
  const [current,...rest]=queue;
