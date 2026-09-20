@@ -1,5 +1,5 @@
-import {shuffled} from './curriculum';
-import {learnedVocabulary,type VocabularyLookupItem} from './vocabulary-lookup';
+import {shuffled} from './curriculum.ts';
+import {learnedVocabulary,type VocabularyLookupItem} from './vocabulary-lookup.ts';
 
 export function eligibleMegaVocabulary(completed:Set<string>,mastered:Set<string>):VocabularyLookupItem[]{
  return learnedVocabulary(completed).filter(item=>!mastered.has(item.id));
