@@ -37,3 +37,5 @@ Book 2 Unit 1 previously owned the exact vocabulary surface 怎麼. Book 1 Unit 
 ## Handwriting provenance
 
 All 18 new character geometries are unmodified Taiwan Traditional entries from AnimCJK graphicsZhHant.txt at source commit ec5e17cca76c87587790bcbce5ea0b4d4fb753d6. Matching dictionaryZhHant.txt rows are retained beside them. Existing Arphic Public License / AnimCJK and LGPL attribution in the project applies. No textbook scans or MOE artwork are redistributed.
+
+Generated curriculum artifacts are derived from these authoring files by the repository generator; they are not hand-edited in this correction.
