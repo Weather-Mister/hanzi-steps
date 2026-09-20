@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {advanceMegaQueue,eligibleMegaVocabulary,makeMegaQueue} from '@/lib/mega-challenge';
+import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
 import {WritingPad} from './writing-pad';
@@ -52,7 +52,7 @@ export function MegaChallenge({
 
  function finishCharacter(assisted:boolean){
   if(!current)return;
-  const perfect=wordPerfect&&!assisted;
+  const perfect=combineWordPerfect(wordPerfect,assisted);
   if(charIndex+1<current.characters.length){
    setWordPerfect(perfect);
    setCharIndex(index=>index+1);
