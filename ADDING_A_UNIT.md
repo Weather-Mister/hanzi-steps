@@ -105,26 +105,54 @@ these entries are not falsely counted as formally taught.
 
 ## Check, build and publish
 
+### Local/manual path
+
+When a shell is available, run:
+
 ```sh
 npm run course:generate
 npm run course:check
 npm run course:test -- unit-9
-node_modules/.bin/tsc --noEmit
-npm run build
+npm run check:characters
+node --experimental-strip-types --test tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs validation/*.test.mjs
+npx tsc --noEmit
+npm run build:pages
 ```
 
-Generation validates before writing; validation fails if generated files are stale.
-The targeted check validates the entire small data graph mechanically, tests the
-new unit's navigation/checkpoints/practice and preserves all pre-refactor records.
-It takes about a second locally, excluding the production build. Historical
-per-unit tests contain fixed course-size assertions; use this targeted gate for
-normal additions. `npm test` is the full suite for engine/migration work (includes
-persisted D1 save/reload, account separation, handwriting matcher and streak tests).
+Generation validates before writing. Validation fails if generated files are stale.
+The targeted check validates the curriculum graph, the changed unit's navigation/checkpoints/practice,
+and the lossless compatibility fixtures.
 
-Follow the Sites building/hosting skills for the final build, commit, push, save
-and deploy using the existing `.openai/hosting.json` project and current audience.
-Current project: `appgprj_6a9fc81d56ac81919bb4a437d79ad7e6`.
-Current URL: https://hanzi-steps.huseyin-uludag.chatgpt.site
-Preserve the pushed revision through packaging and confirm deployment status is
-`succeeded`. Never create a second hosting project. Publish when checks pass;
-the user has authorized publishing without another conversational confirmation.
+### Remote/autonomous path — REQUIRED when no local shell is available
+
+Do **not** stop or report that the unit cannot be completed merely because the current agent cannot
+run npm locally. The repository's pull-request workflow is the supported remote execution path.
+
+1. Read the latest `main` and verify the current published Book 1 endpoint.
+2. Work on a fresh branch from that exact `main` commit. If an earlier automation branch/PR is incomplete,
+   resume and finish it instead of creating duplicate units.
+3. Author the unit module(s), handwriting JSON, audit/source notes when used by surrounding units, and update
+   `course/manifest.json`. Resolve any legitimate later-book first-teaching conflict explicitly and minimally.
+4. Open a pull request to `main`. The permanent **Feature QA** workflow will:
+   - install dependencies,
+   - run `course:generate`,
+   - run `course:check`,
+   - run targeted tests for every changed unit module,
+   - run character coverage,
+   - run regression/validation tests,
+   - run TypeScript,
+   - run the GitHub Pages build,
+   - and commit the generated curriculum artifacts back to the PR branch if they changed.
+5. Inspect the workflow result. If any step fails, read the failing job log, fix the real defect on the same branch,
+   and repeat until the **latest PR head** has a successful QA run. Never merge a red or untested head.
+6. Confirm the PR diff contains only the intended curriculum/integration changes. Then merge the PR.
+7. Wait for **Deploy Hanzi Steps to GitHub Pages** on the merge commit and require both build and deploy jobs to succeed.
+8. Verify `main` contains the new units and generated artifacts after deployment. Perform a final live smoke check when
+   the production URL is available to the agent.
+
+The production repository is `Weather-Mister/hanzi-steps`. Production is GitHub Pages; the old ChatGPT Sites/Hatchable
+deployment path is retired for Hanzi Steps and must not be used.
+
+The user has already authorized publishing verified curriculum additions. Do not ask for another confirmation once all
+required QA is green.
+
