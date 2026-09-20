@@ -202,7 +202,7 @@ Deno.serve(async(request:Request)=>{
         character:next.character,
         pinyin:next.pinyin,
         meaning:next.meaning,
-        book:nextBook?.number??Number(next.bookId.replace(/\D/g,''))||1,
+        book:(nextBook?.number??Number(next.bookId.replace(/\D/g,'')))||1,
         unit:nextOrder?.[2]??1,
         unitId:next.unitId,
       };
