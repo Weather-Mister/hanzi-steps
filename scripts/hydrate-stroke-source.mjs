@@ -14,13 +14,14 @@ async function walk(dir) {
   return out;
 }
 
+async function loadGraphics(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`AnimCJK download failed (${response.status}): ${url}`);
+  return (await response.text()).split(/\r?\n/).filter(Boolean).map(line=>JSON.parse(line));
+}
+
 const declarations = await walk(courseRoot);
 if (!declarations.length) process.exit(0);
-
-const url = 'https://raw.githubusercontent.com/parsimonhi/animCJK/master/graphicsZhHant.txt';
-const response = await fetch(url);
-if (!response.ok) throw new Error(`AnimCJK download failed: ${response.status}`);
-const lines = (await response.text()).split(/\r?\n/).filter(Boolean);
 const wanted = new Set();
 const specs = [];
 for (const file of declarations) {
@@ -29,12 +30,19 @@ for (const file of declarations) {
   for (const ch of spec.characters) wanted.add(ch);
   specs.push({file,spec});
 }
+
 const found = new Map();
-for (const line of lines) {
-  const row = JSON.parse(line);
-  if (wanted.has(row.character)) found.set(row.character,{strokes:row.strokes,medians:row.medians});
+const hant = await loadGraphics('https://raw.githubusercontent.com/parsimonhi/animCJK/master/graphicsZhHant.txt');
+for (const row of hant) if (wanted.has(row.character)) found.set(row.character,{strokes:row.strokes,medians:row.medians});
+
+// AnimCJK stores some characters whose Traditional and Simplified glyph/stroke data are identical only in graphicsZhHans.
+// Use that dataset solely as a fallback for characters absent from graphicsZhHant; never replace an available Traditional entry.
+if ([...wanted].some(ch=>!found.has(ch))) {
+  const hans = await loadGraphics('https://raw.githubusercontent.com/parsimonhi/animCJK/master/graphicsZhHans.txt');
+  for (const row of hans) if (wanted.has(row.character) && !found.has(row.character)) found.set(row.character,{strokes:row.strokes,medians:row.medians});
 }
-for (const ch of wanted) if (!found.has(ch)) throw new Error(`AnimCJK Traditional source missing ${ch}`);
+for (const ch of wanted) if (!found.has(ch)) throw new Error(`AnimCJK source missing ${ch}`);
+
 for (const {file,spec} of specs) {
   const out = Object.fromEntries(spec.characters.map(ch=>[ch,found.get(ch)]));
   const target = file.replace(/\.stroke-source\.json$/, '.strokes.json');
