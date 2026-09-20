@@ -15,9 +15,7 @@ const unit:UnitData = {
     {"id":"b2-intersection","title":"At this intersection","subtitle":"Say where to turn or start","chars":["路","口"],"minutes":"5–7 min","steps":[{"type":"intro","char":"路","id":"b2-char-路-0"},{"type":"trace","char":"路","id":"b2-char-路-1"},{"type":"build","char":"路","id":"b2-char-路-2"},{"type":"complete","char":"路","id":"b2-char-路-3"},{"type":"memory","char":"路","id":"b2-char-路-4"},{"type":"intro","char":"口","id":"b2-char-口-0"},{"type":"trace","char":"口","id":"b2-char-口-1"},{"type":"select","char":"口","prompt":"Which character means “mouth; opening”?","answer":"口","options":["口","我","是","好"],"explanation":"口 (kǒu) means mouth; opening.","id":"b2-char-口-2"},{"type":"complete","char":"口","id":"b2-char-口-3"},{"type":"memory","char":"口","id":"b2-char-口-4"},{"type":"grammar","grammar":"b2-intersection","id":"b2-intersection-0"},{"type":"phrase","phrase":"b2-intersection","id":"b2-intersection-1"},{"type":"order","phrase":"b2-intersection","tokens":["右轉","這","路口","個","在","從"],"id":"b2-intersection-2"},{"type":"select","prompt":"Which measure word fits 這 __ 路口？","options":["個","本","的"],"answer":"個","explanation":"Use 個 for an intersection: 這個路口.","grammarIds":["b2-intersection"],"id":"b2-intersection-3"},{"type":"phrase","phrase":"b2-junction-from","id":"b2-intersection-4"},{"type":"order","phrase":"b2-junction-from","tokens":["路口","走","從","個","前","這","往"],"id":"b2-intersection-5"}]},
     {"id":"b2-review","title":"Unit 1 review","subtitle":"Ask the way and give simple directions","chars":["問","走","怎","到","師","從","往","前","直","左","右","轉","路","口"],"minutes":"7–9 min","steps":[{"type":"match","chars":["從","往","左","右"],"id":"b2-review-0"},{"type":"build","char":"問","id":"b2-review-1"},{"type":"build","char":"轉","id":"b2-review-2"},{"type":"memory","char":"走","id":"b2-review-3"},{"type":"memory","char":"從","id":"b2-review-4"},{"type":"memory","char":"路","id":"b2-review-5"},{"type":"memory","char":"轉","id":"b2-review-6"},{"type":"order","phrase":"b2-destination","tokens":["走","到","請問","師大","怎麼","嗎"],"id":"b2-review-7"},{"type":"order","phrase":"b2-straight","tokens":["前","走","往","一直","這裡","從"],"id":"b2-review-8"},{"type":"order","phrase":"b2-right","tokens":["左轉","請","右轉"],"id":"b2-review-9"},{"type":"order","phrase":"b2-intersection","tokens":["路口","在","右轉","個","這","從"],"id":"b2-review-10"},{"type":"select","prompt":"Which word marks the starting point in a direction?","options":["從","往","到"],"answer":"從","explanation":"從 marks the start. 往 marks direction; 到 can introduce the destination.","grammarIds":["b2-from-toward","b2-destination"],"id":"b2-review-11"},{"type":"listen","char":"轉","options":["轉","直","路","口"],"answer":"轉","explanation":"轉 is zhuǎn here: turn, with the third tone.","id":"b2-review-12"}]},
   ],
-  newVocabulary: [
-    {"text":"怎麼","pinyin":"zěnme","meaning":"how","lessonId":"b2-ask","core":false},
-    {"text":"走","pinyin":"zǒu","meaning":"walk; go","lessonId":"b2-ask","core":false},
+  newVocabulary: [    {"text":"走","pinyin":"zǒu","meaning":"walk; go","lessonId":"b2-ask","core":false},
     {"text":"師大","pinyin":"Shīdà","meaning":"NTNU (National Taiwan Normal University)","lessonId":"b2-destination","core":false},
     {"text":"往","pinyin":"wǎng","meaning":"toward","lessonId":"b2-from-toward","core":false},
     {"text":"前","pinyin":"qián","meaning":"front; forward","lessonId":"b2-straight","core":false},
@@ -30,7 +28,7 @@ const unit:UnitData = {
     {"text":"路","pinyin":"lù","meaning":"road","lessonId":"b2-intersection","core":false},
     {"text":"路口","pinyin":"lùkǒu","meaning":"intersection","lessonId":"b2-intersection","core":false},
   ],
-  reviewVocabulary: ["這裡","那裡","請","在","這","個","嗎","什麼","哪裡","是","有","我","好","本","的","請問","到","從"],
+  reviewVocabulary: ["怎麼","這裡","那裡","請","在","這","個","嗎","什麼","哪裡","是","有","我","好","本","的","請問","到","從"],
   newCharacters: ["走","往","直","左","右","轉","路","口"],
   reviewCharacters: ["問","怎","到","師","從","前"],
   characters: {
