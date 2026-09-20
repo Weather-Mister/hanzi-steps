@@ -1,8 +1,0 @@
-
-> site-creator-vinext-starter@0.1.0 course:generate
-> node --experimental-strip-types validation/course.mjs generate
-
-unit-25: duplicate handwriting declaration 機
-Book 1 / Unit 25 (unit-25) character 機: duplicate first-teaching declaration; already taught in Book 1 / Unit 14 (unit-14)
-Book 1 / Unit 25 (unit-25) character 差: missing/malformed handwriting geometry
-Book 1 / Unit 25 (unit-25): reviewCharacters must identify previously taught guided targets
