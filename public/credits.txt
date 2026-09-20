@@ -200,3 +200,15 @@ Original rows: /stroke-source/unit-18-graphics.txt and
 /stroke-source/unit-18-dictionary.txt. The existing Arphic Public License and
 LGPL v3+ attribution apply. All component groups and glyphs were visually checked.
 No textbook scans, complete dialogues or textbook exercise sets are redistributed.
+
+
+Book 1 Units 23–24 — Permission & Transportation
+Original teaching and exercises aligned with the supplied A Course in Contemporary
+Chinese 1, remaining Lesson 7 permission/dialogue material and Lesson 8 transportation
+material through 又…又…. Unit 23 adds 12 new words/forms and 5 first-time characters;
+Unit 24 adds 12 new words/forms and 13 first-time characters. No textbook scans,
+complete dialogues or exercise sets are redistributed.
+Eighteen unmodified Taiwan Traditional AnimCJK glyph records, source commit
+ec5e17cca76c87587790bcbce5ea0b4d4fb753d6, are retained in /stroke-source/unit-23-graphics.txt and
+/stroke-source/unit-24-graphics.txt with matching dictionary files. Existing
+AnimCJK, Arphic Public License and LGPL v3+ attribution applies.
