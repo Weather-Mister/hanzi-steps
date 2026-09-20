@@ -1,0 +1,5 @@
+{"character":"字","set":["t31","taiwan4808"],"definition":"letter, character, word","radical":"子","decomposition":"⿱宀子","acjk":"字⿱宀3子.3"}
+{"character":"等","set":["t31","taiwan4808"],"definition":"rank, grade; to wait; equal, “and so forth”","radical":"𥫗 (竹)","decomposition":"⿱𥫗寺","acjk":"等⿱𥫗.6寺6"}
+{"character":"事","set":["t31","taiwan4808"],"definition":"affair, matter, business; to serve; accident, incident","radical":"亅","decomposition":"⿻⿳一口⺕亅","acjk":"事⿻⿳一1口3⺕3亅.1"}
+{"character":"意","set":["t32","taiwan4808"],"definition":"thought, idea, opinion; think","radical":"心","decomposition":"⿱音心","acjk":"意⿱音9心.4"}
+{"character":"思","set":["t32","taiwan4808"],"definition":"think, consider, ponder; final particle","radical":"心","decomposition":"⿱田心","acjk":"思⿱田5心.4"}
