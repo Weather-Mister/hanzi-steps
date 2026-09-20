@@ -126,6 +126,18 @@
           "order": 20,
           "title": "Finding Places on Campus",
           "path": "course/book1/unit20.ts"
+        },
+        {
+          "id": "unit-21",
+          "order": 21,
+          "title": "Making Plans by the Clock",
+          "path": "course/book1/unit21.ts"
+        },
+        {
+          "id": "unit-22",
+          "order": 22,
+          "title": "A Busy Afternoon",
+          "path": "course/book1/unit22.ts"
         }
       ]
     },
