@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 first teaching now precedes Book 2: Units 19–20 destinations, distance, shops and campus locations. Original snapshot remains immutable; only explicitly reviewed word ownership, contextual character explanations, first-time card membership and character order change. All historical lesson IDs, steps, questions, answers, grammar and geometry remain unchanged.",
+  "reason": "Book 1 first teaching now precedes Book 2: Units 19–20 destinations, distance, shops and campus locations, plus Unit 21 從 for Lesson 7 ranges. Original snapshot remains immutable; only explicitly reviewed word ownership, first-time card membership and character order change. Existing 從 character metadata and geometry are preserved exactly. All historical lesson IDs, steps, questions, answers and grammar remain unchanged.",
   "records": {
     "vocabulary": {
       "到": {
@@ -17,6 +17,10 @@
       "遠": {
         "before": "04118655d2ba7fd07216b14e19bc6053ac9d4b43ece817b0a593692479b98df7",
         "after": "6e7c5b0c4a1a27049a7d63eca3691b6c776d2baa99343721ba83894fde80942a"
+      },
+      "從": {
+        "before": "bed137ce813c3dd59484e8d750a39bddee9a4e0368b84a266299e20cbc3e67f0",
+        "after": "24c99246587cd59699d050a8b14fb339984346c64309a51a9bc61367445b2c13"
       }
     },
     "characters": {
@@ -44,7 +48,7 @@
     "cards": {
       "book-2-unit-1": {
         "before": "ebe79ee84e202275bc744fe8fdd70588800670709f6e86b4e5414b0c4eca6472",
-        "after": "c7ef98d26f5034d52c368fbe985435199401c4066b02bf88a0791709537952f3"
+        "after": "2582041e64d76f0a0d29aa664f5c8d982e7722496830fcb166d2a2d54316737f"
       },
       "book-2-unit-2": {
         "before": "a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb",
@@ -148,8 +152,8 @@
     "附",
     "商",
     "前",
-    "走",
     "從",
+    "走",
     "往",
     "直",
     "左",
