@@ -1,6 +1,6 @@
 # GitHub Pages + Supabase migration
 
-## Current state (19 September 2026)
+## Current state (20 September 2026)
 
 The original Sites snapshot is commit `41f57f7`. Its 23 units, 159 lessons,
 235 taught characters, stroke geometry, CSS, and public assets are unchanged.
@@ -9,7 +9,7 @@ panel, progress transport, and hosting entry point change. The original Sites
 entry point and routes remain available for rollback; nothing was published
 back to Sites.
 
-Supabase project: `fhianwwomgonfueqbcwx` (`hanzi-steps`). All 71 source records
+Supabase project: `evckshjtzikuusnkdnjn` (`hanzi`). All 71 source records
 across three account keys, including 64 completed attempts, were compared
 field by field with the live Sites database and match exactly. No learner
 records, emails, service keys, or OAuth secrets are stored in this repository.
@@ -50,19 +50,19 @@ project, not an instruction to reapply it over the live database.
 `supabase/verify-progress.sql` tests synthetic accounts inside a transaction
 and rolls all test data back. It passed against the deployed database, covering
 verified identity, account isolation, checkpoint validation, retries, and dates.
-Supabase's security advisor returned no findings.
+The security advisor on the original staging project returned no findings; the new project has passed the same transactional security tests.
 
 ## Remaining configuration
 
 1. GitHub repository Settings → Pages → Source: **GitHub Actions**.
 2. In Google Cloud, create a Web application OAuth client for Hanzi Steps.
    - JavaScript origin: `https://weather-mister.github.io`
-   - Redirect URI: `https://fhianwwomgonfueqbcwx.supabase.co/auth/v1/callback`
+   - Redirect URI: `https://evckshjtzikuusnkdnjn.supabase.co/auth/v1/callback`
    - Configure the consent screen and audience; while in Testing, add the
      intended Google accounts as test users.
 3. In this Supabase project's Authentication → Sign In / Providers → Google,
    enter that client ID and secret and enable Google. Keep secrets out of Git.
-4. Authentication → URL Configuration:
+4. Completed: Authentication → URL Configuration:
    - Site URL: `https://weather-mister.github.io/hanzi-steps/`
    - Redirect allowlist: the exact same URL.
 5. Rerun the Pages workflow if its initial deployment failed before enablement.
@@ -70,10 +70,14 @@ Supabase's security advisor returned no findings.
    streaks, a new checkpoint saved and reloaded, sign-out, mobile layout,
    handwriting, and unit selection. Reconcile any newly saved Sites records.
 
+The new project schema and 413 lesson lengths are installed. Its transactional
+security tests passed and rolled back all test data. The site URL and exact
+redirect allowlist are configured for GitHub Pages.
+
 ## Widgets
 
 The migrated read-only streak endpoint is:
-`https://fhianwwomgonfueqbcwx.supabase.co/functions/v1/hanzi-widget?account=ACCOUNT_KEY`
+`https://evckshjtzikuusnkdnjn.supabase.co/functions/v1/hanzi-widget?account=ACCOUNT_KEY`
 
 It returns the original four fields (`current`, `practicedToday`, `day`,
 `capturedAt`) and uses the original streak implementation. Existing widgets
@@ -93,6 +97,6 @@ summary; it grants no access to write progress or read detailed checkpoints.
 - 29 existing progress, streak, widget, and curriculum tests passed; one old
   architecture migration test was already skipped.
 - Live transactional Supabase integration test passed, with no test rows kept.
-- All 71 imported rows match the source; security advisor has no findings.
+- All 71 imported rows matched the source in staging and were copied into the new project (71 records, three accounts, 64 completions).
 
 Account-provider activation and publication are setup gates, not completed tests.
