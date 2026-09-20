@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {compactPinyin,normalizePinyin,searchVocabulary} from '../lib/vocabulary-lookup.ts';
+import {compactPinyin,normalizePinyin,searchVocabulary,vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 test('pinyin normalization accepts tones, numbers, spacing, case, and v for ü',()=>{
  assert.equal(normalizePinyin('  XǏ HuĀN  '),'xi huan');
@@ -27,4 +27,10 @@ test('search returns all curriculum matches instead of choosing a tone',()=>{
 test('canonical lookup does not emit duplicate vocabulary results',()=>{
  const results=searchVocabulary('shi');
  assert.equal(new Set(results.map(item=>item.id)).size,results.length);
+});
+
+
+test('canonical vocabulary keys are unique and stable-position based',()=>{
+ assert.equal(new Set(vocabularyLookup.map(item=>item.id)).size,vocabularyLookup.length);
+ assert.ok(vocabularyLookup.every(item=>item.id.startsWith('v1:'+item.lessonId+':')));
 });
