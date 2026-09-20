@@ -115,7 +115,7 @@ export function MegaChallenge({
       </article>)}
     </section>:
     masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
-    result?<section className="mega-result">
+    result?<section className={'mega-result '+(result.perfect?'is-perfect':'is-retry')}>
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={24}/>:<RotateCcw size={23}/>}</span>
      <p className="mega-reveal" lang="zh-Hant-TW">{result.item.traditional}</p>
      <p className="pinyin">{result.item.pinyin}</p>
@@ -127,8 +127,12 @@ export function MegaChallenge({
      <div className="mega-prompt">
       <p className="pinyin">{current.pinyin}</p>
       <h2>{current.meaning}</h2>
+      <div className="mega-character-progress" aria-label={`Character ${charIndex+1} of ${current.characters.length}`}>
+       {current.characters.map((_,index)=><span key={index} className={index<charIndex?'done':index===charIndex?'current':''}/>)}
+      </div>
+      <p className="mega-character-label">Character {charIndex+1} of {current.characters.length}</p>
      </div>
-     <WritingPad key={current.id+':'+charIndex} char={currentChar} mode="memory" strict onComplete={finishCharacter}/>
+     <WritingPad key={current.id+':'+charIndex} char={currentChar} mode="memory" strict revealStrokeAfterMisses={5} completionDelayMs={900} onComplete={finishCharacter}/>
      <button className="text-button mega-know-button" onClick={()=>setConfirmItem(current)}>I know this</button>
     </section>:
     eligible.length>0?<section className="mega-complete">
