@@ -59,11 +59,14 @@ old and new lesson checkpoints, offline recovery, and account separation.
 - `db/schema.ts` and `drizzle/`: persistence schema and versioned migrations.
 - `public/credits.txt`: data provenance, attribution, and license links.
 
-For signed-in learners, the hosted Site supplies a verified email identity. Progress
-is scoped to its normalized hash; an optional identity header does not split an
-existing account. Anonymous visitors can practice but cannot save to an account. Checkpoints update monotonically, so an
-older network request cannot replace a later completed exercise. Browser storage
-contains only display preferences and unsynced checkpoint drafts for recovery.
+On GitHub Pages, Hanzi Steps uses lightweight username profiles instead of OAuth.
+Usernames are normalized to lowercase and may contain letters, numbers, and underscores.
+There is intentionally no password: entering the same username opens the same cloud
+progress profile on another device. Existing Google-linked progress is backfilled to a
+username derived from the old email local-part when the username migration is applied.
+Anonymous visitors can still practice without an account. Checkpoints update monotonically,
+so an older network request cannot replace a later completed exercise. Browser storage
+contains display preferences, the remembered username, and unsynced checkpoint drafts for recovery.
 
 Audio uses an available Taiwanese Mandarin system voice. When none is available,
 listening offers a pinyin alternative and records the exercise as supported practice.
