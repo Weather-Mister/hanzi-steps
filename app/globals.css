@@ -546,6 +546,22 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 }
 .mega-character-label { color:#8491a4; font-size:.72rem; font-weight:700; }
 .mega-practice .strict-writing { max-width:380px; }
+.mega-practice .writing-frame.is-done {
+ width:min(250px,64vw,29dvh);
+}
+.mega-practice .writing-frame.is-done ~ .stroke-status,
+.mega-practice .writing-frame.is-done ~ .pad-message {
+ display:none;
+}
+.mega-practice:has(.mega-inline-result) {
+ gap:9px;
+}
+.mega-practice:has(.mega-inline-result) .mega-prompt {
+ padding-top:0;
+}
+.mega-practice:has(.mega-inline-result) .mega-prompt h2 {
+ margin-top:3px;
+}
 .mega-know-button { margin-top:-2px; color:#6c7d95; }
 .mega-give-up-row {
  min-height:36px;
@@ -690,6 +706,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .strict-complete-badge { bottom:10px; min-height:34px; padding:7px 11px; font-size:.74rem; }
  .mega-practice { min-height:0; gap:13px; }
  .mega-practice .writing-frame { width:min(300px,82vw); }
+ .mega-practice .writing-frame.is-done { width:min(215px,56vw,24dvh); }
  .mega-reveal { font-size:2.35rem; }
  .mastered-list {
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -992,6 +1009,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .mega-prompt .pinyin { font-size:1.15rem; }
  .mega-character-progress { margin-top:9px; }
  .mega-practice .writing-frame { width:min(258px,72vw); }
+ .mega-practice .writing-frame.is-done { width:min(190px,52vw,23dvh); }
  .mega-master-confirm { padding:9px 10px; gap:8px; }
 }
 
