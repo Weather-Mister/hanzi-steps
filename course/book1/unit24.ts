@@ -1,40 +1,1916 @@
 import type {UnitData} from '../schema.ts';
 
-// Textbook-aligned Lesson 8 explicit comparisons; examples are original unless noted by structure.
 const unit:UnitData = {
-  "schemaVersion":1,"bookId":"book-1","order":24,
-  "unit":{"id":"unit-24","number":24,"theme":"amber","label":"Explicit comparisons with 比","title":"Which One Is More?","description":"1 new word/form. Compare familiar things explicitly with 比, ask comparison questions, and negate comparison claims.","chars":[],"lessonIds":["u24-frame","u24-price","u24-distance","u24-degree","u24-negation","u24-questions","u24-review"],"banner":{"text":"這支手機比那支手機貴。","pinyin":"Zhè zhī shǒujī bǐ nà zhī shǒujī guì."},"goal":{"text":"我們學校比他們學校大。","pinyin":"Wǒmen xuéxiào bǐ tāmen xuéxiào dà.","meaning":"Our school is bigger than their school."},"grammarIds":["u24-bi-comparison","u24-bi-degree","u24-bi-negation"],"bookReference":"A Course in Contemporary Chinese 1 · Lesson 8, pp. 169–174. Explicit comparison with 比; original Hanzi Steps examples."},
-  "reviewLessonId":"u24-review",
-  "lessons":[
-    {"id":"u24-frame","title":"A 比 B","subtitle":"Build the basic explicit comparison frame.","chars":[],"minutes":"7–9 min","unitId":"unit-24","review":false,"steps":[{"id":"u24-frame-01","type":"grammar","grammar":"u24-bi-comparison"},{"id":"u24-frame-02","type":"phrase","phrase":"u24-school-big"},{"id":"u24-frame-03","type":"order","phrase":"u24-school-big","tokens":["大","他們學校","比","我們學校"]},{"id":"u24-frame-04","type":"phrase","phrase":"u24-book-big"},{"id":"u24-frame-05","type":"order","phrase":"u24-book-big","tokens":["大","那本書","比","這本書"]},{"id":"u24-frame-06","type":"select","prompt":"In A 比 B + property, what follows 比?","options":["the comparison standard B","the property","嗎"],"answer":"the comparison standard B","explanation":"比 introduces the item used as the comparison standard.","grammarIds":["u24-bi-comparison"]},{"id":"u24-frame-07","type":"select","prompt":"Which means “This book is bigger than that book”?","options":["這本書比那本書大。","那本書比這本書大。"],"answer":"這本書比那本書大。","explanation":"The item described as bigger must be A, before 比.","grammarIds":["u24-bi-comparison"]}]},
-    {"id":"u24-price","title":"Compare Prices","subtitle":"Use 比 with familiar phone and price language.","chars":[],"minutes":"7–9 min","unitId":"unit-24","review":false,"steps":[{"id":"u24-price-01","type":"phrase","phrase":"u24-phone-expensive"},{"id":"u24-price-02","type":"order","phrase":"u24-phone-expensive","tokens":["貴","那支手機","比","這支手機"]},{"id":"u24-price-03","type":"phrase","phrase":"u24-question"},{"id":"u24-price-04","type":"order","phrase":"u24-question","tokens":["嗎","貴","那支手機","比","這支手機"]},{"id":"u24-price-05","type":"select","prompt":"Which phone is described as more expensive in 這支手機比那支手機貴？","options":["this phone","that phone"],"answer":"this phone","explanation":"A before 比 is the item receiving the comparison.","grammarIds":["u24-bi-comparison"]},{"id":"u24-price-06","type":"select","prompt":"Can 很 go directly before 貴 in the basic 比 pattern taught here?","options":["No","Yes"],"answer":"No","explanation":"The textbook notes that degree adverbs such as 很 do not appear before the state verb in this basic 比 comparison.","grammarIds":["u24-bi-degree"]}]},
-    {"id":"u24-distance","title":"Nearer or Farther","subtitle":"Transfer the same frame to distance.","chars":[],"minutes":"7–9 min","unitId":"unit-24","review":false,"steps":[{"id":"u24-distance-01","type":"phrase","phrase":"u24-store-near"},{"id":"u24-distance-02","type":"order","phrase":"u24-store-near","tokens":["近","那個商店","比","這個商店"]},{"id":"u24-distance-03","type":"phrase","phrase":"u24-school-far"},{"id":"u24-distance-04","type":"order","phrase":"u24-school-far","tokens":["遠","我們學校","比","他們學校"]},{"id":"u24-distance-05","type":"select","prompt":"Which property means “far”?","options":["遠","近","大"],"answer":"遠","explanation":"遠 is far; 近 is near."},{"id":"u24-distance-06","type":"select","prompt":"Choose the sentence that says their school is farther.","options":["他們學校比我們學校遠。","我們學校比他們學校遠。"],"answer":"他們學校比我們學校遠。","explanation":"The farther school is A before 比.","grammarIds":["u24-bi-comparison"]}]},
-    {"id":"u24-degree","title":"No 很 Inside the Basic 比 Frame","subtitle":"Avoid a common comparison word-order error.","chars":[],"minutes":"7–9 min","unitId":"unit-24","review":false,"steps":[{"id":"u24-degree-01","type":"grammar","grammar":"u24-bi-degree"},{"id":"u24-degree-02","type":"phrase","phrase":"u24-phone-expensive"},{"id":"u24-degree-03","type":"select","prompt":"Choose the textbook-style comparison.","options":["這支手機比那支手機貴。","這支手機比那支手機很貴。"],"answer":"這支手機比那支手機貴。","explanation":"The basic 比 pattern does not insert 很 before the property.","grammarIds":["u24-bi-degree"]},{"id":"u24-degree-04","type":"phrase","phrase":"u24-book-big"},{"id":"u24-degree-05","type":"order","phrase":"u24-book-big","tokens":["大","那本書","比","這本書"]},{"id":"u24-degree-06","type":"select","prompt":"Which is the basic pattern?","options":["A 比 B + property","A 比 B 很 + property"],"answer":"A 比 B + property","explanation":"Use the state verb/property directly after B.","grammarIds":["u24-bi-degree"]}]},
-    {"id":"u24-negation","title":"Negate a Comparison","subtitle":"Put 不 before 比 or reject the whole claim with 不是比.","chars":[],"minutes":"8–10 min","unitId":"unit-24","review":false,"steps":[{"id":"u24-negation-01","type":"grammar","grammar":"u24-bi-negation"},{"id":"u24-negation-02","type":"phrase","phrase":"u24-not-more-expensive"},{"id":"u24-negation-03","type":"order","phrase":"u24-not-more-expensive","tokens":["貴","他的手機","不比","我的手機"]},{"id":"u24-negation-04","type":"phrase","phrase":"u24-not-case"},{"id":"u24-negation-05","type":"order","phrase":"u24-not-case","tokens":["大","那本書","不是比","這本書"]},{"id":"u24-negation-06","type":"select","prompt":"Where does 不 go in the direct negative comparison?","options":["before 比","after B","after the property"],"answer":"before 比","explanation":"The textbook gives A 不比 B + property.","grammarIds":["u24-bi-negation"]}]},
-    {"id":"u24-questions","title":"Ask About the Comparison","subtitle":"Turn an explicit comparison into a yes/no question.","chars":[],"minutes":"6–8 min","unitId":"unit-24","review":false,"steps":[{"id":"u24-questions-01","type":"phrase","phrase":"u24-question"},{"id":"u24-questions-02","type":"order","phrase":"u24-question","tokens":["嗎","貴","那支手機","比","這支手機"]},{"id":"u24-questions-03","type":"select","prompt":"What does 嗎 do here?","options":["asks whether the comparison is true","makes B larger","negates 比"],"answer":"asks whether the comparison is true","explanation":"The comparison remains intact; 嗎 makes it a yes/no question.","grammarIds":["u24-bi-comparison"]},{"id":"u24-questions-04","type":"phrase","phrase":"u24-store-near"},{"id":"u24-questions-05","type":"select","prompt":"Which question asks whether this phone is more expensive?","options":["這支手機比那支手機貴嗎？","這支手機比那支手機嗎貴？"],"answer":"這支手機比那支手機貴嗎？","explanation":"Sentence-final 嗎 follows the complete comparison.","grammarIds":["u24-bi-comparison"]}]},
-    {"id":"u24-review","title":"Unit 24 Review","subtitle":"Build, interpret, question, and negate explicit 比 comparisons.","chars":[],"minutes":"8–10 min","unitId":"unit-24","review":true,"steps":[{"id":"u24-review-01","type":"phrase","phrase":"u24-school-big"},{"id":"u24-review-02","type":"order","phrase":"u24-school-big","tokens":["大","他們學校","比","我們學校"]},{"id":"u24-review-03","type":"phrase","phrase":"u24-phone-expensive"},{"id":"u24-review-04","type":"order","phrase":"u24-phone-expensive","tokens":["貴","那支手機","比","這支手機"]},{"id":"u24-review-05","type":"select","prompt":"Choose the correct comparison.","options":["這個商店比那個商店近。","這個商店比那個商店很近。"],"answer":"這個商店比那個商店近。","explanation":"Use the property directly in the basic 比 frame.","grammarIds":["u24-bi-degree"]},{"id":"u24-review-06","type":"select","prompt":"Choose the direct negative comparison.","options":["我的手機不比他的手機貴。","我的手機比不他的手機貴。"],"answer":"我的手機不比他的手機貴。","explanation":"不 precedes 比.","grammarIds":["u24-bi-negation"]},{"id":"u24-review-07","type":"select","prompt":"In 我們學校比他們學校大, which school is bigger?","options":["our school","their school"],"answer":"our school","explanation":"A before 比 is described as having more of the property.","grammarIds":["u24-bi-comparison"]},{"id":"u24-review-08","type":"phrase","phrase":"u24-question"}]}
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 24,
+  "unit": {
+    "id": "unit-24",
+    "number": 24,
+    "theme": "amber",
+    "label": "Transportation, companions & implicit comparison",
+    "title": "How Are You Getting There?",
+    "description": "12 new words and forms. Start Lesson 8 with transportation, going with someone, asking how, implicit comparison with 比較, and 又…又….",
+    "chars": [
+      "坐",
+      "火",
+      "車",
+      "跟",
+      "慢",
+      "較",
+      "快",
+      "高",
+      "鐵",
+      "票",
+      "又",
+      "舒",
+      "服"
+    ],
+    "lessonIds": [
+      "u24-frame",
+      "u24-price",
+      "u24-distance",
+      "u24-degree",
+      "u24-negation",
+      "u24-questions",
+      "u24-review"
+    ],
+    "banner": {
+      "text": "坐高鐵又快又舒服。",
+      "pinyin": "Zuò gāotiě yòu kuài yòu shūfu."
+    },
+    "goal": {
+      "text": "你怎麼去學校？",
+      "pinyin": "Nǐ zěnme qù xuéxiào?",
+      "meaning": "How do you go to school?"
+    },
+    "grammarIds": [
+      "u24-zuo-transport",
+      "u24-gen-company",
+      "u24-how-zenme",
+      "u24-how-vs-zenmeyang",
+      "u24-bijiao",
+      "u24-you-you"
+    ],
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 8, pp. 160–174. Transportation vocabulary and grammar I–IV; explicit 比 is intentionally left for the next unit. Original Hanzi Steps examples and exercises."
+  },
+  "reviewLessonId": "u24-review",
+  "lessons": [
+    {
+      "id": "u24-frame",
+      "title": "Take the Train",
+      "subtitle": "Use 坐 before transportation.",
+      "chars": [
+        "坐",
+        "火",
+        "車"
+      ],
+      "minutes": "11–14 min",
+      "unitId": "unit-24",
+      "review": false,
+      "steps": [
+        {
+          "id": "u24-frame-01",
+          "type": "grammar",
+          "grammar": "u24-zuo-transport"
+        },
+        {
+          "id": "u24-frame-坐-intro",
+          "type": "intro",
+          "char": "坐"
+        },
+        {
+          "id": "u24-frame-坐-trace",
+          "type": "trace",
+          "char": "坐"
+        },
+        {
+          "id": "u24-frame-坐-build",
+          "type": "build",
+          "char": "坐"
+        },
+        {
+          "id": "u24-frame-坐-complete",
+          "type": "complete",
+          "char": "坐"
+        },
+        {
+          "id": "u24-frame-坐-memory",
+          "type": "memory",
+          "char": "坐"
+        },
+        {
+          "id": "u24-frame-火-intro",
+          "type": "intro",
+          "char": "火"
+        },
+        {
+          "id": "u24-frame-火-trace",
+          "type": "trace",
+          "char": "火"
+        },
+        {
+          "id": "u24-frame-火-build",
+          "type": "build",
+          "char": "火"
+        },
+        {
+          "id": "u24-frame-火-complete",
+          "type": "complete",
+          "char": "火"
+        },
+        {
+          "id": "u24-frame-火-memory",
+          "type": "memory",
+          "char": "火"
+        },
+        {
+          "id": "u24-frame-車-intro",
+          "type": "intro",
+          "char": "車"
+        },
+        {
+          "id": "u24-frame-車-trace",
+          "type": "trace",
+          "char": "車"
+        },
+        {
+          "id": "u24-frame-車-build",
+          "type": "build",
+          "char": "車"
+        },
+        {
+          "id": "u24-frame-車-complete",
+          "type": "complete",
+          "char": "車"
+        },
+        {
+          "id": "u24-frame-車-memory",
+          "type": "memory",
+          "char": "車"
+        },
+        {
+          "id": "u24-frame-02",
+          "type": "phrase",
+          "phrase": "u24-train-school"
+        },
+        {
+          "id": "u24-frame-03",
+          "type": "order",
+          "phrase": "u24-train-school",
+          "tokens": [
+            "學校",
+            "我",
+            "坐火車",
+            "去"
+          ]
+        },
+        {
+          "id": "u24-frame-04",
+          "type": "select",
+          "prompt": "Which phrase means “take the train”?",
+          "options": [
+            "坐火車",
+            "火車坐",
+            "跟火車"
+          ],
+          "answer": "坐火車",
+          "explanation": "Use 坐 before the vehicle.",
+          "grammarIds": [
+            "u24-zuo-transport"
+          ]
+        },
+        {
+          "id": "u24-frame-listen-坐",
+          "type": "listen",
+          "char": "坐",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "坐",
+            "火",
+            "車",
+            "跟"
+          ],
+          "answer": "坐",
+          "explanation": "坐 is zuò; before transport it means take/travel by."
+        },
+        {
+          "id": "u24-frame-listen-車",
+          "type": "listen",
+          "char": "車",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "車",
+            "火",
+            "坐",
+            "慢"
+          ],
+          "answer": "車",
+          "explanation": "車 is chē, vehicle."
+        }
+      ]
+    },
+    {
+      "id": "u24-price",
+      "title": "Go with a Friend",
+      "subtitle": "Use 跟 for companionship and 玩 as an action.",
+      "chars": [
+        "跟"
+      ],
+      "minutes": "8–10 min",
+      "unitId": "unit-24",
+      "review": false,
+      "steps": [
+        {
+          "id": "u24-price-01",
+          "type": "grammar",
+          "grammar": "u24-gen-company"
+        },
+        {
+          "id": "u24-price-跟-intro",
+          "type": "intro",
+          "char": "跟"
+        },
+        {
+          "id": "u24-price-跟-trace",
+          "type": "trace",
+          "char": "跟"
+        },
+        {
+          "id": "u24-price-跟-build",
+          "type": "build",
+          "char": "跟"
+        },
+        {
+          "id": "u24-price-跟-complete",
+          "type": "complete",
+          "char": "跟"
+        },
+        {
+          "id": "u24-price-跟-memory",
+          "type": "memory",
+          "char": "跟"
+        },
+        {
+          "id": "u24-price-02",
+          "type": "phrase",
+          "phrase": "u24-friend-play"
+        },
+        {
+          "id": "u24-price-03",
+          "type": "order",
+          "phrase": "u24-friend-play",
+          "tokens": [
+            "去玩",
+            "我",
+            "週末",
+            "跟朋友"
+          ]
+        },
+        {
+          "id": "u24-price-04",
+          "type": "select",
+          "prompt": "Who accompanies the speaker in 我跟朋友去玩?",
+          "options": [
+            "a friend",
+            "a teacher",
+            "no one"
+          ],
+          "answer": "a friend",
+          "explanation": "跟 introduces the companion.",
+          "grammarIds": [
+            "u24-gen-company"
+          ]
+        },
+        {
+          "id": "u24-price-05",
+          "type": "select",
+          "prompt": "Which is the standalone action “to play; have fun”?",
+          "options": [
+            "玩",
+            "好玩"
+          ],
+          "answer": "玩",
+          "explanation": "玩 is the action verb; 好玩 describes something as fun."
+        }
+      ]
+    },
+    {
+      "id": "u24-distance",
+      "title": "How Do You Go?",
+      "subtitle": "Ask about the method of an action and keep 怎麼 distinct from 怎麼樣.",
+      "chars": [],
+      "minutes": "8–10 min",
+      "unitId": "unit-24",
+      "review": false,
+      "steps": [
+        {
+          "id": "u24-distance-01",
+          "type": "grammar",
+          "grammar": "u24-how-zenme"
+        },
+        {
+          "id": "u24-distance-02",
+          "type": "phrase",
+          "phrase": "u24-how-school"
+        },
+        {
+          "id": "u24-distance-03",
+          "type": "order",
+          "phrase": "u24-how-school",
+          "tokens": [
+            "學校",
+            "去",
+            "怎麼",
+            "你"
+          ]
+        },
+        {
+          "id": "u24-distance-04",
+          "type": "grammar",
+          "grammar": "u24-how-vs-zenmeyang"
+        },
+        {
+          "id": "u24-distance-05",
+          "type": "phrase",
+          "phrase": "u24-train-opinion"
+        },
+        {
+          "id": "u24-distance-06",
+          "type": "select",
+          "prompt": "You want to know the method of getting to school. Which question fits?",
+          "options": [
+            "你怎麼去學校？",
+            "學校怎麼樣？"
+          ],
+          "answer": "你怎麼去學校？",
+          "explanation": "怎麼 comes before the action phrase to ask how it is done.",
+          "grammarIds": [
+            "u24-how-zenme",
+            "u24-how-vs-zenmeyang"
+          ]
+        },
+        {
+          "id": "u24-distance-07",
+          "type": "select",
+          "prompt": "You want an evaluation of the train. Which question fits?",
+          "options": [
+            "火車怎麼樣？",
+            "火車怎麼去？"
+          ],
+          "answer": "火車怎麼樣？",
+          "explanation": "怎麼樣 asks how something is or what someone thinks of it.",
+          "grammarIds": [
+            "u24-how-vs-zenmeyang"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u24-degree",
+      "title": "Faster or Slower",
+      "subtitle": "Use 比較 when the comparison is understood from context.",
+      "chars": [
+        "慢",
+        "較",
+        "快"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-24",
+      "review": false,
+      "steps": [
+        {
+          "id": "u24-degree-01",
+          "type": "grammar",
+          "grammar": "u24-bijiao"
+        },
+        {
+          "id": "u24-degree-慢-intro",
+          "type": "intro",
+          "char": "慢"
+        },
+        {
+          "id": "u24-degree-慢-trace",
+          "type": "trace",
+          "char": "慢"
+        },
+        {
+          "id": "u24-degree-慢-build",
+          "type": "build",
+          "char": "慢"
+        },
+        {
+          "id": "u24-degree-慢-complete",
+          "type": "complete",
+          "char": "慢"
+        },
+        {
+          "id": "u24-degree-慢-memory",
+          "type": "memory",
+          "char": "慢"
+        },
+        {
+          "id": "u24-degree-較-intro",
+          "type": "intro",
+          "char": "較"
+        },
+        {
+          "id": "u24-degree-較-trace",
+          "type": "trace",
+          "char": "較"
+        },
+        {
+          "id": "u24-degree-較-build",
+          "type": "build",
+          "char": "較"
+        },
+        {
+          "id": "u24-degree-較-complete",
+          "type": "complete",
+          "char": "較"
+        },
+        {
+          "id": "u24-degree-較-memory",
+          "type": "memory",
+          "char": "較"
+        },
+        {
+          "id": "u24-degree-快-intro",
+          "type": "intro",
+          "char": "快"
+        },
+        {
+          "id": "u24-degree-快-trace",
+          "type": "trace",
+          "char": "快"
+        },
+        {
+          "id": "u24-degree-快-build",
+          "type": "build",
+          "char": "快"
+        },
+        {
+          "id": "u24-degree-快-complete",
+          "type": "complete",
+          "char": "快"
+        },
+        {
+          "id": "u24-degree-快-memory",
+          "type": "memory",
+          "char": "快"
+        },
+        {
+          "id": "u24-degree-02",
+          "type": "phrase",
+          "phrase": "u24-train-slower"
+        },
+        {
+          "id": "u24-degree-03",
+          "type": "order",
+          "phrase": "u24-train-slower",
+          "tokens": [
+            "比較慢",
+            "火車"
+          ]
+        },
+        {
+          "id": "u24-degree-04",
+          "type": "phrase",
+          "phrase": "u24-hsr-faster"
+        },
+        {
+          "id": "u24-degree-05",
+          "type": "order",
+          "phrase": "u24-hsr-faster",
+          "tokens": [
+            "比較快",
+            "高鐵"
+          ]
+        },
+        {
+          "id": "u24-degree-06",
+          "type": "select",
+          "prompt": "In Taiwan usage taught here, what does 比較 signal?",
+          "options": [
+            "an implicit comparison",
+            "past time",
+            "permission"
+          ],
+          "answer": "an implicit comparison",
+          "explanation": "比較 says something is comparatively/more so, with the comparison understood from context.",
+          "grammarIds": [
+            "u24-bijiao"
+          ]
+        },
+        {
+          "id": "u24-degree-07",
+          "type": "select",
+          "prompt": "Which word means “fast”?",
+          "options": [
+            "快",
+            "慢",
+            "較"
+          ],
+          "answer": "快",
+          "explanation": "快 means fast; 慢 means slow."
+        }
+      ]
+    },
+    {
+      "id": "u24-negation",
+      "title": "High Speed Rail & Tickets",
+      "subtitle": "Learn 高鐵 and 車票, then use the comparison you just learned.",
+      "chars": [
+        "高",
+        "鐵",
+        "票"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-24",
+      "review": false,
+      "steps": [
+        {
+          "id": "u24-negation-高-intro",
+          "type": "intro",
+          "char": "高"
+        },
+        {
+          "id": "u24-negation-高-trace",
+          "type": "trace",
+          "char": "高"
+        },
+        {
+          "id": "u24-negation-高-build",
+          "type": "build",
+          "char": "高"
+        },
+        {
+          "id": "u24-negation-高-complete",
+          "type": "complete",
+          "char": "高"
+        },
+        {
+          "id": "u24-negation-高-memory",
+          "type": "memory",
+          "char": "高"
+        },
+        {
+          "id": "u24-negation-鐵-intro",
+          "type": "intro",
+          "char": "鐵"
+        },
+        {
+          "id": "u24-negation-鐵-trace",
+          "type": "trace",
+          "char": "鐵"
+        },
+        {
+          "id": "u24-negation-鐵-build",
+          "type": "build",
+          "char": "鐵"
+        },
+        {
+          "id": "u24-negation-鐵-complete",
+          "type": "complete",
+          "char": "鐵"
+        },
+        {
+          "id": "u24-negation-鐵-memory",
+          "type": "memory",
+          "char": "鐵"
+        },
+        {
+          "id": "u24-negation-票-intro",
+          "type": "intro",
+          "char": "票"
+        },
+        {
+          "id": "u24-negation-票-trace",
+          "type": "trace",
+          "char": "票"
+        },
+        {
+          "id": "u24-negation-票-build",
+          "type": "build",
+          "char": "票"
+        },
+        {
+          "id": "u24-negation-票-complete",
+          "type": "complete",
+          "char": "票"
+        },
+        {
+          "id": "u24-negation-票-memory",
+          "type": "memory",
+          "char": "票"
+        },
+        {
+          "id": "u24-negation-01",
+          "type": "phrase",
+          "phrase": "u24-hsr-faster"
+        },
+        {
+          "id": "u24-negation-02",
+          "type": "order",
+          "phrase": "u24-hsr-faster",
+          "tokens": [
+            "比較快",
+            "高鐵"
+          ]
+        },
+        {
+          "id": "u24-negation-03",
+          "type": "phrase",
+          "phrase": "u24-ticket-price"
+        },
+        {
+          "id": "u24-negation-04",
+          "type": "order",
+          "phrase": "u24-ticket-price",
+          "tokens": [
+            "有一點貴",
+            "高鐵車票"
+          ]
+        },
+        {
+          "id": "u24-negation-05",
+          "type": "select",
+          "prompt": "Which word means “High Speed Rail”?",
+          "options": [
+            "高鐵",
+            "火車",
+            "車票"
+          ],
+          "answer": "高鐵",
+          "explanation": "高鐵 is the common abbreviation for High Speed Rail."
+        },
+        {
+          "id": "u24-negation-06",
+          "type": "select",
+          "prompt": "Which word means “ticket” in this lesson?",
+          "options": [
+            "車票",
+            "火車",
+            "舒服"
+          ],
+          "answer": "車票",
+          "explanation": "車票 is a transportation ticket."
+        },
+        {
+          "id": "u24-negation-listen-鐵",
+          "type": "listen",
+          "char": "鐵",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "鐵",
+            "高",
+            "票",
+            "車"
+          ],
+          "answer": "鐵",
+          "explanation": "鐵 is tiě, the second character of 高鐵."
+        }
+      ]
+    },
+    {
+      "id": "u24-questions",
+      "title": "Both Fast and Comfortable",
+      "subtitle": "Join two properties with 又…又….",
+      "chars": [
+        "又",
+        "舒",
+        "服"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-24",
+      "review": false,
+      "steps": [
+        {
+          "id": "u24-questions-01",
+          "type": "grammar",
+          "grammar": "u24-you-you"
+        },
+        {
+          "id": "u24-questions-又-intro",
+          "type": "intro",
+          "char": "又"
+        },
+        {
+          "id": "u24-questions-又-trace",
+          "type": "trace",
+          "char": "又"
+        },
+        {
+          "id": "u24-questions-又-build",
+          "type": "build",
+          "char": "又"
+        },
+        {
+          "id": "u24-questions-又-complete",
+          "type": "complete",
+          "char": "又"
+        },
+        {
+          "id": "u24-questions-又-memory",
+          "type": "memory",
+          "char": "又"
+        },
+        {
+          "id": "u24-questions-舒-intro",
+          "type": "intro",
+          "char": "舒"
+        },
+        {
+          "id": "u24-questions-舒-trace",
+          "type": "trace",
+          "char": "舒"
+        },
+        {
+          "id": "u24-questions-舒-build",
+          "type": "build",
+          "char": "舒"
+        },
+        {
+          "id": "u24-questions-舒-complete",
+          "type": "complete",
+          "char": "舒"
+        },
+        {
+          "id": "u24-questions-舒-memory",
+          "type": "memory",
+          "char": "舒"
+        },
+        {
+          "id": "u24-questions-服-intro",
+          "type": "intro",
+          "char": "服"
+        },
+        {
+          "id": "u24-questions-服-trace",
+          "type": "trace",
+          "char": "服"
+        },
+        {
+          "id": "u24-questions-服-build",
+          "type": "build",
+          "char": "服"
+        },
+        {
+          "id": "u24-questions-服-complete",
+          "type": "complete",
+          "char": "服"
+        },
+        {
+          "id": "u24-questions-服-memory",
+          "type": "memory",
+          "char": "服"
+        },
+        {
+          "id": "u24-questions-02",
+          "type": "phrase",
+          "phrase": "u24-fast-comfortable"
+        },
+        {
+          "id": "u24-questions-03",
+          "type": "order",
+          "phrase": "u24-fast-comfortable",
+          "tokens": [
+            "又舒服",
+            "高鐵",
+            "又快"
+          ]
+        },
+        {
+          "id": "u24-questions-04",
+          "type": "select",
+          "prompt": "What two properties are linked in 高鐵又快又舒服?",
+          "options": [
+            "fast and comfortable",
+            "slow and expensive",
+            "new and old"
+          ],
+          "answer": "fast and comfortable",
+          "explanation": "The two 又 markers coordinate 快 and 舒服.",
+          "grammarIds": [
+            "u24-you-you"
+          ]
+        },
+        {
+          "id": "u24-questions-05",
+          "type": "select",
+          "prompt": "Complete the pattern: 又快___舒服",
+          "options": [
+            "又",
+            "比較",
+            "跟"
+          ],
+          "answer": "又",
+          "explanation": "Repeat 又 before the second coordinated property.",
+          "grammarIds": [
+            "u24-you-you"
+          ]
+        },
+        {
+          "id": "u24-questions-listen-又",
+          "type": "listen",
+          "char": "又",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "又",
+            "快",
+            "舒",
+            "服"
+          ],
+          "answer": "又",
+          "explanation": "又 is yòu; the repeated pair forms 又…又…."
+        }
+      ]
+    },
+    {
+      "id": "u24-review",
+      "title": "Unit 24 Review",
+      "subtitle": "Transportation, companions, method questions, and implicit comparison.",
+      "chars": [
+        "坐",
+        "火",
+        "車",
+        "跟",
+        "慢",
+        "較",
+        "快",
+        "高",
+        "鐵",
+        "票",
+        "又",
+        "舒",
+        "服"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-24",
+      "review": true,
+      "steps": [
+        {
+          "id": "u24-review-01",
+          "type": "match",
+          "chars": [
+            "坐",
+            "火",
+            "車",
+            "跟",
+            "慢",
+            "快"
+          ]
+        },
+        {
+          "id": "u24-review-02",
+          "type": "match",
+          "chars": [
+            "較",
+            "高",
+            "鐵",
+            "票",
+            "又",
+            "舒",
+            "服"
+          ]
+        },
+        {
+          "id": "u24-review-03",
+          "type": "phrase",
+          "phrase": "u24-train-school"
+        },
+        {
+          "id": "u24-review-04",
+          "type": "order",
+          "phrase": "u24-train-school",
+          "tokens": [
+            "去",
+            "學校",
+            "坐火車",
+            "我"
+          ]
+        },
+        {
+          "id": "u24-review-05",
+          "type": "select",
+          "prompt": "Which asks how an action is done?",
+          "options": [
+            "你怎麼去學校？",
+            "火車怎麼樣？"
+          ],
+          "answer": "你怎麼去學校？",
+          "explanation": "怎麼 asks for the method of 去學校.",
+          "grammarIds": [
+            "u24-how-zenme"
+          ]
+        },
+        {
+          "id": "u24-review-06",
+          "type": "select",
+          "prompt": "Which says High Speed Rail is relatively faster?",
+          "options": [
+            "高鐵比較快。",
+            "高鐵又快。"
+          ],
+          "answer": "高鐵比較快。",
+          "explanation": "比較 marks the implicit comparison.",
+          "grammarIds": [
+            "u24-bijiao"
+          ]
+        },
+        {
+          "id": "u24-review-07",
+          "type": "phrase",
+          "phrase": "u24-fast-comfortable"
+        },
+        {
+          "id": "u24-review-08",
+          "type": "build",
+          "char": "鐵"
+        },
+        {
+          "id": "u24-review-09",
+          "type": "memory",
+          "char": "票"
+        },
+        {
+          "id": "u24-review-10",
+          "type": "memory",
+          "char": "服"
+        }
+      ]
+    }
   ],
-  "newVocabulary":[{"text":"比","pinyin":"bǐ","meaning":"than; compared with","lessonId":"u24-frame","core":true,"note":"Preposition introducing the comparison standard in A 比 B + property."}],
-  "reviewVocabulary":["我","我們","他","他們","的","這","那","本","書","大","手機","支","貴","商店","近","遠","不","是","嗎"],
-  "newCharacters":[],"reviewCharacters":[],"characters":{},
-  "grammarRules":{
-    "u24-bi-comparison":{"id":"u24-bi-comparison","title":"Explicit comparison with 比","pattern":"A + 比 + B + State Verb / Property","explanation":"比 introduces the comparison standard B. The item being described is A, before 比, and the property comes after B. This explicitly says A has more of that property than B.","examples":[{"text":"我們學校比他們學校大。","pinyin":"Wǒmen xuéxiào bǐ tāmen xuéxiào dà.","meaning":"Our school is bigger than their school."},{"text":"這支手機比那支手機貴。","pinyin":"Zhè zhī shǒujī bǐ nà zhī shǒujī guì.","meaning":"This phone is more expensive than that phone."}],"remember":"A is the item you are describing; B is the comparison standard after 比.","words":["比"]},
-    "u24-bi-degree":{"id":"u24-bi-degree","title":"Keep 很 out of the basic 比 comparison","pattern":"A + 比 + B + Property  ✓","explanation":"In the textbook's basic 比 pattern, degree adverbs such as 很, 真, and 非常 do not appear directly before the state verb/property. Say A 比 B 貴, not A 比 B 很貴.","examples":[{"text":"這支手機比那支手機貴。","pinyin":"Zhè zhī shǒujī bǐ nà zhī shǒujī guì.","meaning":"This phone is more expensive than that phone."},{"text":"這本書比那本書大。","pinyin":"Zhè běn shū bǐ nà běn shū dà.","meaning":"This book is bigger than that book."}],"remember":"Basic 比 frame: go straight from B to the property.","words":["比"]},
-    "u24-bi-negation":{"id":"u24-bi-negation","title":"Negating 比 comparisons","pattern":"A + 不比 + B + Property / A + 不是比 + B + Property","explanation":"The textbook allows the 比 comparison to be negated with 不 before 比. 不是比 can reject the comparison claim as a whole. Keep the comparison order intact.","examples":[{"text":"我的手機不比他的手機貴。","pinyin":"Wǒ de shǒujī bù bǐ tā de shǒujī guì.","meaning":"My phone is not more expensive than his."},{"text":"這本書不是比那本書大。","pinyin":"Zhè běn shū bú shì bǐ nà běn shū dà.","meaning":"It is not the case that this book is bigger than that book."}],"remember":"Direct negation: 不 + 比. Whole-claim correction: 不是 + 比.","words":["不","不是","比"]}
+  "newVocabulary": [
+    {
+      "text": "坐",
+      "pinyin": "zuò",
+      "meaning": "to take; travel by (a vehicle)",
+      "lessonId": "u24-frame",
+      "core": true
+    },
+    {
+      "text": "火車",
+      "pinyin": "huǒchē",
+      "meaning": "train",
+      "lessonId": "u24-frame",
+      "core": true
+    },
+    {
+      "text": "跟",
+      "pinyin": "gēn",
+      "meaning": "with; together with",
+      "lessonId": "u24-price",
+      "core": true
+    },
+    {
+      "text": "玩",
+      "pinyin": "wán",
+      "meaning": "to play; have fun",
+      "lessonId": "u24-price",
+      "core": true
+    },
+    {
+      "text": "怎麼",
+      "pinyin": "zěnme",
+      "meaning": "how",
+      "lessonId": "u24-distance",
+      "core": true
+    },
+    {
+      "text": "慢",
+      "pinyin": "màn",
+      "meaning": "slow",
+      "lessonId": "u24-degree",
+      "core": true
+    },
+    {
+      "text": "比較",
+      "pinyin": "bǐjiào",
+      "meaning": "comparatively; relatively; more",
+      "lessonId": "u24-degree",
+      "core": true,
+      "note": "In the Taiwan usage taught by the textbook, 比較 signals a comparison even when the standard is understood from context."
+    },
+    {
+      "text": "快",
+      "pinyin": "kuài",
+      "meaning": "fast; quick",
+      "lessonId": "u24-degree",
+      "core": true
+    },
+    {
+      "text": "高鐵",
+      "pinyin": "gāotiě",
+      "meaning": "High Speed Rail (HSR)",
+      "lessonId": "u24-negation",
+      "core": true
+    },
+    {
+      "text": "車票",
+      "pinyin": "chēpiào",
+      "meaning": "transportation ticket",
+      "lessonId": "u24-negation",
+      "core": true
+    },
+    {
+      "text": "又…又…",
+      "pinyin": "yòu…yòu…",
+      "meaning": "both … and …",
+      "lessonId": "u24-questions",
+      "core": true
+    },
+    {
+      "text": "舒服",
+      "pinyin": "shūfu",
+      "meaning": "comfortable",
+      "lessonId": "u24-questions",
+      "core": true
+    }
+  ],
+  "reviewVocabulary": [
+    "我",
+    "你",
+    "去",
+    "學校",
+    "朋友",
+    "週末",
+    "很",
+    "有一點",
+    "貴",
+    "怎麼樣",
+    "這",
+    "手機",
+    "好玩",
+    "比賽"
+  ],
+  "newCharacters": [
+    "坐",
+    "火",
+    "車",
+    "跟",
+    "慢",
+    "較",
+    "快",
+    "高",
+    "鐵",
+    "票",
+    "又",
+    "舒",
+    "服"
+  ],
+  "reviewCharacters": [],
+  "characters": {
+    "坐": {
+      "hanzi": "坐",
+      "pinyin": "zuò",
+      "zhuyin": "ㄗㄨㄛˋ",
+      "meaning": "sit; take (transport)",
+      "strokes": 7,
+      "note": "坐 is fourth-tone zuò. Before a vehicle, it means to take or travel by that vehicle.",
+      "memory": "Two 人-like figures sit above 土. Keep the final three 土 strokes centered under the four upper strokes.",
+      "parts": [
+        {
+          "label": "从",
+          "name": "two-person upper group",
+          "role": "Visual component",
+          "description": "The first four strokes form the paired person-like upper group.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "土",
+          "name": "earth component",
+          "role": "Lower component",
+          "description": "The final three strokes form 土 underneath.",
+          "strokes": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "坐火車",
+        "pinyin": "zuò huǒchē",
+        "meaning": "take the train"
+      }
+    },
+    "火": {
+      "hanzi": "火",
+      "pinyin": "huǒ",
+      "zhuyin": "ㄏㄨㄛˇ",
+      "meaning": "fire",
+      "strokes": 4,
+      "note": "火 is third-tone huǒ. In 火車 it is the first character of the word for train.",
+      "memory": "Two small side strokes frame the central 人-like pair, making a four-stroke flame shape.",
+      "parts": [
+        {
+          "label": "side",
+          "name": "side strokes",
+          "role": "Visual component",
+          "description": "The first two strokes are the shorter side strokes of the flame.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "人",
+          "name": "central pair",
+          "role": "Visual component",
+          "description": "The final two strokes spread downward through the center like 人.",
+          "strokes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "火車",
+        "pinyin": "huǒchē",
+        "meaning": "train"
+      }
+    },
+    "車": {
+      "hanzi": "車",
+      "pinyin": "chē",
+      "zhuyin": "ㄔㄜ",
+      "meaning": "vehicle; car",
+      "strokes": 7,
+      "note": "車 is first-tone chē. It appears in 火車 'train' and 車票 'ticket'.",
+      "memory": "A central vertical passes through a boxed middle and three horizontal levels. Keep the seven strokes balanced around the center.",
+      "parts": [
+        {
+          "label": "車",
+          "name": "whole vehicle form",
+          "role": "Character-specific shape",
+          "description": "Write the seven-stroke traditional 車 as a single centered framework with the long vertical crossing its horizontal levels.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "車票",
+        "pinyin": "chēpiào",
+        "meaning": "ticket"
+      }
+    },
+    "跟": {
+      "hanzi": "跟",
+      "pinyin": "gēn",
+      "zhuyin": "ㄍㄣ",
+      "meaning": "with; follow",
+      "strokes": 13,
+      "note": "跟 is first-tone gēn. In this lesson it introduces the person who accompanies someone in an activity.",
+      "memory": "The seven-stroke 足 component stands on the left; 艮 fills the six-stroke right side.",
+      "parts": [
+        {
+          "label": "𧾷",
+          "name": "foot component",
+          "role": "Meaning/shape component",
+          "description": "The first seven strokes form the compressed foot component on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "艮",
+          "name": "right component",
+          "role": "Sound/shape component",
+          "description": "The final six strokes form 艮 on the right.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "跟朋友",
+        "pinyin": "gēn péngyǒu",
+        "meaning": "with a friend"
+      }
+    },
+    "慢": {
+      "hanzi": "慢",
+      "pinyin": "màn",
+      "zhuyin": "ㄇㄢˋ",
+      "meaning": "slow",
+      "strokes": 14,
+      "note": "慢 is fourth-tone màn. It describes something as slow, including a mode of transportation.",
+      "memory": "The three-stroke 忄 heart side stays narrow; the eleven-stroke 曼 block fills the right.",
+      "parts": [
+        {
+          "label": "忄",
+          "name": "heart side",
+          "role": "Meaning/shape component",
+          "description": "The first three strokes form 忄 on the left.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "曼",
+          "name": "right block",
+          "role": "Sound/shape component",
+          "description": "The final eleven strokes form the larger 曼 component on the right.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "比較慢",
+        "pinyin": "bǐjiào màn",
+        "meaning": "relatively slower"
+      }
+    },
+    "較": {
+      "hanzi": "較",
+      "pinyin": "jiào",
+      "zhuyin": "ㄐㄧㄠˋ",
+      "meaning": "compare; relatively",
+      "strokes": 13,
+      "note": "較 is fourth-tone jiào. Together with 比 it forms 比較, the adverb used for an implicit comparison.",
+      "memory": "Traditional 車 takes the first seven strokes; 交 supplies the six-stroke right side.",
+      "parts": [
+        {
+          "label": "車",
+          "name": "vehicle component",
+          "role": "Visual component",
+          "description": "The first seven strokes form 車 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "交",
+          "name": "right component",
+          "role": "Sound/shape component",
+          "description": "The final six strokes form 交 on the right.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "比較",
+        "pinyin": "bǐjiào",
+        "meaning": "comparatively; relatively"
+      }
+    },
+    "快": {
+      "hanzi": "快",
+      "pinyin": "kuài",
+      "zhuyin": "ㄎㄨㄞˋ",
+      "meaning": "fast; quick",
+      "strokes": 7,
+      "note": "快 is fourth-tone kuài. It contrasts with 慢 when comparing transportation.",
+      "memory": "Three-stroke 忄 on the left is followed by four-stroke 夬 on the right.",
+      "parts": [
+        {
+          "label": "忄",
+          "name": "heart side",
+          "role": "Visual component",
+          "description": "The first three strokes form the narrow 忄 component.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "夬",
+          "name": "right component",
+          "role": "Shape component",
+          "description": "The final four strokes form 夬 on the right, ending in the spreading lower stroke.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "比較快",
+        "pinyin": "bǐjiào kuài",
+        "meaning": "relatively faster"
+      }
+    },
+    "高": {
+      "hanzi": "高",
+      "pinyin": "gāo",
+      "zhuyin": "ㄍㄠ",
+      "meaning": "high; tall",
+      "strokes": 10,
+      "note": "高 is first-tone gāo. In 高鐵 it is part of Taiwan's common abbreviation for High Speed Rail.",
+      "memory": "A two-stroke 亠 sits above a small 口, then the five-stroke lower enclosure completes 高.",
+      "parts": [
+        {
+          "label": "亠",
+          "name": "top",
+          "role": "Upper component",
+          "description": "The first two strokes form the cap at the top.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "口",
+          "name": "middle mouth",
+          "role": "Middle component",
+          "description": "The next three strokes form the small central 口.",
+          "strokes": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "冋",
+          "name": "lower frame",
+          "role": "Lower component",
+          "description": "The final five strokes form the broad lower enclosure.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "高鐵",
+        "pinyin": "gāotiě",
+        "meaning": "High Speed Rail"
+      }
+    },
+    "鐵": {
+      "hanzi": "鐵",
+      "pinyin": "tiě",
+      "zhuyin": "ㄊㄧㄝˇ",
+      "meaning": "iron; rail",
+      "strokes": 21,
+      "note": "鐵 is third-tone tiě. In 高鐵 it refers to the rail part of High Speed Rail.",
+      "memory": "金 uses the first eight strokes on the left; the dense thirteen-stroke 𢧜 fills the right.",
+      "parts": [
+        {
+          "label": "金",
+          "name": "metal component",
+          "role": "Meaning component",
+          "description": "The first eight strokes form the metal radical 金 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "label": "𢧜",
+          "name": "right block",
+          "role": "Sound/shape component",
+          "description": "The final thirteen strokes form the compact right-side component.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "高鐵",
+        "pinyin": "gāotiě",
+        "meaning": "High Speed Rail"
+      }
+    },
+    "票": {
+      "hanzi": "票",
+      "pinyin": "piào",
+      "zhuyin": "ㄆㄧㄠˋ",
+      "meaning": "ticket",
+      "strokes": 11,
+      "note": "票 is fourth-tone piào. 車票 means a ticket for transportation.",
+      "memory": "Six-stroke 覀 forms the top; five-stroke 示 forms the lower half.",
+      "parts": [
+        {
+          "label": "覀",
+          "name": "upper component",
+          "role": "Upper component",
+          "description": "The first six strokes form 覀 across the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "示",
+          "name": "lower component",
+          "role": "Lower component",
+          "description": "The final five strokes form 示 below.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "車票",
+        "pinyin": "chēpiào",
+        "meaning": "ticket"
+      }
+    },
+    "又": {
+      "hanzi": "又",
+      "pinyin": "yòu",
+      "zhuyin": "ㄧㄡˋ",
+      "meaning": "again; also",
+      "strokes": 2,
+      "note": "又 is fourth-tone yòu. Repeated as 又…又…, it links two properties: both A and B.",
+      "memory": "又 is only two crossing strokes: a bent first stroke followed by a long falling-right stroke.",
+      "parts": [
+        {
+          "label": "又",
+          "name": "whole character",
+          "role": "Character-specific shape",
+          "description": "The two strokes cross to form the complete character; keep the second stroke long and open.",
+          "strokes": [
+            0,
+            1
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "又快又舒服",
+        "pinyin": "yòu kuài yòu shūfu",
+        "meaning": "both fast and comfortable"
+      }
+    },
+    "舒": {
+      "hanzi": "舒",
+      "pinyin": "shū",
+      "zhuyin": "ㄕㄨ",
+      "meaning": "comfortable; relaxed",
+      "strokes": 12,
+      "note": "舒 is first-tone shū. It is the first character of 舒服, 'comfortable'.",
+      "memory": "舍 fills the first eight strokes on the left and 予 uses the final four strokes on the right.",
+      "parts": [
+        {
+          "label": "舍",
+          "name": "left component",
+          "role": "Meaning/shape component",
+          "description": "The first eight strokes form 舍 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "label": "予",
+          "name": "right component",
+          "role": "Shape component",
+          "description": "The final four strokes form 予 on the right.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "舒服",
+        "pinyin": "shūfu",
+        "meaning": "comfortable"
+      }
+    },
+    "服": {
+      "hanzi": "服",
+      "pinyin": "fú",
+      "zhuyin": "ㄈㄨˊ",
+      "meaning": "clothing; serve (in 舒服)",
+      "strokes": 8,
+      "note": "服 is read with a neutral tone in the common word 舒服: shūfu. The character's citation reading is fú.",
+      "memory": "月 forms the four-stroke left side; the final four strokes form 𠬝 on the right.",
+      "parts": [
+        {
+          "label": "月",
+          "name": "left component",
+          "role": "Visual component",
+          "description": "The first four strokes form 月 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "𠬝",
+          "name": "right component",
+          "role": "Shape component",
+          "description": "The final four strokes form the right-hand component.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "舒服",
+        "pinyin": "shūfu",
+        "meaning": "comfortable"
+      }
+    }
   },
-  "grammarIntroductions":[{"id":"u24-bi-comparison","kind":"rule","ref":"u24-bi-comparison","lessonId":"u24-frame","stepId":"u24-frame-01"},{"id":"u24-bi-degree","kind":"rule","ref":"u24-bi-degree","lessonId":"u24-degree","stepId":"u24-degree-01"},{"id":"u24-bi-negation","kind":"rule","ref":"u24-bi-negation","lessonId":"u24-negation","stepId":"u24-negation-01"}],
-  "reviewGrammar":[],
-  "phrases":{
-    "u24-school-big":{"text":"我們學校比他們學校大。","pinyin":"Wǒmen xuéxiào bǐ tāmen xuéxiào dà.","meaning":"Our school is bigger than their school.","note":"A comes before 比; B follows 比; the property comes last.","tokens":["我們學校","比","他們學校","大"],"grammarIds":["u24-bi-comparison"]},
-    "u24-book-big":{"text":"這本書比那本書大。","pinyin":"Zhè běn shū bǐ nà běn shū dà.","meaning":"This book is bigger than that book.","note":"The compared items occupy A and B; 大 is the property.","tokens":["這本書","比","那本書","大"],"grammarIds":["u24-bi-comparison"]},
-    "u24-phone-expensive":{"text":"這支手機比那支手機貴。","pinyin":"Zhè zhī shǒujī bǐ nà zhī shǒujī guì.","meaning":"This phone is more expensive than that phone.","note":"比 marks the comparison standard before the state verb 貴.","tokens":["這支手機","比","那支手機","貴"],"grammarIds":["u24-bi-comparison"]},
-    "u24-store-near":{"text":"這個商店比那個商店近。","pinyin":"Zhè ge shāngdiàn bǐ nà ge shāngdiàn jìn.","meaning":"This shop is closer than that shop.","note":"近 is the compared property.","tokens":["這個商店","比","那個商店","近"],"grammarIds":["u24-bi-comparison"]},
-    "u24-school-far":{"text":"他們學校比我們學校遠。","pinyin":"Tāmen xuéxiào bǐ wǒmen xuéxiào yuǎn.","meaning":"Their school is farther than our school.","note":"遠 comes after the B comparison standard.","tokens":["他們學校","比","我們學校","遠"],"grammarIds":["u24-bi-comparison"]},
-    "u24-not-more-expensive":{"text":"我的手機不比他的手機貴。","pinyin":"Wǒ de shǒujī bù bǐ tā de shǒujī guì.","meaning":"My phone is not more expensive than his.","note":"不 comes before 比 to negate the comparative claim.","tokens":["我的手機","不比","他的手機","貴"],"grammarIds":["u24-bi-negation"]},
-    "u24-not-case":{"text":"這本書不是比那本書大。","pinyin":"Zhè běn shū bú shì bǐ nà běn shū dà.","meaning":"It is not the case that this book is bigger than that book.","note":"不是比 rejects the comparison claim as a whole.","tokens":["這本書","不是比","那本書","大"],"grammarIds":["u24-bi-negation"]},
-    "u24-question":{"text":"這支手機比那支手機貴嗎？","pinyin":"Zhè zhī shǒujī bǐ nà zhī shǒujī guì ma?","meaning":"Is this phone more expensive than that phone?","note":"Add 嗎 to ask whether the comparison is true.","tokens":["這支手機","比","那支手機","貴","嗎"],"grammarIds":["u24-bi-comparison"]}
+  "grammarRules": {
+    "u24-zuo-transport": {
+      "id": "u24-zuo-transport",
+      "title": "Take transportation with 坐",
+      "pattern": "坐 + Vehicle + 去 + Place",
+      "explanation": "Before a mode of transportation, 坐 means to take or travel by that vehicle. The vehicle follows 坐 directly; a destination can follow 去.",
+      "examples": [
+        {
+          "text": "我坐火車去學校。",
+          "pinyin": "Wǒ zuò huǒchē qù xuéxiào.",
+          "meaning": "I take the train to school."
+        },
+        {
+          "text": "我坐高鐵去。",
+          "pinyin": "Wǒ zuò gāotiě qù.",
+          "meaning": "I go by High Speed Rail."
+        }
+      ],
+      "remember": "坐 + vehicle tells how you travel.",
+      "words": [
+        "坐",
+        "火車",
+        "高鐵"
+      ]
+    },
+    "u24-gen-company": {
+      "id": "u24-gen-company",
+      "title": "Companionship with 跟",
+      "pattern": "Subject + 跟 + Person + Verb Phrase",
+      "explanation": "跟 introduces the person who accompanies the subject in an activity. Put 跟 + person before the action phrase.",
+      "examples": [
+        {
+          "text": "我跟朋友去玩。",
+          "pinyin": "Wǒ gēn péngyǒu qù wán.",
+          "meaning": "I go have fun with a friend."
+        },
+        {
+          "text": "我跟朋友坐火車。",
+          "pinyin": "Wǒ gēn péngyǒu zuò huǒchē.",
+          "meaning": "I take the train with a friend."
+        }
+      ],
+      "remember": "跟 + person comes before the shared activity.",
+      "words": [
+        "跟"
+      ]
+    },
+    "u24-how-zenme": {
+      "id": "u24-how-zenme",
+      "title": "Ask how with 怎麼",
+      "pattern": "Subject / Topic + 怎麼 + Action?",
+      "explanation": "怎麼 is a question adverb used to ask how an action is done. Put it before the action verb or action phrase.",
+      "examples": [
+        {
+          "text": "你怎麼去學校？",
+          "pinyin": "Nǐ zěnme qù xuéxiào?",
+          "meaning": "How do you go to school?"
+        },
+        {
+          "text": "你怎麼去？",
+          "pinyin": "Nǐ zěnme qù?",
+          "meaning": "How are you going?"
+        }
+      ],
+      "remember": "If the answer would describe a method, use 怎麼 before the action.",
+      "words": [
+        "怎麼"
+      ]
+    },
+    "u24-how-vs-zenmeyang": {
+      "id": "u24-how-vs-zenmeyang",
+      "title": "怎麼 is not 怎麼樣",
+      "pattern": "怎麼 + Action?  vs.  Topic + 怎麼樣?",
+      "explanation": "怎麼 asks how an action is carried out. 怎麼樣 is a state-verb expression asking how something is or what someone thinks about it. They are not interchangeable.",
+      "examples": [
+        {
+          "text": "你怎麼去學校？",
+          "pinyin": "Nǐ zěnme qù xuéxiào?",
+          "meaning": "How do you go to school?"
+        },
+        {
+          "text": "火車怎麼樣？",
+          "pinyin": "Huǒchē zěnmeyàng?",
+          "meaning": "How is the train? / What do you think of the train?"
+        }
+      ],
+      "remember": "Method of an action → 怎麼. Evaluation of a topic → 怎麼樣.",
+      "words": [
+        "怎麼",
+        "怎麼樣"
+      ]
+    },
+    "u24-bijiao": {
+      "id": "u24-bijiao",
+      "title": "Implicit comparison with 比較",
+      "pattern": "比較 + State Verb / Description",
+      "explanation": "比較 marks an implicit comparison: the comparison standard is understood from context. In the Taiwan usage presented by the textbook, 比較 retains this comparative meaning. If the description is negated, put the negative with the main description, as in 比較不貴, rather than negating 比較 itself.",
+      "examples": [
+        {
+          "text": "火車比較慢。",
+          "pinyin": "Huǒchē bǐjiào màn.",
+          "meaning": "The train is relatively slower."
+        },
+        {
+          "text": "高鐵比較快。",
+          "pinyin": "Gāotiě bǐjiào kuài.",
+          "meaning": "High Speed Rail is relatively faster."
+        }
+      ],
+      "remember": "比較 tells the listener to compare with something understood from context.",
+      "words": [
+        "比較",
+        "慢",
+        "快"
+      ]
+    },
+    "u24-you-you": {
+      "id": "u24-you-you",
+      "title": "Both A and B with 又…又…",
+      "pattern": "又 + Property A + 又 + Property B",
+      "explanation": "Use 又 before each of two coordinated properties to say that something has both qualities. The two descriptions apply to the same topic.",
+      "examples": [
+        {
+          "text": "高鐵又快又舒服。",
+          "pinyin": "Gāotiě yòu kuài yòu shūfu.",
+          "meaning": "High Speed Rail is both fast and comfortable."
+        },
+        {
+          "text": "這支手機又好看又好玩。",
+          "pinyin": "Zhè zhī shǒujī yòu hǎokàn yòu hǎowán.",
+          "meaning": "This phone is both good-looking and fun."
+        }
+      ],
+      "remember": "Repeat 又: 又 A 又 B.",
+      "words": [
+        "又…又…"
+      ]
+    }
   },
-  "revisionStepIds":["u24-price-01","u24-distance-01","u24-review-03"]
+  "grammarIntroductions": [
+    {
+      "id": "u24-zuo-transport",
+      "kind": "rule",
+      "ref": "u24-zuo-transport",
+      "lessonId": "u24-frame",
+      "stepId": "u24-frame-01"
+    },
+    {
+      "id": "u24-gen-company",
+      "kind": "rule",
+      "ref": "u24-gen-company",
+      "lessonId": "u24-price",
+      "stepId": "u24-price-01"
+    },
+    {
+      "id": "u24-how-zenme",
+      "kind": "rule",
+      "ref": "u24-how-zenme",
+      "lessonId": "u24-distance",
+      "stepId": "u24-distance-01"
+    },
+    {
+      "id": "u24-how-vs-zenmeyang",
+      "kind": "rule",
+      "ref": "u24-how-vs-zenmeyang",
+      "lessonId": "u24-distance",
+      "stepId": "u24-distance-04"
+    },
+    {
+      "id": "u24-bijiao",
+      "kind": "rule",
+      "ref": "u24-bijiao",
+      "lessonId": "u24-degree",
+      "stepId": "u24-degree-01"
+    },
+    {
+      "id": "u24-you-you",
+      "kind": "rule",
+      "ref": "u24-you-you",
+      "lessonId": "u24-questions",
+      "stepId": "u24-questions-01"
+    }
+  ],
+  "reviewGrammar": [],
+  "phrases": {
+    "u24-train-school": {
+      "text": "我坐火車去學校。",
+      "pinyin": "Wǒ zuò huǒchē qù xuéxiào.",
+      "meaning": "I take the train to school.",
+      "note": "坐 + vehicle gives the mode of transportation.",
+      "tokens": [
+        "我",
+        "坐火車",
+        "去",
+        "學校"
+      ],
+      "grammarIds": [
+        "u24-zuo-transport"
+      ]
+    },
+    "u24-friend-play": {
+      "text": "我週末跟朋友去玩。",
+      "pinyin": "Wǒ zhōumò gēn péngyǒu qù wán.",
+      "meaning": "I go have fun with a friend on the weekend.",
+      "note": "跟朋友 precedes the shared action.",
+      "tokens": [
+        "我",
+        "週末",
+        "跟朋友",
+        "去玩"
+      ],
+      "grammarIds": [
+        "u24-gen-company"
+      ]
+    },
+    "u24-how-school": {
+      "text": "你怎麼去學校？",
+      "pinyin": "Nǐ zěnme qù xuéxiào?",
+      "meaning": "How do you go to school?",
+      "note": "怎麼 asks for the method of 去學校.",
+      "tokens": [
+        "你",
+        "怎麼",
+        "去",
+        "學校"
+      ],
+      "grammarIds": [
+        "u24-how-zenme"
+      ]
+    },
+    "u24-train-opinion": {
+      "text": "火車怎麼樣？",
+      "pinyin": "Huǒchē zěnmeyàng?",
+      "meaning": "How is the train? / What do you think of the train?",
+      "note": "怎麼樣 asks for an evaluation, not a method.",
+      "tokens": [
+        "火車",
+        "怎麼樣"
+      ],
+      "grammarIds": [
+        "u24-how-vs-zenmeyang"
+      ]
+    },
+    "u24-train-slower": {
+      "text": "火車比較慢。",
+      "pinyin": "Huǒchē bǐjiào màn.",
+      "meaning": "The train is relatively slower.",
+      "note": "The comparison standard is supplied by context.",
+      "tokens": [
+        "火車",
+        "比較慢"
+      ],
+      "grammarIds": [
+        "u24-bijiao"
+      ]
+    },
+    "u24-hsr-faster": {
+      "text": "高鐵比較快。",
+      "pinyin": "Gāotiě bǐjiào kuài.",
+      "meaning": "High Speed Rail is relatively faster.",
+      "note": "比較 marks an implicit comparison.",
+      "tokens": [
+        "高鐵",
+        "比較快"
+      ],
+      "grammarIds": [
+        "u24-bijiao"
+      ]
+    },
+    "u24-ticket-price": {
+      "text": "高鐵車票有一點貴。",
+      "pinyin": "Gāotiě chēpiào yǒu yìdiǎn guì.",
+      "meaning": "High Speed Rail tickets are a little expensive.",
+      "note": "有一點 softens a negative-ish description such as 貴.",
+      "tokens": [
+        "高鐵車票",
+        "有一點貴"
+      ]
+    },
+    "u24-fast-comfortable": {
+      "text": "高鐵又快又舒服。",
+      "pinyin": "Gāotiě yòu kuài yòu shūfu.",
+      "meaning": "High Speed Rail is both fast and comfortable.",
+      "note": "又 is repeated before each property.",
+      "tokens": [
+        "高鐵",
+        "又快",
+        "又舒服"
+      ],
+      "grammarIds": [
+        "u24-you-you"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u24-price-05",
+    "u24-distance-05",
+    "u24-review-05"
+  ]
 };
 
 export default unit;
