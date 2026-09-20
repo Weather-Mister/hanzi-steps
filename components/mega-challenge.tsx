@@ -110,10 +110,10 @@ export function MegaChallenge({
    {error&&<p className="mega-sync-note" role="status">{error}</p>}
 
    {view==='mastered'?<section className="mastered-list">
-    {masteredItems.length===0?<p className="search-empty">Words you move to Mastered will appear here.</p>:
+    {masteredItems.length===0?<p className="search-empty">Words you add to Mastered will appear here.</p>:
      masteredItems.map(item=><article className="mastered-card" key={item.id}>
       <div><strong lang="zh-Hant-TW">{item.traditional}</strong><span className="pinyin">{item.pinyin}</span><p>{item.meaning}</p></div>
-      <button className="secondary-button" disabled={saving} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore to challenge'}</button>
+      <button className="secondary-button" disabled={saving} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore'}</button>
      </article>)}
    </section>:
    masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
@@ -139,30 +139,30 @@ export function MegaChallenge({
      </div>
      <div className="mega-result-actions">
       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
-      {result.perfect&&!confirmItem&&<button className="text-button mega-know-button" disabled={saving} onClick={()=>setConfirmItem(result.item)}>I already know this</button>}
+      {result.perfect&&!confirmItem&&<button className="text-button mega-know-button" disabled={saving} onClick={()=>setConfirmItem(result.item)}>Add to Mastered</button>}
      </div>
     </div>
-    {result.perfect&&confirmItem&&<div className="mega-master-confirm" role="group" aria-label="Move word to Mastered">
+    {result.perfect&&confirmItem&&<div className="mega-master-confirm" role="group" aria-label="Add word to Mastered">
      <div>
-      <strong>Move <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
+      <strong>Add <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
       <p>It will stay out of Mega Challenge until you restore it.</p>
      </div>
      <div className="mega-master-confirm-actions">
       <button className="text-button" disabled={saving} onClick={()=>setConfirmItem(null)}>Cancel</button>
-      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Move to Mastered'}</button>
+      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>}</>:
-    confirmItem?<div className="mega-master-confirm" role="group" aria-label="Move word to Mastered">
+    confirmItem?<div className="mega-master-confirm" role="group" aria-label="Add word to Mastered">
      <div>
-      <strong>Move <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
+      <strong>Add <span lang="zh-Hant-TW">{confirmItem.traditional}</span> to Mastered?</strong>
       <p>It will stay out of Mega Challenge until you restore it.</p>
      </div>
      <div className="mega-master-confirm-actions">
       <button className="text-button" disabled={saving} onClick={()=>setConfirmItem(null)}>Cancel</button>
-      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Move to Mastered'}</button>
+      <button className="secondary-button" disabled={saving} onClick={()=>void markMastered(confirmItem)}>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>:
-    <button className="text-button mega-know-button" onClick={()=>setConfirmItem(current)}>I already know this</button>}
+    <button className="text-button mega-know-button" onClick={()=>setConfirmItem(current)}>Add to Mastered</button>}
    </section>:
    eligible.length>0?<section className="mega-complete">
     <Trophy size={42}/>
