@@ -113,7 +113,7 @@ export function MegaChallenge({
     {masteredItems.length===0?<p className="search-empty">Words you move to Mastered will appear here.</p>:
      masteredItems.map(item=><article className="mastered-card" key={item.id}>
       <div><strong lang="zh-Hant-TW">{item.traditional}</strong><span className="pinyin">{item.pinyin}</span><p>{item.meaning}</p></div>
-      <button className="secondary-button" disabled={saving} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore to challenge'}</button>
+      <button className="secondary-button" disabled={saving} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore'}</button>
      </article>)}
    </section>:
    masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
