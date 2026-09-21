@@ -38,22 +38,20 @@ These are the supported opening items of Lesson 10 Vocabulary I. They are introd
 - The restored Lesson 8 vocabulary is attached to transport/ticket contexts rather than dumped into a detached word list.
 - Unit 29 retains month/date and 要是…就… teaching, then transitions into concrete fruit-description vocabulary.
 - No Lesson 10 grammar is pulled forward prematurely.
-- New vocabulary is introduced in teaching lessons before the two appended review activities sample it.
-- Existing review questions and grammar checks remain unchanged; the repair adds coverage rather than replacing prior assessments.
+- New vocabulary is introduced in teaching lessons before review.
+- A later quality pass found that two appended review questions were not enough to sample all rebalanced vocabulary and that the reviews lacked handwriting/component retrieval. The 22 existing review positions are now redistributed in place: Unit 28 explicitly retrieves 中國 and the 便 pronunciation contrast, while both units include handwriting/component retrieval and listening that reaches the rebalanced character set.
 
 ## Saved progress
 
 A pre-rebalance step-ID fixture records every published Unit 28–29 lesson prefix.
 
-`lib/lesson-revisions.ts` records the old completion lengths:
-- Unit 28: 5, 14, 13, 5, 5, 6, 20.
-- Unit 29: 16, 5, 9, 10, 4, 6, 20.
+`lib/lesson-revisions.ts` preserves two published completion generations for Units 28–29 rather than one overwritable number:
+- original Unit 28 bounds: 5, 14, 13, 5, 5, 6, 20;
+- rebalanced Unit 28 bounds: 16, 21, 19, 13, 12, 8, 22;
+- original Unit 29 bounds: 16, 5, 9, 10, 4, 6, 20;
+- rebalanced Unit 29 bounds: 27, 17, 16, 17, 6, 8, 22.
 
-Regression tests require:
-- every old step ID to remain at the same position,
-- every old partial checkpoint to remain valid,
-- every old completed checkpoint to retain completion credit,
-- and the new full lesson lengths to remain valid.
+Regression tests require every original step ID to remain at the same position, every old partial checkpoint to remain valid, and completed sessions at every recorded historical bound to retain completion credit. The current quality pass keeps the rebalanced lengths unchanged.
 
 ## Handwriting
 
@@ -71,20 +69,18 @@ For 非 and 或, the character records explicitly use justified whole-character 
 
 Still explicitly open: 網路上, 臺南, 故宮博物院, 逛, 臺東. These are tracked in the source plan with the specific character/provenance or first-teaching issue rather than silently omitted.
 
-## Gates still required
+## Verification status
 
-Before merge, the exact final PR head must pass:
-- curriculum generation and check,
-- separate targeted tests for Unit 28 and Unit 29,
-- character coverage,
-- full regression tests,
-- TypeScript,
-- Pages build,
-- generated artifact commit if needed,
-- and a second exact-head QA run if CI changes the branch.
+The first rebalance previously passed exact-head Feature QA and Pages deployment. This later teaching-quality repair must receive a fresh exact-head Feature QA run because it changes learner-facing wording, review activity types, and progress-compatibility code. Required checks remain curriculum generation/check, separate Unit 28 and Unit 29 targeted tests, character coverage, full regressions, TypeScript and Pages build, followed by a successful Pages build/deployment for the merge commit.
 
-After merge, both GitHub Pages build and deploy must succeed and the deployed artifact must contain the rebalanced vocabulary.
 
-## Exact-head QA trigger after generated artifacts
+## 2026-09-21 teaching-quality findings and fixes
 
-Feature QA hydrated all twelve newly added handwriting targets from `graphicsZhHant.txt` and committed the generated curriculum artifacts. This documentation-only follow-up commit changes no learner content; it exists so the exact final PR head receives a normal Feature QA run after those generated artifacts are present.
+The cross-unit audit of Units 26–29 found no major conflict in the Lesson 9 grammar progression, but it found four repairable quality issues in Units 28–29:
+
+1. **Lesson coherence:** appended vocabulary had produced titles such as “September 30 — and Fruit” and “Maokong — and Giving.” Examples and titles are now rewritten around coherent travel/visit contexts without moving persisted steps.
+2. **Polyphonic 便:** Unit 28 used 便利商店 after the learner already knew 便宜, but did not explicitly contrast **biàn** with **pián**. The lesson, vocabulary note and review now teach that contrast directly.
+3. **Review coverage:** Unit 28 did not retrieve 中國 at all, and both rebalanced reviews lacked handwriting/component retrieval. Review positions are now reassigned in place so all new vocabulary appears in review and both reviews contain handwriting/component retrieval plus at least three listening activities.
+4. **Source-document conflicts:** the older Units 26–27 source plan incorrectly called Lesson 9's source item 電影 and later wrote 作業. The authoritative source has **影片** and **功課**. The source plan is corrected; the learner-facing units were already using the correct 功課 and Unit 28 owns 影片.
+
+The quality pass also replaces several obviously nonsensical multiple-choice distractors with plausible Chinese alternatives while keeping one defensible answer.
