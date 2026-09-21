@@ -10,12 +10,18 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "Dates, additions & conditions",
     "title": "If I Have Time",
-    "description": "Continue Lesson 9 Dialogue II with month/date language, 還, Maokong, and the full 要是…就… condition-consequence frame including negative conditions.",
+    "description": "Finish the supported Lesson 9 date/condition material, then move naturally into the opening fruit vocabulary of Lesson 10 instead of stopping at a thin unit boundary.",
     "chars": [
       "月",
       "號",
       "就",
-      "貓"
+      "貓",
+      "水",
+      "果",
+      "黃",
+      "色",
+      "給",
+      "香"
     ],
     "lessonIds": [
       "u29-date",
@@ -39,19 +45,21 @@ const unit:UnitData = {
       "u29-calendar-date",
       "u29-yaoshi-jiu"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue II / Vocabulary II and Grammar V, with the month/date portion of Grammar I (printed pp. 185–193). Covers 月, 號, 還, 貓空, 要是, 就 and both positive and negative condition-consequence patterns. 逛 and the proper name 臺東 remain explicitly deferred because the current verified Taiwan Traditional handwriting source does not provide acceptable geometry for those first-time characters."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue II / Vocabulary II and Grammar I/V (printed pp. 185–193), then Lesson 10 Dialogue I / Vocabulary I opening material (printed pp. 202–204). After the supported Lesson 9 content, this rebalance adds 水果, 黃色, 給, 香, 甜 and 以前 from the next source section while preserving every published Unit 29 step prefix. 逛 and 臺東 remain separately tracked source gaps pending verified Taiwan Traditional handwriting support."
   },
   "reviewLessonId": "u29-review",
   "lessons": [
     {
       "id": "u29-date",
-      "title": "September 30",
-      "subtitle": "Say months and dates the way Dialogue II does.",
+      "title": "September 30 — and Fruit",
+      "subtitle": "Use month/date language, then open Lesson 10 with 水果.",
       "chars": [
         "月",
-        "號"
+        "號",
+        "水",
+        "果"
       ],
-      "minutes": "11–14 min",
+      "minutes": "15–19 min",
       "unitId": "unit-29",
       "review": false,
       "steps": [
@@ -156,15 +164,80 @@ const unit:UnitData = {
           ],
           "answer": "號",
           "explanation": "號 follows the day number in spoken dates."
+        },
+        {
+          "id": "u29-fruit-水-intro",
+          "type": "intro",
+          "char": "水"
+        },
+        {
+          "id": "u29-fruit-水-trace",
+          "type": "trace",
+          "char": "水"
+        },
+        {
+          "id": "u29-fruit-水-complete",
+          "type": "complete",
+          "char": "水"
+        },
+        {
+          "id": "u29-fruit-水-memory",
+          "type": "memory",
+          "char": "水"
+        },
+        {
+          "id": "u29-fruit-果-intro",
+          "type": "intro",
+          "char": "果"
+        },
+        {
+          "id": "u29-fruit-果-trace",
+          "type": "trace",
+          "char": "果"
+        },
+        {
+          "id": "u29-fruit-果-build",
+          "type": "build",
+          "char": "果"
+        },
+        {
+          "id": "u29-fruit-果-complete",
+          "type": "complete",
+          "char": "果"
+        },
+        {
+          "id": "u29-fruit-果-memory",
+          "type": "memory",
+          "char": "果"
+        },
+        {
+          "id": "u29-date-p3",
+          "type": "phrase",
+          "phrase": "u29-fruit"
+        },
+        {
+          "id": "u29-date-s3",
+          "type": "select",
+          "prompt": "Which word means “fruit”?",
+          "options": [
+            "水果",
+            "黃色",
+            "茶館"
+          ],
+          "answer": "水果",
+          "explanation": "水果 is the general word for fruit."
         }
       ]
     },
     {
       "id": "u29-hai",
-      "title": "Still — and Also",
-      "subtitle": "Use 還 for an unfinished state or an additional item.",
-      "chars": [],
-      "minutes": "7–9 min",
+      "title": "Still, Also — and Yellow",
+      "subtitle": "Use 還, then describe a fruit by color.",
+      "chars": [
+        "黃",
+        "色"
+      ],
+      "minutes": "12–15 min",
       "unitId": "unit-29",
       "review": false,
       "steps": [
@@ -211,17 +284,85 @@ const unit:UnitData = {
           ],
           "answer": "another item / also",
           "explanation": "還有 adds something else that is present."
+        },
+        {
+          "id": "u29-yellow-黃-intro",
+          "type": "intro",
+          "char": "黃"
+        },
+        {
+          "id": "u29-yellow-黃-trace",
+          "type": "trace",
+          "char": "黃"
+        },
+        {
+          "id": "u29-yellow-黃-build",
+          "type": "build",
+          "char": "黃"
+        },
+        {
+          "id": "u29-yellow-黃-complete",
+          "type": "complete",
+          "char": "黃"
+        },
+        {
+          "id": "u29-yellow-黃-memory",
+          "type": "memory",
+          "char": "黃"
+        },
+        {
+          "id": "u29-yellow-色-intro",
+          "type": "intro",
+          "char": "色"
+        },
+        {
+          "id": "u29-yellow-色-trace",
+          "type": "trace",
+          "char": "色"
+        },
+        {
+          "id": "u29-yellow-色-build",
+          "type": "build",
+          "char": "色"
+        },
+        {
+          "id": "u29-yellow-色-complete",
+          "type": "complete",
+          "char": "色"
+        },
+        {
+          "id": "u29-yellow-色-memory",
+          "type": "memory",
+          "char": "色"
+        },
+        {
+          "id": "u29-hai-p3",
+          "type": "phrase",
+          "phrase": "u29-yellow-fruit"
+        },
+        {
+          "id": "u29-hai-s3",
+          "type": "select",
+          "prompt": "Which word means the color yellow?",
+          "options": [
+            "黃色",
+            "水果",
+            "紅色"
+          ],
+          "answer": "黃色",
+          "explanation": "黃色 is yellow; 色 means color."
         }
       ]
     },
     {
       "id": "u29-maokong",
-      "title": "A Place for Tea: Maokong",
-      "subtitle": "Learn the Dialogue II place name without adding unrelated travel vocabulary.",
+      "title": "Maokong — and Giving",
+      "subtitle": "Keep the place-name practice, then add 給 from Lesson 10.",
       "chars": [
-        "貓"
+        "貓",
+        "給"
       ],
-      "minutes": "8–10 min",
+      "minutes": "11–14 min",
       "unitId": "unit-29",
       "review": false,
       "steps": [
@@ -288,17 +429,60 @@ const unit:UnitData = {
           ],
           "answer": "貓",
           "explanation": "貓 is māo, the first character of 貓空."
+        },
+        {
+          "id": "u29-give-給-intro",
+          "type": "intro",
+          "char": "給"
+        },
+        {
+          "id": "u29-give-給-trace",
+          "type": "trace",
+          "char": "給"
+        },
+        {
+          "id": "u29-give-給-build",
+          "type": "build",
+          "char": "給"
+        },
+        {
+          "id": "u29-give-給-complete",
+          "type": "complete",
+          "char": "給"
+        },
+        {
+          "id": "u29-give-給-memory",
+          "type": "memory",
+          "char": "給"
+        },
+        {
+          "id": "u29-maokong-p2",
+          "type": "phrase",
+          "phrase": "u29-give-piece"
+        },
+        {
+          "id": "u29-maokong-s2",
+          "type": "select",
+          "prompt": "Which verb means “to give”?",
+          "options": [
+            "給",
+            "帶",
+            "請"
+          ],
+          "answer": "給",
+          "explanation": "給 is the verb “to give.”"
         }
       ]
     },
     {
       "id": "u29-condition",
-      "title": "If This, Then That",
-      "subtitle": "Use 要是 to set a condition and 就 to mark the consequence.",
+      "title": "If This, Then That — and Fragrance",
+      "subtitle": "Master 要是…就…, then add 香 for describing food.",
       "chars": [
-        "就"
+        "就",
+        "香"
       ],
-      "minutes": "10–13 min",
+      "minutes": "12–15 min",
       "unitId": "unit-29",
       "review": false,
       "steps": [
@@ -375,15 +559,57 @@ const unit:UnitData = {
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
+        },
+        {
+          "id": "u29-fragrant-香-intro",
+          "type": "intro",
+          "char": "香"
+        },
+        {
+          "id": "u29-fragrant-香-trace",
+          "type": "trace",
+          "char": "香"
+        },
+        {
+          "id": "u29-fragrant-香-build",
+          "type": "build",
+          "char": "香"
+        },
+        {
+          "id": "u29-fragrant-香-complete",
+          "type": "complete",
+          "char": "香"
+        },
+        {
+          "id": "u29-fragrant-香-memory",
+          "type": "memory",
+          "char": "香"
+        },
+        {
+          "id": "u29-condition-p2",
+          "type": "phrase",
+          "phrase": "u29-fragrant"
+        },
+        {
+          "id": "u29-condition-s3",
+          "type": "select",
+          "prompt": "Which word describes a pleasant smell?",
+          "options": [
+            "香",
+            "甜",
+            "美"
+          ],
+          "answer": "香",
+          "explanation": "香 means fragrant or good-smelling."
         }
       ]
     },
     {
       "id": "u29-negative",
-      "title": "Negative Conditions and Consequences",
-      "subtitle": "Keep the same frame when one side is negative.",
+      "title": "Negative Conditions — and Sweetness",
+      "subtitle": "Keep negative 要是…就… clear, then use 甜 as a standalone taste word.",
       "chars": [],
-      "minutes": "8–10 min",
+      "minutes": "8–11 min",
       "unitId": "unit-29",
       "review": false,
       "steps": [
@@ -430,13 +656,30 @@ const unit:UnitData = {
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
+        },
+        {
+          "id": "u29-negative-p2",
+          "type": "phrase",
+          "phrase": "u29-sweet"
+        },
+        {
+          "id": "u29-negative-s3",
+          "type": "select",
+          "prompt": "Which word describes a sweet taste?",
+          "options": [
+            "甜",
+            "香",
+            "特別"
+          ],
+          "answer": "甜",
+          "explanation": "甜 means sweet in taste."
         }
       ]
     },
     {
       "id": "u29-integrate",
-      "title": "Build the Dialogue II Logic",
-      "subtitle": "Combine dates, 還, Maokong, suggestions, and conditions.",
+      "title": "Build the Logic — Then Look Back",
+      "subtitle": "Integrate Lesson 9, then add 以前 from the opening of Lesson 10.",
       "chars": [],
       "minutes": "9–12 min",
       "unitId": "unit-29",
@@ -491,15 +734,32 @@ const unit:UnitData = {
           "grammarIds": [
             "u29-calendar-date"
           ]
+        },
+        {
+          "id": "u29-integrate-p5",
+          "type": "phrase",
+          "phrase": "u29-before-fruit"
+        },
+        {
+          "id": "u29-integrate-s3",
+          "type": "select",
+          "prompt": "Which word means “before; in the past”?",
+          "options": [
+            "以前",
+            "現在",
+            "大概"
+          ],
+          "answer": "以前",
+          "explanation": "以前 refers to an earlier time or the past."
         }
       ]
     },
     {
       "id": "u29-review",
       "title": "Unit 29 Review",
-      "subtitle": "Dates, 還, Maokong, and 要是…就… in new combinations.",
+      "subtitle": "Dates, conditions, and the first fruit-description vocabulary from Lesson 10.",
       "chars": [],
-      "minutes": "14–18 min",
+      "minutes": "15–19 min",
       "unitId": "unit-29",
       "review": true,
       "steps": [
@@ -751,6 +1011,30 @@ const unit:UnitData = {
           ],
           "answer": "這裡還有茶館。",
           "explanation": "還有 means there is/are also something else."
+        },
+        {
+          "id": "u29-review-21",
+          "type": "select",
+          "prompt": "Which sentence means “In the past, I didn’t like eating yellow fruit”?",
+          "options": [
+            "我以前不喜歡吃黃色的水果。",
+            "我以後不喜歡吃水果黃色。",
+            "我還黃色以前水果。"
+          ],
+          "answer": "我以前不喜歡吃黃色的水果。",
+          "explanation": "以前 sets the past time, and 黃色的 modifies 水果."
+        },
+        {
+          "id": "u29-review-22",
+          "type": "select",
+          "prompt": "Which sentence pair correctly uses 給, 香, and 甜?",
+          "options": [
+            "我給你一塊水果。水果很香，也很甜。",
+            "我香你一塊水果。水果很給，也很以前。",
+            "我甜你水果。水果很給，也很香。"
+          ],
+          "answer": "我給你一塊水果。水果很香，也很甜。",
+          "explanation": "給 means give; 香 describes a pleasant smell; 甜 describes a sweet taste."
         }
       ]
     }
@@ -798,6 +1082,49 @@ const unit:UnitData = {
       "meaning": "then; in that case",
       "lessonId": "u29-condition",
       "core": false
+    },
+    {
+      "text": "水果",
+      "pinyin": "shuǐguǒ",
+      "meaning": "fruit",
+      "lessonId": "u29-date",
+      "core": true
+    },
+    {
+      "text": "黃色",
+      "pinyin": "huángsè",
+      "meaning": "yellow; the color yellow",
+      "lessonId": "u29-hai",
+      "core": true
+    },
+    {
+      "text": "給",
+      "pinyin": "gěi",
+      "meaning": "to give",
+      "lessonId": "u29-maokong",
+      "core": true
+    },
+    {
+      "text": "香",
+      "pinyin": "xiāng",
+      "meaning": "fragrant; good-smelling",
+      "lessonId": "u29-condition",
+      "core": true
+    },
+    {
+      "text": "甜",
+      "pinyin": "tián",
+      "meaning": "sweet (taste)",
+      "lessonId": "u29-negative",
+      "core": true,
+      "note": "The character was introduced earlier in 甜點; this is its first standalone vocabulary teaching."
+    },
+    {
+      "text": "以前",
+      "pinyin": "yǐqián",
+      "meaning": "before; in the past",
+      "lessonId": "u29-integrate",
+      "core": true
     }
   ],
   "reviewVocabulary": [
@@ -818,7 +1145,13 @@ const unit:UnitData = {
     "月",
     "號",
     "就",
-    "貓"
+    "貓",
+    "水",
+    "果",
+    "黃",
+    "色",
+    "給",
+    "香"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -998,6 +1331,249 @@ const unit:UnitData = {
         "pinyin": "Māokōng",
         "meaning": "Maokong"
       }
+    },
+    "水": {
+      "hanzi": "水",
+      "pinyin": "shuǐ",
+      "zhuyin": "ㄕㄨㄟˇ",
+      "meaning": "water; first character of 水果",
+      "strokes": 4,
+      "layout": "whole",
+      "note": "水 is third-tone shuǐ. In 水果, the word as a whole means fruit.",
+      "memory": "水 is a basic four-stroke radical form. Its central vertical hook anchors the two flowing side strokes, so it is best learned as one whole shape.",
+      "parts": [
+        {
+          "label": "水",
+          "name": "water radical",
+          "role": "Whole-character form",
+          "description": "All four strokes form the independent water radical 水; forcing it into borrowed components would be less useful than learning its balanced whole shape.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "example": {
+        "text": "水果",
+        "pinyin": "shuǐguǒ",
+        "meaning": "fruit"
+      }
+    },
+    "果": {
+      "hanzi": "果",
+      "pinyin": "guǒ",
+      "zhuyin": "ㄍㄨㄛˇ",
+      "meaning": "fruit; result",
+      "strokes": 8,
+      "layout": "whole",
+      "note": "果 is third-tone guǒ. In 水果, it supplies the fruit meaning directly.",
+      "memory": "Write the four-stroke 田 first, then complete the overlapping 木-shaped lower structure.",
+      "parts": [
+        {
+          "label": "田",
+          "name": "field component",
+          "role": "Upper/central visual group",
+          "description": "The first four strokes form 田 at the center-top of 果.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "木",
+          "name": "tree component",
+          "role": "Overlapping lower visual group",
+          "description": "The last four strokes form the 木-shaped lower portion that passes through the center of the character.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layoutLabel": "overlapping groups",
+      "partOrderLabel": "田 first, then the 木-shaped lower strokes",
+      "example": {
+        "text": "水果",
+        "pinyin": "shuǐguǒ",
+        "meaning": "fruit"
+      }
+    },
+    "黃": {
+      "hanzi": "黃",
+      "pinyin": "huáng",
+      "zhuyin": "ㄏㄨㄤˊ",
+      "meaning": "yellow",
+      "strokes": 12,
+      "layout": "stack",
+      "note": "黃 is second-tone huáng and is the color word yellow.",
+      "memory": "The four-stroke top sits above a broad middle and the final 八-like two strokes at the bottom.",
+      "parts": [
+        {
+          "label": "廿",
+          "name": "top component",
+          "role": "Top visual group",
+          "description": "The first four strokes form the compact 廿-like top of 黃.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "田八",
+          "name": "lower body",
+          "role": "Lower visual group",
+          "description": "The remaining eight strokes form the broad lower body, ending with the separated 八-like strokes.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "黃色",
+        "pinyin": "huángsè",
+        "meaning": "yellow (color)"
+      }
+    },
+    "色": {
+      "hanzi": "色",
+      "pinyin": "sè",
+      "zhuyin": "ㄙㄜˋ",
+      "meaning": "color",
+      "strokes": 6,
+      "layout": "stack",
+      "note": "色 is fourth-tone sè. After a color word such as 黃, it forms 黃色, “yellow.”",
+      "memory": "Two short ⺈ strokes sit above the four-stroke 巴 shape.",
+      "parts": [
+        {
+          "label": "⺈",
+          "name": "top component",
+          "role": "Top component",
+          "description": "The first two strokes form the small ⺈ shape at the top.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "巴",
+          "name": "bottom component",
+          "role": "Bottom component",
+          "description": "The final four strokes form 巴 underneath.",
+          "strokes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "example": {
+        "text": "黃色",
+        "pinyin": "huángsè",
+        "meaning": "yellow (color)"
+      }
+    },
+    "給": {
+      "hanzi": "給",
+      "pinyin": "gěi",
+      "zhuyin": "ㄍㄟˇ",
+      "meaning": "to give; for",
+      "strokes": 12,
+      "layout": "side",
+      "note": "給 is third-tone gěi. In this lesson it is the verb “to give.”",
+      "memory": "糹 takes six strokes on the left; 合 takes six on the right.",
+      "parts": [
+        {
+          "label": "糹",
+          "name": "silk component",
+          "role": "Left component",
+          "description": "The first six strokes form 糹 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "合",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final six strokes form 合 on the right.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "給你",
+        "pinyin": "gěi nǐ",
+        "meaning": "give (it) to you"
+      }
+    },
+    "香": {
+      "hanzi": "香",
+      "pinyin": "xiāng",
+      "zhuyin": "ㄒㄧㄤ",
+      "meaning": "fragrant; good-smelling",
+      "strokes": 9,
+      "layout": "stack",
+      "note": "香 is first-tone xiāng. For food, it describes a pleasant smell.",
+      "memory": "禾 forms the five-stroke top; 日 forms the four-stroke bottom.",
+      "parts": [
+        {
+          "label": "禾",
+          "name": "grain component",
+          "role": "Top component",
+          "description": "The first five strokes form 禾 at the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "日",
+          "name": "sun component",
+          "role": "Bottom component",
+          "description": "The final four strokes form 日 below.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "example": {
+        "text": "水果很香",
+        "pinyin": "shuǐguǒ hěn xiāng",
+        "meaning": "the fruit smells fragrant"
+      }
     }
   },
   "grammarRules": {
@@ -1154,6 +1730,67 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u29-yaoshi-jiu"
+      ]
+    },
+    "u29-fruit": {
+      "text": "這個水果很好吃。",
+      "pinyin": "Zhège shuǐguǒ hěn hǎochī.",
+      "meaning": "This fruit tastes very good.",
+      "note": "水果 is the general word for fruit.",
+      "tokens": [
+        "這個水果",
+        "很好吃"
+      ]
+    },
+    "u29-yellow-fruit": {
+      "text": "這個黃色的水果很好吃。",
+      "pinyin": "Zhège huángsè de shuǐguǒ hěn hǎochī.",
+      "meaning": "This yellow fruit tastes very good.",
+      "note": "黃色 modifies 水果 with 的.",
+      "tokens": [
+        "這個黃色的水果",
+        "很好吃"
+      ]
+    },
+    "u29-give-piece": {
+      "text": "我給你一塊。",
+      "pinyin": "Wǒ gěi nǐ yí kuài.",
+      "meaning": "I’ll give you a piece.",
+      "note": "給 is the verb “to give”; 塊 is the previously learned measure word used here for a piece of food.",
+      "tokens": [
+        "我",
+        "給你",
+        "一塊"
+      ]
+    },
+    "u29-fragrant": {
+      "text": "水果很香。",
+      "pinyin": "Shuǐguǒ hěn xiāng.",
+      "meaning": "The fruit smells fragrant.",
+      "note": "香 describes a pleasant smell.",
+      "tokens": [
+        "水果",
+        "很香"
+      ]
+    },
+    "u29-sweet": {
+      "text": "水果很甜。",
+      "pinyin": "Shuǐguǒ hěn tián.",
+      "meaning": "The fruit tastes sweet.",
+      "note": "甜 describes a sweet taste.",
+      "tokens": [
+        "水果",
+        "很甜"
+      ]
+    },
+    "u29-before-fruit": {
+      "text": "我以前不喜歡吃水果。",
+      "pinyin": "Wǒ yǐqián bù xǐhuān chī shuǐguǒ.",
+      "meaning": "In the past, I didn’t like eating fruit.",
+      "note": "以前 places the preference in an earlier time period.",
+      "tokens": [
+        "我以前",
+        "不喜歡吃水果"
       ]
     }
   },

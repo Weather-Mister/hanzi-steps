@@ -10,12 +10,18 @@ const unit:UnitData = {
     "theme": "amber",
     "label": "Time expressions & duration structure",
     "title": "How Long Does It Take?",
-    "description": "Finish the advanced Lesson 9 time-duration system: films, year/day/hour expressions, object repetition, negation, and separable verbs.",
+    "description": "A fuller bridge across Lessons 8–9: recover omitted transport vocabulary, then master films and the advanced time-duration system.",
     "chars": [
       "年",
       "日",
       "鐘",
-      "頭"
+      "頭",
+      "非",
+      "但",
+      "站",
+      "或",
+      "利",
+      "汽"
     ],
     "lessonIds": [
       "u28-film",
@@ -41,16 +47,19 @@ const unit:UnitData = {
       "u28-duration-negation",
       "u28-separable-duration"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue I / Vocabulary I tail and Grammar I–II (printed pp. 182–190). Covers 影片 plus the textbook time-when/time-duration contrast, duration after an object with repeated verb, duration before negation, and duration inside separable verbs. Spoken month/date language remains for Unit 29."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 8 Dialogue I–II / Vocabulary I–II (printed pp. 160–165) plus Lesson 9 Dialogue I / Vocabulary I tail and Grammar I–II (printed pp. 182–190). This rebalance restores 非常, 但是, 站, 或是, 便利商店, 公共汽車 and 中國 without disturbing the published Unit 28 step prefixes, while retaining the complete time-duration sequence."
   },
   "reviewLessonId": "u28-review",
   "lessons": [
     {
       "id": "u28-film",
-      "title": "Films and Two Kinds of Time",
-      "subtitle": "Add 影片 and separate “when” from “how long.”",
-      "chars": [],
-      "minutes": "10–13 min",
+      "title": "Films, Very & But",
+      "subtitle": "Keep the time contrast, then recover two important Lesson 8 connectors.",
+      "chars": [
+        "非",
+        "但"
+      ],
+      "minutes": "15–18 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
@@ -93,18 +102,81 @@ const unit:UnitData = {
             "想玩",
             "兩天"
           ]
+        },
+        {
+          "id": "u28-film-非-intro",
+          "type": "intro",
+          "char": "非"
+        },
+        {
+          "id": "u28-film-非-trace",
+          "type": "trace",
+          "char": "非"
+        },
+        {
+          "id": "u28-film-非-complete",
+          "type": "complete",
+          "char": "非"
+        },
+        {
+          "id": "u28-film-非-memory",
+          "type": "memory",
+          "char": "非"
+        },
+        {
+          "id": "u28-film-但-intro",
+          "type": "intro",
+          "char": "但"
+        },
+        {
+          "id": "u28-film-但-trace",
+          "type": "trace",
+          "char": "但"
+        },
+        {
+          "id": "u28-film-但-build",
+          "type": "build",
+          "char": "但"
+        },
+        {
+          "id": "u28-film-但-complete",
+          "type": "complete",
+          "char": "但"
+        },
+        {
+          "id": "u28-film-但-memory",
+          "type": "memory",
+          "char": "但"
+        },
+        {
+          "id": "u28-film-p3",
+          "type": "phrase",
+          "phrase": "u28-very-but"
+        },
+        {
+          "id": "u28-film-s2",
+          "type": "select",
+          "prompt": "Which pair means “very” and “but/however”?",
+          "options": [
+            "非常／但是",
+            "比較／或是",
+            "大概／不行"
+          ],
+          "answer": "非常／但是",
+          "explanation": "非常 means very; 但是 introduces a contrast."
         }
       ]
     },
     {
       "id": "u28-years-days",
-      "title": "Years and Days as Durations",
-      "subtitle": "Use 年, 日, and standalone 天 in time expressions.",
+      "title": "Years, Days & Stations",
+      "subtitle": "Use duration units and add the transport noun 站.",
       "chars": [
         "年",
-        "日"
+        "日",
+        "站"
       ],
-      "minutes": "10–13 min",
+      "minutes": "13–16 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
@@ -198,18 +270,61 @@ const unit:UnitData = {
           "id": "u28-years-p1",
           "type": "phrase",
           "phrase": "u28-one-year"
+        },
+        {
+          "id": "u28-station-站-intro",
+          "type": "intro",
+          "char": "站"
+        },
+        {
+          "id": "u28-station-站-trace",
+          "type": "trace",
+          "char": "站"
+        },
+        {
+          "id": "u28-station-站-build",
+          "type": "build",
+          "char": "站"
+        },
+        {
+          "id": "u28-station-站-complete",
+          "type": "complete",
+          "char": "站"
+        },
+        {
+          "id": "u28-station-站-memory",
+          "type": "memory",
+          "char": "站"
+        },
+        {
+          "id": "u28-years-p2",
+          "type": "phrase",
+          "phrase": "u28-station"
+        },
+        {
+          "id": "u28-years-s4",
+          "type": "select",
+          "prompt": "What does 站 mean in 高鐵站?",
+          "options": [
+            "station",
+            "ticket",
+            "hour"
+          ],
+          "answer": "station",
+          "explanation": "站 means a station or stop."
         }
       ]
     },
     {
       "id": "u28-hours",
-      "title": "Count Hours with 鐘頭",
-      "subtitle": "Build the everyday Lesson 9 word for an hour.",
+      "title": "Hours — or Another Way",
+      "subtitle": "Count hours, then connect transport alternatives with 或是.",
       "chars": [
         "鐘",
-        "頭"
+        "頭",
+        "或"
       ],
-      "minutes": "11–14 min",
+      "minutes": "13–16 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
@@ -292,15 +407,54 @@ const unit:UnitData = {
           ],
           "answer": "鐘",
           "explanation": "鐘 is zhōng, the first character of 鐘頭."
+        },
+        {
+          "id": "u28-or-或-intro",
+          "type": "intro",
+          "char": "或"
+        },
+        {
+          "id": "u28-or-或-trace",
+          "type": "trace",
+          "char": "或"
+        },
+        {
+          "id": "u28-or-或-complete",
+          "type": "complete",
+          "char": "或"
+        },
+        {
+          "id": "u28-or-或-memory",
+          "type": "memory",
+          "char": "或"
+        },
+        {
+          "id": "u28-hours-p2",
+          "type": "phrase",
+          "phrase": "u28-or"
+        },
+        {
+          "id": "u28-hours-s2",
+          "type": "select",
+          "prompt": "Which word links two alternatives as “or”?",
+          "options": [
+            "或是",
+            "但是",
+            "非常"
+          ],
+          "answer": "或是",
+          "explanation": "或是 joins alternatives: A 或是 B."
         }
       ]
     },
     {
       "id": "u28-object",
-      "title": "Repeat the Verb after an Object",
-      "subtitle": "Keep both the object and the duration without losing either role.",
-      "chars": [],
-      "minutes": "8–11 min",
+      "title": "Objects, Duration & Convenience Stores",
+      "subtitle": "Keep the repeated-verb pattern and add a common Taiwan ticket-buying place.",
+      "chars": [
+        "利"
+      ],
+      "minutes": "11–14 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
@@ -353,15 +507,64 @@ const unit:UnitData = {
           "grammarIds": [
             "u28-object-duration"
           ]
+        },
+        {
+          "id": "u28-store-利-intro",
+          "type": "intro",
+          "char": "利"
+        },
+        {
+          "id": "u28-store-利-trace",
+          "type": "trace",
+          "char": "利"
+        },
+        {
+          "id": "u28-store-利-build",
+          "type": "build",
+          "char": "利"
+        },
+        {
+          "id": "u28-store-利-complete",
+          "type": "complete",
+          "char": "利"
+        },
+        {
+          "id": "u28-store-利-memory",
+          "type": "memory",
+          "char": "利"
+        },
+        {
+          "id": "u28-object-p2",
+          "type": "phrase",
+          "phrase": "u28-convenience"
+        },
+        {
+          "id": "u28-object-p3",
+          "type": "phrase",
+          "phrase": "u28-ticket-options"
+        },
+        {
+          "id": "u28-object-s3",
+          "type": "select",
+          "prompt": "Which place is a convenience store?",
+          "options": [
+            "便利商店",
+            "高鐵站",
+            "茶館"
+          ],
+          "answer": "便利商店",
+          "explanation": "便利商店 means convenience store."
         }
       ]
     },
     {
       "id": "u28-negation",
-      "title": "A Duration before Negation",
-      "subtitle": "Say how long something cannot happen.",
-      "chars": [],
-      "minutes": "8–11 min",
+      "title": "Negative Duration & the Bus",
+      "subtitle": "Place duration before negation and recover the full textbook word for bus.",
+      "chars": [
+        "汽"
+      ],
+      "minutes": "11–14 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
@@ -414,15 +617,57 @@ const unit:UnitData = {
           "grammarIds": [
             "u28-duration-negation"
           ]
+        },
+        {
+          "id": "u28-bus-汽-intro",
+          "type": "intro",
+          "char": "汽"
+        },
+        {
+          "id": "u28-bus-汽-trace",
+          "type": "trace",
+          "char": "汽"
+        },
+        {
+          "id": "u28-bus-汽-build",
+          "type": "build",
+          "char": "汽"
+        },
+        {
+          "id": "u28-bus-汽-complete",
+          "type": "complete",
+          "char": "汽"
+        },
+        {
+          "id": "u28-bus-汽-memory",
+          "type": "memory",
+          "char": "汽"
+        },
+        {
+          "id": "u28-negation-p2",
+          "type": "phrase",
+          "phrase": "u28-bus"
+        },
+        {
+          "id": "u28-negation-s3",
+          "type": "select",
+          "prompt": "Which textbook form means “bus”?",
+          "options": [
+            "公共汽車",
+            "計程車",
+            "機車"
+          ],
+          "answer": "公共汽車",
+          "explanation": "公共汽車 is the full form for bus; 公車 is the shorter everyday form."
         }
       ]
     },
     {
       "id": "u28-separable",
-      "title": "Put Time inside Separable Verbs",
-      "subtitle": "Use 放…假 and 唱…歌 with a duration in the middle.",
+      "title": "Separable Verbs & Ancient China",
+      "subtitle": "Finish duration inside separable verbs and close one remaining Lesson 8 country term.",
       "chars": [],
-      "minutes": "9–12 min",
+      "minutes": "10–13 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
@@ -475,15 +720,32 @@ const unit:UnitData = {
           "grammarIds": [
             "u28-separable-duration"
           ]
+        },
+        {
+          "id": "u28-separable-p3",
+          "type": "phrase",
+          "phrase": "u28-china-ancient"
+        },
+        {
+          "id": "u28-separable-s2",
+          "type": "select",
+          "prompt": "Which word means China?",
+          "options": [
+            "中國",
+            "古代",
+            "臺灣"
+          ],
+          "answer": "中國",
+          "explanation": "中國 is the country name China; 古代 means ancient times."
         }
       ]
     },
     {
       "id": "u28-review",
       "title": "Unit 28 Review",
-      "subtitle": "Time-when, duration, objects, negation, and separable verbs.",
+      "subtitle": "Time structure plus the recovered Lesson 8 transport vocabulary.",
       "chars": [],
-      "minutes": "14–18 min",
+      "minutes": "15–19 min",
       "unitId": "unit-28",
       "review": true,
       "steps": [
@@ -743,6 +1005,30 @@ const unit:UnitData = {
           "grammarIds": [
             "u28-when-duration-contrast"
           ]
+        },
+        {
+          "id": "u28-review-21",
+          "type": "select",
+          "prompt": "Which sentence correctly means “HSR tickets are very expensive, but taking the HSR is fast and comfortable”?",
+          "options": [
+            "高鐵車票非常貴，但是坐高鐵又快又舒服。",
+            "高鐵車票但是貴，非常坐高鐵舒服。",
+            "高鐵車票或是貴，站坐高鐵。"
+          ],
+          "answer": "高鐵車票非常貴，但是坐高鐵又快又舒服。",
+          "explanation": "非常 strengthens 貴, while 但是 introduces the contrasting second clause."
+        },
+        {
+          "id": "u28-review-22",
+          "type": "select",
+          "prompt": "Which set correctly matches the recovered transport words?",
+          "options": [
+            "站 = station；或是 = or；便利商店 = convenience store；公共汽車 = bus",
+            "站 = hour；或是 = very；便利商店 = tea house；公共汽車 = taxi",
+            "站 = film；或是 = but；便利商店 = station；公共汽車 = scooter"
+          ],
+          "answer": "站 = station；或是 = or；便利商店 = convenience store；公共汽車 = bus",
+          "explanation": "These are the Lesson 8 meanings restored in this rebalance."
         }
       ]
     }
@@ -783,6 +1069,56 @@ const unit:UnitData = {
       "meaning": "hour",
       "lessonId": "u28-hours",
       "core": false
+    },
+    {
+      "text": "非常",
+      "pinyin": "fēicháng",
+      "meaning": "very; extremely",
+      "lessonId": "u28-film",
+      "core": true
+    },
+    {
+      "text": "但是",
+      "pinyin": "dànshì",
+      "meaning": "but; however",
+      "lessonId": "u28-film",
+      "core": true
+    },
+    {
+      "text": "站",
+      "pinyin": "zhàn",
+      "meaning": "station; stop",
+      "lessonId": "u28-years-days",
+      "core": true
+    },
+    {
+      "text": "或是",
+      "pinyin": "huòshì",
+      "meaning": "or",
+      "lessonId": "u28-hours",
+      "core": true
+    },
+    {
+      "text": "便利商店",
+      "pinyin": "biànlì shāngdiàn",
+      "meaning": "convenience store",
+      "lessonId": "u28-object",
+      "core": true
+    },
+    {
+      "text": "公共汽車",
+      "pinyin": "gōnggòng qìchē",
+      "meaning": "bus",
+      "lessonId": "u28-negation",
+      "core": true,
+      "note": "Lesson 8 gives 公共汽車 as the full form and 公車 as the shorter everyday form."
+    },
+    {
+      "text": "中國",
+      "pinyin": "Zhōngguó",
+      "meaning": "China",
+      "lessonId": "u28-separable",
+      "core": true
     }
   ],
   "reviewVocabulary": [
@@ -801,7 +1137,13 @@ const unit:UnitData = {
     "年",
     "日",
     "鐘",
-    "頭"
+    "頭",
+    "非",
+    "但",
+    "站",
+    "或",
+    "利",
+    "汽"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -990,6 +1332,235 @@ const unit:UnitData = {
         "text": "鐘頭",
         "pinyin": "zhōngtóu",
         "meaning": "hour"
+      }
+    },
+    "非": {
+      "hanzi": "非",
+      "pinyin": "fēi",
+      "zhuyin": "ㄈㄟ",
+      "meaning": "not; non-; first character of 非常",
+      "strokes": 8,
+      "layout": "whole",
+      "note": "非 is first-tone fēi. In 非常, it forms the common adverb meaning “very.”",
+      "memory": "非 is an interlocked eight-stroke form: the two vertical sides and paired horizontals are written as one balanced shape rather than as two independent components.",
+      "parts": [
+        {
+          "label": "非",
+          "name": "interlocked whole form",
+          "role": "Whole-character form",
+          "description": "The eight strokes interleave the two sides of 非, so a single whole-character group is more faithful than forcing a false left-right split.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "非常",
+        "pinyin": "fēicháng",
+        "meaning": "very"
+      }
+    },
+    "但": {
+      "hanzi": "但",
+      "pinyin": "dàn",
+      "zhuyin": "ㄉㄢˋ",
+      "meaning": "but; however; first character of 但是",
+      "strokes": 7,
+      "layout": "side",
+      "note": "但 is fourth-tone dàn. In 但是, it introduces a contrast: “but; however.”",
+      "memory": "亻stands on the left; 旦 on the right has 日 over a final horizontal.",
+      "parts": [
+        {
+          "label": "亻",
+          "name": "person component",
+          "role": "Left component",
+          "description": "The first two strokes form 亻 on the left.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "旦",
+          "name": "dawn component",
+          "role": "Right component",
+          "description": "The final five strokes form 旦 on the right: 日 above the bottom horizontal.",
+          "strokes": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "example": {
+        "text": "但是",
+        "pinyin": "dànshì",
+        "meaning": "but; however"
+      }
+    },
+    "站": {
+      "hanzi": "站",
+      "pinyin": "zhàn",
+      "zhuyin": "ㄓㄢˋ",
+      "meaning": "station; stop",
+      "strokes": 10,
+      "layout": "side",
+      "note": "站 is fourth-tone zhàn. In 高鐵站, it means a station or stop.",
+      "memory": "立 takes the left five strokes and 占 takes the right five; keep both halves narrow.",
+      "parts": [
+        {
+          "label": "立",
+          "name": "stand component",
+          "role": "Left component",
+          "description": "The first five strokes form 立 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "占",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final five strokes form 占 on the right.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "example": {
+        "text": "高鐵站",
+        "pinyin": "gāotiě zhàn",
+        "meaning": "HSR station"
+      }
+    },
+    "或": {
+      "hanzi": "或",
+      "pinyin": "huò",
+      "zhuyin": "ㄏㄨㄛˋ",
+      "meaning": "or; perhaps; first character of 或是",
+      "strokes": 8,
+      "layout": "whole",
+      "note": "或 is fourth-tone huò. In 或是, it means “or.”",
+      "memory": "The 戈-like outer strokes wrap around 口 and 一. Because the wrapping strokes are interleaved with the inside, learn 或 as one ordered whole rather than a fake side-by-side split.",
+      "parts": [
+        {
+          "label": "或",
+          "name": "wrapped whole form",
+          "role": "Whole-character form",
+          "description": "The eight strokes combine an outer 戈-like frame with the inner 口 and 一 in interleaved stroke order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "或是",
+        "pinyin": "huòshì",
+        "meaning": "or"
+      }
+    },
+    "利": {
+      "hanzi": "利",
+      "pinyin": "lì",
+      "zhuyin": "ㄌㄧˋ",
+      "meaning": "benefit; second character of 便利",
+      "strokes": 7,
+      "layout": "side",
+      "note": "利 is fourth-tone lì. In 便利商店, 便利 means convenient.",
+      "memory": "禾 is the five-stroke left side; the two-stroke 刂 blade finishes the right edge.",
+      "parts": [
+        {
+          "label": "禾",
+          "name": "grain component",
+          "role": "Left component",
+          "description": "The first five strokes form 禾 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "刂",
+          "name": "knife side",
+          "role": "Right component",
+          "description": "The last two strokes form 刂 on the right.",
+          "strokes": [
+            5,
+            6
+          ]
+        }
+      ],
+      "example": {
+        "text": "便利商店",
+        "pinyin": "biànlì shāngdiàn",
+        "meaning": "convenience store"
+      }
+    },
+    "汽": {
+      "hanzi": "汽",
+      "pinyin": "qì",
+      "zhuyin": "ㄑㄧˋ",
+      "meaning": "steam; first character of 汽車",
+      "strokes": 7,
+      "layout": "side",
+      "note": "汽 is fourth-tone qì. In 公共汽車, 汽車 contributes the vehicle/bus meaning.",
+      "memory": "Three water dots 氵go on the left; 气 fills the right with four strokes.",
+      "parts": [
+        {
+          "label": "氵",
+          "name": "water side",
+          "role": "Left component",
+          "description": "The first three strokes form 氵 on the left.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "气",
+          "name": "air component",
+          "role": "Right component",
+          "description": "The final four strokes form 气 on the right.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "example": {
+        "text": "公共汽車",
+        "pinyin": "gōnggòng qìchē",
+        "meaning": "bus"
       }
     }
   },
@@ -1203,6 +1774,87 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u28-separable-duration"
+      ]
+    },
+    "u28-very-but": {
+      "text": "高鐵車票非常貴，但是坐高鐵又快又舒服。",
+      "pinyin": "Gāotiě chēpiào fēicháng guì, dànshì zuò gāotiě yòu kuài yòu shūfu.",
+      "meaning": "HSR tickets are very expensive, but taking the HSR is both fast and comfortable.",
+      "note": "非常 strengthens 貴; 但是 introduces the contrast.",
+      "tokens": [
+        "高鐵車票",
+        "非常貴",
+        "但是",
+        "坐高鐵",
+        "又快又舒服"
+      ]
+    },
+    "u28-station": {
+      "text": "我在高鐵站買票。",
+      "pinyin": "Wǒ zài gāotiě zhàn mǎi piào.",
+      "meaning": "I buy a ticket at the HSR station.",
+      "note": "站 means station or stop.",
+      "tokens": [
+        "我",
+        "在高鐵站",
+        "買票"
+      ]
+    },
+    "u28-or": {
+      "text": "坐高鐵或是坐火車都可以。",
+      "pinyin": "Zuò gāotiě huòshì zuò huǒchē dōu kěyǐ.",
+      "meaning": "Taking the HSR or taking the train are both possible.",
+      "note": "或是 links alternatives: A or B.",
+      "tokens": [
+        "坐高鐵",
+        "或是",
+        "坐火車",
+        "都可以"
+      ]
+    },
+    "u28-convenience": {
+      "text": "我在便利商店買票。",
+      "pinyin": "Wǒ zài biànlì shāngdiàn mǎi piào.",
+      "meaning": "I buy a ticket at a convenience store.",
+      "note": "便利商店 is the Taiwan textbook term for convenience store.",
+      "tokens": [
+        "我",
+        "在便利商店",
+        "買票"
+      ]
+    },
+    "u28-ticket-options": {
+      "text": "在高鐵站或是便利商店都可以。",
+      "pinyin": "Zài gāotiě zhàn huòshì biànlì shāngdiàn dōu kěyǐ.",
+      "meaning": "Either at an HSR station or at a convenience store is fine.",
+      "note": "This combines the Lesson 8 ticket-buying locations with 或是.",
+      "tokens": [
+        "在高鐵站",
+        "或是",
+        "便利商店",
+        "都可以"
+      ]
+    },
+    "u28-bus": {
+      "text": "你可以坐公共汽車去。",
+      "pinyin": "Nǐ kěyǐ zuò gōnggòng qìchē qù.",
+      "meaning": "You can take the bus there.",
+      "note": "公共汽車 is the full textbook form for bus; 公車 is the shorter form already learned.",
+      "tokens": [
+        "你可以",
+        "坐公共汽車",
+        "去"
+      ]
+    },
+    "u28-china-ancient": {
+      "text": "那裡有很多中國古代的東西。",
+      "pinyin": "Nàlǐ yǒu hěn duō Zhōngguó gǔdài de dōngxi.",
+      "meaning": "There are many things from ancient China there.",
+      "note": "中國 is the country name; 古代 was introduced in Unit 26.",
+      "tokens": [
+        "那裡",
+        "有很多",
+        "中國古代的東西"
       ]
     }
   },
