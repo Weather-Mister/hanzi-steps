@@ -1869,3 +1869,22 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .smart-master-summary span,
  .smart-finish-stats span { font-size:.62rem; }
 }
+
+.taiwan-unlock-button {
+ width:min(520px,100%);
+ display:grid;
+ grid-template-columns:auto minmax(0,1fr) auto;
+ align-items:center;
+ gap:11px;
+ text-align:left;
+}
+.taiwan-unlock-button>span {
+ display:flex;
+ min-width:0;
+ flex-direction:column;
+ gap:2px;
+}
+.taiwan-unlock-button small {
+ color:#64748b;
+ font-weight:700;
+}
