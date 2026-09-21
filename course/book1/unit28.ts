@@ -12,8 +12,6 @@ const unit:UnitData = {
     "title": "How Long Does It Take?",
     "description": "Finish the advanced Lesson 9 time-duration system: films, year/day/hour expressions, object repetition, negation, and separable verbs.",
     "chars": [
-      "影",
-      "片",
       "年",
       "日",
       "鐘",
@@ -51,64 +49,11 @@ const unit:UnitData = {
       "id": "u28-film",
       "title": "Films and Two Kinds of Time",
       "subtitle": "Add 影片 and separate “when” from “how long.”",
-      "chars": [
-        "影",
-        "片"
-      ],
+      "chars": [],
       "minutes": "10–13 min",
       "unitId": "unit-28",
       "review": false,
       "steps": [
-        {
-          "id": "u28-film-影-intro",
-          "type": "intro",
-          "char": "影"
-        },
-        {
-          "id": "u28-film-影-trace",
-          "type": "trace",
-          "char": "影"
-        },
-        {
-          "id": "u28-film-影-build",
-          "type": "build",
-          "char": "影"
-        },
-        {
-          "id": "u28-film-影-complete",
-          "type": "complete",
-          "char": "影"
-        },
-        {
-          "id": "u28-film-影-memory",
-          "type": "memory",
-          "char": "影"
-        },
-        {
-          "id": "u28-film-片-intro",
-          "type": "intro",
-          "char": "片"
-        },
-        {
-          "id": "u28-film-片-trace",
-          "type": "trace",
-          "char": "片"
-        },
-        {
-          "id": "u28-film-片-build",
-          "type": "build",
-          "char": "片"
-        },
-        {
-          "id": "u28-film-片-complete",
-          "type": "complete",
-          "char": "片"
-        },
-        {
-          "id": "u28-film-片-memory",
-          "type": "memory",
-          "char": "片"
-        },
         {
           "id": "u28-film-p1",
           "type": "phrase",
@@ -853,8 +798,6 @@ const unit:UnitData = {
     "旅行"
   ],
   "newCharacters": [
-    "影",
-    "片",
     "年",
     "日",
     "鐘",
@@ -862,91 +805,6 @@ const unit:UnitData = {
   ],
   "reviewCharacters": [],
   "characters": {
-    "影": {
-      "hanzi": "影",
-      "pinyin": "yǐng",
-      "zhuyin": "ㄧㄥˇ",
-      "meaning": "image; film image",
-      "strokes": 15,
-      "layout": "side",
-      "note": "影 is third-tone yǐng. In 影片, it contributes the sense of an image or film.",
-      "memory": "景 occupies the left twelve strokes and 彡 finishes the right edge with three descending slants.",
-      "parts": [
-        {
-          "label": "景",
-          "name": "left component",
-          "role": "Visual component",
-          "description": "The first twelve strokes form 景 on the left, with 日 above the lower 京-shaped section.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-          ]
-        },
-        {
-          "label": "彡",
-          "name": "three slants",
-          "role": "Visual component",
-          "description": "The final three strokes are the descending 彡 strokes on the right.",
-          "strokes": [
-            12,
-            13,
-            14
-          ]
-        }
-      ],
-      "example": {
-        "text": "影片",
-        "pinyin": "yǐngpiàn",
-        "meaning": "film; video"
-      }
-    },
-    "片": {
-      "hanzi": "片",
-      "pinyin": "piàn",
-      "zhuyin": "ㄆㄧㄢˋ",
-      "meaning": "slice; piece; film in 影片",
-      "strokes": 4,
-      "layout": "whole",
-      "note": "片 is fourth-tone piàn. In 影片, it is the second syllable of the word for film or video.",
-      "memory": "Write the left vertical structure first, then finish the right side with the horizontal and turning stroke.",
-      "parts": [
-        {
-          "label": "left",
-          "name": "left spine",
-          "role": "Visual component",
-          "description": "The first two strokes establish the narrow left side of 片.",
-          "strokes": [
-            0,
-            1
-          ]
-        },
-        {
-          "label": "right",
-          "name": "right finish",
-          "role": "Visual component",
-          "description": "The final two strokes complete the upper bar and the bent right side.",
-          "strokes": [
-            2,
-            3
-          ]
-        }
-      ],
-      "example": {
-        "text": "影片",
-        "pinyin": "yǐngpiàn",
-        "meaning": "film; video"
-      }
-    },
     "年": {
       "hanzi": "年",
       "pinyin": "nián",
