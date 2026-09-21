@@ -74,3 +74,7 @@ The exact final PR head must pass:
 - Pages build.
 
 If Feature QA writes generated artifacts, the resulting head must receive another exact-head successful run before merge. After merge, both Pages build and deploy must succeed, followed by deployed-artifact verification.
+
+## Exact-head QA after generated artifacts
+
+Feature QA successfully hydrated all declared Unit 30–31 Traditional stroke geometry from `graphicsZhHant.txt`, generated curriculum artifacts, passed curriculum validation, separate targeted tests for Units 30 and 31, character validation, the full regression suite, TypeScript, and the Pages build. The workflow then committed the generated artifacts, changing the PR head. This documentation-only follow-up changes no learner content and exists solely to require a fresh Feature QA run on the exact final PR head before merge.
