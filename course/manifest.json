@@ -34,8 +34,8 @@
         {"id":"unit-25","order":25,"title":"Which Way Is Faster?","path":"course/book1/unit25.ts"},
         {"id":"unit-26","order":26,"title":"What Are You Planning?","path":"course/book1/unit26.ts"},
         {"id":"unit-27","order":27,"title":"How Long Will You Be Away?","path":"course/book1/unit27.ts"},
-        {"id":"unit-28","order":28,"title":"How Long Does It Take?","path":"course/book1/unit28.ts"},
-        {"id":"unit-29","order":29,"title":"If I Have Time","path":"course/book1/unit29.ts"}
+        {"id":"unit-28","order":28,"title":"How Long and When?","path":"course/book1/unit28.ts"},
+        {"id":"unit-29","order":29,"title":"If I Have Time, I’ll Try It","path":"course/book1/unit29.ts"}
       ]
     },
     {
