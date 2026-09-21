@@ -22,9 +22,14 @@ function parseState(value:unknown):PracticeStateMap{
    typeof r.itemId==='string'&&
    typeof r.mode==='string'&&
    ['recognition','recall','pinyin','input','sentence','handwriting','context'].includes(r.mode)&&
-   Number.isFinite(r.attempts)&&Number.isFinite(r.correct)&&Number.isFinite(r.assisted)&&
-   Number.isFinite(r.misses)&&Number.isFinite(r.streak)&&Number.isFinite(r.strength)&&
-   Number.isFinite(r.lastSeen)&&Number.isFinite(r.nextReview)
+   typeof r.attempts==='number'&&Number.isFinite(r.attempts)&&
+   typeof r.correct==='number'&&Number.isFinite(r.correct)&&
+   typeof r.assisted==='number'&&Number.isFinite(r.assisted)&&
+   typeof r.misses==='number'&&Number.isFinite(r.misses)&&
+   typeof r.streak==='number'&&Number.isFinite(r.streak)&&
+   typeof r.strength==='number'&&Number.isFinite(r.strength)&&
+   typeof r.lastSeen==='number'&&Number.isFinite(r.lastSeen)&&
+   typeof r.nextReview==='number'&&Number.isFinite(r.nextReview)
   ){
    out[key]={
     itemId:r.itemId,
@@ -100,7 +105,10 @@ export function usePracticeMastery(userKey:string){
     return;
    }
    const remote=rowsToState(data);
-   const merged={...local,...remote};
+   const merged={...remote};
+   for(const [key,row] of Object.entries(local)){
+    if(!merged[key]||row.attempts>merged[key].attempts)merged[key]=row;
+   }
    setStates(merged);
    writeLocal(userKey,merged);
    setLoading(false);
@@ -143,7 +151,9 @@ export function usePracticeMastery(userKey:string){
   const remote=row[key];
   if(remote){
    setStates(previous=>{
-    const next={...previous,[key]:remote};
+    const current=previous[key];
+    const chosen=!current||remote.attempts>=current.attempts?remote:current;
+    const next={...previous,[key]:chosen};
     writeLocal(userKey,next);
     return next;
    });
@@ -157,7 +167,7 @@ export function usePracticeMastery(userKey:string){
   return {
    tracked:values.length,
    due:values.filter(row=>row.attempts>0&&row.nextReview<=Date.now()).length,
-   weak:values.filter(row=>row.attempts>0&&(row.strength<0.55||row.misses>0)).length,
+   weak:values.filter(row=>row.attempts>0&&row.misses>0&&row.strength<0.72).length,
   };
  },[states]);
 
