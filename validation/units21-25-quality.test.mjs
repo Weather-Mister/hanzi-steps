@@ -89,3 +89,12 @@ test('Book 1 from Unit 21 introduces referenced grammar and phrases before asses
   m.grammarIntroductions.forEach(g=>taughtGrammar.add(g.id));
  }
 });
+
+test('Contextual listening audio is explicit and cannot speak two answer options',()=>{
+ const u21=repaired.find(m=>m.order===21);const s=u21.lessons.flatMap(l=>l.steps).find(s=>s.id==='u21-from-to-listen-空');
+ assert.equal(s.audioText,'有空');
+ const modules=structuredClone(course.modules);const m=modules.find(m=>m.unit.id==='unit-21');
+ const bad=m.lessons.flatMap(l=>l.steps).find(s=>s.id==='u21-from-to-listen-空');
+ bad.audioText='有空';bad.options=['空','有','從'];
+ assert.ok(validateCourse(course.manifest,modules,course.geometry).some(e=>e.includes('contextual audio must contain only one answer option')));
+});

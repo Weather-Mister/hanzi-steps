@@ -19,7 +19,26 @@ const themeColors:Record<string,{accent:string,onAccent:string}> = {
   cyan:{accent:'#087c91',onAccent:'#effcff'},
   indigo:{accent:'#4d54b8',onAccent:'#ffffff'},
   orange:{accent:'#ac480e',onAccent:'#ffffff'},
+  emerald:{accent:'#0b7a53',onAccent:'#eafff6'},
+  violet:{accent:'#6c45c2',onAccent:'#f6f0ff'},
+  coral:{accent:'#b4453a',onAccent:'#fff2ef'},
+  sky:{accent:'#156f9f',onAccent:'#edf9ff'},
+  gold:{accent:'#8a6500',onAccent:'#fff8dd'},
+  magenta:{accent:'#a02b7a',onAccent:'#fff0fa'},
+  forest:{accent:'#3f7334',onAccent:'#f0faed'},
+  cherry:{accent:'#a62a3b',onAccent:'#fff0f2'},
 };
+
+const unitVisualThemes=[
+  'blue','teal','plum','amber','rose','indigo','cyan','orange',
+  'emerald','violet','coral','sky','gold','magenta','forest','cherry',
+] as const;
+
+function visualUnitTheme(bookNumber:number,unitNumber:number){
+  const bookOffset=Math.max(0,bookNumber-1)*8;
+  const index=(Math.max(1,unitNumber)-1+bookOffset)%unitVisualThemes.length;
+  return unitVisualThemes[index];
+}
 
 type SessionRow={
   id:string;
@@ -91,7 +110,7 @@ async function unitDetails(manifest:Manifest,unitId:string){
   const source=await fetch(GITHUB_RAW+found.unit.path,{signal:AbortSignal.timeout(10000)});
   if(!source.ok)throw new Error('Unit metadata unavailable');
   const text=await source.text();
-  const theme=(text.match(/["']?theme["']?\s*:\s*["']([^"']+)["']/)||[])[1]||'blue';
+  const theme=visualUnitTheme(found.book.number,found.unit.order);
   const reviewLessonId=(text.match(/["']?reviewLessonId["']?\s*:\s*["']([^"']+)["']/)||[])[1]||'';
   const value={theme,reviewLessonId};
   themeCache.set(unitId,value);

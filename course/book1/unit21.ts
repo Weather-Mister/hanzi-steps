@@ -776,6 +776,7 @@ const unit:UnitData = {
         },
         {
           "id": "u21-from-to-listen-空",
+          "audioText": "有空",
           "type": "listen",
           "char": "空",
           "prompt": "Listen and choose the character you hear.",
@@ -1673,7 +1674,7 @@ const unit:UnitData = {
           "label": "right block",
           "name": "vertical and lower right block",
           "role": "Sound/shape component",
-          "description": "After 亻, the remaining eight strokes include a separate short vertical above the compact lower shape. This whole right group is not the complete character 侯.",
+          "description": "After 亻, the remaining eight strokes include a separate short vertical alongside the compact lower shape. This whole right group is not the complete character 侯.",
           "strokes": [
             2,
             3,

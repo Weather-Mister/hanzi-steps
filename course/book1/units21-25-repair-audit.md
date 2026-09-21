@@ -5,7 +5,7 @@ Authority: supplied *A Course in Contemporary Chinese 1*, Lesson 6 pp. 116–118
 
 ## Repairs
 
-- Unit 21: correct 午's three-stroke 干 group; stop labelling 候's right group as the complete character 侯 and 對's entire left block as only 丵. Contextualize 空's kòng audio with 有空. Add clock/range/softening transfer checks.
+- Unit 21: correct 午's three-stroke 干 group; stop labelling 候's right group as the complete character 侯 and 對's entire left block as only 丵. Contextualize 空's kòng audio with 有空, using an explicit listening-step override so older listening items keep their existing cues. Add clock/range/softening transfer checks.
 - Unit 22: translate 每個週末都不忙 unambiguously as “never busy on weekends”; contrast this with not-every scope. Register 每天 and 剛開始 where they are already explicitly taught. Counts are 13 lexical items plus two transparent combinations, not 15 unrelated new words. Add negation, ongoing-action and time transfer checks.
 - Unit 23: classify 每天 and 剛開始 as review; 10 new words/forms remain. Expand permission beyond the repeated game example, with granting, refusing, A-not-A versus 嗎, photo permission and contextual listening. Review now independently assesses all three permission targets.
 - Unit 24: add source-supported 又不…又不… teaching/practice and negative 比較 practice; include wishes with 又…又…. Expand listening and review of companionship, method versus evaluation and transport.

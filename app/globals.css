@@ -711,6 +711,18 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  display:flex;
  align-items:center;
  justify-content:center;
+ flex-wrap:wrap;
+ gap:8px;
+}
+.mega-skip-button {
+ min-height:34px;
+ padding:5px 9px;
+ color:#65758b;
+ font-size:.78rem;
+}
+.mega-skip-button:hover:not(:disabled) {
+ background:#f3f6fb;
+ color:#3f5069;
 }
 .mega-give-up-button {
  min-height:34px;
@@ -1156,6 +1168,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
   border-radius:18px;
  }
  .mega-challenge-dialog {
+  top:50dvh;
   gap:12px;
   padding:18px 14px 15px;
  }
@@ -1273,6 +1286,58 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .mega-practice .writing-frame { width:min(258px,72vw); }
 }
 
+/* Keep Mega Challenge usable on shorter desktop viewports.
+   The practice pane is the only scrollable region; compact sizing normally keeps
+   the entire result/action area visible without scrolling. */
+.mega-practice {
+ min-height:0;
+ overflow-y:auto;
+ overscroll-behavior:contain;
+ scrollbar-gutter:stable;
+}
+
+@media(min-width:701px) and (max-height:980px) {
+ .mega-challenge-dialog {
+  max-height:calc(100dvh - 20px);
+  padding:20px 24px;
+  gap:8px;
+ }
+ .mega-tabs { margin:2px 0; }
+ .mega-practice { gap:10px; }
+ .mega-practice.has-result { gap:7px; }
+ .mega-prompt { padding:8px 14px 7px; }
+ .mega-prompt .pinyin { font-size:1.2rem; }
+ .mega-prompt h2 {
+  margin-top:3px;
+  font-size:1rem;
+ }
+ .mega-character-progress { margin-top:10px; }
+ .mega-practice .writing-frame { width:min(285px,100%); }
+ .strict-complete-badge {
+  bottom:10px;
+  min-height:34px;
+  padding:7px 11px;
+  font-size:.74rem;
+ }
+ .mega-inline-result {
+  padding:11px 12px;
+  gap:10px;
+ }
+ .mega-inline-copy p { margin-top:3px; }
+ .mega-result-actions .primary-button,
+ .mega-result-actions .secondary-button { min-height:40px; }
+}
+
+@media(min-width:701px) and (max-height:820px) {
+ .mega-challenge-dialog {
+  padding-top:16px;
+  padding-bottom:16px;
+ }
+ .mega-practice .writing-frame { width:min(245px,100%); }
+ .mega-prompt { padding-top:5px; }
+ .mega-inline-result { padding:10px 11px; }
+}
+
 @media(prefers-reduced-motion:reduce) {
  .strict-writing .writing-frame.is-done,
  .strict-writing.strict-help .stroke-guide,
@@ -1282,4 +1347,55 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
   animation:none !important;
   transition:none !important;
  }
+}
+
+
+/* Expanded unit palette: sixteen visually distinct themes before the cycle repeats. */
+[data-unit-theme="emerald"] {
+ --unit-accent:#0b7a53; --unit-hover:#086846; --unit-depth:#05513a;
+ --unit-edge:#31966f; --unit-focus:#0b7a53; --unit-on-accent:#eafff6;
+ --unit-tint:#eaf8f2; --unit-tint-hover:#d7f0e5; --unit-surface:#f5fbf8;
+ --unit-border:#cbe7da; --unit-line:#84c4a7; --unit-text:#176447;
+}
+[data-unit-theme="violet"] {
+ --unit-accent:#6c45c2; --unit-hover:#5936a8; --unit-depth:#452985;
+ --unit-edge:#8b69d5; --unit-focus:#6c45c2; --unit-on-accent:#f6f0ff;
+ --unit-tint:#f2edff; --unit-tint-hover:#e4dbff; --unit-surface:#faf8ff;
+ --unit-border:#ded4f2; --unit-line:#b49bdc; --unit-text:#58359a;
+}
+[data-unit-theme="coral"] {
+ --unit-accent:#b4453a; --unit-hover:#99382f; --unit-depth:#7a2b24;
+ --unit-edge:#cd6a60; --unit-focus:#b4453a; --unit-on-accent:#fff2ef;
+ --unit-tint:#fff0ed; --unit-tint-hover:#ffded8; --unit-surface:#fff8f6;
+ --unit-border:#f0d1cb; --unit-line:#dc948b; --unit-text:#8f382f;
+}
+[data-unit-theme="sky"] {
+ --unit-accent:#156f9f; --unit-hover:#105d86; --unit-depth:#0b4869;
+ --unit-edge:#408db6; --unit-focus:#156f9f; --unit-on-accent:#edf9ff;
+ --unit-tint:#eaf6fc; --unit-tint-hover:#d7edf8; --unit-surface:#f6fbfe;
+ --unit-border:#cce2ed; --unit-line:#8bbbd2; --unit-text:#175d83;
+}
+[data-unit-theme="gold"] {
+ --unit-accent:#8a6500; --unit-hover:#735300; --unit-depth:#5b4000;
+ --unit-edge:#a9842d; --unit-focus:#8a6500; --unit-on-accent:#fff8dd;
+ --unit-tint:#fff6dc; --unit-tint-hover:#ffebae; --unit-surface:#fffaf0;
+ --unit-border:#eadcb5; --unit-line:#cfb66d; --unit-text:#755605;
+}
+[data-unit-theme="magenta"] {
+ --unit-accent:#a02b7a; --unit-hover:#872264; --unit-depth:#69194e;
+ --unit-edge:#bf5798; --unit-focus:#a02b7a; --unit-on-accent:#fff0fa;
+ --unit-tint:#fcecf6; --unit-tint-hover:#f7d8eb; --unit-surface:#fff7fb;
+ --unit-border:#efd1e3; --unit-line:#d58ab8; --unit-text:#81205f;
+}
+[data-unit-theme="forest"] {
+ --unit-accent:#3f7334; --unit-hover:#335f2b; --unit-depth:#274b21;
+ --unit-edge:#65945b; --unit-focus:#3f7334; --unit-on-accent:#f0faed;
+ --unit-tint:#eef7ec; --unit-tint-hover:#dcefd8; --unit-surface:#f8fbf7;
+ --unit-border:#d4e6d0; --unit-line:#99bd91; --unit-text:#345f2d;
+}
+[data-unit-theme="cherry"] {
+ --unit-accent:#a62a3b; --unit-hover:#8d2131; --unit-depth:#6f1725;
+ --unit-edge:#c65361; --unit-focus:#a62a3b; --unit-on-accent:#fff0f2;
+ --unit-tint:#fff0f2; --unit-tint-hover:#ffdde2; --unit-surface:#fff8f9;
+ --unit-border:#efd0d5; --unit-line:#d78792; --unit-text:#852232;
 }
