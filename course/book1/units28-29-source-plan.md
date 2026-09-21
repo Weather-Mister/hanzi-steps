@@ -65,7 +65,7 @@ Retained Lesson 9 grammar:
 New Lesson 10 vocabulary/forms (11):
 - 水果 shuǐguǒ — fruit
 - 黃色 huángsè — yellow
-- 芒果 mángguǒ — mango
+- 紅色 hóngsè — red
 - 給 gěi — give
 - 香 xiāng — fragrant
 - 甜 tián — sweet
@@ -76,7 +76,7 @@ New Lesson 10 vocabulary/forms (11):
 - 吃吃看 chīchīkàn — try tasting it and see
 
 New characters (8):
-- 水、果、黃、色、芒、給、香、瓜
+- 水、果、給、香、黃、色、瓜、紅
 
 New Lesson 10 grammar:
 - VV看: reduplicated one-syllable action verb + 看 for a tentative “try it and see”
