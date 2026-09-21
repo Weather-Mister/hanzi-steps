@@ -335,15 +335,15 @@ export const taiwanMissions:TaiwanMission[]=[
  {
   id:'make-a-time-plan',stamp:'🕘',title:'Make a time plan',subtitle:'Ask when someone is free and arrange a meeting.',unlockUnitId:'unit-21',
   steps:[
-   {speaker:'You',prompt:'Ask when your friend is free.',answer:'你什麼時候有空？',options:['你什麼時候有空？','你今天有空嗎？','你在哪裡？','你晚上有事嗎？']},
-   {speaker:'Friend',prompt:'我後天有空。晚上七點可以嗎？',answer:'沒問題！',options:['沒問題！','我晚上有事。','下次一起去吧！','你什麼時候有空？'],note:'Confirm that 7 PM works.'},
+   {speaker:'You',prompt:'Ask when your friend is free.',answer:'你什麼時候有空？',options:['你什麼時候有空？','你今天有空嗎？','你後天有空嗎？','你晚上有空嗎？']},
+   {speaker:'Friend',prompt:'我後天有空。晚上七點可以嗎？',answer:'沒問題！',options:['沒問題！','我晚上有空。','下次一起去吧！','你什麼時候有空？'],note:'Confirm that 7 PM works.'},
    {speaker:'You',prompt:'Confirm the plan: meet at 7 PM the day after tomorrow.',answer:'我們後天晚上七點見面。',options:['我們後天晚上七點見面。','我們九點二十分見面。','我中午在餐廳吃飯。','我後天和朋友見面。']},
   ],
  },
  {
   id:'choose-a-ride',stamp:'🚆',title:'Choose a ride',subtitle:'Talk about transport and compare a train with High Speed Rail.',unlockUnitId:'unit-24',
   steps:[
-   {speaker:'Friend',prompt:'你怎麼去學校？',answer:'我坐火車去學校。',options:['我坐火車去學校。','我坐捷運去學校。','我跟朋友去玩。','我明天去學校。'],note:'Say that you are taking the train to school.'},
+   {speaker:'Friend',prompt:'你怎麼去學校？',answer:'我坐火車去學校。',options:['我坐火車去學校。','我坐高鐵去學校。','我跟朋友去玩。','我明天去學校。'],note:'Say that you are taking the train to school.'},
    {speaker:'Friend',prompt:'火車比較慢。',answer:'高鐵比較快。',options:['高鐵比較快。','火車比較慢。','高鐵車票有一點貴。','高鐵又快又舒服。'],note:'Reply with the faster option.'},
    {speaker:'Friend',prompt:'高鐵又快又舒服。',answer:'好，我坐高鐵去。',options:['好，我坐高鐵去。','我坐火車去學校。','我跟朋友一起去。','高鐵車票有一點貴。'],note:'Choose High Speed Rail.'},
   ],
