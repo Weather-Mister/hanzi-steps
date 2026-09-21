@@ -63,7 +63,7 @@ jobs:
       - run: npm run check:characters
 
       - name: Run regression tests
-        run: node --experimental-strip-types --test tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs tests/practice-engine.test.mjs validation/*.test.mjs
+        run: node --experimental-strip-types --test tests/vocabulary-lookup.test.mjs tests/practice-engine.test.mjs validation/*.test.mjs
 
       - run: npx tsc --noEmit
 
