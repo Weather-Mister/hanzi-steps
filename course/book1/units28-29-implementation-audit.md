@@ -84,3 +84,8 @@ The cross-unit audit of Units 26–29 found no major conflict in the Lesson 9 gr
 4. **Source-document conflicts:** the older Units 26–27 source plan incorrectly called Lesson 9's source item 電影 and later wrote 作業. The authoritative source has **影片** and **功課**. The source plan is corrected; the learner-facing units were already using the correct 功課 and Unit 28 owns 影片.
 
 The quality pass also replaces several obviously nonsensical multiple-choice distractors with plausible Chinese alternatives while keeping one defensible answer.
+
+
+## Quality-pass QA follow-up
+
+Feature QA run 89 passed curriculum generation/check, targeted changed-unit tests, character validation, the full regression suite (including multi-bound saved-progress coverage), TypeScript, and the Pages build. CI then committed regenerated curriculum artifacts to the branch. This documentation-only follow-up changes no learner content; its purpose is to require Feature QA once more on the exact final PR head after generated artifacts are present. Merge remains blocked unless that exact-head run is green.
