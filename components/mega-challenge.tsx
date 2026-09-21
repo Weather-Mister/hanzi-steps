@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {advanceMegaQueue,combineWordPerfect,makeMegaQueue} from '@/lib/mega-challenge';
+import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,restoreMegaWord} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
 import {WritingPad} from './writing-pad';
@@ -24,18 +24,21 @@ export function MegaChallenge({
  const [result,setResult]=useState<Result|null>(null);
  const [view,setView]=useState<'challenge'|'mastered'>('challenge');
  const [gaveUp,setGaveUp]=useState(false);
+ const [attempt,setAttempt]=useState(0);
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
   const learnedIds=new Set(learned.map(item=>item.id));
+  // Capture before updating the ref: React may defer the state updater.
+  const fresh=eligible.filter(item=>!knownLearned.current.has(item.id));
+  const seed=Date.now().toString(36)+Math.random().toString(36);
   setQueue(currentQueue=>{
    if(currentQueue===null){
-    return makeMegaQueue(eligible,Date.now().toString(36)+Math.random().toString(36));
+    return makeMegaQueue(eligible,seed);
    }
    const queued=new Set(currentQueue);
-   const fresh=eligible.filter(item=>!knownLearned.current.has(item.id)&&!queued.has(item.id));
-   if(!fresh.length)return currentQueue;
-   const additions=makeMegaQueue(fresh,Date.now().toString(36)+Math.random().toString(36));
+   const additions=makeMegaQueue(fresh.filter(item=>!queued.has(item.id)),seed);
+   if(!additions.length)return currentQueue;
    return [...currentQueue,...additions];
   });
   knownLearned.current=learnedIds;
@@ -45,6 +48,7 @@ export function MegaChallenge({
  const currentChar=current?.characters[charIndex];
 
  function resetWord(){
+  setAttempt(value=>value+1);
   setCharIndex(0);
   setWordPerfect(true);
   setResult(null);
@@ -52,7 +56,7 @@ export function MegaChallenge({
  }
 
  function finishCharacter(assisted:boolean){
-  if(!current)return;
+  if(!current||result)return;
   const perfect=combineWordPerfect(wordPerfect,assisted);
   if(charIndex+1<current.characters.length){
    setWordPerfect(perfect);
@@ -76,13 +80,16 @@ export function MegaChallenge({
  }
 
  function switchView(next:'challenge'|'mastered'){
-  setGaveUp(false);
+  // Leaving the pad unmounts it. Restart the whole word, never a partly
+  // completed word with its assistance history discarded.
+  if(next!==view&&!result)resetWord();
   setView(next);
  }
 
  function giveUp(){
   if(result||gaveUp)return;
   setGaveUp(true);
+  setWordPerfect(false);
  }
 
  function skipWord(){
@@ -101,21 +108,22 @@ export function MegaChallenge({
  async function restore(item:VocabularyLookupItem){
   const saved=await setMastered(item.id,false);
   if(!saved)return;
-  setQueue(currentQueue=>{
-   if(currentQueue===null)return currentQueue;
-   if(currentQueue.includes(item.id))return currentQueue;
-   return [...currentQueue,item.id];
-  });
+  setQueue(currentQueue=>restoreMegaWord(currentQueue,item.id,new Set(learned.map(word=>word.id))));
  }
 
- return <Dialog open={open} onOpenChange={onOpenChange}>
+ function changeOpen(next:boolean){
+  if(!next&&!result)resetWord();
+  onOpenChange(next);
+ }
+
+ return <Dialog open={open} onOpenChange={changeOpen}>
   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
    <div className="mega-title-row">
-    <div><DialogTitle>Mega Challenge</DialogTitle><DialogDescription>Recall learned words from pinyin and meaning alone.</DialogDescription></div>
+    <div><DialogTitle>Mega Challenge</DialogTitle><DialogDescription>Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.</DialogDescription></div>
    </div>
-   <div className="mega-tabs" role="tablist" aria-label="Mega Challenge sections">
-    <button className={view==='challenge'?'selected':''} onClick={()=>switchView('challenge')} role="tab" aria-selected={view==='challenge'}>Challenge</button>
-    <button className={view==='mastered'?'selected':''} onClick={()=>switchView('mastered')} role="tab" aria-selected={view==='mastered'}>Mastered <span>{masteredItems.length}</span></button>
+   <div className="mega-tabs" role="group" aria-label="Mega Challenge sections">
+    <button className={view==='challenge'?'selected':''} disabled={saving} onClick={()=>switchView('challenge')} aria-pressed={view==='challenge'}>Challenge</button>
+    <button className={view==='mastered'?'selected':''} disabled={saving} onClick={()=>switchView('mastered')} aria-pressed={view==='mastered'}>Mastered <span>{masteredItems.length}</span></button>
    </div>
 
    {error&&<p className="mega-sync-note" role="status">{error}</p>}
@@ -123,8 +131,8 @@ export function MegaChallenge({
    {view==='mastered'?<section className="mastered-list">
     {masteredItems.length===0?<p className="search-empty">Words you add to Mastered will appear here.</p>:
      masteredItems.map(item=><article className="mastered-card" key={item.id}>
-      <div><strong lang="zh-Hant-TW">{item.traditional}</strong><span className="pinyin">{item.pinyin}</span><p>{item.meaning}</p></div>
-      <button className="secondary-button" disabled={saving} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore'}</button>
+      <div><strong lang="zh-Hant-TW">{item.traditional}</strong><span className="pinyin">{item.pinyin}</span><p>{item.meaning}</p>{item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}</div>
+      <button className="secondary-button" disabled={saving} aria-label={'Restore '+item.traditional+' to the challenge'} onClick={()=>void restore(item)}>{saving?'Saving…':'Restore'}</button>
      </article>)}
    </section>:
    masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
@@ -144,7 +152,7 @@ export function MegaChallenge({
      </>}
     </div>
     <WritingPad
-     key={current.id+':'+charIndex+':'+(gaveUp?'guided':'memory')}
+     key={current.id+':'+attempt+':'+charIndex+':'+(gaveUp?'guided':'memory')}
      char={currentChar}
      mode={gaveUp?'trace':'memory'}
      strict={!gaveUp}
@@ -155,12 +163,12 @@ export function MegaChallenge({
     {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
      <div className="mega-inline-copy">
-      <span className="mega-result-kicker">{result.perfect?'Perfect recall':'Completed with guides'}</span>
+      <span className="mega-result-kicker">{result.perfect?'Perfect recall':'Completed with support or corrections'}</span>
       <div><strong lang="zh-Hant-TW">{result.item.traditional}</strong><span className="pinyin">{result.item.pinyin}</span></div>
       <p>{result.perfect?'Correct without help. Continue, or move it to Mastered.':'This word will stay in rotation unless you move it to Mastered.'}</p>
      </div>
      <div className="mega-result-actions">
-      <button className="primary-button" onClick={continueAfterResult}>Continue</button>
+      <button className="primary-button" disabled={saving} onClick={continueAfterResult}>Continue</button>
       <button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>:
@@ -173,7 +181,7 @@ export function MegaChallenge({
    eligible.length>0?<section className="mega-complete">
     <Trophy size={42}/>
     <h2>Mega Challenge complete</h2>
-    <p>You cleared all currently available words perfectly.</p>
+    <p>No words remain in this round. Words recalled perfectly are cleared for the round; words in Mastered stay excluded.</p>
     <button className="primary-button" onClick={practiceAgain}>Practice again</button>
    </section>:
    learned.length>0?<section className="mega-complete">

@@ -6,7 +6,12 @@ export function eligibleMegaVocabulary(completed:Set<string>,mastered:Set<string
 }
 
 export function makeMegaQueue(items:VocabularyLookupItem[],seed:string):string[]{
- return shuffled(items.map(item=>item.id),seed);
+ return shuffled([...new Set(items.map(item=>item.id))],seed);
+}
+
+export function restoreMegaWord(queue:string[]|null,id:string,learnedIds:Set<string>):string[]|null{
+ if(queue===null||!learnedIds.has(id)||queue.includes(id))return queue;
+ return [...queue,id];
 }
 
 export function combineWordPerfect(perfectSoFar:boolean,assisted:boolean):boolean{

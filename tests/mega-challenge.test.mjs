@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue} from '../lib/mega-challenge.ts';
+import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue,restoreMegaWord} from '../lib/mega-challenge.ts';
 import {vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 test('Mega Challenge eligibility follows completed lesson IDs and mastered exclusions',()=>{
@@ -26,6 +26,15 @@ test('challenge queue contains each eligible ID once',()=>{
  const queue=makeMegaQueue(items,'test-seed');
  assert.equal(queue.length,items.length);
  assert.equal(new Set(queue).size,items.length);
+ assert.deepEqual(makeMegaQueue([...items,...items],'test-seed'),queue);
+});
+
+test('restoring mastery cannot enqueue unlearned or duplicate words',()=>{
+ const learned=new Set(['a','b']);
+ assert.deepEqual(restoreMegaWord(['a'],'b',learned),['a','b']);
+ assert.deepEqual(restoreMegaWord(['a'],'a',learned),['a']);
+ assert.deepEqual(restoreMegaWord(['a'],'c',learned),['a']);
+ assert.equal(restoreMegaWord(null,'a',learned),null);
 });
 
 

@@ -2,11 +2,8 @@
 import {useMemo,useState} from 'react';
 import {PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {searchVocabulary,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
+import {searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
-
-const practiceableCharacters=(item:VocabularyLookupItem)=>
- item.characters.filter(char=>Boolean(strokeData[char]));
 
 export function PinyinSearch({
  open,onOpenChange,theme,onPracticeCharacter,
@@ -17,7 +14,8 @@ export function PinyinSearch({
  onPracticeCharacter:(char:string)=>void;
 }){
  const [query,setQuery]=useState('');
- const results=useMemo(()=>searchVocabulary(query),[query]);
+ const matches=useMemo(()=>searchVocabulary(query,81),[query]);
+ const results=matches.slice(0,80);
  const trimmed=query.trim();
 
  function practice(char:string){
@@ -29,7 +27,7 @@ export function PinyinSearch({
   <DialogContent data-unit-theme={theme} className="pinyin-search-dialog">
    <div className="pinyin-search-heading">
     <DialogTitle>Find by pinyin</DialogTitle>
-    <DialogDescription>Type pinyin with or without tone marks. Character practice opens the same regular practice used everywhere else in Hanzi Steps.</DialogDescription>
+    <DialogDescription>Search all course vocabulary with or without tones, spaces, or tone numbers. Use ü, v, or u: for ü. Results include all tones; practice opens regular character practice.</DialogDescription>
    </div>
    <div className="pinyin-search-box">
     <Search size={18}/>
@@ -49,9 +47,9 @@ export function PinyinSearch({
     {!trimmed?<p className="search-empty">Start typing a pronunciation.</p>:
      results.length===0?<p className="search-empty">No Hanzi Steps vocabulary matches that pinyin.</p>:
      <>
-      <p className="search-count">{results.length===80?'Showing the first 80 matches':results.length+' '+(results.length===1?'match':'matches')}</p>
+      <p className="search-count">{matches.length>80?'Showing the first 80 matches — type more to narrow your search':results.length+' '+(results.length===1?'match':'matches')}</p>
       <div className="search-result-list">{results.map(item=>{
-       const chars=practiceableCharacters(item);
+       const chars=uniquePracticeCharacters(item).filter(char=>Boolean(strokeData[char]));
        return <article className="search-result-card" key={item.id}>
         <div className="search-result-copy">
          <div className="search-result-title">

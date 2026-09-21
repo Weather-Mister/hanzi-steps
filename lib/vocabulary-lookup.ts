@@ -32,13 +32,18 @@ export function normalizePinyin(value:string):string{
   .toLowerCase()
   .replace(/u:/g,'v')
   .replace(/[āáǎàēéěèêīíǐìōóǒòūúǔùǖǘǚǜüńňǹḿ]/g,char=>toneMap[char]||char)
-  .replace(/[1-5]/g,'')
+  .replace(/[0-5]/g,'')
   .replace(/[^a-zv]+/g,' ')
   .trim()
   .replace(/\s+/g,' ');
 }
 
 export const compactPinyin=(value:string)=>normalizePinyin(value).replace(/\s/g,'');
+
+// Search offers one practice action per glyph; recall retains repeated glyphs.
+export function uniquePracticeCharacters(item:VocabularyLookupItem):string[]{
+ return [...new Set(item.characters)].filter(char=>Boolean(characters[char]));
+}
 
 const lessonById=new Map(lessons.map(lesson=>[lesson.id,lesson]));
 const unitById=new Map(units.map(unit=>[unit.id,unit]));
