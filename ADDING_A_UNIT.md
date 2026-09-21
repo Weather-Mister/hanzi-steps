@@ -13,6 +13,15 @@ this is a flexible range, not a quota or a seven-word limit. Count new words and
 new characters separately. Keep six teaching lessons plus a review, and teach
 every prerequisite before testing it.
 
+**Do not create thin units just to respect a textbook lesson boundary.** Textbook
+lessons define source order, not mandatory Hanzi Steps cut points. When the current
+slice is grammar-heavy or lexically sparse, first close any documented earlier
+coverage gaps and, once prerequisites are secure, it is acceptable to begin the
+next textbook lesson in the same Hanzi Steps unit. Conversely, do not pad the count
+with transparent combinations, already-taught phrases or fake novelty. If a unit
+still lands well below the normal range, document the concrete pedagogical or
+dependency reason in its source/audit note.
+
 ## Files to author (normally three)
 
 1. `course/book1/unit09.ts` — one `UnitData` default export. Other books use
