@@ -557,7 +557,7 @@ const unit:UnitData = {
         {
           "id": "u31-toward-s1",
           "type": "select",
-          "prompt": "In 從旅館往夜市走, which word marks the direction?",
+          "prompt": "In 從旅館往夜市去, which word marks the direction?",
           "options": [
             "往",
             "從",
@@ -584,7 +584,7 @@ const unit:UnitData = {
           "phrase": "u31-toward",
           "tokens": [
             "從旅館",
-            "往夜市走"
+            "往夜市去"
           ]
         }
       ]
@@ -1063,7 +1063,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "lessonId": "u31-toward",
       "core": true,
-      "note": "往 introduces the direction of movement: 從旅館往夜市走."
+      "note": "往 introduces the direction of movement: 從旅館往夜市去."
     },
     {
       "text": "因為",
@@ -1463,7 +1463,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "strokes": 8,
       "layout": "side",
-      "note": "往 is third-tone wǎng. It introduces a direction: 從旅館往夜市走.",
+      "note": "往 is third-tone wǎng. It introduces a direction: 從旅館往夜市去.",
       "memory": "彳 takes three narrow walking strokes on the left; 主 fills the right with five strokes.",
       "parts": [
         {
@@ -1492,9 +1492,9 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "往夜市走",
+        "text": "往夜市去",
         "pinyin": "wǎng yèshì zǒu",
-        "meaning": "walk toward the night market"
+        "meaning": "go toward the night market"
       }
     },
     "因": {
@@ -1768,13 +1768,13 @@ const unit:UnitData = {
       ]
     },
     "u31-toward": {
-      "text": "從旅館往夜市走。",
+      "text": "從旅館往夜市去。",
       "pinyin": "Cóng lǚguǎn wǎng yèshì zǒu.",
-      "meaning": "Walk from the hotel toward the night market.",
+      "meaning": "Go from the hotel toward the night market.",
       "note": "從 marks the starting point; 往 marks the direction.",
       "tokens": [
         "從旅館",
-        "往夜市走"
+        "往夜市去"
       ]
     },
     "u31-because": {
