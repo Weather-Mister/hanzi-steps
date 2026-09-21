@@ -6,7 +6,7 @@ import {Progress} from '@/components/ui/progress';
 import {WritingPad} from './writing-pad';
 import {shuffled,units} from '@/lib/curriculum';
 import {
- aggregateItemState,availableTaiwanMissions,distractorPool,learnedPracticeItems,
+ aggregateItemState,availableTaiwanMissions,distractorPool,isRevengeCandidate,learnedPracticeItems,
  makeDailyTen,makeMegaCheckpoint,makeRevengeRound,megaCheckpointCount,practiceSkillKey,unitComplete,
  type PracticeItem,type PracticeQuestion,type TaiwanMission,
 } from '@/lib/practice-engine';
@@ -108,6 +108,9 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startSc
  const completedUnits=useMemo(()=>units.filter(unit=>unitComplete(completed,unit.id)).length,[completed]);
  const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
  const revengePreview=useMemo(()=>makeRevengeRound(items,states,'preview'),[items,states]);
+ const dueItemCount=useMemo(()=>items.filter(item=>{const state=aggregateItemState(states,item);return state.attempts>0&&state.nextReview<=Date.now()}).length,[items,states]);
+ const weakItemCount=useMemo(()=>items.filter(item=>isRevengeCandidate(states,item)).length,[items,states]);
+ const dailySize=Math.min(10,items.length);
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState(''),[mission,setMission]=useState<TaiwanMission|null>(null);
  useEffect(()=>{if(open){setScreen(startScreen);setQueue([]);setMission(null)}},[open,startScreen]);
  function back(){setScreen('hub');setQueue([])}
@@ -120,8 +123,8 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startSc
  return <Dialog open={open} onOpenChange={value=>{onOpenChange(value);if(!value){setScreen('hub');setQueue([]);setMission(null)}}}><DialogContent data-unit-theme={theme} className="smart-practice-dialog">
   {screen==='hub'&&<><div className="smart-title-row"><div><DialogTitle>Practice</DialogTitle><DialogDescription>One mastery system powers review, mistakes, checkpoints, and real Taiwan situations.</DialogDescription></div>{saving&&<span className="smart-saving">Saving…</span>}</div>{error&&<p className="smart-sync-note" role="status">{error}</p>}
    {loading?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<div className="smart-empty"><Sparkles size={30}/><h2>Finish a lesson first</h2><p>Practice only pulls from material you have actually learned.</p></div>:<div className="smart-hub-grid">
-    <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>10 adaptive questions · {stats.due} due now</small></span><b>10</b></button>
-    <button className="smart-mode-card revenge" onClick={startRevenge} disabled={!revengePreview.length}><span className="smart-card-icon"><Swords size={23}/></span><span><strong>Revenge Round</strong><small>{revengePreview.length?'Attack your weakest item three ways.':'No mistake is ready for revenge yet.'}</small></span><b>{stats.weak}</b></button>
+    <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · {dueItemCount} due now</small></span><b>{dailySize}</b></button>
+    <button className="smart-mode-card revenge" onClick={startRevenge} disabled={!revengePreview.length}><span className="smart-card-icon"><Swords size={23}/></span><span><strong>Revenge Round</strong><small>{revengePreview.length?'Attack your weakest item three ways.':'No mistake is ready for revenge yet.'}</small></span><b>{weakItemCount}</b></button>
     <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>{checkpointCount?'12 mixed questions from your latest 4-unit checkpoint.':'Complete 4 units in a book to unlock a checkpoint.'}</small></span><b>{checkpointCount}</b></button>
     <button className="smart-mode-card taiwan" onClick={()=>setScreen('taiwan')}><span className="smart-card-icon"><MapPin size={23}/></span><span><strong>Taiwan Mode</strong><small>Use what you know in short real-life missions.</small></span><b>{missions.filter(m=>m.unlocked).length}</b></button>
    </div>}
