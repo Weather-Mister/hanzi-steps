@@ -10,6 +10,7 @@ import {
  megaCheckpointUnits,
  practiceAttemptForStep,
  practiceSkillKey,
+ taiwanMissions,
  updatePracticeState,
 } from '../lib/practice-engine.ts';
 
@@ -124,4 +125,18 @@ test('lesson assessment steps map into the same mastery IDs and modes used by sm
 
  assert.deepEqual(practiceAttemptForStep({type:'order',phrase:'hello'}),{itemId:'phrase:hello',mode:'sentence'});
  assert.equal(practiceAttemptForStep({type:'grammar'}),null);
+});
+
+
+test('Taiwan mission steps have one explicit answer and non-duplicated choices',()=>{
+ for(const mission of taiwanMissions){
+  assert.ok(units.some(unit=>unit.id===mission.unlockUnitId),mission.id+' has a real unlock unit');
+  assert.ok(mission.steps.length>=3,mission.id+' has enough interaction to feel like a mission');
+  for(const step of mission.steps){
+   assert.ok(step.answer.trim());
+   assert.ok(step.options.includes(step.answer),mission.id+' answer is selectable');
+   assert.equal(new Set(step.options).size,step.options.length,mission.id+' has unique choices');
+   assert.ok(step.options.length>=3,mission.id+' gives meaningful alternatives');
+  }
+ }
 });
