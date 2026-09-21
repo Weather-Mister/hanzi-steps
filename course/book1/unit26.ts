@@ -163,9 +163,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-buxing",
           "tokens": [
-            "不行",
             "這裡",
-            "沒有捷運"
+            "沒有捷運",
+            "不行"
           ]
         },
         {
@@ -188,7 +188,7 @@ const unit:UnitData = {
           "type": "listen",
           "char": "行",
           "audioText": "不行",
-          "prompt": "Listen to the whole word and choose the character pronounced xíng.",
+          "prompt": "Listen to the word and choose its final character.",
           "options": [
             "行",
             "古",
@@ -326,12 +326,17 @@ const unit:UnitData = {
         },
         {
           "id": "u26-break-o1",
-          "type": "order",
-          "phrase": "u26-break-next-week",
-          "tokens": [
-            "下個星期",
-            "我們",
-            "放假"
+          "type": "select",
+          "prompt": "Which sentence says we have a break next week?",
+          "options": [
+            "下個星期我們放假。",
+            "下個星期我們不放假。",
+            "下個星期我們回國。"
+          ],
+          "answer": "下個星期我們放假。",
+          "explanation": "放假 means have a break. Both 下個星期我們放假 and 我們下個星期放假 are valid time placements.",
+          "grammarIds": [
+            "u26-time-when"
           ]
         },
         {
@@ -463,9 +468,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-go-out",
           "tokens": [
-            "我",
             "想",
-            "出去玩"
+            "出去玩",
+            "我"
           ]
         },
         {
@@ -571,10 +576,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-plan-travel",
           "tokens": [
-            "我",
-            "打算",
-            "跟朋友",
-            "去旅行"
+            "跟朋友去旅行",
+            "我打算"
           ]
         },
         {
@@ -678,10 +681,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-plan-tv",
           "tokens": [
-            "我",
-            "打算",
-            "在家",
-            "看電視"
+            "看電視",
+            "我打算在家"
           ]
         },
         {
@@ -694,9 +695,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-homework",
           "tokens": [
-            "我",
-            "在家",
-            "寫功課"
+            "寫功課",
+            "我在家"
           ]
         },
         {
@@ -771,10 +771,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-probably-return",
           "tokens": [
-            "我",
-            "大概",
-            "下個星期",
-            "回國"
+            "回國",
+            "我大概下個星期"
           ]
         },
         {
@@ -784,12 +782,17 @@ const unit:UnitData = {
         },
         {
           "id": "u26-when-o2",
-          "type": "order",
-          "phrase": "u26-saturday-out",
-          "tokens": [
-            "星期六",
-            "我",
-            "想出去玩"
+          "type": "select",
+          "prompt": "Which sentence says I want to go out on Saturday?",
+          "options": [
+            "星期六我想出去玩。",
+            "星期五我想出去玩。",
+            "星期六我想回國。"
+          ],
+          "answer": "星期六我想出去玩。",
+          "explanation": "星期六 is Saturday; 出去玩 means go out and have fun. The time can also follow 我.",
+          "grammarIds": [
+            "u26-time-when"
           ]
         },
         {
@@ -849,7 +852,7 @@ const unit:UnitData = {
           "type": "listen",
           "char": "行",
           "audioText": "不行",
-          "prompt": "Listen to 不行 and choose the character pronounced xíng.",
+          "prompt": "Listen to the word and choose its final character.",
           "options": [
             "行",
             "期",
@@ -918,9 +921,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-buxing",
           "tokens": [
-            "不行",
             "這裡",
-            "沒有捷運"
+            "沒有捷運",
+            "不行"
           ]
         },
         {
@@ -940,12 +943,17 @@ const unit:UnitData = {
         },
         {
           "id": "u26-review-10",
-          "type": "order",
-          "phrase": "u26-break-next-week",
-          "tokens": [
-            "下個星期",
-            "我們",
-            "放假"
+          "type": "select",
+          "prompt": "Which sentence says we have a break next week?",
+          "options": [
+            "下個星期我們放假。",
+            "下個星期我們不放假。",
+            "下個星期我們回國。"
+          ],
+          "answer": "下個星期我們放假。",
+          "explanation": "放假 means have a break. Both 下個星期我們放假 and 我們下個星期放假 are valid time placements.",
+          "grammarIds": [
+            "u26-time-when"
           ]
         },
         {
@@ -968,9 +976,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-return-next-week",
           "tokens": [
-            "我",
-            "下個星期",
-            "回國"
+            "回國",
+            "我下個星期"
           ]
         },
         {
@@ -988,14 +995,14 @@ const unit:UnitData = {
         {
           "id": "u26-review-14",
           "type": "select",
-          "prompt": "Which sentence most directly says “I plan to travel with friends”?",
+          "prompt": "Which sentence says your friend does not plan to travel?",
           "options": [
-            "我打算跟朋友去旅行。",
-            "我想出去玩。",
-            "我在家寫功課。"
+            "我朋友不打算去旅行。",
+            "我朋友打算去旅行。",
+            "我朋友不能去旅行。"
           ],
-          "answer": "我打算跟朋友去旅行。",
-          "explanation": "打算 explicitly introduces the planned action.",
+          "answer": "我朋友不打算去旅行。",
+          "explanation": "不打算 negates the plan; 不能 says the action is not possible.",
           "grammarIds": [
             "u26-dasuan-plan"
           ]
@@ -1005,10 +1012,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-plan-travel",
           "tokens": [
-            "我",
-            "打算",
-            "跟朋友",
-            "去旅行"
+            "跟朋友去旅行",
+            "我打算"
           ]
         },
         {
@@ -1028,10 +1033,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-plan-tv",
           "tokens": [
-            "我",
-            "打算",
-            "在家",
-            "看電視"
+            "看電視",
+            "我打算在家"
           ]
         },
         {
@@ -1039,9 +1042,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-homework",
           "tokens": [
-            "我",
-            "在家",
-            "寫功課"
+            "寫功課",
+            "我在家"
           ]
         },
         {
@@ -1061,10 +1063,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u26-probably-return",
           "tokens": [
-            "我",
-            "大概",
-            "下個星期",
-            "回國"
+            "回國",
+            "我大概下個星期"
           ]
         }
       ]
@@ -1562,7 +1562,7 @@ const unit:UnitData = {
       "meaning": "go out; emerge",
       "strokes": 5,
       "note": "出 is first-tone chū. 出去 combines 出 with the familiar 去 to mean go out.",
-      "memory": "The central vertical links two open box-like shapes. The visual 山 and 凵 groups interleave in writing order.",
+      "memory": "The central vertical runs through an upper open bowl and a lower bowl. Write the central stroke first, then the upper bowl, then the lower bowl; the two visual groups interleave.",
       "parts": [
         {
           "label": "山-shape",
@@ -1579,7 +1579,7 @@ const unit:UnitData = {
           "label": "凵",
           "name": "lower open box",
           "role": "Visual component",
-          "description": "The second and third strokes form the open lower 凵.",
+          "description": "The second and third strokes form the upper open 凵; the central vertical and lower bowl form the other visual group.",
           "strokes": [
             1,
             2
@@ -1842,7 +1842,7 @@ const unit:UnitData = {
       "id": "u26-dasuan-plan",
       "title": "State a plan with 打算",
       "pattern": "Subject + 打算 + Verb Phrase",
-      "explanation": "打算 introduces an intention or plan. Put the action being planned directly after 打算. It is more explicitly about a plan than simply saying 想, which often expresses what someone wants to do.",
+      "explanation": "打算 introduces an intention or plan. Put the action being planned directly after 打算. It is more explicitly about a plan than simply saying 想, which often expresses what someone wants to do. To say you do not plan to do it, put 不 before 打算. Ask about a plan with 打算 + action + 嗎, or ask what is planned with 打算做什麼. A negative plan is not the same as being unable to do the action.",
       "examples": [
         {
           "text": "我打算跟朋友去旅行。",
@@ -1853,6 +1853,16 @@ const unit:UnitData = {
           "text": "我打算在家看電視。",
           "pinyin": "Wǒ dǎsuàn zài jiā kàn diànshì.",
           "meaning": "I plan to watch TV at home."
+        },
+        {
+          "text": "我不打算回國。",
+          "pinyin": "Wǒ bù dǎsuàn huíguó.",
+          "meaning": "I do not plan to return to my country."
+        },
+        {
+          "text": "你打算回國嗎？",
+          "pinyin": "Nǐ dǎsuàn huíguó ma?",
+          "meaning": "Do you plan to return to your country?"
         }
       ],
       "remember": "打算 + action = plan/intend to do that action.",
@@ -1941,7 +1951,7 @@ const unit:UnitData = {
       "text": "下個星期我們放假。",
       "pinyin": "Xià ge xīngqí wǒmen fàngjià.",
       "meaning": "We have a break next week.",
-      "note": "下個星期 is the time-when expression; 放假 means to have a holiday or break.",
+      "note": "星期 means week. 下個星期 means next week. Weekdays use 星期 + a number: 星期一 is Monday through 星期六, Saturday; Sunday is 星期日 or 星期天. 放假 means have a holiday or break.",
       "tokens": [
         "下個星期",
         "我們",
@@ -1957,8 +1967,7 @@ const unit:UnitData = {
       "meaning": "I will return to my country next week.",
       "note": "The time expression comes before the main action 回國.",
       "tokens": [
-        "我",
-        "下個星期",
+        "我下個星期",
         "回國"
       ],
       "grammarIds": [
@@ -1982,10 +1991,8 @@ const unit:UnitData = {
       "meaning": "I plan to travel with friends.",
       "note": "打算 introduces the planned action; 跟朋友 marks the companions.",
       "tokens": [
-        "我",
-        "打算",
-        "跟朋友",
-        "去旅行"
+        "我打算",
+        "跟朋友去旅行"
       ],
       "grammarIds": [
         "u26-dasuan-plan",
@@ -1998,9 +2005,7 @@ const unit:UnitData = {
       "meaning": "I plan to watch TV at home.",
       "note": "在家 gives the location before the action 看電視.",
       "tokens": [
-        "我",
-        "打算",
-        "在家",
+        "我打算在家",
         "看電視"
       ],
       "grammarIds": [
@@ -2013,8 +2018,7 @@ const unit:UnitData = {
       "meaning": "I do homework at home.",
       "note": "功課 is the Lesson 9 word for homework.",
       "tokens": [
-        "我",
-        "在家",
+        "我在家",
         "寫功課"
       ]
     },
@@ -2024,9 +2028,7 @@ const unit:UnitData = {
       "meaning": "I will probably return to my country next week.",
       "note": "大概 here expresses probability: probably.",
       "tokens": [
-        "我",
-        "大概",
-        "下個星期",
+        "我大概下個星期",
         "回國"
       ],
       "grammarIds": [

@@ -1,0 +1,11 @@
+{
+  "reason": "Correct only the stale zǒu to qù in the shared 往 character example, whose Chinese was already 往夜市去. Retain both immutable first-teaching amendments and all stroke geometry, practice IDs and checkpoint sequences. The focused audit test independently requires 去/qù alignment.",
+  "records": {
+    "characters": {
+      "往": {
+        "before": "25ac172bff8b3f5d70ad19784704da421bac9d01616aa7e11b251fbedd0cc6f9",
+        "after": "ddcc8114dad2679886688c882e9cb0cb99ee8d6f6945f0e6be99d524a8e52d49"
+      }
+    }
+  }
+}

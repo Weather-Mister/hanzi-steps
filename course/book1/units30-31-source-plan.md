@@ -29,7 +29,7 @@ New vocabulary/forms:
 7. 笑 xiào — laugh/smile
 8. 開心 kāixīn — happy
 9. 穿 chuān — wear
-10. 衣服 yīfu — clothes
+10. 衣服 yīfú — clothes
 
 New characters:
 紅、瓜、拍、笑、心、穿、衣
