@@ -9,7 +9,7 @@ const u29=course.modules.find(m=>m.unit.id==='unit-29');
 
 test('Units 28-29 keep honest grammar-heavy novelty and review sizes',()=>{
   assert.equal(u28.newVocabulary.length,5);
-  assert.equal(u28.newCharacters.length,6);
+  assert.equal(u28.newCharacters.length,4);
   assert.equal(u29.newVocabulary.length,6);
   assert.equal(u29.newCharacters.length,4);
   for(const m of [u28,u29]){
