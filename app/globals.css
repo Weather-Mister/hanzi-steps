@@ -1899,3 +1899,12 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  color:#64748b;
  font-weight:700;
 }
+
+
+@media(max-height:650px) {
+ .smart-practice-dialog { overflow-y:auto; }
+ .smart-session,
+ .mission-grid { overflow:visible; flex:none; }
+ .smart-empty,
+ .smart-finish { min-height:260px; }
+}
