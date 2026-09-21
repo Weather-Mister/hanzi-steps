@@ -45,4 +45,4 @@ Before remote QA:
 - No duplicate step IDs were found in either unit.
 - Ordering banks use the exact phrase token multiplicities.
 
-Remote QA and rendered inspection are still required; these static checks do not certify audio, generated stroke geometry, browser rendering, or deployment.
+Feature QA hydrated all 26 newly introduced character geometries from `graphicsZhHant.txt` (no Simplified or Japanese fallback) and subsequently passed targeted unit tests, character coverage, regression tests, TypeScript, and the Pages build. A final exact-head QA run is still required after generated artifacts are committed. Browser/device rendering and deployment verification remain separate gates.
