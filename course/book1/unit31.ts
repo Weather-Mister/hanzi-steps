@@ -792,14 +792,17 @@ const unit:UnitData = {
         {
           "id": "u31-review-09",
           "type": "select",
-          "prompt": "Which set correctly matches the people/height words?",
+          "prompt": "Which sentence correctly describes a male student as shorter?",
           "options": [
-            "男 = male-；矮 = short；高 = tall；弟弟 = younger brother",
-            "男 = wife；矮 = tall；高 = short；弟弟 = hotel",
-            "男 = blue；矮 = clean；高 = toward；弟弟 = because"
+            "這個男學生比較矮。",
+            "這個男學生比較高。",
+            "這個女學生比較矮。"
           ],
-          "answer": "男 = male-；矮 = short；高 = tall；弟弟 = younger brother",
-          "explanation": "These are the four people/height items taught in Unit 31."
+          "answer": "這個男學生比較矮。",
+          "explanation": "男學生 means male student; 比較矮 means comparatively shorter.",
+          "grammarIds": [
+            "u24-bijiao"
+          ]
         },
         {
           "id": "u31-review-10",
@@ -958,16 +961,17 @@ const unit:UnitData = {
         {
           "id": "u31-review-22",
           "type": "select",
-          "prompt": "Which sentence best combines Unit 31's hotel and reason language?",
+          "prompt": "Which sentence correctly gives a cause first and an effect second?",
           "options": [
             "因為現在去玩的人比較少，所以旅館不太貴。",
-            "旅館往因為夜市比較少。",
-            "所以男學生很藍色，因為太太。"
+            "因為旅館不太貴，所以現在去玩的人比較少。",
+            "現在去玩的人比較少，但是旅館很貴。"
           ],
           "answer": "因為現在去玩的人比較少，所以旅館不太貴。",
-          "explanation": "It correctly uses 因為 for the cause, 所以 for the effect, and 旅館 in the result clause.",
+          "explanation": "The first sentence preserves the intended cause: fewer travelers; effect: the hotel is not too expensive.",
           "grammarIds": [
-            "u31-yinwei-suoyi"
+            "u31-yinwei-suoyi",
+            "u31-clause-modifier"
           ]
         }
       ]
