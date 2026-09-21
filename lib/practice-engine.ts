@@ -349,11 +349,11 @@ export const taiwanMissions:TaiwanMission[]=[
   ],
  },
  {
-  id:'directions',stamp:'🚇',title:'Ask for directions',subtitle:'Use the Book 2 direction language in a short exchange.',unlockUnitId:'book-2-unit-3',
+  id:'directions',stamp:'🚇',title:'Ask for directions',subtitle:'Follow the Shida route from Book 2 in a short exchange.',unlockUnitId:'book-2-unit-3',
   steps:[
-   {speaker:'You',prompt:'Ask how to get to the bank.',answer:'請問，到銀行怎麼走？',options:['請問，到銀行怎麼走？','這附近有銀行嗎？','銀行離這裡遠嗎？','在第二個路口右轉嗎？']},
-   {speaker:'Passerby',prompt:'從這裡往前一直走，到第二個路口，再右轉。',answer:'在第二個路口右轉嗎？',options:['在第二個路口右轉嗎？','過第二個紅綠燈。','銀行離這裡不遠。','這附近有銀行。'],note:'Confirm the turning point.'},
-   {speaker:'Passerby',prompt:'對。銀行離這裡不遠。',answer:'好的，謝謝！',options:['好的，謝謝！','在第二個路口右轉嗎？','請問，到銀行怎麼走？','這附近有銀行嗎？']},
+   {speaker:'You',prompt:'Ask how to get to Shida.',answer:'請問，到師大怎麼走？',options:['請問，到師大怎麼走？','這附近有銀行嗎？','師大離這裡遠嗎？','在第二個路口右轉嗎？']},
+   {speaker:'Passerby',prompt:'到下一個路口，右轉。',answer:'好的。',options:['好的。','左轉嗎？','一直走嗎？','第二個路口嗎？'],note:'Acknowledge the first route step.'},
+   {speaker:'Passerby',prompt:'再往前一直走，過第二個紅綠燈。',answer:'謝謝！',options:['謝謝！','好的。','右轉嗎？','下一個路口嗎？'],note:'Thank the person after the final direction.'},
   ],
  },
 ];
