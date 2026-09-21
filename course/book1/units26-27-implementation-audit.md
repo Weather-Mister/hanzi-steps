@@ -45,4 +45,4 @@ Before remote QA:
 - No duplicate step IDs were found in either unit.
 - Ordering banks use the exact phrase token multiplicities.
 
-Feature QA hydrated all 26 newly introduced character geometries from `graphicsZhHant.txt` (no Simplified or Japanese fallback) and subsequently passed targeted unit tests, character coverage, regression tests, TypeScript, and the Pages build. A final exact-head QA run is still required after generated artifacts are committed. Browser/device rendering and deployment verification remain separate gates.
+Feature QA hydrated all 26 newly introduced character geometries from `graphicsZhHant.txt` (no Simplified or Japanese fallback). Exact-head QA subsequently passed targeted Unit 26 and Unit 27 tests, character coverage, regression tests, TypeScript, and the Pages build. PR #24 was merged and the corresponding GitHub Pages build and deployment completed successfully. This audit does not claim a separate physical-device rendering pass.

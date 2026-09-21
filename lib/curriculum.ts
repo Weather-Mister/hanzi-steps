@@ -2,8 +2,8 @@
 import {characters,characterOrder,lessons,units,books,vocabulary} from '../course/runtime.ts';
 import type {Step,Lesson,Session,Unit} from '../course/schema.ts';
 import {courseModules} from '../course/registry.generated.ts';
-import {completedLessonIds,previousLessonLengths} from './lesson-revisions.ts';
-export {completedLessonIds,previousLessonLengths} from './lesson-revisions.ts';
+import {completedLessonIds,previousLessonLengths,historicalLessonLengthsFor} from './lesson-revisions.ts';
+export {completedLessonIds,previousLessonLengths,additionalPreviousLessonLengths,historicalLessonLengthsFor} from './lesson-revisions.ts';
 export * from '../course/schema.ts';
 export {characters,characterOrder,lessons,units,books,vocabulary,grammarRules,phrases} from '../course/runtime.ts';
 export const wordMeaning=(text:string)=>vocabulary.find(w=>w.text===text)?.meaning||characters[text]?.meaning||'';
@@ -26,8 +26,11 @@ export function shuffled<T>(items:T[],seed:string):T[]{
  const copy=[...items];for(let i=copy.length-1;i>0;i--){n=(Math.imul(n,1664525)+1013904223)>>>0;const j=n%(i+1);[copy[i],copy[j]]=[copy[j],copy[i]]}return copy;
 }
 export function validSession(value:unknown):value is Session {
- if(!value||typeof value!=='object')return false;const s=value as Session;if(typeof s.lessonId!=='string')return false;const length=findLesson(s.lessonId)?.steps.length??(Object.hasOwn(previousLessonLengths,s.lessonId)?previousLessonLengths[s.lessonId]:undefined);
- return typeof length==='number'&&typeof s.id==='string'&&/^[a-zA-Z0-9-]{20,80}$/.test(s.id)&&Number.isInteger(s.index)&&s.index>=0&&s.index<=length&&Number.isInteger(s.independent)&&s.independent>=0&&Number.isInteger(s.assisted)&&s.assisted>=0&&s.independent+s.assisted<=s.index&&typeof s.complete==='boolean'&&(s.complete ? (s.index===length || (Object.hasOwn(previousLessonLengths,s.lessonId) && s.index===previousLessonLengths[s.lessonId])) : s.index<length)&&Number.isFinite(s.updatedAt);
+ if(!value||typeof value!=='object')return false;const s=value as Session;if(typeof s.lessonId!=='string')return false;
+ const historical=historicalLessonLengthsFor(s.lessonId);
+ const currentLength=findLesson(s.lessonId)?.steps.length;
+ const length=currentLength??historical[historical.length-1];
+ return typeof length==='number'&&typeof s.id==='string'&&/^[a-zA-Z0-9-]{20,80}$/.test(s.id)&&Number.isInteger(s.index)&&s.index>=0&&s.index<=length&&Number.isInteger(s.independent)&&s.independent>=0&&Number.isInteger(s.assisted)&&s.assisted>=0&&s.independent+s.assisted<=s.index&&typeof s.complete==='boolean'&&(s.complete ? (s.index===length || historical.includes(s.index)) : s.index<length)&&Number.isFinite(s.updatedAt);
 }
 
 // Historical named exports, retained for callers and checkpoint fixtures.

@@ -1,10 +1,10 @@
 # Book 1 Units 26–27 source plan
 
-Status: Units 26–27 are authored on the working branch. Publication remains blocked on Taiwan Traditional stroke hydration, targeted/full QA, diff review, merge, Pages deployment, and live verification.
+Status: Units 26–27 are published. This source plan has been corrected after the Units 26–29 teaching-quality audit so it matches the authoritative Lesson 9 vocabulary and the implemented first-teaching ownership.
 
 ## Production boundary
 
-Current `course/manifest.json` ends Book 1 at Unit 25. Unit 25's own source note explicitly defers **古代** and **不行** from Lesson 8 Vocabulary II to the next source-continuation unit. No open PR existed when this checkpoint was made.
+At the time of authoring, Unit 25 explicitly deferred **古代** and **不行** from Lesson 8 Vocabulary II. Unit 26 now owns those two items before continuing into Lesson 9.
 
 ## Authoritative source coverage
 
@@ -25,7 +25,7 @@ Source items recovered from the textbook:
 - 回國 huíguó — return to one's country
 - 打算 dǎsuàn — plan/intend to
 - 電視 diànshì — television
-- 電影 diànyǐng — film/movie (the exact word/use is already present earlier in Hanzi Steps via 看電影; classify as REVIEW, not new)
+- 影片 yǐngpiàn — film; video. This is the Lesson 9 Vocabulary I source item. Earlier 看電影 remains review language, but 電影 is not a substitute for the textbook's 影片 entry.
 - 旅行 lǚxíng — travel
 - 功課 gōngkè — homework
 - 出去 chūqù — go out
@@ -36,7 +36,7 @@ Source items recovered from the textbook:
 - 多久 duōjiǔ — how long
 - 臺東 Táidōng — Taitung
 
-Unit 26 should close Lesson 8 and establish the core Lesson 9 holiday/planning vocabulary. Do not inflate novelty: 電影 is review; 下個星期 is a transparent phrase once 星期 is taught; 有時候 and 多久 should be counted according to the cumulative index at implementation time, not assumed new from the textbook alone.
+Unit 26 closes the Lesson 8 tail and establishes the core Lesson 9 holiday/planning vocabulary. 下個星期 is a transparent phrase once 星期 is taught. 影片 was intentionally left for Unit 28, while earlier 看電影 remains review language.
 
 ### Lesson 9 Dialogue II / Vocabulary II (printed pp. 185 onward)
 
@@ -79,7 +79,7 @@ Before final authoring, recover and map every earlier Lesson 9 grammar section t
 
 Goal: close the Lesson 8 tail, then let the learner talk about holiday plans and going out/travelling.
 
-Implemented new vocabulary: 古代, 不行, 星期, 回國, 打算, 電視, 旅行, 功課, 出去, 大概, 放假. Treat 電影 as review. Use 下個星期 as a transparent combination after 星期 unless the cumulative index proves it needs formal first teaching.
+Implemented new vocabulary: 古代, 不行, 星期, 回國, 打算, 電視, 旅行, 功課, 出去, 大概, 放假. Use 下個星期 as a transparent combination after 星期. The textbook item 影片 is not replaced by 電影; it is first-taught in Unit 28.
 
 Six teaching lessons + review. Suggested pedagogical progression:
 
@@ -87,7 +87,7 @@ Six teaching lessons + review. Suggested pedagogical progression:
 2. 星期 / 放假 / 下個星期.
 3. 回國 / 出去.
 4. 打算 + planning sentences; teach its actual textbook grammar/usage before assessing it.
-5. 電視 / 電影(review) / 作業.
+5. 電視 / 功課, while earlier 看電影 stays review-only and textbook 影片 is deferred to Unit 28.
 6. 旅行 / 大概 + integrated holiday planning.
 7. Review: 18–22 meaningful activities, >=3 listening, independent assessment of every new grammar target.
 
@@ -113,7 +113,7 @@ Teach the relevant recommendation grammar before assessment. If …的時候 / �
 
 ## Implemented boundary and deferred source material
 
-Unit 26 closes the Lesson 8 tail with 古代 and 不行, then covers the core Lesson 9 Dialogue I planning vocabulary. It treats 下個星期 as a transparent combination after 星期 and reuses the already-taught expression 看電影 rather than inflating 電影 as a new item.
+Unit 26 closes the Lesson 8 tail with 古代 and 不行, then covers the core Lesson 9 Dialogue I planning vocabulary. It treats 下個星期 as a transparent combination after 星期. The exact textbook Vocabulary I item **影片** is first-taught in Unit 28; earlier **看電影** remains review language rather than being misreported as the source item.
 
 Unit 27 adds 多久, 有時候, 建議, 應該, 夜市, 特別, 茶館, 女朋友, 帶, and 決定. It teaches the basic Verb + Duration frame, …的時候, the paired 有時候…有時候… pattern, and 應該 suggestions.
 
@@ -125,6 +125,6 @@ Explicitly deferred to Unit 28 or later Lesson 9 continuation:
 
 The current split is therefore a source-continuation boundary, not a claim that Lesson 9 is complete.
 
-## Exact next action
+## Current continuation
 
-Hydrate the declared graphicsZhHant stroke sources for Units 26–27, run all repository validation gates, inspect the rendered units and the Book 2 行 compatibility adjustment, then open Feature QA only when the branch is internally consistent.
+Units 26–27 have completed their publication gates. Units 28–29 continue the Lesson 9 duration/date/condition material and then begin Lesson 10. Remaining source gaps are tracked in the later coverage plan rather than being treated as complete.

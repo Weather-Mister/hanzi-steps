@@ -31,7 +31,7 @@ The source explicitly includes the previously unformalized items **非常, 但�
 
 The opening Lesson 10 source introduces **水果, 黃色, 芒果, 給, 塊, 香, 甜, 紅色, 西瓜, 吧, 對, 以前, 機會, 請, 吃吃看**. Unit 29 begins this source section only after its supported Lesson 9 material.
 
-## Unit 28 — How Long Does It Take?
+## Unit 28 — How Long Is the Trip?
 
 ### New vocabulary/forms
 1. 影片 yǐngpiàn — film; video
@@ -60,7 +60,7 @@ Transparent combinations such as 一年、兩天、三個鐘頭、放三天的�
 
 The added Lesson 8 items repair source-coverage omissions rather than inventing extra novelty.
 
-## Unit 29 — If I Have Time
+## Unit 29 — If You Come to Visit
 
 ### New vocabulary/forms
 1. 月 yuè — month
@@ -83,7 +83,7 @@ The added Lesson 8 items repair source-coverage omissions rather than inventing 
 - Number + 月 + Number + 號 / 日 calendar dates.
 - 要是…就… condition/consequence, including subject placement and negative conditions/consequences.
 
-The final six lexical items deliberately open Lesson 10 instead of leaving Unit 29 as a six-word unit. No Lesson 10 grammar is pulled forward.
+The final six lexical items deliberately open Lesson 10 instead of leaving Unit 29 as a six-word unit. No Lesson 10 grammar is pulled forward. The 2026-09-21 quality pass rewrites their examples so they continue one visit/hosting context: a visitor arrives, fruit is shared, and 香/甜 are reused inside already-taught condition language rather than appearing as detached mini-lessons.
 
 ## Explicitly deferred source material
 
@@ -103,4 +103,16 @@ Unit 29 only opens Vocabulary I. Continue the remaining Lesson 10 Vocabulary I a
 
 ## Progress compatibility
 
-Units 28–29 were already published before this rebalance. Existing lesson IDs and every existing step position are therefore frozen. All new practice is appended after the previously published prefixes, and the old completion lengths are recorded in `lib/lesson-revisions.ts`.
+Units 28–29 were already published before the rebalance. Existing lesson IDs and every existing step position are therefore frozen. The first rebalance appended source-backed teaching after the original prefixes. The later quality pass changes wording/content in place without changing lesson lengths or moving step IDs. `lib/lesson-revisions.ts` now preserves both the original completion bounds and the rebalanced published lengths through a multi-bound history mechanism, so a future extension must append another bound rather than overwrite an earlier one.
+
+
+## Teaching-quality follow-up
+
+A later Units 26–29 audit found that the vocabulary density was appropriate after the rebalance but several appended lesson pairings were still pedagogically mechanical. The follow-up therefore:
+
+- makes Unit 28 consistently about time/duration in travel contexts;
+- explicitly teaches the polyphonic contrast **便利 biànlì** vs. **便宜 piányi**;
+- integrates Unit 29's Lesson 10 fruit vocabulary into the existing visit/condition context instead of treating fruit, color, giving, smell and taste as unrelated add-ons;
+- keeps all published lesson IDs, step IDs, positions and lengths unchanged;
+- redistributes the 22-step reviews so newly added vocabulary is actually retrieved, and adds handwriting/component retrieval without exceeding the review-size target;
+- retains the unresolved source gaps below rather than silently declaring Lesson 8 or Lesson 9 complete.
