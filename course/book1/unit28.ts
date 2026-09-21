@@ -8,9 +8,9 @@ const unit:UnitData = {
     "id": "unit-28",
     "number": 28,
     "theme": "amber",
-    "label": "Time expressions & duration structure",
-    "title": "How Long Does It Take?",
-    "description": "A fuller bridge across Lessons 8–9: recover omitted transport vocabulary, then master films and the advanced time-duration system.",
+    "label": "Travel time, duration & transport",
+    "title": "How Long Is the Trip?",
+    "description": "Master the Lesson 9 duration system while repairing real Lesson 8 travel vocabulary gaps, with each recovered item tied back to time, routes, tickets, or trip planning.",
     "chars": [
       "年",
       "日",
@@ -53,8 +53,8 @@ const unit:UnitData = {
   "lessons": [
     {
       "id": "u28-film",
-      "title": "Films, Very & But",
-      "subtitle": "Keep the time contrast, then recover two important Lesson 8 connectors.",
+      "title": "When, Duration & Contrast",
+      "subtitle": "Use 影片 to separate when from how long, then connect two ideas with 非常 and 但是.",
       "chars": [
         "非",
         "但"
@@ -156,21 +156,21 @@ const unit:UnitData = {
         {
           "id": "u28-film-s2",
           "type": "select",
-          "prompt": "Which pair means “very” and “but/however”?",
+          "prompt": "Which pair lets you strengthen the first idea and then introduce a contrast?",
           "options": [
             "非常／但是",
             "比較／或是",
             "大概／不行"
           ],
           "answer": "非常／但是",
-          "explanation": "非常 means very; 但是 introduces a contrast."
+          "explanation": "非常 strengthens the description or preference; 但是 introduces the contrasting clause."
         }
       ]
     },
     {
       "id": "u28-years-days",
-      "title": "Years, Days & Stations",
-      "subtitle": "Use duration units and add the transport noun 站.",
+      "title": "Calendar Units & Travel Stations",
+      "subtitle": "Use 年, 日, and 天 for time, then place a familiar travel action at 高鐵站.",
       "chars": [
         "年",
         "日",
@@ -317,8 +317,8 @@ const unit:UnitData = {
     },
     {
       "id": "u28-hours",
-      "title": "Hours — or Another Way",
-      "subtitle": "Count hours, then connect transport alternatives with 或是.",
+      "title": "Hours & Travel Choices",
+      "subtitle": "Count hours with 鐘頭, then link two transport alternatives with 或是.",
       "chars": [
         "鐘",
         "頭",
@@ -449,8 +449,8 @@ const unit:UnitData = {
     },
     {
       "id": "u28-object",
-      "title": "Objects, Duration & Convenience Stores",
-      "subtitle": "Keep the repeated-verb pattern and add a common Taiwan ticket-buying place.",
+      "title": "Study Duration & Ticket Stops",
+      "subtitle": "Repeat the verb in an object-duration sentence, then use 便利商店 in a Taiwan ticket-buying context.",
       "chars": [
         "利"
       ],
@@ -481,14 +481,14 @@ const unit:UnitData = {
         {
           "id": "u28-object-s1",
           "type": "select",
-          "prompt": "You want to say “I study Chinese for one year.” Which structure matches Lesson 9?",
+          "prompt": "Which sentence follows Lesson 9's taught object + repeated verb + duration pattern?",
           "options": [
             "我學中文學一年。",
-            "我一年學中文一年。",
-            "我學一年中文。"
+            "我明年學中文。",
+            "我學中文嗎？"
           ],
           "answer": "我學中文學一年。",
-          "explanation": "With an object plus duration, the textbook repeats the verb before the duration.",
+          "explanation": "中文 is the object, and the repeated 學 introduces the duration 一年.",
           "grammarIds": [
             "u28-object-duration"
           ]
@@ -546,21 +546,21 @@ const unit:UnitData = {
         {
           "id": "u28-object-s3",
           "type": "select",
-          "prompt": "Which place is a convenience store?",
+          "prompt": "How is 便 pronounced in 便利商店?",
           "options": [
-            "便利商店",
-            "高鐵站",
-            "茶館"
+            "biàn",
+            "pián",
+            "biān"
           ],
-          "answer": "便利商店",
-          "explanation": "便利商店 means convenience store."
+          "answer": "biàn",
+          "explanation": "便利 is biànlì. This contrasts with 便宜 piányi, where the same character 便 is pronounced pián."
         }
       ]
     },
     {
       "id": "u28-negation",
-      "title": "Negative Duration & the Bus",
-      "subtitle": "Place duration before negation and recover the full textbook word for bus.",
+      "title": "Negative Duration & Bus Travel",
+      "subtitle": "Put the duration before negation, then apply the same pattern to 公共汽車.",
       "chars": [
         "汽"
       ],
@@ -591,14 +591,14 @@ const unit:UnitData = {
         {
           "id": "u28-negation-s1",
           "type": "select",
-          "prompt": "Which sentence means “I cannot come to class for two days”?",
+          "prompt": "Which sentence expresses a two-day negative span with the duration before 不能?",
           "options": [
             "我兩天不能來上課。",
-            "我不能來兩天上課。",
-            "我不能兩天來上課。"
+            "我明天不能來上課。",
+            "我兩天都來上課。"
           ],
           "answer": "我兩天不能來上課。",
-          "explanation": "For a negative span, Lesson 9 places the duration before the negation.",
+          "explanation": "兩天 is a duration and is placed before 不能. 明天 is a Time-When expression, while 兩天都來上課 is affirmative.",
           "grammarIds": [
             "u28-duration-negation"
           ]
@@ -651,21 +651,24 @@ const unit:UnitData = {
         {
           "id": "u28-negation-s3",
           "type": "select",
-          "prompt": "Which textbook form means “bus”?",
+          "prompt": "Which sentence correctly says “I cannot take the bus for two days”?",
           "options": [
-            "公共汽車",
-            "計程車",
-            "機車"
+            "我兩天不能坐公共汽車。",
+            "我明天不能坐公共汽車。",
+            "我兩天都坐公共汽車。"
           ],
-          "answer": "公共汽車",
-          "explanation": "公共汽車 is the full form for bus; 公車 is the shorter everyday form."
+          "answer": "我兩天不能坐公共汽車。",
+          "explanation": "兩天 gives the duration and comes before 不能; 公共汽車 is bus.",
+          "grammarIds": [
+            "u28-duration-negation"
+          ]
         }
       ]
     },
     {
       "id": "u28-separable",
-      "title": "Separable Verbs & Ancient China",
-      "subtitle": "Finish duration inside separable verbs and close one remaining Lesson 8 country term.",
+      "title": "Separable vs. Ordinary Duration",
+      "subtitle": "Put time inside 放假 and 唱歌, then contrast that with an ordinary travel-duration sentence.",
       "chars": [],
       "minutes": "10–13 min",
       "unitId": "unit-28",
@@ -709,14 +712,14 @@ const unit:UnitData = {
         {
           "id": "u28-separable-s1",
           "type": "select",
-          "prompt": "Which sentence correctly inserts a duration into 放假?",
+          "prompt": "Which form puts the duration inside the separable verb 放假, as taught in Lesson 9?",
           "options": [
-            "我們放三天的假。",
-            "我們三天放假三天。",
-            "我們放假三天的。"
+            "放三天的假",
+            "放假的時候",
+            "三天不能放假"
           ],
-          "answer": "我們放三天的假。",
-          "explanation": "放假 is separable, so the duration can appear between 放 and 假.",
+          "answer": "放三天的假",
+          "explanation": "The duration 三天 is inserted between 放 and 假.",
           "grammarIds": [
             "u28-separable-duration"
           ]
@@ -729,14 +732,14 @@ const unit:UnitData = {
         {
           "id": "u28-separable-s2",
           "type": "select",
-          "prompt": "Which word means China?",
+          "prompt": "Why does 一個星期 follow 旅行 in 我打算去中國旅行一個星期, while 三天 goes inside 放三天的假?",
           "options": [
-            "中國",
-            "古代",
-            "臺灣"
+            "旅行 is an ordinary verb here; 放假 is separable",
+            "中國 always forces duration to the end",
+            "星期 can only follow country names"
           ],
-          "answer": "中國",
-          "explanation": "中國 is the country name China; 古代 means ancient times."
+          "answer": "旅行 is an ordinary verb here; 放假 is separable",
+          "explanation": "Ordinary verb duration follows the verb phrase; a separable verb can take the duration inside its verb-object pair."
         }
       ]
     },
@@ -764,15 +767,15 @@ const unit:UnitData = {
         {
           "id": "u28-review-02",
           "type": "listen",
-          "char": "影",
+          "char": "非",
           "options": [
-            "影",
-            "年",
-            "日",
-            "鐘"
+            "非",
+            "但",
+            "站",
+            "汽"
           ],
-          "answer": "影",
-          "explanation": "影 is yǐng."
+          "answer": "非",
+          "explanation": "非 is fēi, the first character of 非常."
         },
         {
           "id": "u28-review-03",
@@ -780,9 +783,9 @@ const unit:UnitData = {
           "char": "年",
           "options": [
             "年",
-            "片",
-            "頭",
-            "日"
+            "日",
+            "鐘",
+            "站"
           ],
           "answer": "年",
           "explanation": "年 is nián, year."
@@ -790,15 +793,15 @@ const unit:UnitData = {
         {
           "id": "u28-review-04",
           "type": "listen",
-          "char": "鐘",
+          "char": "汽",
           "options": [
-            "鐘",
-            "影",
-            "年",
-            "日"
+            "汽",
+            "站",
+            "非",
+            "年"
           ],
-          "answer": "鐘",
-          "explanation": "鐘 is zhōng."
+          "answer": "汽",
+          "explanation": "汽 is qì, the first character of 汽車."
         },
         {
           "id": "u28-review-05",
@@ -865,14 +868,14 @@ const unit:UnitData = {
         {
           "id": "u28-review-10",
           "type": "select",
-          "prompt": "Which sentence has the duration in the correct place before negation?",
+          "prompt": "Which sentence expresses a two-day negative span with duration before 不能?",
           "options": [
             "我兩天不能來上課。",
-            "我不能兩天來上課。",
-            "我不能來上課兩天不。"
+            "我明天不能來上課。",
+            "我兩天都來上課。"
           ],
           "answer": "我兩天不能來上課。",
-          "explanation": "The duration precedes 不能.",
+          "explanation": "兩天 is the duration and comes before 不能.",
           "grammarIds": [
             "u28-duration-negation"
           ]
@@ -890,37 +893,35 @@ const unit:UnitData = {
         {
           "id": "u28-review-12",
           "type": "select",
-          "prompt": "Which is the correct separable-verb pattern?",
+          "prompt": "Which form puts a duration inside the separable verb 放假?",
           "options": [
             "放三天的假",
-            "三天放假三天",
-            "放假的三天放"
+            "放假的時候",
+            "三天不能放假"
           ],
           "answer": "放三天的假",
-          "explanation": "The duration is inserted between 放 and 假.",
+          "explanation": "The duration 三天 is inserted between 放 and 假.",
           "grammarIds": [
             "u28-separable-duration"
           ]
         },
         {
           "id": "u28-review-13",
-          "type": "order",
-          "phrase": "u28-three-day-break",
-          "tokens": [
-            "我們",
-            "放",
-            "三天的假"
-          ]
+          "type": "memory",
+          "char": "站"
         },
         {
           "id": "u28-review-14",
-          "type": "order",
-          "phrase": "u28-three-hours-song",
-          "tokens": [
-            "我",
-            "唱",
-            "三個鐘頭的歌"
-          ]
+          "type": "parts",
+          "char": "但",
+          "prompt": "Which component is on the left of 但?",
+          "options": [
+            "亻",
+            "旦",
+            "刂"
+          ],
+          "answer": "亻",
+          "explanation": "但 has 亻 on the left and 旦 on the right."
         },
         {
           "id": "u28-review-15",
@@ -937,26 +938,26 @@ const unit:UnitData = {
         {
           "id": "u28-review-16",
           "type": "select",
-          "prompt": "Which pair is a duration?",
+          "prompt": "Which word means “China”?",
           "options": [
-            "一年",
-            "明天",
-            "今天"
+            "中國",
+            "古代",
+            "臺灣"
           ],
-          "answer": "一年",
-          "explanation": "一年 answers how long."
+          "answer": "中國",
+          "explanation": "中國 is China; 古代 means ancient times, and 臺灣 is Taiwan."
         },
         {
           "id": "u28-review-17",
           "type": "select",
-          "prompt": "Which sentence contains an object and therefore repeats the verb?",
+          "prompt": "How is 便 pronounced in 便利商店, compared with 便宜?",
           "options": [
-            "我學中文學一年。",
-            "我想玩兩天。",
-            "我明天去旅行。"
+            "biàn in 便利商店; pián in 便宜",
+            "pián in both words",
+            "biàn in both words"
           ],
-          "answer": "我學中文學一年。",
-          "explanation": "中文 is the object, so 學 repeats before 一年.",
+          "answer": "biàn in 便利商店; pián in 便宜",
+          "explanation": "便利 is biànlì, while 便宜 is piányi. The same character has different readings in these two familiar words.",
           "grammarIds": [
             "u28-object-duration"
           ]
@@ -964,14 +965,14 @@ const unit:UnitData = {
         {
           "id": "u28-review-18",
           "type": "select",
-          "prompt": "Which sentence means “We have three days off”?",
+          "prompt": "Which is the full textbook expression for “bus”?",
           "options": [
-            "我們放三天的假。",
-            "我們看三天的影片。",
-            "我們三年放假。"
+            "公共汽車",
+            "計程車",
+            "機車"
           ],
-          "answer": "我們放三天的假。",
-          "explanation": "This is the separable 放假 duration pattern.",
+          "answer": "公共汽車",
+          "explanation": "公共汽車 is bus; 計程車 is taxi and 機車 is scooter/motorcycle.",
           "grammarIds": [
             "u28-separable-duration"
           ]
@@ -979,14 +980,14 @@ const unit:UnitData = {
         {
           "id": "u28-review-19",
           "type": "select",
-          "prompt": "Two days of being unable to attend class is expressed as:",
+          "prompt": "Which word correctly links two transport alternatives as “or”?",
           "options": [
-            "兩天不能來上課",
-            "不能來上課兩天不",
-            "不能兩天上課來"
+            "或是",
+            "但是",
+            "非常"
           ],
-          "answer": "兩天不能來上課",
-          "explanation": "The duration comes before the negation.",
+          "answer": "或是",
+          "explanation": "或是 links alternatives: 坐高鐵或是坐火車.",
           "grammarIds": [
             "u28-duration-negation"
           ]
@@ -1009,26 +1010,26 @@ const unit:UnitData = {
         {
           "id": "u28-review-21",
           "type": "select",
-          "prompt": "Which sentence correctly means “HSR tickets are very expensive, but taking the HSR is fast and comfortable”?",
+          "prompt": "Which sentence means “I really like films, but I do not have time to watch today”?",
           "options": [
-            "高鐵車票非常貴，但是坐高鐵又快又舒服。",
-            "高鐵車票但是貴，非常坐高鐵舒服。",
-            "高鐵車票或是貴，站坐高鐵。"
+            "我非常喜歡影片，但是今天沒有空看。",
+            "我今天有空看影片，所以不喜歡影片。",
+            "我大概喜歡影片，今天也有空看。"
           ],
-          "answer": "高鐵車票非常貴，但是坐高鐵又快又舒服。",
-          "explanation": "非常 strengthens 貴, while 但是 introduces the contrasting second clause."
+          "answer": "我非常喜歡影片，但是今天沒有空看。",
+          "explanation": "非常 strengthens 喜歡, while 但是 introduces the contrast with 今天沒有空看."
         },
         {
           "id": "u28-review-22",
           "type": "select",
-          "prompt": "Which set correctly matches the recovered transport words?",
+          "prompt": "Which set correctly matches the recovered travel words?",
           "options": [
-            "站 = station；或是 = or；便利商店 = convenience store；公共汽車 = bus",
-            "站 = hour；或是 = very；便利商店 = tea house；公共汽車 = taxi",
-            "站 = film；或是 = but；便利商店 = station；公共汽車 = scooter"
+            "站 = station；便利商店 = convenience store；公共汽車 = bus",
+            "站 = station；便利商店 = tea house；公共汽車 = taxi",
+            "站 = market；便利商店 = convenience store；公共汽車 = scooter"
           ],
-          "answer": "站 = station；或是 = or；便利商店 = convenience store；公共汽車 = bus",
-          "explanation": "These are the Lesson 8 meanings restored in this rebalance."
+          "answer": "站 = station；便利商店 = convenience store；公共汽車 = bus",
+          "explanation": "站 is station, 便利商店 is convenience store, and 公共汽車 is bus."
         }
       ]
     }
@@ -1103,7 +1104,8 @@ const unit:UnitData = {
       "pinyin": "biànlì shāngdiàn",
       "meaning": "convenience store",
       "lessonId": "u28-object",
-      "core": true
+      "core": true,
+      "note": "Taiwan textbook term for convenience store. Pronounce 便 as biàn here; compare 便宜 piányi, where 便 is pián."
     },
     {
       "text": "公共汽車",
@@ -1131,7 +1133,8 @@ const unit:UnitData = {
     "來",
     "放假",
     "星期",
-    "旅行"
+    "旅行",
+    "便宜"
   ],
   "newCharacters": [
     "年",
@@ -1490,7 +1493,7 @@ const unit:UnitData = {
       "meaning": "benefit; second character of 便利",
       "strokes": 7,
       "layout": "side",
-      "note": "利 is fourth-tone lì. In 便利商店, 便利 means convenient.",
+      "note": "利 is fourth-tone lì. In 便利商店, 便利 is biànlì, “convenient”; note that 便 is biàn here but pián in 便宜.",
       "memory": "禾 is the five-stroke left side; the two-stroke 刂 blade finishes the right edge.",
       "parts": [
         {
@@ -1777,27 +1780,30 @@ const unit:UnitData = {
       ]
     },
     "u28-very-but": {
-      "text": "高鐵車票非常貴，但是坐高鐵又快又舒服。",
-      "pinyin": "Gāotiě chēpiào fēicháng guì, dànshì zuò gāotiě yòu kuài yòu shūfu.",
-      "meaning": "HSR tickets are very expensive, but taking the HSR is both fast and comfortable.",
-      "note": "非常 strengthens 貴; 但是 introduces the contrast.",
+      "text": "我非常喜歡影片，但是今天沒有空看。",
+      "pinyin": "Wǒ fēicháng xǐhuān yǐngpiàn, dànshì jīntiān méiyǒu kòng kàn.",
+      "meaning": "I really like films, but I do not have time to watch today.",
+      "note": "非常 strengthens 喜歡; 但是 introduces the contrast. 今天 is a Time-When expression.",
       "tokens": [
-        "高鐵車票",
-        "非常貴",
+        "我",
+        "非常喜歡影片",
         "但是",
-        "坐高鐵",
-        "又快又舒服"
+        "今天沒有空看"
       ]
     },
     "u28-station": {
-      "text": "我在高鐵站買票。",
-      "pinyin": "Wǒ zài gāotiě zhàn mǎi piào.",
-      "meaning": "I buy a ticket at the HSR station.",
-      "note": "站 means station or stop.",
+      "text": "我星期日去高鐵站買票。",
+      "pinyin": "Wǒ xīngqírì qù gāotiě zhàn mǎi piào.",
+      "meaning": "I go to the HSR station to buy a ticket on Sunday.",
+      "note": "星期日 is a Time-When expression; 站 names the travel station.",
       "tokens": [
         "我",
-        "在高鐵站",
+        "星期日",
+        "去高鐵站",
         "買票"
+      ],
+      "grammarIds": [
+        "u28-when-duration-contrast"
       ]
     },
     "u28-or": {
@@ -1816,7 +1822,7 @@ const unit:UnitData = {
       "text": "我在便利商店買票。",
       "pinyin": "Wǒ zài biànlì shāngdiàn mǎi piào.",
       "meaning": "I buy a ticket at a convenience store.",
-      "note": "便利商店 is the Taiwan textbook term for convenience store.",
+      "note": "便利商店 is the Taiwan textbook term for convenience store. Here 便 is pronounced biàn in 便利, unlike pián in 便宜.",
       "tokens": [
         "我",
         "在便利商店",
@@ -1836,25 +1842,28 @@ const unit:UnitData = {
       ]
     },
     "u28-bus": {
-      "text": "你可以坐公共汽車去。",
-      "pinyin": "Nǐ kěyǐ zuò gōnggòng qìchē qù.",
-      "meaning": "You can take the bus there.",
-      "note": "公共汽車 is the full textbook form for bus; 公車 is the shorter form already learned.",
+      "text": "我兩天不能坐公共汽車。",
+      "pinyin": "Wǒ liǎng tiān bù néng zuò gōnggòng qìchē.",
+      "meaning": "I cannot take the bus for two days.",
+      "note": "The duration 兩天 comes before 不能. 公共汽車 is the full textbook form for bus.",
       "tokens": [
-        "你可以",
-        "坐公共汽車",
-        "去"
+        "我",
+        "兩天",
+        "不能坐公共汽車"
+      ],
+      "grammarIds": [
+        "u28-duration-negation"
       ]
     },
     "u28-china-ancient": {
-      "text": "那裡有很多中國古代的東西。",
-      "pinyin": "Nàlǐ yǒu hěn duō Zhōngguó gǔdài de dōngxi.",
-      "meaning": "There are many things from ancient China there.",
-      "note": "中國 is the country name; 古代 was introduced in Unit 26.",
+      "text": "我打算去中國旅行一個星期。",
+      "pinyin": "Wǒ dǎsuàn qù Zhōngguó lǚxíng yí ge xīngqí.",
+      "meaning": "I plan to travel in China for one week.",
+      "note": "旅行 is an ordinary verb here, so 一個星期 follows the verb phrase. Compare 放三天的假, where the duration goes inside the separable verb 放假.",
       "tokens": [
-        "那裡",
-        "有很多",
-        "中國古代的東西"
+        "我打算",
+        "去中國",
+        "旅行一個星期"
       ]
     }
   },
