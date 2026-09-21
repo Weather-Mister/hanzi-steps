@@ -8,9 +8,9 @@ const unit:UnitData = {
     "id": "unit-29",
     "number": 29,
     "theme": "teal",
-    "label": "Dates, additions & conditions",
-    "title": "If I Have Time",
-    "description": "Finish the supported Lesson 9 date/condition material, then move naturally into the opening fruit vocabulary of Lesson 10 instead of stopping at a thin unit boundary.",
+    "label": "Visit plans, conditions & fruit",
+    "title": "If You Come to Visit",
+    "description": "Finish Lesson 9 visit dates and conditions, then transition into Lesson 10 fruit language through one continuing visit-and-hosting context rather than unrelated mini-lessons.",
     "chars": [
       "月",
       "號",
@@ -37,9 +37,9 @@ const unit:UnitData = {
       "pinyin": "Yàoshi wǒ yǒu kòng, wǒ jiù gēn nǐ yìqǐ qù."
     },
     "goal": {
-      "text": "我女朋友九月三十號要來看我。",
-      "pinyin": "Wǒ nǚpéngyou jiǔyuè sānshí hào yào lái kàn wǒ.",
-      "meaning": "My girlfriend is coming to see me on September 30."
+      "text": "要是你來，我就給你一塊水果。",
+      "pinyin": "Yàoshi nǐ lái, wǒ jiù gěi nǐ yí kuài shuǐguǒ.",
+      "meaning": "If you come, I’ll give you a piece of fruit."
     },
     "grammarIds": [
       "u29-calendar-date",
@@ -51,8 +51,8 @@ const unit:UnitData = {
   "lessons": [
     {
       "id": "u29-date",
-      "title": "September 30 — and Fruit",
-      "subtitle": "Use month/date language, then open Lesson 10 with 水果.",
+      "title": "A Visit Date — and What to Eat",
+      "subtitle": "Say when someone is coming, then carry that visit naturally into the first Lesson 10 word 水果.",
       "chars": [
         "月",
         "號",
@@ -141,14 +141,14 @@ const unit:UnitData = {
         {
           "id": "u29-date-s1",
           "type": "select",
-          "prompt": "Which expression means September 30?",
+          "prompt": "Which spoken date means September 30?",
           "options": [
             "九月三十號",
-            "三十月九號",
-            "九號三十月"
+            "九月十三號",
+            "十月三十號"
           ],
           "answer": "九月三十號",
-          "explanation": "Chinese dates put the month before the day.",
+          "explanation": "九月 is September and 三十號 is the 30th.",
           "grammarIds": [
             "u29-calendar-date"
           ]
@@ -231,8 +231,8 @@ const unit:UnitData = {
     },
     {
       "id": "u29-hai",
-      "title": "Still, Also — and Yellow",
-      "subtitle": "Use 還, then describe a fruit by color.",
+      "title": "What Else Is There?",
+      "subtitle": "Use 還 to add something, then describe the added fruit by color.",
       "chars": [
         "黃",
         "色"
@@ -356,8 +356,8 @@ const unit:UnitData = {
     },
     {
       "id": "u29-maokong",
-      "title": "Maokong — and Giving",
-      "subtitle": "Keep the place-name practice, then add 給 from Lesson 10.",
+      "title": "At Maokong, Share a Piece",
+      "subtitle": "Keep the Maokong visit context and use 給 naturally while sharing food.",
       "chars": [
         "貓",
         "給"
@@ -476,8 +476,8 @@ const unit:UnitData = {
     },
     {
       "id": "u29-condition",
-      "title": "If This, Then That — and Fragrance",
-      "subtitle": "Master 要是…就…, then add 香 for describing food.",
+      "title": "If It Smells Good, I’ll Eat It",
+      "subtitle": "Use 要是…就… with 香 so the condition and the new food description reinforce each other.",
       "chars": [
         "就",
         "香"
@@ -548,14 +548,14 @@ const unit:UnitData = {
         {
           "id": "u29-condition-s2",
           "type": "select",
-          "prompt": "Which sentence correctly means “If I am free, then I will go with you”?",
+          "prompt": "Which sentence uses the taught 要是…就… frame to mean “If I am free, then I will go with you”?",
           "options": [
             "要是我有空，我就跟你一起去。",
-            "我就要是有空，跟你一起去。",
-            "有空就我，要是一起去。"
+            "我有空，所以跟你一起去。",
+            "你要是有空，你就跟我一起去。"
           ],
           "answer": "要是我有空，我就跟你一起去。",
-          "explanation": "The condition comes with 要是 and the result with 就.",
+          "explanation": "The first option keeps the intended subject and uses 要是 for the condition and 就 for its consequence.",
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
@@ -606,8 +606,8 @@ const unit:UnitData = {
     },
     {
       "id": "u29-negative",
-      "title": "Negative Conditions — and Sweetness",
-      "subtitle": "Keep negative 要是…就… clear, then use 甜 as a standalone taste word.",
+      "title": "If It Isn’t Sweet",
+      "subtitle": "Keep the negative condition-consequence pattern and use 甜 inside the condition.",
       "chars": [],
       "minutes": "8–11 min",
       "unitId": "unit-29",
@@ -630,14 +630,14 @@ const unit:UnitData = {
         {
           "id": "u29-negative-s1",
           "type": "select",
-          "prompt": "Which sentence correctly handles a negative condition?",
+          "prompt": "Which sentence correctly uses a negative condition and a negative consequence?",
           "options": [
             "你要是沒空，我們就不去夜市。",
-            "你沒空就要是我們不去夜市。",
-            "要是就你沒空，我們夜市不去。"
+            "你要是有空，我們就去夜市。",
+            "你沒空，所以我去夜市。"
           ],
           "answer": "你要是沒空，我們就不去夜市。",
-          "explanation": "Negation stays inside its clause; 要是 and 就 keep their normal roles.",
+          "explanation": "沒空 is the negative condition; 就不去夜市 is the negative consequence.",
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
@@ -678,8 +678,8 @@ const unit:UnitData = {
     },
     {
       "id": "u29-integrate",
-      "title": "Build the Logic — Then Look Back",
-      "subtitle": "Integrate Lesson 9, then add 以前 from the opening of Lesson 10.",
+      "title": "Earlier Preferences, Today’s Visit",
+      "subtitle": "Use 以前 in a familiar preference frame while recycling the fruit vocabulary from this unit.",
       "chars": [],
       "minutes": "9–12 min",
       "unitId": "unit-29",
@@ -770,49 +770,49 @@ const unit:UnitData = {
           "options": [
             "月",
             "號",
-            "貓",
-            "就"
+            "水",
+            "給"
           ],
           "answer": "月",
-          "explanation": "月 is yuè."
+          "explanation": "月 is yuè, month."
         },
         {
           "id": "u29-review-02",
           "type": "listen",
-          "char": "號",
+          "char": "水",
           "options": [
-            "號",
+            "水",
+            "果",
             "月",
-            "就",
-            "貓"
+            "給"
           ],
-          "answer": "號",
-          "explanation": "號 is hào."
+          "answer": "水",
+          "explanation": "水 is shuǐ, the first character of 水果."
         },
         {
           "id": "u29-review-03",
           "type": "listen",
-          "char": "就",
+          "char": "給",
           "options": [
+            "給",
+            "香",
             "就",
-            "貓",
-            "號",
-            "月"
+            "號"
           ],
-          "answer": "就",
-          "explanation": "就 is jiù."
+          "answer": "給",
+          "explanation": "給 is gěi, to give."
         },
         {
           "id": "u29-review-04",
           "type": "select",
-          "prompt": "Which expression means September 30?",
+          "prompt": "Which spoken date means September 30?",
           "options": [
             "九月三十號",
-            "三十月九號",
-            "九年三十號"
+            "九月十三號",
+            "十月三十號"
           ],
           "answer": "九月三十號",
-          "explanation": "Month precedes day.",
+          "explanation": "九月 is September and 三十號 is the 30th.",
           "grammarIds": [
             "u29-calendar-date"
           ]
@@ -829,13 +829,8 @@ const unit:UnitData = {
         },
         {
           "id": "u29-review-06",
-          "type": "order",
-          "phrase": "u29-return-date",
-          "tokens": [
-            "我",
-            "九月三十號",
-            "回國"
-          ]
+          "type": "memory",
+          "char": "號"
         },
         {
           "id": "u29-review-07",
@@ -885,12 +880,8 @@ const unit:UnitData = {
         },
         {
           "id": "u29-review-11",
-          "type": "order",
-          "phrase": "u29-maokong",
-          "tokens": [
-            "貓空的風景",
-            "很美"
-          ]
+          "type": "memory",
+          "char": "貓"
         },
         {
           "id": "u29-review-12",
@@ -957,30 +948,28 @@ const unit:UnitData = {
         },
         {
           "id": "u29-review-17",
-          "type": "select",
-          "prompt": "Which is a Time-When expression?",
+          "type": "parts",
+          "char": "給",
+          "prompt": "Which component is on the left of 給?",
           "options": [
-            "九月三十號",
-            "三個鐘頭",
-            "兩天"
+            "糹",
+            "合",
+            "言"
           ],
-          "answer": "九月三十號",
-          "explanation": "It identifies a calendar date.",
-          "grammarIds": [
-            "u29-calendar-date"
-          ]
+          "answer": "糹",
+          "explanation": "給 has 糹 on the left and 合 on the right."
         },
         {
           "id": "u29-review-18",
           "type": "select",
-          "prompt": "Which sentence correctly places a date before the action?",
+          "prompt": "Which sentence means “I return to my country on September 30”?",
           "options": [
             "我九月三十號回國。",
-            "我回國九月三十號回。",
-            "九月回國我三十號。"
+            "我九月三十號去夜市。",
+            "我九月十三號回國。"
           ],
           "answer": "我九月三十號回國。",
-          "explanation": "The date is a Time-When expression and precedes the verb phrase.",
+          "explanation": "The correct sentence keeps both the date 九月三十號 and the action 回國.",
           "grammarIds": [
             "u29-calendar-date"
           ]
@@ -1018,20 +1007,20 @@ const unit:UnitData = {
           "prompt": "Which sentence means “In the past, I didn’t like eating yellow fruit”?",
           "options": [
             "我以前不喜歡吃黃色的水果。",
-            "我以後不喜歡吃水果黃色。",
-            "我還黃色以前水果。"
+            "我以前很喜歡吃黃色的水果。",
+            "我現在不喜歡吃黃色的水果。"
           ],
           "answer": "我以前不喜歡吃黃色的水果。",
-          "explanation": "以前 sets the past time, and 黃色的 modifies 水果."
+          "explanation": "以前 sets the time in the past, 不喜歡 gives the negative preference, and 黃色的 modifies 水果."
         },
         {
           "id": "u29-review-22",
           "type": "select",
-          "prompt": "Which sentence pair correctly uses 給, 香, and 甜?",
+          "prompt": "Which sentence pair means “I give you a piece of fruit. The fruit smells fragrant and tastes sweet”?",
           "options": [
             "我給你一塊水果。水果很香，也很甜。",
-            "我香你一塊水果。水果很給，也很以前。",
-            "我甜你水果。水果很給，也很香。"
+            "我帶你去吃水果。水果很香，也很甜。",
+            "我給你一塊水果。水果很特別，但是不甜。"
           ],
           "answer": "我給你一塊水果。水果很香，也很甜。",
           "explanation": "給 means give; 香 describes a pleasant smell; 甜 describes a sweet taste."
@@ -1643,7 +1632,8 @@ const unit:UnitData = {
   ],
   "reviewGrammar": [
     "u26-time-when",
-    "u27-yinggai"
+    "u27-yinggai",
+    "u27-de-shihou"
   ],
   "phrases": {
     "u29-date": {
@@ -1733,54 +1723,65 @@ const unit:UnitData = {
       ]
     },
     "u29-fruit": {
-      "text": "這個水果很好吃。",
-      "pinyin": "Zhège shuǐguǒ hěn hǎochī.",
-      "meaning": "This fruit tastes very good.",
-      "note": "水果 is the general word for fruit.",
+      "text": "她來的時候，我們一起吃水果。",
+      "pinyin": "Tā lái de shíhou, wǒmen yìqǐ chī shuǐguǒ.",
+      "meaning": "When she comes, we will eat fruit together.",
+      "note": "水果 opens Lesson 10 while 的時候 deliberately recycles the Lesson 9 time-setting pattern.",
       "tokens": [
-        "這個水果",
-        "很好吃"
+        "她來的時候",
+        "我們一起吃水果"
+      ],
+      "grammarIds": [
+        "u27-de-shihou"
       ]
     },
     "u29-yellow-fruit": {
-      "text": "這個黃色的水果很好吃。",
-      "pinyin": "Zhège huángsè de shuǐguǒ hěn hǎochī.",
-      "meaning": "This yellow fruit tastes very good.",
-      "note": "黃色 modifies 水果 with 的.",
+      "text": "這裡還有黃色的水果。",
+      "pinyin": "Zhèlǐ hái yǒu huángsè de shuǐguǒ.",
+      "meaning": "There is also yellow fruit here.",
+      "note": "還有 adds another item; 黃色的 modifies 水果.",
       "tokens": [
-        "這個黃色的水果",
-        "很好吃"
+        "這裡",
+        "還有",
+        "黃色的水果"
       ]
     },
     "u29-give-piece": {
-      "text": "我給你一塊。",
-      "pinyin": "Wǒ gěi nǐ yí kuài.",
-      "meaning": "I’ll give you a piece.",
-      "note": "給 is the verb “to give”; 塊 is the previously learned measure word used here for a piece of food.",
+      "text": "在貓空，我給你一塊水果。",
+      "pinyin": "Zài Māokōng, wǒ gěi nǐ yí kuài shuǐguǒ.",
+      "meaning": "At Maokong, I’ll give you a piece of fruit.",
+      "note": "給 is the verb “to give”; 塊 is the familiar measure word for a piece of food.",
       "tokens": [
+        "在貓空",
         "我",
         "給你",
-        "一塊"
+        "一塊水果"
       ]
     },
     "u29-fragrant": {
-      "text": "水果很香。",
-      "pinyin": "Shuǐguǒ hěn xiāng.",
-      "meaning": "The fruit smells fragrant.",
-      "note": "香 describes a pleasant smell.",
+      "text": "要是水果很香，我就想吃。",
+      "pinyin": "Yàoshi shuǐguǒ hěn xiāng, wǒ jiù xiǎng chī.",
+      "meaning": "If the fruit smells fragrant, then I want to eat it.",
+      "note": "香 describes the smell; 要是 introduces the condition and 就 introduces the consequence.",
       "tokens": [
-        "水果",
-        "很香"
+        "要是水果很香",
+        "我就想吃"
+      ],
+      "grammarIds": [
+        "u29-yaoshi-jiu"
       ]
     },
     "u29-sweet": {
-      "text": "水果很甜。",
-      "pinyin": "Shuǐguǒ hěn tián.",
-      "meaning": "The fruit tastes sweet.",
-      "note": "甜 describes a sweet taste.",
+      "text": "要是水果不甜，我就不吃。",
+      "pinyin": "Yàoshi shuǐguǒ bù tián, wǒ jiù bù chī.",
+      "meaning": "If the fruit is not sweet, then I will not eat it.",
+      "note": "The condition is negative with 不甜; the consequence is also negative with 不吃.",
       "tokens": [
-        "水果",
-        "很甜"
+        "要是水果不甜",
+        "我就不吃"
+      ],
+      "grammarIds": [
+        "u29-yaoshi-jiu"
       ]
     },
     "u29-before-fruit": {
