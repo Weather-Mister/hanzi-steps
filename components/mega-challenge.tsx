@@ -85,6 +85,12 @@ export function MegaChallenge({
   setGaveUp(true);
  }
 
+ function skipWord(){
+  if(result||!current)return;
+  setQueue(currentQueue=>currentQueue?advanceMegaQueue(currentQueue,false):currentQueue);
+  resetWord();
+ }
+
  async function markMastered(item:VocabularyLookupItem){
   const saved=await setMastered(item.id,true);
   if(!saved)return;
@@ -159,6 +165,7 @@ export function MegaChallenge({
      </div>
     </div>:
     <div className="mega-give-up-row">
+     <button className="text-button mega-skip-button" onClick={skipWord}>Skip word</button>
      {gaveUp?<span className="mega-guides-on" role="status">All guides are on.</span>:
       <button className="text-button mega-give-up-button" onClick={giveUp}>Give up · show all guides</button>}
     </div>}
