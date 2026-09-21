@@ -287,73 +287,73 @@ export const taiwanMissions:TaiwanMission[]=[
  {
   id:'first-conversation',stamp:'👋',title:'First conversation',subtitle:'Greet someone and introduce yourself.',unlockUnitId:'unit-1',
   steps:[
-   {speaker:'對方',prompt:'你好！',answer:'你好！',options:['你好！','學生','嗎','我'],note:'Return the greeting.'},
-   {speaker:'對方',prompt:'你是學生嗎？',answer:'是，我是學生。',options:['是，我是學生。','你好。','我嗎？','學生是。'],note:'Answer the yes/no question naturally.'},
-   {speaker:'你',prompt:'Ask whether the other person is a student.',answer:'你是學生嗎？',options:['你是學生嗎？','我是學生。','你好嗎？','學生你是。']},
+   {speaker:'對方',prompt:'你好！',answer:'你好！',options:['你好！','我是學生。','你是學生嗎？','是。'],note:'Return the greeting.'},
+   {speaker:'對方',prompt:'你是學生嗎？',answer:'是，我是學生。',options:['是，我是學生。','你是學生嗎？','我是學生嗎？','你好！'],note:'Say yes and answer with a complete sentence.'},
+   {speaker:'你',prompt:'Ask whether the other person is a student.',answer:'你是學生嗎？',options:['你是學生嗎？','我是學生。','你是學生。','你好！']},
   ],
  },
  {
   id:'tea-break',stamp:'🍵',title:'Tea break',subtitle:'Talk about drinks and preferences.',unlockUnitId:'unit-5',
   steps:[
-   {speaker:'朋友',prompt:'你喜歡喝茶嗎？',answer:'我喜歡喝茶。',options:['我喜歡喝茶。','我是不茶。','喝嗎學生。','我沒有好。']},
-   {speaker:'朋友',prompt:'咖啡呢？',answer:'我也喜歡咖啡。',options:['我也喜歡咖啡。','咖啡是學生。','我沒有嗎？','茶的咖啡。']},
-   {speaker:'你',prompt:'Thank your friend.',answer:'謝謝！',options:['謝謝！','請嗎？','咖啡呢？','不。']},
+   {speaker:'朋友',prompt:'你喜歡喝茶嗎？',answer:'我喜歡喝茶。',options:['我喜歡喝茶。','我喜歡喝咖啡。','我喝茶嗎？','茶很好喝。'],note:'Say that you like tea.'},
+   {speaker:'朋友',prompt:'咖啡呢？',answer:'我也喜歡咖啡。',options:['我也喜歡咖啡。','我喜歡喝茶。','咖啡好喝嗎？','你呢？'],note:'Say that you like coffee too.'},
+   {speaker:'你',prompt:'Thank your friend.',answer:'謝謝！',options:['謝謝！','請。','你好！','咖啡呢？']},
   ],
  },
  {
   id:'weekend-plan',stamp:'🎬',title:'Make a weekend plan',subtitle:'Suggest an activity and agree on a plan.',unlockUnitId:'unit-8',
   steps:[
-   {speaker:'朋友',prompt:'明天一起看電影，怎麼樣？',answer:'好啊！',options:['好啊！','沒有。','哪裡。','很學生。']},
-   {speaker:'你',prompt:'Suggest swimming instead.',answer:'一起游泳吧！',options:['一起游泳吧！','游泳是嗎？','明天沒有。','我在電影。']},
-   {speaker:'朋友',prompt:'可以！',answer:'好啊！',options:['好啊！','不可以嗎？','週末的。','什麼書？']},
+   {speaker:'朋友',prompt:'明天一起看電影，怎麼樣？',answer:'好啊！',options:['好啊！','一起游泳吧！','可以嗎？','明天呢？'],note:'Accept the plan.'},
+   {speaker:'你',prompt:'Suggest swimming instead.',answer:'一起游泳吧！',options:['一起游泳吧！','一起看電影吧！','明天看電影。','可以嗎？']},
+   {speaker:'朋友',prompt:'游泳可以嗎？',answer:'好啊！',options:['好啊！','看電影吧！','明天呢？','不可以。'],note:'Agree.'},
   ],
  },
  {
   id:'buy-a-drink',stamp:'🧋',title:'Buy a drink',subtitle:'Order, choose takeout, and ask the total.',unlockUnitId:'unit-13',
   steps:[
-   {speaker:'店員',prompt:'內用還是外帶？',answer:'外帶，謝謝。',options:['外帶，謝謝。','我是外帶。','哪裡喝？','學生外帶。']},
-   {speaker:'你',prompt:'Ask how much it costs altogether.',answer:'請問，一共多少錢？',options:['請問，一共多少錢？','請問，哪裡學生？','一共很好喝。','多少人喝茶？']},
-   {speaker:'店員',prompt:'一百二十塊。',answer:'好的，謝謝。',options:['好的，謝謝。','一百二十嗎？','我不學生。','外帶哪裡。']},
+   {speaker:'店員',prompt:'內用還是外帶？',answer:'外帶，謝謝。',options:['外帶，謝謝。','內用，謝謝。','一杯茶，謝謝。','請問，多少錢？'],note:'Choose takeout.'},
+   {speaker:'你',prompt:'Ask how much it costs altogether.',answer:'請問，一共多少錢？',options:['請問，一共多少錢？','請問，一杯多少錢？','一共一百二十塊。','請幫我微波。']},
+   {speaker:'店員',prompt:'一百二十塊。',answer:'好的，謝謝。',options:['好的，謝謝。','外帶，謝謝。','請問，一共多少錢？','請幫我微波。']},
   ],
  },
  {
   id:'order-food',stamp:'🍜',title:'Order food',subtitle:'Choose a dish and react to the food.',unlockUnitId:'unit-17',
   steps:[
-   {speaker:'店員',prompt:'你要吃什麼？',answer:'我要一碗牛肉麵。',options:['我要一碗牛肉麵。','我是一碗。','牛肉麵在哪裡？','我要學生。']},
-   {speaker:'朋友',prompt:'這個有一點辣。',answer:'我不怕辣。',options:['我不怕辣。','我沒有一點。','辣是誰？','我很碗。']},
-   {speaker:'朋友',prompt:'小籠包也很好吃。',answer:'太好了！',options:['太好了！','不好看嗎？','我沒有店。','這麼哪裡？']},
+   {speaker:'店員',prompt:'你要吃什麼？',answer:'我要一碗牛肉麵。',options:['我要一碗牛肉麵。','我要一杯茶。','我要一個包子。','我喜歡牛肉麵。'],note:'Order one bowl of beef noodles.'},
+   {speaker:'朋友',prompt:'這個有一點辣。',answer:'我不怕辣。',options:['我不怕辣。','我怕辣。','這個有一點辣。','我喜歡甜點。'],note:'Say that spicy food does not bother you.'},
+   {speaker:'朋友',prompt:'小籠包也很好吃。',answer:'太好了！',options:['太好了！','我知道。','我怕辣。','有一點辣。'],note:'React enthusiastically.'},
   ],
  },
  {
   id:'find-the-library',stamp:'📚',title:'Find the library',subtitle:'Ask where a place is on campus.',unlockUnitId:'unit-20',
   steps:[
-   {speaker:'你',prompt:'Ask where the library is.',answer:'圖書館在哪裡？',options:['圖書館在哪裡？','圖書館是誰？','哪裡圖書館嗎？','我有圖書館。']},
-   {speaker:'同學',prompt:'在教室旁邊。',answer:'謝謝！',options:['謝謝！','旁邊嗎？','我是教室。','圖書館很好吃。']},
-   {speaker:'你',prompt:'Confirm that it is nearby.',answer:'很近嗎？',options:['很近嗎？','很貴嗎？','很好吃嗎？','很辣嗎？']},
+   {speaker:'你',prompt:'Ask where the library is.',answer:'圖書館在哪裡？',options:['圖書館在哪裡？','教室在哪裡？','商店在哪裡？','宿舍在哪裡？']},
+   {speaker:'同學',prompt:'在教室旁邊。',answer:'謝謝！',options:['謝謝！','真的嗎？','很遠嗎？','歡迎！']},
+   {speaker:'你',prompt:'Confirm that it is nearby.',answer:'很近嗎？',options:['很近嗎？','很遠嗎？','方便嗎？','教室在哪裡？']},
   ],
  },
  {
   id:'make-a-time-plan',stamp:'🕘',title:'Make a time plan',subtitle:'Ask when someone is free and arrange a meeting.',unlockUnitId:'unit-23',
   steps:[
-   {speaker:'你',prompt:'Ask when your friend is free.',answer:'你什麼時候有空？',options:['你什麼時候有空？','你有什麼書？','你哪裡有空？','你每天嗎？']},
-   {speaker:'朋友',prompt:'我下午有空。',answer:'那我們下午見面吧！',options:['那我們下午見面吧！','那我下午學生。','我們有空嗎？','下午沒有書。']},
-   {speaker:'朋友',prompt:'沒問題！',answer:'好，下次見！',options:['好，下次見！','不可以寫字。','哪裡有空？','剛開始嗎？']},
+   {speaker:'你',prompt:'Ask when your friend is free.',answer:'你什麼時候有空？',options:['你什麼時候有空？','你今天有空嗎？','你在哪裡？','你最近忙嗎？']},
+   {speaker:'朋友',prompt:'我下午有空。',answer:'那我們下午見面吧！',options:['那我們下午見面吧！','那我們明天見面吧！','我下午很忙。','你下午有空嗎？'],note:'Suggest meeting in the afternoon.'},
+   {speaker:'朋友',prompt:'下午三點可以嗎？',answer:'可以，沒問題！',options:['可以，沒問題！','我下午很忙。','下次見。','幾點？'],note:'Confirm the time.'},
   ],
  },
  {
   id:'take-the-train',stamp:'🚆',title:'Take the train',subtitle:'Talk about how you are getting somewhere.',unlockUnitId:'unit-25',
   steps:[
-   {speaker:'朋友',prompt:'你怎麼去？',answer:'我坐火車去。',options:['我坐火車去。','我火車是。','我去怎麼？','火車有空。']},
-   {speaker:'朋友',prompt:'坐火車比較快。',answer:'好，我坐火車。',options:['好，我坐火車。','比較是嗎？','我不快。','火車很學生。']},
-   {speaker:'你',prompt:'Say you are going with a friend.',answer:'我跟朋友一起去。',options:['我跟朋友一起去。','朋友跟是。','我有朋友嗎？','一起火車比較。']},
+   {speaker:'朋友',prompt:'你怎麼去？',answer:'我坐火車去。',options:['我坐火車去。','我跟朋友一起去。','我明天去。','我坐火車來。'],note:'Say that you are taking the train.'},
+   {speaker:'朋友',prompt:'坐火車比較快。',answer:'好，我坐火車。',options:['好，我坐火車。','我坐火車比較慢。','我跟朋友一起去。','我不坐火車。'],note:'Agree and choose the train.'},
+   {speaker:'你',prompt:'Say you are going with a friend.',answer:'我跟朋友一起去。',options:['我跟朋友一起去。','我一個人去。','我跟朋友一起吃飯。','我坐火車去。']},
   ],
  },
  {
   id:'directions',stamp:'🚇',title:'Ask for directions',subtitle:'Use the Book 2 direction language in a short exchange.',unlockUnitId:'book-2-unit-3',
   steps:[
-   {speaker:'你',prompt:'請問，到師大怎麼走？',answer:'一直走。',options:['一直走。','我坐學生。','師大很好吃。','怎麼有空？']},
-   {speaker:'路人',prompt:'過第二個紅綠燈，再右轉。',answer:'好的，謝謝！',options:['好的，謝謝！','第二個嗎？','紅綠燈很好。','我不右轉。']},
-   {speaker:'你',prompt:'Confirm: go straight, then turn right.',answer:'一直走，再右轉。',options:['一直走，再右轉。','右轉一直嗎？','我走學生。','再紅綠燈。']},
+   {speaker:'你',prompt:'Ask how to get to the bank.',answer:'請問，到銀行怎麼走？',options:['請問，到銀行怎麼走？','這附近有銀行嗎？','銀行離這裡遠嗎？','在第二個路口右轉嗎？']},
+   {speaker:'路人',prompt:'從這裡往前一直走，到第二個路口，再右轉。',answer:'在第二個路口右轉嗎？',options:['在第二個路口右轉嗎？','過第二個紅綠燈。','銀行離這裡不遠。','這附近有銀行。'],note:'Confirm the turning point.'},
+   {speaker:'路人',prompt:'對。銀行離這裡不遠。',answer:'好的，謝謝！',options:['好的，謝謝！','在第二個路口右轉嗎？','請問，到銀行怎麼走？','這附近有銀行嗎？']},
   ],
  },
 ];
