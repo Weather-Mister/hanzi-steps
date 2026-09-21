@@ -81,47 +81,6 @@
     },
     "audioText": "兄弟"
   },
-  "弟": {
-    "hanzi": "弟",
-    "pinyin": "dì",
-    "zhuyin": "ㄉㄧˋ",
-    "meaning": "younger brother; brother in 兄弟",
-    "layout": "stack",
-    "strokes": 7,
-    "note": "兄弟 (xiōngdì) means brothers. 弟 begins with two small strokes, followed by a bent central shape, a vertical, and a final left-falling stroke. Notice how the vertical threads through the middle.",
-    "memory": "弟 begins with two small strokes, followed by a bent central shape, a vertical, and a final left-falling stroke. Notice how the vertical threads through the middle.",
-    "parts": [
-      {
-        "label": "丷",
-        "name": "丷 component",
-        "role": "Visual component",
-        "description": "The two short strokes at the top open apart. Keep them small enough to leave room for the lower body.",
-        "strokes": [
-          0,
-          1
-        ]
-      },
-      {
-        "label": "lower",
-        "name": "lower group",
-        "role": "Visual component",
-        "description": "The lower five strokes form the bent central body, its vertical, and the final slant. Follow the animation to distinguish each bend from a new stroke.",
-        "strokes": [
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      }
-    ],
-    "example": {
-      "text": "兄弟",
-      "pinyin": "xiōngdì",
-      "meaning": "brothers"
-    },
-    "audioText": "兄弟"
-  },
   "漂": {
     "hanzi": "漂",
     "pinyin": "piào",

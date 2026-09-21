@@ -35,7 +35,9 @@
         {"id":"unit-26","order":26,"title":"What Are You Planning?","path":"course/book1/unit26.ts"},
         {"id":"unit-27","order":27,"title":"How Long Will You Be Away?","path":"course/book1/unit27.ts"},
         {"id":"unit-28","order":28,"title":"How Long Is the Trip?","path":"course/book1/unit28.ts"},
-        {"id":"unit-29","order":29,"title":"If You Come to Visit","path":"course/book1/unit29.ts"}
+        {"id":"unit-29","order":29,"title":"If You Come to Visit","path":"course/book1/unit29.ts"},
+        {"id":"unit-30","order":30,"title":"Try It and Describe It","path":"course/book1/unit30.ts"},
+        {"id":"unit-31","order":31,"title":"The One in Blue","path":"course/book1/unit31.ts"}
       ]
     },
     {
