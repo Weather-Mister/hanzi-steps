@@ -48,7 +48,7 @@ const unit:UnitData = {
       "u27-you-shihou",
       "u27-yinggai"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue I–II, Vocabulary I–II, and Grammar I–IV (printed pp. 183–192). This unit teaches the basic verb + duration frame, …的時候, 有時候…有時候…, and 應該 suggestions. Object-repeat/separable-verb duration details and 要是…就… are explicitly deferred to the next source-continuation unit."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue I–II and Vocabulary I–II (printed pp. 183–187), plus Grammar I–IV as relevant to time-when, basic duration, …的時候, and 有時候…有時候… (printed pp. 188–192). Object-repeat/separable-verb duration details and 要是…就… are explicitly deferred to the next source-continuation unit."
   },
   "reviewLessonId": "u27-review",
   "lessons": [
@@ -629,7 +629,7 @@ const unit:UnitData = {
           "options": [
             "特別",
             "有名",
-            "漂亮"
+            "美"
           ],
           "answer": "特別",
           "explanation": "特別 means special or distinctive; 有名 and 漂亮 are different descriptions."
