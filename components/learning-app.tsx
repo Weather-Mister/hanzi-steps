@@ -107,7 +107,6 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
   {needsSignIn&&signInPanel}
   <nav className="book-switcher" aria-label="Choose a book">{books.map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
   {book.available ? <>
-  <div className="book-heading"><p className="eyebrow">BOOK {book.number} · A COURSE IN CONTEMPORARY CHINESE</p><p>{book.number===1?'Continue your foundation. New units fill in the book’s vocabulary and patterns.':'Start Book 2 with directions. This unit builds on Book 1 basics; you can start here without completing Book 1 in the app.'}</p></div>
   <UnitPicker unit={unit} units={bookUnits} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
   <div className="course-milestone"><div><span>Book {book.number} · units practiced</span><strong>{finishedBookUnits}<small> / {book.unitIds.length} available</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={`Available Book ${book.number} units completed`}/></div>
   <Tabs value={tab} onValueChange={setTab}>
