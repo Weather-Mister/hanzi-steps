@@ -1,5 +1,5 @@
 'use client';
-import {useCallback,useEffect,useMemo,useState} from 'react';
+import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import {supabase} from '@/pages/supabase';
 import {
  practiceSkillKey,
@@ -83,6 +83,7 @@ function rowsToState(value:unknown):PracticeStateMap{
 
 export function usePracticeMastery(userKey:string){
  const [states,setStates]=useState<PracticeStateMap>({});
+ const statesRef=useRef<PracticeStateMap>({});
  const [loading,setLoading]=useState(true);
  const [saving,setSaving]=useState(false);
  const [error,setError]=useState('');
@@ -90,6 +91,7 @@ export function usePracticeMastery(userKey:string){
  useEffect(()=>{
   let cancelled=false;
   const local=readLocal(userKey);
+  statesRef.current=local;
   setStates(local);
   setError('');
   if(userKey==='signed-out'){
@@ -105,10 +107,12 @@ export function usePracticeMastery(userKey:string){
     return;
    }
    const remote=rowsToState(data);
+   const currentLocal=statesRef.current;
    const merged={...remote};
-   for(const [key,row] of Object.entries(local)){
+   for(const [key,row] of Object.entries(currentLocal)){
     if(!merged[key]||row.attempts>merged[key].attempts)merged[key]=row;
    }
+   statesRef.current=merged;
    setStates(merged);
    writeLocal(userKey,merged);
    setLoading(false);
@@ -125,13 +129,11 @@ export function usePracticeMastery(userKey:string){
  })=>{
   const assisted=Boolean(args.assisted);
   const key=practiceSkillKey(args.itemId,args.mode);
-  let optimistic:PracticeSkillState|undefined;
-  setStates(previous=>{
-   optimistic=updatePracticeState(previous[key],{itemId:args.itemId,mode:args.mode,correct:args.correct,assisted});
-   const next={...previous,[key]:optimistic};
-   writeLocal(userKey,next);
-   return next;
-  });
+  const optimistic=updatePracticeState(statesRef.current[key],{itemId:args.itemId,mode:args.mode,correct:args.correct,assisted});
+  const optimisticState={...statesRef.current,[key]:optimistic};
+  statesRef.current=optimisticState;
+  setStates(optimisticState);
+  writeLocal(userKey,optimisticState);
   if(userKey==='signed-out')return optimistic;
   setSaving(true);
   const {data,error:saveError}=await supabase.rpc('hanzi_record_practice_attempt',{
@@ -150,13 +152,12 @@ export function usePracticeMastery(userKey:string){
   const row=rowsToState(data?[data]:[]);
   const remote=row[key];
   if(remote){
-   setStates(previous=>{
-    const current=previous[key];
-    const chosen=!current||remote.attempts>=current.attempts?remote:current;
-    const next={...previous,[key]:chosen};
-    writeLocal(userKey,next);
-    return next;
-   });
+   const current=statesRef.current[key];
+   const chosen=!current||remote.attempts>=current.attempts?remote:current;
+   const next={...statesRef.current,[key]:chosen};
+   statesRef.current=next;
+   setStates(next);
+   writeLocal(userKey,next);
   }
   setError('');
   return remote??optimistic;
