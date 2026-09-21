@@ -341,11 +341,11 @@ export const taiwanMissions:TaiwanMission[]=[
   ],
  },
  {
-  id:'take-the-train',stamp:'🚆',title:'Take the train',subtitle:'Talk about how you are getting somewhere.',unlockUnitId:'unit-24',
+  id:'choose-a-ride',stamp:'🚆',title:'Choose a ride',subtitle:'Talk about transport and compare a train with High Speed Rail.',unlockUnitId:'unit-24',
   steps:[
    {speaker:'Friend',prompt:'你怎麼去學校？',answer:'我坐火車去學校。',options:['我坐火車去學校。','我坐捷運去學校。','我跟朋友去玩。','我明天去學校。'],note:'Say that you are taking the train to school.'},
-   {speaker:'Friend',prompt:'坐火車比較快。',answer:'好，我坐火車。',options:['好，我坐火車。','我坐火車比較慢。','我跟朋友一起去。','我不坐火車。'],note:'Agree and choose the train.'},
-   {speaker:'You',prompt:'Say you are going with a friend.',answer:'我跟朋友一起去。',options:['我跟朋友一起去。','我一個人去。','我跟朋友一起吃飯。','我坐火車去學校。']},
+   {speaker:'Friend',prompt:'火車比較慢。',answer:'高鐵比較快。',options:['高鐵比較快。','火車比較慢。','高鐵車票有一點貴。','高鐵又快又舒服。'],note:'Reply with the faster option.'},
+   {speaker:'Friend',prompt:'高鐵又快又舒服。',answer:'好，我坐高鐵去。',options:['好，我坐高鐵去。','我坐火車去學校。','我跟朋友一起去。','高鐵車票有一點貴。'],note:'Choose High Speed Rail.'},
   ],
  },
  {
