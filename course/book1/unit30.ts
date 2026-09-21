@@ -249,14 +249,14 @@ const unit:UnitData = {
         {
           "id": "u30-try-s2",
           "type": "select",
-          "prompt": "Which follows the Lesson 10 VV看 restriction?",
+          "prompt": "Which option follows Lesson 10's VV看 restriction?",
           "options": [
-            "先說水果，再說吃吃看",
-            "說吃吃看西瓜",
-            "把 看 放在動詞前面"
+            "Mention the fruit first, then say 吃吃看",
+            "Put 西瓜 directly after 吃吃看",
+            "Put 看 before the repeated verb"
           ],
-          "answer": "先說水果，再說吃吃看",
-          "explanation": "Establish the object first, then use 吃吃看. Lesson 10 generally does not put an object after VV看.",
+          "answer": "Mention the fruit first, then say 吃吃看",
+          "explanation": "Establish the object first, then use 吃吃看. In this Lesson 10 pattern, an object normally does not follow VV看.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -758,14 +758,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-12",
           "type": "select",
-          "prompt": "Which follows the Lesson 10 VV看 object restriction?",
+          "prompt": "Which sentence follows the Lesson 10 VV看 object restriction?",
           "options": [
             "這個水果很甜，你吃吃看。",
-            "你吃吃看西瓜。",
-            "你西瓜看吃吃。"
+            "你吃吃看這個西瓜。",
+            "你吃這個西瓜，很好吃。"
           ],
           "answer": "這個水果很甜，你吃吃看。",
-          "explanation": "The fruit is established first; 吃吃看 is not followed by the object.",
+          "explanation": "The fruit is established first; the taught VV看 pattern does not put the food object after 吃吃看.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -833,14 +833,17 @@ const unit:UnitData = {
         {
           "id": "u30-review-18",
           "type": "select",
-          "prompt": "Which pair correctly matches the feeling words?",
+          "prompt": "Which sentence says someone smiles happily?",
           "options": [
-            "笑 = smile/laugh；開心 = happy",
-            "笑 = wear；開心 = photo",
-            "笑 = red；開心 = chance"
+            "她笑得很開心。",
+            "她穿得很開心。",
+            "她拍得很開心。"
           ],
-          "answer": "笑 = smile/laugh；開心 = happy",
-          "explanation": "笑 is smile/laugh; 開心 is happy."
+          "answer": "她笑得很開心。",
+          "explanation": "笑 is the action smile/laugh, and 得很開心 describes how she smiles.",
+          "grammarIds": [
+            "u16-performance"
+          ]
         },
         {
           "id": "u30-review-19",
@@ -934,7 +937,7 @@ const unit:UnitData = {
     {
       "text": "拍",
       "pinyin": "pāi",
-      "meaning": "to take (a picture); to拍",
+      "meaning": "to take (a picture); pat",
       "lessonId": "u30-photo",
       "core": true,
       "note": "In Lesson 10, 拍 is used with 照片: 拍照片, take photos."
