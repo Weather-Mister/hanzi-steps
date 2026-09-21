@@ -1,0 +1,354 @@
+import {characters,lessons,phrases,shuffled,units} from './curriculum.ts';
+import {learnedVocabulary,type VocabularyLookupItem} from './vocabulary-lookup.ts';
+
+export type PracticeMode='recognition'|'recall'|'pinyin'|'input'|'sentence'|'handwriting'|'context';
+export type PracticeSessionKind='daily'|'revenge'|'mega'|'taiwan';
+export type PracticeSkillState={
+ itemId:string;
+ mode:PracticeMode;
+ attempts:number;
+ correct:number;
+ assisted:number;
+ misses:number;
+ streak:number;
+ strength:number;
+ lastSeen:number;
+ nextReview:number;
+};
+export type PracticeStateMap=Record<string,PracticeSkillState>;
+
+export type PracticeItem={
+ id:string;
+ kind:'word'|'phrase';
+ traditional:string;
+ pinyin:string;
+ meaning:string;
+ characters:string[];
+ unitId?:string;
+ unitNumber?:number;
+ lessonId:string;
+ tokens?:string[];
+};
+
+export type PracticeQuestion={
+ id:string;
+ item:PracticeItem;
+ mode:PracticeMode;
+ sessionKind:PracticeSessionKind;
+};
+
+export type TaiwanMissionStep={
+ prompt:string;
+ speaker?:string;
+ answer:string;
+ options:string[];
+ note?:string;
+};
+export type TaiwanMission={
+ id:string;
+ stamp:string;
+ title:string;
+ subtitle:string;
+ unlockUnitId:string;
+ steps:TaiwanMissionStep[];
+};
+
+const skillKey=(itemId:string,mode:PracticeMode)=>itemId+'::'+mode;
+export const practiceSkillKey=skillKey;
+
+function phraseItems(completed:Set<string>):PracticeItem[]{
+ const seen=new Set<string>();
+ const out:PracticeItem[]=[];
+ for(const lesson of lessons){
+  if(!completed.has(lesson.id))continue;
+  for(const step of lesson.steps){
+   if(!step.phrase||seen.has(step.phrase))continue;
+   const phrase=phrases[step.phrase];
+   if(!phrase?.tokens?.length)continue;
+   seen.add(step.phrase);
+   out.push({
+    id:'phrase:'+step.phrase,
+    kind:'phrase',
+    traditional:phrase.text,
+    pinyin:phrase.pinyin,
+    meaning:phrase.meaning,
+    characters:Array.from(phrase.text).filter(char=>Boolean(characters[char])),
+    unitId:lesson.unitId,
+    unitNumber:units.find(unit=>unit.id===lesson.unitId)?.displayNumber??units.find(unit=>unit.id===lesson.unitId)?.number,
+    lessonId:lesson.id,
+    tokens:phrase.tokens,
+   });
+  }
+ }
+ return out;
+}
+
+export function learnedPracticeItems(completed:Set<string>):PracticeItem[]{
+ const words:PracticeItem[]=learnedVocabulary(completed).map(item=>({
+  id:item.id,
+  kind:'word',
+  traditional:item.traditional,
+  pinyin:item.pinyin,
+  meaning:item.meaning,
+  characters:item.characters,
+  unitId:item.unitId,
+  unitNumber:item.unitNumber,
+  lessonId:item.lessonId,
+ }));
+ return [...words,...phraseItems(completed)];
+}
+
+function supportedModes(item:PracticeItem):PracticeMode[]{
+ const base:PracticeMode[]=['recognition','recall','pinyin','input'];
+ if(item.kind==='phrase'&&item.tokens?.length)base.push('sentence');
+ if(item.characters.length)base.push('handwriting');
+ return base;
+}
+export const practiceModesForItem=supportedModes;
+
+export function stateFor(states:PracticeStateMap,itemId:string,mode:PracticeMode):PracticeSkillState|undefined{
+ return states[skillKey(itemId,mode)];
+}
+
+export function aggregateItemState(states:PracticeStateMap,item:PracticeItem){
+ const records=supportedModes(item).map(mode=>stateFor(states,item.id,mode)).filter(Boolean) as PracticeSkillState[];
+ if(!records.length)return {attempts:0,misses:0,strength:0,lastSeen:0,nextReview:0};
+ return {
+  attempts:records.reduce((sum,row)=>sum+row.attempts,0),
+  misses:records.reduce((sum,row)=>sum+row.misses,0),
+  strength:records.reduce((sum,row)=>sum+row.strength,0)/records.length,
+  lastSeen:Math.max(...records.map(row=>row.lastSeen)),
+  nextReview:Math.min(...records.map(row=>row.nextReview||0)),
+ };
+}
+
+function weakestMode(states:PracticeStateMap,item:PracticeItem,avoidEasy=false):PracticeMode{
+ const modes=supportedModes(item).filter(mode=>!avoidEasy||mode!=='recognition');
+ const ranked=modes.map(mode=>({mode,row:stateFor(states,item.id,mode)})).sort((a,b)=>{
+  const sa=a.row?.strength??0;
+  const sb=b.row?.strength??0;
+  if(sa!==sb)return sa-sb;
+  return (a.row?.attempts??0)-(b.row?.attempts??0);
+ });
+ return ranked[0]?.mode||'recognition';
+}
+
+function uniqueItems(items:PracticeItem[]):PracticeItem[]{
+ const seen=new Set<string>();
+ return items.filter(item=>!seen.has(item.id)&&seen.add(item.id));
+}
+
+export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:string,now=Date.now()):PracticeQuestion[]{
+ if(!items.length)return [];
+ const shuffledItems=shuffled(uniqueItems(items),seed);
+ const withMeta=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
+ const due=withMeta.filter(row=>row.attempts>0&&row.nextReview<=now).sort((a,b)=>a.nextReview-b.nextReview||a.strength-b.strength);
+ const weak=withMeta.filter(row=>row.attempts>0&&(row.strength<0.58||row.misses>0)).sort((a,b)=>a.strength-b.strength||b.misses-a.misses);
+ const unseen=withMeta.filter(row=>row.attempts===0).sort((a,b)=>(b.item.unitNumber??0)-(a.item.unitNumber??0));
+ const recent=withMeta.filter(row=>row.attempts>0).sort((a,b)=>b.lastSeen-a.lastSeen);
+
+ const picked:PracticeItem[]=[];
+ const add=(rows:{item:PracticeItem}[],count:number)=>{
+  for(const row of rows){
+   if(picked.length>=10||count<=0)break;
+   if(picked.some(item=>item.id===row.item.id))continue;
+   picked.push(row.item);count--;
+  }
+ };
+ add(due,4);
+ add(weak,3);
+ add(unseen,2);
+ add(recent,10-picked.length);
+ add(withMeta,10-picked.length);
+
+ return picked.slice(0,10).map((item,index)=>{
+  let mode=weakestMode(states,item,index===9);
+  if(index===9&&item.kind==='phrase'&&item.tokens?.length)mode='sentence';
+  else if(index===9&&item.characters.length)mode='handwriting';
+  return {id:'daily:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'daily'};
+ });
+}
+
+export function makeRevengeRound(items:PracticeItem[],states:PracticeStateMap,seed:string):PracticeQuestion[]{
+ const candidates=items
+  .map(item=>({item,...aggregateItemState(states,item)}))
+  .filter(row=>row.attempts>0&&(row.misses>0||row.strength<0.55))
+  .sort((a,b)=>b.misses-a.misses||a.strength-b.strength||a.lastSeen-b.lastSeen);
+ const target=candidates[0]?.item;
+ if(!target)return [];
+ const modes=supportedModes(target);
+ const preferred:PracticeMode[]=['recognition','recall',target.kind==='phrase'?'sentence':'handwriting'];
+ const chosen=preferred.filter(mode=>modes.includes(mode));
+ while(chosen.length<3){
+  const candidate=weakestMode(states,target,true);
+  if(!chosen.includes(candidate))chosen.push(candidate);else break;
+ }
+ return chosen.slice(0,3).map((mode,index)=>({
+  id:'revenge:'+seed+':'+index+':'+target.id,
+  item:target,
+  mode,
+  sessionKind:'revenge',
+ }));
+}
+
+export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string):PracticeQuestion[]{
+ if(!items.length)return [];
+ const byUnit=new Map<string,PracticeItem[]>();
+ for(const item of items){
+  const key=item.unitId||'other';
+  byUnit.set(key,[...(byUnit.get(key)||[]),item]);
+ }
+ const unitIds=[...byUnit.keys()].sort((a,b)=>{
+  const ua=units.find(unit=>unit.id===a)?.number??999;
+  const ub=units.find(unit=>unit.id===b)?.number??999;
+  return ua-ub;
+ });
+ const spread:PracticeItem[]=[];
+ let round=0;
+ while(spread.length<12&&round<8){
+  for(const unitId of unitIds){
+   const pool=shuffled(byUnit.get(unitId)||[],seed+':'+unitId+':'+round);
+   const item=pool[round%Math.max(pool.length,1)];
+   if(item&&!spread.some(existing=>existing.id===item.id))spread.push(item);
+   if(spread.length>=12)break;
+  }
+  round++;
+ }
+ if(spread.length<12){
+  for(const item of shuffled(items,seed+':fill')){
+   if(!spread.some(existing=>existing.id===item.id))spread.push(item);
+   if(spread.length>=12)break;
+  }
+ }
+ const cycle:PracticeMode[]=['recall','input','pinyin','sentence','handwriting','recall'];
+ return spread.slice(0,12).map((item,index)=>{
+  const modes=supportedModes(item);
+  let mode=cycle[index%cycle.length];
+  if(!modes.includes(mode))mode=weakestMode(states,item,true);
+  return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
+ });
+}
+
+export function unitComplete(completed:Set<string>,unitId:string):boolean{
+ const unit=units.find(candidate=>candidate.id===unitId);
+ return Boolean(unit?.lessonIds.length&&completed.has(unit.lessonIds[unit.lessonIds.length-1]));
+}
+
+export const taiwanMissions:TaiwanMission[]=[
+ {
+  id:'first-conversation',stamp:'👋',title:'First conversation',subtitle:'Greet someone and introduce yourself.',unlockUnitId:'unit-1',
+  steps:[
+   {speaker:'對方',prompt:'你好！',answer:'你好！',options:['你好！','學生','嗎','我'],note:'Return the greeting.'},
+   {speaker:'對方',prompt:'你是學生嗎？',answer:'是，我是學生。',options:['是，我是學生。','你好。','我嗎？','學生是。'],note:'Answer the yes/no question naturally.'},
+   {speaker:'你',prompt:'Ask whether the other person is a student.',answer:'你是學生嗎？',options:['你是學生嗎？','我是學生。','你好嗎？','學生你是。']},
+  ],
+ },
+ {
+  id:'tea-break',stamp:'🍵',title:'Tea break',subtitle:'Talk about drinks and preferences.',unlockUnitId:'unit-5',
+  steps:[
+   {speaker:'朋友',prompt:'你喜歡喝茶嗎？',answer:'我喜歡喝茶。',options:['我喜歡喝茶。','我是不茶。','喝嗎學生。','我沒有好。']},
+   {speaker:'朋友',prompt:'咖啡呢？',answer:'我也喜歡咖啡。',options:['我也喜歡咖啡。','咖啡是學生。','我沒有嗎？','茶的咖啡。']},
+   {speaker:'你',prompt:'Thank your friend.',answer:'謝謝！',options:['謝謝！','請嗎？','咖啡呢？','不。']},
+  ],
+ },
+ {
+  id:'weekend-plan',stamp:'🎬',title:'Make a weekend plan',subtitle:'Suggest an activity and agree on a plan.',unlockUnitId:'unit-8',
+  steps:[
+   {speaker:'朋友',prompt:'明天一起看電影，怎麼樣？',answer:'好啊！',options:['好啊！','沒有。','哪裡。','很學生。']},
+   {speaker:'你',prompt:'Suggest swimming instead.',answer:'一起游泳吧！',options:['一起游泳吧！','游泳是嗎？','明天沒有。','我在電影。']},
+   {speaker:'朋友',prompt:'可以！',answer:'好啊！',options:['好啊！','不可以嗎？','週末的。','什麼書？']},
+  ],
+ },
+ {
+  id:'buy-a-drink',stamp:'🧋',title:'Buy a drink',subtitle:'Order, choose takeout, and ask the total.',unlockUnitId:'unit-13',
+  steps:[
+   {speaker:'店員',prompt:'內用還是外帶？',answer:'外帶，謝謝。',options:['外帶，謝謝。','我是外帶。','哪裡喝？','學生外帶。']},
+   {speaker:'你',prompt:'Ask how much it costs altogether.',answer:'請問，一共多少錢？',options:['請問，一共多少錢？','請問，哪裡學生？','一共很好喝。','多少人喝茶？']},
+   {speaker:'店員',prompt:'一百二十塊。',answer:'好的，謝謝。',options:['好的，謝謝。','一百二十嗎？','我不學生。','外帶哪裡。']},
+  ],
+ },
+ {
+  id:'order-food',stamp:'🍜',title:'Order food',subtitle:'Choose a dish and react to the food.',unlockUnitId:'unit-17',
+  steps:[
+   {speaker:'店員',prompt:'你要吃什麼？',answer:'我要一碗牛肉麵。',options:['我要一碗牛肉麵。','我是一碗。','牛肉麵在哪裡？','我要學生。']},
+   {speaker:'朋友',prompt:'這個有一點辣。',answer:'我不怕辣。',options:['我不怕辣。','我沒有一點。','辣是誰？','我很碗。']},
+   {speaker:'朋友',prompt:'小籠包也很好吃。',answer:'太好了！',options:['太好了！','不好看嗎？','我沒有店。','這麼哪裡？']},
+  ],
+ },
+ {
+  id:'find-the-library',stamp:'📚',title:'Find the library',subtitle:'Ask where a place is on campus.',unlockUnitId:'unit-20',
+  steps:[
+   {speaker:'你',prompt:'Ask where the library is.',answer:'圖書館在哪裡？',options:['圖書館在哪裡？','圖書館是誰？','哪裡圖書館嗎？','我有圖書館。']},
+   {speaker:'同學',prompt:'在教室旁邊。',answer:'謝謝！',options:['謝謝！','旁邊嗎？','我是教室。','圖書館很好吃。']},
+   {speaker:'你',prompt:'Confirm that it is nearby.',answer:'很近嗎？',options:['很近嗎？','很貴嗎？','很好吃嗎？','很辣嗎？']},
+  ],
+ },
+ {
+  id:'make-a-time-plan',stamp:'🕘',title:'Make a time plan',subtitle:'Ask when someone is free and arrange a meeting.',unlockUnitId:'unit-23',
+  steps:[
+   {speaker:'你',prompt:'Ask when your friend is free.',answer:'你什麼時候有空？',options:['你什麼時候有空？','你有什麼書？','你哪裡有空？','你每天嗎？']},
+   {speaker:'朋友',prompt:'我下午有空。',answer:'那我們下午見面吧！',options:['那我們下午見面吧！','那我下午學生。','我們有空嗎？','下午沒有書。']},
+   {speaker:'朋友',prompt:'沒問題！',answer:'好，下次見！',options:['好，下次見！','不可以寫字。','哪裡有空？','剛開始嗎？']},
+  ],
+ },
+ {
+  id:'take-the-train',stamp:'🚆',title:'Take the train',subtitle:'Talk about how you are getting somewhere.',unlockUnitId:'unit-25',
+  steps:[
+   {speaker:'朋友',prompt:'你怎麼去？',answer:'我坐火車去。',options:['我坐火車去。','我火車是。','我去怎麼？','火車有空。']},
+   {speaker:'朋友',prompt:'坐火車比較快。',answer:'好，我坐火車。',options:['好，我坐火車。','比較是嗎？','我不快。','火車很學生。']},
+   {speaker:'你',prompt:'Say you are going with a friend.',answer:'我跟朋友一起去。',options:['我跟朋友一起去。','朋友跟是。','我有朋友嗎？','一起火車比較。']},
+  ],
+ },
+ {
+  id:'directions',stamp:'🚇',title:'Ask for directions',subtitle:'Use the Book 2 direction language in a short exchange.',unlockUnitId:'book-2-unit-3',
+  steps:[
+   {speaker:'你',prompt:'請問，到師大怎麼走？',answer:'一直走。',options:['一直走。','我坐學生。','師大很好吃。','怎麼有空？']},
+   {speaker:'路人',prompt:'過第二個紅綠燈，再右轉。',answer:'好的，謝謝！',options:['好的，謝謝！','第二個嗎？','紅綠燈很好。','我不右轉。']},
+   {speaker:'你',prompt:'Confirm: go straight, then turn right.',answer:'一直走，再右轉。',options:['一直走，再右轉。','右轉一直嗎？','我走學生。','再紅綠燈。']},
+  ],
+ },
+];
+
+export function availableTaiwanMissions(completed:Set<string>){
+ return taiwanMissions.map(mission=>({...mission,unlocked:unitComplete(completed,mission.unlockUnitId)}));
+}
+
+export function updatePracticeState(previous:PracticeSkillState|undefined,args:{
+ itemId:string;mode:PracticeMode;correct:boolean;assisted:boolean;now?:number;
+}):PracticeSkillState{
+ const now=args.now??Date.now();
+ const old=previous??{itemId:args.itemId,mode:args.mode,attempts:0,correct:0,assisted:0,misses:0,streak:0,strength:0,lastSeen:0,nextReview:0};
+ const cleanCorrect=args.correct&&!args.assisted;
+ const streak=cleanCorrect?old.streak+1:0;
+ let strength:number;
+ if(cleanCorrect)strength=Math.min(1,old.strength+0.16+Math.min(streak,5)*0.02);
+ else if(args.correct)strength=Math.max(0.05,old.strength*0.9);
+ else strength=Math.max(0,old.strength*0.55);
+ const interval=strength<0.2?10*60*1000:strength<0.4?24*60*60*1000:strength<0.65?3*24*60*60*1000:strength<0.82?7*24*60*60*1000:14*24*60*60*1000;
+ return {
+  itemId:args.itemId,
+  mode:args.mode,
+  attempts:old.attempts+1,
+  correct:old.correct+Number(args.correct),
+  assisted:old.assisted+Number(args.assisted),
+  misses:old.misses+Number(!args.correct||args.assisted),
+  streak,
+  strength,
+  lastSeen:now,
+  nextReview:now+interval,
+ };
+}
+
+export function distractorPool(item:PracticeItem,items:PracticeItem[],field:'traditional'|'meaning'|'pinyin',seed:string,count=4):string[]{
+ const answer=item[field];
+ const candidates=shuffled(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]),seed)
+  .filter(value=>value&&value!==answer);
+ return [answer,...candidates].filter((value,index,array)=>array.indexOf(value)===index).slice(0,count);
+}
+
+export function fromLookupItem(item:VocabularyLookupItem):PracticeItem{
+ return {
+  id:item.id,kind:'word',traditional:item.traditional,pinyin:item.pinyin,meaning:item.meaning,
+  characters:item.characters,unitId:item.unitId,unitNumber:item.unitNumber,lessonId:item.lessonId,
+ };
+}
