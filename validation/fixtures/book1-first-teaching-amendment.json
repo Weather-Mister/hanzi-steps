@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable.",
+  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable. Units 30–31 continue this explicitly reviewed Book 1 first-teaching migration for 往 and for characters such as 弟/紅 now introduced from Lesson 10; historical Book 2/legacy content remains intact while first-teaching ownership and handwriting geometry move earlier.",
   "records": {
     "vocabulary": {
       "到": {
@@ -25,6 +25,10 @@
       "怎麼": {
         "before": "475e0a8a90cda526135a7710468963ece488e9ac528b7e8d37d550f666dfb72e",
         "after": "c209ae6babb4533f32c95a81b62e356cf038b838e452f78f893d0c2fda944539"
+      },
+      "往": {
+        "before": "480e510dd255fa15b3c455b4215cc267314d8a4d8db18911c9de78b39c98067d",
+        "after": "8a4a8b12cfcecfc38cbcb5132c9571640e5d88ef37648e3323a6ce573aa7d2a8"
       }
     },
     "characters": {
