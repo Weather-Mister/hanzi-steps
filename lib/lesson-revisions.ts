@@ -62,6 +62,36 @@ export const previousLessonLengths:Record<string,number>={
  'u8-possible':17,'u8-agree':15,'u8-review':21
 };
 
+/**
+ * Additional historical completion bounds for lessons that have already been
+ * extended more than once. Keep previousLessonLengths for compatibility with
+ * older callers; add later published completion lengths here instead of
+ * overwriting the first historical bound.
+ */
+export const additionalPreviousLessonLengths:Record<string,number[]>={
+ 'u28-film':[16],
+ 'u28-years-days':[21],
+ 'u28-hours':[19],
+ 'u28-object':[13],
+ 'u28-negation':[12],
+ 'u28-separable':[8],
+ 'u28-review':[22],
+ 'u29-date':[27],
+ 'u29-hai':[17],
+ 'u29-maokong':[16],
+ 'u29-condition':[17],
+ 'u29-negative':[6],
+ 'u29-integrate':[8],
+ 'u29-review':[22]
+};
+
+export function historicalLessonLengthsFor(lessonId:string):number[]{
+ const values:number[]=[];
+ if(Object.hasOwn(previousLessonLengths,lessonId))values.push(previousLessonLengths[lessonId]);
+ if(Object.hasOwn(additionalPreviousLessonLengths,lessonId))values.push(...additionalPreviousLessonLengths[lessonId]);
+ return [...new Set(values)].sort((a,b)=>a-b);
+}
+
 // Credit completed content when all of a revised lesson's source lessons were
 // finished. Completing the previous unit review also retains unit completion.
 export const revisedLessonPrerequisites:Record<string,string[]>={
