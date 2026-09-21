@@ -53,3 +53,10 @@ The existing deferrals are still explicit: 網路上、臺南、故宮博物院�
 ## Verification
 
 Local gates passed: generation/check, character coverage, separate targeted test for each of six units, vocabulary lookup and Mega Challenge regressions, all curriculum validation tests (56 passed; one architecture-migration-only check intentionally skipped), TypeScript and Pages build. The PR must pass Feature QA on its final head before merge; Pages build/deploy must pass for the merge commit. Live notes/character checks follow deployment. Physical-device speech and handwriting input are not certified by this audit.
+
+
+## Remote QA follow-up
+
+Feature QA run 120 passed all gates and committed the generated curriculum outputs as `70c751272706b6672cd80853bf419c018a47dd84`. This documentation update requests QA on the final head containing those outputs; merge still requires that run to pass.
+
+The source cross-check also confirmed the Lesson 8 carryover against printed pp. 163–166 (PDF pp. 190–193): 古代, 不行 and 公共汽車 match the dialogue/vocabulary context.
