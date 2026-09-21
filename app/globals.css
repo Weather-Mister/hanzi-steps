@@ -1403,15 +1403,21 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 
 /* Adaptive practice: Daily 10, Revenge, checkpoint challenges, and Taiwan missions. */
 .smart-practice-dialog {
- width:min(760px,calc(100vw - 28px));
- max-width:760px;
+ width:min(92vw,720px);
+ max-width:720px;
  max-height:calc(100dvh - 28px);
  overflow:hidden;
  display:flex;
  flex-direction:column;
- gap:18px;
- padding:24px;
- border-radius:24px;
+ gap:16px;
+ padding:26px;
+ border:1px solid color-mix(in srgb,var(--unit-border) 78%,#dfe6ef);
+ border-radius:22px;
+ background:
+  radial-gradient(circle at 50% -30px,color-mix(in srgb,var(--unit-tint) 82%,white) 0,transparent 220px),
+  #fff;
+ box-shadow:0 22px 70px #1726421f,0 4px 16px #1726420d;
+ color:#172642;
 }
 .smart-title-row,
 .smart-session-head {
