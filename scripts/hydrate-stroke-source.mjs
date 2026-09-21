@@ -1,33 +1,36 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-
-const root = process.cwd();
-const courseRoot = path.join(root, 'course');
-
-async function walk(dir) {
-  const out=[];
-  for (const entry of await fs.readdir(dir,{withFileTypes:true})) {
-    const full=path.join(dir,entry.name);
-    if (entry.isDirectory()) out.push(...await walk(full));
-    else if (entry.name.endsWith('.stroke-source.json')) out.push(full);
-  }
-  return out;
+const root=process.cwd(),courseRoot=path.join(root,'course');
+async function walk(dir){const out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())out.push(...await walk(f));else if(e.name.endsWith('.stroke-source.json'))out.push(f)}return out}
+async function rows(name){const url=`https://raw.githubusercontent.com/parsimonhi/animCJK/master/${name}`;const r=await fetch(url);if(!r.ok)throw Error(`AnimCJK download failed ${r.status}: ${name}`);return (await r.text()).split(/\r?\n/).filter(Boolean).map(JSON.parse)}
+function normalizeGeometry(row){
+  const medians=row.medians.map(stroke=>stroke.map(([x,y])=>[
+    Math.max(0,Math.min(1024,Math.round(x))),
+    Math.max(0,Math.min(1024,Math.round(1024-y)))
+  ]));
+  return {strokes:row.strokes,medians};
 }
-
-const declarations=await walk(courseRoot);
-for (const file of declarations) {
+const files=await walk(courseRoot);if(!files.length)process.exit(0);
+const specs=[],wanted=new Set();
+for(const file of files){
   const spec=JSON.parse(await fs.readFile(file,'utf8'));
-  if (spec.source!=='Hanzi Writer Data') throw new Error(`Unsupported stroke source in ${file}`);
-  const out={};
-  for (const ch of spec.characters) {
-    const url=`https://raw.githubusercontent.com/chanind/hanzi-writer-data/master/data/${encodeURIComponent(ch)}.json`;
-    const response=await fetch(url);
-    if (!response.ok) throw new Error(`Stroke source missing ${ch}: ${response.status}`);
-    const row=await response.json();
-    if (!Array.isArray(row.strokes)||!Array.isArray(row.medians)||row.strokes.length!==row.medians.length) throw new Error(`Invalid stroke geometry for ${ch}`);
-    out[ch]={strokes:row.strokes,medians:row.medians};
-  }
+  if(spec.source!=='AnimCJK')throw Error(`Unsupported stroke source in ${file}`);
   const target=file.replace(/\.stroke-source\.json$/,'.strokes.json');
-  await fs.writeFile(target,JSON.stringify(out),'utf8');
-  console.log(`Hydrated ${spec.characters.length} characters -> ${path.relative(root,target)}`);
+  let existing={};try{existing=JSON.parse(await fs.readFile(target,'utf8'))}catch{}
+  const missing=spec.characters.filter(ch=>!existing[ch]);
+  missing.forEach(ch=>wanted.add(ch));
+  specs.push({file,spec,target,existing,missing});
+}
+if(!wanted.size){console.log('All declared stroke sources are already hydrated.');process.exit(0)}
+const found=new Map(),used=new Map();
+for(const name of ['graphicsZhHant.txt','graphicsZhHans.txt','graphicsJa.txt']){
+  for(const row of await rows(name))if(wanted.has(row.character)&&!found.has(row.character)){found.set(row.character,normalizeGeometry(row));used.set(row.character,name)}
+}
+for(const ch of wanted)if(!found.has(ch))throw Error(`AnimCJK source missing ${ch}`);
+for(const {target,existing,missing} of specs){
+  if(!missing.length)continue;
+  for(const ch of missing)existing[ch]=found.get(ch);
+  await fs.writeFile(target,JSON.stringify(existing),'utf8');
+  console.log(`Hydrated ${missing.length} missing characters -> ${path.relative(root,target)}`);
+  for(const ch of missing)console.log(`${ch}: ${used.get(ch)}`);
 }
