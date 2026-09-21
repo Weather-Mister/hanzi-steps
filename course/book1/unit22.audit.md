@@ -2,7 +2,7 @@
 
 Primary source: supplied *A Course in Contemporary Chinese* Book 1, Lesson 7 printed pp. 135–145.
 
-13 new lexical forms: 午餐, 剛, 下課, 下午, 半, 比賽, 結束, 開始, 寫, 忙, 每, 書法, 課.
+13 lexical items (plus the transparent combinations 每天 and 剛開始, explicitly indexed here after the Units 21–25 repair): 午餐, 剛, 下課, 下午, 半, 比賽, 結束, 開始, 寫, 忙, 每, 書法, 課.
 12 first-time characters: 剛 半 比 賽 結 束 開 始 寫 忙 每 法.
 午, 下, 課, 書 and other prerequisites were already available before this unit; they are not falsely labelled new.
 

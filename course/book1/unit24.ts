@@ -292,6 +292,20 @@ const unit:UnitData = {
           ],
           "answer": "玩",
           "explanation": "玩 is the action verb; 好玩 describes something as fun."
+        },
+        {
+          "id": "u24-price-quality-11",
+          "type": "listen",
+          "char": "跟",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "跟",
+            "坐",
+            "車",
+            "火"
+          ],
+          "answer": "跟",
+          "explanation": "跟 is gēn: with; follow."
         }
       ]
     },
@@ -513,6 +527,65 @@ const unit:UnitData = {
           ],
           "answer": "快",
           "explanation": "快 means fast; 慢 means slow."
+        },
+        {
+          "id": "u24-degree-quality-23",
+          "type": "phrase",
+          "phrase": "u24-less-busy"
+        },
+        {
+          "id": "u24-degree-quality-24",
+          "type": "order",
+          "phrase": "u24-less-busy",
+          "tokens": [
+            "最近",
+            "比較",
+            "不忙",
+            "我"
+          ]
+        },
+        {
+          "id": "u24-degree-quality-25",
+          "type": "select",
+          "prompt": "You are less busy lately than before. Which matches?",
+          "options": [
+            "我最近比較不忙。",
+            "我最近不比較忙。",
+            "我最近比較忙。"
+          ],
+          "answer": "我最近比較不忙。",
+          "explanation": "The negative belongs to 忙: 比較 + 不忙. 比較忙 would mean busier.",
+          "grammarIds": [
+            "u24-bijiao"
+          ]
+        },
+        {
+          "id": "u24-degree-quality-26",
+          "type": "listen",
+          "char": "慢",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "慢",
+            "快",
+            "較",
+            "跟"
+          ],
+          "answer": "慢",
+          "explanation": "慢 is màn: slow."
+        },
+        {
+          "id": "u24-degree-quality-27",
+          "type": "listen",
+          "char": "快",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "快",
+            "慢",
+            "較",
+            "坐"
+          ],
+          "answer": "快",
+          "explanation": "快 is kuài: fast; quick."
         }
       ]
     },
@@ -823,6 +896,67 @@ const unit:UnitData = {
           ],
           "answer": "又",
           "explanation": "又 is yòu; the repeated pair forms 又…又…."
+        },
+        {
+          "id": "u24-questions-quality-22",
+          "type": "phrase",
+          "phrase": "u24-phone-neither"
+        },
+        {
+          "id": "u24-questions-quality-23",
+          "type": "order",
+          "phrase": "u24-phone-neither",
+          "tokens": [
+            "又不",
+            "好看",
+            "又不",
+            "好玩",
+            "這支手機"
+          ]
+        },
+        {
+          "id": "u24-questions-quality-24",
+          "type": "select",
+          "prompt": "Both qualities are negative. Complete: 這支手機又不好看___不好玩。",
+          "options": [
+            "又",
+            "比較",
+            "跟"
+          ],
+          "answer": "又",
+          "explanation": "Repeat 又 before the second negative predicate as well.",
+          "grammarIds": [
+            "u24-you-you"
+          ]
+        },
+        {
+          "id": "u24-questions-quality-25",
+          "type": "select",
+          "prompt": "我又想喝茶又想喝咖啡 expresses which wishes?",
+          "options": [
+            "Both tea and coffee",
+            "Only tea",
+            "Neither tea nor coffee"
+          ],
+          "answer": "Both tea and coffee",
+          "explanation": "又 repeats before 想喝茶 and 想喝咖啡; both wishes hold.",
+          "grammarIds": [
+            "u24-you-you"
+          ]
+        },
+        {
+          "id": "u24-questions-quality-26",
+          "type": "listen",
+          "char": "舒",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "舒",
+            "服",
+            "又",
+            "快"
+          ],
+          "answer": "舒",
+          "explanation": "舒 is shū: comfortable; relaxed."
         }
       ]
     },
@@ -845,7 +979,7 @@ const unit:UnitData = {
         "舒",
         "服"
       ],
-      "minutes": "10–13 min",
+      "minutes": "12–16 min",
       "unitId": "unit-24",
       "review": true,
       "steps": [
@@ -937,6 +1071,134 @@ const unit:UnitData = {
           "id": "u24-review-10",
           "type": "memory",
           "char": "服"
+        },
+        {
+          "id": "u24-review-quality-11",
+          "type": "select",
+          "prompt": "Which says the speaker has been LESS busy lately?",
+          "options": [
+            "我最近比較不忙。",
+            "我最近比較忙。",
+            "我最近很忙。"
+          ],
+          "answer": "我最近比較不忙。",
+          "explanation": "比較不忙 compares the lower degree of busyness with an understood earlier situation.",
+          "grammarIds": [
+            "u24-bijiao"
+          ]
+        },
+        {
+          "id": "u24-review-quality-12",
+          "type": "select",
+          "prompt": "Which says the phone is NEITHER good-looking NOR fun?",
+          "options": [
+            "這支手機又不好看又不好玩。",
+            "這支手機又好看又好玩。",
+            "這支手機又不好看又好玩。"
+          ],
+          "answer": "這支手機又不好看又不好玩。",
+          "explanation": "Each property needs its own negative: 又不…又不….",
+          "grammarIds": [
+            "u24-you-you"
+          ]
+        },
+        {
+          "id": "u24-review-quality-13",
+          "type": "order",
+          "phrase": "u24-phone-neither",
+          "tokens": [
+            "又不",
+            "好看",
+            "又不",
+            "好玩",
+            "這支手機"
+          ]
+        },
+        {
+          "id": "u24-review-quality-14",
+          "type": "select",
+          "prompt": "我跟朋友坐火車 tells you what?",
+          "options": [
+            "The companion and the transport",
+            "The ticket price and departure time",
+            "Only the destination"
+          ],
+          "answer": "The companion and the transport",
+          "explanation": "跟朋友 names the companion; 坐火車 names the transport.",
+          "grammarIds": [
+            "u24-gen-company",
+            "u24-zuo-transport"
+          ]
+        },
+        {
+          "id": "u24-review-quality-15",
+          "type": "listen",
+          "char": "跟",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "跟",
+            "坐",
+            "車",
+            "快"
+          ],
+          "answer": "跟",
+          "explanation": "跟 is gēn: with; follow."
+        },
+        {
+          "id": "u24-review-quality-16",
+          "type": "listen",
+          "char": "慢",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "慢",
+            "快",
+            "高",
+            "較"
+          ],
+          "answer": "慢",
+          "explanation": "慢 is màn: slow."
+        },
+        {
+          "id": "u24-review-quality-17",
+          "type": "listen",
+          "char": "較",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "較",
+            "高",
+            "票",
+            "鐵"
+          ],
+          "answer": "較",
+          "explanation": "較 is jiào: compare; relatively."
+        },
+        {
+          "id": "u24-review-quality-18",
+          "type": "listen",
+          "char": "舒",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "舒",
+            "服",
+            "又",
+            "快"
+          ],
+          "answer": "舒",
+          "explanation": "舒 is shū: comfortable; relaxed."
+        },
+        {
+          "id": "u24-review-quality-19",
+          "type": "select",
+          "prompt": "You want an opinion about the train, not instructions for travelling. Which question fits?",
+          "options": [
+            "火車怎麼樣？",
+            "你怎麼坐火車去？"
+          ],
+          "answer": "火車怎麼樣？",
+          "explanation": "怎麼樣 requests an evaluation; 怎麼 before an action asks about its method.",
+          "grammarIds": [
+            "u24-how-vs-zenmeyang"
+          ]
         }
       ]
     }
@@ -1719,6 +1981,11 @@ const unit:UnitData = {
           "text": "高鐵比較快。",
           "pinyin": "Gāotiě bǐjiào kuài.",
           "meaning": "High Speed Rail is relatively faster."
+        },
+        {
+          "text": "我最近比較不忙。",
+          "pinyin": "Wǒ zuìjìn bǐjiào bù máng.",
+          "meaning": "I have been less busy lately."
         }
       ],
       "remember": "比較 tells the listener to compare with something understood from context.",
@@ -1732,7 +1999,7 @@ const unit:UnitData = {
       "id": "u24-you-you",
       "title": "Both A and B with 又…又…",
       "pattern": "又 + Property A + 又 + Property B",
-      "explanation": "Use 又 before each of two coordinated properties to say that something has both qualities. The two descriptions apply to the same topic.",
+      "explanation": "Use 又 before each of two coordinated properties to say that something has both qualities. The two descriptions apply to the same topic. The textbook also uses this pattern with wishes or abilities, not only simple adjectives. To make both descriptions negative, place 不 after each 又: 又不…又不….",
       "examples": [
         {
           "text": "高鐵又快又舒服。",
@@ -1743,9 +2010,19 @@ const unit:UnitData = {
           "text": "這支手機又好看又好玩。",
           "pinyin": "Zhè zhī shǒujī yòu hǎokàn yòu hǎowán.",
           "meaning": "This phone is both good-looking and fun."
+        },
+        {
+          "text": "這支手機又不好看又不好玩。",
+          "pinyin": "Zhè zhī shǒujī yòu bù hǎokàn yòu bù hǎowán.",
+          "meaning": "This phone is neither good-looking nor fun."
+        },
+        {
+          "text": "我又想喝茶又想喝咖啡。",
+          "pinyin": "Wǒ yòu xiǎng hē chá yòu xiǎng hē kāfēi.",
+          "meaning": "I want both tea and coffee."
         }
       ],
-      "remember": "Repeat 又: 又 A 又 B.",
+      "remember": "Repeat 又 before both predicates; put 不 after each 又 when both are negative.",
       "words": [
         "又…又…"
       ]
@@ -1904,6 +2181,37 @@ const unit:UnitData = {
       "grammarIds": [
         "u24-you-you"
       ]
+    },
+    "u24-less-busy": {
+      "text": "我最近比較不忙。",
+      "pinyin": "Wǒ zuìjìn bǐjiào bù máng.",
+      "meaning": "I have been less busy lately.",
+      "tokens": [
+        "我",
+        "最近",
+        "比較",
+        "不忙"
+      ],
+      "note": "The comparison is with the earlier situation. 比較 stays before the negative description 不忙.",
+      "grammarIds": [
+        "u24-bijiao"
+      ]
+    },
+    "u24-phone-neither": {
+      "text": "這支手機又不好看又不好玩。",
+      "pinyin": "Zhè zhī shǒujī yòu bù hǎokàn yòu bù hǎowán.",
+      "meaning": "This phone is neither good-looking nor fun.",
+      "tokens": [
+        "這支手機",
+        "又不",
+        "好看",
+        "又不",
+        "好玩"
+      ],
+      "note": "Both descriptions are negative: repeat 又不 before each one.",
+      "grammarIds": [
+        "u24-you-you"
+      ]
     }
   },
   "revisionStepIds": [
@@ -1912,5 +2220,4 @@ const unit:UnitData = {
     "u24-review-05"
   ]
 };
-
 export default unit;

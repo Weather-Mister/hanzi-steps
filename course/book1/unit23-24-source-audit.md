@@ -6,7 +6,7 @@ Authoritative source: supplied *A Course in Contemporary Chinese 1*.
 
 Source basis: the remaining Lesson 7 dialogue/vocabulary and the Lesson 7 permission section (printed pp. 135–145). Unit 22 intentionally stopped before 最近, 字, 問, 等一下, 有事, 有意思 and the permission use of 可以; Unit 23 now closes that gap before Lesson 8 begins.
 
-New lexical forms: 最近, 每天, 等一下, 有事, 字, 寫字, 剛開始, 有意思, 問, 不可以, 可不可以, 可以嗎. The exact surface form 可以 is review because it was formally taught earlier for possibility; this unit explicitly teaches its Lesson 7 permission reading.
+New lexical forms after repair: 最近, 等一下, 有事, 字, 寫字, 有意思, 問, 不可以, 可不可以, 可以嗎. 每天 and 剛開始 are now correctly indexed in Unit 22 and reviewed here. The exact surface form 可以 is review because it was formally taught earlier for possibility; this unit explicitly teaches its Lesson 7 permission reading.
 
 Checked points:
 - 可以 precedes the permitted action.
@@ -39,3 +39,5 @@ Book 2 Unit 1 previously owned the exact vocabulary surface 怎麼. Book 1 Unit 
 All 18 new character geometries are unmodified Taiwan Traditional entries from AnimCJK graphicsZhHant.txt at source commit ec5e17cca76c87587790bcbce5ea0b4d4fb753d6. Matching dictionaryZhHant.txt rows are retained beside them. Existing Arphic Public License / AnimCJK and LGPL attribution in the project applies. No textbook scans or MOE artwork are redistributed.
 
 Generated curriculum artifacts are derived from these authoring files by the repository generator; they are not hand-edited in this correction.
+
+Repair addendum: see `units21-25-repair-audit.md`. Unit 24 now also explicitly practices negative 比較 and 又不…又不…, including their review assessments.

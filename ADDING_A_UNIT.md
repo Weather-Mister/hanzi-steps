@@ -156,3 +156,18 @@ deployment path is retired for Hanzi Steps and must not be used.
 The user has already authorized publishing verified curriculum additions. Do not ask for another confirmation once all
 required QA is green.
 
+
+## Quality guardrails after the Units 21–25 audit
+
+Read `docs/BOOK1_COMPLETION_PROMPT.md` for the full source and learner-quality workflow.
+Passing the schema/build is insufficient: audit negatives, questions, restrictions,
+new/review classifications, all example characters, and actual component usefulness.
+The regression gates now check Book 1 phrase/example character coverage from Unit 21,
+explanation before referenced assessments, and from Unit 23 a review with at least
+18 activities, three listening tasks and assessment of every new grammar target.
+These floors do not justify filler. Do not weaken the tests to fit thin content.
+
+`course:test` accepts ONE unit ID per invocation. Run it separately for every changed
+unit. When appending to published lessons, preserve all historical complete bounds as
+well as partial step positions; existing `previousLessonLengths` records must not be
+overwritten by later extensions. Use an explicit migration if sequence changes are needed.

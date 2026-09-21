@@ -1,6 +1,6 @@
 // Pure structural validation. No network, textbook analysis or content repair.
 export const han = text => [...text].filter(c => /\p{Script=Han}/u.test(c));
-const generic = /^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square/i;
+const generic = /^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square|practice all \d+ strokes of .+ in the displayed Traditional stroke order before writing it from memory|is introduced here through .+: /i;
 const object = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const text = x => typeof x === 'string' && x.trim().length > 0;
 const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
@@ -115,6 +115,10 @@ export function validateCourse(manifest, modules, geometry = {}) {
     if(s.char&&!allChars[s.char])fail(sa,`missing character reference ${s.char}`);
     if(['intro','trace','complete','memory','build','parts','listen'].includes(s.type)&&!allChars[s.char])fail(sa,'missing required character');
     if(['select','listen','parts'].includes(s.type))choice({...allChars[s.char]?.partQuestion,...s,prompt:s.prompt||(s.type==='listen'?'Listen':undefined)},sa);
+    if(s.audioText!==undefined){
+     if(s.type!=='listen'||!text(s.audioText))fail(sa,'audioText requires a listening exercise and nonempty text');
+     else if(!Array.isArray(s.options)||!s.audioText.includes(s.answer)||s.options.filter(o=>s.audioText.includes(o)).length!==1)fail(sa,'contextual audio must contain only one answer option');
+    }
     if(s.type==='match'){
      if(strings(s.chars,`${sa} chars`,{empty:false})&&s.chars.length<2)fail(sa,'match requires at least two characters');
      for(const ch of s.chars||[])if(!allChars[ch])fail(sa,`missing match answer character ${ch}`);
