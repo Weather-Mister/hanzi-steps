@@ -37,3 +37,7 @@ Low vocabulary counts are intentional: this batch is grammar-heavy and does not 
 All newly introduced characters declare AnimCJK with graphicsZhHant.txt preferred. The Feature QA workflow must hydrate and verify geometry before merge.
 
 No fallback is declared for 逛 or 臺 because those items are intentionally deferred rather than silently using non-Taiwan geometry.
+
+## Exact-head verification follow-up
+
+The first successful Feature QA hydrated handwriting and generated the derived curriculum artifacts. This documentation-only follow-up commit exists so Feature QA runs again on a human-authored final head after those generated files are present; it does not change curriculum content.
