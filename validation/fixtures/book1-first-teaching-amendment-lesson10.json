@@ -1,0 +1,9 @@
+{
+  "reason": "Lesson 10 Book 1 now first-teaches 往 before the existing Book 2 directions unit. Book 2 lesson IDs and steps remain unchanged; the only immutable-baseline practice record affected is practice-往, whose card now uses the Book 1 first-teaching character metadata/order.",
+  "practice": {
+    "往": {
+      "before": "e82e5caefbf93dfaa3dc3528d609aaa0d239da313128a1d6f3812ffae6f148cf",
+      "after": "1dd0d8fb42371d66d8c106ac7d0b30ce91dd5015a2f1c6468bb60e4c7fb29cc6"
+    }
+  }
+}
