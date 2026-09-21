@@ -84,3 +84,7 @@ Before merge, the exact final PR head must pass:
 - and a second exact-head QA run if CI changes the branch.
 
 After merge, both GitHub Pages build and deploy must succeed and the deployed artifact must contain the rebalanced vocabulary.
+
+## Exact-head QA trigger after generated artifacts
+
+Feature QA hydrated all twelve newly added handwriting targets from `graphicsZhHant.txt` and committed the generated curriculum artifacts. This documentation-only follow-up commit changes no learner content; it exists so the exact final PR head receives a normal Feature QA run after those generated artifacts are present.
