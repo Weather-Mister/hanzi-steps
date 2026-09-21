@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,GraduationCap,Lightbulb,Lock,Play,RotateCcw,Settings2,Sparkles,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
+import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,GraduationCap,Lightbulb,Lock,MapPin,Play,RotateCcw,Settings2,Sparkles,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {Switch} from '@/components/ui/switch';
