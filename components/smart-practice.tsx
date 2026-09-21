@@ -1,5 +1,5 @@
 'use client';
-import {useMemo,useState} from 'react';
+import {useEffect,useMemo,useState} from 'react';
 import {ArrowLeft,Check,Flame,MapPin,RotateCcw,Sparkles,Swords,Trophy,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {Progress} from '@/components/ui/progress';
@@ -102,13 +102,14 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
    <button className="primary-button" onClick={()=>{setResult(null);setIndex(i=>i+1)}}>{index+1===mission.steps.length?'Finish mission':'Continue'}</button></div>}
  </section>;
 }
-export function SmartPractice({open,onOpenChange,completed,theme,mastery}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController}){
+export function SmartPractice({open,onOpenChange,completed,theme,mastery,startScreen='hub'}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;startScreen?:'hub'|'taiwan'}){
  const {states,loading,saving,error,record,stats}=mastery;
  const items=useMemo(()=>learnedPracticeItems(completed),[completed]),missions=useMemo(()=>availableTaiwanMissions(completed),[completed]);
  const completedUnits=useMemo(()=>units.filter(unit=>unitComplete(completed,unit.id)).length,[completed]);
  const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
  const revengePreview=useMemo(()=>makeRevengeRound(items,states,'preview'),[items,states]);
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState(''),[mission,setMission]=useState<TaiwanMission|null>(null);
+ useEffect(()=>{if(open){setScreen(startScreen);setQueue([]);setMission(null)}},[open,startScreen]);
  function back(){setScreen('hub');setQueue([])}
  function startDaily(){setQueue(makeDailyTen(items,states,seed('daily')));setSessionTitle('Daily 10');setSessionSubtitle('Due review, weak spots, recent material, and one challenge.');setScreen('session')}
  function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked three different ways.');setScreen('session')}
