@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable. Units 30–31 continue this explicitly reviewed Book 1 first-teaching migration for 往 and for characters such as 弟/紅 now introduced from Lesson 10; historical Book 2/legacy content remains intact while first-teaching ownership and handwriting geometry move earlier.",
+  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable.",
   "records": {
     "vocabulary": {
       "到": {
@@ -25,10 +25,6 @@
       "怎麼": {
         "before": "475e0a8a90cda526135a7710468963ece488e9ac528b7e8d37d550f666dfb72e",
         "after": "c209ae6babb4533f32c95a81b62e356cf038b838e452f78f893d0c2fda944539"
-      },
-      "往": {
-        "before": "480e510dd255fa15b3c455b4215cc267314d8a4d8db18911c9de78b39c98067d",
-        "after": "8a4a8b12cfcecfc38cbcb5132c9571640e5d88ef37648e3323a6ce573aa7d2a8"
       }
     },
     "characters": {
@@ -55,16 +51,12 @@
       "行": {
         "before": "372451a965de7a6f5655640bfedb78ec4452f5c2851075d2c13a5021d1cee403",
         "after": "b493783fbb94dc56c7a8beb560c7c3f6da49c384206cc1242a48fe23d7fe0150"
-      },
-      "往": {
-        "before": "484e020767f41bc79d6c1d943d581f10ae36bcfe6d4ea9a9222ce34bd3ee3cb3",
-        "after": "e25e988b9ae2847c61d4591f93b33245b49041d983a97342eaf6598eb0e4e859"
       }
     },
     "cards": {
       "book-2-unit-1": {
         "before": "ebe79ee84e202275bc744fe8fdd70588800670709f6e86b4e5414b0c4eca6472",
-        "after": "95b4507adb4264317fb535a86fbc8eed4d032b0dc48753d4d101f4c0afdee9fa"
+        "after": "2582041e64d76f0a0d29aa664f5c8d982e7722496830fcb166d2a2d54316737f"
       },
       "book-2-unit-2": {
         "before": "a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb",
@@ -182,8 +174,8 @@
     "前",
     "從",
     "行",
-    "往",
     "走",
+    "往",
     "直",
     "左",
     "右",
