@@ -1010,9 +1010,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-yellow-fruit",
           "tokens": [
-            "這個",
-            "黃色的水果",
-            "叫什麼"
+            "這個水果",
+            "是黃色的"
           ]
         },
         {
@@ -1916,14 +1915,13 @@ const unit:UnitData = {
       ]
     },
     "u29-yellow-fruit": {
-      "text": "這個黃色的水果叫什麼？",
-      "pinyin": "Zhè ge huángsè de shuǐguǒ jiào shénme?",
-      "meaning": "What is this yellow fruit called?",
-      "note": "黃色 modifies 水果 with 的.",
+      "text": "這個水果是黃色的。",
+      "pinyin": "Zhè ge shuǐguǒ shì huángsè de.",
+      "meaning": "This fruit is yellow.",
+      "note": "黃色 is the color yellow. The color phrase describes 水果.",
       "tokens": [
-        "這個",
-        "黃色的水果",
-        "叫什麼"
+        "這個水果",
+        "是黃色的"
       ]
     },
     "u29-fragrant-sweet": {
