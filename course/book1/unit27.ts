@@ -632,7 +632,7 @@ const unit:UnitData = {
             "美"
           ],
           "answer": "特別",
-          "explanation": "特別 means special or distinctive; 有名 and 漂亮 are different descriptions."
+          "explanation": "特別 means special or distinctive; 有名 and 美 are different descriptions."
         }
       ]
     },
