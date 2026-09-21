@@ -711,6 +711,18 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  display:flex;
  align-items:center;
  justify-content:center;
+ flex-wrap:wrap;
+ gap:8px;
+}
+.mega-skip-button {
+ min-height:34px;
+ padding:5px 9px;
+ color:#65758b;
+ font-size:.78rem;
+}
+.mega-skip-button:hover:not(:disabled) {
+ background:#f3f6fb;
+ color:#3f5069;
 }
 .mega-give-up-button {
  min-height:34px;
@@ -1156,6 +1168,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
   border-radius:18px;
  }
  .mega-challenge-dialog {
+  top:50dvh;
   gap:12px;
   padding:18px 14px 15px;
  }
