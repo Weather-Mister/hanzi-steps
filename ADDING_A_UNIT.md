@@ -13,6 +13,17 @@ this is a flexible range, not a quota or a seven-word limit. Count new words and
 new characters separately. Keep six teaching lessons plus a review, and teach
 every prerequisite before testing it.
 
+**Standing pacing rule (2026-09-21): textbook lesson boundaries are not Hanzi Steps
+unit boundaries.** Do not create a thin or nearly empty unit merely to stop at the
+end of a textbook lesson or grammar cluster. Rebalance adjacent Hanzi Steps units
+so each has a meaningful lexical and practice load. Once the current textbook
+lesson is materially covered, a later Hanzi Steps unit may begin the next textbook
+lesson when that produces a better learning unit. If a small number of source items
+are blocked by a verified handwriting/source constraint, carry them forward
+explicitly in the coverage map rather than padding a unit or silently dropping them;
+do not call the earlier textbook lesson complete until those items are resolved.
+Never inflate the count with transparent combinations just to hit the target.
+
 ## Files to author (normally three)
 
 1. `course/book1/unit09.ts` — one `UnitData` default export. Other books use
