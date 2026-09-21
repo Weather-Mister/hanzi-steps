@@ -18,12 +18,12 @@ const unit:UnitData = {
       "貓",
       "水",
       "果",
-      "黃",
-      "色",
-      "芒",
       "給",
       "香",
-      "瓜"
+      "黃",
+      "色",
+      "瓜",
+      "紅"
     ],
     "lessonIds": [
       "u29-date",
@@ -242,7 +242,6 @@ const unit:UnitData = {
       "title": "Still More to Try",
       "subtitle": "Retain 還, then learn mango, giving, fragrance, and sweetness.",
       "chars": [
-        "芒",
         "給",
         "香"
       ],
@@ -295,31 +294,6 @@ const unit:UnitData = {
           "explanation": "還有 adds something else that is present."
         },
         {
-          "id": "u29-hai-mango-芒-intro",
-          "type": "intro",
-          "char": "芒"
-        },
-        {
-          "id": "u29-hai-mango-芒-trace",
-          "type": "trace",
-          "char": "芒"
-        },
-        {
-          "id": "u29-hai-mango-芒-build",
-          "type": "build",
-          "char": "芒"
-        },
-        {
-          "id": "u29-hai-mango-芒-complete",
-          "type": "complete",
-          "char": "芒"
-        },
-        {
-          "id": "u29-hai-mango-芒-memory",
-          "type": "memory",
-          "char": "芒"
-        },
-        {
           "id": "u29-hai-give-給-intro",
           "type": "intro",
           "char": "給"
@@ -370,9 +344,9 @@ const unit:UnitData = {
           "char": "香"
         },
         {
-          "id": "u29-hai-mango-p1",
+          "id": "u29-hai-fruit-p1",
           "type": "phrase",
-          "phrase": "u29-give-mango"
+          "phrase": "u29-give-fruit"
         },
         {
           "id": "u29-hai-taste-p1",
@@ -413,7 +387,8 @@ const unit:UnitData = {
         "貓",
         "黃",
         "色",
-        "瓜"
+        "瓜",
+        "紅"
       ],
       "minutes": "8–10 min",
       "unitId": "unit-29",
@@ -596,6 +571,48 @@ const unit:UnitData = {
           ],
           "answer": "對",
           "explanation": "對 means correct/right and can confirm what someone has said."
+        },
+        {
+          "id": "u29-maokong-red-紅-intro",
+          "type": "intro",
+          "char": "紅"
+        },
+        {
+          "id": "u29-maokong-red-紅-trace",
+          "type": "trace",
+          "char": "紅"
+        },
+        {
+          "id": "u29-maokong-red-紅-build",
+          "type": "build",
+          "char": "紅"
+        },
+        {
+          "id": "u29-maokong-red-紅-complete",
+          "type": "complete",
+          "char": "紅"
+        },
+        {
+          "id": "u29-maokong-red-紅-memory",
+          "type": "memory",
+          "char": "紅"
+        },
+        {
+          "id": "u29-maokong-red-p1",
+          "type": "phrase",
+          "phrase": "u29-red-fruit"
+        },
+        {
+          "id": "u29-maokong-s4",
+          "type": "select",
+          "prompt": "Which word means “red”?",
+          "options": [
+            "紅色",
+            "黃色",
+            "西瓜"
+          ],
+          "answer": "紅色",
+          "explanation": "紅色 is the color red."
         }
       ]
     },
@@ -781,14 +798,14 @@ const unit:UnitData = {
         {
           "id": "u29-negative-vvkan-p1",
           "type": "phrase",
-          "phrase": "u29-try-mango"
+          "phrase": "u29-try-watermelon"
         },
         {
           "id": "u29-negative-vvkan-o1",
           "type": "order",
-          "phrase": "u29-try-mango",
+          "phrase": "u29-try-watermelon",
           "tokens": [
-            "這個芒果很好吃",
+            "這個西瓜很好吃",
             "你吃吃看"
           ]
         },
@@ -1001,23 +1018,23 @@ const unit:UnitData = {
         {
           "id": "u29-review-06",
           "type": "order",
-          "phrase": "u29-give-mango",
+          "phrase": "u29-give-fruit",
           "tokens": [
             "給你",
-            "一塊芒果"
+            "一塊水果"
           ]
         },
         {
           "id": "u29-review-07",
           "type": "select",
-          "prompt": "Which word means mango?",
+          "prompt": "Which word means red?",
           "options": [
-            "芒果",
-            "西瓜",
-            "水果"
+            "紅色",
+            "黃色",
+            "西瓜"
           ],
-          "answer": "芒果",
-          "explanation": "芒果 is mango."
+          "answer": "紅色",
+          "explanation": "紅色 is red."
         },
         {
           "id": "u29-review-08",
@@ -1103,9 +1120,9 @@ const unit:UnitData = {
         {
           "id": "u29-review-14",
           "type": "order",
-          "phrase": "u29-try-mango",
+          "phrase": "u29-try-watermelon",
           "tokens": [
-            "這個芒果很好吃",
+            "這個西瓜很好吃",
             "你吃吃看"
           ]
         },
@@ -1231,13 +1248,6 @@ const unit:UnitData = {
       "core": true
     },
     {
-      "text": "芒果",
-      "pinyin": "mángguǒ",
-      "meaning": "mango",
-      "lessonId": "u29-hai",
-      "core": true
-    },
-    {
       "text": "給",
       "pinyin": "gěi",
       "meaning": "to give",
@@ -1294,6 +1304,13 @@ const unit:UnitData = {
       "meaning": "try tasting it; have a taste and see",
       "lessonId": "u29-negative",
       "core": true
+    },
+    {
+      "text": "紅色",
+      "pinyin": "hóngsè",
+      "meaning": "red",
+      "lessonId": "u29-maokong",
+      "core": true
     }
   ],
   "reviewVocabulary": [
@@ -1321,19 +1338,18 @@ const unit:UnitData = {
     "喜歡",
     "很",
     "好吃",
-    "這個",
     "也",
     "旅行"
   ],
   "newCharacters": [
     "水",
     "果",
-    "黃",
-    "色",
-    "芒",
     "給",
     "香",
-    "瓜"
+    "黃",
+    "色",
+    "瓜",
+    "紅"
   ],
   "reviewCharacters": [
     "月",
@@ -1426,6 +1442,93 @@ const unit:UnitData = {
         "text": "芒果",
         "pinyin": "mángguǒ",
         "meaning": "mango"
+      }
+    },
+    "給": {
+      "hanzi": "給",
+      "pinyin": "gěi",
+      "zhuyin": "ㄍㄟˇ",
+      "meaning": "to give",
+      "strokes": 12,
+      "layout": "side",
+      "note": "給 is third-tone gěi when it means “to give.” Keep the left 糹 narrow so 合 has room on the right.",
+      "memory": "The silk component 糹 takes the first six strokes on the left; 合 takes the final six on the right.",
+      "parts": [
+        {
+          "label": "糹",
+          "name": "silk component",
+          "role": "Semantic component",
+          "description": "The first six strokes form 糹 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "合",
+          "name": "right component",
+          "role": "Sound/visual component",
+          "description": "The final six strokes form 合 on the right.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "給你一塊芒果",
+        "pinyin": "gěi nǐ yí kuài mángguǒ",
+        "meaning": "give you a piece of mango"
+      }
+    },
+    "香": {
+      "hanzi": "香",
+      "pinyin": "xiāng",
+      "zhuyin": "ㄒㄧㄤ",
+      "meaning": "fragrant",
+      "strokes": 9,
+      "layout": "stack",
+      "note": "香 is first-tone xiāng and describes a pleasant smell.",
+      "memory": "禾 forms the five-stroke top; 日 forms the four-stroke block below.",
+      "parts": [
+        {
+          "label": "禾",
+          "name": "grain component",
+          "role": "Visual component",
+          "description": "The first five strokes form 禾 at the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "日",
+          "name": "sun block",
+          "role": "Visual component",
+          "description": "The final four strokes form 日 below.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "example": {
+        "text": "這個芒果很香",
+        "pinyin": "zhè ge mángguǒ hěn xiāng",
+        "meaning": "this mango smells very fragrant"
       }
     },
     "黃": {
@@ -1528,132 +1631,6 @@ const unit:UnitData = {
         "meaning": "yellow"
       }
     },
-    "芒": {
-      "hanzi": "芒",
-      "pinyin": "máng",
-      "zhuyin": "ㄇㄤˊ",
-      "meaning": "awn; first character of 芒果",
-      "strokes": 6,
-      "layout": "stack",
-      "note": "芒 is second-tone máng. In this course it is learned mainly as the first character of 芒果, mango.",
-      "memory": "The three-stroke grass top 艹 sits above the three-stroke 亡 below.",
-      "parts": [
-        {
-          "label": "艹",
-          "name": "grass top",
-          "role": "Semantic component",
-          "description": "The first three strokes form 艹, the grass/plant component at the top.",
-          "strokes": [
-            0,
-            1,
-            2
-          ]
-        },
-        {
-          "label": "亡",
-          "name": "lower component",
-          "role": "Visual component",
-          "description": "The last three strokes form 亡 beneath the grass top.",
-          "strokes": [
-            3,
-            4,
-            5
-          ]
-        }
-      ],
-      "example": {
-        "text": "芒果",
-        "pinyin": "mángguǒ",
-        "meaning": "mango"
-      }
-    },
-    "給": {
-      "hanzi": "給",
-      "pinyin": "gěi",
-      "zhuyin": "ㄍㄟˇ",
-      "meaning": "to give",
-      "strokes": 12,
-      "layout": "side",
-      "note": "給 is third-tone gěi when it means “to give.” Keep the left 糹 narrow so 合 has room on the right.",
-      "memory": "The silk component 糹 takes the first six strokes on the left; 合 takes the final six on the right.",
-      "parts": [
-        {
-          "label": "糹",
-          "name": "silk component",
-          "role": "Semantic component",
-          "description": "The first six strokes form 糹 on the left.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        },
-        {
-          "label": "合",
-          "name": "right component",
-          "role": "Sound/visual component",
-          "description": "The final six strokes form 合 on the right.",
-          "strokes": [
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-          ]
-        }
-      ],
-      "example": {
-        "text": "給你一塊芒果",
-        "pinyin": "gěi nǐ yí kuài mángguǒ",
-        "meaning": "give you a piece of mango"
-      }
-    },
-    "香": {
-      "hanzi": "香",
-      "pinyin": "xiāng",
-      "zhuyin": "ㄒㄧㄤ",
-      "meaning": "fragrant",
-      "strokes": 9,
-      "layout": "stack",
-      "note": "香 is first-tone xiāng and describes a pleasant smell.",
-      "memory": "禾 forms the five-stroke top; 日 forms the four-stroke block below.",
-      "parts": [
-        {
-          "label": "禾",
-          "name": "grain component",
-          "role": "Visual component",
-          "description": "The first five strokes form 禾 at the top.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4
-          ]
-        },
-        {
-          "label": "日",
-          "name": "sun block",
-          "role": "Visual component",
-          "description": "The final four strokes form 日 below.",
-          "strokes": [
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "example": {
-        "text": "這個芒果很香",
-        "pinyin": "zhè ge mángguǒ hěn xiāng",
-        "meaning": "this mango smells very fragrant"
-      }
-    },
     "瓜": {
       "hanzi": "瓜",
       "pinyin": "guā",
@@ -1698,6 +1675,48 @@ const unit:UnitData = {
         "text": "西瓜",
         "pinyin": "xīguā",
         "meaning": "watermelon"
+      }
+    },
+    "紅": {
+      "hanzi": "紅",
+      "pinyin": "hóng",
+      "zhuyin": "ㄏㄨㄥˊ",
+      "meaning": "red",
+      "strokes": 9,
+      "layout": "side",
+      "note": "紅 is second-tone hóng. In 紅色, it is the color word red.",
+      "memory": "糹 + 工: keep the six-stroke thread component narrow on the left, then finish the simple three-stroke 工 on the right.",
+      "parts": [
+        {
+          "label": "糹",
+          "name": "thread component",
+          "role": "Visual component",
+          "description": "The first six strokes form the narrow 糹 thread component on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "工",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The last three strokes form 工 on the right: horizontal, vertical, horizontal.",
+          "strokes": [
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "example": {
+        "text": "紅色",
+        "pinyin": "hóngsè",
+        "meaning": "red"
       }
     }
   },
@@ -1756,9 +1775,9 @@ const unit:UnitData = {
       "explanation": "For a one-syllable action verb, repeat the verb and add 看 to make a tentative “try doing it and see” expression. The pattern has a light, exploratory tone. In the Lesson 10 pattern, an object normally does not follow 看 directly, so say 吃吃看 rather than *吃吃看芒果.",
       "examples": [
         {
-          "text": "這個芒果很好吃，你吃吃看。",
-          "pinyin": "Zhè ge mángguǒ hěn hǎochī, nǐ chīchīkàn.",
-          "meaning": "This mango tastes good. Try it."
+          "text": "這個西瓜很好吃，你吃吃看。",
+          "pinyin": "Zhè ge xīguā hěn hǎochī, nǐ chīchīkàn.",
+          "meaning": "This watermelon tastes good. Try it."
         },
         {
           "text": "這杯茶很香，你喝喝看。",
@@ -1907,23 +1926,13 @@ const unit:UnitData = {
         "叫什麼"
       ]
     },
-    "u29-give-mango": {
-      "text": "給你一塊芒果。",
-      "pinyin": "Gěi nǐ yí kuài mángguǒ.",
-      "meaning": "Here, have a piece of mango.",
-      "note": "給 means give. 塊 is reused here in its Lesson 10 sense as a measure word for a piece of food, rather than its earlier price/dollar use.",
-      "tokens": [
-        "給你",
-        "一塊芒果"
-      ]
-    },
     "u29-fragrant-sweet": {
-      "text": "這個芒果很香，也很甜。",
-      "pinyin": "Zhè ge mángguǒ hěn xiāng, yě hěn tián.",
-      "meaning": "This mango is fragrant and also sweet.",
-      "note": "香 describes smell; 甜 describes taste. This sentence uses ordinary 很, not the later reduplicated-state-verb pattern.",
+      "text": "這個水果很香，也很甜。",
+      "pinyin": "Zhè ge shuǐguǒ hěn xiāng, yě hěn tián.",
+      "meaning": "This fruit is fragrant and also sweet.",
+      "note": "香 describes smell; 甜 describes taste. This uses ordinary 很, not the later reduplicated-state-verb pattern.",
       "tokens": [
-        "這個芒果",
+        "這個水果",
         "很香",
         "也很甜"
       ]
@@ -1972,19 +1981,6 @@ const unit:UnitData = {
         "u29-yaoshi-jiu"
       ]
     },
-    "u29-try-mango": {
-      "text": "這個芒果很好吃，你吃吃看。",
-      "pinyin": "Zhè ge mángguǒ hěn hǎochī, nǐ chīchīkàn.",
-      "meaning": "This mango tastes good. Try it.",
-      "note": "吃吃看 is 吃 + 吃 + 看: try tasting it and see.",
-      "tokens": [
-        "這個芒果很好吃",
-        "你吃吃看"
-      ],
-      "grammarIds": [
-        "u29-vv-kan"
-      ]
-    },
     "u29-if-chance-try": {
       "text": "要是有機會，我就吃吃看。",
       "pinyin": "Yàoshi yǒu jīhuì, wǒ jiù chīchīkàn.",
@@ -1996,6 +1992,39 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u29-yaoshi-jiu",
+        "u29-vv-kan"
+      ]
+    },
+    "u29-give-fruit": {
+      "text": "給你一塊水果。",
+      "pinyin": "Gěi nǐ yí kuài shuǐguǒ.",
+      "meaning": "Here, have a piece of fruit.",
+      "note": "給 means give. 塊 is reused here in its Lesson 10 food-piece measure-word sense, not its earlier price/dollar sense.",
+      "tokens": [
+        "給你",
+        "一塊水果"
+      ]
+    },
+    "u29-red-fruit": {
+      "text": "這個水果是紅色的。",
+      "pinyin": "Zhè ge shuǐguǒ shì hóngsè de.",
+      "meaning": "This fruit is red.",
+      "note": "紅色 is the color red.",
+      "tokens": [
+        "這個水果",
+        "是紅色的"
+      ]
+    },
+    "u29-try-watermelon": {
+      "text": "這個西瓜很好吃，你吃吃看。",
+      "pinyin": "Zhè ge xīguā hěn hǎochī, nǐ chīchīkàn.",
+      "meaning": "This watermelon tastes good. Try it.",
+      "note": "吃吃看 is 吃 + 吃 + 看: try tasting it and see.",
+      "tokens": [
+        "這個西瓜很好吃",
+        "你吃吃看"
+      ],
+      "grammarIds": [
         "u29-vv-kan"
       ]
     }
