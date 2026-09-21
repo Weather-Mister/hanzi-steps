@@ -29,6 +29,8 @@ Your job is to do the work, not just propose it: verify the source → map cover
 3. Design real learning, not a filled template
 
 - Keep six teaching lessons plus one review per unit. Around 10–13 genuinely new words/forms is a flexible pacing target, not a quota.
+- Treat textbook lesson boundaries as source organization, not mandatory Hanzi Steps unit boundaries. If a source slice is grammar-heavy or would leave a thin unit, rebalance across adjacent source sections: close documented earlier gaps first and/or begin the next textbook lesson once prerequisites are secure. Do not manufacture an almost-empty unit merely to stop at a lesson boundary.
+- Flexibility does not mean padding. Transparent combinations, already-taught phrases, and review expressions still do not count as genuinely new vocabulary. If a unit remains substantially below the normal range, the source/audit must explain why rebalancing would be pedagogically worse or blocked by a concrete dependency.
 - Separately report new lexical items, new grammatical uses, transparent combinations, review expressions and new characters. Do not inflate novelty by relabelling phrases already explicitly taught. Move first-teaching declarations when necessary and explain the reconciliation.
 - Give each lesson a concrete learner outcome and enough explanation to understand it: meaning, form, position, use/context, common confusion and contrasting examples where useful.
 - Teach prerequisites before assessing them. A grammar ID in metadata is not an explanation. A vocabulary list outside the lesson is not proof the learner has encountered a word.
