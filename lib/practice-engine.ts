@@ -1,8 +1,8 @@
-import {characters,lessons,phrases,shuffled,units} from './curriculum.ts';
-import {learnedVocabulary,type VocabularyLookupItem} from './vocabulary-lookup.ts';
+import {books,characters,lessons,phrases,shuffled,units} from './curriculum.ts';
+import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from './vocabulary-lookup.ts';
 
 export type PracticeMode='recognition'|'recall'|'pinyin'|'input'|'sentence'|'handwriting'|'context';
-export type PracticeSessionKind='daily'|'revenge'|'mega'|'taiwan';
+export type PracticeSessionKind='lesson'|'daily'|'revenge'|'mega'|'taiwan';
 export type PracticeSkillState={
  itemId:string;
  mode:PracticeMode;
@@ -19,13 +19,15 @@ export type PracticeStateMap=Record<string,PracticeSkillState>;
 
 export type PracticeItem={
  id:string;
- kind:'word'|'phrase';
+ kind:'word'|'phrase'|'character';
  traditional:string;
  pinyin:string;
  meaning:string;
  characters:string[];
  unitId?:string;
  unitNumber?:number;
+ bookId?:string;
+ bookNumber?:number;
  lessonId:string;
  tokens?:string[];
 };
@@ -65,6 +67,8 @@ function phraseItems(completed:Set<string>):PracticeItem[]{
    if(!step.phrase||seen.has(step.phrase))continue;
    const phrase=phrases[step.phrase];
    if(!phrase?.tokens?.length)continue;
+   const unit=units.find(candidate=>candidate.id===lesson.unitId);
+   const book=books.find(candidate=>candidate.unitIds.includes(unit?.id||''));
    seen.add(step.phrase);
    out.push({
     id:'phrase:'+step.phrase,
@@ -74,7 +78,9 @@ function phraseItems(completed:Set<string>):PracticeItem[]{
     meaning:phrase.meaning,
     characters:Array.from(phrase.text).filter(char=>Boolean(characters[char])),
     unitId:lesson.unitId,
-    unitNumber:units.find(unit=>unit.id===lesson.unitId)?.displayNumber??units.find(unit=>unit.id===lesson.unitId)?.number,
+    unitNumber:unit?.displayNumber??unit?.number,
+    bookId:book?.id,
+    bookNumber:book?.number,
     lessonId:lesson.id,
     tokens:phrase.tokens,
    });
@@ -93,9 +99,24 @@ export function learnedPracticeItems(completed:Set<string>):PracticeItem[]{
   characters:item.characters,
   unitId:item.unitId,
   unitNumber:item.unitNumber,
+  bookId:item.bookId,
+  bookNumber:item.bookNumber,
   lessonId:item.lessonId,
  }));
- return [...words,...phraseItems(completed)];
+ const exactWordChars=new Set(words.filter(item=>Array.from(item.traditional).length===1).map(item=>item.traditional));
+ const fallbackCharacters:PracticeItem[]=[];
+ for(const char of Object.keys(characters)){
+  if(exactWordChars.has(char))continue;
+  const lesson=lessons.find(candidate=>completed.has(candidate.id)&&!candidate.review&&candidate.chars.includes(char));
+  if(!lesson)continue;
+  const unit=units.find(candidate=>candidate.id===lesson.unitId);
+  const book=books.find(candidate=>candidate.unitIds.includes(unit?.id||''));
+  fallbackCharacters.push({
+   id:'char:'+char,kind:'character',traditional:char,pinyin:characters[char].pinyin,meaning:characters[char].meaning,
+   characters:[char],unitId:unit?.id,unitNumber:unit?.displayNumber??unit?.number,bookId:book?.id,bookNumber:book?.number,lessonId:lesson.id,
+  });
+ }
+ return [...words,...phraseItems(completed),...fallbackCharacters];
 }
 
 function supportedModes(item:PracticeItem):PracticeMode[]{
@@ -135,7 +156,11 @@ function weakestMode(states:PracticeStateMap,item:PracticeItem,avoidEasy=false):
 
 function uniqueItems(items:PracticeItem[]):PracticeItem[]{
  const seen=new Set<string>();
- return items.filter(item=>!seen.has(item.id)&&seen.add(item.id));
+ return items.filter(item=>{if(seen.has(item.id))return false;seen.add(item.id);return true});
+}
+
+export function isRevengeCandidate(states:PracticeStateMap,item:PracticeItem):boolean{
+ return supportedModes(item).some(mode=>{const row=stateFor(states,item.id,mode);return Boolean(row&&row.misses>0&&row.strength<0.72)});
 }
 
 export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:string,now=Date.now()):PracticeQuestion[]{
@@ -143,7 +168,7 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const shuffledItems=shuffled(uniqueItems(items),seed);
  const withMeta=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
  const due=withMeta.filter(row=>row.attempts>0&&row.nextReview<=now).sort((a,b)=>a.nextReview-b.nextReview||a.strength-b.strength);
- const weak=withMeta.filter(row=>row.attempts>0&&(row.strength<0.58||row.misses>0)).sort((a,b)=>a.strength-b.strength||b.misses-a.misses);
+ const weak=withMeta.filter(row=>row.attempts>0&&(row.strength<0.45||isRevengeCandidate(states,row.item))).sort((a,b)=>a.strength-b.strength||b.misses-a.misses);
  const unseen=withMeta.filter(row=>row.attempts===0).sort((a,b)=>(b.item.unitNumber??0)-(a.item.unitNumber??0));
  const recent=withMeta.filter(row=>row.attempts>0).sort((a,b)=>b.lastSeen-a.lastSeen);
 
@@ -172,7 +197,7 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
 export function makeRevengeRound(items:PracticeItem[],states:PracticeStateMap,seed:string):PracticeQuestion[]{
  const candidates=items
   .map(item=>({item,...aggregateItemState(states,item)}))
-  .filter(row=>row.attempts>0&&(row.misses>0||row.strength<0.55))
+  .filter(row=>row.attempts>0&&isRevengeCandidate(states,row.item))
   .sort((a,b)=>b.misses-a.misses||a.strength-b.strength||a.lastSeen-b.lastSeen);
  const target=candidates[0]?.item;
  if(!target)return [];
@@ -191,31 +216,41 @@ export function makeRevengeRound(items:PracticeItem[],states:PracticeStateMap,se
  }));
 }
 
-export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string):PracticeQuestion[]{
+export function megaCheckpointUnits(completed:Set<string>):string[]{
+ for(let bookIndex=books.length-1;bookIndex>=0;bookIndex--){
+  const completedUnits=books[bookIndex].unitIds.filter(unitId=>unitComplete(completed,unitId));
+  const end=Math.floor(completedUnits.length/4)*4;
+  if(end>=4)return completedUnits.slice(end-4,end);
+ }
+ return [];
+}
+
+export function megaCheckpointCount(completed:Set<string>):number{
+ return books.reduce((sum,book)=>sum+Math.floor(book.unitIds.filter(unitId=>unitComplete(completed,unitId)).length/4),0);
+}
+
+export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string,completed?:Set<string>):PracticeQuestion[]{
  if(!items.length)return [];
+ const checkpointUnits=completed?megaCheckpointUnits(completed):[];
+ const source=checkpointUnits.length?items.filter(item=>item.unitId&&checkpointUnits.includes(item.unitId)):items;
+ if(!source.length)return [];
+ const unitIds=checkpointUnits.length?checkpointUnits:[...new Set(source.map(item=>item.unitId||'other'))];
  const byUnit=new Map<string,PracticeItem[]>();
- for(const item of items){
+ for(const item of source){
   const key=item.unitId||'other';
   byUnit.set(key,[...(byUnit.get(key)||[]),item]);
  }
- const unitIds=[...byUnit.keys()].sort((a,b)=>{
-  const ua=units.find(unit=>unit.id===a)?.number??999;
-  const ub=units.find(unit=>unit.id===b)?.number??999;
-  return ua-ub;
- });
  const spread:PracticeItem[]=[];
- let round=0;
- while(spread.length<12&&round<8){
+ for(let round=0;round<3&&spread.length<12;round++){
   for(const unitId of unitIds){
-   const pool=shuffled(byUnit.get(unitId)||[],seed+':'+unitId+':'+round);
-   const item=pool[round%Math.max(pool.length,1)];
+   const pool=shuffled(byUnit.get(unitId)||[],seed+':'+unitId);
+   const item=pool[round];
    if(item&&!spread.some(existing=>existing.id===item.id))spread.push(item);
    if(spread.length>=12)break;
   }
-  round++;
  }
  if(spread.length<12){
-  for(const item of shuffled(items,seed+':fill')){
+  for(const item of shuffled(source,seed+':fill')){
    if(!spread.some(existing=>existing.id===item.id))spread.push(item);
    if(spread.length>=12)break;
   }
@@ -232,6 +267,20 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
 export function unitComplete(completed:Set<string>,unitId:string):boolean{
  const unit=units.find(candidate=>candidate.id===unitId);
  return Boolean(unit?.lessonIds.length&&completed.has(unit.lessonIds[unit.lessonIds.length-1]));
+}
+
+export function practiceAttemptForStep(step:{type:string;char?:string;phrase?:string}):{itemId:string;mode:PracticeMode}|null{
+ if(step.phrase){
+  if(step.type==='order')return {itemId:'phrase:'+step.phrase,mode:'sentence'};
+  return null;
+ }
+ if(!step.char)return null;
+ const word=vocabularyLookup.find(item=>item.traditional===step.char&&Array.from(item.traditional).length===1);
+ const itemId=word?.id||'char:'+step.char;
+ if(step.type==='memory'||step.type==='trace'||step.type==='complete')return {itemId,mode:'handwriting'};
+ if(step.type==='select')return {itemId,mode:'recall'};
+ if(step.type==='listen'||step.type==='parts'||step.type==='build')return {itemId,mode:'recognition'};
+ return null;
 }
 
 export const taiwanMissions:TaiwanMission[]=[
@@ -349,6 +398,6 @@ export function distractorPool(item:PracticeItem,items:PracticeItem[],field:'tra
 export function fromLookupItem(item:VocabularyLookupItem):PracticeItem{
  return {
   id:item.id,kind:'word',traditional:item.traditional,pinyin:item.pinyin,meaning:item.meaning,
-  characters:item.characters,unitId:item.unitId,unitNumber:item.unitNumber,lessonId:item.lessonId,
+  characters:item.characters,unitId:item.unitId,unitNumber:item.unitNumber,bookId:item.bookId,bookNumber:item.bookNumber,lessonId:item.lessonId,
  };
 }
