@@ -902,11 +902,17 @@ const unit:UnitData = {
         },
         {
           "id": "u31-review-17",
-          "type": "order",
-          "phrase": "u31-toward",
-          "tokens": [
-            "從旅館",
-            "往夜市走"
+          "type": "select",
+          "prompt": "Which question asks whether the changed situation now holds?",
+          "options": [
+            "你現在喜歡吃水果了嗎？",
+            "你現在喜歡吃水果嗎？",
+            "你以前喜歡吃水果嗎？"
+          ],
+          "answer": "你現在喜歡吃水果了嗎？",
+          "explanation": "Final 了 before 嗎 asks whether the new situation now applies, rather than simply asking about a current or past preference.",
+          "grammarIds": [
+            "u31-sentential-le"
           ]
         },
         {
