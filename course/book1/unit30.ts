@@ -876,7 +876,7 @@ const unit:UnitData = {
           "options": [
             "一塊西瓜",
             "一個機會",
-            "一件衣服"
+            "一個西瓜"
           ],
           "answer": "一塊西瓜",
           "explanation": "Lesson 10 uses 塊 for a piece of food."
@@ -888,7 +888,7 @@ const unit:UnitData = {
           "options": [
             "拍照片、笑得很開心、穿衣服",
             "回國、坐高鐵、買車票",
-            "上課、寫書法、打電話"
+            "上課、寫書法、喝茶"
           ],
           "answer": "拍照片、笑得很開心、穿衣服",
           "explanation": "These combine the new photo, smile/happy, and clothing language from Unit 30."
@@ -1315,7 +1315,7 @@ const unit:UnitData = {
       "id": "u30-state-redup",
       "title": "Give a subjective impression by reduplicating a state verb",
       "pattern": "State verb + state verb + 的",
-      "explanation": "Lesson 10 reduplicates certain state verbs to intensify a subjective impression or reaction. The reduplicated form takes 的: 香香的, 甜甜的. Do not add 很 because reduplication already supplies the intensifying effect. With two reduplicated state verbs in sequence, the first 的 can be omitted: 香香甜甜的. This pattern is restricted: the textbook allows examples such as 香, 甜, 高, 熱, 大, but not every state verb, so do not freely reduplicate words such as 美, 矮, 貴, 近, 忙, 新, or 少.",
+      "explanation": "Lesson 10 reduplicates certain state verbs to intensify a subjective impression or reaction. The reduplicated form takes 的: 香香的, 甜甜的. Do not add 很 because reduplication already supplies the intensifying effect. With two reduplicated state verbs in sequence, the first 的 can be omitted: 香香甜甜的. This pattern is restricted: the textbook allows examples such as 香, 甜, 高, 熱, 大, but not every state verb, so do not freely reduplicate familiar words such as 美, 貴, 近, 忙, 新, or 少.",
       "examples": [
         {
           "text": "這個水果香香的。",
