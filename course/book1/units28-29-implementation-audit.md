@@ -42,10 +42,14 @@ word was formally taught earlier.
 
 - Unit 28 takes ownership of the already verified 月、號、就、貓 geometry in addition
   to 年、日、鐘、頭.
-- Unit 29 declares AnimCJK graphicsZhHant hydration for 水、果、黃、色、芒、給、香、瓜.
+- Unit 29 declares AnimCJK graphicsZhHant hydration for 水、果、給、香、黃、色、瓜、紅.
 - Character notes and component groups are character-specific and cover every declared
   stroke exactly once.
-- 逛 and 臺 remain explicit blockers; no Simplified/Japanese substitution is used.
+- 逛 and 臺 remain explicit Lesson 9 blockers.
+- An initial hydration attempt showed 芒 would fall back to `graphicsZhHans.txt`. That
+  was rejected. Unit 29 uses the equally source-supported Lesson 10 item 紅色 instead,
+  moving 紅 first-teaching from Book 2 Unit 3 to Book 1; Book 2 now treats 紅 as review.
+  No Simplified/Japanese substitution is used.
 
 ## Saved-progress compatibility
 
@@ -66,7 +70,7 @@ completed lessons retain completion credit after the append-only extension.
 ## Remaining source debt
 
 Lesson 9 is not called complete until 逛 and 臺東 are resolved with acceptable verified
-Taiwan Traditional handwriting geometry. Lesson 10 is only started here; 紅色 and the
+Taiwan Traditional handwriting geometry. Lesson 10 is only started here; 芒果 and the
 rest of its still-uncovered source material remain for subsequent units.
 
 ## Verification requirement
