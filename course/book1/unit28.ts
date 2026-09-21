@@ -957,10 +957,7 @@ const unit:UnitData = {
             "biàn in both words"
           ],
           "answer": "biàn in 便利商店; pián in 便宜",
-          "explanation": "便利 is biànlì, while 便宜 is piányi. The same character has different readings in these two familiar words.",
-          "grammarIds": [
-            "u28-object-duration"
-          ]
+          "explanation": "便利 is biànlì, while 便宜 is piányi. The same character has different readings in these two familiar words."
         },
         {
           "id": "u28-review-18",
@@ -972,10 +969,7 @@ const unit:UnitData = {
             "機車"
           ],
           "answer": "公共汽車",
-          "explanation": "公共汽車 is bus; 計程車 is taxi and 機車 is scooter/motorcycle.",
-          "grammarIds": [
-            "u28-separable-duration"
-          ]
+          "explanation": "公共汽車 is bus; 計程車 is taxi and 機車 is scooter/motorcycle."
         },
         {
           "id": "u28-review-19",
@@ -987,10 +981,7 @@ const unit:UnitData = {
             "非常"
           ],
           "answer": "或是",
-          "explanation": "或是 links alternatives: 坐高鐵或是坐火車.",
-          "grammarIds": [
-            "u28-duration-negation"
-          ]
+          "explanation": "或是 links alternatives: 坐高鐵或是坐火車."
         },
         {
           "id": "u28-review-20",
@@ -1013,8 +1004,8 @@ const unit:UnitData = {
           "prompt": "Which sentence means “I really like films, but I do not have time to watch today”?",
           "options": [
             "我非常喜歡影片，但是今天沒有空看。",
-            "我今天有空看影片，所以不喜歡影片。",
-            "我大概喜歡影片，今天也有空看。"
+            "我非常喜歡影片，今天也有空看。",
+            "我今天不喜歡影片，但是有空看。"
           ],
           "answer": "我非常喜歡影片，但是今天沒有空看。",
           "explanation": "非常 strengthens 喜歡, while 但是 introduces the contrast with 今天沒有空看."
