@@ -1,6 +1,6 @@
 # Book 1 Units 26–27 source plan
 
-Status: source-audited planning checkpoint. Do not publish until both units, Taiwan Traditional stroke data, targeted QA, full Feature QA, and deployment verification are complete.
+Status: Units 26–27 are authored on the working branch. Publication remains blocked on Taiwan Traditional stroke hydration, targeted/full QA, diff review, merge, Pages deployment, and live verification.
 
 ## Production boundary
 
@@ -27,7 +27,7 @@ Source items recovered from the textbook:
 - 電視 diànshì — television
 - 電影 diànyǐng — film/movie (the exact word/use is already present earlier in Hanzi Steps via 看電影; classify as REVIEW, not new)
 - 旅行 lǚxíng — travel
-- 作業 zuòyè — homework
+- 功課 gōngkè — homework
 - 出去 chūqù — go out
 - 大概 dàgài — approximately / probably
 - 放假 fàngjià — have a holiday / be on break
@@ -79,7 +79,7 @@ Before final authoring, recover and map every earlier Lesson 9 grammar section t
 
 Goal: close the Lesson 8 tail, then let the learner talk about holiday plans and going out/travelling.
 
-Provisional new vocabulary pool: 古代, 不行, 星期, 回國, 打算, 電視, 旅行, 作業, 出去, 大概, 放假. Treat 電影 as review. Use 下個星期 as a transparent combination after 星期 unless the cumulative index proves it needs formal first teaching.
+Implemented new vocabulary: 古代, 不行, 星期, 回國, 打算, 電視, 旅行, 功課, 出去, 大概, 放假. Treat 電影 as review. Use 下個星期 as a transparent combination after 星期 unless the cumulative index proves it needs formal first teaching.
 
 Six teaching lessons + review. Suggested pedagogical progression:
 
@@ -111,6 +111,20 @@ Teach the relevant recommendation grammar before assessment. If …的時候 / �
 - Run `course:generate`, `course:check`, `course:test -- unit-26`, `course:test -- unit-27`, `check:characters`, vocabulary/mega/validation tests, TypeScript, and `build:pages`.
 - Require Feature QA green on the exact final PR head; inspect diff; merge; require Pages build+deploy green; verify live content.
 
+## Implemented boundary and deferred source material
+
+Unit 26 closes the Lesson 8 tail with 古代 and 不行, then covers the core Lesson 9 Dialogue I planning vocabulary. It treats 下個星期 as a transparent combination after 星期 and reuses the already-taught expression 看電影 rather than inflating 電影 as a new item.
+
+Unit 27 adds 多久, 有時候, 建議, 應該, 夜市, 特別, 茶館, 女朋友, 帶, and 決定. It teaches the basic Verb + Duration frame, …的時候, the paired 有時候…有時候… pattern, and 應該 suggestions.
+
+Explicitly deferred to Unit 28 or later Lesson 9 continuation:
+- the full object-repeat, duration-before-negation, and separable-verb duration subpatterns from Grammar II;
+- 要是…就… including affirmative and negative conditions;
+- remaining Vocabulary II items not yet first-taught, including month/date language, 還, 逛, and 貓空;
+- 臺東 and other proper-name material only when it can be introduced and supported without an unnecessary character spike.
+
+The current split is therefore a source-continuation boundary, not a claim that Lesson 9 is complete.
+
 ## Exact next action
 
-Recover the missing Lesson 9 grammar sections before `…的時候`, then author Unit 26 and Unit 27 modules plus stroke JSON from the verified Taiwan Traditional source. Do not open a PR until both units are internally complete enough for Feature QA.
+Hydrate the declared graphicsZhHant stroke sources for Units 26–27, run all repository validation gates, inspect the rendered units and the Book 2 行 compatibility adjustment, then open Feature QA only when the branch is internally consistent.
