@@ -1,33 +1,195 @@
 {
-  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material, for 行 in Unit 26 不行, and for 往 in Unit 31. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and affected teaching/practice records change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable.",
+  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable.",
   "records": {
     "vocabulary": {
-      "到": {"before":"37311f549b123e63d5609a479c227e946b7e494929cb81defce8e79bef123601","after":"137a192d1cc60b42662871081261ae037075a0d86af8afff3c9990bae8fa8eb5"},
-      "附近": {"before":"f5a9a16a03d2f40f44eb7f744c1599b8be33e93df3ab2d333b52f30cc137192a","after":"aa055ae9c65d0aa448d902ceaafdce6d560547facef639778dad71af1ba25d3b"},
-      "近": {"before":"ebdefa13d928fb04b96ca4142def20c7bf01552308fc386c0df6d3287e3fb330","after":"affaa6550a0d8ff488b964b6dd2c2da52786512bbaaec8e048094df5c9cfbf2f"},
-      "遠": {"before":"04118655d2ba7fd07216b14e19bc6053ac9d4b43ece817b0a593692479b98df7","after":"6e7c5b0c4a1a27049a7d63eca3691b6c776d2baa99343721ba83894fde80942a"},
-      "從": {"before":"bed137ce813c3dd59484e8d750a39bddee9a4e0368b84a266299e20cbc3e67f0","after":"24c99246587cd59699d050a8b14fb339984346c64309a51a9bc61367445b2c13"},
-      "怎麼": {"before":"475e0a8a90cda526135a7710468963ece488e9ac528b7e8d37d550f666dfb72e","after":"c209ae6babb4533f32c95a81b62e356cf038b838e452f78f893d0c2fda944539"}
+      "到": {
+        "before": "37311f549b123e63d5609a479c227e946b7e494929cb81defce8e79bef123601",
+        "after": "137a192d1cc60b42662871081261ae037075a0d86af8afff3c9990bae8fa8eb5"
+      },
+      "附近": {
+        "before": "f5a9a16a03d2f40f44eb7f744c1599b8be33e93df3ab2d333b52f30cc137192a",
+        "after": "aa055ae9c65d0aa448d902ceaafdce6d560547facef639778dad71af1ba25d3b"
+      },
+      "近": {
+        "before": "ebdefa13d928fb04b96ca4142def20c7bf01552308fc386c0df6d3287e3fb330",
+        "after": "affaa6550a0d8ff488b964b6dd2c2da52786512bbaaec8e048094df5c9cfbf2f"
+      },
+      "遠": {
+        "before": "04118655d2ba7fd07216b14e19bc6053ac9d4b43ece817b0a593692479b98df7",
+        "after": "6e7c5b0c4a1a27049a7d63eca3691b6c776d2baa99343721ba83894fde80942a"
+      },
+      "從": {
+        "before": "bed137ce813c3dd59484e8d750a39bddee9a4e0368b84a266299e20cbc3e67f0",
+        "after": "24c99246587cd59699d050a8b14fb339984346c64309a51a9bc61367445b2c13"
+      },
+      "怎麼": {
+        "before": "475e0a8a90cda526135a7710468963ece488e9ac528b7e8d37d550f666dfb72e",
+        "after": "c209ae6babb4533f32c95a81b62e356cf038b838e452f78f893d0c2fda944539"
+      }
     },
     "characters": {
-      "到": {"before":"93ee10983a3fe9cf9cfb0401f493cf0318c9dbd64f4d2e01582fba368a2149ba","after":"7b8af3c80632f27b892755802b13c86d077e1764274ddf2760e0b3658b6be0d2"},
-      "前": {"before":"1da3969f68e0e2cd411d13a07ea6a2dfb526ffe0fa5317054d6b1d468f1acfc0","after":"897b4a584421905485e92677c8a41123e1c8716416d4cbfc969e7783c30e338f"},
-      "商": {"before":"c94ac2da0a2efce26640814557d02d1a109410437d7ff73f9c1e11a2d8e49d3a","after":"9371a9ac0850c70152d80318384d2fe13f4ba969cb14c22591f809cdf9f257e1"},
-      "附": {"before":"441bb0782ceff5b1cf9b061601d47ee0b5e0dc2e1e85976d8092fb74c668b2f2","after":"6abaaefcc673d4b38ad3ff10a3f7f27b55bdbb51f2d7fa0f06935d0cf6cadbd8"},
-      "近": {"before":"c3970e58a9bf107615992e4dc83a9eaec3dc4546154479130debf2e2ad0b3f81","after":"c9d6c8f0950d5d4e5983223655ac0e8aa785f744f51ce7ea9334924c0d58e917"},
-      "行": {"before":"372451a965de7a6f5655640bfedb78ec4452f5c2851075d2c13a5021d1cee403","after":"b493783fbb94dc56c7a8beb560c7c3f6da49c384206cc1242a48fe23d7fe0150"},
-      "往": {"before":"484e020767f41bc79d6c1d943d581f10ae36bcfe6d4ea9a9222ce34bd3ee3cb3","after":"e25e988b9ae2847c61d4591f93b33245b49041d983a97342eaf6598eb0e4e859"}
+      "到": {
+        "before": "93ee10983a3fe9cf9cfb0401f493cf0318c9dbd64f4d2e01582fba368a2149ba",
+        "after": "7b8af3c80632f27b892755802b13c86d077e1764274ddf2760e0b3658b6be0d2"
+      },
+      "前": {
+        "before": "1da3969f68e0e2cd411d13a07ea6a2dfb526ffe0fa5317054d6b1d468f1acfc0",
+        "after": "897b4a584421905485e92677c8a41123e1c8716416d4cbfc969e7783c30e338f"
+      },
+      "商": {
+        "before": "c94ac2da0a2efce26640814557d02d1a109410437d7ff73f9c1e11a2d8e49d3a",
+        "after": "9371a9ac0850c70152d80318384d2fe13f4ba969cb14c22591f809cdf9f257e1"
+      },
+      "附": {
+        "before": "441bb0782ceff5b1cf9b061601d47ee0b5e0dc2e1e85976d8092fb74c668b2f2",
+        "after": "6abaaefcc673d4b38ad3ff10a3f7f27b55bdbb51f2d7fa0f06935d0cf6cadbd8"
+      },
+      "近": {
+        "before": "c3970e58a9bf107615992e4dc83a9eaec3dc4546154479130debf2e2ad0b3f81",
+        "after": "c9d6c8f0950d5d4e5983223655ac0e8aa785f744f51ce7ea9334924c0d58e917"
+      },
+      "行": {
+        "before": "372451a965de7a6f5655640bfedb78ec4452f5c2851075d2c13a5021d1cee403",
+        "after": "b493783fbb94dc56c7a8beb560c7c3f6da49c384206cc1242a48fe23d7fe0150"
+      }
     },
     "cards": {
-      "book-2-unit-1": {"before":"ebe79ee84e202275bc744fe8fdd70588800670709f6e86b4e5414b0c4eca6472","after":"95b4507adb4264317fb535a86fbc8eed4d032b0dc48753d4d101f4c0afdee9fa"},
-      "book-2-unit-2": {"before":"a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb","after":"673b58f125dafc00d0434b6d6b1e1cff6c480dce0697af7bb4b7957be8118219"}
+      "book-2-unit-1": {
+        "before": "ebe79ee84e202275bc744fe8fdd70588800670709f6e86b4e5414b0c4eca6472",
+        "after": "2582041e64d76f0a0d29aa664f5c8d982e7722496830fcb166d2a2d54316737f"
+      },
+      "book-2-unit-2": {
+        "before": "a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb",
+        "after": "673b58f125dafc00d0434b6d6b1e1cff6c480dce0697af7bb4b7957be8118219"
+      }
     },
-    "units": {"book-2-unit-2":{"before":"8a10434edb672bc6abdee93d031307697f76addf7ff537214b6c7ef906697ec5","after":"4489da3b1363f9dcab4d98a858731caf1ea279c27569b829ec07f52db42be553"}},
-    "lessons": {"b2u2-bank":{"before":"bb3b8640470f9d667c1280b739ce5ce62300355516b3c5d54c42dbd30feebdbf","after":"1a3689b80433a838c60141a8960800e32f72d9751fc29b61a80ab574c7eb8931"}}
+    "units": {
+      "book-2-unit-2": {
+        "before": "8a10434edb672bc6abdee93d031307697f76addf7ff537214b6c7ef906697ec5",
+        "after": "4489da3b1363f9dcab4d98a858731caf1ea279c27569b829ec07f52db42be553"
+      }
+    },
+    "lessons": {
+      "b2u2-bank": {
+        "before": "bb3b8640470f9d667c1280b739ce5ce62300355516b3c5d54c42dbd30feebdbf",
+        "after": "1a3689b80433a838c60141a8960800e32f72d9751fc29b61a80ab574c7eb8931"
+      }
+    }
   },
-  "characterOrder": ["你","好","我","是","學","生","嗎","他","她","們","也","不","的","一","個","人","有","沒","這","那","什","麼","書","本","兩","很","大","小","在","裡","都","去","來","哪","看","和","中","文","英","說","聽","想","要","會","喝","茶","請","喜","歡","咖","啡","呢","謝","家","爸","媽","哥","姐","妹","誰","照","片","張","幾","老","師","相","電","影","週","末","做","游","泳","常","吧","今","天","明","覺","得","玩","起","怎","樣","啊","可","以","問","到","遠","近","附","商","前","從","行","往","走","直","左","右","轉","路","口","銀","超","離"],
+  "characterOrder": [
+    "你",
+    "好",
+    "我",
+    "是",
+    "學",
+    "生",
+    "嗎",
+    "他",
+    "她",
+    "們",
+    "也",
+    "不",
+    "的",
+    "一",
+    "個",
+    "人",
+    "有",
+    "沒",
+    "這",
+    "那",
+    "什",
+    "麼",
+    "書",
+    "本",
+    "兩",
+    "很",
+    "大",
+    "小",
+    "在",
+    "裡",
+    "都",
+    "去",
+    "來",
+    "哪",
+    "看",
+    "和",
+    "中",
+    "文",
+    "英",
+    "說",
+    "聽",
+    "想",
+    "要",
+    "會",
+    "喝",
+    "茶",
+    "請",
+    "喜",
+    "歡",
+    "咖",
+    "啡",
+    "呢",
+    "謝",
+    "家",
+    "爸",
+    "媽",
+    "哥",
+    "姐",
+    "妹",
+    "誰",
+    "照",
+    "片",
+    "張",
+    "幾",
+    "老",
+    "師",
+    "相",
+    "電",
+    "影",
+    "週",
+    "末",
+    "做",
+    "游",
+    "泳",
+    "常",
+    "吧",
+    "今",
+    "天",
+    "明",
+    "覺",
+    "得",
+    "玩",
+    "起",
+    "怎",
+    "樣",
+    "啊",
+    "可",
+    "以",
+    "問",
+    "到",
+    "遠",
+    "近",
+    "附",
+    "商",
+    "前",
+    "從",
+    "行",
+    "走",
+    "往",
+    "直",
+    "左",
+    "右",
+    "轉",
+    "路",
+    "口",
+    "銀",
+    "超",
+    "離"
+  ],
   "practice": {
-    "行": {"before":"1b7aa5dd6e506527a21ef7463bdfaac6164e55ddcd4c06ab1b316a8e1903d6c","after":"e3c000332f766f5db24284eca93554da60f7d62ed4c9ddc81203cceb38f00634"},
-    "往": {"before":"e82e5caefbf93dfaa3dc3528d609aaa0d239da313128a1d6f3812ffae6f148cf","after":"1dd0d8fb42371d66d8c106ac7d0b30ce91dd5015a2f1c6468bb60e4c7fb29cc6"}
+    "行": {
+      "before": "1b7aa5dd6e506527a21ef7463bdfaac6164e55ddcd4c06acb1b316a8e1903d6c",
+      "after": "e3c000332f766f5db24284eca93554da60f7d62ed4c9ddc81203cceb38f00634"
+    }
   }
 }
