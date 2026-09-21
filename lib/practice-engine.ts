@@ -277,9 +277,9 @@ export function practiceAttemptForStep(step:{type:string;char?:string;phrase?:st
  if(!step.char)return null;
  const word=vocabularyLookup.find(item=>item.traditional===step.char&&Array.from(item.traditional).length===1);
  const itemId=word?.id||'char:'+step.char;
- if(step.type==='memory'||step.type==='trace'||step.type==='complete')return {itemId,mode:'handwriting'};
+ if(step.type==='memory')return {itemId,mode:'handwriting'};
  if(step.type==='select')return {itemId,mode:'recall'};
- if(step.type==='listen'||step.type==='parts'||step.type==='build')return {itemId,mode:'recognition'};
+ if(step.type==='listen')return {itemId,mode:'recognition'};
  return null;
 }
 
@@ -380,7 +380,7 @@ export function updatePracticeState(previous:PracticeSkillState|undefined,args:{
   attempts:old.attempts+1,
   correct:old.correct+Number(args.correct),
   assisted:old.assisted+Number(args.assisted),
-  misses:old.misses+Number(!args.correct||args.assisted),
+  misses:old.misses+Number(!args.correct),
   streak,
   strength,
   lastSeen:now,
