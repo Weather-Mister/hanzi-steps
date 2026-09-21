@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {books,units} from '../lib/curriculum.ts';
+import {books,lessons,phrases,units,vocabulary} from '../lib/curriculum.ts';
 import {
  availableTaiwanMissions,
  makeDailyTen,
@@ -137,6 +137,51 @@ test('Taiwan mission steps have one explicit answer and non-duplicated choices',
    assert.ok(step.options.includes(step.answer),mission.id+' answer is selectable');
    assert.equal(new Set(step.options).size,step.options.length,mission.id+' has unique choices');
    assert.ok(step.options.length>=3,mission.id+' gives meaningful alternatives');
+  }
+ }
+});
+
+
+test('Taiwan missions only show Hanzi already exposed by their unlock point',()=>{
+ const hanzi=/[\u3400-\u9fff\uf900-\ufaff]/g;
+ const addText=(set,text)=>{for(const char of String(text||'').match(hanzi)||[])set.add(char)};
+ for(const mission of taiwanMissions){
+  const targetUnit=units.find(unit=>unit.id===mission.unlockUnitId);
+  assert.ok(targetUnit,mission.id+' has an unlock unit');
+  const targetBookIndex=books.findIndex(book=>book.unitIds.includes(mission.unlockUnitId));
+  assert.ok(targetBookIndex>=0,mission.id+' unlock unit belongs to a book');
+  const targetBook=books[targetBookIndex];
+  const targetPosition=targetBook.unitIds.indexOf(mission.unlockUnitId);
+  const allowedUnitIds=new Set([
+   ...books.slice(0,targetBookIndex).flatMap(book=>book.unitIds),
+   ...targetBook.unitIds.slice(0,targetPosition+1),
+  ]);
+  const allowedLessons=lessons.filter(lesson=>allowedUnitIds.has(lesson.unitId));
+  const allowedLessonIds=new Set(allowedLessons.map(lesson=>lesson.id));
+  const allowed=new Set();
+
+  for(const word of vocabulary)if(allowedLessonIds.has(word.lessonId))addText(allowed,word.text);
+  for(const unit of units)if(allowedUnitIds.has(unit.id)){
+   for(const char of unit.chars)addText(allowed,char);
+   addText(allowed,unit.banner.text);
+   addText(allowed,unit.goal.text);
+  }
+  for(const lesson of allowedLessons){
+   for(const char of lesson.chars)addText(allowed,char);
+   for(const step of lesson.steps){
+    if(step.phrase&&phrases[step.phrase])addText(allowed,phrases[step.phrase].text);
+    addText(allowed,step.prompt);
+    addText(allowed,step.answer);
+    for(const option of step.options||[])addText(allowed,option);
+   }
+  }
+
+  for(const step of mission.steps){
+   assert.equal((step.speaker||'').match(hanzi),null,mission.id+' speaker labels stay readable in English');
+   for(const text of [step.prompt,step.answer,...step.options]){
+    const unseen=(String(text).match(hanzi)||[]).filter(char=>!allowed.has(char));
+    assert.deepEqual([...new Set(unseen)],[],mission.id+' contains unseen Hanzi in '+text);
+   }
   }
  }
 });
