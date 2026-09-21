@@ -8,14 +8,18 @@ const unit:UnitData = {
     "id": "unit-28",
     "number": 28,
     "theme": "amber",
-    "label": "Time expressions & duration structure",
-    "title": "How Long Does It Take?",
-    "description": "Finish the advanced Lesson 9 time-duration system: films, year/day/hour expressions, object repetition, negation, and separable verbs.",
+    "label": "Duration, dates & travel plans",
+    "title": "How Long and When?",
+    "description": "Finish the supported Lesson 9 time system while carrying the remaining date, 還, Maokong, and condition-marker vocabulary forward into active use.",
     "chars": [
       "年",
       "日",
       "鐘",
-      "頭"
+      "頭",
+      "月",
+      "號",
+      "就",
+      "貓"
     ],
     "lessonIds": [
       "u28-film",
@@ -31,9 +35,9 @@ const unit:UnitData = {
       "pinyin": "Wǒ xué Zhōngwén xué yì nián."
     },
     "goal": {
-      "text": "我們放三天的假。",
-      "pinyin": "Wǒmen fàng sān tiān de jià.",
-      "meaning": "We have three days off."
+      "text": "要是我有空，我就一起去。",
+      "pinyin": "Yàoshi wǒ yǒu kòng, wǒ jiù yìqǐ qù.",
+      "meaning": "If I have time, then I'll go together."
     },
     "grammarIds": [
       "u28-when-duration-contrast",
@@ -41,15 +45,18 @@ const unit:UnitData = {
       "u28-duration-negation",
       "u28-separable-duration"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue I / Vocabulary I tail and Grammar I–II (printed pp. 182–190). Covers 影片 plus the textbook time-when/time-duration contrast, duration after an object with repeated verb, duration before negation, and duration inside separable verbs. Spoken month/date language remains for Unit 29."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue I–II / Vocabulary I–II and Grammar I–II (printed pp. 182–190), with lexical preview from Grammar V. Covers 影片, duration structure, month/date vocabulary, 還, 貓空, 要是 and 就. Formal calendar-date and 要是…就… grammar remains in Unit 29."
   },
   "reviewLessonId": "u28-review",
   "lessons": [
     {
       "id": "u28-film",
-      "title": "Films and Two Kinds of Time",
-      "subtitle": "Add 影片 and separate “when” from “how long.”",
-      "chars": [],
+      "title": "Films, Months, and Dates",
+      "subtitle": "Contrast duration with calendar time, then learn 月 and 號.",
+      "chars": [
+        "月",
+        "號"
+      ],
       "minutes": "10–13 min",
       "unitId": "unit-28",
       "review": false,
@@ -93,13 +100,92 @@ const unit:UnitData = {
             "想玩",
             "兩天"
           ]
+        },
+        {
+          "id": "u28-film-month-月-intro",
+          "type": "intro",
+          "char": "月"
+        },
+        {
+          "id": "u28-film-month-月-trace",
+          "type": "trace",
+          "char": "月"
+        },
+        {
+          "id": "u28-film-month-月-build",
+          "type": "build",
+          "char": "月"
+        },
+        {
+          "id": "u28-film-month-月-complete",
+          "type": "complete",
+          "char": "月"
+        },
+        {
+          "id": "u28-film-month-月-memory",
+          "type": "memory",
+          "char": "月"
+        },
+        {
+          "id": "u28-film-date-號-intro",
+          "type": "intro",
+          "char": "號"
+        },
+        {
+          "id": "u28-film-date-號-trace",
+          "type": "trace",
+          "char": "號"
+        },
+        {
+          "id": "u28-film-date-號-build",
+          "type": "build",
+          "char": "號"
+        },
+        {
+          "id": "u28-film-date-號-complete",
+          "type": "complete",
+          "char": "號"
+        },
+        {
+          "id": "u28-film-date-號-memory",
+          "type": "memory",
+          "char": "號"
+        },
+        {
+          "id": "u28-film-date-p1",
+          "type": "phrase",
+          "phrase": "u28-date-preview"
+        },
+        {
+          "id": "u28-film-date-s1",
+          "type": "select",
+          "prompt": "In 九月三十號, which character marks the month?",
+          "options": [
+            "月",
+            "號",
+            "年"
+          ],
+          "answer": "月",
+          "explanation": "月 follows the month number: 九月 is September."
+        },
+        {
+          "id": "u28-film-date-s2",
+          "type": "select",
+          "prompt": "In 九月三十號, which character marks the spoken day of the month?",
+          "options": [
+            "號",
+            "月",
+            "鐘"
+          ],
+          "answer": "號",
+          "explanation": "號 follows the day number in an everyday spoken date."
         }
       ]
     },
     {
       "id": "u28-years-days",
-      "title": "Years and Days as Durations",
-      "subtitle": "Use 年, 日, and standalone 天 in time expressions.",
+      "title": "Years, Days, and What Is Still True",
+      "subtitle": "Use duration units, then distinguish 還 as “still” and “also/in addition.”",
       "chars": [
         "年",
         "日"
@@ -198,16 +284,51 @@ const unit:UnitData = {
           "id": "u28-years-p1",
           "type": "phrase",
           "phrase": "u28-one-year"
+        },
+        {
+          "id": "u28-years-hai-p1",
+          "type": "phrase",
+          "phrase": "u28-hai-preview"
+        },
+        {
+          "id": "u28-years-hai-s1",
+          "type": "select",
+          "prompt": "In 我還不知道, 還 means:",
+          "options": [
+            "still",
+            "already",
+            "only"
+          ],
+          "answer": "still",
+          "explanation": "The not-knowing continues, so 還 means “still.”"
+        },
+        {
+          "id": "u28-years-hai-p2",
+          "type": "phrase",
+          "phrase": "u28-hai-additional-preview"
+        },
+        {
+          "id": "u28-years-hai-s2",
+          "type": "select",
+          "prompt": "In 還有什麼好玩的地方, 還 adds:",
+          "options": [
+            "another possibility",
+            "a past tense",
+            "a comparison"
+          ],
+          "answer": "another possibility",
+          "explanation": "還有 introduces something additional: “what other…?”"
         }
       ]
     },
     {
       "id": "u28-hours",
-      "title": "Count Hours with 鐘頭",
-      "subtitle": "Build the everyday Lesson 9 word for an hour.",
+      "title": "Hours and a Place to Go",
+      "subtitle": "Count hours, then learn the Lesson 9 destination 貓空.",
       "chars": [
         "鐘",
-        "頭"
+        "頭",
+        "貓"
       ],
       "minutes": "11–14 min",
       "unitId": "unit-28",
@@ -292,6 +413,48 @@ const unit:UnitData = {
           ],
           "answer": "鐘",
           "explanation": "鐘 is zhōng, the first character of 鐘頭."
+        },
+        {
+          "id": "u28-hours-maokong-貓-intro",
+          "type": "intro",
+          "char": "貓"
+        },
+        {
+          "id": "u28-hours-maokong-貓-trace",
+          "type": "trace",
+          "char": "貓"
+        },
+        {
+          "id": "u28-hours-maokong-貓-build",
+          "type": "build",
+          "char": "貓"
+        },
+        {
+          "id": "u28-hours-maokong-貓-complete",
+          "type": "complete",
+          "char": "貓"
+        },
+        {
+          "id": "u28-hours-maokong-貓-memory",
+          "type": "memory",
+          "char": "貓"
+        },
+        {
+          "id": "u28-hours-maokong-p1",
+          "type": "phrase",
+          "phrase": "u28-maokong-preview"
+        },
+        {
+          "id": "u28-hours-maokong-s1",
+          "type": "select",
+          "prompt": "Which item is the Taipei place name from Lesson 9?",
+          "options": [
+            "貓空",
+            "茶館",
+            "夜市"
+          ],
+          "answer": "貓空",
+          "explanation": "貓空 is the proper place name; 茶館 and 夜市 are common nouns."
         }
       ]
     },
@@ -419,9 +582,11 @@ const unit:UnitData = {
     },
     {
       "id": "u28-separable",
-      "title": "Put Time inside Separable Verbs",
-      "subtitle": "Use 放…假 and 唱…歌 with a duration in the middle.",
-      "chars": [],
+      "title": "Duration Inside Verbs — and a Condition Preview",
+      "subtitle": "Finish separable-verb duration, then learn 要是 and 就 before their full grammar lesson.",
+      "chars": [
+        "就"
+      ],
       "minutes": "9–12 min",
       "unitId": "unit-28",
       "review": false,
@@ -475,13 +640,67 @@ const unit:UnitData = {
           "grammarIds": [
             "u28-separable-duration"
           ]
+        },
+        {
+          "id": "u28-separable-condition-就-intro",
+          "type": "intro",
+          "char": "就"
+        },
+        {
+          "id": "u28-separable-condition-就-trace",
+          "type": "trace",
+          "char": "就"
+        },
+        {
+          "id": "u28-separable-condition-就-build",
+          "type": "build",
+          "char": "就"
+        },
+        {
+          "id": "u28-separable-condition-就-complete",
+          "type": "complete",
+          "char": "就"
+        },
+        {
+          "id": "u28-separable-condition-就-memory",
+          "type": "memory",
+          "char": "就"
+        },
+        {
+          "id": "u28-separable-if-p1",
+          "type": "phrase",
+          "phrase": "u28-if-preview"
+        },
+        {
+          "id": "u28-separable-if-s1",
+          "type": "select",
+          "prompt": "Which word in 要是…就… means “if”?",
+          "options": [
+            "要是",
+            "就",
+            "還"
+          ],
+          "answer": "要是",
+          "explanation": "要是 introduces the condition."
+        },
+        {
+          "id": "u28-separable-if-s2",
+          "type": "select",
+          "prompt": "Which word in 要是…就… marks the consequence “then/in that case”?",
+          "options": [
+            "就",
+            "要是",
+            "號"
+          ],
+          "answer": "就",
+          "explanation": "就 introduces what follows from the condition."
         }
       ]
     },
     {
       "id": "u28-review",
       "title": "Unit 28 Review",
-      "subtitle": "Time-when, duration, objects, negation, and separable verbs.",
+      "subtitle": "Duration, dates, 還, Maokong, and condition markers.",
       "chars": [],
       "minutes": "14–18 min",
       "unitId": "unit-28",
@@ -502,41 +721,41 @@ const unit:UnitData = {
         {
           "id": "u28-review-02",
           "type": "listen",
-          "char": "影",
+          "char": "月",
           "options": [
-            "影",
+            "月",
+            "號",
             "年",
-            "日",
-            "鐘"
+            "日"
           ],
-          "answer": "影",
-          "explanation": "影 is yǐng."
+          "answer": "月",
+          "explanation": "月 is yuè, month."
         },
         {
           "id": "u28-review-03",
           "type": "listen",
-          "char": "年",
+          "char": "號",
           "options": [
-            "年",
-            "片",
+            "號",
+            "月",
             "頭",
             "日"
           ],
-          "answer": "年",
-          "explanation": "年 is nián, year."
+          "answer": "號",
+          "explanation": "號 is hào, the spoken day/date marker."
         },
         {
           "id": "u28-review-04",
           "type": "listen",
-          "char": "鐘",
+          "char": "就",
           "options": [
-            "鐘",
-            "影",
+            "就",
+            "月",
             "年",
             "日"
           ],
-          "answer": "鐘",
-          "explanation": "鐘 is zhōng."
+          "answer": "就",
+          "explanation": "就 is jiù, the consequence marker used in 要是…就…."
         },
         {
           "id": "u28-review-05",
@@ -663,26 +882,26 @@ const unit:UnitData = {
         {
           "id": "u28-review-15",
           "type": "select",
-          "prompt": "Which character can mark a day in a written date?",
+          "prompt": "In 我還不知道, 還 means:",
           "options": [
-            "日",
-            "年",
-            "鐘"
+            "still",
+            "already",
+            "only"
           ],
-          "answer": "日",
-          "explanation": "日 is used for a written day/date."
+          "answer": "still",
+          "explanation": "還 marks a continuing state here."
         },
         {
           "id": "u28-review-16",
           "type": "select",
-          "prompt": "Which pair is a duration?",
+          "prompt": "Which item is a place name?",
           "options": [
-            "一年",
-            "明天",
-            "今天"
+            "貓空",
+            "鐘頭",
+            "影片"
           ],
-          "answer": "一年",
-          "explanation": "一年 answers how long."
+          "answer": "貓空",
+          "explanation": "貓空 is a Taipei place name."
         },
         {
           "id": "u28-review-17",
@@ -732,16 +951,35 @@ const unit:UnitData = {
         {
           "id": "u28-review-20",
           "type": "select",
-          "prompt": "Which statement correctly contrasts the two time types?",
+          "prompt": "Which pair gives the basic “if…then…” markers?",
           "options": [
-            "Time-when locates an event; duration gives its length",
-            "Duration always comes before the subject",
-            "Time-when and duration are interchangeable"
+            "要是…就…",
+            "還…號…",
+            "年…月…"
           ],
-          "answer": "Time-when locates an event; duration gives its length",
-          "explanation": "That is the core Lesson 9 distinction.",
+          "answer": "要是…就…",
+          "explanation": "要是 marks the condition and 就 marks the consequence; Unit 29 develops the complete grammar.",
           "grammarIds": [
             "u28-when-duration-contrast"
+          ]
+        },
+        {
+          "id": "u28-review-21",
+          "type": "order",
+          "phrase": "u28-date-preview",
+          "tokens": [
+            "我",
+            "九月三十號",
+            "回國"
+          ]
+        },
+        {
+          "id": "u28-review-22",
+          "type": "order",
+          "phrase": "u28-if-preview",
+          "tokens": [
+            "要是我有空",
+            "我就一起去"
           ]
         }
       ]
@@ -783,6 +1021,49 @@ const unit:UnitData = {
       "meaning": "hour",
       "lessonId": "u28-hours",
       "core": false
+    },
+    {
+      "text": "月",
+      "pinyin": "yuè",
+      "meaning": "month of the year",
+      "lessonId": "u28-film",
+      "core": false
+    },
+    {
+      "text": "號",
+      "pinyin": "hào",
+      "meaning": "date; numbered day of a month",
+      "lessonId": "u28-film",
+      "core": false
+    },
+    {
+      "text": "還",
+      "pinyin": "hái",
+      "meaning": "still; additionally; also",
+      "lessonId": "u28-years-days",
+      "core": false,
+      "note": "The character was seen earlier in 還是; this is the first formal teaching of 還 as an independent adverb."
+    },
+    {
+      "text": "貓空",
+      "pinyin": "Māokōng",
+      "meaning": "Maokong, a Taipei place known for tea and scenery",
+      "lessonId": "u28-hours",
+      "core": false
+    },
+    {
+      "text": "要是",
+      "pinyin": "yàoshi",
+      "meaning": "if",
+      "lessonId": "u28-separable",
+      "core": false
+    },
+    {
+      "text": "就",
+      "pinyin": "jiù",
+      "meaning": "then; in that case",
+      "lessonId": "u28-separable",
+      "core": false
     }
   ],
   "reviewVocabulary": [
@@ -801,7 +1082,11 @@ const unit:UnitData = {
     "年",
     "日",
     "鐘",
-    "頭"
+    "頭",
+    "月",
+    "號",
+    "就",
+    "貓"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -990,6 +1275,183 @@ const unit:UnitData = {
         "text": "鐘頭",
         "pinyin": "zhōngtóu",
         "meaning": "hour"
+      }
+    },
+    "月": {
+      "hanzi": "月",
+      "pinyin": "yuè",
+      "zhuyin": "ㄩㄝˋ",
+      "meaning": "month; moon",
+      "strokes": 4,
+      "layout": "whole",
+      "note": "月 is fourth-tone yuè. After a number, it names a month, as in 九月.",
+      "memory": "The first two strokes make the tall outer shape; the final two short horizontals sit inside it.",
+      "parts": [
+        {
+          "label": "⺆",
+          "name": "outer frame",
+          "role": "Visual component",
+          "description": "The first two strokes form the tall outer frame of 月.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "二",
+          "name": "inner lines",
+          "role": "Visual component",
+          "description": "The last two strokes are the two short horizontal lines inside.",
+          "strokes": [
+            2,
+            3
+          ]
+        }
+      ],
+      "example": {
+        "text": "九月",
+        "pinyin": "jiǔyuè",
+        "meaning": "September"
+      }
+    },
+    "號": {
+      "hanzi": "號",
+      "pinyin": "hào",
+      "zhuyin": "ㄏㄠˋ",
+      "meaning": "date; number",
+      "strokes": 13,
+      "layout": "side",
+      "note": "號 is fourth-tone hào. After a number in a date, it means the numbered day of the month.",
+      "memory": "A compact five-stroke left sound component balances the eight-stroke 虎 component on the right.",
+      "parts": [
+        {
+          "label": "号",
+          "name": "left sound component",
+          "role": "Visual component",
+          "description": "The first five strokes form the compact left component with 口 above a hooked lower shape.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "虎",
+          "name": "tiger component",
+          "role": "Visual component",
+          "description": "The final eight strokes form 虎 on the right.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "example": {
+        "text": "三十號",
+        "pinyin": "sānshí hào",
+        "meaning": "the 30th"
+      }
+    },
+    "就": {
+      "hanzi": "就",
+      "pinyin": "jiù",
+      "zhuyin": "ㄐㄧㄡˋ",
+      "meaning": "then; in that case",
+      "strokes": 12,
+      "layout": "side",
+      "note": "就 is fourth-tone jiù. In 要是…就…, it introduces the consequence of the condition.",
+      "memory": "京 fills the left eight strokes; 尤 completes the right with four strokes.",
+      "parts": [
+        {
+          "label": "京",
+          "name": "left component",
+          "role": "Visual component",
+          "description": "The first eight strokes form 京 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "label": "尤",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The final four strokes form 尤 on the right.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "要是有空，就一起去。",
+        "pinyin": "Yàoshi yǒu kòng, jiù yìqǐ qù.",
+        "meaning": "If there is time, then go together."
+      }
+    },
+    "貓": {
+      "hanzi": "貓",
+      "pinyin": "māo",
+      "zhuyin": "ㄇㄠ",
+      "meaning": "cat; first character of 貓空",
+      "strokes": 16,
+      "layout": "side",
+      "note": "貓 is first-tone māo. Here it is learned as the first character of the Taipei place name 貓空.",
+      "memory": "豸 uses the first seven strokes on the left; 苗 uses the final nine strokes on the right.",
+      "parts": [
+        {
+          "label": "豸",
+          "name": "left component",
+          "role": "Visual component",
+          "description": "The first seven strokes form 豸 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "苗",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The final nine strokes form 苗 on the right, with 艹 above 田.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        }
+      ],
+      "example": {
+        "text": "貓空",
+        "pinyin": "Māokōng",
+        "meaning": "Maokong"
       }
     }
   },
@@ -1203,6 +1665,60 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u28-separable-duration"
+      ]
+    },
+    "u28-date-preview": {
+      "text": "我九月三十號回國。",
+      "pinyin": "Wǒ jiǔyuè sānshí hào huíguó.",
+      "meaning": "I return to my country on September 30.",
+      "note": "月 marks the month and 號 marks the spoken day of the month. Unit 29 formalizes the complete date pattern.",
+      "tokens": [
+        "我",
+        "九月三十號",
+        "回國"
+      ]
+    },
+    "u28-hai-preview": {
+      "text": "我還不知道。",
+      "pinyin": "Wǒ hái bù zhīdào.",
+      "meaning": "I still do not know.",
+      "note": "Here 還 means that a state continues: still.",
+      "tokens": [
+        "我",
+        "還",
+        "不知道"
+      ]
+    },
+    "u28-hai-additional-preview": {
+      "text": "還有什麼好玩的地方？",
+      "pinyin": "Hái yǒu shénme hǎowán de dìfāng?",
+      "meaning": "What other fun places are there?",
+      "note": "Here 還 adds another possibility: also / in addition / other.",
+      "tokens": [
+        "還有",
+        "什麼",
+        "好玩的地方"
+      ]
+    },
+    "u28-maokong-preview": {
+      "text": "我想去貓空。",
+      "pinyin": "Wǒ xiǎng qù Māokōng.",
+      "meaning": "I want to go to Maokong.",
+      "note": "貓空 is the Taipei place name used in Lesson 9 Dialogue II.",
+      "tokens": [
+        "我",
+        "想去",
+        "貓空"
+      ]
+    },
+    "u28-if-preview": {
+      "text": "要是我有空，我就一起去。",
+      "pinyin": "Yàoshi wǒ yǒu kòng, wǒ jiù yìqǐ qù.",
+      "meaning": "If I have time, then I'll go together.",
+      "note": "For now, learn 要是 as “if” and 就 as the consequence marker “then.” Unit 29 gives the full placement rules.",
+      "tokens": [
+        "要是我有空",
+        "我就一起去"
       ]
     }
   },
