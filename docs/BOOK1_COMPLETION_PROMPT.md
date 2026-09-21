@@ -29,6 +29,7 @@ Your job is to do the work, not just propose it: verify the source → map cover
 3. Design real learning, not a filled template
 
 - Keep six teaching lessons plus one review per unit. Around 10–13 genuinely new words/forms is a flexible pacing target, not a quota.
+- **Do not manufacture thin units to match textbook lesson boundaries.** A Hanzi Steps unit may bridge textbook sections, and the second unit of a batch may begin the next textbook lesson once the current lesson is materially covered. Rebalance adjacent units when one would otherwise contain only a handful of lexical items. If a small number of items are blocked by a verified handwriting/source constraint, carry that debt explicitly forward instead of padding the unit or pretending the source lesson is complete. Do not count transparent combinations as fake novelty.
 - Separately report new lexical items, new grammatical uses, transparent combinations, review expressions and new characters. Do not inflate novelty by relabelling phrases already explicitly taught. Move first-teaching declarations when necessary and explain the reconciliation.
 - Give each lesson a concrete learner outcome and enough explanation to understand it: meaning, form, position, use/context, common confusion and contrasting examples where useful.
 - Teach prerequisites before assessing them. A grammar ID in metadata is not an explanation. A vocabulary list outside the lesson is not proof the learner has encountered a word.
