@@ -27,7 +27,7 @@ New vocabulary/forms:
 - 鐘頭 zhōngtóu — hour
 
 New characters:
-- 影、片、年、日、鐘、頭
+- 年、日、鐘、頭
 
 New grammar:
 - Time-When vs. Time-Duration contrast.
