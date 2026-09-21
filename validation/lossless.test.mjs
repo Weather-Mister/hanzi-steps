@@ -15,17 +15,26 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){
-   const change=amendment.records[key]?.[id];
-   if(change)assert.equal(change.before,digest,`amendment must identify original ${key} ${id}`);
-   assert.equal(hash(actual[id]),change?.after??digest,`${key} ${id}`);
+   const first=amendment.records[key]?.[id];
+   if(first)assert.equal(first.before,digest,`amendment must identify original ${key} ${id}`);
+   const firstExpected=first?.after??digest;
+   const later=lesson10Amendment.records?.[key]?.[id];
+   if(later)assert.equal(later.before,firstExpected,`Lesson 10 amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),later?.after??firstExpected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
  for(const b of baseline.books){const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);}
- assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),amendment.characterOrder);
- for(const [ch,digest]of Object.entries(baseline.practice)){const change=amendment.practice?.[ch];if(change)assert.equal(change.before,digest,`practice amendment must identify original ${ch}`);const firstExpected=change?.after??digest;const later=lesson10Amendment.practice?.[ch];if(later)assert.equal(later.before,firstExpected,`Lesson 10 amendment must identify prior ${ch}`);assert.equal(hash(current.practiceLesson(ch)),later?.after??firstExpected,`practice-${ch}`);}
+ assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson10Amendment.characterOrder??amendment.characterOrder);
+ for(const [ch,digest]of Object.entries(baseline.practice)){
+  const first=amendment.practice?.[ch];
+  if(first)assert.equal(first.before,digest,`practice amendment must identify original ${ch}`);
+  const firstExpected=first?.after??digest;
+  const later=lesson10Amendment.practice?.[ch];
+  if(later)assert.equal(later.before,firstExpected,`Lesson 10 amendment must identify prior ${ch}`);
+  assert.equal(hash(current.practiceLesson(ch)),later?.after??firstExpected,`practice-${ch}`);
+ }
 });
-
 test('Original complete and partial progress checkpoints remain valid',()=>{
  for(const l of current.lessons.filter(l=>Object.hasOwn(baseline.records.lessons,l.id)))for(const index of [0,Math.floor(l.steps.length/2),l.steps.length]){
   assert.ok(current.validSession({id:'550e8400-e29b-41d4-a716-446655440030',lessonId:l.id,index,independent:0,assisted:0,complete:index===l.steps.length,updatedAt:1}),l.id);
