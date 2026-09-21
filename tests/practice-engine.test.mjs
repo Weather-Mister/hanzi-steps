@@ -43,10 +43,16 @@ test('practice strength schedules clean recall farther out and mistakes weaken i
  assert.ok(second.strength>first.strength);
  assert.ok(second.nextReview-(now+1000)>=first.nextReview-now);
 
- const miss=updatePracticeState(second,{itemId:'x',mode:'recall',correct:false,assisted:false,now:now+2000});
+ const assisted=updatePracticeState(second,{itemId:'x',mode:'recall',correct:true,assisted:true,now:now+1500});
+ assert.equal(assisted.assisted,1);
+ assert.equal(assisted.misses,0);
+ assert.equal(assisted.streak,0);
+ assert.ok(assisted.strength<second.strength);
+
+ const miss=updatePracticeState(assisted,{itemId:'x',mode:'recall',correct:false,assisted:false,now:now+2000});
  assert.equal(miss.misses,1);
  assert.equal(miss.streak,0);
- assert.ok(miss.strength<second.strength);
+ assert.ok(miss.strength<assisted.strength);
 });
 
 test('Daily 10 is capped, unique, and prioritizes a due weak item',()=>{
@@ -124,7 +130,14 @@ test('lesson assessment steps map into the same mastery IDs and modes used by sm
  assert.ok(recall.itemId.includes(':你:'));
 
  assert.deepEqual(practiceAttemptForStep({type:'order',phrase:'hello'}),{itemId:'phrase:hello',mode:'sentence'});
+ assert.equal(practiceAttemptForStep({type:'trace',char:'你'}),null);
+ assert.equal(practiceAttemptForStep({type:'complete',char:'你'}),null);
+ assert.equal(practiceAttemptForStep({type:'parts',char:'你'}),null);
+ assert.equal(practiceAttemptForStep({type:'build',char:'你'}),null);
  assert.equal(practiceAttemptForStep({type:'grammar'}),null);
+ const handwriting=practiceAttemptForStep({type:'memory',char:'你'});
+ assert.ok(handwriting);
+ assert.equal(handwriting.mode,'handwriting');
 });
 
 
