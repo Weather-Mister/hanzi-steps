@@ -31,7 +31,9 @@
         {"id":"unit-22","order":22,"title":"A Busy Afternoon","path":"course/book1/unit22.ts"},
         {"id":"unit-23","order":23,"title":"Can I Go Check It Out?","path":"course/book1/unit23.ts"},
         {"id":"unit-24","order":24,"title":"How Are You Getting There?","path":"course/book1/unit24.ts"},
-        {"id":"unit-25","order":25,"title":"Which Way Is Faster?","path":"course/book1/unit25.ts"}
+        {"id":"unit-25","order":25,"title":"Which Way Is Faster?","path":"course/book1/unit25.ts"},
+        {"id":"unit-26","order":26,"title":"What Are You Planning?","path":"course/book1/unit26.ts"},
+        {"id":"unit-27","order":27,"title":"How Long Will You Be Away?","path":"course/book1/unit27.ts"}
       ]
     },
     {

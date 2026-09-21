@@ -22,7 +22,7 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
  for(const b of baseline.books){const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);}
  assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),amendment.characterOrder);
- for(const [ch,digest]of Object.entries(baseline.practice))assert.equal(hash(current.practiceLesson(ch)),digest,`practice-${ch}`);
+ for(const [ch,digest]of Object.entries(baseline.practice)){const change=amendment.practice?.[ch];if(change)assert.equal(change.before,digest,`practice amendment must identify original ${ch}`);assert.equal(hash(current.practiceLesson(ch)),change?.after??digest,`practice-${ch}`);}
 });
 
 test('Original complete and partial progress checkpoints remain valid',()=>{
