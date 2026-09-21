@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 Lesson 10 now first-teaches 往 before the existing Book 2 directions unit, and first-teaches 紅 before Book 2 Unit 3. The immutable earlier amendment remains unchanged. Only baseline-tracked records affected by the 往 ownership move are chained here; Book 2 lesson IDs and step sequences remain stable.",
+  "reason": "Book 1 Lesson 10 now first-teaches 往 before the existing Book 2 directions unit, 紅 before Book 2 Unit 3, and 弟 as formal Book 1 handwriting rather than a legacy-only practice character. The immutable earlier amendment remains unchanged. Book 2 lesson IDs and step sequences remain stable.",
   "records": {
     "vocabulary": {
       "往": {
@@ -11,6 +11,10 @@
       "往": {
         "before": "484e020767f41bc79d6c1d943d581f10ae36bcfe6d4ea9a9222ce34bd3ee3cb3",
         "after": "e25e988b9ae2847c61d4591f93b33245b49041d983a97342eaf6598eb0e4e859"
+      },
+      "弟": {
+        "before": "78392f5b0717e68354bcf15f0f61a7f1f891ed74d606d0cbcbf0ee55a5777c81",
+        "after": "PENDING"
       }
     },
     "cards": {
@@ -134,6 +138,10 @@
     "往": {
       "before": "e82e5caefbf93dfaa3dc3528d609aaa0d239da313128a1d6f3812ffae6f148cf",
       "after": "1dd0d8fb42371d66d8c106ac7d0b30ce91dd5015a2f1c6468bb60e4c7fb29cc6"
+    },
+    "弟": {
+      "before": "8bc54aa77845908e551f4452265dc667b2f788847d8989811274c96d267cd0b9",
+      "after": "PENDING"
     }
   }
 }
