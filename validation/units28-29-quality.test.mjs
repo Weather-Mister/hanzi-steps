@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {loadCourse} from './course-io.mjs';
 import {han} from './validate.mjs';
-import {validSession,findLesson} from '../lib/curriculum.ts';
+import {validSession,findLesson,historicalLessonLengthsFor} from '../lib/curriculum.ts';
 
 const course=await loadCourse();
 const u28=course.modules.find(m=>m.unit.id==='unit-28');
@@ -28,16 +28,57 @@ test('Units 28-29 are rebalanced without padding novelty',()=>{
     assert.ok(u29.newVocabulary.some(v=>v.text===word),`Unit 29 missing ${word}`);
 });
 
-test('Published Units 28-29 step prefixes and historical completion bounds survive the rebalance',()=>{
+test('Published Units 28-29 step prefixes and every historical completion bound survive later repairs',()=>{
   for(const [id,ids] of Object.entries(baseline)){
     const lesson=findLesson(id);
     assert.ok(lesson,id);
     assert.deepEqual(lesson.steps.slice(0,ids.length).map(s=>s.id),ids,id);
     for(let index=0;index<ids.length;index++)assert.ok(validSession(sample(id,index,false)),`${id} partial ${index}`);
-    assert.ok(validSession(sample(id,ids.length,true)),`${id} published completion`);
-    assert.ok(validSession(sample(id,lesson.steps.length,true)),`${id} rebalanced completion`);
+    const history=historicalLessonLengthsFor(id);
+    assert.ok(history.includes(ids.length),`${id}: original published length missing from history`);
+    assert.ok(history.includes(lesson.steps.length),`${id}: rebalanced published length missing from history`);
+    for(const length of history)assert.ok(validSession(sample(id,length,true)),`${id} historical completion ${length}`);
+    assert.ok(validSession(sample(id,lesson.steps.length,true)),`${id} current completion`);
     if(lesson.steps.length>ids.length)assert.ok(validSession(sample(id,ids.length,false)),`${id} first appended step`);
   }
+});
+
+
+function reviewBlob(module){
+  const review=module.lessons.find(l=>l.id===module.reviewLessonId);
+  const values=[];
+  for(const step of review.steps){
+    for(const key of ['prompt','answer','explanation','audioText','char'])if(typeof step[key]==='string')values.push(step[key]);
+    if(Array.isArray(step.options))values.push(...step.options);
+    if(Array.isArray(step.tokens))values.push(...step.tokens);
+    if(step.phrase&&module.phrases[step.phrase]){
+      const phrase=module.phrases[step.phrase];
+      values.push(phrase.text,phrase.pinyin,phrase.meaning,phrase.note??'');
+    }
+  }
+  return values.join('\n');
+}
+
+test('Rebalanced reviews sample every new vocabulary item and include handwriting retrieval',()=>{
+  for(const m of [u28,u29]){
+    const review=m.lessons.find(l=>l.id===m.reviewLessonId);
+    const blob=reviewBlob(m);
+    for(const word of m.newVocabulary.map(v=>v.text))
+      assert.ok(blob.includes(word),`${m.unit.id}: review never retrieves ${word}`);
+    assert.ok(review.steps.some(s=>s.type==='memory'||s.type==='parts'),`${m.unit.id}: review lacks handwriting/component retrieval`);
+    const listened=new Set(review.steps.filter(s=>s.type==='listen').map(s=>s.char));
+    assert.ok([...listened].some(ch=>m.newCharacters.includes(ch)),`${m.unit.id}: review listening ignores all unit-new characters`);
+  }
+});
+
+test('Unit 28 explicitly teaches the polyphonic contrast 便宜 piányi vs 便利 biànlì',()=>{
+  const store=u28.newVocabulary.find(v=>v.text==='便利商店');
+  assert.match(store?.note??'',/biàn/);
+  assert.match(store?.note??'',/pián/);
+  const lesson=u28.lessons.find(l=>l.id==='u28-object');
+  const check=lesson.steps.find(s=>s.id==='u28-object-s3');
+  assert.equal(check.answer,'biàn');
+  assert.ok(check.options.includes('pián'));
 });
 
 test('Units 28-29 phrases and grammar examples use covered Han characters',()=>{
