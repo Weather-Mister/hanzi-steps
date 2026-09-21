@@ -27,7 +27,7 @@ export function shuffled<T>(items:T[],seed:string):T[]{
 }
 export function validSession(value:unknown):value is Session {
  if(!value||typeof value!=='object')return false;const s=value as Session;if(typeof s.lessonId!=='string')return false;const length=findLesson(s.lessonId)?.steps.length??(Object.hasOwn(previousLessonLengths,s.lessonId)?previousLessonLengths[s.lessonId]:undefined);
- return typeof length==='number'&&typeof s.id==='string'&&/^[a-zA-Z0-9-]{20,80}$/.test(s.id)&&Number.isInteger(s.index)&&s.index>=0&&s.index<=length&&Number.isInteger(s.independent)&&s.independent>=0&&Number.isInteger(s.assisted)&&s.assisted>=0&&s.independent+s.assisted<=s.index&&typeof s.complete==='boolean'&&s.complete===(s.index===length)&&Number.isFinite(s.updatedAt);
+ return typeof length==='number'&&typeof s.id==='string'&&/^[a-zA-Z0-9-]{20,80}$/.test(s.id)&&Number.isInteger(s.index)&&s.index>=0&&s.index<=length&&Number.isInteger(s.independent)&&s.independent>=0&&Number.isInteger(s.assisted)&&s.assisted>=0&&s.independent+s.assisted<=s.index&&typeof s.complete==='boolean'&&(s.complete ? (s.index===length || (Object.hasOwn(previousLessonLengths,s.lessonId) && s.index===previousLessonLengths[s.lessonId])) : s.index<length)&&Number.isFinite(s.updatedAt);
 }
 
 // Historical named exports, retained for callers and checkpoint fixtures.

@@ -150,6 +150,35 @@ const unit:UnitData = {
           "grammarIds": [
             "u21-not-the-case"
           ]
+        },
+        {
+          "id": "u21-soften-quality-11",
+          "type": "phrase",
+          "phrase": "u21-help-teach"
+        },
+        {
+          "id": "u21-soften-quality-12",
+          "type": "order",
+          "phrase": "u21-help-teach",
+          "tokens": [
+            "教教",
+            "我",
+            "請你"
+          ]
+        },
+        {
+          "id": "u21-soften-quality-13",
+          "type": "select",
+          "prompt": "You are correcting “You do not want to learn Chinese.” Which opening rejects that assumption?",
+          "options": [
+            "我不是不想學中文。",
+            "我不想學中文。"
+          ],
+          "answer": "我不是不想學中文。",
+          "explanation": "不是 rejects the assumed negative claim; 不想 alone would confirm it.",
+          "grammarIds": [
+            "u21-not-the-case"
+          ]
         }
       ]
     },
@@ -416,6 +445,21 @@ const unit:UnitData = {
           ],
           "answer": "分",
           "explanation": "分 is fēn, minute in clock time."
+        },
+        {
+          "id": "u21-clock-quality-12",
+          "type": "select",
+          "prompt": "Your appointment is at 7:40. Which time matches?",
+          "options": [
+            "七點四十分",
+            "七點十四分",
+            "四點七分"
+          ],
+          "answer": "七點四十分",
+          "explanation": "七 is the hour, 四十 is forty minutes.",
+          "grammarIds": [
+            "u21-clock-time"
+          ]
         }
       ]
     },
@@ -743,6 +787,21 @@ const unit:UnitData = {
           ],
           "answer": "空",
           "explanation": "空 is kòng in 有空."
+        },
+        {
+          "id": "u21-from-to-quality-20",
+          "type": "select",
+          "prompt": "從中午到晚上 describes which range?",
+          "options": [
+            "From noon until evening",
+            "From evening until noon",
+            "Only at noon"
+          ],
+          "answer": "From noon until evening",
+          "explanation": "從 introduces the start, 中午; 到 introduces the end, 晚上.",
+          "grammarIds": [
+            "u21-from-to-time"
+          ]
         }
       ]
     },
@@ -980,7 +1039,7 @@ const unit:UnitData = {
         "題",
         "對"
       ],
-      "minutes": "8–11 min",
+      "minutes": "12–16 min",
       "unitId": "unit-21",
       "review": true,
       "steps": [
@@ -1177,6 +1236,36 @@ const unit:UnitData = {
           "id": "u21-review-18",
           "type": "phrase",
           "phrase": "u21-no-problem"
+        },
+        {
+          "id": "u21-review-quality-19",
+          "type": "select",
+          "prompt": "Which keeps the meaning “We meet at school tomorrow evening”?",
+          "options": [
+            "我們明天晚上在學校見面。",
+            "我們明天晚上在餐廳見面。",
+            "我們後天晚上在學校見面。"
+          ],
+          "answer": "我們明天晚上在學校見面。",
+          "explanation": "Match both the time and the place: 明天晚上 is tomorrow evening; 學校 is school.",
+          "grammarIds": [
+            "u21-time-before-place"
+          ]
+        },
+        {
+          "id": "u21-review-quality-20",
+          "type": "select",
+          "prompt": "Which time is 8:15?",
+          "options": [
+            "八點十五分",
+            "八點五十分",
+            "五點十八分"
+          ],
+          "answer": "八點十五分",
+          "explanation": "十五 is fifteen; 五十 is fifty.",
+          "grammarIds": [
+            "u21-clock-time"
+          ]
         }
       ]
     }
@@ -1500,10 +1589,10 @@ const unit:UnitData = {
           ]
         },
         {
-          "label": "十",
-          "name": "crossed lower group",
+          "label": "干",
+          "name": "two bars and a vertical",
           "role": "Visual component",
-          "description": "The remaining three strokes form two horizontal bars crossed by the final vertical.",
+          "description": "The remaining three strokes form 干: two horizontal strokes followed by the vertical through them. This group has three strokes; it is not the two-stroke 十.",
           "strokes": [
             1,
             2,
@@ -1581,10 +1670,10 @@ const unit:UnitData = {
           ]
         },
         {
-          "label": "侯",
-          "name": "right block",
+          "label": "right block",
+          "name": "vertical and lower right block",
           "role": "Sound/shape component",
-          "description": "The last eight strokes form the compact right block, with a short vertical near the top and the long final right-falling stroke at the bottom.",
+          "description": "After 亻, the remaining eight strokes include a separate short vertical above the compact lower shape. This whole right group is not the complete character 侯.",
           "strokes": [
             2,
             3,
@@ -1654,7 +1743,7 @@ const unit:UnitData = {
       "zhuyin": "ㄎㄨㄥˋ",
       "meaning": "free; unoccupied",
       "strokes": 8,
-      "note": "空 is fourth-tone kòng in 有空, meaning to be free or have available time.",
+      "note": "空 is fourth-tone kòng in 有空 (yǒu kòng), meaning to have time available. The audio uses 有空 to make this reading clear; 空 has other readings in other words.",
       "memory": "穴 opens like a roofed space above 工: picture an empty space under a roof.",
       "parts": [
         {
@@ -1687,7 +1776,8 @@ const unit:UnitData = {
         "text": "有空",
         "pinyin": "yǒu kòng",
         "meaning": "to be free"
-      }
+      },
+      "audioText": "有空"
     },
     "次": {
       "hanzi": "次",
@@ -1789,10 +1879,10 @@ const unit:UnitData = {
       "memory": "A dense vertical left block balances 寸 on the lower right; keep the final dot of 寸 distinct.",
       "parts": [
         {
-          "label": "丵",
-          "name": "left block",
+          "label": "left block",
+          "name": "upper cluster and lower 土",
           "role": "Visual component",
-          "description": "The first eleven strokes form the dense left and central structure, with paired short strokes at the top and a vertical spine.",
+          "description": "The first eleven strokes form the left block, including its upper cluster and lower 土-shaped base. The label describes the entire highlighted group, not just its upper portion.",
           "strokes": [
             0,
             1,
@@ -2173,6 +2263,20 @@ const unit:UnitData = {
         "你",
         "什麼時候",
         "有空"
+      ]
+    },
+    "u21-help-teach": {
+      "text": "請你教教我。",
+      "pinyin": "Qǐng nǐ jiāojiao wǒ.",
+      "meaning": "Please teach me a little.",
+      "tokens": [
+        "請你",
+        "教教",
+        "我"
+      ],
+      "note": "教教 softens the request; 我 remains outside the repeated verb.",
+      "grammarIds": [
+        "u21-softened-action"
       ]
     }
   },

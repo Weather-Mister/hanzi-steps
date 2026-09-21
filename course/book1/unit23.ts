@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "Recent routines, useful expressions & permission",
     "title": "Can I Go Check It Out?",
-    "description": "12 new words and forms. Finish Lesson 7 with recent routines, writing characters, useful everyday expressions, and asking or denying permission.",
+    "description": "10 new words and forms, with 每天 and 剛開始 reviewed from Unit 22. Talk about recent activities and ask, grant, or refuse permission.",
     "chars": [
       "字",
       "等",
@@ -114,6 +114,34 @@ const unit:UnitData = {
           "grammarIds": [
             "u22-every-dou"
           ]
+        },
+        {
+          "id": "u23-method-quality-7",
+          "type": "phrase",
+          "phrase": "u23-busy-afternoon"
+        },
+        {
+          "id": "u23-method-quality-8",
+          "type": "order",
+          "phrase": "u23-busy-afternoon",
+          "tokens": [
+            "最近",
+            "每天下午",
+            "都",
+            "很忙",
+            "我"
+          ]
+        },
+        {
+          "id": "u23-method-quality-9",
+          "type": "select",
+          "prompt": "Someone says 我最近很忙. Must this mean “I am busy every day”?",
+          "options": [
+            "No. 最近 says lately, not every day.",
+            "Yes. 最近 and 每天 mean the same thing."
+          ],
+          "answer": "No. 最近 says lately, not every day.",
+          "explanation": "最近 identifies a recent period; 每天 explicitly means every day."
         }
       ]
     },
@@ -246,6 +274,18 @@ const unit:UnitData = {
           ],
           "answer": "事",
           "explanation": "事 is shì, the second character of 有事."
+        },
+        {
+          "id": "u23-do-quality-18",
+          "type": "select",
+          "prompt": "Your friend says 等一下. What are they asking you to do?",
+          "options": [
+            "Wait a moment",
+            "Come every day",
+            "Start writing"
+          ],
+          "answer": "Wait a moment",
+          "explanation": "等 is wait; 一下 makes it a brief wait."
         }
       ]
     },
@@ -390,6 +430,65 @@ const unit:UnitData = {
           ],
           "answer": "我剛開始寫字。",
           "explanation": "剛開始 marks that something has just begun."
+        },
+        {
+          "id": "u23-play-quality-22",
+          "type": "phrase",
+          "phrase": "u23-writing-evaluation"
+        },
+        {
+          "id": "u23-play-quality-23",
+          "type": "order",
+          "phrase": "u23-writing-evaluation",
+          "tokens": [
+            "覺得",
+            "寫字",
+            "有意思",
+            "嗎",
+            "你"
+          ]
+        },
+        {
+          "id": "u23-play-quality-24",
+          "type": "listen",
+          "char": "字",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "字",
+            "等",
+            "事",
+            "意"
+          ],
+          "answer": "字",
+          "explanation": "字 is zì: written character; word."
+        },
+        {
+          "id": "u23-play-quality-25",
+          "type": "listen",
+          "char": "意",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "意",
+            "字",
+            "思",
+            "等"
+          ],
+          "answer": "意",
+          "explanation": "意 is yì: idea; meaning."
+        },
+        {
+          "id": "u23-play-quality-26",
+          "type": "listen",
+          "char": "思",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "思",
+            "意",
+            "事",
+            "字"
+          ],
+          "answer": "思",
+          "explanation": "思 is sī: think; thought."
         }
       ]
     },
@@ -459,6 +558,20 @@ const unit:UnitData = {
             "我",
             "問"
           ]
+        },
+        {
+          "id": "u23-contrast-quality-7",
+          "type": "select",
+          "prompt": "You need to ask the teacher something briefly. Which uses the softened action correctly?",
+          "options": [
+            "我想問問老師。",
+            "我想問老師問老師。"
+          ],
+          "answer": "我想問問老師。",
+          "explanation": "Repeat 問 itself, leaving 老師 outside the repeated verb.",
+          "grammarIds": [
+            "u21-softened-action"
+          ]
         }
       ]
     },
@@ -521,6 +634,37 @@ const unit:UnitData = {
             "可以",
             "你",
             "去"
+          ]
+        },
+        {
+          "id": "u23-order-quality-7",
+          "type": "phrase",
+          "phrase": "u23-permitted-coffee"
+        },
+        {
+          "id": "u23-order-quality-8",
+          "type": "order",
+          "phrase": "u23-permitted-coffee",
+          "tokens": [
+            "可以",
+            "在這裡",
+            "喝咖啡",
+            "你"
+          ]
+        },
+        {
+          "id": "u23-order-quality-9",
+          "type": "select",
+          "prompt": "A host says 你可以在這裡喝咖啡. What does 可以 do here?",
+          "options": [
+            "Grants permission",
+            "Says the action already happened",
+            "Orders the guest to drink"
+          ],
+          "answer": "Grants permission",
+          "explanation": "The host is allowing the activity; 可以 is not a command.",
+          "grammarIds": [
+            "u23-permission-keyi"
           ]
         }
       ]
@@ -621,6 +765,52 @@ const unit:UnitData = {
           "grammarIds": [
             "u23-permission-questions"
           ]
+        },
+        {
+          "id": "u23-transfer-quality-11",
+          "type": "phrase",
+          "phrase": "u23-photo-permission"
+        },
+        {
+          "id": "u23-transfer-quality-12",
+          "type": "order",
+          "phrase": "u23-photo-permission",
+          "tokens": [
+            "可以",
+            "在這裡",
+            "照相",
+            "嗎",
+            "我"
+          ]
+        },
+        {
+          "id": "u23-transfer-quality-13",
+          "type": "select",
+          "prompt": "Photos are prohibited here. Which reply refuses permission?",
+          "options": [
+            "你不可以在這裡照相。",
+            "你可以在這裡照相。",
+            "你可不可以在這裡照相？"
+          ],
+          "answer": "你不可以在這裡照相。",
+          "explanation": "不可以 refuses permission. 可以 allows it, and 可不可以 asks a question.",
+          "grammarIds": [
+            "u23-permission-negative"
+          ]
+        },
+        {
+          "id": "u23-transfer-quality-14",
+          "type": "select",
+          "prompt": "Which is a standard permission question using A-not-A?",
+          "options": [
+            "我可不可以在這裡寫字？",
+            "我可不可以在這裡寫字嗎？"
+          ],
+          "answer": "我可不可以在這裡寫字？",
+          "explanation": "Choose the A-not-A construction or the 嗎 construction; do not combine them here.",
+          "grammarIds": [
+            "u23-permission-questions"
+          ]
         }
       ]
     },
@@ -636,7 +826,7 @@ const unit:UnitData = {
         "思",
         "問"
       ],
-      "minutes": "9–12 min",
+      "minutes": "12–16 min",
       "unitId": "unit-23",
       "review": true,
       "steps": [
@@ -716,6 +906,128 @@ const unit:UnitData = {
           "id": "u23-review-10",
           "type": "memory",
           "char": "思"
+        },
+        {
+          "id": "u23-review-quality-11",
+          "type": "select",
+          "prompt": "You want permission to sing here. Which asks for it?",
+          "options": [
+            "我可以在這裡唱歌嗎？",
+            "我喜歡在這裡唱歌。",
+            "我每天在這裡唱歌。"
+          ],
+          "answer": "我可以在這裡唱歌嗎？",
+          "explanation": "可以…嗎 asks whether the action is allowed; the other sentences report a preference or routine.",
+          "grammarIds": [
+            "u23-permission-questions"
+          ]
+        },
+        {
+          "id": "u23-review-quality-12",
+          "type": "select",
+          "prompt": "The teacher says 你不可以在這裡喝咖啡. Are you allowed to drink coffee here?",
+          "options": [
+            "No",
+            "Yes"
+          ],
+          "answer": "No",
+          "explanation": "不可以 prohibits the action.",
+          "grammarIds": [
+            "u23-permission-negative"
+          ]
+        },
+        {
+          "id": "u23-review-quality-13",
+          "type": "order",
+          "phrase": "u23-photo-permission",
+          "tokens": [
+            "可以",
+            "在這裡",
+            "照相",
+            "嗎",
+            "我"
+          ]
+        },
+        {
+          "id": "u23-review-quality-14",
+          "type": "order",
+          "phrase": "u23-busy-afternoon",
+          "tokens": [
+            "最近",
+            "每天下午",
+            "都",
+            "很忙",
+            "我"
+          ]
+        },
+        {
+          "id": "u23-review-quality-15",
+          "type": "select",
+          "prompt": "Which expresses interest in writing, rather than having something to do?",
+          "options": [
+            "寫字很有意思。",
+            "我有事。",
+            "等一下。"
+          ],
+          "answer": "寫字很有意思。",
+          "explanation": "有意思 means interesting. 有事 means being occupied; 等一下 asks someone to wait."
+        },
+        {
+          "id": "u23-review-quality-16",
+          "type": "listen",
+          "char": "字",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "字",
+            "等",
+            "事",
+            "思"
+          ],
+          "answer": "字",
+          "explanation": "字 is zì: written character; word."
+        },
+        {
+          "id": "u23-review-quality-17",
+          "type": "listen",
+          "char": "意",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "意",
+            "字",
+            "等",
+            "事"
+          ],
+          "answer": "意",
+          "explanation": "意 is yì: idea; meaning."
+        },
+        {
+          "id": "u23-review-quality-18",
+          "type": "listen",
+          "char": "思",
+          "prompt": "Listen and choose the character you hear.",
+          "options": [
+            "思",
+            "等",
+            "字",
+            "意"
+          ],
+          "answer": "思",
+          "explanation": "思 is sī: think; thought."
+        },
+        {
+          "id": "u23-review-quality-19",
+          "type": "select",
+          "prompt": "A host is allowing you to drink tea here. Which sentence grants that permission?",
+          "options": [
+            "你可以在這裡喝茶。",
+            "你不可以在這裡喝茶。",
+            "你在這裡喝茶嗎？"
+          ],
+          "answer": "你可以在這裡喝茶。",
+          "explanation": "可以 grants permission; 不可以 prohibits it, and the last sentence asks about an action.",
+          "grammarIds": [
+            "u23-permission-keyi"
+          ]
         }
       ]
     }
@@ -725,13 +1037,6 @@ const unit:UnitData = {
       "text": "最近",
       "pinyin": "zuìjìn",
       "meaning": "recently; lately",
-      "lessonId": "u23-method",
-      "core": true
-    },
-    {
-      "text": "每天",
-      "pinyin": "měitiān",
-      "meaning": "every day",
       "lessonId": "u23-method",
       "core": true
     },
@@ -760,13 +1065,6 @@ const unit:UnitData = {
       "text": "寫字",
       "pinyin": "xiě zì",
       "meaning": "to write characters",
-      "lessonId": "u23-play",
-      "core": true
-    },
-    {
-      "text": "剛開始",
-      "pinyin": "gāng kāishǐ",
-      "meaning": "to have just started; just beginning",
       "lessonId": "u23-play",
       "core": true
     },
@@ -831,7 +1129,9 @@ const unit:UnitData = {
     "下課",
     "比賽",
     "唱歌",
-    "去"
+    "去",
+    "每天",
+    "剛開始"
   ],
   "newCharacters": [
     "字",
@@ -1120,7 +1420,7 @@ const unit:UnitData = {
           "meaning": "May I go watch the game?"
         }
       ],
-      "remember": "可不可以 goes before the action; 可以…嗎 keeps 嗎 at the end.",
+      "remember": "Use either 可不可以 + action or 可以 + action + 嗎. Do not add 嗎 to the A-not-A question taught here.",
       "words": [
         "可不可以",
         "可以嗎"
@@ -1327,6 +1627,66 @@ const unit:UnitData = {
       "grammarIds": [
         "u23-permission-questions"
       ]
+    },
+    "u23-busy-afternoon": {
+      "text": "我最近每天下午都很忙。",
+      "pinyin": "Wǒ zuìjìn měitiān xiàwǔ dōu hěn máng.",
+      "meaning": "Lately I have been busy every afternoon.",
+      "tokens": [
+        "我",
+        "最近",
+        "每天下午",
+        "都",
+        "很忙"
+      ],
+      "note": "最近 gives the recent period; 每天下午 says the routine repeats every afternoon.",
+      "grammarIds": [
+        "u22-every-dou"
+      ]
+    },
+    "u23-writing-evaluation": {
+      "text": "你覺得寫字有意思嗎？",
+      "pinyin": "Nǐ juéde xiě zì yǒu yìsi ma?",
+      "meaning": "Do you think writing characters is interesting?",
+      "tokens": [
+        "你",
+        "覺得",
+        "寫字",
+        "有意思",
+        "嗎"
+      ],
+      "note": "有意思 evaluates the activity; the final 嗎 makes this a yes/no question."
+    },
+    "u23-permitted-coffee": {
+      "text": "你可以在這裡喝咖啡。",
+      "pinyin": "Nǐ kěyǐ zài zhèlǐ hē kāfēi.",
+      "meaning": "You may drink coffee here.",
+      "tokens": [
+        "你",
+        "可以",
+        "在這裡",
+        "喝咖啡"
+      ],
+      "note": "A host grants permission to drink coffee in this place.",
+      "grammarIds": [
+        "u23-permission-keyi"
+      ]
+    },
+    "u23-photo-permission": {
+      "text": "我可以在這裡照相嗎？",
+      "pinyin": "Wǒ kěyǐ zài zhèlǐ zhàoxiàng ma?",
+      "meaning": "May I take photos here?",
+      "tokens": [
+        "我",
+        "可以",
+        "在這裡",
+        "照相",
+        "嗎"
+      ],
+      "note": "You are asking the person responsible for this place whether photos are allowed.",
+      "grammarIds": [
+        "u23-permission-questions"
+      ]
     }
   },
   "revisionStepIds": [
@@ -1335,5 +1695,4 @@ const unit:UnitData = {
     "u23-review-08"
   ]
 };
-
 export default unit;

@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Afternoon schedules, ongoing actions & routines",
     "title": "A Busy Afternoon",
-    "description": "13 new words and forms. Talk about an afternoon schedule, actions in progress, start and end times, and repeated routines.",
+    "description": "13 new words, plus the transparent combinations 每天 and 剛開始. Tell afternoon times, describe ongoing actions, and distinguish every day from not every day.",
     "chars": [
       "剛",
       "半",
@@ -670,6 +670,21 @@ const unit:UnitData = {
           ],
           "answer": "寫",
           "explanation": "寫 is xiě, write."
+        },
+        {
+          "id": "u22-progressive-quality-16",
+          "type": "select",
+          "prompt": "Which says “They are singing,” rather than naming where they are?",
+          "options": [
+            "他們在唱歌。",
+            "他們在學校。",
+            "他們喜歡唱歌。"
+          ],
+          "answer": "他們在唱歌。",
+          "explanation": "在 before 唱歌 marks an ongoing action. 在學校 gives a location; 喜歡 gives a preference.",
+          "grammarIds": [
+            "u22-progressive-zai"
+          ]
         }
       ]
     },
@@ -865,6 +880,36 @@ const unit:UnitData = {
           ],
           "answer": "忙",
           "explanation": "忙 is máng, busy."
+        },
+        {
+          "id": "u22-routine-quality-25",
+          "type": "select",
+          "prompt": "You are free on every weekend, with no busy weekends. Which sentence fits?",
+          "options": [
+            "我每個週末都不忙。",
+            "我不是每個週末都不忙。",
+            "我每個週末都很忙。"
+          ],
+          "answer": "我每個週末都不忙。",
+          "explanation": "都不忙 applies “not busy” to every weekend: never busy on weekends.",
+          "grammarIds": [
+            "u22-every-negation"
+          ]
+        },
+        {
+          "id": "u22-routine-quality-26",
+          "type": "select",
+          "prompt": "You have classes on some days, but not all days. Which sentence fits?",
+          "options": [
+            "我不是每天都上課。",
+            "我每天都不上課。",
+            "我每天都上課。"
+          ],
+          "answer": "我不是每天都上課。",
+          "explanation": "不是每天都 means not every day; 每天都不 would mean no classes on any day.",
+          "grammarIds": [
+            "u22-every-negation"
+          ]
         }
       ]
     },
@@ -1013,7 +1058,7 @@ const unit:UnitData = {
         "每",
         "法"
       ],
-      "minutes": "8–11 min",
+      "minutes": "12–16 min",
       "unitId": "unit-22",
       "review": true,
       "steps": [
@@ -1202,6 +1247,37 @@ const unit:UnitData = {
           "id": "u22-review-18",
           "type": "phrase",
           "phrase": "u22-calligraphy"
+        },
+        {
+          "id": "u22-review-quality-19",
+          "type": "select",
+          "prompt": "我每個週末都不忙 means:",
+          "options": [
+            "I am never busy on weekends.",
+            "I am busy on some weekends but not all.",
+            "I am busy every weekend."
+          ],
+          "answer": "I am never busy on weekends.",
+          "explanation": "每個週末都不忙 makes every weekend a non-busy one.",
+          "grammarIds": [
+            "u22-every-negation"
+          ]
+        },
+        {
+          "id": "u22-review-quality-20",
+          "type": "select",
+          "prompt": "Class starts at 2:30. Which sentence fits?",
+          "options": [
+            "課下午兩點半開始。",
+            "課下午兩點半結束。",
+            "課下午三點半開始。"
+          ],
+          "answer": "課下午兩點半開始。",
+          "explanation": "Match both the event boundary 開始 and the time 兩點半.",
+          "grammarIds": [
+            "u22-event-start-end",
+            "u22-half-time"
+          ]
         }
       ]
     }
@@ -1297,6 +1373,22 @@ const unit:UnitData = {
       "meaning": "class; lesson",
       "lessonId": "u22-calligraphy",
       "core": true
+    },
+    {
+      "text": "每天",
+      "pinyin": "měitiān",
+      "meaning": "every day",
+      "lessonId": "u22-routine",
+      "core": true,
+      "note": "Transparent combination explicitly taught here; not an additional independent vocabulary root."
+    },
+    {
+      "text": "剛開始",
+      "pinyin": "gāng kāishǐ",
+      "meaning": "to have just started; just beginning",
+      "lessonId": "u22-calligraphy",
+      "core": true,
+      "note": "Transparent combination explicitly taught here; not an additional independent vocabulary root."
     }
   ],
   "reviewVocabulary": [
@@ -1946,7 +2038,7 @@ const unit:UnitData = {
         {
           "text": "我每個週末都不忙。",
           "pinyin": "Wǒ měi ge zhōumò dōu bù máng.",
-          "meaning": "I am not busy every weekend."
+          "meaning": "I am never busy on weekends."
         }
       ],
       "remember": "Think 每…都… as “every… all/no exceptions.” Put 都 before the predicate.",
@@ -1964,7 +2056,7 @@ const unit:UnitData = {
         {
           "text": "我每個週末都不忙。",
           "pinyin": "Wǒ měi ge zhōumò dōu bù máng.",
-          "meaning": "I am not busy every weekend."
+          "meaning": "I am never busy on weekends."
         },
         {
           "text": "我不是每天都上課。",
@@ -2215,7 +2307,7 @@ const unit:UnitData = {
     "u22-every-not-busy": {
       "text": "我每個週末都不忙。",
       "pinyin": "Wǒ měi ge zhōumò dōu bù máng.",
-      "meaning": "I am not busy every weekend.",
+      "meaning": "I am never busy on weekends.",
       "note": "不 follows 都 because the negative predicate applies to every weekend.",
       "tokens": [
         "我",

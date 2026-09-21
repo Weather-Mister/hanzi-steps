@@ -1,6 +1,6 @@
 // Pure structural validation. No network, textbook analysis or content repair.
 export const han = text => [...text].filter(c => /\p{Script=Han}/u.test(c));
-const generic = /^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square/i;
+const generic = /^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square|practice all \d+ strokes of .+ in the displayed Traditional stroke order before writing it from memory|is introduced here through .+: /i;
 const object = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const text = x => typeof x === 'string' && x.trim().length > 0;
 const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
