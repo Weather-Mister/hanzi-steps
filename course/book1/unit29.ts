@@ -116,6 +116,11 @@ const unit:UnitData = {
           "phrase": "u29-date"
         },
         {
+          "id": "u29-date-p2",
+          "type": "phrase",
+          "phrase": "u29-return-date"
+        },
+        {
           "id": "u29-date-o1",
           "type": "order",
           "phrase": "u29-date",
