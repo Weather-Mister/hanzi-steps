@@ -39,6 +39,23 @@ export const previousLessonLengths:Record<string,number>={
  'u25-choices':5,
  'u25-review':9,
 
+ // Units 28–29 were rebalanced after publication by appending source-backed content.
+ // Preserve every previously valid completion bound and all partial step positions.
+ 'u28-film':5,
+ 'u28-years-days':14,
+ 'u28-hours':13,
+ 'u28-object':5,
+ 'u28-negation':5,
+ 'u28-separable':6,
+ 'u28-review':20,
+ 'u29-date':16,
+ 'u29-hai':5,
+ 'u29-maokong':9,
+ 'u29-condition':10,
+ 'u29-negative':4,
+ 'u29-integrate':6,
+ 'u29-review':20,
+
  'u7-numbers':19,'u7-describe':19,'u7-hobbies':23,'u7-activities':32,
  'u7-often':19,'u7-plans':20,'u7-review':20,
  'u8-time':28,'u8-opinions':20,'u8-together':20,'u8-dinner':25,
