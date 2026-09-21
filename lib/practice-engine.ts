@@ -169,7 +169,7 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const withMeta=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
  const due=withMeta.filter(row=>row.attempts>0&&row.nextReview<=now).sort((a,b)=>a.nextReview-b.nextReview||a.strength-b.strength);
  const weak=withMeta.filter(row=>row.attempts>0&&(row.strength<0.45||isRevengeCandidate(states,row.item))).sort((a,b)=>a.strength-b.strength||b.misses-a.misses);
- const unseen=withMeta.filter(row=>row.attempts===0).sort((a,b)=>(b.item.unitNumber??0)-(a.item.unitNumber??0));
+ const unseen=withMeta.filter(row=>row.attempts===0).sort((a,b)=>(b.item.bookNumber??0)-(a.item.bookNumber??0)||(b.item.unitNumber??0)-(a.item.unitNumber??0));
  const recent=withMeta.filter(row=>row.attempts>0).sort((a,b)=>b.lastSeen-a.lastSeen);
 
  const picked:PracticeItem[]=[];
@@ -390,7 +390,18 @@ export function updatePracticeState(previous:PracticeSkillState|undefined,args:{
 
 export function distractorPool(item:PracticeItem,items:PracticeItem[],field:'traditional'|'meaning'|'pinyin',seed:string,count=4):string[]{
  const answer=item[field];
- const candidates=shuffled(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]),seed)
+ const score=(candidate:PracticeItem)=>{
+  let value=0;
+  if(candidate.unitId&&candidate.unitId===item.unitId)value+=6;
+  if(candidate.bookId&&candidate.bookId===item.bookId)value+=2;
+  if(candidate.kind===item.kind)value+=1;
+  if(Array.from(candidate.traditional).length===Array.from(item.traditional).length)value+=1;
+  if(field==='pinyin'&&candidate.pinyin[0]?.toLowerCase()===item.pinyin[0]?.toLowerCase())value+=1;
+  return value;
+ };
+ const candidates=shuffled(items.filter(candidate=>candidate.id!==item.id),seed)
+  .sort((a,b)=>score(b)-score(a))
+  .map(candidate=>candidate[field])
   .filter(value=>value&&value!==answer);
  return [answer,...candidates].filter((value,index,array)=>array.indexOf(value)===index).slice(0,count);
 }
