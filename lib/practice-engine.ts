@@ -311,7 +311,7 @@ export const taiwanMissions:TaiwanMission[]=[
  {
   id:'buy-a-drink',stamp:'🧋',title:'Buy a drink',subtitle:'Order, choose takeout, and ask the total.',unlockUnitId:'unit-13',
   steps:[
-   {speaker:'Clerk',prompt:'內用還是外帶？',answer:'外帶，謝謝。',options:['外帶，謝謝。','內用，謝謝。','一杯茶，謝謝。','請問，多少錢？'],note:'Choose takeout.'},
+   {speaker:'Clerk',prompt:'外帶還是內用？',answer:'外帶，謝謝。',options:['外帶，謝謝。','內用，謝謝。','一杯茶，謝謝。','請問，多少錢？'],note:'Choose takeout.'},
    {speaker:'You',prompt:'Ask how much it costs altogether.',answer:'請問，一共多少錢？',options:['請問，一共多少錢？','請問，一杯多少錢？','一共一百二十塊。','請幫我微波。']},
    {speaker:'Clerk',prompt:'一百二十塊。',answer:'好的，謝謝。',options:['好的，謝謝。','外帶，謝謝。','請問，一共多少錢？','請幫我微波。']},
   ],
