@@ -7,10 +7,10 @@ import {WritingPad} from './writing-pad';
 import {shuffled,units} from '@/lib/curriculum';
 import {
  aggregateItemState,availableTaiwanMissions,distractorPool,learnedPracticeItems,
- makeDailyTen,makeMegaCheckpoint,makeRevengeRound,practiceSkillKey,unitComplete,
+ makeDailyTen,makeMegaCheckpoint,makeRevengeRound,megaCheckpointCount,practiceSkillKey,unitComplete,
  type PracticeItem,type PracticeQuestion,type TaiwanMission,
 } from '@/lib/practice-engine';
-import {usePracticeMastery} from '@/lib/use-practice-mastery';
+import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
 
 type Result={correct:boolean;assisted:boolean;answer:string};
 type Screen='hub'|'session'|'taiwan'|'mission';
@@ -102,16 +102,17 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
    <button className="primary-button" onClick={()=>{setResult(null);setIndex(i=>i+1)}}>{index+1===mission.steps.length?'Finish mission':'Continue'}</button></div>}
  </section>;
 }
-export function SmartPractice({open,onOpenChange,completed,userKey,theme}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;userKey:string;theme:string}){
- const {states,loading,saving,error,record,stats}=usePracticeMastery(userKey);
+export function SmartPractice({open,onOpenChange,completed,theme,mastery}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController}){
+ const {states,loading,saving,error,record,stats}=mastery;
  const items=useMemo(()=>learnedPracticeItems(completed),[completed]),missions=useMemo(()=>availableTaiwanMissions(completed),[completed]);
  const completedUnits=useMemo(()=>units.filter(unit=>unitComplete(completed,unit.id)).length,[completed]);
+ const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
  const revengePreview=useMemo(()=>makeRevengeRound(items,states,'preview'),[items,states]);
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState(''),[mission,setMission]=useState<TaiwanMission|null>(null);
  function back(){setScreen('hub');setQueue([])}
  function startDaily(){setQueue(makeDailyTen(items,states,seed('daily')));setSessionTitle('Daily 10');setSessionSubtitle('Due review, weak spots, recent material, and one challenge.');setScreen('session')}
  function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked three different ways.');setScreen('session')}
- function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega')));setSessionTitle('Mega Challenge');setSessionSubtitle('Mixed recall across everything you have completed.');setScreen('session')}
+ function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mega Challenge');setSessionSubtitle('Mixed recall across everything you have completed.');setScreen('session')}
  const recordQuestion=(q:PracticeQuestion,correct:boolean,assisted:boolean)=>record({itemId:q.item.id,mode:q.mode,correct,assisted,sessionKind:q.sessionKind});
  const recordMission=(itemId:string,correct:boolean)=>record({itemId,mode:'context',correct,assisted:false,sessionKind:'taiwan'});
  const missionDone=(candidate:TaiwanMission)=>candidate.steps.every((_,i)=>(states[practiceSkillKey('mission:'+candidate.id+':'+i,'context')]?.correct??0)>0);
@@ -120,7 +121,7 @@ export function SmartPractice({open,onOpenChange,completed,userKey,theme}:{open:
    {loading?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<div className="smart-empty"><Sparkles size={30}/><h2>Finish a lesson first</h2><p>Practice only pulls from material you have actually learned.</p></div>:<div className="smart-hub-grid">
     <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>10 adaptive questions · {stats.due} due now</small></span><b>10</b></button>
     <button className="smart-mode-card revenge" onClick={startRevenge} disabled={!revengePreview.length}><span className="smart-card-icon"><Swords size={23}/></span><span><strong>Revenge Round</strong><small>{revengePreview.length?'Attack your weakest item three ways.':'No mistake is ready for revenge yet.'}</small></span><b>{stats.weak}</b></button>
-    <button className="smart-mode-card mega" onClick={startMega} disabled={completedUnits<4}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>{completedUnits>=4?'12 mixed questions across completed units.':'Complete 4 units to unlock checkpoints.'}</small></span><b>{Math.floor(completedUnits/4)}</b></button>
+    <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>{checkpointCount?'12 mixed questions from your latest 4-unit checkpoint.':'Complete 4 units in a book to unlock a checkpoint.'}</small></span><b>{checkpointCount}</b></button>
     <button className="smart-mode-card taiwan" onClick={()=>setScreen('taiwan')}><span className="smart-card-icon"><MapPin size={23}/></span><span><strong>Taiwan Mode</strong><small>Use what you know in short real-life missions.</small></span><b>{missions.filter(m=>m.unlocked).length}</b></button>
    </div>}
    <div className="smart-master-summary"><div><strong>{items.filter(item=>aggregateItemState(states,item).strength>=0.65).length}</strong><span>strong items</span></div><div><strong>{stats.tracked}</strong><span>skills tracked</span></div><div><strong>{completedUnits}</strong><span>units complete</span></div></div></>}
