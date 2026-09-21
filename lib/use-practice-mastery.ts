@@ -263,6 +263,26 @@ export function usePracticeMastery(userKey:string){
   return Promise.resolve(optimistic);
  },[userKey,flush]);
 
+ const retrySync=useCallback(async()=>{
+  if(userKey==='signed-out')return;
+  if(pendingRef.current.length){
+   await flush();
+   return;
+  }
+  setSaving(true);
+  const {data,error:readError}=await supabase.rpc('hanzi_read_practice_state',{expected_account:userKey});
+  setSaving(false);
+  if(readError){
+   setError('Practice history could not sync. Local practice still works.');
+   return;
+  }
+  const remote=rowsToState(data);
+  statesRef.current=remote;
+  setStates(remote);
+  writeLocal(userKey,remote);
+  setError('');
+ },[userKey,flush]);
+
  const stats=useMemo(()=>{
   const values=Object.values(states);
   return {
@@ -272,7 +292,7 @@ export function usePracticeMastery(userKey:string){
   };
  },[states]);
 
- return {states,loading,saving,error,record,stats,retrySync:flush};
+ return {states,loading,saving,error,record,stats,retrySync};
 }
 
 export type PracticeMasteryController=ReturnType<typeof usePracticeMastery>;
