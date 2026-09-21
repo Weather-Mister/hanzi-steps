@@ -10,7 +10,7 @@
 
 ### Unit 28
 - 5 new vocabulary/forms.
-- 6 new characters.
+- 4 new characters.
 - 4 new grammar targets.
 - 20 review activities, including 3 listening activities.
 
