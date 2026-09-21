@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 first teaching now precedes Book 2: Units 19–20 destinations, distance, shops and campus locations, Unit 21 從 for Lesson 7 ranges, and Unit 24 怎麼 for Lesson 8 method questions. Original snapshot remains immutable; only explicitly reviewed word ownership, first-time card membership and character order change. Existing migrated character metadata and geometry are preserved exactly. Historical Book 2 lesson IDs, steps, questions, answers and direction grammar remain unchanged.",
+  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable.",
   "records": {
     "vocabulary": {
       "到": {
@@ -47,6 +47,10 @@
       "近": {
         "before": "c3970e58a9bf107615992e4dc83a9eaec3dc4546154479130debf2e2ad0b3f81",
         "after": "c9d6c8f0950d5d4e5983223655ac0e8aa785f744f51ce7ea9334924c0d58e917"
+      },
+      "行": {
+        "before": "372451a965de7a6f5655640bfedb78ec4452f5c2851075d2c13a5021d1cee403",
+        "after": "b493783fbb94dc56c7a8beb560c7c3f6da49c384206cc1242a48fe23d7fe0150"
       }
     },
     "cards": {
@@ -56,7 +60,19 @@
       },
       "book-2-unit-2": {
         "before": "a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb",
-        "after": "739bb858eb32327144390428246d442a380473ed010b36816e385ee939ce3fca"
+        "after": "673b58f125dafc00d0434b6d6b1e1cff6c480dce0697af7bb4b7957be8118219"
+      }
+    },
+    "units": {
+      "book-2-unit-2": {
+        "before": "8a10434edb672bc6abdee93d031307697f76addf7ff537214b6c7ef906697ec5",
+        "after": "4489da3b1363f9dcab4d98a858731caf1ea279c27569b829ec07f52db42be553"
+      }
+    },
+    "lessons": {
+      "b2u2-bank": {
+        "before": "bb3b8640470f9d667c1280b739ce5ce62300355516b3c5d54c42dbd30feebdbf",
+        "after": "1a3689b80433a838c60141a8960800e32f72d9751fc29b61a80ab574c7eb8931"
       }
     }
   },
@@ -157,6 +173,7 @@
     "商",
     "前",
     "從",
+    "行",
     "走",
     "往",
     "直",
@@ -166,8 +183,13 @@
     "路",
     "口",
     "銀",
-    "行",
     "超",
     "離"
-  ]
+  ],
+  "practice": {
+    "行": {
+      "before": "1b7aa5dd6e506527a21ef7463bdfaac6164e55ddcd4c06acb1b316a8e1903d6c",
+      "after": "e3c000332f766f5db24284eca93554da60f7d62ed4c9ddc81203cceb38f00634"
+    }
+  }
 }
