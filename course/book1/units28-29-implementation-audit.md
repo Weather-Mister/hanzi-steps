@@ -1,43 +1,86 @@
-# Units 28–29 implementation audit
+# Units 28–29 rebalance implementation audit
 
-## Coverage
+## Reason for the repair
 
-- Unit 28 covers the remaining productive Time-Duration structures from Lesson 9 Grammar II and formalizes the Time-When/Time-Duration contrast.
-- Unit 29 covers month/date language from Grammar I, the remaining supported Dialogue II vocabulary, and the complete 要是…就… condition-consequence frame including negative conditions.
-- 逛 and 臺東 remain explicit, documented source gaps because acceptable Taiwan Traditional handwriting geometry is not currently available in the repository's verified source path.
+The first published version passed structural QA but was too sparse:
+- Unit 28: 5 new vocabulary/forms.
+- Unit 29: 6 new vocabulary/forms.
 
-## Honest novelty
+The repair keeps every published lesson ID and step prefix intact, then appends source-backed teaching. It does not renumber, reorder, or reinterpret an existing checkpoint.
+
+## Honest novelty after rebalance
 
 ### Unit 28
-- 5 new vocabulary/forms.
-- 4 new characters.
+- 12 new vocabulary/forms.
+- 10 new characters.
 - 4 new grammar targets.
-- 20 review activities, including 3 listening activities.
+- 22 review activities, including 3 listening activities.
+
+Added source-backed vocabulary:
+**非常, 但是, 站, 或是, 便利商店, 公共汽車, 中國**.
+
+These come from Lesson 8 vocabulary/dialogues and close real earlier coverage gaps.
 
 ### Unit 29
-- 6 new vocabulary/forms.
-- 4 new characters.
+- 12 new vocabulary/forms.
+- 10 new characters.
 - 2 new grammar targets.
-- 20 review activities, including 3 listening activities.
+- 22 review activities, including 3 listening activities.
 
-Low vocabulary counts are intentional: this batch is grammar-heavy and does not pad novelty with transparent combinations.
+Added source-backed vocabulary:
+**水果, 黃色, 給, 香, 甜, 以前**.
 
-## Pedagogy and ambiguity checks
+These are the supported opening items of Lesson 10 Vocabulary I. They are introduced only after Unit 29's Lesson 9 date/condition content.
 
-- Time-When and Time-Duration are contrasted before advanced duration questions are tested.
-- Object + duration exercises teach verb repetition before independent retrieval.
-- Negative-duration exercises explicitly place duration before negation.
-- Separable-verb duration practice uses 放…假 and 唱…歌 with the duration inside the pair.
-- 要是…就… teaches both allowed subject placements and keeps negative material inside its own clause.
-- Multiple-choice items have one intended answer in their stated context.
-- Ordering banks contain the exact required phrase tokens.
+## Pedagogy
+
+- Unit 28 still explains the full Lesson 9 time-duration system before assessing it.
+- The restored Lesson 8 vocabulary is attached to transport/ticket contexts rather than dumped into a detached word list.
+- Unit 29 retains month/date and 要是…就… teaching, then transitions into concrete fruit-description vocabulary.
+- No Lesson 10 grammar is pulled forward prematurely.
+- New vocabulary is introduced in teaching lessons before the two appended review activities sample it.
+- Existing review questions and grammar checks remain unchanged; the repair adds coverage rather than replacing prior assessments.
+
+## Saved progress
+
+A pre-rebalance step-ID fixture records every published Unit 28–29 lesson prefix.
+
+`lib/lesson-revisions.ts` records the old completion lengths:
+- Unit 28: 5, 14, 13, 5, 5, 6, 20.
+- Unit 29: 16, 5, 9, 10, 4, 6, 20.
+
+Regression tests require:
+- every old step ID to remain at the same position,
+- every old partial checkpoint to remain valid,
+- every old completed checkpoint to retain completion credit,
+- and the new full lesson lengths to remain valid.
 
 ## Handwriting
 
-All newly introduced characters declare AnimCJK with graphicsZhHant.txt preferred. The Feature QA workflow must hydrate and verify geometry before merge.
+New Unit 28 handwriting targets:
+**非、但、站、或、利、汽**.
 
-No fallback is declared for 逛 or 臺 because those items are intentionally deferred rather than silently using non-Taiwan geometry.
+New Unit 29 handwriting targets:
+**水、果、黃、色、給、香**.
 
-## Exact-head verification follow-up
+The stroke-source declarations require **graphicsZhHant.txt only**. Feature QA must hydrate these entries and validate stroke/path/median counts before merge. No Simplified/Japanese fallback is declared for this repair.
 
-The first successful Feature QA hydrated handwriting and generated the derived curriculum artifacts. This documentation-only follow-up commit exists so Feature QA runs again on a human-authored final head after those generated files are present; it does not change curriculum content.
+For 非 and 或, the character records explicitly use justified whole-character grouping because their visual structure and stroke sequence interleave; they are not mislabeled as simple left/right compounds.
+
+## Remaining source gaps
+
+Still explicitly open: 網路上, 臺南, 故宮博物院, 逛, 臺東. These are tracked in the source plan with the specific character/provenance or first-teaching issue rather than silently omitted.
+
+## Gates still required
+
+Before merge, the exact final PR head must pass:
+- curriculum generation and check,
+- separate targeted tests for Unit 28 and Unit 29,
+- character coverage,
+- full regression tests,
+- TypeScript,
+- Pages build,
+- generated artifact commit if needed,
+- and a second exact-head QA run if CI changes the branch.
+
+After merge, both GitHub Pages build and deploy must succeed and the deployed artifact must contain the rebalanced vocabulary.
