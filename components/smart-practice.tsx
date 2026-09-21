@@ -94,7 +94,7 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
  const [index,setIndex]=useState(0),[result,setResult]=useState<Result|null>(null),[score,setScore]=useState(0);
  const step=mission.steps[index],complete=index>=mission.steps.length;
  async function answer(choice:string){if(result||!step)return;const correct=choice===step.answer;setResult({correct,assisted:false,answer:step.answer});if(correct)setScore(v=>v+1);await onRecord('mission:'+mission.id+':'+index,correct)}
- if(complete)return <section className="smart-finish mission-finish"><div className="mission-stamp">{mission.stamp}</div><p className="eyebrow">TAIWAN SKILL UNLOCKED</p><h2>{mission.title}</h2><p>{score}/{mission.steps.length} first-try choices correct. You can replay this mission any time.</p><button className="primary-button" onClick={onExit}>Back to Taiwan Mode</button></section>;
+ if(complete)return <section className="smart-finish mission-finish"><div className="mission-stamp">{mission.stamp}</div><p className="eyebrow">MISSION COMPLETE</p><h2>{mission.title}</h2><p>{score}/{mission.steps.length} first-try choices correct. You can replay this mission any time.</p><button className="primary-button" onClick={onExit}>Back to Taiwan Mode</button></section>;
  return <section className="smart-session mission-session"><div className="smart-session-head"><button className="icon-button" aria-label="Back to Taiwan Mode" onClick={onExit}><ArrowLeft size={20}/></button><div><strong>{mission.stamp} {mission.title}</strong><small>{mission.subtitle}</small></div><span>{index+1}/{mission.steps.length}</span></div><Progress value={index/mission.steps.length*100}/>
   <div className="mission-scene">{step.speaker&&<span>{step.speaker}</span>}<h2 lang="zh-Hant-TW">{step.prompt}</h2>{step.note&&<p>{step.note}</p>}</div>
   {!result?<div className="smart-choice-grid">{shuffled(step.options,mission.id+':'+index).map(option=><button key={option} onClick={()=>void answer(option)} lang="zh-Hant-TW">{option}</button>)}</div>:
@@ -103,7 +103,7 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
  </section>;
 }
 export function SmartPractice({open,onOpenChange,completed,theme,mastery,startScreen='hub'}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;startScreen?:'hub'|'taiwan'}){
- const {states,loading,saving,error,record,stats,retrySync}=mastery;
+ const {states,loading,saving,error,record,retrySync}=mastery;
  const items=useMemo(()=>learnedPracticeItems(completed),[completed]),missions=useMemo(()=>availableTaiwanMissions(completed),[completed]);
  const completedUnits=useMemo(()=>units.filter(unit=>unitComplete(completed,unit.id)).length,[completed]);
  const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
@@ -111,6 +111,7 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startSc
  const dueItemCount=useMemo(()=>items.filter(item=>{const state=aggregateItemState(states,item);return state.attempts>0&&state.nextReview<=Date.now()}).length,[items,states]);
  const weakItemCount=useMemo(()=>items.filter(item=>isRevengeCandidate(states,item)).length,[items,states]);
  const dailySize=Math.min(10,items.length);
+ const trackedItemCount=useMemo(()=>items.filter(item=>aggregateItemState(states,item).attempts>0).length,[items,states]);
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState(''),[mission,setMission]=useState<TaiwanMission|null>(null);
  useEffect(()=>{if(open){setScreen(startScreen);setQueue([]);setMission(null)}},[open,startScreen]);
  function back(){setScreen('hub');setQueue([])}
@@ -128,7 +129,7 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startSc
     <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>{checkpointCount?'12 mixed questions from your latest 4-unit checkpoint.':'Complete 4 units in a book to unlock a checkpoint.'}</small></span><b>{checkpointCount}</b></button>
     <button className="smart-mode-card taiwan" onClick={()=>setScreen('taiwan')}><span className="smart-card-icon"><MapPin size={23}/></span><span><strong>Taiwan Mode</strong><small>Use what you know in short real-life missions.</small></span><b>{missions.filter(m=>m.unlocked).length}</b></button>
    </div>}
-   <div className="smart-master-summary"><div><strong>{items.filter(item=>aggregateItemState(states,item).strength>=0.65).length}</strong><span>strong items</span></div><div><strong>{stats.tracked}</strong><span>skills tracked</span></div><div><strong>{completedUnits}</strong><span>units complete</span></div></div></>}
+   {!loading&&items.length>0&&<div className="smart-master-summary"><div><strong>{items.filter(item=>aggregateItemState(states,item).strength>=0.65).length}</strong><span>strong items</span></div><div><strong>{trackedItemCount}</strong><span>items tracked</span></div><div><strong>{completedUnits}</strong><span>units complete</span></div></div>}</>}
   {screen==='session'&&<><DialogTitle className="sr-only">{sessionTitle}</DialogTitle><DialogDescription className="sr-only">{sessionSubtitle}</DialogDescription><Session title={sessionTitle} subtitle={sessionSubtitle} queue={queue} items={items} onExit={back} onRecord={recordQuestion}/></>}
   {screen==='taiwan'&&<><div className="smart-session-head taiwan-head"><button className="icon-button" aria-label="Back to practice" onClick={back}><ArrowLeft size={20}/></button><div><DialogTitle>Taiwan Mode</DialogTitle><DialogDescription>Small situations built only from language you have already unlocked.</DialogDescription></div><span>{missions.filter(m=>m.unlocked).length}/{missions.length}</span></div>
    <div className="mission-grid">{missions.map(candidate=><button key={candidate.id} className={'mission-card '+(candidate.unlocked?'unlocked':'locked')+' '+(missionDone(candidate)?'done':'')} disabled={!candidate.unlocked} onClick={()=>{setMission(candidate);setScreen('mission')}}><span className="mission-stamp">{candidate.stamp}</span><span><strong>{candidate.title}</strong><small>{candidate.unlocked?candidate.subtitle:'Keep learning to unlock this mission.'}</small></span><b>{missionDone(candidate)?<Check size={18}/>:candidate.unlocked?'Play':'🔒'}</b></button>)}</div></>}
