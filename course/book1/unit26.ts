@@ -315,6 +315,11 @@ const unit:UnitData = {
           "char": "假"
         },
         {
+          "id": "u26-break-g1",
+          "type": "grammar",
+          "grammar": "u26-time-when"
+        },
+        {
           "id": "u26-break-p1",
           "type": "phrase",
           "phrase": "u26-break-next-week"
@@ -755,11 +760,6 @@ const unit:UnitData = {
           "id": "u26-when-概-memory",
           "type": "memory",
           "char": "概"
-        },
-        {
-          "id": "u26-when-g1",
-          "type": "grammar",
-          "grammar": "u26-time-when"
         },
         {
           "id": "u26-when-p1",
@@ -1904,8 +1904,8 @@ const unit:UnitData = {
       "id": "u26-time-when",
       "kind": "rule",
       "ref": "u26-time-when",
-      "lessonId": "u26-when",
-      "stepId": "u26-when-g1"
+      "lessonId": "u26-break",
+      "stepId": "u26-break-g1"
     }
   ],
   "reviewGrammar": [
