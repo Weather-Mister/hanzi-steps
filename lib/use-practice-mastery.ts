@@ -173,3 +173,5 @@ export function usePracticeMastery(userKey:string){
 
  return {states,loading,saving,error,record,stats};
 }
+
+export type PracticeMasteryController=ReturnType<typeof usePracticeMastery>;
