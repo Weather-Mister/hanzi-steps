@@ -103,9 +103,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-how-long",
           "tokens": [
-            "你",
             "想玩",
-            "多久"
+            "多久",
+            "你"
           ]
         },
         {
@@ -118,9 +118,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-one-week",
           "tokens": [
-            "我",
             "想玩",
-            "一個星期"
+            "一個星期",
+            "我"
           ]
         },
         {
@@ -176,12 +176,17 @@ const unit:UnitData = {
         },
         {
           "id": "u27-when-o1",
-          "type": "order",
-          "phrase": "u27-break-when",
-          "tokens": [
-            "放假的時候",
-            "我",
-            "想出去玩"
+          "type": "select",
+          "prompt": "Which phrase means “when we are on break,” rather than “how long is the break”?",
+          "options": [
+            "我們放假的時候",
+            "我們放假多久",
+            "我們有時候放假"
+          ],
+          "answer": "我們放假的時候",
+          "explanation": "的時候 makes a when-clause; 多久 asks for duration; 有時候 means sometimes.",
+          "grammarIds": [
+            "u27-de-shihou"
           ]
         },
         {
@@ -191,12 +196,17 @@ const unit:UnitData = {
         },
         {
           "id": "u27-when-o2",
-          "type": "order",
-          "phrase": "u27-free-when",
-          "tokens": [
-            "有空的時候",
-            "我",
-            "去看風景"
+          "type": "select",
+          "prompt": "Which phrase means “when you have free time”?",
+          "options": [
+            "你有空的時候",
+            "你有時候",
+            "你想玩多久"
+          ],
+          "answer": "你有空的時候",
+          "explanation": "有空 is have free time; append 的時候 to frame another event.",
+          "grammarIds": [
+            "u27-de-shihou"
           ]
         },
         {
@@ -252,12 +262,17 @@ const unit:UnitData = {
         },
         {
           "id": "u27-sometimes-o1",
-          "type": "order",
-          "phrase": "u27-sometimes",
-          "tokens": [
-            "我",
-            "有時候在家看電視",
-            "有時候出去玩"
+          "type": "select",
+          "prompt": "Which sentence says I sometimes drink tea and sometimes drink coffee?",
+          "options": [
+            "我有時候喝茶，有時候喝咖啡。",
+            "我又喝茶又喝咖啡。",
+            "我有時候喝茶，不喝咖啡。"
+          ],
+          "answer": "我有時候喝茶，有時候喝咖啡。",
+          "explanation": "The two 有時候 clauses describe different occasions. Either activity can be mentioned first; 又…又… does not express this alternation.",
+          "grammarIds": [
+            "u27-you-shihou"
           ]
         },
         {
@@ -416,9 +431,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-suggestion-question",
           "tokens": [
-            "你",
-            "有",
-            "什麼建議"
+            "什麼建議",
+            "你有"
           ]
         },
         {
@@ -436,9 +450,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-should-night-market",
           "tokens": [
-            "你",
             "應該",
-            "去夜市"
+            "去夜市",
+            "你"
           ]
         },
         {
@@ -594,8 +608,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-special-teahouse",
           "tokens": [
-            "這裡的茶館",
-            "很特別"
+            "很特別",
+            "這裡的茶館"
           ]
         },
         {
@@ -708,10 +722,10 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-decide-night-market",
           "tokens": [
-            "我",
             "決定",
             "帶女朋友",
-            "去夜市"
+            "去夜市",
+            "我"
           ]
         },
         {
@@ -724,9 +738,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-she-teahouse",
           "tokens": [
-            "她",
             "應該",
-            "去茶館"
+            "去茶館",
+            "她"
           ]
         },
         {
@@ -794,15 +808,16 @@ const unit:UnitData = {
           "id": "u27-review-02",
           "type": "listen",
           "char": "應",
-          "prompt": "Listen and choose the character you hear.",
+          "prompt": "Listen to the word and choose its first character.",
           "options": [
             "應",
-            "該",
+            "久",
             "特",
             "建"
           ],
           "answer": "應",
-          "explanation": "應 is yīng in 應該."
+          "explanation": "應 is yīng in 應該.",
+          "audioText": "應該"
         },
         {
           "id": "u27-review-03",
@@ -866,34 +881,39 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-one-week",
           "tokens": [
-            "我",
             "想玩",
-            "一個星期"
+            "一個星期",
+            "我"
           ]
         },
         {
           "id": "u27-review-09",
           "type": "select",
-          "prompt": "Which sentence uses the basic verb + duration order?",
+          "prompt": "Which answer says we want to play for two weeks?",
           "options": [
-            "我想玩一個星期。",
-            "我一個星期想玩。",
-            "一個星期我多久玩？"
+            "我們想玩兩個星期。",
+            "我們下個星期想玩。",
+            "我們星期二想玩。"
           ],
-          "answer": "我想玩一個星期。",
-          "explanation": "The duration follows 玩 in the basic pattern.",
+          "answer": "我們想玩兩個星期。",
+          "explanation": "兩個星期 is a duration after 玩; 下個星期 and 星期二 say when.",
           "grammarIds": [
             "u27-duration-basic"
           ]
         },
         {
           "id": "u27-review-10",
-          "type": "order",
-          "phrase": "u27-break-when",
-          "tokens": [
-            "放假的時候",
-            "我",
-            "想出去玩"
+          "type": "select",
+          "prompt": "Which phrase means “when we are on break,” rather than “how long is the break”?",
+          "options": [
+            "我們放假的時候",
+            "我們放假多久",
+            "我們有時候放假"
+          ],
+          "answer": "我們放假的時候",
+          "explanation": "的時候 makes a when-clause; 多久 asks for duration; 有時候 means sometimes.",
+          "grammarIds": [
+            "u27-de-shihou"
           ]
         },
         {
@@ -913,12 +933,17 @@ const unit:UnitData = {
         },
         {
           "id": "u27-review-12",
-          "type": "order",
-          "phrase": "u27-sometimes",
-          "tokens": [
-            "我",
-            "有時候在家看電視",
-            "有時候出去玩"
+          "type": "select",
+          "prompt": "Which sentence says I sometimes drink tea and sometimes drink coffee?",
+          "options": [
+            "我有時候喝茶，有時候喝咖啡。",
+            "我又喝茶又喝咖啡。",
+            "我有時候喝茶，不喝咖啡。"
+          ],
+          "answer": "我有時候喝茶，有時候喝咖啡。",
+          "explanation": "The two 有時候 clauses describe different occasions. Either activity can be mentioned first; 又…又… does not express this alternation.",
+          "grammarIds": [
+            "u27-you-shihou"
           ]
         },
         {
@@ -941,9 +966,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-suggestion-question",
           "tokens": [
-            "你",
-            "有",
-            "什麼建議"
+            "什麼建議",
+            "你有"
           ]
         },
         {
@@ -963,9 +987,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-should-night-market",
           "tokens": [
-            "你",
             "應該",
-            "去夜市"
+            "去夜市",
+            "你"
           ]
         },
         {
@@ -988,8 +1012,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-special-teahouse",
           "tokens": [
-            "這裡的茶館",
-            "很特別"
+            "很特別",
+            "這裡的茶館"
           ]
         },
         {
@@ -1009,10 +1033,10 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u27-decide-night-market",
           "tokens": [
-            "我",
             "決定",
             "帶女朋友",
-            "去夜市"
+            "去夜市",
+            "我"
           ]
         },
         {
@@ -1823,8 +1847,7 @@ const unit:UnitData = {
       "meaning": "What suggestions do you have?",
       "note": "Here 建議 is a noun, matching the Lesson 9 dialogue.",
       "tokens": [
-        "你",
-        "有",
+        "你有",
         "什麼建議"
       ]
     },
@@ -1856,7 +1879,7 @@ const unit:UnitData = {
       "text": "我決定帶女朋友去夜市。",
       "pinyin": "Wǒ juédìng dài nǚpéngyou qù yèshì.",
       "meaning": "I decided to take my girlfriend to a night market.",
-      "note": "帶 introduces the person being taken somewhere; 決定 introduces the decision.",
+      "note": "女朋友 means girlfriend. 決定 + action means decide to do it; 帶 + person + 去 + place means take someone to a place.",
       "tokens": [
         "我",
         "決定",

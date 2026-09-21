@@ -133,9 +133,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-date",
           "tokens": [
-            "我女朋友",
-            "九月三十號",
-            "要來看我"
+            "要來看我",
+            "我女朋友九月三十號"
           ]
         },
         {
@@ -251,9 +250,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-still",
           "tokens": [
-            "我",
             "還",
-            "不知道"
+            "不知道",
+            "我"
           ]
         },
         {
@@ -347,7 +346,7 @@ const unit:UnitData = {
           "options": [
             "黃色",
             "水果",
-            "紅色"
+            "茶館"
           ],
           "answer": "黃色",
           "explanation": "黃色 is yellow; 色 means color."
@@ -401,8 +400,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-maokong",
           "tokens": [
-            "貓空的風景",
-            "很美"
+            "很美",
+            "貓空的風景"
           ]
         },
         {
@@ -526,8 +525,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-if-free",
           "tokens": [
-            "要是我有空",
-            "我就跟你一起去"
+            "我就跟你一起去",
+            "要是我有空"
           ]
         },
         {
@@ -623,8 +622,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-if-not-free",
           "tokens": [
-            "你要是沒空",
-            "我們就不去夜市"
+            "我們就不去夜市",
+            "你要是沒空"
           ]
         },
         {
@@ -805,14 +804,14 @@ const unit:UnitData = {
         {
           "id": "u29-review-04",
           "type": "select",
-          "prompt": "Which spoken date means September 30?",
+          "prompt": "Which spoken date means October 13?",
           "options": [
-            "九月三十號",
-            "九月十三號",
-            "十月三十號"
+            "十月十三號",
+            "十月三十號",
+            "九月十三號"
           ],
-          "answer": "九月三十號",
-          "explanation": "九月 is September and 三十號 is the 30th.",
+          "answer": "十月十三號",
+          "explanation": "Month comes first: 十月 is October, 十三號 is the 13th.",
           "grammarIds": [
             "u29-calendar-date"
           ]
@@ -822,9 +821,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-date",
           "tokens": [
-            "我女朋友",
-            "九月三十號",
-            "要來看我"
+            "要來看我",
+            "我女朋友九月三十號"
           ]
         },
         {
@@ -849,9 +847,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-still",
           "tokens": [
-            "我",
             "還",
-            "不知道"
+            "不知道",
+            "我"
           ]
         },
         {
@@ -918,8 +916,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-if-free",
           "tokens": [
-            "要是我有空",
-            "我就跟你一起去"
+            "我就跟你一起去",
+            "要是我有空"
           ]
         },
         {
@@ -927,21 +925,21 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u29-if-not-free",
           "tokens": [
-            "你要是沒空",
-            "我們就不去夜市"
+            "我們就不去夜市",
+            "你要是沒空"
           ]
         },
         {
           "id": "u29-review-16",
           "type": "select",
-          "prompt": "Which sentence shows the subject before 要是?",
+          "prompt": "Which sentence means “If she is free, we will go to Maokong”?",
           "options": [
-            "你要是沒空，我們就不去夜市。",
-            "要是我有空，我就一起去。",
-            "我還不知道。"
+            "她要是有空，我們就去貓空。",
+            "她要是沒空，我們就去貓空。",
+            "她要是有空，我們就不去貓空。"
           ],
-          "answer": "你要是沒空，我們就不去夜市。",
-          "explanation": "Lesson 9 allows the subject before 要是.",
+          "answer": "她要是有空，我們就去貓空。",
+          "explanation": "她 precedes 要是; 有空 is the positive condition and 就去貓空 is the consequence.",
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
@@ -1358,13 +1356,13 @@ const unit:UnitData = {
       "strokes": 8,
       "layout": "whole",
       "note": "果 is third-tone guǒ. In 水果, it supplies the fruit meaning directly.",
-      "memory": "Write the four-stroke 田 first, then complete the overlapping 木-shaped lower structure.",
+      "memory": "Write a four-stroke 日-shaped box first. The following 木-shaped group sends its vertical through that box, creating the final 田-like appearance.",
       "parts": [
         {
-          "label": "田",
-          "name": "field component",
+          "label": "日-shaped box",
+          "name": "upper box",
           "role": "Upper/central visual group",
-          "description": "The first four strokes form 田 at the center-top of 果.",
+          "description": "The first four strokes form a 日-shaped box, not a complete five-stroke 田. The vertical through its center comes later with the 木-shaped group.",
           "strokes": [
             0,
             1,
@@ -1416,10 +1414,10 @@ const unit:UnitData = {
           ]
         },
         {
-          "label": "田八",
+          "label": "一 + 田 + 八",
           "name": "lower body",
           "role": "Lower visual group",
-          "description": "The remaining eight strokes form the broad lower body, ending with the separated 八-like strokes.",
+          "description": "After the four-stroke top, write the long horizontal, the five-stroke 田-like middle, and the two separate lower strokes.",
           "strokes": [
             4,
             5,
@@ -1642,8 +1640,7 @@ const unit:UnitData = {
       "meaning": "My girlfriend is coming to see me on September 30.",
       "note": "九月三十號 is a complete Time-When expression.",
       "tokens": [
-        "我女朋友",
-        "九月三十號",
+        "我女朋友九月三十號",
         "要來看我"
       ],
       "grammarIds": [
@@ -1750,7 +1747,7 @@ const unit:UnitData = {
       "text": "在貓空，我給你一塊水果。",
       "pinyin": "Zài Māokōng, wǒ gěi nǐ yí kuài shuǐguǒ.",
       "meaning": "At Maokong, I’ll give you a piece of fruit.",
-      "note": "給 is the verb “to give”; 塊 is the familiar measure word for a piece of food.",
+      "note": "給 + person + thing means give someone something. 塊 also counts pieces of food: 一塊水果 is one piece of fruit. This extends the price use of 塊 you already know.",
       "tokens": [
         "在貓空",
         "我",

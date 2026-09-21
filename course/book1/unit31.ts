@@ -361,9 +361,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u31-these-photos",
           "tokens": [
-            "這些",
             "是",
-            "我拍的照片"
+            "我拍的照片",
+            "這些"
           ]
         }
       ]
@@ -583,8 +583,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u31-toward",
           "tokens": [
-            "從旅館",
-            "往夜市去"
+            "往夜市去",
+            "從旅館"
           ]
         }
       ]
@@ -670,8 +670,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u31-because",
           "tokens": [
-            "因為現在去玩的人比較少",
-            "所以旅館不太貴"
+            "所以旅館不太貴",
+            "因為現在去玩的人比較少"
           ]
         }
       ]
@@ -780,14 +780,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-08",
           "type": "select",
-          "prompt": "Which verb means live or stay?",
+          "prompt": "Which sentence says his younger brother is tall?",
           "options": [
-            "住",
-            "往",
-            "穿"
+            "他弟弟很高。",
+            "他弟弟很矮。",
+            "他太太很高。"
           ],
-          "answer": "住",
-          "explanation": "住 means live/stay."
+          "answer": "他弟弟很高。",
+          "explanation": "弟弟 means younger brother, while 太太 means wife; 高 means tall."
         },
         {
           "id": "u31-review-09",
@@ -819,14 +819,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-11",
           "type": "select",
-          "prompt": "Which sentence contains a clause modifying 照片?",
+          "prompt": "Which sentence says these are the clothes she wears?",
           "options": [
-            "這些是我拍的照片。",
-            "我拍照片。",
-            "這些照片很乾淨。"
+            "這些是她穿的衣服。",
+            "這些是她拍的照片。",
+            "她穿紅色的衣服。"
           ],
-          "answer": "這些是我拍的照片。",
-          "explanation": "我拍 is the clause before 的 + 照片.",
+          "answer": "這些是她穿的衣服。",
+          "explanation": "她穿 is the modifying clause before 的 + 衣服; 這些 means these.",
           "grammarIds": [
             "u31-clause-modifier"
           ]
@@ -834,14 +834,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-12",
           "type": "select",
-          "prompt": "Which negative modifying clause is well formed?",
+          "prompt": "Which phrase means “people who do not go to the night market”?",
           "options": [
             "不去夜市的人",
             "人不去的夜市",
-            "不的人去夜市"
+            "去夜市的人"
           ],
           "answer": "不去夜市的人",
-          "explanation": "The whole negative clause comes before 的 + 人.",
+          "explanation": "不去夜市 modifies 人. 人不去的夜市 can mean a night market that people do not go to; it modifies a different noun.",
           "grammarIds": [
             "u31-clause-modifier"
           ]
@@ -950,8 +950,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u31-because",
           "tokens": [
-            "因為現在去玩的人比較少",
-            "所以旅館不太貴"
+            "所以旅館不太貴",
+            "因為現在去玩的人比較少"
           ]
         },
         {
@@ -959,22 +959,22 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u31-these-photos",
           "tokens": [
-            "這些",
             "是",
-            "我拍的照片"
+            "我拍的照片",
+            "這些"
           ]
         },
         {
           "id": "u31-review-22",
           "type": "select",
-          "prompt": "Which sentence correctly gives a cause first and an effect second?",
+          "prompt": "Fewer people are traveling, which makes the hotel less expensive. Which sentence preserves that cause and result?",
           "options": [
             "因為現在去玩的人比較少，所以旅館不太貴。",
             "因為旅館不太貴，所以現在去玩的人比較少。",
             "現在去玩的人比較少，但是旅館很貴。"
           ],
           "answer": "因為現在去玩的人比較少，所以旅館不太貴。",
-          "explanation": "The first sentence preserves the intended cause: fewer travelers; effect: the hotel is not too expensive.",
+          "explanation": "因為 introduces fewer travelers as the cause; 所以 introduces the hotel price as the result. The second option is structurally possible but reverses the given causal relationship.",
           "grammarIds": [
             "u31-yinwei-suoyi",
             "u31-clause-modifier"
@@ -1493,7 +1493,7 @@ const unit:UnitData = {
       ],
       "example": {
         "text": "往夜市去",
-        "pinyin": "wǎng yèshì zǒu",
+        "pinyin": "wǎng yèshì qù",
         "meaning": "go toward the night market"
       }
     },
@@ -1553,7 +1553,7 @@ const unit:UnitData = {
         },
         {
           "text": "穿紅色衣服的人是我朋友。",
-          "pinyin": "Chuān hóngsè yīfu de rén shì wǒ péngyǒu.",
+          "pinyin": "Chuān hóngsè yīfú de rén shì wǒ péngyǒu.",
           "meaning": "The person wearing red clothes is my friend."
         },
         {
@@ -1685,7 +1685,7 @@ const unit:UnitData = {
       "text": "這些是我拍的照片。",
       "pinyin": "Zhèxiē shì wǒ pāi de zhàopiàn.",
       "meaning": "These are the photos I took.",
-      "note": "我拍 is a complete modifying clause; 的 links it to 照片.",
+      "note": "這些 means these and refers to more than one thing. 我拍 identifies which photos; 的 connects that clause to 照片.",
       "tokens": [
         "這些",
         "是",
@@ -1697,7 +1697,7 @@ const unit:UnitData = {
     },
     "u31-red-person": {
       "text": "穿紅色衣服的人是我朋友。",
-      "pinyin": "Chuān hóngsè yīfu de rén shì wǒ péngyǒu.",
+      "pinyin": "Chuān hóngsè yīfú de rén shì wǒ péngyǒu.",
       "meaning": "The person wearing red clothes is my friend.",
       "note": "穿紅色衣服 modifies 人.",
       "tokens": [
@@ -1769,7 +1769,7 @@ const unit:UnitData = {
     },
     "u31-toward": {
       "text": "從旅館往夜市去。",
-      "pinyin": "Cóng lǚguǎn wǎng yèshì zǒu.",
+      "pinyin": "Cóng lǚguǎn wǎng yèshì qù.",
       "meaning": "Go from the hotel toward the night market.",
       "note": "從 marks the starting point; 往 marks the direction.",
       "tokens": [

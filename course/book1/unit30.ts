@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "rose",
     "label": "Fruit, trying & descriptions",
     "title": "Try It and Describe It",
-    "description": "Finish the supported opening of Lesson 10: identify fruit, make a guess, try something tentatively, describe taste subjectively, and talk about photos and clothing.",
+    "description": "Identify fruit, make a guess, try an action, describe a subjective impression, and talk about photos and clothing.",
     "chars": [
       "紅",
       "瓜",
@@ -43,7 +43,7 @@ const unit:UnitData = {
       "u30-vv-kan",
       "u30-state-redup"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 10 Dialogue I / Vocabulary I (printed pp. 202–204) and Grammar I–II (printed pp. 208–210). 芒果 is explicitly deferred because 芒 does not have verified Taiwan Traditional handwriting geometry in the project's licensed source path."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 10, Vocabulary I–II (printed pp. 204, 207), guessing 吧, and Grammar I–II (pp. 208–210)."
   },
   "reviewLessonId": "u30-review",
   "lessons": [
@@ -196,8 +196,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u30-guess",
           "tokens": [
-            "這是西瓜",
-            "吧"
+            "吧",
+            "這是西瓜"
           ]
         }
       ]
@@ -339,14 +339,14 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s3",
           "type": "select",
-          "prompt": "Can every state verb be reduplicated this way?",
+          "prompt": "Which familiar state verb does the textbook ALLOW in this reduplication pattern?",
           "options": [
-            "No; Lesson 10 explicitly restricts which state verbs allow it",
-            "Yes; every description may be doubled",
-            "Only color words may be doubled"
+            "美",
+            "貴",
+            "忙"
           ],
-          "answer": "No; Lesson 10 explicitly restricts which state verbs allow it",
-          "explanation": "The textbook permits examples such as 香、甜、高、熱、大 but lists several common state verbs that do not use this pattern.",
+          "answer": "美",
+          "explanation": "美 appears in the permitted column; 貴 and 忙 appear in the excluded column. Not every state verb can be doubled.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -356,8 +356,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u30-fragrant-sweet",
           "tokens": [
-            "這個水果",
-            "香香甜甜的"
+            "香香甜甜的",
+            "這個水果"
           ]
         }
       ]
@@ -597,8 +597,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u30-red-clothes",
           "tokens": [
-            "我朋友",
-            "穿紅色的衣服"
+            "穿紅色的衣服",
+            "我朋友"
           ]
         }
       ]
@@ -728,14 +728,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-10",
           "type": "select",
-          "prompt": "Which sentence uses guessing 吧 rather than suggestion 吧?",
+          "prompt": "You think your friend plans to return home and want confirmation. Which sentence uses guessing 吧?",
           "options": [
-            "這是西瓜吧？",
-            "我們去夜市吧。",
-            "我今天穿紅色的衣服。"
+            "你打算回國吧？",
+            "我們回國吧。",
+            "你打算回國。"
           ],
-          "answer": "這是西瓜吧？",
-          "explanation": "The speaker is guessing that the fruit is watermelon and seeks confirmation.",
+          "answer": "你打算回國吧？",
+          "explanation": "The first sentence seeks confirmation of a guess; 我們回國吧 is a suggestion, and the last sentence is a statement without 吧.",
           "grammarIds": [
             "u30-ba-guess"
           ]
@@ -758,14 +758,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-12",
           "type": "select",
-          "prompt": "Which sentence follows the Lesson 10 VV看 object restriction?",
+          "prompt": "Which sentence uses VV看 to invite someone to TRY fragrant tea, with the object established first?",
           "options": [
-            "這個水果很甜，你吃吃看。",
-            "你吃吃看這個西瓜。",
-            "你吃這個西瓜，很好吃。"
+            "這杯茶很香，你喝喝看。",
+            "你喝喝看這杯茶。",
+            "這杯茶很香，你每天喝。"
           ],
-          "answer": "這個水果很甜，你吃吃看。",
-          "explanation": "The fruit is established first; the taught VV看 pattern does not put the food object after 吃吃看.",
+          "answer": "這杯茶很香，你喝喝看。",
+          "explanation": "喝喝看 invites a trial. The taught pattern establishes 茶 first and generally does not put an object after 看.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -788,14 +788,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-14",
           "type": "select",
-          "prompt": "Which statement about state-verb reduplication is correct?",
+          "prompt": "Which pair gives an allowed subjective description and an excluded form in the textbook?",
           "options": [
-            "It is restricted to state verbs that permit the pattern",
-            "Every state verb can always be doubled",
-            "The doubled form must always use 很"
+            "美美的 is allowed; 貴貴的 is excluded",
+            "貴貴的 is allowed; 美美的 is excluded",
+            "忙忙的 and 貴貴的 are both allowed"
           ],
-          "answer": "It is restricted to state verbs that permit the pattern",
-          "explanation": "Lesson 10 explicitly lists allowed and disallowed state verbs.",
+          "answer": "美美的 is allowed; 貴貴的 is excluded",
+          "explanation": "The textbook explicitly permits 美 and excludes 貴 and 忙.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -805,8 +805,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u30-red-watermelon",
           "tokens": [
-            "這個西瓜",
-            "是紅色的"
+            "是紅色的",
+            "這個西瓜"
           ]
         },
         {
@@ -814,8 +814,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u30-try",
           "tokens": [
-            "這個水果很甜",
-            "你吃吃看"
+            "你吃吃看",
+            "這個水果很甜"
           ]
         },
         {
@@ -884,14 +884,17 @@ const unit:UnitData = {
         {
           "id": "u30-review-22",
           "type": "select",
-          "prompt": "Which set contains three Unit 30 actions or descriptions?",
+          "prompt": "You are simply ordering hot coffee, not praising its feel. Which wording fits the textbook usage note?",
           "options": [
-            "拍照片、笑得很開心、穿衣服",
-            "回國、坐高鐵、買車票",
-            "上課、寫書法、喝茶"
+            "我要一杯熱咖啡。",
+            "我要一杯很熱熱的咖啡。",
+            "我要一杯非常熱熱的咖啡。"
           ],
-          "answer": "拍照片、笑得很開心、穿衣服",
-          "explanation": "These combine the new photo, smile/happy, and clothing language from Unit 30."
+          "answer": "我要一杯熱咖啡。",
+          "explanation": "For a neutral order use 熱咖啡. The reduplicated descriptive pattern expresses an impression and cannot take 很 or 非常.",
+          "grammarIds": [
+            "u30-state-redup"
+          ]
         }
       ]
     }
@@ -965,10 +968,11 @@ const unit:UnitData = {
     },
     {
       "text": "衣服",
-      "pinyin": "yīfu",
+      "pinyin": "yīfú",
       "meaning": "clothes; clothing",
       "lessonId": "u30-clothes",
-      "core": true
+      "core": true,
+      "note": "The textbook gives yīfú, with second-tone 服."
     }
   ],
   "reviewVocabulary": [
@@ -1166,13 +1170,13 @@ const unit:UnitData = {
       "strokes": 4,
       "layout": "whole",
       "note": "心 is first-tone xīn. In 開心, the whole word means happy or cheerful.",
-      "memory": "心 is a four-stroke heart form: a left-falling stroke, the hooked center, then two separated dots.",
+      "memory": "Begin with the left dot, write the curved hook, then add the middle and right dots. The three dots balance the hooked center.",
       "parts": [
         {
           "label": "心",
           "name": "heart radical",
           "role": "Whole-character form",
-          "description": "The four strokes form the independent heart radical 心, with the hooked center between the left stroke and two dots.",
+          "description": "The independent 心 form has a left dot, a curved hook, then two more dots; all four strokes belong to the heart radical.",
           "strokes": [
             0,
             1,
@@ -1225,7 +1229,7 @@ const unit:UnitData = {
       ],
       "example": {
         "text": "穿衣服",
-        "pinyin": "chuān yīfu",
+        "pinyin": "chuān yīfú",
         "meaning": "wear clothes"
       }
     },
@@ -1264,7 +1268,7 @@ const unit:UnitData = {
       ],
       "example": {
         "text": "衣服",
-        "pinyin": "yīfu",
+        "pinyin": "yīfú",
         "meaning": "clothes"
       }
     }
@@ -1293,7 +1297,7 @@ const unit:UnitData = {
       "id": "u30-vv-kan",
       "title": "Try an action with VV看",
       "pattern": "monosyllabic action verb + same verb + 看",
-      "explanation": "Reduplicate a one-syllable action verb and add 看 to mean 'try doing it and see.' The pattern sounds tentative. Lesson 10 contrasts it with ordinary verb reduplication: VV can take an object, but VV看 generally does not put an object after 看. Establish the thing first, then say 吃吃看, 喝喝看, 聽聽看, and so on.",
+      "explanation": "Reduplicate a one-syllable action verb and add 看 to mean 'try doing it and see.' The pattern sounds tentative. Lesson 10 contrasts it with ordinary verb reduplication: VV can take an object, but VV看 generally does not put an object after 看. Establish the thing first, then say 吃吃看, 喝喝看, 聽聽看, and so on. Do not add 看 automatically to habitual VV activities: 我有時候看看書 describes an occasional activity, not a trial to find out what it is like.",
       "examples": [
         {
           "text": "這個水果很甜，你吃吃看。",
@@ -1315,7 +1319,7 @@ const unit:UnitData = {
       "id": "u30-state-redup",
       "title": "Give a subjective impression by reduplicating a state verb",
       "pattern": "State verb + state verb + 的",
-      "explanation": "Lesson 10 reduplicates certain state verbs to intensify a subjective impression or reaction. The reduplicated form takes 的: 香香的, 甜甜的. Do not add 很 because reduplication already supplies the intensifying effect. With two reduplicated state verbs in sequence, the first 的 can be omitted: 香香甜甜的. This pattern is restricted: the textbook allows examples such as 香, 甜, 高, 熱, 大, but not every state verb, so do not freely reduplicate familiar words such as 美, 貴, 近, 忙, 新, or 少.",
+      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. The textbook permits 美 as well as 香、甜、熱、大; it excludes 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
       "examples": [
         {
           "text": "這個水果香香的。",
@@ -1328,7 +1332,7 @@ const unit:UnitData = {
           "meaning": "This fruit is fragrant and sweet."
         }
       ],
-      "remember": "Reduplicated state verb + 的 expresses a subjective impression; no 很, and only use state verbs that permit this pattern."
+      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. 美 is allowed; 多、貴、近、忙、新、少 are excluded in the textbook table."
     }
   },
   "grammarIntroductions": [
@@ -1374,7 +1378,7 @@ const unit:UnitData = {
       "text": "我給你一塊西瓜。",
       "pinyin": "Wǒ gěi nǐ yí kuài xīguā.",
       "meaning": "I'll give you a piece of watermelon.",
-      "note": "塊 was learned for prices; Lesson 10 also uses it as a measure word for pieces of food.",
+      "note": "塊 counts a piece of food, as introduced with 水果 in Unit 29; here 一塊西瓜 is a piece of watermelon.",
       "tokens": [
         "我",
         "給你",
@@ -1480,7 +1484,7 @@ const unit:UnitData = {
     },
     "u30-yellow-clothes": {
       "text": "我今天穿黃色的衣服。",
-      "pinyin": "Wǒ jīntiān chuān huángsè de yīfu.",
+      "pinyin": "Wǒ jīntiān chuān huángsè de yīfú.",
       "meaning": "I'm wearing yellow clothes today.",
       "note": "穿 is the verb wear; 衣服 is clothing.",
       "tokens": [
@@ -1490,7 +1494,7 @@ const unit:UnitData = {
     },
     "u30-red-clothes": {
       "text": "我朋友穿紅色的衣服。",
-      "pinyin": "Wǒ péngyǒu chuān hóngsè de yīfu.",
+      "pinyin": "Wǒ péngyǒu chuān hóngsè de yīfú.",
       "meaning": "My friend is wearing red clothes.",
       "note": "A color + 的 can modify 衣服.",
       "tokens": [

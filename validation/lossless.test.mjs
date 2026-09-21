@@ -8,6 +8,7 @@ const baseline=readJSON('validation/fixtures/live-before-refactor.json');
 // Explicitly reviewed first-teaching moves; retain the immutable migration snapshot.
 const amendment=readJSON('validation/fixtures/book1-first-teaching-amendment.json');
 const lesson10Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson10.json');
+const correctionAmendment=readJSON('validation/fixtures/units26-31-correction-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -20,7 +21,10 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const firstExpected=first?.after??digest;
    const later=lesson10Amendment.records?.[key]?.[id];
    if(later)assert.equal(later.before,firstExpected,`Lesson 10 amendment must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),later?.after??firstExpected,`${key} ${id}`);
+   const priorExpected=later?.after??firstExpected;
+   const correction=correctionAmendment.records?.[key]?.[id];
+   if(correction)assert.equal(correction.before,priorExpected,`correction must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),correction?.after??priorExpected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);

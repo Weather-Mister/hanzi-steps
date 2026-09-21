@@ -63,7 +63,7 @@ New Unit 29 handwriting targets:
 
 The stroke-source declarations require **graphicsZhHant.txt only**. Feature QA must hydrate these entries and validate stroke/path/median counts before merge. No Simplified/Japanese fallback is declared for this repair.
 
-For 非 and 或, the character records explicitly use justified whole-character grouping because their visual structure and stroke sequence interleave; they are not mislabeled as simple left/right compounds.
+The later Units 26–31 audit corrected 非: its four-stroke left and right groups are consecutive, not interleaved. It now uses two accurate visual groups. 或 retains whole-character grouping for its interleaved structure.
 
 ## Remaining source gaps
 

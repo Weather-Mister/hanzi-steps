@@ -98,9 +98,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-two-days",
           "tokens": [
-            "我",
             "想玩",
-            "兩天"
+            "兩天",
+            "我"
           ]
         },
         {
@@ -245,14 +245,14 @@ const unit:UnitData = {
         {
           "id": "u28-years-s2",
           "type": "select",
-          "prompt": "Which standalone word is used for a duration such as 兩天?",
+          "prompt": "Which word is the day unit in the duration 兩天?",
           "options": [
             "天",
             "年",
             "鐘頭"
           ],
           "answer": "天",
-          "explanation": "天 is the day unit in durations such as 兩天."
+          "explanation": "天 counts days, 年 counts years, and 鐘頭 counts hours. All three can be duration units."
         },
         {
           "id": "u28-years-s3",
@@ -473,9 +473,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-one-year",
           "tokens": [
-            "我",
-            "學中文",
-            "學一年"
+            "學一年",
+            "我學中文"
           ]
         },
         {
@@ -583,9 +582,8 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-two-days-no-class",
           "tokens": [
-            "我",
-            "兩天",
-            "不能來上課"
+            "不能來上課",
+            "我兩天"
           ]
         },
         {
@@ -689,9 +687,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-three-day-break",
           "tokens": [
-            "我們",
             "放",
-            "三天的假"
+            "三天的假",
+            "我們"
           ]
         },
         {
@@ -704,9 +702,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-three-hours-song",
           "tokens": [
-            "我",
             "唱",
-            "三個鐘頭的歌"
+            "三個鐘頭的歌",
+            "我"
           ]
         },
         {
@@ -823,9 +821,9 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-two-days",
           "tokens": [
-            "我",
             "想玩",
-            "兩天"
+            "兩天",
+            "我"
           ]
         },
         {
@@ -845,22 +843,21 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-one-year",
           "tokens": [
-            "我",
-            "學中文",
-            "學一年"
+            "學一年",
+            "我學中文"
           ]
         },
         {
           "id": "u28-review-09",
           "type": "select",
-          "prompt": "With an object plus a duration, what does Lesson 9 require?",
+          "prompt": "Which sentence uses the repeated-verb pattern to say “I plan to teach Chinese for two years”?",
           "options": [
-            "Repeat the verb before the duration",
-            "Put the duration before the subject",
-            "Delete the object"
+            "我打算教中文教兩年。",
+            "我打算學中文學兩年。",
+            "我打算明年教中文。"
           ],
-          "answer": "Repeat the verb before the duration",
-          "explanation": "The repeated verb separates the object from the duration.",
+          "answer": "我打算教中文教兩年。",
+          "explanation": "教中文 gives the action and object; 教兩年 repeats the verb and adds its duration.",
           "grammarIds": [
             "u28-object-duration"
           ]
@@ -885,22 +882,21 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u28-two-days-no-class",
           "tokens": [
-            "我",
-            "兩天",
-            "不能來上課"
+            "不能來上課",
+            "我兩天"
           ]
         },
         {
           "id": "u28-review-12",
           "type": "select",
-          "prompt": "Which form puts a duration inside the separable verb 放假?",
+          "prompt": "Which pair gives two valid ways to say “have two days off”?",
           "options": [
-            "放三天的假",
-            "放假的時候",
-            "三天不能放假"
+            "放兩天假／放兩天的假",
+            "放假兩天的／放兩天的假",
+            "放假的兩天／放假兩天的"
           ],
-          "answer": "放三天的假",
-          "explanation": "The duration 三天 is inserted between 放 and 假.",
+          "answer": "放兩天假／放兩天的假",
+          "explanation": "In the taught separable-verb pattern, 的 may be present or absent between duration and 假.",
           "grammarIds": [
             "u28-separable-duration"
           ]
@@ -1334,20 +1330,28 @@ const unit:UnitData = {
       "zhuyin": "ㄈㄟ",
       "meaning": "not; non-; first character of 非常",
       "strokes": 8,
-      "layout": "whole",
+      "layout": "side",
       "note": "非 is first-tone fēi. In 非常, it forms the common adverb meaning “very.”",
-      "memory": "非 is an interlocked eight-stroke form: the two vertical sides and paired horizontals are written as one balanced shape rather than as two independent components.",
+      "memory": "Write the left vertical and its three short bars first, then the right vertical and its three bars. The halves face outward and are written consecutively.",
       "parts": [
         {
-          "label": "非",
-          "name": "interlocked whole form",
-          "role": "Whole-character form",
-          "description": "The eight strokes interleave the two sides of 非, so a single whole-character group is more faithful than forcing a false left-right split.",
+          "label": "left half",
+          "name": "left comb-like group",
+          "role": "Left visual group",
+          "description": "The first four strokes are the left vertical followed by three bars extending left. This is a visual group, not a separate character.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "right half",
+          "name": "right comb-like group",
+          "role": "Right visual group",
+          "description": "The last four strokes are the right vertical followed by three bars extending right.",
+          "strokes": [
             4,
             5,
             6,
@@ -1600,7 +1604,7 @@ const unit:UnitData = {
           "meaning": "I teach Chinese for one year."
         }
       ],
-      "remember": "Object present? Repeat the verb before the duration.",
+      "remember": "In this repeated-verb pattern: verb + object + the same verb + duration. Other duration patterns are taught separately.",
       "words": [
         "年"
       ]
@@ -1609,7 +1613,7 @@ const unit:UnitData = {
       "id": "u28-duration-negation",
       "title": "Put the duration before a negated action",
       "pattern": "Subject + Duration + Negation + Verb Phrase",
-      "explanation": "When the duration tells how long a negative situation lasts, the duration comes before 不 or 不能. This is different from the basic affirmative pattern where the duration follows the verb.",
+      "explanation": "When the duration tells how long a negative situation lasts, the duration comes before 不 or 不能. This is different from the basic affirmative pattern where the duration follows the verb. Here the examples describe a planned or expected period of inability. They do not mean that the action itself takes two days, and they are not the past-time “have not done it for…” construction.",
       "examples": [
         {
           "text": "我兩天不能來上課。",
@@ -1643,9 +1647,14 @@ const unit:UnitData = {
           "text": "我唱三個鐘頭的歌。",
           "pinyin": "Wǒ chàng sān ge zhōngtóu de gē.",
           "meaning": "I sing for three hours."
+        },
+        {
+          "text": "我們放三天假。",
+          "pinyin": "Wǒmen fàng sān tiān jià.",
+          "meaning": "We have three days off."
         }
       ],
-      "remember": "For separable verbs, place the duration inside the verb-object pair.",
+      "remember": "放三天假 and 放三天的假 both work: duration goes between 放 and 假; 的 is optional here.",
       "words": [
         "鐘頭",
         "天",
@@ -1720,8 +1729,7 @@ const unit:UnitData = {
       "meaning": "I study Chinese for one year.",
       "note": "The verb 學 repeats because 中文 is an object before the duration.",
       "tokens": [
-        "我",
-        "學中文",
+        "我學中文",
         "學一年"
       ],
       "grammarIds": [
@@ -1734,8 +1742,7 @@ const unit:UnitData = {
       "meaning": "I cannot come to class for two days.",
       "note": "The duration 兩天 appears before the negation 不能.",
       "tokens": [
-        "我",
-        "兩天",
+        "我兩天",
         "不能來上課"
       ],
       "grammarIds": [
