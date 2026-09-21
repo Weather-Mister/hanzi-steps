@@ -980,8 +980,8 @@ const unit:UnitData = {
           "prompt": "If the condition is negative, does 就 disappear?",
           "options": [
             "No, 就 still introduces the consequence",
-            "Yes, negatives never use 就",
-            "Only dates can use 就"
+            "Yes, replace 就 with 還 after a negative condition",
+            "Yes, 就 is only used after affirmative conditions"
           ],
           "answer": "No, 就 still introduces the consequence",
           "explanation": "The condition can be negative without changing the 要是…就… frame.",
