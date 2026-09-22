@@ -681,6 +681,115 @@ export function distractorPool(item:PracticeItem,items:PracticeItem[],field:'tra
  return [answer,...candidates].filter((value,index,array)=>array.indexOf(value)===index).slice(0,count);
 }
 
+type SentenceTokenCandidate={
+ token:string;
+ unitId?:string;
+ unitNumber?:number;
+ bookId?:string;
+ kind:PracticeItem['kind'];
+ pinyin?:string;
+ meaning?:string;
+ phrasePositions:number[];
+};
+
+function tokenMeaningWords(value:string|undefined):Set<string>{
+ if(!value)return new Set();
+ const stop=new Set(['a','an','the','to','of','is','are','am','be','my','your','his','her','their','this','that','these','those','one','some']);
+ return new Set(value.toLowerCase().replace(/[^a-z0-9\s-]/g,' ').split(/\s+/).filter(word=>word.length>1&&!stop.has(word)));
+}
+
+function visualTokenSimilarity(a:string,b:string):number{
+ const aa=Array.from(a),bb=Array.from(b);
+ let score=0;
+ if(aa.length===bb.length)score+=12;
+ if(aa.length>1&&bb.length>1&&new Set(aa).size===1&&new Set(bb).size===1)score+=9;
+ const length=Math.min(aa.length,bb.length);
+ for(let i=0;i<length;i++){
+  const left=characters[aa[i]],right=characters[bb[i]];
+  if(!left||!right)continue;
+  if(left.layout===right.layout)score+=3;
+  if(Math.abs(left.strokes-right.strokes)<=2)score+=3;
+  const leftParts=new Set(left.parts.flatMap(part=>[part.label,part.name]).filter(Boolean));
+  const shared=right.parts.some(part=>leftParts.has(part.label)||leftParts.has(part.name));
+  if(shared)score+=7;
+ }
+ return score;
+}
+
+function sentenceTokenCandidates(items:PracticeItem[]):SentenceTokenCandidate[]{
+ const byToken=new Map<string,SentenceTokenCandidate>();
+ const upsert=(token:string,item:PracticeItem,position?:number)=>{
+  if(!token||Array.from(token).length>4)return;
+  const existing=byToken.get(token);
+  if(existing){
+   if(position!==undefined&&!existing.phrasePositions.includes(position))existing.phrasePositions.push(position);
+   if(!existing.meaning&&item.meaning)existing.meaning=item.meaning;
+   if(!existing.pinyin&&item.pinyin)existing.pinyin=item.pinyin;
+   return;
+  }
+  byToken.set(token,{
+   token,unitId:item.unitId,unitNumber:item.unitNumber,bookId:item.bookId,kind:item.kind,
+   pinyin:item.kind==='phrase'?undefined:item.pinyin,
+   meaning:item.kind==='phrase'?undefined:item.meaning,
+   phrasePositions:position===undefined?[]:[position],
+  });
+ };
+ for(const item of items){
+  if(item.kind!=='phrase')upsert(item.traditional,item);
+  for(const [index,token] of (item.tokens||[]).entries())upsert(token,item,index);
+ }
+ return [...byToken.values()];
+}
+
+function targetTokenMetadata(token:string,items:PracticeItem[]):SentenceTokenCandidate|undefined{
+ return sentenceTokenCandidates(items).find(candidate=>candidate.token===token);
+}
+
+export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:string,count?:number):string[]{
+ const answerTokens=item.tokens||[];
+ if(!answerTokens.length)return [];
+ const desired=count??(answerTokens.length<=4?2:answerTokens.length<=7?3:4);
+ const answerSet=new Set(answerTokens);
+ const candidates=sentenceTokenCandidates(items).filter(candidate=>!answerSet.has(candidate.token));
+ const targetMeta=answerTokens.map(token=>({token,meta:targetTokenMetadata(token,items)}));
+
+ const score=(candidate:SentenceTokenCandidate)=>{
+  let best=0;
+  for(const target of targetMeta){
+   let value=visualTokenSimilarity(target.token,candidate.token);
+   const targetLength=Array.from(target.token).length,candidateLength=Array.from(candidate.token).length;
+   if(targetLength===candidateLength)value+=10;
+   const targetWords=tokenMeaningWords(target.meta?.meaning);
+   const candidateWords=tokenMeaningWords(candidate.meaning);
+   const sharedMeaning=[...targetWords].filter(word=>candidateWords.has(word)).length;
+   value+=sharedMeaning*14;
+   if(target.meta?.pinyin&&candidate.pinyin){
+    const a=target.meta.pinyin.toLowerCase(),b=candidate.pinyin.toLowerCase();
+    if(a[0]&&a[0]===b[0])value+=3;
+    if(a.split(/\s+/).length===b.split(/\s+/).length)value+=2;
+   }
+   const targetPositions=answerTokens.flatMap((token,index)=>token===target.token?[index]:[]);
+   if(candidate.phrasePositions.some(position=>targetPositions.includes(position)))value+=12;
+   best=Math.max(best,value);
+  }
+  if(candidate.unitId&&candidate.unitId===item.unitId)best+=15;
+  else if(candidate.bookId&&candidate.bookId===item.bookId){
+   const gap=Math.abs((candidate.unitNumber??999)-(item.unitNumber??-999));
+   if(gap===1)best+=11;
+   else if(gap===2)best+=7;
+   else if(gap<=4)best+=3;
+  }
+  return best;
+ };
+
+ const ranked=shuffled(candidates,seed+':sentence-distractors')
+  .sort((a,b)=>score(b)-score(a))
+  .map(candidate=>candidate.token)
+  .filter((token,index,array)=>array.indexOf(token)===index);
+
+ return ranked.slice(0,Math.min(desired,ranked.length));
+}
+
 export function fromLookupItem(item:VocabularyLookupItem):PracticeItem{
  return {
   id:item.id,kind:'word',traditional:item.traditional,pinyin:item.pinyin,meaning:item.meaning,
