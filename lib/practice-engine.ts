@@ -154,6 +154,34 @@ function weakestMode(states:PracticeStateMap,item:PracticeItem,avoidEasy=false):
  return ranked[0]?.mode||'recognition';
 }
 
+function choiceField(mode:PracticeMode):'traditional'|'meaning'|'pinyin'|null{
+ if(mode==='recognition')return 'meaning';
+ if(mode==='recall')return 'traditional';
+ if(mode==='pinyin')return 'pinyin';
+ return null;
+}
+
+function viableMode(item:PracticeItem,mode:PracticeMode,items:PracticeItem[]):PracticeMode{
+ const field=choiceField(mode);
+ if(!field)return mode;
+ const values=new Set(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]).filter(Boolean));
+ return values.size>=2?mode:'input';
+}
+
+function dueMode(states:PracticeStateMap,item:PracticeItem,now:number):PracticeMode|undefined{
+ return supportedModes(item)
+  .map(mode=>stateFor(states,item.id,mode))
+  .filter((row):row is PracticeSkillState=>Boolean(row&&row.attempts>0&&row.nextReview<=now))
+  .sort((a,b)=>a.nextReview-b.nextReview||a.strength-b.strength)[0]?.mode;
+}
+
+function failedMode(states:PracticeStateMap,item:PracticeItem):PracticeMode|undefined{
+ return supportedModes(item)
+  .map(mode=>stateFor(states,item.id,mode))
+  .filter((row):row is PracticeSkillState=>Boolean(row&&row.misses>0&&row.strength<0.72))
+  .sort((a,b)=>a.strength-b.strength||b.misses-a.misses)[0]?.mode;
+}
+
 function uniqueItems(items:PracticeItem[]):PracticeItem[]{
  const seen=new Set<string>();
  return items.filter(item=>{if(seen.has(item.id))return false;seen.add(item.id);return true});
@@ -187,9 +215,12 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  add(withMeta,10-picked.length);
 
  return picked.slice(0,10).map((item,index)=>{
-  let mode=weakestMode(states,item,index===9);
-  if(index===9&&item.kind==='phrase'&&item.tokens?.length)mode='sentence';
-  else if(index===9&&item.characters.length)mode='handwriting';
+  const due=dueMode(states,item,now);
+  const failed=failedMode(states,item);
+  let mode=due||failed||weakestMode(states,item,index===9);
+  if(!due&&!failed&&index===9&&item.kind==='phrase'&&item.tokens?.length)mode='sentence';
+  else if(!due&&!failed&&index===9&&item.characters.length)mode='handwriting';
+  mode=viableMode(item,mode,items);
   return {id:'daily:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'daily'};
  });
 }
@@ -202,13 +233,22 @@ export function makeRevengeRound(items:PracticeItem[],states:PracticeStateMap,se
  const target=candidates[0]?.item;
  if(!target)return [];
  const modes=supportedModes(target);
- const preferred:PracticeMode[]=['recognition','recall',target.kind==='phrase'?'sentence':'handwriting'];
- const chosen=preferred.filter(mode=>modes.includes(mode));
- while(chosen.length<3){
-  const candidate=weakestMode(states,target,true);
-  if(!chosen.includes(candidate))chosen.push(candidate);else break;
+ const preferred:PracticeMode[]=[
+  failedMode(states,target)||'recall',
+  'recognition',
+  target.kind==='phrase'?'sentence':'handwriting',
+  'pinyin',
+  'input',
+  ...modes,
+ ];
+ const chosen:PracticeMode[]=[];
+ for(const rawMode of preferred){
+  if(!modes.includes(rawMode))continue;
+  const mode=viableMode(target,rawMode,items);
+  if(!chosen.includes(mode))chosen.push(mode);
+  if(chosen.length===3)break;
  }
- return chosen.slice(0,3).map((mode,index)=>({
+ return chosen.map((mode,index)=>({
   id:'revenge:'+seed+':'+index+':'+target.id,
   item:target,
   mode,
@@ -260,6 +300,7 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
   const modes=supportedModes(item);
   let mode=cycle[index%cycle.length];
   if(!modes.includes(mode))mode=weakestMode(states,item,true);
+  mode=viableMode(item,mode,source);
   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
  });
 }
