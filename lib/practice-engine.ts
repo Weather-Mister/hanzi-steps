@@ -235,6 +235,20 @@ function forgottenScore(row:DailyRow,now:number):number{
  return 45+overdueDays*3+daysSinceSeen+(1-row.strength)*30;
 }
 
+function memoryRiskScore(row:DailyRow,now:number,frontierRank:number):number{
+ const scheduled=forgottenScore(row,now);
+ if(scheduled>0)return scheduled+Math.min(18,Math.max(0,frontierRank-progressRank(row.item))*1.5);
+ if(row.attempts>0)return 0;
+
+ // For material that predates the mastery tracker, estimate forgetting from
+ // curriculum distance. Prefer the middle-back window over constantly falling
+ // all the way to Unit 1.
+ const distance=Math.max(0,frontierRank-progressRank(row.item));
+ if(distance<4)return 0;
+ if(distance<=12)return 38+distance*2.4;
+ return 24+Math.min(8,(distance-12)*0.4);
+}
+
 function recentScore(states:PracticeStateMap,row:DailyRow,recentUnits:string[],now:number):number{
  const unitIndex=row.item.unitId?recentUnits.indexOf(row.item.unitId):-1;
  const progressBonus=unitIndex<0?0:[46,38,30,24][unitIndex]??18;
@@ -270,6 +284,7 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const withMeta:DailyRow[]=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
  const recentUnits=recentProgressUnits(shuffledItems,4);
  const recentSet=new Set(recentUnits);
+ const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
  const recent=withMeta
   .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
   .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
@@ -277,8 +292,9 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
   .filter(row=>hardScore(states,row)>35)
   .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
  const forgotten=withMeta
-  .filter(row=>forgottenScore(row,now)>0)
-  .sort((a,b)=>forgottenScore(b,now)-forgottenScore(a,now));
+  .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
+  .filter(row=>memoryRiskScore(row,now,frontierRank)>0)
+  .sort((a,b)=>memoryRiskScore(b,now,frontierRank)-memoryRiskScore(a,now,frontierRank));
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
@@ -310,8 +326,8 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  addRows(recent,10-picked.length);
  addRows([...hard,...forgotten],10-picked.length);
  addRows(withMeta.sort((a,b)=>
-  recentScore(states,b,recentUnits,now)+hardScore(states,b)+forgottenScore(b,now)-
-  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+forgottenScore(a,now))
+  recentScore(states,b,recentUnits,now)+hardScore(states,b)+memoryRiskScore(b,now,frontierRank)-
+  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+memoryRiskScore(a,now,frontierRank))
  ),10-picked.length);
 
  return picked.slice(0,10).map((item,index)=>{
@@ -373,6 +389,7 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  const recentUnits=recentProgressUnits(source,6);
  const recentSet=new Set(recentUnits);
  const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
+ const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
  const recent=withMeta
   .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
   .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
@@ -380,8 +397,9 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
   .filter(row=>hardScore(states,row)>28)
   .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
  const forgotten=withMeta
-  .filter(row=>forgottenScore(row,now)>0)
-  .sort((a,b)=>forgottenScore(b,now)-forgottenScore(a,now));
+  .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
+  .filter(row=>memoryRiskScore(row,now,frontierRank)>0)
+  .sort((a,b)=>memoryRiskScore(b,now,frontierRank)-memoryRiskScore(a,now,frontierRank));
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
@@ -405,8 +423,8 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  addRows(forgotten,3);
  addRows([...hard,...forgotten,...recent],12-picked.length);
  addRows(withMeta.sort((a,b)=>
-  recentScore(states,b,recentUnits,now)+hardScore(states,b)+forgottenScore(b,now)-
-  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+forgottenScore(a,now))
+  recentScore(states,b,recentUnits,now)+hardScore(states,b)+memoryRiskScore(b,now,frontierRank)-
+  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+memoryRiskScore(a,now,frontierRank))
  ),12-picked.length);
 
  return picked.slice(0,12).map((item,index)=>{
