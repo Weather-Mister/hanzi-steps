@@ -116,7 +116,7 @@ export function learnedPracticeItems(completed:Set<string>):PracticeItem[]{
    characters:[char],unitId:unit?.id,unitNumber:unit?.displayNumber??unit?.number,bookId:book?.id,bookNumber:book?.number,lessonId:lesson.id,
   });
  }
- return [...words,...phraseItems(completed),...fallbackCharacters];
+ return uniqueItems([...words,...phraseItems(completed),...fallbackCharacters]);
 }
 
 export function adaptivePracticeItems(items:PracticeItem[],mastered:Set<string>):PracticeItem[]{
@@ -166,11 +166,36 @@ function choiceField(mode:PracticeMode):'traditional'|'meaning'|'pinyin'|null{
 }
 
 function viableMode(item:PracticeItem,mode:PracticeMode,items:PracticeItem[]):PracticeMode{
+ const ambiguous=practicePromptIsAmbiguous(item,mode,items);
+ if(ambiguous){
+  const fallbacks:PracticeMode[]=[
+   item.kind==='phrase'&&item.tokens?.length?'sentence':'handwriting',
+   'handwriting',
+   'input',
+   'pinyin',
+   'recall',
+   'recognition',
+  ];
+  for(const fallback of fallbacks){
+   if(!supportedModes(item).includes(fallback)||fallback===mode)continue;
+   if(practicePromptIsAmbiguous(item,fallback,items))continue;
+   const field=choiceField(fallback);
+   if(field){
+    const answer=item[field];
+    const values=new Set(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]).filter(value=>Boolean(value)&&value!==answer));
+    if(values.size<2)continue;
+   }
+   return fallback;
+  }
+ }
  const field=choiceField(mode);
  if(!field)return mode;
  const answer=item[field];
  const values=new Set(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]).filter(value=>Boolean(value)&&value!==answer));
- return values.size>=2?mode:'input';
+ if(values.size>=2)return mode;
+ if(!practicePromptIsAmbiguous(item,'input',items))return 'input';
+ if(item.characters.length&&!practicePromptIsAmbiguous(item,'handwriting',items))return 'handwriting';
+ return mode;
 }
 
 function dueMode(states:PracticeStateMap,item:PracticeItem,now:number):PracticeMode|undefined{
@@ -187,9 +212,53 @@ function failedMode(states:PracticeStateMap,item:PracticeItem):PracticeMode|unde
   .sort((a,b)=>a.strength-b.strength||b.misses-a.misses)[0]?.mode;
 }
 
+function normalizePracticeSurface(value:string):string{
+ return value.normalize('NFKC').trim().replace(/[\s，。！？、,.!?;；:：'"“”‘’（）()]/g,'');
+}
+
+function normalizePracticeMeaning(value:string):string{
+ return value.normalize('NFKC').trim().toLowerCase().replace(/[“”‘’'"]/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim().replace(/\s+/g,' ');
+}
+
+function normalizePracticePinyin(value:string):string{
+ return value.normalize('NFC').trim().toLowerCase().replace(/\s+/g,' ');
+}
+
 function uniqueItems(items:PracticeItem[]):PracticeItem[]{
- const seen=new Set<string>();
- return items.filter(item=>{if(seen.has(item.id))return false;seen.add(item.id);return true});
+ const seenIds=new Set<string>();
+ const seenSurfaces=new Set<string>();
+ return items.filter(item=>{
+  const surface=normalizePracticeSurface(item.traditional);
+  if(seenIds.has(item.id)||seenSurfaces.has(surface))return false;
+  seenIds.add(item.id);
+  seenSurfaces.add(surface);
+  return true;
+ });
+}
+
+function practiceAnswerKey(item:PracticeItem,mode:PracticeMode):string{
+ if(mode==='recognition')return normalizePracticeMeaning(item.meaning);
+ if(mode==='pinyin')return normalizePracticePinyin(item.pinyin);
+ if(mode==='sentence')return normalizePracticeSurface((item.tokens||[]).join(''));
+ return normalizePracticeSurface(item.traditional);
+}
+
+function practicePromptKey(item:PracticeItem,mode:PracticeMode):string{
+ if(mode==='recognition')return normalizePracticeSurface(item.traditional);
+ if(mode==='pinyin')return normalizePracticeSurface(item.traditional)+'|'+normalizePracticeMeaning(item.meaning);
+ if(mode==='recall'||mode==='handwriting')return normalizePracticeMeaning(item.meaning)+'|'+normalizePracticePinyin(item.pinyin);
+ if(mode==='input'||mode==='sentence')return normalizePracticeMeaning(item.meaning);
+ return normalizePracticeSurface(item.traditional);
+}
+
+export function practicePromptIsAmbiguous(item:PracticeItem,mode:PracticeMode,items:PracticeItem[]):boolean{
+ const prompt=practicePromptKey(item,mode);
+ const answer=practiceAnswerKey(item,mode);
+ return items.some(candidate=>
+  candidate.id!==item.id&&
+  practicePromptKey(candidate,mode)===prompt&&
+  practiceAnswerKey(candidate,mode)!==answer
+ );
 }
 
 export function isRevengeCandidate(states:PracticeStateMap,item:PracticeItem):boolean{
