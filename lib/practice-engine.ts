@@ -365,37 +365,57 @@ export function megaCheckpointCount(completed:Set<string>):number{
  return books.reduce((sum,book)=>sum+Math.floor(book.unitIds.filter(unitId=>unitComplete(completed,unitId)).length/4),0);
 }
 
-export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string,completed?:Set<string>):PracticeQuestion[]{
+export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string,completed?:Set<string>,now=Date.now()):PracticeQuestion[]{
  if(!items.length)return [];
- const checkpointUnits=completed?megaCheckpointUnits(completed):[];
- const source=checkpointUnits.length?items.filter(item=>item.unitId&&checkpointUnits.includes(item.unitId)):items;
- if(!source.length)return [];
- const unitIds=checkpointUnits.length?checkpointUnits:[...new Set(source.map(item=>item.unitId||'other'))];
- const byUnit=new Map<string,PracticeItem[]>();
- for(const item of source){
-  const key=item.unitId||'other';
-  byUnit.set(key,[...(byUnit.get(key)||[]),item]);
- }
- const spread:PracticeItem[]=[];
- for(let round=0;round<3&&spread.length<12;round++){
-  for(const unitId of unitIds){
-   const pool=shuffled(byUnit.get(unitId)||[],seed+':'+unitId);
-   const item=pool[round];
-   if(item&&!spread.some(existing=>existing.id===item.id))spread.push(item);
-   if(spread.length>=12)break;
+ if(completed&&megaCheckpointCount(completed)===0)return [];
+
+ const source=shuffled(uniqueItems(items),seed+':source');
+ const recentUnits=recentProgressUnits(source,6);
+ const recentSet=new Set(recentUnits);
+ const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
+ const recent=withMeta
+  .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
+  .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
+ const hard=withMeta
+  .filter(row=>hardScore(states,row)>28)
+  .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
+ const forgotten=withMeta
+  .filter(row=>forgottenScore(row,now)>0)
+  .sort((a,b)=>forgottenScore(b,now)-forgottenScore(a,now));
+
+ const picked:PracticeItem[]=[];
+ const addRows=(rows:{item:PracticeItem}[],count:number)=>{
+  let added=0;
+  for(const row of rows){
+   if(picked.length>=12||added>=count)break;
+   if(picked.some(item=>item.id===row.item.id))continue;
+   picked.push(row.item);
+   added++;
   }
+ };
+
+ // Mixed Mastery stays centered on the learner's current frontier, but reaches
+ // farther back than Daily 10 for weak and overdue material.
+ const recentQuotas=[2,2,1,1];
+ for(let index=0;index<recentUnits.length&&index<recentQuotas.length;index++){
+  addRows(recent.filter(row=>row.item.unitId===recentUnits[index]),recentQuotas[index]);
  }
- if(spread.length<12){
-  for(const item of shuffled(source,seed+':fill')){
-   if(!spread.some(existing=>existing.id===item.id))spread.push(item);
-   if(spread.length>=12)break;
+ addRows(recent,Math.max(0,6-picked.length));
+ addRows(hard,3);
+ addRows(forgotten,3);
+ addRows([...hard,...forgotten,...recent],12-picked.length);
+ addRows(withMeta.sort((a,b)=>
+  recentScore(states,b,recentUnits,now)+hardScore(states,b)+forgottenScore(b,now)-
+  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+forgottenScore(a,now))
+ ),12-picked.length);
+
+ return picked.slice(0,12).map((item,index)=>{
+  let mode=dailyMode(states,item,index+3,now);
+  // Mixed Mastery should skew productive. Recognition is only retained when it
+  // is the exact overdue/failed skill that needs review.
+  if(mode==='recognition'&&!dueMode(states,item,now)&&!failedMode(states,item)){
+   mode=item.kind==='phrase'&&item.tokens?.length?'sentence':'input';
   }
- }
- const cycle:PracticeMode[]=['recall','input','pinyin','sentence','handwriting','recall'];
- return spread.slice(0,12).map((item,index)=>{
-  const modes=supportedModes(item);
-  let mode=cycle[index%cycle.length];
-  if(!modes.includes(mode))mode=weakestMode(states,item,true);
   mode=viableMode(item,mode,source);
   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
  });
