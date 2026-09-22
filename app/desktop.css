@@ -566,3 +566,180 @@
     gap: 17px;
   }
 }
+
+
+/* Keep the desktop overview above the fold: selectors and unit summary are controls,
+   not the main content. The lesson list should be visible immediately. */
+@media (min-width: 1100px) {
+  .topbar {
+    min-height: 66px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .brand-mark {
+    width: 40px;
+    height: 40px;
+    font-size: 1.55rem;
+  }
+
+  .brand {
+    font-size: 1.45rem;
+  }
+
+  .brand small {
+    margin-top: 3px;
+    font-size: .5rem;
+  }
+
+  .home-main {
+    padding-top: 18px;
+  }
+
+  .book-switcher {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .book-switcher button {
+    min-height: 44px;
+    padding: 7px 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 0 #e5eaf2;
+  }
+
+  .book-switcher button.selected {
+    box-shadow: 0 2px 0 var(--unit-border), inset 0 0 0 1px color-mix(in srgb, var(--unit-accent) 16%, transparent);
+  }
+
+  .book-switcher button > svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .book-switcher strong {
+    font-size: .9rem;
+  }
+
+  .book-switcher small {
+    display: none;
+  }
+
+  .unit-picker-trigger {
+    min-height: 48px;
+    margin-bottom: 8px;
+    padding: 7px 12px;
+    border-radius: 13px;
+    box-shadow: 0 2px 0 var(--unit-border);
+  }
+
+  .unit-picker-number {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    font-size: .88rem;
+  }
+
+  .unit-picker-summary {
+    gap: 1px;
+  }
+
+  .unit-picker-summary strong {
+    font-size: .9rem;
+  }
+
+  .unit-picker-summary small {
+    font-size: .72rem;
+  }
+
+  .unit-picker-change {
+    gap: 5px;
+    font-size: .78rem;
+  }
+
+  .unit-picker-change svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .course-milestone {
+    margin: 0 2px 12px;
+  }
+
+  .course-milestone > div:first-child {
+    margin-bottom: 5px;
+    font-size: .72rem;
+  }
+
+  .course-milestone strong {
+    font-size: .82rem;
+  }
+
+  .course-milestone small {
+    font-size: .68rem;
+  }
+
+  .course-milestone [data-slot="progress"] {
+    height: 4px;
+  }
+
+  .unit-banner {
+    min-height: 82px;
+    padding: 14px 20px;
+    border-radius: 17px;
+  }
+
+  .unit-banner .eyebrow {
+    font-size: .65rem;
+    letter-spacing: .1em;
+  }
+
+  .unit-banner h1 {
+    margin: 4px 0 3px;
+    font-size: 1.48rem;
+  }
+
+  .unit-banner div > p:last-child {
+    max-width: 760px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-size: .82rem;
+    line-height: 1.35;
+  }
+
+  .banner-characters {
+    min-width: 150px;
+    padding-left: 22px;
+    font-size: 2.45rem;
+    letter-spacing: .08em;
+  }
+
+  .banner-characters span {
+    margin-top: 4px;
+    font-size: .72rem;
+  }
+
+  .course-layout {
+    padding-top: 12px;
+  }
+
+  .lesson-path {
+    padding-top: 16px;
+  }
+
+  .path-intro {
+    margin-bottom: 9px;
+    padding-bottom: 9px;
+  }
+
+  .main-tabs {
+    top: 82px;
+  }
+
+  .course-sidebar {
+    top: 82px;
+  }
+}
