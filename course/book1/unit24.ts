@@ -35,10 +35,7 @@ const unit:UnitData = {
       "u24-questions",
       "u24-review"
     ],
-    "banner": {
-      "text": "坐高鐵又快又舒服。",
-      "pinyin": "Zuò gāotiě yòu kuài yòu shūfu."
-    },
+    "banner": {"text":"高鐵","pinyin":"gāotiě"},
     "goal": {
       "text": "你怎麼去學校？",
       "pinyin": "Nǐ zěnme qù xuéxiào?",
