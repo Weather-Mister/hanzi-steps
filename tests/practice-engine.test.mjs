@@ -301,7 +301,7 @@ test('Revenge Round attacks one unresolved mistake three different ways and clea
  assert.equal(makeRevengeRound(items,freshMistake,'revenge-test').length,3);
 });
 
-test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, weak, and forgotten material',()=>{
+test('Mixed Mastery uses the latest completed four-unit checkpoint instead of mirroring Daily 10',()=>{
  const firstBook=books.find(book=>book.id==='book-1');
  assert.ok(firstBook);
  const completed=new Set();
@@ -310,7 +310,8 @@ test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, w
   assert.ok(unit);
   completed.add(unit.lessonIds[unit.lessonIds.length-1]);
  }
- assert.deepEqual(megaCheckpointUnits(completed),firstBook.unitIds.slice(4,8));
+ const checkpointUnits=firstBook.unitIds.slice(4,8);
+ assert.deepEqual(megaCheckpointUnits(completed),checkpointUnits);
  assert.equal(megaCheckpointCount(completed),2);
 
  const items=[];
@@ -327,13 +328,11 @@ test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, w
  };
  const queue=makeMegaCheckpoint(items,states,'mixed-mastery-test',completed,1000);
  assert.equal(queue.length,12);
- assert.ok(queue.some(question=>question.item.id===oldWeak.id));
- const latestThree=new Set(firstBook.unitIds.slice(5,8));
- assert.ok(queue.filter(question=>question.item.unitId&&latestThree.has(question.item.unitId)).length>=11);
- assert.ok(queue.filter(question=>question.item.unitId===firstBook.unitIds[7]).length>=4);
- assert.ok(queue.filter(question=>question.item.unitId===firstBook.unitIds[6]).length>=3);
- assert.ok(queue.filter(question=>question.item.unitId===firstBook.unitIds[5]).length>=1);
- assert.ok(queue.every(question=>!['recognition','recall'].includes(question.mode)));
+ assert.ok(!queue.some(question=>question.item.id===oldWeak.id),'an unrelated old weakness should not replace the checkpoint block');
+ assert.ok(queue.every(question=>question.item.unitId&&checkpointUnits.includes(question.item.unitId)));
+ for(const unitId of checkpointUnits)assert.equal(queue.filter(question=>question.item.unitId===unitId).length,3);
+ assert.ok(new Set(queue.map(question=>question.mode)).size>=3,'Mixed Mastery should exercise several skills');
+ assert.ok(queue.every(question=>question.mode!=='recognition'));
 });
 
 test('Taiwan missions stay locked until their prerequisite unit is complete',()=>{
