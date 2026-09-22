@@ -540,62 +540,73 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
  const checkpointRows=withMeta.filter(row=>row.item.unitId&&checkpointUnits.includes(row.item.unitId));
  const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
+ const roundSize=16;
+
+ const masteryDifficulty=(row:DailyRow)=>{
+  const length=Array.from(row.item.traditional).length;
+  const productionBonus=row.item.kind==='phrase'?90:row.item.kind==='word'&&length>1?36:0;
+  const singleCharacterPenalty=length===1?-14:0;
+  return productionBonus+singleCharacterPenalty+challengeComplexity(row.item)*2+hardScore(states,row)+Math.min(28,forgottenScore(row,now));
+ };
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
   let added=0;
   for(const row of rows){
-   if(picked.length>=12||added>=count)break;
+   if(picked.length>=roundSize||added>=count)break;
    if(picked.some(item=>item.id===row.item.id))continue;
    picked.push(row.item);
    added++;
   }
  };
 
- // Mixed Mastery is a checkpoint, not a longer Daily 10. Its backbone is the
- // latest fully-completed four-unit block, which intentionally sits behind the
- // learner's current rolling window. Each checkpoint unit contributes evenly.
+ // Mixed Mastery is deliberately harder than Daily 10. It samples evenly from
+ // the latest completed four-unit checkpoint, heavily prefers phrases and
+ // multi-character vocabulary, and asks for more material before the round ends.
  for(const unitId of checkpointUnits){
   const rows=randomizedAdaptiveRows(
    checkpointRows.filter(row=>row.item.unitId===unitId),
    seed+':checkpoint:'+unitId,
-   row=>challengeComplexity(row.item)+hardScore(states,row)+Math.min(24,forgottenScore(row,now)),
-   30,
+   masteryDifficulty,
+   18,
   );
-  addRows(rows,3);
+  addRows(rows,4);
  }
 
  // Mega-mastered items are already removed before this function is called. If
- // a checkpoint unit has too few remaining items, fill from the rest of that
- // checkpoint first, then use genuinely difficult older material as a fallback.
+ // a checkpoint unit has too few remaining items, fill from the same checkpoint
+ // first, then fall back to genuinely difficult older material.
  const checkpointFallback=randomizedAdaptiveRows(
   checkpointRows,
   seed+':checkpoint-fallback',
-  row=>challengeComplexity(row.item)+hardScore(states,row)+Math.min(24,forgottenScore(row,now)),
-  24,
+  masteryDifficulty,
+  16,
  );
- addRows(checkpointFallback,12-picked.length);
+ addRows(checkpointFallback,roundSize-picked.length);
 
  const broadFallback=randomizedAdaptiveRows(
   withMeta.filter(row=>row.item.unitId&&!checkpointUnits.includes(row.item.unitId)),
   seed+':broad-fallback',
-  row=>hardScore(states,row)+memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
-  18,
+  row=>hardScore(states,row)+memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item)*2,
+  14,
  );
- addRows(broadFallback,12-picked.length);
+ addRows(broadFallback,roundSize-picked.length);
 
- const finalPicked=shuffled(picked.slice(0,12),seed+':question-order');
- const masteryPattern:PracticeMode[]=['recall','pinyin','input','handwriting','input','pinyin'];
+ const finalPicked=shuffled(picked.slice(0,roundSize),seed+':question-order');
  return finalPicked.map((item,index)=>{
-  let mode:PracticeMode;
-  if(item.kind==='phrase'&&item.tokens?.length)mode='sentence';
-  else if(item.kind==='character')mode='handwriting';
-  else mode=masteryPattern[index%masteryPattern.length];
-
+  // No easy multiple choice in Mixed Mastery. Phrases are recalled by typing
+  // the whole sentence; other material alternates typed production and writing.
+  let mode:PracticeMode=item.kind==='phrase'?'input':item.characters.length&&index%2===0?'handwriting':'input';
   mode=viableMode(item,mode,source);
-  // Keep the checkpoint active: it may mix skills, but it should never collapse
-  // into passive recognition.
-  if(mode==='recognition')mode=viableMode(item,item.characters.length?'handwriting':'input',source);
+
+  // viableMode may fall back when a prompt would be ambiguous. Keep any such
+  // fallback productive: recognition, recall, and pinyin choice questions are
+  // never allowed in this checkpoint.
+  if(mode==='recognition'||mode==='recall'||mode==='pinyin'){
+   mode=viableMode(item,item.characters.length?'handwriting':'input',source);
+  }
+  if(mode==='recognition'||mode==='recall'||mode==='pinyin')mode='input';
+
   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
  });
 }
