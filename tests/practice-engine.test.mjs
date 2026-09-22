@@ -11,6 +11,7 @@ import {
  megaCheckpointUnits,
  practiceAttemptForStep,
  practiceSkillKey,
+ sentenceDistractors,
  taiwanMissions,
  updatePracticeState,
 } from '../lib/practice-engine.ts';
@@ -56,6 +57,56 @@ test('practice strength schedules clean recall farther out and mistakes weaken i
  assert.ok(miss.strength<assisted.strength);
 });
 
+
+
+test('sentence builders add plausible recent distractors without duplicating answer tiles',()=>{
+ const phrase={
+  id:'phrase:test-sister-photo',kind:'phrase',traditional:'這是我姐姐的照片',pinyin:'zhè shì wǒ jiějie de zhàopiàn',
+  meaning:"This is my older sister's photo.",characters:['這','是','我','姐','姐','的','照','片'],
+  unitId:'unit-7',unitNumber:7,bookId:'book-1',bookNumber:1,lessonId:'u7-test',
+  tokens:['這','是','我','姐姐','的','照片'],
+ };
+ const word=(id,traditional,meaning,unitNumber=7)=>({
+  id,kind:'word',traditional,pinyin:traditional,meaning,characters:Array.from(traditional),
+  unitId:'unit-'+unitNumber,unitNumber,bookId:'book-1',bookNumber:1,lessonId:'test-'+id,
+ });
+ const items=[
+  phrase,
+  word('older-sister','姐姐','older sister'),
+  word('younger-sister','妹妹','younger sister'),
+  word('younger-brother','弟弟','younger brother'),
+  word('that','那','that'),
+  word('she','她','she',6),
+  word('he','他','he',6),
+  word('coffee','咖啡','coffee',2),
+ ];
+ const distractors=sentenceDistractors(phrase,items,'sentence-test');
+ assert.equal(distractors.length,3);
+ assert.ok(distractors.includes('妹妹'),String(distractors));
+ assert.ok(distractors.some(value=>['那','弟弟','她','他'].includes(value)),String(distractors));
+ assert.ok(distractors.every(value=>!phrase.tokens.includes(value)));
+ assert.equal(new Set(distractors).size,distractors.length);
+});
+
+test('sentence distractors avoid same-meaning synonyms that could create ambiguous answers',()=>{
+ const phrase={
+  id:'phrase:test-ambiguous',kind:'phrase',traditional:'這是我姐姐的照片',pinyin:'zhè shì wǒ jiějie de zhàopiàn',
+  meaning:"This is my older sister's photo.",characters:['這','是','我','姐','姐','的','照','片'],
+  unitId:'unit-7',unitNumber:7,bookId:'book-1',bookNumber:1,lessonId:'u7-test',
+  tokens:['這','是','我','姐姐','的','照片'],
+ };
+ const items=[
+  phrase,
+  {id:'姐姐',kind:'word',traditional:'姐姐',pinyin:'jiějie',meaning:'older sister',characters:['姐','姐'],unitId:'unit-7',unitNumber:7,bookId:'book-1',bookNumber:1,lessonId:'a'},
+  {id:'姊姊',kind:'word',traditional:'姊姊',pinyin:'zǐzǐ',meaning:'older sister',characters:['姊','姊'],unitId:'unit-7',unitNumber:7,bookId:'book-1',bookNumber:1,lessonId:'b'},
+  {id:'妹妹',kind:'word',traditional:'妹妹',pinyin:'mèimei',meaning:'younger sister',characters:['妹','妹'],unitId:'unit-7',unitNumber:7,bookId:'book-1',bookNumber:1,lessonId:'c'},
+  {id:'弟弟',kind:'word',traditional:'弟弟',pinyin:'dìdi',meaning:'younger brother',characters:['弟','弟'],unitId:'unit-6',unitNumber:6,bookId:'book-1',bookNumber:1,lessonId:'d'},
+  {id:'那',kind:'word',traditional:'那',pinyin:'nà',meaning:'that',characters:['那'],unitId:'unit-7',unitNumber:7,bookId:'book-1',bookNumber:1,lessonId:'e'},
+ ];
+ const distractors=sentenceDistractors(phrase,items,'ambiguous-test',3);
+ assert.equal(distractors.includes('姊姊'),false,String(distractors));
+ assert.ok(distractors.includes('妹妹'),String(distractors));
+});
 
 test('Mega-mastered vocabulary is excluded from adaptive practice pools',()=>{
  const items=[item(1,'unit-1'),item(2,'unit-2'),item(3,'unit-3')];
