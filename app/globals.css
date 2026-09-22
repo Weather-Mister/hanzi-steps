@@ -1247,6 +1247,8 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .smart-result .primary-button { min-width:112px; }
 .smart-result.correct .primary-button { background:#21804c; box-shadow:0 4px 0 #155932; }
 .smart-result.wrong .primary-button { background:#b75a35; box-shadow:0 4px 0 #833d22; }
+.smart-result.correct .primary-button:active:not(:disabled) { box-shadow:0 1px 0 #155932; }
+.smart-result.wrong .primary-button:active:not(:disabled) { box-shadow:0 1px 0 #833d22; }
 .smart-finish,
 .smart-empty {
  min-height:370px;
