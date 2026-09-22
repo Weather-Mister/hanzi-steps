@@ -37,10 +37,7 @@ const unit:UnitData = {
       "u26-when",
       "u26-review"
     ],
-    "banner": {
-      "text": "下個星期我們放假。",
-      "pinyin": "Xià ge xīngqí wǒmen fàngjià."
-    },
+    "banner": {"text":"旅行","pinyin":"lǚxíng"},
     "goal": {
       "text": "我打算跟朋友去旅行。",
       "pinyin": "Wǒ dǎsuàn gēn péngyǒu qù lǚxíng.",
