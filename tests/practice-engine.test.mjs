@@ -72,6 +72,38 @@ test('Daily 10 is capped, unique, and prioritizes a due weak item',()=>{
 });
 
 
+
+test('Daily 10 follows the learner frontier instead of drifting back to early easy units',()=>{
+ const items=[];
+ for(let unitNumber=1;unitNumber<=8;unitNumber++){
+  for(let index=0;index<5;index++)items.push(item(unitNumber*10+index,'unit-'+unitNumber));
+ }
+ const queue=makeDailyTen(items,{},'recent-frontier',1000);
+ assert.equal(queue.length,10);
+ const unitNumbers=queue.map(question=>question.item.unitNumber);
+ assert.ok(unitNumbers.every(number=>number>=5),String(unitNumbers));
+ assert.ok(unitNumbers.filter(number=>number===8).length>=2);
+ assert.ok(unitNumbers.filter(number=>number===7).length>=2);
+});
+
+test('Daily 10 still reaches back for genuinely weak older material',()=>{
+ const items=[];
+ for(let unitNumber=1;unitNumber<=8;unitNumber++){
+  for(let index=0;index<5;index++)items.push(item(unitNumber*10+index,'unit-'+unitNumber));
+ }
+ const oldWeak=items.find(candidate=>candidate.unitId==='unit-1');
+ assert.ok(oldWeak);
+ const states={
+  [practiceSkillKey(oldWeak.id,'recall')]:{
+   itemId:oldWeak.id,mode:'recall',attempts:5,correct:2,assisted:0,misses:3,streak:0,
+   strength:.15,lastSeen:100,nextReview:200,
+  },
+ };
+ const queue=makeDailyTen(items,states,'adaptive-old-weak',1000);
+ assert.ok(queue.some(question=>question.item.id===oldWeak.id));
+ assert.ok(queue.filter(question=>question.item.unitNumber>=5).length>=6);
+});
+
 test('Daily 10 reviews the skill that is actually due instead of an unrelated unseen mode',()=>{
  const items=Array.from({length:8},(_,index)=>item(index,'unit-1'));
  const target=items[0];
@@ -142,7 +174,7 @@ test('Revenge Round attacks one unresolved mistake three different ways then cle
  assert.deepEqual(makeRevengeRound(items,resolved,'revenge-test'),[]);
 });
 
-test('Mega Challenge uses the latest complete four-unit checkpoint inside one book',()=>{
+test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, weak, and forgotten material',()=>{
  const firstBook=books.find(book=>book.id==='book-1');
  assert.ok(firstBook);
  const completed=new Set();
@@ -156,12 +188,22 @@ test('Mega Challenge uses the latest complete four-unit checkpoint inside one bo
 
  const items=[];
  firstBook.unitIds.slice(0,8).forEach((unitId,unitIndex)=>{
-  for(let i=0;i<4;i++)items.push(item(unitIndex*10+i,unitId));
+  for(let i=0;i<5;i++)items.push(item(unitIndex*10+i,unitId));
  });
- const queue=makeMegaCheckpoint(items,{},'mega-test',completed);
+ const oldWeak=items.find(candidate=>candidate.unitId===firstBook.unitIds[0]);
+ assert.ok(oldWeak);
+ const states={
+  [practiceSkillKey(oldWeak.id,'recall')]:{
+   itemId:oldWeak.id,mode:'recall',attempts:6,correct:2,assisted:0,misses:4,streak:0,
+   strength:.12,lastSeen:100,nextReview:200,
+  },
+ };
+ const queue=makeMegaCheckpoint(items,states,'mixed-mastery-test',completed,1000);
  assert.equal(queue.length,12);
- assert.ok(queue.every(question=>firstBook.unitIds.slice(4,8).includes(question.item.unitId)));
- assert.equal(new Set(queue.map(question=>question.item.unitId)).size,4);
+ assert.ok(queue.some(question=>question.item.id===oldWeak.id));
+ const recentUnits=new Set(firstBook.unitIds.slice(2,8));
+ assert.ok(queue.filter(question=>question.item.unitId&&recentUnits.has(question.item.unitId)).length>=6);
+ assert.ok(queue.every(question=>question.mode!=='recognition'||question.item.id===oldWeak.id));
 });
 
 test('Taiwan missions stay locked until their prerequisite unit is complete',()=>{
