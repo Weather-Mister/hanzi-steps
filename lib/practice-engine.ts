@@ -750,8 +750,13 @@ export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:
  if(!answerTokens.length)return [];
  const desired=count??(answerTokens.length<=4?2:answerTokens.length<=7?3:4);
  const answerSet=new Set(answerTokens);
- const candidates=sentenceTokenCandidates(items).filter(candidate=>!answerSet.has(candidate.token));
  const targetMeta=answerTokens.map(token=>({token,meta:targetTokenMetadata(token,items)}));
+ const targetMeanings=new Set(targetMeta.map(target=>target.meta?.meaning?.trim().toLowerCase()).filter(Boolean));
+ const candidates=sentenceTokenCandidates(items).filter(candidate=>{
+  if(answerSet.has(candidate.token))return false;
+  const meaning=candidate.meaning?.trim().toLowerCase();
+  return !meaning||!targetMeanings.has(meaning);
+ });
 
  const score=(candidate:SentenceTokenCandidate)=>{
   let best=0;
