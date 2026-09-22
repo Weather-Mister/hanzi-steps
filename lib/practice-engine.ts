@@ -534,46 +534,12 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  if(completed&&megaCheckpointCount(completed)===0)return [];
 
  const source=shuffled(uniqueItems(items),seed+':source');
- const recentUnits=recentProgressUnits(source,5);
- const frontierUnit=recentUnits[0];
- const previousUnit=recentUnits[1];
- const secondPreviousUnit=recentUnits[2];
- const frontierRank=Math.max(...source.map(item=>progressRank(item)));
- const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
+ const checkpointUnits=completed?megaCheckpointUnits(completed):recentProgressUnits(source,4).reverse();
+ if(!checkpointUnits.length)return [];
 
- const current=randomizedAdaptiveRows(
-  withMeta.filter(row=>row.item.unitId===frontierUnit),
-  seed+':current',
-  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
-  28,
- );
- const previous=randomizedAdaptiveRows(
-  withMeta.filter(row=>row.item.unitId===previousUnit),
-  seed+':previous',
-  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
-  26,
- );
- const secondPrevious=randomizedAdaptiveRows(
-  withMeta.filter(row=>row.item.unitId===secondPreviousUnit),
-  seed+':second-previous',
-  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
-  24,
- );
- const hard=randomizedAdaptiveRows(
-  withMeta.filter(row=>actualTrouble(row,frontierRank,now)),
-  seed+':hard',
-  row=>hardScore(states,row)+challengeComplexity(row.item)*1.5,
-  16,
- );
- const forgotten=randomizedAdaptiveRows(
-  withMeta.filter(row=>{
-   const distance=Math.max(0,frontierRank-progressRank(row.item));
-   return distance>=3&&distance<=6&&challengeComplexity(row.item)>=16&&memoryRiskScore(row,now,frontierRank)>0;
-  }),
-  seed+':forgotten',
-  row=>memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
-  16,
- );
+ const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
+ const checkpointRows=withMeta.filter(row=>row.item.unitId&&checkpointUnits.includes(row.item.unitId));
+ const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
@@ -586,34 +552,50 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
   }
  };
 
- // Mixed Mastery uses the same rolling window but stays tougher: current,
- // previous, and second-previous units make up nearly the whole round, with
- // one slot for a concrete weak/forgotten item.
- addRows(current,5);
- addRows(previous,4);
- addRows(secondPrevious,2);
- addRows([...hard,...forgotten],1);
+ // Mixed Mastery is a checkpoint, not a longer Daily 10. Its backbone is the
+ // latest fully-completed four-unit block, which intentionally sits behind the
+ // learner's current rolling window. Each checkpoint unit contributes evenly.
+ for(const unitId of checkpointUnits){
+  const rows=randomizedAdaptiveRows(
+   checkpointRows.filter(row=>row.item.unitId===unitId),
+   seed+':checkpoint:'+unitId,
+   row=>challengeComplexity(row.item)+hardScore(states,row)+Math.min(24,forgottenScore(row,now)),
+   30,
+  );
+  addRows(rows,3);
+ }
 
- addRows([...current,...previous,...secondPrevious],12-picked.length);
- addRows([...hard,...forgotten],12-picked.length);
-
- const fallback=randomizedAdaptiveRows(
-  withMeta.filter(row=>{
-   const distance=Math.max(0,frontierRank-progressRank(row.item));
-   return distance<=3||actualTrouble(row,frontierRank,now);
-  }),
-  seed+':fallback',
-  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
-  20,
+ // Mega-mastered items are already removed before this function is called. If
+ // a checkpoint unit has too few remaining items, fill from the rest of that
+ // checkpoint first, then use genuinely difficult older material as a fallback.
+ const checkpointFallback=randomizedAdaptiveRows(
+  checkpointRows,
+  seed+':checkpoint-fallback',
+  row=>challengeComplexity(row.item)+hardScore(states,row)+Math.min(24,forgottenScore(row,now)),
+  24,
  );
- addRows(fallback,12-picked.length);
+ addRows(checkpointFallback,12-picked.length);
+
+ const broadFallback=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId&&!checkpointUnits.includes(row.item.unitId)),
+  seed+':broad-fallback',
+  row=>hardScore(states,row)+memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
+  18,
+ );
+ addRows(broadFallback,12-picked.length);
 
  const finalPicked=shuffled(picked.slice(0,12),seed+':question-order');
+ const masteryPattern:PracticeMode[]=['recall','pinyin','input','handwriting','input','pinyin'];
  return finalPicked.map((item,index)=>{
-  let mode=productiveMode(states,item,index+2,now,true);
-  // Mixed Mastery never drops down to recognition-style multiple choice.
-  if(mode==='recognition'||mode==='recall')mode=item.kind==='phrase'&&item.tokens?.length?'sentence':'input';
+  let mode:PracticeMode;
+  if(item.kind==='phrase'&&item.tokens?.length)mode='sentence';
+  else if(item.kind==='character')mode='handwriting';
+  else mode=masteryPattern[index%masteryPattern.length];
+
   mode=viableMode(item,mode,source);
+  // Keep the checkpoint active: it may mix skills, but it should never collapse
+  // into passive recognition.
+  if(mode==='recognition')mode=viableMode(item,item.characters.length?'handwriting':'input',source);
   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
  });
 }

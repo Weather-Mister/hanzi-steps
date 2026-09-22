@@ -78,7 +78,7 @@ function BonusStage({kind,onStart}:{kind:BonusStageKind;onStart:()=>void}){
  const meta={
   daily:{label:'BONUS STAGE',title:'Daily 10',subtitle:'A quick adaptive mix from what you have been learning.',icon:Flame},
   revenge:{label:'REVENGE STAGE',title:'Revenge Round',subtitle:'One weak spot is back. Beat it a few different ways.',icon:Swords},
-  mixed:{label:'POWER CHECK',title:'Mixed Mastery',subtitle:'Recent, difficult, and almost-forgotten material in one harder round.',icon:Sparkles},
+  mixed:{label:'POWER CHECK',title:'Mixed Mastery',subtitle:'A surprise four-unit checkpoint with a wider mix of skills than Daily 10.',icon:Sparkles},
   mega:{label:'HANDWRITING BOSS',title:'Mega Challenge',subtitle:'A longer handwriting run when you feel like going for it.',icon:Trophy},
   taiwan:{label:'TAIWAN DETOUR',title:'Taiwan Mode',subtitle:'Use what you know in a short real-life situation.',icon:MapPin},
  }[kind];
@@ -91,6 +91,14 @@ function BonusStage({kind,onStart}:{kind:BonusStageKind;onStart:()=>void}){
    <button className="bonus-stage-action" onClick={onStart}>Play bonus stage<ArrowRight size={16}/></button>
   </div>
  </div>;
+}
+
+function chooseBonusStage(seed:string,ready:Record<BonusStageKind,boolean>):BonusStageKind|null{
+ const weighted:BonusStageKind[]=(['daily','daily','revenge','mixed','taiwan','mega'] as BonusStageKind[]).filter(kind=>ready[kind]);
+ if(!weighted.length)return null;
+ let hash=2166136261;
+ for(let i=0;i<seed.length;i++){hash^=seed.charCodeAt(i);hash=Math.imul(hash,16777619)}
+ return weighted[(hash>>>0)%weighted.length]??null;
 }
 
 type AppProps={userKey:string;accountPanel:ReactNode;signInPanel:ReactNode};
@@ -122,9 +130,6 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const mixedReady=megaCheckpointCount(completed)>0;
  const taiwanReady=availableTaiwanMissions(completed).some(mission=>mission.unlocked);
  const completedUnitsTotal=units.filter(candidate=>completed.has(candidate.lessonIds[candidate.lessonIds.length-1])).length;
- const unitSequence=Math.max(0,books.flatMap(candidate=>candidate.unitIds).indexOf(unit.id));
- const bonusCycle:BonusStageKind[]=['daily','revenge','mixed','taiwan','mega'];
- const preferredBonus=bonusCycle[unitSequence%bonusCycle.length];
  const bonusReady:Record<BonusStageKind,boolean>={
   daily:practiceItems.length>=3,
   revenge:revengeReady,
@@ -132,7 +137,11 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
   mega:completedUnitsTotal>=2&&practiceItems.length>=8,
   taiwan:taiwanReady,
  };
- const bonusKind:BonusStageKind|null=bonusReady[preferredBonus]?preferredBonus:bonusReady.daily?'daily':null;
+ // Bonus stages should feel discovered rather than scheduled. The pick is
+ // pseudo-random per user + unit, so it stays stable while the page rerenders.
+ // Daily 10 gets a little extra weight; Revenge and Mixed Mastery have equal
+ // chances whenever each is ready.
+ const bonusKind=chooseBonusStage(userKey+':'+unit.id,bonusReady);
  const bonusAfterIndex=Math.max(0,Math.min(unitLessons.length-2,Math.floor((unitLessons.length-1)/2)));
  const bonusVisible=Boolean(bonusKind&&completed.has(unitLessons[bonusAfterIndex]?.id));
  const current=active?findLesson(active.lessonId):undefined;
