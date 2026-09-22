@@ -31,8 +31,8 @@ const unit:UnitData = {
       "u11-challenge"
     ],
     "banner": {
-      "text": "外帶還是內用？",
-      "pinyin": "Wàidài háishi nèiyòng?"
+      "text": "外帶",
+      "pinyin": "wàidài"
     },
     "goal": {
       "text": "我要一杯熱茶，外帶，謝謝。",
