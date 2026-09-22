@@ -86,6 +86,19 @@ test('Daily 10 follows the learner frontier instead of drifting back to early ea
  assert.ok(unitNumbers.filter(number=>number===7).length>=2);
 });
 
+
+test('Daily 10 infers likely-forgotten material even before mastery history exists',()=>{
+ const items=[];
+ for(let unitNumber=1;unitNumber<=12;unitNumber++){
+  for(let index=0;index<5;index++)items.push(item(unitNumber*10+index,'unit-'+unitNumber));
+ }
+ const queue=makeDailyTen(items,{},'memory-risk-without-history',1000);
+ assert.equal(queue.length,10);
+ assert.ok(queue.filter(question=>question.item.unitNumber>=9).length>=6);
+ assert.ok(queue.some(question=>question.item.unitNumber<=8&&question.item.unitNumber>=2));
+ assert.ok(queue.filter(question=>question.item.unitNumber===1).length<=1);
+});
+
 test('Daily 10 still reaches back for genuinely weak older material',()=>{
  const items=[];
  for(let unitNumber=1;unitNumber<=8;unitNumber++){
