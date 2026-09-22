@@ -7,7 +7,7 @@ import {WritingPad} from './writing-pad';
 import {shuffled} from '@/lib/curriculum';
 import {
  adaptivePracticeItems,availableTaiwanMissions,distractorPool,isRevengeCandidate,learnedPracticeItems,
- makeDailyTen,makeMegaCheckpoint,makeRevengeRound,megaCheckpointCount,practiceSkillKey,
+ makeDailyTen,makeMegaCheckpoint,makeRevengeRound,megaCheckpointCount,practiceSkillKey,sentenceDistractors,
  type PracticeItem,type PracticeQuestion,type TaiwanMission,
 } from '@/lib/practice-engine';
 import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
@@ -51,14 +51,19 @@ function InputQuestion({question,onAnswer}:{question:PracticeQuestion;onAnswer:(
   <button className="primary-button" disabled={!value.trim()} onClick={submit}>Check</button>
  </div>;
 }
-function SentenceQuestion({question,onAnswer}:{question:PracticeQuestion;onAnswer:(ok:boolean,answer:string)=>void}){
+function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string)=>void}){
  const tokens=question.item.tokens||[];
- const order=useMemo(()=>shuffled(tokens.map((_,i)=>i),question.id+':tokens'),[question.id,tokens]);
+ const bank=useMemo(()=>{
+  const extras=sentenceDistractors(question.item,items,question.id);
+  return shuffled([...tokens,...extras].map((text,index)=>({id:index,text})),question.id+':tokens');
+ },[items,question.id,question.item,tokens]);
  const [picked,setPicked]=useState<number[]>([]);
- const built=picked.map(i=>tokens[i]).join('');
- return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>Build the Chinese sentence.</p></div>
-  <div className="smart-built-sentence" lang="zh-Hant-TW">{picked.length?picked.map(i=>tokens[i]).join(' '):'…'}</div>
-  <div className="smart-token-bank">{order.map(i=><button key={i} disabled={picked.includes(i)} onClick={()=>setPicked(old=>[...old,i])} lang="zh-Hant-TW">{tokens[i]}</button>)}</div>
+ const chosen=picked.map(id=>bank.find(token=>token.id===id)?.text||'');
+ const built=chosen.join('');
+ const full=picked.length>=tokens.length;
+ return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>Build the Chinese sentence. Extra tiles are mixed in.</p></div>
+  <div className="smart-built-sentence" lang="zh-Hant-TW">{picked.length?chosen.join(' '):'…'}</div>
+  <div className="smart-token-bank">{bank.map(token=><button key={token.id} disabled={picked.includes(token.id)||full} onClick={()=>setPicked(old=>[...old,token.id])} lang="zh-Hant-TW">{token.text}</button>)}</div>
   <div className="smart-inline-actions"><button className="text-button" disabled={!picked.length} onClick={()=>setPicked(old=>old.slice(0,-1))}>Undo</button>
    <button className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
  </div>;
@@ -75,7 +80,7 @@ function HandwritingQuestion({question,onAnswer}:{question:PracticeQuestion;onAn
 function QuestionView({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
  if(question.mode==='recognition'||question.mode==='recall'||question.mode==='pinyin')return <ChoiceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
  if(question.mode==='input')return <InputQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
- if(question.mode==='sentence')return <SentenceQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
+ if(question.mode==='sentence')return <SentenceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
  return <HandwritingQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
 }
 function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subtitle:string;queue:PracticeQuestion[];items:PracticeItem[];onExit:()=>void;onRecord:(question:PracticeQuestion,ok:boolean,assisted:boolean)=>Promise<unknown>}){
