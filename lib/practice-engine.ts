@@ -260,6 +260,23 @@ function recentScore(states:PracticeStateMap,row:DailyRow,recentUnits:string[],n
  return progressBonus+unseenBonus+hardScore(states,row)+Math.min(35,forgottenScore(row,now));
 }
 
+function randomizedAdaptiveRows(
+ rows:DailyRow[],
+ seed:string,
+ score:(row:DailyRow)=>number,
+ jitter=22,
+):DailyRow[]{
+ if(rows.length<2)return [...rows];
+ const noiseOrder=shuffled(rows,seed+':noise');
+ const noise=new Map(noiseOrder.map((row,index)=>[
+  row.item.id,
+  ((index/Math.max(1,noiseOrder.length-1))-.5)*jitter,
+ ]));
+ return [...rows].sort((a,b)=>
+  (score(b)+(noise.get(b.item.id)??0))-(score(a)+(noise.get(a.item.id)??0))
+ );
+}
+
 function dailyMode(states:PracticeStateMap,item:PracticeItem,index:number,now:number):PracticeMode{
  const failed=failedMode(states,item);
  if(failed)return failed;
@@ -289,16 +306,26 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const recentUnits=recentProgressUnits(shuffledItems,4);
  const recentSet=new Set(recentUnits);
  const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
- const recent=withMeta
-  .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
-  .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
- const hard=withMeta
-  .filter(row=>hardScore(states,row)>35)
-  .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
- const forgotten=withMeta
-  .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
-  .filter(row=>memoryRiskScore(row,now,frontierRank)>0)
-  .sort((a,b)=>memoryRiskScore(b,now,frontierRank)-memoryRiskScore(a,now,frontierRank));
+ const recent=randomizedAdaptiveRows(
+  withMeta.filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId))),
+  seed+':recent',
+  row=>recentScore(states,row,recentUnits,now),
+  30,
+ );
+ const hard=randomizedAdaptiveRows(
+  withMeta.filter(row=>hardScore(states,row)>35),
+  seed+':hard',
+  row=>hardScore(states,row),
+  20,
+ );
+ const forgotten=randomizedAdaptiveRows(
+  withMeta
+   .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
+   .filter(row=>memoryRiskScore(row,now,frontierRank)>0),
+  seed+':forgotten',
+  row=>memoryRiskScore(row,now,frontierRank),
+  20,
+ );
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
@@ -329,12 +356,15 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  // to older easy material.
  addRows(recent,10-picked.length);
  addRows([...hard,...forgotten],10-picked.length);
- addRows(withMeta.sort((a,b)=>
-  recentScore(states,b,recentUnits,now)+hardScore(states,b)+memoryRiskScore(b,now,frontierRank)-
-  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+memoryRiskScore(a,now,frontierRank))
+ addRows(randomizedAdaptiveRows(
+  withMeta,
+  seed+':fallback',
+  row=>recentScore(states,row,recentUnits,now)+hardScore(states,row)+memoryRiskScore(row,now,frontierRank),
+  18,
  ),10-picked.length);
 
- return picked.slice(0,10).map((item,index)=>{
+ const finalPicked=shuffled(picked.slice(0,10),seed+':question-order');
+ return finalPicked.map((item,index)=>{
   let mode=dailyMode(states,item,index,now);
   mode=viableMode(item,mode,items);
   return {id:'daily:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'daily'};

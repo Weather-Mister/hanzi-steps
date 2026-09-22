@@ -19,9 +19,10 @@ type Screen='hub'|'session'|'taiwan'|'mission';
 function normalizeChinese(value:string){
  return value.trim().replace(/[\s，。！？、,.!?;；:：'"“”‘’（）()]/g,'');
 }
-function seed(prefix:string,stableForDay=false){
+function seed(prefix:string){
  const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei'}).format(new Date());
- return stableForDay?prefix+':'+day:prefix+':'+day+':'+Math.floor(Date.now()/60000);
+ const nonce=typeof crypto!=='undefined'&&'randomUUID' in crypto?crypto.randomUUID():Math.random().toString(36).slice(2);
+ return prefix+':'+day+':'+Date.now()+':'+nonce;
 }
 function ModeLabel({mode}:{mode:PracticeQuestion['mode']}){
  const labels:Record<PracticeQuestion['mode'],string>={
@@ -117,7 +118,7 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startMo
  const dailySize=Math.min(10,items.length);
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState(''),[mission,setMission]=useState<TaiwanMission|null>(null);
  function back(){setScreen('hub');setQueue([])}
- function startDaily(){setQueue(makeDailyTen(items,states,seed('daily',true)));setSessionTitle('Daily 10');setSessionSubtitle('Recent units first, with weak and likely-forgotten material mixed in.');setScreen('session')}
+ function startDaily(){setQueue(makeDailyTen(items,states,seed('daily')));setSessionTitle('Daily 10');setSessionSubtitle('Recent units first, with weak and likely-forgotten material mixed in.');setScreen('session')}
  function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked in different ways.');setScreen('session')}
  function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mixed Mastery');setSessionSubtitle('Harder adaptive review of recent units, weak spots, and material you may be forgetting.');setScreen('session')}
  useEffect(()=>{
