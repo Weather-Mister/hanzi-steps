@@ -35,8 +35,8 @@ const unit:UnitData = {
       "u15-challenge"
     ],
     "banner": {
-      "text": "我想點一碗牛肉麵。",
-      "pinyin": "Wǒ xiǎng diǎn yì wǎn niúròu miàn."
+      "text": "牛肉麵",
+      "pinyin": "niúròu miàn"
     },
     "goal": {
       "text": "我想點一碗牛肉麵。",
