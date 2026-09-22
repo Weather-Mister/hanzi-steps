@@ -32,10 +32,7 @@ const unit:UnitData = {
       "u28-separable",
       "u28-review"
     ],
-    "banner": {
-      "text": "我學中文學一年。",
-      "pinyin": "Wǒ xué Zhōngwén xué yì nián."
-    },
+    "banner": {"text":"鐘頭","pinyin":"zhōngtóu"},
     "goal": {
       "text": "我們放三天的假。",
       "pinyin": "Wǒmen fàng sān tiān de jià.",
