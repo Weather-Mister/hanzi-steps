@@ -4,16 +4,16 @@ import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,restoreMegaWord} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
-import {useMegaMastery} from '@/lib/use-mega-mastery';
+import type {MegaMasteryController} from '@/lib/use-mega-mastery';
 import {WritingPad} from './writing-pad';
 
 type Result={item:VocabularyLookupItem;perfect:boolean};
 const itemById=new Map(vocabularyLookup.map(item=>[item.id,item]));
 
 export function MegaChallenge({
- open,onOpenChange,completed,userKey,theme,
-}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;userKey:string;theme:string}){
- const {mastered,loading:masteryLoading,saving,error,setMastered}=useMegaMastery(userKey);
+ open,onOpenChange,completed,theme,mastery,
+}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController}){
+ const {mastered,loading:masteryLoading,saving,error,setMastered}=mastery;
  const learned=useMemo(()=>learnedVocabulary(completed),[completed]);
  const eligible=useMemo(()=>learned.filter(item=>!mastered.has(item.id)),[learned,mastered]);
  const masteredItems=useMemo(()=>vocabularyLookup.filter(item=>mastered.has(item.id)),[mastered]);
