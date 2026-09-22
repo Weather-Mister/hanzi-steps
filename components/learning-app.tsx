@@ -1,6 +1,6 @@
 'use client';
-import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,GraduationCap,Lightbulb,Lock,MapPin,Play,RotateCcw,Settings2,Sparkles,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
+import {Fragment,useEffect,useRef,useState,type ReactNode} from 'react';
+import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,Flame,GraduationCap,Lightbulb,Lock,MapPin,Play,RotateCcw,Settings2,Sparkles,Swords,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {Switch} from '@/components/ui/switch';
@@ -13,11 +13,11 @@ import {WritingPad} from './writing-pad';
 import {UnitPicker} from './unit-picker';
 import {StreakCounter} from './streak-counter';
 import {InteractionFeedback,useInteractionFeedback} from './interaction-feedback';
-import {SmartPractice} from './smart-practice';
+import {SmartPractice,type PracticeEntry} from './smart-practice';
 import {MegaChallenge} from './mega-challenge';
 import {PinyinSearch} from './pinyin-search';
 import {visualUnitTheme} from '@/lib/unit-theme';
-import {practiceAttemptForStep,taiwanMissions} from '@/lib/practice-engine';
+import {availableTaiwanMissions,learnedPracticeItems,makeRevengeRound,megaCheckpointCount,practiceAttemptForStep,taiwanMissions} from '@/lib/practice-engine';
 import {usePracticeMastery} from '@/lib/use-practice-mastery';
 
 type Preferences={pinyin:boolean;zhuyin:boolean};
@@ -71,13 +71,33 @@ function Exercise({step,prefs,onAdvance,onAttempt}:{step:Step;prefs:Preferences;
  </section><footer className={`exercise-footer ${feedback==='good'?'success':feedback==='wrong'?'error':''}`}><div className="feedback-area" aria-live="polite">{feedback?<><span className="feedback-icon">{feedback==='good'?<Check size={27}/>:<RotateCcw size={25}/>}</span><div><strong>{feedback==='good'?(hadHelp?'Good practice!':'Nicely done!'):'Let’s try that again'}</strong><p>{explanation}</p></div></>:<p>{introduction?(step.type==='intro'?'Take your time. Learn the shape and its parts.':'Notice the pattern. You will use it next.'):writing?'One stroke at a time. You have unlimited tries.':'Take your time. There is no timer.'}</p>}</div><button className="primary-button continue-button" disabled={!ready} onClick={introduction||feedback?proceed:check}>{feedback==='wrong'?'Try again':introduction||feedback==='good'?'Continue':'Check answer'}<ArrowRight size={19}/></button></footer></>
 }
 
+type BonusStageKind='daily'|'revenge'|'mixed'|'mega'|'taiwan';
+function BonusStage({kind,onStart}:{kind:BonusStageKind;onStart:()=>void}){
+ const meta={
+  daily:{label:'BONUS STAGE',title:'Daily 10',subtitle:'A quick adaptive mix from what you have been learning.',icon:Flame},
+  revenge:{label:'REVENGE STAGE',title:'Revenge Round',subtitle:'One weak spot is back. Beat it a few different ways.',icon:Swords},
+  mixed:{label:'POWER CHECK',title:'Mixed Mastery',subtitle:'Recent, difficult, and almost-forgotten material in one harder round.',icon:Sparkles},
+  mega:{label:'HANDWRITING BOSS',title:'Mega Challenge',subtitle:'A longer handwriting run when you feel like going for it.',icon:Trophy},
+  taiwan:{label:'TAIWAN DETOUR',title:'Taiwan Mode',subtitle:'Use what you know in a short real-life situation.',icon:MapPin},
+ }[kind];
+ const Icon=meta.icon;
+ return <div className={`path-row bonus-stage bonus-${kind}`}>
+  <div className="path-track"><button className="path-node bonus-stage-node" onClick={onStart} aria-label={`Play optional bonus stage: ${meta.title}`}><Icon size={27}/></button></div>
+  <div className="path-copy bonus-stage-card">
+   <p className="path-step">{meta.label}<span>OPTIONAL</span></p>
+   <h3>{meta.title}</h3><p>{meta.subtitle}</p>
+   <button className="bonus-stage-action" onClick={onStart}>Play bonus stage<ArrowRight size={16}/></button>
+  </div>
+ </div>;
+}
+
 type AppProps={userKey:string;accountPanel:ReactNode;signInPanel:ReactNode};
 export function LearningApp({userKey,accountPanel,signInPanel}:AppProps){
  return <InteractionFeedback><LearningExperience userKey={userKey} accountPanel={accountPanel} signInPanel={signInPanel}/></InteractionFeedback>;
 }
 function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const {preferences:feedbackPrefs,updatePreferences:updateFeedbackPrefs,soundAvailable,reducedMotion,feedback:feel,stopFeedback}=useInteractionFeedback();
- const {sessions,loading,loadError,saveError,saveState:writeState,needsSignIn,save,retrySave:retryWrite,reload,studyDays}=useProgress(userKey);const practiceMastery=usePracticeMastery(userKey);const saveState=needsSignIn?'error':loading?'saving':loadError?'error':writeState;const retrySave=()=>needsSignIn?setSettings(true):loadError?reload():retryWrite();const [active,setActive]=useState<Session|null>(null);const [tab,setTab]=useState('learn');const [settings,setSettings]=useState(false);const [practiceOpen,setPracticeOpen]=useState(false);const [practiceStart,setPracticeStart]=useState<'hub'|'taiwan'>('hub');const [megaOpen,setMegaOpen]=useState(false);const [searchOpen,setSearchOpen]=useState(false);const [exitOpen,setExitOpen]=useState(false);const [detail,setDetail]=useState<string|null>(null);const [prefs,setPrefs]=useState<Preferences>({pinyin:true,zhuyin:false});
+ const {sessions,loading,loadError,saveError,saveState:writeState,needsSignIn,save,retrySave:retryWrite,reload,studyDays}=useProgress(userKey);const practiceMastery=usePracticeMastery(userKey);const saveState=needsSignIn?'error':loading?'saving':loadError?'error':writeState;const retrySave=()=>needsSignIn?setSettings(true):loadError?reload():retryWrite();const [active,setActive]=useState<Session|null>(null);const [tab,setTab]=useState('learn');const [settings,setSettings]=useState(false);const [practiceOpen,setPracticeOpen]=useState(false);const [practiceStart,setPracticeStart]=useState<PracticeEntry>('hub');const [megaOpen,setMegaOpen]=useState(false);const [searchOpen,setSearchOpen]=useState(false);const [exitOpen,setExitOpen]=useState(false);const [detail,setDetail]=useState<string|null>(null);const [prefs,setPrefs]=useState<Preferences>({pinyin:true,zhuyin:false});
  const [bookId,setBookId]=useState('book-1');const book=books.find(b=>b.id===bookId)||books[0];
  const [unitId,setUnitId]=useState('unit-1');const unitChosen=useRef(false);
  useEffect(()=>{try{const p=JSON.parse(localStorage.getItem('hanzi-steps-preferences')||'null');if(p&&typeof p.pinyin==='boolean'&&typeof p.zhuyin==='boolean')setPrefs(p)}catch{}},[]);
@@ -94,6 +114,24 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const unitLearned=unitCharacters.filter(c=>practicedCharacters.has(c));
  const unitCompleted=unitLessons.filter(l=>completed.has(l.id)).length;
  const nextLesson=unitLessons.find(l=>!completed.has(l.id))||unitLessons[unitLessons.length-1];
+ const practiceItems=learnedPracticeItems(completed);
+ const revengeReady=makeRevengeRound(practiceItems,practiceMastery.states,'path-preview').length>0;
+ const mixedReady=megaCheckpointCount(completed)>0;
+ const taiwanReady=availableTaiwanMissions(completed).some(mission=>mission.unlocked);
+ const completedUnitsTotal=units.filter(candidate=>completed.has(candidate.lessonIds[candidate.lessonIds.length-1])).length;
+ const unitSequence=Math.max(0,books.flatMap(candidate=>candidate.unitIds).indexOf(unit.id));
+ const bonusCycle:BonusStageKind[]=['daily','revenge','mixed','taiwan','mega'];
+ const preferredBonus=bonusCycle[unitSequence%bonusCycle.length];
+ const bonusReady:Record<BonusStageKind,boolean>={
+  daily:practiceItems.length>=3,
+  revenge:revengeReady,
+  mixed:mixedReady,
+  mega:completedUnitsTotal>=2&&practiceItems.length>=8,
+  taiwan:taiwanReady,
+ };
+ const bonusKind:BonusStageKind|null=bonusReady[preferredBonus]?preferredBonus:bonusReady.daily?'daily':null;
+ const bonusAfterIndex=Math.max(0,Math.min(unitLessons.length-2,Math.floor((unitLessons.length-1)/2)));
+ const bonusVisible=Boolean(bonusKind&&completed.has(unitLessons[bonusAfterIndex]?.id));
  const current=active?findLesson(active.lessonId):undefined;
  const currentUnit=units.find(u=>u.id===current?.unitId)||(current?.id.startsWith('practice-')?units.find(u=>unitLibraryCharacters(u).includes(current.chars[0])):undefined)||unit;
  const currentBook=books.find(b=>b.unitIds.includes(currentUnit.id));
@@ -107,8 +145,13 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  function home(){if('speechSynthesis' in window)window.speechSynthesis.cancel();setActive(null);setExitOpen(false);window.scrollTo({top:0,behavior:'instant'})}
  function practiceFromSearch(char:string){const lesson=findLesson(`practice-${char}`);if(!lesson)return;setSearchOpen(false);start(lesson)}
  function recordLessonAttempt(step:Step,correct:boolean,assisted:boolean){const target=practiceAttemptForStep(step);if(!target)return;void practiceMastery.record({...target,correct,assisted,sessionKind:'lesson'})}
+ function openBonusStage(kind:BonusStageKind){
+  if(kind==='mega'){setMegaOpen(true);return}
+  const entry:PracticeEntry=kind==='mixed'?'mixed':kind;
+  setPracticeStart(entry);setPracticeOpen(true);
+ }
  const saveLabel=needsSignIn?'Sign in to save':loading?'Loading progress…':loadError?'Retry loading':saveState==='error'?'Retry saving':saveState==='saving'?'Saving progress…':'Progress saved';
- return <div data-unit-theme={currentTheme} className={active?'learning-app in-lesson':'learning-app'} onClick={event=>{const control=event.target instanceof Element?event.target.closest('button,summary,[role=button]'):null;if(control&&!control.matches(':disabled,[aria-disabled=true],[data-disabled]')){if(control.closest('[data-feedback=quiet]'))stopFeedback();else feel('tap')}}}><header className="topbar"><button className="brand" aria-label="Hanzi Steps home" onClick={()=>active&&!active.complete?setExitOpen(true):home()}><span className="brand-mark" lang="zh-Hant-TW">字</span><span>hanzi<span className="brand-light">steps</span><small>TRADITIONAL CHINESE</small></span></button><div className="header-tools"><StreakCounter studyDays={studyDays} sessions={sessions} loading={loading} loadError={loadError} needsSignIn={needsSignIn} saveState={saveState} onRetry={reload}/><span className="course-label">Taiwanese Mandarin</span><span className="learned-count" aria-label={`${learned.length} of ${characterOrder.length} characters practiced`} title="Characters practiced"><PenLine size={19}/><strong>{learned.length}</strong><span>/ {characterOrder.length}</span></span><button className="practice-header-button" aria-label="Practice" title="Practice" onClick={()=>{setPracticeStart('hub');setPracticeOpen(true)}}><Sparkles size={19}/><span>Practice</span></button><button className="mega-header-button" aria-label="Mega Challenge" title="Mega Challenge" onClick={()=>setMegaOpen(true)}><Trophy size={19}/><span>Mega Challenge</span></button><button className="icon-button" aria-label="Search by pinyin" title="Search by pinyin" onClick={()=>setSearchOpen(true)}><Search size={20}/></button><button className="icon-button" aria-label="Learning settings" title="Learning settings" onClick={()=>setSettings(true)}><Settings2 size={21}/></button></div></header>
+ return <div data-unit-theme={currentTheme} className={active?'learning-app in-lesson':'learning-app'} onClick={event=>{const control=event.target instanceof Element?event.target.closest('button,summary,[role=button]'):null;if(control&&!control.matches(':disabled,[aria-disabled=true],[data-disabled]')){if(control.closest('[data-feedback=quiet]'))stopFeedback();else feel('tap')}}}><header className="topbar"><button className="brand" aria-label="Hanzi Steps home" onClick={()=>active&&!active.complete?setExitOpen(true):home()}><span className="brand-mark" lang="zh-Hant-TW">字</span><span>hanzi<span className="brand-light">steps</span><small>TRADITIONAL CHINESE</small></span></button><div className="header-tools"><StreakCounter studyDays={studyDays} sessions={sessions} loading={loading} loadError={loadError} needsSignIn={needsSignIn} saveState={saveState} onRetry={reload}/><span className="course-label">Taiwanese Mandarin</span><span className="learned-count" aria-label={`${learned.length} of ${characterOrder.length} characters practiced`} title="Characters practiced"><PenLine size={19}/><strong>{learned.length}</strong><span>/ {characterOrder.length}</span></span><button className="practice-header-button" aria-label="Practice" title="Practice" onClick={()=>{setPracticeStart('hub');setPracticeOpen(true)}}><Sparkles size={19}/><span>Practice</span></button><button className="icon-button" aria-label="Search by pinyin" title="Search by pinyin" onClick={()=>setSearchOpen(true)}><Search size={20}/></button><button className="icon-button" aria-label="Learning settings" title="Learning settings" onClick={()=>setSettings(true)}><Settings2 size={21}/></button></div></header>
  {active&&needsSignIn&&<div className="lesson-account-notice">{signInPanel}</div>}
  {!active ? <main className="home-main">
   {needsSignIn&&signInPanel}
@@ -128,10 +171,10 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
      {unitLessons.map((lesson,i)=>{
       const done=completed.has(lesson.id),available=lessonAvailable(lesson.id,completed);
       const resume=sessions.some(s=>s.lessonId===lesson.id&&!s.complete),next=lesson.id===nextLesson.id&&available;
-      return <div key={lesson.id} className={`path-row ${done?'completed':''} ${next?'current':''} ${available?'':'locked'}`}>
+      return <Fragment key={lesson.id}><div className={`path-row ${done?'completed':''} ${next?'current':''} ${available?'':'locked'}`}>
        <div className="path-track"><button className="path-node" disabled={!available||loading} aria-label={`${done?'Practice again:':available?'Start:':'Locked:'} ${lesson.title}`} onClick={()=>start(lesson)}>{done?<Check size={32}/>:!available?<Lock size={25}/>:lesson.review?<Trophy size={29}/>:<span lang="zh-Hant-TW">{lesson.chars[0]}</span>}</button></div>
        <div className="path-copy"><p className="path-step">{lesson.review?'UNIT CHALLENGE':`LESSON ${String(i+1).padStart(2,'0')}`} {done&&<span>COMPLETE</span>}</p><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><div className="lesson-meta"><span lang="zh-Hant-TW">{lesson.chars.join(' · ')}</span><span>{lesson.minutes}</span></div>{next&&<button className="primary-button start-button" disabled={loading} onClick={()=>start(lesson)}>{loading?'Loading progress…':done?'Practice the unit':resume?'Resume lesson':'Start lesson'}<ArrowRight size={18}/></button>}</div>
-      </div>
+      </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
      })}
      {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
     </section><aside className="course-sidebar">
@@ -154,7 +197,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  </main> : current ? <main className="lesson-main">
   <div className="lesson-topline"><button className="icon-button" aria-label="Pause this lesson" onClick={()=>setExitOpen(true)}><X size={23}/></button><div><div className="lesson-progress-label"><span>{current.title}</span><span>{active.index+1} / {current.steps.length}</span></div><Progress className="lesson-progress" value={active.index/current.steps.length*100} aria-label="Lesson progress"/></div><button className={`sync-indicator ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()} aria-label={saveLabel}>{saveState==='saved'?<CloudCheck size={19}/>:<CloudUpload size={19}/>}</button></div>{!needsSignIn&&saveState==='error'&&<div className="save-inline" role="status">{saveError||loadError||'Your progress has not synced yet.'} <button onClick={()=>void retrySave()}>Try again</button></div>}<Exercise key={`${active.id}-${active.index}`} step={current.steps[active.index]} prefs={prefs} onAdvance={advance} onAttempt={recordLessonAttempt}/>
  </main> : null}
- <SmartPractice key={userKey} open={practiceOpen} onOpenChange={setPracticeOpen} completed={completed} theme={currentTheme} mastery={practiceMastery} startScreen={practiceStart} onOpenMegaChallenge={()=>setMegaOpen(true)}/>
+ <SmartPractice key={userKey} open={practiceOpen} onOpenChange={setPracticeOpen} completed={completed} theme={currentTheme} mastery={practiceMastery} startMode={practiceStart} onOpenMegaChallenge={()=>setMegaOpen(true)}/>
  <MegaChallenge key={'legacy-mega-'+userKey} open={megaOpen} onOpenChange={setMegaOpen} completed={completed} userKey={userKey} theme={currentTheme}/>
  <PinyinSearch open={searchOpen} onOpenChange={setSearchOpen} theme={currentTheme} onPracticeCharacter={practiceFromSearch}/>
  <Dialog open={settings} onOpenChange={setSettings}><DialogContent data-unit-theme={currentTheme} className="settings-dialog"><DialogTitle>Make it your practice</DialogTitle><DialogDescription>Choose pronunciation guides and how your practice feels.</DialogDescription>{needsSignIn?signInPanel:accountPanel}<div className="preference-row"><label htmlFor="pinyin-switch"><strong>Pinyin</strong><span>nǐ hǎo</span></label><Switch id="pinyin-switch" checked={prefs.pinyin} onCheckedChange={v=>updatePrefs({...prefs,pinyin:v})}/></div><div className="preference-row"><label htmlFor="zhuyin-switch"><strong>Zhuyin</strong><span lang="zh-Hant-TW">ㄋㄧˇ ㄏㄠˇ</span></label><Switch id="zhuyin-switch" checked={prefs.zhuyin} onCheckedChange={v=>updatePrefs({...prefs,zhuyin:v})}/></div><p className="settings-note">Writing from memory hides the character. Sound exercises keep pronunciation hidden until you ask for a hint.</p><div className="feedback-settings"><h3>Little moments of feedback</h3><div className="preference-row"><label htmlFor="animation-switch"><strong>Animations</strong><span>{reducedMotion?'Your device’s Reduce Motion setting is on.':'Small pops, bounces, and celebrations.'}</span></label><Switch id="animation-switch" checked={feedbackPrefs.animations} onCheckedChange={v=>updateFeedbackPrefs({...feedbackPrefs,animations:v})}/></div><div className="preference-row"><label htmlFor="sound-switch"><strong>Sound effects</strong><span>{soundAvailable?'Soft blips for choices and answers.':'Sound effects aren’t available in this browser.'}</span></label><Switch id="sound-switch" checked={soundAvailable&&feedbackPrefs.sounds} disabled={!soundAvailable} onCheckedChange={v=>{updateFeedbackPrefs({...feedbackPrefs,sounds:v});if(v)feel('tap')}}/></div>{soundAvailable&&<button className="text-button" disabled={!feedbackPrefs.sounds} onClick={()=>feel('success')}>Try the sounds</button>}</div><div className="source-notes"><h3>About these lessons</h3><p>Original beginner lessons. Audio uses an available Taiwanese Mandarin voice on your device; pinyin is available when audio cannot play.</p><p>Handwriting: <a href="https://hanziwriter.org" target="_blank" rel="noreferrer">Hanzi Writer</a>. Taiwan stroke forms: <a href="https://github.com/parsimonhi/animCJK" target="_blank" rel="noreferrer">AnimCJK</a>. <a href="./credits.txt" target="_blank">Sources and licenses</a>.</p></div></DialogContent></Dialog>
