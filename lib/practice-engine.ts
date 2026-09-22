@@ -119,6 +119,10 @@ export function learnedPracticeItems(completed:Set<string>):PracticeItem[]{
  return [...words,...phraseItems(completed),...fallbackCharacters];
 }
 
+export function adaptivePracticeItems(items:PracticeItem[],mastered:Set<string>):PracticeItem[]{
+ return items.filter(item=>!mastered.has(item.id));
+}
+
 function supportedModes(item:PracticeItem):PracticeMode[]{
  const base:PracticeMode[]=['recognition','recall','pinyin','input'];
  if(item.kind==='phrase'&&item.tokens?.length)base.push('sentence');
