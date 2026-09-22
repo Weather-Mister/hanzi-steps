@@ -36,10 +36,7 @@ const unit:UnitData = {
       "u18-study",
       "u18-review"
     ],
-    "banner": {
-      "text": "學校裡面有圖書館。",
-      "pinyin": "Xuéxiào lǐmiàn yǒu túshūguǎn."
-    },
+    "banner": {"text":"圖書館","pinyin":"túshūguǎn"},
     "goal": {
       "text": "我現在在圖書館裡面看書。",
       "pinyin": "Wǒ xiànzài zài túshūguǎn lǐmiàn kàn shū.",
