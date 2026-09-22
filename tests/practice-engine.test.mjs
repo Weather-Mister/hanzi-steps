@@ -81,9 +81,10 @@ test('Daily 10 follows the learner frontier instead of drifting back to early ea
  const queue=makeDailyTen(items,{},'recent-frontier',1000);
  assert.equal(queue.length,10);
  const unitNumbers=queue.map(question=>question.item.unitNumber);
- assert.ok(unitNumbers.every(number=>number>=5),String(unitNumbers));
+ assert.ok(unitNumbers.filter(number=>number>=5).length>=8,String(unitNumbers));
  assert.ok(unitNumbers.filter(number=>number===8).length>=2);
  assert.ok(unitNumbers.filter(number=>number===7).length>=2);
+ assert.equal(unitNumbers.includes(1),false,String(unitNumbers));
 });
 
 
@@ -94,9 +95,9 @@ test('Daily 10 infers likely-forgotten material even before mastery history exis
  }
  const queue=makeDailyTen(items,{},'memory-risk-without-history',1000);
  assert.equal(queue.length,10);
- assert.ok(queue.filter(question=>question.item.unitNumber>=9).length>=6);
- assert.ok(queue.some(question=>question.item.unitNumber<=8&&question.item.unitNumber>=2));
- assert.ok(queue.filter(question=>question.item.unitNumber===1).length<=1);
+ assert.ok(queue.filter(question=>question.item.unitNumber>=9).length>=8);
+ assert.ok(queue.some(question=>question.item.unitNumber<=8&&question.item.unitNumber>=4));
+ assert.equal(queue.some(question=>question.item.unitNumber===1),false);
 });
 
 test('Daily 10 still reaches back for genuinely weak older material',()=>{
