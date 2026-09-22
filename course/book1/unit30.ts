@@ -29,10 +29,7 @@ const unit:UnitData = {
       "u30-clothes",
       "u30-review"
     ],
-    "banner": {
-      "text": "這個水果香香甜甜的。",
-      "pinyin": "Zhège shuǐguǒ xiāngxiāng tiántián de."
-    },
+    "banner": {"text":"西瓜","pinyin":"xīguā"},
     "goal": {
       "text": "這是西瓜吧？你吃吃看。",
       "pinyin": "Zhè shì xīguā ba? Nǐ chīchīkàn.",
