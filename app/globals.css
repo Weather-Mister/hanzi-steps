@@ -1514,6 +1514,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .smart-mode-card.daily { --mode-accent:#a96012; --mode-tint:#fff3df; --mode-edge:#e9cca6; }
 .smart-mode-card.revenge { --mode-accent:#9b435d; --mode-tint:#fff0f4; --mode-edge:#e8c6d0; }
 .smart-mode-card.mega { --mode-accent:#7054a7; --mode-tint:#f3effc; --mode-edge:#d7cdec; }
+.smart-mode-card.legacy-mega { --mode-accent:#9a7110; --mode-tint:#fff8dc; --mode-edge:#e7d48a; }
 .smart-mode-card.taiwan { --mode-accent:#14776c; --mode-tint:#eaf8f5; --mode-edge:#bfdfd9; }
 .smart-mode-card:hover:not(:disabled) {
  transform:translateY(-2px);
