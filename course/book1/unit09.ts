@@ -33,10 +33,7 @@ const unit:UnitData = {
       "u9-preferences",
       "u9-review"
     ],
-    "banner": {
-      "text": "運動",
-      "pinyin": "yùndòng"
-    },
+    "banner": {"text":"運動","pinyin":"yùndòng"},
     "goal": {
       "text": "你喜歡打籃球還是踢足球？",
       "pinyin": "Nǐ xǐhuān dǎ lánqiú háishì tī zúqiú?",
