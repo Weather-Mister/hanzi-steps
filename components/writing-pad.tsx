@@ -18,13 +18,13 @@ export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterM
   mounted.current=true;let alive=true;let observer:ResizeObserver|undefined;let dispose:(()=>void)|undefined;
   if(completionTimer.current){clearTimeout(completionTimer.current);completionTimer.current=null}setReady(false);setFailed(false);setDone(false);setBusy(false);setNext(start);nextRef.current=start;setMessage('');setStudyReady(false);setGuide(false);helped.current=false;misses.current=0;strokeMisses.current=0;
   import('hanzi-writer').then(({default:Hanzi})=>{
-   if(!alive||!host.current)return;host.current.replaceChildren();const width=Math.min(320,host.current.clientWidth||320);setSize(width);
+   if(!alive||!host.current)return;host.current.replaceChildren();const width=host.current.clientWidth||320;setSize(width);
    const owned=createWriterTarget(host.current,width,width);dispose=owned.dispose;
    const accent=getComputedStyle(host.current).getPropertyValue('--unit-accent').trim()||'#245ee8';
    const instance=Hanzi.create(host.current,char,{width,height:width,padding:24,showCharacter:mode==='intro',showOutline:mode==='trace',strokeColor:'#172642',outlineColor:'#dfe6f2',drawingColor:accent,drawingWidth:9,highlightColor:accent,highlightCompleteColor:'#24976a',strokeAnimationSpeed:.9,delayBetweenStrokes:220,strokeFadeDuration:120,rendererOverride:{createRenderTarget:()=>owned.target},charDataLoader:()=>strokeData[char]});
    writer.current=instance;
    void instance.getCharacterData().then(()=>{if(!alive)return;setReady(true);if(mode!=='intro')quizRef.current()});
-   observer=new ResizeObserver(()=>{if(!host.current||!alive)return;const width=Math.min(320,host.current.clientWidth);if(width>0){setSize(width);void instance.updateDimensions({width,height:width,padding:24})}});observer.observe(host.current);
+   observer=new ResizeObserver(()=>{if(!host.current||!alive)return;const width=host.current.clientWidth;if(width>0){setSize(width);void instance.updateDimensions({width,height:width,padding:24})}});observer.observe(host.current);
   }).catch(()=>{if(alive)setFailed(true)});
   return ()=>{alive=false;mounted.current=false;if(completionTimer.current){clearTimeout(completionTimer.current);completionTimer.current=null}observer?.disconnect();writer.current?.cancelQuiz();writer.current?.pauseAnimation();writer.current=null;dispose?.()};
  },[char,mode,reset,start,strict,revealStrokeAfterMisses]);
