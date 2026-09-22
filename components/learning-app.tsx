@@ -17,7 +17,7 @@ import {SmartPractice,type PracticeEntry} from './smart-practice';
 import {MegaChallenge} from './mega-challenge';
 import {PinyinSearch} from './pinyin-search';
 import {visualUnitTheme} from '@/lib/unit-theme';
-import {availableTaiwanMissions,learnedPracticeItems,makeRevengeRound,megaCheckpointCount,practiceAttemptForStep,taiwanMissions} from '@/lib/practice-engine';
+import {adaptivePracticeItems,availableTaiwanMissions,learnedPracticeItems,makeRevengeRound,megaCheckpointCount,practiceAttemptForStep,taiwanMissions} from '@/lib/practice-engine';
 import {usePracticeMastery} from '@/lib/use-practice-mastery';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
 
@@ -115,7 +115,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const unitLearned=unitCharacters.filter(c=>practicedCharacters.has(c));
  const unitCompleted=unitLessons.filter(l=>completed.has(l.id)).length;
  const nextLesson=unitLessons.find(l=>!completed.has(l.id))||unitLessons[unitLessons.length-1];
- const practiceItems=learnedPracticeItems(completed).filter(item=>!megaMastery.mastered.has(item.id));
+ const practiceItems=adaptivePracticeItems(learnedPracticeItems(completed),megaMastery.mastered);
  const revengeReady=makeRevengeRound(practiceItems,practiceMastery.states,'path-preview').length>0;
  const mixedReady=megaCheckpointCount(completed)>0;
  const taiwanReady=availableTaiwanMissions(completed).some(mission=>mission.unlocked);
