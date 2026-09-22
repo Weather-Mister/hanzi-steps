@@ -71,6 +71,39 @@ test('Daily 10 is capped, unique, and prioritizes a due weak item',()=>{
  assert.ok(queue.every(question=>question.sessionKind==='daily'));
 });
 
+
+test('Daily 10 reviews the skill that is actually due instead of an unrelated unseen mode',()=>{
+ const items=Array.from({length:8},(_,index)=>item(index,'unit-1'));
+ const target=items[0];
+ const states={
+  [practiceSkillKey(target.id,'recall')]:{
+   itemId:target.id,mode:'recall',attempts:2,correct:1,assisted:0,misses:1,streak:0,
+   strength:.3,lastSeen:100,nextReview:200,
+  },
+ };
+ const queue=makeDailyTen(items,states,'due-mode-test',1000);
+ const question=queue.find(candidate=>candidate.item.id===target.id);
+ assert.ok(question);
+ assert.equal(question.mode,'recall');
+});
+
+test('Smart practice avoids one-answer multiple choice when too little material is learned',()=>{
+ const only=item(1,'unit-1');
+ const daily=makeDailyTen([only],{},'tiny-pool',1000);
+ assert.equal(daily.length,1);
+ assert.equal(daily[0].mode,'input');
+
+ const states={
+  [practiceSkillKey(only.id,'recall')]:{
+   itemId:only.id,mode:'recall',attempts:2,correct:1,assisted:0,misses:1,streak:0,
+   strength:.2,lastSeen:100,nextReview:200,
+  },
+ };
+ const revenge=makeRevengeRound([only],states,'tiny-revenge');
+ assert.ok(revenge.length>=2);
+ assert.ok(revenge.every(question=>!['recognition','recall','pinyin'].includes(question.mode)));
+});
+
 test('Revenge Round attacks one unresolved mistake three different ways then clears when strong',()=>{
  const target=item(1);
  const state={
@@ -83,6 +116,7 @@ test('Revenge Round attacks one unresolved mistake three different ways then cle
  assert.equal(round.length,3);
  assert.equal(new Set(round.map(question=>question.item.id)).size,1);
  assert.equal(new Set(round.map(question=>question.mode)).size,3);
+ assert.equal(round[0].mode,'recall');
 
  const resolved={
   [practiceSkillKey(target.id,'recall')]:{...state[practiceSkillKey(target.id,'recall')],strength:.8},
