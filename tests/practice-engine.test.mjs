@@ -167,7 +167,7 @@ test('Daily 10 still reaches back for genuinely weak older material',()=>{
  assert.ok(queue.filter(question=>question.item.unitNumber>=5).length>=6);
 });
 
-test('Daily 10 reviews the skill that is actually due instead of an unrelated unseen mode',()=>{
+test('Daily 10 escalates easy due recall into productive practice',()=>{
  const items=Array.from({length:8},(_,index)=>item(index,'unit-1'));
  const target=items[0];
  const states={
@@ -179,7 +179,7 @@ test('Daily 10 reviews the skill that is actually due instead of an unrelated un
  const queue=makeDailyTen(items,states,'due-mode-test',1000);
  const question=queue.find(candidate=>candidate.item.id===target.id);
  assert.ok(question);
- assert.equal(question.mode,'recall');
+ assert.ok(['input','handwriting'].includes(question.mode),question.mode);
 });
 
 test('Smart practice avoids one-answer multiple choice when too little material is learned',()=>{
