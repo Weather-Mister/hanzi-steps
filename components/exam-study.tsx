@@ -86,6 +86,13 @@ export function ExamStudy({
  const current=queue?.length?itemById.get(queue[0]):undefined;
  const currentChar=current?.characters[charIndex];
 
+ // Never carry guided/give-up state into a different character or word.
+ // This is deliberately defensive because Exam Study advances words and
+ // characters without saving a session object anywhere.
+ useEffect(()=>{
+  setGaveUp(false);
+ },[current?.id,charIndex]);
+
  function resetWord(){
   setAttempt(value=>value+1);
   setCharIndex(0);
@@ -141,8 +148,14 @@ export function ExamStudy({
   next.add(item.id);
   setMastered(next);
   saveMastered(activeSet.id,next);
+  // Remove the mastered word first, then hard-reset the next prompt to
+  // character 1 in memory mode. Nothing from the finished word can leak over.
   setQueue(currentQueue=>currentQueue?.filter(id=>id!==item.id)??currentQueue);
-  resetWord();
+  setCharIndex(0);
+  setWordPerfect(true);
+  setResult(null);
+  setGaveUp(false);
+  setAttempt(value=>value+1);
  }
 
  function restore(item:VocabularyLookupItem){
