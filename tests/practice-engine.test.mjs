@@ -256,7 +256,7 @@ test('Smart practice avoids one-answer multiple choice when too little material 
 });
 
 
-test('Choice viability counts distinct wrong answers, not duplicate copies of the right answer',()=>{
+test('Choice viability counts distinct wrong answers and avoids an ambiguous typed fallback',()=>{
  const target={...item(1,'unit-1'),meaning:'same'};
  const duplicate={...item(2,'unit-1'),meaning:'same'};
  const oneWrong={...item(3,'unit-1'),meaning:'different'};
@@ -269,7 +269,7 @@ test('Choice viability counts distinct wrong answers, not duplicate copies of th
  const daily=makeDailyTen([target,duplicate,oneWrong],states,'duplicate-answer-pool',1000);
  const question=daily.find(candidate=>candidate.item.id===target.id);
  assert.ok(question);
- assert.equal(question.mode,'input');
+ assert.equal(question.mode,'handwriting');
 });
 
 test('Revenge Round attacks one unresolved mistake three different ways then clears when strong',()=>{
