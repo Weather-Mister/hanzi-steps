@@ -18,9 +18,9 @@ type Screen='hub'|'session'|'taiwan'|'mission';
 function normalizeChinese(value:string){
  return value.trim().replace(/[\s，。！？、,.!?;；:：'"“”‘’（）()]/g,'');
 }
-function seed(prefix:string){
+function seed(prefix:string,stableForDay=false){
  const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei'}).format(new Date());
- return prefix+':'+day+':'+Math.floor(Date.now()/60000);
+ return stableForDay?prefix+':'+day:prefix+':'+day+':'+Math.floor(Date.now()/60000);
 }
 function ModeLabel({mode}:{mode:PracticeQuestion['mode']}){
  const labels:Record<PracticeQuestion['mode'],string>={
@@ -115,8 +115,8 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startSc
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState(''),[mission,setMission]=useState<TaiwanMission|null>(null);
  useEffect(()=>{if(open){setScreen(startScreen);setQueue([]);setMission(null)}},[open,startScreen]);
  function back(){setScreen('hub');setQueue([])}
- function startDaily(){setQueue(makeDailyTen(items,states,seed('daily')));setSessionTitle('Daily 10');setSessionSubtitle('Due review, weak spots, recent material, and one challenge.');setScreen('session')}
- function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked three different ways.');setScreen('session')}
+ function startDaily(){setQueue(makeDailyTen(items,states,seed('daily',true)));setSessionTitle('Daily 10');setSessionSubtitle('Due review, weak spots, recent material, and one challenge.');setScreen('session')}
+ function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked in different ways.');setScreen('session')}
  function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mega Challenge');setSessionSubtitle('Mixed recall across everything you have completed.');setScreen('session')}
  const recordQuestion=(q:PracticeQuestion,correct:boolean,assisted:boolean)=>record({itemId:q.item.id,mode:q.mode,correct,assisted,sessionKind:q.sessionKind});
  const recordMission=(itemId:string,correct:boolean)=>record({itemId,mode:'context',correct,assisted:false,sessionKind:'taiwan'});
