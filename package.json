@@ -19,7 +19,7 @@
     "course:context": "node --experimental-strip-types validation/course.mjs context",
     "course:test": "node --experimental-strip-types validation/targeted.mjs",
     "test:curriculum": "node --experimental-strip-types --test validation/*.test.mjs",
-    "build:pages": "npm run course:check && npm run check:characters && vite build --config vite.pages.config.ts",
+    "build:pages": "npm run course:generate && npm run course:check && npm run check:characters && vite build --config vite.pages.config.ts",
     "dev:pages": "vite --config vite.pages.config.ts"
   },
   "dependencies": {
