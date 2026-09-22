@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useRef,useState,type ReactNode} from 'react';
+import {Fragment,useEffect,useRef,useState,type ReactNode} from 'react';
 import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,Flame,GraduationCap,Lightbulb,Lock,MapPin,Play,RotateCcw,Settings2,Sparkles,Swords,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
@@ -171,10 +171,10 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
      {unitLessons.map((lesson,i)=>{
       const done=completed.has(lesson.id),available=lessonAvailable(lesson.id,completed);
       const resume=sessions.some(s=>s.lessonId===lesson.id&&!s.complete),next=lesson.id===nextLesson.id&&available;
-      return <div key={lesson.id} className="path-stage-group"><div className={`path-row ${done?'completed':''} ${next?'current':''} ${available?'':'locked'}`}>
+      return <Fragment key={lesson.id}><div className={`path-row ${done?'completed':''} ${next?'current':''} ${available?'':'locked'}`}>
        <div className="path-track"><button className="path-node" disabled={!available||loading} aria-label={`${done?'Practice again:':available?'Start:':'Locked:'} ${lesson.title}`} onClick={()=>start(lesson)}>{done?<Check size={32}/>:!available?<Lock size={25}/>:lesson.review?<Trophy size={29}/>:<span lang="zh-Hant-TW">{lesson.chars[0]}</span>}</button></div>
        <div className="path-copy"><p className="path-step">{lesson.review?'UNIT CHALLENGE':`LESSON ${String(i+1).padStart(2,'0')}`} {done&&<span>COMPLETE</span>}</p><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><div className="lesson-meta"><span lang="zh-Hant-TW">{lesson.chars.join(' · ')}</span><span>{lesson.minutes}</span></div>{next&&<button className="primary-button start-button" disabled={loading} onClick={()=>start(lesson)}>{loading?'Loading progress…':done?'Practice the unit':resume?'Resume lesson':'Start lesson'}<ArrowRight size={18}/></button>}</div>
-      </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</div>
+      </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
      })}
      {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
     </section><aside className="course-sidebar">
