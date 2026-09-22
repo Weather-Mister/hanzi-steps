@@ -33,10 +33,7 @@ const unit:UnitData = {
       "u27-decide",
       "u27-review"
     ],
-    "banner": {
-      "text": "你想玩多久？",
-      "pinyin": "Nǐ xiǎng wán duōjiǔ?"
-    },
+    "banner": {"text":"夜市","pinyin":"yèshì"},
     "goal": {
       "text": "你應該去夜市。",
       "pinyin": "Nǐ yīnggāi qù yèshì.",
