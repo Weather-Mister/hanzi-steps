@@ -44,7 +44,7 @@ function ChoiceQuestion({question,items,onAnswer}:{question:PracticeQuestion;ite
 function InputQuestion({question,onAnswer}:{question:PracticeQuestion;onAnswer:(ok:boolean,answer:string)=>void}){
  const [value,setValue]=useState('');const answer=question.item.traditional;
  const submit=()=>onAnswer(normalizeChinese(value)===normalizeChinese(answer),answer);
- return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>{question.item.pinyin}</p></div>
+ return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2></div>
   <label className="smart-input-label">Type the Traditional Chinese<input value={value} onChange={event=>setValue(event.target.value)} lang="zh-Hant-TW" autoComplete="off" autoCapitalize="off" spellCheck={false} onKeyDown={event=>{if(event.key==='Enter'&&value.trim())submit()}}/></label>
   <button className="primary-button" disabled={!value.trim()} onClick={submit}>Check</button>
  </div>;
@@ -107,13 +107,12 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
    <button className="primary-button" onClick={continueMission}>{index+1===mission.steps.length?'Finish mission':'Continue'}</button></div>}
  </section>;
 }
-export function SmartPractice({open,onOpenChange,completed,theme,mastery,startScreen='hub'}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;startScreen?:'hub'|'taiwan'}){
+export function SmartPractice({open,onOpenChange,completed,theme,mastery,startScreen='hub',onOpenMegaChallenge}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;startScreen?:'hub'|'taiwan';onOpenMegaChallenge?:()=>void}){
  const {states,loading,saving,error,record,retrySync}=mastery;
  const items=useMemo(()=>learnedPracticeItems(completed),[completed]),missions=useMemo(()=>availableTaiwanMissions(completed),[completed]);
  const completedUnits=useMemo(()=>units.filter(unit=>unitComplete(completed,unit.id)).length,[completed]);
  const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
  const revengePreview=useMemo(()=>makeRevengeRound(items,states,'preview'),[items,states]);
- const dueItemCount=useMemo(()=>items.filter(item=>{const state=aggregateItemState(states,item);return state.attempts>0&&state.nextReview<=Date.now()}).length,[items,states]);
  const weakItemCount=useMemo(()=>items.filter(item=>isRevengeCandidate(states,item)).length,[items,states]);
  const dailySize=Math.min(10,items.length);
  const trackedItemCount=useMemo(()=>items.filter(item=>aggregateItemState(states,item).attempts>0).length,[items,states]);
@@ -122,16 +121,17 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,startSc
  function back(){setScreen('hub');setQueue([])}
  function startDaily(){setQueue(makeDailyTen(items,states,seed('daily',true)));setSessionTitle('Daily 10');setSessionSubtitle('Due review, weak spots, recent material, and one challenge.');setScreen('session')}
  function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked in different ways.');setScreen('session')}
- function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mixed Checkpoint');setSessionSubtitle('Mixed recall across everything you have completed.');setScreen('session')}
+ function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mixed Mastery');setSessionSubtitle('Harder adaptive review of recent units, weak spots, and material you may be forgetting.');setScreen('session')}
  const recordQuestion=(q:PracticeQuestion,correct:boolean,assisted:boolean)=>record({itemId:q.item.id,mode:q.mode,correct,assisted,sessionKind:q.sessionKind});
  const recordMission=(itemId:string,correct:boolean)=>record({itemId,mode:'context',correct,assisted:false,sessionKind:'taiwan'});
  const missionDone=(candidate:TaiwanMission)=>candidate.steps.every((_,i)=>(states[practiceSkillKey('mission:'+candidate.id+':'+i,'context')]?.correct??0)>0);
  return <Dialog open={open} onOpenChange={value=>{onOpenChange(value);if(!value){setScreen('hub');setQueue([]);setMission(null)}}}><DialogContent data-unit-theme={theme} className="smart-practice-dialog">
-  {screen==='hub'&&<><div className="smart-title-row"><div><DialogTitle>Practice</DialogTitle><DialogDescription>One mastery system powers review, mistakes, checkpoints, and real Taiwan situations.</DialogDescription></div>{saving&&<span className="smart-saving">Saving…</span>}</div>{error&&<div className="smart-sync-note" role="status"><span>{error}</span><button className="text-button" onClick={()=>void retrySync()}>Try sync</button></div>}
+  {screen==='hub'&&<><div className="smart-title-row"><div><DialogTitle>Practice</DialogTitle><DialogDescription>Adaptive review, mistake practice, handwriting challenges, and real Taiwan situations.</DialogDescription></div>{saving&&<span className="smart-saving">Saving…</span>}</div>{error&&<div className="smart-sync-note" role="status"><span>{error}</span><button className="text-button" onClick={()=>void retrySync()}>Try sync</button></div>}
    {loading?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<div className="smart-empty"><Sparkles size={30}/><h2>Finish a lesson first</h2><p>Practice only pulls from material you have actually learned.</p></div>:<div className="smart-hub-grid">
-    <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · {dueItemCount} due now</small></span><b>{dailySize}</b></button>
+    <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · recent units + weak + forgotten</small></span><b>{dailySize}</b></button>
     <button className="smart-mode-card revenge" onClick={startRevenge} disabled={!revengePreview.length}><span className="smart-card-icon"><Swords size={23}/></span><span><strong>Revenge Round</strong><small>{revengePreview.length?'Attack your weakest item three ways.':'No mistake is ready for revenge yet.'}</small></span><b>{weakItemCount}</b></button>
-    <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Checkpoint</strong><small>{checkpointCount?'12 mixed questions from your latest 4-unit checkpoint.':'Complete 4 units in a book to unlock a checkpoint.'}</small></span><b>{checkpointCount}</b></button>
+    <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Mastery</strong><small>{checkpointCount?'12 harder adaptive questions · recent + weak + forgotten':'Complete 4 units in a book to unlock Mixed Mastery.'}</small></span><b>{checkpointCount?12:0}</b></button>
+    <button className="smart-mode-card legacy-mega" disabled={!onOpenMegaChallenge} onClick={()=>{onOpenChange(false);onOpenMegaChallenge?.()}}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>Original handwriting challenge · clear the full learned-word rotation.</small></span><b>∞</b></button>
     <button className="smart-mode-card taiwan" onClick={()=>setScreen('taiwan')}><span className="smart-card-icon"><MapPin size={23}/></span><span><strong>Taiwan Mode</strong><small>Use what you know in short real-life missions.</small></span><b>{missions.filter(m=>m.unlocked).length}</b></button>
    </div>}
    {!loading&&items.length>0&&<div className="smart-master-summary"><div><strong>{items.filter(item=>aggregateItemState(states,item).strength>=0.65).length}</strong><span>strong items</span></div><div><strong>{trackedItemCount}</strong><span>items tracked</span></div><div><strong>{completedUnits}</strong><span>units complete</span></div></div>}</>}

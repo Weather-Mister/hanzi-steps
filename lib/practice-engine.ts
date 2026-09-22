@@ -192,35 +192,150 @@ export function isRevengeCandidate(states:PracticeStateMap,item:PracticeItem):bo
  return supportedModes(item).some(mode=>{const row=stateFor(states,item.id,mode);return Boolean(row&&row.misses>0&&row.strength<0.72)});
 }
 
+const unitRank=(()=>{
+ const map=new Map<string,number>();
+ let rank=0;
+ for(const book of books)for(const unitId of book.unitIds)map.set(unitId,rank++);
+ return map;
+})();
+
+function progressRank(item:PracticeItem):number{
+ if(item.unitId&&unitRank.has(item.unitId))return unitRank.get(item.unitId)!;
+ return (item.bookNumber??0)*1000+(item.unitNumber??0);
+}
+
+function recentProgressUnits(items:PracticeItem[],count=4):string[]{
+ const seen=new Set<string>();
+ return uniqueItems(items)
+  .filter(item=>Boolean(item.unitId))
+  .sort((a,b)=>progressRank(b)-progressRank(a))
+  .flatMap(item=>{
+   const unitId=item.unitId!;
+   if(seen.has(unitId))return [];
+   seen.add(unitId);
+   return [unitId];
+  })
+  .slice(0,count);
+}
+
+type DailyRow=ReturnType<typeof aggregateItemState>&{item:PracticeItem};
+
+function hardScore(states:PracticeStateMap,row:DailyRow):number{
+ if(row.attempts===0)return 0;
+ const revenge=isRevengeCandidate(states,row.item)?35:0;
+ return revenge+row.misses*12+(1-row.strength)*55;
+}
+
+function forgottenScore(row:DailyRow,now:number):number{
+ if(row.attempts===0)return 0;
+ const overdue=Math.max(0,now-row.nextReview);
+ if(overdue<=0)return 0;
+ const overdueDays=Math.min(21,overdue/86400000);
+ const daysSinceSeen=Math.min(30,Math.max(0,now-row.lastSeen)/86400000);
+ return 45+overdueDays*3+daysSinceSeen+(1-row.strength)*30;
+}
+
+function memoryRiskScore(row:DailyRow,now:number,frontierRank:number):number{
+ const scheduled=forgottenScore(row,now);
+ if(scheduled>0)return scheduled+Math.min(18,Math.max(0,frontierRank-progressRank(row.item))*1.5);
+ if(row.attempts>0)return 0;
+
+ // For material that predates the mastery tracker, estimate forgetting from
+ // curriculum distance. Prefer the middle-back window over constantly falling
+ // all the way to Unit 1.
+ const distance=Math.max(0,frontierRank-progressRank(row.item));
+ if(distance<4)return 0;
+ // The best "probably forgotten" window is several units behind the frontier,
+ // not the very beginning of the course. Truly old material comes back through
+ // actual weakness/due history instead of dominating by age alone.
+ if(distance<=9)return 64-Math.abs(distance-5.5)*6;
+ if(distance<=14)return 30-(distance-10)*2;
+ return 12;
+}
+
+function recentScore(states:PracticeStateMap,row:DailyRow,recentUnits:string[],now:number):number{
+ const unitIndex=row.item.unitId?recentUnits.indexOf(row.item.unitId):-1;
+ const progressBonus=unitIndex<0?0:[46,38,30,24][unitIndex]??18;
+ const unseenBonus=row.attempts===0?44:0;
+ return progressBonus+unseenBonus+hardScore(states,row)+Math.min(35,forgottenScore(row,now));
+}
+
+function dailyMode(states:PracticeStateMap,item:PracticeItem,index:number,now:number):PracticeMode{
+ const failed=failedMode(states,item);
+ if(failed)return failed;
+ const due=dueMode(states,item,now);
+ if(due)return due;
+
+ const productive=supportedModes(item).filter(mode=>mode!=='recognition');
+ if(item.kind==='phrase'&&item.tokens?.length&&productive.includes('sentence')){
+  const sentence=stateFor(states,item.id,'sentence');
+  if(!sentence||sentence.strength<0.72)return 'sentence';
+ }
+ const attempted=productive
+  .map(mode=>({mode,row:stateFor(states,item.id,mode)}))
+  .filter(candidate=>Boolean(candidate.row))
+  .sort((a,b)=>(a.row?.strength??0)-(b.row?.strength??0)||(a.row?.attempts??0)-(b.row?.attempts??0));
+ if(attempted.length)return attempted[0].mode;
+
+ const challengeOrder:Array<Exclude<PracticeMode,'recognition'>>=['recall','input','pinyin','handwriting'];
+ const available=challengeOrder.filter(mode=>productive.includes(mode));
+ return available[index%available.length]||weakestMode(states,item,true);
+}
+
 export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:string,now=Date.now()):PracticeQuestion[]{
  if(!items.length)return [];
  const shuffledItems=shuffled(uniqueItems(items),seed);
- const withMeta=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
- const due=withMeta.filter(row=>row.attempts>0&&row.nextReview<=now).sort((a,b)=>a.nextReview-b.nextReview||a.strength-b.strength);
- const weak=withMeta.filter(row=>row.attempts>0&&(row.strength<0.45||isRevengeCandidate(states,row.item))).sort((a,b)=>a.strength-b.strength||b.misses-a.misses);
- const unseen=withMeta.filter(row=>row.attempts===0).sort((a,b)=>(b.item.bookNumber??0)-(a.item.bookNumber??0)||(b.item.unitNumber??0)-(a.item.unitNumber??0));
- const recent=withMeta.filter(row=>row.attempts>0).sort((a,b)=>b.lastSeen-a.lastSeen);
+ const withMeta:DailyRow[]=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
+ const recentUnits=recentProgressUnits(shuffledItems,4);
+ const recentSet=new Set(recentUnits);
+ const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
+ const recent=withMeta
+  .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
+  .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
+ const hard=withMeta
+  .filter(row=>hardScore(states,row)>35)
+  .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
+ const forgotten=withMeta
+  .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
+  .filter(row=>memoryRiskScore(row,now,frontierRank)>0)
+  .sort((a,b)=>memoryRiskScore(b,now,frontierRank)-memoryRiskScore(a,now,frontierRank));
 
  const picked:PracticeItem[]=[];
- const add=(rows:{item:PracticeItem}[],count:number)=>{
+ const addRows=(rows:{item:PracticeItem}[],count:number)=>{
+  let added=0;
   for(const row of rows){
-   if(picked.length>=10||count<=0)break;
+   if(picked.length>=10||added>=count)break;
    if(picked.some(item=>item.id===row.item.id))continue;
-   picked.push(row.item);count--;
+   picked.push(row.item);
+   added++;
   }
  };
- add(due,4);
- add(weak,3);
- add(unseen,2);
- add(recent,10-picked.length);
- add(withMeta,10-picked.length);
+
+ // Daily 10 follows the learner's curriculum frontier first:
+ // 2 from each of the newest two units, then 1 from each of the next two.
+ const recentQuotas=[2,2,1,1];
+ for(let index=0;index<recentUnits.length&&index<recentQuotas.length;index++){
+  addRows(recent.filter(row=>row.item.unitId===recentUnits[index]),recentQuotas[index]);
+ }
+ // Fill any missing part of the six-question recent block from the strongest
+ // adaptive candidates in the same four-unit window.
+ addRows(recent,Math.max(0,6-picked.length));
+
+ // Reserve the rest for material the learner is actually struggling to retain.
+ addRows(hard,2);
+ addRows(forgotten,2);
+
+ // If a bucket is short, stay near the curriculum frontier before falling back
+ // to older easy material.
+ addRows(recent,10-picked.length);
+ addRows([...hard,...forgotten],10-picked.length);
+ addRows(withMeta.sort((a,b)=>
+  recentScore(states,b,recentUnits,now)+hardScore(states,b)+memoryRiskScore(b,now,frontierRank)-
+  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+memoryRiskScore(a,now,frontierRank))
+ ),10-picked.length);
 
  return picked.slice(0,10).map((item,index)=>{
-  const due=dueMode(states,item,now);
-  const failed=failedMode(states,item);
-  let mode=due||failed||weakestMode(states,item,index===9);
-  if(!due&&!failed&&index===9&&item.kind==='phrase'&&item.tokens?.length)mode='sentence';
-  else if(!due&&!failed&&index===9&&item.characters.length)mode='handwriting';
+  let mode=dailyMode(states,item,index,now);
   mode=viableMode(item,mode,items);
   return {id:'daily:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'daily'};
  });
@@ -270,37 +385,59 @@ export function megaCheckpointCount(completed:Set<string>):number{
  return books.reduce((sum,book)=>sum+Math.floor(book.unitIds.filter(unitId=>unitComplete(completed,unitId)).length/4),0);
 }
 
-export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string,completed?:Set<string>):PracticeQuestion[]{
+export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string,completed?:Set<string>,now=Date.now()):PracticeQuestion[]{
  if(!items.length)return [];
- const checkpointUnits=completed?megaCheckpointUnits(completed):[];
- const source=checkpointUnits.length?items.filter(item=>item.unitId&&checkpointUnits.includes(item.unitId)):items;
- if(!source.length)return [];
- const unitIds=checkpointUnits.length?checkpointUnits:[...new Set(source.map(item=>item.unitId||'other'))];
- const byUnit=new Map<string,PracticeItem[]>();
- for(const item of source){
-  const key=item.unitId||'other';
-  byUnit.set(key,[...(byUnit.get(key)||[]),item]);
- }
- const spread:PracticeItem[]=[];
- for(let round=0;round<3&&spread.length<12;round++){
-  for(const unitId of unitIds){
-   const pool=shuffled(byUnit.get(unitId)||[],seed+':'+unitId);
-   const item=pool[round];
-   if(item&&!spread.some(existing=>existing.id===item.id))spread.push(item);
-   if(spread.length>=12)break;
+ if(completed&&megaCheckpointCount(completed)===0)return [];
+
+ const source=shuffled(uniqueItems(items),seed+':source');
+ const recentUnits=recentProgressUnits(source,6);
+ const recentSet=new Set(recentUnits);
+ const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
+ const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
+ const recent=withMeta
+  .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
+  .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
+ const hard=withMeta
+  .filter(row=>hardScore(states,row)>28)
+  .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
+ const forgotten=withMeta
+  .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
+  .filter(row=>memoryRiskScore(row,now,frontierRank)>0)
+  .sort((a,b)=>memoryRiskScore(b,now,frontierRank)-memoryRiskScore(a,now,frontierRank));
+
+ const picked:PracticeItem[]=[];
+ const addRows=(rows:{item:PracticeItem}[],count:number)=>{
+  let added=0;
+  for(const row of rows){
+   if(picked.length>=12||added>=count)break;
+   if(picked.some(item=>item.id===row.item.id))continue;
+   picked.push(row.item);
+   added++;
   }
+ };
+
+ // Mixed Mastery stays centered on the learner's current frontier, but reaches
+ // farther back than Daily 10 for weak and overdue material.
+ const recentQuotas=[2,2,1,1];
+ for(let index=0;index<recentUnits.length&&index<recentQuotas.length;index++){
+  addRows(recent.filter(row=>row.item.unitId===recentUnits[index]),recentQuotas[index]);
  }
- if(spread.length<12){
-  for(const item of shuffled(source,seed+':fill')){
-   if(!spread.some(existing=>existing.id===item.id))spread.push(item);
-   if(spread.length>=12)break;
+ addRows(recent,Math.max(0,6-picked.length));
+ addRows(hard,3);
+ addRows(forgotten,3);
+ addRows([...hard,...forgotten,...recent],12-picked.length);
+ addRows(withMeta.sort((a,b)=>
+  recentScore(states,b,recentUnits,now)+hardScore(states,b)+memoryRiskScore(b,now,frontierRank)-
+  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+memoryRiskScore(a,now,frontierRank))
+ ),12-picked.length);
+
+ return picked.slice(0,12).map((item,index)=>{
+  let mode=dailyMode(states,item,index+3,now);
+  // Mixed Mastery should skew productive. Recognition is only retained when it
+  // is the exact overdue/failed skill that needs review.
+  if(mode==='recognition'&&!dueMode(states,item,now)&&!failedMode(states,item)){
+   mode=item.kind==='phrase'&&item.tokens?.length?'sentence':'input';
   }
- }
- const cycle:PracticeMode[]=['recall','input','pinyin','sentence','handwriting','recall'];
- return spread.slice(0,12).map((item,index)=>{
-  const modes=supportedModes(item);
-  let mode=cycle[index%cycle.length];
-  if(!modes.includes(mode))mode=weakestMode(states,item,true);
   mode=viableMode(item,mode,source);
   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
  });
