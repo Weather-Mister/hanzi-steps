@@ -36,10 +36,7 @@ const unit:UnitData = {
       "u14-can",
       "u14-challenge"
     ],
-    "banner": {
-      "text": "這支手機能上網嗎？",
-      "pinyin": "Zhè zhī shǒujī néng shàngwǎng ma?"
-    },
+    "banner": {"text":"手機","pinyin":"shǒujī"},
     "goal": {
       "text": "這支手機能上網嗎？",
       "pinyin": "Zhè zhī shǒujī néng shàngwǎng ma?",
