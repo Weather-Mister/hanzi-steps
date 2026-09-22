@@ -32,10 +32,7 @@ const unit:UnitData = {
       "u29-integrate",
       "u29-review"
     ],
-    "banner": {
-      "text": "要是我有空，我就跟你一起去。",
-      "pinyin": "Yàoshi wǒ yǒu kòng, wǒ jiù gēn nǐ yìqǐ qù."
-    },
+    "banner": {"text":"水果","pinyin":"shuǐguǒ"},
     "goal": {
       "text": "要是你來，我就給你一塊水果。",
       "pinyin": "Yàoshi nǐ lái, wǒ jiù gěi nǐ yí kuài shuǐguǒ.",
