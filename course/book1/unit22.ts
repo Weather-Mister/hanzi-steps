@@ -34,10 +34,7 @@ const unit:UnitData = {
       "u22-calligraphy",
       "u22-review"
     ],
-    "banner": {
-      "text": "下午四點半有比賽。",
-      "pinyin": "Xiàwǔ sì diǎn bàn yǒu bǐsài."
-    },
+    "banner": {"text":"比賽","pinyin":"bǐsài"},
     "goal": {
       "text": "我每天下午都上書法課。",
       "pinyin": "Wǒ měitiān xiàwǔ dōu shàng shūfǎ kè.",
