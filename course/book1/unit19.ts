@@ -32,10 +32,7 @@ const unit:UnitData = {
       "u19-meal",
       "u19-review"
     ],
-    "banner": {
-      "text": "到學校附近去。",
-      "pinyin": "Dào xuéxiào fùjìn qù."
-    },
+    "banner": {"text":"附近","pinyin":"fùjìn"},
     "goal": {
       "text": "我今天要和朋友一起吃飯。",
       "pinyin": "Wǒ jīntiān yào hé péngyǒu yìqǐ chīfàn.",
