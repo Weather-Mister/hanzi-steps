@@ -327,8 +327,9 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const withMeta:DailyRow[]=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
  const recentUnits=recentProgressUnits(shuffledItems,4);
  const frontierUnit=recentUnits[0];
+ const previousUnit=recentUnits[1];
+ const secondPreviousUnit=recentUnits[2];
  const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
- const nearUnits=new Set(recentUnits.slice(1,4));
 
  const current=randomizedAdaptiveRows(
   withMeta.filter(row=>row.item.unitId===frontierUnit),
@@ -336,11 +337,17 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
   row=>challengeScore(states,row,recentUnits,frontierRank,now),
   34,
  );
- const near=randomizedAdaptiveRows(
-  withMeta.filter(row=>Boolean(row.item.unitId&&nearUnits.has(row.item.unitId))),
-  seed+':near',
+ const previous=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId===previousUnit),
+  seed+':previous',
   row=>challengeScore(states,row,recentUnits,frontierRank,now),
-  30,
+  32,
+ );
+ const secondPrevious=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId===secondPreviousUnit),
+  seed+':second-previous',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now),
+  28,
  );
  const hard=randomizedAdaptiveRows(
   withMeta.filter(row=>actualTrouble(row,frontierRank,now)),
@@ -369,23 +376,21 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
   }
  };
 
- // Most of every Daily 10 comes from the unit the learner is currently moving
- // through. Nearby units provide transfer; only real weakness/forgetting earns
- // an older item a slot.
- addRows(current,5);
- addRows(near,2);
- addRows(hard,2);
- addRows(forgotten,1);
+ // Daily 10 should feel like a rolling learning window, not a single-unit drill:
+ // current + previous + second-previous dominate together. Only one slot is
+ // reserved for an older genuinely weak/forgotten item.
+ addRows(current,4);
+ addRows(previous,3);
+ addRows(secondPrevious,2);
+ addRows([...hard,...forgotten],1);
 
- addRows(current,10-picked.length);
- addRows(near,10-picked.length);
- addRows(hard,10-picked.length);
- addRows(forgotten,10-picked.length);
+ addRows([...current,...previous,...secondPrevious],10-picked.length);
+ addRows([...hard,...forgotten],10-picked.length);
 
  const safeFallback=randomizedAdaptiveRows(
   withMeta.filter(row=>{
    const distance=Math.max(0,frontierRank-progressRank(row.item));
-   return distance<=4||actualTrouble(row,frontierRank,now);
+   return distance<=3||actualTrouble(row,frontierRank,now);
   }),
   seed+':fallback',
   row=>challengeScore(states,row,recentUnits,frontierRank,now),
@@ -452,9 +457,10 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  const source=shuffled(uniqueItems(items),seed+':source');
  const recentUnits=recentProgressUnits(source,5);
  const frontierUnit=recentUnits[0];
+ const previousUnit=recentUnits[1];
+ const secondPreviousUnit=recentUnits[2];
  const frontierRank=Math.max(...source.map(item=>progressRank(item)));
  const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
- const nearUnits=new Set(recentUnits.slice(1,4));
 
  const current=randomizedAdaptiveRows(
   withMeta.filter(row=>row.item.unitId===frontierUnit),
@@ -462,9 +468,15 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
   row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
   28,
  );
- const near=randomizedAdaptiveRows(
-  withMeta.filter(row=>Boolean(row.item.unitId&&nearUnits.has(row.item.unitId))),
-  seed+':near',
+ const previous=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId===previousUnit),
+  seed+':previous',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
+  26,
+ );
+ const secondPrevious=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId===secondPreviousUnit),
+  seed+':second-previous',
   row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
   24,
  );
@@ -495,23 +507,21 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
   }
  };
 
- // Mixed Mastery is deliberately tougher than Daily 10: half the round is
- // current-unit material, most of the rest stays close to the frontier, and
- // old material only returns for a concrete reason.
- addRows(current,6);
- addRows(near,3);
- addRows(hard,2);
- addRows(forgotten,1);
+ // Mixed Mastery uses the same rolling window but stays tougher: current,
+ // previous, and second-previous units make up nearly the whole round, with
+ // one slot for a concrete weak/forgotten item.
+ addRows(current,5);
+ addRows(previous,4);
+ addRows(secondPrevious,2);
+ addRows([...hard,...forgotten],1);
 
- addRows(current,12-picked.length);
- addRows(near,12-picked.length);
- addRows(hard,12-picked.length);
- addRows(forgotten,12-picked.length);
+ addRows([...current,...previous,...secondPrevious],12-picked.length);
+ addRows([...hard,...forgotten],12-picked.length);
 
  const fallback=randomizedAdaptiveRows(
   withMeta.filter(row=>{
    const distance=Math.max(0,frontierRank-progressRank(row.item));
-   return distance<=5||actualTrouble(row,frontierRank,now);
+   return distance<=3||actualTrouble(row,frontierRank,now);
   }),
   seed+':fallback',
   row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
