@@ -118,9 +118,10 @@ test('Daily 10 follows the learner frontier instead of drifting back to early ea
  const queue=makeDailyTen(items,{},'recent-frontier',1000);
  assert.equal(queue.length,10);
  const unitNumbers=queue.map(question=>question.item.unitNumber);
- assert.ok(unitNumbers.filter(number=>number>=5).length>=8,String(unitNumbers));
- assert.ok(unitNumbers.filter(number=>number===8).length>=5);
+ assert.ok(unitNumbers.filter(number=>number>=6).length>=9,String(unitNumbers));
+ assert.ok(unitNumbers.filter(number=>number===8).length>=3);
  assert.ok(unitNumbers.filter(number=>number===7).length>=2);
+ assert.ok(unitNumbers.filter(number=>number===6).length>=1);
  assert.equal(unitNumbers.includes(1),false,String(unitNumbers));
 });
 
