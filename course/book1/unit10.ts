@@ -31,10 +31,7 @@ const unit:UnitData = {
       "u10-common-ground",
       "u10-challenge"
     ],
-    "banner": {
-      "text": "晚飯",
-      "pinyin": "wǎnfàn"
-    },
+    "banner": {"text":"晚飯","pinyin":"wǎnfàn"},
     "goal": {
       "text": "我們晚上一起吃晚飯，好不好？",
       "pinyin": "Wǒmen wǎnshàng yìqǐ chī wǎnfàn, hǎo bu hǎo?",
