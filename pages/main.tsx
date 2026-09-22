@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {LearningApp} from '../components/learning-app';
 import {supabase} from './supabase';
 import '../app/globals.css';
+import '../app/desktop.css';
 
 const ACTIVE_USERNAME_KEY='hanziSteps.activeUsername';
 const normalizeUsername=(value:string)=>value.trim().toLowerCase();
