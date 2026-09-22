@@ -7,11 +7,11 @@ import {createWriterTarget} from '@/lib/writer-target';
 import {strokeGeometryLooksAligned} from '@/lib/stroke-data-validation';
 import {useInteractionFeedback} from './interaction-feedback';
 export type WriteMode='intro'|'trace'|'complete'|'memory';
-export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterMisses,completionDelayMs=0}:{char:string;mode:WriteMode;onComplete?:(assisted:boolean)=>void;strict?:boolean;revealStrokeAfterMisses?:number;completionDelayMs?:number}){
+export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterMisses,completionDelayMs=0,validateStrokeGeometry=false}:{char:string;mode:WriteMode;onComplete?:(assisted:boolean)=>void;strict?:boolean;revealStrokeAfterMisses?:number;completionDelayMs?:number;validateStrokeGeometry?:boolean}){
  const {feedback:feel}=useInteractionFeedback();
  const host=useRef<HTMLDivElement>(null);const writer=useRef<HanziWriter|null>(null);const callback=useRef(onComplete);callback.current=onComplete;const completionTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
  const rawLocalStrokeData=strokeData[char];
- const localStrokeData=rawLocalStrokeData&&strokeGeometryLooksAligned(rawLocalStrokeData)?rawLocalStrokeData:undefined;
+ const localStrokeData=rawLocalStrokeData&&(!validateStrokeGeometry||strokeGeometryLooksAligned(rawLocalStrokeData))?rawLocalStrokeData:undefined;
  const start=mode==='complete'?Math.max(0,(localStrokeData?.strokes.length??0)-3):0;
  const [next,setNext]=useState(start);const nextRef=useRef(start);const [strokeCount,setStrokeCount]=useState(localStrokeData?.strokes.length??0);const [runtimeMedians,setRuntimeMedians]=useState<number[][][]>(localStrokeData?.medians??[]);const [ready,setReady]=useState(false);const [failed,setFailed]=useState(false);const [done,setDone]=useState(false);const [busy,setBusy]=useState(false);const [guide,setGuide]=useState(false);const [message,setMessage]=useState('');const [studyReady,setStudyReady]=useState(false);const [size,setSize]=useState(320);const helped=useRef(false);const misses=useRef(0);const strokeMisses=useRef(0);const mounted=useRef(true);const [reset,setReset]=useState(0);const marker=useId().replace(/:/g,'');
  const finish=(assisted:boolean)=>{setDone(true);setGuide(false);feel('success');setMessage(assisted?'Character complete — keep it moving.':mode==='memory'?'Character complete!':'All strokes complete!');if(completionTimer.current)clearTimeout(completionTimer.current);if(completionDelayMs>0)completionTimer.current=setTimeout(()=>{completionTimer.current=null;callback.current?.(assisted)},completionDelayMs);else callback.current?.(assisted)};
@@ -30,7 +30,7 @@ export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterM
    observer=new ResizeObserver(()=>{if(!host.current||!alive)return;const width=host.current.clientWidth;if(width>0){setSize(width);void instance.updateDimensions({width,height:width,padding:24})}});observer.observe(host.current);
   }).catch(()=>{if(alive)setFailed(true)});
   return ()=>{alive=false;mounted.current=false;if(completionTimer.current){clearTimeout(completionTimer.current);completionTimer.current=null}observer?.disconnect();writer.current?.cancelQuiz();writer.current?.pauseAnimation();writer.current=null;dispose?.()};
- },[char,mode,reset,start,strict,revealStrokeAfterMisses,localStrokeData]);
+ },[char,mode,reset,start,strict,revealStrokeAfterMisses,localStrokeData,validateStrokeGeometry]);
  async function watch(study=false){const w=writer.current;if(!w||busy)return;if(mode!=='intro')helped.current=true;setBusy(true);setGuide(false);setMessage('Watch the order and direction.');w.cancelQuiz();await w.animateCharacter();if(!mounted.current)return;setBusy(false);if(study){setStudyReady(true);setMessage('Animation studied. You can continue without a handwriting score.')}else if(mode!=='intro'){quizRef.current();setMessage('Your turn. Start again from the first missing stroke.')}else setMessage('Write each stroke in one movement.')}
  function hint(){if(!writer.current||done||busy)return;helped.current=true;setGuide(true);void writer.current.highlightStroke(nextRef.current);setMessage('Start at the dot and follow the arrow.')}
  function reveal(){if(!writer.current||busy||done)return;helped.current=true;void writer.current.showOutline();setMessage('The outline is visible. This attempt will be marked as supported.')}
