@@ -32,10 +32,7 @@ const unit:UnitData = {
       "u31-because",
       "u31-review"
     ],
-    "banner": {
-      "text": "這些是我拍的照片。",
-      "pinyin": "Zhèxiē shì wǒ pāi de zhàopiàn."
-    },
+    "banner": {"text":"旅館","pinyin":"lǚguǎn"},
     "goal": {
       "text": "因為現在去玩的人比較少，所以旅館不太貴。",
       "pinyin": "Yīnwèi xiànzài qù wán de rén bǐjiào shǎo, suǒyǐ lǚguǎn bú tài guì.",
