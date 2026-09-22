@@ -78,3 +78,5 @@ export function useMegaMastery(userKey:string){
 
  return {mastered,loading,saving,error,setMastered:setMasteredValue};
 }
+
+export type MegaMasteryController=ReturnType<typeof useMegaMastery>;
