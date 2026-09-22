@@ -301,7 +301,7 @@ test('Revenge Round attacks one unresolved mistake three different ways and clea
  assert.equal(makeRevengeRound(items,freshMistake,'revenge-test').length,3);
 });
 
-test('Mixed Mastery uses the latest completed four-unit checkpoint instead of mirroring Daily 10',()=>{
+test('Mixed Mastery is a hard four-unit production checkpoint instead of a longer Daily 10',()=>{
  const firstBook=books.find(book=>book.id==='book-1');
  assert.ok(firstBook);
  const completed=new Set();
@@ -316,8 +316,20 @@ test('Mixed Mastery uses the latest completed four-unit checkpoint instead of mi
 
  const items=[];
  firstBook.unitIds.slice(0,8).forEach((unitId,unitIndex)=>{
-  for(let i=0;i<5;i++)items.push(item(unitIndex*10+i,unitId));
+  for(let i=0;i<6;i++)items.push(item(unitIndex*10+i,unitId));
  });
+ const hardPhrase={
+  ...item(999,checkpointUnits[0]),
+  id:'phrase:mixed-hard-test',
+  kind:'phrase',
+  traditional:'你想喝咖啡嗎',
+  pinyin:'nǐ xiǎng hē kāfēi ma',
+  meaning:'Do you want to drink coffee?',
+  characters:['你','想','喝','咖','啡'],
+  tokens:['你','想','喝','咖啡','嗎'],
+ };
+ items.push(hardPhrase);
+
  const oldWeak=items.find(candidate=>candidate.unitId===firstBook.unitIds[0]);
  assert.ok(oldWeak);
  const states={
@@ -327,12 +339,17 @@ test('Mixed Mastery uses the latest completed four-unit checkpoint instead of mi
   },
  };
  const queue=makeMegaCheckpoint(items,states,'mixed-mastery-test',completed,1000);
- assert.equal(queue.length,12);
+ assert.equal(queue.length,16);
  assert.ok(!queue.some(question=>question.item.id===oldWeak.id),'an unrelated old weakness should not replace the checkpoint block');
  assert.ok(queue.every(question=>question.item.unitId&&checkpointUnits.includes(question.item.unitId)));
- for(const unitId of checkpointUnits)assert.equal(queue.filter(question=>question.item.unitId===unitId).length,3);
- assert.ok(new Set(queue.map(question=>question.mode)).size>=3,'Mixed Mastery should exercise several skills');
- assert.ok(queue.every(question=>question.mode!=='recognition'));
+ for(const unitId of checkpointUnits)assert.equal(queue.filter(question=>question.item.unitId===unitId).length,4);
+ assert.ok(queue.every(question=>!['recognition','recall','pinyin'].includes(question.mode)),'Mixed Mastery must not fall back to easy multiple choice');
+ assert.ok(queue.every(question=>['input','handwriting','sentence'].includes(question.mode)));
+ assert.ok(queue.filter(question=>question.mode==='input').length>=7,'the checkpoint should demand substantial typed production');
+ assert.ok(queue.filter(question=>question.mode==='handwriting').length>=5,'the checkpoint should demand substantial writing from memory');
+ const phraseQuestion=queue.find(question=>question.item.id===hardPhrase.id);
+ assert.ok(phraseQuestion,'hard phrases should be prioritized in the checkpoint');
+ assert.equal(phraseQuestion.mode,'input','phrases should require full typed recall instead of sentence tiles');
 });
 
 test('Taiwan missions stay locked until their prerequisite unit is complete',()=>{
