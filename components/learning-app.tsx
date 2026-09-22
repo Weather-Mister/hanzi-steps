@@ -156,38 +156,52 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  {active&&needsSignIn&&<div className="lesson-account-notice">{signInPanel}</div>}
  {!active ? <main className="home-main">
   {needsSignIn&&signInPanel}
-  <nav className="book-switcher" aria-label="Choose a book">{books.map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
-  {book.available ? <>
-  <UnitPicker unit={unit} units={bookUnits} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
-  <div className="course-milestone"><div><span>Book {book.number} · units practiced</span><strong>{finishedBookUnits}<small> / {book.unitIds.length} available</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={`Available Book ${book.number} units completed`}/></div>
   <Tabs value={tab} onValueChange={setTab}>
-   <TabsList className="main-tabs"><TabsTrigger value="learn"><BookOpen size={18}/>Learn</TabsTrigger><TabsTrigger value="characters"><PenLine size={18}/>Characters</TabsTrigger><TabsTrigger value="notes"><Lightbulb size={18}/>Notes</TabsTrigger></TabsList>
-   <TabsContent value="learn">
-    {unit.bookReference&&<p className="book-reference">{unit.bookReference}</p>}
-    <div className="unit-banner"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} <span>·</span> {unit.label.toUpperCase()}</p><h1>{unit.title}</h1><p>{unit.description}</p></div><div className="banner-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div>
-    {unit.number>1&&!lessonAvailable(unit.lessonIds[0],completed)&&<div className="unit-prerequisite"><Lock size={17}/><p>Finish the Unit {unit.number-1} review to start these lessons. You can explore the characters and notes now.</p><button className="text-button" onClick={()=>chooseUnit(units[unit.number-2].id)}>Go to Unit {unit.number-1}<ArrowRight size={16}/></button></div>}
-    {sessions.some(s=>!s.complete&&Object.hasOwn(previousLessonLengths,s.lessonId)&&s.lessonId.startsWith(unit.id==='unit-7'?'u7-':unit.id==='unit-8'?'u8-':'none-'))&&<p className="book-reference">This unit now has shorter lessons. Completed work is kept; unfinished lessons restart with the new sequence.</p>}
-    <div className="course-layout"><section className="lesson-path" aria-label={`Unit ${unit.displayNumber??unit.number} lessons`}>
-     <div className="path-intro"><h2>Your learning path</h2><span>{unitCompleted} / {unitLessons.length} complete</span></div>
-     {unitLessons.map((lesson,i)=>{
-      const done=completed.has(lesson.id),available=lessonAvailable(lesson.id,completed);
-      const resume=sessions.some(s=>s.lessonId===lesson.id&&!s.complete),next=lesson.id===nextLesson.id&&available;
-      return <Fragment key={lesson.id}><div className={`path-row ${done?'completed':''} ${next?'current':''} ${available?'':'locked'}`}>
-       <div className="path-track"><button className="path-node" disabled={!available||loading} aria-label={`${done?'Practice again:':available?'Start:':'Locked:'} ${lesson.title}`} onClick={()=>start(lesson)}>{done?<Check size={32}/>:!available?<Lock size={25}/>:lesson.review?<Trophy size={29}/>:<span lang="zh-Hant-TW">{lesson.chars[0]}</span>}</button></div>
-       <div className="path-copy"><p className="path-step">{lesson.review?'UNIT CHALLENGE':`LESSON ${String(i+1).padStart(2,'0')}`} {done&&<span>COMPLETE</span>}</p><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><div className="lesson-meta"><span lang="zh-Hant-TW">{lesson.chars.join(' · ')}</span><span>{lesson.minutes}</span></div>{next&&<button className="primary-button start-button" disabled={loading} onClick={()=>start(lesson)}>{loading?'Loading progress…':done?'Practice the unit':resume?'Resume lesson':'Start lesson'}<ArrowRight size={18}/></button>}</div>
-      </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
-     })}
-     {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
-    </section><aside className="course-sidebar">
-     <section className="sidebar-card"><div className="card-heading"><h2>This unit’s characters</h2><span>{unitLearned.length}/{unitCharacters.length}</span></div><Progress className="unit-progress" value={unitCharacters.length?unitLearned.length/unitCharacters.length*100:0} aria-label="Unit characters practiced"/><div className="character-mini-grid">{unitCharacters.map(c=><button key={c} className={practicedCharacters.has(c)?'learned':''} onClick={()=>setDetail(c)} aria-label={`Explore ${c}, ${characters[c].meaning}`}><span lang="zh-Hant-TW">{c}</span>{prefs.pinyin&&<small>{characters[c].pinyin}</small>}{practicedCharacters.has(c)&&<Check size={13}/>}</button>)}</div><p>Tap any character to explore its parts.</p></section>
-     <section className="sidebar-card unit-goal"><GraduationCap size={25}/><p className="eyebrow">BY THE END OF THIS UNIT</p><h3 lang="zh-Hant-TW">{unit.goal.text}</h3>{prefs.pinyin&&<p className="pinyin">{unit.goal.pinyin}</p>}<p>{unit.goal.meaning}</p><button className="text-button" onClick={()=>setTab('notes')}><Lightbulb size={16}/>Words & patterns</button></section>
-     <section className="practice-method"><span><PenLine size={19}/>Trace</span><ChevronRight size={16}/><span><Shapes size={19}/>Complete</span><ChevronRight size={16}/><span><BookOpen size={19}/>Recall</span></section>
-    </aside></div>
-   </TabsContent>
-   <TabsContent value="characters"><div className="character-page-heading"><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} · CHARACTER LIBRARY</p><h1>A closer look at each character.</h1><p>New characters from this unit’s words. Explore their parts or choose writing practice. Characters taught earlier stay in their original unit.</p></div><div className="character-library">{unitCharacters.map(c=><button key={c} className="library-card" onClick={()=>setDetail(c)}><div className="library-top"><span>{characters[c].strokes} {characters[c].strokes===1?'stroke':'strokes'}</span>{practicedCharacters.has(c)&&<span className="learned-badge"><Check size={14}/>Practiced</span>}</div><CharacterArt char={c}/><Phonetics character={characters[c]} prefs={prefs}/><h2>{characters[c].meaning}</h2><span className="library-action">Explore character<ArrowRight size={17}/></span></button>)}</div></TabsContent>
-   <TabsContent value="notes"><UnitNotes unit={unit} prefs={prefs} completed={completed}/></TabsContent>
+   <div className="course-workspace">
+    <aside className="course-navigation">
+     <div className="course-navigation-heading"><span>COURSE</span><strong>Taiwanese Mandarin</strong></div>
+     <section className="course-navigation-section">
+      <p className="course-navigation-label">Book</p>
+      <nav className="book-switcher" aria-label="Choose a book">{books.map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
+     </section>
+     {book.available&&<section className="course-navigation-section">
+      <p className="course-navigation-label">Unit</p>
+      <UnitPicker unit={unit} units={bookUnits} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
+      <div className="course-milestone"><div><span>Book {book.number} progress</span><strong>{finishedBookUnits}<small> / {book.unitIds.length}</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={`Available Book ${book.number} units completed`}/></div>
+     </section>}
+     {book.available&&<section className="course-navigation-section course-navigation-tabs"><p className="course-navigation-label">View</p><TabsList className="main-tabs"><TabsTrigger value="learn"><BookOpen size={18}/>Learn</TabsTrigger><TabsTrigger value="characters"><PenLine size={18}/>Characters</TabsTrigger><TabsTrigger value="notes"><Lightbulb size={18}/>Notes</TabsTrigger></TabsList></section>}
+    </aside>
+    <div className="course-content">
+     {book.available ? <>
+     <TabsContent value="learn">
+      {unit.bookReference&&<p className="book-reference">{unit.bookReference}</p>}
+      <div className="unit-banner mobile-unit-banner"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} <span>·</span> {unit.label.toUpperCase()}</p><h1>{unit.title}</h1><p>{unit.description}</p></div><div className="banner-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div>
+      {unit.number>1&&!lessonAvailable(unit.lessonIds[0],completed)&&<div className="unit-prerequisite"><Lock size={17}/><p>Finish the Unit {unit.number-1} review to start these lessons. You can explore the characters and notes now.</p><button className="text-button" onClick={()=>chooseUnit(units[unit.number-2].id)}>Go to Unit {unit.number-1}<ArrowRight size={16}/></button></div>}
+      {sessions.some(s=>!s.complete&&Object.hasOwn(previousLessonLengths,s.lessonId)&&s.lessonId.startsWith(unit.id==='unit-7'?'u7-':unit.id==='unit-8'?'u8-':'none-'))&&<p className="book-reference">This unit now has shorter lessons. Completed work is kept; unfinished lessons restart with the new sequence.</p>}
+      <div className="course-layout"><section className="lesson-path" aria-label={`Unit ${unit.displayNumber??unit.number} lessons`}>
+       <div className="path-intro"><h2>Your learning path</h2><span>{unitCompleted} / {unitLessons.length} complete</span></div>
+       {unitLessons.map((lesson,i)=>{
+        const done=completed.has(lesson.id),available=lessonAvailable(lesson.id,completed);
+        const resume=sessions.some(s=>s.lessonId===lesson.id&&!s.complete),next=lesson.id===nextLesson.id&&available;
+        return <Fragment key={lesson.id}><div className={`path-row ${done?'completed':''} ${next?'current':''} ${available?'':'locked'}`}>
+         <div className="path-track"><button className="path-node" disabled={!available||loading} aria-label={`${done?'Practice again:':available?'Start:':'Locked:'} ${lesson.title}`} onClick={()=>start(lesson)}>{done?<Check size={32}/>:!available?<Lock size={25}/>:lesson.review?<Trophy size={29}/>:<span lang="zh-Hant-TW">{lesson.chars[0]}</span>}</button></div>
+         <div className="path-copy"><p className="path-step">{lesson.review?'UNIT CHALLENGE':`LESSON ${String(i+1).padStart(2,'0')}`} {done&&<span>COMPLETE</span>}</p><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><div className="lesson-meta"><span lang="zh-Hant-TW">{lesson.chars.join(' · ')}</span><span>{lesson.minutes}</span></div>{next&&<button className="primary-button start-button" disabled={loading} onClick={()=>start(lesson)}>{loading?'Loading progress…':done?'Practice the unit':resume?'Resume lesson':'Start lesson'}<ArrowRight size={18}/></button>}</div>
+        </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
+       })}
+       {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
+      </section><aside className="course-sidebar">
+       <section className="unit-overview-card"><div className="unit-overview-heading"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} · {unit.label.toUpperCase()}</p><h1>{unit.title}</h1></div><div className="unit-overview-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div><p className="unit-overview-description">{unit.description}</p></section>
+       <section className="sidebar-card"><div className="card-heading"><h2>This unit’s characters</h2><span>{unitLearned.length}/{unitCharacters.length}</span></div><Progress className="unit-progress" value={unitCharacters.length?unitLearned.length/unitCharacters.length*100:0} aria-label="Unit characters practiced"/><div className="character-mini-grid">{unitCharacters.map(c=><button key={c} className={practicedCharacters.has(c)?'learned':''} onClick={()=>setDetail(c)} aria-label={`Explore ${c}, ${characters[c].meaning}`}><span lang="zh-Hant-TW">{c}</span>{prefs.pinyin&&<small>{characters[c].pinyin}</small>}{practicedCharacters.has(c)&&<Check size={13}/>}</button>)}</div><p>Tap any character to explore its parts.</p></section>
+       <section className="sidebar-card unit-goal"><GraduationCap size={25}/><p className="eyebrow">BY THE END OF THIS UNIT</p><h3 lang="zh-Hant-TW">{unit.goal.text}</h3>{prefs.pinyin&&<p className="pinyin">{unit.goal.pinyin}</p>}<p>{unit.goal.meaning}</p><button className="text-button" onClick={()=>setTab('notes')}><Lightbulb size={16}/>Words & patterns</button></section>
+       <section className="practice-method"><span><PenLine size={19}/>Trace</span><ChevronRight size={16}/><span><Shapes size={19}/>Complete</span><ChevronRight size={16}/><span><BookOpen size={19}/>Recall</span></section>
+      </aside></div>
+     </TabsContent>
+     <TabsContent value="characters"><div className="character-page-heading"><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} · CHARACTER LIBRARY</p><h1>A closer look at each character.</h1><p>New characters from this unit’s words. Explore their parts or choose writing practice. Characters taught earlier stay in their original unit.</p></div><div className="character-library">{unitCharacters.map(c=><button key={c} className="library-card" onClick={()=>setDetail(c)}><div className="library-top"><span>{characters[c].strokes} {characters[c].strokes===1?'stroke':'strokes'}</span>{practicedCharacters.has(c)&&<span className="learned-badge"><Check size={14}/>Practiced</span>}</div><CharacterArt char={c}/><Phonetics character={characters[c]} prefs={prefs}/><h2>{characters[c].meaning}</h2><span className="library-action">Explore character<ArrowRight size={17}/></span></button>)}</div></TabsContent>
+     <TabsContent value="notes"><UnitNotes unit={unit} prefs={prefs} completed={completed}/></TabsContent>
+     </> : <section className="book-placeholder"><BookOpen size={38}/><p className="eyebrow">BOOK {book.number}</p><h1>We’ll get here.</h1><p>Book {book.number} units are coming later. For now, keep building your Mandarin in Book 1.</p><button className="primary-button" onClick={()=>setBookId('book-1')}>Back to Book 1<ArrowRight size={18}/></button></section>}
+    </div>
+   </div>
   </Tabs>
-  </> : <section className="book-placeholder"><BookOpen size={38}/><p className="eyebrow">BOOK {book.number}</p><h1>We’ll get here.</h1><p>Book {book.number} units are coming later. For now, keep building your Mandarin in Book 1.</p><button className="primary-button" onClick={()=>setBookId('book-1')}>Back to Book 1<ArrowRight size={18}/></button></section>}
   {!needsSignIn&&(loadError||saveError)&&<div className="storage-notice" role="status"><p>{loadError||saveError}</p><button className="text-button" onClick={()=>void retrySave()}>Try again</button></div>}
   <div className="home-footer"><span>One unit at a time. As many tries as you need.</span><button className={`sync-state ${saveState}`} onClick={()=>saveState==='error'?void retrySave():undefined} disabled={saveState!=='error'}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button></div>
  </main> : active.complete&&current ? <main className="completion-main">
