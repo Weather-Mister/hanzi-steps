@@ -78,7 +78,7 @@ function BonusStage({kind,onStart}:{kind:BonusStageKind;onStart:()=>void}){
  const meta={
   daily:{label:'BONUS STAGE',title:'Daily 10',subtitle:'A quick adaptive mix from what you have been learning.',icon:Flame},
   revenge:{label:'REVENGE STAGE',title:'Revenge Round',subtitle:'One weak spot is back. Beat it a few different ways.',icon:Swords},
-  mixed:{label:'POWER CHECK',title:'Mixed Mastery',subtitle:'A surprise four-unit production checkpoint: full typing, memory writing, no easy multiple choice.',icon:Sparkles},
+  mixed:{label:'POWER CHECK',title:'Mixed Mastery',subtitle:'A surprise four-unit checkpoint with sentence clozes, contextual recall, typing, and memory writing.',icon:Sparkles},
   mega:{label:'HANDWRITING BOSS',title:'Mega Challenge',subtitle:'A longer handwriting run when you feel like going for it.',icon:Trophy},
   taiwan:{label:'TAIWAN DETOUR',title:'Taiwan Mode',subtitle:'Use what you know in a short real-life situation.',icon:MapPin},
  }[kind];

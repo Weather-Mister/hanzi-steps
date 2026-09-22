@@ -32,11 +32,17 @@ export type PracticeItem={
  tokens?:string[];
 };
 
+export type PracticeContextPrompt={
+ sentence:string;
+ meaning:string;
+ answer:string;
+};
 export type PracticeQuestion={
  id:string;
  item:PracticeItem;
  mode:PracticeMode;
  sessionKind:PracticeSessionKind;
+ context?:PracticeContextPrompt;
 };
 
 export type TaiwanMissionStep={
@@ -529,6 +535,63 @@ export function megaCheckpointCount(completed:Set<string>):number{
  return books.reduce((sum,book)=>sum+Math.floor(book.unitIds.filter(unitId=>unitComplete(completed,unitId)).length/4),0);
 }
 
+function contextSpanInPhrase(phrase:PracticeItem,item:PracticeItem):{start:number;end:number}|null{
+ const tokens=phrase.tokens||[];
+ const target=normalizePracticeSurface(item.traditional);
+ if(!target||!tokens.length)return null;
+ for(let start=0;start<tokens.length;start++){
+  let joined='';
+  for(let end=start;end<tokens.length;end++){
+   joined+=tokens[end];
+   const normalized=normalizePracticeSurface(joined);
+   if(normalized===target)return {start,end:end+1};
+   if(normalized.length>target.length)break;
+  }
+ }
+ return null;
+}
+
+function mixedMasteryContext(item:PracticeItem,pool:PracticeItem[],seed:string):PracticeContextPrompt|undefined{
+ // Single characters are better tested by writing them from memory. Context
+ // clozes are for words and short phrases that would otherwise produce weak
+ // prompts such as simply showing "one person".
+ if(Array.from(item.traditional).length===1)return undefined;
+
+ const candidates=pool.flatMap(candidate=>{
+  if(candidate.id===item.id||candidate.kind!=='phrase'||!candidate.tokens?.length)return [];
+  const span=contextSpanInPhrase(candidate,item);
+  if(!span)return [];
+  const targetSurface=normalizePracticeSurface(item.traditional);
+  const sentenceSurface=normalizePracticeSurface(candidate.traditional);
+  if(!targetSurface||sentenceSurface===targetSurface)return [];
+  return [{candidate,span}];
+ });
+ if(!candidates.length)return undefined;
+
+ const ranked=shuffled(candidates,seed+':contexts').sort((a,b)=>{
+  const aLength=Array.from(a.candidate.traditional).length;
+  const bLength=Array.from(b.candidate.traditional).length;
+  const aWords=a.candidate.tokens?.length??0;
+  const bWords=b.candidate.tokens?.length??0;
+  return bWords-aWords||bLength-aLength;
+ });
+ const chosen=ranked[0].candidate;
+ let sentence=chosen.traditional.replace(item.traditional,'＿＿＿');
+ let meaning=chosen.meaning;
+
+ // Turn a bare existential example into a slightly richer sentence when the
+ // learner already knows 這裡. This keeps the grammar familiar while avoiding
+ // the exact textbook-sized fragment ("有一個人。") as the prompt.
+ const knowsHere=pool.some(candidate=>normalizePracticeSurface(candidate.traditional)==='這裡');
+ if(knowsHere&&sentence.startsWith('有')&&!sentence.startsWith('這裡')){
+  sentence='這裡'+sentence;
+  const cleanMeaning=meaning.trim().replace(/[.!?]+$/,'');
+  meaning=cleanMeaning+' here.';
+ }
+
+ return {sentence,meaning,answer:item.traditional};
+}
+
 export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,seed:string,completed?:Set<string>,now=Date.now()):PracticeQuestion[]{
  if(!items.length)return [];
  if(completed&&megaCheckpointCount(completed)===0)return [];
@@ -540,68 +603,67 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
  const checkpointRows=withMeta.filter(row=>row.item.unitId&&checkpointUnits.includes(row.item.unitId));
  const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
- const roundSize=16;
-
- const masteryDifficulty=(row:DailyRow)=>{
-  const length=Array.from(row.item.traditional).length;
-  const productionBonus=row.item.kind==='phrase'?90:row.item.kind==='word'&&length>1?36:0;
-  const singleCharacterPenalty=length===1?-14:0;
-  return productionBonus+singleCharacterPenalty+challengeComplexity(row.item)*2+hardScore(states,row)+Math.min(28,forgottenScore(row,now));
- };
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
   let added=0;
   for(const row of rows){
-   if(picked.length>=roundSize||added>=count)break;
+   if(picked.length>=12||added>=count)break;
    if(picked.some(item=>item.id===row.item.id))continue;
    picked.push(row.item);
    added++;
   }
  };
 
- // Mixed Mastery is deliberately harder than Daily 10. It samples evenly from
- // the latest completed four-unit checkpoint, heavily prefers phrases and
- // multi-character vocabulary, and asks for more material before the round ends.
+ // Keep the original Mixed Mastery picker: the latest completed four-unit
+ // checkpoint contributes evenly, while complexity, weakness and forgetting
+ // decide which material inside each unit deserves another turn.
  for(const unitId of checkpointUnits){
   const rows=randomizedAdaptiveRows(
    checkpointRows.filter(row=>row.item.unitId===unitId),
    seed+':checkpoint:'+unitId,
-   masteryDifficulty,
-   18,
+   row=>challengeComplexity(row.item)+hardScore(states,row)+Math.min(24,forgottenScore(row,now)),
+   30,
   );
-  addRows(rows,4);
+  addRows(rows,3);
  }
 
- // Mega-mastered items are already removed before this function is called. If
- // a checkpoint unit has too few remaining items, fill from the same checkpoint
- // first, then fall back to genuinely difficult older material.
  const checkpointFallback=randomizedAdaptiveRows(
   checkpointRows,
   seed+':checkpoint-fallback',
-  masteryDifficulty,
-  16,
+  row=>challengeComplexity(row.item)+hardScore(states,row)+Math.min(24,forgottenScore(row,now)),
+  24,
  );
- addRows(checkpointFallback,roundSize-picked.length);
+ addRows(checkpointFallback,12-picked.length);
 
  const broadFallback=randomizedAdaptiveRows(
   withMeta.filter(row=>row.item.unitId&&!checkpointUnits.includes(row.item.unitId)),
   seed+':broad-fallback',
-  row=>hardScore(states,row)+memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item)*2,
-  14,
+  row=>hardScore(states,row)+memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
+  18,
  );
- addRows(broadFallback,roundSize-picked.length);
+ addRows(broadFallback,12-picked.length);
 
- const finalPicked=shuffled(picked.slice(0,roundSize),seed+':question-order');
+ // Context may use any sentence the learner has already completed, including a
+ // phrase removed from the adaptive pool after being marked Mega-mastered.
+ const learnedContextPool=completed?learnedPracticeItems(completed):[];
+ const contextPool=uniqueItems([...source,...learnedContextPool]);
+ const finalPicked=shuffled(picked.slice(0,12),seed+':question-order');
+ const masteryPattern:PracticeMode[]=['input','handwriting','input','handwriting'];
+
  return finalPicked.map((item,index)=>{
-  // No easy multiple choice in Mixed Mastery. Phrases are recalled by typing
-  // the whole sentence; other material alternates typed production and writing.
-  let mode:PracticeMode=item.kind==='phrase'?'input':item.characters.length&&index%2===0?'handwriting':'input';
+  const context=mixedMasteryContext(item,contextPool,seed+':'+index+':'+item.id);
+  if(context){
+   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode:'context',sessionKind:'mega',context};
+  }
+
+  let mode:PracticeMode;
+  if(item.kind==='character')mode='handwriting';
+  else mode=masteryPattern[index%masteryPattern.length];
   mode=viableMode(item,mode,source);
 
-  // viableMode may fall back when a prompt would be ambiguous. Keep any such
-  // fallback productive: recognition, recall, and pinyin choice questions are
-  // never allowed in this checkpoint.
+  // Mixed Mastery should stay productive even when no good sentence context is
+  // available. Never fall back to a recognition/recall/pinyin choice question.
   if(mode==='recognition'||mode==='recall'||mode==='pinyin'){
    mode=viableMode(item,item.characters.length?'handwriting':'input',source);
   }
