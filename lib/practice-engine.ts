@@ -164,7 +164,8 @@ function choiceField(mode:PracticeMode):'traditional'|'meaning'|'pinyin'|null{
 function viableMode(item:PracticeItem,mode:PracticeMode,items:PracticeItem[]):PracticeMode{
  const field=choiceField(mode);
  if(!field)return mode;
- const values=new Set(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]).filter(Boolean));
+ const answer=item[field];
+ const values=new Set(items.filter(candidate=>candidate.id!==item.id).map(candidate=>candidate[field]).filter(value=>Boolean(value)&&value!==answer));
  return values.size>=2?mode:'input';
 }
 
