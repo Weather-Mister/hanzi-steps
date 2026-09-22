@@ -627,7 +627,7 @@ const unit:UnitData = {
     {
       "id": "u11-here",
       "title": "For Here, Please",
-      "subtitle": "Recognize and answer 外帶還是內用？",
+      "subtitle": "Recognize and answer 外帶",
       "chars": [
         "內",
         "用"
@@ -1648,7 +1648,7 @@ const unit:UnitData = {
       "examples": [
         {
           "text": "外帶還是內用？",
-          "pinyin": "Wàidài háishi nèiyòng?",
+          "pinyin": "wàidài",
           "meaning": "To go or for here?"
         },
         {
