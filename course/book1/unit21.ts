@@ -34,10 +34,7 @@ const unit:UnitData = {
       "u21-conversation",
       "u21-review"
     ],
-    "banner": {
-      "text": "後天晚上七點見面。",
-      "pinyin": "Hòutiān wǎnshàng qī diǎn jiànmiàn."
-    },
+    "banner": {"text":"見面","pinyin":"jiànmiàn"},
     "goal": {
       "text": "你什麼時候有空？",
       "pinyin": "Nǐ shénme shíhou yǒu kòng?",
