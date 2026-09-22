@@ -762,7 +762,9 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
   width:calc(100vw - 18px);
   max-height:calc(100dvh - 18px);
   border-radius:18px;
- } .pinyin-search-dialog { padding:21px 17px; }
+
+ }
+ .pinyin-search-dialog { padding:21px 17px; }
  .strict-complete-badge {
   bottom:10px;
   min-height:34px;
