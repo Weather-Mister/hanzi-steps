@@ -15,8 +15,9 @@ export type ExamStudySet={
 /**
  * Exam Study is intentionally separate from curriculum/progress data.
  * Add each homework/exam list here as its own numbered set.
- * Nothing in this module writes to progress, mastery, streaks, studied words,
- * localStorage, or the backend.
+ * Exam Study never writes to curriculum progress, normal mastery, streaks,
+ * studied-word counters, or the backend. The UI may keep only a per-list,
+ * device-local weekly Mastered checklist so exam lists remain isolated.
  */
 export const examStudySets:ExamStudySet[]=[
 ];
