@@ -34,10 +34,7 @@ const unit:UnitData = {
       "u15-about-prices",
       "u15-challenge"
     ],
-    "banner": {
-      "text": "我想點一碗牛肉麵。",
-      "pinyin": "Wǒ xiǎng diǎn yì wǎn niúròu miàn."
-    },
+    "banner": {"text":"麵","pinyin":"miàn"},
     "goal": {
       "text": "我想點一碗牛肉麵。",
       "pinyin": "Wǒ xiǎng diǎn yì wǎn niúròu miàn.",
