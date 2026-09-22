@@ -20,6 +20,7 @@ import {visualUnitTheme} from '@/lib/unit-theme';
 import {adaptivePracticeItems,availableTaiwanMissions,learnedPracticeItems,makeRevengeRound,megaCheckpointCount,practiceAttemptForStep,taiwanMissions} from '@/lib/practice-engine';
 import {usePracticeMastery} from '@/lib/use-practice-mastery';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
+import {unitSourceReference} from '@/lib/unit-source-reference';
 
 type Preferences={pinyin:boolean;zhuyin:boolean};
 function CharacterParts({character,compact=false}:{character:Character;compact?:boolean}){
@@ -106,6 +107,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const completed=completedLessonIds(sessions.filter(s=>s.complete&&!s.lessonId.startsWith('practice-')).map(s=>s.lessonId));
  const bookUnits=units.filter(u=>book.unitIds.includes(u.id));
  const unit=bookUnits.find(u=>u.id===unitId)||bookUnits[0]||units[0];
+ const sourceReference=unitSourceReference(unit,book.number);
  const nextUnit=bookUnits[bookUnits.findIndex(u=>u.id===unit.id)+1];
  const finishedBookUnits=bookUnits.filter(u=>completed.has(u.lessonIds[u.lessonIds.length-1])).length;
  const unitLessons=lessons.filter(l=>l.unitId===unit.id);
@@ -174,8 +176,8 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
     <div className="course-content">
      {book.available ? <>
      <TabsContent value="learn">
-      {unit.bookReference&&<p className="book-reference">{unit.bookReference}</p>}
       <div className="unit-banner mobile-unit-banner"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} <span>·</span> {unit.label.toUpperCase()}</p><h1>{unit.title}</h1><p>{unit.description}</p></div><div className="banner-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div>
+      {sourceReference&&<p className="unit-source-footer mobile-source-footer">{sourceReference}</p>}
       {unit.number>1&&!lessonAvailable(unit.lessonIds[0],completed)&&<div className="unit-prerequisite"><Lock size={17}/><p>Finish the Unit {unit.number-1} review to start these lessons. You can explore the characters and notes now.</p><button className="text-button" onClick={()=>chooseUnit(units[unit.number-2].id)}>Go to Unit {unit.number-1}<ArrowRight size={16}/></button></div>}
       {sessions.some(s=>!s.complete&&Object.hasOwn(previousLessonLengths,s.lessonId)&&s.lessonId.startsWith(unit.id==='unit-7'?'u7-':unit.id==='unit-8'?'u8-':'none-'))&&<p className="book-reference">This unit now has shorter lessons. Completed work is kept; unfinished lessons restart with the new sequence.</p>}
       <div className="course-layout"><section className="lesson-path" aria-label={`Unit ${unit.displayNumber??unit.number} lessons`}>
@@ -191,6 +193,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
        {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
       </section><aside className="course-sidebar">
        <section className="unit-overview-card"><div className="unit-overview-heading"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} · {unit.label.toUpperCase()}</p><h1>{unit.title}</h1></div><div className="unit-overview-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div><p className="unit-overview-description">{unit.description}</p></section>
+       {sourceReference&&<p className="unit-source-footer desktop-source-footer">{sourceReference}</p>}
        <section className="sidebar-card"><div className="card-heading"><h2>This unit’s characters</h2><span>{unitLearned.length}/{unitCharacters.length}</span></div><Progress className="unit-progress" value={unitCharacters.length?unitLearned.length/unitCharacters.length*100:0} aria-label="Unit characters practiced"/><div className="character-mini-grid">{unitCharacters.map(c=><button key={c} className={practicedCharacters.has(c)?'learned':''} onClick={()=>setDetail(c)} aria-label={`Explore ${c}, ${characters[c].meaning}`}><span lang="zh-Hant-TW">{c}</span>{prefs.pinyin&&<small>{characters[c].pinyin}</small>}{practicedCharacters.has(c)&&<Check size={13}/>}</button>)}</div><p>Tap any character to explore its parts.</p></section>
        <section className="sidebar-card unit-goal"><GraduationCap size={25}/><p className="eyebrow">BY THE END OF THIS UNIT</p><h3 lang="zh-Hant-TW">{unit.goal.text}</h3>{prefs.pinyin&&<p className="pinyin">{unit.goal.pinyin}</p>}<p>{unit.goal.meaning}</p><button className="text-button" onClick={()=>setTab('notes')}><Lightbulb size={16}/>Words & patterns</button></section>
        <section className="practice-method"><span><PenLine size={19}/>Trace</span><ChevronRight size={16}/><span><Shapes size={19}/>Complete</span><ChevronRight size={16}/><span><BookOpen size={19}/>Recall</span></section>

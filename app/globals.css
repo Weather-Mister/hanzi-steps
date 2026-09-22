@@ -359,6 +359,12 @@ html[data-feedback-motion=off] button:is(:active,:hover) { transform: none !impo
 .book-heading { margin-bottom:18px; }
 .book-heading > p:last-child { color:#60748d; font-size:1rem; line-height:1.6; margin-top:6px; }
 .book-reference { color:var(--unit-text); font-size:.875rem; line-height:1.6; margin:6px 0 12px; }
+.unit-source-footer { margin:9px 4px 24px; padding-top:9px; border-top:1px solid #e8edf4; color:#8894a7; font-size:.72rem; line-height:1.5; }
+.desktop-source-footer { display:none; }
+@media(min-width:1100px) {
+ .mobile-source-footer { display:none; }
+ .desktop-source-footer { display:block; margin:-6px 4px 15px; padding:0 2px; border-top:0; color:#8995a8; font-size:.68rem; line-height:1.5; }
+}
 .book-placeholder { text-align:center; max-width:560px; margin:60px auto; padding:30px 12px; }
 .book-placeholder > svg { margin:0 auto 20px; color:var(--unit-accent); }
 .book-placeholder h1 { font-size:2rem; margin:12px 0; }
