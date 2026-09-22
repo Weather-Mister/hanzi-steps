@@ -6,7 +6,7 @@ import {Progress} from '@/components/ui/progress';
 import {WritingPad} from './writing-pad';
 import {shuffled} from '@/lib/curriculum';
 import {
- availableTaiwanMissions,distractorPool,isRevengeCandidate,learnedPracticeItems,
+ adaptivePracticeItems,availableTaiwanMissions,distractorPool,isRevengeCandidate,learnedPracticeItems,
  makeDailyTen,makeMegaCheckpoint,makeRevengeRound,megaCheckpointCount,practiceSkillKey,
  type PracticeItem,type PracticeQuestion,type TaiwanMission,
 } from '@/lib/practice-engine';
@@ -113,7 +113,7 @@ export type PracticeEntry='hub'|'daily'|'revenge'|'mixed'|'taiwan';
 export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMastery,startMode='hub',onOpenMegaChallenge}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;megaMastery:MegaMasteryController;startMode?:PracticeEntry;onOpenMegaChallenge?:()=>void}){
  const {states,loading,saving,error,record,retrySync}=mastery;
  const allItems=useMemo(()=>learnedPracticeItems(completed),[completed]);
- const items=useMemo(()=>allItems.filter(item=>!megaMastery.mastered.has(item.id)),[allItems,megaMastery.mastered]);
+ const items=useMemo(()=>adaptivePracticeItems(allItems,megaMastery.mastered),[allItems,megaMastery.mastered]);
  const preparing=loading||megaMastery.loading;
  const missions=useMemo(()=>availableTaiwanMissions(completed),[completed]);
  const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
