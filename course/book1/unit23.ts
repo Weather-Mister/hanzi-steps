@@ -28,10 +28,7 @@ const unit:UnitData = {
       "u23-transfer",
       "u23-review"
     ],
-    "banner": {
-      "text": "我最近每天都很忙。",
-      "pinyin": "Wǒ zuìjìn měitiān dōu hěn máng."
-    },
+    "banner": {"text":"最近","pinyin":"zuìjìn"},
     "goal": {
       "text": "我可不可以去看比賽？",
       "pinyin": "Wǒ kě bù kěyǐ qù kàn bǐsài?",
