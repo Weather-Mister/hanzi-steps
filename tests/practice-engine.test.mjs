@@ -73,6 +73,35 @@ test('Daily 10 is capped, unique, and prioritizes a due weak item',()=>{
 
 
 
+
+test('Daily 10 changes substantially across fresh seeds while keeping the adaptive frontier',()=>{
+ const items=[];
+ for(let unitNumber=1;unitNumber<=10;unitNumber++){
+  for(let index=0;index<8;index++)items.push(item(unitNumber*100+index,'unit-'+unitNumber));
+ }
+ const first=makeDailyTen(items,{},'fresh-random-a',1000);
+ const second=makeDailyTen(items,{},'fresh-random-b',1000);
+ assert.equal(first.length,10);
+ assert.equal(second.length,10);
+ const firstIds=first.map(question=>question.item.id);
+ const secondIds=second.map(question=>question.item.id);
+ assert.notDeepEqual(firstIds,secondIds);
+ assert.ok(first.filter(question=>question.item.unitNumber>=7).length>=8);
+ assert.ok(second.filter(question=>question.item.unitNumber>=7).length>=8);
+ const overlap=firstIds.filter(id=>secondIds.includes(id)).length;
+ assert.ok(overlap<=8,'Daily 10 should not feel nearly identical across fresh launches');
+});
+
+test('Daily 10 stays deterministic for a supplied seed so regressions remain reproducible',()=>{
+ const items=[];
+ for(let unitNumber=1;unitNumber<=8;unitNumber++){
+  for(let index=0;index<6;index++)items.push(item(unitNumber*100+index,'unit-'+unitNumber));
+ }
+ const first=makeDailyTen(items,{},'same-seed',1000);
+ const second=makeDailyTen(items,{},'same-seed',1000);
+ assert.deepEqual(first.map(question=>question.id),second.map(question=>question.id));
+});
+
 test('Daily 10 follows the learner frontier instead of drifting back to early easy units',()=>{
  const items=[];
  for(let unitNumber=1;unitNumber<=8;unitNumber++){
