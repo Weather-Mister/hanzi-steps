@@ -277,26 +277,43 @@ function randomizedAdaptiveRows(
  );
 }
 
-function dailyMode(states:PracticeStateMap,item:PracticeItem,index:number,now:number):PracticeMode{
+function challengeComplexity(item:PracticeItem):number{
+ const length=Array.from(item.traditional).length;
+ if(item.kind==='phrase')return 34+Math.min(18,length);
+ if(item.kind==='word')return length===1?4:16+Math.min(12,length*3);
+ return 2;
+}
+
+function actualTrouble(row:DailyRow,frontierRank:number,now:number):boolean{
+ if(row.attempts===0)return false;
+ const distance=Math.max(0,frontierRank-progressRank(row.item));
+ const weak=row.misses>0&&row.strength<0.72;
+ const overdue=row.nextReview<=now&&row.strength<0.62;
+ if(distance<=6)return weak||overdue;
+ return row.misses>=2&&row.strength<0.45;
+}
+
+function challengeScore(states:PracticeStateMap,row:DailyRow,recentUnits:string[],frontierRank:number,now:number):number{
+ const distance=Math.max(0,frontierRank-progressRank(row.item));
+ const frontierBonus=distance===0?70:distance===1?36:distance===2?24:distance===3?14:0;
+ const unseenBonus=row.attempts===0?22:0;
+ return frontierBonus+unseenBonus+challengeComplexity(row.item)+hardScore(states,row)+Math.min(20,forgottenScore(row,now));
+}
+
+function productiveMode(states:PracticeStateMap,item:PracticeItem,index:number,now:number,forceHard=false):PracticeMode{
  const failed=failedMode(states,item);
- if(failed)return failed;
  const due=dueMode(states,item,now);
- if(due)return due;
+ const requested=failed||due;
 
- const productive=supportedModes(item).filter(mode=>mode!=='recognition');
- if(item.kind==='phrase'&&item.tokens?.length&&productive.includes('sentence')){
-  const sentence=stateFor(states,item.id,'sentence');
-  if(!sentence||sentence.strength<0.72)return 'sentence';
- }
- const attempted=productive
-  .map(mode=>({mode,row:stateFor(states,item.id,mode)}))
-  .filter(candidate=>Boolean(candidate.row))
-  .sort((a,b)=>(a.row?.strength??0)-(b.row?.strength??0)||(a.row?.attempts??0)-(b.row?.attempts??0));
- if(attempted.length)return attempted[0].mode;
+ if(requested==='sentence'||requested==='handwriting'||requested==='input'||requested==='pinyin')return requested;
+ if(item.kind==='phrase'&&item.tokens?.length)return 'sentence';
+ if(item.kind==='character')return 'handwriting';
 
- const challengeOrder:Array<Exclude<PracticeMode,'recognition'>>=['recall','input','pinyin','handwriting'];
- const available=challengeOrder.filter(mode=>productive.includes(mode));
- return available[index%available.length]||weakestMode(states,item,true);
+ // Recognition/recall multiple choice is intentionally not the default here.
+ // Adaptive practice should make the learner produce language, not keep asking
+ // beginner prompts they can answer on sight.
+ if(forceHard&&item.characters.length&&index%3===0)return 'handwriting';
+ return index%4===3&&item.characters.length?'handwriting':'input';
 }
 
 export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:string,now=Date.now()):PracticeQuestion[]{
@@ -304,27 +321,36 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const shuffledItems=shuffled(uniqueItems(items),seed);
  const withMeta:DailyRow[]=shuffledItems.map(item=>({item,...aggregateItemState(states,item)}));
  const recentUnits=recentProgressUnits(shuffledItems,4);
- const recentSet=new Set(recentUnits);
+ const frontierUnit=recentUnits[0];
  const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
- const recent=randomizedAdaptiveRows(
-  withMeta.filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId))),
-  seed+':recent',
-  row=>recentScore(states,row,recentUnits,now),
+ const nearUnits=new Set(recentUnits.slice(1,4));
+
+ const current=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId===frontierUnit),
+  seed+':current',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now),
+  34,
+ );
+ const near=randomizedAdaptiveRows(
+  withMeta.filter(row=>Boolean(row.item.unitId&&nearUnits.has(row.item.unitId))),
+  seed+':near',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now),
   30,
  );
  const hard=randomizedAdaptiveRows(
-  withMeta.filter(row=>hardScore(states,row)>35),
+  withMeta.filter(row=>actualTrouble(row,frontierRank,now)),
   seed+':hard',
-  row=>hardScore(states,row),
-  20,
+  row=>hardScore(states,row)+challengeComplexity(row.item),
+  18,
  );
  const forgotten=randomizedAdaptiveRows(
-  withMeta
-   .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
-   .filter(row=>memoryRiskScore(row,now,frontierRank)>0),
+  withMeta.filter(row=>{
+   const distance=Math.max(0,frontierRank-progressRank(row.item));
+   return distance>=3&&distance<=6&&memoryRiskScore(row,now,frontierRank)>0;
+  }),
   seed+':forgotten',
-  row=>memoryRiskScore(row,now,frontierRank),
-  20,
+  row=>memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
+  18,
  );
 
  const picked:PracticeItem[]=[];
@@ -338,34 +364,33 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
   }
  };
 
- // Daily 10 follows the learner's curriculum frontier first:
- // 2 from each of the newest two units, then 1 from each of the next two.
- const recentQuotas=[2,2,1,1];
- for(let index=0;index<recentUnits.length&&index<recentQuotas.length;index++){
-  addRows(recent.filter(row=>row.item.unitId===recentUnits[index]),recentQuotas[index]);
- }
- // Fill any missing part of the six-question recent block from the strongest
- // adaptive candidates in the same four-unit window.
- addRows(recent,Math.max(0,6-picked.length));
-
- // Reserve the rest for material the learner is actually struggling to retain.
+ // Most of every Daily 10 comes from the unit the learner is currently moving
+ // through. Nearby units provide transfer; only real weakness/forgetting earns
+ // an older item a slot.
+ addRows(current,5);
+ addRows(near,2);
  addRows(hard,2);
- addRows(forgotten,2);
+ addRows(forgotten,1);
 
- // If a bucket is short, stay near the curriculum frontier before falling back
- // to older easy material.
- addRows(recent,10-picked.length);
- addRows([...hard,...forgotten],10-picked.length);
- addRows(randomizedAdaptiveRows(
-  withMeta,
+ addRows(current,10-picked.length);
+ addRows(near,10-picked.length);
+ addRows(hard,10-picked.length);
+ addRows(forgotten,10-picked.length);
+
+ const safeFallback=randomizedAdaptiveRows(
+  withMeta.filter(row=>{
+   const distance=Math.max(0,frontierRank-progressRank(row.item));
+   return distance<=4||actualTrouble(row,frontierRank,now);
+  }),
   seed+':fallback',
-  row=>recentScore(states,row,recentUnits,now)+hardScore(states,row)+memoryRiskScore(row,now,frontierRank),
-  18,
- ),10-picked.length);
+  row=>challengeScore(states,row,recentUnits,frontierRank,now),
+  24,
+ );
+ addRows(safeFallback,10-picked.length);
 
  const finalPicked=shuffled(picked.slice(0,10),seed+':question-order');
  return finalPicked.map((item,index)=>{
-  let mode=dailyMode(states,item,index,now);
+  let mode=productiveMode(states,item,index,now,false);
   mode=viableMode(item,mode,items);
   return {id:'daily:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'daily'};
  });
@@ -420,20 +445,39 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  if(completed&&megaCheckpointCount(completed)===0)return [];
 
  const source=shuffled(uniqueItems(items),seed+':source');
- const recentUnits=recentProgressUnits(source,6);
- const recentSet=new Set(recentUnits);
+ const recentUnits=recentProgressUnits(source,5);
+ const frontierUnit=recentUnits[0];
+ const frontierRank=Math.max(...source.map(item=>progressRank(item)));
  const withMeta:DailyRow[]=source.map(item=>({item,...aggregateItemState(states,item)}));
- const frontierRank=Math.max(...withMeta.map(row=>progressRank(row.item)));
- const recent=withMeta
-  .filter(row=>Boolean(row.item.unitId&&recentSet.has(row.item.unitId)))
-  .sort((a,b)=>recentScore(states,b,recentUnits,now)-recentScore(states,a,recentUnits,now));
- const hard=withMeta
-  .filter(row=>hardScore(states,row)>28)
-  .sort((a,b)=>hardScore(states,b)-hardScore(states,a)||a.strength-b.strength);
- const forgotten=withMeta
-  .filter(row=>!row.item.unitId||!recentSet.has(row.item.unitId))
-  .filter(row=>memoryRiskScore(row,now,frontierRank)>0)
-  .sort((a,b)=>memoryRiskScore(b,now,frontierRank)-memoryRiskScore(a,now,frontierRank));
+ const nearUnits=new Set(recentUnits.slice(1,4));
+
+ const current=randomizedAdaptiveRows(
+  withMeta.filter(row=>row.item.unitId===frontierUnit),
+  seed+':current',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
+  28,
+ );
+ const near=randomizedAdaptiveRows(
+  withMeta.filter(row=>Boolean(row.item.unitId&&nearUnits.has(row.item.unitId))),
+  seed+':near',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
+  24,
+ );
+ const hard=randomizedAdaptiveRows(
+  withMeta.filter(row=>actualTrouble(row,frontierRank,now)),
+  seed+':hard',
+  row=>hardScore(states,row)+challengeComplexity(row.item)*1.5,
+  16,
+ );
+ const forgotten=randomizedAdaptiveRows(
+  withMeta.filter(row=>{
+   const distance=Math.max(0,frontierRank-progressRank(row.item));
+   return distance>=3&&distance<=7&&memoryRiskScore(row,now,frontierRank)>0;
+  }),
+  seed+':forgotten',
+  row=>memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
+  16,
+ );
 
  const picked:PracticeItem[]=[];
  const addRows=(rows:{item:PracticeItem}[],count:number)=>{
@@ -446,28 +490,35 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
   }
  };
 
- // Mixed Mastery stays centered on the learner's current frontier, but reaches
- // farther back than Daily 10 for weak and overdue material.
- const recentQuotas=[2,2,1,1];
- for(let index=0;index<recentUnits.length&&index<recentQuotas.length;index++){
-  addRows(recent.filter(row=>row.item.unitId===recentUnits[index]),recentQuotas[index]);
- }
- addRows(recent,Math.max(0,6-picked.length));
- addRows(hard,3);
- addRows(forgotten,3);
- addRows([...hard,...forgotten,...recent],12-picked.length);
- addRows(withMeta.sort((a,b)=>
-  recentScore(states,b,recentUnits,now)+hardScore(states,b)+memoryRiskScore(b,now,frontierRank)-
-  (recentScore(states,a,recentUnits,now)+hardScore(states,a)+memoryRiskScore(a,now,frontierRank))
- ),12-picked.length);
+ // Mixed Mastery is deliberately tougher than Daily 10: half the round is
+ // current-unit material, most of the rest stays close to the frontier, and
+ // old material only returns for a concrete reason.
+ addRows(current,6);
+ addRows(near,3);
+ addRows(hard,2);
+ addRows(forgotten,1);
 
- return picked.slice(0,12).map((item,index)=>{
-  let mode=dailyMode(states,item,index+3,now);
-  // Mixed Mastery should skew productive. Recognition is only retained when it
-  // is the exact overdue/failed skill that needs review.
-  if(mode==='recognition'&&!dueMode(states,item,now)&&!failedMode(states,item)){
-   mode=item.kind==='phrase'&&item.tokens?.length?'sentence':'input';
-  }
+ addRows(current,12-picked.length);
+ addRows(near,12-picked.length);
+ addRows(hard,12-picked.length);
+ addRows(forgotten,12-picked.length);
+
+ const fallback=randomizedAdaptiveRows(
+  withMeta.filter(row=>{
+   const distance=Math.max(0,frontierRank-progressRank(row.item));
+   return distance<=5||actualTrouble(row,frontierRank,now);
+  }),
+  seed+':fallback',
+  row=>challengeScore(states,row,recentUnits,frontierRank,now)+challengeComplexity(row.item),
+  20,
+ );
+ addRows(fallback,12-picked.length);
+
+ const finalPicked=shuffled(picked.slice(0,12),seed+':question-order');
+ return finalPicked.map((item,index)=>{
+  let mode=productiveMode(states,item,index+2,now,true);
+  // Mixed Mastery never drops down to recognition-style multiple choice.
+  if(mode==='recognition'||mode==='recall')mode=item.kind==='phrase'&&item.tokens?.length?'sentence':'input';
   mode=viableMode(item,mode,source);
   return {id:'mega:'+seed+':'+index+':'+item.id,item,mode,sessionKind:'mega'};
  });
