@@ -33,10 +33,7 @@ const unit:UnitData = {
       "u25-choices",
       "u25-review"
     ],
-    "banner": {
-      "text": "坐捷運比坐火車快。",
-      "pinyin": "Zuò jiéyùn bǐ zuò huǒchē kuài."
-    },
+    "banner": {"text":"捷運","pinyin":"jiéyùn"},
     "goal": {
       "text": "騎機車比坐公車快嗎？",
       "pinyin": "Qí jīchē bǐ zuò gōngchē kuài ma?",
