@@ -68,11 +68,13 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
    <button className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
  </div>;
 }
-function HandwritingQuestion({question,onAnswer}:{question:PracticeQuestion;onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
+function HandwritingQuestion({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
  const [charIndex,setCharIndex]=useState(0),[assisted,setAssisted]=useState(false),[guided,setGuided]=useState(false);
  const chars=question.item.characters,char=chars[charIndex];
+ const normalizedMeaning=question.item.meaning.trim().toLowerCase();
+ const needsPinyin=question.sessionKind!=='mega'||items.some(candidate=>candidate.id!==question.item.id&&candidate.meaning.trim().toLowerCase()===normalizedMeaning&&candidate.traditional!==question.item.traditional);
  function done(help:boolean){const used=assisted||guided||help;if(charIndex+1<chars.length){setAssisted(used);setGuided(false);setCharIndex(i=>i+1)}else onAnswer(true,question.item.traditional,used)}
- return <div className="smart-question smart-writing-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>{question.item.pinyin} · character {charIndex+1} of {chars.length}</p></div>
+ return <div className="smart-question smart-writing-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>{needsPinyin?question.item.pinyin+' · ':''}character {charIndex+1} of {chars.length}</p></div>
   <WritingPad key={question.id+':'+charIndex+':'+guided} char={char} mode={guided?'trace':'memory'} strict={!guided} revealStrokeAfterMisses={guided?undefined:5} completionDelayMs={500} onComplete={done}/>
   <button className="text-button" disabled={guided} onClick={()=>{setGuided(true);setAssisted(true)}}>{guided?'Guides are on':'Show guides'}</button>
  </div>;
@@ -81,7 +83,7 @@ function QuestionView({question,items,onAnswer}:{question:PracticeQuestion;items
  if(question.mode==='recognition'||question.mode==='recall'||question.mode==='pinyin')return <ChoiceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
  if(question.mode==='input')return <InputQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
  if(question.mode==='sentence')return <SentenceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
- return <HandwritingQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
+ return <HandwritingQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
 }
 function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subtitle:string;queue:PracticeQuestion[];items:PracticeItem[];onExit:()=>void;onRecord:(question:PracticeQuestion,ok:boolean,assisted:boolean)=>Promise<unknown>}){
  const {feedback:feel}=useInteractionFeedback();
@@ -129,7 +131,7 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
  function back(){setScreen('hub');setQueue([])}
  function startDaily(){setQueue(makeDailyTen(items,states,seed('daily')));setSessionTitle('Daily 10');setSessionSubtitle('Current unit plus the last one or two, with only useful weak review mixed in.');setScreen('session')}
  function startRevenge(){setQueue(makeRevengeRound(items,states,seed('revenge')));setSessionTitle('Revenge Round');setSessionSubtitle('One old mistake, attacked in different ways.');setScreen('session')}
- function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mixed Mastery');setSessionSubtitle('A 12-question checkpoint across a completed four-unit block, mixing recall, pinyin, sentence building, typing, and handwriting.');setScreen('session')}
+ function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mixed Mastery');setSessionSubtitle('A hard 16-question production checkpoint: type full answers, write from memory, and get no easy multiple choice.');setScreen('session')}
  useEffect(()=>{
   if(!open)return;
   setQueue([]);setMission(null);
@@ -147,7 +149,7 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
    {preparing?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<div className="smart-empty"><Sparkles size={30}/><h2>Nothing useful to drill right now</h2><p>Words you marked Mastered stay out of adaptive practice. Complete more of your current unit or restore a word from Mega Challenge if you want it back.</p></div>:<div className="smart-hub-grid">
     <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · current + last 1–2 units</small></span><b>{dailySize}</b></button>
     <button className="smart-mode-card revenge" onClick={startRevenge} disabled={!revengePreview.length}><span className="smart-card-icon"><Swords size={23}/></span><span><strong>Revenge Round</strong><small>{revengePreview.length?'Attack your weakest item three ways.':'No mistake is ready for revenge yet.'}</small></span><b>{weakItemCount}</b></button>
-    <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Mastery</strong><small>{checkpointCount?'12 mixed-skill checkpoint questions · completed 4-unit block':'Complete 4 units in a book to unlock Mixed Mastery.'}</small></span><b>{checkpointCount?12:0}</b></button>
+    <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Mastery</strong><small>{checkpointCount?'16 hard-production questions · completed 4-unit block':'Complete 4 units in a book to unlock Mixed Mastery.'}</small></span><b>{checkpointCount?16:0}</b></button>
     <button className="smart-mode-card legacy-mega" disabled={!onOpenMegaChallenge} onClick={()=>{onOpenChange(false);onOpenMegaChallenge?.()}}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>Original handwriting challenge · clear the full learned-word rotation.</small></span><b>∞</b></button>
     <button className="smart-mode-card taiwan" onClick={()=>setScreen('taiwan')}><span className="smart-card-icon"><MapPin size={23}/></span><span><strong>Taiwan Mode</strong><small>Use what you know in short real-life missions.</small></span><b>{missions.filter(m=>m.unlocked).length}</b></button>
    </div>}
