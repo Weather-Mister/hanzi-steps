@@ -235,6 +235,7 @@ export function ExamStudy({
       strict={!gaveUp}
       revealStrokeAfterMisses={gaveUp?undefined:5}
       completionDelayMs={900}
+      validateStrokeGeometry
       onComplete={assisted=>finishCharacter(gaveUp||assisted)}
      />
      {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
