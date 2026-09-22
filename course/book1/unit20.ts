@@ -34,10 +34,7 @@ const unit:UnitData = {
       "u20-welcome",
       "u20-review"
     ],
-    "banner": {
-      "text": "教室在圖書館旁邊。",
-      "pinyin": "Jiàoshì zài túshūguǎn pángbiān."
-    },
+    "banner": {"text":"宿舍","pinyin":"sùshè"},
     "goal": {
       "text": "圖書館旁邊的教室在二樓。",
       "pinyin": "Túshūguǎn pángbiān de jiàoshì zài èr lóu.",
