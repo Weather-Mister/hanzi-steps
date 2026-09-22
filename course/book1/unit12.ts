@@ -37,10 +37,7 @@ const unit:UnitData = {
       "u12-total",
       "u12-challenge"
     ],
-    "banner": {
-      "text": "多少錢？",
-      "pinyin": "Duōshǎo qián?"
-    },
+    "banner": {"text":"錢","pinyin":"qián"},
     "goal": {
       "text": "一共多少錢？七十五塊。",
       "pinyin": "Yígòng duōshǎo qián? Qīshíwǔ kuài.",
