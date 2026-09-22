@@ -171,7 +171,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
       <UnitPicker unit={unit} units={bookUnits} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
       <div className="course-milestone"><div><span>Book {book.number} progress</span><strong>{finishedBookUnits}<small> / {book.unitIds.length}</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={`Available Book ${book.number} units completed`}/></div>
      </section>}
-     {book.available&&<section className="course-navigation-section course-navigation-tabs"><p className="course-navigation-label">View</p><TabsList className="main-tabs"><TabsTrigger value="learn"><BookOpen size={18}/>Learn</TabsTrigger><TabsTrigger value="characters"><PenLine size={18}/>Characters</TabsTrigger><TabsTrigger value="notes"><Lightbulb size={18}/>Notes</TabsTrigger></TabsList></section>}
+     {book.available&&<section className="course-navigation-section course-navigation-tabs"><TabsList className="main-tabs"><TabsTrigger value="learn"><BookOpen size={18}/>Learn</TabsTrigger><TabsTrigger value="characters"><PenLine size={18}/>Characters</TabsTrigger><TabsTrigger value="notes"><Lightbulb size={18}/>Notes</TabsTrigger></TabsList></section>}
     </aside>
     <div className="course-content">
      {book.available ? <>
