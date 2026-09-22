@@ -272,12 +272,13 @@ test('Choice viability counts distinct wrong answers and avoids an ambiguous typ
  assert.equal(question.mode,'handwriting');
 });
 
-test('Revenge Round attacks one unresolved mistake three different ways then clears when strong',()=>{
+test('Revenge Round attacks one unresolved mistake three different ways and clears it after a clean recovery',()=>{
  const target=item(1);
  const items=[target,item(2),item(3),item(4)];
+ const key=practiceSkillKey(target.id,'recall');
  const state={
-  [practiceSkillKey(target.id,'recall')]:{
-   itemId:target.id,mode:'recall',attempts:4,correct:2,assisted:0,misses:2,streak:1,
+  [key]:{
+   itemId:target.id,mode:'recall',attempts:4,correct:2,assisted:0,misses:2,streak:0,
    strength:.4,lastSeen:100,nextReview:200,
   },
  };
@@ -287,10 +288,17 @@ test('Revenge Round attacks one unresolved mistake three different ways then cle
  assert.equal(new Set(round.map(question=>question.mode)).size,3);
  assert.equal(round[0].mode,'recall');
 
- const resolved={
-  [practiceSkillKey(target.id,'recall')]:{...state[practiceSkillKey(target.id,'recall')],strength:.8},
+ const recovered={
+  ...state,
+  [key]:updatePracticeState(state[key],{itemId:target.id,mode:'recall',correct:true,assisted:false,now:300}),
  };
- assert.deepEqual(makeRevengeRound(items,resolved,'revenge-test'),[]);
+ assert.deepEqual(makeRevengeRound(items,recovered,'revenge-test'),[]);
+
+ const freshMistake={
+  ...recovered,
+  [practiceSkillKey(target.id,'handwriting')]:updatePracticeState(undefined,{itemId:target.id,mode:'handwriting',correct:false,assisted:false,now:400}),
+ };
+ assert.equal(makeRevengeRound(items,freshMistake,'revenge-test').length,3);
 });
 
 test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, weak, and forgotten material',()=>{
