@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {books,lessons,phrases,units,vocabulary} from '../lib/curriculum.ts';
 import {
+ adaptivePracticeItems,
  availableTaiwanMissions,
  makeDailyTen,
  makeMegaCheckpoint,
@@ -53,6 +54,13 @@ test('practice strength schedules clean recall farther out and mistakes weaken i
  assert.equal(miss.misses,1);
  assert.equal(miss.streak,0);
  assert.ok(miss.strength<assisted.strength);
+});
+
+
+test('Mega-mastered vocabulary is excluded from adaptive practice pools',()=>{
+ const items=[item(1,'unit-1'),item(2,'unit-2'),item(3,'unit-3')];
+ const filtered=adaptivePracticeItems(items,new Set([items[0].id,items[2].id]));
+ assert.deepEqual(filtered.map(entry=>entry.id),[items[1].id]);
 });
 
 test('Daily 10 is capped, unique, and prioritizes a due weak item',()=>{
@@ -111,11 +119,23 @@ test('Daily 10 follows the learner frontier instead of drifting back to early ea
  assert.equal(queue.length,10);
  const unitNumbers=queue.map(question=>question.item.unitNumber);
  assert.ok(unitNumbers.filter(number=>number>=5).length>=8,String(unitNumbers));
- assert.ok(unitNumbers.filter(number=>number===8).length>=2);
+ assert.ok(unitNumbers.filter(number=>number===8).length>=5);
  assert.ok(unitNumbers.filter(number=>number===7).length>=2);
  assert.equal(unitNumbers.includes(1),false,String(unitNumbers));
 });
 
+
+
+test('Daily 10 guarantees the current unit dominates when enough current material exists',()=>{
+ const items=[];
+ for(let unitNumber=1;unitNumber<=7;unitNumber++){
+  for(let index=0;index<9;index++)items.push(item(unitNumber*100+index,'unit-'+unitNumber));
+ }
+ const queue=makeDailyTen(items,{},'current-unit-dominates',1000);
+ assert.equal(queue.length,10);
+ assert.ok(queue.filter(question=>question.item.unitNumber===7).length>=5);
+ assert.ok(queue.every(question=>question.mode!=='recognition'));
+});
 
 test('Daily 10 infers likely-forgotten material even before mastery history exists',()=>{
  const items=[];
@@ -124,7 +144,7 @@ test('Daily 10 infers likely-forgotten material even before mastery history exis
  }
  const queue=makeDailyTen(items,{},'memory-risk-without-history',1000);
  assert.equal(queue.length,10);
- assert.ok(queue.filter(question=>question.item.unitNumber>=9).length>=8);
+ assert.ok(queue.filter(question=>question.item.unitNumber>=9).length>=7);
  assert.ok(queue.some(question=>question.item.unitNumber<=8&&question.item.unitNumber>=4));
  assert.equal(queue.some(question=>question.item.unitNumber===1),false);
 });
@@ -244,9 +264,11 @@ test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, w
  const queue=makeMegaCheckpoint(items,states,'mixed-mastery-test',completed,1000);
  assert.equal(queue.length,12);
  assert.ok(queue.some(question=>question.item.id===oldWeak.id));
- const recentUnits=new Set(firstBook.unitIds.slice(2,8));
- assert.ok(queue.filter(question=>question.item.unitId&&recentUnits.has(question.item.unitId)).length>=6);
- assert.ok(queue.every(question=>question.mode!=='recognition'||question.item.id===oldWeak.id));
+ const frontierUnit=firstBook.unitIds[7];
+ assert.ok(queue.filter(question=>question.item.unitId===frontierUnit).length>=5);
+ const recentUnits=new Set(firstBook.unitIds.slice(4,8));
+ assert.ok(queue.filter(question=>question.item.unitId&&recentUnits.has(question.item.unitId)).length>=9);
+ assert.ok(queue.every(question=>!['recognition','recall'].includes(question.mode)));
 });
 
 test('Taiwan missions stay locked until their prerequisite unit is complete',()=>{
