@@ -259,7 +259,7 @@ function dailyMode(states:PracticeStateMap,item:PracticeItem,index:number,now:nu
   .sort((a,b)=>(a.row?.strength??0)-(b.row?.strength??0)||(a.row?.attempts??0)-(b.row?.attempts??0));
  if(attempted.length)return attempted[0].mode;
 
- const challengeOrder:PracticeMode[]=['recall','input','pinyin','handwriting'];
+ const challengeOrder:Array<Exclude<PracticeMode,'recognition'>>=['recall','input','pinyin','handwriting'];
  const available=challengeOrder.filter(mode=>productive.includes(mode));
  return available[index%available.length]||weakestMode(states,item,true);
 }
