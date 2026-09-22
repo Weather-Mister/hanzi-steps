@@ -106,13 +106,14 @@ test('Smart practice avoids one-answer multiple choice when too little material 
 
 test('Revenge Round attacks one unresolved mistake three different ways then clears when strong',()=>{
  const target=item(1);
+ const items=[target,item(2),item(3),item(4)];
  const state={
   [practiceSkillKey(target.id,'recall')]:{
    itemId:target.id,mode:'recall',attempts:4,correct:2,assisted:0,misses:2,streak:1,
    strength:.4,lastSeen:100,nextReview:200,
   },
  };
- const round=makeRevengeRound([target],state,'revenge-test');
+ const round=makeRevengeRound(items,state,'revenge-test');
  assert.equal(round.length,3);
  assert.equal(new Set(round.map(question=>question.item.id)).size,1);
  assert.equal(new Set(round.map(question=>question.mode)).size,3);
@@ -121,7 +122,7 @@ test('Revenge Round attacks one unresolved mistake three different ways then cle
  const resolved={
   [practiceSkillKey(target.id,'recall')]:{...state[practiceSkillKey(target.id,'recall')],strength:.8},
  };
- assert.deepEqual(makeRevengeRound([target],resolved,'revenge-test'),[]);
+ assert.deepEqual(makeRevengeRound(items,resolved,'revenge-test'),[]);
 });
 
 test('Mega Challenge uses the latest complete four-unit checkpoint inside one book',()=>{
