@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useMemo,useState} from 'react';
-import {ArrowLeft,Check,Flame,MapPin,RotateCcw,Sparkles,Swords,Trophy,X} from 'lucide-react';
+import {ArrowLeft,Check,Flame,GraduationCap,MapPin,RotateCcw,Sparkles,Swords,Trophy,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {Progress} from '@/components/ui/progress';
 import {WritingPad} from './writing-pad';
@@ -13,6 +13,7 @@ import {
 import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
 import type {MegaMasteryController} from '@/lib/use-mega-mastery';
 import {useInteractionFeedback} from './interaction-feedback';
+import {examStudySets} from '@/lib/exam-study';
 
 type Result={correct:boolean;assisted:boolean;answer:string};
 type Screen='hub'|'session'|'taiwan'|'mission';
@@ -131,7 +132,7 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
  </section>;
 }
 export type PracticeEntry='hub'|'daily'|'revenge'|'mixed'|'taiwan';
-export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMastery,startMode='hub',onOpenMegaChallenge}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;megaMastery:MegaMasteryController;startMode?:PracticeEntry;onOpenMegaChallenge?:()=>void}){
+export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMastery,startMode='hub',onOpenMegaChallenge,onOpenExamStudy}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;megaMastery:MegaMasteryController;startMode?:PracticeEntry;onOpenMegaChallenge?:()=>void;onOpenExamStudy?:()=>void}){
  const {states,loading,saving,error,record,retrySync}=mastery;
  const allItems=useMemo(()=>learnedPracticeItems(completed),[completed]);
  const items=useMemo(()=>adaptivePracticeItems(allItems,megaMastery.mastered),[allItems,megaMastery.mastered]);
@@ -160,12 +161,13 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
  const missionDone=(candidate:TaiwanMission)=>candidate.steps.every((_,i)=>(states[practiceSkillKey('mission:'+candidate.id+':'+i,'context')]?.correct??0)>0);
  return <Dialog open={open} onOpenChange={value=>{onOpenChange(value);if(!value){setScreen('hub');setQueue([]);setMission(null)}}}><DialogContent data-unit-theme={theme} className="smart-practice-dialog">
   {screen==='hub'&&<><div className="smart-title-row"><div><DialogTitle>Practice</DialogTitle><DialogDescription>Adaptive review, mistake practice, handwriting challenges, and real Taiwan situations.</DialogDescription></div>{saving&&<span className="smart-saving">Saving…</span>}</div>{error&&<div className="smart-sync-note" role="status"><span>{error}</span><button className="text-button" onClick={()=>void retrySync()}>Try sync</button></div>}
-   {preparing?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<div className="smart-empty"><Sparkles size={30}/><h2>Nothing useful to drill right now</h2><p>Words you marked Mastered stay out of adaptive practice. Complete more of your current unit or restore a word from Mega Challenge if you want it back.</p></div>:<div className="smart-hub-grid">
+   {preparing?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<><div className="smart-empty"><Sparkles size={30}/><h2>Nothing useful to drill right now</h2><p>Words you marked Mastered stay out of adaptive practice. Complete more of your current unit or restore a word from Mega Challenge if you want it back.</p></div><div className="smart-hub-grid"><button className="smart-mode-card exam-study" disabled={!onOpenExamStudy} onClick={()=>{onOpenChange(false);onOpenExamStudy?.()}}><span className="smart-card-icon"><GraduationCap size={23}/></span><span><strong>Exam Study</strong><small>Off-the-record list practice · never changes progress, streaks, counters, or mastery.</small></span><b>{examStudySets.length}</b></button></div></>:<div className="smart-hub-grid">
     <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · current + last 1–2 units</small></span><b>{dailySize}</b></button>
     <button className="smart-mode-card revenge" onClick={startRevenge} disabled={!revengePreview.length}><span className="smart-card-icon"><Swords size={23}/></span><span><strong>Revenge Round</strong><small>{revengePreview.length?'Attack your weakest item three ways.':'No mistake is ready for revenge yet.'}</small></span><b>{weakItemCount}</b></button>
     <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Mastery</strong><small>{checkpointCount?'12 contextual mastery questions · completed 4-unit block':'Complete 4 units in a book to unlock Mixed Mastery.'}</small></span><b>{checkpointCount?12:0}</b></button>
     <button className="smart-mode-card legacy-mega" disabled={!onOpenMegaChallenge} onClick={()=>{onOpenChange(false);onOpenMegaChallenge?.()}}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>Original handwriting challenge · clear the full learned-word rotation.</small></span><b>∞</b></button>
     <button className="smart-mode-card taiwan" onClick={()=>setScreen('taiwan')}><span className="smart-card-icon"><MapPin size={23}/></span><span><strong>Taiwan Mode</strong><small>Use what you know in short real-life missions.</small></span><b>{missions.filter(m=>m.unlocked).length}</b></button>
+    <button className="smart-mode-card exam-study" disabled={!onOpenExamStudy} onClick={()=>{onOpenChange(false);onOpenExamStudy?.()}}><span className="smart-card-icon"><GraduationCap size={23}/></span><span><strong>Exam Study</strong><small>Off-the-record list practice · never changes progress, streaks, counters, or mastery.</small></span><b>{examStudySets.length}</b></button>
    </div>}
   </>}
   {screen==='session'&&<><DialogTitle className="sr-only">{sessionTitle}</DialogTitle><DialogDescription className="sr-only">{sessionSubtitle}</DialogDescription><Session title={sessionTitle} subtitle={sessionSubtitle} queue={queue} items={items} onExit={back} onRecord={recordQuestion}/></>}
