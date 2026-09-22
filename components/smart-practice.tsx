@@ -103,7 +103,7 @@ function MissionSession({mission,onExit,onRecord}:{mission:TaiwanMission;onExit:
  return <section className="smart-session mission-session"><div className="smart-session-head"><button className="icon-button" aria-label="Back to Taiwan Mode" onClick={onExit}><ArrowLeft size={20}/></button><div><strong>{mission.stamp} {mission.title}</strong><small>{mission.subtitle}</small></div><span>{index+1}/{mission.steps.length}</span></div><Progress value={index/mission.steps.length*100}/>
   <div className="mission-scene">{step.speaker&&<span>{step.speaker}</span>}<h2 lang="zh-Hant-TW">{step.prompt}</h2>{step.note&&<p>{step.note}</p>}</div>
   {!result?<div className="smart-choice-grid">{shuffled(step.options,mission.id+':'+index).map(option=><button key={option} onClick={()=>void answer(option)} lang="zh-Hant-TW">{option}</button>)}</div>:
-   <div className={'smart-result '+(result.correct?'correct':'wrong')}><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span><div><strong>{result.correct?'That works.':'Use this line:'}</strong><p lang="zh-Hant-TW">{result.answer}</p></div>
+   <div className={'smart-result '+(result.correct?'correct':'wrong')} role="status"><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span><div><strong>{result.correct?'That works.':'Use this line:'}</strong><p lang="zh-Hant-TW">{result.answer}</p></div>
    <button className="primary-button" onClick={continueMission}>{index+1===mission.steps.length?'Finish mission':'Continue'}</button></div>}
  </section>;
 }
