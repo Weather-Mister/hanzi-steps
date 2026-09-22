@@ -300,8 +300,9 @@ function actualTrouble(row:DailyRow,frontierRank:number,now:number):boolean{
 function challengeScore(states:PracticeStateMap,row:DailyRow,recentUnits:string[],frontierRank:number,now:number):number{
  const distance=Math.max(0,frontierRank-progressRank(row.item));
  const frontierBonus=distance===0?70:distance===1?36:distance===2?24:distance===3?14:0;
- const unseenBonus=row.attempts===0?22:0;
- return frontierBonus+unseenBonus+challengeComplexity(row.item)+hardScore(states,row)+Math.min(20,forgottenScore(row,now));
+ const unseenBonus=row.attempts===0?28:0;
+ const repetitionPenalty=row.attempts>0?Math.min(24,row.attempts*2.5+row.strength*12):0;
+ return frontierBonus+unseenBonus+challengeComplexity(row.item)+hardScore(states,row)+Math.min(20,forgottenScore(row,now))-repetitionPenalty;
 }
 
 function productiveMode(states:PracticeStateMap,item:PracticeItem,index:number,now:number,forceHard=false):PracticeMode{
