@@ -36,8 +36,8 @@ const unit:UnitData = {
       "u13-challenge"
     ],
     "banner": {
-      "text": "請幫我買兩個包子。",
-      "pinyin": "Qǐng bāng wǒ mǎi liǎng ge bāozi."
+      "text": "包子",
+      "pinyin": "bāozi"
     },
     "goal": {
       "text": "請幫我買兩個包子。",
