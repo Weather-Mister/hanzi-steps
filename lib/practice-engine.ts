@@ -245,8 +245,12 @@ function memoryRiskScore(row:DailyRow,now:number,frontierRank:number):number{
  // all the way to Unit 1.
  const distance=Math.max(0,frontierRank-progressRank(row.item));
  if(distance<4)return 0;
- if(distance<=12)return 38+distance*2.4;
- return 24+Math.min(8,(distance-12)*0.4);
+ // The best "probably forgotten" window is several units behind the frontier,
+ // not the very beginning of the course. Truly old material comes back through
+ // actual weakness/due history instead of dominating by age alone.
+ if(distance<=9)return 64-Math.abs(distance-5.5)*6;
+ if(distance<=14)return 30-(distance-10)*2;
+ return 12;
 }
 
 function recentScore(states:PracticeStateMap,row:DailyRow,recentUnits:string[],now:number):number{
