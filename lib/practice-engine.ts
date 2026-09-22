@@ -293,7 +293,7 @@ function actualTrouble(row:DailyRow,frontierRank:number,now:number):boolean{
  const distance=Math.max(0,frontierRank-progressRank(row.item));
  const weak=row.misses>0&&row.strength<0.72;
  const overdue=row.nextReview<=now&&row.strength<0.62;
- if(distance<=6)return weak||overdue;
+ if(distance<=4)return weak||overdue;
  return row.misses>=2&&row.strength<0.45;
 }
 
@@ -350,7 +350,7 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  const forgotten=randomizedAdaptiveRows(
   withMeta.filter(row=>{
    const distance=Math.max(0,frontierRank-progressRank(row.item));
-   return distance>=3&&distance<=6&&memoryRiskScore(row,now,frontierRank)>0;
+   return distance>=3&&distance<=5&&challengeComplexity(row.item)>=16&&memoryRiskScore(row,now,frontierRank)>0;
   }),
   seed+':forgotten',
   row=>memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
@@ -476,7 +476,7 @@ export function makeMegaCheckpoint(items:PracticeItem[],states:PracticeStateMap,
  const forgotten=randomizedAdaptiveRows(
   withMeta.filter(row=>{
    const distance=Math.max(0,frontierRank-progressRank(row.item));
-   return distance>=3&&distance<=7&&memoryRiskScore(row,now,frontierRank)>0;
+   return distance>=3&&distance<=6&&challengeComplexity(row.item)>=16&&memoryRiskScore(row,now,frontierRank)>0;
   }),
   seed+':forgotten',
   row=>memoryRiskScore(row,now,frontierRank)+challengeComplexity(row.item),
