@@ -104,6 +104,23 @@ test('Smart practice avoids one-answer multiple choice when too little material 
  assert.ok(revenge.every(question=>!['recognition','recall','pinyin'].includes(question.mode)));
 });
 
+
+test('Choice viability counts distinct wrong answers, not duplicate copies of the right answer',()=>{
+ const target={...item(1,'unit-1'),meaning:'same'};
+ const duplicate={...item(2,'unit-1'),meaning:'same'};
+ const oneWrong={...item(3,'unit-1'),meaning:'different'};
+ const states={
+  [practiceSkillKey(target.id,'recognition')]:{
+   itemId:target.id,mode:'recognition',attempts:1,correct:0,assisted:0,misses:1,streak:0,
+   strength:.1,lastSeen:100,nextReview:200,
+  },
+ };
+ const daily=makeDailyTen([target,duplicate,oneWrong],states,'duplicate-answer-pool',1000);
+ const question=daily.find(candidate=>candidate.item.id===target.id);
+ assert.ok(question);
+ assert.equal(question.mode,'input');
+});
+
 test('Revenge Round attacks one unresolved mistake three different ways then clears when strong',()=>{
  const target=item(1);
  const items=[target,item(2),item(3),item(4)];
