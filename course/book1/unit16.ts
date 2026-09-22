@@ -36,8 +36,8 @@ const unit:UnitData = {
       "u16-challenge"
     ],
     "banner": {
-      "text": "我會做飯，也做得不錯。",
-      "pinyin": "Wǒ huì zuòfàn, yě zuò de búcuò."
+      "text": "辣",
+      "pinyin": "là"
     },
     "goal": {
       "text": "我會做飯，也做得不錯。",
