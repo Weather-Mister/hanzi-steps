@@ -38,8 +38,8 @@ const unit:UnitData = {
       "u12-challenge"
     ],
     "banner": {
-      "text": "多少錢？",
-      "pinyin": "Duōshǎo qián?"
+      "text": "多少",
+      "pinyin": "duōshǎo"
     },
     "goal": {
       "text": "一共多少錢？七十五塊。",
