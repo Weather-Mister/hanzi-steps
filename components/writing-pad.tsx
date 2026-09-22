@@ -4,12 +4,14 @@ import type HanziWriter from 'hanzi-writer';
 import {Eye,Lightbulb,Play,RotateCcw,Check} from 'lucide-react';
 import {strokeData} from './character-art';
 import {createWriterTarget} from '@/lib/writer-target';
+import {strokeGeometryLooksAligned} from '@/lib/stroke-data-validation';
 import {useInteractionFeedback} from './interaction-feedback';
 export type WriteMode='intro'|'trace'|'complete'|'memory';
 export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterMisses,completionDelayMs=0}:{char:string;mode:WriteMode;onComplete?:(assisted:boolean)=>void;strict?:boolean;revealStrokeAfterMisses?:number;completionDelayMs?:number}){
  const {feedback:feel}=useInteractionFeedback();
  const host=useRef<HTMLDivElement>(null);const writer=useRef<HanziWriter|null>(null);const callback=useRef(onComplete);callback.current=onComplete;const completionTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
- const localStrokeData=strokeData[char];
+ const rawLocalStrokeData=strokeData[char];
+ const localStrokeData=rawLocalStrokeData&&strokeGeometryLooksAligned(rawLocalStrokeData)?rawLocalStrokeData:undefined;
  const start=mode==='complete'?Math.max(0,(localStrokeData?.strokes.length??0)-3):0;
  const [next,setNext]=useState(start);const nextRef=useRef(start);const [strokeCount,setStrokeCount]=useState(localStrokeData?.strokes.length??0);const [runtimeMedians,setRuntimeMedians]=useState<number[][][]>(localStrokeData?.medians??[]);const [ready,setReady]=useState(false);const [failed,setFailed]=useState(false);const [done,setDone]=useState(false);const [busy,setBusy]=useState(false);const [guide,setGuide]=useState(false);const [message,setMessage]=useState('');const [studyReady,setStudyReady]=useState(false);const [size,setSize]=useState(320);const helped=useRef(false);const misses=useRef(0);const strokeMisses=useRef(0);const mounted=useRef(true);const [reset,setReset]=useState(0);const marker=useId().replace(/:/g,'');
  const finish=(assisted:boolean)=>{setDone(true);setGuide(false);feel('success');setMessage(assisted?'Character complete — keep it moving.':mode==='memory'?'Character complete!':'All strokes complete!');if(completionTimer.current)clearTimeout(completionTimer.current);if(completionDelayMs>0)completionTimer.current=setTimeout(()=>{completionTimer.current=null;callback.current?.(assisted)},completionDelayMs);else callback.current?.(assisted)};
