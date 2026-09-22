@@ -126,14 +126,18 @@ test('Daily 10 follows the learner frontier instead of drifting back to early ea
 
 
 
-test('Daily 10 guarantees the current unit dominates when enough current material exists',()=>{
+test('Daily 10 is dominated by the rolling current-plus-last-two unit window',()=>{
  const items=[];
  for(let unitNumber=1;unitNumber<=7;unitNumber++){
   for(let index=0;index<9;index++)items.push(item(unitNumber*100+index,'unit-'+unitNumber));
  }
  const queue=makeDailyTen(items,{},'current-unit-dominates',1000);
  assert.equal(queue.length,10);
- assert.ok(queue.filter(question=>question.item.unitNumber===7).length>=5);
+ const windowCount=queue.filter(question=>question.item.unitNumber>=5).length;
+ assert.ok(windowCount>=9);
+ assert.ok(queue.filter(question=>question.item.unitNumber===7).length>=3);
+ assert.ok(queue.filter(question=>question.item.unitNumber===6).length>=2);
+ assert.ok(queue.filter(question=>question.item.unitNumber===5).length>=1);
  assert.ok(queue.every(question=>question.mode!=='recognition'));
 });
 
@@ -264,10 +268,11 @@ test('Mixed Mastery unlocks on four-unit checkpoints but adapts around recent, w
  const queue=makeMegaCheckpoint(items,states,'mixed-mastery-test',completed,1000);
  assert.equal(queue.length,12);
  assert.ok(queue.some(question=>question.item.id===oldWeak.id));
- const frontierUnit=firstBook.unitIds[7];
- assert.ok(queue.filter(question=>question.item.unitId===frontierUnit).length>=5);
- const recentUnits=new Set(firstBook.unitIds.slice(4,8));
- assert.ok(queue.filter(question=>question.item.unitId&&recentUnits.has(question.item.unitId)).length>=9);
+ const latestThree=new Set(firstBook.unitIds.slice(5,8));
+ assert.ok(queue.filter(question=>question.item.unitId&&latestThree.has(question.item.unitId)).length>=11);
+ assert.ok(queue.filter(question=>question.item.unitId===firstBook.unitIds[7]).length>=4);
+ assert.ok(queue.filter(question=>question.item.unitId===firstBook.unitIds[6]).length>=3);
+ assert.ok(queue.filter(question=>question.item.unitId===firstBook.unitIds[5]).length>=1);
  assert.ok(queue.every(question=>!['recognition','recall'].includes(question.mode)));
 });
 
