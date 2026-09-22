@@ -32,8 +32,8 @@ const unit:UnitData = {
       "u17-review"
     ],
     "banner": {
-      "text": "這麼好吃，一定要吃！",
-      "pinyin": "Zhème hǎochī, yídìng yào chī!"
+      "text": "好吃",
+      "pinyin": "hǎochī"
     },
     "goal": {
       "text": "我知道那家店。你一定要吃小籠包！",
