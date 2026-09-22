@@ -262,7 +262,17 @@ export function practicePromptIsAmbiguous(item:PracticeItem,mode:PracticeMode,it
 }
 
 export function isRevengeCandidate(states:PracticeStateMap,item:PracticeItem):boolean{
- return supportedModes(item).some(mode=>{const row=stateFor(states,item.id,mode);return Boolean(row&&row.misses>0&&row.strength<0.72)});
+ const rows=supportedModes(item)
+  .map(mode=>stateFor(states,item.id,mode))
+  .filter((row):row is PracticeSkillState=>Boolean(row));
+ const unresolved=rows.filter(row=>row.misses>0&&row.strength<0.72&&row.streak===0);
+ if(!unresolved.length)return false;
+
+ // Historical misses should not live in Revenge forever. A later clean recovery
+ // clears older weak spots for this item; only a newer mistake can bring it back.
+ const latestUnresolved=Math.max(...unresolved.map(row=>row.lastSeen));
+ const latestCleanRecovery=Math.max(0,...rows.filter(row=>row.streak>0).map(row=>row.lastSeen));
+ return latestUnresolved>latestCleanRecovery;
 }
 
 const unitRank=(()=>{
