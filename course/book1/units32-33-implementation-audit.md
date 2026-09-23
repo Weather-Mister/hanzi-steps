@@ -37,3 +37,6 @@ The exact final PR head must pass:
 - Pages build.
 
 If Feature QA writes generated artifacts/strokes and changes the PR head, the resulting head must receive another complete successful Feature QA run before merge.
+
+## Exact-head recheck
+A fresh Feature QA run is required on this post-audit head; generated stroke/curriculum artifacts must be committed by CI and the resulting head must pass again before merge.
