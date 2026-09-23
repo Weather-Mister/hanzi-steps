@@ -18,6 +18,39 @@ Grammar III explicitly contrasts Unit 35's standalone 以後 'in the future' wit
 
 Grammar IV preserves the textbook split between perception combinations and action-verb ease/difficulty, plus degree modification, negation, and question forms.
 
+## Defects found in the deep audit and repaired
+
+### 1. Three Dialogue II turns were initially underrepresented
+The first pass jumped from the arrival/work exchange to the business explanation, and later from the company reaction directly to Yue-mei's answer.
+
+Repair:
+- restored 為什麼你們公司要替你付學費？;
+- restored 我覺得你們公司真好。;
+- restored 對了，你回國以後，打算做什麼？ before the answer;
+- targeted regression coverage now pins these turns.
+
+### 2. The first QA pass exposed schema metadata defects
+The initial listening activities lacked the required `char` field, and grammar-introduction IDs did not match the formal grammar rule IDs expected by the generator.
+
+Repair:
+- all three listening activities now carry explicit focal characters and prompts;
+- grammar introduction IDs now match `u36-yihou-after` and `u36-hao-nan-verb`.
+
+### 3. 難 was exposed before its formal character lesson
+The first implementation used the source grammar example 好工作很難找 in the 好/難 grammar lesson but had scheduled the 難 character card two lessons later.
+
+Repair:
+- moved 難 character teaching and formal vocabulary ownership into `u36-job`, before the grammar card and all assessments;
+- the final dialogue lesson now reinforces 難 rather than first-teaching it.
+
+### 4. Source-faithful dialogue needed explicit character-boundary handling
+The textbook opens the first turn with the vocative 田中, but 田 is not yet a formally taught Hanzi Steps character. It also prints sex-specific 妳 when Tianzhong addresses Yue-mei, while 妳 is not in the cumulative taught-character inventory.
+
+Repair:
+- omit only the proper-name vocative 田中 from the learner-facing opening question;
+- normalize source 妳 to already-taught general 你 in the return-home question;
+- document both adaptations explicitly in the source plan and phrase notes instead of silently leaking untaught characters.
+
 ## Pedagogy and sequencing
 
 - 工 and 作 are introduced before 工作 is assessed.
