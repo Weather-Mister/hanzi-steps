@@ -1,0 +1,1730 @@
+import type {UnitData} from '../schema.ts';
+
+const unit:UnitData = {
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 34,
+  "unit": {
+    "id": "unit-34",
+    "number": 34,
+    "theme": "teal",
+    "label": "Study plans, sequence & scholarships",
+    "title": "How Long Will You Study?",
+    "description": "Begin Lesson 12 with study plans and duration, 先…再… sequencing, language-center and university study, total time needed, cost, scholarships, and grades.",
+    "chars": [
+      "臺",
+      "灣",
+      "畫",
+      "先",
+      "念",
+      "語",
+      "言",
+      "需",
+      "花",
+      "獎",
+      "金",
+      "成",
+      "績"
+    ],
+    "lessonIds": [
+      "u34-plan",
+      "u34-sequence",
+      "u34-center",
+      "u34-need",
+      "u34-money",
+      "u34-grades",
+      "u34-review"
+    ],
+    "banner": {
+      "text": "先念中文，再念大學",
+      "pinyin": "Xiān niàn Zhōngwén, zài niàn dàxué"
+    },
+    "goal": {
+      "text": "我先在語言中心念一年，再念四年大學，所以需要五年。",
+      "pinyin": "Wǒ xiān zài yǔyán zhōngxīn niàn yì nián, zài niàn sì nián dàxué, suǒyǐ xūyào wǔ nián.",
+      "meaning": "I will first study for one year at a language center, then study at university for four years, so I need five years."
+    },
+    "grammarIds": [
+      "u34-first-then"
+    ],
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 12 「你在臺灣學多久的中文？」 Dialogue I opening / Vocabulary I (printed pp. 246–249) and Grammar I 先…再… (printed p. 252). This unit follows the dialogue through the scholarship/grades exchange. The later Dialogue I tail (學費、公司、替、希望、以後、上班、念書、累、加油), Dialogue II, and Grammar II–IV are deliberately deferred."
+  },
+  "reviewLessonId": "u34-review",
+  "lessons": [
+    {
+      "id": "u34-plan",
+      "title": "How Long Is the Plan?",
+      "subtitle": "Formally learn 臺灣, 計畫, 久, and 時間 through the opening question of Lesson 12.",
+      "chars": [
+        "臺",
+        "灣",
+        "畫"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-34",
+      "review": false,
+      "steps": [
+        {
+          "id": "u34-plan-臺-intro",
+          "type": "intro",
+          "char": "臺"
+        },
+        {
+          "id": "u34-plan-臺-trace",
+          "type": "trace",
+          "char": "臺"
+        },
+        {
+          "id": "u34-plan-臺-build",
+          "type": "build",
+          "char": "臺"
+        },
+        {
+          "id": "u34-plan-臺-complete",
+          "type": "complete",
+          "char": "臺"
+        },
+        {
+          "id": "u34-plan-臺-memory",
+          "type": "memory",
+          "char": "臺"
+        },
+        {
+          "id": "u34-plan-灣-intro",
+          "type": "intro",
+          "char": "灣"
+        },
+        {
+          "id": "u34-plan-灣-trace",
+          "type": "trace",
+          "char": "灣"
+        },
+        {
+          "id": "u34-plan-灣-build",
+          "type": "build",
+          "char": "灣"
+        },
+        {
+          "id": "u34-plan-灣-complete",
+          "type": "complete",
+          "char": "灣"
+        },
+        {
+          "id": "u34-plan-灣-memory",
+          "type": "memory",
+          "char": "灣"
+        },
+        {
+          "id": "u34-plan-畫-intro",
+          "type": "intro",
+          "char": "畫"
+        },
+        {
+          "id": "u34-plan-畫-trace",
+          "type": "trace",
+          "char": "畫"
+        },
+        {
+          "id": "u34-plan-畫-build",
+          "type": "build",
+          "char": "畫"
+        },
+        {
+          "id": "u34-plan-畫-complete",
+          "type": "complete",
+          "char": "畫"
+        },
+        {
+          "id": "u34-plan-畫-memory",
+          "type": "memory",
+          "char": "畫"
+        },
+        {
+          "id": "u34-plan-p1",
+          "type": "phrase",
+          "phrase": "u34-plan"
+        },
+        {
+          "id": "u34-plan-p2",
+          "type": "phrase",
+          "phrase": "u34-time"
+        },
+        {
+          "id": "u34-plan-s1",
+          "type": "select",
+          "prompt": "In 你計畫在臺灣學多久的中文？, what is being asked?",
+          "options": [
+            "the planned length of study",
+            "the price of tuition",
+            "where the landlord lives"
+          ],
+          "answer": "the planned length of study",
+          "explanation": "多久 asks how long, and 計畫 frames it as a plan."
+        },
+        {
+          "id": "u34-plan-s2",
+          "type": "select",
+          "prompt": "Which new Lesson 12 verb is closest to the earlier 打算 'plan/intend'?",
+          "options": [
+            "計畫",
+            "時間",
+            "成績"
+          ],
+          "answer": "計畫",
+          "explanation": "計畫 is the Lesson 12 verb 'to plan.' 打算 was taught earlier and remains a useful near-synonym."
+        }
+      ]
+    },
+    {
+      "id": "u34-sequence",
+      "title": "First This, Then That",
+      "subtitle": "Learn 先, 念, and the source sequence pattern 先…再….",
+      "chars": [
+        "先",
+        "念"
+      ],
+      "minutes": "11–14 min",
+      "unitId": "unit-34",
+      "review": false,
+      "steps": [
+        {
+          "id": "u34-sequence-先-intro",
+          "type": "intro",
+          "char": "先"
+        },
+        {
+          "id": "u34-sequence-先-trace",
+          "type": "trace",
+          "char": "先"
+        },
+        {
+          "id": "u34-sequence-先-build",
+          "type": "build",
+          "char": "先"
+        },
+        {
+          "id": "u34-sequence-先-complete",
+          "type": "complete",
+          "char": "先"
+        },
+        {
+          "id": "u34-sequence-先-memory",
+          "type": "memory",
+          "char": "先"
+        },
+        {
+          "id": "u34-sequence-念-intro",
+          "type": "intro",
+          "char": "念"
+        },
+        {
+          "id": "u34-sequence-念-trace",
+          "type": "trace",
+          "char": "念"
+        },
+        {
+          "id": "u34-sequence-念-build",
+          "type": "build",
+          "char": "念"
+        },
+        {
+          "id": "u34-sequence-念-complete",
+          "type": "complete",
+          "char": "念"
+        },
+        {
+          "id": "u34-sequence-念-memory",
+          "type": "memory",
+          "char": "念"
+        },
+        {
+          "id": "u34-sequence-g1",
+          "type": "grammar",
+          "grammar": "u34-first-then"
+        },
+        {
+          "id": "u34-sequence-p1",
+          "type": "phrase",
+          "phrase": "u34-sequence-simple"
+        },
+        {
+          "id": "u34-sequence-s1",
+          "type": "select",
+          "prompt": "Which word marks the action that happens first?",
+          "options": [
+            "先",
+            "再",
+            "久"
+          ],
+          "answer": "先",
+          "explanation": "先 goes before the first event; 再 introduces the next event.",
+          "grammarIds": [
+            "u34-first-then"
+          ]
+        },
+        {
+          "id": "u34-sequence-s2",
+          "type": "select",
+          "prompt": "In this lesson, 念中文 means…",
+          "options": [
+            "study Chinese",
+            "write Chinese",
+            "teach Chinese"
+          ],
+          "answer": "study Chinese",
+          "explanation": "In Taiwan Mandarin, 念 can mean to study, as in 念中文 and 念大學."
+        }
+      ]
+    },
+    {
+      "id": "u34-center",
+      "title": "Language Center, Then University",
+      "subtitle": "Build 語言中心 and 大學 into the full study sequence.",
+      "chars": [
+        "語",
+        "言"
+      ],
+      "minutes": "11–14 min",
+      "unitId": "unit-34",
+      "review": false,
+      "steps": [
+        {
+          "id": "u34-center-語-intro",
+          "type": "intro",
+          "char": "語"
+        },
+        {
+          "id": "u34-center-語-trace",
+          "type": "trace",
+          "char": "語"
+        },
+        {
+          "id": "u34-center-語-build",
+          "type": "build",
+          "char": "語"
+        },
+        {
+          "id": "u34-center-語-complete",
+          "type": "complete",
+          "char": "語"
+        },
+        {
+          "id": "u34-center-語-memory",
+          "type": "memory",
+          "char": "語"
+        },
+        {
+          "id": "u34-center-言-intro",
+          "type": "intro",
+          "char": "言"
+        },
+        {
+          "id": "u34-center-言-trace",
+          "type": "trace",
+          "char": "言"
+        },
+        {
+          "id": "u34-center-言-build",
+          "type": "build",
+          "char": "言"
+        },
+        {
+          "id": "u34-center-言-complete",
+          "type": "complete",
+          "char": "言"
+        },
+        {
+          "id": "u34-center-言-memory",
+          "type": "memory",
+          "char": "言"
+        },
+        {
+          "id": "u34-center-p1",
+          "type": "phrase",
+          "phrase": "u34-sequence-source"
+        },
+        {
+          "id": "u34-center-o1",
+          "type": "order",
+          "phrase": "u34-sequence-source",
+          "tokens": [
+            "再念四年大學",
+            "我先在語言中心念一年"
+          ]
+        },
+        {
+          "id": "u34-center-s1",
+          "type": "select",
+          "prompt": "語言中心 is…",
+          "options": [
+            "a language center",
+            "a university dormitory",
+            "a scholarship office"
+          ],
+          "answer": "a language center",
+          "explanation": "語言 means language and 中心 means center."
+        },
+        {
+          "id": "u34-center-s2",
+          "type": "select",
+          "prompt": "大學 means…",
+          "options": [
+            "university",
+            "high school",
+            "language"
+          ],
+          "answer": "university",
+          "explanation": "大學 is university."
+        }
+      ]
+    },
+    {
+      "id": "u34-need",
+      "title": "How Many Years Do You Need?",
+      "subtitle": "Use 需要 to connect the two-part plan to the total duration.",
+      "chars": [
+        "需"
+      ],
+      "minutes": "9–12 min",
+      "unitId": "unit-34",
+      "review": false,
+      "steps": [
+        {
+          "id": "u34-need-需-intro",
+          "type": "intro",
+          "char": "需"
+        },
+        {
+          "id": "u34-need-需-trace",
+          "type": "trace",
+          "char": "需"
+        },
+        {
+          "id": "u34-need-需-build",
+          "type": "build",
+          "char": "需"
+        },
+        {
+          "id": "u34-need-需-complete",
+          "type": "complete",
+          "char": "需"
+        },
+        {
+          "id": "u34-need-需-memory",
+          "type": "memory",
+          "char": "需"
+        },
+        {
+          "id": "u34-need-p1",
+          "type": "phrase",
+          "phrase": "u34-need"
+        },
+        {
+          "id": "u34-need-p2",
+          "type": "phrase",
+          "phrase": "u34-sequence-source"
+        },
+        {
+          "id": "u34-need-s1",
+          "type": "select",
+          "prompt": "需要 means…",
+          "options": [
+            "need; require",
+            "finish",
+            "plan"
+          ],
+          "answer": "need; require",
+          "explanation": "需要 states what amount, thing, or action is required."
+        },
+        {
+          "id": "u34-need-s2",
+          "type": "select",
+          "prompt": "The plan is one year plus four years. Which total matches 所以需要五年?",
+          "options": [
+            "五年",
+            "四年",
+            "一年"
+          ],
+          "answer": "五年",
+          "explanation": "One year plus four years gives five years."
+        }
+      ]
+    },
+    {
+      "id": "u34-money",
+      "title": "That Will Cost Money",
+      "subtitle": "Learn the source cost reaction and the word for a scholarship.",
+      "chars": [
+        "花",
+        "獎",
+        "金"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-34",
+      "review": false,
+      "steps": [
+        {
+          "id": "u34-money-花-intro",
+          "type": "intro",
+          "char": "花"
+        },
+        {
+          "id": "u34-money-花-trace",
+          "type": "trace",
+          "char": "花"
+        },
+        {
+          "id": "u34-money-花-build",
+          "type": "build",
+          "char": "花"
+        },
+        {
+          "id": "u34-money-花-complete",
+          "type": "complete",
+          "char": "花"
+        },
+        {
+          "id": "u34-money-花-memory",
+          "type": "memory",
+          "char": "花"
+        },
+        {
+          "id": "u34-money-獎-intro",
+          "type": "intro",
+          "char": "獎"
+        },
+        {
+          "id": "u34-money-獎-trace",
+          "type": "trace",
+          "char": "獎"
+        },
+        {
+          "id": "u34-money-獎-build",
+          "type": "build",
+          "char": "獎"
+        },
+        {
+          "id": "u34-money-獎-complete",
+          "type": "complete",
+          "char": "獎"
+        },
+        {
+          "id": "u34-money-獎-memory",
+          "type": "memory",
+          "char": "獎"
+        },
+        {
+          "id": "u34-money-金-intro",
+          "type": "intro",
+          "char": "金"
+        },
+        {
+          "id": "u34-money-金-trace",
+          "type": "trace",
+          "char": "金"
+        },
+        {
+          "id": "u34-money-金-build",
+          "type": "build",
+          "char": "金"
+        },
+        {
+          "id": "u34-money-金-complete",
+          "type": "complete",
+          "char": "金"
+        },
+        {
+          "id": "u34-money-金-memory",
+          "type": "memory",
+          "char": "金"
+        },
+        {
+          "id": "u34-money-p1",
+          "type": "phrase",
+          "phrase": "u34-cost"
+        },
+        {
+          "id": "u34-money-p2",
+          "type": "phrase",
+          "phrase": "u34-scholarship"
+        },
+        {
+          "id": "u34-money-s1",
+          "type": "select",
+          "prompt": "What does 花 mean in 這得花不少錢?",
+          "options": [
+            "spend / cost",
+            "flower",
+            "study"
+          ],
+          "answer": "spend / cost",
+          "explanation": "With money or time as the object, 花 is the verb 'spend; cost.'"
+        },
+        {
+          "id": "u34-money-s2",
+          "type": "select",
+          "prompt": "Which word means scholarship?",
+          "options": [
+            "獎學金",
+            "時間",
+            "大學"
+          ],
+          "answer": "獎學金",
+          "explanation": "獎學金 is scholarship."
+        }
+      ]
+    },
+    {
+      "id": "u34-grades",
+      "title": "If the Grades Aren't Good",
+      "subtitle": "Learn 成績 and retrieve the earlier 要是…就… conditional in the source scholarship warning.",
+      "chars": [
+        "成",
+        "績"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-34",
+      "review": false,
+      "steps": [
+        {
+          "id": "u34-grades-成-intro",
+          "type": "intro",
+          "char": "成"
+        },
+        {
+          "id": "u34-grades-成-trace",
+          "type": "trace",
+          "char": "成"
+        },
+        {
+          "id": "u34-grades-成-build",
+          "type": "build",
+          "char": "成"
+        },
+        {
+          "id": "u34-grades-成-complete",
+          "type": "complete",
+          "char": "成"
+        },
+        {
+          "id": "u34-grades-成-memory",
+          "type": "memory",
+          "char": "成"
+        },
+        {
+          "id": "u34-grades-績-intro",
+          "type": "intro",
+          "char": "績"
+        },
+        {
+          "id": "u34-grades-績-trace",
+          "type": "trace",
+          "char": "績"
+        },
+        {
+          "id": "u34-grades-績-build",
+          "type": "build",
+          "char": "績"
+        },
+        {
+          "id": "u34-grades-績-complete",
+          "type": "complete",
+          "char": "績"
+        },
+        {
+          "id": "u34-grades-績-memory",
+          "type": "memory",
+          "char": "績"
+        },
+        {
+          "id": "u34-grades-p1",
+          "type": "phrase",
+          "phrase": "u34-grades"
+        },
+        {
+          "id": "u34-grades-s1",
+          "type": "select",
+          "prompt": "成績 means…",
+          "options": [
+            "grades; academic results",
+            "tuition",
+            "schedule"
+          ],
+          "answer": "grades; academic results",
+          "explanation": "成績 is the source word for grades."
+        },
+        {
+          "id": "u34-grades-s2",
+          "type": "select",
+          "prompt": "Which earlier pattern is being reused in 要是成績不好，就沒獎學金了?",
+          "options": [
+            "要是…就…",
+            "先…再…",
+            "因為…所以…"
+          ],
+          "answer": "要是…就…",
+          "explanation": "要是 introduces the condition and 就 introduces the consequence.",
+          "grammarIds": [
+            "u29-yaoshi-jiu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u34-review",
+      "title": "Unit 34 Review",
+      "subtitle": "Study plans, duration, sequence, cost, scholarship, grades, listening, and handwriting retrieval.",
+      "chars": [],
+      "minutes": "12–16 min",
+      "unitId": "unit-34",
+      "review": true,
+      "steps": [
+        {
+          "id": "u34-review-p1",
+          "type": "phrase",
+          "phrase": "u34-plan"
+        },
+        {
+          "id": "u34-review-p2",
+          "type": "phrase",
+          "phrase": "u34-time"
+        },
+        {
+          "id": "u34-review-p3",
+          "type": "phrase",
+          "phrase": "u34-sequence-simple"
+        },
+        {
+          "id": "u34-review-p4",
+          "type": "phrase",
+          "phrase": "u34-sequence-source"
+        },
+        {
+          "id": "u34-review-p5",
+          "type": "phrase",
+          "phrase": "u34-need"
+        },
+        {
+          "id": "u34-review-p6",
+          "type": "phrase",
+          "phrase": "u34-cost"
+        },
+        {
+          "id": "u34-review-p7",
+          "type": "phrase",
+          "phrase": "u34-scholarship"
+        },
+        {
+          "id": "u34-review-p8",
+          "type": "phrase",
+          "phrase": "u34-grades"
+        },
+        {
+          "id": "u34-review-s1",
+          "type": "select",
+          "prompt": "Which word means 'plan' in this lesson?",
+          "options": [
+            "計畫",
+            "需要",
+            "成績"
+          ],
+          "answer": "計畫",
+          "explanation": "計畫 means to plan / a plan."
+        },
+        {
+          "id": "u34-review-s2",
+          "type": "select",
+          "prompt": "Which pair means 'a long time' / 'time'?",
+          "options": [
+            "久 / 時間",
+            "先 / 再",
+            "花 / 金"
+          ],
+          "answer": "久 / 時間",
+          "explanation": "久 describes long duration; 時間 is the noun 'time.'"
+        },
+        {
+          "id": "u34-review-s3",
+          "type": "select",
+          "prompt": "Which place is 語言中心?",
+          "options": [
+            "language center",
+            "university",
+            "market"
+          ],
+          "answer": "language center",
+          "explanation": "語言中心 is a language center."
+        },
+        {
+          "id": "u34-review-s4",
+          "type": "select",
+          "prompt": "Which word is the scholarship?",
+          "options": [
+            "獎學金",
+            "成績",
+            "時間"
+          ],
+          "answer": "獎學金",
+          "explanation": "獎學金 means scholarship."
+        },
+        {
+          "id": "u34-review-g1",
+          "type": "select",
+          "prompt": "You want to say 'I study Chinese first, then university.' Which sentence has the correct sequence markers?",
+          "options": [
+            "我先念中文，再念大學。",
+            "我再念中文，先念大學。"
+          ],
+          "answer": "我先念中文，再念大學。",
+          "explanation": "先 marks Event 1; 再 marks Event 2.",
+          "grammarIds": [
+            "u34-first-then"
+          ]
+        },
+        {
+          "id": "u34-review-g2",
+          "type": "select",
+          "prompt": "Which sentence correctly reuses the earlier condition pattern?",
+          "options": [
+            "要是成績不好，就沒獎學金了。",
+            "先成績不好，再沒獎學金了。"
+          ],
+          "answer": "要是成績不好，就沒獎學金了。",
+          "explanation": "The condition uses 要是…就…, not 先…再….",
+          "grammarIds": [
+            "u29-yaoshi-jiu"
+          ]
+        },
+        {
+          "id": "u34-review-o1",
+          "type": "order",
+          "phrase": "u34-sequence-source",
+          "tokens": [
+            "再念四年大學",
+            "我先在語言中心念一年"
+          ]
+        },
+        {
+          "id": "u34-review-o2",
+          "type": "order",
+          "phrase": "u34-grades",
+          "tokens": [
+            "就沒獎學金了",
+            "要是成績不好"
+          ]
+        },
+        {
+          "id": "u34-review-l1",
+          "type": "listen",
+          "char": "畫",
+          "prompt": "Listen for the planning verb.",
+          "audioText": "你計畫在臺灣學多久的中文？",
+          "options": [
+            "計畫",
+            "需要",
+            "成績"
+          ],
+          "answer": "計畫",
+          "explanation": "計畫 is the planning verb."
+        },
+        {
+          "id": "u34-review-l2",
+          "type": "listen",
+          "char": "先",
+          "prompt": "Listen for what marks the first action.",
+          "audioText": "我先念中文，再念大學。",
+          "options": [
+            "先",
+            "再",
+            "久"
+          ],
+          "answer": "先",
+          "explanation": "先 marks the first action."
+        },
+        {
+          "id": "u34-review-l3",
+          "type": "listen",
+          "char": "獎",
+          "prompt": "Listen for the scholarship word.",
+          "audioText": "我有獎學金。",
+          "options": [
+            "獎學金",
+            "語言中心",
+            "成績"
+          ],
+          "answer": "獎學金",
+          "explanation": "獎學金 means scholarship."
+        },
+        {
+          "id": "u34-review-m1",
+          "type": "memory",
+          "char": "灣"
+        },
+        {
+          "id": "u34-review-m2",
+          "type": "memory",
+          "char": "績"
+        }
+      ]
+    }
+  ],
+  "newVocabulary": [
+    {
+      "text": "臺灣",
+      "pinyin": "Táiwān",
+      "meaning": "Taiwan",
+      "lessonId": "u34-plan",
+      "core": true,
+      "note": "A prerequisite-repair item: Lesson 12 assumes 臺灣, but the cumulative Hanzi Steps index had not formally introduced the word or its characters."
+    },
+    {
+      "text": "計畫",
+      "pinyin": "jìhuà",
+      "meaning": "to plan; plan",
+      "lessonId": "u34-plan",
+      "core": true,
+      "note": "Lesson 12 lists 計畫 as a verb; compare earlier 打算 'plan/intend'."
+    },
+    {
+      "text": "久",
+      "pinyin": "jiǔ",
+      "meaning": "long (time)",
+      "lessonId": "u34-plan",
+      "core": true
+    },
+    {
+      "text": "時間",
+      "pinyin": "shíjiān",
+      "meaning": "time",
+      "lessonId": "u34-plan",
+      "core": true
+    },
+    {
+      "text": "先",
+      "pinyin": "xiān",
+      "meaning": "first; before",
+      "lessonId": "u34-sequence",
+      "core": true
+    },
+    {
+      "text": "念",
+      "pinyin": "niàn",
+      "meaning": "to study; read",
+      "lessonId": "u34-sequence",
+      "core": true,
+      "note": "In this lesson, Taiwan Mandarin uses 念 for studying a subject or attending a course of study."
+    },
+    {
+      "text": "大學",
+      "pinyin": "dàxué",
+      "meaning": "university",
+      "lessonId": "u34-center",
+      "core": true
+    },
+    {
+      "text": "語言中心",
+      "pinyin": "yǔyán zhōngxīn",
+      "meaning": "language center",
+      "lessonId": "u34-center",
+      "core": true
+    },
+    {
+      "text": "需要",
+      "pinyin": "xūyào",
+      "meaning": "to need; require",
+      "lessonId": "u34-need",
+      "core": true
+    },
+    {
+      "text": "花",
+      "pinyin": "huā",
+      "meaning": "to spend (time or money); cost",
+      "lessonId": "u34-money",
+      "core": true,
+      "note": "Source sense here is the verb 'spend/cost'."
+    },
+    {
+      "text": "獎學金",
+      "pinyin": "jiǎngxuéjīn",
+      "meaning": "scholarship",
+      "lessonId": "u34-money",
+      "core": true
+    },
+    {
+      "text": "成績",
+      "pinyin": "chéngjī",
+      "meaning": "grades; academic results",
+      "lessonId": "u34-grades",
+      "core": true
+    }
+  ],
+  "reviewVocabulary": [
+    "年",
+    "中文",
+    "在",
+    "為什麼",
+    "這麼",
+    "所以",
+    "不少",
+    "錢",
+    "要是",
+    "就",
+    "好",
+    "打算",
+    "再"
+  ],
+  "newCharacters": [
+    "臺",
+    "灣",
+    "畫",
+    "先",
+    "念",
+    "語",
+    "言",
+    "需",
+    "花",
+    "獎",
+    "金",
+    "成",
+    "績"
+  ],
+  "reviewCharacters": [],
+  "characters": {
+    "臺": {
+      "hanzi": "臺",
+      "pinyin": "tái",
+      "zhuyin": "ㄊㄞˊ",
+      "meaning": "Taiwan; raised platform (in 臺灣)",
+      "strokes": 14,
+      "layout": "stack",
+      "note": "臺 is the Traditional character used in 臺灣. Hanzi Steps formally adds it here because the cumulative curriculum had used Taiwan as context without first teaching this character.",
+      "memory": "Build 士 and 口 at the top, place the 冖 cover through the middle, then finish with 至 at the bottom.",
+      "parts": [
+        {
+          "label": "士",
+          "name": "scholar component",
+          "role": "Top component",
+          "description": "The first three strokes form 士 at the top.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "口",
+          "name": "mouth component",
+          "role": "Upper-middle component",
+          "description": "The next three strokes form 口.",
+          "strokes": [
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "冖",
+          "name": "cover component",
+          "role": "Middle component",
+          "description": "Two strokes make the cover across the middle.",
+          "strokes": [
+            6,
+            7
+          ]
+        },
+        {
+          "label": "至",
+          "name": "arrive component",
+          "role": "Bottom component",
+          "description": "The final six strokes form 至 below the cover.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "example": {
+        "text": "臺灣",
+        "pinyin": "Táiwān",
+        "meaning": "Taiwan"
+      }
+    },
+    "灣": {
+      "hanzi": "灣",
+      "pinyin": "wān",
+      "zhuyin": "ㄨㄢ",
+      "meaning": "bay; gulf (second character of 臺灣)",
+      "strokes": 25,
+      "layout": "side",
+      "note": "灣 is first-tone wān. In 臺灣 it is the second character of the place name Taiwan.",
+      "memory": "Keep the three-dot water component 氵 narrow on the left; the dense 彎 component occupies the full right side.",
+      "parts": [
+        {
+          "label": "氵",
+          "name": "water component",
+          "role": "Left component",
+          "description": "The first three strokes form 氵.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "彎",
+          "name": "bend component",
+          "role": "Right component",
+          "description": "The remaining twenty-two strokes form 彎 on the right.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
+        }
+      ],
+      "example": {
+        "text": "臺灣",
+        "pinyin": "Táiwān",
+        "meaning": "Taiwan"
+      }
+    },
+    "畫": {
+      "hanzi": "畫",
+      "pinyin": "huà",
+      "zhuyin": "ㄏㄨㄚˋ",
+      "meaning": "plan; draw (in 計畫)",
+      "strokes": 12,
+      "layout": "stack",
+      "note": "畫 is fourth-tone huà. In 計畫, the whole word means to plan or a plan; this is different from using 畫 by itself for drawing.",
+      "memory": "Write the 聿-like upper frame first, build 田 beneath it, and close with the long final 一.",
+      "parts": [
+        {
+          "label": "聿",
+          "name": "brush-like upper component",
+          "role": "Upper component",
+          "description": "The first six strokes form the brush-like upper structure.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "田",
+          "name": "field component",
+          "role": "Lower-middle component",
+          "description": "The next five strokes form 田.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "label": "一",
+          "name": "final horizontal",
+          "role": "Bottom stroke",
+          "description": "The last stroke closes the character along the bottom.",
+          "strokes": [
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "計畫",
+        "pinyin": "jìhuà",
+        "meaning": "to plan; plan"
+      }
+    },
+    "先": {
+      "hanzi": "先",
+      "pinyin": "xiān",
+      "zhuyin": "ㄒㄧㄢ",
+      "meaning": "first; before",
+      "strokes": 6,
+      "layout": "stack",
+      "note": "先 is first-tone xiān. Put it before the first action in 先…再… to mark what happens first.",
+      "memory": "The four-stroke upper shape stands above 儿, whose two legs spread at the bottom.",
+      "parts": [
+        {
+          "label": "⺧",
+          "name": "upper shape",
+          "role": "Top component",
+          "description": "The first four strokes form the compact upper structure.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "儿",
+          "name": "legs component",
+          "role": "Bottom component",
+          "description": "The final two strokes form 儿.",
+          "strokes": [
+            4,
+            5
+          ]
+        }
+      ],
+      "example": {
+        "text": "先念",
+        "pinyin": "xiān niàn",
+        "meaning": "study first"
+      }
+    },
+    "念": {
+      "hanzi": "念",
+      "pinyin": "niàn",
+      "zhuyin": "ㄋㄧㄢˋ",
+      "meaning": "to study; read; think of",
+      "strokes": 8,
+      "layout": "stack",
+      "note": "念 is fourth-tone niàn. In this lesson it is the Taiwan Mandarin verb 'to study,' as in 念中文 or 念大學.",
+      "memory": "今 sits on top of 心: four strokes above and four heart strokes below.",
+      "parts": [
+        {
+          "label": "今",
+          "name": "now component",
+          "role": "Top component",
+          "description": "The first four strokes form 今.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "心",
+          "name": "heart component",
+          "role": "Bottom component",
+          "description": "The final four strokes form 心.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "念中文",
+        "pinyin": "niàn Zhōngwén",
+        "meaning": "study Chinese"
+      }
+    },
+    "語": {
+      "hanzi": "語",
+      "pinyin": "yǔ",
+      "zhuyin": "ㄩˇ",
+      "meaning": "language; speech",
+      "strokes": 14,
+      "layout": "side",
+      "note": "語 is third-tone yǔ. Together with 言 it forms 語言, 'language.'",
+      "memory": "言 occupies the left seven strokes; 吾 fills the right seven.",
+      "parts": [
+        {
+          "label": "言",
+          "name": "speech component",
+          "role": "Left component",
+          "description": "The first seven strokes form 言.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "吾",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final seven strokes form 吾.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "example": {
+        "text": "語言",
+        "pinyin": "yǔyán",
+        "meaning": "language"
+      }
+    },
+    "言": {
+      "hanzi": "言",
+      "pinyin": "yán",
+      "zhuyin": "ㄧㄢˊ",
+      "meaning": "speech; language",
+      "strokes": 7,
+      "layout": "whole",
+      "note": "言 is second-tone yán. Learn it here as the second character of 語言.",
+      "memory": "Start with the top mark and horizontal lines, then finish the lower 口-shaped speech block.",
+      "parts": [
+        {
+          "label": "亠",
+          "name": "top mark",
+          "role": "Top",
+          "description": "The first two strokes establish the top of 言.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "二",
+          "name": "middle lines",
+          "role": "Middle",
+          "description": "The next two strokes form the paired middle lines.",
+          "strokes": [
+            2,
+            3
+          ]
+        },
+        {
+          "label": "口",
+          "name": "mouth shape",
+          "role": "Bottom",
+          "description": "The final three strokes form the lower 口.",
+          "strokes": [
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "example": {
+        "text": "語言",
+        "pinyin": "yǔyán",
+        "meaning": "language"
+      }
+    },
+    "需": {
+      "hanzi": "需",
+      "pinyin": "xū",
+      "zhuyin": "ㄒㄩ",
+      "meaning": "need; require (in 需要)",
+      "strokes": 14,
+      "layout": "stack",
+      "note": "需 is first-tone xū. In 需要, the whole word means 'to need; require.'",
+      "memory": "雨 forms the eight-stroke top; 而 supplies the six-stroke lower block.",
+      "parts": [
+        {
+          "label": "雨",
+          "name": "rain component",
+          "role": "Top component",
+          "description": "The first eight strokes form 雨.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "label": "而",
+          "name": "lower component",
+          "role": "Bottom component",
+          "description": "The final six strokes form 而.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "example": {
+        "text": "需要",
+        "pinyin": "xūyào",
+        "meaning": "to need"
+      }
+    },
+    "花": {
+      "hanzi": "花",
+      "pinyin": "huā",
+      "zhuyin": "ㄏㄨㄚ",
+      "meaning": "to spend; flower",
+      "strokes": 8,
+      "layout": "stack",
+      "note": "花 is first-tone huā. In 這得花不少錢 it is a verb meaning 'to spend/cost,' not the noun 'flower.'",
+      "memory": "The four-stroke 艹 sits across the top; 化 forms the four strokes below.",
+      "parts": [
+        {
+          "label": "艹",
+          "name": "grass component",
+          "role": "Top component",
+          "description": "The first four strokes form the Taiwan-form 艹 top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "化",
+          "name": "change component",
+          "role": "Bottom component",
+          "description": "The final four strokes form 化.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "花錢",
+        "pinyin": "huā qián",
+        "meaning": "spend money"
+      }
+    },
+    "獎": {
+      "hanzi": "獎",
+      "pinyin": "jiǎng",
+      "zhuyin": "ㄐㄧㄤˇ",
+      "meaning": "award; prize (in 獎學金)",
+      "strokes": 15,
+      "layout": "stack",
+      "note": "獎 is third-tone jiǎng. In 獎學金 it refers to an award or scholarship fund.",
+      "memory": "The large 將 component fills the upper area; 大 spreads across the bottom. In the exact source geometry, the final dot belonging to the upper component is written after the three 大 strokes.",
+      "parts": [
+        {
+          "label": "將",
+          "name": "award-related upper component",
+          "role": "Upper component",
+          "description": "The upper component uses strokes 1–11 plus the final dot; the source stroke order writes that dot last.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            14
+          ]
+        },
+        {
+          "label": "大",
+          "name": "big component",
+          "role": "Bottom component",
+          "description": "Three broad strokes form 大 at the bottom before the final upper-component dot.",
+          "strokes": [
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "example": {
+        "text": "獎學金",
+        "pinyin": "jiǎngxuéjīn",
+        "meaning": "scholarship"
+      }
+    },
+    "金": {
+      "hanzi": "金",
+      "pinyin": "jīn",
+      "zhuyin": "ㄐㄧㄣ",
+      "meaning": "gold; money; fund",
+      "strokes": 8,
+      "layout": "whole",
+      "note": "金 is first-tone jīn. In 獎學金 it contributes the sense of money or funds.",
+      "memory": "The top opens outward, a central vertical anchors the character, and the final horizontal closes the base.",
+      "parts": [
+        {
+          "label": "金",
+          "name": "whole character",
+          "role": "Whole character",
+          "description": "All eight strokes form the balanced 金 character.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "獎學金",
+        "pinyin": "jiǎngxuéjīn",
+        "meaning": "scholarship"
+      }
+    },
+    "成": {
+      "hanzi": "成",
+      "pinyin": "chéng",
+      "zhuyin": "ㄔㄥˊ",
+      "meaning": "become; accomplish (in 成績)",
+      "strokes": 6,
+      "layout": "whole",
+      "note": "成 is second-tone chéng. Here it is the first character of 成績, 'grades; academic results.'",
+      "memory": "Keep the inner bend compact while the long slanting stroke and final hook open the character to the right.",
+      "parts": [
+        {
+          "label": "成",
+          "name": "whole character",
+          "role": "Whole character",
+          "description": "All six strokes form the compact 成 shape.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "example": {
+        "text": "成績",
+        "pinyin": "chéngjī",
+        "meaning": "grades; academic results"
+      }
+    },
+    "績": {
+      "hanzi": "績",
+      "pinyin": "jī",
+      "zhuyin": "ㄐㄧ",
+      "meaning": "achievement; record (in 成績)",
+      "strokes": 17,
+      "layout": "side",
+      "note": "績 is first-tone jī. In 成績 it completes the word for grades or academic results.",
+      "memory": "糹 is the six-stroke thread component on the left; 責 forms the eleven-stroke right side.",
+      "parts": [
+        {
+          "label": "糹",
+          "name": "thread component",
+          "role": "Left component",
+          "description": "The first six strokes form 糹.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "責",
+          "name": "responsibility component",
+          "role": "Right component",
+          "description": "The final eleven strokes form 責.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ],
+      "example": {
+        "text": "成績",
+        "pinyin": "chéngjī",
+        "meaning": "grades; academic results"
+      }
+    }
+  },
+  "grammarRules": {
+    "u34-first-then": {
+      "id": "u34-first-then",
+      "title": "First…, then… with 先…再…",
+      "pattern": "Subject + 先 + Event 1，(Subject) + 再 + Event 2",
+      "explanation": "先…再… presents two events in temporal order. Put 先 directly before the first action and 再 before the next action. The pattern can describe past routines, present routines, or future plans; it is the order that matters. When both events have the same subject, Chinese normally states the subject once before 先 and leaves it understood before 再. Here 再 means 'then / next,' not merely 'again.'",
+      "examples": [
+        {
+          "text": "我先念中文，再念大學。",
+          "pinyin": "Wǒ xiān niàn Zhōngwén, zài niàn dàxué.",
+          "meaning": "I study Chinese first, then attend university."
+        },
+        {
+          "text": "我今天晚上先吃飯，再打電話。",
+          "pinyin": "Wǒ jīntiān wǎnshang xiān chīfàn, zài dǎ diànhuà.",
+          "meaning": "Tonight I will eat first, then make a phone call."
+        },
+        {
+          "text": "我明天先去圖書館看書，再去超市買東西。",
+          "pinyin": "Wǒ míngtiān xiān qù túshūguǎn kàn shū, zài qù chāoshì mǎi dōngxi.",
+          "meaning": "Tomorrow I will go to the library to read first, then go to the supermarket to buy things."
+        }
+      ],
+      "remember": "先 marks Event 1; 再 marks Event 2. Keep the two actions in the real order you mean."
+    }
+  },
+  "grammarIntroductions": [
+    {
+      "id": "u34-first-then-intro",
+      "kind": "rule",
+      "ref": "u34-first-then",
+      "lessonId": "u34-sequence",
+      "stepId": "u34-sequence-g1"
+    }
+  ],
+  "reviewGrammar": [
+    "u29-yaoshi-jiu"
+  ],
+  "phrases": {
+    "u34-plan": {
+      "text": "你計畫在臺灣學多久的中文？",
+      "pinyin": "Nǐ jìhuà zài Táiwān xué duō jiǔ de Zhōngwén?",
+      "meaning": "How long do you plan to study Chinese in Taiwan?",
+      "note": "This is the opening question of Lesson 12 Dialogue I. 計畫 is close to the earlier 打算; here both can express an intended plan.",
+      "tokens": [
+        "你計畫",
+        "在臺灣",
+        "學多久的中文"
+      ]
+    },
+    "u34-time": {
+      "text": "為什麼要這麼久的時間？",
+      "pinyin": "Wèishénme yào zhème jiǔ de shíjiān?",
+      "meaning": "Why such a long time?",
+      "note": "久 describes a long duration; 時間 is the noun 'time.'",
+      "tokens": [
+        "為什麼",
+        "要這麼久的時間"
+      ]
+    },
+    "u34-sequence-simple": {
+      "text": "我先念中文，再念大學。",
+      "pinyin": "Wǒ xiān niàn Zhōngwén, zài niàn dàxué.",
+      "meaning": "I will study Chinese first, then attend university.",
+      "note": "先 marks the first action and 再 marks the next action.",
+      "tokens": [
+        "我先念中文",
+        "再念大學"
+      ],
+      "grammarIds": [
+        "u34-first-then"
+      ]
+    },
+    "u34-sequence-source": {
+      "text": "我先在語言中心念一年，再念四年大學。",
+      "pinyin": "Wǒ xiān zài yǔyán zhōngxīn niàn yì nián, zài niàn sì nián dàxué.",
+      "meaning": "I will first study for one year at a language center, then study at university for four years.",
+      "note": "This keeps the study sequence from Lesson 12 Dialogue I. 年 is the measure word for years.",
+      "tokens": [
+        "我先在語言中心念一年",
+        "再念四年大學"
+      ],
+      "grammarIds": [
+        "u34-first-then"
+      ]
+    },
+    "u34-need": {
+      "text": "所以需要五年。",
+      "pinyin": "Suǒyǐ xūyào wǔ nián.",
+      "meaning": "So five years are needed.",
+      "note": "需要 is a transitive stative verb meaning 'to need; require.'",
+      "tokens": [
+        "所以",
+        "需要五年"
+      ]
+    },
+    "u34-cost": {
+      "text": "這得花不少錢！",
+      "pinyin": "Zhè děi huā bù shǎo qián!",
+      "meaning": "That will cost quite a lot of money!",
+      "note": "花 means 'spend/cost' here. 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
+      "tokens": [
+        "這得",
+        "花不少錢"
+      ]
+    },
+    "u34-scholarship": {
+      "text": "我有獎學金。",
+      "pinyin": "Wǒ yǒu jiǎngxuéjīn.",
+      "meaning": "I have a scholarship.",
+      "note": "獎學金 is the source word for a scholarship.",
+      "tokens": [
+        "我有",
+        "獎學金"
+      ]
+    },
+    "u34-grades": {
+      "text": "要是成績不好，就沒獎學金了。",
+      "pinyin": "Yàoshi chéngjī bù hǎo, jiù méi jiǎngxuéjīn le.",
+      "meaning": "If my grades are poor, then I won't have a scholarship anymore.",
+      "note": "This source line retrieves the earlier 要是…就… condition pattern. The final 了 marks the changed result.",
+      "tokens": [
+        "要是成績不好",
+        "就沒獎學金了"
+      ],
+      "grammarIds": [
+        "u29-yaoshi-jiu"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u34-plan-s2",
+    "u34-grades-p1",
+    "u34-grades-s2",
+    "u34-review-g2"
+  ]
+};
+export default unit;
