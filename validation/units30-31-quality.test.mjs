@@ -25,10 +25,10 @@ function reviewBlob(module){
 }
 
 test('Units 30-31 keep intended novelty, lesson count and review depth',()=>{
-  assert.equal(u30.newVocabulary.length,10);
-  assert.equal(u30.newCharacters.length,7);
-  assert.equal(u31.newVocabulary.length,12);
-  assert.equal(u31.newCharacters.length,10);
+  assert.equal(u30.newVocabulary.length,11);
+  assert.equal(u30.newCharacters.length,8);
+  assert.equal(u31.newVocabulary.length,14);
+  assert.equal(u31.newCharacters.length,12);
   for(const m of [u30,u31]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
@@ -107,11 +107,11 @@ test('紅 and 往 first-teaching ownership moves earlier without deleting Book 2
   assert.ok(b2u1.lessons.find(l=>l.id==='b2-from-toward').steps.some(s=>s.char==='往'));
 });
 
-test('Known Lesson 10 handwriting blockers stay explicitly deferred',()=>{
-  for(const m of [u30,u31]){
-    assert.ok(!m.newVocabulary.some(v=>v.text==='芒果'||v.text==='窗戶'));
-    assert.ok(!m.newCharacters.includes('芒'));
-    assert.ok(!m.newCharacters.includes('窗'));
-    assert.ok(!m.newCharacters.includes('戶'));
-  }
+test('Lesson 10 source-debt vocabulary is now restored with exact Traditional codepoints',()=>{
+  assert.ok(u30.newVocabulary.some(v=>v.text==='芒果'));
+  assert.ok(u30.newCharacters.includes('芒'));
+  assert.ok(u31.newVocabulary.some(v=>v.text==='窗戶'));
+  assert.ok(u31.newCharacters.includes('窗'));
+  assert.ok(u31.newCharacters.includes('戶'));
+  assert.equal(u31.phrases['u31-toward'].text,'從窗戶往外看，是藍色的大海。');
 });
