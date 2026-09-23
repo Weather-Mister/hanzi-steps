@@ -96,7 +96,7 @@ test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',(
   assert.match(zero.explanation,/object/i);
   assert.match(zero.explanation,/ambiguous/i);
   assert.match(u33.phrases['u33-then'].note,/then \/ in that case/i);
-  assert.match(u33.phrases['u33-sorry'].note,/pragmatic phrase/i);
+  assert.match(u33.phrases['u33-sorry'].note,/polite apology\/excuse/i);
   assert.ok(u33.newVocabulary.some(v=>v.text==='等'&&v.pinyin==='děng'));
   assert.equal(u33.phrases['u33-wait'].text,'好，我在家等你。');
   assert.equal(u33.phrases['u33-rent-question'].text,'你收到我的房租了嗎？');
