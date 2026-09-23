@@ -1664,7 +1664,7 @@ const unit:UnitData = {
       "text": "為什麼要這麼久的時間？",
       "pinyin": "Wèishénme yào zhème jiǔ de shíjiān?",
       "meaning": "Why such a long time?",
-      "note": "久 describes a long duration; 時間 is the noun 'time.'",
+      "note": "This follows the source reply 五年。 久 describes a long duration; 時間 is the noun 'time.'",
       "tokens": [
         "為什麼",
         "要這麼久的時間"
