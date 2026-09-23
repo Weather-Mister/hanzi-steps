@@ -1070,17 +1070,16 @@ const unit:UnitData = {
       "hanzi": "房",
       "pinyin": "fáng",
       "zhuyin": "ㄈㄤˊ",
-      "meaning": "house; room",
-      "strokes": 8,
+      "meaning": "house (in 房子)",
       "layout": "stack",
-      "note": "房 is second-tone fáng. It appears in 房東, 房間, and 套房 throughout this rental lesson.",
-      "memory": "戶 occupies the upper-left area and its long slant shelters 方 below; do not compress 方 into the left edge.",
+      "note": "房 is the first character of 房子, house. Notice the upper-left 戶 and the 方 beneath it.",
+      "memory": "房 shelters 方 beneath 戶. The long left stroke of 戶 runs down beside the lower group.",
       "parts": [
         {
           "label": "戶",
           "name": "door-shaped upper group",
-          "role": "Upper component",
-          "description": "The first four strokes form 戶 above and to the left.",
+          "role": "Visual component",
+          "description": "戶 begins above 方, then its long sloping stroke extends down the left side of the lower group.",
           "strokes": [
             0,
             1,
@@ -1090,9 +1089,9 @@ const unit:UnitData = {
         },
         {
           "label": "方",
-          "name": "direction component",
-          "role": "Lower component",
-          "description": "The final four strokes form 方 beneath 戶.",
+          "name": "lower component",
+          "role": "Visual component",
+          "description": "方 sits underneath the upper part of 戶. Leave room for its hooked and slanting strokes below the horizontal.",
           "strokes": [
             4,
             5,
@@ -1101,11 +1100,14 @@ const unit:UnitData = {
           ]
         }
       ],
+      "strokes": 8,
       "example": {
-        "text": "房東",
-        "pinyin": "fángdōng",
-        "meaning": "landlord"
-      }
+        "text": "房",
+        "pinyin": "fáng",
+        "meaning": "house (in 房子)"
+      },
+      "layoutLabel": "Upper-left enclosure",
+      "partOrderLabel": "戶 first, then 方 below"
     },
     "客": {
       "hanzi": "客",
@@ -1204,14 +1206,14 @@ const unit:UnitData = {
       "meaning": "left",
       "strokes": 5,
       "layout": "stack",
-      "note": "左 is third-tone zuǒ and gives the left side in 左邊.",
-      "memory": "The two upper strokes overhang 工. The 工 at the bottom distinguishes 左 from 右.",
+      "note": "左 gives the left direction. Notice 工 below the upper strokes.",
+      "memory": "Look for 工 under the overhanging top of 左; compare the 口 in 右.",
       "parts": [
         {
           "label": "𠂇",
           "name": "upper strokes",
-          "role": "Top group",
-          "description": "The first two strokes make the overhanging top.",
+          "role": "Visual component",
+          "description": "The first two strokes form a horizontal top and a long slant down to the left.",
           "strokes": [
             0,
             1
@@ -1219,9 +1221,9 @@ const unit:UnitData = {
         },
         {
           "label": "工",
-          "name": "work component",
-          "role": "Bottom component",
-          "description": "The final three strokes form 工.",
+          "name": "work-shaped part",
+          "role": "Visual component",
+          "description": "工 has two horizontal lines joined by a short vertical. It distinguishes 左 from 右.",
           "strokes": [
             2,
             3,
@@ -1230,9 +1232,9 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "左邊",
-        "pinyin": "zuǒbiān",
-        "meaning": "left side"
+        "text": "左",
+        "pinyin": "zuǒ",
+        "meaning": "left"
       }
     },
     "右": {
@@ -1242,14 +1244,14 @@ const unit:UnitData = {
       "meaning": "right",
       "strokes": 5,
       "layout": "stack",
-      "note": "右 is fourth-tone yòu and gives the right side in 右邊.",
-      "memory": "The two upper strokes overhang 口. The 口 at the bottom distinguishes 右 from 左.",
+      "note": "右 gives the right direction. Notice 口 below the upper strokes. Follow the guide: its opening stroke order differs from 左.",
+      "memory": "Look for 口 under the overhanging top of 右; compare the 工 in 左.",
       "parts": [
         {
           "label": "𠂇",
           "name": "upper strokes",
-          "role": "Top group",
-          "description": "The first two strokes make the overhanging top.",
+          "role": "Visual component",
+          "description": "The first two strokes form the overhanging top and the slant down to the left.",
           "strokes": [
             0,
             1
@@ -1257,9 +1259,9 @@ const unit:UnitData = {
         },
         {
           "label": "口",
-          "name": "mouth component",
-          "role": "Bottom component",
-          "description": "The final three strokes close a small 口.",
+          "name": "mouth-shaped part",
+          "role": "Visual component",
+          "description": "口 is the small box below the top strokes. It distinguishes 右 from 左.",
           "strokes": [
             2,
             3,
@@ -1268,9 +1270,9 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "右邊",
-        "pinyin": "yòubiān",
-        "meaning": "right side"
+        "text": "右",
+        "pinyin": "yòu",
+        "meaning": "right"
       }
     },
     "浴": {
@@ -1320,17 +1322,17 @@ const unit:UnitData = {
       "hanzi": "超",
       "pinyin": "chāo",
       "zhuyin": "ㄔㄠ",
-      "meaning": "surpass; first character of 超市",
+      "meaning": "surpass; first character of 超商",
       "strokes": 12,
       "layout": "side",
-      "note": "超 is first-tone chāo. In 超市 it is part of the ordinary word for supermarket.",
-      "memory": "走 supplies the seven-stroke movement base; 召 sits compactly above the long lower sweep.",
+      "note": "超 is the first character of 超商, the everyday Taiwan word for a convenience store.",
+      "memory": "走 + 召: the familiar 走 stretches underneath 召, which has 刀 above 口.",
       "parts": [
         {
           "label": "走",
           "name": "walking component",
-          "role": "Wrapping/left component",
-          "description": "The first seven strokes form 走 and its long base.",
+          "role": "Visual component",
+          "description": "走 occupies the left side and sends its long final stroke underneath the right component.",
           "strokes": [
             0,
             1,
@@ -1343,9 +1345,9 @@ const unit:UnitData = {
         },
         {
           "label": "召",
-          "name": "right component",
-          "role": "Right component",
-          "description": "The final five strokes form 召 above the base of 走.",
+          "name": "upper-right component",
+          "role": "Visual component",
+          "description": "召 is 刀 above 口. Nest this smaller group above the long base of 走.",
           "strokes": [
             7,
             8,
@@ -1356,10 +1358,12 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "超市",
-        "pinyin": "chāoshì",
-        "meaning": "supermarket"
-      }
+        "text": "超",
+        "pinyin": "chāo",
+        "meaning": "surpass"
+      },
+      "layoutLabel": "Wraparound",
+      "partOrderLabel": "wrapping 走, then inner 召"
     },
     "走": {
       "hanzi": "走",
@@ -1368,14 +1372,14 @@ const unit:UnitData = {
       "meaning": "walk; go",
       "strokes": 7,
       "layout": "stack",
-      "note": "走 is third-tone zǒu. 走路 is the separable verb “to walk.”",
-      "memory": "A 土-like three-stroke top leads into the four-stroke lower walking shape and its long final sweep.",
+      "note": "走 means walk; in a directions question it asks how to get somewhere.",
+      "memory": "Remember 走 by 土 above a long, spreading lower stroke.",
       "parts": [
         {
           "label": "土",
           "name": "upper shape",
-          "role": "Top group",
-          "description": "The first three strokes form a 土-like top.",
+          "role": "Visual component",
+          "description": "The upper three strokes form a 土 shape: a vertical crossing two horizontal lines.",
           "strokes": [
             0,
             1,
@@ -1384,9 +1388,9 @@ const unit:UnitData = {
         },
         {
           "label": "龰",
-          "name": "lower walking group",
-          "role": "Bottom group",
-          "description": "The last four strokes form the lower walking shape.",
+          "name": "lower group",
+          "role": "Visual component",
+          "description": "The lower group leads down to the long final stroke sweeping out to the right.",
           "strokes": [
             3,
             4,
@@ -1396,26 +1400,26 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "走路",
-        "pinyin": "zǒulù",
-        "meaning": "to walk"
+        "text": "走",
+        "pinyin": "zǒu",
+        "meaning": "walk; go"
       }
     },
     "路": {
       "hanzi": "路",
       "pinyin": "lù",
       "zhuyin": "ㄌㄨˋ",
-      "meaning": "road; route",
+      "meaning": "road",
       "strokes": 13,
       "layout": "side",
-      "note": "路 is fourth-tone lù. In 走路 it supplies the noun-like second half of the separable verb.",
-      "memory": "足 fills the left side and 各 fills the right; keep both components upright rather than letting the lower strokes collide.",
+      "note": "路 means road. 路口 means an intersection.",
+      "memory": "Remember 路 as 足 + 各: a small mouth above foot strokes on the left, and a crossing top above 口 on the right.",
       "parts": [
         {
           "label": "足",
           "name": "foot component",
-          "role": "Left component",
-          "description": "The first seven strokes form 足.",
+          "role": "Visual component",
+          "description": "足 forms the left side, with 口 at the top and the foot-shaped strokes below.",
           "strokes": [
             0,
             1,
@@ -1428,9 +1432,9 @@ const unit:UnitData = {
         },
         {
           "label": "各",
-          "name": "right component",
-          "role": "Right component",
-          "description": "The final six strokes form 各.",
+          "name": "right part",
+          "role": "Visual component",
+          "description": "各 has crossing, spreading strokes at the top and a small 口 underneath.",
           "strokes": [
             7,
             8,
@@ -1442,9 +1446,9 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "走路",
-        "pinyin": "zǒulù",
-        "meaning": "to walk"
+        "text": "路",
+        "pinyin": "lù",
+        "meaning": "road"
       }
     },
     "間": {
