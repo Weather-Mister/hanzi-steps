@@ -82,6 +82,20 @@ The 需要 lesson asked the learner to add one year and four years to select 五
 Repair:
 - replaced it with a direct Chinese comprehension/selection task for 所以需要五年.
 
+### 7. 大學 ownership did not match its actual first teaching
+大學 was declared as new in u34-center, but the preceding 先…再… lesson already taught it in 「我先念中文，再念大學。」. This was not an assessment-before-teaching error, but it made the curriculum metadata dishonest about where the word first enters instruction.
+
+Repair:
+- moved 大學 vocabulary ownership to u34-sequence, where it is actually first taught;
+- u34-center now reinforces 大學 while introducing 語言中心.
+
+### 8. A few distractors/prompts were weaker than the course standard
+The opening duration question included an obviously unrelated landlord distractor, and several review prompts used awkward English.
+
+Repair:
+- replaced the weak distractors with plausible study-plan alternatives;
+- tightened review wording without changing any existing step IDs.
+
 ## Grammar audit
 
 The 先…再… rule now stays closer to the textbook:
