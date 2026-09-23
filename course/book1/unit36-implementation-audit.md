@@ -6,7 +6,7 @@
 - 4 first-taught characters: 工、作、試、難.
 - 2 new grammar rules: Event/Time + 以後 and special 好/難 + verbs.
 - Six teaching lessons plus one review.
-- Review has 26 activities, including 3 contextual listening tasks and 4 handwriting-memory tasks.
+- Review has 27 activities, including 3 contextual listening tasks and 4 handwriting-memory tasks.
 - Every formal NEW vocabulary item is retrieved in review.
 - Unit 35 是…的 and earlier 要是…就… are review grammar, not redeclared.
 
@@ -97,6 +97,50 @@ Repair:
 ### 10. End-of-lesson activities were checked explicitly
 The deep audit extended past Dialogue II and Grammar IV through the Lesson 12 integrated activities and self-assessment. Those pages reinforce study/future plans, 先…再…, 是…的, and work-experience discussion; they do not add a fifth formal grammar point or an unaccounted Vocabulary I/II item.
 
+### 11. Review breadth was still too repetitive
+The first repair improved Grammar IV coverage, but the review still repeated the same event-anchor explanation for 以後 and repeated the bare 好找 meaning instead of retrieving two source details that had only appeared in explanatory prose.
+
+Repair:
+- `u36-review-g2` now retrieves the time-expression use 半年以後 = “half a year later”;
+- `u36-review-g4` now retrieves the source degree-adverb example 我媽媽做的菜很好吃;
+- the perception-negative review now uses the separate source sentence 學校餐廳的菜不難吃 instead of duplicating the teaching item 便宜的咖啡不好喝.
+
+### 12. Two distractors were not strict enough for an unambiguous key
+The earlier A-not-A checks used forms with 有沒有 that can occur colloquially enough to make them poor “wrong answer” choices even though they do not match the textbook pattern being taught.
+
+Repair:
+- replaced those distractors with structurally misplaced forms that cannot reasonably compete with the source pattern;
+- preserved the same step IDs and positions.
+
+### 13. Learner-facing notes leaked the very glyphs the adaptation was meant to avoid
+The target phrases correctly omitted 田 from the proper-name vocative and normalized 妳 to 你, but the runtime phrase notes still printed 田中 and 妳. Those notes are learner-facing content, so the character boundary was not actually clean.
+
+Repair:
+- runtime notes now describe the adaptation without displaying 田 or 妳;
+- authoring-only source/audit documents retain the exact source forms for traceability;
+- a regression test now rejects either glyph anywhere in the Unit 36 runtime module.
+
+### 14. Pinyin spacing needed one cleanup
+The business line wrote 臺灣人 as `Táiwānrén`, although the source phrase is 臺灣 人 and the project normally spaces lexical words in phrase pinyin.
+
+Repair:
+- changed it to `Táiwān rén`;
+- added a regression assertion for the full line.
+
+### 15. Pinyin Search and Mega Challenge were explicitly checked
+The general repository tests exercise both systems, but the deep audit added Unit 36-specific guarantees:
+- each of the eight new vocabulary entries resolves through normalized Pinyin Search to its canonical curriculum item;
+- after its declared teaching lesson is complete, each entry becomes eligible for Mega Challenge;
+- transparent 試試看 and 做生意 remain contextual phrases rather than duplicate canonical vocabulary entries.
+
+### 16. Saved-progress topology is unchanged
+The audit compared published `main` against the repair branch:
+- all seven lesson IDs are unchanged;
+- every activity ID remains in the same position;
+- lesson step counts remain 15 / 7 / 8 / 12 / 9 / 8 / 27;
+- no step was inserted, deleted, or reordered.
+
+Therefore these repairs require no lesson-length compatibility migration and do not invalidate existing complete or partial Unit 36 checkpoints.
 ## Pedagogy and sequencing
 
 - 工 and 作 are introduced before 工作 is assessed.
