@@ -42,10 +42,13 @@ The eight-word count is deliberately below the normal 10–13 range because this
 
 ## Dialogue II coverage
 
-Represented directly:
+Dialogue II content covered:
 - 田中，你是什麼時候來臺灣工作的？
 - 去年，我已經在臺灣工作一年了。
+- 為什麼你們公司要替你付學費？
 - 因為我們公司跟臺灣人做生意。老闆希望我們都會說中文。
+- 我覺得你們公司真好。
+- 對了，妳回國以後，打算做什麼？
 - 我回國以後，也想找個有機會說中文的工作。
 - 不錯，這樣的工作在你們國家好找嗎？
 - 不知道好不好找，我試試看。
@@ -53,7 +56,9 @@ Represented directly:
 - 那麼我再來臺灣學中文。
 - 太好了！那我們就可以再見面了。
 
-The opening 是…的 question retrieves Unit 35 rather than redeclaring that grammar. The duration-to-date line is kept as source dialogue comprehension; this unit does not prematurely declare the later formal double-了 grammar from Lesson 14.
+The opening 是…的 question retrieves Unit 35 rather than redeclaring that grammar. In the learner-facing phrase, the vocative 田中 is omitted because 田 is not yet a formally taught Hanzi Steps character. The source's sex-specific 妳 in 對了，妳回國以後… is normalized to the already-taught general pronoun 你, preserving the grammar and meaning without creating a one-off character leak. These are explicit character-boundary adaptations, not silent source substitutions.
+
+The duration-to-date line is kept as source dialogue comprehension; this unit does not prematurely declare the later formal double-了 grammar from Lesson 14.
 
 ## Grammar III: 以後
 
