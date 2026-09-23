@@ -114,7 +114,7 @@ test('Lesson 10 Vocabulary I-II is cumulatively accounted for through Unit 31',(
     assert.ok(taught.has(word),`Lesson 10 Vocabulary I missing ${word}`);
   for(const word of ['拍','笑','開心','穿','衣服','旅館','太太','男','矮','高','弟弟','乾淨','窗戶','往','藍色','因為','住','上個月','這些'])
     assert.ok(taught.has(word),`Lesson 10 Vocabulary II missing ${word}`);
-  assert.equal(u30.phrases['u30-piece'].text,'這個黃色的水果叫芒果。我給你一塊。');
+  assert.equal(u30.phrases['u30-piece'].text,'這個黃色的水果是芒果。我給你一塊。');
   assert.equal(u31.phrases['u31-toward'].text,'從窗戶往外看，是藍色的大海。');
 });
 
