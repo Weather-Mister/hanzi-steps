@@ -1272,7 +1272,7 @@ const unit:UnitData = {
       "text": "你是什麼時候來臺灣工作的？",
       "pinyin": "Nǐ shì shénme shíhou lái Táiwān gōngzuò de?",
       "meaning": "When did you come to Taiwan to work?",
-      "note": "Dialogue II opens with 田中 as a vocative; Hanzi Steps omits that proper-name address so untaught 田 is not introduced incidentally, while preserving the source 是…的 question.",
+      "note": "The textbook dialogue includes the listener's name as a vocative before this question. Hanzi Steps omits the name here so the focus stays on the already-taught 是…的 question.",
       "tokens": [
         "你是什麼時候",
         "來臺灣工作的"
@@ -1338,7 +1338,7 @@ const unit:UnitData = {
       "text": "對了，你回國以後，打算做什麼？",
       "pinyin": "Duì le, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?",
       "meaning": "By the way, what do you plan to do after you go back to your country?",
-      "note": "Dialogue II prints 妳 for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 to avoid introducing a one-off orthographic variant while preserving the sentence and grammar. 回國、打算 and 做 are review.",
+      "note": "The textbook prints a gender-specific form of 'you' for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 while preserving the sentence and grammar. 回國、打算 and 做 are review.",
       "tokens": [
         "對了",
         "你回國以後",
