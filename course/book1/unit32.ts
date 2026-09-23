@@ -24,6 +24,7 @@ const unit:UnitData = {
       "路",
       "間",
       "套",
+      "再",
       "話"
     ],
     "lessonIds": [
@@ -48,7 +49,7 @@ const unit:UnitData = {
       "u32-lai-vp",
       "u32-early-jiu"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 11 Dialogue I / Vocabulary I (printed pp. 224–226) and Grammar I–II (printed pp. 230–232). 分鐘, 房間, 回去 and 打電話 are taught transparently from already-supported parts rather than counted as extra NEW vocabulary; 再 continues in Unit 33."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 11 Dialogue I / Vocabulary I (printed pp. 224–226) and Grammar I–II (printed pp. 230–232). Unit 32 completes Dialogue I, including 回去想想，再打電話給你; transparent combinations remain taught in context rather than being inflated into separate core targets."
   },
   "reviewLessonId": "u32-review",
   "lessons": [
@@ -397,6 +398,16 @@ const unit:UnitData = {
           ],
           "answer": "vacant; empty",
           "explanation": "Here 空 kōng describes a vacant room. Earlier 有空 used kòng in the expression 'to be free'."
+        },
+        {
+          "id": "u32-sides-p3",
+          "type": "phrase",
+          "phrase": "u32-internet"
+        },
+        {
+          "id": "u32-sides-p4",
+          "type": "phrase",
+          "phrase": "u32-opinion"
         }
       ]
     },
@@ -517,12 +528,38 @@ const unit:UnitData = {
       "title": "Come Here to Do It",
       "subtitle": "Contrast 來 + activity with the earlier 去 + activity pattern, and add 電話 for contacting the landlord.",
       "chars": [
+        "再",
         "話"
       ],
       "minutes": "9–12 min",
       "unitId": "unit-32",
       "review": false,
       "steps": [
+        {
+          "id": "u32-come-再-intro",
+          "type": "intro",
+          "char": "再"
+        },
+        {
+          "id": "u32-come-再-trace",
+          "type": "trace",
+          "char": "再"
+        },
+        {
+          "id": "u32-come-再-build",
+          "type": "build",
+          "char": "再"
+        },
+        {
+          "id": "u32-come-再-complete",
+          "type": "complete",
+          "char": "再"
+        },
+        {
+          "id": "u32-come-再-memory",
+          "type": "memory",
+          "char": "再"
+        },
         {
           "id": "u32-come-話-intro",
           "type": "intro",
@@ -554,6 +591,11 @@ const unit:UnitData = {
           "phrase": "u32-phone"
         },
         {
+          "id": "u32-come-place",
+          "type": "phrase",
+          "phrase": "u32-place"
+        },
+        {
           "id": "u32-come-g1",
           "type": "grammar",
           "grammar": "u32-lai-vp"
@@ -572,6 +614,11 @@ const unit:UnitData = {
           "id": "u32-come-p3",
           "type": "phrase",
           "phrase": "u32-come-question"
+        },
+        {
+          "id": "u32-come-p4",
+          "type": "phrase",
+          "phrase": "u32-return-call"
         },
         {
           "id": "u32-come-s1",
@@ -675,7 +722,7 @@ const unit:UnitData = {
         {
           "id": "u32-review-p7",
           "type": "phrase",
-          "phrase": "u32-phone"
+          "phrase": "u32-return-call"
         },
         {
           "id": "u32-review-s1",
@@ -763,14 +810,14 @@ const unit:UnitData = {
           "id": "u32-review-l1",
           "type": "listen",
           "char": "左",
-          "prompt": "Listen for the side named in the sentence.",
-          "audioText": "客廳在左邊。",
+          "prompt": "Listen for the kitchen's side.",
+          "audioText": "廚房在左邊。",
           "options": [
             "左邊",
             "右邊"
           ],
           "answer": "左邊",
-          "explanation": "The sentence says the living room is on the left."
+          "explanation": "Dialogue I says the kitchen is on the left."
         },
         {
           "id": "u32-review-l2",
@@ -928,6 +975,14 @@ const unit:UnitData = {
       "core": true
     },
     {
+      "text": "再",
+      "pinyin": "zài",
+      "meaning": "and then; then",
+      "lessonId": "u32-come",
+      "core": true,
+      "note": "Orders a later action in the source dialogue: 想想，再打電話."
+    },
+    {
       "text": "電話",
       "pinyin": "diànhuà",
       "meaning": "telephone",
@@ -958,6 +1013,7 @@ const unit:UnitData = {
     "路",
     "間",
     "套",
+    "再",
     "話"
   ],
   "reviewCharacters": [],
@@ -1474,6 +1530,45 @@ const unit:UnitData = {
         "meaning": "suite"
       }
     },
+    "再": {
+      "hanzi": "再",
+      "pinyin": "zài",
+      "zhuyin": "ㄗㄞˋ",
+      "meaning": "then; again",
+      "strokes": 6,
+      "layout": "stack",
+      "note": "再 is fourth-tone zài. In this lesson it orders a later action: think first, then call.",
+      "memory": "A single top bar sits over 冉. The lower frame is crossed by a central vertical and finishes with the long horizontal.",
+      "parts": [
+        {
+          "label": "一",
+          "name": "top bar",
+          "role": "Top component",
+          "description": "Begin with the single horizontal roof.",
+          "strokes": [
+            0
+          ]
+        },
+        {
+          "label": "冉",
+          "name": "lower structure",
+          "role": "Lower component",
+          "description": "The remaining five strokes form 冉 below the roof.",
+          "strokes": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "example": {
+        "text": "再打電話",
+        "pinyin": "zài dǎ diànhuà",
+        "meaning": "then make a phone call"
+      }
+    },
     "話": {
       "hanzi": "話",
       "pinyin": "huà",
@@ -1625,12 +1720,13 @@ const unit:UnitData = {
       ]
     },
     "u32-rooms": {
-      "text": "客廳在左邊，右邊有浴室。",
-      "pinyin": "Kètīng zài zuǒbiān, yòubiān yǒu yùshì.",
-      "meaning": "The living room is on the left, and there is a bathroom on the right.",
-      "note": "左邊 and 右邊 locate the rooms.",
+      "text": "這裡是客廳，廚房在左邊，右邊有浴室。",
+      "pinyin": "Zhèlǐ shì kètīng, chúfáng zài zuǒbiān, yòubiān yǒu yùshì.",
+      "meaning": "This is the living room. The kitchen is on the left, and there is a bathroom on the right.",
+      "note": "This preserves the room layout from Dialogue I; the living room itself is not said to be on the left.",
       "tokens": [
-        "客廳在左邊",
+        "這裡是客廳",
+        "廚房在左邊",
         "右邊有浴室"
       ]
     },
@@ -1645,13 +1741,13 @@ const unit:UnitData = {
       ]
     },
     "u32-market": {
-      "text": "附近有超市。",
-      "pinyin": "Fùjìn yǒu chāoshì.",
-      "meaning": "There is a supermarket nearby.",
-      "note": "超市 is supermarket.",
+      "text": "附近有超市和捷運站。",
+      "pinyin": "Fùjìn yǒu chāoshì hé jiéyùnzhàn.",
+      "meaning": "Nearby there are a supermarket and an MRT station.",
+      "note": "Dialogue I describes the rental environment with both a supermarket and an MRT station.",
       "tokens": [
-        "附近",
-        "有超市"
+        "附近有",
+        "超市和捷運站"
       ]
     },
     "u32-walk": {
@@ -1728,6 +1824,46 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u32-early-jiu"
+      ]
+    },
+    "u32-place": {
+      "text": "房子很不錯，這裡很方便。",
+      "pinyin": "Fángzi hěn búcuò, zhèlǐ hěn fāngbiàn.",
+      "meaning": "The place is pretty good, and this area is very convenient.",
+      "note": "Both 不錯 and 方便 are previously learned words reused directly from Dialogue I.",
+      "tokens": [
+        "房子很不錯",
+        "這裡很方便"
+      ]
+    },
+    "u32-internet": {
+      "text": "房間裡面可以上網嗎？",
+      "pinyin": "Fángjiān lǐmiàn kěyǐ shàngwǎng ma?",
+      "meaning": "Can you access the internet from the room?",
+      "note": "Dialogue I reuses 裡面, 可以 and 上網 while practicing the new rental noun 房間.",
+      "tokens": [
+        "房間裡面",
+        "可以上網嗎"
+      ]
+    },
+    "u32-opinion": {
+      "text": "你覺得這間房間怎麼樣？你想租嗎？",
+      "pinyin": "Nǐ juéde zhè jiān fángjiān zěnmeyàng? Nǐ xiǎng zū ma?",
+      "meaning": "What do you think of this room? Do you want to rent it?",
+      "note": "This keeps the landlord's evaluation-and-decision sequence from Dialogue I, using neutral 你 in the practice version.",
+      "tokens": [
+        "你覺得這間房間怎麼樣",
+        "你想租嗎"
+      ]
+    },
+    "u32-return-call": {
+      "text": "我回去想想，再打電話給你。",
+      "pinyin": "Wǒ huíqù xiǎngxiang, zài dǎ diànhuà gěi nǐ.",
+      "meaning": "I'll go back and think about it, then call you.",
+      "note": "This is the closing move of Dialogue I. 再 orders the later action; 回去 and 打電話 are transparent combinations of already supported parts.",
+      "tokens": [
+        "我回去想想",
+        "再打電話給你"
       ]
     }
   },
