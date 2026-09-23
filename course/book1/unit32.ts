@@ -870,14 +870,14 @@ const unit:UnitData = {
         {
           "id": "u32-review-s4",
           "type": "select",
-          "prompt": "電話 means…",
+          "prompt": "In 我打電話給房東, which word means landlord?",
           "options": [
-            "telephone",
-            "landlord",
-            "kitchen"
+            "房東",
+            "電話",
+            "客廳"
           ],
-          "answer": "telephone",
-          "explanation": "電話 is telephone."
+          "answer": "房東",
+          "explanation": "房東 means landlord; 電話 means telephone."
         },
         {
           "id": "u32-review-s5",
