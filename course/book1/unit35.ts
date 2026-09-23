@@ -1,0 +1,1578 @@
+import type {UnitData} from '../schema.ts';
+
+const unit:UnitData = {
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 35,
+  "unit": {
+    "id": "unit-35",
+    "number": 35,
+    "theme": "indigo",
+    "label": "Tuition, future work & past-event focus",
+    "title": "Who Paid the Tuition?",
+    "description": "Finish Lesson 12 Dialogue I with tuition, company support, future work plans, studying while working, encouragement, and the 是…的 focus construction for past events.",
+    "chars": [
+      "費",
+      "司",
+      "替",
+      "希",
+      "望",
+      "班",
+      "累",
+      "加",
+      "油"
+    ],
+    "lessonIds": [
+      "u35-tuition",
+      "u35-focus",
+      "u35-decision",
+      "u35-future",
+      "u35-workstudy",
+      "u35-cheer",
+      "u35-review"
+    ],
+    "banner": {
+      "text": "我的學費是公司替我付的",
+      "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de"
+    },
+    "goal": {
+      "text": "我的學費是公司替我付的。",
+      "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de.",
+      "meaning": "My tuition is paid by my company for me."
+    },
+    "grammarIds": [
+      "u35-shi-de"
+    ],
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 12 「你在臺灣學多久的中文？」 Dialogue I tail / Vocabulary I (printed pp. 246–249) and Grammar II 是…的 (printed pp. 253–255). This unit completes Dialogue I, teaches the source past-event focus construction, and introduces standalone 以後 'in the future' from Dialogue I. Dialogue II, Vocabulary II, Grammar III Event + 以後, and Grammar IV 好/難 + verbs remain deferred."
+  },
+  "reviewLessonId": "u35-review",
+  "lessons": [
+    {
+      "id": "u35-tuition",
+      "title": "Who Paid the Tuition?",
+      "subtitle": "Learn 學費, 公司, and 替 through the source line that introduces 是…的.",
+      "chars": [
+        "費",
+        "司",
+        "替"
+      ],
+      "minutes": "13–16 min",
+      "unitId": "unit-35",
+      "review": false,
+      "steps": [
+        {
+          "id": "u35-tuition-費-intro",
+          "type": "intro",
+          "char": "費"
+        },
+        {
+          "id": "u35-tuition-費-trace",
+          "type": "trace",
+          "char": "費"
+        },
+        {
+          "id": "u35-tuition-費-build",
+          "type": "build",
+          "char": "費"
+        },
+        {
+          "id": "u35-tuition-費-complete",
+          "type": "complete",
+          "char": "費"
+        },
+        {
+          "id": "u35-tuition-費-memory",
+          "type": "memory",
+          "char": "費"
+        },
+        {
+          "id": "u35-tuition-司-intro",
+          "type": "intro",
+          "char": "司"
+        },
+        {
+          "id": "u35-tuition-司-trace",
+          "type": "trace",
+          "char": "司"
+        },
+        {
+          "id": "u35-tuition-司-build",
+          "type": "build",
+          "char": "司"
+        },
+        {
+          "id": "u35-tuition-司-complete",
+          "type": "complete",
+          "char": "司"
+        },
+        {
+          "id": "u35-tuition-司-memory",
+          "type": "memory",
+          "char": "司"
+        },
+        {
+          "id": "u35-tuition-替-intro",
+          "type": "intro",
+          "char": "替"
+        },
+        {
+          "id": "u35-tuition-替-trace",
+          "type": "trace",
+          "char": "替"
+        },
+        {
+          "id": "u35-tuition-替-build",
+          "type": "build",
+          "char": "替"
+        },
+        {
+          "id": "u35-tuition-替-complete",
+          "type": "complete",
+          "char": "替"
+        },
+        {
+          "id": "u35-tuition-替-memory",
+          "type": "memory",
+          "char": "替"
+        },
+        {
+          "id": "u35-tuition-p1",
+          "type": "phrase",
+          "phrase": "u35-tuition"
+        },
+        {
+          "id": "u35-tuition-g1",
+          "type": "grammar",
+          "grammar": "u35-shi-de"
+        },
+        {
+          "id": "u35-tuition-s1",
+          "type": "select",
+          "prompt": "What does 學費 mean?",
+          "options": [
+            "tuition",
+            "scholarship",
+            "salary"
+          ],
+          "answer": "tuition",
+          "explanation": "學費 is the source word for tuition."
+        },
+        {
+          "id": "u35-tuition-s2",
+          "type": "select",
+          "prompt": "In 我的學費是公司替我付的, what is focused by 是…的?",
+          "options": [
+            "公司",
+            "學費",
+            "我"
+          ],
+          "answer": "公司",
+          "explanation": "學費 is fronted as the topic/object; 公司 is the focused subject that paid it.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u35-focus",
+      "title": "What Part of the Past Matters?",
+      "subtitle": "Practice focusing time, place, manner, and subject—and learn what 是…的 cannot focus.",
+      "chars": [],
+      "minutes": "9–12 min",
+      "unitId": "unit-35",
+      "review": false,
+      "steps": [
+        {
+          "id": "u35-focus-p1",
+          "type": "phrase",
+          "phrase": "u35-focus-time"
+        },
+        {
+          "id": "u35-focus-p2",
+          "type": "phrase",
+          "phrase": "u35-focus-place"
+        },
+        {
+          "id": "u35-focus-p3",
+          "type": "phrase",
+          "phrase": "u35-focus-manner"
+        },
+        {
+          "id": "u35-focus-s1",
+          "type": "select",
+          "prompt": "In 他是昨天晚上到臺灣的, what is the focus?",
+          "options": [
+            "time: 昨天晚上",
+            "place: 臺灣",
+            "person: 他"
+          ],
+          "answer": "time: 昨天晚上",
+          "explanation": "是 comes directly before 昨天晚上, so the time is highlighted.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-focus-s2",
+          "type": "select",
+          "prompt": "Which sentence focuses how the speaker came to class?",
+          "options": [
+            "我是坐公車來上課的。",
+            "我是在學校附近吃晚飯的。",
+            "他是昨天晚上到臺灣的。"
+          ],
+          "answer": "我是坐公車來上課的。",
+          "explanation": "坐公車 is the manner phrase immediately after 是.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-focus-s3",
+          "type": "select",
+          "prompt": "Which element does the textbook say cannot be the focus in 是…的?",
+          "options": [
+            "the object",
+            "the time",
+            "the place"
+          ],
+          "answer": "the object",
+          "explanation": "The source allows subject, time, place, manner, and occasionally the verb as focus, but not the object.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u35-decision",
+      "title": "The Company Decides",
+      "subtitle": "Finish the duration exchange and retrieve 大概, 決定, 打算, and 是…的.",
+      "chars": [],
+      "minutes": "8–10 min",
+      "unitId": "unit-35",
+      "review": false,
+      "steps": [
+        {
+          "id": "u35-decision-p1",
+          "type": "phrase",
+          "phrase": "u35-duration-question"
+        },
+        {
+          "id": "u35-decision-p2",
+          "type": "phrase",
+          "phrase": "u35-decision"
+        },
+        {
+          "id": "u35-decision-o1",
+          "type": "order",
+          "phrase": "u35-decision",
+          "tokens": [
+            "是公司決定的",
+            "大概兩年"
+          ]
+        },
+        {
+          "id": "u35-decision-s1",
+          "type": "select",
+          "prompt": "What does 大概兩年 mean here?",
+          "options": [
+            "probably about two years",
+            "exactly two years",
+            "more than five years"
+          ],
+          "answer": "probably about two years",
+          "explanation": "大概 marks an approximate or probable amount."
+        },
+        {
+          "id": "u35-decision-s2",
+          "type": "select",
+          "prompt": "In 是公司決定的, which information is highlighted?",
+          "options": [
+            "公司",
+            "決定",
+            "兩年"
+          ],
+          "answer": "公司",
+          "explanation": "是 directly precedes 公司, so the company is the focused element.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u35-future",
+      "title": "A Good Company in the Future",
+      "subtitle": "Learn 希望, standalone 以後, and 上班 through the next source line.",
+      "chars": [
+        "希",
+        "望",
+        "班"
+      ],
+      "minutes": "13–16 min",
+      "unitId": "unit-35",
+      "review": false,
+      "steps": [
+        {
+          "id": "u35-future-希-intro",
+          "type": "intro",
+          "char": "希"
+        },
+        {
+          "id": "u35-future-希-trace",
+          "type": "trace",
+          "char": "希"
+        },
+        {
+          "id": "u35-future-希-build",
+          "type": "build",
+          "char": "希"
+        },
+        {
+          "id": "u35-future-希-complete",
+          "type": "complete",
+          "char": "希"
+        },
+        {
+          "id": "u35-future-希-memory",
+          "type": "memory",
+          "char": "希"
+        },
+        {
+          "id": "u35-future-望-intro",
+          "type": "intro",
+          "char": "望"
+        },
+        {
+          "id": "u35-future-望-trace",
+          "type": "trace",
+          "char": "望"
+        },
+        {
+          "id": "u35-future-望-build",
+          "type": "build",
+          "char": "望"
+        },
+        {
+          "id": "u35-future-望-complete",
+          "type": "complete",
+          "char": "望"
+        },
+        {
+          "id": "u35-future-望-memory",
+          "type": "memory",
+          "char": "望"
+        },
+        {
+          "id": "u35-future-班-intro",
+          "type": "intro",
+          "char": "班"
+        },
+        {
+          "id": "u35-future-班-trace",
+          "type": "trace",
+          "char": "班"
+        },
+        {
+          "id": "u35-future-班-build",
+          "type": "build",
+          "char": "班"
+        },
+        {
+          "id": "u35-future-班-complete",
+          "type": "complete",
+          "char": "班"
+        },
+        {
+          "id": "u35-future-班-memory",
+          "type": "memory",
+          "char": "班"
+        },
+        {
+          "id": "u35-future-p1",
+          "type": "phrase",
+          "phrase": "u35-future"
+        },
+        {
+          "id": "u35-future-s1",
+          "type": "select",
+          "prompt": "What does 希望 mean?",
+          "options": [
+            "hope",
+            "decide",
+            "pay"
+          ],
+          "answer": "hope",
+          "explanation": "希望 is the source verb 'to hope.'"
+        },
+        {
+          "id": "u35-future-s2",
+          "type": "select",
+          "prompt": "What does 以後 mean in this Dialogue I sentence?",
+          "options": [
+            "in the future",
+            "before class",
+            "for two years"
+          ],
+          "answer": "in the future",
+          "explanation": "Here 以後 stands alone as a future time expression. Event + 以後 'after…' comes later in Lesson 12."
+        },
+        {
+          "id": "u35-future-s3",
+          "type": "select",
+          "prompt": "What does 上班 mean?",
+          "options": [
+            "go to work",
+            "study at university",
+            "pay tuition"
+          ],
+          "answer": "go to work",
+          "explanation": "上班 is the source separable verb 'to go to work.'"
+        }
+      ]
+    },
+    {
+      "id": "u35-workstudy",
+      "title": "Work and Study",
+      "subtitle": "Learn 念書 and 累 while retrieving the earlier 又…又… pattern.",
+      "chars": [
+        "累"
+      ],
+      "minutes": "9–12 min",
+      "unitId": "unit-35",
+      "review": false,
+      "steps": [
+        {
+          "id": "u35-workstudy-累-intro",
+          "type": "intro",
+          "char": "累"
+        },
+        {
+          "id": "u35-workstudy-累-trace",
+          "type": "trace",
+          "char": "累"
+        },
+        {
+          "id": "u35-workstudy-累-build",
+          "type": "build",
+          "char": "累"
+        },
+        {
+          "id": "u35-workstudy-累-complete",
+          "type": "complete",
+          "char": "累"
+        },
+        {
+          "id": "u35-workstudy-累-memory",
+          "type": "memory",
+          "char": "累"
+        },
+        {
+          "id": "u35-workstudy-p1",
+          "type": "phrase",
+          "phrase": "u35-workstudy"
+        },
+        {
+          "id": "u35-workstudy-s1",
+          "type": "select",
+          "prompt": "What does 念書 mean here?",
+          "options": [
+            "study",
+            "pay tuition",
+            "go to work"
+          ],
+          "answer": "study",
+          "explanation": "念書 is a separable verb meaning 'to study.'"
+        },
+        {
+          "id": "u35-workstudy-s2",
+          "type": "select",
+          "prompt": "Which earlier pattern is reused in 我又要上班，又要念書?",
+          "options": [
+            "又…又…",
+            "先…再…",
+            "要是…就…"
+          ],
+          "answer": "又…又…",
+          "explanation": "又…又… links the two parallel obligations: work and study.",
+          "grammarIds": [
+            "u24-you-you"
+          ]
+        },
+        {
+          "id": "u35-workstudy-s3",
+          "type": "select",
+          "prompt": "How does the speaker feel after working and studying?",
+          "options": [
+            "很累",
+            "很好",
+            "很近"
+          ],
+          "answer": "很累",
+          "explanation": "累 means tired; 真的很累 intensifies the source reaction."
+        }
+      ]
+    },
+    {
+      "id": "u35-cheer",
+      "title": "Keep It Up",
+      "subtitle": "Finish Dialogue I with 加油 and complete the key negation/question restrictions of 是…的.",
+      "chars": [
+        "加",
+        "油"
+      ],
+      "minutes": "11–14 min",
+      "unitId": "unit-35",
+      "review": false,
+      "steps": [
+        {
+          "id": "u35-cheer-加-intro",
+          "type": "intro",
+          "char": "加"
+        },
+        {
+          "id": "u35-cheer-加-trace",
+          "type": "trace",
+          "char": "加"
+        },
+        {
+          "id": "u35-cheer-加-build",
+          "type": "build",
+          "char": "加"
+        },
+        {
+          "id": "u35-cheer-加-complete",
+          "type": "complete",
+          "char": "加"
+        },
+        {
+          "id": "u35-cheer-加-memory",
+          "type": "memory",
+          "char": "加"
+        },
+        {
+          "id": "u35-cheer-油-intro",
+          "type": "intro",
+          "char": "油"
+        },
+        {
+          "id": "u35-cheer-油-trace",
+          "type": "trace",
+          "char": "油"
+        },
+        {
+          "id": "u35-cheer-油-build",
+          "type": "build",
+          "char": "油"
+        },
+        {
+          "id": "u35-cheer-油-complete",
+          "type": "complete",
+          "char": "油"
+        },
+        {
+          "id": "u35-cheer-油-memory",
+          "type": "memory",
+          "char": "油"
+        },
+        {
+          "id": "u35-cheer-p1",
+          "type": "phrase",
+          "phrase": "u35-cheer"
+        },
+        {
+          "id": "u35-cheer-p2",
+          "type": "phrase",
+          "phrase": "u35-focus-negative"
+        },
+        {
+          "id": "u35-cheer-p3",
+          "type": "phrase",
+          "phrase": "u35-focus-when"
+        },
+        {
+          "id": "u35-cheer-s1",
+          "type": "select",
+          "prompt": "What does 加油 mean in 我們一起加油吧?",
+          "options": [
+            "keep up the good work",
+            "add cooking oil",
+            "go to work"
+          ],
+          "answer": "keep up the good work",
+          "explanation": "In this source phrase, 加油 is encouragement, not a literal instruction about oil."
+        },
+        {
+          "id": "u35-cheer-s2",
+          "type": "select",
+          "prompt": "Which negation follows the textbook 是…的 rule?",
+          "options": [
+            "我不是在圖書館看書的。",
+            "我是不在圖書館看書的。"
+          ],
+          "answer": "我不是在圖書館看書的。",
+          "explanation": "不 goes before 是: 不是…的.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-cheer-s3",
+          "type": "select",
+          "prompt": "Which past-event question correctly asks when he came to school?",
+          "options": [
+            "他是什麼時候來學校的？",
+            "他是什麼東西來學校的？"
+          ],
+          "answer": "他是什麼時候來學校的？",
+          "explanation": "是…的 can ask who, when, how, or where about a past event; the textbook excludes 'what' when it is the object.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-cheer-s4",
+          "type": "select",
+          "prompt": "Can 是 sometimes be omitted in this construction?",
+          "options": [
+            "yes, when the focus remains recoverable",
+            "no, 是 is never omitted"
+          ],
+          "answer": "yes, when the focus remains recoverable",
+          "explanation": "The textbook explicitly notes that 是 can sometimes be omitted, as in 我跟朋友一起來的.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u35-review",
+      "title": "Unit 35 Review",
+      "subtitle": "Tuition, company support, future work, work-and-study pressure, encouragement, and past-event focus.",
+      "chars": [],
+      "minutes": "13–17 min",
+      "unitId": "unit-35",
+      "review": true,
+      "steps": [
+        {
+          "id": "u35-review-p1",
+          "type": "phrase",
+          "phrase": "u35-tuition"
+        },
+        {
+          "id": "u35-review-p2",
+          "type": "phrase",
+          "phrase": "u35-duration-question"
+        },
+        {
+          "id": "u35-review-p3",
+          "type": "phrase",
+          "phrase": "u35-decision"
+        },
+        {
+          "id": "u35-review-p4",
+          "type": "phrase",
+          "phrase": "u35-future"
+        },
+        {
+          "id": "u35-review-p5",
+          "type": "phrase",
+          "phrase": "u35-workstudy"
+        },
+        {
+          "id": "u35-review-p6",
+          "type": "phrase",
+          "phrase": "u35-cheer"
+        },
+        {
+          "id": "u35-review-s1",
+          "type": "select",
+          "prompt": "Which word means tuition?",
+          "options": [
+            "學費",
+            "公司",
+            "希望"
+          ],
+          "answer": "學費",
+          "explanation": "學費 means tuition."
+        },
+        {
+          "id": "u35-review-s2",
+          "type": "select",
+          "prompt": "Which word means 'for / on behalf of'?",
+          "options": [
+            "替",
+            "累",
+            "班"
+          ],
+          "answer": "替",
+          "explanation": "替 introduces the person on whose behalf an action is done."
+        },
+        {
+          "id": "u35-review-s3",
+          "type": "select",
+          "prompt": "Which word means 'to hope'?",
+          "options": [
+            "希望",
+            "決定",
+            "打算"
+          ],
+          "answer": "希望",
+          "explanation": "希望 means to hope."
+        },
+        {
+          "id": "u35-review-s4",
+          "type": "select",
+          "prompt": "Which expression means 'in the future' in Dialogue I?",
+          "options": [
+            "以後",
+            "昨天晚上",
+            "多久"
+          ],
+          "answer": "以後",
+          "explanation": "Dialogue I uses standalone 以後 for 'in the future.'"
+        },
+        {
+          "id": "u35-review-s5",
+          "type": "select",
+          "prompt": "Which word means tired?",
+          "options": [
+            "累",
+            "好",
+            "近"
+          ],
+          "answer": "累",
+          "explanation": "累 means tired."
+        },
+        {
+          "id": "u35-review-s6",
+          "type": "select",
+          "prompt": "Which phrase is used to encourage someone?",
+          "options": [
+            "加油",
+            "上班",
+            "念書"
+          ],
+          "answer": "加油",
+          "explanation": "加油 means 'keep it up / keep up the good work.'"
+        },
+        {
+          "id": "u35-review-g1",
+          "type": "select",
+          "prompt": "Which sentence focuses the time of a past event?",
+          "options": [
+            "他是昨天晚上到臺灣的。",
+            "他是在學校附近吃晚飯的。"
+          ],
+          "answer": "他是昨天晚上到臺灣的。",
+          "explanation": "昨天晚上 follows 是, so time is the focus.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-g2",
+          "type": "select",
+          "prompt": "Which sentence focuses place?",
+          "options": [
+            "他是在學校附近吃晚飯的。",
+            "我是坐公車來上課的。"
+          ],
+          "answer": "他是在學校附近吃晚飯的。",
+          "explanation": "在學校附近 is the focused place phrase.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-g3",
+          "type": "select",
+          "prompt": "Which element cannot be focused by 是…的 according to the textbook?",
+          "options": [
+            "object",
+            "manner",
+            "time"
+          ],
+          "answer": "object",
+          "explanation": "The object may be moved to the front as topic, but it is not the focused element.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-g4",
+          "type": "select",
+          "prompt": "Which negative form is correct?",
+          "options": [
+            "不是…的",
+            "是不…的"
+          ],
+          "answer": "不是…的",
+          "explanation": "不 must come before 是.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-g5",
+          "type": "select",
+          "prompt": "Which is a valid 是…的 past-event wh-question?",
+          "options": [
+            "你是怎麼去的？",
+            "你是什麼東西看的？"
+          ],
+          "answer": "你是怎麼去的？",
+          "explanation": "The construction can ask how; the textbook rejects using it to ask 'what' as the object.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-o1",
+          "type": "order",
+          "phrase": "u35-tuition",
+          "tokens": [
+            "替我付的",
+            "我的學費",
+            "是公司"
+          ]
+        },
+        {
+          "id": "u35-review-o2",
+          "type": "order",
+          "phrase": "u35-future",
+          "tokens": [
+            "上班",
+            "希望我以後",
+            "也可以到這麼好的公司"
+          ]
+        },
+        {
+          "id": "u35-review-l1",
+          "type": "listen",
+          "char": "司",
+          "prompt": "Listen for the company word.",
+          "options": [
+            "公司",
+            "宿舍",
+            "餐廳"
+          ],
+          "answer": "公司",
+          "explanation": "公司 means company.",
+          "audioText": "我的學費是公司替我付的。"
+        },
+        {
+          "id": "u35-review-l2",
+          "type": "listen",
+          "char": "希",
+          "prompt": "Listen for the verb 'to hope'.",
+          "options": [
+            "希望",
+            "打算",
+            "決定"
+          ],
+          "answer": "希望",
+          "explanation": "希望 is the source verb 'to hope.'",
+          "audioText": "希望我以後也可以到這麼好的公司上班。"
+        },
+        {
+          "id": "u35-review-l3",
+          "type": "listen",
+          "char": "加",
+          "prompt": "Listen for the encouragement phrase.",
+          "options": [
+            "加油",
+            "上班",
+            "念書"
+          ],
+          "answer": "加油",
+          "explanation": "加油 is the encouragement phrase.",
+          "audioText": "我們一起加油吧！"
+        },
+        {
+          "id": "u35-review-m1",
+          "type": "memory",
+          "char": "費"
+        },
+        {
+          "id": "u35-review-m2",
+          "type": "memory",
+          "char": "累"
+        }
+      ]
+    }
+  ],
+  "newVocabulary": [
+    {
+      "text": "學費",
+      "pinyin": "xuéfèi",
+      "meaning": "tuition",
+      "lessonId": "u35-tuition",
+      "core": true
+    },
+    {
+      "text": "公司",
+      "pinyin": "gōngsī",
+      "meaning": "company",
+      "lessonId": "u35-tuition",
+      "core": true
+    },
+    {
+      "text": "替",
+      "pinyin": "tì",
+      "meaning": "for; on behalf of",
+      "lessonId": "u35-tuition",
+      "core": true
+    },
+    {
+      "text": "希望",
+      "pinyin": "xīwàng",
+      "meaning": "to hope",
+      "lessonId": "u35-future",
+      "core": true
+    },
+    {
+      "text": "以後",
+      "pinyin": "yǐhòu",
+      "meaning": "in the future",
+      "lessonId": "u35-future",
+      "core": true,
+      "note": "Dialogue I uses 以後 by itself as a future time expression. Event + 以後 'after…' is taught later in Lesson 12 and is deliberately deferred."
+    },
+    {
+      "text": "上班",
+      "pinyin": "shàngbān",
+      "meaning": "to go to work",
+      "lessonId": "u35-future",
+      "core": true
+    },
+    {
+      "text": "念書",
+      "pinyin": "niànshū",
+      "meaning": "to study",
+      "lessonId": "u35-workstudy",
+      "core": true
+    },
+    {
+      "text": "累",
+      "pinyin": "lèi",
+      "meaning": "tired",
+      "lessonId": "u35-workstudy",
+      "core": true
+    },
+    {
+      "text": "加油",
+      "pinyin": "jiāyóu",
+      "meaning": "keep up the good work",
+      "lessonId": "u35-cheer",
+      "core": true
+    }
+  ],
+  "reviewVocabulary": [
+    "付",
+    "打算",
+    "大概",
+    "決定",
+    "也",
+    "可以",
+    "到",
+    "這麼",
+    "好",
+    "真的",
+    "一起",
+    "吧",
+    "要",
+    "我",
+    "的",
+    "是",
+    "誰",
+    "怎麼",
+    "哪裡",
+    "圖書館",
+    "房東",
+    "電話",
+    "給"
+  ],
+  "newCharacters": [
+    "費",
+    "司",
+    "替",
+    "希",
+    "望",
+    "班",
+    "累",
+    "加",
+    "油"
+  ],
+  "reviewCharacters": [],
+  "characters": {
+    "費": {
+      "hanzi": "費",
+      "pinyin": "fèi",
+      "zhuyin": "ㄈㄟˋ",
+      "meaning": "fee; expense (in 學費)",
+      "strokes": 12,
+      "layout": "stack",
+      "note": "費 is fourth-tone fèi. In this lesson, learn it inside 學費, 'tuition.'",
+      "memory": "Write the five-stroke 弗 upper part first, then place the seven-stroke 貝 below it.",
+      "parts": [
+        {
+          "label": "弗",
+          "name": "upper component",
+          "role": "Top component",
+          "description": "The first five strokes form 弗 at the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "貝",
+          "name": "shell component",
+          "role": "Bottom component",
+          "description": "The final seven strokes form 貝 at the bottom.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "學費",
+        "pinyin": "xuéfèi",
+        "meaning": "tuition"
+      }
+    },
+    "司": {
+      "hanzi": "司",
+      "pinyin": "sī",
+      "zhuyin": "ㄙ",
+      "meaning": "manage; company element (in 公司)",
+      "strokes": 5,
+      "layout": "whole",
+      "note": "司 is first-tone sī. Here it is learned as the second character of 公司, 'company.'",
+      "memory": "Keep the outer turning stroke compact around the inner 一 and 口 structure.",
+      "parts": [
+        {
+          "label": "司",
+          "name": "whole character",
+          "role": "Whole character",
+          "description": "All five strokes form the compact 司 character.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "example": {
+        "text": "公司",
+        "pinyin": "gōngsī",
+        "meaning": "company"
+      }
+    },
+    "替": {
+      "hanzi": "替",
+      "pinyin": "tì",
+      "zhuyin": "ㄊㄧˋ",
+      "meaning": "for; on behalf of",
+      "strokes": 12,
+      "layout": "stack",
+      "note": "替 is fourth-tone tì. In 公司替我付, it marks the person on whose behalf an action is done.",
+      "memory": "Build the paired upper figures first, then finish with 日 as the four-stroke base.",
+      "parts": [
+        {
+          "label": "替",
+          "name": "upper paired structure",
+          "role": "Upper structure",
+          "description": "The first eight strokes form the paired upper structure.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "label": "日",
+          "name": "sun component",
+          "role": "Bottom component",
+          "description": "The final four strokes form 日.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "替我付",
+        "pinyin": "tì wǒ fù",
+        "meaning": "pay for me; pay on my behalf"
+      }
+    },
+    "希": {
+      "hanzi": "希",
+      "pinyin": "xī",
+      "zhuyin": "ㄒㄧ",
+      "meaning": "hope (in 希望)",
+      "strokes": 7,
+      "layout": "stack",
+      "note": "希 is first-tone xī. Learn it together with 望 in 希望, 'to hope.'",
+      "memory": "Start with the crossed top strokes, then build the 布-like lower structure underneath.",
+      "parts": [
+        {
+          "label": "乂",
+          "name": "crossed top",
+          "role": "Top component",
+          "description": "The first two strokes form the crossed top.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "布",
+          "name": "lower structure",
+          "role": "Lower component",
+          "description": "The final five strokes form the lower 布-like structure.",
+          "strokes": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "example": {
+        "text": "希望",
+        "pinyin": "xīwàng",
+        "meaning": "to hope"
+      }
+    },
+    "望": {
+      "hanzi": "望",
+      "pinyin": "wàng",
+      "zhuyin": "ㄨㄤˋ",
+      "meaning": "hope; look toward (in 希望)",
+      "strokes": 11,
+      "layout": "stack",
+      "note": "望 is fourth-tone wàng. In this lesson it completes 希望, 'to hope.'",
+      "memory": "Set 亡 and 月 across the upper area, then anchor the character with 王 at the bottom.",
+      "parts": [
+        {
+          "label": "亡",
+          "name": "upper-left component",
+          "role": "Upper-left component",
+          "description": "The first three strokes form 亡.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "月",
+          "name": "moon component",
+          "role": "Upper-right component",
+          "description": "The next four strokes form 月.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "王",
+          "name": "king component",
+          "role": "Bottom component",
+          "description": "The final four strokes form 王.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "example": {
+        "text": "希望",
+        "pinyin": "xīwàng",
+        "meaning": "to hope"
+      }
+    },
+    "班": {
+      "hanzi": "班",
+      "pinyin": "bān",
+      "zhuyin": "ㄅㄢ",
+      "meaning": "work shift; class (in 上班)",
+      "strokes": 10,
+      "layout": "side",
+      "note": "班 is first-tone bān. Here it appears in 上班, 'to go to work.'",
+      "memory": "Keep the left and right jade-like sides balanced around the narrow center.",
+      "parts": [
+        {
+          "label": "班",
+          "name": "whole character",
+          "role": "Whole character",
+          "description": "All ten strokes form the balanced left-center-right structure of 班.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "example": {
+        "text": "上班",
+        "pinyin": "shàngbān",
+        "meaning": "to go to work"
+      }
+    },
+    "累": {
+      "hanzi": "累",
+      "pinyin": "lèi",
+      "zhuyin": "ㄌㄟˋ",
+      "meaning": "tired",
+      "strokes": 11,
+      "layout": "stack",
+      "note": "累 is fourth-tone lèi. The Lesson 12 line 真的很累 describes being exhausted from working and studying.",
+      "memory": "Write 田 first, then place the six-stroke 糸 thread component underneath.",
+      "parts": [
+        {
+          "label": "田",
+          "name": "field component",
+          "role": "Top component",
+          "description": "The first five strokes form 田.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "糸",
+          "name": "thread component",
+          "role": "Bottom component",
+          "description": "The final six strokes form 糸.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "example": {
+        "text": "很累",
+        "pinyin": "hěn lèi",
+        "meaning": "very tired"
+      }
+    },
+    "加": {
+      "hanzi": "加",
+      "pinyin": "jiā",
+      "zhuyin": "ㄐㄧㄚ",
+      "meaning": "add; first character of 加油",
+      "strokes": 5,
+      "layout": "side",
+      "note": "加 is first-tone jiā. In 加油, the whole expression is encouragement: 'keep it up / keep up the good work.'",
+      "memory": "Write 力 on the left, then add the three-stroke 口 on the right.",
+      "parts": [
+        {
+          "label": "力",
+          "name": "strength component",
+          "role": "Left component",
+          "description": "The first two strokes form 力.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "口",
+          "name": "mouth component",
+          "role": "Right component",
+          "description": "The final three strokes form 口.",
+          "strokes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "example": {
+        "text": "加油",
+        "pinyin": "jiāyóu",
+        "meaning": "keep up the good work"
+      }
+    },
+    "油": {
+      "hanzi": "油",
+      "pinyin": "yóu",
+      "zhuyin": "ㄧㄡˊ",
+      "meaning": "oil; second character of 加油",
+      "strokes": 8,
+      "layout": "side",
+      "note": "油 is second-tone yóu. In 加油, do not translate the two characters literally; the phrase is used to encourage someone.",
+      "memory": "Keep 氵 narrow on the left and write the five-stroke 由 clearly on the right.",
+      "parts": [
+        {
+          "label": "氵",
+          "name": "water component",
+          "role": "Left component",
+          "description": "The first three strokes form 氵.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "由",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final five strokes form 由.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "加油",
+        "pinyin": "jiāyóu",
+        "meaning": "keep up the good work"
+      }
+    }
+  },
+  "grammarRules": {
+    "u35-shi-de": {
+      "id": "u35-shi-de",
+      "title": "Focus a past event with 是…的",
+      "pattern": "Subject / Topic + 是 + Focus + Activity + 的",
+      "explanation": "是…的 highlights one element of a past event as the focus or contrast. The focused element can be the subject, time, place, manner, and occasionally the verb, but not the object. An object is often moved to the front as the topic, as in 學費是公司替我付的. Put 不 before 是 for negation. 是 can sometimes be omitted. For past-event wh-questions, ask who, when, how, or where inside the construction; the textbook specifically excludes using it to ask 'what' when 'what' is the object.",
+      "examples": [
+        {
+          "text": "學費是公司替我付的。",
+          "pinyin": "Xuéfèi shì gōngsī tì wǒ fù de.",
+          "meaning": "It is the company that pays my tuition for me."
+        },
+        {
+          "text": "他是昨天晚上到臺灣的。",
+          "pinyin": "Tā shì zuótiān wǎnshang dào Táiwān de.",
+          "meaning": "It was last night that he arrived in Taiwan."
+        },
+        {
+          "text": "他是在學校附近吃晚飯的。",
+          "pinyin": "Tā shì zài xuéxiào fùjìn chī wǎnfàn de.",
+          "meaning": "It was near the school that he ate dinner."
+        },
+        {
+          "text": "我是坐公車來上課的。",
+          "pinyin": "Wǒ shì zuò gōngchē lái shàngkè de.",
+          "meaning": "I came to class by bus."
+        },
+        {
+          "text": "我不是在圖書館看書的。",
+          "pinyin": "Wǒ bú shì zài túshūguǎn kàn shū de.",
+          "meaning": "It wasn't at the library that I read."
+        }
+      ],
+      "remember": "Use 是 directly before the information you want to focus; put 的 at the end. For negation, use 不是…, not 是不…. Do not use the construction to focus the object."
+    }
+  },
+  "grammarIntroductions": [
+    {
+      "id": "u35-shi-de",
+      "kind": "rule",
+      "ref": "u35-shi-de",
+      "lessonId": "u35-tuition",
+      "stepId": "u35-tuition-g1"
+    }
+  ],
+  "reviewGrammar": [
+    "u24-you-you"
+  ],
+  "phrases": {
+    "u35-tuition": {
+      "text": "我的學費是公司替我付的。",
+      "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de.",
+      "meaning": "My tuition is paid by my company for me.",
+      "note": "Source Dialogue I. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
+      "tokens": [
+        "我的學費",
+        "是公司",
+        "替我付的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-duration-question": {
+      "text": "你打算學多久呢？",
+      "pinyin": "Nǐ dǎsuàn xué duō jiǔ ne?",
+      "meaning": "And how long do you plan to study?",
+      "note": "This retrieves 打算 and 多久 from earlier units.",
+      "tokens": [
+        "你打算",
+        "學多久呢"
+      ]
+    },
+    "u35-decision": {
+      "text": "大概兩年，是公司決定的。",
+      "pinyin": "Dàgài liǎng nián, shì gōngsī juédìng de.",
+      "meaning": "Probably two years. It is the company that decides.",
+      "note": "Source Dialogue I. 是…的 focuses 公司 as the decider.",
+      "tokens": [
+        "大概兩年",
+        "是公司決定的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-future": {
+      "text": "希望我以後也可以到這麼好的公司上班。",
+      "pinyin": "Xīwàng wǒ yǐhòu yě kěyǐ dào zhème hǎo de gōngsī shàngbān.",
+      "meaning": "I hope that in the future I can work at such a good company too.",
+      "note": "Here 以後 stands alone as a future time expression. Lesson 12 later teaches Event + 以後 'after…'; that grammar is deliberately deferred.",
+      "tokens": [
+        "希望我以後",
+        "也可以到這麼好的公司",
+        "上班"
+      ]
+    },
+    "u35-workstudy": {
+      "text": "我又要上班，又要念書，真的很累。",
+      "pinyin": "Wǒ yòu yào shàngbān, yòu yào niànshū, zhēnde hěn lèi.",
+      "meaning": "I have to both work and study. It is exhausting.",
+      "note": "This retrieves the earlier 又…又… pattern while adding 上班, 念書, and 累.",
+      "tokens": [
+        "我又要上班",
+        "又要念書",
+        "真的很累"
+      ],
+      "grammarIds": [
+        "u24-you-you"
+      ]
+    },
+    "u35-cheer": {
+      "text": "我們一起加油吧！",
+      "pinyin": "Wǒmen yìqǐ jiāyóu ba!",
+      "meaning": "Let's keep up the good work!",
+      "note": "加油 is the source encouragement phrase at the end of Dialogue I.",
+      "tokens": [
+        "我們一起",
+        "加油吧"
+      ]
+    },
+    "u35-focus-time": {
+      "text": "他是昨天晚上到臺灣的。",
+      "pinyin": "Tā shì zuótiān wǎnshang dào Táiwān de.",
+      "meaning": "It was last night that he arrived in Taiwan.",
+      "note": "是 directly precedes the focused time expression.",
+      "tokens": [
+        "他是昨天晚上",
+        "到臺灣的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-place": {
+      "text": "他是在學校附近吃晚飯的。",
+      "pinyin": "Tā shì zài xuéxiào fùjìn chī wǎnfàn de.",
+      "meaning": "It was near the school that he ate dinner.",
+      "note": "是 directly precedes the focused place expression 在學校附近.",
+      "tokens": [
+        "他是在學校附近",
+        "吃晚飯的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-manner": {
+      "text": "我是坐公車來上課的。",
+      "pinyin": "Wǒ shì zuò gōngchē lái shàngkè de.",
+      "meaning": "I came to class by bus.",
+      "note": "是 directly precedes the focused manner phrase 坐公車.",
+      "tokens": [
+        "我是坐公車",
+        "來上課的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-negative": {
+      "text": "我不是在圖書館看書的。",
+      "pinyin": "Wǒ bú shì zài túshūguǎn kàn shū de.",
+      "meaning": "It wasn't at the library that I read.",
+      "note": "The textbook places 不 before 是: 不是…的.",
+      "tokens": [
+        "我不是在圖書館",
+        "看書的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-when": {
+      "text": "他是什麼時候來學校的？",
+      "pinyin": "Tā shì shénme shíhou lái xuéxiào de?",
+      "meaning": "When was it that he came to school?",
+      "note": "A past-event wh-question can ask for time inside 是…的.",
+      "tokens": [
+        "他是什麼時候",
+        "來學校的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u35-tuition-s2",
+    "u35-focus-s3",
+    "u35-cheer-s2",
+    "u35-review-g3",
+    "u35-review-g4"
+  ]
+};
+export default unit;
