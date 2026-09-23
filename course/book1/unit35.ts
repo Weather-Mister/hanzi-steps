@@ -1571,7 +1571,7 @@ const unit:UnitData = {
       "text": "我的學費是公司替我付的。",
       "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de.",
       "meaning": "My tuition is paid by my company for me.",
-      "note": "Source Dialogue I. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
+      "note": "Source Dialogue I. This answers the preceding 你呢？ from the scholarship turn. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
       "tokens": [
         "我的學費",
         "是公司",
