@@ -712,7 +712,7 @@ const unit:UnitData = {
         {
           "id": "u32-review-p4",
           "type": "phrase",
-          "phrase": "u32-kitchen"
+          "phrase": "u32-internet"
         },
         {
           "id": "u32-review-p5",
