@@ -112,6 +112,13 @@ The rule explained both branches but did not show the source mixed example.
 Repair:
 - added 這個歌好聽也好唱。 / Zhège gē hǎotīng yě hǎochàng. to the grammar card.
 
+### 5. Two 是…的 yes/no distractors were too linguistically arguable
+The correct source pattern was always keyed, but the distractors used alternative-looking question shapes that could be read as broader Mandarin constructions rather than cleanly wrong Lesson 12 forms.
+
+Repair:
+- replaced them with unmistakably misplaced 嗎 forms;
+- added a regression preventing the old 是不是-style distractor from returning.
+
 ## Teaching-order / learner-boundary audit
 
 The integrated static audit verifies:
