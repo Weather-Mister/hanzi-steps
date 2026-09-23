@@ -350,6 +350,13 @@ html[data-feedback-motion=off] button:is(:active,:hover) { transform: none !impo
 .settings-dialog .account-panel { flex-wrap:wrap; margin-top:8px; margin-bottom:0; }
 @media(max-width:700px) { .account-panel { flex-wrap:wrap; gap:12px; } .account-panel .primary-button { width:100%; } .account-panel.signed-in { flex-wrap:nowrap; } }
 
+/* Desktop-only navigation labels are intentionally hidden on mobile/tablet.
+   Their styling lives in desktop.css; without it they render as stray headings. */
+@media(max-width:1099px) {
+ .course-navigation-heading,
+ .course-navigation-label { display:none; }
+}
+
 /* Book navigation keeps the existing unit and lesson surfaces. */
 .book-switcher { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:10px 0 22px; }
 .book-switcher button { display:flex; align-items:center; gap:12px; text-align:left; padding:15px 18px; min-width:0; border:1px solid var(--unit-border); border-radius:14px; background:#fff; color:#43536a; }
