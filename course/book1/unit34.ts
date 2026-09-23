@@ -768,6 +768,18 @@ const unit:UnitData = {
           "explanation": "獎學金 means scholarship."
         },
         {
+          "id": "u34-review-s5",
+          "type": "select",
+          "prompt": "In 這得花不少錢, what does 花 mean?",
+          "options": [
+            "spend / cost",
+            "flower",
+            "study"
+          ],
+          "answer": "spend / cost",
+          "explanation": "With money as its object, 花 is the verb 'spend; cost.'"
+        },
+        {
           "id": "u34-review-g1",
           "type": "select",
           "prompt": "You want to say 'I study Chinese first, then university.' Which sentence has the correct sequence markers?",
