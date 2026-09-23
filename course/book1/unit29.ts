@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "Visit plans, conditions & fruit",
     "title": "If You Come to Visit",
-    "description": "Finish Lesson 9 visit dates and conditions, then transition into Lesson 10 fruit language through one continuing visit-and-hosting context rather than unrelated mini-lessons.",
+    "description": "Finish Lesson 9 visit dates and conditions with the remaining source vocabulary, then transition into Lesson 10 fruit language through one continuing visit-and-hosting context.",
     "chars": [
       "月",
       "號",
@@ -21,7 +21,8 @@ const unit:UnitData = {
       "黃",
       "色",
       "給",
-      "香"
+      "香",
+      "逛"
     ],
     "lessonIds": [
       "u29-date",
@@ -42,7 +43,7 @@ const unit:UnitData = {
       "u29-calendar-date",
       "u29-yaoshi-jiu"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue II / Vocabulary II and Grammar I/V (printed pp. 185–193), then Lesson 10 Dialogue I / Vocabulary I opening material (printed pp. 202–204). After the supported Lesson 9 content, this rebalance adds 水果, 黃色, 給, 香, 甜 and 以前 from the next source section while preserving every published Unit 29 step prefix. 逛 and 臺東 remain separately tracked source gaps pending verified Taiwan Traditional handwriting support."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 9 Dialogue II / Vocabulary II and Grammar I/V (printed pp. 185–193), then Lesson 10 Dialogue I / Vocabulary I opening material (printed pp. 202–204). This pass restores the source-listed 女 + noun pattern and 逛, then continues with 水果, 黃色, 給, 香, 甜 and 以前. Existing published step IDs and positions remain stable."
   },
   "reviewLessonId": "u29-review",
   "lessons": [
@@ -694,7 +695,7 @@ const unit:UnitData = {
         {
           "id": "u29-integrate-p3",
           "type": "phrase",
-          "phrase": "u29-maokong"
+          "phrase": "u29-stroll"
         },
         {
           "id": "u29-integrate-p4",
@@ -864,14 +865,14 @@ const unit:UnitData = {
         {
           "id": "u29-review-10",
           "type": "select",
-          "prompt": "Which place name is Maokong?",
+          "prompt": "Which verb means “to wander around / look around,” as in 去逛逛?",
           "options": [
-            "貓空",
-            "夜市",
-            "茶館"
+            "逛",
+            "帶",
+            "決定"
           ],
-          "answer": "貓空",
-          "explanation": "貓空 is the proper name."
+          "answer": "逛",
+          "explanation": "逛 means to wander or look around; the dialogue uses 去逛逛 for a casual visit."
         },
         {
           "id": "u29-review-11",
@@ -987,14 +988,14 @@ const unit:UnitData = {
         {
           "id": "u29-review-20",
           "type": "select",
-          "prompt": "Which sentence uses 還 to add another item?",
+          "prompt": "In Lesson 9 Vocabulary II, what does 女 do in 女學生?",
           "options": [
-            "這裡還有茶館。",
-            "我還不知道。",
-            "我九月三十號回國。"
+            "Marks the person as female",
+            "Means the person is young",
+            "Means the person is a friend"
           ],
-          "answer": "這裡還有茶館。",
-          "explanation": "還有 means there is/are also something else."
+          "answer": "Marks the person as female",
+          "explanation": "女 + person noun works as female-/girl-, for example 女學生. This is distinct from simply memorizing the fixed word 女朋友."
         },
         {
           "id": "u29-review-21",
@@ -1111,6 +1112,22 @@ const unit:UnitData = {
       "core": true
     }
   ],
+    {
+      "text": "女",
+      "pinyin": "nǚ",
+      "meaning": "female-; girl- (before a person noun)",
+      "lessonId": "u29-date",
+      "core": false,
+      "note": "Lesson 9 Vocabulary II gives 女 + noun as a productive person label, for example 女學生."
+    },
+    {
+      "text": "逛",
+      "pinyin": "guàng",
+      "meaning": "to wander around; look around",
+      "lessonId": "u29-integrate",
+      "core": false,
+      "note": "The dialogue uses 去逛逛 for going to look around a night market."
+    },
   "reviewVocabulary": [
     "女朋友",
     "來",
@@ -1135,7 +1152,8 @@ const unit:UnitData = {
     "黃",
     "色",
     "給",
-    "香"
+    "香",
+    "逛"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -1558,6 +1576,39 @@ const unit:UnitData = {
         "pinyin": "shuǐguǒ hěn xiāng",
         "meaning": "the fruit smells fragrant"
       }
+    },
+    "逛": {
+      "hanzi": "逛",
+      "pinyin": "guàng",
+      "zhuyin": "ㄍㄨㄤˋ",
+      "meaning": "wander around; look around",
+      "strokes": 10,
+      "layout": "side",
+      "note": "逛 is fourth-tone guàng. Lesson 9 uses 去逛逛 for going to look around a night market.",
+      "memory": "Write the seven-stroke 狂 body first, then finish with the three-stroke movement component 辶 wrapping along the lower-left.",
+      "parts": [
+        {
+          "label": "狂",
+          "name": "inner component",
+          "role": "Inner component",
+          "description": "The first seven strokes form 狂, the compact inner body of 逛.",
+          "strokes": [0,1,2,3,4,5,6]
+        },
+        {
+          "label": "辶",
+          "name": "movement component",
+          "role": "Wrapping component",
+          "description": "The final three strokes form 辶 and sweep around the lower-left of the inner body.",
+          "strokes": [7,8,9]
+        }
+      ],
+      "example": {
+        "text": "逛夜市",
+        "pinyin": "guàng yèshì",
+        "meaning": "wander around a night market"
+      },
+      "layoutLabel": "Wraparound",
+      "partOrderLabel": "inner 狂, then wrapping 辶"
     }
   },
   "grammarRules": {
@@ -1635,7 +1686,7 @@ const unit:UnitData = {
       "text": "我女朋友九月三十號要來看我。",
       "pinyin": "Wǒ nǚpéngyou jiǔyuè sānshí hào yào lái kàn wǒ.",
       "meaning": "My girlfriend is coming to see me on September 30.",
-      "note": "九月三十號 is a complete Time-When expression.",
+      "note": "九月三十號 is a complete Time-When expression. Lesson 9 also gives 女 + person noun as female-/girl- (for example 女學生); 女朋友 is the fixed word girlfriend.",
       "tokens": [
         "我女朋友九月三十號",
         "要來看我"
@@ -1786,6 +1837,16 @@ const unit:UnitData = {
       "tokens": [
         "我以前",
         "不喜歡吃水果"
+      ]
+    },
+    "u29-stroll": {
+      "text": "臺灣的夜市很有名，你們應該去逛逛。",
+      "pinyin": "Táiwān de yèshì hěn yǒumíng, nǐmen yīnggāi qù guàngguang.",
+      "meaning": "Taiwan's night markets are famous; you should go look around.",
+      "note": "This restores the Lesson 9 dialogue use of 逛. Reduplication 逛逛 makes the activity light/casual here.",
+      "tokens": [
+        "臺灣的夜市很有名",
+        "你們應該去逛逛"
       ]
     }
   },
