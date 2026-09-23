@@ -105,6 +105,13 @@ test('Every new grammar target is independently assessed in its review',()=>{
   }
 });
 
+
+test('Lesson 9 Vocabulary II is cumulatively accounted for through Unit 29',()=>{
+  const taught=new Set(course.modules.filter(m=>m.bookId==='book-1'&&m.order<=29).flatMap(m=>m.newVocabulary.map(v=>v.text)));
+  for(const word of ['女','月','號','帶','她','還','建議','夜市','應該','逛','特別','茶館','決定','要是','就','貓空'])
+    assert.ok(taught.has(word),`Lesson 9 Vocabulary II missing ${word}`);
+});
+
 test('Unit 29 closes its Dialogue II vocabulary gap while earlier out-of-scope gaps remain explicit',()=>{
   assert.ok(u29.newVocabulary.some(w=>w.text==='逛'));
   assert.ok(u29.newCharacters.includes('逛'));
