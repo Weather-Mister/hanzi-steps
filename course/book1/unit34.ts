@@ -847,8 +847,8 @@ const unit:UnitData = {
           "audioText": "我先念中文，再念大學。",
           "options": [
             "先",
-            "再",
-            "久"
+            "久",
+            "成績"
           ],
           "answer": "先",
           "explanation": "先 marks the first action."
@@ -1630,7 +1630,7 @@ const unit:UnitData = {
   },
   "grammarIntroductions": [
     {
-      "id": "u34-first-then-intro",
+      "id": "u34-first-then",
       "kind": "rule",
       "ref": "u34-first-then",
       "lessonId": "u34-sequence",
