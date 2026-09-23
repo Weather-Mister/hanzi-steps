@@ -713,7 +713,7 @@ const unit:UnitData = {
         {
           "id": "u32-review-p4",
           "type": "phrase",
-          "phrase": "u32-internet"
+          "phrase": "u32-come-in"
         },
         {
           "id": "u32-review-p5",
@@ -740,7 +740,7 @@ const unit:UnitData = {
             "浴室"
           ],
           "answer": "套房",
-          "explanation": "套房 is a suite."
+          "explanation": "套房 is a suite/room with its own bathroom in this lesson."
         },
         {
           "id": "u32-review-s2",
@@ -1762,7 +1762,7 @@ const unit:UnitData = {
       "text": "我想租套房。",
       "pinyin": "Wǒ xiǎng zū tàofáng.",
       "meaning": "I want to rent a suite.",
-      "note": "租 is the verb rent; 套房 is a suite.",
+      "note": "租 is the verb rent; 套房 here is a suite/room with its own bathroom.",
       "tokens": [
         "我想",
         "租套房"
