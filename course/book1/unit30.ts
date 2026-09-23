@@ -1424,12 +1424,12 @@ const unit:UnitData = {
       ]
     },
     "u30-piece": {
-      "text": "這個黃色的水果叫芒果。我給你一塊。",
-      "pinyin": "Zhège huángsè de shuǐguǒ jiào mángguǒ. Wǒ gěi nǐ yí kuài.",
-      "meaning": "This yellow fruit is called mango. I'll give you a piece.",
-      "note": "This follows Dialogue I: the yellow fruit is 芒果, and 塊 counts a piece of food after the fruit is already understood.",
+      "text": "這個黃色的水果是芒果。我給你一塊。",
+      "pinyin": "Zhège huángsè de shuǐguǒ shì mángguǒ. Wǒ gěi nǐ yí kuài.",
+      "meaning": "This yellow fruit is mango. I'll give you a piece.",
+      "note": "This keeps the textbook's yellow-mango context while using already-covered 是 rather than introducing 叫 before it is taught. 塊 counts a piece of food after the fruit is understood.",
       "tokens": [
-        "這個黃色的水果叫芒果",
+        "這個黃色的水果是芒果",
         "我給你一塊"
       ]
     },
