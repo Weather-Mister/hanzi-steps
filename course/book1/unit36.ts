@@ -568,7 +568,7 @@ const unit:UnitData = {
           "options": [
             "你覺得那個電影好看不好看？",
             "你覺得那個電影好看不看？",
-            "你覺得那個電影有沒有好看？"
+            "你覺得那個電影好不看？"
           ],
           "answer": "你覺得那個電影好看不好看？",
           "explanation": "For the perception word 好看, the textbook's A-not-A example repeats the whole compound: 好看不好看.",
@@ -828,8 +828,8 @@ const unit:UnitData = {
           "prompt": "Which source-style A-not-A question asks whether the dessert taught today is hard to learn to make?",
           "options": [
             "老師今天教的甜點難不難學？",
-            "老師今天教的甜點難學不學？",
-            "老師今天教的甜點有沒有難學？"
+            "老師今天教的甜點難不學？",
+            "老師今天教的甜點不難學難？"
           ],
           "answer": "老師今天教的甜點難不難學？",
           "explanation": "The source uses 難不難 + action verb here: 難不難學 asks whether it is difficult to learn to make the dessert.",
