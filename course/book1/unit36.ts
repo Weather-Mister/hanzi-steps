@@ -564,14 +564,14 @@ const unit:UnitData = {
         {
           "id": "u36-hard-s4",
           "type": "select",
-          "prompt": "Which source question asks whether today's dessert is difficult to learn?",
+          "prompt": "Which A-not-A form matches the textbook's perception-verb question?",
           "options": [
-            "老師今天教的甜點難不難學？",
-            "老師今天教的甜點難學不？",
-            "老師今天教的甜點有沒有難學？"
+            "你覺得那個電影好看不好看？",
+            "你覺得那個電影好看不看？",
+            "你覺得那個電影有沒有好看？"
           ],
-          "answer": "老師今天教的甜點難不難學？",
-          "explanation": "The source uses 好不好 + verb and 難不難 + verb as question patterns.",
+          "answer": "你覺得那個電影好看不好看？",
+          "explanation": "For the perception word 好看, the textbook's A-not-A example repeats the whole compound: 好看不好看.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -816,7 +816,7 @@ const unit:UnitData = {
             "便宜的咖啡沒好喝。"
           ],
           "answer": "便宜的咖啡不好喝。",
-          "explanation": "Put 不 before the whole 難 + verb predicate.",
+          "explanation": "Put 不 before the whole 好/難 + verb expression. Here 不好喝 is the perception-verb negative from the source.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -824,14 +824,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g7",
           "type": "select",
-          "prompt": "Which source-style A-not-A question uses 難 + an action verb?",
+          "prompt": "Which source-style A-not-A question asks whether the dessert taught today is hard to learn to make?",
           "options": [
             "老師今天教的甜點難不難學？",
             "老師今天教的甜點難學不學？",
             "老師今天教的甜點有沒有難學？"
           ],
           "answer": "老師今天教的甜點難不難學？",
-          "explanation": "The source uses 難不難 + action verb: 難不難學 asks whether something is difficult to learn.",
+          "explanation": "The source uses 難不難 + action verb here: 難不難學 asks whether it is difficult to learn to make the dessert.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -1140,13 +1140,13 @@ const unit:UnitData = {
       "meaning": "difficult; hard to",
       "strokes": 19,
       "note": "難 is second-tone nán. Before an action verb in Lesson 12, it means 'hard/difficult to': 難找 'hard to find', 難學 'hard to learn'.",
-      "memory": "Keep the dense eleven-stroke left component compact, then write the eight-stroke 隹 'short-tailed bird' clearly on the right.",
+      "memory": "Build the eleven-stroke left side as 廿 above an interwoven 口 and 夫, then add the eight-stroke 隹 'short-tailed bird' on the right.",
       "parts": [
         {
-          "label": "𦰩",
+          "label": "廿＋口／夫",
           "name": "left structural component",
           "role": "Left component",
-          "description": "The first eleven strokes form the dense left-side component of 難.",
+          "description": "The first eleven strokes form the left side: 廿 above an interwoven 口 and 夫, matching the Traditional decomposition ⿱廿⿻口夫.",
           "strokes": [
             0,
             1,
@@ -1220,7 +1220,7 @@ const unit:UnitData = {
       "id": "u36-hao-nan-verb",
       "title": "Special meanings of 好 / 難 + verbs",
       "pattern": "好 / 難 + Verb",
-      "explanation": "The textbook separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Questions can use 嗎 or A-not-A forms such as 好不好找 and 難不難學.",
+      "explanation": "The textbook separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Both branches can form 嗎 questions. For A-not-A questions, the source's perception example repeats the whole compound (好看不好看), while action-verb examples put the contrast before the action verb (好不好賣, 難不難學).",
       "examples": [
         {
           "text": "日本菜好吃也好看。",
@@ -1243,7 +1243,7 @@ const unit:UnitData = {
           "meaning": "Cheap suites near the school are not easy to find."
         }
       ],
-      "remember": "Perception verb: 好/難 describes how it tastes, sounds, looks, etc. Action verb: 好 = easy to, 難 = hard to. Put 不 before the whole combination; ask 好不好V / 難不難V."
+      "remember": "Perception branch: 好吃、好看, etc. are whole perception words; a source A-not-A form is 好看不好看. Action branch: 好 = easy to and 難 = hard to; ask 好不好 + V or 難不難 + V. Put 不 before the whole predicate in negatives."
     }
   },
   "grammarIntroductions": [
@@ -1284,7 +1284,7 @@ const unit:UnitData = {
       "text": "去年，我已經在臺灣工作一年了。",
       "pinyin": "Qùnián, wǒ yǐjīng zài Táiwān gōngzuò yì nián le.",
       "meaning": "Last year. I have been working in Taiwan for a year.",
-      "note": "Source Dialogue II. Treat this as the dialogue's duration-to-date statement; the later formal double-了 grammar is not being introduced here.",
+      "note": "Source Dialogue II. Treat this as the dialogue's duration-to-date statement; Unit 36 keeps it as dialogue comprehension rather than declaring an additional duration grammar rule.",
       "tokens": [
         "去年",
         "我已經在臺灣",
