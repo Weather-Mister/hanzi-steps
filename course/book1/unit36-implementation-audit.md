@@ -63,6 +63,40 @@ Repair:
 
 These changes do not introduce new grammar or vocabulary; they increase retrieval breadth for material already present in Lesson 12 (Grammar IV, printed pp. 257–258).
 
+### 6. Grammar IV A-not-A handling was too compressed
+The first published rule correctly taught 好/難 + verb, but its question summary treated A-not-A forms as though the two branches behaved identically. The textbook separates them more carefully: its perception example is 好看不好看, while its action examples are 好不好賣 and 難不難學.
+
+Repair:
+- the grammar explanation and memory note now state the branch-specific A-not-A patterns;
+- one teaching check now retrieves the source perception question 你覺得那個電影好看不好看？;
+- the review separately retains the action pattern 老師今天教的甜點難不難學？;
+- the dessert prompt/explanation now reflects the source meaning “hard to learn to make,” rather than the awkward “hard to learn a dessert.”
+
+### 7. A review explanation mismatched its own answer
+The repaired perception-negative question used 便宜的咖啡不好喝, but its explanation still said to put 不 before a 難 + verb predicate.
+
+Repair:
+- the explanation now correctly describes 不 before the whole 好/難 + verb expression and identifies 不好喝 as the source perception negative.
+
+### 8. 難 component guidance was structurally too opaque
+The original card grouped the left eleven strokes under the rare label 𦰩 and described them only as a “dense left-side component.” AnimCJK’s Traditional decomposition is ⿰⿱廿⿻口夫隹.
+
+Repair:
+- the highlighted stroke grouping remains unchanged and complete;
+- the learner-facing label is now 廿＋口／夫;
+- the description explains 廿 above an interwoven 口 and 夫, followed by 隹;
+- the memory cue now mirrors the verified Traditional structure.
+
+### 9. The duration note made an unnecessary claim outside Lesson 12
+The line 去年，我已經在臺灣工作一年了。 is source Dialogue II, but the prior note justified not teaching it by referring to a later “double-了” grammar point.
+
+Repair:
+- removed the unsupported forward claim;
+- the note now simply says the source line is retained for dialogue comprehension without inventing an extra Unit 36 grammar rule.
+
+### 10. End-of-lesson activities were checked explicitly
+The deep audit extended past Dialogue II and Grammar IV through the Lesson 12 integrated activities and self-assessment. Those pages reinforce study/future plans, 先…再…, 是…的, and work-experience discussion; they do not add a fifth formal grammar point or an unaccounted Vocabulary I/II item.
+
 ## Pedagogy and sequencing
 
 - 工 and 作 are introduced before 工作 is assessed.
@@ -81,7 +115,7 @@ Declared stroke/component models:
 - 試: 言 + 式, 13 strokes.
 - 難: 11-stroke left structural component + 隹, 19 strokes.
 
-Feature QA hydration on the implementation head confirmed the declared Traditional stroke sources and generated the checked stroke artifact. Exact Unicode targets remain mandatory; never substitute a different Simplified/Japanese codepoint.
+Feature QA hydration confirmed all four Unit 36 characters from AnimCJK `graphicsZhHant.txt` using their exact Unicode targets: 工、作、試、難. The hydration job did not use a Hans or Japanese fallback for this unit. The AnimCJK master revision audited here is `ec5e17cca76c87587790bcbce5ea0b4d4fb753d6`.
 
 ## Publication gate
 
