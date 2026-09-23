@@ -23,7 +23,7 @@ The lower NEW-vocabulary count is deliberate: Grammar II has unusually dense res
 
 ## Dialogue I coverage completed here
 
-- 我的學費是公司替我付的。
+- 我的學費是公司替我付的。 (answers the preceding 你呢？ handoff from Unit 34)
 - 你打算學多久呢？
 - 大概兩年，是公司決定的。
 - 希望我以後也可以到這麼好的公司上班。
