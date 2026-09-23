@@ -212,14 +212,14 @@ const unit:UnitData = {
         {
           "id": "u36-business-s3",
           "type": "select",
-          "prompt": "Which word in 老闆希望我們都會說中文 means “boss”?",
+          "prompt": "In 老闆希望我們都會說中文, what does 希望 mean?",
           "options": [
-            "老闆",
-            "公司",
-            "生意"
+            "to hope; to want",
+            "to pay",
+            "to look for"
           ],
-          "answer": "老闆",
-          "explanation": "老闆 is review vocabulary from an earlier unit; here it means the boss."
+          "answer": "to hope; to want",
+          "explanation": "希望 is review vocabulary. The line says the boss wants everyone to be able to speak Chinese."
         }
       ]
     },
@@ -399,11 +399,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which sentence uses the perception-verb branch of 好 + verb?",
           "options": [
-            "日本菜好吃。",
+            "日本菜好吃也好看。",
             "好工作很難找。",
             "這樣的工作在你們國家好找嗎？"
           ],
-          "answer": "日本菜好吃。",
+          "answer": "日本菜好吃也好看。",
           "explanation": "With perception verbs such as 吃/喝/看/聽, the textbook treats forms like 好吃 as single words describing a pleasant perception.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -551,11 +551,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which negative follows the textbook pattern?",
           "options": [
-            "學校附近便宜的套房不好找。",
-            "學校附近便宜的套房好不找。",
-            "學校附近便宜的套房沒好找。"
+            "便宜的咖啡不好喝。",
+            "便宜的咖啡好不喝。",
+            "便宜的咖啡沒好喝。"
           ],
-          "answer": "學校附近便宜的套房不好找。",
+          "answer": "便宜的咖啡不好喝。",
           "explanation": "Negation places 不 before the 好/難 + verb predicate: 不好找, 不難學, 不好喝.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -564,14 +564,14 @@ const unit:UnitData = {
         {
           "id": "u36-hard-s4",
           "type": "select",
-          "prompt": "Which is a valid A-not-A question from this grammar?",
+          "prompt": "Which A-not-A form matches the textbook's perception-verb question?",
           "options": [
-            "工作好不好找？",
-            "工作好找不？",
-            "工作沒好找嗎？"
+            "你覺得那個電影好看不好看？",
+            "你覺得那個電影好看不看？",
+            "你覺得那個電影好不看？"
           ],
-          "answer": "工作好不好找？",
-          "explanation": "The source uses 好不好 + verb and 難不難 + verb as question patterns.",
+          "answer": "你覺得那個電影好看不好看？",
+          "explanation": "For the perception word 好看, the textbook's A-not-A example repeats the whole compound: 好看不好看.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -751,13 +751,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g2",
           "type": "select",
-          "prompt": "Which word order matches Event + 以後?",
+          "prompt": "In 半年以後，你打算做什麼？, what does 半年以後 mean?",
           "options": [
-            "Event + 以後, then the later event",
-            "以後 + Event, then the earlier event"
+            "half a year later",
+            "for half a year",
+            "half a year ago"
           ],
-          "answer": "Event + 以後, then the later event",
-          "explanation": "The source anchor comes first: 回國以後…, 下課以後….",
+          "answer": "half a year later",
+          "explanation": "A time expression can come before 以後 just like an event anchor: 半年以後 means half a year later.",
           "grammarIds": [
             "u36-yihou-after"
           ]
@@ -779,14 +780,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g4",
           "type": "select",
-          "prompt": "What does 好找 mean?",
+          "prompt": "Which source sentence correctly puts 很 before a perception word?",
           "options": [
-            "easy to find",
-            "good-looking",
-            "already found"
+            "我媽媽做的菜很好吃。",
+            "我媽媽做的菜好很吃。",
+            "我媽媽做的菜很吃好。"
           ],
-          "answer": "easy to find",
-          "explanation": "With an action verb, 好 means easy to do.",
+          "answer": "我媽媽做的菜很好吃。",
+          "explanation": "The source shows that degree adverbs such as 很 can modify this branch: 很好吃.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -796,11 +797,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which pair belongs to the textbook's perception branch?",
           "options": [
-            "好吃 / 難吃",
+            "好喝 / 難喝",
             "好找 / 難找",
             "好學 / 難學"
           ],
-          "answer": "好吃 / 難吃",
+          "answer": "好喝 / 難喝",
           "explanation": "With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, 好聽/難聽 function as perception descriptions.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -809,14 +810,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g6",
           "type": "select",
-          "prompt": "Which negation is correct?",
+          "prompt": "Which source sentence correctly negates a 難 + perception word?",
           "options": [
-            "中文不難學。",
-            "中文難不學。",
-            "中文沒難學。"
+            "學校餐廳的菜不難吃。",
+            "學校餐廳的菜難不吃。",
+            "學校餐廳的菜沒難吃。"
           ],
-          "answer": "中文不難學。",
-          "explanation": "Put 不 before the whole 難 + verb predicate.",
+          "answer": "學校餐廳的菜不難吃。",
+          "explanation": "Put 不 before the whole perception word. The source uses 不難吃 here to mean the cafeteria food is not bad to eat / tastes okay.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -824,14 +825,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g7",
           "type": "select",
-          "prompt": "Which asks whether a job is easy to find?",
+          "prompt": "Which source-style A-not-A question asks whether the dessert taught today is hard to learn to make?",
           "options": [
-            "工作好不好找？",
-            "工作好找不找？",
-            "工作有沒有找？"
+            "老師今天教的甜點難不難學？",
+            "老師今天教的甜點難不學？",
+            "老師今天教的甜點不難學難？"
           ],
-          "answer": "工作好不好找？",
-          "explanation": "Use 好不好 + action verb for the A-not-A question.",
+          "answer": "老師今天教的甜點難不難學？",
+          "explanation": "The source uses 難不難 + action verb here: 難不難學 asks whether it is difficult to learn to make the dessert.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -1140,13 +1141,13 @@ const unit:UnitData = {
       "meaning": "difficult; hard to",
       "strokes": 19,
       "note": "難 is second-tone nán. Before an action verb in Lesson 12, it means 'hard/difficult to': 難找 'hard to find', 難學 'hard to learn'.",
-      "memory": "Keep the dense eleven-stroke left component compact, then write the eight-stroke 隹 'short-tailed bird' clearly on the right.",
+      "memory": "Build the eleven-stroke left side as 廿 above an interwoven 口 and 夫, then add the eight-stroke 隹 'short-tailed bird' on the right.",
       "parts": [
         {
-          "label": "𦰩",
+          "label": "廿＋口／夫",
           "name": "left structural component",
           "role": "Left component",
-          "description": "The first eleven strokes form the dense left-side component of 難.",
+          "description": "The first eleven strokes form the left side: 廿 above an interwoven 口 and 夫, matching the Traditional decomposition ⿱廿⿻口夫.",
           "strokes": [
             0,
             1,
@@ -1220,7 +1221,7 @@ const unit:UnitData = {
       "id": "u36-hao-nan-verb",
       "title": "Special meanings of 好 / 難 + verbs",
       "pattern": "好 / 難 + Verb",
-      "explanation": "The textbook separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Questions can use 嗎 or A-not-A forms such as 好不好找 and 難不難學.",
+      "explanation": "The textbook separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Both branches can form 嗎 questions. For A-not-A questions, the source's perception example repeats the whole compound (好看不好看), while action-verb examples put the contrast before the action verb (好不好賣, 難不難學).",
       "examples": [
         {
           "text": "日本菜好吃也好看。",
@@ -1243,7 +1244,7 @@ const unit:UnitData = {
           "meaning": "Cheap suites near the school are not easy to find."
         }
       ],
-      "remember": "Perception verb: 好/難 describes how it tastes, sounds, looks, etc. Action verb: 好 = easy to, 難 = hard to. Put 不 before the whole combination; ask 好不好V / 難不難V."
+      "remember": "Perception branch: 好吃、好看, etc. are whole perception words; a source A-not-A form is 好看不好看. Action branch: 好 = easy to and 難 = hard to; ask 好不好 + V or 難不難 + V. Put 不 before the whole predicate in negatives."
     }
   },
   "grammarIntroductions": [
@@ -1271,7 +1272,7 @@ const unit:UnitData = {
       "text": "你是什麼時候來臺灣工作的？",
       "pinyin": "Nǐ shì shénme shíhou lái Táiwān gōngzuò de?",
       "meaning": "When did you come to Taiwan to work?",
-      "note": "Dialogue II opens with 田中 as a vocative; Hanzi Steps omits that proper-name address so untaught 田 is not introduced incidentally, while preserving the source 是…的 question.",
+      "note": "The textbook dialogue includes the listener's name as a vocative before this question. Hanzi Steps omits the name here so the focus stays on the already-taught 是…的 question. 工作 is the verb 'to work' here; Vocabulary II also lists the same written form as the noun 'job, work'.",
       "tokens": [
         "你是什麼時候",
         "來臺灣工作的"
@@ -1284,7 +1285,7 @@ const unit:UnitData = {
       "text": "去年，我已經在臺灣工作一年了。",
       "pinyin": "Qùnián, wǒ yǐjīng zài Táiwān gōngzuò yì nián le.",
       "meaning": "Last year. I have been working in Taiwan for a year.",
-      "note": "Source Dialogue II. Treat this as the dialogue's duration-to-date statement; the later formal double-了 grammar is not being introduced here.",
+      "note": "Source Dialogue II. Treat this as the dialogue's duration-to-date statement; Unit 36 keeps it as dialogue comprehension rather than declaring an additional duration grammar rule.",
       "tokens": [
         "去年",
         "我已經在臺灣",
@@ -1304,7 +1305,7 @@ const unit:UnitData = {
     },
     "u36-business": {
       "text": "因為我們公司跟臺灣人做生意。",
-      "pinyin": "Yīnwèi wǒmen gōngsī gēn Táiwānrén zuò shēngyì.",
+      "pinyin": "Yīnwèi wǒmen gōngsī gēn Táiwān rén zuò shēngyì.",
       "meaning": "Because our company does business with Taiwanese people.",
       "note": "生意 is new; 做 and 因為 are review. 做生意 is a transparent source combination, not an extra new-vocabulary count.",
       "tokens": [
@@ -1337,7 +1338,7 @@ const unit:UnitData = {
       "text": "對了，你回國以後，打算做什麼？",
       "pinyin": "Duì le, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?",
       "meaning": "By the way, what do you plan to do after you go back to your country?",
-      "note": "Dialogue II prints 妳 for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 to avoid introducing a one-off orthographic variant while preserving the sentence and grammar. 回國、打算 and 做 are review.",
+      "note": "The textbook prints a gender-specific form of 'you' for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 while preserving the sentence and grammar. 回國、打算 and 做 are review.",
       "tokens": [
         "對了",
         "你回國以後",
@@ -1431,7 +1432,7 @@ const unit:UnitData = {
       "text": "要是難找呢？",
       "pinyin": "Yàoshi nán zhǎo ne?",
       "meaning": "What if it is hard to find?",
-      "note": "Dialogue II. 難 + 找 means 'hard to find'; 要是 is review from the earlier conditional.",
+      "note": "Dialogue II. 難 + 找 means 'hard to find'. 要是 introduces the hypothetical condition; with sentence-final 呢, this asks 'what if...?' and leaves the consequence for the other speaker to supply, so no 就-clause is stated here.",
       "tokens": [
         "要是",
         "難找呢"
@@ -1456,7 +1457,7 @@ const unit:UnitData = {
       "text": "太好了！那我們就可以再見面了。",
       "pinyin": "Tài hǎo le! Nà wǒmen jiù kěyǐ zài jiànmiàn le.",
       "meaning": "Great! Then we can see each other again.",
-      "note": "This completes Dialogue II. 太好了、就、可以、再、見面 are review.",
+      "note": "This completes Dialogue II. Here 那 is the short conversational 'then / in that case' leading into the result; compare new 那麼 in the previous turn. 太好了、就、可以、再、見面 are review.",
       "tokens": [
         "太好了",
         "那我們就可以",

@@ -6,7 +6,7 @@
 - 4 first-taught characters: 工、作、試、難.
 - 2 new grammar rules: Event/Time + 以後 and special 好/難 + verbs.
 - Six teaching lessons plus one review.
-- Review has 26 activities, including 3 contextual listening tasks and 4 handwriting-memory tasks.
+- Review has 27 activities, including 3 contextual listening tasks and 4 handwriting-memory tasks.
 - Every formal NEW vocabulary item is retrieved in review.
 - Unit 35 是…的 and earlier 要是…就… are review grammar, not redeclared.
 
@@ -51,6 +51,122 @@ Repair:
 - normalize source 妳 to already-taught general 你 in the return-home question;
 - document both adaptations explicitly in the source plan and phrase notes instead of silently leaking untaught characters.
 
+### 5. Exercise coverage overused the same action-verb examples
+The published pass was source-correct, but several checks repeatedly reused 好找 / 難找 / 難學 while the textbook's Grammar IV explicitly develops both perception and action branches with broader examples.
+
+Repair:
+- restored the exact source perception example 日本菜好吃也好看 in the first branch-identification check;
+- added retrieval of the source perception negative 便宜的咖啡不好喝;
+- added the source 難不難學 question with 老師今天教的甜點;
+- diversified the review so 好喝/難喝 and the 難 + action-verb A-not-A pattern are independently retrieved;
+- replaced a low-value repeated 老闆 recognition item with retrieval of 希望 from the source dialogue.
+
+These changes do not introduce new grammar or vocabulary; they increase retrieval breadth for material already present in Lesson 12 (Grammar IV, printed pp. 257–258).
+
+### 6. Grammar IV A-not-A handling was too compressed
+The first published rule correctly taught 好/難 + verb, but its question summary treated A-not-A forms as though the two branches behaved identically. The textbook separates them more carefully: its perception example is 好看不好看, while its action examples are 好不好賣 and 難不難學.
+
+Repair:
+- the grammar explanation and memory note now state the branch-specific A-not-A patterns;
+- one teaching check now retrieves the source perception question 你覺得那個電影好看不好看？;
+- the review separately retains the action pattern 老師今天教的甜點難不難學？;
+- the dessert prompt/explanation now reflects the source meaning “hard to learn to make,” rather than the awkward “hard to learn a dessert.”
+
+### 7. A review explanation mismatched its own answer
+The repaired perception-negative question used 便宜的咖啡不好喝, but its explanation still said to put 不 before a 難 + verb predicate.
+
+Repair:
+- the explanation now correctly describes 不 before the whole 好/難 + verb expression and identifies 不好喝 as the source perception negative.
+
+### 8. 難 component guidance was structurally too opaque
+The original card grouped the left eleven strokes under the rare label 𦰩 and described them only as a “dense left-side component.” AnimCJK’s Traditional decomposition is ⿰⿱廿⿻口夫隹.
+
+Repair:
+- the highlighted stroke grouping remains unchanged and complete;
+- the learner-facing label is now 廿＋口／夫;
+- the description explains 廿 above an interwoven 口 and 夫, followed by 隹;
+- the memory cue now mirrors the verified Traditional structure.
+
+### 9. The duration note made an unnecessary claim outside Lesson 12
+The line 去年，我已經在臺灣工作一年了。 is source Dialogue II, but the prior note justified not teaching it by referring to a later “double-了” grammar point.
+
+Repair:
+- removed the unsupported forward claim;
+- the note now simply says the source line is retained for dialogue comprehension without inventing an extra Unit 36 grammar rule.
+
+### 10. End-of-lesson activities were checked explicitly
+The deep audit extended past Dialogue II and Grammar IV through the Lesson 12 integrated activities and self-assessment. Those pages reinforce study/future plans, 先…再…, 是…的, and work-experience discussion; they do not add a fifth formal grammar point or an unaccounted Vocabulary I/II item.
+
+### 11. Review breadth was still too repetitive
+The first repair improved Grammar IV coverage, but the review still repeated the same event-anchor explanation for 以後 and repeated the bare 好找 meaning instead of retrieving two source details that had only appeared in explanatory prose.
+
+Repair:
+- `u36-review-g2` now retrieves the time-expression use 半年以後 = “half a year later”;
+- `u36-review-g4` now retrieves the source degree-adverb example 我媽媽做的菜很好吃;
+- the perception-negative review now uses the separate source sentence 學校餐廳的菜不難吃 instead of duplicating the teaching item 便宜的咖啡不好喝.
+
+### 12. Two distractors were not strict enough for an unambiguous key
+The earlier A-not-A checks used forms with 有沒有 that can occur colloquially enough to make them poor “wrong answer” choices even though they do not match the textbook pattern being taught.
+
+Repair:
+- replaced those distractors with structurally misplaced forms that cannot reasonably compete with the source pattern;
+- preserved the same step IDs and positions.
+
+### 13. Learner-facing notes leaked the very glyphs the adaptation was meant to avoid
+The target phrases correctly omitted 田 from the proper-name vocative and normalized 妳 to 你, but the runtime phrase notes still printed 田中 and 妳. Those notes are learner-facing content, so the character boundary was not actually clean.
+
+Repair:
+- runtime notes now describe the adaptation without displaying 田 or 妳;
+- authoring-only source/audit documents retain the exact source forms for traceability;
+- a regression test now rejects either glyph anywhere in the Unit 36 runtime module.
+
+### 14. Pinyin spacing needed one cleanup
+The business line wrote 臺灣人 as `Táiwānrén`, although the source phrase is 臺灣 人 and the project normally spaces lexical words in phrase pinyin.
+
+Repair:
+- changed it to `Táiwān rén`;
+- added a regression assertion for the full line.
+
+### 15. Pinyin Search and Mega Challenge were explicitly checked
+The general repository tests exercise both systems, but the deep audit added Unit 36-specific guarantees:
+- each of the eight new vocabulary entries resolves through normalized Pinyin Search to its canonical curriculum item;
+- after its declared teaching lesson is complete, each entry becomes eligible for Mega Challenge;
+- transparent 試試看 and 做生意 remain contextual phrases rather than duplicate canonical vocabulary entries.
+
+### 16. Saved-progress topology is unchanged
+The audit compared published `main` against the repair branch:
+- all seven lesson IDs are unchanged;
+- every activity ID remains in the same position;
+- lesson step counts remain 15 / 7 / 8 / 12 / 9 / 8 / 27;
+- no step was inserted, deleted, or reordered.
+
+Therefore these repairs require no lesson-length compatibility migration and do not invalidate existing complete or partial Unit 36 checkpoints.
+### 17. “Lesson 12 complete” was verified against the actual neighboring modules
+The audit did not rely only on the Unit 34/35 source-plan documents. It inspected their current module data as well:
+- Unit 34 contains the Dialogue I opening vocabulary/phrases and formal 先…再… rule;
+- Unit 35 contains the Dialogue I tail and the complete 是…的 rule, including focus restrictions, object topicalization, negation, yes/no and wh-questions, and optional 是;
+- Unit 36 contains Dialogue II, Vocabulary II, Event/Time + 以後, and 好/難 + verbs.
+
+This confirms the Unit 36 completion claim against implemented curriculum rather than planning metadata alone.
+
+### 18. 工作’s noun sense was tested before it had been explicitly explained
+The first lesson showed 工作 twice in verb contexts and then asked the learner to identify both the verb and noun senses. The noun sense was present in the vocabulary record but had not yet appeared in a learner-facing explanation.
+
+Repair:
+- the first 工作 phrase note now explicitly explains verb “to work” and noun “job, work” before the dual-sense assessment;
+- a regression test pins the explanation-before-assessment order.
+
+### 19. The source’s standalone 要是…呢 question needed an explanation
+The source line 要是難找呢？ intentionally asks “What if it is hard to find?” without stating a 就 consequence clause. Merely tagging it with the earlier 要是…就… rule could make the missing 就 look accidental.
+
+Repair:
+- the phrase note now explains that 要是 introduces the hypothetical condition and sentence-final 呢 asks the other speaker to supply the consequence, so no 就-clause is stated in that turn.
+
+### 20. Dialogue-final 那 carries a connective sense
+In 太好了！那我們就可以再見面了。, 那 functions conversationally as “then / in that case,” not simply the earlier demonstrative “that.”
+
+Repair:
+- the phrase note now explains this discourse use and connects it to the newly taught 那麼 without creating a duplicate formal vocabulary item.
 ## Pedagogy and sequencing
 
 - 工 and 作 are introduced before 工作 is assessed.
@@ -69,8 +185,14 @@ Declared stroke/component models:
 - 試: 言 + 式, 13 strokes.
 - 難: 11-stroke left structural component + 隹, 19 strokes.
 
-Feature QA hydration on the implementation head confirmed the declared Traditional stroke sources and generated the checked stroke artifact. Exact Unicode targets remain mandatory; never substitute a different Simplified/Japanese codepoint.
+Feature QA hydration confirmed all four Unit 36 characters from AnimCJK `graphicsZhHant.txt` using their exact Unicode targets: 工、作、試、難. The hydration job did not use a Hans or Japanese fallback for this unit. The AnimCJK master revision audited here is `ec5e17cca76c87587790bcbce5ea0b4d4fb753d6`.
 
+## Runtime / integration audit
+
+- Verified phrase notes are actually rendered in the lesson UI before the learner advances, so the repaired 工作 dual-sense explanation is genuinely pre-assessment teaching rather than hidden metadata.
+- Verified the existing step topology is supported by the current renderer: phrase, grammar, select, listen, order, handwriting, and matching activities all use established paths; Unit 36 introduces no new runtime step type.
+- Static audit found no missing Dialogue II line, no phrase-token mismatch, no duplicate answer option, no answer absent from its option set, no new-character assessment before introduction, and no formal new vocabulary omitted from review.
+- Unit 36-specific regression coverage now includes source breadth, character-boundary leakage, Pinyin Search, Mega Challenge eligibility, pinyin spacing, and both 工作 senses.
 ## Publication gate
 
 Before merge, the exact final PR head must pass Feature QA: stroke hydration, course generation/check, targeted Unit 36 testing, character coverage, vocabulary lookup/Mega Challenge regressions, all validation tests, TypeScript, and GitHub Pages build. If CI commits generated artifacts, the new head must receive a fresh successful QA run before merge. After merge, require the GitHub Pages build and deploy jobs to succeed.

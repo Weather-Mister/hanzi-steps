@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCourse} from './course-io.mjs';
 import {han} from './validate.mjs';
+import {compactPinyin,searchVocabulary,vocabularyLookup} from '../lib/vocabulary-lookup.ts';
+import {eligibleMegaVocabulary} from '../lib/mega-challenge.ts';
 
 const course=await loadCourse();
 const u36=course.modules.find(m=>m.unit.id==='unit-36');
@@ -136,4 +138,88 @@ test('Unit 36 assessments do not use a new character before its intro step',()=>
           assert.ok(known.has(ch),step.id+' assesses '+ch+' before its character introduction');
     }
   }
+});
+
+
+test('Unit 36 deep audit retrieves both Grammar IV branches with source examples',()=>{
+  const job=u36.lessons.find(l=>l.id==='u36-job');
+  const hard=u36.lessons.find(l=>l.id==='u36-hard');
+  const review=u36.lessons.find(l=>l.id===u36.reviewLessonId);
+  const blob=[...job.steps,...hard.steps,...review.steps].flatMap(step=>[step.prompt,step.answer,step.explanation,...(step.options??[])]).filter(Boolean).join('\n');
+  assert.match(blob,/日本菜好吃也好看/);
+  assert.match(blob,/便宜的咖啡不好喝/);
+  assert.match(blob,/學校餐廳的菜不難吃/);
+  assert.match(blob,/你覺得那個電影好看不好看/);
+  assert.match(blob,/老師今天教的甜點難不難學/);
+  assert.match(blob,/好喝 \/ 難喝/);
+});
+
+
+test('Unit 36 pinyin search resolves every new vocabulary entry to its canonical item',()=>{
+  for(const word of u36.newVocabulary){
+    const query=compactPinyin(word.pinyin);
+    const hit=searchVocabulary(query,1000).find(item=>item.traditional===word.text&&item.lessonId===word.lessonId);
+    assert.ok(hit,'Pinyin search misses '+word.text+' via '+query);
+    assert.equal(hit.pinyin,word.pinyin);
+    assert.equal(hit.meaning,word.meaning);
+  }
+});
+
+test('Unit 36 vocabulary becomes Mega Challenge eligible after its teaching lessons are complete',()=>{
+  const completed=new Set(u36.newVocabulary.map(word=>word.lessonId));
+  const eligible=eligibleMegaVocabulary(completed,new Set());
+  const ids=new Set(eligible.map(item=>item.id));
+  for(const word of u36.newVocabulary){
+    const item=vocabularyLookup.find(v=>v.traditional===word.text&&v.lessonId===word.lessonId);
+    assert.ok(item,'canonical lookup missing '+word.text);
+    assert.ok(ids.has(item.id),'Mega Challenge eligibility misses '+word.text);
+  }
+});
+
+test('Unit 36 grammar review keeps perception and action A-not-A forms distinct',()=>{
+  const hard=u36.lessons.find(l=>l.id==='u36-hard');
+  const review=u36.lessons.find(l=>l.id===u36.reviewLessonId);
+  const perception=hard.steps.find(s=>s.id==='u36-hard-s4');
+  const action=review.steps.find(s=>s.id==='u36-review-g7');
+  assert.equal(perception.answer,'你覺得那個電影好看不好看？');
+  assert.match(perception.explanation,/whole compound/i);
+  assert.equal(action.answer,'老師今天教的甜點難不難學？');
+  assert.match(action.explanation,/難不難 \+ action verb/);
+});
+
+test('Unit 36 review covers time-anchor 以後 and degree modification, not only event anchors and bare predicates',()=>{
+  const review=u36.lessons.find(l=>l.id===u36.reviewLessonId);
+  const time=review.steps.find(s=>s.id==='u36-review-g2');
+  const degree=review.steps.find(s=>s.id==='u36-review-g4');
+  assert.equal(time.answer,'half a year later');
+  assert.match(time.prompt,/半年以後/);
+  assert.equal(degree.answer,'我媽媽做的菜很好吃。');
+  assert.match(degree.explanation,/degree adverbs/i);
+});
+
+
+test('Unit 36 learner-facing runtime content does not leak the omitted textbook glyphs 田 or 妳',()=>{
+  const values=[];
+  const visit=value=>{
+    if(typeof value==='string')values.push(value);
+    else if(Array.isArray(value))value.forEach(visit);
+    else if(value&&typeof value==='object')Object.values(value).forEach(visit);
+  };
+  visit(u36);
+  const blob=values.join('\n');
+  assert.ok(!blob.includes('田'),'Unit 36 runtime content leaks untaught proper-name glyph 田');
+  assert.ok(!blob.includes('妳'),'Unit 36 runtime content leaks untaught orthographic variant 妳');
+});
+
+test('Unit 36 source dialogue pinyin keeps 臺灣 人 as separate words',()=>{
+  assert.equal(u36.phrases['u36-business'].pinyin,'Yīnwèi wǒmen gōngsī gēn Táiwān rén zuò shēngyì.');
+});
+
+
+test('Unit 36 explains both 工作 source senses before testing them',()=>{
+  const note=u36.phrases['u36-work-question'].note;
+  assert.match(note,/verb 'to work'/i);
+  assert.match(note,/noun 'job, work'/i);
+  const lesson=u36.lessons.find(l=>l.id==='u36-work');
+  assert.ok(lesson.steps.findIndex(s=>s.id==='u36-work-p1')<lesson.steps.findIndex(s=>s.id==='u36-work-s3'));
 });
