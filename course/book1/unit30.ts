@@ -12,6 +12,7 @@ const unit:UnitData = {
     "title": "Try It and Describe It",
     "description": "Identify fruit, make a guess, try an action, describe a subjective impression, and talk about photos and clothing.",
     "chars": [
+      "芒",
       "紅",
       "瓜",
       "拍",
@@ -689,14 +690,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-07",
           "type": "select",
-          "prompt": "Which fruit is watermelon?",
+          "prompt": "Which fruit is 芒果?",
           "options": [
+            "芒果",
             "西瓜",
-            "水果",
-            "甜"
+            "水果"
           ],
-          "answer": "西瓜",
-          "explanation": "西瓜 is watermelon."
+          "answer": "芒果",
+          "explanation": "芒果 is mango; 西瓜 is watermelon and 水果 is the general word fruit."
         },
         {
           "id": "u30-review-08",
@@ -898,6 +899,14 @@ const unit:UnitData = {
   ],
   "newVocabulary": [
     {
+      "text": "芒果",
+      "pinyin": "mángguǒ",
+      "meaning": "mango",
+      "lessonId": "u30-fruit",
+      "core": true,
+      "note": "Lesson 10 Dialogue I identifies the yellow fruit as 芒果."
+    },
+    {
       "text": "紅色",
       "pinyin": "hóngsè",
       "meaning": "red; the color red",
@@ -993,6 +1002,7 @@ const unit:UnitData = {
     "茶"
   ],
   "newCharacters": [
+    "芒",
     "紅",
     "瓜",
     "拍",
@@ -1268,6 +1278,37 @@ const unit:UnitData = {
         "pinyin": "yīfú",
         "meaning": "clothes"
       }
+    },
+    "芒": {
+      "hanzi": "芒",
+      "pinyin": "máng",
+      "zhuyin": "ㄇㄤˊ",
+      "meaning": "mango component; awn",
+      "strokes": 6,
+      "layout": "stack",
+      "note": "芒 is second-tone máng. In this course, learn it primarily as the first character of 芒果, mango.",
+      "memory": "The three-stroke 艹 grass top sits above the three-stroke 亡 shape.",
+      "parts": [
+        {
+          "label": "艹",
+          "name": "grass component",
+          "role": "Top component",
+          "description": "The first three strokes form the compact 艹 grass component across the top.",
+          "strokes": [0,1,2]
+        },
+        {
+          "label": "亡",
+          "name": "lower component",
+          "role": "Bottom component",
+          "description": "The final three strokes form 亡 below the grass top.",
+          "strokes": [3,4,5]
+        }
+      ],
+      "example": {
+        "text": "芒果",
+        "pinyin": "mángguǒ",
+        "meaning": "mango"
+      }
     }
   },
   "grammarRules": {
@@ -1316,7 +1357,7 @@ const unit:UnitData = {
       "id": "u30-state-redup",
       "title": "Give a subjective impression by reduplicating a state verb",
       "pattern": "State verb + state verb + 的",
-      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. The textbook permits 美 as well as 香、甜、熱、大; it excludes 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
+      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. The textbook's permitted set is 香、甜、高、熱、大、美、遠、辣、矮; its excluded set is 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
       "examples": [
         {
           "text": "這個水果香香的。",
@@ -1329,7 +1370,7 @@ const unit:UnitData = {
           "meaning": "This fruit is fragrant and sweet."
         }
       ],
-      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. 美 is allowed; 多、貴、近、忙、新、少 are excluded in the textbook table."
+      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. The textbook allows 香、甜、高、熱、大、美、遠、辣、矮 and excludes 多、貴、近、忙、新、少."
     }
   },
   "grammarIntroductions": [
@@ -1372,10 +1413,10 @@ const unit:UnitData = {
       ]
     },
     "u30-piece": {
-      "text": "我給你一塊西瓜。",
-      "pinyin": "Wǒ gěi nǐ yí kuài xīguā.",
+      "text": "我給你一塊芒果。",
+      "pinyin": "Wǒ gěi nǐ yí kuài mángguǒ.",
       "meaning": "I'll give you a piece of watermelon.",
-      "note": "塊 counts a piece of food, as introduced with 水果 in Unit 29; here 一塊西瓜 is a piece of watermelon.",
+      "note": "芒果 is the yellow fruit named in Dialogue I. 塊 counts a piece of food; 一塊芒果 is a piece of mango.",
       "tokens": [
         "我",
         "給你",
