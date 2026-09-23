@@ -33,7 +33,10 @@ const unit:UnitData = {
       "u29-integrate",
       "u29-review"
     ],
-    "banner": {"text":"水果","pinyin":"shuǐguǒ"},
+    "banner": {
+      "text": "水果",
+      "pinyin": "shuǐguǒ"
+    },
     "goal": {
       "text": "要是你來，我就給你一塊水果。",
       "pinyin": "Yàoshi nǐ lái, wǒ jiù gěi nǐ yí kuài shuǐguǒ.",
@@ -1592,14 +1595,26 @@ const unit:UnitData = {
           "name": "inner component",
           "role": "Inner component",
           "description": "The first seven strokes form 狂, the compact inner body of 逛.",
-          "strokes": [0,1,2,3,4,5,6]
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
         },
         {
           "label": "辶",
           "name": "movement component",
           "role": "Wrapping component",
           "description": "The final three strokes form 辶 and sweep around the lower-left of the inner body.",
-          "strokes": [7,8,9]
+          "strokes": [
+            7,
+            8,
+            9
+          ]
         }
       ],
       "example": {
@@ -1840,12 +1855,12 @@ const unit:UnitData = {
       ]
     },
     "u29-stroll": {
-      "text": "臺灣的夜市很有名，你們應該去逛逛。",
-      "pinyin": "Táiwān de yèshì hěn yǒumíng, nǐmen yīnggāi qù guàngguang.",
-      "meaning": "Taiwan's night markets are famous; you should go look around.",
-      "note": "This restores the Lesson 9 dialogue use of 逛. Reduplication 逛逛 makes the activity light/casual here.",
+      "text": "夜市很有名，你們應該去逛逛。",
+      "pinyin": "Yèshì hěn yǒumíng, nǐmen yīnggāi qù guàngguang.",
+      "meaning": "Night markets are famous; you should go look around.",
+      "note": "This restores the Lesson 9 dialogue use of 逛 without introducing the separately deferred 臺 character. Reduplication 逛逛 makes the activity light/casual here.",
       "tokens": [
-        "臺灣的夜市很有名",
+        "夜市很有名",
         "你們應該去逛逛"
       ]
     }
