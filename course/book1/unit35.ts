@@ -177,7 +177,7 @@ const unit:UnitData = {
     {
       "id": "u35-focus",
       "title": "What Part of the Past Matters?",
-      "subtitle": "Practice focusing time, place, manner, and subject—and learn what 是…的 cannot focus.",
+      "subtitle": "Practice subject, time, place, and manner focus, then cover yes/no questions, optional 是, and the source wh-question types.",
       "chars": [],
       "minutes": "9–12 min",
       "unitId": "unit-35",
@@ -239,6 +239,78 @@ const unit:UnitData = {
           ],
           "answer": "the object",
           "explanation": "The source allows subject, time, place, manner, and occasionally the verb as focus, but not the object.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-focus-p4",
+          "type": "phrase",
+          "phrase": "u35-focus-subject"
+        },
+        {
+          "id": "u35-focus-p5",
+          "type": "phrase",
+          "phrase": "u35-focus-yesno"
+        },
+        {
+          "id": "u35-focus-p6",
+          "type": "phrase",
+          "phrase": "u35-focus-omitted"
+        },
+        {
+          "id": "u35-focus-p7",
+          "type": "phrase",
+          "phrase": "u35-focus-who"
+        },
+        {
+          "id": "u35-focus-p8",
+          "type": "phrase",
+          "phrase": "u35-focus-how"
+        },
+        {
+          "id": "u35-focus-p9",
+          "type": "phrase",
+          "phrase": "u35-focus-where"
+        },
+        {
+          "id": "u35-focus-s4",
+          "type": "select",
+          "prompt": "Which source-style yes/no question correctly uses 是…的?",
+          "options": [
+            "你的房租是自己付的嗎？",
+            "你的房租自己是不是付的？"
+          ],
+          "answer": "你的房租是自己付的嗎？",
+          "explanation": "The textbook shows yes/no questions by keeping the 是…的 frame and adding 嗎.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-focus-s5",
+          "type": "select",
+          "prompt": "What does the textbook say about 是 in this construction?",
+          "options": [
+            "是 can sometimes be omitted.",
+            "是 can never be omitted."
+          ],
+          "answer": "是 can sometimes be omitted.",
+          "explanation": "The source explicitly gives examples such as 我跟朋友一起來的 with 是 omitted.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-focus-s6",
+          "type": "select",
+          "prompt": "Which list contains only wh-question types the textbook allows with past-event 是…的?",
+          "options": [
+            "who, when, how, where",
+            "what-object, why, how many"
+          ],
+          "answer": "who, when, how, where",
+          "explanation": "The textbook allows who, when, how, and where, but not 'what' when it is the object.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -637,10 +709,10 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Can 是 sometimes be omitted in this construction?",
           "options": [
-            "yes, when the focus remains recoverable",
+            "yes, 是 can sometimes be omitted",
             "no, 是 is never omitted"
           ],
-          "answer": "yes, when the focus remains recoverable",
+          "answer": "yes, 是 can sometimes be omitted",
           "explanation": "The textbook explicitly notes that 是 can sometimes be omitted, as in 我跟朋友一起來的.",
           "grammarIds": [
             "u35-shi-de"
@@ -901,6 +973,48 @@ const unit:UnitData = {
           "id": "u35-review-m2",
           "type": "memory",
           "char": "累"
+        },
+        {
+          "id": "u35-review-g6",
+          "type": "select",
+          "prompt": "Which is a correct yes/no 是…的 question?",
+          "options": [
+            "你的房租是自己付的嗎？",
+            "你的房租是不自己付的嗎？"
+          ],
+          "answer": "你的房租是自己付的嗎？",
+          "explanation": "The source keeps 是…的 and adds 嗎 for this yes/no question.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-g7",
+          "type": "select",
+          "prompt": "Which sentence shows the textbook's optional omission of 是?",
+          "options": [
+            "我跟朋友一起來的。",
+            "我跟朋友一起是來的。"
+          ],
+          "answer": "我跟朋友一起來的。",
+          "explanation": "是 may sometimes be omitted while 的 remains at the end.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
+        },
+        {
+          "id": "u35-review-g8",
+          "type": "select",
+          "prompt": "Which question correctly asks where a past event happened?",
+          "options": [
+            "你是在哪裡吃飯的？",
+            "你是哪裡是吃飯的？"
+          ],
+          "answer": "你是在哪裡吃飯的？",
+          "explanation": "在哪裡 occupies the focus position after 是.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
         }
       ]
     }
@@ -994,7 +1108,15 @@ const unit:UnitData = {
     "圖書館",
     "房東",
     "電話",
-    "給"
+    "給",
+    "房租",
+    "自己",
+    "朋友",
+    "跟",
+    "來",
+    "吃飯",
+    "去",
+    "嗎"
   ],
   "newCharacters": [
     "費",
@@ -1091,14 +1213,14 @@ const unit:UnitData = {
       "meaning": "for; on behalf of",
       "strokes": 12,
       "layout": "stack",
-      "note": "替 is fourth-tone tì. In 公司替我付, it marks the person on whose behalf an action is done.",
-      "memory": "Build the paired upper figures first, then finish with 日 as the four-stroke base.",
+      "note": "替 is fourth-tone tì and is a preposition meaning 'for; on behalf of.' Put 替 + person before the action: 公司替我付 = 'the company pays for me.'",
+      "memory": "Write 㚘—two 夫 shapes side by side—across the top, then finish with the four-stroke 曰 at the bottom.",
       "parts": [
         {
-          "label": "替",
-          "name": "upper paired structure",
-          "role": "Upper structure",
-          "description": "The first eight strokes form the paired upper structure.",
+          "label": "㚘",
+          "name": "paired 夫 component",
+          "role": "Top component",
+          "description": "The first eight strokes form 㚘, visually two 夫 shapes side by side.",
           "strokes": [
             0,
             1,
@@ -1111,10 +1233,10 @@ const unit:UnitData = {
           ]
         },
         {
-          "label": "日",
-          "name": "sun component",
+          "label": "曰",
+          "name": "曰 component",
           "role": "Bottom component",
-          "description": "The final four strokes form 日.",
+          "description": "The final four strokes form the wide 曰 component at the bottom.",
           "strokes": [
             8,
             9,
@@ -1228,21 +1350,37 @@ const unit:UnitData = {
       "meaning": "work shift; class (in 上班)",
       "strokes": 10,
       "layout": "side",
-      "note": "班 is first-tone bān. Here it appears in 上班, 'to go to work.'",
-      "memory": "Keep the left and right jade-like sides balanced around the narrow center.",
+      "note": "班 is first-tone bān. Here it appears in 上班, 'to go to work.' In Taiwan's standard form, the center is written as two narrow strokes between the two 王 sides; do not confuse 班 with 斑.",
+      "memory": "Balance 王 on the left and 王 on the right; the two narrow middle strokes, 丶 then 丿, are the modern form of the knife-derived center.",
       "parts": [
         {
-          "label": "班",
-          "name": "whole character",
-          "role": "Whole character",
-          "description": "All ten strokes form the balanced left-center-right structure of 班.",
+          "label": "王",
+          "name": "left jade component",
+          "role": "Left component",
+          "description": "The first four strokes form 王 on the left.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "丶丿",
+          "name": "knife-derived middle strokes",
+          "role": "Middle component",
+          "description": "The next two strokes are a dot and a left-falling stroke in the narrow center.",
+          "strokes": [
             4,
-            5,
+            5
+          ]
+        },
+        {
+          "label": "王",
+          "name": "right jade component",
+          "role": "Right component",
+          "description": "The final four strokes form 王 on the right.",
+          "strokes": [
             6,
             7,
             8,
@@ -1385,12 +1523,12 @@ const unit:UnitData = {
       "id": "u35-shi-de",
       "title": "Focus a past event with 是…的",
       "pattern": "Subject / Topic + 是 + Focus + Activity + 的",
-      "explanation": "是…的 highlights one element of a past event as the focus or contrast. The focused element can be the subject, time, place, manner, and occasionally the verb, but not the object. An object is often moved to the front as the topic, as in 學費是公司替我付的. Put 不 before 是 for negation. 是 can sometimes be omitted. For past-event wh-questions, ask who, when, how, or where inside the construction; the textbook specifically excludes using it to ask 'what' when 'what' is the object.",
+      "explanation": "是…的 highlights one element of a past event as the focus or contrast. Put 是 directly before the focused element and 的 at the end. The focused element can be the subject, time, place, manner, and occasionally the verb, but never the object. An object is often moved to the very front as the topic, as in 學費是公司替我付的. Put 不 before 是 for negation. The textbook also forms yes/no questions with 嗎, notes that 是 can sometimes be omitted, and allows wh-questions asking who, when, how, or where about a past event; it specifically excludes using the construction to ask 'what' when 'what' is the object.",
       "examples": [
         {
           "text": "學費是公司替我付的。",
           "pinyin": "Xuéfèi shì gōngsī tì wǒ fù de.",
-          "meaning": "It is the company that pays my tuition for me."
+          "meaning": "My tuition is paid by my company for me."
         },
         {
           "text": "他是昨天晚上到臺灣的。",
@@ -1413,7 +1551,7 @@ const unit:UnitData = {
           "meaning": "It wasn't at the library that I read."
         }
       ],
-      "remember": "Use 是 directly before the information you want to focus; put 的 at the end. For negation, use 不是…, not 是不…. Do not use the construction to focus the object."
+      "remember": "Past event: put 是 before the focused information and 的 at the end. Object focus is not allowed. Negation is 不是…的; yes/no questions can add 嗎; 是 can sometimes be omitted; wh-questions can ask who, when, how, or where."
     }
   },
   "grammarIntroductions": [
@@ -1456,7 +1594,7 @@ const unit:UnitData = {
     "u35-decision": {
       "text": "大概兩年，是公司決定的。",
       "pinyin": "Dàgài liǎng nián, shì gōngsī juédìng de.",
-      "meaning": "Probably two years. It is the company that decides.",
+      "meaning": "Probably two years. My company will decide.",
       "note": "Source Dialogue I. 是…的 focuses 公司 as the decider.",
       "tokens": [
         "大概兩年",
@@ -1565,6 +1703,84 @@ const unit:UnitData = {
       "grammarIds": [
         "u35-shi-de"
       ]
+    },
+    "u35-focus-subject": {
+      "text": "是我打電話給房東的。",
+      "pinyin": "Shì wǒ dǎ diànhuà gěi fángdōng de.",
+      "meaning": "It was I who called the landlord.",
+      "note": "The source uses this to show subject focus: 是 comes immediately before 我.",
+      "tokens": [
+        "是我",
+        "打電話給房東的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-yesno": {
+      "text": "你的房租是自己付的嗎？",
+      "pinyin": "Nǐ de fángzū shì zìjǐ fù de ma?",
+      "meaning": "Do you pay your own rent?",
+      "note": "The textbook forms a yes/no question by adding 嗎 to the 是…的 sentence.",
+      "tokens": [
+        "你的房租",
+        "是自己付的嗎"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-omitted": {
+      "text": "我跟朋友一起來的。",
+      "pinyin": "Wǒ gēn péngyǒu yìqǐ lái de.",
+      "meaning": "I came with friends.",
+      "note": "The textbook notes that 是 can sometimes be omitted; this is the source example with 是 left out.",
+      "tokens": [
+        "我跟朋友一起",
+        "來的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-who": {
+      "text": "是誰打電話給你的？",
+      "pinyin": "Shì shéi dǎ diànhuà gěi nǐ de?",
+      "meaning": "Who was it that called you?",
+      "note": "A past-event 是…的 wh-question can ask who.",
+      "tokens": [
+        "是誰",
+        "打電話給你的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-how": {
+      "text": "你是怎麼去的？",
+      "pinyin": "Nǐ shì zěnme qù de?",
+      "meaning": "How did you go?",
+      "note": "A past-event 是…的 wh-question can ask how.",
+      "tokens": [
+        "你是怎麼",
+        "去的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    "u35-focus-where": {
+      "text": "你是在哪裡吃飯的？",
+      "pinyin": "Nǐ shì zài nǎlǐ chīfàn de?",
+      "meaning": "Where did you eat?",
+      "note": "A past-event 是…的 wh-question can ask where.",
+      "tokens": [
+        "你是在哪裡",
+        "吃飯的"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
     }
   },
   "revisionStepIds": [
@@ -1572,7 +1788,12 @@ const unit:UnitData = {
     "u35-focus-s3",
     "u35-cheer-s2",
     "u35-review-g3",
-    "u35-review-g4"
+    "u35-review-g4",
+    "u35-focus-s4",
+    "u35-focus-s5",
+    "u35-review-g6",
+    "u35-review-g7",
+    "u35-review-g8"
   ]
 };
 export default unit;
