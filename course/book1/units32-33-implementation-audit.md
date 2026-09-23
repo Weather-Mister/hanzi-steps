@@ -18,6 +18,9 @@
 - Tightened 會 to the textbook distinction: acquired skill vs possibility/likelihood.
 - Tightened zero-pronoun teaching to all three source cases: context-predictable subject, previously mentioned subject, previously mentioned object.
 
+
+- The textbook's context-predictable zero-pronoun example 請進 uses 進, which Hanzi Steps has not taught yet. The learner exercise uses already-taught 請坐 for the same omitted-你 function; the source concept is preserved without violating teach-before-test.
+
 ## Traditional Chinese
 Learner-facing content is regression-checked against common Simplified leaks. Traditional forms such as 廳、廚、間、線、視、關、經、慣、這、裡、話、東 are required.
 
