@@ -214,3 +214,12 @@ test('Unit 36 learner-facing runtime content does not leak the omitted textbook 
 test('Unit 36 source dialogue pinyin keeps 臺灣 人 as separate words',()=>{
   assert.equal(u36.phrases['u36-business'].pinyin,'Yīnwèi wǒmen gōngsī gēn Táiwān rén zuò shēngyì.');
 });
+
+
+test('Unit 36 explains both 工作 source senses before testing them',()=>{
+  const note=u36.phrases['u36-work-question'].note;
+  assert.match(note,/verb 'to work'/i);
+  assert.match(note,/noun 'job, work'/i);
+  const lesson=u36.lessons.find(l=>l.id==='u36-work');
+  assert.ok(lesson.steps.findIndex(s=>s.id==='u36-work-p1')<lesson.steps.findIndex(s=>s.id==='u36-work-s3'));
+});
