@@ -1432,7 +1432,7 @@ const unit:UnitData = {
       "text": "要是難找呢？",
       "pinyin": "Yàoshi nán zhǎo ne?",
       "meaning": "What if it is hard to find?",
-      "note": "Dialogue II. 難 + 找 means 'hard to find'; 要是 is review from the earlier conditional.",
+      "note": "Dialogue II. 難 + 找 means 'hard to find'. 要是 introduces the hypothetical condition; with sentence-final 呢, this asks 'what if...?' and leaves the consequence for the other speaker to supply, so no 就-clause is stated here.",
       "tokens": [
         "要是",
         "難找呢"
