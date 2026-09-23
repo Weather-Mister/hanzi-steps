@@ -187,6 +187,12 @@ Declared stroke/component models:
 
 Feature QA hydration confirmed all four Unit 36 characters from AnimCJK `graphicsZhHant.txt` using their exact Unicode targets: 工、作、試、難. The hydration job did not use a Hans or Japanese fallback for this unit. The AnimCJK master revision audited here is `ec5e17cca76c87587790bcbce5ea0b4d4fb753d6`.
 
+## Runtime / integration audit
+
+- Verified phrase notes are actually rendered in the lesson UI before the learner advances, so the repaired 工作 dual-sense explanation is genuinely pre-assessment teaching rather than hidden metadata.
+- Verified the existing step topology is supported by the current renderer: phrase, grammar, select, listen, order, handwriting, and matching activities all use established paths; Unit 36 introduces no new runtime step type.
+- Static audit found no missing Dialogue II line, no phrase-token mismatch, no duplicate answer option, no answer absent from its option set, no new-character assessment before introduction, and no formal new vocabulary omitted from review.
+- Unit 36-specific regression coverage now includes source breadth, character-boundary leakage, Pinyin Search, Mega Challenge eligibility, pinyin spacing, and both 工作 senses.
 ## Publication gate
 
 Before merge, the exact final PR head must pass Feature QA: stroke hydration, course generation/check, targeted Unit 36 testing, character coverage, vocabulary lookup/Mega Challenge regressions, all validation tests, TypeScript, and GitHub Pages build. If CI commits generated artifacts, the new head must receive a fresh successful QA run before merge. After merge, require the GitHub Pages build and deploy jobs to succeed.
