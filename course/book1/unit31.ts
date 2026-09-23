@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "People, hotels & reasons",
     "title": "The One in Blue",
-    "description": "Continue Lesson 10 through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, move toward a place with 往, and connect causes and effects with 因為…所以….",
+    "description": "Continue Lesson 10 through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, express direction with 往, and connect causes and effects with 因為…所以….",
     "chars": [
       "窗",
       "戶",
@@ -514,8 +514,8 @@ const unit:UnitData = {
     },
     {
       "id": "u31-toward",
-      "title": "From the Hotel Toward the Night Market",
-      "subtitle": "Use 往 for the direction of movement and contrast it with 從 as the starting point.",
+      "title": "Looking Out the Window",
+      "subtitle": "Use the dialogue’s 從窗戶往外看 to contrast the starting viewpoint 從 with directional 往.",
       "chars": [
         "往"
       ],
@@ -891,14 +891,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-16",
           "type": "select",
-          "prompt": "Which word marks movement toward a destination?",
+          "prompt": "In 從窗戶往外看, which word marks the outward direction?",
           "options": [
             "往",
             "從",
             "住"
           ],
           "answer": "往",
-          "explanation": "往 marks direction; 從 marks the starting point."
+          "explanation": "往 marks the direction of the action; 從 marks the starting viewpoint."
         },
         {
           "id": "u31-review-17",
@@ -1063,7 +1063,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "lessonId": "u31-toward",
       "core": true,
-      "note": "往 introduces the direction of movement: 從旅館往夜市去."
+      "note": "往 introduces the direction of an action. Dialogue II uses 從窗戶往外看: from the window, look outward."
     },
     {
       "text": "因為",
@@ -1481,7 +1481,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "strokes": 8,
       "layout": "side",
-      "note": "往 is third-tone wǎng. It introduces a direction: 從旅館往夜市去.",
+      "note": "往 is third-tone wǎng. It introduces direction; Dialogue II uses 從窗戶往外看, look outward from the window.",
       "memory": "彳 takes three narrow walking strokes on the left; 主 fills the right with five strokes.",
       "parts": [
         {
@@ -1510,9 +1510,9 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "往夜市去",
-        "pinyin": "wǎng yèshì qù",
-        "meaning": "go toward the night market"
+        "text": "往外看",
+        "pinyin": "wǎng wài kàn",
+        "meaning": "look outward"
       }
     },
     "因": {
