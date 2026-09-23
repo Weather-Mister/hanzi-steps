@@ -148,6 +148,7 @@ test('Unit 36 deep audit retrieves both Grammar IV branches with source examples
   const blob=[...job.steps,...hard.steps,...review.steps].flatMap(step=>[step.prompt,step.answer,step.explanation,...(step.options??[])]).filter(Boolean).join('\n');
   assert.match(blob,/日本菜好吃也好看/);
   assert.match(blob,/便宜的咖啡不好喝/);
+  assert.match(blob,/學校餐廳的菜不難吃/);
   assert.match(blob,/你覺得那個電影好看不好看/);
   assert.match(blob,/老師今天教的甜點難不難學/);
   assert.match(blob,/好喝 \/ 難喝/);
@@ -194,4 +195,22 @@ test('Unit 36 review covers time-anchor 以後 and degree modification, not only
   assert.match(time.prompt,/半年以後/);
   assert.equal(degree.answer,'我媽媽做的菜很好吃。');
   assert.match(degree.explanation,/degree adverbs/i);
+});
+
+
+test('Unit 36 learner-facing runtime content does not leak the omitted textbook glyphs 田 or 妳',()=>{
+  const values=[];
+  const visit=value=>{
+    if(typeof value==='string')values.push(value);
+    else if(Array.isArray(value))value.forEach(visit);
+    else if(value&&typeof value==='object')Object.values(value).forEach(visit);
+  };
+  visit(u36);
+  const blob=values.join('\n');
+  assert.ok(!blob.includes('田'),'Unit 36 runtime content leaks untaught proper-name glyph 田');
+  assert.ok(!blob.includes('妳'),'Unit 36 runtime content leaks untaught orthographic variant 妳');
+});
+
+test('Unit 36 source dialogue pinyin keeps 臺灣 人 as separate words',()=>{
+  assert.equal(u36.phrases['u36-business'].pinyin,'Yīnwèi wǒmen gōngsī gēn Táiwān rén zuò shēngyì.');
 });
