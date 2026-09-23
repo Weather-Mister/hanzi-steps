@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCourse} from './course-io.mjs';
 import {han} from './validate.mjs';
+import {compactPinyin,searchVocabulary,vocabularyLookup} from '../lib/vocabulary-lookup.ts';
+import {eligibleMegaVocabulary} from '../lib/mega-challenge.ts';
 
 const course=await loadCourse();
 const u36=course.modules.find(m=>m.unit.id==='unit-36');
@@ -146,6 +148,40 @@ test('Unit 36 deep audit retrieves both Grammar IV branches with source examples
   const blob=[...job.steps,...hard.steps,...review.steps].flatMap(step=>[step.prompt,step.answer,step.explanation,...(step.options??[])]).filter(Boolean).join('\n');
   assert.match(blob,/日本菜好吃也好看/);
   assert.match(blob,/便宜的咖啡不好喝/);
+  assert.match(blob,/你覺得那個電影好看不好看/);
   assert.match(blob,/老師今天教的甜點難不難學/);
   assert.match(blob,/好喝 \/ 難喝/);
+});
+
+
+test('Unit 36 pinyin search resolves every new vocabulary entry to its canonical item',()=>{
+  for(const word of u36.newVocabulary){
+    const query=compactPinyin(word.pinyin);
+    const hit=searchVocabulary(query,1000).find(item=>item.traditional===word.text&&item.lessonId===word.lessonId);
+    assert.ok(hit,'Pinyin search misses '+word.text+' via '+query);
+    assert.equal(hit.pinyin,word.pinyin);
+    assert.equal(hit.meaning,word.meaning);
+  }
+});
+
+test('Unit 36 vocabulary becomes Mega Challenge eligible after its teaching lessons are complete',()=>{
+  const completed=new Set(u36.newVocabulary.map(word=>word.lessonId));
+  const eligible=eligibleMegaVocabulary(completed,new Set());
+  const ids=new Set(eligible.map(item=>item.id));
+  for(const word of u36.newVocabulary){
+    const item=vocabularyLookup.find(v=>v.traditional===word.text&&v.lessonId===word.lessonId);
+    assert.ok(item,'canonical lookup missing '+word.text);
+    assert.ok(ids.has(item.id),'Mega Challenge eligibility misses '+word.text);
+  }
+});
+
+test('Unit 36 grammar review keeps perception and action A-not-A forms distinct',()=>{
+  const hard=u36.lessons.find(l=>l.id==='u36-hard');
+  const review=u36.lessons.find(l=>l.id===u36.reviewLessonId);
+  const perception=hard.steps.find(s=>s.id==='u36-hard-s4');
+  const action=review.steps.find(s=>s.id==='u36-review-g7');
+  assert.equal(perception.answer,'你覺得那個電影好看不好看？');
+  assert.match(perception.explanation,/whole compound/i);
+  assert.equal(action.answer,'老師今天教的甜點難不難學？');
+  assert.match(action.explanation,/難不難 \+ action verb/);
 });
