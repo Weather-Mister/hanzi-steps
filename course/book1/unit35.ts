@@ -279,7 +279,7 @@ const unit:UnitData = {
           "prompt": "Which source-style yes/no question correctly uses 是…的?",
           "options": [
             "你的房租是自己付的嗎？",
-            "你的房租自己是不是付的？"
+            "你的房租是自己嗎付的？"
           ],
           "answer": "你的房租是自己付的嗎？",
           "explanation": "The textbook shows yes/no questions by keeping the 是…的 frame and adding 嗎.",
