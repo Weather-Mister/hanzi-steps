@@ -36,7 +36,13 @@ function completedThrough(unitId){
 
 function assertQuestionContent(question,items,label){
  assert.ok(items.some(item=>item.id===question.item.id),label+' uses an item outside the learned pool: '+question.item.id);
- assert.ok(practiceModesForItem(question.item).includes(question.mode),label+' uses unsupported mode '+question.mode+' for '+question.item.id);
+ if(question.mode==='context'){
+  assert.ok(question.context,label+' context mode has no context payload for '+question.item.id);
+  assert.equal(question.context.answer,question.item.traditional,label+' context answer drifted from '+question.item.id);
+  assert.ok(question.context.sentence.includes('＿＿＿'),label+' context prompt has no blank for '+question.item.id);
+ }else{
+  assert.ok(practiceModesForItem(question.item).includes(question.mode),label+' uses unsupported mode '+question.mode+' for '+question.item.id);
+ }
  assert.equal(
   practicePromptIsAmbiguous(question.item,question.mode,items),
   false,

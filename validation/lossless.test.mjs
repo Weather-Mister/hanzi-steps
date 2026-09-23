@@ -9,6 +9,8 @@ const baseline=readJSON('validation/fixtures/live-before-refactor.json');
 const amendment=readJSON('validation/fixtures/book1-first-teaching-amendment.json');
 const lesson10Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson10.json');
 const correctionAmendment=readJSON('validation/fixtures/units26-31-correction-amendment.json');
+const spotlightAmendment=readJSON('validation/fixtures/spotlight-word-amendment.json');
+const lesson11Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson11.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -24,19 +26,28 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const priorExpected=later?.after??firstExpected;
    const correction=correctionAmendment.records?.[key]?.[id];
    if(correction)assert.equal(correction.before,priorExpected,`correction must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),correction?.after??priorExpected,`${key} ${id}`);
+   const correctedExpected=correction?.after??priorExpected;
+   const spotlight=spotlightAmendment.records?.[key]?.[id];
+   if(spotlight)assert.equal(spotlight.before,correctedExpected,`spotlight amendment must identify prior ${key} ${id}`);
+   const spotlightExpected=spotlight?.after??correctedExpected;
+   const lesson11=lesson11Amendment.records?.[key]?.[id];
+   if(lesson11)assert.equal(lesson11.before,spotlightExpected,`Lesson 11 amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),lesson11?.after??spotlightExpected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
  for(const b of baseline.books){const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);}
- assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson10Amendment.characterOrder??amendment.characterOrder);
+ assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson11Amendment.characterOrder??lesson10Amendment.characterOrder??amendment.characterOrder);
  for(const [ch,digest]of Object.entries(baseline.practice)){
   const first=amendment.practice?.[ch];
   if(first)assert.equal(first.before,digest,`practice amendment must identify original ${ch}`);
   const firstExpected=first?.after??digest;
   const later=lesson10Amendment.practice?.[ch];
   if(later)assert.equal(later.before,firstExpected,`Lesson 10 amendment must identify prior ${ch}`);
-  assert.equal(hash(current.practiceLesson(ch)),later?.after??firstExpected,`practice-${ch}`);
+  const priorExpected=later?.after??firstExpected;
+  const lesson11=lesson11Amendment.practice?.[ch];
+  if(lesson11)assert.equal(lesson11.before,priorExpected,`Lesson 11 amendment must identify prior practice ${ch}`);
+  assert.equal(hash(current.practiceLesson(ch)),lesson11?.after??priorExpected,`practice-${ch}`);
  }
 });
 test('Original complete and partial progress checkpoints remain valid',()=>{

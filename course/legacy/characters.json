@@ -1,47 +1,4 @@
 {
-  "房": {
-    "hanzi": "房",
-    "pinyin": "fáng",
-    "zhuyin": "ㄈㄤˊ",
-    "meaning": "house (in 房子)",
-    "layout": "stack",
-    "note": "房 is the first character of 房子, house. Notice the upper-left 戶 and the 方 beneath it.",
-    "memory": "房 shelters 方 beneath 戶. The long left stroke of 戶 runs down beside the lower group.",
-    "parts": [
-      {
-        "label": "戶",
-        "name": "door-shaped upper group",
-        "role": "Visual component",
-        "description": "戶 begins above 方, then its long sloping stroke extends down the left side of the lower group.",
-        "strokes": [
-          0,
-          1,
-          2,
-          3
-        ]
-      },
-      {
-        "label": "方",
-        "name": "lower component",
-        "role": "Visual component",
-        "description": "方 sits underneath the upper part of 戶. Leave room for its hooked and slanting strokes below the horizontal.",
-        "strokes": [
-          4,
-          5,
-          6,
-          7
-        ]
-      }
-    ],
-    "strokes": 8,
-    "example": {
-      "text": "房",
-      "pinyin": "fáng",
-      "meaning": "house (in 房子)"
-    },
-    "layoutLabel": "Upper-left enclosure",
-    "partOrderLabel": "戶 first, then 方 below"
-  },
   "兄": {
     "hanzi": "兄",
     "pinyin": "xiōng",

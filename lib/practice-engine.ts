@@ -575,8 +575,15 @@ function mixedMasteryContext(item:PracticeItem,pool:PracticeItem[],seed:string):
   const bWords=b.candidate.tokens?.length??0;
   return bWords-aWords||bLength-aLength;
  });
- const chosen=ranked[0].candidate;
- let sentence=chosen.traditional.replace(item.traditional,'＿＿＿');
+ const selected=ranked[0];
+ const chosen=selected.candidate;
+ const chosenTokens=chosen.tokens||[];
+ const rawSpan=chosenTokens.slice(selected.span.start,selected.span.end).join('');
+ let sentence=rawSpan?chosen.traditional.replace(rawSpan,'＿＿＿'):chosen.traditional.replace(item.traditional,'＿＿＿');
+ // A normalized token span can match even when the target item carries terminal
+ // punctuation that the larger sentence does not. Never emit a context question
+ // unless the visible prompt actually contains the cloze blank.
+ if(!sentence.includes('＿＿＿'))return undefined;
  let meaning=chosen.meaning;
 
  // Turn a bare existential example into a slightly richer sentence when the
