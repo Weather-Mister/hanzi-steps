@@ -41,7 +41,10 @@ test('Unit 36 retrieves every formal NEW vocabulary item in review',()=>{
 test('Unit 36 preserves Dialogue II core lines and source phrase treatment',()=>{
   assert.equal(u36.phrases['u36-work-question'].text,'你是什麼時候來臺灣工作的？');
   assert.equal(u36.phrases['u36-last-year'].text,'去年，我已經在臺灣工作一年了。');
+  assert.equal(u36.phrases['u36-tuition-question'].text,'為什麼你們公司要替你付學費？');
   assert.equal(u36.phrases['u36-business'].text,'因為我們公司跟臺灣人做生意。');
+  assert.equal(u36.phrases['u36-company-good'].text,'我覺得你們公司真好。');
+  assert.equal(u36.phrases['u36-after-question'].text,'對了，你回國以後，打算做什麼？');
   assert.equal(u36.phrases['u36-after-home'].text,'我回國以後，也想找個有機會說中文的工作。');
   assert.equal(u36.phrases['u36-job-question'].text,'不錯，這樣的工作在你們國家好找嗎？');
   assert.equal(u36.phrases['u36-try-it'].text,'不知道好不好找，我試試看。');
