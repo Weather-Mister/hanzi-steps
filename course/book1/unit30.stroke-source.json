@@ -7,14 +7,14 @@
     "graphicsJa.txt"
   ],
   "characters": [
-    "芒",
     "紅",
     "瓜",
     "拍",
     "笑",
     "心",
     "穿",
-    "衣"
+    "衣",
+    "芒"
   ],
   "note": "Traditional Hanzi Steps target. Prefer graphicsZhHant.txt; if unavailable, fallback may use only the exact same Unicode character from graphicsZhHans.txt or graphicsJa.txt. Never substitute a different Simplified/Japanese codepoint."
 }
