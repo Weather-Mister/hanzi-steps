@@ -1,0 +1,1739 @@
+import type {UnitData} from '../schema.ts';
+
+const unit:UnitData = {
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 32,
+  "unit": {
+    "id": "unit-32",
+    "number": 32,
+    "theme": "cyan",
+    "label": "Renting & rooms",
+    "title": "A Place to Rent",
+    "description": "Begin Lesson 11 with renting and the home: landlords, rooms, left/right location, nearby places, walking time, 來 + activity, and the single-sentence 就 that marks unexpectedly little time or distance.",
+    "chars": [
+      "租",
+      "房",
+      "客",
+      "廚",
+      "左",
+      "右",
+      "浴",
+      "超",
+      "走",
+      "路",
+      "間",
+      "套",
+      "話"
+    ],
+    "lessonIds": [
+      "u32-rent",
+      "u32-rooms",
+      "u32-sides",
+      "u32-nearby",
+      "u32-come",
+      "u32-quick",
+      "u32-review"
+    ],
+    "banner": {
+      "text": "我要租房子",
+      "pinyin": "Wǒ yào zū fángzi"
+    },
+    "goal": {
+      "text": "我來看房子。走路五分鐘就到了。",
+      "pinyin": "Wǒ lái kàn fángzi. Zǒulù wǔ fēnzhōng jiù dào le.",
+      "meaning": "I came to look at the place. It is only a five-minute walk to get there."
+    },
+    "grammarIds": [
+      "u32-lai-vp",
+      "u32-early-jiu"
+    ],
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 11 Dialogue I / Vocabulary I (printed pp. 224–226) and Grammar I–II (printed pp. 230–232). 分鐘, 房間, 回去 and 打電話 are taught transparently from already-supported parts rather than counted as extra NEW vocabulary; 再 continues in Unit 33."
+  },
+  "reviewLessonId": "u32-review",
+  "lessons": [
+    {
+      "id": "u32-rent",
+      "title": "A Place to Rent",
+      "subtitle": "Start Lesson 11 with the core rental words: 租, 房東, 套房, and the 房 character family.",
+      "chars": [
+        "租",
+        "房",
+        "套"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-32",
+      "review": false,
+      "steps": [
+        {
+          "id": "u32-rent-租-intro",
+          "type": "intro",
+          "char": "租"
+        },
+        {
+          "id": "u32-rent-租-trace",
+          "type": "trace",
+          "char": "租"
+        },
+        {
+          "id": "u32-rent-租-build",
+          "type": "build",
+          "char": "租"
+        },
+        {
+          "id": "u32-rent-租-complete",
+          "type": "complete",
+          "char": "租"
+        },
+        {
+          "id": "u32-rent-租-memory",
+          "type": "memory",
+          "char": "租"
+        },
+        {
+          "id": "u32-rent-房-intro",
+          "type": "intro",
+          "char": "房"
+        },
+        {
+          "id": "u32-rent-房-trace",
+          "type": "trace",
+          "char": "房"
+        },
+        {
+          "id": "u32-rent-房-build",
+          "type": "build",
+          "char": "房"
+        },
+        {
+          "id": "u32-rent-房-complete",
+          "type": "complete",
+          "char": "房"
+        },
+        {
+          "id": "u32-rent-房-memory",
+          "type": "memory",
+          "char": "房"
+        },
+        {
+          "id": "u32-rent-套-intro",
+          "type": "intro",
+          "char": "套"
+        },
+        {
+          "id": "u32-rent-套-trace",
+          "type": "trace",
+          "char": "套"
+        },
+        {
+          "id": "u32-rent-套-build",
+          "type": "build",
+          "char": "套"
+        },
+        {
+          "id": "u32-rent-套-complete",
+          "type": "complete",
+          "char": "套"
+        },
+        {
+          "id": "u32-rent-套-memory",
+          "type": "memory",
+          "char": "套"
+        },
+        {
+          "id": "u32-rent-p1",
+          "type": "phrase",
+          "phrase": "u32-rent"
+        },
+        {
+          "id": "u32-rent-p2",
+          "type": "phrase",
+          "phrase": "u32-landlord"
+        },
+        {
+          "id": "u32-rent-s1",
+          "type": "select",
+          "prompt": "Which word means landlord?",
+          "options": [
+            "房東",
+            "套房",
+            "客廳"
+          ],
+          "answer": "房東",
+          "explanation": "房東 means landlord."
+        }
+      ]
+    },
+    {
+      "id": "u32-rooms",
+      "title": "Living Room, Kitchen, Bathroom",
+      "subtitle": "Build the key room vocabulary from the first rental dialogue.",
+      "chars": [
+        "客",
+        "廚",
+        "浴"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-32",
+      "review": false,
+      "steps": [
+        {
+          "id": "u32-rooms-客-intro",
+          "type": "intro",
+          "char": "客"
+        },
+        {
+          "id": "u32-rooms-客-trace",
+          "type": "trace",
+          "char": "客"
+        },
+        {
+          "id": "u32-rooms-客-build",
+          "type": "build",
+          "char": "客"
+        },
+        {
+          "id": "u32-rooms-客-complete",
+          "type": "complete",
+          "char": "客"
+        },
+        {
+          "id": "u32-rooms-客-memory",
+          "type": "memory",
+          "char": "客"
+        },
+        {
+          "id": "u32-rooms-廚-intro",
+          "type": "intro",
+          "char": "廚"
+        },
+        {
+          "id": "u32-rooms-廚-trace",
+          "type": "trace",
+          "char": "廚"
+        },
+        {
+          "id": "u32-rooms-廚-build",
+          "type": "build",
+          "char": "廚"
+        },
+        {
+          "id": "u32-rooms-廚-complete",
+          "type": "complete",
+          "char": "廚"
+        },
+        {
+          "id": "u32-rooms-廚-memory",
+          "type": "memory",
+          "char": "廚"
+        },
+        {
+          "id": "u32-rooms-浴-intro",
+          "type": "intro",
+          "char": "浴"
+        },
+        {
+          "id": "u32-rooms-浴-trace",
+          "type": "trace",
+          "char": "浴"
+        },
+        {
+          "id": "u32-rooms-浴-build",
+          "type": "build",
+          "char": "浴"
+        },
+        {
+          "id": "u32-rooms-浴-complete",
+          "type": "complete",
+          "char": "浴"
+        },
+        {
+          "id": "u32-rooms-浴-memory",
+          "type": "memory",
+          "char": "浴"
+        },
+        {
+          "id": "u32-rooms-p1",
+          "type": "phrase",
+          "phrase": "u32-rooms"
+        },
+        {
+          "id": "u32-rooms-p2",
+          "type": "phrase",
+          "phrase": "u32-kitchen"
+        },
+        {
+          "id": "u32-rooms-s1",
+          "type": "select",
+          "prompt": "Which room is 客廳?",
+          "options": [
+            "living room",
+            "kitchen",
+            "bathroom"
+          ],
+          "answer": "living room",
+          "explanation": "客廳 is the living room."
+        }
+      ]
+    },
+    {
+      "id": "u32-sides",
+      "title": "Left, Right, and Vacant Rooms",
+      "subtitle": "Use 左邊 / 右邊, count rooms with 間, and use 空 for a vacant room.",
+      "chars": [
+        "左",
+        "右",
+        "間"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-32",
+      "review": false,
+      "steps": [
+        {
+          "id": "u32-sides-左-intro",
+          "type": "intro",
+          "char": "左"
+        },
+        {
+          "id": "u32-sides-左-trace",
+          "type": "trace",
+          "char": "左"
+        },
+        {
+          "id": "u32-sides-左-build",
+          "type": "build",
+          "char": "左"
+        },
+        {
+          "id": "u32-sides-左-complete",
+          "type": "complete",
+          "char": "左"
+        },
+        {
+          "id": "u32-sides-左-memory",
+          "type": "memory",
+          "char": "左"
+        },
+        {
+          "id": "u32-sides-右-intro",
+          "type": "intro",
+          "char": "右"
+        },
+        {
+          "id": "u32-sides-右-trace",
+          "type": "trace",
+          "char": "右"
+        },
+        {
+          "id": "u32-sides-右-build",
+          "type": "build",
+          "char": "右"
+        },
+        {
+          "id": "u32-sides-右-complete",
+          "type": "complete",
+          "char": "右"
+        },
+        {
+          "id": "u32-sides-右-memory",
+          "type": "memory",
+          "char": "右"
+        },
+        {
+          "id": "u32-sides-間-intro",
+          "type": "intro",
+          "char": "間"
+        },
+        {
+          "id": "u32-sides-間-trace",
+          "type": "trace",
+          "char": "間"
+        },
+        {
+          "id": "u32-sides-間-build",
+          "type": "build",
+          "char": "間"
+        },
+        {
+          "id": "u32-sides-間-complete",
+          "type": "complete",
+          "char": "間"
+        },
+        {
+          "id": "u32-sides-間-memory",
+          "type": "memory",
+          "char": "間"
+        },
+        {
+          "id": "u32-sides-p1",
+          "type": "phrase",
+          "phrase": "u32-rooms"
+        },
+        {
+          "id": "u32-sides-p2",
+          "type": "phrase",
+          "phrase": "u32-landlord"
+        },
+        {
+          "id": "u32-sides-s1",
+          "type": "select",
+          "prompt": "In 兩間空房間, what does 間 do?",
+          "options": [
+            "counts rooms",
+            "means empty",
+            "means landlord"
+          ],
+          "answer": "counts rooms",
+          "explanation": "間 is the measure word for rooms and houses here."
+        },
+        {
+          "id": "u32-sides-s2",
+          "type": "select",
+          "prompt": "What does 空 mean in 空房間?",
+          "options": [
+            "vacant; empty",
+            "free time only",
+            "right side"
+          ],
+          "answer": "vacant; empty",
+          "explanation": "Here 空 kōng describes a vacant room. Earlier 有空 used kòng in the expression 'to be free'."
+        }
+      ]
+    },
+    {
+      "id": "u32-nearby",
+      "title": "Nearby on Foot",
+      "subtitle": "Talk about a nearby supermarket and walking there.",
+      "chars": [
+        "超",
+        "走",
+        "路"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-32",
+      "review": false,
+      "steps": [
+        {
+          "id": "u32-nearby-超-intro",
+          "type": "intro",
+          "char": "超"
+        },
+        {
+          "id": "u32-nearby-超-trace",
+          "type": "trace",
+          "char": "超"
+        },
+        {
+          "id": "u32-nearby-超-build",
+          "type": "build",
+          "char": "超"
+        },
+        {
+          "id": "u32-nearby-超-complete",
+          "type": "complete",
+          "char": "超"
+        },
+        {
+          "id": "u32-nearby-超-memory",
+          "type": "memory",
+          "char": "超"
+        },
+        {
+          "id": "u32-nearby-走-intro",
+          "type": "intro",
+          "char": "走"
+        },
+        {
+          "id": "u32-nearby-走-trace",
+          "type": "trace",
+          "char": "走"
+        },
+        {
+          "id": "u32-nearby-走-build",
+          "type": "build",
+          "char": "走"
+        },
+        {
+          "id": "u32-nearby-走-complete",
+          "type": "complete",
+          "char": "走"
+        },
+        {
+          "id": "u32-nearby-走-memory",
+          "type": "memory",
+          "char": "走"
+        },
+        {
+          "id": "u32-nearby-路-intro",
+          "type": "intro",
+          "char": "路"
+        },
+        {
+          "id": "u32-nearby-路-trace",
+          "type": "trace",
+          "char": "路"
+        },
+        {
+          "id": "u32-nearby-路-build",
+          "type": "build",
+          "char": "路"
+        },
+        {
+          "id": "u32-nearby-路-complete",
+          "type": "complete",
+          "char": "路"
+        },
+        {
+          "id": "u32-nearby-路-memory",
+          "type": "memory",
+          "char": "路"
+        },
+        {
+          "id": "u32-nearby-p1",
+          "type": "phrase",
+          "phrase": "u32-market"
+        },
+        {
+          "id": "u32-nearby-p2",
+          "type": "phrase",
+          "phrase": "u32-walk"
+        },
+        {
+          "id": "u32-nearby-s1",
+          "type": "select",
+          "prompt": "Which source word means 'to walk'?",
+          "options": [
+            "走路",
+            "超市",
+            "套房"
+          ],
+          "answer": "走路",
+          "explanation": "走路 is the separable verb 'to walk'."
+        }
+      ]
+    },
+    {
+      "id": "u32-come",
+      "title": "Come Here to Do It",
+      "subtitle": "Contrast 來 + activity with the earlier 去 + activity pattern, and add 電話 for contacting the landlord.",
+      "chars": [
+        "話"
+      ],
+      "minutes": "9–12 min",
+      "unitId": "unit-32",
+      "review": false,
+      "steps": [
+        {
+          "id": "u32-come-話-intro",
+          "type": "intro",
+          "char": "話"
+        },
+        {
+          "id": "u32-come-話-trace",
+          "type": "trace",
+          "char": "話"
+        },
+        {
+          "id": "u32-come-話-build",
+          "type": "build",
+          "char": "話"
+        },
+        {
+          "id": "u32-come-話-complete",
+          "type": "complete",
+          "char": "話"
+        },
+        {
+          "id": "u32-come-話-memory",
+          "type": "memory",
+          "char": "話"
+        },
+        {
+          "id": "u32-come-phone",
+          "type": "phrase",
+          "phrase": "u32-phone"
+        },
+        {
+          "id": "u32-come-g1",
+          "type": "grammar",
+          "grammar": "u32-lai-vp"
+        },
+        {
+          "id": "u32-come-p1",
+          "type": "phrase",
+          "phrase": "u32-come-house"
+        },
+        {
+          "id": "u32-come-p2",
+          "type": "phrase",
+          "phrase": "u32-come-class"
+        },
+        {
+          "id": "u32-come-p3",
+          "type": "phrase",
+          "phrase": "u32-come-question"
+        },
+        {
+          "id": "u32-come-s1",
+          "type": "select",
+          "prompt": "You are at the place and ask whether a friend will come there to look at it. Which fits?",
+          "options": [
+            "你要來看房子嗎？",
+            "你要去看房子嗎？"
+          ],
+          "answer": "你要來看房子嗎？",
+          "explanation": "來 points toward the relevant location."
+        }
+      ]
+    },
+    {
+      "id": "u32-quick",
+      "title": "Only Five Minutes",
+      "subtitle": "Use the Lesson 11 single-sentence 就 for an event reached sooner than expected, not the earlier conditional 就.",
+      "chars": [],
+      "minutes": "8–11 min",
+      "unitId": "unit-32",
+      "review": false,
+      "steps": [
+        {
+          "id": "u32-quick-g1",
+          "type": "grammar",
+          "grammar": "u32-early-jiu"
+        },
+        {
+          "id": "u32-quick-p1",
+          "type": "phrase",
+          "phrase": "u32-walk"
+        },
+        {
+          "id": "u32-quick-p2",
+          "type": "phrase",
+          "phrase": "u32-quick"
+        },
+        {
+          "id": "u32-quick-s1",
+          "type": "select",
+          "prompt": "What does 就 contribute in 走路五分鐘就到了?",
+          "options": [
+            "the trip takes less time than expected",
+            "a condition is being introduced",
+            "the action is habitual"
+          ],
+          "answer": "the trip takes less time than expected",
+          "explanation": "This Lesson 11 就 presents the arrival as sooner/easier than expected."
+        },
+        {
+          "id": "u32-quick-o1",
+          "type": "order",
+          "phrase": "u32-walk",
+          "tokens": [
+            "就到了",
+            "走路五分鐘"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u32-review",
+      "title": "Unit 32 Review",
+      "subtitle": "Renting, rooms, directions inside a home, coming to do something, and the new time/distance use of 就.",
+      "chars": [],
+      "minutes": "12–16 min",
+      "unitId": "unit-32",
+      "review": true,
+      "steps": [
+        {
+          "id": "u32-review-p1",
+          "type": "phrase",
+          "phrase": "u32-rent"
+        },
+        {
+          "id": "u32-review-p2",
+          "type": "phrase",
+          "phrase": "u32-landlord"
+        },
+        {
+          "id": "u32-review-p3",
+          "type": "phrase",
+          "phrase": "u32-rooms"
+        },
+        {
+          "id": "u32-review-p4",
+          "type": "phrase",
+          "phrase": "u32-kitchen"
+        },
+        {
+          "id": "u32-review-p5",
+          "type": "phrase",
+          "phrase": "u32-market"
+        },
+        {
+          "id": "u32-review-p6",
+          "type": "phrase",
+          "phrase": "u32-walk"
+        },
+        {
+          "id": "u32-review-p7",
+          "type": "phrase",
+          "phrase": "u32-phone"
+        },
+        {
+          "id": "u32-review-s1",
+          "type": "select",
+          "prompt": "Which word means 'suite'?",
+          "options": [
+            "套房",
+            "客廳",
+            "浴室"
+          ],
+          "answer": "套房",
+          "explanation": "套房 is a suite."
+        },
+        {
+          "id": "u32-review-s2",
+          "type": "select",
+          "prompt": "Which word means 'vacant; empty' in 空房間?",
+          "options": [
+            "空",
+            "間",
+            "房東"
+          ],
+          "answer": "空",
+          "explanation": "空 kōng describes a vacant room here."
+        },
+        {
+          "id": "u32-review-s3",
+          "type": "select",
+          "prompt": "Which measure word counts rooms?",
+          "options": [
+            "間",
+            "分",
+            "個"
+          ],
+          "answer": "間",
+          "explanation": "Use 間 for rooms and houses."
+        },
+        {
+          "id": "u32-review-g1",
+          "type": "select",
+          "prompt": "Which sentence clearly uses 來 as movement toward the relevant location to do an activity?",
+          "options": [
+            "我來看房子。",
+            "我要是有空就去。"
+          ],
+          "answer": "我來看房子。",
+          "explanation": "來 + VP is the new directional activity pattern.",
+          "grammarIds": [
+            "u32-lai-vp"
+          ]
+        },
+        {
+          "id": "u32-review-g2",
+          "type": "select",
+          "prompt": "Which sentence uses the Lesson 11 'sooner than expected' 就?",
+          "options": [
+            "走路五分鐘就到了。",
+            "要是下雨，我就不去。"
+          ],
+          "answer": "走路五分鐘就到了。",
+          "explanation": "Here 就 highlights the short time/distance, not a condition.",
+          "grammarIds": [
+            "u32-early-jiu"
+          ]
+        },
+        {
+          "id": "u32-review-o1",
+          "type": "order",
+          "phrase": "u32-come-question",
+          "tokens": [
+            "要來看房子嗎",
+            "你"
+          ]
+        },
+        {
+          "id": "u32-review-o2",
+          "type": "order",
+          "phrase": "u32-walk",
+          "tokens": [
+            "就到了",
+            "走路五分鐘"
+          ]
+        },
+        {
+          "id": "u32-review-l1",
+          "type": "listen",
+          "char": "左",
+          "prompt": "Listen for the side named in the sentence.",
+          "audioText": "客廳在左邊。",
+          "options": [
+            "左邊",
+            "右邊"
+          ],
+          "answer": "左邊",
+          "explanation": "The sentence says the living room is on the left."
+        },
+        {
+          "id": "u32-review-l2",
+          "type": "listen",
+          "char": "浴",
+          "prompt": "Listen for the room named in the sentence.",
+          "audioText": "右邊有浴室。",
+          "options": [
+            "浴室",
+            "廚房",
+            "客廳"
+          ],
+          "answer": "浴室",
+          "explanation": "浴室 is the bathroom."
+        },
+        {
+          "id": "u32-review-l3",
+          "type": "listen",
+          "char": "超",
+          "prompt": "Listen for the nearby place.",
+          "audioText": "附近有超市。",
+          "options": [
+            "超市",
+            "套房",
+            "客廳"
+          ],
+          "answer": "超市",
+          "explanation": "超市 is the supermarket."
+        },
+        {
+          "id": "u32-review-m1",
+          "type": "memory",
+          "char": "租"
+        },
+        {
+          "id": "u32-review-m2",
+          "type": "memory",
+          "char": "間"
+        },
+        {
+          "id": "u32-review-m3",
+          "type": "memory",
+          "char": "話"
+        },
+        {
+          "id": "u32-review-s4",
+          "type": "select",
+          "prompt": "電話 means…",
+          "options": [
+            "telephone",
+            "landlord",
+            "kitchen"
+          ],
+          "answer": "telephone",
+          "explanation": "電話 is telephone."
+        },
+        {
+          "id": "u32-review-s5",
+          "type": "select",
+          "prompt": "Which is the kitchen?",
+          "options": [
+            "廚房",
+            "客廳",
+            "浴室"
+          ],
+          "answer": "廚房",
+          "explanation": "廚房 is kitchen."
+        }
+      ]
+    }
+  ],
+  "newVocabulary": [
+    {
+      "text": "租",
+      "pinyin": "zū",
+      "meaning": "to rent",
+      "lessonId": "u32-rent",
+      "core": true
+    },
+    {
+      "text": "房東",
+      "pinyin": "fángdōng",
+      "meaning": "landlord",
+      "lessonId": "u32-rent",
+      "core": true
+    },
+    {
+      "text": "套房",
+      "pinyin": "tàofáng",
+      "meaning": "suite",
+      "lessonId": "u32-rent",
+      "core": true
+    },
+    {
+      "text": "客廳",
+      "pinyin": "kètīng",
+      "meaning": "living room",
+      "lessonId": "u32-rooms",
+      "core": true
+    },
+    {
+      "text": "廚房",
+      "pinyin": "chúfáng",
+      "meaning": "kitchen",
+      "lessonId": "u32-rooms",
+      "core": true
+    },
+    {
+      "text": "浴室",
+      "pinyin": "yùshì",
+      "meaning": "bathroom",
+      "lessonId": "u32-rooms",
+      "core": true
+    },
+    {
+      "text": "左邊",
+      "pinyin": "zuǒbiān",
+      "meaning": "left side",
+      "lessonId": "u32-sides",
+      "core": true
+    },
+    {
+      "text": "右邊",
+      "pinyin": "yòubiān",
+      "meaning": "right side",
+      "lessonId": "u32-sides",
+      "core": true
+    },
+    {
+      "text": "間",
+      "pinyin": "jiān",
+      "meaning": "measure word for rooms and houses",
+      "lessonId": "u32-sides",
+      "core": true
+    },
+    {
+      "text": "空",
+      "pinyin": "kōng",
+      "meaning": "vacant; empty",
+      "lessonId": "u32-sides",
+      "core": true
+    },
+    {
+      "text": "超市",
+      "pinyin": "chāoshì",
+      "meaning": "supermarket",
+      "lessonId": "u32-nearby",
+      "core": true
+    },
+    {
+      "text": "走路",
+      "pinyin": "zǒulù",
+      "meaning": "to walk",
+      "lessonId": "u32-nearby",
+      "core": true
+    },
+    {
+      "text": "電話",
+      "pinyin": "diànhuà",
+      "meaning": "telephone",
+      "lessonId": "u32-come",
+      "core": true
+    }
+  ],
+  "reviewVocabulary": [
+    "想",
+    "到",
+    "給",
+    "來",
+    "有",
+    "附近",
+    "分",
+    "就"
+  ],
+  "newCharacters": [
+    "租",
+    "房",
+    "客",
+    "廚",
+    "左",
+    "右",
+    "浴",
+    "超",
+    "走",
+    "路",
+    "間",
+    "套",
+    "話"
+  ],
+  "reviewCharacters": [],
+  "characters": {
+    "租": {
+      "hanzi": "租",
+      "pinyin": "zū",
+      "zhuyin": "ㄗㄨ",
+      "meaning": "rent",
+      "strokes": 10,
+      "layout": "side",
+      "note": "租 is first-tone zū. In this lesson it is the verb “to rent,” especially a room or apartment.",
+      "memory": "禾 forms the five-stroke left side; 且 forms the five-stroke right side. Keep the two blocks narrow and balanced.",
+      "parts": [
+        {
+          "label": "禾",
+          "name": "grain component",
+          "role": "Left component",
+          "description": "The first five strokes form 禾 on the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "且",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final five strokes form 且, with its stacked horizontal lines, on the right.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "example": {
+        "text": "租房子",
+        "pinyin": "zū fángzi",
+        "meaning": "rent a place"
+      }
+    },
+    "房": {
+      "hanzi": "房",
+      "pinyin": "fáng",
+      "zhuyin": "ㄈㄤˊ",
+      "meaning": "house; room",
+      "strokes": 8,
+      "layout": "stack",
+      "note": "房 is second-tone fáng. It appears in 房東, 房間, and 套房 throughout this rental lesson.",
+      "memory": "戶 occupies the upper-left area and its long slant shelters 方 below; do not compress 方 into the left edge.",
+      "parts": [
+        {
+          "label": "戶",
+          "name": "door-shaped upper group",
+          "role": "Upper component",
+          "description": "The first four strokes form 戶 above and to the left.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "方",
+          "name": "direction component",
+          "role": "Lower component",
+          "description": "The final four strokes form 方 beneath 戶.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "example": {
+        "text": "房東",
+        "pinyin": "fángdōng",
+        "meaning": "landlord"
+      }
+    },
+    "客": {
+      "hanzi": "客",
+      "pinyin": "kè",
+      "zhuyin": "ㄎㄜˋ",
+      "meaning": "guest; first character of 客廳",
+      "strokes": 9,
+      "layout": "stack",
+      "note": "客 is fourth-tone kè. In 客廳 it is part of the word for living room.",
+      "memory": "宀 is the three-stroke roof; 各 fills the lower space with a crossing top above 口.",
+      "parts": [
+        {
+          "label": "宀",
+          "name": "roof component",
+          "role": "Top component",
+          "description": "The first three strokes form 宀 across the top.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "各",
+          "name": "lower component",
+          "role": "Bottom component",
+          "description": "The final six strokes form 各 under the roof.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "example": {
+        "text": "客廳",
+        "pinyin": "kètīng",
+        "meaning": "living room"
+      }
+    },
+    "廚": {
+      "hanzi": "廚",
+      "pinyin": "chú",
+      "zhuyin": "ㄔㄨˊ",
+      "meaning": "kitchen; first character of 廚房",
+      "strokes": 15,
+      "layout": "stack",
+      "note": "廚 is second-tone chú. Learn it as the first character of 廚房, “kitchen.”",
+      "memory": "广 makes a three-stroke shelter; the remaining 尌-shaped body fills the inside without crossing the left shelter.",
+      "parts": [
+        {
+          "label": "广",
+          "name": "shelter component",
+          "role": "Outer component",
+          "description": "The first three strokes form the sloping 广 shelter.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "尌",
+          "name": "inner body",
+          "role": "Inner component",
+          "description": "The remaining twelve strokes build the dense inner body beneath 广.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        }
+      ],
+      "example": {
+        "text": "廚房",
+        "pinyin": "chúfáng",
+        "meaning": "kitchen"
+      }
+    },
+    "左": {
+      "hanzi": "左",
+      "pinyin": "zuǒ",
+      "zhuyin": "ㄗㄨㄛˇ",
+      "meaning": "left",
+      "strokes": 5,
+      "layout": "stack",
+      "note": "左 is third-tone zuǒ and gives the left side in 左邊.",
+      "memory": "The two upper strokes overhang 工. The 工 at the bottom distinguishes 左 from 右.",
+      "parts": [
+        {
+          "label": "𠂇",
+          "name": "upper strokes",
+          "role": "Top group",
+          "description": "The first two strokes make the overhanging top.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "工",
+          "name": "work component",
+          "role": "Bottom component",
+          "description": "The final three strokes form 工.",
+          "strokes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "example": {
+        "text": "左邊",
+        "pinyin": "zuǒbiān",
+        "meaning": "left side"
+      }
+    },
+    "右": {
+      "hanzi": "右",
+      "pinyin": "yòu",
+      "zhuyin": "ㄧㄡˋ",
+      "meaning": "right",
+      "strokes": 5,
+      "layout": "stack",
+      "note": "右 is fourth-tone yòu and gives the right side in 右邊.",
+      "memory": "The two upper strokes overhang 口. The 口 at the bottom distinguishes 右 from 左.",
+      "parts": [
+        {
+          "label": "𠂇",
+          "name": "upper strokes",
+          "role": "Top group",
+          "description": "The first two strokes make the overhanging top.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "口",
+          "name": "mouth component",
+          "role": "Bottom component",
+          "description": "The final three strokes close a small 口.",
+          "strokes": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "example": {
+        "text": "右邊",
+        "pinyin": "yòubiān",
+        "meaning": "right side"
+      }
+    },
+    "浴": {
+      "hanzi": "浴",
+      "pinyin": "yù",
+      "zhuyin": "ㄩˋ",
+      "meaning": "bathe; first character of 浴室",
+      "strokes": 10,
+      "layout": "side",
+      "note": "浴 is fourth-tone yù. In 浴室 it is part of the word for bathroom.",
+      "memory": "Three water dots 氵 stay narrow on the left; 谷 fills the right with spreading upper strokes above 口.",
+      "parts": [
+        {
+          "label": "氵",
+          "name": "water component",
+          "role": "Left component",
+          "description": "The first three strokes form 氵.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "谷",
+          "name": "valley component",
+          "role": "Right component",
+          "description": "The final seven strokes form 谷 on the right.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "example": {
+        "text": "浴室",
+        "pinyin": "yùshì",
+        "meaning": "bathroom"
+      }
+    },
+    "超": {
+      "hanzi": "超",
+      "pinyin": "chāo",
+      "zhuyin": "ㄔㄠ",
+      "meaning": "surpass; first character of 超市",
+      "strokes": 12,
+      "layout": "side",
+      "note": "超 is first-tone chāo. In 超市 it is part of the ordinary word for supermarket.",
+      "memory": "走 supplies the seven-stroke movement base; 召 sits compactly above the long lower sweep.",
+      "parts": [
+        {
+          "label": "走",
+          "name": "walking component",
+          "role": "Wrapping/left component",
+          "description": "The first seven strokes form 走 and its long base.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "召",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final five strokes form 召 above the base of 走.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "超市",
+        "pinyin": "chāoshì",
+        "meaning": "supermarket"
+      }
+    },
+    "走": {
+      "hanzi": "走",
+      "pinyin": "zǒu",
+      "zhuyin": "ㄗㄡˇ",
+      "meaning": "walk; go",
+      "strokes": 7,
+      "layout": "stack",
+      "note": "走 is third-tone zǒu. 走路 is the separable verb “to walk.”",
+      "memory": "A 土-like three-stroke top leads into the four-stroke lower walking shape and its long final sweep.",
+      "parts": [
+        {
+          "label": "土",
+          "name": "upper shape",
+          "role": "Top group",
+          "description": "The first three strokes form a 土-like top.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "龰",
+          "name": "lower walking group",
+          "role": "Bottom group",
+          "description": "The last four strokes form the lower walking shape.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "example": {
+        "text": "走路",
+        "pinyin": "zǒulù",
+        "meaning": "to walk"
+      }
+    },
+    "路": {
+      "hanzi": "路",
+      "pinyin": "lù",
+      "zhuyin": "ㄌㄨˋ",
+      "meaning": "road; route",
+      "strokes": 13,
+      "layout": "side",
+      "note": "路 is fourth-tone lù. In 走路 it supplies the noun-like second half of the separable verb.",
+      "memory": "足 fills the left side and 各 fills the right; keep both components upright rather than letting the lower strokes collide.",
+      "parts": [
+        {
+          "label": "足",
+          "name": "foot component",
+          "role": "Left component",
+          "description": "The first seven strokes form 足.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "各",
+          "name": "right component",
+          "role": "Right component",
+          "description": "The final six strokes form 各.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "example": {
+        "text": "走路",
+        "pinyin": "zǒulù",
+        "meaning": "to walk"
+      }
+    },
+    "間": {
+      "hanzi": "間",
+      "pinyin": "jiān",
+      "zhuyin": "ㄐㄧㄢ",
+      "meaning": "measure word for rooms; room-space",
+      "strokes": 12,
+      "layout": "stack",
+      "note": "間 is first-tone jiān here. It counts rooms and houses: 兩間房間.",
+      "memory": "The eight-stroke 門 surrounds a four-stroke 日. Keep the inner 日 centered with space around it.",
+      "parts": [
+        {
+          "label": "門",
+          "name": "door frame",
+          "role": "Outer component",
+          "description": "The first eight strokes form the Traditional door frame 門.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "label": "日",
+          "name": "sun component",
+          "role": "Inner component",
+          "description": "The final four strokes form 日 inside the frame.",
+          "strokes": [
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "兩間房間",
+        "pinyin": "liǎng jiān fángjiān",
+        "meaning": "two rooms"
+      }
+    },
+    "套": {
+      "hanzi": "套",
+      "pinyin": "tào",
+      "zhuyin": "ㄊㄠˋ",
+      "meaning": "set; first character of 套房",
+      "strokes": 10,
+      "layout": "stack",
+      "note": "套 is fourth-tone tào. 套房 is a suite: a room with its own bathroom in this lesson.",
+      "memory": "大 spreads across the top; 镸 fills the lower seven strokes and stays centered under it.",
+      "parts": [
+        {
+          "label": "大",
+          "name": "big component",
+          "role": "Top component",
+          "description": "The first three strokes form 大.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "镸",
+          "name": "long component",
+          "role": "Bottom component",
+          "description": "The final seven strokes form the lower component.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "example": {
+        "text": "套房",
+        "pinyin": "tàofáng",
+        "meaning": "suite"
+      }
+    },
+    "話": {
+      "hanzi": "話",
+      "pinyin": "huà",
+      "zhuyin": "ㄏㄨㄚˋ",
+      "meaning": "speech; words",
+      "strokes": 13,
+      "layout": "side",
+      "note": "話 is fourth-tone huà. It appears in 電話 and 打電話.",
+      "memory": "言 forms the seven-stroke left side; 舌 forms the six-stroke right side with 口 at the bottom.",
+      "parts": [
+        {
+          "label": "言",
+          "name": "speech component",
+          "role": "Left component",
+          "description": "The first seven strokes form 言.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "舌",
+          "name": "tongue component",
+          "role": "Right component",
+          "description": "The final six strokes form 舌.",
+          "strokes": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "example": {
+        "text": "電話",
+        "pinyin": "diànhuà",
+        "meaning": "telephone"
+      }
+    }
+  },
+  "grammarRules": {
+    "u32-lai-vp": {
+      "id": "u32-lai-vp",
+      "title": "Come here to do something",
+      "pattern": "來 + activity",
+      "explanation": "來 + VP says that the subject comes toward the speaker or the relevant deictic location in order to do the activity. It parallels the earlier 去 + activity pattern, but the direction is toward rather than away. Negation, auxiliary verbs, and adverbs go before 來: 不來上課, 要來看房子, 常來游泳. Do not use 來 merely as a generic future marker.",
+      "examples": [
+        {
+          "text": "我來學中文。",
+          "pinyin": "Wǒ lái xué Zhōngwén.",
+          "meaning": "I came here to study Chinese."
+        },
+        {
+          "text": "他來打籃球。",
+          "pinyin": "Tā lái dǎ lánqiú.",
+          "meaning": "He came here to play basketball."
+        },
+        {
+          "text": "你要來看房子嗎？",
+          "pinyin": "Nǐ yào lái kàn fángzi ma?",
+          "meaning": "Are you coming to look at the place?"
+        },
+        {
+          "text": "我明天不來上課。",
+          "pinyin": "Wǒ míngtiān bù lái shàngkè.",
+          "meaning": "I am not coming to class tomorrow."
+        }
+      ],
+      "remember": "來 points toward the relevant location; 去 points away. Put 不, 要, 常 and similar words before 來.",
+      "words": [
+        "來"
+      ]
+    },
+    "u32-early-jiu": {
+      "id": "u32-early-jiu",
+      "title": "Sooner than expected with 就",
+      "pattern": "time / distance + 就 + event",
+      "explanation": "In a time or distance context, 就 can present an event as occurring sooner, more directly, or with less delay than expected: 走路五分鐘就到了. This is different from the linking 就 in 要是…就…: here the sentence can stand alone without a condition. Sentence-final 了 often appears with arrival or change, but it is not required in every 就 sentence.",
+      "examples": [
+        {
+          "text": "走路五分鐘就到了。",
+          "pinyin": "Zǒulù wǔ fēnzhōng jiù dào le.",
+          "meaning": "It is only a five-minute walk to get there."
+        },
+        {
+          "text": "他等一下就來。",
+          "pinyin": "Tā děng yíxià jiù lái.",
+          "meaning": "He will be here in just a moment."
+        },
+        {
+          "text": "那個地方很近，很快就到了。",
+          "pinyin": "Nàge dìfang hěn jìn, hěn kuài jiù dào le.",
+          "meaning": "That place is close; you get there very quickly."
+        }
+      ],
+      "remember": "Here 就 signals unexpectedly little time or distance. Do not automatically treat every 就 as the consequence half of 要是…就….",
+      "words": [
+        "就"
+      ]
+    }
+  },
+  "grammarIntroductions": [
+    {
+      "id": "u32-lai-vp",
+      "kind": "rule",
+      "ref": "u32-lai-vp",
+      "lessonId": "u32-come",
+      "stepId": "u32-come-g1"
+    },
+    {
+      "id": "u32-early-jiu",
+      "kind": "rule",
+      "ref": "u32-early-jiu",
+      "lessonId": "u32-quick",
+      "stepId": "u32-quick-g1"
+    }
+  ],
+  "reviewGrammar": [
+    "u7-go",
+    "u29-yaoshi-jiu"
+  ],
+  "phrases": {
+    "u32-rent": {
+      "text": "我想租套房。",
+      "pinyin": "Wǒ xiǎng zū tàofáng.",
+      "meaning": "I want to rent a suite.",
+      "note": "租 is the verb rent; 套房 is a suite.",
+      "tokens": [
+        "我想",
+        "租套房"
+      ]
+    },
+    "u32-landlord": {
+      "text": "房東有兩間空房間。",
+      "pinyin": "Fángdōng yǒu liǎng jiān kōng fángjiān.",
+      "meaning": "The landlord has two vacant rooms.",
+      "note": "間 counts rooms. 房間 is a transparent combination of 房 + 間, and 空 means vacant here.",
+      "tokens": [
+        "房東",
+        "有兩間",
+        "空房間"
+      ]
+    },
+    "u32-rooms": {
+      "text": "客廳在左邊，右邊有浴室。",
+      "pinyin": "Kètīng zài zuǒbiān, yòubiān yǒu yùshì.",
+      "meaning": "The living room is on the left, and there is a bathroom on the right.",
+      "note": "左邊 and 右邊 locate the rooms.",
+      "tokens": [
+        "客廳在左邊",
+        "右邊有浴室"
+      ]
+    },
+    "u32-kitchen": {
+      "text": "廚房在右邊。",
+      "pinyin": "Chúfáng zài yòubiān.",
+      "meaning": "The kitchen is on the right.",
+      "note": "廚房 means kitchen.",
+      "tokens": [
+        "廚房",
+        "在右邊"
+      ]
+    },
+    "u32-market": {
+      "text": "附近有超市。",
+      "pinyin": "Fùjìn yǒu chāoshì.",
+      "meaning": "There is a supermarket nearby.",
+      "note": "超市 is supermarket.",
+      "tokens": [
+        "附近",
+        "有超市"
+      ]
+    },
+    "u32-walk": {
+      "text": "走路五分鐘就到了。",
+      "pinyin": "Zǒulù wǔ fēnzhōng jiù dào le.",
+      "meaning": "It is only a five-minute walk to get there.",
+      "note": "分鐘 is transparent here from the already learned 分 'minute' plus 鐘; 就 presents the arrival as sooner/easier than expected.",
+      "tokens": [
+        "走路五分鐘",
+        "就到了"
+      ],
+      "grammarIds": [
+        "u32-early-jiu"
+      ]
+    },
+    "u32-phone": {
+      "text": "我打電話給房東。",
+      "pinyin": "Wǒ dǎ diànhuà gěi fángdōng.",
+      "meaning": "I call the landlord.",
+      "note": "打電話 is the ordinary collocation 'make a phone call'; 電話 is the new noun.",
+      "tokens": [
+        "我",
+        "打電話",
+        "給房東"
+      ]
+    },
+    "u32-come-house": {
+      "text": "我來看房子。",
+      "pinyin": "Wǒ lái kàn fángzi.",
+      "meaning": "I came here to look at the place.",
+      "note": "來 + activity means coming toward the relevant location to do the activity.",
+      "tokens": [
+        "我",
+        "來看房子"
+      ],
+      "grammarIds": [
+        "u32-lai-vp"
+      ]
+    },
+    "u32-come-class": {
+      "text": "我明天不來上課。",
+      "pinyin": "Wǒ míngtiān bù lái shàngkè.",
+      "meaning": "I am not coming to class tomorrow.",
+      "note": "The negative 不 goes before 來.",
+      "tokens": [
+        "我明天",
+        "不來上課"
+      ],
+      "grammarIds": [
+        "u32-lai-vp"
+      ]
+    },
+    "u32-come-question": {
+      "text": "你要來看房子嗎？",
+      "pinyin": "Nǐ yào lái kàn fángzi ma?",
+      "meaning": "Are you coming to look at the place?",
+      "note": "要 appears before 來, the first verbal element.",
+      "tokens": [
+        "你",
+        "要來看房子嗎"
+      ],
+      "grammarIds": [
+        "u32-lai-vp"
+      ]
+    },
+    "u32-quick": {
+      "text": "他等一下就來。",
+      "pinyin": "Tā děng yíxià jiù lái.",
+      "meaning": "He will be here in just a moment.",
+      "note": "This 就 presents the event as happening sooner than expected.",
+      "tokens": [
+        "他等一下",
+        "就來"
+      ],
+      "grammarIds": [
+        "u32-early-jiu"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u32-sides-s2",
+    "u32-quick-s1"
+  ]
+};
+export default unit;
