@@ -1877,7 +1877,7 @@ const unit:UnitData = {
       "text": "我已經收到房租了。",
       "pinyin": "Wǒ yǐjīng shōudào fángzū le.",
       "meaning": "I have already received the rent.",
-      "note": "房租 is transparent after 房 and 租; 收到 means receive.",
+      "note": "房租 is the rent payment for a room or house; 收到 means receive. Compare 租房, which means to rent a place.",
       "tokens": [
         "我",
         "已經收到",
