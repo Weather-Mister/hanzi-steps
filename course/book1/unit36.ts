@@ -751,13 +751,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g2",
           "type": "select",
-          "prompt": "Which word order matches Event + 以後?",
+          "prompt": "In 半年以後，你打算做什麼？, what does 半年以後 mean?",
           "options": [
-            "Event + 以後, then the later event",
-            "以後 + Event, then the earlier event"
+            "half a year later",
+            "for half a year",
+            "half a year ago"
           ],
-          "answer": "Event + 以後, then the later event",
-          "explanation": "The source anchor comes first: 回國以後…, 下課以後….",
+          "answer": "half a year later",
+          "explanation": "A time expression can come before 以後 just like an event anchor: 半年以後 means half a year later.",
           "grammarIds": [
             "u36-yihou-after"
           ]
@@ -779,14 +780,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g4",
           "type": "select",
-          "prompt": "What does 好找 mean?",
+          "prompt": "Which source sentence correctly puts 很 before a perception word?",
           "options": [
-            "easy to find",
-            "good-looking",
-            "already found"
+            "我媽媽做的菜很好吃。",
+            "我媽媽做的菜好很吃。",
+            "我媽媽做的菜很吃好。"
           ],
-          "answer": "easy to find",
-          "explanation": "With an action verb, 好 means easy to do.",
+          "answer": "我媽媽做的菜很好吃。",
+          "explanation": "The source shows that degree adverbs such as 很 can modify this branch: 很好吃.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
