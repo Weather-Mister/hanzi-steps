@@ -95,6 +95,6 @@ Legacy handwriting ownership for 房 also moves to Unit 32. Later practice remai
 
 All learner-facing forms are Traditional Chinese: 廳、廚、間、線、視、關、經、慣、這、裡、話、東, etc. Stroke hydration requests the exact same Unicode character and prefers AnimCJK Traditional data. If a Traditional data row is absent, any geometry fallback must still be for that identical Unicode character; no Simplified character is substituted. Such fallback cases are audited explicitly.
 
-## Earlier source debt
+## Earlier source debt status
 
-The previously documented Lesson 10 handwriting blockers 芒果 and 窗戶 remain separate historical source debt. They are not silently inserted into Lesson 11 or used as filler.
+The former Lesson 10 gaps 芒果 and 窗戶, plus the Lesson 9 gap 逛, are now resolved in Units 29–31 with exact-codepoint stroke-source fallbacks where the Hant dataset lacks a row. They are not duplicated into Lesson 11. Earlier out-of-scope gaps still tracked separately are 網路上、臺南、故宮博物院、臺東.
