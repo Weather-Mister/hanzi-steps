@@ -61,7 +61,7 @@ Repair:
 - diversified the review so 好喝/難喝 and the 難 + action-verb A-not-A pattern are independently retrieved;
 - replaced a low-value repeated 老闆 recognition item with retrieval of 希望 from the source dialogue.
 
-These changes do not introduce new grammar or vocabulary; they increase retrieval breadth for material already present in Lesson 12. fileciteturn0file0L10933-L10979
+These changes do not introduce new grammar or vocabulary; they increase retrieval breadth for material already present in Lesson 12 (Grammar IV, printed pp. 257–258).
 
 ## Pedagogy and sequencing
 
