@@ -152,3 +152,8 @@ The audit branch must pass the full Feature QA workflow on its final head:
 - GitHub Pages production build.
 
 If Feature QA writes generated artifacts and advances the branch head, the resulting generated head must itself receive a complete successful Feature QA pass before merge.
+
+
+## Generated-artifact exact-head recheck
+
+Feature QA refreshed generated curriculum artifacts on commit `9e890ebe44626cdcc861d1758e497e5703fbe266`. This audit-only follow-up makes no learner-facing curriculum change; it exists to trigger and require one final complete Feature QA run over the generated state before merge.
