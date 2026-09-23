@@ -39,7 +39,8 @@
         {"id":"unit-30","order":30,"title":"Try It and Describe It","path":"course/book1/unit30.ts"},
         {"id":"unit-31","order":31,"title":"The One in Blue","path":"course/book1/unit31.ts"},
         {"id":"unit-32","order":32,"title":"A Place to Rent","path":"course/book1/unit32.ts"},
-        {"id":"unit-33","order":33,"title":"Settling Into the New Place","path":"course/book1/unit33.ts"}
+        {"id":"unit-33","order":33,"title":"Settling Into the New Place","path":"course/book1/unit33.ts"},
+        {"id":"unit-34","order":34,"title":"How Long Will You Study?","path":"course/book1/unit34.ts"}
       ]
     },
     {
