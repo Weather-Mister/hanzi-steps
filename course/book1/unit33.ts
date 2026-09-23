@@ -1795,30 +1795,30 @@ const unit:UnitData = {
       ]
     },
     "u33-zero-pronoun": {
-    "u33-zero-pronoun":   "id": "u33-zero-pronoun",
-    "u33-zero-pronoun":   "title": "Leave understood subjects and objects unspoken",
-    "u33-zero-pronoun":   "pattern": "recoverable subject / object → Ø",
-    "u33-zero-pronoun":   "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. The most frequent omissions are subjects and objects: a subject can be understood from context even without being spoken (請進! has an understood 你), a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
-    "u33-zero-pronoun":   "examples": [
-    "u33-zero-pronoun":     {
-    "u33-zero-pronoun":       "text": "請進！",
-    "u33-zero-pronoun":       "pinyin": "Qǐng jìn!",
-    "u33-zero-pronoun":       "meaning": "Please come in! (understood subject: you)"
-    "u33-zero-pronoun":     },
-    "u33-zero-pronoun":     {
-    "u33-zero-pronoun":       "text": "我常打籃球，也常踢足球。",
-    "u33-zero-pronoun":       "pinyin": "Wǒ cháng dǎ lánqiú, yě cháng tī zúqiú.",
-    "u33-zero-pronoun":       "meaning": "I often play basketball, and also often play soccer."
-    "u33-zero-pronoun":     },
-    "u33-zero-pronoun":     {
-    "u33-zero-pronoun":       "text": "朋友給我一個西瓜，我不想吃。",
-    "u33-zero-pronoun":       "pinyin": "Péngyǒu gěi wǒ yí ge xīguā, wǒ bù xiǎng chī.",
-    "u33-zero-pronoun":       "meaning": "A friend gave me a watermelon; I don't want to eat it."
-    "u33-zero-pronoun":     }
-    "u33-zero-pronoun":   ],
-    "u33-zero-pronoun":   "remember": "If the listener already knows who or what you mean, Chinese often says less. Context-predictable subjects, repeated subjects, and repeated objects can all be omitted when the referent stays clear.",
-    "u33-zero-pronoun":   "words": []
-    "u33-zero-pronoun": }
+      "id": "u33-zero-pronoun",
+      "title": "Leave understood subjects and objects unspoken",
+      "pattern": "recoverable subject / object → Ø",
+      "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. The most frequent omissions are subjects and objects: a subject can be understood from context even without being spoken (請進! has an understood 你), a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
+      "examples": [
+        {
+          "text": "請進！",
+          "pinyin": "Qǐng jìn!",
+          "meaning": "Please come in! (understood subject: you)"
+        },
+        {
+          "text": "我常打籃球，也常踢足球。",
+          "pinyin": "Wǒ cháng dǎ lánqiú, yě cháng tī zúqiú.",
+          "meaning": "I often play basketball, and also often play soccer."
+        },
+        {
+          "text": "朋友給我一個西瓜，我不想吃。",
+          "pinyin": "Péngyǒu gěi wǒ yí ge xīguā, wǒ bù xiǎng chī.",
+          "meaning": "A friend gave me a watermelon; I don't want to eat it."
+        }
+      ],
+      "remember": "If the listener already knows who or what you mean, Chinese often says less. Context-predictable subjects, repeated subjects, and repeated objects can all be omitted when the referent stays clear.",
+      "words": []
+    }
   },
   "grammarIntroductions": [
     {
