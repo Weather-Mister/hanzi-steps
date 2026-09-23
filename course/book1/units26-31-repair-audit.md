@@ -46,9 +46,9 @@ Counts are not increased by these repairs. Each unit keeps six teaching lessons 
 
 The shared 往 record's pinyin correction is documented in a **new chained amendment**, preserving the two prior immutable migration snapshots. A separate test verifies 去/qù alignment so the hash amendment cannot conceal a stale reading.
 
-## Source coverage that remains deferred
+## Source coverage after the later closure pass
 
-The existing deferrals are still explicit: 網路上、臺南、故宮博物院、逛、臺東、芒果、窗戶. This repair does not claim the textbook is fully covered or resolve their earlier handwriting/provenance and first-teaching requirements. These are tracked in the existing source plans for completion work.
+The later Units 29–31 closure pass resolves **逛、芒果、窗戶** with exact-codepoint handwriting provenance and explicit teaching. The older out-of-scope deferrals that remain are **網路上、臺南、故宮博物院、臺東**.
 
 ## Verification
 
