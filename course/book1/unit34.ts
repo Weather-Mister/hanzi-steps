@@ -429,11 +429,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "需要 means…",
           "options": [
-            "need; require",
+            "need",
             "finish",
             "plan"
           ],
-          "answer": "need; require",
+          "answer": "need",
           "explanation": "需要 is the Lesson 12 verb 'to need.'"
         },
         {
