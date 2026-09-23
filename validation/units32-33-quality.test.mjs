@@ -70,6 +70,8 @@ test('Unit 32 teaches Lesson 11 direction and 就 distinctions explicitly',()=>{
   assert.match(u32.phrases['u32-landlord'].note,/空.*vacant/i);
   assert.equal(u32.phrases['u32-rooms'].text,'這裡是客廳，廚房在左邊，右邊有浴室。');
   assert.ok(!Object.values(u32.phrases).some(p=>p.text.includes('客廳在左邊')));
+  assert.ok(!Object.values(u32.phrases).some(p=>p.text.includes('廚房在右邊')));
+  assert.equal(u32.phrases['u32-kitchen'].text,'廚房在左邊。');
   assert.equal(u32.phrases['u32-return-call'].text,'我回去想想，再打電話給你。');
   assert.equal(u32.phrases['u32-landlord'].text,'還有兩間空房間，一間是套房，一間不是。');
   assert.equal(u32.phrases['u32-occupied'].text,'現在有人住嗎？');
@@ -97,6 +99,26 @@ test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',(
   assert.ok(u33.phrases['u33-then'].text.includes('還有問題嗎？'));
   assert.match(u33.phrases['u33-pay'].note,/得.*děi.*must/i);
   assert.equal(u33.characters['像'].strokes,14);
+});
+
+test('Every Lesson 11 source vocabulary item is accounted for in teaching or retrieval',()=>{
+  const blob32=[
+    ...u32.newVocabulary.map(v=>v.text),
+    ...u32.reviewVocabulary,
+    ...Object.values(u32.phrases).flatMap(p=>[p.text,p.note??'']),
+    ...Object.values(u32.grammarRules).flatMap(g=>[g.explanation,g.remember,...g.examples.map(e=>e.text)]),
+  ].join('\n');
+  const blob33=[
+    ...u33.newVocabulary.map(v=>v.text),
+    ...u33.reviewVocabulary,
+    ...Object.values(u33.phrases).flatMap(p=>[p.text,p.note??'']),
+    ...Object.values(u33.grammarRules).flatMap(g=>[g.explanation,g.remember,...g.examples.map(e=>e.text)]),
+  ].join('\n');
+  // 林 is the dialogue surname/name entry, not core lexical material.
+  for(const item of ['租','房東','客廳','廚房','左邊','右邊','浴室','超市','走路','分鐘','就','到','間','空','房間','套房','回去','想','再','電話','給','打電話'])
+    assert.ok(blob32.includes(item),`Unit 32 does not account for Lesson 11 Vocabulary I item ${item}`);
+  for(const item of ['喂','房租','已經','習慣','問題','熱水器','好像','會','等','那','裝','不過','付','收到','不好意思','沒關係','有線電視'])
+    assert.ok(blob33.includes(item),`Unit 33 does not account for Lesson 11 Vocabulary II/phrase item ${item}`);
 });
 
 test('Lesson 11 transparent forms and source dialogue vocabulary are not dropped',()=>{
