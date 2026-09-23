@@ -39,7 +39,7 @@ test('Unit 34 retrieves every formal NEW vocabulary item in review',()=>{
 
 test('Unit 34 teaches 先…再… before assessing it and preserves the source meaning',()=>{
   const g=u34.grammarRules['u34-first-then'];
-  assert.match(g.explanation,/temporal order/i);
+  assert.match(g.explanation,/temporal (?:order|sequence)/i);
   assert.match(g.explanation,/past and future|past.*future/i);
   assert.match(g.explanation,/then \/ next/i);
   assert.equal(u34.phrases['u34-sequence-source'].text,'我先在語言中心念一年，再念四年大學。');
