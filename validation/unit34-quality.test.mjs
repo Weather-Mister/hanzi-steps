@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCourse} from './course-io.mjs';
+import {han} from './validate.mjs';
 
 const course=await loadCourse();
 const u34=course.modules.find(m=>m.unit.id==='unit-34');
@@ -131,4 +132,47 @@ test('Unit 34 active 需要 practice tests language rather than arithmetic',()=>
   const item=lesson.steps.find(s=>s.id==='u34-need-s2');
   assert.equal(item.answer,'所以需要五年。');
   assert.match(item.prompt,/Which sentence/i);
+});
+
+
+test('Unit 34 current source slice has an exact formal vocabulary boundary',()=>{
+  assert.deepEqual(
+    u34.newVocabulary.map(v=>v.text),
+    ['臺灣','計畫','久','時間','先','念','大學','語言中心','需要','花','獎學金','成績']
+  );
+  const taughtAndReview=[
+    ...u34.newVocabulary.map(v=>v.text),
+    ...u34.reviewVocabulary,
+    ...Object.values(u34.phrases).map(p=>p.text)
+  ].join('\n');
+  for(const item of ['計畫','年','久','時間','先','念','大學','需要','花','獎學金','成績','語言中心'])
+    assert.ok(taughtAndReview.includes(item),'current Unit 34 source slice lost '+item);
+  for(const item of ['學費','公司','替','希望','以後','到','上班','念書','累','加油'])
+    assert.ok(!u34.newVocabulary.some(v=>v.text===item),'deferred/review source item became falsely NEW: '+item);
+});
+
+test('Unit 34 assessments do not use a new character before its intro step',()=>{
+  const known=new Set(
+    course.modules
+      .filter(m=>m.bookId==='book-1'&&m.order<u34.order)
+      .flatMap(m=>m.newCharacters)
+  );
+  const nonAssessmentTypes=new Set(['intro','trace','build','complete','memory','phrase','grammar','parts']);
+  for(const lesson of u34.lessons){
+    for(const step of lesson.steps){
+      if(step.type==='intro'&&step.char)known.add(step.char);
+      if(nonAssessmentTypes.has(step.type))continue;
+      const values=[
+        step.prompt,step.answer,step.explanation,step.audioText,
+        ...(step.options??[]),...(step.tokens??[])
+      ];
+      if(step.phrase&&u34.phrases[step.phrase]){
+        const p=u34.phrases[step.phrase];
+        values.push(p.text,...(p.tokens??[]));
+      }
+      for(const value of values.filter(Boolean))
+        for(const ch of han(value))
+          assert.ok(known.has(ch),step.id+' assesses '+ch+' before its character introduction');
+    }
+  }
 });
