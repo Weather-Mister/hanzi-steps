@@ -18,7 +18,7 @@ Formal genuinely NEW vocabulary:
 
 The source phrase 試試看 is taught explicitly, but it is not counted as a ninth lexical item because it is transparently built from new 試 plus already-known 看. Likewise 做生意 is taught as the source combination of review 做 + new 生意.
 
-The eight-word count is deliberately below the normal 10–13 range because this final Lesson 12 slice carries two complete grammar systems, a full dialogue, and source distinctions/negative/question behavior that should not be compressed or padded with transparent combinations.
+The eight-word count is deliberately below the normal 10–13 range because this final Lesson 12 slice carries two complete grammar systems, a full dialogue, and source distinctions/negative/question behavior that should not be compressed or padded with transparent combinations. The deep audit also rechecked the pacing decision: beginning Lesson 13 here would either push this unit beyond its existing six-teaching-lesson arc or displace independent retrieval of Grammar III/IV, so keeping the clean Lesson 12 endpoint is pedagogically preferable to crossing the lesson boundary solely to raise the vocabulary count.
 
 ## Vocabulary II ledger
 
