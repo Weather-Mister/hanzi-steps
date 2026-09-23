@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCourse} from './course-io.mjs';
+import {han} from './validate.mjs';
 
 const course=await loadCourse();
 const u34=course.modules.find(m=>m.unit.id==='unit-34');
@@ -38,8 +39,8 @@ test('Unit 34 retrieves every formal NEW vocabulary item in review',()=>{
 
 test('Unit 34 teaches 先…再… before assessing it and preserves the source meaning',()=>{
   const g=u34.grammarRules['u34-first-then'];
-  assert.match(g.explanation,/temporal order/i);
-  assert.match(g.explanation,/past routines|future plans/i);
+  assert.match(g.explanation,/temporal (?:order|sequence)/i);
+  assert.match(g.explanation,/past and future|past.*future/i);
   assert.match(g.explanation,/then \/ next/i);
   assert.equal(u34.phrases['u34-sequence-source'].text,'我先在語言中心念一年，再念四年大學。');
   const intro=u34.grammarIntroductions.find(x=>x.ref==='u34-first-then');
@@ -54,6 +55,8 @@ test('Unit 34 keeps Lesson 12 source distinctions and prior grammar ownership',(
   assert.equal(u34.phrases['u34-time'].text,'為什麼要這麼久的時間？');
   assert.equal(u34.phrases['u34-cost'].text,'這得花不少錢！');
   assert.match(u34.phrases['u34-cost'].note,/得.*děi.*must/i);
+  assert.equal(u34.phrases['u34-scholarship'].text,'對，不過我有獎學金。');
+  assert.equal(u34.phrases['u34-need'].meaning,'So I need five years.');
   assert.equal(u34.phrases['u34-grades'].text,'要是成績不好，就沒獎學金了。');
   assert.ok(u34.reviewGrammar.includes('u29-yaoshi-jiu'));
   assert.ok(!u34.grammarRules['u29-yaoshi-jiu']);
@@ -83,5 +86,93 @@ test('Unit 34 handwriting metadata covers each new character exactly once',()=>{
     assert.deepEqual(covered,Array.from({length:c.strokes},(_,i)=>i),ch+': component stroke coverage');
   }
   assert.equal(u34.characters['獎'].strokes,15);
-  assert.deepEqual(u34.characters['獎'].parts.find(p=>p.label==='大').strokes,[11,12,13]);
+  assert.deepEqual(u34.characters['獎'].parts.find(p=>p.label==='將').strokes,[0,1,2,3,4,5,6,7,8,9,10]);
+  assert.deepEqual(u34.characters['獎'].parts.find(p=>p.label==='犬').strokes,[11,12,13,14]);
+  assert.ok(!u34.characters['獎'].parts.some(p=>p.label==='大'));
+});
+
+
+test('Unit 34 formal vocabulary glosses stay on the Lesson 12 source senses',()=>{
+  const meanings=Object.fromEntries(u34.newVocabulary.map(v=>[v.text,v.meaning]));
+  assert.equal(meanings['計畫'],'to plan to');
+  assert.equal(meanings['念'],'to study');
+  assert.equal(meanings['需要'],'to need');
+  assert.equal(meanings['花'],'to spend (time or money)');
+});
+
+test('Unit 34 does not assess a formal NEW word before its declared lesson',()=>{
+  const lessonIndex=new Map(u34.lessons.map((l,i)=>[l.id,i]));
+  const nonAssessmentTypes=new Set(['intro','trace','build','complete','memory','phrase','grammar','parts']);
+  for(const word of u34.newVocabulary){
+    const declared=lessonIndex.get(word.lessonId);
+    assert.notEqual(declared,undefined,'unknown declared lesson for '+word.text);
+    for(let i=0;i<declared;i++){
+      for(const step of u34.lessons[i].steps){
+        if(nonAssessmentTypes.has(step.type))continue;
+        const blob=[
+          step.prompt,step.answer,step.explanation,step.audioText,
+          ...(step.options??[]),...(step.tokens??[])
+        ].filter(Boolean).join('\n');
+        assert.ok(!blob.includes(word.text),
+          word.text+' is assessed before '+word.lessonId+' in '+step.id);
+      }
+    }
+  }
+});
+
+test('Unit 34 review listening preserves the repaired scholarship contrast',()=>{
+  const review=u34.lessons.find(l=>l.id===u34.reviewLessonId);
+  const item=review.steps.find(s=>s.id==='u34-review-l3');
+  assert.equal(item.audioText,'對，不過我有獎學金。');
+  assert.equal(item.answer,'獎學金');
+});
+
+test('Unit 34 active 需要 practice tests language rather than arithmetic',()=>{
+  const lesson=u34.lessons.find(l=>l.id==='u34-need');
+  const item=lesson.steps.find(s=>s.id==='u34-need-s2');
+  assert.equal(item.answer,'所以需要五年。');
+  assert.match(item.prompt,/Which sentence/i);
+});
+
+
+test('Unit 34 current source slice has an exact formal vocabulary boundary',()=>{
+  assert.deepEqual(
+    u34.newVocabulary.map(v=>v.text),
+    ['臺灣','計畫','久','時間','先','念','大學','語言中心','需要','花','獎學金','成績']
+  );
+  const taughtAndReview=[
+    ...u34.newVocabulary.map(v=>v.text),
+    ...u34.reviewVocabulary,
+    ...Object.values(u34.phrases).map(p=>p.text)
+  ].join('\n');
+  for(const item of ['計畫','年','久','時間','先','念','大學','需要','花','獎學金','成績','語言中心'])
+    assert.ok(taughtAndReview.includes(item),'current Unit 34 source slice lost '+item);
+  for(const item of ['學費','公司','替','希望','以後','到','上班','念書','累','加油'])
+    assert.ok(!u34.newVocabulary.some(v=>v.text===item),'deferred/review source item became falsely NEW: '+item);
+});
+
+test('Unit 34 assessments do not use a new character before its intro step',()=>{
+  const known=new Set(
+    course.modules
+      .filter(m=>m.bookId==='book-1'&&m.order<u34.order)
+      .flatMap(m=>m.newCharacters)
+  );
+  const nonAssessmentTypes=new Set(['intro','trace','build','complete','memory','phrase','grammar','parts']);
+  for(const lesson of u34.lessons){
+    for(const step of lesson.steps){
+      if(step.type==='intro'&&step.char)known.add(step.char);
+      if(nonAssessmentTypes.has(step.type))continue;
+      const values=[
+        step.prompt,step.answer,step.explanation,step.audioText,
+        ...(step.options??[]),...(step.tokens??[])
+      ];
+      if(step.phrase&&u34.phrases[step.phrase]){
+        const p=u34.phrases[step.phrase];
+        values.push(p.text,...(p.tokens??[]));
+      }
+      for(const value of values.filter(Boolean))
+        for(const ch of han(value))
+          assert.ok(known.has(ch),step.id+' assesses '+ch+' before its character introduction');
+    }
+  }
 });

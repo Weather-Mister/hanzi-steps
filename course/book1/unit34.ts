@@ -155,8 +155,8 @@ const unit:UnitData = {
           "prompt": "In 你計畫在臺灣學多久的中文？, what is being asked?",
           "options": [
             "the planned length of study",
-            "the price of tuition",
-            "where the landlord lives"
+            "the planned place of study",
+            "the planned start time of study"
           ],
           "answer": "the planned length of study",
           "explanation": "多久 asks how long, and 計畫 frames it as a plan."
@@ -164,14 +164,14 @@ const unit:UnitData = {
         {
           "id": "u34-plan-s2",
           "type": "select",
-          "prompt": "Which new Lesson 12 verb is closest to the earlier 打算 'plan/intend'?",
+          "prompt": "Which Lesson 12 word means 'to plan to'?",
           "options": [
             "計畫",
             "時間",
-            "成績"
+            "久"
           ],
           "answer": "計畫",
-          "explanation": "計畫 is the Lesson 12 verb 'to plan.' 打算 was taught earlier and remains a useful near-synonym."
+          "explanation": "計畫 is the Lesson 12 verb 'to plan to.' Compare the earlier 打算 'plan/intend.'"
         }
       ]
     },
@@ -279,7 +279,7 @@ const unit:UnitData = {
     {
       "id": "u34-center",
       "title": "Language Center, Then University",
-      "subtitle": "Build 語言中心 and 大學 into the full study sequence.",
+      "subtitle": "Build 語言中心 into the full study sequence and reinforce 大學.",
       "chars": [
         "語",
         "言"
@@ -355,7 +355,7 @@ const unit:UnitData = {
         {
           "id": "u34-center-s1",
           "type": "select",
-          "prompt": "語言中心 is…",
+          "prompt": "What does 語言中心 mean?",
           "options": [
             "a language center",
             "a university dormitory",
@@ -429,24 +429,24 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "需要 means…",
           "options": [
-            "need; require",
+            "need",
             "finish",
             "plan"
           ],
-          "answer": "need; require",
-          "explanation": "需要 states what amount, thing, or action is required."
+          "answer": "need",
+          "explanation": "需要 is the Lesson 12 verb 'to need.'"
         },
         {
           "id": "u34-need-s2",
           "type": "select",
-          "prompt": "The plan is one year plus four years. Which total matches 所以需要五年?",
+          "prompt": "Which sentence says 'So I need five years'?",
           "options": [
-            "五年",
-            "四年",
-            "一年"
+            "所以需要五年。",
+            "所以先念五年。",
+            "所以五年很久。"
           ],
-          "answer": "五年",
-          "explanation": "One year plus four years gives five years."
+          "answer": "所以需要五年。",
+          "explanation": "需要 means 'to need.' In context, the omitted subject is the speaker: 'So I need five years.'"
         }
       ]
     },
@@ -553,12 +553,12 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "What does 花 mean in 這得花不少錢?",
           "options": [
-            "spend / cost",
+            "spend",
             "flower",
             "study"
           ],
-          "answer": "spend / cost",
-          "explanation": "With money or time as the object, 花 is the verb 'spend; cost.'"
+          "answer": "spend",
+          "explanation": "Here 花 is the verb 'to spend (time or money).' The whole sentence can naturally be translated as 'That will cost quite a lot of money.'"
         },
         {
           "id": "u34-money-s2",
@@ -656,14 +656,14 @@ const unit:UnitData = {
         {
           "id": "u34-grades-s2",
           "type": "select",
-          "prompt": "Which earlier pattern is being reused in 要是成績不好，就沒獎學金了?",
+          "prompt": "According to 要是成績不好，就沒獎學金了, what happens if the grades are not good?",
           "options": [
-            "要是…就…",
-            "先…再…",
-            "因為…所以…"
+            "The scholarship is lost.",
+            "The study plan becomes five years.",
+            "The student changes universities."
           ],
-          "answer": "要是…就…",
-          "explanation": "要是 introduces the condition and 就 introduces the consequence.",
+          "answer": "The scholarship is lost.",
+          "explanation": "就沒獎學金了 means the scholarship will no longer be available; 要是…就… links that result to the condition.",
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
@@ -722,19 +722,19 @@ const unit:UnitData = {
         {
           "id": "u34-review-s1",
           "type": "select",
-          "prompt": "Which word means 'plan' in this lesson?",
+          "prompt": "Which Lesson 12 word means 'to plan to'?",
           "options": [
             "計畫",
             "需要",
             "成績"
           ],
           "answer": "計畫",
-          "explanation": "計畫 means to plan / a plan."
+          "explanation": "計畫 is the source verb 'to plan to.'"
         },
         {
           "id": "u34-review-s2",
           "type": "select",
-          "prompt": "Which pair means 'a long time' / 'time'?",
+          "prompt": "Which pair correctly matches 'long (time)' / 'time'?",
           "options": [
             "久 / 時間",
             "先 / 再",
@@ -746,7 +746,7 @@ const unit:UnitData = {
         {
           "id": "u34-review-s3",
           "type": "select",
-          "prompt": "Which place is 語言中心?",
+          "prompt": "What does 語言中心 mean?",
           "options": [
             "language center",
             "university",
@@ -758,7 +758,7 @@ const unit:UnitData = {
         {
           "id": "u34-review-s4",
           "type": "select",
-          "prompt": "Which word is the scholarship?",
+          "prompt": "Which word means 'scholarship'?",
           "options": [
             "獎學金",
             "成績",
@@ -772,17 +772,17 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "In 這得花不少錢, what does 花 mean?",
           "options": [
-            "spend / cost",
+            "spend",
             "flower",
             "study"
           ],
-          "answer": "spend / cost",
-          "explanation": "With money as its object, 花 is the verb 'spend; cost.'"
+          "answer": "spend",
+          "explanation": "Here 花 is the source verb 'to spend (time or money).'"
         },
         {
           "id": "u34-review-g1",
           "type": "select",
-          "prompt": "You want to say 'I study Chinese first, then university.' Which sentence has the correct sequence markers?",
+          "prompt": "You want to say 'I study Chinese first, then attend university.' Which sentence has the correct sequence markers?",
           "options": [
             "我先念中文，再念大學。",
             "我再念中文，先念大學。"
@@ -858,7 +858,7 @@ const unit:UnitData = {
           "type": "listen",
           "char": "獎",
           "prompt": "Listen for the scholarship word.",
-          "audioText": "我有獎學金。",
+          "audioText": "對，不過我有獎學金。",
           "options": [
             "獎學金",
             "語言中心",
@@ -892,7 +892,7 @@ const unit:UnitData = {
     {
       "text": "計畫",
       "pinyin": "jìhuà",
-      "meaning": "to plan; plan",
+      "meaning": "to plan to",
       "lessonId": "u34-plan",
       "core": true,
       "note": "Lesson 12 lists 計畫 as a verb; compare earlier 打算 'plan/intend'."
@@ -921,7 +921,7 @@ const unit:UnitData = {
     {
       "text": "念",
       "pinyin": "niàn",
-      "meaning": "to study; read",
+      "meaning": "to study",
       "lessonId": "u34-sequence",
       "core": true,
       "note": "In this lesson, Taiwan Mandarin uses 念 for studying a subject or attending a course of study."
@@ -930,7 +930,7 @@ const unit:UnitData = {
       "text": "大學",
       "pinyin": "dàxué",
       "meaning": "university",
-      "lessonId": "u34-center",
+      "lessonId": "u34-sequence",
       "core": true
     },
     {
@@ -943,17 +943,17 @@ const unit:UnitData = {
     {
       "text": "需要",
       "pinyin": "xūyào",
-      "meaning": "to need; require",
+      "meaning": "to need",
       "lessonId": "u34-need",
       "core": true
     },
     {
       "text": "花",
       "pinyin": "huā",
-      "meaning": "to spend (time or money); cost",
+      "meaning": "to spend (time or money)",
       "lessonId": "u34-money",
       "core": true,
-      "note": "Source sense here is the verb 'spend/cost'."
+      "note": "Source sense here is the verb 'to spend (time or money).'"
     },
     {
       "text": "獎學金",
@@ -1127,10 +1127,10 @@ const unit:UnitData = {
       "hanzi": "畫",
       "pinyin": "huà",
       "zhuyin": "ㄏㄨㄚˋ",
-      "meaning": "plan; draw (in 計畫)",
+      "meaning": "draw; second character of 計畫",
       "strokes": 12,
       "layout": "stack",
-      "note": "畫 is fourth-tone huà. In 計畫, the whole word means to plan or a plan; this is different from using 畫 by itself for drawing.",
+      "note": "畫 is fourth-tone huà. Here, learn it inside 計畫 'to plan to'; do not translate the two characters separately when reading the compound.",
       "memory": "Write the 聿-like upper frame first, build 田 beneath it, and close with the long final 一.",
       "parts": [
         {
@@ -1173,7 +1173,7 @@ const unit:UnitData = {
       "example": {
         "text": "計畫",
         "pinyin": "jìhuà",
-        "meaning": "to plan; plan"
+        "meaning": "to plan to"
       }
     },
     "先": {
@@ -1358,7 +1358,7 @@ const unit:UnitData = {
       "meaning": "need; require (in 需要)",
       "strokes": 14,
       "layout": "stack",
-      "note": "需 is first-tone xū. In 需要, the whole word means 'to need; require.'",
+      "note": "需 is first-tone xū. In this lesson, learn it inside 需要 'to need.'",
       "memory": "雨 forms the eight-stroke top; 而 supplies the six-stroke lower block.",
       "parts": [
         {
@@ -1405,7 +1405,7 @@ const unit:UnitData = {
       "meaning": "to spend; flower",
       "strokes": 8,
       "layout": "stack",
-      "note": "花 is first-tone huā. In 這得花不少錢 it is a verb meaning 'to spend/cost,' not the noun 'flower.'",
+      "note": "花 is first-tone huā. In 這得花不少錢 it is the source verb 'to spend (time or money),' not the noun 'flower.'",
       "memory": "The four-stroke 艹 sits across the top; 化 forms the four strokes below.",
       "parts": [
         {
@@ -1447,13 +1447,13 @@ const unit:UnitData = {
       "strokes": 15,
       "layout": "stack",
       "note": "獎 is third-tone jiǎng. In 獎學金 it refers to an award or scholarship fund.",
-      "memory": "The large 將 component fills the upper area; 大 spreads across the bottom. In the exact source geometry, the final dot belonging to the upper component is written after the three 大 strokes.",
+      "memory": "將 fills the upper part; 犬 forms the four-stroke bottom. The last dot is the final stroke of 犬.",
       "parts": [
         {
           "label": "將",
-          "name": "award-related upper component",
-          "role": "Upper component",
-          "description": "The upper component uses strokes 1–11 plus the final dot; the source stroke order writes that dot last.",
+          "name": "upper component",
+          "role": "Top component",
+          "description": "The first eleven strokes form 將.",
           "strokes": [
             0,
             1,
@@ -1465,19 +1465,19 @@ const unit:UnitData = {
             7,
             8,
             9,
-            10,
-            14
+            10
           ]
         },
         {
-          "label": "大",
-          "name": "big component",
+          "label": "犬",
+          "name": "dog component",
           "role": "Bottom component",
-          "description": "Three broad strokes form 大 at the bottom before the final upper-component dot.",
+          "description": "The final four strokes form 犬; its dot is written last.",
           "strokes": [
             11,
             12,
-            13
+            13,
+            14
           ]
         }
       ],
@@ -1607,7 +1607,7 @@ const unit:UnitData = {
       "id": "u34-first-then",
       "title": "First…, then… with 先…再…",
       "pattern": "Subject + 先 + Event 1，(Subject) + 再 + Event 2",
-      "explanation": "先…再… presents two events in temporal order. Put 先 directly before the first action and 再 before the next action. The pattern can describe past routines, present routines, or future plans; it is the order that matters. When both events have the same subject, Chinese normally states the subject once before 先 and leaves it understood before 再. Here 再 means 'then / next,' not merely 'again.'",
+      "explanation": "先…再… presents the temporal sequence of two consecutive events. Put 先 before the first event and 再 before the next event. The textbook explicitly uses the pattern for past and future sequences, and its drills also include habitual sequences such as 每天…. When the same subject continues into the second event, the examples normally leave it understood before 再. Here 再 means 'then / next,' not merely 'again.'",
       "examples": [
         {
           "text": "我先念中文，再念大學。",
@@ -1691,8 +1691,8 @@ const unit:UnitData = {
     "u34-need": {
       "text": "所以需要五年。",
       "pinyin": "Suǒyǐ xūyào wǔ nián.",
-      "meaning": "So five years are needed.",
-      "note": "需要 is a transitive stative verb meaning 'to need; require.'",
+      "meaning": "So I need five years.",
+      "note": "需要 means 'to need.' The subject 我 is understood from the preceding context.",
       "tokens": [
         "所以",
         "需要五年"
@@ -1702,20 +1702,20 @@ const unit:UnitData = {
       "text": "這得花不少錢！",
       "pinyin": "Zhè děi huā bù shǎo qián!",
       "meaning": "That will cost quite a lot of money!",
-      "note": "花 means 'spend/cost' here. 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
+      "note": "花 is the source verb 'to spend (time or money).' In this context, 這得花不少錢 is naturally translated as 'That will cost quite a lot of money.' 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
       "tokens": [
         "這得",
         "花不少錢"
       ]
     },
     "u34-scholarship": {
-      "text": "我有獎學金。",
-      "pinyin": "Wǒ yǒu jiǎngxuéjīn.",
-      "meaning": "I have a scholarship.",
-      "note": "獎學金 is the source word for a scholarship.",
+      "text": "對，不過我有獎學金。",
+      "pinyin": "Duì, búguò wǒ yǒu jiǎngxuéjīn.",
+      "meaning": "Right, but I have a scholarship.",
+      "note": "This preserves the source contrast: the study plan costs a lot, but the speaker has a scholarship. 不過 is review from Unit 33.",
       "tokens": [
-        "我有",
-        "獎學金"
+        "對",
+        "不過我有獎學金"
       ]
     },
     "u34-grades": {
