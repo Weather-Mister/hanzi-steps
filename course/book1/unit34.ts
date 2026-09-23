@@ -953,7 +953,7 @@ const unit:UnitData = {
       "meaning": "to spend (time or money)",
       "lessonId": "u34-money",
       "core": true,
-      "note": "Source sense here is the verb 'spend/cost'."
+      "note": "Source sense here is the verb 'to spend (time or money).'"
     },
     {
       "text": "獎學金",
@@ -1173,7 +1173,7 @@ const unit:UnitData = {
       "example": {
         "text": "計畫",
         "pinyin": "jìhuà",
-        "meaning": "to plan; plan"
+        "meaning": "to plan to"
       }
     },
     "先": {
@@ -1358,7 +1358,7 @@ const unit:UnitData = {
       "meaning": "need; require (in 需要)",
       "strokes": 14,
       "layout": "stack",
-      "note": "需 is first-tone xū. In 需要, the whole word means 'to need; require.'",
+      "note": "需 is first-tone xū. In this lesson, learn it inside 需要 'to need.'",
       "memory": "雨 forms the eight-stroke top; 而 supplies the six-stroke lower block.",
       "parts": [
         {
