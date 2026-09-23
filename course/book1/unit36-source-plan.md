@@ -58,7 +58,7 @@ Dialogue II content covered:
 
 The opening 是…的 question retrieves Unit 35 rather than redeclaring that grammar. In the learner-facing phrase, the vocative 田中 is omitted because 田 is not yet a formally taught Hanzi Steps character. The source's sex-specific 妳 in 對了，妳回國以後… is normalized to the already-taught general pronoun 你, preserving the grammar and meaning without creating a one-off character leak. These are explicit character-boundary adaptations, not silent source substitutions.
 
-The duration-to-date line is kept as source dialogue comprehension; this unit does not prematurely declare the later formal double-了 grammar from Lesson 14.
+The duration-to-date line is kept as source dialogue comprehension; Unit 36 does not invent a separate grammar rule for it beyond what Lesson 12 explicitly teaches.
 
 ## Grammar III: 以後
 
@@ -77,12 +77,14 @@ Unit 36 preserves both textbook branches:
 It also teaches:
 - degree adverbs such as 很 may modify either type;
 - negation with 不 before the combined predicate;
-- 嗎 questions;
-- A-not-A questions such as 好不好找 / 難不難學.
+- 嗎 questions in both branches;
+- the source A-not-A distinction: perception compounds may repeat the whole compound (好看不好看), while action-verb patterns place the contrast before the action verb (好不好賣 / 難不難學).
 
 ## Lesson 12 completion
 
-After Unit 36, Lesson 12 has no deliberate source deferrals remaining across Dialogue I/II, Vocabulary I/II, and Grammar I–IV. Units 34–36 together cover the lesson.
+The deep audit also inspected the integrated Lesson 12 activities and self-assessment after Grammar IV. They recycle the same three lesson objectives—study/future plans, event sequencing, and describing past actions/experience—and introduce no additional formal vocabulary or grammar system that requires a new Hanzi Steps declaration.
+
+After Unit 36, Lesson 12 has no deliberate source deferrals remaining across Dialogue I/II, Vocabulary I/II, Grammar I–IV, or the language targets reinforced by the end-of-lesson activities. Units 34–36 together cover the lesson.
 
 ## Handwriting
 
