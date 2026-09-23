@@ -7,238 +7,49 @@
       "title": "A Course in Contemporary Chinese",
       "available": true,
       "units": [
-        {
-          "id": "unit-1",
-          "order": 1,
-          "title": "Nice to meet you.",
-          "path": "course/book1/unit01.ts"
-        },
-        {
-          "id": "unit-2",
-          "order": 2,
-          "title": "A little more to say.",
-          "path": "course/book1/unit02.ts"
-        },
-        {
-          "id": "unit-3",
-          "order": 3,
-          "title": "A little world around you.",
-          "path": "course/book1/unit03.ts"
-        },
-        {
-          "id": "unit-4",
-          "order": 4,
-          "title": "What would you like to do?",
-          "path": "course/book1/unit04.ts"
-        },
-        {
-          "id": "unit-5",
-          "order": 5,
-          "title": "A little conversation over tea.",
-          "path": "course/book1/unit05.ts"
-        },
-        {
-          "id": "unit-6",
-          "order": 6,
-          "title": "My Family",
-          "path": "course/book1/unit06.ts"
-        },
-        {
-          "id": "unit-7",
-          "order": 7,
-          "title": "What Shall We Do This Weekend?",
-          "path": "course/book1/unit07.ts"
-        },
-        {
-          "id": "unit-8",
-          "order": 8,
-          "title": "Let’s Make a Plan Together",
-          "path": "course/book1/unit08.ts"
-        },
-        {
-          "id": "unit-9",
-          "order": 9,
-          "title": "Sports, Music & Choices",
-          "path": "course/book1/unit09.ts"
-        },
-        {
-          "id": "unit-10",
-          "order": 10,
-          "title": "Routines & Common Ground",
-          "path": "course/book1/unit10.ts"
-        },
-        {
-          "id": "unit-11",
-          "order": 11,
-          "title": "A Drink to Go",
-          "path": "course/book1/unit11.ts"
-        },
-        {
-          "id": "unit-12",
-          "order": 12,
-          "title": "How Much Altogether?",
-          "path": "course/book1/unit12.ts"
-        },
-        {
-          "id": "unit-13",
-          "order": 13,
-          "title": "Buying Snacks & Asking for Help",
-          "path": "course/book1/unit13.ts"
-        },
-        {
-          "id": "unit-14",
-          "order": 14,
-          "title": "Choosing a Phone",
-          "path": "course/book1/unit14.ts"
-        },
-        {
-          "id": "unit-15",
-          "order": 15,
-          "title": "Food Favorites & Ordering",
-          "path": "course/book1/unit15.ts"
-        },
-        {
-          "id": "unit-16",
-          "order": 16,
-          "title": "Spicy Food & Cooking Skills",
-          "path": "course/book1/unit16.ts"
-        },
-        {
-          "id": "unit-17",
-          "order": 17,
-          "title": "Food Worth Trying",
-          "path": "course/book1/unit17.ts"
-        },
-        {
-          "id": "unit-18",
-          "order": 18,
-          "title": "Around the School",
-          "path": "course/book1/unit18.ts"
-        },
-        {
-          "id": "unit-19",
-          "order": 19,
-          "title": "Visiting Friends & Nearby Shops",
-          "path": "course/book1/unit19.ts"
-        },
-        {
-          "id": "unit-20",
-          "order": 20,
-          "title": "Finding Places on Campus",
-          "path": "course/book1/unit20.ts"
-        },
-        {
-          "id": "unit-21",
-          "order": 21,
-          "title": "Making Plans by the Clock",
-          "path": "course/book1/unit21.ts"
-        },
-        {
-          "id": "unit-22",
-          "order": 22,
-          "title": "A Busy Afternoon",
-          "path": "course/book1/unit22.ts"
-        },
-        {
-          "id": "unit-23",
-          "order": 23,
-          "title": "Can I Go Check It Out?",
-          "path": "course/book1/unit23.ts"
-        },
-        {
-          "id": "unit-24",
-          "order": 24,
-          "title": "How Are You Getting There?",
-          "path": "course/book1/unit24.ts"
-        },
-        {
-          "id": "unit-25",
-          "order": 25,
-          "title": "Which Way Is Faster?",
-          "path": "course/book1/unit25.ts"
-        },
-        {
-          "id": "unit-26",
-          "order": 26,
-          "title": "What Are You Planning?",
-          "path": "course/book1/unit26.ts"
-        },
-        {
-          "id": "unit-27",
-          "order": 27,
-          "title": "How Long Will You Be Away?",
-          "path": "course/book1/unit27.ts"
-        },
-        {
-          "id": "unit-28",
-          "order": 28,
-          "title": "How Long Is the Trip?",
-          "path": "course/book1/unit28.ts"
-        },
-        {
-          "id": "unit-29",
-          "order": 29,
-          "title": "If You Come to Visit",
-          "path": "course/book1/unit29.ts"
-        },
-        {
-          "id": "unit-30",
-          "order": 30,
-          "title": "Try It and Describe It",
-          "path": "course/book1/unit30.ts"
-        },
-        {
-          "id": "unit-31",
-          "order": 31,
-          "title": "The One in Blue",
-          "path": "course/book1/unit31.ts"
-        },
-        {
-          "id": "unit-32",
-          "order": 32,
-          "title": "A Place to Rent",
-          "path": "course/book1/unit32.ts"
-        },
-        {
-          "id": "unit-33",
-          "order": 33,
-          "title": "Settling Into the New Place",
-          "path": "course/book1/unit33.ts"
-        }
+        {"id":"unit-1","order":1,"title":"Nice to meet you.","path":"course/book1/unit01.ts"},
+        {"id":"unit-2","order":2,"title":"A little more to say.","path":"course/book1/unit02.ts"},
+        {"id":"unit-3","order":3,"title":"A little world around you.","path":"course/book1/unit03.ts"},
+        {"id":"unit-4","order":4,"title":"What would you like to do?","path":"course/book1/unit04.ts"},
+        {"id":"unit-5","order":5,"title":"A little conversation over tea.","path":"course/book1/unit05.ts"},
+        {"id":"unit-6","order":6,"title":"My Family","path":"course/book1/unit06.ts"},
+        {"id":"unit-7","order":7,"title":"What Shall We Do This Weekend?","path":"course/book1/unit07.ts"},
+        {"id":"unit-8","order":8,"title":"Let’s Make a Plan Together","path":"course/book1/unit08.ts"},
+        {"id":"unit-9","order":9,"title":"Sports, Music & Choices","path":"course/book1/unit09.ts"},
+        {"id":"unit-10","order":10,"title":"Routines & Common Ground","path":"course/book1/unit10.ts"},
+        {"id":"unit-11","order":11,"title":"A Drink to Go","path":"course/book1/unit11.ts"},
+        {"id":"unit-12","order":12,"title":"How Much Altogether?","path":"course/book1/unit12.ts"},
+        {"id":"unit-13","order":13,"title":"Buying Snacks & Asking for Help","path":"course/book1/unit13.ts"},
+        {"id":"unit-14","order":14,"title":"Choosing a Phone","path":"course/book1/unit14.ts"},
+        {"id":"unit-15","order":15,"title":"Food Favorites & Ordering","path":"course/book1/unit15.ts"},
+        {"id":"unit-16","order":16,"title":"Spicy Food & Cooking Skills","path":"course/book1/unit16.ts"},
+        {"id":"unit-17","order":17,"title":"Food Worth Trying","path":"course/book1/unit17.ts"},
+        {"id":"unit-18","order":18,"title":"Around the School","path":"course/book1/unit18.ts"},
+        {"id":"unit-19","order":19,"title":"Visiting Friends & Nearby Shops","path":"course/book1/unit19.ts"},
+        {"id":"unit-20","order":20,"title":"Finding Places on Campus","path":"course/book1/unit20.ts"},
+        {"id":"unit-21","order":21,"title":"Making Plans by the Clock","path":"course/book1/unit21.ts"},
+        {"id":"unit-22","order":22,"title":"A Busy Afternoon","path":"course/book1/unit22.ts"},
+        {"id":"unit-23","order":23,"title":"Can I Go Check It Out?","path":"course/book1/unit23.ts"},
+        {"id":"unit-24","order":24,"title":"How Are You Getting There?","path":"course/book1/unit24.ts"},
+        {"id":"unit-25","order":25,"title":"Which Way Is Faster?","path":"course/book1/unit25.ts"},
+        {"id":"unit-26","order":26,"title":"What Are You Planning?","path":"course/book1/unit26.ts"},
+        {"id":"unit-27","order":27,"title":"How Long Will You Be Away?","path":"course/book1/unit27.ts"},
+        {"id":"unit-28","order":28,"title":"How Long Is the Trip?","path":"course/book1/unit28.ts"},
+        {"id":"unit-29","order":29,"title":"If You Come to Visit","path":"course/book1/unit29.ts"},
+        {"id":"unit-30","order":30,"title":"Try It and Describe It","path":"course/book1/unit30.ts"},
+        {"id":"unit-31","order":31,"title":"The One in Blue","path":"course/book1/unit31.ts"},
+        {"id":"unit-32","order":32,"title":"A Place to Rent","path":"course/book1/unit32.ts"},
+        {"id":"unit-33","order":33,"title":"Settling Into the New Place","path":"course/book1/unit33.ts"}
       ]
     },
     {
-      "id": "book-2",
-      "number": 2,
-      "title": "A Course in Contemporary Chinese",
-      "available": true,
-      "units": [
-        {
-          "id": "book-2-unit-1",
-          "order": 1,
-          "title": "Which way to Shida?",
-          "path": "course/book2/unit01.ts"
-        },
-        {
-          "id": "book-2-unit-2",
-          "order": 2,
-          "title": "Is there a bank nearby?",
-          "path": "course/book2/unit02.ts"
-        },
-        {
-          "id": "book-2-unit-3",
-          "order": 3,
-          "title": "Past the second traffic light",
-          "path": "course/book2/unit03.ts"
-        }
+      "id":"book-2","number":2,"title":"A Course in Contemporary Chinese","available":true,
+      "units":[
+        {"id":"book-2-unit-1","order":1,"title":"Which way to Shida?","path":"course/book2/unit01.ts"},
+        {"id":"book-2-unit-2","order":2,"title":"Is there a bank nearby?","path":"course/book2/unit02.ts"},
+        {"id":"book-2-unit-3","order":3,"title":"Past the second traffic light","path":"course/book2/unit03.ts"}
       ]
     },
-    {
-      "id": "book-3",
-      "number": 3,
-      "title": "A Course in Contemporary Chinese",
-      "available": false,
-      "units": []
-    }
+    {"id":"book-3","number":3,"title":"A Course in Contemporary Chinese","available":false,"units":[]}
   ]
 }
