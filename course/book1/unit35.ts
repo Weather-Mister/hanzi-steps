@@ -980,7 +980,7 @@ const unit:UnitData = {
           "prompt": "Which is a correct yes/no 是…的 question?",
           "options": [
             "你的房租是自己付的嗎？",
-            "你的房租是不自己付的嗎？"
+            "你的房租是嗎自己付的？"
           ],
           "answer": "你的房租是自己付的嗎？",
           "explanation": "The source keeps 是…的 and adds 嗎 for this yes/no question.",
