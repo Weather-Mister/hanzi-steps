@@ -1234,6 +1234,11 @@ const unit:UnitData = {
           "meaning": "Good jobs are hard to find."
         },
         {
+          "text": "這個歌好聽也好唱。",
+          "pinyin": "Zhège gē hǎotīng yě hǎochàng.",
+          "meaning": "This song is nice to listen to and easy to sing."
+        },
+        {
           "text": "有人覺得中文很難學。",
           "pinyin": "Yǒu rén juéde Zhōngwén hěn nán xué.",
           "meaning": "Some people think Chinese is hard to learn."
@@ -1336,7 +1341,7 @@ const unit:UnitData = {
     },
     "u36-after-question": {
       "text": "對了，你回國以後，打算做什麼？",
-      "pinyin": "Duì le, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?",
+      "pinyin": "Duìle, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?",
       "meaning": "By the way, what do you plan to do after you go back to your country?",
       "note": "The textbook prints a gender-specific form of 'you' for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 while preserving the sentence and grammar. 回國、打算 and 做 are review.",
       "tokens": [

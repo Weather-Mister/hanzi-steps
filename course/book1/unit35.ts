@@ -279,7 +279,7 @@ const unit:UnitData = {
           "prompt": "Which source-style yes/no question correctly uses 是…的?",
           "options": [
             "你的房租是自己付的嗎？",
-            "你的房租自己是不是付的？"
+            "你的房租是自己嗎付的？"
           ],
           "answer": "你的房租是自己付的嗎？",
           "explanation": "The textbook shows yes/no questions by keeping the 是…的 frame and adding 嗎.",
@@ -980,7 +980,7 @@ const unit:UnitData = {
           "prompt": "Which is a correct yes/no 是…的 question?",
           "options": [
             "你的房租是自己付的嗎？",
-            "你的房租是不自己付的嗎？"
+            "你的房租是嗎自己付的？"
           ],
           "answer": "你的房租是自己付的嗎？",
           "explanation": "The source keeps 是…的 and adds 嗎 for this yes/no question.",
@@ -1571,7 +1571,7 @@ const unit:UnitData = {
       "text": "我的學費是公司替我付的。",
       "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de.",
       "meaning": "My tuition is paid by my company for me.",
-      "note": "Source Dialogue I. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
+      "note": "Source Dialogue I. This answers the preceding 你呢？ from the scholarship turn. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
       "tokens": [
         "我的學費",
         "是公司",

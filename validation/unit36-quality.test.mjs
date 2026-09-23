@@ -223,3 +223,13 @@ test('Unit 36 explains both 工作 source senses before testing them',()=>{
   const lesson=u36.lessons.find(l=>l.id==='u36-work');
   assert.ok(lesson.steps.findIndex(s=>s.id==='u36-work-p1')<lesson.steps.findIndex(s=>s.id==='u36-work-s3'));
 });
+
+
+test('Unit 36 preserves source pinyin spelling and the mixed Grammar IV example',()=>{
+  assert.equal(u36.phrases['u36-after-question'].pinyin,'Duìle, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?');
+  const g=u36.grammarRules['u36-hao-nan-verb'];
+  const mixed=g.examples.find(ex=>ex.text==='這個歌好聽也好唱。');
+  assert.ok(mixed);
+  assert.equal(mixed.pinyin,'Zhège gē hǎotīng yě hǎochàng.');
+  assert.equal(mixed.meaning,'This song is nice to listen to and easy to sing.');
+});

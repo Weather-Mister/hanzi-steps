@@ -175,3 +175,13 @@ test('Unit 35 assessments do not use a new character before its intro step',()=>
     }
   }
 });
+
+
+test('Unit 35 yes-no distractors do not use alternative grammatical question patterns',()=>{
+  const focus=u35.lessons.find(l=>l.id==='u35-focus').steps.find(s=>s.id==='u35-focus-s4');
+  const review=u35.lessons.find(l=>l.id===u35.reviewLessonId).steps.find(s=>s.id==='u35-review-g6');
+  assert.deepEqual(focus.options,['你的房租是自己付的嗎？','你的房租是自己嗎付的？']);
+  assert.deepEqual(review.options,['你的房租是自己付的嗎？','你的房租是嗎自己付的？']);
+  assert.ok(!focus.options.some(option=>option.includes('是不是')));
+  assert.ok(!review.options.some(option=>option.includes('是不是')));
+});

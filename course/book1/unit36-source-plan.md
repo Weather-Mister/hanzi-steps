@@ -76,6 +76,7 @@ Unit 36 preserves both textbook branches:
 
 It also teaches:
 - degree adverbs such as 很 may modify either type;
+- the source mixed example 這個歌好聽也好唱 shows a perception compound and an easy-to action compound in one sentence;
 - negation with 不 before the combined predicate;
 - 嗎 questions in both branches;
 - the source A-not-A distinction: perception compounds may repeat the whole compound (好看不好看), while action-verb patterns place the contrast before the action verb (好不好賣 / 難不難學).
