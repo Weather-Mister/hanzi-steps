@@ -155,8 +155,8 @@ const unit:UnitData = {
           "prompt": "In 你計畫在臺灣學多久的中文？, what is being asked?",
           "options": [
             "the planned length of study",
-            "the price of tuition",
-            "where the landlord lives"
+            "the planned place of study",
+            "the planned start time of study"
           ],
           "answer": "the planned length of study",
           "explanation": "多久 asks how long, and 計畫 frames it as a plan."
@@ -355,7 +355,7 @@ const unit:UnitData = {
         {
           "id": "u34-center-s1",
           "type": "select",
-          "prompt": "語言中心 is…",
+          "prompt": "What does 語言中心 mean?",
           "options": [
             "a language center",
             "a university dormitory",
@@ -734,7 +734,7 @@ const unit:UnitData = {
         {
           "id": "u34-review-s2",
           "type": "select",
-          "prompt": "Which pair means 'a long time' / 'time'?",
+          "prompt": "Which pair correctly matches 'long (time)' / 'time'?",
           "options": [
             "久 / 時間",
             "先 / 再",
@@ -746,7 +746,7 @@ const unit:UnitData = {
         {
           "id": "u34-review-s3",
           "type": "select",
-          "prompt": "Which place is 語言中心?",
+          "prompt": "What does 語言中心 mean?",
           "options": [
             "language center",
             "university",
@@ -758,7 +758,7 @@ const unit:UnitData = {
         {
           "id": "u34-review-s4",
           "type": "select",
-          "prompt": "Which word is the scholarship?",
+          "prompt": "Which word means 'scholarship'?",
           "options": [
             "獎學金",
             "成績",
@@ -782,7 +782,7 @@ const unit:UnitData = {
         {
           "id": "u34-review-g1",
           "type": "select",
-          "prompt": "You want to say 'I study Chinese first, then university.' Which sentence has the correct sequence markers?",
+          "prompt": "You want to say 'I study Chinese first, then attend university.' Which sentence has the correct sequence markers?",
           "options": [
             "我先念中文，再念大學。",
             "我再念中文，先念大學。"
@@ -1692,7 +1692,7 @@ const unit:UnitData = {
       "text": "所以需要五年。",
       "pinyin": "Suǒyǐ xūyào wǔ nián.",
       "meaning": "So I need five years.",
-      "note": "需要 is the source transitive state verb 'to need.' The omitted subject is the speaker from the preceding context.",
+      "note": "需要 means 'to need.' The subject 我 is understood from the preceding context.",
       "tokens": [
         "所以",
         "需要五年"
