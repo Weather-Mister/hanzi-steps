@@ -57,7 +57,7 @@ test('Unit 34 keeps Lesson 12 source distinctions and prior grammar ownership',(
   assert.match(u34.phrases['u34-cost'].note,/得.*děi.*must/i);
   assert.equal(u34.phrases['u34-scholarship'].text,'對，不過我有獎學金。');
   assert.equal(u34.phrases['u34-need'].meaning,'So I need five years.');
-  assert.equal(u34.phrases['u34-grades'].text,'要是成績不好，就沒獎學金了。');
+  assert.equal(u34.phrases['u34-grades'].text,'要是成績不好，就沒獎學金了。你呢？');
   assert.ok(u34.reviewGrammar.includes('u29-yaoshi-jiu'));
   assert.ok(!u34.grammarRules['u29-yaoshi-jiu']);
   assert.ok(u34.reviewVocabulary.includes('再'));
@@ -175,4 +175,23 @@ test('Unit 34 assessments do not use a new character before its intro step',()=>
           assert.ok(known.has(ch),step.id+' assesses '+ch+' before its character introduction');
     }
   }
+});
+
+
+test('Unit 34 preserves the two short Dialogue I turns that connect the exchange',()=>{
+  const plan=u34.lessons.find(l=>l.id==='u34-plan');
+  const reply=plan.steps.find(s=>s.id==='u34-plan-s1');
+  assert.equal(reply.answer,'五年。');
+  assert.match(u34.phrases['u34-plan'].note,/source reply is 五年/);
+  assert.match(u34.phrases['u34-grades'].text,/你呢？$/);
+  assert.equal(u34.phrases['u34-grades'].tokens.at(-1),'你呢');
+});
+
+test('Unit 34 先…再… practice retrieves a source past sequence as well as future sequencing',()=>{
+  const g=u34.grammarRules['u34-first-then'];
+  assert.ok(g.examples.some(ex=>ex.text==='我昨天晚上先寫功課，再看電視。'));
+  assert.ok(g.examples.some(ex=>ex.text==='我想先吃晚飯，再給媽媽打電話。'));
+  const review=u34.lessons.find(l=>l.id===u34.reviewLessonId);
+  const item=review.steps.find(s=>s.id==='u34-review-g1');
+  assert.equal(item.answer,'我昨天晚上先寫功課，再看電視。');
 });
