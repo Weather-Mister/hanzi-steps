@@ -47,3 +47,7 @@ A fresh Feature QA run is required on this post-audit head; generated stroke/cur
 
 ## Final exact-head gate
 The generated curriculum/stroke artifacts were refreshed by Feature QA after the full curriculum and regression suite passed. A final human-authored no-curriculum-change commit is used only to trigger the exact generated state through Feature QA again; CI should report the artifacts already current and must not alter the head before merge.
+
+## Units 29–33 polish pass
+
+A later source-completeness pass adds 請進 / 進 to Unit 32, promotes 房間 in Unit 32 and 房租 / 不好意思 in Unit 33, explicitly teaches the Lesson 11 senses 給 “to” and 想想 “think it over”, and strengthens the existential-有, 不會, and zero-pronoun review questions. These are learner-facing changes after the previous exact-head certification, so this branch requires a new complete Feature QA run before merge.
