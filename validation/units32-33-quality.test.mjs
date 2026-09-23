@@ -26,10 +26,10 @@ function reviewBlob(module){
 }
 
 test('Units 32-33 keep balanced novelty and full lesson/review structure',()=>{
-  assert.equal(u32.newVocabulary.length,13);
-  assert.equal(u32.newCharacters.length,13);
+  assert.equal(u32.newVocabulary.length,14);
+  assert.equal(u32.newCharacters.length,14);
   assert.equal(u33.newVocabulary.length,13);
-  assert.equal(u33.newCharacters.length,15);
+  assert.equal(u33.newCharacters.length,14);
   for(const m of [u32,u33]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
@@ -68,6 +68,9 @@ test('Unit 32 teaches Lesson 11 direction and 就 distinctions explicitly',()=>{
   assert.match(jiu.explanation,/要是…就/);
   assert.ok(u32.phrases['u32-walk'].text.includes('五分鐘就到了'));
   assert.match(u32.phrases['u32-landlord'].note,/空.*vacant/i);
+  assert.equal(u32.phrases['u32-rooms'].text,'這裡是客廳，廚房在左邊，右邊有浴室。');
+  assert.ok(!Object.values(u32.phrases).some(p=>p.text.includes('客廳在左邊')));
+  assert.equal(u32.phrases['u32-return-call'].text,'我回去想想，再打電話給你。');
 });
 
 test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',()=>{
@@ -83,13 +86,17 @@ test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',(
   assert.match(zero.explanation,/ambiguous/i);
   assert.match(u33.phrases['u33-then'].note,/then \/ in that case/i);
   assert.match(u33.phrases['u33-sorry'].note,/pragmatic phrase/i);
+  assert.ok(u33.newVocabulary.some(v=>v.text==='等'&&v.pinyin==='děng'));
+  assert.equal(u33.phrases['u33-wait'].text,'好，我在家等你。');
+  assert.match(u33.phrases['u33-pay'].note,/得.*děi.*must/i);
+  assert.equal(u33.characters['像'].strokes,14);
 });
 
 test('Lesson 11 transparent forms and source dialogue vocabulary are not dropped',()=>{
   const text32=Object.values(u32.phrases).map(p=>p.text+' '+p.note).join('\n');
   const text33=Object.values(u33.phrases).map(p=>p.text+' '+p.note).join('\n');
-  for(const item of ['分鐘','房間','打電話'])assert.ok(text32.includes(item),`Unit 32 lost ${item}`);
-  for(const item of ['回去','房租','不好意思','那'])assert.ok(text33.includes(item),`Unit 33 lost ${item}`);
+  for(const item of ['分鐘','房間','回去','再','打電話','捷運站','上網'])assert.ok(text32.includes(item),`Unit 32 lost ${item}`);
+  for(const item of ['房租','不好意思','那','等','得自己付錢'])assert.ok(text33.includes(item),`Unit 33 lost ${item}`);
   for(const item of ['喂','已經','習慣','問題','熱水器','好像','裝','不過','付','收到','沒關係','有線電視'])
     assert.ok(text33.includes(item),`Unit 33 lost ${item}`);
 });
@@ -118,12 +125,14 @@ test('Book 2 keeps its lessons while first-teaching ownership moves earlier',()=
   assert.ok(!b2u2.newCharacters.includes('超'));
   assert.ok(b2u2.reviewCharacters.includes('超'));
 
-  for(const ch of ['過','再']){
-    assert.ok(u33.newCharacters.includes(ch));
-    assert.ok(!b2u3.newCharacters.includes(ch));
-    assert.ok(b2u3.reviewCharacters.includes(ch));
-  }
-  assert.ok(u33.newVocabulary.some(v=>v.text==='再'));
+  assert.ok(u33.newCharacters.includes('過'));
+  assert.ok(!b2u3.newCharacters.includes('過'));
+  assert.ok(b2u3.reviewCharacters.includes('過'));
+
+  assert.ok(u32.newCharacters.includes('再'));
+  assert.ok(!b2u3.newCharacters.includes('再'));
+  assert.ok(b2u3.reviewCharacters.includes('再'));
+  assert.ok(u32.newVocabulary.some(v=>v.text==='再'));
   assert.ok(!b2u3.newVocabulary.some(v=>v.text==='再'));
   assert.ok(b2u3.reviewVocabulary.includes('再'));
 
@@ -131,6 +140,15 @@ test('Book 2 keeps its lessons while first-teaching ownership moves earlier',()=
   assert.ok(b2u2.lessons.find(l=>l.id==='b2u2-store').steps.some(s=>s.char==='超'));
   assert.ok(b2u3.lessons.find(l=>l.id==='b2u3-pass').steps.some(s=>s.char==='過'));
   assert.ok(b2u3.lessons.find(l=>l.id==='b2u3-then').steps.some(s=>s.char==='再'));
+});
+
+
+test('Learner-facing Units 32-33 stay Traditional Chinese',()=>{
+  const blob=[JSON.stringify(u32),JSON.stringify(u33)].join('\n');
+  for(const simplified of ['厅','厨','间','线','视','关','经','惯','这','里','话','东'])
+    assert.ok(!blob.includes(simplified),`Simplified form leaked into learner content: ${simplified}`);
+  for(const traditional of ['廳','廚','間','線','視','關','經','慣','這','裡','話','東'])
+    assert.ok(blob.includes(traditional),`Expected Traditional form missing: ${traditional}`);
 });
 
 test('Known Lesson 10 handwriting blockers remain explicit rather than smuggled into Lesson 11',()=>{
