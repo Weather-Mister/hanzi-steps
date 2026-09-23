@@ -166,6 +166,11 @@ const unit:UnitData = {
       "review": false,
       "steps": [
         {
+          "id": "u36-business-p0",
+          "type": "phrase",
+          "phrase": "u36-tuition-question"
+        },
+        {
           "id": "u36-business-p1",
           "type": "phrase",
           "phrase": "u36-business"
@@ -174,6 +179,11 @@ const unit:UnitData = {
           "id": "u36-business-p2",
           "type": "phrase",
           "phrase": "u36-boss"
+        },
+        {
+          "id": "u36-business-p3",
+          "type": "phrase",
+          "phrase": "u36-company-good"
         },
         {
           "id": "u36-business-s1",
@@ -226,6 +236,11 @@ const unit:UnitData = {
           "id": "u36-after-g1",
           "type": "grammar",
           "grammar": "u36-yihou-after"
+        },
+        {
+          "id": "u36-after-p0",
+          "type": "phrase",
+          "phrase": "u36-after-question"
         },
         {
           "id": "u36-after-p1",
@@ -1253,11 +1268,12 @@ const unit:UnitData = {
   ],
   "phrases": {
     "u36-work-question": {
-      "text": "你是什麼時候來臺灣工作的？",
-      "pinyin": "Nǐ shì shénme shíhou lái Táiwān gōngzuò de?",
-      "meaning": "When did you come to Taiwan to work?",
+      "text": "田中，你是什麼時候來臺灣工作的？",
+      "pinyin": "Tiánzhōng, nǐ shì shénme shíhou lái Táiwān gōngzuò de?",
+      "meaning": "Tianzhong, when did you come to Taiwan to work?",
       "note": "Dialogue II opens by retrieving the 是…的 past-event question from Unit 35.",
       "tokens": [
+        "田中",
         "你是什麼時候",
         "來臺灣工作的"
       ],
@@ -1274,6 +1290,17 @@ const unit:UnitData = {
         "去年",
         "我已經在臺灣",
         "工作一年了"
+      ]
+    },
+    "u36-tuition-question": {
+      "text": "為什麼你們公司要替你付學費？",
+      "pinyin": "Wèishénme nǐmen gōngsī yào tì nǐ fù xuéfèi?",
+      "meaning": "Why does your company pay your tuition for you?",
+      "note": "Dialogue II retrieves 公司、替、付 and 學費 from Unit 35 before Tianzhong explains the business reason.",
+      "tokens": [
+        "為什麼",
+        "你們公司",
+        "要替你付學費"
       ]
     },
     "u36-business": {
@@ -1295,6 +1322,30 @@ const unit:UnitData = {
       "tokens": [
         "老闆希望",
         "我們都會說中文"
+      ]
+    },
+    "u36-company-good": {
+      "text": "我覺得你們公司真好。",
+      "pinyin": "Wǒ juéde nǐmen gōngsī zhēn hǎo.",
+      "meaning": "I think your company is really good.",
+      "note": "Dialogue II response. 覺得、公司 and 好 are review vocabulary.",
+      "tokens": [
+        "我覺得",
+        "你們公司真好"
+      ]
+    },
+    "u36-after-question": {
+      "text": "對了，妳回國以後，打算做什麼？",
+      "pinyin": "Duì le, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?",
+      "meaning": "By the way, what do you plan to do after you go back to your country?",
+      "note": "Dialogue II question introducing Event + 以後 in context; 回國、打算 and 做 are review.",
+      "tokens": [
+        "對了",
+        "妳回國以後",
+        "打算做什麼"
+      ],
+      "grammarIds": [
+        "u36-yihou-after"
       ]
     },
     "u36-after-home": {
