@@ -1740,13 +1740,13 @@ const unit:UnitData = {
       ]
     },
     "u32-kitchen": {
-      "text": "廚房在右邊。",
-      "pinyin": "Chúfáng zài yòubiān.",
-      "meaning": "The kitchen is on the right.",
+      "text": "廚房在左邊。",
+      "pinyin": "Chúfáng zài zuǒbiān.",
+      "meaning": "The kitchen is on the left.",
       "note": "廚房 means kitchen.",
       "tokens": [
         "廚房",
-        "在右邊"
+        "在左邊"
       ]
     },
     "u32-market": {
