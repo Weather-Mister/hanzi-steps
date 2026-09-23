@@ -12,7 +12,6 @@ const unit:UnitData = {
     "title": "A Place to Rent",
     "description": "Begin Lesson 11 with renting and the home: landlords, rooms, left/right location, nearby places, walking time, 來 + activity, and the single-sentence 就 that marks unexpectedly little time or distance.",
     "chars": [
-      "進",
       "租",
       "房",
       "客",
@@ -26,7 +25,8 @@ const unit:UnitData = {
       "間",
       "套",
       "再",
-      "話"
+      "話",
+      "進"
     ],
     "lessonIds": [
       "u32-rent",
@@ -994,8 +994,7 @@ const unit:UnitData = {
       "meaning": "telephone",
       "lessonId": "u32-come",
       "core": true
-    }
-,
+    },
     {
       "text": "房間",
       "pinyin": "fángjiān",
@@ -1011,7 +1010,8 @@ const unit:UnitData = {
       "lessonId": "u32-rent",
       "core": true,
       "note": "The landlord says 請進 at the start of Dialogue I. 進 means to enter/go in."
-    }  ],
+    }
+  ],
   "reviewVocabulary": [
     "想",
     "到",
@@ -1023,7 +1023,6 @@ const unit:UnitData = {
     "就"
   ],
   "newCharacters": [
-    "進",
     "租",
     "房",
     "客",
@@ -1037,7 +1036,8 @@ const unit:UnitData = {
     "間",
     "套",
     "再",
-    "話"
+    "話",
+    "進"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -1657,14 +1657,28 @@ const unit:UnitData = {
           "name": "inner component",
           "role": "Inner component",
           "description": "The first eight strokes form 隹, the compact inner body.",
-          "strokes": [0,1,2,3,4,5,6,7]
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
         },
         {
           "label": "辶",
           "name": "movement component",
           "role": "Wrapping component",
           "description": "The final four strokes form the Traditional movement component 辶 around the lower-left.",
-          "strokes": [8,9,10,11]
+          "strokes": [
+            8,
+            9,
+            10,
+            11
+          ]
         }
       ],
       "example": {
@@ -1941,7 +1955,9 @@ const unit:UnitData = {
       "pinyin": "Qǐng jìn.",
       "meaning": "Please come in.",
       "note": "This restores the landlord's opening line from Dialogue I. The understood subject is 你; Unit 33 reuses this exact example for zero-pronoun omission.",
-      "tokens": ["請進"]
+      "tokens": [
+        "請進"
+      ]
     }
   },
   "revisionStepIds": [
