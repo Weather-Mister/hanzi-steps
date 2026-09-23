@@ -1110,8 +1110,7 @@ const unit:UnitData = {
       "meaning": "before; in the past",
       "lessonId": "u29-integrate",
       "core": true
-    }
-  ],
+    },
     {
       "text": "女",
       "pinyin": "nǚ",
@@ -1127,7 +1126,8 @@ const unit:UnitData = {
       "lessonId": "u29-integrate",
       "core": false,
       "note": "The dialogue uses 去逛逛 for going to look around a night market."
-    },
+    }
+  ],
   "reviewVocabulary": [
     "女朋友",
     "來",
