@@ -434,7 +434,7 @@ const unit:UnitData = {
             "plan"
           ],
           "answer": "need; require",
-          "explanation": "需要 states what amount, thing, or action is required."
+          "explanation": "需要 is the Lesson 12 verb 'to need.'"
         },
         {
           "id": "u34-need-s2",
@@ -722,14 +722,14 @@ const unit:UnitData = {
         {
           "id": "u34-review-s1",
           "type": "select",
-          "prompt": "Which word means 'plan' in this lesson?",
+          "prompt": "Which Lesson 12 word means 'to plan to'?",
           "options": [
             "計畫",
             "需要",
             "成績"
           ],
           "answer": "計畫",
-          "explanation": "計畫 means to plan / a plan."
+          "explanation": "計畫 is the source verb 'to plan to.'"
         },
         {
           "id": "u34-review-s2",
@@ -1692,7 +1692,7 @@ const unit:UnitData = {
       "text": "所以需要五年。",
       "pinyin": "Suǒyǐ xūyào wǔ nián.",
       "meaning": "So I need five years.",
-      "note": "需要 is a transitive stative verb meaning 'to need; require.'",
+      "note": "需要 is the source transitive state verb 'to need.' The omitted subject is the speaker from the preceding context.",
       "tokens": [
         "所以",
         "需要五年"
@@ -1702,7 +1702,7 @@ const unit:UnitData = {
       "text": "這得花不少錢！",
       "pinyin": "Zhè děi huā bù shǎo qián!",
       "meaning": "That will cost quite a lot of money!",
-      "note": "花 means 'spend/cost' here. 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
+      "note": "花 is the source verb 'to spend (time or money).' In this context, 這得花不少錢 is naturally translated as 'That will cost quite a lot of money.' 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
       "tokens": [
         "這得",
         "花不少錢"
