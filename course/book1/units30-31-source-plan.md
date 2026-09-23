@@ -20,19 +20,20 @@ Unit 29 already opened Lesson 10 with 水果, 黃色, 給, 香, 甜 and 以前.
 ## Unit 30 — Try It and Describe It
 
 New vocabulary/forms:
-1. 紅色 hóngsè — red
-2. 西瓜 xīguā — watermelon
-3. 對 duì — correct/right
-4. 機會 jīhuì — opportunity/chance
-5. 吃吃看 chīchīkàn — try tasting it
-6. 拍 pāi — take a photo
-7. 笑 xiào — laugh/smile
-8. 開心 kāixīn — happy
-9. 穿 chuān — wear
-10. 衣服 yīfú — clothes
+1. 芒果 mángguǒ — mango
+2. 紅色 hóngsè — red
+3. 西瓜 xīguā — watermelon
+4. 對 duì — correct/right
+5. 機會 jīhuì — opportunity/chance
+6. 吃吃看 chīchīkàn — try tasting it
+7. 拍 pāi — take a photo
+8. 笑 xiào — laugh/smile
+9. 開心 kāixīn — happy
+10. 穿 chuān — wear
+11. 衣服 yīfú — clothes
 
 New characters:
-紅、瓜、拍、笑、心、穿、衣
+芒、紅、瓜、拍、笑、心、穿、衣
 
 New grammar:
 - guessing/confirmation 吧, contrasted with the previously learned suggestion 吧;
@@ -57,9 +58,11 @@ New vocabulary/forms:
 10. 藍色 lánsè — blue
 11. 往 wǎng — toward
 12. 因為 yīnwèi — because
+13. 窗戶 chuānghù — window
+14. 上個月 shàng ge yuè — last month
 
 New characters:
-住、男、矮、弟、些、乾、淨、藍、往、因
+窗、戶、住、男、矮、弟、些、乾、淨、藍、往、因
 
 New grammar:
 - [clause] + 的 + noun, including affirmative and negative modifying clauses;
@@ -67,7 +70,7 @@ New grammar:
 - 因為 + cause，所以 + effect.
 
 Transparent/review material:
-上個月 is a transparent Time-When phrase; 照片, 拍, 穿, 衣服, 紅色, 海, 少, 所以, 從, 比較 and other prerequisites are reused from earlier units.
+照片, 拍, 穿, 衣服, 紅色, 海, 少, 所以, 從, 比較 and other prerequisites are reused from earlier units. 上個月 is now explicitly indexed because it is source-listed Vocabulary II.
 
 ## First-teaching compatibility migrations
 
@@ -78,16 +81,12 @@ Two characters/words were previously first-declared in existing Book 2 material 
 
 These are compatibility migrations only. They do not begin or redesign Book 2.
 
-## Explicitly deferred source material
+## Resolved source debt and handwriting provenance
 
-The batch does **not** silently claim every printed vocabulary item is covered.
+The former Lesson 10 gaps **芒果** and **窗戶** are now taught explicitly. AnimCJK has no `graphicsZhHant.txt` rows for 芒、窗、戶, so hydration falls back only to the exact same Unicode characters from `graphicsZhHans.txt`; learner-facing text remains Traditional and no Simplified codepoint is substituted. Existing Hant rows remain preferred whenever available.
 
-- **芒果 mángguǒ** remains deferred because 芒 lacks verified Taiwan Traditional handwriting geometry in the project's current licensed source path.
-- **窗戶 chuānghù** remains deferred because 窗 and 戶 do not have verified Taiwan Traditional geometry in the current source path.
-- Previously tracked Lesson 8/9 gaps remain open separately: 網路上、臺南、故宮博物院、逛、臺東.
-
-Those gaps remain in the durable coverage map until their character-provenance/first-teaching issues are resolved.
+The former Lesson 9 gap **逛** is also closed in Unit 29 using the exact Unicode character 逛 from the same fallback policy. Earlier out-of-scope gaps remain tracked separately: 網路上、臺南、故宮博物院、臺東.
 
 ## Lesson 10 status after this batch
 
-With the two handwriting-blocked vocabulary items excluded, Units 29–31 cover the supported Dialogue I/Vocabulary I, Dialogue II/Vocabulary II and Grammar I–V material for Lesson 10. Lesson 10 must not be called fully closed until 芒果 and 窗戶 are either taught with verified Traditional geometry or explicitly resolved by an approved alternative source.
+Units 29–31 now account for Dialogue I/Vocabulary I, Dialogue II/Vocabulary II and Grammar I–V, including 芒果, 窗戶 and the source phrase 上個月. The route/direction lesson now uses the textbook sentence 從窗戶往外看，是藍色的大海 instead of an invented substitute.
