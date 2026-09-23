@@ -849,16 +849,17 @@ const unit:UnitData = {
           "phrase": "u33-install",
           "tokens": [
             "裝有線電視嗎",
-            "可以幫我"
+            "我想買電視",
+            "請問可以幫我"
           ]
         },
         {
           "id": "u33-review-o2",
           "type": "order",
-          "phrase": "u33-return-call",
+          "phrase": "u33-pay",
           "tokens": [
-            "再打電話給你",
-            "我回去想想"
+            "不過你得自己付錢",
+            "可以"
           ]
         },
         {
