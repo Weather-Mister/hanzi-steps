@@ -810,14 +810,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g6",
           "type": "select",
-          "prompt": "Which source-style perception negation is correct?",
+          "prompt": "Which source sentence correctly negates a 難 + perception word?",
           "options": [
-            "便宜的咖啡不好喝。",
-            "便宜的咖啡好不喝。",
-            "便宜的咖啡沒好喝。"
+            "學校餐廳的菜不難吃。",
+            "學校餐廳的菜難不吃。",
+            "學校餐廳的菜沒難吃。"
           ],
-          "answer": "便宜的咖啡不好喝。",
-          "explanation": "Put 不 before the whole 好/難 + verb expression. Here 不好喝 is the perception-verb negative from the source.",
+          "answer": "學校餐廳的菜不難吃。",
+          "explanation": "Put 不 before the whole perception word. The source uses 不難吃 here to mean the cafeteria food is not bad to eat / tastes okay.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
