@@ -57,7 +57,7 @@ const unit:UnitData = {
     {
       "id": "u33-call",
       "title": "Call the Landlord",
-      "subtitle": "Finish the first rental dialogue and open the phone call with 再, 喂, and 收到.",
+      "subtitle": "Open the landlord phone call with 喂, 收到, and the rent-payment phrase 房租.",
       "chars": [
         "喂",
         "收"
@@ -134,14 +134,14 @@ const unit:UnitData = {
         {
           "id": "u33-call-s1",
           "type": "select",
-          "prompt": "Which word orders the later action in 'think, then call'?",
+          "prompt": "In 你收到我的房租了嗎？, what does 房租 mean?",
           "options": [
-            "再",
-            "已經",
-            "好像"
+            "rent for a room or house",
+            "a room that is for rent",
+            "the landlord"
           ],
-          "answer": "再",
-          "explanation": "再 introduces the later action."
+          "answer": "rent for a room or house",
+          "explanation": "房租 is the rent payment. Compare 租房, which means to rent a place."
         }
       ]
     },
@@ -1034,13 +1034,11 @@ const unit:UnitData = {
     "電話",
     "房東",
     "租",
-    "套房",
     "間",
     "來",
     "有",
     "會",
-    "那",
-    "再"
+    "那"
   ],
   "newCharacters": [
     "喂",
