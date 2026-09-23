@@ -12,8 +12,6 @@ const unit:UnitData = {
     "title": "The One in Blue",
     "description": "Continue Lesson 10 through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, express direction with 往, and connect causes and effects with 因為…所以….",
     "chars": [
-      "窗",
-      "戶",
       "住",
       "男",
       "矮",
@@ -23,7 +21,9 @@ const unit:UnitData = {
       "淨",
       "藍",
       "往",
-      "因"
+      "因",
+      "窗",
+      "戶"
     ],
     "lessonIds": [
       "u31-hotel",
@@ -34,7 +34,10 @@ const unit:UnitData = {
       "u31-because",
       "u31-review"
     ],
-    "banner": {"text":"旅館","pinyin":"lǚguǎn"},
+    "banner": {
+      "text": "旅館",
+      "pinyin": "lǚguǎn"
+    },
     "goal": {
       "text": "因為現在去玩的人比較少，所以旅館不太貴。",
       "pinyin": "Yīnwèi xiànzài qù wán de rén bǐjiào shǎo, suǒyǐ lǚguǎn bú tài guì.",
@@ -1072,8 +1075,7 @@ const unit:UnitData = {
       "lessonId": "u31-because",
       "core": true,
       "note": "Lesson 10 pairs 因為 with the already familiar 所以 to express cause before effect."
-    }
-,
+    },
     {
       "text": "窗戶",
       "pinyin": "chuānghù",
@@ -1089,7 +1091,8 @@ const unit:UnitData = {
       "lessonId": "u31-hotel",
       "core": true,
       "note": "This is the source-listed phrase that sets the Hualien trip in the previous month."
-    }  ],
+    }
+  ],
   "reviewVocabulary": [
     "照片",
     "拍",
@@ -1113,8 +1116,6 @@ const unit:UnitData = {
     "這裡"
   ],
   "newCharacters": [
-    "窗",
-    "戶",
     "住",
     "男",
     "矮",
@@ -1124,7 +1125,9 @@ const unit:UnitData = {
     "淨",
     "藍",
     "往",
-    "因"
+    "因",
+    "窗",
+    "戶"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -1571,14 +1574,28 @@ const unit:UnitData = {
           "name": "cave/roof component",
           "role": "Top component",
           "description": "The first five strokes form 穴 across the top.",
-          "strokes": [0,1,2,3,4]
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
         },
         {
           "label": "囱",
           "name": "lower window-shaped body",
           "role": "Bottom component",
           "description": "The final seven strokes form the enclosed lower body beneath 穴.",
-          "strokes": [5,6,7,8,9,10,11]
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
         }
       ],
       "example": {
@@ -1602,7 +1619,12 @@ const unit:UnitData = {
           "name": "whole character",
           "role": "Whole-character form",
           "description": "All four strokes form the independent Traditional character 戶.",
-          "strokes": [0,1,2,3]
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
         }
       ],
       "example": {
