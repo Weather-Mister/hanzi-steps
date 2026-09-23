@@ -656,14 +656,14 @@ const unit:UnitData = {
         {
           "id": "u34-grades-s2",
           "type": "select",
-          "prompt": "Which earlier pattern is being reused in 要是成績不好，就沒獎學金了?",
+          "prompt": "According to 要是成績不好，就沒獎學金了, what happens if the grades are not good?",
           "options": [
-            "要是…就…",
-            "先…再…",
-            "因為…所以…"
+            "The scholarship is lost.",
+            "The study plan becomes five years.",
+            "The student changes universities."
           ],
-          "answer": "要是…就…",
-          "explanation": "要是 introduces the condition and 就 introduces the consequence.",
+          "answer": "The scholarship is lost.",
+          "explanation": "就沒獎學金了 means the scholarship will no longer be available; 要是…就… links that result to the condition.",
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
