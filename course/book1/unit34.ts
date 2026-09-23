@@ -746,14 +746,16 @@ const unit:UnitData = {
         {
           "id": "u34-review-s3",
           "type": "select",
-          "prompt": "What does 語言中心 mean?",
+          "prompt": "Which source sentence correctly sequences studying language first and university second?",
           "options": [
-            "language center",
-            "university",
-            "market"
+            "他計畫在臺灣先學語言，再念大學。",
+            "他計畫在臺灣再學語言，先念大學。"
           ],
-          "answer": "language center",
-          "explanation": "語言中心 is a language center."
+          "answer": "他計畫在臺灣先學語言，再念大學。",
+          "explanation": "This is the textbook's Grammar I sequence: 先 marks language study first and 再 marks university study next.",
+          "grammarIds": [
+            "u34-first-then"
+          ]
         },
         {
           "id": "u34-review-s4",
