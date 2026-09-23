@@ -7,7 +7,6 @@
     "graphicsJa.txt"
   ],
   "characters": [
-    "進",
     "租",
     "房",
     "客",
@@ -21,7 +20,8 @@
     "間",
     "套",
     "再",
-    "話"
+    "話",
+    "進"
   ],
   "note": "Traditional Hanzi Steps target. Prefer graphicsZhHant.txt; if unavailable, fallback may use only the exact same Unicode character from graphicsZhHans.txt or graphicsJa.txt. Never substitute a different Simplified/Japanese codepoint."
 }
