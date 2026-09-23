@@ -1784,12 +1784,12 @@ const unit:UnitData = {
       "id": "u33-zero-pronoun",
       "title": "Leave understood subjects and objects unspoken",
       "pattern": "recoverable subject / object → Ø",
-      "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. The most frequent omissions are subjects and objects: a subject can be understood from context even without being repeated, a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
+      "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. To keep this unit teach-before-test safe, its context-predictable subject case is practiced with the already-learned 請坐 rather than introducing 進 early. The most frequent omissions are subjects and objects: a subject can be understood from context even without being repeated, a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
       "examples": [
         {
-          "text": "請進！",
-          "pinyin": "Qǐng jìn!",
-          "meaning": "Please come in! (understood subject: you)"
+          "text": "請坐！",
+          "pinyin": "Qǐng zuò!",
+          "meaning": "Please sit! (understood subject: you)"
         },
         {
           "text": "我常打籃球，也常踢足球。",
