@@ -253,8 +253,8 @@ const unit:UnitData = {
           "prompt": "Which word marks the action that happens first?",
           "options": [
             "先",
-            "再",
-            "久"
+            "久",
+            "需要"
           ],
           "answer": "先",
           "explanation": "先 goes before the first event; 再 introduces the next event.",
