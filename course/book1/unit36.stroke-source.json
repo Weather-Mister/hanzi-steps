@@ -12,5 +12,6 @@
     "試",
     "難"
   ],
-  "note": "Traditional Hanzi Steps target. Prefer graphicsZhHant.txt; if absent, fallback may use only the identical Unicode codepoint from graphicsZhHans.txt or graphicsJa.txt. Never substitute a different Simplified/Japanese codepoint."
+  "note": "Traditional Hanzi Steps target. Feature QA hydration confirmed 工、作、試、難 from AnimCJK graphicsZhHant.txt at audited master revision ec5e17cca76c87587790bcbce5ea0b4d4fb753d6. Fallback policy remains exact-codepoint only; never substitute a different Simplified/Japanese character.",
+  "revision": "ec5e17cca76c87587790bcbce5ea0b4d4fb753d6"
 }
