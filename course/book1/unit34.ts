@@ -279,7 +279,7 @@ const unit:UnitData = {
     {
       "id": "u34-center",
       "title": "Language Center, Then University",
-      "subtitle": "Build 語言中心 and 大學 into the full study sequence.",
+      "subtitle": "Build 語言中心 into the full study sequence and reinforce 大學.",
       "chars": [
         "語",
         "言"
@@ -930,7 +930,7 @@ const unit:UnitData = {
       "text": "大學",
       "pinyin": "dàxué",
       "meaning": "university",
-      "lessonId": "u34-center",
+      "lessonId": "u34-sequence",
       "core": true
     },
     {
