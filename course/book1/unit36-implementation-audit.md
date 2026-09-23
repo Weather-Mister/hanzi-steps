@@ -51,6 +51,18 @@ Repair:
 - normalize source 妳 to already-taught general 你 in the return-home question;
 - document both adaptations explicitly in the source plan and phrase notes instead of silently leaking untaught characters.
 
+### 5. Exercise coverage overused the same action-verb examples
+The published pass was source-correct, but several checks repeatedly reused 好找 / 難找 / 難學 while the textbook's Grammar IV explicitly develops both perception and action branches with broader examples.
+
+Repair:
+- restored the exact source perception example 日本菜好吃也好看 in the first branch-identification check;
+- added retrieval of the source perception negative 便宜的咖啡不好喝;
+- added the source 難不難學 question with 老師今天教的甜點;
+- diversified the review so 好喝/難喝 and the 難 + action-verb A-not-A pattern are independently retrieved;
+- replaced a low-value repeated 老闆 recognition item with retrieval of 希望 from the source dialogue.
+
+These changes do not introduce new grammar or vocabulary; they increase retrieval breadth for material already present in Lesson 12. fileciteturn0file0L10933-L10979
+
 ## Pedagogy and sequencing
 
 - 工 and 作 are introduced before 工作 is assessed.
