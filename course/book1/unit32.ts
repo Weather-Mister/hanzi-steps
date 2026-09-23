@@ -12,6 +12,7 @@ const unit:UnitData = {
     "title": "A Place to Rent",
     "description": "Begin Lesson 11 with renting and the home: landlords, rooms, left/right location, nearby places, walking time, 來 + activity, and the single-sentence 就 that marks unexpectedly little time or distance.",
     "chars": [
+      "進",
       "租",
       "房",
       "客",
@@ -149,7 +150,7 @@ const unit:UnitData = {
         {
           "id": "u32-rent-p2",
           "type": "phrase",
-          "phrase": "u32-landlord"
+          "phrase": "u32-come-in"
         },
         {
           "id": "u32-rent-s1",
@@ -870,26 +871,26 @@ const unit:UnitData = {
         {
           "id": "u32-review-s4",
           "type": "select",
-          "prompt": "In 我打電話給房東, which word means landlord?",
+          "prompt": "How does 給 work in 我打電話給房東?",
           "options": [
-            "房東",
-            "電話",
-            "客廳"
+            "Preposition 'to', marking the call recipient",
+            "Verb 'give', meaning give the landlord a phone",
+            "Measure word for phone calls"
           ],
-          "answer": "房東",
-          "explanation": "房東 means landlord; 電話 means telephone."
+          "answer": "Preposition 'to', marking the call recipient",
+          "explanation": "Lesson 11 uses 給 as a preposition in 打電話給… 'call …'. This differs from 給你一塊水果, where 給 is the verb 'give'."
         },
         {
           "id": "u32-review-s5",
           "type": "select",
-          "prompt": "Which is the kitchen?",
+          "prompt": "What does 想想 mean in 我回去想想，再打電話給你?",
           "options": [
-            "廚房",
-            "客廳",
-            "浴室"
+            "think it over",
+            "want to call",
+            "look at the room"
           ],
-          "answer": "廚房",
-          "explanation": "廚房 is kitchen."
+          "answer": "think it over",
+          "explanation": "Here reduplicated 想想 means think it over; earlier 想 + VP often meant want to do something."
         }
       ]
     }
@@ -912,7 +913,7 @@ const unit:UnitData = {
     {
       "text": "套房",
       "pinyin": "tàofáng",
-      "meaning": "suite",
+      "meaning": "suite; room with a bathroom",
       "lessonId": "u32-rent",
       "core": true
     },
@@ -994,7 +995,23 @@ const unit:UnitData = {
       "lessonId": "u32-come",
       "core": true
     }
-  ],
+,
+    {
+      "text": "房間",
+      "pinyin": "fángjiān",
+      "meaning": "room",
+      "lessonId": "u32-sides",
+      "core": true,
+      "note": "Vocabulary I lists 房間 as the ordinary noun for a room; 房 and 間 are now both familiar."
+    },
+    {
+      "text": "請進",
+      "pinyin": "qǐng jìn",
+      "meaning": "please come in",
+      "lessonId": "u32-rent",
+      "core": true,
+      "note": "The landlord says 請進 at the start of Dialogue I. 進 means to enter/go in."
+    }  ],
   "reviewVocabulary": [
     "想",
     "到",
@@ -1006,6 +1023,7 @@ const unit:UnitData = {
     "就"
   ],
   "newCharacters": [
+    "進",
     "租",
     "房",
     "客",
@@ -1623,6 +1641,39 @@ const unit:UnitData = {
         "pinyin": "diànhuà",
         "meaning": "telephone"
       }
+    },
+    "進": {
+      "hanzi": "進",
+      "pinyin": "jìn",
+      "zhuyin": "ㄐㄧㄣˋ",
+      "meaning": "enter; go in",
+      "strokes": 12,
+      "layout": "side",
+      "note": "進 is fourth-tone jìn. In 請進, it means enter / come in.",
+      "memory": "Write the eight-stroke 隹 body first, then add the four-stroke movement component 辶 wrapping along the lower-left.",
+      "parts": [
+        {
+          "label": "隹",
+          "name": "inner component",
+          "role": "Inner component",
+          "description": "The first eight strokes form 隹, the compact inner body.",
+          "strokes": [0,1,2,3,4,5,6,7]
+        },
+        {
+          "label": "辶",
+          "name": "movement component",
+          "role": "Wrapping component",
+          "description": "The final four strokes form the Traditional movement component 辶 around the lower-left.",
+          "strokes": [8,9,10,11]
+        }
+      ],
+      "example": {
+        "text": "請進",
+        "pinyin": "qǐng jìn",
+        "meaning": "please come in"
+      },
+      "layoutLabel": "Wraparound",
+      "partOrderLabel": "inner 隹, then wrapping 辶"
     }
   },
   "grammarRules": {
@@ -1776,7 +1827,7 @@ const unit:UnitData = {
       "text": "我打電話給房東。",
       "pinyin": "Wǒ dǎ diànhuà gěi fángdōng.",
       "meaning": "I call the landlord.",
-      "note": "打電話 is the ordinary collocation 'make a phone call'; 電話 is the new noun.",
+      "note": "打電話 is the ordinary collocation 'make a phone call'. Here 給 is the Lesson 11 preposition 'to', marking the recipient: 打電話給房東. Compare earlier 給你一塊水果, where 給 is the verb 'give'.",
       "tokens": [
         "我",
         "打電話",
@@ -1869,7 +1920,7 @@ const unit:UnitData = {
       "text": "我回去想想，再打電話給你。",
       "pinyin": "Wǒ huíqù xiǎngxiang, zài dǎ diànhuà gěi nǐ.",
       "meaning": "I'll go back and think about it, then call you.",
-      "note": "This is the closing move of Dialogue I. 再 orders the later action; 回去 and 打電話 are transparent combinations of already supported parts.",
+      "note": "This is the closing move of Dialogue I. Here 想想 means 'think it over', extending earlier 想 + VP 'want to'. 再 orders the later action, and 給 in 打電話給你 marks the call recipient.",
       "tokens": [
         "我回去想想",
         "再打電話給你"
@@ -1884,6 +1935,13 @@ const unit:UnitData = {
         "現在",
         "有人住嗎"
       ]
+    },
+    "u32-come-in": {
+      "text": "請進。",
+      "pinyin": "Qǐng jìn.",
+      "meaning": "Please come in.",
+      "note": "This restores the landlord's opening line from Dialogue I. The understood subject is 你; Unit 33 reuses this exact example for zero-pronoun omission.",
+      "tokens": ["請進"]
     }
   },
   "revisionStepIds": [
