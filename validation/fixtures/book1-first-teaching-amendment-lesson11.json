@@ -1,32 +1,6 @@
 {
-  "reason": "Book 1 Lesson 11 now first-teaches 房 in the rental context and first-teaches 走、左、右、路、超 before the existing Book 2 direction/store units. Later Book 2 lesson and activity IDs remain unchanged; only first-teaching/card ownership and the reviewed character teaching metadata move earlier. The character order records the earlier Book 1 ownership while preserving all previously taught characters.",
+  "reason": "Book 1 Lesson 11 now first-teaches 房 in the rental context and first-teaches 走、左、右、路、超 before their existing Book 2 direction/store units. Historical character-card metadata and practice behavior are preserved exactly; later Book 2 lesson/activity IDs remain unchanged. Only per-unit first-teaching card ownership and the global first-occurrence order change.",
   "records": {
-    "characters": {
-      "房": {
-        "before": "7670e74d3bc2bbbe3a08f08253645c6967051c765de724d40157a3309401fffd",
-        "after": "99ec5e923b87e791be8aacdd54c893700e1acb2af27da7620d7d8852a9cdc90f"
-      },
-      "走": {
-        "before": "0d2e7408cb76c02032848997d7ef02ffc8006ed347003684a9d55b7ed02bd584",
-        "after": "b87cad29aedd90214e445ce77e54ddc6b846819362eaec208004b68c7cea4de2"
-      },
-      "左": {
-        "before": "80613ec0f8e524acff27d94221870e941aac879d9f6763da15b3629667593c1e",
-        "after": "1656cd75e10340d13c6247d3fa41b5164eb24840f34aabed6b100b61d7b1f348"
-      },
-      "右": {
-        "before": "41eed225415b509dfca5180accc1f432b1f45297e6ea2bf7ead410a988052fb7",
-        "after": "757bf111f496155d45205a2a8efb7f1d280e9e01da8122392c1605a3ca21c835"
-      },
-      "路": {
-        "before": "ed9a04ad7f34267e7a5d8c088f9e8acf68a8e789e7cce7daf365917e571641fd",
-        "after": "de83052e49c5d65bd18d0e3d26822e1674041481400b790fa8de6acc74179eb2"
-      },
-      "超": {
-        "before": "6db7c6cdd01cfda2a3a3b1cf08bc4669387c6911d960f9c589eb2db3e79c7ed6",
-        "after": "545be321f4ef486a97ebc66c73c92c062f6f7447636ffa214f1a600c71f59992"
-      }
-    },
     "cards": {
       "book-2-unit-1": {
         "before": "95b4507adb4264317fb535a86fbc8eed4d032b0dc48753d4d101f4c0afdee9fa",
@@ -147,19 +121,5 @@
     "口",
     "銀",
     "離"
-  ],
-  "practice": {
-    "房": {
-      "before": "9e255d78a36b0e13d87b3eece94266bd8d18e5a46d75c93ae93351e36d25c386",
-      "after": "7728fb5184dc9185a29754e48355c9fc6736ce66c4d0008d5fb051ce8b6caff6"
-    },
-    "路": {
-      "before": "8b9bb4e84206580e6e2193dc49b562bd6cb83235c0c8a4fb761527be7139af82",
-      "after": "05b6b5e00647e0abaaf19d2ead0071071f08cdc508b2f4b8880f95e2c314c243"
-    },
-    "超": {
-      "before": "5ca39a243976a84a4f0bfd4282e4b9cbc39980ad134e3863c9712f7373b6bd6d",
-      "after": "5b6579b5dfae63020245a1ec6ee87ca22854dde2a3930599d4cca766b2ddaa3e"
-    }
-  }
+  ]
 }
