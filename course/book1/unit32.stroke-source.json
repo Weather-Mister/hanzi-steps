@@ -3,7 +3,8 @@
   "url": "https://github.com/parsimonhi/animCJK",
   "preference": [
     "graphicsZhHant.txt",
-    "same-codepoint fallback only"
+    "graphicsZhHans.txt",
+    "graphicsJa.txt"
   ],
   "characters": [
     "租",
@@ -21,5 +22,5 @@
     "再",
     "話"
   ],
-  "note": "Traditional Hanzi Steps target. Use graphicsZhHant.txt whenever present; any fallback must keep the exact same Unicode Traditional character and is audited separately."
+  "note": "Traditional Hanzi Steps target. The hydrator prefers graphicsZhHant.txt and only falls back by looking up the exact same Unicode character; it never substitutes a different Simplified/Japanese codepoint."
 }
