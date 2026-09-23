@@ -137,3 +137,15 @@ test('Unit 36 assessments do not use a new character before its intro step',()=>
     }
   }
 });
+
+
+test('Unit 36 deep audit retrieves both Grammar IV branches with source examples',()=>{
+  const job=u36.lessons.find(l=>l.id==='u36-job');
+  const hard=u36.lessons.find(l=>l.id==='u36-hard');
+  const review=u36.lessons.find(l=>l.id===u36.reviewLessonId);
+  const blob=[...job.steps,...hard.steps,...review.steps].flatMap(step=>[step.prompt,step.answer,step.explanation,...(step.options??[])]).filter(Boolean).join('\n');
+  assert.match(blob,/日本菜好吃也好看/);
+  assert.match(blob,/便宜的咖啡不好喝/);
+  assert.match(blob,/老師今天教的甜點難不難學/);
+  assert.match(blob,/好喝 \/ 難喝/);
+});
