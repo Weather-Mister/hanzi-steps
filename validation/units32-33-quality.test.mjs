@@ -71,6 +71,10 @@ test('Unit 32 teaches Lesson 11 direction and 就 distinctions explicitly',()=>{
   assert.equal(u32.phrases['u32-rooms'].text,'這裡是客廳，廚房在左邊，右邊有浴室。');
   assert.ok(!Object.values(u32.phrases).some(p=>p.text.includes('客廳在左邊')));
   assert.equal(u32.phrases['u32-return-call'].text,'我回去想想，再打電話給你。');
+  assert.equal(u32.phrases['u32-landlord'].text,'還有兩間空房間，一間是套房，一間不是。');
+  assert.equal(u32.phrases['u32-occupied'].text,'現在有人住嗎？');
+  assert.equal(u32.phrases['u32-market'].text,'附近有超市和捷運站。');
+  assert.equal(u32.phrases['u32-internet'].text,'房間裡面可以上網嗎？');
 });
 
 test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',()=>{
@@ -88,6 +92,9 @@ test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',(
   assert.match(u33.phrases['u33-sorry'].note,/pragmatic phrase/i);
   assert.ok(u33.newVocabulary.some(v=>v.text==='等'&&v.pinyin==='děng'));
   assert.equal(u33.phrases['u33-wait'].text,'好，我在家等你。');
+  assert.equal(u33.phrases['u33-rent-question'].text,'你收到我的房租了嗎？');
+  assert.equal(u33.phrases['u33-time'].text,'你什麼時候有空？晚上可以嗎？');
+  assert.ok(u33.phrases['u33-then'].text.includes('還有問題嗎？'));
   assert.match(u33.phrases['u33-pay'].note,/得.*děi.*must/i);
   assert.equal(u33.characters['像'].strokes,14);
 });
