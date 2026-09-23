@@ -185,3 +185,13 @@ test('Unit 36 grammar review keeps perception and action A-not-A forms distinct'
   assert.equal(action.answer,'老師今天教的甜點難不難學？');
   assert.match(action.explanation,/難不難 \+ action verb/);
 });
+
+test('Unit 36 review covers time-anchor 以後 and degree modification, not only event anchors and bare predicates',()=>{
+  const review=u36.lessons.find(l=>l.id===u36.reviewLessonId);
+  const time=review.steps.find(s=>s.id==='u36-review-g2');
+  const degree=review.steps.find(s=>s.id==='u36-review-g4');
+  assert.equal(time.answer,'half a year later');
+  assert.match(time.prompt,/半年以後/);
+  assert.equal(degree.answer,'我媽媽做的菜很好吃。');
+  assert.match(degree.explanation,/degree adverbs/i);
+});
