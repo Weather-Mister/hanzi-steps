@@ -12,14 +12,14 @@ const unit:UnitData = {
     "title": "Try It and Describe It",
     "description": "Identify fruit, make a guess, try an action, describe a subjective impression, and talk about photos and clothing.",
     "chars": [
-      "芒",
       "紅",
       "瓜",
       "拍",
       "笑",
       "心",
       "穿",
-      "衣"
+      "衣",
+      "芒"
     ],
     "lessonIds": [
       "u30-fruit",
@@ -30,7 +30,10 @@ const unit:UnitData = {
       "u30-clothes",
       "u30-review"
     ],
-    "banner": {"text":"西瓜","pinyin":"xīguā"},
+    "banner": {
+      "text": "西瓜",
+      "pinyin": "xīguā"
+    },
     "goal": {
       "text": "這是西瓜吧？你吃吃看。",
       "pinyin": "Zhè shì xīguā ba? Nǐ chīchīkàn.",
@@ -1002,14 +1005,14 @@ const unit:UnitData = {
     "茶"
   ],
   "newCharacters": [
-    "芒",
     "紅",
     "瓜",
     "拍",
     "笑",
     "心",
     "穿",
-    "衣"
+    "衣",
+    "芒"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -1294,14 +1297,22 @@ const unit:UnitData = {
           "name": "grass component",
           "role": "Top component",
           "description": "The first three strokes form the compact 艹 grass component across the top.",
-          "strokes": [0,1,2]
+          "strokes": [
+            0,
+            1,
+            2
+          ]
         },
         {
           "label": "亡",
           "name": "lower component",
           "role": "Bottom component",
           "description": "The final three strokes form 亡 below the grass top.",
-          "strokes": [3,4,5]
+          "strokes": [
+            3,
+            4,
+            5
+          ]
         }
       ],
       "example": {
