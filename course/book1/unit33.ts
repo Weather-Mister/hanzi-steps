@@ -117,6 +117,11 @@ const unit:UnitData = {
           "char": "收"
         },
         {
+          "id": "u33-call-p0",
+          "type": "phrase",
+          "phrase": "u33-rent-question"
+        },
+        {
           "id": "u33-call-p2",
           "type": "phrase",
           "phrase": "u33-phone"
@@ -606,6 +611,11 @@ const unit:UnitData = {
           "id": "u33-exists-係-memory",
           "type": "memory",
           "char": "係"
+        },
+        {
+          "id": "u33-exists-time",
+          "type": "phrase",
+          "phrase": "u33-time"
         },
         {
           "id": "u33-exists-p0",
@@ -1717,6 +1727,11 @@ const unit:UnitData = {
           "meaning": "No one lives in this room."
         },
         {
+          "text": "有沒有人住這裡？",
+          "pinyin": "Yǒu méiyǒu rén zhù zhèlǐ?",
+          "meaning": "Does anyone live here?"
+        },
+        {
           "text": "地上有一支手機。",
           "pinyin": "Dìshang yǒu yì zhī shǒujī.",
           "meaning": "There is a cellphone on the floor."
@@ -1918,13 +1933,13 @@ const unit:UnitData = {
       ]
     },
     "u33-then": {
-      "text": "那我明天下午兩點到。",
-      "pinyin": "Nà wǒ míngtiān xiàwǔ liǎng diǎn dào.",
-      "meaning": "Then I'll arrive at two tomorrow afternoon.",
-      "note": "Here 那 is the discourse particle 'then / in that case,' extending the earlier word 那 'that.'",
+      "text": "那我明天下午兩點到。還有問題嗎？",
+      "pinyin": "Nà wǒ míngtiān xiàwǔ liǎng diǎn dào. Hái yǒu wèntí ma?",
+      "meaning": "Then I'll arrive at two tomorrow afternoon. Are there any other problems?",
+      "note": "Here 那 is the discourse particle 'then / in that case.' 還有問題嗎 asks whether there are any additional problems.",
       "tokens": [
-        "那",
-        "我明天下午兩點到"
+        "那我明天下午兩點到",
+        "還有問題嗎"
       ]
     },
     "u33-install": {
@@ -2021,6 +2036,26 @@ const unit:UnitData = {
       "tokens": [
         "好",
         "我在家等你"
+      ]
+    },
+    "u33-rent-question": {
+      "text": "你收到我的房租了嗎？",
+      "pinyin": "Nǐ shōudào wǒ de fángzū le ma?",
+      "meaning": "Have you received my rent?",
+      "note": "This preserves the opening question of Dialogue II; 房租 is the rent paid for a room or house.",
+      "tokens": [
+        "你收到",
+        "我的房租了嗎"
+      ]
+    },
+    "u33-time": {
+      "text": "你什麼時候有空？晚上可以嗎？",
+      "pinyin": "Nǐ shénme shíhou yǒu kòng? Wǎnshang kěyǐ ma?",
+      "meaning": "When are you free? Would tonight be okay?",
+      "note": "The landlord uses familiar scheduling language before arranging the repair visit.",
+      "tokens": [
+        "你什麼時候有空",
+        "晚上可以嗎"
       ]
     }
   },
