@@ -28,3 +28,8 @@ No existing Unit 34 IDs are changed. Unit 35 adds new IDs only.
 
 ## Publication gate
 Before merge, exact-head Feature QA must pass stroke hydration, course generation/check, targeted Unit 35 testing, character coverage, repository regressions, TypeScript, and Pages build. If CI creates generated artifacts and advances the branch head, rerun Feature QA on the resulting head before merge.
+
+
+## Generated-artifact exact-head recheck
+
+Feature QA hydrated Unit 35 handwriting geometry and refreshed generated curriculum artifacts on commit `2990a2816dbc03e11c550ca0afd514ca1beb8ab3`. This audit-only follow-up makes no learner-facing curriculum change; it exists to trigger one complete Feature QA run on the generated state before merge.
