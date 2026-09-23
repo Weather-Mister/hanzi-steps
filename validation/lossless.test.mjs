@@ -13,6 +13,7 @@ const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
  const data={...current,cards:Object.fromEntries(current.units.map(u=>[u.id,current.unitLibraryCharacters(u)]))};
+ console.log('CURRENT_BASELINE_UNIT_HASHES',JSON.stringify(Object.fromEntries(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>[u.id,hash(u)]))));
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){
