@@ -292,12 +292,39 @@ const unit:UnitData = {
     {
       "id": "u36-job",
       "title": "Is That Kind of Job Easy to Find?",
-      "subtitle": "Learn 這樣 and 國家, then distinguish the special 好/難 + verb meanings.",
-      "chars": [],
-      "minutes": "9–12 min",
+      "subtitle": "Learn 難, 這樣, and 國家, then distinguish the special 好/難 + verb meanings.",
+      "chars": [
+        "難"
+      ],
+      "minutes": "12–15 min",
       "unitId": "unit-36",
       "review": false,
       "steps": [
+        {
+          "id": "u36-job-難-intro",
+          "type": "intro",
+          "char": "難"
+        },
+        {
+          "id": "u36-job-難-trace",
+          "type": "trace",
+          "char": "難"
+        },
+        {
+          "id": "u36-job-難-build",
+          "type": "build",
+          "char": "難"
+        },
+        {
+          "id": "u36-job-難-complete",
+          "type": "complete",
+          "char": "難"
+        },
+        {
+          "id": "u36-job-難-memory",
+          "type": "memory",
+          "char": "難"
+        },
         {
           "id": "u36-job-g1",
           "type": "grammar",
@@ -451,39 +478,12 @@ const unit:UnitData = {
     {
       "id": "u36-hard",
       "title": "What If It Is Hard to Find?",
-      "subtitle": "Learn 難 and 那麼, finish Dialogue II, and practice negatives/questions across both 好/難 + verb branches.",
-      "chars": [
-        "難"
-      ],
-      "minutes": "11–14 min",
+      "subtitle": "Learn 那麼, finish Dialogue II, and practice negatives/questions across both 好/難 + verb branches.",
+      "chars": [],
+      "minutes": "9–12 min",
       "unitId": "unit-36",
       "review": false,
       "steps": [
-        {
-          "id": "u36-hard-難-intro",
-          "type": "intro",
-          "char": "難"
-        },
-        {
-          "id": "u36-hard-難-trace",
-          "type": "trace",
-          "char": "難"
-        },
-        {
-          "id": "u36-hard-難-build",
-          "type": "build",
-          "char": "難"
-        },
-        {
-          "id": "u36-hard-難-complete",
-          "type": "complete",
-          "char": "難"
-        },
-        {
-          "id": "u36-hard-難-memory",
-          "type": "memory",
-          "char": "難"
-        },
         {
           "id": "u36-hard-p1",
           "type": "phrase",
@@ -947,7 +947,7 @@ const unit:UnitData = {
       "text": "難",
       "pinyin": "nán",
       "meaning": "hard to; difficult to",
-      "lessonId": "u36-hard",
+      "lessonId": "u36-job",
       "core": true,
       "note": "Grammar IV gives 難 a special pre-verbal meaning 'hard/difficult to' with action verbs, e.g. 難找."
     },
