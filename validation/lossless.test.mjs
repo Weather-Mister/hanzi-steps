@@ -11,6 +11,7 @@ const lesson10Amendment=readJSON('validation/fixtures/book1-first-teaching-amend
 const correctionAmendment=readJSON('validation/fixtures/units26-31-correction-amendment.json');
 const spotlightAmendment=readJSON('validation/fixtures/spotlight-word-amendment.json');
 const lesson11Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson11.json');
+const polishAmendment=readJSON('validation/fixtures/units29-33-polish-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -32,7 +33,10 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const spotlightExpected=spotlight?.after??correctedExpected;
    const lesson11=lesson11Amendment.records?.[key]?.[id];
    if(lesson11)assert.equal(lesson11.before,spotlightExpected,`Lesson 11 amendment must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),lesson11?.after??spotlightExpected,`${key} ${id}`);
+   const lesson11Expected=lesson11?.after??spotlightExpected;
+   const polish=polishAmendment.records?.[key]?.[id];
+   if(polish)assert.equal(polish.before,lesson11Expected,`Units 29-33 polish amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),polish?.after??lesson11Expected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
