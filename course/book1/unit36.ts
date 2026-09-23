@@ -1305,7 +1305,7 @@ const unit:UnitData = {
     },
     "u36-business": {
       "text": "因為我們公司跟臺灣人做生意。",
-      "pinyin": "Yīnwèi wǒmen gōngsī gēn Táiwānrén zuò shēngyì.",
+      "pinyin": "Yīnwèi wǒmen gōngsī gēn Táiwān rén zuò shēngyì.",
       "meaning": "Because our company does business with Taiwanese people.",
       "note": "生意 is new; 做 and 因為 are review. 做生意 is a transparent source combination, not an extra new-vocabulary count.",
       "tokens": [
