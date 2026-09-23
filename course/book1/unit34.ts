@@ -152,14 +152,14 @@ const unit:UnitData = {
         {
           "id": "u34-plan-s1",
           "type": "select",
-          "prompt": "In 你計畫在臺灣學多久的中文？, what is being asked?",
+          "prompt": "In Dialogue I, what answer follows 你計畫在臺灣學多久的中文？",
           "options": [
-            "the planned length of study",
-            "the planned place of study",
-            "the planned start time of study"
+            "五年。",
+            "一年。",
+            "兩年。"
           ],
-          "answer": "the planned length of study",
-          "explanation": "多久 asks how long, and 計畫 frames it as a plan."
+          "answer": "五年。",
+          "explanation": "The source reply is 五年, 'five years.' The next line asks why such a long time."
         },
         {
           "id": "u34-plan-s2",
@@ -782,13 +782,13 @@ const unit:UnitData = {
         {
           "id": "u34-review-g1",
           "type": "select",
-          "prompt": "You want to say 'I study Chinese first, then attend university.' Which sentence has the correct sequence markers?",
+          "prompt": "Which sentence correctly uses 先…再… for a past sequence?",
           "options": [
-            "我先念中文，再念大學。",
-            "我再念中文，先念大學。"
+            "我昨天晚上先寫功課，再看電視。",
+            "我昨天晚上再寫功課，先看電視。"
           ],
-          "answer": "我先念中文，再念大學。",
-          "explanation": "先 marks Event 1; 再 marks Event 2.",
+          "answer": "我昨天晚上先寫功課，再看電視。",
+          "explanation": "The textbook uses 先…再… for past as well as future sequences: 先 marks Event 1 and 再 marks Event 2.",
           "grammarIds": [
             "u34-first-then"
           ]
@@ -821,6 +821,7 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "u34-grades",
           "tokens": [
+            "你呢",
             "就沒獎學金了",
             "要是成績不好"
           ]
@@ -1615,9 +1616,14 @@ const unit:UnitData = {
           "meaning": "I study Chinese first, then attend university."
         },
         {
-          "text": "我今天晚上先吃飯，再打電話。",
-          "pinyin": "Wǒ jīntiān wǎnshang xiān chīfàn, zài dǎ diànhuà.",
-          "meaning": "Tonight I will eat first, then make a phone call."
+          "text": "我想先吃晚飯，再給媽媽打電話。",
+          "pinyin": "Wǒ xiǎng xiān chī wǎnfàn, zài gěi māma dǎ diànhuà.",
+          "meaning": "I want to eat dinner first, then call my mom."
+        },
+        {
+          "text": "我昨天晚上先寫功課，再看電視。",
+          "pinyin": "Wǒ zuótiān wǎnshang xiān xiě gōngkè, zài kàn diànshì.",
+          "meaning": "Last night I did my homework first, then watched TV."
         },
         {
           "text": "我明天先去圖書館看書，再去超市買東西。",
@@ -1645,7 +1651,7 @@ const unit:UnitData = {
       "text": "你計畫在臺灣學多久的中文？",
       "pinyin": "Nǐ jìhuà zài Táiwān xué duō jiǔ de Zhōngwén?",
       "meaning": "How long do you plan to study Chinese in Taiwan?",
-      "note": "This is the opening question of Lesson 12 Dialogue I. 計畫 is close to the earlier 打算; here both can express an intended plan.",
+      "note": "This is the opening question of Lesson 12 Dialogue I. The source reply is 五年。 計畫 is close to the earlier 打算; here both can express an intended plan.",
       "tokens": [
         "你計畫",
         "在臺灣",
@@ -1719,13 +1725,14 @@ const unit:UnitData = {
       ]
     },
     "u34-grades": {
-      "text": "要是成績不好，就沒獎學金了。",
-      "pinyin": "Yàoshi chéngjī bù hǎo, jiù méi jiǎngxuéjīn le.",
-      "meaning": "If my grades are poor, then I won't have a scholarship anymore.",
-      "note": "This source line retrieves the earlier 要是…就… condition pattern. The final 了 marks the changed result.",
+      "text": "要是成績不好，就沒獎學金了。你呢？",
+      "pinyin": "Yàoshi chéngjī bù hǎo, jiù méi jiǎngxuéjīn le. Nǐ ne?",
+      "meaning": "If my grades are poor, then I won't have a scholarship anymore. And you?",
+      "note": "This completes the source speaker turn. 要是…就… is the earlier condition pattern; the final 了 marks the changed result, and 你呢？ hands the conversation back to the other speaker.",
       "tokens": [
         "要是成績不好",
-        "就沒獎學金了"
+        "就沒獎學金了",
+        "你呢"
       ],
       "grammarIds": [
         "u29-yaoshi-jiu"
