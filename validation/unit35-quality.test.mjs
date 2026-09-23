@@ -50,7 +50,7 @@ test('Unit 35 teaches source 是…的 restrictions, not only the surface frame'
   const g=u35.grammarRules['u35-shi-de'];
   assert.match(g.explanation,/past event/i);
   assert.match(g.explanation,/subject, time, place, manner/i);
-  assert.match(g.explanation,/not the object/i);
+  assert.match(g.explanation,/(?:not|never) the object/i);
   assert.match(g.explanation,/不 before 是/i);
   assert.match(g.explanation,/omitted/i);
   assert.match(g.explanation,/yes\/no questions with 嗎/i);
