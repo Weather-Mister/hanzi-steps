@@ -10,9 +10,8 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Landlords, repairs & natural speech",
     "title": "Settling Into the New Place",
-    "description": "Finish Lesson 11 through the landlord phone call: already/getting used to, household problems, repairs and payment, existential subjects with 有, the likelihood use of 會, and natural omission of understood subjects and objects.",
+    "description": "Cover Lesson 11 Dialogue II through the landlord phone call: already/getting used to, household problems, waiting and appointments, repairs and payment, existential subjects with 有, the likelihood use of 會, and natural omission of understood subjects and objects.",
     "chars": [
-      "再",
       "喂",
       "收",
       "已",
@@ -51,7 +50,7 @@ const unit:UnitData = {
       "u33-hui-likelihood",
       "u33-zero-pronoun"
     ],
-    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 11 end of Dialogue I, Dialogue II / Vocabulary II (printed pp. 226–229), and Grammar III–V (printed pp. 232–235). 房租 is transparent after 房 + 租; 不好意思 and 那 'then/in that case' are taught through phrase notes instead of inflating the NEW-word count."
+    "bookReference": "A Course in Contemporary Chinese 1 · Lesson 11 Dialogue II / Vocabulary II (printed pp. 227–229) and Grammar III–V (printed pp. 232–235). The source-listed 等 is taught formally; 那 'then/in that case', 不好意思, 房租, and 得 děi are retained explicitly in dialogue-based teaching rather than omitted."
   },
   "reviewLessonId": "u33-review",
   "lessons": [
@@ -60,7 +59,6 @@ const unit:UnitData = {
       "title": "Call the Landlord",
       "subtitle": "Finish the first rental dialogue and open the phone call with 再, 喂, and 收到.",
       "chars": [
-        "再",
         "喂",
         "收"
       ],
@@ -68,31 +66,6 @@ const unit:UnitData = {
       "unitId": "unit-33",
       "review": false,
       "steps": [
-        {
-          "id": "u33-call-再-intro",
-          "type": "intro",
-          "char": "再"
-        },
-        {
-          "id": "u33-call-再-trace",
-          "type": "trace",
-          "char": "再"
-        },
-        {
-          "id": "u33-call-再-build",
-          "type": "build",
-          "char": "再"
-        },
-        {
-          "id": "u33-call-再-complete",
-          "type": "complete",
-          "char": "再"
-        },
-        {
-          "id": "u33-call-再-memory",
-          "type": "memory",
-          "char": "再"
-        },
         {
           "id": "u33-call-喂-intro",
           "type": "intro",
@@ -142,11 +115,6 @@ const unit:UnitData = {
           "id": "u33-call-收-memory",
           "type": "memory",
           "char": "收"
-        },
-        {
-          "id": "u33-call-p1",
-          "type": "phrase",
-          "phrase": "u33-return-call"
         },
         {
           "id": "u33-call-p2",
@@ -562,6 +530,18 @@ const unit:UnitData = {
           ],
           "answer": "pay",
           "explanation": "付 is to pay."
+        },
+        {
+          "id": "u33-install-s3",
+          "type": "select",
+          "prompt": "In 不過你得自己付錢, how is 得 read and what does it mean?",
+          "options": [
+            "děi — must / have to",
+            "de — complement marker",
+            "dé — obtain"
+          ],
+          "answer": "děi — must / have to",
+          "explanation": "Dialogue II uses 得 děi as 'must / have to.' This is a different pronunciation and function from 得 de after a verb."
         }
       ]
     },
@@ -636,6 +616,11 @@ const unit:UnitData = {
           "id": "u33-exists-p1",
           "type": "phrase",
           "phrase": "u33-no-problem"
+        },
+        {
+          "id": "u33-exists-wait",
+          "type": "phrase",
+          "phrase": "u33-wait"
         },
         {
           "id": "u33-exists-g1",
@@ -755,7 +740,7 @@ const unit:UnitData = {
         {
           "id": "u33-review-p1",
           "type": "phrase",
-          "phrase": "u33-return-call"
+          "phrase": "u33-phone"
         },
         {
           "id": "u33-review-p2",
@@ -807,14 +792,13 @@ const unit:UnitData = {
         {
           "id": "u33-review-s2",
           "type": "select",
-          "prompt": "Which word means 'already'?",
+          "prompt": "You need to apologize politely before explaining a conflict. Which phrase fits?",
           "options": [
-            "已經",
-            "不過",
-            "好像"
+            "不好意思",
+            "沒關係"
           ],
-          "answer": "已經",
-          "explanation": "已經 means already."
+          "answer": "不好意思",
+          "explanation": "不好意思 is the apology/excuse; 沒關係 is a response meaning 'no problem.'"
         },
         {
           "id": "u33-review-g1",
@@ -908,16 +892,16 @@ const unit:UnitData = {
         {
           "id": "u33-review-l3",
           "type": "listen",
-          "char": "付",
-          "prompt": "Listen for the payment action.",
-          "audioText": "不過你要自己付錢。",
+          "char": "等",
+          "prompt": "Listen for the verb 'wait for.'",
+          "audioText": "好，我在家等你。",
           "options": [
-            "付",
-            "裝",
-            "等"
+            "等",
+            "到",
+            "付"
           ],
-          "answer": "付",
-          "explanation": "付 means pay."
+          "answer": "等",
+          "explanation": "等 děng means to wait for."
         },
         {
           "id": "u33-review-m1",
@@ -925,31 +909,24 @@ const unit:UnitData = {
           "char": "經"
         },
         {
-          "id": "u33-review-m2",
-          "type": "memory",
-          "char": "關"
-        },
-        {
-          "id": "u33-review-m3",
-          "type": "memory",
-          "char": "線"
-        },
-        {
           "id": "u33-review-p9",
           "type": "phrase",
           "phrase": "u33-phone"
+        },
+        {
+          "id": "u33-review-p10",
+          "type": "phrase",
+          "phrase": "u33-wait"
+        },
+        {
+          "id": "u33-review-p11",
+          "type": "phrase",
+          "phrase": "u33-then"
         }
       ]
     }
   ],
   "newVocabulary": [
-    {
-      "text": "再",
-      "pinyin": "zài",
-      "meaning": "then; again",
-      "lessonId": "u33-call",
-      "core": true
-    },
     {
       "text": "喂",
       "pinyin": "wèi",
@@ -1033,6 +1010,13 @@ const unit:UnitData = {
       "meaning": "no problem; it doesn't matter",
       "lessonId": "u33-exists",
       "core": true
+    },
+    {
+      "text": "等",
+      "pinyin": "děng",
+      "meaning": "to wait for",
+      "lessonId": "u33-exists",
+      "core": true
     }
   ],
   "reviewVocabulary": [
@@ -1044,11 +1028,10 @@ const unit:UnitData = {
     "來",
     "有",
     "會",
-    "等",
-    "那"
+    "那",
+    "再"
   ],
   "newCharacters": [
-    "再",
     "喂",
     "收",
     "已",
@@ -1066,45 +1049,6 @@ const unit:UnitData = {
   ],
   "reviewCharacters": [],
   "characters": {
-    "再": {
-      "hanzi": "再",
-      "pinyin": "zài",
-      "zhuyin": "ㄗㄞˋ",
-      "meaning": "then; again",
-      "strokes": 6,
-      "layout": "stack",
-      "note": "再 is fourth-tone zài. In this lesson it orders a later action: think first, then call.",
-      "memory": "A single top bar sits over 冉. The lower frame is crossed by a central vertical and finishes with the long horizontal.",
-      "parts": [
-        {
-          "label": "一",
-          "name": "top bar",
-          "role": "Top component",
-          "description": "Begin with the single horizontal roof.",
-          "strokes": [
-            0
-          ]
-        },
-        {
-          "label": "冉",
-          "name": "lower structure",
-          "role": "Lower component",
-          "description": "The remaining five strokes form 冉 below the roof.",
-          "strokes": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ]
-        }
-      ],
-      "example": {
-        "text": "再打電話",
-        "pinyin": "zài dǎ diànhuà",
-        "meaning": "then make a phone call"
-      }
-    },
     "喂": {
       "hanzi": "喂",
       "pinyin": "wèi",
@@ -1432,16 +1376,16 @@ const unit:UnitData = {
       "pinyin": "xiàng",
       "zhuyin": "ㄒㄧㄤˋ",
       "meaning": "seem; resemble",
-      "strokes": 13,
+      "strokes": 14,
       "layout": "side",
       "note": "像 is fourth-tone xiàng. In 好像 it helps express “seem; appear to be,” often softening a comment.",
-      "memory": "亻 is the narrow two-stroke person component; 象 fills the eleven-stroke right side.",
+      "memory": "亻 + 象: a narrow person component beside the full twelve-stroke 象 shape.",
       "parts": [
         {
           "label": "亻",
           "name": "person component",
           "role": "Left component",
-          "description": "The first two strokes form 亻.",
+          "description": "The first two strokes form the narrow 亻 on the left.",
           "strokes": [
             0,
             1
@@ -1451,7 +1395,7 @@ const unit:UnitData = {
           "label": "象",
           "name": "elephant component",
           "role": "Right component",
-          "description": "The final eleven strokes form 象.",
+          "description": "The remaining twelve strokes form 象 on the right; keep its stacked turns and lower sweeping strokes open and balanced.",
           "strokes": [
             2,
             3,
@@ -1463,7 +1407,8 @@ const unit:UnitData = {
             9,
             10,
             11,
-            12
+            12,
+            13
           ]
         }
       ],
@@ -1753,7 +1698,7 @@ const unit:UnitData = {
       "id": "u33-existential-you",
       "title": "Introduce an indefinite subject with 有",
       "pattern": "有 + indefinite person / thing + VP",
-      "explanation": "When the subject is indefinite—someone, some students, a person not already identified—Lesson 11 introduces it with 有 before describing what it does: 有人住這裡. Negate existential 有 with 沒有: 沒有人住. You can also say location + 有 + NP to set the location as the topic, or 有 + NP + 在 + location to introduce the person/thing first; the existence is similar but the information focus differs.",
+      "explanation": "有 introduces the existence of an indefinite subject, and the following VP says what that subject does: 有人住這裡, 有兩個學生來找你. Because a bare subject is normally definite, a new indefinite subject is introduced with 有. Existential 有 is always negated with 沒有. The textbook also contrasts 地上有一支手機 with 有一支手機在地上: the basic existence is similar, but the first puts the new cellphone information in focus, while the second makes the location 地上 the focus.",
       "examples": [
         {
           "text": "有人住這裡。",
@@ -1766,17 +1711,22 @@ const unit:UnitData = {
           "meaning": "Two students came to look for you."
         },
         {
-          "text": "沒有人住這裡。",
-          "pinyin": "Méiyǒu rén zhù zhèlǐ.",
-          "meaning": "No one lives here."
+          "text": "這間沒有人住。",
+          "pinyin": "Zhè jiān méiyǒu rén zhù.",
+          "meaning": "No one lives in this room."
         },
         {
-          "text": "有一個人在這裡。",
-          "pinyin": "Yǒu yí ge rén zài zhèlǐ.",
-          "meaning": "There is a person here."
+          "text": "地上有一支手機。",
+          "pinyin": "Dìshang yǒu yì zhī shǒujī.",
+          "meaning": "There is a cellphone on the floor."
+        },
+        {
+          "text": "有一支手機在地上。",
+          "pinyin": "Yǒu yì zhī shǒujī zài dìshang.",
+          "meaning": "There is a cellphone on the floor."
         }
       ],
-      "remember": "Use 有 to introduce an indefinite subject; use 沒有 for its negative. Do not place a bare new indefinite subject at the front as if it were already known.",
+      "remember": "Use 有 before a new indefinite subject and 沒有 for its negative. Word order can shift the information focus even when the existence meaning stays similar.",
       "words": [
         "有",
         "沒有"
@@ -1786,7 +1736,7 @@ const unit:UnitData = {
       "id": "u33-hui-likelihood",
       "title": "會: learned skill or likelihood?",
       "pattern": "會 + VP",
-      "explanation": "You already know 會 for an acquired skill: 他會做飯 means he knows how to cook. Lesson 11 adds 會 for likelihood or an expected future event, often with a future time expression: 我明天會去看看. Context tells the two uses apart. The negative 不會 can likewise mean either 'doesn't know how' or 'probably/will not.'",
+      "explanation": "The textbook distinguishes two uses of 會. The earlier 會 means an acquired skill: 他會做飯, 'he knows how to cook.' Lesson 11 adds 會 for possibility or likelihood, commonly about a future event: 我明天會去看看他. Context—not the character alone—determines the reading. 不會 likewise can mean either 'doesn't know how' or 'will probably not / won't.'",
       "examples": [
         {
           "text": "他會做飯。",
@@ -1794,14 +1744,19 @@ const unit:UnitData = {
           "meaning": "He knows how to cook."
         },
         {
-          "text": "我明天會去看看。",
-          "pinyin": "Wǒ míngtiān huì qù kànkan.",
-          "meaning": "I'll go take a look tomorrow."
+          "text": "我不會打籃球。",
+          "pinyin": "Wǒ bú huì dǎ lánqiú.",
+          "meaning": "I don't know how to play basketball."
         },
         {
-          "text": "他明天不會來。",
-          "pinyin": "Tā míngtiān bú huì lái.",
-          "meaning": "He won't / probably won't come tomorrow."
+          "text": "我明天會去看看他。",
+          "pinyin": "Wǒ míngtiān huì qù kànkan tā.",
+          "meaning": "I'll probably go see him tomorrow."
+        },
+        {
+          "text": "他明天不會去上書法課。",
+          "pinyin": "Tā míngtiān bú huì qù shàng shūfǎkè.",
+          "meaning": "He won't / probably won't go to calligraphy class tomorrow."
         }
       ],
       "remember": "With a learned activity, 會 can mean know how. With a future event, 會 can mean will / be likely to. Read the whole context.",
@@ -1813,22 +1768,22 @@ const unit:UnitData = {
       "id": "u33-zero-pronoun",
       "title": "Leave understood subjects and objects unspoken",
       "pattern": "recoverable subject / object → Ø",
-      "explanation": "Chinese often omits old information that is already clear from the situation or a previous clause. The omitted element can be a subject or an object. In 我喜歡茶，也喜歡咖啡, the second 我 is understood. In 朋友給我一個西瓜，我不想吃, 西瓜 is the understood object of 吃. Omit only information the listener can reliably recover; keep it when omission would be ambiguous.",
+      "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. The most frequent omissions are subjects and objects: a subject can be understood from context even without being repeated, a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
       "examples": [
         {
-          "text": "我喜歡茶，也喜歡咖啡。",
-          "pinyin": "Wǒ xǐhuān chá, yě xǐhuān kāfēi.",
-          "meaning": "I like tea, and I also like coffee."
+          "text": "請進！",
+          "pinyin": "Qǐng jìn!",
+          "meaning": "Please come in! (understood subject: you)"
+        },
+        {
+          "text": "我常打籃球，也常踢足球。",
+          "pinyin": "Wǒ cháng dǎ lánqiú, yě cháng tī zúqiú.",
+          "meaning": "I often play basketball, and also often play soccer."
         },
         {
           "text": "朋友給我一個西瓜，我不想吃。",
           "pinyin": "Péngyǒu gěi wǒ yí ge xīguā, wǒ bù xiǎng chī.",
           "meaning": "A friend gave me a watermelon; I don't want to eat it."
-        },
-        {
-          "text": "這間房間很好，我想租。",
-          "pinyin": "Zhè jiān fángjiān hěn hǎo, wǒ xiǎng zū.",
-          "meaning": "This room is good; I want to rent it."
         }
       ],
       "remember": "If the listener already knows who or what you mean, Chinese often says less. Do not insert an unnecessary pronoun just because English requires one.",
@@ -1878,16 +1833,6 @@ const unit:UnitData = {
     "u4-ability"
   ],
   "phrases": {
-    "u33-return-call": {
-      "text": "我回去想想，再打電話給你。",
-      "pinyin": "Wǒ huíqù xiǎngxiang, zài dǎ diànhuà gěi nǐ.",
-      "meaning": "I'll go back and think about it, then call you.",
-      "note": "再 orders the later action. 回去 and 打電話 are transparent combinations of previously taught parts.",
-      "tokens": [
-        "我回去想想",
-        "再打電話給你"
-      ]
-    },
     "u33-phone": {
       "text": "喂，你好。",
       "pinyin": "Wèi, nǐ hǎo.",
@@ -1982,23 +1927,24 @@ const unit:UnitData = {
       ]
     },
     "u33-install": {
-      "text": "可以幫我裝有線電視嗎？",
-      "pinyin": "Kěyǐ bāng wǒ zhuāng yǒuxiàn diànshì ma?",
-      "meaning": "Can you help me install cable TV?",
-      "note": "裝 means install; 有線電視 is cable TV.",
+      "text": "我想買電視。請問可以幫我裝有線電視嗎？",
+      "pinyin": "Wǒ xiǎng mǎi diànshì. Qǐngwèn kěyǐ bāng wǒ zhuāng yǒuxiàn diànshì ma?",
+      "meaning": "I want to buy a television. Could you help me install cable TV?",
+      "note": "This follows the request sequence in Dialogue II: buying a TV, then asking the landlord to install cable.",
       "tokens": [
-        "可以幫我",
+        "我想買電視",
+        "請問可以幫我",
         "裝有線電視嗎"
       ]
     },
     "u33-pay": {
-      "text": "可以，不過你要自己付錢。",
-      "pinyin": "Kěyǐ, búguò nǐ yào zìjǐ fù qián.",
+      "text": "可以，不過你得自己付錢。",
+      "pinyin": "Kěyǐ, búguò nǐ děi zìjǐ fù qián.",
       "meaning": "Yes, but you have to pay for it yourself.",
-      "note": "不過 introduces a contrast: however/but. 付 means pay.",
+      "note": "Here 得 is read děi and means 'must / have to,' distinct from the earlier complement marker 得 de.",
       "tokens": [
         "可以",
-        "不過你要自己付錢"
+        "不過你得自己付錢"
       ]
     },
     "u33-exist": {
@@ -2041,13 +1987,13 @@ const unit:UnitData = {
       ]
     },
     "u33-omit-subject": {
-      "text": "我喜歡茶，也喜歡咖啡。",
-      "pinyin": "Wǒ xǐhuān chá, yě xǐhuān kāfēi.",
-      "meaning": "I like tea, and I also like coffee.",
-      "note": "The second clause omits the understood subject 我.",
+      "text": "我常打籃球，也常踢足球。",
+      "pinyin": "Wǒ cháng dǎ lánqiú, yě cháng tī zúqiú.",
+      "meaning": "I often play basketball, and also often play soccer.",
+      "note": "Following the textbook pattern, the second clause omits the already-mentioned subject 我.",
       "tokens": [
-        "我喜歡茶",
-        "也喜歡咖啡"
+        "我常打籃球",
+        "也常踢足球"
       ],
       "grammarIds": [
         "u33-zero-pronoun"
@@ -2064,6 +2010,16 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u33-zero-pronoun"
+      ]
+    },
+    "u33-wait": {
+      "text": "好，我在家等你。",
+      "pinyin": "Hǎo, wǒ zài jiā děng nǐ.",
+      "meaning": "Okay, I'll wait for you at home.",
+      "note": "等 děng is the source verb 'to wait for.'",
+      "tokens": [
+        "好",
+        "我在家等你"
       ]
     }
   },
