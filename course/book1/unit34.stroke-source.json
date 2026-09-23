@@ -1,0 +1,25 @@
+{
+  "source": "AnimCJK",
+  "url": "https://github.com/parsimonhi/animCJK",
+  "preference": [
+    "graphicsZhHant.txt",
+    "graphicsZhHans.txt",
+    "graphicsJa.txt"
+  ],
+  "characters": [
+    "臺",
+    "灣",
+    "畫",
+    "先",
+    "念",
+    "語",
+    "言",
+    "需",
+    "花",
+    "獎",
+    "金",
+    "成",
+    "績"
+  ],
+  "note": "Traditional Hanzi Steps target. Prefer graphicsZhHant.txt; when that dataset lacks the exact codepoint, fallback may use only the identical Unicode character from graphicsZhHans.txt or graphicsJa.txt. Never substitute a different Simplified/Japanese codepoint. 臺 currently resolves by exact-codepoint Hans fallback, 灣 and 獎 by exact-codepoint Ja fallback; the other declared characters resolve in Hant."
+}
