@@ -5,6 +5,12 @@
         "before": "fb617966234239b633f12bbf931df29bb222972be6f10d58dc347bebc3384f38",
         "after": "f40f0c99f24ab9106ea38e5eaa68215e8503622e4fa8535a81c949062e599f83"
       }
+    },
+    "characters": {
+      "往": {
+        "before": "ddcc8114dad2679886688c882e9cb0cb99ee8d6f6945f0e6be99d524a8e52d49",
+        "after": "14eab712417bd9b5c5740fd302fc830049d6ab83768d2c7885ffbd104934bc3b"
+      }
     }
   }
 }
