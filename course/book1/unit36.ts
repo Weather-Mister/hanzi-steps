@@ -580,30 +580,36 @@ const unit:UnitData = {
         {
           "id": "u36-review-l1",
           "type": "listen",
+          "char": "工",
+          "prompt": "Listen for the word for work.",
           "audioText": "去年，我已經在臺灣工作一年了。",
           "options": [
-            "去年",
-            "明年",
-            "今年"
+            "工作",
+            "上班",
+            "念書"
           ],
-          "answer": "去年",
-          "explanation": "去年 means last year."
+          "answer": "工作",
+          "explanation": "工作 is the source word for working here."
         },
         {
           "id": "u36-review-l2",
           "type": "listen",
-          "audioText": "因為我們公司跟臺灣人做生意。",
+          "char": "試",
+          "prompt": "Listen for the phrase meaning 'give it a try'.",
+          "audioText": "不知道好不好找，我試試看。",
           "options": [
-            "生意",
-            "生日",
-            "生病"
+            "試試看",
+            "加油",
+            "見面"
           ],
-          "answer": "生意",
-          "explanation": "生意 means business."
+          "answer": "試試看",
+          "explanation": "試試看 is the source phrase 'give it a try'."
         },
         {
           "id": "u36-review-l3",
           "type": "listen",
+          "char": "難",
+          "prompt": "Listen for 'hard to find'.",
           "audioText": "要是難找呢？那麼我再來臺灣學中文。",
           "options": [
             "難找",
@@ -1227,14 +1233,14 @@ const unit:UnitData = {
   },
   "grammarIntroductions": [
     {
-      "id": "u36-yihou-after-intro",
+      "id": "u36-yihou-after",
       "kind": "rule",
       "ref": "u36-yihou-after",
       "lessonId": "u36-after",
       "stepId": "u36-after-g1"
     },
     {
-      "id": "u36-hao-nan-verb-intro",
+      "id": "u36-hao-nan-verb",
       "kind": "rule",
       "ref": "u36-hao-nan-verb",
       "lessonId": "u36-job",
