@@ -1272,7 +1272,7 @@ const unit:UnitData = {
       "text": "你是什麼時候來臺灣工作的？",
       "pinyin": "Nǐ shì shénme shíhou lái Táiwān gōngzuò de?",
       "meaning": "When did you come to Taiwan to work?",
-      "note": "The textbook dialogue includes the listener's name as a vocative before this question. Hanzi Steps omits the name here so the focus stays on the already-taught 是…的 question.",
+      "note": "The textbook dialogue includes the listener's name as a vocative before this question. Hanzi Steps omits the name here so the focus stays on the already-taught 是…的 question. 工作 is the verb 'to work' here; Vocabulary II also lists the same written form as the noun 'job, work'.",
       "tokens": [
         "你是什麼時候",
         "來臺灣工作的"
