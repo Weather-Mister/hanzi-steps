@@ -13,7 +13,27 @@ const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
  const data={...current,cards:Object.fromEntries(current.units.map(u=>[u.id,current.unitLibraryCharacters(u)]))};
- console.log('CURRENT_BASELINE_UNIT_HASHES',JSON.stringify(Object.fromEntries(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>[u.id,hash(u)]))));
+ const mismatchDiagnostics={};
+ for(const [diagKey,diagRecords] of Object.entries(baseline.records)){
+  const diagActual=Array.isArray(data[diagKey])?Object.fromEntries(data[diagKey].map(v=>[v.id||v.text,v])):data[diagKey];
+  for(const [diagId,diagDigest] of Object.entries(diagRecords)){
+   const a1=amendment.records[diagKey]?.[diagId];
+   const e1=a1?.after??diagDigest;
+   const a2=lesson10Amendment.records?.[diagKey]?.[diagId];
+   const e2=a2?.after??e1;
+   const a3=correctionAmendment.records?.[diagKey]?.[diagId];
+   const expected=a3?.after??e2;
+   const actualHash=hash(diagActual[diagId]);
+   if(actualHash!==expected)(mismatchDiagnostics[diagKey]??=[]).push({id:diagId,expected,actual:actualHash});
+  }
+ }
+ for(const [diagCh,diagDigest] of Object.entries(baseline.practice)){
+  const a1=amendment.practice?.[diagCh];const e1=a1?.after??diagDigest;
+  const a2=lesson10Amendment.practice?.[diagCh];const expected=a2?.after??e1;
+  const actualHash=hash(current.practiceLesson(diagCh));
+  if(actualHash!==expected)(mismatchDiagnostics.practice??=[]).push({id:diagCh,expected,actual:actualHash});
+ }
+ console.log('CURRENT_LOSSLESS_MISMATCHES',JSON.stringify(mismatchDiagnostics));
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){
