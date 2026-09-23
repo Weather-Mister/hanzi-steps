@@ -96,6 +96,25 @@ Repair:
 - replaced the weak distractors with plausible study-plan alternatives;
 - tightened review wording without changing any existing step IDs.
 
+### 9. Two short Dialogue I turns were only implicit
+
+The prior audit treated 五年。 as covered indirectly by later duration material and dropped the turn-final 你呢？ entirely. That made the unit linguistically usable, but it did not actually preserve the complete dialogue handoff into Unit 35.
+
+Repair:
+- the opening comprehension item now retrieves the exact source reply 五年。;
+- the scholarship/grades phrase now ends with 你呢？;
+- the review order item reconstructs the complete 要是…就… + 你呢？ turn;
+- Unit 35's opening tuition note explicitly identifies itself as the answer to that handoff.
+
+### 10. Grammar I review leaned too heavily on the unit's simplified future sequence
+
+The rule explanation correctly stated that 先…再… works for past and future events, but the review only tested the simplified study-plan sequence.
+
+Repair:
+- restored the source past example 我昨天晚上先寫功課，再看電視。 as independent review;
+- restored the source future example 我想先吃晚飯，再給媽媽打電話。 on the grammar card;
+- kept the learner-friendly 我先念中文，再念大學。 phrase for scaffolded production.
+
 ## Grammar audit
 
 The 先…再… rule now stays closer to the textbook:
