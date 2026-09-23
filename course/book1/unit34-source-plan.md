@@ -55,12 +55,12 @@ Additional source/context accounting:
 The following source content is represented directly:
 
 - 你計畫在臺灣學多久的中文？
-- 五年。 (retrieved through the duration/需要 sequence)
+- 五年。 (now retrieved explicitly immediately after the opening question)
 - 為什麼要這麼久的時間？
 - 我先在語言中心念一年，再念四年大學，所以需要五年。
 - 這得花不少錢！
 - 對，不過我有獎學金。
-- 要是成績不好，就沒獎學金了。
+- 要是成績不好，就沒獎學金了。你呢？
 
 The unit stops before 「我的學費是公司替我付的。」 and the remaining Dialogue I study/work exchange.
 
@@ -75,7 +75,7 @@ Unit 34 therefore teaches:
 - the second subject may remain understood when it is the same as the first;
 - 再 in this construction means “then / next,” not merely “again.”
 
-The final review independently assesses the pattern and contrasts it with the already-taught 要是…就… conditional.
+The final review independently assesses the pattern in a textbook past-time example and contrasts it with the already-taught 要是…就… conditional. The grammar card also retains source past/future examples without exposing later Unit 34 characters early.
 
 ## Explicit deferrals
 
