@@ -188,3 +188,9 @@ Before merge, the exact final PR head must pass:
 - GitHub Pages production build.
 
 If Feature QA generates a new artifact commit, that exact new head must receive a fresh complete successful QA run before merge. After merge, both GitHub Pages build and deploy must succeed.
+
+## Generated-artifact exact-head recheck
+
+Feature QA run 303 passed the full gate, including stroke hydration, generation, curriculum validation, targeted Unit 34/35/36 tests, character coverage, the full regression suite, TypeScript, and the GitHub Pages build. That run refreshed `course/registry.generated.ts` and advanced the branch to generated-artifact commit `eecfb944f2cbbe0d811f76929db57ef57fe2e2bc`.
+
+This audit-only follow-up intentionally makes no learner-facing curriculum change. It exists to trigger and require one fresh complete Feature QA pass over the generated state before merge.
