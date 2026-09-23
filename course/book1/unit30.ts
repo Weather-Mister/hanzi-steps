@@ -47,8 +47,8 @@ const unit:UnitData = {
   "lessons": [
     {
       "id": "u30-fruit",
-      "title": "Red Watermelon",
-      "subtitle": "Name a red fruit and extend 塊 from prices to pieces of food.",
+      "title": "Mango and Watermelon",
+      "subtitle": "Name the yellow mango, give a piece, then contrast it with the red watermelon.",
       "chars": [
         "紅",
         "瓜"
@@ -127,14 +127,14 @@ const unit:UnitData = {
         {
           "id": "u30-fruit-s2",
           "type": "select",
-          "prompt": "In 一塊西瓜, what is 塊 doing?",
+          "prompt": "After 芒果 is identified, what is 塊 doing in 我給你一塊?",
           "options": [
             "Counting a piece of food",
             "Naming the color red",
             "Marking a question"
           ],
           "answer": "Counting a piece of food",
-          "explanation": "Lesson 10 extends familiar 塊 to a measure word for a piece of food, such as watermelon."
+          "explanation": "Lesson 10 extends familiar 塊 to a measure word for a piece of food; here it means a piece of mango."
         }
       ]
     },
