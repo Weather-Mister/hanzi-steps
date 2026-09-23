@@ -212,14 +212,14 @@ const unit:UnitData = {
         {
           "id": "u36-business-s3",
           "type": "select",
-          "prompt": "Which word in 老闆希望我們都會說中文 means “boss”?",
+          "prompt": "In 老闆希望我們都會說中文, what does 希望 mean?",
           "options": [
-            "老闆",
-            "公司",
-            "生意"
+            "to hope; to want",
+            "to pay",
+            "to look for"
           ],
-          "answer": "老闆",
-          "explanation": "老闆 is review vocabulary from an earlier unit; here it means the boss."
+          "answer": "to hope; to want",
+          "explanation": "希望 is review vocabulary. The line says the boss wants everyone to be able to speak Chinese."
         }
       ]
     },
@@ -399,11 +399,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which sentence uses the perception-verb branch of 好 + verb?",
           "options": [
-            "日本菜好吃。",
+            "日本菜好吃也好看。",
             "好工作很難找。",
             "這樣的工作在你們國家好找嗎？"
           ],
-          "answer": "日本菜好吃。",
+          "answer": "日本菜好吃也好看。",
           "explanation": "With perception verbs such as 吃/喝/看/聽, the textbook treats forms like 好吃 as single words describing a pleasant perception.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -551,11 +551,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which negative follows the textbook pattern?",
           "options": [
-            "學校附近便宜的套房不好找。",
-            "學校附近便宜的套房好不找。",
-            "學校附近便宜的套房沒好找。"
+            "便宜的咖啡不好喝。",
+            "便宜的咖啡好不喝。",
+            "便宜的咖啡沒好喝。"
           ],
-          "answer": "學校附近便宜的套房不好找。",
+          "answer": "便宜的咖啡不好喝。",
           "explanation": "Negation places 不 before the 好/難 + verb predicate: 不好找, 不難學, 不好喝.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -564,13 +564,13 @@ const unit:UnitData = {
         {
           "id": "u36-hard-s4",
           "type": "select",
-          "prompt": "Which is a valid A-not-A question from this grammar?",
+          "prompt": "Which source question asks whether today's dessert is difficult to learn?",
           "options": [
-            "工作好不好找？",
-            "工作好找不？",
-            "工作沒好找嗎？"
+            "老師今天教的甜點難不難學？",
+            "老師今天教的甜點難學不？",
+            "老師今天教的甜點有沒有難學？"
           ],
-          "answer": "工作好不好找？",
+          "answer": "老師今天教的甜點難不難學？",
           "explanation": "The source uses 好不好 + verb and 難不難 + verb as question patterns.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -796,11 +796,11 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which pair belongs to the textbook's perception branch?",
           "options": [
-            "好吃 / 難吃",
+            "好喝 / 難喝",
             "好找 / 難找",
             "好學 / 難學"
           ],
-          "answer": "好吃 / 難吃",
+          "answer": "好喝 / 難喝",
           "explanation": "With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, 好聽/難聽 function as perception descriptions.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -809,13 +809,13 @@ const unit:UnitData = {
         {
           "id": "u36-review-g6",
           "type": "select",
-          "prompt": "Which negation is correct?",
+          "prompt": "Which source-style perception negation is correct?",
           "options": [
-            "中文不難學。",
-            "中文難不學。",
-            "中文沒難學。"
+            "便宜的咖啡不好喝。",
+            "便宜的咖啡好不喝。",
+            "便宜的咖啡沒好喝。"
           ],
-          "answer": "中文不難學。",
+          "answer": "便宜的咖啡不好喝。",
           "explanation": "Put 不 before the whole 難 + verb predicate.",
           "grammarIds": [
             "u36-hao-nan-verb"
@@ -824,14 +824,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g7",
           "type": "select",
-          "prompt": "Which asks whether a job is easy to find?",
+          "prompt": "Which source-style A-not-A question uses 難 + an action verb?",
           "options": [
-            "工作好不好找？",
-            "工作好找不找？",
-            "工作有沒有找？"
+            "老師今天教的甜點難不難學？",
+            "老師今天教的甜點難學不學？",
+            "老師今天教的甜點有沒有難學？"
           ],
-          "answer": "工作好不好找？",
-          "explanation": "Use 好不好 + action verb for the A-not-A question.",
+          "answer": "老師今天教的甜點難不難學？",
+          "explanation": "The source uses 難不難 + action verb: 難不難學 asks whether something is difficult to learn.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
