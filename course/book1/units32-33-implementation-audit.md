@@ -43,3 +43,6 @@ If Feature QA writes generated artifacts/strokes and changes the PR head, the re
 
 ## Exact-head recheck
 A fresh Feature QA run is required on this post-audit head; generated stroke/curriculum artifacts must be committed by CI and the resulting head must pass again before merge.
+
+## Final exact-head gate
+The generated curriculum/stroke artifacts were refreshed by Feature QA after the full curriculum and regression suite passed. A final human-authored no-curriculum-change commit is used only to trigger the exact generated state through Feature QA again; CI should report the artifacts already current and must not alter the head before merge.
