@@ -408,6 +408,11 @@ const unit:UnitData = {
           "id": "u32-sides-p4",
           "type": "phrase",
           "phrase": "u32-opinion"
+        },
+        {
+          "id": "u32-sides-p5",
+          "type": "phrase",
+          "phrase": "u32-occupied"
         }
       ]
     },
@@ -1709,14 +1714,14 @@ const unit:UnitData = {
       ]
     },
     "u32-landlord": {
-      "text": "房東有兩間空房間。",
-      "pinyin": "Fángdōng yǒu liǎng jiān kōng fángjiān.",
-      "meaning": "The landlord has two vacant rooms.",
-      "note": "間 counts rooms. 房間 is a transparent combination of 房 + 間, and 空 means vacant here.",
+      "text": "還有兩間空房間，一間是套房，一間不是。",
+      "pinyin": "Hái yǒu liǎng jiān kōng fángjiān, yì jiān shì tàofáng, yì jiān bú shì.",
+      "meaning": "There are two other vacant rooms. One is a suite, and one is not.",
+      "note": "This keeps the Dialogue I wording. 還有 here means 'there are also/still'; 間 counts rooms and 空 kōng means vacant.",
       "tokens": [
-        "房東",
-        "有兩間",
-        "空房間"
+        "還有兩間空房間",
+        "一間是套房",
+        "一間不是"
       ]
     },
     "u32-rooms": {
@@ -1864,6 +1869,16 @@ const unit:UnitData = {
       "tokens": [
         "我回去想想",
         "再打電話給你"
+      ]
+    },
+    "u32-occupied": {
+      "text": "現在有人住嗎？",
+      "pinyin": "Xiànzài yǒu rén zhù ma?",
+      "meaning": "Does anyone live here now?",
+      "note": "Dialogue I previews existential 有 here. Unit 33 explains the indefinite-subject grammar formally.",
+      "tokens": [
+        "現在",
+        "有人住嗎"
       ]
     }
   },
