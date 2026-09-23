@@ -793,7 +793,7 @@ const unit:UnitData = {
           "prompt": "Which phone greeting is used here?",
           "options": [
             "喂",
-            "再",
+            "等",
             "付"
           ],
           "answer": "喂",
