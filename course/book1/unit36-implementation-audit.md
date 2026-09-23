@@ -69,7 +69,7 @@ Declared stroke/component models:
 - 試: 言 + 式, 13 strokes.
 - 難: 11-stroke left structural component + 隹, 19 strokes.
 
-The Feature QA hydrator must confirm actual path/median counts against the exact Unicode targets. If a declared count/grouping disagrees with licensed geometry, fix the curriculum metadata rather than weakening validation.
+Feature QA hydration on the implementation head confirmed the declared Traditional stroke sources and generated the checked stroke artifact. Exact Unicode targets remain mandatory; never substitute a different Simplified/Japanese codepoint.
 
 ## Publication gate
 
