@@ -11,14 +11,14 @@ This batch follows the flexible pacing rule rather than mechanically splitting a
 ## Honest novelty
 
 ### Unit 30
-- 10 new vocabulary/forms.
-- 7 new characters.
+- 11 new vocabulary/forms.
+- 8 new characters.
 - 3 new grammar targets.
 - 22 review activities, including 3 listening activities plus handwriting/component retrieval.
 
 ### Unit 31
-- 12 new vocabulary/forms.
-- 10 new characters.
+- 14 new vocabulary/forms.
+- 12 new characters.
 - 3 new grammar targets.
 - 22 review activities, including 3 listening activities plus handwriting/component retrieval.
 
@@ -42,12 +42,12 @@ All learner-facing phrases and grammar examples are checked against the cumulati
 ## Handwriting and first-teaching
 
 Declared Unit 30 Traditional targets:
-紅、瓜、拍、笑、心、穿、衣
+芒、紅、瓜、拍、笑、心、穿、衣
 
 Declared Unit 31 Traditional targets:
-住、男、矮、弟、些、乾、淨、藍、往、因
+窗、戶、住、男、矮、弟、些、乾、淨、藍、往、因
 
-Both stroke-source declarations require `graphicsZhHant.txt` only.
+Both stroke-source declarations prefer `graphicsZhHant.txt`. For 芒、窗、戶, AnimCJK lacks Hant rows, so the hydrator may fall back only to the identical Unicode character from `graphicsZhHans.txt`; no alternate Simplified codepoint is allowed.
 
 First-teaching ownership is intentionally migrated:
 - 紅: Book 2 Unit 3 -> Book 1 Unit 30.
@@ -55,13 +55,11 @@ First-teaching ownership is intentionally migrated:
 
 Book 2 lesson IDs and step sequences are left untouched.
 
-## Known source gaps
+## Source-gap closure
 
-Still explicit:
-- Lesson 10: 芒果, 窗戶.
-- Earlier source: 網路上, 臺南, 故宮博物院, 逛, 臺東.
+Lesson 10's former 芒果 / 窗戶 omissions are now closed, and Unit 31 uses the textbook's 從窗戶往外看，是藍色的大海 context. The former 逛 gap is closed in Unit 29. Earlier out-of-scope gaps remain 網路上, 臺南, 故宮博物院 and 臺東.
 
-No Simplified/Japanese geometry is substituted to make those items pass.
+All restored characters keep their exact Traditional/same-form Unicode codepoints; fallback geometry never substitutes a different Simplified character.
 
 ## Required verification before merge
 
@@ -75,6 +73,6 @@ The exact final PR head must pass:
 
 If Feature QA writes generated artifacts, the resulting head must receive another exact-head successful run before merge. After merge, both Pages build and deploy must succeed, followed by deployed-artifact verification.
 
-## Exact-head QA after generated artifacts
+## QA history and current gate
 
-Feature QA successfully hydrated all declared Unit 30–31 Traditional stroke geometry from `graphicsZhHant.txt`, generated curriculum artifacts, passed curriculum validation, separate targeted tests for Units 30 and 31, character validation, the full regression suite, TypeScript, and the Pages build. The workflow then committed the generated artifacts, changing the PR head. This documentation-only follow-up changes no learner content and exists solely to require a fresh Feature QA run on the exact final PR head before merge.
+The original Units 30–31 release previously passed exact-head Feature QA using its then-current Hant-only character set. This source-completeness pass changes learner content and adds 芒、窗、戶, whose exact Traditional/same-form Unicode geometry is expected to hydrate via the declared same-codepoint fallback because AnimCJK has no Hant row for those characters. A fresh full Feature QA run on the exact final head is therefore required before merge; the earlier successful run does not certify this new state.

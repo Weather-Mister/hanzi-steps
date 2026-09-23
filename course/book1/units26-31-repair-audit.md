@@ -16,7 +16,7 @@ Read the attached Book 1 PDF directly. Relevant Lesson 9 material: printed pp. 1
 - **U29:** explained the food-piece sense of 塊 at its first lesson use rather than calling it familiar before U30. Removed untaught 紅色 as a distractor. Added a different date and a different conditional sentence in review.
 - **U30, substantive source error:** 美 was wrongly placed in the forbidden reduplication list. Printed p.210 explicitly puts 美 in the YES column. Corrected the explanation and assessment; included the subjective-impression vs. factual-ordering restriction and prohibition on degree adverbs, not just 很. Added the habitual-VV vs. tentative-VV看 distinction.
 - **U30–31, pronunciation:** textbook p.207 gives 衣服 **yīfú**. Corrected vocabulary, character examples, grammar examples and phrases consistently. Other listed neutral tones (太太, 弟弟) follow the source.
-- **U31, Chinese/pinyin mismatch:** both the route phrase and 往 character example ended in Chinese 去 but pinyin zǒu. Both now say qù.
+- **U31, historical Chinese/pinyin mismatch:** an earlier invented route phrase and 往 character example ended in Chinese 去 but pinyin zǒu; that repair aligned them to qù. The later source-completeness pass replaces the invented route with the textbook window scene 從窗戶往外看，是藍色的大海。
 - **U31, ambiguous assessment:** 人不去的夜市 is a possible negative relative clause with a different head noun, not inherently malformed. The prompt now asks specifically for “people who do not go to the night market.” The cause/effect question now states the intended cause explicitly; the reversed sentence is not called structurally invalid.
 - **U31, retrieval:** 弟弟 previously appeared only as a distractor in review. It now receives a positive meaning assessment together with 高. A new relative-clause transfer uses clothes instead of repeating the photo demonstration. The first 這些 phrase explicitly explains plurality.
 
@@ -44,11 +44,11 @@ Corrections:
 
 Counts are not increased by these repairs. Each unit keeps six teaching lessons plus review, at least three review listening activities and handwriting/component retrieval. Existing step IDs, order and lesson lengths are preserved and covered by a baseline fixture plus exhaustive current-position checkpoint tests. Historical compatibility tests remain in place.
 
-The shared 往 record's pinyin correction is documented in a **new chained amendment**, preserving the two prior immutable migration snapshots. A separate test verifies 去/qù alignment so the hash amendment cannot conceal a stale reading.
+The shared 往 record's earlier pinyin correction remains documented in its chained amendment, preserving prior immutable migration snapshots. The current regression now verifies the textbook 從窗戶往外看 source sentence and wǎng wài kàn reading instead of the retired route example.
 
-## Source coverage that remains deferred
+## Source coverage after the later closure pass
 
-The existing deferrals are still explicit: 網路上、臺南、故宮博物院、逛、臺東、芒果、窗戶. This repair does not claim the textbook is fully covered or resolve their earlier handwriting/provenance and first-teaching requirements. These are tracked in the existing source plans for completion work.
+The later Units 29–31 closure pass resolves **逛、芒果、窗戶** with exact-codepoint handwriting provenance and explicit teaching. The older out-of-scope deferrals that remain are **網路上、臺南、故宮博物院、臺東**.
 
 ## Verification
 

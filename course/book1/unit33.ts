@@ -813,13 +813,13 @@ const unit:UnitData = {
         {
           "id": "u33-review-g1",
           "type": "select",
-          "prompt": "Which sentence correctly introduces an indefinite subject?",
+          "prompt": "The textbook contrasts 地上有一支手機 with 有一支手機在地上. Which one puts the location 地上 in focus?",
           "options": [
-            "有人住這裡。",
-            "人住這裡。"
+            "有一支手機在地上。",
+            "地上有一支手機。"
           ],
-          "answer": "有人住這裡。",
-          "explanation": "Use 有 before a new indefinite subject.",
+          "answer": "有一支手機在地上。",
+          "explanation": "Both describe a cellphone on the floor, but the textbook says 有一支手機在地上 puts the location 地上 in focus; 地上有一支手機 focuses the new cellphone information.",
           "grammarIds": [
             "u33-existential-you"
           ]
@@ -827,13 +827,13 @@ const unit:UnitData = {
         {
           "id": "u33-review-g2",
           "type": "select",
-          "prompt": "Which 會 is a future-likelihood use?",
+          "prompt": "Which 不會 is the Lesson 11 future-likelihood use rather than 'doesn't know how'?",
           "options": [
-            "我明天會去看看。",
-            "他會做飯。"
+            "他明天不會去上書法課。",
+            "我不會打籃球。"
           ],
-          "answer": "我明天會去看看。",
-          "explanation": "明天 plus a future event gives the likelihood/will reading.",
+          "answer": "他明天不會去上書法課。",
+          "explanation": "明天 + 不會 + future event gives the likelihood/won't reading. 我不會打籃球 is the acquired-skill meaning: I don't know how to play basketball.",
           "grammarIds": [
             "u33-hui-likelihood"
           ]
@@ -841,14 +841,14 @@ const unit:UnitData = {
         {
           "id": "u33-review-g3",
           "type": "select",
-          "prompt": "What is omitted in 我喜歡茶，也喜歡咖啡?",
+          "prompt": "At the door, the landlord says 請進！ Which subject is understood but not spoken?",
           "options": [
-            "the second subject 我",
-            "the object 茶",
-            "the verb 喜歡"
+            "你",
+            "房東",
+            "房間"
           ],
-          "answer": "the second subject 我",
-          "explanation": "The subject remains the same and is recoverable.",
+          "answer": "你",
+          "explanation": "The listener is the understood subject: (你)請進. This is the textbook's context-predictable zero-pronoun case.",
           "grammarIds": [
             "u33-zero-pronoun"
           ]
@@ -1029,7 +1029,23 @@ const unit:UnitData = {
       "lessonId": "u33-exists",
       "core": true
     }
-  ],
+,
+    {
+      "text": "房租",
+      "pinyin": "fángzū",
+      "meaning": "rent (payment for a room or house)",
+      "lessonId": "u33-call",
+      "core": true,
+      "note": "Vocabulary II distinguishes 房租, the rent payment, from 租房, to rent a place."
+    },
+    {
+      "text": "不好意思",
+      "pinyin": "bù hǎoyìsi",
+      "meaning": "sorry; excuse me",
+      "lessonId": "u33-exists",
+      "core": true,
+      "note": "Dialogue II uses 不好意思 as a polite apology before explaining a scheduling conflict."
+    }  ],
   "reviewVocabulary": [
     "電話",
     "房東",
@@ -1782,12 +1798,12 @@ const unit:UnitData = {
       "id": "u33-zero-pronoun",
       "title": "Leave understood subjects and objects unspoken",
       "pattern": "recoverable subject / object → Ø",
-      "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. To keep this unit teach-before-test safe, its context-predictable subject case is practiced with the already-learned 請坐 rather than introducing 進 early. The most frequent omissions are subjects and objects: a subject can be understood from context even without being repeated, a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
+      "explanation": "Chinese often omits old information when the listener can recover it from the immediate situation or from an earlier mention. The textbook calls an omitted pronoun a zero pronoun. The most frequent omissions are subjects and objects: a subject can be understood from context even without being spoken (請進! has an understood 你), a previously mentioned subject can disappear in the next clause, and a previously mentioned object can be left unspoken. Keep the noun or pronoun whenever omission would make the meaning ambiguous.",
       "examples": [
         {
-          "text": "請坐！",
-          "pinyin": "Qǐng zuò!",
-          "meaning": "Please sit! (understood subject: you)"
+          "text": "請進！",
+          "pinyin": "Qǐng jìn!",
+          "meaning": "Please come in! (understood subject: you)"
         },
         {
           "text": "我常打籃球，也常踢足球。",
@@ -1800,7 +1816,7 @@ const unit:UnitData = {
           "meaning": "A friend gave me a watermelon; I don't want to eat it."
         }
       ],
-      "remember": "If the listener already knows who or what you mean, Chinese often says less. Do not insert an unnecessary pronoun just because English requires one.",
+      "remember": "If the listener already knows who or what you mean, Chinese often says less. Context-predictable subjects, repeated subjects, and repeated objects can all be omitted when the referent stays clear.",
       "words": []
     }
   },
@@ -1861,7 +1877,7 @@ const unit:UnitData = {
       "text": "我已經收到房租了。",
       "pinyin": "Wǒ yǐjīng shōudào fángzū le.",
       "meaning": "I have already received the rent.",
-      "note": "房租 is transparent after 房 and 租; 收到 means receive.",
+      "note": "房租 is the rent payment for a room or house; 收到 means receive. Compare 租房, which means to rent a place.",
       "tokens": [
         "我",
         "已經收到",
@@ -1915,7 +1931,7 @@ const unit:UnitData = {
       "text": "不好意思，今天晚上我有事。",
       "pinyin": "Bù hǎoyìsi, jīntiān wǎnshang wǒ yǒu shì.",
       "meaning": "Sorry, I have something to do tonight.",
-      "note": "不好意思 is a polite apology/excuse; its characters are already familiar, so it is taught as a pragmatic phrase rather than padded into the NEW-word count.",
+      "note": "不好意思 is the source-listed polite apology/excuse used before the scheduling conflict; it is now indexed explicitly as vocabulary.",
       "tokens": [
         "不好意思",
         "今天晚上我有事"

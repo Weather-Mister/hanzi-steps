@@ -26,9 +26,9 @@ function reviewBlob(module){
 }
 
 test('Units 32-33 keep balanced novelty and full lesson/review structure',()=>{
-  assert.equal(u32.newVocabulary.length,14);
-  assert.equal(u32.newCharacters.length,14);
-  assert.equal(u33.newVocabulary.length,13);
+  assert.equal(u32.newVocabulary.length,16);
+  assert.equal(u32.newCharacters.length,15);
+  assert.equal(u33.newVocabulary.length,15);
   assert.equal(u33.newCharacters.length,14);
   for(const m of [u32,u33]){
     assert.equal(m.lessons.length,7);
@@ -77,6 +77,11 @@ test('Unit 32 teaches Lesson 11 direction and 就 distinctions explicitly',()=>{
   assert.equal(u32.phrases['u32-occupied'].text,'現在有人住嗎？');
   assert.equal(u32.phrases['u32-market'].text,'附近有超市和捷運站。');
   assert.equal(u32.phrases['u32-internet'].text,'房間裡面可以上網嗎？');
+  assert.equal(u32.phrases['u32-come-in'].text,'請進。');
+  assert.match(u32.phrases['u32-phone'].note,/給.*preposition.*to/i);
+  assert.match(u32.phrases['u32-return-call'].note,/想想.*think it over/i);
+  assert.ok(u32.newVocabulary.some(v=>v.text==='房間'));
+  assert.ok(u32.newVocabulary.some(v=>v.text==='請進'));
 });
 
 test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',()=>{
@@ -91,7 +96,7 @@ test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',(
   assert.match(zero.explanation,/object/i);
   assert.match(zero.explanation,/ambiguous/i);
   assert.match(u33.phrases['u33-then'].note,/then \/ in that case/i);
-  assert.match(u33.phrases['u33-sorry'].note,/pragmatic phrase/i);
+  assert.match(u33.phrases['u33-sorry'].note,/polite apology\/excuse/i);
   assert.ok(u33.newVocabulary.some(v=>v.text==='等'&&v.pinyin==='děng'));
   assert.equal(u33.phrases['u33-wait'].text,'好，我在家等你。');
   assert.equal(u33.phrases['u33-rent-question'].text,'你收到我的房租了嗎？');
@@ -99,6 +104,9 @@ test('Unit 33 covers every Lesson 11 grammar contrast and pragmatic extension',(
   assert.ok(u33.phrases['u33-then'].text.includes('還有問題嗎？'));
   assert.match(u33.phrases['u33-pay'].note,/得.*děi.*must/i);
   assert.equal(u33.characters['像'].strokes,14);
+  assert.ok(u33.newVocabulary.some(v=>v.text==='房租'));
+  assert.ok(u33.newVocabulary.some(v=>v.text==='不好意思'));
+  assert.equal(u33.grammarRules['u33-zero-pronoun'].examples[0].text,'請進！');
 });
 
 test('Every Lesson 11 source vocabulary item is accounted for in teaching or retrieval',()=>{
@@ -180,7 +188,7 @@ test('Learner-facing Units 32-33 stay Traditional Chinese',()=>{
     assert.ok(blob.includes(traditional),`Expected Traditional form missing: ${traditional}`);
 });
 
-test('Known Lesson 10 handwriting blockers remain explicit rather than smuggled into Lesson 11',()=>{
+test('Lesson 10 restored vocabulary stays owned by Units 30-31 rather than duplicated into Lesson 11',()=>{
   for(const m of [u32,u33]){
     assert.ok(!m.newVocabulary.some(v=>v.text==='芒果'||v.text==='窗戶'));
     assert.ok(!m.newCharacters.includes('芒'));

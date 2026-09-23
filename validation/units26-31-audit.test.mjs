@@ -17,10 +17,13 @@ test('Six-unit repair preserves every published position and completed checkpoin
   }
  }
 });
-test('Lesson 10 direction phrase pinyin follows 去 in both teaching surfaces',()=>{
- for(const p of [get(31).phrases['u31-toward'],get(31).characters['往'].example]){
-  assert.match(p.text,/去[。]?$/);assert.match(p.pinyin,/qù[.]?$/);assert.doesNotMatch(p.pinyin,/zǒu/);
- }
+test('Lesson 10 direction teaching now follows the source window scene exactly',()=>{
+ const phrase=get(31).phrases['u31-toward'];
+ const example=get(31).characters['往'].example;
+ assert.equal(phrase.text,'從窗戶往外看，是藍色的大海。');
+ assert.match(phrase.pinyin,/wǎng wài kàn/);
+ assert.equal(example.text,'往外看');
+ assert.match(example.pinyin,/wǎng wài kàn/);
 });
 test('Clothing pronunciation follows textbook printed p.207 throughout Units 30-31',()=>{
  let count=0;
@@ -32,7 +35,7 @@ test('Clothing pronunciation follows textbook printed p.207 throughout Units 30-
 });
 test('Source table correction keeps 美 allowed and tests its actual classification',()=>{
  const u=get(30),g=u.grammarRules['u30-state-redup'];
- assert.match(g.explanation,/permits 美/);assert.match(g.explanation,/excludes 多、貴、近、忙、新、少/);
+ assert.match(g.explanation,/香、甜、高、熱、大、美、遠、辣、矮/);assert.match(g.explanation,/excluded set is 多、貴、近、忙、新、少/);
  assert.doesNotMatch(g.explanation,/not freely reduplicate.*美/);
  assert.equal(u.lessons.flatMap(l=>l.steps).find(s=>s.id==='u30-taste-s3').answer,'美');
 });

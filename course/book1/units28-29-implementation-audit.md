@@ -22,13 +22,12 @@ Added source-backed vocabulary:
 These come from Lesson 8 vocabulary/dialogues and close real earlier coverage gaps.
 
 ### Unit 29
-- 12 new vocabulary/forms.
-- 10 new characters.
+- 14 new vocabulary/forms.
+- 11 new characters.
 - 2 new grammar targets.
 - 22 review activities, including 3 listening activities.
 
-Added source-backed vocabulary:
-**水果, 黃色, 給, 香, 甜, 以前**.
+Added source-backed vocabulary now includes the remaining Lesson 9 Vocabulary II items **女 + noun** and **逛**, followed by the Lesson 10 bridge items **水果, 黃色, 給, 香, 甜, 以前**.
 
 These are the supported opening items of Lesson 10 Vocabulary I. They are introduced only after Unit 29's Lesson 9 date/condition content.
 
@@ -58,16 +57,15 @@ Regression tests require every original step ID to remain at the same position, 
 New Unit 28 handwriting targets:
 **非、但、站、或、利、汽**.
 
-New Unit 29 handwriting targets:
-**水、果、黃、色、給、香**.
+New Unit 29 handwriting targets include **水、果、黃、色、給、香、逛**.
 
-The stroke-source declarations require **graphicsZhHant.txt only**. Feature QA must hydrate these entries and validate stroke/path/median counts before merge. No Simplified/Japanese fallback is declared for this repair.
+Stroke hydration still targets Traditional learner text. Existing characters prefer `graphicsZhHant.txt`; 逛 has no Hant row in AnimCJK, so the declared fallback may use only the exact same Unicode character 逛 from `graphicsZhHans.txt`. No different Simplified codepoint is substituted.
 
 The later Units 26–31 audit corrected 非: its four-stroke left and right groups are consecutive, not interleaved. It now uses two accurate visual groups. 或 retains whole-character grouping for its interleaved structure.
 
 ## Remaining source gaps
 
-Still explicitly open: 網路上, 臺南, 故宮博物院, 逛, 臺東. These are tracked in the source plan with the specific character/provenance or first-teaching issue rather than silently omitted.
+Still explicitly open outside this five-unit closure pass: 網路上, 臺南, 故宮博物院, 臺東. The former 逛 gap is closed in Unit 29. These are tracked in the source plan with the specific character/provenance or first-teaching issue rather than silently omitted.
 
 ## Verification status
 

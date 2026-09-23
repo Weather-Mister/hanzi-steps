@@ -1,8 +1,8 @@
 # Units 32–33 implementation audit
 
 ## Curriculum design
-- Unit 32: 14 formal NEW vocabulary items, 14 first-taught characters, 2 new grammar rules, six teaching lessons + review.
-- Unit 33: 13 formal NEW vocabulary items, 14 first-taught characters, 3 new grammar rules, six teaching lessons + review.
+- Unit 32: 16 formal NEW vocabulary items, 15 first-taught characters, 2 new grammar rules, six teaching lessons + review.
+- Unit 33: 15 formal NEW vocabulary items, 14 first-taught characters, 3 new grammar rules, six teaching lessons + review.
 - Both reviews contain 22 activities and at least three contextual listening items.
 - The split now follows the textbook dialogue boundary exactly: Unit 32 completes Dialogue I; Unit 33 begins with Dialogue II.
 
@@ -17,9 +17,10 @@
 - Tightened existential 有 to the textbook's indefinite-subject rule, 沒有 negation, and information-focus contrast.
 - Tightened 會 to the textbook distinction: acquired skill vs possibility/likelihood.
 - Tightened zero-pronoun teaching to all three source cases: context-predictable subject, previously mentioned subject, previously mentioned object.
-
-
-- The textbook's context-predictable zero-pronoun example 請進 uses 進, which Hanzi Steps has not taught yet. The learner exercise uses already-taught 請坐 for the same omitted-你 function; the source concept is preserved without violating teach-before-test.
+- Restored **請進** in Unit 32 and now uses the textbook's exact 請進！ zero-pronoun example in Unit 33.
+- Promoted **房間**, **房租**, and **不好意思** to explicit indexed vocabulary.
+- Added explicit sense contrasts for **給** in 打電話給… (“to”) and **想想** (“think it over”).
+- Strengthened review discrimination for existential-information focus and negative **不會** skill-vs-likelihood readings.
 
 ## Traditional Chinese
 Learner-facing content is regression-checked against common Simplified leaks. Traditional forms such as 廳、廚、間、線、視、關、經、慣、這、裡、話、東 are required.
@@ -46,3 +47,7 @@ A fresh Feature QA run is required on this post-audit head; generated stroke/cur
 
 ## Final exact-head gate
 The generated curriculum/stroke artifacts were refreshed by Feature QA after the full curriculum and regression suite passed. A final human-authored no-curriculum-change commit is used only to trigger the exact generated state through Feature QA again; CI should report the artifacts already current and must not alter the head before merge.
+
+## Units 29–33 polish pass
+
+A later source-completeness pass adds 請進 / 進 to Unit 32, promotes 房間 in Unit 32 and 房租 / 不好意思 in Unit 33, explicitly teaches the Lesson 11 senses 給 “to” and 想想 “think it over”, and strengthens the existential-有, 不會, and zero-pronoun review questions. These are learner-facing changes after the previous exact-head certification, so this branch requires a new complete Feature QA run before merge.

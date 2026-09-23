@@ -25,10 +25,10 @@ function reviewBlob(module){
 }
 
 test('Units 30-31 keep intended novelty, lesson count and review depth',()=>{
-  assert.equal(u30.newVocabulary.length,10);
-  assert.equal(u30.newCharacters.length,7);
-  assert.equal(u31.newVocabulary.length,12);
-  assert.equal(u31.newCharacters.length,10);
+  assert.equal(u30.newVocabulary.length,11);
+  assert.equal(u30.newCharacters.length,8);
+  assert.equal(u31.newVocabulary.length,14);
+  assert.equal(u31.newCharacters.length,12);
   for(const m of [u30,u31]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
@@ -107,11 +107,22 @@ test('紅 and 往 first-teaching ownership moves earlier without deleting Book 2
   assert.ok(b2u1.lessons.find(l=>l.id==='b2-from-toward').steps.some(s=>s.char==='往'));
 });
 
-test('Known Lesson 10 handwriting blockers stay explicitly deferred',()=>{
-  for(const m of [u30,u31]){
-    assert.ok(!m.newVocabulary.some(v=>v.text==='芒果'||v.text==='窗戶'));
-    assert.ok(!m.newCharacters.includes('芒'));
-    assert.ok(!m.newCharacters.includes('窗'));
-    assert.ok(!m.newCharacters.includes('戶'));
-  }
+
+test('Lesson 10 Vocabulary I-II is cumulatively accounted for through Unit 31',()=>{
+  const taught=new Set(course.modules.filter(m=>m.bookId==='book-1'&&m.order<=31).flatMap(m=>m.newVocabulary.map(v=>v.text)));
+  for(const word of ['水果','黃色','芒果','給','塊','香','甜','紅色','西瓜','吧','對','以前','機會','請','吃吃看'])
+    assert.ok(taught.has(word),`Lesson 10 Vocabulary I missing ${word}`);
+  for(const word of ['拍','笑','開心','穿','衣服','旅館','太太','男','矮','高','弟弟','乾淨','窗戶','往','藍色','因為','住','上個月','這些'])
+    assert.ok(taught.has(word),`Lesson 10 Vocabulary II missing ${word}`);
+  assert.equal(u30.phrases['u30-piece'].text,'這個黃色的水果是芒果。我給你一塊。');
+  assert.equal(u31.phrases['u31-toward'].text,'從窗戶往外看，是藍色的大海。');
+});
+
+test('Lesson 10 source-debt vocabulary is now restored with exact Traditional codepoints',()=>{
+  assert.ok(u30.newVocabulary.some(v=>v.text==='芒果'));
+  assert.ok(u30.newCharacters.includes('芒'));
+  assert.ok(u31.newVocabulary.some(v=>v.text==='窗戶'));
+  assert.ok(u31.newCharacters.includes('窗'));
+  assert.ok(u31.newCharacters.includes('戶'));
+  assert.equal(u31.phrases['u31-toward'].text,'從窗戶往外看，是藍色的大海。');
 });

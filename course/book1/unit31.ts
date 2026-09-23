@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "People, hotels & reasons",
     "title": "The One in Blue",
-    "description": "Continue Lesson 10 through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, move toward a place with 往, and connect causes and effects with 因為…所以….",
+    "description": "Continue Lesson 10 through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, express direction with 往, and connect causes and effects with 因為…所以….",
     "chars": [
       "住",
       "男",
@@ -21,7 +21,9 @@ const unit:UnitData = {
       "淨",
       "藍",
       "往",
-      "因"
+      "因",
+      "窗",
+      "戶"
     ],
     "lessonIds": [
       "u31-hotel",
@@ -32,7 +34,10 @@ const unit:UnitData = {
       "u31-because",
       "u31-review"
     ],
-    "banner": {"text":"旅館","pinyin":"lǚguǎn"},
+    "banner": {
+      "text": "旅館",
+      "pinyin": "lǚguǎn"
+    },
     "goal": {
       "text": "因為現在去玩的人比較少，所以旅館不太貴。",
       "pinyin": "Yīnwèi xiànzài qù wán de rén bǐjiào shǎo, suǒyǐ lǚguǎn bú tài guì.",
@@ -512,8 +517,8 @@ const unit:UnitData = {
     },
     {
       "id": "u31-toward",
-      "title": "From the Hotel Toward the Night Market",
-      "subtitle": "Use 往 for the direction of movement and contrast it with 從 as the starting point.",
+      "title": "Looking Out the Window",
+      "subtitle": "Use the dialogue’s 從窗戶往外看 to contrast the starting viewpoint 從 with directional 往.",
       "chars": [
         "往"
       ],
@@ -554,34 +559,35 @@ const unit:UnitData = {
         {
           "id": "u31-toward-s1",
           "type": "select",
-          "prompt": "In 從旅館往夜市去, which word marks the direction?",
+          "prompt": "In 從窗戶往外看, which word marks the outward direction?",
           "options": [
             "往",
             "從",
-            "住"
+            "窗戶"
           ],
           "answer": "往",
-          "explanation": "從 marks the starting point; 往 marks the direction."
+          "explanation": "從 marks the starting viewpoint; 往 marks direction, here 往外 'outward'."
         },
         {
           "id": "u31-toward-s2",
           "type": "select",
-          "prompt": "Which phrase means 'toward the night market'?",
+          "prompt": "Which phrase means “look out from the window”?",
           "options": [
-            "往夜市",
-            "從夜市",
-            "住夜市"
+            "從窗戶往外看",
+            "從旅館往夜市去",
+            "住在窗戶"
           ],
-          "answer": "往夜市",
-          "explanation": "往 + place gives the direction toward that place."
+          "answer": "從窗戶往外看",
+          "explanation": "從窗戶 sets the viewpoint at the window and 往外看 means look outward."
         },
         {
           "id": "u31-toward-o1",
           "type": "order",
           "phrase": "u31-toward",
           "tokens": [
-            "往夜市去",
-            "從旅館"
+            "是藍色的大海",
+            "從窗戶",
+            "往外看"
           ]
         }
       ]
@@ -753,14 +759,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-06",
           "type": "select",
-          "prompt": "Which word means hotel?",
+          "prompt": "In 上個月我住在旅館, which word means “hotel”?",
           "options": [
             "旅館",
-            "太太",
-            "弟弟"
+            "上個月",
+            "太太"
           ],
           "answer": "旅館",
-          "explanation": "旅館 is a hotel or inn."
+          "explanation": "旅館 is hotel/inn; 上個月 means last month."
         },
         {
           "id": "u31-review-07",
@@ -846,14 +852,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-13",
           "type": "select",
-          "prompt": "Which pair means clean and blue?",
+          "prompt": "Which matching set is correct?",
           "options": [
-            "乾淨／藍色",
-            "開心／紅色",
-            "高／黃色"
+            "窗戶 = window; 乾淨 = clean; 藍色 = blue",
+            "窗戶 = hotel; 乾淨 = blue; 藍色 = clean",
+            "窗戶 = clothes; 乾淨 = tall; 藍色 = red"
           ],
-          "answer": "乾淨／藍色",
-          "explanation": "乾淨 is clean; 藍色 is blue."
+          "answer": "窗戶 = window; 乾淨 = clean; 藍色 = blue",
+          "explanation": "窗戶 is window, 乾淨 is clean, and 藍色 is blue—the three descriptions used around the hotel scene."
         },
         {
           "id": "u31-review-14",
@@ -888,14 +894,14 @@ const unit:UnitData = {
         {
           "id": "u31-review-16",
           "type": "select",
-          "prompt": "Which word marks movement toward a destination?",
+          "prompt": "In 從窗戶往外看, which word marks the outward direction?",
           "options": [
             "往",
             "從",
             "住"
           ],
           "answer": "往",
-          "explanation": "往 marks direction; 從 marks the starting point."
+          "explanation": "往 marks the direction of the action; 從 marks the starting viewpoint."
         },
         {
           "id": "u31-review-17",
@@ -1060,7 +1066,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "lessonId": "u31-toward",
       "core": true,
-      "note": "往 introduces the direction of movement: 從旅館往夜市去."
+      "note": "往 introduces the direction of an action. Dialogue II uses 從窗戶往外看: from the window, look outward."
     },
     {
       "text": "因為",
@@ -1069,6 +1075,22 @@ const unit:UnitData = {
       "lessonId": "u31-because",
       "core": true,
       "note": "Lesson 10 pairs 因為 with the already familiar 所以 to express cause before effect."
+    },
+    {
+      "text": "窗戶",
+      "pinyin": "chuānghù",
+      "meaning": "window",
+      "lessonId": "u31-toward",
+      "core": true,
+      "note": "Dialogue II uses 從窗戶往外看, looking out from the window."
+    },
+    {
+      "text": "上個月",
+      "pinyin": "shàng ge yuè",
+      "meaning": "last month",
+      "lessonId": "u31-hotel",
+      "core": true,
+      "note": "This is the source-listed phrase that sets the Hualien trip in the previous month."
     }
   ],
   "reviewVocabulary": [
@@ -1103,7 +1125,9 @@ const unit:UnitData = {
     "淨",
     "藍",
     "往",
-    "因"
+    "因",
+    "窗",
+    "戶"
   ],
   "reviewCharacters": [],
   "characters": {
@@ -1460,7 +1484,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "strokes": 8,
       "layout": "side",
-      "note": "往 is third-tone wǎng. It introduces a direction: 從旅館往夜市去.",
+      "note": "往 is third-tone wǎng. It introduces direction; Dialogue II uses 從窗戶往外看, look outward from the window.",
       "memory": "彳 takes three narrow walking strokes on the left; 主 fills the right with five strokes.",
       "parts": [
         {
@@ -1489,9 +1513,9 @@ const unit:UnitData = {
         }
       ],
       "example": {
-        "text": "往夜市去",
-        "pinyin": "wǎng yèshì qù",
-        "meaning": "go toward the night market"
+        "text": "往外看",
+        "pinyin": "wǎng wài kàn",
+        "meaning": "look outward"
       }
     },
     "因": {
@@ -1533,6 +1557,80 @@ const unit:UnitData = {
         "text": "因為",
         "pinyin": "yīnwèi",
         "meaning": "because"
+      }
+    },
+    "窗": {
+      "hanzi": "窗",
+      "pinyin": "chuāng",
+      "zhuyin": "ㄔㄨㄤ",
+      "meaning": "window",
+      "strokes": 12,
+      "layout": "stack",
+      "note": "窗 is first-tone chuāng. Learn it with 戶 as 窗戶, window.",
+      "memory": "The five-stroke 穴 roof sits above the seven-stroke lower 囱-shaped body.",
+      "parts": [
+        {
+          "label": "穴",
+          "name": "cave/roof component",
+          "role": "Top component",
+          "description": "The first five strokes form 穴 across the top.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "囱",
+          "name": "lower window-shaped body",
+          "role": "Bottom component",
+          "description": "The final seven strokes form the enclosed lower body beneath 穴.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "example": {
+        "text": "窗戶",
+        "pinyin": "chuānghù",
+        "meaning": "window"
+      }
+    },
+    "戶": {
+      "hanzi": "戶",
+      "pinyin": "hù",
+      "zhuyin": "ㄏㄨˋ",
+      "meaning": "door; household; second character of 窗戶",
+      "strokes": 4,
+      "layout": "whole",
+      "note": "戶 is fourth-tone hù. In 窗戶, the whole word means window.",
+      "memory": "戶 is a compact four-stroke form with a top stroke and a broad sloping lower shape; keep the left side open and tall.",
+      "parts": [
+        {
+          "label": "戶",
+          "name": "whole character",
+          "role": "Whole-character form",
+          "description": "All four strokes form the independent Traditional character 戶.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "example": {
+        "text": "窗戶",
+        "pinyin": "chuānghù",
+        "meaning": "window"
       }
     }
   },
@@ -1765,13 +1863,14 @@ const unit:UnitData = {
       ]
     },
     "u31-toward": {
-      "text": "從旅館往夜市去。",
-      "pinyin": "Cóng lǚguǎn wǎng yèshì qù.",
-      "meaning": "Go from the hotel toward the night market.",
-      "note": "從 marks the starting point; 往 marks the direction.",
+      "text": "從窗戶往外看，是藍色的大海。",
+      "pinyin": "Cóng chuānghù wǎng wài kàn, shì lánsè de dàhǎi.",
+      "meaning": "Looking out from the window, you see the blue sea.",
+      "note": "This is the Dialogue II wording: 從 introduces the viewpoint/source, 往外 gives the outward direction, and 窗戶 is the window.",
       "tokens": [
-        "從旅館",
-        "往夜市去"
+        "從窗戶",
+        "往外看",
+        "是藍色的大海"
       ]
     },
     "u31-because": {
