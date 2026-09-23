@@ -151,3 +151,8 @@ Before merge, the final branch head must pass:
 - GitHub Pages production build.
 
 If Feature QA writes generated artifacts and advances the head, the generated head itself must receive a complete successful Feature QA pass before merge.
+
+
+## Generated-artifact exact-head recheck
+
+Feature QA refreshed generated curriculum artifacts on commit `2cdd1d68f7d5191bd6acadbc9a203b677ea54590`. This audit-only follow-up makes no learner-facing curriculum change; it exists to trigger one final complete Feature QA run over the generated state before merge.
