@@ -76,6 +76,9 @@ Dialogue II also preserves the important source use **得 děi = must / have to*
 4. **Different types of 會** — acquired skill vs possibility/likelihood, including negative examples.
 5. **Omitting nouns at second mention / zero pronouns** — contextually predictable subject, previously mentioned subject, and previously mentioned object; omission is blocked when the referent would be ambiguous.
 
+
+- The textbook's context-predictable zero-pronoun example 請進 uses 進, which Hanzi Steps has not taught yet. The learner exercise uses already-taught 請坐 for the same omitted-你 function; the source concept is preserved without violating teach-before-test.
+
 ## First-teaching reconciliation
 
 Later Book 2 lessons keep their stable lesson/activity IDs, but earlier Book 1 teaching now owns these characters:
