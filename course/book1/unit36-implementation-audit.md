@@ -141,6 +141,32 @@ The audit compared published `main` against the repair branch:
 - no step was inserted, deleted, or reordered.
 
 Therefore these repairs require no lesson-length compatibility migration and do not invalidate existing complete or partial Unit 36 checkpoints.
+### 17. “Lesson 12 complete” was verified against the actual neighboring modules
+The audit did not rely only on the Unit 34/35 source-plan documents. It inspected their current module data as well:
+- Unit 34 contains the Dialogue I opening vocabulary/phrases and formal 先…再… rule;
+- Unit 35 contains the Dialogue I tail and the complete 是…的 rule, including focus restrictions, object topicalization, negation, yes/no and wh-questions, and optional 是;
+- Unit 36 contains Dialogue II, Vocabulary II, Event/Time + 以後, and 好/難 + verbs.
+
+This confirms the Unit 36 completion claim against implemented curriculum rather than planning metadata alone.
+
+### 18. 工作’s noun sense was tested before it had been explicitly explained
+The first lesson showed 工作 twice in verb contexts and then asked the learner to identify both the verb and noun senses. The noun sense was present in the vocabulary record but had not yet appeared in a learner-facing explanation.
+
+Repair:
+- the first 工作 phrase note now explicitly explains verb “to work” and noun “job, work” before the dual-sense assessment;
+- a regression test pins the explanation-before-assessment order.
+
+### 19. The source’s standalone 要是…呢 question needed an explanation
+The source line 要是難找呢？ intentionally asks “What if it is hard to find?” without stating a 就 consequence clause. Merely tagging it with the earlier 要是…就… rule could make the missing 就 look accidental.
+
+Repair:
+- the phrase note now explains that 要是 introduces the hypothetical condition and sentence-final 呢 asks the other speaker to supply the consequence, so no 就-clause is stated in that turn.
+
+### 20. Dialogue-final 那 carries a connective sense
+In 太好了！那我們就可以再見面了。, 那 functions conversationally as “then / in that case,” not simply the earlier demonstrative “that.”
+
+Repair:
+- the phrase note now explains this discourse use and connects it to the newly taught 那麼 without creating a duplicate formal vocabulary item.
 ## Pedagogy and sequencing
 
 - 工 and 作 are introduced before 工作 is assessed.
