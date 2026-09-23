@@ -192,6 +192,9 @@ test('Unit 34 先…再… practice retrieves a source past sequence as well as 
   assert.ok(g.examples.some(ex=>ex.text==='我昨天晚上先寫功課，再看電視。'));
   assert.ok(g.examples.some(ex=>ex.text==='我想先吃晚飯，再給媽媽打電話。'));
   const review=u34.lessons.find(l=>l.id===u34.reviewLessonId);
-  const item=review.steps.find(s=>s.id==='u34-review-g1');
-  assert.equal(item.answer,'我昨天晚上先寫功課，再看電視。');
+  const past=review.steps.find(s=>s.id==='u34-review-g1');
+  const sourcePlan=review.steps.find(s=>s.id==='u34-review-s3');
+  assert.equal(past.answer,'我昨天晚上先寫功課，再看電視。');
+  assert.equal(sourcePlan.answer,'他計畫在臺灣先學語言，再念大學。');
+  assert.ok(sourcePlan.grammarIds.includes('u34-first-then'));
 });
