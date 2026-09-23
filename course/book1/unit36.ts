@@ -1457,7 +1457,7 @@ const unit:UnitData = {
       "text": "太好了！那我們就可以再見面了。",
       "pinyin": "Tài hǎo le! Nà wǒmen jiù kěyǐ zài jiànmiàn le.",
       "meaning": "Great! Then we can see each other again.",
-      "note": "This completes Dialogue II. 太好了、就、可以、再、見面 are review.",
+      "note": "This completes Dialogue II. Here 那 is the short conversational 'then / in that case' leading into the result; compare new 那麼 in the previous turn. 太好了、就、可以、再、見面 are review.",
       "tokens": [
         "太好了",
         "那我們就可以",
