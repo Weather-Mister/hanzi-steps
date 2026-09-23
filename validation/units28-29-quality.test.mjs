@@ -14,8 +14,8 @@ const sample=(lessonId,index,complete)=>({id:'550e8400-e29b-41d4-a716-4466554400
 test('Units 28-29 are rebalanced without padding novelty',()=>{
   assert.equal(u28.newVocabulary.length,12);
   assert.equal(u28.newCharacters.length,10);
-  assert.equal(u29.newVocabulary.length,12);
-  assert.equal(u29.newCharacters.length,10);
+  assert.equal(u29.newVocabulary.length,14);
+  assert.equal(u29.newCharacters.length,11);
   for(const m of [u28,u29]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
@@ -24,7 +24,7 @@ test('Units 28-29 are rebalanced without padding novelty',()=>{
   }
   for(const word of ['非常','但是','站','或是','便利商店','公共汽車','中國'])
     assert.ok(u28.newVocabulary.some(v=>v.text===word),`Unit 28 missing ${word}`);
-  for(const word of ['水果','黃色','給','香','甜','以前'])
+  for(const word of ['水果','黃色','給','香','甜','以前','女','逛'])
     assert.ok(u29.newVocabulary.some(v=>v.text===word),`Unit 29 missing ${word}`);
 });
 
@@ -105,11 +105,12 @@ test('Every new grammar target is independently assessed in its review',()=>{
   }
 });
 
-test('Known unresolved Traditional-handwriting source gaps are not silently first-taught',()=>{
-  for(const word of ['逛','臺東','臺南','網路上','故宮博物院']){
-    assert.ok(!u28.newVocabulary.some(w=>w.text===word),`Unit 28 silently added ${word}`);
-    assert.ok(!u29.newVocabulary.some(w=>w.text===word),`Unit 29 silently added ${word}`);
+test('Unit 29 closes its Dialogue II vocabulary gap while earlier out-of-scope gaps remain explicit',()=>{
+  assert.ok(u29.newVocabulary.some(w=>w.text==='逛'));
+  assert.ok(u29.newCharacters.includes('逛'));
+  for(const word of ['臺東','臺南','網路上','故宮博物院']){
+    assert.ok(!u28.newVocabulary.some(w=>w.text===word),`Unit 28 unexpectedly added ${word}`);
+    assert.ok(!u29.newVocabulary.some(w=>w.text===word),`Unit 29 unexpectedly added ${word}`);
   }
-  assert.ok(!u28.newCharacters.includes('逛')&&!u29.newCharacters.includes('逛'));
   assert.ok(!u28.newCharacters.includes('臺')&&!u29.newCharacters.includes('臺'));
 });
