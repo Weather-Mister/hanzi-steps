@@ -107,6 +107,17 @@ test('紅 and 往 first-teaching ownership moves earlier without deleting Book 2
   assert.ok(b2u1.lessons.find(l=>l.id==='b2-from-toward').steps.some(s=>s.char==='往'));
 });
 
+
+test('Lesson 10 Vocabulary I-II is cumulatively accounted for through Unit 31',()=>{
+  const taught=new Set(course.modules.filter(m=>m.bookId==='book-1'&&m.order<=31).flatMap(m=>m.newVocabulary.map(v=>v.text)));
+  for(const word of ['水果','黃色','芒果','給','塊','香','甜','紅色','西瓜','吧','對','以前','機會','請','吃吃看'])
+    assert.ok(taught.has(word),`Lesson 10 Vocabulary I missing ${word}`);
+  for(const word of ['拍','笑','開心','穿','衣服','旅館','太太','男','矮','高','弟弟','乾淨','窗戶','往','藍色','因為','住','上個月','這些'])
+    assert.ok(taught.has(word),`Lesson 10 Vocabulary II missing ${word}`);
+  assert.equal(u30.phrases['u30-piece'].text,'這個黃色的水果叫芒果。我給你一塊。');
+  assert.equal(u31.phrases['u31-toward'].text,'從窗戶往外看，是藍色的大海。');
+});
+
 test('Lesson 10 source-debt vocabulary is now restored with exact Traditional codepoints',()=>{
   assert.ok(u30.newVocabulary.some(v=>v.text==='芒果'));
   assert.ok(u30.newCharacters.includes('芒'));
