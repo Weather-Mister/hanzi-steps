@@ -1,6 +1,6 @@
 # Unit 36 source coverage plan
 
-Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 12 「你在臺灣學多久的中文？」, Dialogue II / Vocabulary II (printed pp. 249–251), Grammar III 以後 (printed pp. 255–257), and Grammar IV special meanings of 好 / 難 + verbs (printed pp. 257–259).
+Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 12 「你在臺灣學多久的中文？」, Dialogue II / Vocabulary II (printed pp. 249–251), Grammar III 以後 (printed pp. 255–257), Grammar IV special meanings of 好 / 難 + verbs (printed pp. 257–259), and the integrated activities/self-assessment used to verify lesson-level coverage (printed pp. 263–268).
 
 ## Scope
 
