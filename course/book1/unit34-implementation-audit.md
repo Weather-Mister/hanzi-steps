@@ -31,3 +31,6 @@ Unit 34 does not mark Lesson 12 complete. The source plan records the deferred V
 
 ## Required exact-head QA
 Before merge, the PR head must pass the repository Feature QA workflow: stroke hydration, curriculum generation/check, targeted Unit 34 test, character coverage, regression suite, TypeScript, and Pages build. If CI commits generated artifacts/strokes and advances the head, the resulting head requires another successful Feature QA pass before merge.
+
+## Generated-artifact exact-head recheck
+Feature QA hydrated Unit 34 strokes and refreshed the generated curriculum artifacts on commit `6a303faf0e07011fe45babd5980cc23b2d5fa959`. This audit-only commit intentionally makes no curriculum change; it exists to force one complete human-authored exact-head Feature QA run over that generated state. The final run must report the generated artifacts already current before merge.
