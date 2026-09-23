@@ -37,7 +37,7 @@ The eight-word count is deliberately below the normal 10–13 range because this
 | 試 | NEW |
 | 難 | NEW |
 | 那麼 | NEW |
-| 再 | REVIEW |
+| 再 | REVIEW; Unit 32 taught the same word in a later-action sense, and Dialogue II explicitly retrieves its familiar 'again' sense in 再來臺灣 |
 | 試試看 | source phrase taught explicitly; transparent combination, not padded into the new-word count |
 
 ## Dialogue II coverage
