@@ -47,6 +47,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 
 ## 3. Exact phrase records
 
+### u43-only-basic
+- text: **我只喝茶。**
+- pinyin: **Wǒ zhǐ hē chá.**
+- meaning: **I only drink tea.**
+- note: Simple meaning-first card for 只 before the completed-duration grammar.
+- tokens: [`我只喝茶`]
+
 ### u43-finished-stay
 - text: **我在臺灣住了一年。**
 - pinyin: **Wǒ zài Táiwān zhù le yì nián.**
@@ -116,6 +123,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - note: This card explicitly teaches the Lesson-14 auxiliary sense before G003. Do not create a second canonical vocabulary row.
 - tokens: [`要`]
 
+### u43-newyear-basic
+- text: **新年到了。我想回去看父母。**
+- pinyin: **Xīnnián dào le. Wǒ xiǎng huíqù kàn fùmǔ.**
+- meaning: **New Year has arrived. I want to go back to see my parents.**
+- note: Meaning-first card for 新年 and 父母. It deliberately avoids the new imminence pattern until G003 is taught.
+- tokens: [`新年到了`, `我想回去看父母`]
+
 ### u43-newyear-source
 - text: **新年快到了。想回去看父母嗎？**
 - pinyin: **Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?**
@@ -180,40 +194,41 @@ Each expands to ordered `intro → trace → build → complete → memory`.
 
 Order:
 1. 只 character lifecycle.
-2. select `u43-only-s1`
+2. phrase `u43-only-basic`.
+3. select `u43-only-s1`
    - prompt: **只 means…**
    - options: [`only; merely`, `already`, `even more`]
    - answer: **only; merely**
    - explanation: 只 limits the amount or scope.
-3. grammar `u43-completed-duration`.
-4. phrase `u43-finished-stay`.
-5. phrase `u43-tennis-duration`.
-6. select `u43-duration-s1`
+4. grammar `u43-completed-duration`.
+5. phrase `u43-finished-stay`.
+6. phrase `u43-tennis-duration`.
+7. select `u43-duration-s1`
    - prompt: **Which sentence correctly keeps the object before the duration?**
    - options: [`我打網球打了兩個鐘頭。`, `我打網球了兩個鐘頭。`, `我打了兩個鐘頭網球打。`]
    - answer: **我打網球打了兩個鐘頭。**
    - explanation: With the object before the duration, repeat the verb.
    - grammarIds: [`u43-completed-duration`]
-7. phrase `u43-only-chinese`.
-8. select `u43-duration-s2`
+8. phrase `u43-only-chinese`.
+9. select `u43-duration-s2`
    - prompt: **Why does 中文我只學了五個月 not repeat 學?**
    - options: [`中文 is fronted as the topic`, `了 removes the verb`, `只 forbids verb repetition`]
    - answer: **中文 is fronted as the topic**
    - explanation: Fronting the object/topic allows the source pattern without the repeated verb.
    - grammarIds: [`u43-completed-duration`]
-9. phrase `u43-confirm-bridge` — EXPLAIN 對不對 before testing.
-10. select `u43-confirm-s1`
+10. phrase `u43-confirm-bridge` — EXPLAIN 對不對 before testing.
+11. select `u43-confirm-s1`
    - prompt: **In the source-style prompt, 對不對 is used to…**
    - options: [`seek confirmation of the statement`, `ask how many months`, `mean “only”`]
    - answer: **seek confirmation of the statement**
    - explanation: The bridge has already explained 對不對 as a confirmation form.
-11. listen `u43-duration-l1`
+12. listen `u43-duration-l1`
    - audioText: **我打網球打了兩個鐘頭。**
    - prompt: **How long was the tennis activity?**
    - options: [`two hours`, `two months`, `two years`]
    - answer: **two hours**
    - explanation: 兩個鐘頭 means two hours.
-12. order `u43-duration-o1` using `u43-tennis-duration`
+13. order `u43-duration-o1` using `u43-tennis-duration`
    - tokens: [`我打網球`, `打了兩個鐘頭`]
 
 ### u43-duration-now — How Long Up to Now?
@@ -269,48 +284,49 @@ Order:
 Order:
 1. 父 lifecycle.
 2. 母 lifecycle.
-3. select `u43-newyear-s1`
+3. phrase `u43-newyear-basic`.
+4. select `u43-newyear-s1`
    - prompt: **新年 means…**
    - options: [`New Year`, `next year`, `last year`]
    - answer: **New Year**
    - explanation: 新年 means New Year.
-4. select `u43-parents-s1`
+5. select `u43-parents-s1`
    - prompt: **父母 means…**
    - options: [`parents`, `classmates`, `everyone`]
    - answer: **parents**
    - explanation: 父母 means parents.
-5. phrase `u43-kuai-sense` — EXPLAIN the Lesson-14 快 sense.
-6. phrase `u43-yao-sense` — EXPLAIN the Lesson-14 要 sense.
-7. grammar `u43-imminent`.
-8. phrase `u43-newyear-source`.
-9. select `u43-imminent-s1`
+6. phrase `u43-kuai-sense` — EXPLAIN the Lesson-14 快 sense.
+7. phrase `u43-yao-sense` — EXPLAIN the Lesson-14 要 sense.
+8. grammar `u43-imminent`.
+9. phrase `u43-newyear-source`.
+10. select `u43-imminent-s1`
    - prompt: **In 新年快到了, 快 means…**
    - options: [`soon / almost`, `fast in speed`, `only`]
    - answer: **soon / almost**
    - explanation: This is the Lesson-14 temporal sense of 快.
-10. select `u43-imminent-s2`
+11. select `u43-imminent-s2`
    - prompt: **In 比賽要開始了, 要 means…**
    - options: [`is about to / is going to`, `wants an object`, `misses someone`]
    - answer: **is about to / is going to**
    - explanation: This is the Lesson-14 imminent-event auxiliary sense.
-11. select `u43-imminent-s3`
+12. select `u43-imminent-s3`
    - prompt: **According to the textbook's Lesson-14 rule, which sentence is rejected?**
    - options: [`他明天快要回來了。`, `他快要回來了。`, `快下雨了。`]
    - answer: **他明天快要回來了。**
    - explanation: The source blocks explicit time word + 快要 in this construction.
    - grammarIds: [`u43-imminent`]
-12. select `u43-imminent-s4`
+13. select `u43-imminent-s4`
    - prompt: **Which form does the source identify as especially preferred in Taiwan Mandarin?**
    - options: [`快要`, `只要`, `更要`]
    - answer: **快要**
    - explanation: The textbook explicitly notes the Taiwan preference for disyllabic 快要.
-13. listen `u43-newyear-l1`
+14. listen `u43-newyear-l1`
    - audioText: **新年快到了。**
    - prompt: **What is about to arrive?**
    - options: [`New Year`, `a typhoon`, `autumn leaves`]
    - answer: **New Year**
    - explanation: 新年 is New Year.
-14. order `u43-newyear-o1` using `u43-newyear-source`
+15. order `u43-newyear-o1` using `u43-newyear-source`
    - tokens: [`新年快到了`, `想回去看父母嗎`]
 
 ### u43-stopping — The Rain Is About to Stop
