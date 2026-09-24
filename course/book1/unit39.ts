@@ -194,14 +194,14 @@ const unit:UnitData = {
         {
           "id": "u39-this-year-s3",
           "type": "select",
-          "prompt": "Do you need to produce new 什麼都… sentences yet?",
+          "prompt": "In 我什麼都吃。, what does the sentence mean here?",
           "options": [
-            "No — Unit 40 teaches the full system.",
-            "Yes — it is formal grammar here.",
-            "Only in questions."
+            "I eat anything / everything.",
+            "What do I eat?",
+            "I do not eat anything."
           ],
-          "answer": "No — Unit 40 teaches the full system.",
-          "explanation": "The line is comprehension-first in Unit 39."
+          "answer": "I eat anything / everything.",
+          "explanation": "Here 什麼都 gives an all-inclusive meaning: anything / everything."
         }
       ]
     },
@@ -613,15 +613,19 @@ const unit:UnitData = {
           "id": "u39-review-l3",
           "type": "listen",
           "char": "蛋",
-          "audioText": "我今天吃蛋。",
-          "prompt": "Listen for 'egg'.",
+          "audioText": "我今天沒吃蛋。",
+          "prompt": "Listen: what did not happen?",
           "options": [
-            "蛋",
-            "豬腳",
-            "麵線"
+            "沒吃蛋",
+            "吃了蛋",
+            "不吃蛋"
           ],
-          "answer": "蛋",
-          "explanation": "The final food item is 蛋."
+          "answer": "沒吃蛋",
+          "explanation": "沒吃 marks a past non-occurrence, and the completed-action verbal 了 is absent.",
+          "grammarIds": [
+            "u39-verbal-le",
+            "u39-bu-vs-mei"
+          ]
         },
         {
           "id": "u39-review-c1",
@@ -689,14 +693,14 @@ const unit:UnitData = {
         {
           "id": "u39-review-v4",
           "type": "select",
-          "prompt": "Which contrast is correct?",
+          "prompt": "豬腳 means…",
           "options": [
-            "訂 = reserve/order ahead; 點 = choose/order food",
-            "訂 = eat; 點 = reserve ahead",
-            "They are identical"
+            "pork knuckles",
+            "extra-fine noodles",
+            "cake"
           ],
-          "answer": "訂 = reserve/order ahead; 點 = choose/order food",
-          "explanation": "The unit contrasts them."
+          "answer": "pork knuckles",
+          "explanation": "豬腳 is the traditional birthday-food item introduced in this unit."
         },
         {
           "id": "u39-review-g1",
@@ -833,14 +837,14 @@ const unit:UnitData = {
         {
           "id": "u39-review-t1",
           "type": "select",
-          "prompt": "Which reply shows a completed reservation?",
+          "prompt": "In 等一下你多吃一點, 一點 means…",
           "options": [
-            "我已經訂了車票。",
-            "我不訂車票。",
-            "我訂車票左右。"
+            "a little; some amount",
+            "one o'clock",
+            "approximately"
           ],
-          "answer": "我已經訂了車票。",
-          "explanation": "訂了 marks completion."
+          "answer": "a little; some amount",
+          "explanation": "一點 is the quantity expression 'a little / some amount' here."
         }
       ]
     }
