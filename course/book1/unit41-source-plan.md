@@ -123,3 +123,15 @@ After Unit 41, Lesson 13 has no deliberate language-content deferrals.
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **22 useful activities**:
+- 3 listening;
+- 3 character-retrieval/writing activities across 糕、祝、如;
+- 4 lexical/wish/pragmatics retrieval items;
+- 5 Unit 41 grammar items independently assessing 是不是 and 跟…一樣, including negation scope and questions;
+- 5 cumulative grammar-transfer items, one each for Lesson 13 Grammar I–V;
+- 2 Dialogue II / cultural-outcome transfer items.
+
+Together with u41-capstone, this guarantees all seven Lesson 13 grammar sections and all four lesson objectives are productively revisited without turning the review into a 35-item vocabulary dump.
