@@ -1,0 +1,1349 @@
+import type {UnitData} from '../schema.ts';
+
+const unit:UnitData = {
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 39,
+  "unit": {
+    "id": "unit-39",
+    "number": 39,
+    "theme": "amber",
+    "bookReference": "Lesson 13 Dialogue II opening (turns 1–6), Vocabulary II entries 1–8 plus Phrase 14, Grammar II completed-action 了, and Grammar III 不 vs. 沒（有）.",
+    "label": "Gifts, birthday food & completed actions",
+    "title": "What Did You Order?",
+    "description": "Begin the birthday dinner: gifts, food preferences, completed actions with verbal 了, and 不 vs. 沒（有）.",
+    "chars": [
+      "禮",
+      "物",
+      "訂",
+      "豬",
+      "腳",
+      "蛋"
+    ],
+    "lessonIds": [
+      "u39-gift",
+      "u39-this-year",
+      "u39-ordered",
+      "u39-food",
+      "u39-a-little",
+      "u39-negation",
+      "u39-review"
+    ],
+    "banner": {
+      "text": "我已經訂了豬腳麵線和蛋",
+      "pinyin": "Wǒ yǐjīng dìng le zhūjiǎo miànxiàn hé dàn"
+    },
+    "goal": {
+      "text": "我已經訂了豬腳麵線和蛋。",
+      "pinyin": "Wǒ yǐjīng dìng le zhūjiǎo miànxiàn hé dàn.",
+      "meaning": "I already ordered pork knuckles, fine noodles, and an egg."
+    },
+    "grammarIds": [
+      "u39-verbal-le",
+      "u39-bu-vs-mei"
+    ]
+  },
+  "reviewLessonId": "u39-review",
+  "lessons": [
+    {
+      "id": "u39-gift",
+      "title": "A Birthday Gift",
+      "subtitle": "Learn 禮物 and the fixed response 哪裡哪裡.",
+      "chars": [
+        "禮",
+        "物"
+      ],
+      "minutes": "11–14 min",
+      "unitId": "unit-39",
+      "review": false,
+      "steps": [
+        {
+          "id": "u39-gift-禮-intro",
+          "type": "intro",
+          "char": "禮"
+        },
+        {
+          "id": "u39-gift-禮-trace",
+          "type": "trace",
+          "char": "禮"
+        },
+        {
+          "id": "u39-gift-禮-build",
+          "type": "build",
+          "char": "禮"
+        },
+        {
+          "id": "u39-gift-禮-complete",
+          "type": "complete",
+          "char": "禮"
+        },
+        {
+          "id": "u39-gift-禮-memory",
+          "type": "memory",
+          "char": "禮"
+        },
+        {
+          "id": "u39-gift-物-intro",
+          "type": "intro",
+          "char": "物"
+        },
+        {
+          "id": "u39-gift-物-trace",
+          "type": "trace",
+          "char": "物"
+        },
+        {
+          "id": "u39-gift-物-build",
+          "type": "build",
+          "char": "物"
+        },
+        {
+          "id": "u39-gift-物-complete",
+          "type": "complete",
+          "char": "物"
+        },
+        {
+          "id": "u39-gift-物-memory",
+          "type": "memory",
+          "char": "物"
+        },
+        {
+          "id": "u39-gift-p0",
+          "type": "phrase",
+          "phrase": "u39-meal-thanks"
+        },
+        {
+          "id": "u39-gift-p1",
+          "type": "phrase",
+          "phrase": "u39-gift-source"
+        },
+        {
+          "id": "u39-gift-s1",
+          "type": "select",
+          "prompt": "禮物 means…",
+          "options": [
+            "gift; present",
+            "birthday",
+            "tradition"
+          ],
+          "answer": "gift; present",
+          "explanation": "禮物 is a gift/present."
+        },
+        {
+          "id": "u39-gift-s2",
+          "type": "select",
+          "prompt": "哪裡，哪裡！ means here…",
+          "options": [
+            "Don't mention it / It's my pleasure.",
+            "Where? Where?",
+            "Around where?"
+          ],
+          "answer": "Don't mention it / It's my pleasure.",
+          "explanation": "The repeated phrase is an idiomatic polite response."
+        }
+      ]
+    },
+    {
+      "id": "u39-this-year",
+      "title": "This Year's Birthday",
+      "subtitle": "Learn 今年 and ask about food preferences.",
+      "chars": [],
+      "minutes": "8–11 min",
+      "unitId": "unit-39",
+      "review": false,
+      "steps": [
+        {
+          "id": "u39-this-year-p1",
+          "type": "phrase",
+          "phrase": "u39-year-source"
+        },
+        {
+          "id": "u39-this-year-s1",
+          "type": "select",
+          "prompt": "今年 means…",
+          "options": [
+            "this year",
+            "next year",
+            "last year"
+          ],
+          "answer": "this year",
+          "explanation": "今年 means this year."
+        },
+        {
+          "id": "u39-this-year-p2",
+          "type": "phrase",
+          "phrase": "u39-food-question"
+        },
+        {
+          "id": "u39-this-year-s2",
+          "type": "select",
+          "prompt": "Which asks about foods someone does not eat?",
+          "options": [
+            "有沒有不吃的東西？",
+            "大概幾點？",
+            "你在哪裡見面？"
+          ],
+          "answer": "有沒有不吃的東西？",
+          "explanation": "This is the source dietary-preference question."
+        },
+        {
+          "id": "u39-this-year-p3",
+          "type": "phrase",
+          "phrase": "u39-totality-preview"
+        },
+        {
+          "id": "u39-this-year-s3",
+          "type": "select",
+          "prompt": "Do you need to produce new 什麼都… sentences yet?",
+          "options": [
+            "No — Unit 40 teaches the full system.",
+            "Yes — it is formal grammar here.",
+            "Only in questions."
+          ],
+          "answer": "No — Unit 40 teaches the full system.",
+          "explanation": "The line is comprehension-first in Unit 39."
+        }
+      ]
+    },
+    {
+      "id": "u39-ordered",
+      "title": "I Already Ordered It",
+      "subtitle": "Learn 訂 and completed-action verbal 了.",
+      "chars": [
+        "訂"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-39",
+      "review": false,
+      "steps": [
+        {
+          "id": "u39-ordered-訂-intro",
+          "type": "intro",
+          "char": "訂"
+        },
+        {
+          "id": "u39-ordered-訂-trace",
+          "type": "trace",
+          "char": "訂"
+        },
+        {
+          "id": "u39-ordered-訂-build",
+          "type": "build",
+          "char": "訂"
+        },
+        {
+          "id": "u39-ordered-訂-complete",
+          "type": "complete",
+          "char": "訂"
+        },
+        {
+          "id": "u39-ordered-訂-memory",
+          "type": "memory",
+          "char": "訂"
+        },
+        {
+          "id": "u39-ordered-g1",
+          "type": "grammar",
+          "grammar": "u39-verbal-le"
+        },
+        {
+          "id": "u39-ordered-p1",
+          "type": "phrase",
+          "phrase": "u39-booked-ticket"
+        },
+        {
+          "id": "u39-ordered-s1",
+          "type": "select",
+          "prompt": "訂 is closest to…",
+          "options": [
+            "order/reserve in advance",
+            "order food by choosing from a menu",
+            "eat"
+          ],
+          "answer": "order/reserve in advance",
+          "explanation": "訂 is for arranging/reserving ahead."
+        },
+        {
+          "id": "u39-ordered-s2",
+          "type": "select",
+          "prompt": "What happens to verbal 了 under 沒（有） negation?",
+          "options": [
+            "It disappears.",
+            "It moves before the verb.",
+            "It becomes 過."
+          ],
+          "answer": "It disappears.",
+          "explanation": "The source rejects *沒吃了 and uses 沒吃."
+        },
+        {
+          "id": "u39-ordered-s3",
+          "type": "select",
+          "prompt": "Is verbal 了 simply a past-tense suffix?",
+          "options": [
+            "No.",
+            "Yes, always.",
+            "Only after 不."
+          ],
+          "answer": "No.",
+          "explanation": "It marks a completed/taken-place event."
+        }
+      ]
+    },
+    {
+      "id": "u39-food",
+      "title": "Pork Knuckles, Noodles and Egg",
+      "subtitle": "Learn 豬腳, 麵線, and 蛋.",
+      "chars": [
+        "豬",
+        "腳",
+        "蛋"
+      ],
+      "minutes": "13–17 min",
+      "unitId": "unit-39",
+      "review": false,
+      "steps": [
+        {
+          "id": "u39-food-豬-intro",
+          "type": "intro",
+          "char": "豬"
+        },
+        {
+          "id": "u39-food-豬-trace",
+          "type": "trace",
+          "char": "豬"
+        },
+        {
+          "id": "u39-food-豬-build",
+          "type": "build",
+          "char": "豬"
+        },
+        {
+          "id": "u39-food-豬-complete",
+          "type": "complete",
+          "char": "豬"
+        },
+        {
+          "id": "u39-food-豬-memory",
+          "type": "memory",
+          "char": "豬"
+        },
+        {
+          "id": "u39-food-腳-intro",
+          "type": "intro",
+          "char": "腳"
+        },
+        {
+          "id": "u39-food-腳-trace",
+          "type": "trace",
+          "char": "腳"
+        },
+        {
+          "id": "u39-food-腳-build",
+          "type": "build",
+          "char": "腳"
+        },
+        {
+          "id": "u39-food-腳-complete",
+          "type": "complete",
+          "char": "腳"
+        },
+        {
+          "id": "u39-food-腳-memory",
+          "type": "memory",
+          "char": "腳"
+        },
+        {
+          "id": "u39-food-蛋-intro",
+          "type": "intro",
+          "char": "蛋"
+        },
+        {
+          "id": "u39-food-蛋-trace",
+          "type": "trace",
+          "char": "蛋"
+        },
+        {
+          "id": "u39-food-蛋-build",
+          "type": "build",
+          "char": "蛋"
+        },
+        {
+          "id": "u39-food-蛋-complete",
+          "type": "complete",
+          "char": "蛋"
+        },
+        {
+          "id": "u39-food-蛋-memory",
+          "type": "memory",
+          "char": "蛋"
+        },
+        {
+          "id": "u39-food-s1",
+          "type": "select",
+          "prompt": "豬腳 means…",
+          "options": [
+            "pork knuckles",
+            "fine noodles",
+            "cake"
+          ],
+          "answer": "pork knuckles",
+          "explanation": "豬腳 is the birthday-food item."
+        },
+        {
+          "id": "u39-food-s2",
+          "type": "select",
+          "prompt": "麵線 means…",
+          "options": [
+            "extra-fine noodles",
+            "bread",
+            "rice"
+          ],
+          "answer": "extra-fine noodles",
+          "explanation": "麵線 is fine noodles."
+        },
+        {
+          "id": "u39-food-s3",
+          "type": "select",
+          "prompt": "蛋 means…",
+          "options": [
+            "egg",
+            "cake",
+            "gift"
+          ],
+          "answer": "egg",
+          "explanation": "蛋 is egg."
+        },
+        {
+          "id": "u39-food-p1",
+          "type": "phrase",
+          "phrase": "u39-food-source"
+        },
+        {
+          "id": "u39-food-o1",
+          "type": "order",
+          "phrase": "u39-food-source",
+          "tokens": [
+            "我已經訂了",
+            "豬腳麵線和蛋"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u39-a-little",
+      "title": "Eat a Little More",
+      "subtitle": "Learn 一點 and retrieve completed-action questions.",
+      "chars": [],
+      "minutes": "9–12 min",
+      "unitId": "unit-39",
+      "review": false,
+      "steps": [
+        {
+          "id": "u39-a-little-p1",
+          "type": "phrase",
+          "phrase": "u39-more-preview"
+        },
+        {
+          "id": "u39-a-little-s1",
+          "type": "select",
+          "prompt": "一點 here means…",
+          "options": [
+            "a little; some amount",
+            "a little/somewhat before a description only",
+            "one o'clock"
+          ],
+          "answer": "a little; some amount",
+          "explanation": "This is the quantity expression."
+        },
+        {
+          "id": "u39-a-little-s2",
+          "type": "select",
+          "prompt": "Which earlier expression means 'a little/somewhat' before a description?",
+          "options": [
+            "有一點",
+            "一樣",
+            "左右"
+          ],
+          "answer": "有一點",
+          "explanation": "有一點 + description was learned earlier."
+        },
+        {
+          "id": "u39-a-little-p2",
+          "type": "phrase",
+          "phrase": "u39-le-question"
+        },
+        {
+          "id": "u39-a-little-s3",
+          "type": "select",
+          "prompt": "Which asks whether dinner was eaten?",
+          "options": [
+            "你吃了晚飯沒有？",
+            "你不吃晚飯了嗎？",
+            "你吃晚飯左右？"
+          ],
+          "answer": "你吃了晚飯沒有？",
+          "explanation": "Completed clause + 沒有 is a source pattern."
+        }
+      ]
+    },
+    {
+      "id": "u39-negation",
+      "title": "Not Doing vs. Didn't Do",
+      "subtitle": "Choose 不 or 沒（有） by meaning and verb type.",
+      "chars": [],
+      "minutes": "13–17 min",
+      "unitId": "unit-39",
+      "review": false,
+      "steps": [
+        {
+          "id": "u39-negation-g1",
+          "type": "grammar",
+          "grammar": "u39-bu-vs-mei"
+        },
+        {
+          "id": "u39-negation-p1",
+          "type": "phrase",
+          "phrase": "u39-le-positive"
+        },
+        {
+          "id": "u39-negation-p2",
+          "type": "phrase",
+          "phrase": "u39-le-negative"
+        },
+        {
+          "id": "u39-negation-p3",
+          "type": "phrase",
+          "phrase": "u39-final-le-negative"
+        },
+        {
+          "id": "u39-negation-s1",
+          "type": "select",
+          "prompt": "For a habitual action you do not do, use…",
+          "options": [
+            "不",
+            "沒（有） only",
+            "了"
+          ],
+          "answer": "不",
+          "explanation": "Habitual non-action uses 不."
+        },
+        {
+          "id": "u39-negation-s2",
+          "type": "select",
+          "prompt": "For an action that did not happen yesterday, use…",
+          "options": [
+            "沒（有）",
+            "不 only",
+            "都"
+          ],
+          "answer": "沒（有）",
+          "explanation": "Past non-occurrence uses 沒（有）."
+        },
+        {
+          "id": "u39-negation-s3",
+          "type": "select",
+          "prompt": "Taiwan Mandarin in the source commonly prefers…",
+          "options": [
+            "沒有 + Verb",
+            "bare 沒 is impossible",
+            "不 + 了"
+          ],
+          "answer": "沒有 + Verb",
+          "explanation": "Bare 沒 + V remains grammatical."
+        },
+        {
+          "id": "u39-negation-s4",
+          "type": "select",
+          "prompt": "Why can 我現在不吃這些東西了 contain 了?",
+          "options": [
+            "That 了 is sentence-final changed-situation 了.",
+            "Because verbal 了 never changes under negation.",
+            "Because 不 means past."
+          ],
+          "answer": "That 了 is sentence-final changed-situation 了.",
+          "explanation": "The two 了 functions are distinct."
+        }
+      ]
+    },
+    {
+      "id": "u39-review",
+      "title": "Unit 39 Review",
+      "subtitle": "Retrieve the birthday dinner vocabulary and both 了 / negation systems.",
+      "chars": [
+        "禮",
+        "物",
+        "訂",
+        "豬",
+        "腳",
+        "蛋"
+      ],
+      "minutes": "19–23 min",
+      "unitId": "unit-39",
+      "review": true,
+      "steps": [
+        {
+          "id": "u39-review-l1",
+          "type": "listen",
+          "char": "禮",
+          "audioText": "這是我給你的禮物。",
+          "prompt": "Listen for 'gift'.",
+          "options": [
+            "禮物",
+            "今年",
+            "一點"
+          ],
+          "answer": "禮物",
+          "explanation": "禮物 means gift."
+        },
+        {
+          "id": "u39-review-l2",
+          "type": "listen",
+          "char": "訂",
+          "audioText": "我已經訂了車票。",
+          "prompt": "Listen for the reservation verb.",
+          "options": [
+            "訂",
+            "點",
+            "買"
+          ],
+          "answer": "訂",
+          "explanation": "訂 means order/reserve in advance."
+        },
+        {
+          "id": "u39-review-l3",
+          "type": "listen",
+          "char": "蛋",
+          "audioText": "我已經訂了豬腳麵線和蛋。",
+          "prompt": "Listen for 'egg'.",
+          "options": [
+            "蛋",
+            "豬腳",
+            "麵線"
+          ],
+          "answer": "蛋",
+          "explanation": "The final food item is 蛋."
+        },
+        {
+          "id": "u39-review-c1",
+          "type": "match",
+          "chars": [
+            "禮",
+            "物",
+            "訂",
+            "豬",
+            "腳",
+            "蛋"
+          ]
+        },
+        {
+          "id": "u39-review-c2",
+          "type": "build",
+          "char": "禮"
+        },
+        {
+          "id": "u39-review-c3",
+          "type": "build",
+          "char": "訂"
+        },
+        {
+          "id": "u39-review-c4",
+          "type": "build",
+          "char": "蛋"
+        },
+        {
+          "id": "u39-review-v1",
+          "type": "select",
+          "prompt": "今年 means…",
+          "options": [
+            "this year",
+            "last year",
+            "next month"
+          ],
+          "answer": "this year",
+          "explanation": "今年 is this year."
+        },
+        {
+          "id": "u39-review-v2",
+          "type": "select",
+          "prompt": "哪裡哪裡 is used as…",
+          "options": [
+            "a polite 'Don't mention it' response",
+            "a literal two-place question",
+            "a time expression"
+          ],
+          "answer": "a polite 'Don't mention it' response",
+          "explanation": "It is a fixed expression."
+        },
+        {
+          "id": "u39-review-v3",
+          "type": "select",
+          "prompt": "Which is 'extra-fine noodles'?",
+          "options": [
+            "麵線",
+            "豬腳",
+            "禮物"
+          ],
+          "answer": "麵線",
+          "explanation": "麵線 are fine noodles."
+        },
+        {
+          "id": "u39-review-v4",
+          "type": "select",
+          "prompt": "Which contrast is correct?",
+          "options": [
+            "訂 = reserve/order ahead; 點 = choose/order food",
+            "訂 = eat; 點 = reserve ahead",
+            "They are identical"
+          ],
+          "answer": "訂 = reserve/order ahead; 點 = choose/order food",
+          "explanation": "The unit contrasts them."
+        },
+        {
+          "id": "u39-review-g1",
+          "type": "select",
+          "prompt": "Completed affirmative action uses…",
+          "options": [
+            "V + 了",
+            "不 + V + 了",
+            "都 + V"
+          ],
+          "answer": "V + 了",
+          "explanation": "Postverbal 了 marks completion."
+        },
+        {
+          "id": "u39-review-g2",
+          "type": "select",
+          "prompt": "Correct negative of 我吃了晚飯 is…",
+          "options": [
+            "我沒吃晚飯。",
+            "我沒吃了晚飯。",
+            "我不吃了晚飯。"
+          ],
+          "answer": "我沒吃晚飯。",
+          "explanation": "Negated completed action uses 沒 + V with no verbal 了."
+        },
+        {
+          "id": "u39-review-g3",
+          "type": "select",
+          "prompt": "Which completed-action question is valid?",
+          "options": [
+            "你吃了晚飯沒有？",
+            "你沒了吃晚飯？",
+            "你吃沒有了晚飯？"
+          ],
+          "answer": "你吃了晚飯沒有？",
+          "explanation": "The source can append 沒有."
+        },
+        {
+          "id": "u39-review-g4",
+          "type": "select",
+          "prompt": "Which 了 can remain after a negative clause?",
+          "options": [
+            "sentence-final changed-situation 了",
+            "negated completed-action verbal 了",
+            "none ever"
+          ],
+          "answer": "sentence-final changed-situation 了",
+          "explanation": "Do not overgeneralize the verbal-了 rule."
+        },
+        {
+          "id": "u39-review-n1",
+          "type": "select",
+          "prompt": "Habit: 'I don't drink coffee.' Choose the marker.",
+          "options": [
+            "不",
+            "沒（有）",
+            "了"
+          ],
+          "answer": "不",
+          "explanation": "Habitual non-action uses 不."
+        },
+        {
+          "id": "u39-review-n2",
+          "type": "select",
+          "prompt": "Past: 'I didn't go yesterday.' Choose the marker.",
+          "options": [
+            "沒（有）",
+            "不",
+            "太"
+          ],
+          "answer": "沒（有）",
+          "explanation": "Past non-occurrence uses 沒（有）."
+        },
+        {
+          "id": "u39-review-n3",
+          "type": "select",
+          "prompt": "State: 'I'm not busy.' Under the source system use…",
+          "options": [
+            "不忙",
+            "沒忙",
+            "忙了沒有"
+          ],
+          "answer": "不忙",
+          "explanation": "State verbs use 不."
+        },
+        {
+          "id": "u39-review-n4",
+          "type": "select",
+          "prompt": "Arrival has not happened yet. Choose…",
+          "options": [
+            "他還沒到。",
+            "他還不到。",
+            "他到了不。"
+          ],
+          "answer": "他還沒到。",
+          "explanation": "Non-happening of arrival uses 沒."
+        },
+        {
+          "id": "u39-review-d1",
+          "type": "select",
+          "prompt": "Which question checks dietary restrictions?",
+          "options": [
+            "有沒有不吃的東西？",
+            "大概幾點？",
+            "是不是比他高？"
+          ],
+          "answer": "有沒有不吃的東西？",
+          "explanation": "This is the source dietary-preference question."
+        },
+        {
+          "id": "u39-review-t1",
+          "type": "select",
+          "prompt": "Which reply shows a completed reservation?",
+          "options": [
+            "我已經訂了車票。",
+            "我不訂車票。",
+            "我訂車票左右。"
+          ],
+          "answer": "我已經訂了車票。",
+          "explanation": "訂了 marks completion."
+        }
+      ]
+    }
+  ],
+  "newVocabulary": [
+    {
+      "text": "禮物",
+      "pinyin": "lǐwù",
+      "meaning": "gift; present",
+      "lessonId": "u39-gift",
+      "core": true
+    },
+    {
+      "text": "哪裡哪裡",
+      "pinyin": "nǎlǐ nǎlǐ",
+      "meaning": "don't mention it; it's my pleasure",
+      "lessonId": "u39-gift",
+      "core": true,
+      "note": "Stored without punctuation; display may use 哪裡，哪裡！"
+    },
+    {
+      "text": "今年",
+      "pinyin": "jīnnián",
+      "meaning": "this year",
+      "lessonId": "u39-this-year",
+      "core": true
+    },
+    {
+      "text": "訂",
+      "pinyin": "dìng",
+      "meaning": "order or reserve in advance",
+      "lessonId": "u39-ordered",
+      "core": true
+    },
+    {
+      "text": "豬腳",
+      "pinyin": "zhūjiǎo",
+      "meaning": "pork knuckles",
+      "lessonId": "u39-food",
+      "core": true
+    },
+    {
+      "text": "麵線",
+      "pinyin": "miànxiàn",
+      "meaning": "extra-fine noodles",
+      "lessonId": "u39-food",
+      "core": true
+    },
+    {
+      "text": "蛋",
+      "pinyin": "dàn",
+      "meaning": "egg",
+      "lessonId": "u39-food",
+      "core": true
+    },
+    {
+      "text": "一點",
+      "pinyin": "yìdiǎn",
+      "meaning": "a little; some amount",
+      "lessonId": "u39-a-little",
+      "core": true,
+      "note": "Quantity use; builds on earlier 有一點 + description."
+    }
+  ],
+  "reviewVocabulary": [
+    "了",
+    "點",
+    "有一點",
+    "過"
+  ],
+  "newCharacters": [
+    "禮",
+    "物",
+    "訂",
+    "豬",
+    "腳",
+    "蛋"
+  ],
+  "reviewCharacters": [],
+  "characters": {
+    "禮": {
+      "hanzi": "禮",
+      "pinyin": "lǐ",
+      "zhuyin": "ㄌㄧˇ",
+      "meaning": "courtesy; gift component",
+      "strokes": 17,
+      "note": "禮 is learned in Unit 39 through 禮物.",
+      "memory": "Practice 禮 as a complete Traditional character and connect it to 禮物.",
+      "parts": [
+        {
+          "label": "禮",
+          "name": "禮 whole form",
+          "role": "Whole character",
+          "description": "Write all 17 strokes in standard order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ],
+      "layout": "single",
+      "example": {
+        "text": "禮物",
+        "pinyin": "lǐwù",
+        "meaning": "gift"
+      }
+    },
+    "物": {
+      "hanzi": "物",
+      "pinyin": "wù",
+      "zhuyin": "ㄨˋ",
+      "meaning": "thing; object",
+      "strokes": 8,
+      "note": "物 is learned in Unit 39 through 禮物.",
+      "memory": "Practice 物 as a complete Traditional character and connect it to 禮物.",
+      "parts": [
+        {
+          "label": "物",
+          "name": "物 whole form",
+          "role": "Whole character",
+          "description": "Write all 8 strokes in standard order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layout": "single",
+      "example": {
+        "text": "禮物",
+        "pinyin": "lǐwù",
+        "meaning": "gift"
+      }
+    },
+    "訂": {
+      "hanzi": "訂",
+      "pinyin": "dìng",
+      "zhuyin": "ㄉㄧㄥˋ",
+      "meaning": "order/reserve in advance",
+      "strokes": 9,
+      "note": "訂 is learned in Unit 39 through 訂.",
+      "memory": "Practice 訂 as a complete Traditional character and connect it to 訂.",
+      "parts": [
+        {
+          "label": "訂",
+          "name": "訂 whole form",
+          "role": "Whole character",
+          "description": "Write all 9 strokes in standard order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "layout": "single",
+      "example": {
+        "text": "訂",
+        "pinyin": "dìng",
+        "meaning": "order/reserve in advance"
+      }
+    },
+    "豬": {
+      "hanzi": "豬",
+      "pinyin": "zhū",
+      "zhuyin": "ㄓㄨ",
+      "meaning": "pig; pork",
+      "strokes": 15,
+      "note": "豬 is learned in Unit 39 through 豬腳.",
+      "memory": "Practice 豬 as a complete Traditional character and connect it to 豬腳.",
+      "parts": [
+        {
+          "label": "豬",
+          "name": "豬 whole form",
+          "role": "Whole character",
+          "description": "Write all 15 strokes in standard order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        }
+      ],
+      "layout": "single",
+      "example": {
+        "text": "豬腳",
+        "pinyin": "zhūjiǎo",
+        "meaning": "pork knuckles"
+      }
+    },
+    "腳": {
+      "hanzi": "腳",
+      "pinyin": "jiǎo",
+      "zhuyin": "ㄐㄧㄠˇ",
+      "meaning": "foot; leg",
+      "strokes": 13,
+      "note": "腳 is learned in Unit 39 through 豬腳.",
+      "memory": "Practice 腳 as a complete Traditional character and connect it to 豬腳.",
+      "parts": [
+        {
+          "label": "腳",
+          "name": "腳 whole form",
+          "role": "Whole character",
+          "description": "Write all 13 strokes in standard order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        }
+      ],
+      "layout": "single",
+      "example": {
+        "text": "豬腳",
+        "pinyin": "zhūjiǎo",
+        "meaning": "pork knuckles"
+      }
+    },
+    "蛋": {
+      "hanzi": "蛋",
+      "pinyin": "dàn",
+      "zhuyin": "ㄉㄢˋ",
+      "meaning": "egg",
+      "strokes": 11,
+      "note": "蛋 is learned in Unit 39 through 蛋.",
+      "memory": "Practice 蛋 as a complete Traditional character and connect it to 蛋.",
+      "parts": [
+        {
+          "label": "蛋",
+          "name": "蛋 whole form",
+          "role": "Whole character",
+          "description": "Write all 11 strokes in standard order.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "layout": "single",
+      "example": {
+        "text": "蛋",
+        "pinyin": "dàn",
+        "meaning": "egg"
+      }
+    }
+  },
+  "grammarRules": {
+    "u39-verbal-le": {
+      "id": "u39-verbal-le",
+      "title": "Completed action with verbal 了",
+      "pattern": "Verb + 了 (+ Object)",
+      "explanation": "Postverbal 了 indicates that an action/event has been completed or has taken place. It is not simply a past-tense ending. Negate the completed action with 沒（有） before the verb and remove verbal 了: 我沒吃晚飯, not *我沒吃了晚飯. A source yes/no form puts 沒有 after the completed clause. This is distinct from sentence-final changed-situation 了.",
+      "examples": [
+        {
+          "text": "我吃了晚飯。",
+          "pinyin": "Wǒ chī le wǎnfàn.",
+          "meaning": "I ate dinner."
+        },
+        {
+          "text": "我沒吃晚飯。",
+          "pinyin": "Wǒ méi chī wǎnfàn.",
+          "meaning": "I didn't eat dinner."
+        },
+        {
+          "text": "你吃了晚飯沒有？",
+          "pinyin": "Nǐ chī le wǎnfàn méiyǒu?",
+          "meaning": "Have you eaten dinner?"
+        }
+      ],
+      "remember": "Completed action: V + 了. Negative: 沒（有） + V, with no verbal 了. Do not equate 了 with past tense."
+    },
+    "u39-bu-vs-mei": {
+      "id": "u39-bu-vs-mei",
+      "title": "不 vs. 沒（有）",
+      "pattern": "不 + V/state vs. 沒（有） + event V",
+      "explanation": "For action verbs, 不 expresses habitual non-action or an intention not to act; 沒（有） says an action did not happen in the past. State verbs use 不 in the textbook's system. Process/change events use 沒（有） for non-happening, as in 還沒到. In Taiwan, 沒有 + V is more common than bare 沒 + V, but bare 沒 + V is still grammatical. When 沒 negates a completed action, verbal 了 disappears; sentence-final changed-situation 了 is a different function.",
+      "examples": [
+        {
+          "text": "我不喝咖啡。",
+          "pinyin": "Wǒ bù hē kāfēi.",
+          "meaning": "I don't drink coffee (habit)."
+        },
+        {
+          "text": "我今天不去。",
+          "pinyin": "Wǒ jīntiān bú qù.",
+          "meaning": "I'm not going today (intention)."
+        },
+        {
+          "text": "我昨天沒有去。",
+          "pinyin": "Wǒ zuótiān méiyǒu qù.",
+          "meaning": "I didn't go yesterday."
+        },
+        {
+          "text": "他還沒到。",
+          "pinyin": "Tā hái méi dào.",
+          "meaning": "He hasn't arrived yet."
+        }
+      ],
+      "remember": "不: habit/intention or contrary state. 沒（有）: an event did not happen. Taiwan commonly prefers 沒有 + V, but bare 沒 + V remains valid."
+    }
+  },
+  "grammarIntroductions": [
+    {
+      "id": "u39-verbal-le",
+      "kind": "rule",
+      "ref": "u39-verbal-le",
+      "lessonId": "u39-ordered",
+      "stepId": "u39-ordered-g1"
+    },
+    {
+      "id": "u39-bu-vs-mei",
+      "kind": "rule",
+      "ref": "u39-bu-vs-mei",
+      "lessonId": "u39-negation",
+      "stepId": "u39-negation-g1"
+    }
+  ],
+  "reviewGrammar": [
+    "u38-yi-jiu"
+  ],
+  "phrases": {
+    "u39-meal-thanks": {
+      "text": "謝謝你請我到這麼有名的餐廳吃飯。",
+      "pinyin": "Xièxie nǐ qǐng wǒ dào zhème yǒumíng de cāntīng chīfàn.",
+      "meaning": "Thank you for treating me to a meal at such a famous restaurant.",
+      "note": "Source Dialogue II turn 1 with 妳 normalized to 你.",
+      "tokens": [
+        "謝謝你請我",
+        "到這麼有名的餐廳",
+        "吃飯"
+      ]
+    },
+    "u39-gift-source": {
+      "text": "哪裡，哪裡！這是我給你的禮物。",
+      "pinyin": "Nǎlǐ, nǎlǐ! Zhè shì wǒ gěi nǐ de lǐwù.",
+      "meaning": "Don't mention it! This is my gift for you.",
+      "note": "Source turn 2. 哪裡哪裡 is an idiomatic polite response.",
+      "tokens": [
+        "哪裡哪裡",
+        "這是我給你的禮物"
+      ]
+    },
+    "u39-year-source": {
+      "text": "今年有臺灣朋友給我過生日。",
+      "pinyin": "Jīnnián yǒu Táiwān péngyǒu gěi wǒ guò shēngrì.",
+      "meaning": "This year I have a Taiwanese friend celebrating my birthday with me.",
+      "note": "Source turn 3 core.",
+      "tokens": [
+        "今年",
+        "有臺灣朋友",
+        "給我過生日"
+      ]
+    },
+    "u39-food-question": {
+      "text": "你想吃什麼？有沒有不吃的東西？",
+      "pinyin": "Nǐ xiǎng chī shénme? Yǒu méiyǒu bù chī de dōngxi?",
+      "meaning": "What would you like to eat? Is there anything you don't eat?",
+      "note": "Source dietary-preference question.",
+      "tokens": [
+        "你想吃什麼",
+        "有沒有不吃的東西"
+      ]
+    },
+    "u39-totality-preview": {
+      "text": "我什麼都吃。",
+      "pinyin": "Wǒ shénme dōu chī.",
+      "meaning": "I eat anything / everything.",
+      "note": "Comprehension-only preview; Unit 40 teaches the full totality system.",
+      "tokens": [
+        "我什麼都吃"
+      ]
+    },
+    "u39-booked-ticket": {
+      "text": "我已經訂了車票。",
+      "pinyin": "Wǒ yǐjīng dìng le chēpiào.",
+      "meaning": "I already booked the ticket.",
+      "note": "Learner-safe completed-action example before the food characters are introduced.",
+      "tokens": [
+        "我已經",
+        "訂了車票"
+      ],
+      "grammarIds": [
+        "u39-verbal-le"
+      ]
+    },
+    "u39-food-source": {
+      "text": "我已經訂了豬腳麵線和蛋。",
+      "pinyin": "Wǒ yǐjīng dìng le zhūjiǎo miànxiàn hé dàn.",
+      "meaning": "I already ordered pork knuckles, fine noodles, and an egg.",
+      "note": "Source turn 6.",
+      "tokens": [
+        "我已經訂了",
+        "豬腳麵線和蛋"
+      ],
+      "grammarIds": [
+        "u39-verbal-le"
+      ]
+    },
+    "u39-more-preview": {
+      "text": "等一下你多吃一點。",
+      "pinyin": "Děng yíxià nǐ duō chī yìdiǎn.",
+      "meaning": "In a moment, eat a little more.",
+      "note": "Source preview; Unit 40 teaches 多／少 + Verb.",
+      "tokens": [
+        "等一下",
+        "你多吃一點"
+      ]
+    },
+    "u39-le-positive": {
+      "text": "我吃了晚飯。",
+      "pinyin": "Wǒ chī le wǎnfàn.",
+      "meaning": "I ate dinner / I have eaten dinner.",
+      "note": "Completed-action verbal 了 follows the verb.",
+      "tokens": [
+        "我吃了",
+        "晚飯"
+      ],
+      "grammarIds": [
+        "u39-verbal-le"
+      ]
+    },
+    "u39-le-negative": {
+      "text": "我沒吃晚飯。",
+      "pinyin": "Wǒ méi chī wǎnfàn.",
+      "meaning": "I didn't eat dinner.",
+      "note": "Negation uses 沒 before the verb and removes verbal 了.",
+      "tokens": [
+        "我沒吃",
+        "晚飯"
+      ],
+      "grammarIds": [
+        "u39-verbal-le",
+        "u39-bu-vs-mei"
+      ]
+    },
+    "u39-le-question": {
+      "text": "你吃了晚飯沒有？",
+      "pinyin": "Nǐ chī le wǎnfàn méiyǒu?",
+      "meaning": "Have you eaten dinner?",
+      "note": "Source-style completed-action yes/no question with 沒有 at the end.",
+      "tokens": [
+        "你吃了晚飯",
+        "沒有"
+      ],
+      "grammarIds": [
+        "u39-verbal-le"
+      ]
+    },
+    "u39-final-le-negative": {
+      "text": "我現在不吃這些東西了。",
+      "pinyin": "Wǒ xiànzài bù chī zhèxiē dōngxi le.",
+      "meaning": "I don't eat these things anymore now.",
+      "note": "Final 了 marks a changed situation; it is not the negated completed-action verbal 了.",
+      "tokens": [
+        "我現在",
+        "不吃這些東西了"
+      ],
+      "grammarIds": [
+        "u39-bu-vs-mei"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u39-gift-p1",
+    "u39-this-year-p2",
+    "u39-ordered-s2",
+    "u39-negation-s3",
+    "u39-negation-s4",
+    "u39-review-g2"
+  ]
+};
+export default unit;
