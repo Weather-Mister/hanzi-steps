@@ -166,6 +166,8 @@ Four ordinary source forms already have Book 1 ownership before Lesson 13:
 
 These are **new-sense or new-function teaching**, not duplicate first-teaching vocabulary.
 
+A third-pass learner-state check adds one nuance for 對: its character was already introduced in Unit 21 and the character metadata mentions “toward”, but the learner has not received a canonical standalone vocabulary entry or productive **對 + person** prepositional pattern. Lesson 13 should therefore formalize the prepositional use without pretending the glyph or semantic hint is wholly unseen.
+
 ### Future ownership collision
 
 過 is currently indexed only in Book 2 Unit 3 with the later sense “go past; cross”. For a Book 1 learner after Unit 36, 過 is not yet learned.
@@ -184,6 +186,7 @@ All nine source Phrase entries and the Name 西班牙 are also currently absent 
 
 ### Important related prior forms
 
+- 樂 was taught earlier with the reading **yuè** in 音樂. Lesson 13 快樂 requires **lè**. 快樂 is therefore not only a new exact word but also the learner's first productive encounter with this alternate reading of an already-known character; it needs an explicit reading note even though 樂 is not a new handwriting target.
 - 有一點 already exists from Unit 16; Lesson 13's exact 一點 is a distinct quantity expression and must not be conflated with 有一點 + description.
 - 點 already exists as “order food”; Lesson 13 訂 is “order in advance” and needs a direct contrast.
 - 多 and 少 are already known with earlier quantity meanings; Grammar V introduces their pre-verbal “do more / do less than planned/usual” use.
@@ -198,7 +201,9 @@ Across all source-listed Lesson 13 vocabulary / names / phrases there are 72 uni
 
 The second-pass audit caught an important ordering nuance: 口 exists in the repository only because Book 2 Unit 1 teaches it later. A global character-index presence check therefore falsely treated it as already known. For Lesson 13 planning, knowledge must be evaluated against the chronological Book 1 Unit 36 learner state, not against the repository-wide index.
 
-This is the complete first-pass handwriting / learner-facing character risk pool from the formal source inventory. Phase 2 must decide which phrase-only characters receive formal handwriting teaching and must ensure that no assessment exposes a future NEW character before its introduction.
+Because 門口 is formal Lesson 13 Vocabulary I, this is not merely a warning: **Book 1 Lesson 13 must become the chronological first character teaching of 口.** The existing Book 2 Unit 1 character treatment of 口 must later be converted to review/reuse rather than continuing to claim first character ownership.
+
+This is the complete formal-inventory handwriting / learner-facing character risk pool at the Unit 36 boundary. Phase 2 must decide which phrase-only characters receive formal handwriting teaching and must ensure that no assessment exposes a future NEW character before its introduction.
 
 ### Dialogue-only glyph risks
 
@@ -255,6 +260,8 @@ Source question form:
 - completed-action yes/no questions may place 沒有 at the end, e.g. 吃了午餐沒有？ / 付了沒有？ / 開始了沒有？
 
 This grammar must not be reduced to “了 = past tense”, and it must be explicitly distinguished from already-known sentence-final 了.
+
+**Critical scope warning from the source itself:** the rule “了 does not occur in negative sentences” applies to the **verbal completed-action 了** being taught in Grammar II, not to every 了 in Mandarin. Lesson 13's own Dialogue II says **現在大部分年輕人過生日不吃這些東西了**, where the final 了 marks a changed situation. Dialogue I likewise contains already-familiar sentence-final 了 in **最近太忙了** and **你太客氣了**. Phase 2 must never teach the overgeneralization “negative sentences cannot contain 了”. It must contrast **沒 + V** with no verbal 了 against independent sentence-final 了 uses.
 
 ## Grammar III — 不 negation vs. 沒（有） negation
 
@@ -371,6 +378,51 @@ Questions:
 
 The textbook includes both simple sameness and equality of a property. Phase 2 must preserve the scope distinction in negation and not collapse all negative forms into “different”.
 
+## Grammar-section exercise demand ledger
+
+The third-pass audit separately inventories what the textbook asks learners to **do** after each grammar explanation. These tasks are evidence for productive mastery and should inform Phase 2 exercise design even when Hanzi Steps does not copy the textbook activity literally.
+
+### Grammar I exercise
+
+The learner completes short dialogues using **一…就…** from situational prompts. This requires productive sequencing rather than merely recognizing the pattern.
+
+### Grammar II exercise
+
+The learner listens and distinguishes whether several people **做了 / 沒做** particular activities. This directly tests completed vs. non-completed events and requires the learner to process the 了 / 沒 contrast in context.
+
+### Grammar III exercise
+
+The learner chooses **沒 or 不** in sentence blanks **and explains why**. The explanation requirement confirms that the source expects a semantic/verb-type distinction, not memorized surface substitution.
+
+### Grammar IV exercise
+
+The learner rewrites ordinary statements into **all-inclusive or all-exclusive** question-word patterns. This requires productive transformation among 誰 / 哪裡 / 什麼 / 什麼時候 / 怎麼 and 都 / 也 + 不 / 沒.
+
+### Grammar V exercise
+
+The learner looks at situations/pictures and gives suggestions with **多 / 少 + Verb**. This tests productive “do more / do less than planned/usual” use.
+
+### Grammar VI exercise
+
+The learner inserts **是不是** into the appropriate position in complete sentences. This tests placement and confirmation structure, not merely recognition of the phrase.
+
+### Grammar VII exercise
+
+The learner matches activities/pictures and then writes comparison sentences with **跟…一樣…**. This requires productive comparison of objects, qualities, and activities.
+
+### Source-example / exercise glyph boundary
+
+Several grammar examples and exercises contain characters that are **not** formal Lesson 13 vocabulary and are also not learned by the end of Book 1 Unit 36. They must not be copied blindly into learner-facing Hanzi Steps before adaptation:
+
+- **漂、亮** in 漂亮 from a Grammar II example;
+- **玉、田** in the Grammar II listening participants 如玉 / 田中 (安 is already flagged from the dialogue names);
+- **李** in 李先生 from the Grammar IV rewrite exercise;
+- **冷** in the Grammar IV rewrite exercise;
+- **銀** in 銀行 from Grammar VI examples — 銀 exists only later in Book 2 Unit 2;
+- **王** in 小王 from a Grammar VII example.
+
+These are source-example support glyphs, **not reasons to enlarge Lesson 13's formal vocabulary/handwriting inventory**. Phase 2 should either adapt those examples to already-taught language or defer/directly scaffold them without creating accidental first-teaching obligations.
+
 ## Integrated activities and what they require
 
 ### Activity I — Going to Night Markets
@@ -479,6 +531,32 @@ Confirmed on second pass:
 - The four self-assessment outcomes match the four lesson-level learning objectives.
 
 No additional missing vocabulary item, dialogue turn, grammar section, activity, or learning objective was found in the second pass.
+
+## Third-pass adversarial verification
+
+A third, deliberately adversarial pass was completed after the second-pass correction. Unlike the earlier coverage passes, it targeted hidden learner-state assumptions, polyphonic/readings, 了 scope, textbook exercise demands, and source examples that could leak untaught characters.
+
+Findings and repairs:
+
+1. **口 requires a real character-ownership migration.** It is part of formal Vocabulary I 門口 but is currently first-owned only by Book 2 Unit 1. Lesson 13 must become its chronological first character teaching; Book 2 must later treat 口 as review.
+2. **快樂 introduces a new reading of an old character.** 樂 is already known as yuè from 音樂, but Lesson 13 requires lè in 快樂. Phase 2 must teach the reading change explicitly without duplicating handwriting ownership.
+3. **The verbal-了 negation rule needed a scope guard.** The source prohibition concerns completed-action verbal 了 under 沒; the lesson itself also contains sentence-final 了 after a negative clause in 不吃這些東西了. The ledger now explicitly blocks the false rule “negative sentences cannot contain 了”.
+4. **The grammar practice layer was under-specified.** The ledger now records the productive task demanded after each of Grammar I–VII, including transformation, listening, explanation, insertion, and comparison writing.
+5. **Several source examples contain untaught non-target glyphs.** 漂、亮、玉、田、李、冷、銀、王 are now explicitly flagged so Phase 2 will not blindly copy source examples and accidentally expand the formal curriculum.
+6. **對 is not semantically completely unseen.** Unit 21 character metadata already hints at “toward”, although the productive prepositional pattern is not formally taught. Lesson 13 should formalize the pattern rather than presenting the glyph/sense as wholly new.
+
+The pass rechecked the earlier counts after these repairs:
+- Dialogue I: 14 / 14 turns accounted for.
+- Dialogue II: 13 / 13 turns accounted for.
+- Source-listed items: 40 = 30 ordinary vocabulary + 1 Name + 9 Phrases.
+- Ordinary source forms already canonically owned in Book 1: 怎麼、那麼、了、對.
+- Later exact-form vocabulary collision: 過 in Book 2 Unit 3.
+- Later character collision: 口 in Book 2 Unit 1.
+- Formal Lesson 13 characters not yet learned by the end of Unit 36: 24.
+- Dialogue-only untaught glyph risks: 怡、君、安、蓮、妳.
+- Additional grammar-example/exercise support glyph risks: 漂、亮、玉、田、李、冷、銀、王.
+
+No eighth grammar section, missing listed vocabulary item, missing dialogue turn, missing integrated activity, or missing self-assessment objective was found.
 
 ## Phase 1 completion status
 
