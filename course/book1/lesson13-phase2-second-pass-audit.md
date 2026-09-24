@@ -218,11 +218,22 @@ Canonical text:
 - store 哪裡哪裡 without punctuation for vocabulary identity/search;
 - learner display may reproduce 哪裡，哪裡！.
 
+## Ambiguity / single-answer audit
+
+The source permits multiple forms in several places. The implementation spec now blocks false “one right answer” questions:
+
+- 一…就… questions may use 嗎 or 是不是; do not mark one ungrammatical merely because the other is targeted.
+- Taiwan usage prefers 沒有 + V, but bare 沒 + V is still source-valid.
+- negative total-exclusion may use either 都 or 也 before 不／沒; do not make 都 vs. 也 a single-answer grammatical contrast.
+- 跟…一樣 questions may use 一樣不一樣 or 是不是一樣; both are source-valid.
+
+Where pragmatic differences matter (especially 是不是 confirmation vs. neutral 嗎/A-not-A), the item must provide enough context for one defensible answer rather than pretending grammatical alternatives are impossible.
+
 ## Final second-pass result
 
 No source-backed change to the five-unit architecture is required.
 
-The second pass **did** improve the implementation contract in eight places:
+The second pass **did** improve the implementation contract in nine places:
 1. demonstrated negative Event A for 一…就…;
 2. explicitly allocated the source cultural readings;
 3. made integrated activities glyph-safe;
@@ -230,6 +241,7 @@ The second pass **did** improve the implementation contract in eight places:
 5. documented partial familiarity for 語言 / 一點;
 6. specified safe, topology-preserving 過 / 口 migrations;
 7. gave each review a concrete useful-activity budget;
-8. locked unit themes/titles/labels and book-reference scope so implementation does not reopen presentation metadata decisions.
+8. locked unit themes/titles/labels and book-reference scope so implementation does not reopen presentation metadata decisions;
+9. added explicit ambiguity guards so source-valid alternatives are never turned into false single-answer contrasts.
 
 After these refinements, Phase 2 is implementation-ready for Unit 37.
