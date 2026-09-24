@@ -613,7 +613,7 @@ const unit:UnitData = {
           "id": "u39-review-l3",
           "type": "listen",
           "char": "蛋",
-          "audioText": "我已經訂了豬腳麵線和蛋。",
+          "audioText": "我今天吃蛋。",
           "prompt": "Listen for 'egg'.",
           "options": [
             "蛋",
