@@ -75,6 +75,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - note: Source B1L14-D2T05; 每…都… is review.
 - tokens: [`這裡每年夏天`, `都有颱風`]
 
+### u44-typhoon-conditions
+- text: **颱風來的時候，風和雨都很大，做什麼都很不方便。**
+- pinyin: **Táifēng lái de shíhou, fēng hé yǔ dōu hěn dà, zuò shénme dōu hěn bù fāngbiàn.**
+- meaning: **When a typhoon comes, the wind and rain are both strong, and everything is inconvenient to do.**
+- note: Preserves the condition/totality content of B1L14-D2T05; …的時候 and question-word + 都 are prior review.
+- tokens: [`颱風來的時候`, `風和雨都很大`, `做什麼都很不方便`]
+
 ### u44-culture-note
 - text: **颱風**
 - pinyin: **táifēng**
@@ -296,24 +303,25 @@ Order:
    - answer: **imminence with 快要…了**
    - explanation: 快要…了 was taught in Unit 43.
 6. phrase `u44-typhoon-summer`.
-7. phrase `u44-culture-note` — EXPLAIN culture before culture questions.
-8. select `u44-culture-s1`
+7. phrase `u44-typhoon-conditions`.
+8. phrase `u44-culture-note` — EXPLAIN culture before culture questions.
+9. select `u44-culture-s1`
    - prompt: **In the textbook's historical typhoon-day reading, what forecast window is mentioned?**
    - options: [`the next four hours`, `the next four days`, `the next month`]
    - answer: **the next four hours**
    - explanation: The source reading states a four-hour forecast window.
-9. select `u44-culture-s2`
+10. select `u44-culture-s2`
    - prompt: **According to the textbook's historical account, where was typhoon-day decision-making later vested?**
    - options: [`regional governments`, `individual students`, `transport companies`]
    - answer: **regional governments**
    - explanation: The source says the decision was later vested in regional governments. The culture card already frames this as historical/source context, not current instructions.
-10. listen `u44-typhoon-l1`
+11. listen `u44-typhoon-l1`
    - audioText: **颱風快要來了。**
    - prompt: **What is about to come?**
    - options: [`a typhoon`, `New Year`, `red leaves`]
    - answer: **a typhoon**
    - explanation: The audio says 颱風.
-11. order `u44-typhoon-o1` using `u44-typhoon-coming`
+12. order `u44-typhoon-o1` using `u44-typhoon-coming`
    - tokens: [`颱風`, `快要來了`]
 
 ### u44-wet — Wet and Annoying
