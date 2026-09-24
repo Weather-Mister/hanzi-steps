@@ -22,13 +22,10 @@ function reviewBlob(module){
   const review=module.lessons.find(l=>l.id===module.reviewLessonId);
   const values=[];
   for(const step of review.steps){
-    for(const key of ['prompt','answer','explanation','audioText','char'])if(typeof step[key]==='string')values.push(step[key]);
-    if(Array.isArray(step.options))values.push(...step.options);
-    if(Array.isArray(step.tokens))values.push(...step.tokens);
-    if(step.phrase&&module.phrases[step.phrase]){
-      const p=module.phrases[step.phrase];
-      values.push(p.text,p.pinyin,p.meaning,p.note??'');
-    }
+    // Count only fields that make the item an actual target. Distractors and
+    // explanations must not satisfy review retrieval by themselves.
+    for(const key of ['prompt','answer','audioText'])if(typeof step[key]==='string')values.push(step[key]);
+    if(step.type==='order'&&step.phrase&&module.phrases[step.phrase])values.push(module.phrases[step.phrase].text);
   }
   return values.join('\n');
 }
@@ -166,4 +163,12 @@ test('Unit 37 vocabulary becomes Mega Challenge eligible after teaching lessons 
     assert.ok(item,'canonical lookup missing '+word.text);
     assert.ok(eligible.has(item.id),'Mega Challenge misses '+word.text);
   }
+});
+
+
+test('Unit 37 learner activities do not expose curriculum-planning meta',()=>{
+  const text=u37.lessons.flatMap(l=>l.steps).flatMap(s=>[
+    s.prompt,s.answer,s.explanation,...(s.options??[])
+  ]).filter(Boolean).join('\n');
+  assert.doesNotMatch(text,/\bUnit\s+\d+\b|formal grammar here|new Hanzi target|which unit|curriculum/i);
 });

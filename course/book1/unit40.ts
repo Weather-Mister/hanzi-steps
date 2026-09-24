@@ -149,24 +149,24 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "Which statement is correct?",
           "options": [
-            "Both 都 and 也 can be source-valid in negative total exclusion.",
+            "Both 都 and 也 can be valid in negative total exclusion.",
             "Only 都 is grammatical.",
             "Only 也 is grammatical."
           ],
-          "answer": "Both 都 and 也 can be source-valid in negative total exclusion.",
-          "explanation": "Do not create a false single-answer contrast."
+          "answer": "Both 都 and 也 can be valid in negative total exclusion.",
+          "explanation": "Both markers occur before 不／沒 in this negative total-exclusion pattern."
         },
         {
           "id": "u40-nothing-s3",
           "type": "select",
-          "prompt": "The source specifies which question strategy here?",
+          "prompt": "Which question strategy is used with this totality pattern?",
           "options": [
             "嗎",
             "ordinary A-not-A only",
             "no questions"
           ],
           "answer": "嗎",
-          "explanation": "The grammar note specifies 嗎."
+          "explanation": "Use 嗎 for the yes/no question form taught here."
         }
       ]
     },
@@ -369,7 +369,7 @@ const unit:UnitData = {
             "Because every past sentence needs 了."
           ],
           "answer": "It is sentence-final changed-situation 了.",
-          "explanation": "It is not the completed-action verbal 了 from Unit 39."
+          "explanation": "This is sentence-final changed-situation 了, not completed-action verbal 了."
         }
       ]
     },
@@ -493,26 +493,26 @@ const unit:UnitData = {
         {
           "id": "u40-customs-c4",
           "type": "select",
-          "prompt": "How should the first-birthday 'grabbing' custom be treated here?",
+          "prompt": "In the first-birthday zhuāzhōu 'grabbing' custom, what does the child do?",
           "options": [
-            "as optional annotated culture context, not an assessed new Hanzi target",
-            "as a new mandatory vocabulary word",
-            "as Lesson 14 grammar"
+            "Choose or grab one of several objects placed around them.",
+            "Blow out sixty candles.",
+            "Exchange birthday gifts at school."
           ],
-          "answer": "as optional annotated culture context, not an assessed new Hanzi target",
-          "explanation": "The plan avoids inflating formal vocabulary from the culture reading."
+          "answer": "Choose or grab one of several objects placed around them.",
+          "explanation": "Traditionally, the chosen object is interpreted as a clue to the child's future character or profession."
         },
         {
           "id": "u40-customs-s1",
           "type": "select",
-          "prompt": "Which unit will make productive same/different cultural comparisons?",
+          "prompt": "According to the reading, what is common for birthdays today?",
           "options": [
-            "Unit 41",
-            "Unit 39",
-            "Unit 37"
+            "Celebrating according to the Gregorian calendar.",
+            "Using only the lunar calendar.",
+            "Celebrating only at ages 60, 70, and 80."
           ],
-          "answer": "Unit 41",
-          "explanation": "Unit 40 prepares the content; Unit 41 teaches comparison."
+          "answer": "Celebrating according to the Gregorian calendar.",
+          "explanation": "Traditional birthdays could follow the lunar calendar, while most people today use the Gregorian calendar."
         }
       ]
     },
@@ -597,7 +597,7 @@ const unit:UnitData = {
             "same"
           ],
           "answer": "most; most of",
-          "explanation": "大部分 is a source Phrase form."
+          "explanation": "大部分 means 'most; most of'."
         },
         {
           "id": "u40-review-g1",
@@ -654,7 +654,7 @@ const unit:UnitData = {
             "也 is always wrong in negative totality."
           ],
           "answer": "Both 都 and 也 can be valid in negative total exclusion.",
-          "explanation": "The source permits both.",
+          "explanation": "Both 都 and 也 are valid before 不／沒 in this pattern.",
           "grammarIds": [
             "u40-questionword-totality"
           ]
@@ -662,7 +662,7 @@ const unit:UnitData = {
         {
           "id": "u40-review-g5",
           "type": "select",
-          "prompt": "How does the source form a question for this pattern?",
+          "prompt": "How do you form a yes/no question with this totality pattern?",
           "options": [
             "with 嗎",
             "with ordinary A-not-A only",

@@ -222,7 +222,7 @@ const unit:UnitData = {
             "approximately"
           ],
           "answer": "so / that (degree)",
-          "explanation": "This is the degree use; Unit 36 used 那麼 as 'then/in that case'."
+          "explanation": "Here 那麼 means 'so / that' before a degree description, not 'then / in that case'."
         },
         {
           "id": "u38-enthusiastic-l1",
@@ -341,7 +341,7 @@ const unit:UnitData = {
             "again"
           ],
           "answer": "same; alike",
-          "explanation": "Unit 41 later expands this into 跟…一樣."
+          "explanation": "Here 一樣 means 'the same / likewise'."
         },
         {
           "id": "u38-polite-p2",
@@ -374,7 +374,7 @@ const unit:UnitData = {
             "forget"
           ],
           "answer": "celebrate",
-          "explanation": "Lesson 13 teaches 過生日 'celebrate a birthday'."
+          "explanation": "In 過生日, 過 means 'celebrate'."
         },
         {
           "id": "u38-celebrate-s2",
@@ -386,7 +386,7 @@ const unit:UnitData = {
             "回來生日"
           ],
           "answer": "過生日",
-          "explanation": "過生日 is the source combination."
+          "explanation": "過生日 is the natural expression for celebrating a birthday."
         },
         {
           "id": "u38-celebrate-o1",
@@ -476,14 +476,14 @@ const unit:UnitData = {
         {
           "id": "u38-as-soon-s4",
           "type": "select",
-          "prompt": "How can the source form a yes/no question?",
+          "prompt": "How can you form a yes/no question with 一…就…?",
           "options": [
             "Use 嗎 or 是不是.",
             "Use only ordinary A-not-A.",
             "Questions are impossible."
           ],
           "answer": "Use 嗎 or 是不是.",
-          "explanation": "Both are source-valid; ordinary A-not-A is unavailable."
+          "explanation": "Use 嗎 or 是不是; ordinary A-not-A is unavailable in this pattern."
         }
       ]
     },
@@ -727,7 +727,7 @@ const unit:UnitData = {
             "approximately"
           ],
           "answer": "same; alike",
-          "explanation": "Full comparison grammar comes later."
+          "explanation": "一樣 means 'same; alike'."
         },
         {
           "id": "u38-review-v4",
@@ -739,7 +739,7 @@ const unit:UnitData = {
             "finish class"
           ],
           "answer": "celebrate",
-          "explanation": "This is Lesson 13's first vocabulary sense."
+          "explanation": "In 過生日, 過 means 'celebrate'."
         },
         {
           "id": "u38-review-v5",
@@ -798,14 +798,14 @@ const unit:UnitData = {
         {
           "id": "u38-review-g4",
           "type": "select",
-          "prompt": "Which question statement is accurate?",
+          "prompt": "Which statement about 一…就… questions is accurate?",
           "options": [
-            "The source allows 嗎 or 是不是; ordinary A-not-A is unavailable.",
+            "Use 嗎 or 是不是; ordinary A-not-A is unavailable.",
             "Only A-not-A is possible.",
             "Questions cannot use 嗎."
           ],
-          "answer": "The source allows 嗎 or 是不是; ordinary A-not-A is unavailable.",
-          "explanation": "Both source-valid question strategies remain valid.",
+          "answer": "Use 嗎 or 是不是; ordinary A-not-A is unavailable.",
+          "explanation": "Both 嗎 and 是不是 are valid here; ordinary A-not-A is not.",
           "grammarIds": [
             "u38-yi-jiu"
           ]
