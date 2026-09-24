@@ -373,14 +373,14 @@ const unit:UnitData = {
         {
           "id": "u37-forget-s4",
           "type": "select",
-          "prompt": "Does Unit 37 teach a general rule that 了 means past tense?",
+          "prompt": "In 啊，我怎麼忘了！, what is safest to learn from this example?",
           "options": [
-            "No — 忘了 is learned here as a source chunk; the completed-action system comes in Unit 39.",
-            "Yes — every past sentence must use 了.",
-            "Yes — 了 always means yesterday."
+            "忘了 means 'forgot' here; do not treat 了 as a universal past-tense ending.",
+            "了 always means past tense.",
+            "Every past sentence must contain 了."
           ],
-          "answer": "No — 忘了 is learned here as a source chunk; the completed-action system comes in Unit 39.",
-          "explanation": "Unit 37 keeps the source meaning without overgeneralizing verbal 了 before its formal lesson."
+          "answer": "忘了 means 'forgot' here; do not treat 了 as a universal past-tense ending.",
+          "explanation": "This example gives you the natural chunk 忘了, 'forgot'. Chinese 了 has more than one function."
         }
       ]
     },
