@@ -139,7 +139,8 @@ const unit:UnitData = {
             "雨"
           ],
           "answer": "傘",
-          "explanation": "The audio asks about an umbrella."
+          "explanation": "The audio asks about an umbrella.",
+          "char": "傘"
         },
         {
           "id": "u44-umbrella-o1",
@@ -267,12 +268,13 @@ const unit:UnitData = {
           "audioText": "颱風快要來了。",
           "prompt": "What is about to come?",
           "options": [
-            "a typhoon",
-            "New Year",
-            "red leaves"
+            "颱風",
+            "新年",
+            "下雨"
           ],
-          "answer": "a typhoon",
-          "explanation": "The audio says 颱風."
+          "answer": "颱風",
+          "explanation": "The audio says 颱風, “typhoon.”",
+          "char": "颱"
         },
         {
           "id": "u44-typhoon-o1",
@@ -428,14 +430,15 @@ const unit:UnitData = {
           "id": "u44-wet-l1",
           "type": "listen",
           "audioText": "哪裡都濕濕的。真討厭。",
-          "prompt": "How does the speaker feel about the wet conditions?",
+          "prompt": "Which reaction do you hear?",
           "options": [
-            "annoyed",
-            "pleased with the conditions",
-            "indifferent to the conditions"
+            "討厭",
+            "開心",
+            "舒服"
           ],
-          "answer": "annoyed",
-          "explanation": "真討厭 expresses annoyance."
+          "answer": "討厭",
+          "explanation": "The audio says 真討厭, expressing annoyance.",
+          "char": "討"
         },
         {
           "id": "u44-wet-o1",
@@ -561,14 +564,15 @@ const unit:UnitData = {
           "id": "u44-news-l1",
           "type": "listen",
           "audioText": "電視新聞說，請大家多小心。",
-          "prompt": "What does the news ask everyone to do?",
+          "prompt": "What caution phrase do you hear?",
           "options": [
-            "be extra careful",
-            "bring an umbrella",
-            "wait until the rain stops"
+            "多小心",
+            "去滑雪",
+            "想家"
           ],
-          "answer": "be extra careful",
-          "explanation": "請大家多小心 gives the caution."
+          "answer": "多小心",
+          "explanation": "The audio says 請大家多小心, asking everyone to be extra careful.",
+          "char": "聞"
         },
         {
           "id": "u44-news-o1",
@@ -707,11 +711,12 @@ const unit:UnitData = {
           "prompt": "Which time is the comparison baseline?",
           "options": [
             "上次",
-            "這次",
-            "明年"
+            "明年",
+            "去年"
           ],
           "answer": "上次",
-          "explanation": "This typhoon is compared against the previous one."
+          "explanation": "The audio compares this typhoon with 上次, “last time.”",
+          "char": "更"
         },
         {
           "id": "u44-g4-o1",
@@ -848,14 +853,15 @@ const unit:UnitData = {
           "id": "u44-g5-l1",
           "type": "listen",
           "audioText": "希望這次的沒有上次的那麼可怕。",
-          "prompt": "What comparison do you hear?",
+          "prompt": "Which comparison phrase do you hear?",
           "options": [
-            "this one is not as scary as the last one",
-            "this one is even scarier than the last one",
-            "both are equally scary"
+            "沒有上次的那麼可怕",
+            "比上次的更可怕",
+            "跟上次的一樣可怕"
           ],
-          "answer": "this one is not as scary as the last one",
-          "explanation": "沒有…那麼… gives the inferior comparison."
+          "answer": "沒有上次的那麼可怕",
+          "explanation": "The audio says this one is not as scary as the last one.",
+          "char": "怕"
         },
         {
           "id": "u44-g5-o1",
@@ -891,38 +897,41 @@ const unit:UnitData = {
           "audioText": "颱風快要來了。",
           "prompt": "What is about to come?",
           "options": [
-            "a typhoon",
-            "New Year",
-            "autumn leaves"
+            "颱風",
+            "新年",
+            "下雨"
           ],
-          "answer": "a typhoon",
-          "explanation": "颱風 means typhoon."
+          "answer": "颱風",
+          "explanation": "The audio says 颱風, “typhoon.”",
+          "char": "颱"
         },
         {
           "id": "u44-review-l2",
           "type": "listen",
           "audioText": "電視新聞說，請大家多小心。",
-          "prompt": "What is the warning?",
+          "prompt": "What caution phrase do you hear?",
           "options": [
-            "everyone should be extra careful",
-            "everyone should go skiing",
-            "everyone should miss home"
+            "多小心",
+            "去滑雪",
+            "想家"
           ],
-          "answer": "everyone should be extra careful",
-          "explanation": "請大家多小心 is the caution."
+          "answer": "多小心",
+          "explanation": "The audio says 請大家多小心.",
+          "char": "聞"
         },
         {
           "id": "u44-review-l3",
           "type": "listen",
           "audioText": "希望這次的沒有上次的那麼可怕。",
-          "prompt": "What does the speaker hope?",
+          "prompt": "Which comparison phrase do you hear?",
           "options": [
-            "this one is not as scary as the last one",
-            "this one is even bigger",
-            "both are identical"
+            "沒有上次的那麼可怕",
+            "比上次的更可怕",
+            "跟上次的一樣可怕"
           ],
-          "answer": "this one is not as scary as the last one",
-          "explanation": "沒有…那麼… expresses lower degree."
+          "answer": "沒有上次的那麼可怕",
+          "explanation": "The audio uses 沒有…那麼… to express lower degree.",
+          "char": "怕"
         },
         {
           "id": "u44-review-san",
