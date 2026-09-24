@@ -1200,7 +1200,7 @@ const unit:UnitData = {
       "text": "謝謝你請我到這麼有名的餐廳吃飯。",
       "pinyin": "Xièxie nǐ qǐng wǒ dào zhème yǒumíng de cāntīng chīfàn.",
       "meaning": "Thank you for treating me to a meal at such a famous restaurant.",
-      "note": "Source Dialogue II turn 1 with 妳 normalized to 你.",
+      "note": "Source Dialogue II turn 1 with the source second-person form normalized to 你.",
       "tokens": [
         "謝謝你請我",
         "到這麼有名的餐廳",
