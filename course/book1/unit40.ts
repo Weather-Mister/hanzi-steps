@@ -609,7 +609,10 @@ const unit:UnitData = {
             "都誰…"
           ],
           "answer": "誰都…",
-          "explanation": "Affirmative 誰 + 都 gives everyone."
+          "explanation": "Affirmative 誰 + 都 gives everyone.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ]
         },
         {
           "id": "u40-review-g2",
@@ -621,7 +624,10 @@ const unit:UnitData = {
             "沒哪裡都去"
           ],
           "answer": "哪裡都沒去",
-          "explanation": "Negative comes after 都."
+          "explanation": "Negative comes after 都.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ]
         },
         {
           "id": "u40-review-g3",
@@ -633,7 +639,10 @@ const unit:UnitData = {
             "也什麼不想吃"
           ],
           "answer": "什麼也不想吃",
-          "explanation": "Question word + 也 + 不."
+          "explanation": "Question word + 也 + 不.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ]
         },
         {
           "id": "u40-review-g4",
@@ -645,7 +654,10 @@ const unit:UnitData = {
             "也 is always wrong in negative totality."
           ],
           "answer": "Both 都 and 也 can be valid in negative total exclusion.",
-          "explanation": "The source permits both."
+          "explanation": "The source permits both.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ]
         },
         {
           "id": "u40-review-g5",
@@ -657,7 +669,10 @@ const unit:UnitData = {
             "questions are impossible"
           ],
           "answer": "with 嗎",
-          "explanation": "The grammar section specifies 嗎."
+          "explanation": "The grammar section specifies 嗎.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ]
         },
         {
           "id": "u40-review-m1",
@@ -669,7 +684,10 @@ const unit:UnitData = {
             "吃都一點"
           ],
           "answer": "多吃一點",
-          "explanation": "多 goes before the verb."
+          "explanation": "多 goes before the verb.",
+          "grammarIds": [
+            "u40-more-less-verb"
+          ]
         },
         {
           "id": "u40-review-m2",
@@ -681,7 +699,10 @@ const unit:UnitData = {
             "東西買少"
           ],
           "answer": "少買東西",
-          "explanation": "少 goes before the verb."
+          "explanation": "少 goes before the verb.",
+          "grammarIds": [
+            "u40-more-less-verb"
+          ]
         },
         {
           "id": "u40-review-m3",
@@ -693,7 +714,10 @@ const unit:UnitData = {
             "Only present."
           ],
           "answer": "Yes, both.",
-          "explanation": "The source allows both."
+          "explanation": "The source allows both.",
+          "grammarIds": [
+            "u40-more-less-verb"
+          ]
         },
         {
           "id": "u40-review-d1",
