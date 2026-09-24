@@ -150,7 +150,7 @@ test('Unit 41 capstone covers all four Lesson 13 objectives',()=>{
   const cap=JSON.stringify(u41.lessons.find(l=>l.id==='u41-capstone'));
   assert.ok(cap.includes('Phone appointment'));
   assert.ok(cap.includes('Dietary preferences'));
-  assert.ok(cap.includes('same as your friend'));
+  assert.ok(cap.includes('我們跟你們一樣吃蛋糕。'));
   assert.ok(cap.includes('birthday wishes'));
 });
 
