@@ -91,7 +91,7 @@ The two DEFERRED entries are formal textbook **Name** entries. They remain sourc
 | **B1L14-G002** Double 了 completion-to-date | **NEW** | G001; `u39-verbal-le`; `u31-sentential-le`; 已經 (Unit 33) | The accumulated-to-now meaning and double-了 contrast are not previously owned. Teach only after G001 so “completed duration” vs. “duration up to now” is explicit. |
 | **B1L14-G003** 快／要／快要…了 imminence | **NEW** | V008 快 expansion; V022 要 expansion; `u31-sentential-le` | New construction. Must preserve imminence/change-of-state meaning, Taiwan-preferred 快要 note, and the explicit-time restriction. Do not reduce it to generic future. |
 | **B1L14-G004** 比…更… | **NEW** | V027 更; `u25-bi-comparison`; `u24-bijiao`; `u41-shibushi` for source-style confirmation questions | New comparison construction with a source-significant “even more” baseline. It extends, rather than replaces, the existing 比 system. |
-| **B1L14-G005** A 沒有 B 那麼／這麼 + State Verb | **NEW** | `u25-bi-comparison`; `u41-gen-yiyang`; 沒有 (Unit 2); 這麼 (Unit 17); degree use of 那麼 explicitly practiced in Unit 38 | New inferior-degree comparison. Keep it distinct from ordinary 沒有 negation and from Unit-25 不比. The source three-way equal/inferior/superior contrast is required. |
+| **B1L14-G005** A 沒有 B 那麼／這麼 + State Verb | **NEW** | `u25-bi-comparison`; `u41-gen-yiyang`; 沒有 (Unit 2); `u17-so` for 這麼; Unit-38 `u38-enthusiastic` for degree 那麼 | New inferior-degree comparison. Keep it distinct from ordinary 沒有 negation and from Unit-25 不比. The source three-way equal/inferior/superior contrast is required. |
 
 ## Required intra-Lesson-14 edges
 
@@ -151,12 +151,12 @@ These records do not automatically become Lesson-14 vocabulary. Their dispositio
 | X024 | …的時候 | **KNOWN** | `u27-de-shihou`. |
 | X025 | 還沒有 / 已經 | **REVIEW** | 已經 is Unit 33; Unit 39 explicitly uses 還沒到 in negation teaching. |
 | X026 | 太…了 / 有一點… | **KNOWN** | Units 14 and 16. |
-| X027 | 吧 / 呢 in dialogue contexts | **REVIEW** | 吧 guess is already formalized in Unit 30. 呢 remains comprehension-only under P004; no new particle rule is inferred. |
+| X027 | 吧 / 呢 in dialogue contexts | **DEFERRED** | This bundled record is not wholly safe as REVIEW: inferential 吧 is already covered by P003 / Unit 30, but 呢 in 妳怎麼沒帶傘呢？ is not the previously taught Unit-5 follow-up use. Destination: **split treatment in learner-facing architecture** — review 吧 through P003, keep this 呢 occurrence comprehension-only through P004, and do not assess or generalize the untaught 呢 function. |
 | X028 | 打算 + VP / 想 + VP / 希望 + clause | **KNOWN** | 打算 formal Unit 26; 想 Unit 4; 希望 Unit 35. |
 | X029 | 濕濕的 | **EXPANSION** | `u30-state-redup` teaches restricted state-verb reduplication, but 濕 is not in that earlier listed set. Lesson 14 source itself licenses 濕濕的, so teach it as a **specific source-attested extension** after V024; do not generalize reduplication to all state verbs. |
 | X030 | 差不多 + time / duration + 多 | **EXPANSION** | 差不多 is Unit 25 and post-number 多 is known from Unit 15; applying these to Lesson-14 duration/time expressions needs explicit transfer support. |
 | X031 | 每年…都… / 常 | **REVIEW** | 每…都… is Unit 22; 常 is Unit 7; 年 is known. 每年 is transparent support, not new vocabulary ownership. |
-| X032 | 不過 / 可是 / 對了 / 請…多小心 / 小心慢走 | **REVIEW** | 不過、可是、對了、請 are prior material; 小心 and 慢走 are separately taught by V029/V035 before the full interaction formula is retrieved. |
+| X032 | 不過 / 可是 / 對了 / 請…多小心 / 小心慢走 | **EXPANSION** | The discourse markers 不過、可是、對了、請 are prior material, but the bundled support record is not wholly prior review: 大家 / 小心 / 慢走 are Lesson-14 NEW items, and 請大家多小心 also relies on prior `u40-more-less-verb`. Teach/retrieve the full formulas only after V028 + V029 (+ `u40-more-less-verb`) and V029 + V035 / P005 respectively. |
 | X033 | 一共 | **KNOWN** | Unit 12 exact vocabulary/grammar support. |
 | X034 | 對不對 | **EXPANSION** | 對 and negation are known, but this exact confirmation form is not canonical. Briefly explain the transparent A-not-A confirmation use if the source G001 prompt is retained. |
 | X035 | 上網 | **KNOWN** | Unit 14 exact vocabulary. |
@@ -167,9 +167,9 @@ These records do not automatically become Lesson-14 vocabulary. Their dispositio
 
 - NEW: **1**
 - KNOWN: **19**
-- REVIEW: **5**
-- EXPANSION: **4**
-- DEFERRED: **8**
+- REVIEW: **3**
+- EXPANSION: **5**
+- DEFERRED: **9**
 - Total: **37 / 37**
 
 ---
@@ -295,11 +295,11 @@ This classification does **not** create 22 extra vocabulary items. It means the 
 
 ## Lesson outcomes
 
-Each of **F001–F004** is **NEW (lesson-level capability)**:
-- F001 weather/typhoon discussion;
-- F002 seasons + preference explanation;
-- F003 comparison of events/conditions;
-- F004 simple experience/trip statements.
+Lesson-outcome dispositions:
+- **F001 — NEW**: weather/typhoon discussion.
+- **F002 — NEW**: seasons + preference explanation.
+- **F003 — EXPANSION**: prior 比 / 比較 / 跟…一樣 comparison capability is broadened by 更 and 沒有…那麼/這麼.
+- **F004 — EXPANSION**: prior duration and completed-action foundations are integrated into the source-required experience/trip statements.
 
 These do not count toward lexical pacing.
 
@@ -342,7 +342,7 @@ Existing production nodes:
 - G001 + `u31-sentential-le` + `u39-verbal-le` → G002
 - V008 + V022 + `u31-sentential-le` → G003
 - V027 + `u25-bi-comparison` → G004
-- `u25-bi-comparison` + `u41-gen-yiyang` + prior 沒有/這麼/那麼-degree support → G005
+- `u25-bi-comparison` + `u41-gen-yiyang` + 沒有 (Unit 2) + `u17-so` + Unit-38 `u38-enthusiastic` → G005
 - `u30-ba-guess` → P003
 - `u30-state-redup` + V024 → X029 濕濕的
 - `u31-yinwei-suoyi` → A001 support
@@ -352,7 +352,8 @@ Existing production nodes:
 New Lesson-14 nodes:
 
 - G001 → G002
-- V029 + V035 → P005 / X032 full leave-taking formula
+- V028 + V029 + `u40-more-less-verb` → X032 請大家多小心
+- V029 + V035 → P005 / X032 小心慢走 leave-taking formula
 - G004 → P001
 - G005 → P002
 - G003 → P006
