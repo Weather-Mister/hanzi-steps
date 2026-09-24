@@ -240,8 +240,8 @@ Review/support:
 - known food/activity vocabulary
 
 Transfer:
-- B1L14-A001: describe one's climate, most/least liked seasons, and reasons.
-- B1L14-A005: discuss summer weather, distinctive features, fruit and activities.
+- B1L14-A001: describe one's home-country climate, identify the most- and least-liked seasons, and explain the reasons using known 因為…所以….
+- B1L14-A005: discuss summer weather in Taiwan, distinctive features, commonly eaten fruit, and common activities, then **write the findings in Chinese** as required by the source.
 
 Outcome:
 - complete B1L14-F002.
@@ -410,7 +410,7 @@ Source:
 - B1L14-X025, X030
 
 Transfer:
-- complete B1L14-A002 here, after both G001 and G002 have been taught, using learner-safe place labels/substitutions.
+- complete B1L14-A002 here, after both G001 and G002 have been taught: ask where a person/classmate lived and for how long, record the result, and report it. Use learner-safe place labels/substitutions so the duration contrast is assessed without deferred glyphs.
 
 ### U43-L3 — New Year Is Almost Here
 Reserved lesson ID: `u43-new-year`
@@ -643,8 +643,11 @@ Review:
 - weather vocabulary from Unit 42
 
 Culture:
-- introduce B1L14-CUL001 as **textbook-era Taiwanese typhoon-day culture**.
-- do not present the textbook's old administrative thresholds/agencies/contact information as current 2026 guidance unless separately verified at release time.
+- introduce B1L14-CUL001 as **textbook-era Taiwanese typhoon-day culture**;
+- preserve the reading's historical content at an appropriate learner level: the source-era wind/gust thresholds, the four-hour forecast window, school/work suspension, and the described shift from central-personnel-agency to regional-government decision making;
+- then-current URLs/phone details may be summarized as dated source material rather than reproduced as live guidance;
+- do not present the textbook's old administrative thresholds/agencies/contact information as current 2026 guidance unless separately verified at release time;
+- the culture explanation must use English or already-known Chinese where necessary so it cannot introduce hidden vocabulary/character prerequisites.
 
 Source:
 - B1L14-D2T03–D2T05 partial
@@ -745,7 +748,8 @@ Requirements:
 - handwriting retrieval for all 7 NEW characters;
 - retrieve Unit-43 imminence through typhoon/weather context;
 - retrieve Unit-42 seasons/weather;
-- cover B1L14-A003 and A004 transfer;
+- cover B1L14-A003 with equal and unequal seasonal-temperature comparisons across last year/this year using the complete comparison toolkit;
+- cover B1L14-A004 across all four seasons plus typhoon, rain-frequency and snow questions; require asking for additional information and recording results in the comparison chart;
 - sample all four B1L14-F outcomes;
 - map B1L14-S001–S004 to explicit capstone checks.
 
@@ -854,7 +858,7 @@ Do not promote source drill support to Search/Mega just because it appears in ex
 
 These are curriculum decisions, not source deletions.
 
-1. **玉山 / 紐約** — preserve source context by English/pinyin/glossed name; no productive Hanzi assessment.
+1. **玉山 / 紐約** — preserve source context by English/pinyin/glossed name; if 玉山 is shown contextually, preserve the source identification of Yushan/Mount Jade as the tallest mountain in central Taiwan; no productive Hanzi assessment.
 2. **妳** — learner-facing normalization to 你; source artifact preserves 妳.
 3. **speaker/proper-name glyphs 華 / 安 / etc.** — romanized/generic speaker labels or glossed context.
 4. **漂亮** — source-turn meaning preserved, but productive practice uses known 好看 or a gloss because 漂/亮 are untaught.
