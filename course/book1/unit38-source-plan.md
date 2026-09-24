@@ -62,6 +62,7 @@ Teach:
 Productive boundary:
 - actively test 嗎 questions;
 - 是不是 may be shown as source-supported preview, but independent productive 是不是 waits Unit 41;
+- because both 嗎 and 是不是 are source-valid question strategies here, never use one as the false distractor against the other solely on grammaticality;
 - include both a negative Event A example and a negative Event B example. Use learner-safe adaptation 那裡一沒人，我就回家。 for negative Event A rather than importing source-only 拍／照.
 
 ## Ownership migrations
