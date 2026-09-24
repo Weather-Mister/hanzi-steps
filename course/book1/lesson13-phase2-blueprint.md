@@ -1498,6 +1498,33 @@ Book 2 migrations:
 
 ---
 
+# Phase 2 internal audit
+
+A mechanical cross-unit audit was run before freezing this plan.
+
+Results:
+- source-listed Lesson 13 items: **40 / 40 assigned exactly once**;
+- missing source items: **0**;
+- duplicate source assignments: **0**;
+- extra invented source-list assignments: **0**;
+- formal-source unique Han characters: 72;
+- chronological new characters after Book 1 Unit 36: **24**;
+- planned first-character assignments: **24 / 24**, each exactly once;
+- Dialogue I turns: **14 / 14 assigned**;
+- Dialogue II turns: **13 / 13 assigned**;
+- formal grammar sections: **7 / 7 assigned**;
+- integrated learning objectives: **4 / 4 represented**;
+- reserved teaching/review lesson IDs: **35** (7 per unit);
+- reserved Lesson 13 grammar IDs: **7**.
+
+The audit also rechecked the two cross-book migrations:
+- 過 remains a Book 1 character but must move standalone vocabulary first ownership from Book 2 Unit 3 to Unit 38;
+- 口 must move chronological character first ownership from Book 2 Unit 1 to Unit 38.
+
+No additional source content needs to be moved between Units 37–41 before implementation.
+
+---
+
 # Phase 2 freeze decision
 
 The five-unit structure is now frozen as:
