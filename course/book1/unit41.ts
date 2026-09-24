@@ -105,19 +105,19 @@ const unit:UnitData = {
             "換"
           ],
           "answer": "訂",
-          "explanation": "Unit 39 taught 訂."
+          "explanation": "The sentence reuses 訂, 'order / reserve in advance'."
         },
         {
           "id": "u41-cake-s3",
           "type": "select",
-          "prompt": "Do you need to create new 跟…一樣 comparisons before the grammar lesson?",
+          "prompt": "In 跟你們一樣，吃蛋糕。, what is the speaker saying?",
           "options": [
-            "No — this source line is comprehension-first here.",
-            "Yes — grammar was completed in Unit 38.",
-            "Only with cakes."
+            "We eat cake too, just like you.",
+            "We never eat cake.",
+            "Your cake is more expensive."
           ],
-          "answer": "No — this source line is comprehension-first here.",
-          "explanation": "The formal comparison system follows."
+          "answer": "We eat cake too, just like you.",
+          "explanation": "一樣 signals that the birthday practice is the same here."
         }
       ]
     },
@@ -160,7 +160,7 @@ const unit:UnitData = {
         {
           "id": "u41-confirm-s2",
           "type": "select",
-          "prompt": "Which is source-supported with 比?",
+          "prompt": "Which is grammatical with 比?",
           "options": [
             "你是不是比他高？",
             "你比不比他高？ as the required form",
@@ -288,14 +288,14 @@ const unit:UnitData = {
         {
           "id": "u41-different-s3",
           "type": "select",
-          "prompt": "Which question forms are source-valid?",
+          "prompt": "Which question forms can both be used?",
           "options": [
             "一樣不一樣？ and 是不是一樣？",
             "only 一樣不一樣？",
             "only 是不是一樣？"
           ],
           "answer": "一樣不一樣？ and 是不是一樣？",
-          "explanation": "Both are source-valid."
+          "explanation": "Both question forms are valid."
         },
         {
           "id": "u41-different-s4",
@@ -486,14 +486,14 @@ const unit:UnitData = {
         {
           "id": "u41-capstone-o4",
           "type": "select",
-          "prompt": "Say your birthday custom is the same as your friend's.",
+          "prompt": "You and your friend both eat cake for birthdays. Which comparison fits?",
           "options": [
-            "我的跟你的一樣。",
-            "我的比你的。",
-            "我的是不是生日。"
+            "我們跟你們一樣吃蛋糕。",
+            "我們比你們吃蛋糕。",
+            "我們是不是生日。"
           ],
-          "answer": "我的跟你的一樣。",
-          "explanation": "This transfers 跟…一樣 to cultural comparison."
+          "answer": "我們跟你們一樣吃蛋糕。",
+          "explanation": "跟…一樣 + action compares the shared birthday practice."
         },
         {
           "id": "u41-capstone-o5",
@@ -665,7 +665,7 @@ const unit:UnitData = {
             "around"
           ],
           "answer": "to/toward",
-          "explanation": "This is the Unit 41 new sense."
+          "explanation": "Here 對 means 'to / toward'."
         },
         {
           "id": "u41-review-g1",
@@ -730,14 +730,14 @@ const unit:UnitData = {
         {
           "id": "u41-review-g5",
           "type": "select",
-          "prompt": "Which question forms are both valid?",
+          "prompt": "Which question forms can both be used?",
           "options": [
             "一樣不一樣？ / 是不是一樣？",
             "only 一樣不一樣？",
             "only 是不是一樣？"
           ],
           "answer": "一樣不一樣？ / 是不是一樣？",
-          "explanation": "Both are source-valid.",
+          "explanation": "Both are valid.",
           "grammarIds": [
             "u41-gen-yiyang"
           ]
@@ -1138,7 +1138,7 @@ const unit:UnitData = {
     "u41-not-target": {
       "text": "他不跟我一樣高，跟你一樣高。",
       "pinyin": "Tā bù gēn wǒ yíyàng gāo, gēn nǐ yíyàng gāo.",
-      "meaning": "He isn't as tall as me; he's as tall as you.",
+      "meaning": "He isn't the same height as me; he's the same height as you.",
       "note": "不 before 跟 changes the comparison target.",
       "tokens": [
         "他不跟我一樣高",
