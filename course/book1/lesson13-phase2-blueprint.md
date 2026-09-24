@@ -244,9 +244,13 @@ Total = **24 / 24**.
 
 ## Unit identity
 
-Proposed label: **Birthday calls, returning & remembering**
+Locked theme: **rose**
 
-Proposed title: **Tomorrow Is Your Birthday**
+Locked label: **Birthday calls, returning & remembering**
+
+Locked title: **Tomorrow Is Your Birthday**
+
+Book reference: Lesson 13 Dialogue I opening (turns 1–6), Vocabulary I entries 1–8 plus Phrases 19–21.
 
 Primary goal:
 - understand/open a friendly phone call;
@@ -440,9 +444,13 @@ Not new challenge entries:
 
 ## Unit identity
 
-Proposed label: **Language exchange, politeness & meeting plans**
+Locked theme: **cyan**
 
-Proposed title: **I'll See You After Class**
+Locked label: **Language exchange, politeness & meeting plans**
+
+Locked title: **I'll See You After Class**
+
+Book reference: Lesson 13 Dialogue I tail (turns 7–14), remaining Vocabulary I / Name / Phrases, and Grammar I 一…就….
 
 Primary goal:
 - talk about a language exchange;
@@ -661,9 +669,13 @@ No duplicate entries:
 
 ## Unit identity
 
-Proposed label: **Gifts, birthday food & completed actions**
+Locked theme: **amber**
 
-Proposed title: **What Did You Order?**
+Locked label: **Gifts, birthday food & completed actions**
+
+Locked title: **What Did You Order?**
+
+Book reference: Lesson 13 Dialogue II opening (turns 1–6), Vocabulary II entries 1–8 plus Phrase 14, Grammar II completed-action 了, and Grammar III 不 vs. 沒（有）.
 
 Primary goal:
 - handle the opening of the birthday meal;
@@ -869,9 +881,13 @@ No new canonical entry:
 
 ## Unit identity
 
-Proposed label: **Food preferences, totality & birthday customs**
+Locked theme: **teal**
 
-Proposed title: **What Does Everyone Eat?**
+Locked label: **Food preferences, totality & birthday customs**
+
+Locked title: **What Does Everyone Eat?**
+
+Book reference: Lesson 13 Dialogue II turns 7–9, Vocabulary II entries 9–10 plus Phrase 15, Grammar IV–V, and the Taiwanese-birthday cultural reading.
 
 Primary goal:
 - say everyone/everything/everywhere and nobody/nothing/nowhere;
@@ -1076,9 +1092,13 @@ No duplicate entries:
 
 ## Unit identity
 
-Proposed label: **Confirmation, comparison & birthday wishes**
+Locked theme: **plum**
 
-Proposed title: **Happy Birthday and Best Wishes**
+Locked label: **Confirmation, comparison & birthday wishes**
+
+Locked title: **Happy Birthday and Best Wishes**
+
+Book reference: Lesson 13 Dialogue II turns 10–13, Vocabulary II entries 11–13 plus Phrases 16–17, Grammar VI–VII, integrated activities, congratulatory-expression culture note, and self-assessment.
 
 Primary goal:
 - ask for confirmation with 是不是;
@@ -1521,6 +1541,8 @@ Before coding Unit 37:
 
 During implementation:
 
+- use the locked themes/titles/labels/book-reference scope above rather than making new presentation decisions during coding;
+- for Book 1 Lesson 13 indexed first-taught source forms, follow the current Book 1 convention of `core: true` unless a concrete repository rule requires otherwise;
 - keep **six teaching lessons + one review** exactly as reserved here;
 - fixed Phrase forms deliberately included in newVocabulary for search/challenge are: 生日快樂、我就是、好久不見、不必客氣、太客氣、哪裡哪裡、大部分、萬事如意、心想事成. Store 哪裡哪裡 without punctuation in the vocabulary key; learner-facing display may use 哪裡，哪裡！. Proper-name 西班牙 and review/new-sense forms 怎麼、那麼、了、對 must not create duplicate entries;
 - preserve project pinyin conventions, including contextual 一/不 tone sandhi where already standardized (e.g. yíyàng, yìdiǎn, hǎojiǔ bújiàn, búbì kèqi);
