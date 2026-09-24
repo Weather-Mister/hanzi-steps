@@ -149,7 +149,8 @@ const unit:UnitData = {
             "國家"
           ],
           "answer": "天氣",
-          "explanation": "The audio begins with 天氣."
+          "explanation": "The audio begins with 天氣.",
+          "char": "冷"
         },
         {
           "id": "u42-weather-o1",
@@ -287,7 +288,8 @@ const unit:UnitData = {
             "上網"
           ],
           "answer": "滑雪",
-          "explanation": "The sentence says the speaker often goes skiing."
+          "explanation": "The sentence says the speaker often goes skiing.",
+          "char": "滑"
         },
         {
           "id": "u42-snow-o1",
@@ -419,12 +421,13 @@ const unit:UnitData = {
           "audioText": "我比較喜歡春天。",
           "prompt": "Which season is preferred?",
           "options": [
-            "spring",
-            "winter",
-            "autumn"
+            "春天",
+            "冬天",
+            "秋天"
           ],
-          "answer": "spring",
-          "explanation": "The audio says 春天, “spring.”"
+          "answer": "春天",
+          "explanation": "The audio says 春天, “spring.”",
+          "char": "春"
         },
         {
           "id": "u42-spring-o1",
@@ -549,14 +552,15 @@ const unit:UnitData = {
           "id": "u42-season-l1",
           "type": "listen",
           "audioText": "春天、夏天、秋天、冬天。",
-          "prompt": "Which set do you hear?",
+          "prompt": "Which season word do you hear?",
           "options": [
-            "the four seasons",
-            "four kinds of transport",
-            "four weather warnings"
+            "春天",
+            "天氣",
+            "水果"
           ],
-          "answer": "the four seasons",
-          "explanation": "The audio names spring, summer, autumn, and winter."
+          "answer": "春天",
+          "explanation": "The audio includes 春天 in the four-season sequence.",
+          "char": "春"
         },
         {
           "id": "u42-season-o1",
@@ -679,7 +683,8 @@ const unit:UnitData = {
             "滑雪"
           ],
           "answer": "下雨",
-          "explanation": "The audio says it often rains in summer."
+          "explanation": "The audio says it often rains in summer.",
+          "char": "雨"
         },
         {
           "id": "u42-rain-o1",
@@ -833,7 +838,8 @@ const unit:UnitData = {
             "國家"
           ],
           "answer": "天氣",
-          "explanation": "天氣 means weather."
+          "explanation": "天氣 means weather.",
+          "char": "冷"
         },
         {
           "id": "u42-review-l2",
@@ -846,20 +852,22 @@ const unit:UnitData = {
             "上網"
           ],
           "answer": "滑雪",
-          "explanation": "The speaker says 滑雪."
+          "explanation": "The speaker says 滑雪.",
+          "char": "滑"
         },
         {
           "id": "u42-review-l3",
           "type": "listen",
           "audioText": "這裡常不常下雨？",
-          "prompt": "What is being asked?",
+          "prompt": "Which question pattern do you hear?",
           "options": [
-            "whether it often rains here",
-            "whether winter is cold",
-            "whether someone misses home"
+            "常不常",
+            "會不會",
+            "有沒有"
           ],
-          "answer": "whether it often rains here",
-          "explanation": "常不常 asks about frequency and 下雨 means rain."
+          "answer": "常不常",
+          "explanation": "The audio uses 常不常 to ask about frequency.",
+          "char": "雨"
         },
         {
           "id": "u42-review-cold",
