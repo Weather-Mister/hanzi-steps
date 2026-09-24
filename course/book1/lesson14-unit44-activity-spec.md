@@ -514,55 +514,31 @@ Order:
 10. `u44-review-geng` — complete 更
 
 ### Independent NEW vocabulary retrieval
-11. `u44-review-v1` 傘 → umbrella / typhoon / rain → **umbrella**
+11. `u44-review-vmatch` — match characters [`傘`, `濕`, `更`] to their lexical meanings **umbrella / wet / even more**. The implementation character meanings must preserve those lexical values so this counts as direct retrieval of the three single-character vocabulary targets.
 12. `u44-review-v2` 颱風 → typhoon / season / news → **typhoon**
-13. `u44-review-v3` 濕 → wet / cold / fast → **wet**
-14. `u44-review-v4` 討厭 → annoying / careful / comfortable → **annoying**
-15. `u44-review-v5` 新聞 → news / New Year / autumn leaves → **news**
-16. `u44-review-v6` 大家 → everyone / parents / classmates → **everyone**
-17. `u44-review-v7` 小心 → be careful / be scary / be wet → **be careful**
-18. `u44-review-v8` 這次 → this time / last time / next year → **this time**
-19. `u44-review-v9` 上次 → last time / this time / New Year → **last time**
-20. `u44-review-v10` 更 → even more / only / already → **even more**
-21. `u44-review-v11` 可怕 → scary / wet / careful → **scary**
-22. `u44-review-v12` 慢走 → Take care / Bye / compare again / snow → **Take care / Bye**
+13. `u44-review-v4` 討厭 → annoying / careful / comfortable → **annoying**
+14. `u44-review-v5` 新聞 → news / New Year / autumn leaves → **news**
+15. `u44-review-v6` 大家 → everyone / parents / classmates → **everyone**
+16. `u44-review-v7` 小心 → be careful / be scary / be wet → **be careful**
+17. `u44-review-v8` 這次 → this time / last time / next year → **this time**
+18. `u44-review-v9` 上次 → last time / this time / New Year → **last time**
+19. `u44-review-v11` 可怕 → scary / wet / careful → **scary**
+20. `u44-review-v12` 慢走 → Take care / Bye / compare again / snow → **Take care / Bye**
 
-Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
+For select rows above, prompt format: **“X means…”**; explanation: **“X means <answer>.”**
 
 ### Grammar/comparison retrieval
-23. `u44-review-g1`
-   - prompt: Which means “This summer is even hotter than last summer”?
-   - options: [今年夏天比去年夏天更熱。, 今年夏天跟去年夏天一樣熱。, 今年夏天沒有去年夏天那麼熱。]
-   - answer: 今年夏天比去年夏天更熱。
-   - explanation: 比…更… gives an “even more” comparison.
-   - grammarIds: [u44-even-more]
-24. `u44-review-g2`
-   - prompt: Which means “This winter is not as hot as last winter”?
-   - options: [今年冬天沒有去年冬天那麼熱。, 今年冬天比去年冬天更熱。, 今年冬天跟去年冬天一樣熱。]
-   - answer: 今年冬天沒有去年冬天那麼熱。
-   - explanation: 沒有…那麼… expresses lower degree.
-   - grammarIds: [u44-not-as]
-25. `u44-review-g3`
-   - prompt: Which is the equality comparison?
-   - options: [A 跟 B 一樣熱, A 沒有 B 那麼熱, A 比 B 更熱]
-   - answer: A 跟 B 一樣熱
-   - explanation: 跟…一樣 gives equal degree.
-26. `u44-review-g4`
-   - prompt: Which is the inferior comparison?
-   - options: [A 沒有 B 那麼熱, A 跟 B 一樣熱, A 比 B 更熱]
-   - answer: A 沒有 B 那麼熱
-   - explanation: 沒有…那麼 gives lower degree.
-27. `u44-review-g5`
+21. `u44-review-g5`
    - prompt: Why does 更 mean more than neutral “more” here?
    - options: [it invokes an established/understood baseline, it marks past tense, it means everyone]
    - answer: it invokes an established/understood baseline
    - explanation: The “even more” baseline is required by the source.
-28. `u44-review-g6`
+22. `u44-review-g6`
    - prompt: Which uses 比較 for an implicit/relative comparison without naming a 比-target?
    - options: [今年春天比較冷。, 今年春天比去年春天更冷。, 今年春天跟去年春天一樣冷。]
    - answer: 今年春天比較冷。
    - explanation: 比較 + description gives the source toolkit's implicit/relative comparison.
-29. `u44-review-g7`
+23. `u44-review-g7`
    - prompt: Which uses plain 比 to name both sides without 更?
    - options: [今年比去年冷。, 今年比去年更冷。, 今年跟去年一樣冷。]
    - answer: 今年比去年冷。
@@ -599,17 +575,6 @@ No prompt or answer uses 度 or 北.
    - options: [ask for additional information and record the results, stop after one question, avoid recording anything]
    - answer: ask for additional information and record the results
    - explanation: A004 explicitly requires both.
-36. `u44-review-a004-3`
-   - prompt: Which asks whether it snows?
-   - options: [會不會下雪？, 常不常下雨？, 有沒有颱風？]
-   - answer: 會不會下雪？
-   - explanation: 會不會 asks whether the snow event occurs.
-37. `u44-review-a004-4`
-   - prompt: Which asks whether there are typhoons?
-   - options: [有沒有颱風？, 會不會下雪？, 秋天的天氣怎麼樣？]
-   - answer: 有沒有颱風？
-   - explanation: 有沒有 asks whether typhoons are present/occur in the place.
-
 ### Delayed retrieval from Units 42–43
 38. `u44-review-cum1`
    - prompt: Which asks whether it often rains?
@@ -626,12 +591,6 @@ No prompt or answer uses 度 or 北.
    - options: [颱風快要來了。, 颱風來了兩個月。, 颱風跟雨一樣。]
    - answer: 颱風快要來了。
    - explanation: 快要…了 marks an imminent event.
-41. `u44-review-cum4`
-   - prompt: In 想家, what does 想 mean?
-   - options: [miss, compare, be careful]
-   - answer: miss
-   - explanation: This retrieves the Lesson-14 expansion sense from Unit 43.
-
 ### Culture
 42. `u44-review-culture`
    - prompt: In the textbook's historical account, what changed about who made typhoon-day decisions?
@@ -661,7 +620,7 @@ No prompt or answer uses 度 or 北.
    - answer: say where an experience happened and how long it lasted
    - explanation: This maps to B1L14-F004/S004.
 
-Review count: **46**. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; G004/G005, A003/A004, culture, delayed retrieval, and all four outcomes are explicit.
+Review count: **37**. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; the match step directly retrieves the three single-character lexical targets 傘/濕/更, while the remaining nine receive individual select retrieval. G004/G005, the full A003 toolkit, A004, culture, delayed retrieval, and all four outcomes remain explicit.
 
 ## 7. Lifecycle coverage
 
