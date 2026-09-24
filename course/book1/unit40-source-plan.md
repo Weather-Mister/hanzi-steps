@@ -6,10 +6,11 @@ Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 13 Dialogue I
 
 Unit 40 is intentionally grammar-heavy and lexically light.
 
-Canonical NEW entries:
-- 傳統
-- 年輕
-- 大部分
+Implementation-indexed first-taught forms:
+- ordinary vocabulary: 傳統、年輕
+- source Phrase form: 大部分
+
+Pacing report: **2 ordinary new words + 1 source Phrase form**. This low lexical count is deliberate because the unit carries Grammar IV and V in full; moving Unit 39 food later would expose untaught source glyphs/weakens 訂了, while starting Lesson 14 here would interrupt the unresolved Lesson 13 comparison/wishes arc.
 
 New characters:
 - 傳、統、輕、部
@@ -91,3 +92,8 @@ Must verify:
 - 一點 combination;
 - Dialogue II turns 7–9;
 - birthday-custom transfer.
+
+
+## Review quality floor
+
+Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
