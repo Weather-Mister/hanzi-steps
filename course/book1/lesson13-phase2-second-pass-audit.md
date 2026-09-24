@@ -222,7 +222,7 @@ Canonical text:
 
 No source-backed change to the five-unit architecture is required.
 
-The second pass **did** improve the implementation contract in seven places:
+The second pass **did** improve the implementation contract in eight places:
 1. demonstrated negative Event A for 一…就…;
 2. explicitly allocated the source cultural readings;
 3. made integrated activities glyph-safe;
