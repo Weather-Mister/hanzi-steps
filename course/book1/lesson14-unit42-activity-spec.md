@@ -93,6 +93,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - note: 常不常 is the A-not-A form of 常. This explanation must appear before assessment.
 - tokens: [`這裡`, `常不常下雨`]
 
+### u42-home-country-model
+- text: **我家那裡夏天很熱，冬天很冷。**
+- pinyin: **Wǒ jiā nàlǐ xiàtiān hěn rè, dōngtiān hěn lěng.**
+- meaning: **Where I'm from, summers are hot and winters are cold.**
+- note: Model for the source A001 home-country climate description without adding new country-name vocabulary.
+- tokens: [`我家那裡`, `夏天很熱`, `冬天很冷`]
+
 ### u42-season-reason
 - text: **因為我怕冷，所以我比較喜歡春天。**
 - pinyin: **Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.**
@@ -304,35 +311,41 @@ Order:
 ### u42-seasons — My Seasons and Summer
 
 Order:
-1. phrase `u42-season-reason`.
-2. select `u42-seasons-s1`
+1. phrase `u42-home-country-model`.
+2. select `u42-seasons-home`
+   - prompt: **What is the first part of the source Four Seasons task?**
+   - options: [`describe the climate where you are from`, `compare transport prices`, `describe a birthday meal`]
+   - answer: **describe the climate where you are from**
+   - explanation: B1L14-A001 begins with the learner's home-country climate.
+3. phrase `u42-season-reason`.
+4. select `u42-seasons-s1`
    - prompt: **Which answer gives both a season preference and a reason?**
    - options: [`因為我怕冷，所以我比較喜歡春天。`, `春天、夏天、秋天、冬天。`, `今天比昨天冷。`]
    - answer: **因為我怕冷，所以我比較喜歡春天。**
    - explanation: The sentence states a preference and explains why.
-3. select `u42-seasons-s2`
+5. select `u42-seasons-s2`
    - prompt: **For the source “Four Seasons” task, which pair must you identify?**
    - options: [`your most- and least-liked seasons`, `only today's temperature and time`, `only one transport method`]
    - answer: **your most- and least-liked seasons**
    - explanation: A001 explicitly asks for most/least preferred seasons plus reasons.
-4. phrase `u42-summer-model`.
-5. select `u42-summer-s2`
+6. phrase `u42-summer-model`.
+7. select `u42-summer-s2`
    - prompt: **Which statement describes Taiwan summer weather?**
    - options: [`臺灣夏天天氣很熱。`, `臺灣冬天是夏天。`, `臺灣下雪就是滑雪。`]
    - answer: **臺灣夏天天氣很熱。**
    - explanation: This is a weather statement about summer.
-6. phrase `u42-summer-write`.
-7. select `u42-summer-s3`
+8. phrase `u42-summer-write`.
+9. select `u42-summer-s3`
    - prompt: **What must the source “Summer in Taiwan” transfer include?**
    - options: [`summer weather plus distinctive features, common fruit/food, and common activities`, `only the word 夏天`, `only a comparison of train speeds`]
    - answer: **summer weather plus distinctive features, common fruit/food, and common activities**
    - explanation: These are the source A005 fields.
-8. select `u42-summer-s4`
+10. select `u42-summer-s4`
    - prompt: **After discussing the summer findings, what does the source task ask you to do?**
    - options: [`write the findings in Chinese`, `translate them into French`, `skip recording them`]
    - answer: **write the findings in Chinese**
    - explanation: A005 explicitly requires writing the findings in Chinese.
-9. order `u42-seasons-o1` using `u42-season-reason`
+11. order `u42-seasons-o1` using `u42-season-reason`
    - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
 
 ## 5. Unit 42 review — exact step bank
