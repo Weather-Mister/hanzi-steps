@@ -188,7 +188,7 @@ const unit:UnitData = {
           "options": [
             "生日快樂",
             "好久不見",
-            "不必客氣"
+            "太好了"
           ],
           "answer": "生日快樂",
           "explanation": "生日快樂 means 'Happy birthday!'"
@@ -443,7 +443,7 @@ const unit:UnitData = {
           "prompt": "Which pair is opposite in this unit?",
           "options": [
             "忘 / 記得",
-            "回來 / 當然",
+            "回來 / 剛",
             "生日 / 快樂"
           ],
           "answer": "忘 / 記得",
