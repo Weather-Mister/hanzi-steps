@@ -1395,15 +1395,15 @@ const unit:UnitData = {
       "pinyin": "yè",
       "zhuyin": "ㄧㄝˋ",
       "meaning": "leaf",
-      "strokes": 12,
+      "strokes": 13,
       "note": "葉 is first taught in Unit 43 through 紅葉.",
-      "memory": "Connect 葉 with 紅葉 (red maple leaves) while writing its 12 strokes in order.",
+      "memory": "Connect 葉 with 紅葉 (red maple leaves) while writing its 13 strokes in Taiwan Traditional order.",
       "parts": [
         {
           "label": "葉",
           "name": "葉 whole form",
           "role": "Whole character",
-          "description": "Write all 12 strokes of 葉 in standard order and connect the shape to 紅葉.",
+          "description": "Write all 13 strokes of 葉 in standard Taiwan Traditional order and connect the shape to 紅葉.",
           "strokes": [
             0,
             1,
@@ -1416,7 +1416,8 @@ const unit:UnitData = {
             8,
             9,
             10,
-            11
+            11,
+            12
           ]
         }
       ],
