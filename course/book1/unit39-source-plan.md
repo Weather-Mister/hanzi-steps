@@ -74,7 +74,8 @@ Process verbs:
 - 沒（有） in the source system.
 
 Taiwan note:
-- source says 沒有 + V is more common in Taiwan than bare 沒 + V.
+- source says 沒有 + V is more common in Taiwan than bare 沒 + V;
+- bare 沒 + V remains grammatical in the source system and must not be marked wrong merely because 沒有 is more common in Taiwan.
 
 Critical rule:
 - “verbal 了 disappears under 沒” must never be rewritten as “negative sentences cannot contain 了”.
