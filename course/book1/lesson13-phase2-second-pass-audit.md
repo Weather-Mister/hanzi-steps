@@ -106,7 +106,7 @@ Refinement:
 
 ## Finding 4 — phrase indexing decision is now explicit
 
-All nine textbook Phrase entries intentionally remain exact first-taught searchable / Mega Challenge forms:
+All nine textbook Phrase entries intentionally remain exact first-taught searchable / Mega Challenge forms. A repository search found no earlier canonical occurrence of any of these exact forms before Unit 37:
 
 - 生日快樂
 - 我就是
@@ -190,6 +190,18 @@ Grammar-heavy units reserve enough independent items to assess the actual distin
 
 U41 capstone remains separate from the review and still demonstrates all four lesson-level objectives.
 
+## Unit metadata freeze
+
+The second pass also removed avoidable implementation-time decisions:
+
+- U37: rose — “Tomorrow Is Your Birthday”
+- U38: cyan — “I'll See You After Class”
+- U39: amber — “What Did You Order?”
+- U40: teal — “What Does Everyone Eat?”
+- U41: plum — “Happy Birthday and Best Wishes”
+
+Each unit now has explicit source/book-reference scope in the master blueprint. Lesson 13 indexed first-taught forms should follow the current Book 1 convention of core:true unless a concrete repository rule requires otherwise.
+
 ## Pinyin / pronunciation audit
 
 Keep project-consistent contextual tone-sandhi spelling where already standardized, including:
@@ -217,6 +229,7 @@ The second pass **did** improve the implementation contract in seven places:
 4. locked Phrase-form search/Mega behavior;
 5. documented partial familiarity for 語言 / 一點;
 6. specified safe, topology-preserving 過 / 口 migrations;
-7. gave each review a concrete useful-activity budget.
+7. gave each review a concrete useful-activity budget;
+8. locked unit themes/titles/labels and book-reference scope so implementation does not reopen presentation metadata decisions.
 
 After these refinements, Phase 2 is implementation-ready for Unit 37.
