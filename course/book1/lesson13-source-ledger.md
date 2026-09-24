@@ -192,9 +192,11 @@ All nine source Phrase entries and the Name 西班牙 are also currently absent 
 
 ## Character-state audit at the Unit 36 baseline
 
-Across all source-listed Lesson 13 vocabulary / names / phrases there are 72 unique Han characters. **23 are not yet formally taught after Unit 36:**
+Across all source-listed Lesson 13 vocabulary / names / phrases there are 72 unique Han characters. **24 are not yet formally taught by the end of Book 1 Unit 36:**
 
-忘、記、當、然、交、換、牙、門、必、氣、禮、物、訂、豬、腳、蛋、傳、統、輕、糕、祝、部、如
+忘、記、當、然、交、換、牙、門、口、必、氣、禮、物、訂、豬、腳、蛋、傳、統、輕、糕、祝、部、如
+
+The second-pass audit caught an important ordering nuance: 口 exists in the repository only because Book 2 Unit 1 teaches it later. A global character-index presence check therefore falsely treated it as already known. For Lesson 13 planning, knowledge must be evaluated against the chronological Book 1 Unit 36 learner state, not against the repository-wide index.
 
 This is the complete first-pass handwriting / learner-facing character risk pool from the formal source inventory. Phase 2 must decide which phrase-only characters receive formal handwriting teaching and must ensure that no assessment exposes a future NEW character before its introduction.
 
@@ -373,9 +375,9 @@ The textbook includes both simple sameness and equality of a property. Phase 2 m
 
 ### Activity I — Going to Night Markets
 
-Goal: ask about preferences while discussing completed / non-completed actions.
+Source goal: **Learning to ask people about their preferences.**
 
-The source models:
+The task operationalizes that goal through completed / non-completed actions at a night market. The source models:
 - 吃了臭豆腐沒有？
 - 沒有，我點了小籠包。
 - 吃了，我吃了臭豆腐。
@@ -457,7 +459,26 @@ Phase 2 should respect the following source-driven ordering constraints:
 8. 祝 + person + wish is productive language, while 萬事如意 / 心想事成 remain fixed congratulatory expressions.
 9. No future-new character may appear in learner-facing assessment before its teaching point.
 10. Proper-name characters and source 妳 must not silently create new handwriting obligations.
-11. 過 ownership must be repaired across Book 1 and the existing Book 2 Unit 3 before the Lesson 13 sequence is considered technically clean.
+11. 過 vocabulary ownership must be repaired across Book 1 and the existing Book 2 Unit 3 before the Lesson 13 sequence is considered technically clean. The character 過 itself is already a Book 1 character from Unit 33 through 不過, so this is a lexical/sense ownership issue rather than a new-character issue.
+
+## Second-pass verification
+
+A second source-and-curriculum pass was completed after the initial Phase 1 merge. It rechecked the entire Lesson 13 range against both dialogues, Vocabulary I / Names / Phrases, Vocabulary II / Phrases, Grammar I–VII, integrated activities, cultural readings, self-assessment, and the chronological Hanzi Steps state after Unit 36.
+
+Confirmed on second pass:
+
+- Dialogue I has 14 source turns and all 14 are represented in this ledger.
+- Dialogue II has 13 source turns and all 13 are represented in this ledger.
+- Source-listed inventory remains exactly 40 items: 30 ordinary vocabulary entries, 1 Name, and 9 Phrases.
+- The four already-known Book 1 ordinary forms remain 怎麼、那麼、了、對; each requires new-sense/new-function treatment rather than duplicate first ownership.
+- 過 remains the only exact-form vocabulary item whose current ownership is later in Book 2, while the character 過 itself is already known from Book 1 Unit 33.
+- The chronological character-risk count is 24, not 23; 口 was the missed item because its current character record belongs to Book 2 Unit 1.
+- The additional dialogue-only untaught glyph risks remain 怡、君、安、蓮、妳.
+- Grammar I–VII restrictions recorded above match the source, including question restrictions, negation behavior, scope distinctions, and Taiwan-specific 沒有 usage.
+- Activity I's source goal is explicitly preserved as “Learning to ask people about their preferences”; completed-action language is the task mechanism, not a replacement for the source goal.
+- The four self-assessment outcomes match the four lesson-level learning objectives.
+
+No additional missing vocabulary item, dialogue turn, grammar section, activity, or learning objective was found in the second pass.
 
 ## Phase 1 completion status
 
