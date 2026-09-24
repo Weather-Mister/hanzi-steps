@@ -101,7 +101,7 @@ const unit:UnitData = {
           "prompt": "Which earlier verb appears in 今天我也訂了一個生日蛋糕?",
           "options": [
             "訂",
-            "祝",
+            "過",
             "換"
           ],
           "answer": "訂",
