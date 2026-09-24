@@ -421,7 +421,7 @@ Every vocabulary item above uses prompt format **“X means…”** and explanat
    - explanation: 會不會 asks whether the event occurs.
 24. `u42-review-q2`
    - prompt: Which asks whether rain is frequent?
-   - options: [常不常下雨？, 會不會下雪？, 雨停了嗎？]
+   - options: [常不常下雨？, 會不會下雪？, 下雨了嗎？]
    - answer: 常不常下雨？
    - explanation: 常不常 asks about frequency.
 25. `u42-review-t1`
