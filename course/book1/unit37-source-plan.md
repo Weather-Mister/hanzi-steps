@@ -56,7 +56,7 @@ Learner-facing adaptations:
 ## Review gate
 
 Unit 37 review must verify:
-- 10/10 canonical entries;
+- 10/10 indexed first-taught forms (7 ordinary vocabulary + 3 source Phrase forms);
 - 4/4 new characters;
 - 樂 lè vs. earlier yuè;
 - 怎麼 reaction sense;
