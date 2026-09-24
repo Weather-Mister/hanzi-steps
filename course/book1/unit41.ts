@@ -892,7 +892,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "蛋糕",
         "pinyin": "dàngāo",
@@ -926,7 +926,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "祝你生日快樂",
         "pinyin": "zhù nǐ shēngrì kuàilè",
@@ -957,7 +957,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "萬事如意",
         "pinyin": "wànshì rúyì",
