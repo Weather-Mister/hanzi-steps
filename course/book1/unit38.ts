@@ -1136,14 +1136,15 @@ const unit:UnitData = {
       "zhuyin": "ㄎㄡˇ",
       "meaning": "mouth; opening",
       "strokes": 3,
-      "note": "口 is learned in Unit 38 through 門口.",
-      "memory": "Practice 口 as a complete Traditional character and connect it to 門口.",
+      "layout": "whole",
+      "note": "You have seen 口 inside other characters. Now write it on its own. In 路口 it refers to an opening or junction.",
+      "memory": "Remember 口 as a three-stroke box: left edge, top-and-right bend, then the bottom closes it.",
       "parts": [
         {
           "label": "口",
-          "name": "口 whole form",
-          "role": "Whole character",
-          "description": "Write all 3 strokes in standard order.",
+          "name": "whole character",
+          "role": "Visual component",
+          "description": "口 is a single component. Its top and right edges are written together as one bent stroke.",
           "strokes": [
             0,
             1,
@@ -1151,11 +1152,10 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
       "example": {
-        "text": "門口",
-        "pinyin": "ménkǒu",
-        "meaning": "entrance"
+        "text": "路口",
+        "pinyin": "lùkǒu",
+        "meaning": "intersection"
       }
     }
   },
@@ -1201,7 +1201,10 @@ const unit:UnitData = {
       "pinyin": "Wǒmen zuò yǔyán jiāohuàn.",
       "meaning": "We do a language exchange.",
       "note": "Learner-safe setup before the Spanish-language source phrase is introduced in the next lesson.",
-      "tokens": ["我們做","語言交換"]
+      "tokens": [
+        "我們做",
+        "語言交換"
+      ]
     },
     "u38-exchange-source": {
       "text": "語言交換的時候，你那麼熱心教我西班牙文。",
