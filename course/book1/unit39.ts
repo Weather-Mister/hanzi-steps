@@ -708,7 +708,10 @@ const unit:UnitData = {
             "都 + V"
           ],
           "answer": "V + 了",
-          "explanation": "Postverbal 了 marks completion."
+          "explanation": "Postverbal 了 marks completion.",
+          "grammarIds": [
+            "u39-verbal-le"
+          ]
         },
         {
           "id": "u39-review-g2",
@@ -720,7 +723,10 @@ const unit:UnitData = {
             "我不吃了晚飯。"
           ],
           "answer": "我沒吃晚飯。",
-          "explanation": "Negated completed action uses 沒 + V with no verbal 了."
+          "explanation": "Negated completed action uses 沒 + V with no verbal 了.",
+          "grammarIds": [
+            "u39-verbal-le"
+          ]
         },
         {
           "id": "u39-review-g3",
@@ -732,7 +738,10 @@ const unit:UnitData = {
             "你吃沒有了晚飯？"
           ],
           "answer": "你吃了晚飯沒有？",
-          "explanation": "The source can append 沒有."
+          "explanation": "The source can append 沒有.",
+          "grammarIds": [
+            "u39-verbal-le"
+          ]
         },
         {
           "id": "u39-review-g4",
@@ -744,7 +753,10 @@ const unit:UnitData = {
             "none ever"
           ],
           "answer": "sentence-final changed-situation 了",
-          "explanation": "Do not overgeneralize the verbal-了 rule."
+          "explanation": "Do not overgeneralize the verbal-了 rule.",
+          "grammarIds": [
+            "u39-verbal-le"
+          ]
         },
         {
           "id": "u39-review-n1",
@@ -756,7 +768,10 @@ const unit:UnitData = {
             "了"
           ],
           "answer": "不",
-          "explanation": "Habitual non-action uses 不."
+          "explanation": "Habitual non-action uses 不.",
+          "grammarIds": [
+            "u39-bu-vs-mei"
+          ]
         },
         {
           "id": "u39-review-n2",
@@ -768,7 +783,10 @@ const unit:UnitData = {
             "太"
           ],
           "answer": "沒（有）",
-          "explanation": "Past non-occurrence uses 沒（有）."
+          "explanation": "Past non-occurrence uses 沒（有）.",
+          "grammarIds": [
+            "u39-bu-vs-mei"
+          ]
         },
         {
           "id": "u39-review-n3",
@@ -780,7 +798,10 @@ const unit:UnitData = {
             "忙了沒有"
           ],
           "answer": "不忙",
-          "explanation": "State verbs use 不."
+          "explanation": "State verbs use 不.",
+          "grammarIds": [
+            "u39-bu-vs-mei"
+          ]
         },
         {
           "id": "u39-review-n4",
@@ -792,7 +813,10 @@ const unit:UnitData = {
             "他到了不。"
           ],
           "answer": "他還沒到。",
-          "explanation": "Non-happening of arrival uses 沒."
+          "explanation": "Non-happening of arrival uses 沒.",
+          "grammarIds": [
+            "u39-bu-vs-mei"
+          ]
         },
         {
           "id": "u39-review-d1",
