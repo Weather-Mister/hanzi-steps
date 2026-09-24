@@ -1,0 +1,1755 @@
+import type {UnitData} from '../schema.ts';
+
+const unit:UnitData = {
+  "schemaVersion": 1,
+  "bookId": "book-1",
+  "order": 43,
+  "unit": {
+    "id": "unit-43",
+    "number": 43,
+    "theme": "amber",
+    "bookReference": "Lesson 14 Dialogue I turns 6–11, Grammar I–III, duration Activity II, and experience/imminence support.",
+    "label": "Duration & imminence",
+    "title": "How Long and What's About to Happen",
+    "description": "Contrast completed duration with duration up to now, talk about missing home, and describe events that are about to happen.",
+    "chars": [
+      "只",
+      "父",
+      "母",
+      "停",
+      "底",
+      "葉"
+    ],
+    "lessonIds": [
+      "u43-finished-duration",
+      "u43-duration-now",
+      "u43-new-year",
+      "u43-stopping",
+      "u43-return-plan",
+      "u43-next-year",
+      "u43-review"
+    ],
+    "banner": {
+      "text": "新年快到了",
+      "pinyin": "Xīnnián kuài dào le"
+    },
+    "goal": {
+      "text": "我在臺灣住了半年多了。",
+      "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le.",
+      "meaning": "I have been in Taiwan for a little over half a year."
+    },
+    "grammarIds": [
+      "u43-completed-duration",
+      "u43-duration-to-now",
+      "u43-imminent"
+    ]
+  },
+  "reviewLessonId": "u43-review",
+  "lessons": [
+    {
+      "id": "u43-finished-duration",
+      "title": "A Finished Stay",
+      "subtitle": "State how long a completed activity lasted.",
+      "chars": [
+        "只"
+      ],
+      "minutes": "13–16 min",
+      "unitId": "unit-43",
+      "review": false,
+      "steps": [
+        {
+          "id": "u43-finished-duration-只-intro",
+          "type": "intro",
+          "char": "只"
+        },
+        {
+          "id": "u43-finished-duration-只-trace",
+          "type": "trace",
+          "char": "只"
+        },
+        {
+          "id": "u43-finished-duration-只-build",
+          "type": "build",
+          "char": "只"
+        },
+        {
+          "id": "u43-finished-duration-只-complete",
+          "type": "complete",
+          "char": "只"
+        },
+        {
+          "id": "u43-finished-duration-只-memory",
+          "type": "memory",
+          "char": "只"
+        },
+        {
+          "id": "u43-finished-duration-p1",
+          "type": "phrase",
+          "phrase": "u43-only-basic"
+        },
+        {
+          "id": "u43-only-s1",
+          "type": "select",
+          "prompt": "只 means…",
+          "options": [
+            "only; merely",
+            "already",
+            "even more"
+          ],
+          "answer": "only; merely",
+          "explanation": "只 limits the amount or scope."
+        },
+        {
+          "id": "u43-completed-duration",
+          "type": "grammar",
+          "grammar": "u43-completed-duration"
+        },
+        {
+          "id": "u43-finished-duration-p2",
+          "type": "phrase",
+          "phrase": "u43-finished-stay"
+        },
+        {
+          "id": "u43-finished-duration-p3",
+          "type": "phrase",
+          "phrase": "u43-tennis-duration"
+        },
+        {
+          "id": "u43-duration-s1",
+          "type": "select",
+          "prompt": "Which sentence correctly keeps the object before the duration?",
+          "options": [
+            "我打網球打了兩個鐘頭。",
+            "我打網球了兩個鐘頭。",
+            "我打網球兩個鐘頭。"
+          ],
+          "answer": "我打網球打了兩個鐘頭。",
+          "explanation": "With the object before the duration, repeat the verb.",
+          "grammarIds": [
+            "u43-completed-duration"
+          ]
+        },
+        {
+          "id": "u43-finished-duration-p4",
+          "type": "phrase",
+          "phrase": "u43-only-chinese"
+        },
+        {
+          "id": "u43-duration-s2",
+          "type": "select",
+          "prompt": "Why does 中文我只學了五個月 not repeat 學?",
+          "options": [
+            "中文 is fronted as the topic",
+            "了 removes the verb",
+            "只 forbids verb repetition"
+          ],
+          "answer": "中文 is fronted as the topic",
+          "explanation": "Fronting the object/topic allows the source pattern without the repeated verb.",
+          "grammarIds": [
+            "u43-completed-duration"
+          ]
+        },
+        {
+          "id": "u43-finished-duration-p5",
+          "type": "phrase",
+          "phrase": "u43-confirm-bridge"
+        },
+        {
+          "id": "u43-confirm-s1",
+          "type": "select",
+          "prompt": "In the source-style prompt, 對不對 is used to…",
+          "options": [
+            "seek confirmation of the statement",
+            "ask how many months",
+            "mean “only”"
+          ],
+          "answer": "seek confirmation of the statement",
+          "explanation": "The bridge has already explained 對不對 as a confirmation form."
+        },
+        {
+          "id": "u43-duration-l1",
+          "type": "listen",
+          "audioText": "我打網球打了兩個鐘頭。",
+          "prompt": "How long was the tennis activity?",
+          "options": [
+            "two hours",
+            "two months",
+            "two years"
+          ],
+          "answer": "two hours",
+          "explanation": "兩個鐘頭 means two hours."
+        },
+        {
+          "id": "u43-duration-o1",
+          "type": "order",
+          "phrase": "u43-tennis-duration",
+          "tokens": [
+            "我打網球",
+            "打了兩個鐘頭"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u43-duration-now",
+      "title": "How Long Up to Now?",
+      "subtitle": "Contrast completed duration with duration accumulated to now.",
+      "chars": [],
+      "minutes": "14–17 min",
+      "unitId": "unit-43",
+      "review": false,
+      "steps": [
+        {
+          "id": "u43-duration-to-now",
+          "type": "grammar",
+          "grammar": "u43-duration-to-now"
+        },
+        {
+          "id": "u43-duration-now-p1",
+          "type": "phrase",
+          "phrase": "u43-duration-now-source"
+        },
+        {
+          "id": "u43-miss-s1",
+          "type": "select",
+          "prompt": "In 有一點想家, 想 means…",
+          "options": [
+            "miss",
+            "plan to",
+            "compare"
+          ],
+          "answer": "miss",
+          "explanation": "Lesson 14 adds the state-verb sense “miss”; 想家 means miss home."
+        },
+        {
+          "id": "u43-duration-now-s1",
+          "type": "select",
+          "prompt": "Which sentence presents the six-month stay as duration accumulated up to now?",
+          "options": [
+            "我在臺灣住了半年了。",
+            "我在臺灣住了半年。",
+            "我在臺灣住半年。"
+          ],
+          "answer": "我在臺灣住了半年了。",
+          "explanation": "Final 了 creates the duration-to-now frame.",
+          "grammarIds": [
+            "u43-duration-to-now"
+          ]
+        },
+        {
+          "id": "u43-duration-now-s2",
+          "type": "select",
+          "prompt": "Does the double-了 pattern by itself guarantee that the action will continue?",
+          "options": [
+            "No; continuation depends on context.",
+            "Yes; it always continues.",
+            "No; it always stopped already."
+          ],
+          "answer": "No; continuation depends on context.",
+          "explanation": "This is the source distinction.",
+          "grammarIds": [
+            "u43-duration-to-now"
+          ]
+        },
+        {
+          "id": "u43-duration-now-p2",
+          "type": "phrase",
+          "phrase": "u43-approx-time"
+        },
+        {
+          "id": "u43-approx-s1",
+          "type": "select",
+          "prompt": "Which means “around December”?",
+          "options": [
+            "差不多十二月",
+            "差不多兩個月",
+            "十二月開始"
+          ],
+          "answer": "差不多十二月",
+          "explanation": "差不多 before a time expression means approximately/around that time."
+        },
+        {
+          "id": "u43-duration-now-p3",
+          "type": "phrase",
+          "phrase": "u43-duration-question"
+        },
+        {
+          "id": "u43-duration-now-p4",
+          "type": "phrase",
+          "phrase": "u43-a002-model"
+        },
+        {
+          "id": "u43-duration-contrast",
+          "type": "select",
+          "prompt": "Which sentence presents a completed one-year stay?",
+          "options": [
+            "我在臺灣住了一年。",
+            "我在臺灣住了一年了。",
+            "我在臺灣住一年。"
+          ],
+          "answer": "我在臺灣住了一年。",
+          "explanation": "G001 presents the duration as completed; the final 了 in G002 shifts to accumulated duration up to now."
+        },
+        {
+          "id": "u43-a002-s1",
+          "type": "select",
+          "prompt": "For the source experience task, what two things must you ask about?",
+          "options": [
+            "where the person lived and for how long",
+            "where the person lives now and what they like",
+            "when the person returned and why"
+          ],
+          "answer": "where the person lived and for how long",
+          "explanation": "B1L14-A002 asks for place plus duration."
+        },
+        {
+          "id": "u43-a002-s2",
+          "type": "select",
+          "prompt": "After asking the classmate, what does the source task require?",
+          "options": [
+            "record the result and report it",
+            "ask the same questions again without recording anything",
+            "report before asking for the duration"
+          ],
+          "answer": "record the result and report it",
+          "explanation": "A002 includes recording and reporting."
+        },
+        {
+          "id": "u43-duration-now-l1",
+          "type": "listen",
+          "audioText": "我在臺灣住了半年多了。",
+          "prompt": "What duration frame do you hear?",
+          "options": [
+            "a little over half a year up to now",
+            "exactly two hours completed",
+            "an event about to happen"
+          ],
+          "answer": "a little over half a year up to now",
+          "explanation": "半年多了 expresses accumulated duration."
+        },
+        {
+          "id": "u43-duration-now-o1",
+          "type": "order",
+          "phrase": "u43-duration-now-source",
+          "tokens": [
+            "我在臺灣住了半年多了",
+            "有一點想家"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u43-new-year",
+      "title": "New Year Is Almost Here",
+      "subtitle": "Use 快／要／快要…了 for imminence.",
+      "chars": [
+        "父",
+        "母"
+      ],
+      "minutes": "14–17 min",
+      "unitId": "unit-43",
+      "review": false,
+      "steps": [
+        {
+          "id": "u43-new-year-父-intro",
+          "type": "intro",
+          "char": "父"
+        },
+        {
+          "id": "u43-new-year-父-trace",
+          "type": "trace",
+          "char": "父"
+        },
+        {
+          "id": "u43-new-year-父-build",
+          "type": "build",
+          "char": "父"
+        },
+        {
+          "id": "u43-new-year-父-complete",
+          "type": "complete",
+          "char": "父"
+        },
+        {
+          "id": "u43-new-year-父-memory",
+          "type": "memory",
+          "char": "父"
+        },
+        {
+          "id": "u43-new-year-母-intro",
+          "type": "intro",
+          "char": "母"
+        },
+        {
+          "id": "u43-new-year-母-trace",
+          "type": "trace",
+          "char": "母"
+        },
+        {
+          "id": "u43-new-year-母-build",
+          "type": "build",
+          "char": "母"
+        },
+        {
+          "id": "u43-new-year-母-complete",
+          "type": "complete",
+          "char": "母"
+        },
+        {
+          "id": "u43-new-year-母-memory",
+          "type": "memory",
+          "char": "母"
+        },
+        {
+          "id": "u43-new-year-p1",
+          "type": "phrase",
+          "phrase": "u43-newyear-basic"
+        },
+        {
+          "id": "u43-newyear-s1",
+          "type": "select",
+          "prompt": "新年 means…",
+          "options": [
+            "New Year",
+            "next year",
+            "last year"
+          ],
+          "answer": "New Year",
+          "explanation": "新年 means New Year."
+        },
+        {
+          "id": "u43-parents-s1",
+          "type": "select",
+          "prompt": "父母 means…",
+          "options": [
+            "parents",
+            "classmates",
+            "everyone"
+          ],
+          "answer": "parents",
+          "explanation": "父母 means parents."
+        },
+        {
+          "id": "u43-new-year-p2",
+          "type": "phrase",
+          "phrase": "u43-kuai-sense"
+        },
+        {
+          "id": "u43-new-year-p3",
+          "type": "phrase",
+          "phrase": "u43-yao-sense"
+        },
+        {
+          "id": "u43-imminent",
+          "type": "grammar",
+          "grammar": "u43-imminent"
+        },
+        {
+          "id": "u43-new-year-p4",
+          "type": "phrase",
+          "phrase": "u43-newyear-source"
+        },
+        {
+          "id": "u43-imminent-s1",
+          "type": "select",
+          "prompt": "In 新年快到了, 快 means…",
+          "options": [
+            "soon / almost",
+            "fast in speed",
+            "only"
+          ],
+          "answer": "soon / almost",
+          "explanation": "This is the Lesson-14 temporal sense of 快."
+        },
+        {
+          "id": "u43-imminent-s2",
+          "type": "select",
+          "prompt": "In 比賽要開始了, 要 means…",
+          "options": [
+            "is about to / is going to",
+            "wants an object",
+            "misses someone"
+          ],
+          "answer": "is about to / is going to",
+          "explanation": "This is the Lesson-14 imminent-event auxiliary sense."
+        },
+        {
+          "id": "u43-imminent-s3",
+          "type": "select",
+          "prompt": "According to the textbook's Lesson-14 rule, which sentence is rejected?",
+          "options": [
+            "他明天快要回來了。",
+            "他快要回來了。",
+            "快下雨了。"
+          ],
+          "answer": "他明天快要回來了。",
+          "explanation": "The source blocks explicit time word + 快要 in this construction.",
+          "grammarIds": [
+            "u43-imminent"
+          ]
+        },
+        {
+          "id": "u43-imminent-s4",
+          "type": "select",
+          "prompt": "Which form does the source identify as especially preferred in Taiwan Mandarin?",
+          "options": [
+            "快要",
+            "快",
+            "要"
+          ],
+          "answer": "快要",
+          "explanation": "The textbook explicitly notes the Taiwan preference for disyllabic 快要."
+        },
+        {
+          "id": "u43-newyear-l1",
+          "type": "listen",
+          "audioText": "新年快到了。",
+          "prompt": "What is about to arrive?",
+          "options": [
+            "New Year",
+            "a typhoon",
+            "autumn leaves"
+          ],
+          "answer": "New Year",
+          "explanation": "新年 is New Year."
+        },
+        {
+          "id": "u43-newyear-o1",
+          "type": "order",
+          "phrase": "u43-newyear-source",
+          "tokens": [
+            "新年快到了",
+            "想回去看父母嗎"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u43-stopping",
+      "title": "The Rain Is About to Stop",
+      "subtitle": "Retrieve imminence with 停.",
+      "chars": [
+        "停"
+      ],
+      "minutes": "9–12 min",
+      "unitId": "unit-43",
+      "review": false,
+      "steps": [
+        {
+          "id": "u43-stopping-停-intro",
+          "type": "intro",
+          "char": "停"
+        },
+        {
+          "id": "u43-stopping-停-trace",
+          "type": "trace",
+          "char": "停"
+        },
+        {
+          "id": "u43-stopping-停-build",
+          "type": "build",
+          "char": "停"
+        },
+        {
+          "id": "u43-stopping-停-complete",
+          "type": "complete",
+          "char": "停"
+        },
+        {
+          "id": "u43-stopping-停-memory",
+          "type": "memory",
+          "char": "停"
+        },
+        {
+          "id": "u43-stop-s1",
+          "type": "select",
+          "prompt": "停 means…",
+          "options": [
+            "to stop",
+            "to rain",
+            "to miss"
+          ],
+          "answer": "to stop",
+          "explanation": "停 means to stop."
+        },
+        {
+          "id": "u43-stopping-p1",
+          "type": "phrase",
+          "phrase": "u43-stopping"
+        },
+        {
+          "id": "u43-stop-s2",
+          "type": "select",
+          "prompt": "雨快要停了 means…",
+          "options": [
+            "The rain is about to stop.",
+            "The rain has already stopped.",
+            "The rain often stops."
+          ],
+          "answer": "The rain is about to stop.",
+          "explanation": "快要…了 marks imminence and 停 means stop."
+        },
+        {
+          "id": "u43-stop-l1",
+          "type": "listen",
+          "audioText": "雨快要停了。",
+          "prompt": "Which verb do you hear?",
+          "options": [
+            "停",
+            "滑雪",
+            "想"
+          ],
+          "answer": "停",
+          "explanation": "The audio ends with 停了."
+        },
+        {
+          "id": "u43-stop-o1",
+          "type": "order",
+          "phrase": "u43-stopping",
+          "tokens": [
+            "雨",
+            "快要停了"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u43-return-plan",
+      "title": "The End of December",
+      "subtitle": "Talk about return plans and month-end timing.",
+      "chars": [
+        "底"
+      ],
+      "minutes": "10–13 min",
+      "unitId": "unit-43",
+      "review": false,
+      "steps": [
+        {
+          "id": "u43-return-plan-底-intro",
+          "type": "intro",
+          "char": "底"
+        },
+        {
+          "id": "u43-return-plan-底-trace",
+          "type": "trace",
+          "char": "底"
+        },
+        {
+          "id": "u43-return-plan-底-build",
+          "type": "build",
+          "char": "底"
+        },
+        {
+          "id": "u43-return-plan-底-complete",
+          "type": "complete",
+          "char": "底"
+        },
+        {
+          "id": "u43-return-plan-底-memory",
+          "type": "memory",
+          "char": "底"
+        },
+        {
+          "id": "u43-return-plan-p1",
+          "type": "phrase",
+          "phrase": "u43-return-plan"
+        },
+        {
+          "id": "u43-endmonth-s1",
+          "type": "select",
+          "prompt": "十二月底 means…",
+          "options": [
+            "the end of December",
+            "the beginning of December",
+            "December last year"
+          ],
+          "answer": "the end of December",
+          "explanation": "月底 means the end of a month."
+        },
+        {
+          "id": "u43-return-plan-p2",
+          "type": "phrase",
+          "phrase": "u43-return-reason"
+        },
+        {
+          "id": "u43-plan-s1",
+          "type": "select",
+          "prompt": "Which sentence states an end-of-December plan?",
+          "options": [
+            "我打算十二月底回去。",
+            "我在臺灣住了半年多了。",
+            "雨快要停了。"
+          ],
+          "answer": "我打算十二月底回去。",
+          "explanation": "打算 marks the plan and 十二月底 gives the time."
+        },
+        {
+          "id": "u43-plan-l1",
+          "type": "listen",
+          "audioText": "我打算十二月底回去。",
+          "prompt": "When is the planned return?",
+          "options": [
+            "at the end of December",
+            "next autumn",
+            "after two hours"
+          ],
+          "answer": "at the end of December",
+          "explanation": "十二月底 is the end of December."
+        },
+        {
+          "id": "u43-plan-o1",
+          "type": "order",
+          "phrase": "u43-return-reason",
+          "tokens": [
+            "因為我們只放十天的假",
+            "所以一月五號回來"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u43-next-year",
+      "title": "Next Year and Autumn Leaves",
+      "subtitle": "Close Dialogue I with next-year plans and experiences.",
+      "chars": [
+        "葉"
+      ],
+      "minutes": "12–15 min",
+      "unitId": "unit-43",
+      "review": false,
+      "steps": [
+        {
+          "id": "u43-next-year-葉-intro",
+          "type": "intro",
+          "char": "葉"
+        },
+        {
+          "id": "u43-next-year-葉-trace",
+          "type": "trace",
+          "char": "葉"
+        },
+        {
+          "id": "u43-next-year-葉-build",
+          "type": "build",
+          "char": "葉"
+        },
+        {
+          "id": "u43-next-year-葉-complete",
+          "type": "complete",
+          "char": "葉"
+        },
+        {
+          "id": "u43-next-year-葉-memory",
+          "type": "memory",
+          "char": "葉"
+        },
+        {
+          "id": "u43-next-year-p1",
+          "type": "phrase",
+          "phrase": "u43-nextyear-source"
+        },
+        {
+          "id": "u43-next-year-p2",
+          "type": "phrase",
+          "phrase": "u43-return-question"
+        },
+        {
+          "id": "u43-nextyear-s1",
+          "type": "select",
+          "prompt": "明年 means…",
+          "options": [
+            "next year",
+            "New Year",
+            "last year"
+          ],
+          "answer": "next year",
+          "explanation": "明年 means next year."
+        },
+        {
+          "id": "u43-leaves-s1",
+          "type": "select",
+          "prompt": "紅葉 means…",
+          "options": [
+            "red maple leaves",
+            "rain",
+            "news"
+          ],
+          "answer": "red maple leaves",
+          "explanation": "紅葉 is the source word for red maple leaves."
+        },
+        {
+          "id": "u43-next-year-p3",
+          "type": "phrase",
+          "phrase": "u43-trip-adapted"
+        },
+        {
+          "id": "u43-trip-s1",
+          "type": "select",
+          "prompt": "Which line is an experience statement with a completed duration?",
+          "options": [
+            "我去年五月出去玩了兩個星期。",
+            "新年快到了。",
+            "雨快要停了。"
+          ],
+          "answer": "我去年五月出去玩了兩個星期。",
+          "explanation": "It reports a completed trip lasting two weeks.",
+          "grammarIds": [
+            "u43-completed-duration"
+          ]
+        },
+        {
+          "id": "u43-nextyear-l1",
+          "type": "listen",
+          "audioText": "我想明年秋天去看紅葉。",
+          "prompt": "What does the speaker want to see?",
+          "options": [
+            "red maple leaves",
+            "an umbrella",
+            "a typhoon"
+          ],
+          "answer": "red maple leaves",
+          "explanation": "The audio says 紅葉."
+        },
+        {
+          "id": "u43-nextyear-o1",
+          "type": "order",
+          "phrase": "u43-nextyear-source",
+          "tokens": [
+            "冬天太冷了",
+            "不過",
+            "我想明年秋天去看紅葉"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "u43-review",
+      "title": "Unit 43 Review",
+      "subtitle": "Retrieve duration, imminence, expansion senses, and handwriting.",
+      "chars": [
+        "只",
+        "父",
+        "母",
+        "停",
+        "底",
+        "葉"
+      ],
+      "minutes": "24–28 min",
+      "unitId": "unit-43",
+      "review": true,
+      "steps": [
+        {
+          "id": "u43-review-l1",
+          "type": "listen",
+          "audioText": "我打網球打了兩個鐘頭。",
+          "prompt": "Which duration do you hear?",
+          "options": [
+            "two hours",
+            "two months",
+            "two years"
+          ],
+          "answer": "two hours",
+          "explanation": "兩個鐘頭 means two hours."
+        },
+        {
+          "id": "u43-review-l2",
+          "type": "listen",
+          "audioText": "我在臺灣住了半年多了。有一點想家。",
+          "prompt": "What does 想 mean here?",
+          "options": [
+            "miss",
+            "compare",
+            "stop"
+          ],
+          "answer": "miss",
+          "explanation": "想家 means miss home."
+        },
+        {
+          "id": "u43-review-l3",
+          "type": "listen",
+          "audioText": "雨快要停了。",
+          "prompt": "What is about to happen?",
+          "options": [
+            "the rain will stop",
+            "the rain has already stopped",
+            "the rain will continue for two hours"
+          ],
+          "answer": "the rain will stop",
+          "explanation": "快要…了 marks imminence; 停 means stop."
+        },
+        {
+          "id": "u43-review-zhi",
+          "type": "complete",
+          "char": "只"
+        },
+        {
+          "id": "u43-review-fu",
+          "type": "complete",
+          "char": "父"
+        },
+        {
+          "id": "u43-review-mu",
+          "type": "complete",
+          "char": "母"
+        },
+        {
+          "id": "u43-review-ting",
+          "type": "complete",
+          "char": "停"
+        },
+        {
+          "id": "u43-review-di",
+          "type": "complete",
+          "char": "底"
+        },
+        {
+          "id": "u43-review-ye",
+          "type": "complete",
+          "char": "葉"
+        },
+        {
+          "id": "u43-review-v1",
+          "type": "select",
+          "prompt": "只 means…",
+          "options": [
+            "only; merely",
+            "already",
+            "even more"
+          ],
+          "answer": "only; merely",
+          "explanation": "只 means only; merely."
+        },
+        {
+          "id": "u43-review-v2",
+          "type": "select",
+          "prompt": "新年 means…",
+          "options": [
+            "New Year",
+            "next year",
+            "last year"
+          ],
+          "answer": "New Year",
+          "explanation": "新年 means New Year."
+        },
+        {
+          "id": "u43-review-v3",
+          "type": "select",
+          "prompt": "父母 means…",
+          "options": [
+            "parents",
+            "classmates",
+            "everyone"
+          ],
+          "answer": "parents",
+          "explanation": "父母 means parents."
+        },
+        {
+          "id": "u43-review-v4",
+          "type": "select",
+          "prompt": "停 means…",
+          "options": [
+            "stop",
+            "rain",
+            "compare"
+          ],
+          "answer": "stop",
+          "explanation": "停 means stop."
+        },
+        {
+          "id": "u43-review-v5",
+          "type": "select",
+          "prompt": "十二月底 means…",
+          "options": [
+            "end of December",
+            "beginning of December",
+            "December last year"
+          ],
+          "answer": "end of December",
+          "explanation": "十二月底 means end of December."
+        },
+        {
+          "id": "u43-review-v6",
+          "type": "select",
+          "prompt": "明年 means…",
+          "options": [
+            "next year",
+            "New Year",
+            "this year"
+          ],
+          "answer": "next year",
+          "explanation": "明年 means next year."
+        },
+        {
+          "id": "u43-review-v7",
+          "type": "select",
+          "prompt": "紅葉 means…",
+          "options": [
+            "red maple leaves",
+            "rain",
+            "umbrella"
+          ],
+          "answer": "red maple leaves",
+          "explanation": "紅葉 means red maple leaves."
+        },
+        {
+          "id": "u43-review-e1",
+          "type": "select",
+          "prompt": "In 想家, 想 means…",
+          "options": [
+            "miss",
+            "want to buy",
+            "compare"
+          ],
+          "answer": "miss",
+          "explanation": "Lesson 14 adds the “miss” sense."
+        },
+        {
+          "id": "u43-review-e2",
+          "type": "select",
+          "prompt": "In 新年快到了, 快 means…",
+          "options": [
+            "soon / almost",
+            "fast in speed",
+            "only"
+          ],
+          "answer": "soon / almost",
+          "explanation": "This is the Lesson-14 temporal sense."
+        },
+        {
+          "id": "u43-review-e3",
+          "type": "select",
+          "prompt": "In 比賽要開始了, 要 means…",
+          "options": [
+            "is about to / is going to",
+            "wants an object",
+            "misses someone"
+          ],
+          "answer": "is about to / is going to",
+          "explanation": "This is the source auxiliary sense."
+        },
+        {
+          "id": "u43-review-g1",
+          "type": "select",
+          "prompt": "Which correctly expresses a completed two-hour tennis activity?",
+          "options": [
+            "我打網球打了兩個鐘頭。",
+            "我打網球兩個鐘頭了。",
+            "我打網球兩個鐘頭。"
+          ],
+          "answer": "我打網球打了兩個鐘頭。",
+          "explanation": "Object before duration requires verb repetition.",
+          "grammarIds": [
+            "u43-completed-duration"
+          ]
+        },
+        {
+          "id": "u43-review-g2",
+          "type": "select",
+          "prompt": "Which presents duration accumulated up to now?",
+          "options": [
+            "我工作了兩個月了。",
+            "我工作了兩個月。",
+            "我快要工作了。"
+          ],
+          "answer": "我工作了兩個月了。",
+          "explanation": "Final 了 creates the duration-to-now frame.",
+          "grammarIds": [
+            "u43-duration-to-now"
+          ]
+        },
+        {
+          "id": "u43-review-g3",
+          "type": "select",
+          "prompt": "Which means “The game is about to start”?",
+          "options": [
+            "比賽要開始了。",
+            "比賽已經開始了。",
+            "比賽明天開始。"
+          ],
+          "answer": "比賽要開始了。",
+          "explanation": "要…了 marks imminence here.",
+          "grammarIds": [
+            "u43-imminent"
+          ]
+        },
+        {
+          "id": "u43-review-g4",
+          "type": "select",
+          "prompt": "Which presents the stay as completed rather than accumulated-to-now?",
+          "options": [
+            "我在臺灣住了一年。",
+            "我在臺灣住了一年了。",
+            "我在臺灣住一年。"
+          ],
+          "answer": "我在臺灣住了一年。",
+          "explanation": "G001 completed duration lacks the final sentence 了."
+        },
+        {
+          "id": "u43-review-g5",
+          "type": "select",
+          "prompt": "According to the textbook's Lesson-14 rule, which is rejected?",
+          "options": [
+            "他明天快要回來了。",
+            "他快要回來了。",
+            "快下雨了。"
+          ],
+          "answer": "他明天快要回來了。",
+          "explanation": "The source blocks explicit-time + 快要."
+        },
+        {
+          "id": "u43-review-g6",
+          "type": "select",
+          "prompt": "Which ending asks for confirmation of a statement?",
+          "options": [
+            "對不對",
+            "多久",
+            "十二月底"
+          ],
+          "answer": "對不對",
+          "explanation": "對不對 asks whether the preceding statement is correct, functioning as a confirmation check."
+        },
+        {
+          "id": "u43-review-cum1",
+          "type": "select",
+          "prompt": "Which earlier weather sentence says it often rains in summer?",
+          "options": [
+            "夏天常下雨。",
+            "新年快到了。",
+            "紅葉很冷。"
+          ],
+          "answer": "夏天常下雨。",
+          "explanation": "This retrieves Unit-42 weather before Unit 44."
+        },
+        {
+          "id": "u43-review-cum2",
+          "type": "select",
+          "prompt": "For the source experience task, what comes after asking where/how long?",
+          "options": [
+            "record and report the result",
+            "introduce a typhoon comparison",
+            "skip the result"
+          ],
+          "answer": "record and report the result",
+          "explanation": "This retrieves A002's transfer requirement."
+        },
+        {
+          "id": "u43-review-o1",
+          "type": "order",
+          "phrase": "u43-tennis-duration",
+          "tokens": [
+            "我打網球",
+            "打了兩個鐘頭"
+          ]
+        }
+      ]
+    }
+  ],
+  "newVocabulary": [
+    {
+      "text": "只",
+      "pinyin": "zhǐ",
+      "meaning": "only; merely",
+      "lessonId": "u43-finished-duration",
+      "core": true
+    },
+    {
+      "text": "新年",
+      "pinyin": "xīnnián",
+      "meaning": "New Year",
+      "lessonId": "u43-new-year",
+      "core": true
+    },
+    {
+      "text": "父母",
+      "pinyin": "fùmǔ",
+      "meaning": "parents",
+      "lessonId": "u43-new-year",
+      "core": true
+    },
+    {
+      "text": "停",
+      "pinyin": "tíng",
+      "meaning": "to stop",
+      "lessonId": "u43-stopping",
+      "core": true
+    },
+    {
+      "text": "十二月底",
+      "pinyin": "shí'èr yuè dǐ",
+      "meaning": "the end of December",
+      "lessonId": "u43-return-plan",
+      "core": true
+    },
+    {
+      "text": "明年",
+      "pinyin": "míngnián",
+      "meaning": "next year",
+      "lessonId": "u43-next-year",
+      "core": true
+    },
+    {
+      "text": "紅葉",
+      "pinyin": "hóngyè",
+      "meaning": "red maple leaves",
+      "lessonId": "u43-next-year",
+      "core": true
+    }
+  ],
+  "reviewVocabulary": [
+    "想",
+    "快",
+    "要",
+    "打網球",
+    "結束",
+    "比賽",
+    "已經",
+    "打算",
+    "因為",
+    "所以",
+    "差不多",
+    "一共",
+    "臺灣",
+    "雨",
+    "下雨",
+    "冬天"
+  ],
+  "newCharacters": [
+    "只",
+    "父",
+    "母",
+    "停",
+    "底",
+    "葉"
+  ],
+  "reviewCharacters": [],
+  "characters": {
+    "只": {
+      "hanzi": "只",
+      "pinyin": "zhǐ",
+      "zhuyin": "ㄓˇ",
+      "meaning": "only; merely",
+      "strokes": 5,
+      "note": "只 is first taught in Unit 43 through 只.",
+      "memory": "Connect 只 with 只 (only) while writing its 5 strokes in order.",
+      "parts": [
+        {
+          "label": "只",
+          "name": "只 whole form",
+          "role": "Whole character",
+          "description": "Write all 5 strokes of 只 in standard order and connect the shape to 只.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "只",
+        "pinyin": "zhǐ",
+        "meaning": "only"
+      }
+    },
+    "父": {
+      "hanzi": "父",
+      "pinyin": "fù",
+      "zhuyin": "ㄈㄨˋ",
+      "meaning": "father",
+      "strokes": 4,
+      "note": "父 is first taught in Unit 43 through 父母.",
+      "memory": "Connect 父 with 父母 (parents) while writing its 4 strokes in order.",
+      "parts": [
+        {
+          "label": "父",
+          "name": "父 whole form",
+          "role": "Whole character",
+          "description": "Write all 4 strokes of 父 in standard order and connect the shape to 父母.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "父母",
+        "pinyin": "fùmǔ",
+        "meaning": "parents"
+      }
+    },
+    "母": {
+      "hanzi": "母",
+      "pinyin": "mǔ",
+      "zhuyin": "ㄇㄨˇ",
+      "meaning": "mother",
+      "strokes": 5,
+      "note": "母 is first taught in Unit 43 through 父母.",
+      "memory": "Connect 母 with 父母 (parents) while writing its 5 strokes in order.",
+      "parts": [
+        {
+          "label": "母",
+          "name": "母 whole form",
+          "role": "Whole character",
+          "description": "Write all 5 strokes of 母 in standard order and connect the shape to 父母.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "父母",
+        "pinyin": "fùmǔ",
+        "meaning": "parents"
+      }
+    },
+    "停": {
+      "hanzi": "停",
+      "pinyin": "tíng",
+      "zhuyin": "ㄊㄧㄥˊ",
+      "meaning": "stop",
+      "strokes": 11,
+      "note": "停 is first taught in Unit 43 through 雨快要停了.",
+      "memory": "Connect 停 with 雨快要停了 (the rain is about to stop) while writing its 11 strokes in order.",
+      "parts": [
+        {
+          "label": "停",
+          "name": "停 whole form",
+          "role": "Whole character",
+          "description": "Write all 11 strokes of 停 in standard order and connect the shape to 雨快要停了.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "雨快要停了",
+        "pinyin": "yǔ kuài yào tíng le",
+        "meaning": "the rain is about to stop"
+      }
+    },
+    "底": {
+      "hanzi": "底",
+      "pinyin": "dǐ",
+      "zhuyin": "ㄉㄧˇ",
+      "meaning": "bottom; end",
+      "strokes": 8,
+      "note": "底 is first taught in Unit 43 through 十二月底.",
+      "memory": "Connect 底 with 十二月底 (the end of December) while writing its 8 strokes in order.",
+      "parts": [
+        {
+          "label": "底",
+          "name": "底 whole form",
+          "role": "Whole character",
+          "description": "Write all 8 strokes of 底 in standard order and connect the shape to 十二月底.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "十二月底",
+        "pinyin": "shí'èr yuè dǐ",
+        "meaning": "the end of December"
+      }
+    },
+    "葉": {
+      "hanzi": "葉",
+      "pinyin": "yè",
+      "zhuyin": "ㄧㄝˋ",
+      "meaning": "leaf",
+      "strokes": 12,
+      "note": "葉 is first taught in Unit 43 through 紅葉.",
+      "memory": "Connect 葉 with 紅葉 (red maple leaves) while writing its 12 strokes in order.",
+      "parts": [
+        {
+          "label": "葉",
+          "name": "葉 whole form",
+          "role": "Whole character",
+          "description": "Write all 12 strokes of 葉 in standard order and connect the shape to 紅葉.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "layout": "whole",
+      "example": {
+        "text": "紅葉",
+        "pinyin": "hóngyè",
+        "meaning": "red maple leaves"
+      }
+    }
+  },
+  "grammarRules": {
+    "u43-completed-duration": {
+      "id": "u43-completed-duration",
+      "title": "Completed duration with verbal 了",
+      "pattern": "Subject + V + 了 + Duration / Subject + V + Object + V + 了 + Duration",
+      "explanation": "Use verbal 了 followed by a duration when an activity is viewed as completed. If a transitive verb keeps its object before the duration, repeat the verb before 了 + Duration: 打網球打了兩個鐘頭. If the object or location is fronted as the topic, the repeated verb is not required: 中文我只學了五個月. This integrates earlier duration grammar, object-repeat duration, and completed-action 了.",
+      "examples": [
+        {
+          "text": "我在臺灣住了一年。",
+          "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
+          "meaning": "I lived in Taiwan for one year."
+        },
+        {
+          "text": "我打網球打了兩個鐘頭。",
+          "pinyin": "Wǒ dǎ wǎngqiú dǎ le liǎng ge zhōngtóu.",
+          "meaning": "I played tennis for two hours."
+        },
+        {
+          "text": "中文我只學了五個月。",
+          "pinyin": "Zhōngwén wǒ zhǐ xué le wǔ ge yuè.",
+          "meaning": "I studied Chinese for only five months."
+        }
+      ],
+      "remember": "Completed duration: verbal 了 + duration. With an object before the duration, repeat the verb; fronting the object/location can avoid the repetition."
+    },
+    "u43-duration-to-now": {
+      "id": "u43-duration-to-now",
+      "title": "Duration accumulated up to now",
+      "pattern": "Subject + V + 了 + Duration + 了",
+      "explanation": "Use the double-了 pattern for a duration accumulated up to the time of speaking. The situation may continue or may stop depending on context. Do not treat this as automatically “still continuing.” Contrast it with u43-completed-duration, which presents the duration as completed. 多久了 asks for the accumulated duration; 已經 often appears in this context.",
+      "examples": [
+        {
+          "text": "我在臺灣住了半年多了。",
+          "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le.",
+          "meaning": "I have been in Taiwan for a little over half a year."
+        },
+        {
+          "text": "她已經工作了兩個月了。",
+          "pinyin": "Tā yǐjīng gōngzuò le liǎng ge yuè le.",
+          "meaning": "She has worked for two months up to now."
+        },
+        {
+          "text": "他學中文學了三個星期了。",
+          "pinyin": "Tā xué Zhōngwén xué le sān ge xīngqí le.",
+          "meaning": "He has studied Chinese for three weeks up to now."
+        }
+      ],
+      "remember": "One 了 after the verb + duration can present a completed duration; final 了 adds the “up to now” duration frame. Continuation depends on context."
+    },
+    "u43-imminent": {
+      "id": "u43-imminent",
+      "title": "Something is about to happen",
+      "pattern": "快…了 / 要…了 / 快要…了",
+      "explanation": "These patterns present an event or change as imminent. 快 here means “soon/about to,” and 要 is the source auxiliary “will / going to” in this imminent-event system. The source notes that Taiwan Mandarin prefers the disyllabic 快要 form. Under the textbook's Lesson-14 rule, do not combine an explicit time word such as 明天 directly with 快要: *他明天快要回來了. Use this pattern when the context shows that the event is close, not as a generic future marker.",
+      "examples": [
+        {
+          "text": "快下雨了。",
+          "pinyin": "Kuài xiàyǔ le.",
+          "meaning": "It is about to rain."
+        },
+        {
+          "text": "比賽要開始了。",
+          "pinyin": "Bǐsài yào kāishǐ le.",
+          "meaning": "The game is about to start."
+        },
+        {
+          "text": "爸爸快要到家了。",
+          "pinyin": "Bàba kuài yào dào jiā le.",
+          "meaning": "Dad is about to get home."
+        }
+      ],
+      "remember": "Imminence, not generic future: 快／要／快要…了. The source prefers 快要 in Taiwan Mandarin and blocks explicit-time + 快要 in this Lesson-14 rule."
+    }
+  },
+  "grammarIntroductions": [
+    {
+      "id": "u43-completed-duration",
+      "kind": "rule",
+      "ref": "u43-completed-duration",
+      "lessonId": "u43-finished-duration",
+      "stepId": "u43-completed-duration"
+    },
+    {
+      "id": "u43-duration-to-now",
+      "kind": "rule",
+      "ref": "u43-duration-to-now",
+      "lessonId": "u43-duration-now",
+      "stepId": "u43-duration-to-now"
+    },
+    {
+      "id": "u43-imminent",
+      "kind": "rule",
+      "ref": "u43-imminent",
+      "lessonId": "u43-new-year",
+      "stepId": "u43-imminent"
+    }
+  ],
+  "reviewGrammar": [
+    "u27-duration-basic",
+    "u28-object-duration",
+    "u39-verbal-le",
+    "u31-sentential-le",
+    "u31-yinwei-suoyi"
+  ],
+  "phrases": {
+    "u43-only-basic": {
+      "text": "我只喝茶。",
+      "pinyin": "Wǒ zhǐ hē chá.",
+      "meaning": "I only drink tea.",
+      "note": "Simple meaning-first card for 只 before the completed-duration grammar.",
+      "tokens": [
+        "我只喝茶"
+      ]
+    },
+    "u43-finished-stay": {
+      "text": "我在臺灣住了一年。",
+      "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
+      "meaning": "I lived in Taiwan for one year.",
+      "note": "G001 completed duration.",
+      "tokens": [
+        "我在臺灣",
+        "住了一年"
+      ],
+      "grammarIds": [
+        "u43-completed-duration"
+      ]
+    },
+    "u43-tennis-duration": {
+      "text": "我打網球打了兩個鐘頭。",
+      "pinyin": "Wǒ dǎ wǎngqiú dǎ le liǎng ge zhōngtóu.",
+      "meaning": "I played tennis for two hours.",
+      "note": "The object remains before the duration, so the verb repeats.",
+      "tokens": [
+        "我打網球",
+        "打了兩個鐘頭"
+      ],
+      "grammarIds": [
+        "u43-completed-duration"
+      ]
+    },
+    "u43-only-chinese": {
+      "text": "中文我只學了五個月。",
+      "pinyin": "Zhōngwén wǒ zhǐ xué le wǔ ge yuè.",
+      "meaning": "I studied Chinese for only five months.",
+      "note": "Fronted object/topic; 只 means only.",
+      "tokens": [
+        "中文",
+        "我只學了五個月"
+      ],
+      "grammarIds": [
+        "u43-completed-duration"
+      ]
+    },
+    "u43-confirm-bridge": {
+      "text": "你昨天看電視看了三個鐘頭，對不對？",
+      "pinyin": "Nǐ zuótiān kàn diànshì kàn le sān ge zhōngtóu, duì bú duì?",
+      "meaning": "You watched TV for three hours yesterday, right?",
+      "note": "Teaching bridge before assessment: 對不對 is a transparent confirmation form here, “right or not / right?”. It checks a proposition. It is source support, not a new formal numbered grammar rule.",
+      "tokens": [
+        "你昨天看電視",
+        "看了三個鐘頭",
+        "對不對"
+      ]
+    },
+    "u43-duration-now-source": {
+      "text": "我在臺灣住了半年多了。有一點想家。",
+      "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le. Yǒu yìdiǎn xiǎng jiā.",
+      "meaning": "I have been in Taiwan for a little over half a year. I miss home a little.",
+      "note": "Source B1L14-D1T07. Here 想 means “miss,” not “want to.”",
+      "tokens": [
+        "我在臺灣住了半年多了",
+        "有一點想家"
+      ],
+      "grammarIds": [
+        "u43-duration-to-now"
+      ]
+    },
+    "u43-a002-model": {
+      "text": "你以前住在哪裡？你在那裡住了多久？",
+      "pinyin": "Nǐ yǐqián zhù zài nǎlǐ? Nǐ zài nàlǐ zhù le duōjiǔ?",
+      "meaning": "Where did you live before? How long did you live there?",
+      "note": "Learner-safe question pair for the source A002 interview task. Transfer instruction: ask a classmate (or rehearse with an imagined partner), record the place and duration on paper, then report one result in Chinese.",
+      "tokens": [
+        "你以前住在哪裡",
+        "你在那裡住了多久"
+      ],
+      "grammarIds": [
+        "u43-completed-duration"
+      ]
+    },
+    "u43-approx-time": {
+      "text": "每年差不多十二月開始下雪。",
+      "pinyin": "Měinián chàbuduō shí'èr yuè kāishǐ xiàxuě.",
+      "meaning": "It starts snowing around December each year.",
+      "note": "Source B1L14-D1T03 support. This explicitly transfers known 差不多 to approximate time; contrast with duration + 多 in 半年多.",
+      "tokens": [
+        "每年",
+        "差不多十二月",
+        "開始下雪"
+      ]
+    },
+    "u43-duration-question": {
+      "text": "你在臺灣住了多久了？",
+      "pinyin": "Nǐ zài Táiwān zhù le duōjiǔ le?",
+      "meaning": "How long have you been in Taiwan up to now?",
+      "note": "多久了 asks for accumulated duration to the speech point.",
+      "tokens": [
+        "你在臺灣",
+        "住了多久了"
+      ],
+      "grammarIds": [
+        "u43-duration-to-now"
+      ]
+    },
+    "u43-kuai-sense": {
+      "text": "快",
+      "pinyin": "kuài",
+      "meaning": "soon / about to (Lesson-14 sense)",
+      "note": "This card explicitly teaches the Lesson-14 sense before G003. Do not change the earlier canonical vocabulary gloss.",
+      "tokens": [
+        "快"
+      ]
+    },
+    "u43-yao-sense": {
+      "text": "要",
+      "pinyin": "yào",
+      "meaning": "will / going to in an imminent-event context (Lesson-14 sense)",
+      "note": "This card explicitly teaches the Lesson-14 auxiliary sense before G003. Do not create a second canonical vocabulary row.",
+      "tokens": [
+        "要"
+      ]
+    },
+    "u43-newyear-basic": {
+      "text": "新年到了。我想回去看父母。",
+      "pinyin": "Xīnnián dào le. Wǒ xiǎng huíqù kàn fùmǔ.",
+      "meaning": "New Year has arrived. I want to go back to see my parents.",
+      "note": "Meaning-first card for 新年 and 父母. It deliberately avoids the new imminence pattern until G003 is taught.",
+      "tokens": [
+        "新年到了",
+        "我想回去看父母"
+      ]
+    },
+    "u43-newyear-source": {
+      "text": "新年快到了。想回去看父母嗎？",
+      "pinyin": "Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?",
+      "meaning": "New Year is almost here. Do you want to go back to see your parents?",
+      "note": "Source B1L14-D1T08, presented only after 快/要 and G003 have been explained.",
+      "tokens": [
+        "新年快到了",
+        "想回去看父母嗎"
+      ],
+      "grammarIds": [
+        "u43-imminent"
+      ]
+    },
+    "u43-stopping": {
+      "text": "雨快要停了。",
+      "pinyin": "Yǔ kuài yào tíng le.",
+      "meaning": "The rain is about to stop.",
+      "note": "Delayed retrieval of G003 with the new verb 停.",
+      "tokens": [
+        "雨",
+        "快要停了"
+      ],
+      "grammarIds": [
+        "u43-imminent"
+      ]
+    },
+    "u43-return-plan": {
+      "text": "我打算十二月底回去。想跟我去玩嗎？",
+      "pinyin": "Wǒ dǎsuàn shí'èr yuè dǐ huíqù. Xiǎng gēn wǒ qù wán ma?",
+      "meaning": "I plan to go back at the end of December. Do you want to go travel/have fun with me?",
+      "note": "Learner-safe preservation of B1L14-D1T09: the deferred country name is omitted, but the return plan and invitation are retained.",
+      "tokens": [
+        "我打算十二月底回去",
+        "想跟我去玩嗎"
+      ]
+    },
+    "u43-return-reason": {
+      "text": "因為我們只放十天的假，所以一月五號回來。",
+      "pinyin": "Yīnwèi wǒmen zhǐ fàng shí tiān de jià, suǒyǐ yī yuè wǔ hào huílái.",
+      "meaning": "Because we only have ten days off, we come back on January 5.",
+      "note": "Source B1L14-D1T11; 因為…所以… is prior review.",
+      "tokens": [
+        "因為我們只放十天的假",
+        "所以一月五號回來"
+      ]
+    },
+    "u43-return-question": {
+      "text": "對了，你什麼時候回來？",
+      "pinyin": "Duì le, nǐ shénme shíhou huílái?",
+      "meaning": "By the way, when are you coming back?",
+      "note": "Preserves the return-timing question in B1L14-D1T10 with 妳 normalized to 你.",
+      "tokens": [
+        "對了",
+        "你什麼時候回來"
+      ]
+    },
+    "u43-nextyear-source": {
+      "text": "冬天太冷了。不過，我想明年秋天去看紅葉。",
+      "pinyin": "Dōngtiān tài lěng le. Búguò, wǒ xiǎng míngnián qiūtiān qù kàn hóngyè.",
+      "meaning": "Winter is too cold. But I want to go see the red maple leaves next autumn.",
+      "note": "Source B1L14-D1T10, preserving the travel-plan function without deferred speaker orthography.",
+      "tokens": [
+        "冬天太冷了",
+        "不過",
+        "我想明年秋天去看紅葉"
+      ]
+    },
+    "u43-trip-adapted": {
+      "text": "我去年五月出去玩了兩個星期。那個時候，風景很好看，我玩得非常開心。",
+      "pinyin": "Wǒ qùnián wǔ yuè chūqù wán le liǎng ge xīngqí. Nàge shíhou, fēngjǐng hěn hǎokàn, wǒ wán de fēicháng kāixīn.",
+      "meaning": "Last May I went away for two weeks. The scenery was nice, and I had a very good time.",
+      "note": "Gate-A-approved learner-safe adaptation of B1L14-D1T06: no productive 紐約 and 好看 replaces untaught 漂亮.",
+      "tokens": [
+        "我去年五月出去玩了兩個星期",
+        "那個時候",
+        "風景很好看",
+        "我玩得非常開心"
+      ],
+      "grammarIds": [
+        "u43-completed-duration"
+      ]
+    }
+  },
+  "revisionStepIds": [
+    "u43-confirm-s1",
+    "u43-approx-s1",
+    "u43-review-cum1",
+    "u43-review-cum2",
+    "u43-review-g6"
+  ]
+};
+export default unit;
