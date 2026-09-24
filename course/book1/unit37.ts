@@ -260,14 +260,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "回",
           "audioText": "我剛從臺東回來。",
-          "prompt": "Listen: where does 回來 appear?",
+          "prompt": "Listen for the word meaning 'come back'.",
           "options": [
-            "at the end",
-            "at the beginning",
-            "it is not present"
+            "回來",
+            "回國",
+            "出國"
           ],
-          "answer": "at the end",
-          "explanation": "The source line ends with 回來: 'came back.'"
+          "answer": "回來",
+          "explanation": "The source line ends with 回來, 'come back'."
         },
         {
           "id": "u37-return-s3",
