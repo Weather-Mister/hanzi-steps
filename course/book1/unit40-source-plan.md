@@ -110,3 +110,14 @@ Must verify:
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **20 useful activities**:
+- 3 listening;
+- 3 character/vocabulary retrieval activities;
+- 5 question-word totality items spanning affirmative, negative, 都/也 order and 嗎 restriction;
+- 3 多／少 + Verb items including one past and one future context;
+- 2 Dialogue II/customs items;
+- 2 source-culture comprehension items;
+- 2 independent transfer items.
