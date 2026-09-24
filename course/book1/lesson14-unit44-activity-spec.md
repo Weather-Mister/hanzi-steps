@@ -274,13 +274,13 @@ Order:
 5. phrase `u44-umbrella-reply`.
 6. select `u44-umbrella-s3`
    - prompt: **What happened today?**
-   - options: [`The speaker forgot to bring the umbrella.`, `The speaker bought a typhoon.`, `The speaker went skiing.`]
+   - options: [`The speaker forgot to bring the umbrella today.`, `The speaker forgot it yesterday but brought it today.`, `The speaker did not bring an umbrella on either day.`]
    - answer: **The speaker forgot to bring the umbrella.**
    - explanation: 今天忘了帶 means “forgot to bring it today.”
 7. listen `u44-umbrella-l1`
    - audioText: **你怎麼沒帶傘呢？**
    - prompt: **What object do you hear?**
-   - options: [`傘`, `紅葉`, `新聞`]
+   - options: [`傘`, `紅葉`, `雨`]
    - answer: **傘**
    - explanation: The audio asks about an umbrella.
 8. order `u44-umbrella-o1` using `u44-umbrella-reply`
@@ -351,7 +351,7 @@ Order:
 10. listen `u44-wet-l1`
    - audioText: **哪裡都濕濕的。真討厭。**
    - prompt: **How does the speaker feel about the wet conditions?**
-   - options: [`annoyed`, `excited about skiing`, `unsure about New Year`]
+   - options: [`annoyed`, `pleased with the conditions`, `indifferent to the conditions`]
    - answer: **annoyed**
    - explanation: 真討厭 expresses annoyance.
 11. order `u44-wet-o1` using `u44-wet-source`
@@ -382,14 +382,14 @@ Order:
 8. phrase `u44-heard`.
 9. select `u44-moreverb-s1`
    - prompt: **Before 請大家多小心, what does 多 do?**
-   - options: [`it tells people to be more/extra careful`, `it means many umbrellas`, `it changes 大家 into a question`]
+   - options: [`it tells people to be more/extra careful`, `it marks a large quantity before a noun`, `it turns the clause into a comparison question`]
    - answer: **it tells people to be more/extra careful**
    - explanation: This retrieves the prior 多 + Verb pattern.
 10. phrase `u44-caution` — only after 大家, 小心 and 多+Verb retrieval.
 11. listen `u44-news-l1`
    - audioText: **電視新聞說，請大家多小心。**
    - prompt: **What does the news ask everyone to do?**
-   - options: [`be extra careful`, `go skiing`, `miss home`]
+   - options: [`be extra careful`, `bring an umbrella`, `wait until the rain stops`]
    - answer: **be extra careful**
    - explanation: 請大家多小心 gives the caution.
 12. order `u44-news-o1` using `u44-caution`
@@ -541,6 +541,7 @@ For select rows above, prompt format: **“X means…”**; explanation: **“X 
    - options: [it invokes an established/understood baseline, it marks past tense, it means everyone]
    - answer: it invokes an established/understood baseline
    - explanation: The “even more” baseline is required by the source.
+   - grammarIds: [u44-even-more]
 22. `u44-review-g6`
    - prompt: Which uses 比較 for an implicit/relative comparison without naming a 比-target?
    - options: [今年春天比較冷。, 今年春天比去年春天更冷。, 今年春天跟去年春天一樣冷。]
@@ -558,6 +559,7 @@ For select rows above, prompt format: **“X means…”**; explanation: **“X 
    - options: [`今年夏天比去年夏天更熱。`, `今年夏天跟去年夏天一樣熱。`, `今年夏天沒有去年夏天那麼熱。`]
    - answer: **今年夏天比去年夏天更熱。**
    - explanation: 31°C is higher than 29°C.
+   - grammarIds: [u44-even-more]
 31. `u44-review-a003-2`
    - prompt: **Taipei chart: last autumn 24°C; this autumn 24°C. Which sentence is correct?**
    - options: [`今年秋天跟去年秋天一樣熱。`, `今年秋天比去年秋天更熱。`, `今年秋天沒有去年秋天那麼熱。`]
@@ -568,6 +570,7 @@ For select rows above, prompt format: **“X means…”**; explanation: **“X 
    - options: [`今年冬天沒有去年冬天那麼熱。`, `今年冬天比去年冬天更熱。`, `今年冬天跟去年冬天一樣熱。`]
    - answer: **今年冬天沒有去年冬天那麼熱。**
    - explanation: 16°C is lower than 18°C.
+   - grammarIds: [u44-not-as]
 
 No prompt or answer uses 度 or 北.
 
@@ -609,22 +612,22 @@ No prompt or answer uses 度 or 北.
 ### Explicit F/S001–004 capstone
 43. `u44-review-cap1`
    - prompt: Which task demonstrates the weather/typhoon outcome?
-   - options: [describe rain/snow/typhoon conditions and appropriate caution, only say your birthday, only list transport]
+   - options: [describe rain/snow/typhoon conditions and appropriate caution, compare seasonal temperatures, report where someone lived and for how long]
    - answer: describe rain/snow/typhoon conditions and appropriate caution
    - explanation: This maps to B1L14-F001/S001.
 44. `u44-review-cap2`
    - prompt: Which task demonstrates the seasons/preference outcome?
-   - options: [name the seasons and explain which you like/dislike and why, only count months, only compare buses]
+   - options: [name the seasons and explain which you like/dislike and why, describe a typhoon warning, report a completed travel duration]
    - answer: name the seasons and explain which you like/dislike and why
    - explanation: This maps to B1L14-F002/S002.
 45. `u44-review-cap3`
    - prompt: Which task demonstrates the comparison outcome?
-   - options: [compare conditions with 比…更 / 跟…一樣 / 沒有…那麼, only use 了, only say 新年]
+   - options: [compare conditions with 比…更 / 跟…一樣 / 沒有…那麼, explain seasonal preferences, report where an experience happened and how long it lasted]
    - answer: compare conditions with 比…更 / 跟…一樣 / 沒有…那麼
    - explanation: This maps to B1L14-F003/S003.
 46. `u44-review-cap4`
    - prompt: Which task demonstrates the experience outcome?
-   - options: [say where an experience happened and how long it lasted, only name an umbrella, only ask if it rains]
+   - options: [say where an experience happened and how long it lasted, compare seasonal temperatures, describe typhoon conditions and caution]
    - answer: say where an experience happened and how long it lasted
    - explanation: This maps to B1L14-F004/S004.
 
@@ -634,19 +637,19 @@ Review count: **37 total steps** — 36 review-specific step IDs plus the `u44-w
 
 | Target | Explain/context | Controlled | Retrieval | Cumulative |
 |---|---|---|---|---|
-| 傘 | char + D2T01 card | umbrella selects/order | review-v1 | D2T10 |
+| 傘 | char + D2T01 card | umbrella selects/order | review-vmatch | D2T10 |
 | 颱風 | char + coming/summer cards | typhoon selects | review-v2 | G004/G005 + capstone |
-| 濕/討厭 | char + wet cards | wet/annoy selects | review-v3/v4 | weather capstone |
+| 濕/討厭 | char + wet cards | wet/annoy selects | review-vmatch / review-v4 | weather capstone |
 | 濕濕的 | source note | u44-wet-s2 | contextual retrieval in wet review/listen | cumulative weather |
 | 新聞/大家/小心 | char + caution | news/everyone/care selects | review-v5–v7 | full D2T07 + capstone |
-| 這次/上次/更 | baseline → grammar → D2T07 | G004 selects/order | review-v8–v10/g1/g5 | A003/capstone |
-| 可怕/慢走 | lexical/formula cards → G005 | G005/leave selects | review-v11/v12/g2–g4 | capstone |
-| G004 | baseline + grammar + source turn | lesson-5 select/order/listen | review-g1/g5 | A003/capstone |
-| G005 | grammar before D2T08 | lesson-6 selects/order/listen | review-g2–g4 | A003/capstone |
+| 這次/上次/更 | baseline → grammar → D2T07 | G004 selects/order | review-v8 / review-v9 / review-vmatch / review-g5 / review-a003-1 | A003/capstone |
+| 可怕/慢走 | lexical/formula cards → G005 | G005/leave selects | review-v11 / review-v12 / review-a003-3 | capstone |
+| G004 | baseline + grammar + source turn | lesson-5 select/order/listen | review-g5 / review-a003-1 | A003/capstone |
+| G005 | grammar before D2T08 | lesson-6 selects/order/listen | review-a003-3 | A003/capstone |
 | CUL001 | culture note | culture selects | review-culture | final source context |
-| A003 | models + full 比 / 比較 / 更 / 跟…一樣 / 沒有…那麼 toolkit | review-g1–g7 + review-a003-1–3 | same | F003 |
-| A004 | Unit42 prep + exact u44-weather-interview card | review-a004-1–4 | same | F001/F003 |
-| F/S001–004 | prior unit lifecycle | capstone items 38–41 | same | Lesson-14 closure |
+| A003 | models + full 比 / 比較 / 更 / 跟…一樣 / 沒有…那麼 toolkit | review-g5–g7 + review-a003-1–3 | same | F003 |
+| A004 | Unit42 prep + exact u44-weather-interview card | u44-weather-interview + review-a004-1–2 | same | F001/F003 |
+| F/S001–004 | prior unit lifecycle | review-cap1–review-cap4 | same | Lesson-14 closure |
 
 ## 8. Search/Mega and deferral rules
 
