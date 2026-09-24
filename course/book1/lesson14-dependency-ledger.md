@@ -272,9 +272,30 @@ This hidden-glyph pass closes the major route by which source examples could oth
 
 # 7. Dialogue-turn dispositions — B1L14-D1T01–B1L14-D2T11
 
-Every one of the **22 source dialogue turns** contains at least one Lesson-14 NEW/EXPANSION target or is required to connect such targets. Therefore each individual turn is classified:
+Every one of the **22 source dialogue turns** contains at least one Lesson-14 NEW/EXPANSION target or is required to connect such targets. Therefore each individual turn is classified **NEW — source integration utterance**:
 
-**NEW — source integration utterance**
+- B1L14-D1T01
+- B1L14-D1T02
+- B1L14-D1T03
+- B1L14-D1T04
+- B1L14-D1T05
+- B1L14-D1T06
+- B1L14-D1T07
+- B1L14-D1T08
+- B1L14-D1T09
+- B1L14-D1T10
+- B1L14-D1T11
+- B1L14-D2T01
+- B1L14-D2T02
+- B1L14-D2T03
+- B1L14-D2T04
+- B1L14-D2T05
+- B1L14-D2T06
+- B1L14-D2T07
+- B1L14-D2T08
+- B1L14-D2T09
+- B1L14-D2T10
+- B1L14-D2T11
 
 This classification does **not** create 22 extra vocabulary items. It means the eventual architecture must make each turn comprehensible only after its dependencies are available.
 
@@ -328,7 +349,12 @@ Each of **B1L14-A001–B1L14-A005** is **NEW (source-required transfer task)**. 
 
 ## Self-assessment
 
-Each of **B1L14-S001–B1L14-S004** is **REVIEW** of the corresponding B1L14-F001–B1L14-F004 outcome. They do not create separate teaching ownership.
+- **B1L14-S001 — REVIEW** of B1L14-F001.
+- **B1L14-S002 — REVIEW** of B1L14-F002.
+- **B1L14-S003 — REVIEW** of B1L14-F003.
+- **B1L14-S004 — REVIEW** of B1L14-F004.
+
+These self-assessment records do not create separate teaching ownership.
 
 ---
 
