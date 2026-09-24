@@ -92,6 +92,8 @@ Do not invent a formal numbered grammar section.
 
 Teach 萬事如意 and 心想事成 as fixed conventional wishes, not decomposable productive syntax.
 
+Include the source cultural-pragmatic point that congratulatory sayings are often fixed four-character auspicious expressions and that these two are presented as broadly useful/all-purpose wishes. This is context, not a new grammar rule.
+
 ## Capstone acceptance criteria
 
 The learner must demonstrate all four source outcomes:
@@ -101,12 +103,12 @@ The learner must demonstrate all four source outcomes:
 3. cultural comparison;
 4. giving/responding to wishes.
 
-Use new scenarios, not only source-dialogue replay.
+Use new scenarios, not only source-dialogue replay. The culture-comparison task should draw on Unit 40's source birthday-culture note rather than introducing Lesson 14 or unrelated culture.
 
 ## Review gate
 
 Unit 41 review must verify:
-- 4/4 canonical entries;
+- 4/4 indexed first-taught forms (2 ordinary vocabulary + 2 source Phrase forms);
 - 3/3 new characters;
 - 對 + person;
 - 是不是 function/placement;
