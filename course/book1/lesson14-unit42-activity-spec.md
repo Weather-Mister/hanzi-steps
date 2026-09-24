@@ -145,22 +145,22 @@ No independent assessed step containing the character may precede its cycle.
 Order:
 1. 冷 character lifecycle.
 2. phrase `u42-weather-cold`.
-3. select `u42-weather-s1`
+3. phrase `u42-weather-source` — this contextual card explains 風 as wind before any 風 assessment.
+4. select `u42-weather-s1`
    - prompt: **天氣 means…**
    - options: [`weather`, `season`, `news`]
    - answer: **weather**
    - explanation: 天氣 means weather.
-4. select `u42-weather-s2`
+5. select `u42-weather-s2`
    - prompt: **冷 means…**
    - options: [`cold`, `wet`, `windy`]
    - answer: **cold**
    - explanation: 冷 describes cold temperature.
-5. select `u42-weather-s3`
+6. select `u42-weather-s3`
    - prompt: **風 means…**
    - options: [`wind`, `rain`, `snow`]
    - answer: **wind**
    - explanation: 風 is wind.
-6. phrase `u42-weather-source`.
 7. select `u42-weather-s4`
    - prompt: **Which sentence says today is colder than yesterday?**
    - options: [`今天比昨天冷。`, `今天跟昨天一樣冷。`, `昨天比今天冷。`]
