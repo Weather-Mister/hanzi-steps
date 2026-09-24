@@ -82,7 +82,7 @@ Source: printed pp. 302–303 / PDF pp. 329–330.
 | **B1L14-V012** | 秋天 | qiūntiān | N | autumn (season) |
 | **B1L14-V013** | 紅葉 | hóngyè | N | red maple leaves |
 | **B1L14-V014** | 只 | zhǐ | Adv | only; merely |
-| **B1L14-V015** | 玉山 | Yùshān | Name | Yushan / Mount Jade |
+| **B1L14-V015** | 玉山 | Yùshān | Name | Yu Shan (Mount Jade), tallest mountain in central Taiwan |
 | **B1L14-V016** | 紐約 | Niǔyuē | Name | New York |
 | **B1L14-V017** | 下雪 | xiàxuě | Phrase | to snow |
 | **B1L14-V018** | 十二月底 | shí'èr yuè dǐ | Phrase | the end of December |
@@ -170,7 +170,9 @@ Question/drill coverage:
 - 是不是
 - 多久
 - 幾個月 / 幾個鐘頭
-- repeated-verb questions such as 打網球打了幾個鐘頭.
+- repeated-verb questions such as 打網球打了幾個鐘頭;
+- confirmation prompts with **吧** and **對不對**, e.g. 你在紐約住了兩年吧？ / 你昨天看電視看了三個鐘頭，對不對？;
+- the response model **我一共學了五個月。**, which makes 一共 source support that must be dependency-checked.
 
 **Required distinction:** this is completed duration.
 
@@ -222,6 +224,8 @@ Source: printed pp. 309–310 / PDF pp. 336–337.
 
 Function: a degree greater than an established or understood baseline — “even more so.”
 
+The source first illustrates standalone 更 with **星期天我更忙。**, meaning the speaker is even busier on Sunday than normally, then states that Lesson 14 introduces 更 inside 比 comparisons.
+
 Core examples:
 - 他很高，他哥哥比他更高。
 - 今年比去年更冷。
@@ -255,7 +259,7 @@ Examples:
 Source requirements:
 - normally negative with 沒（有）;
 - 那麼 / 這麼 may sometimes be omitted;
-- positive **A 有 B 那麼／這麼 + State Verb** is rare except in questions;
+- positive **A 有 B 那麼／這麼 + State Verb** is rare except in **嗎 questions**;
 - questions use **有沒有**;
 - 今天有沒有昨天熱？ carries the source-described assumption that yesterday was fairly hot.
 
@@ -264,12 +268,14 @@ Three-way source contrast:
 - inferior: **A 沒有 B 那麼 + State Verb**
 - superior: **A 比 B + State Verb**
 
+Source cross-reference: the textbook identifies the equal-degree **跟…一樣…** pattern as introduced in Lesson 13 and the superior-degree **比…** pattern as introduced in Lesson 8.
+
 ## 8. Pragmatics / source usage
 
 - **B1L14-P001** — 更 contributes an “even more” baseline, not merely neutral “more.”
 - **B1L14-P002** — 有沒有 B 那麼…? comparison questions can presuppose that B has a salient degree of the property.
-- **B1L14-P003** — 吧 in 開始下雪了吧？ marks speaker inference/assumption and invites confirmation.
-- **B1L14-P004** — 呢 in 妳怎麼沒帶傘呢？ is part of an immediate contextual concern/surprise why-question.
+- **B1L14-P003** — In 開始下雪了吧？, the source English support renders the proposition as “It has probably started snowing (there).” The source therefore supports an inferential/probability reading for this occurrence of 吧; do not generalize a broader particle rule from this lesson alone.
+- **B1L14-P004** — 呢 occurs in 妳怎麼沒帶傘呢？. The source English support renders the contextual why-question naturally but gives no separate gloss or explicit grammar rule for 呢, so this occurrence must remain dialogue-context support rather than a newly source-defined pragmatics rule.
 - **B1L14-P005** — 慢走 / 小心慢走 is a conventional leave-taking/care formula.
 - **B1L14-P006** — 快要 is explicitly identified by the textbook as the Taiwan-preferred disyllabic form in the imminence construction.
 
@@ -318,10 +324,15 @@ These items occur in dialogues, examples, drills, or classroom tasks. They are n
 | **B1L14-X030** | 差不多 + time / duration + 多 |
 | **B1L14-X031** | 每年…都… / 常 |
 | **B1L14-X032** | 不過 / 可是 / 對了 / 請…多小心 / 小心慢走 |
+| **B1L14-X033** | 一共 (G001 response model) |
+| **B1L14-X034** | 對不對 (G001 confirmation prompt) |
+| **B1L14-X035** | 上網 (G004 question example) |
+| **B1L14-X036** | 生意 (G005 drill prompt) |
+| **B1L14-X037** | 好喝 (G005 drill prompt) |
 
 ## 10. Grammar drill families
 
-- **B1L14-DR001** — G001: answer completed-duration questions with 多久 / 幾個月 / 幾個鐘頭; preserve verb repetition where required.
+- **B1L14-DR001** — G001: answer completed-duration questions with 多久 / 幾個月 / 幾個鐘頭; preserve verb repetition where required; retain the source’s confirmation-prompt support with 吧 / 對不對 and the 一共 response model.
 - **B1L14-DR002** — G002: answer 多久了 using duration-to-date expressions.
 - **B1L14-DR003** — G003: infer imminent events from contextual evidence and select 快 / 要 / 快要…了.
 - **B1L14-DR004** — G004: form 比…更… comparisons from prices, quantities, study duration, and travel time.
@@ -337,6 +348,7 @@ Goal: describe the four seasons and explain why one likes or dislikes them.
 
 Task:
 - describe the climate of one’s home country;
+- identify which season one likes most and least;
 - state seasonal preferences;
 - explain why;
 - worksheet scaffolding explicitly uses **因為…所以…**.
@@ -383,6 +395,12 @@ Source: printed pp. 317–318 / PDF pp. 344–345.
 
 Goal: compare weather conditions between one’s own country and a classmate’s.
 
+Task requirements:
+- use the first activity’s home-country climate information;
+- compare it with one classmate’s home country;
+- ask for additional information;
+- write the results in the chart.
+
 Prompts:
 - 春天的天氣怎麼樣？
 - 夏天的天氣怎麼樣？
@@ -397,6 +415,8 @@ Prompts:
 Source: printed p. 319 / PDF p. 346.
 
 Goal: discuss events and activities in summer.
+
+Task: discuss with a classmate **and write the findings in Chinese**.
 
 Task fields:
 - 天氣怎麼樣
@@ -453,7 +473,7 @@ This is not a new-character claim. Dialogue-, grammar-, drill-, activity-, cultu
 - dialogue turns: **22**
 - lesson outcomes: **4**
 - pragmatic/usage records: **6**
-- support-only dependency-audit records: **32**
+- support-only dependency-audit records: **37**
 - grammar-drill families: **5**
 - classroom activities: **5**
 - culture items: **1**
@@ -468,7 +488,7 @@ Before Lesson 14 can leave the source/dependency pipeline:
 - F001–F004 must be supported, not merely listed;
 - dialogue functions must not introduce hidden future prerequisites;
 - P001–P006 must not be semantically flattened;
-- X001–X032 must be checked against the cumulative learner state before assessed reuse;
+- X001–X037 must be checked against the cumulative learner state before assessed reuse;
 - DR001–DR005 and A001–A005 must inform later teaching/practice design;
 - character exposure must be prerequisite-safe;
 - culture must not misrepresent publication-era administrative facts as current facts.
