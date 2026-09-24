@@ -6,9 +6,9 @@
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
   "currentStage": "dependency-ledger",
-  "stageStatus": "ready",
+  "stageStatus": "human-review",
   "bookComplete": false,
-  "humanReviewRequired": false,
+  "humanReviewRequired": true,
   "workingUnitRange": null,
   "gates": {
     "source": "pass",
@@ -21,12 +21,12 @@
   "openFindings": [],
   "artifacts": {
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
-    "dependencyLedger": null,
+    "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": null,
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md"
   },
-  "notes": "Preflight remains anchored to production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, with Book 1 complete through source Lesson 13 / Unit 41. Lesson 14 source extraction and A↔B reconciliation are complete. A mandatory fresh-context audit checked the authoritative Lesson 14 range (printed pp. 299-321 / PDF pp. 326-348) against the reconciled source ledger and source-stage protocol rules. Initial source-ledger defects were repaired; the final re-audit passes with 0 BLOCKER, 0 MAJOR, 0 MINOR, and 0 unresolved source disagreements. The source gate is PASS and the repository is ready for the dependency-ledger stage. No dependency ledger, curriculum architecture, Unit 42 design, learner-facing activities, or implementation has begun."
+  "notes": "Lesson 14 source gate is PASS. The dependency ledger is now built at course/book1/lesson14-dependency-ledger.md against the cumulative production curriculum through Unit 41. Builder pass found 0 open BLOCKER/MAJOR findings after resolving false-known, hidden-glyph, proper-name, reduplication, and duration-integration risks. The dependency gate remains PENDING because the protocol requires a separate fresh-context dependency audit. No Unit 42+ architecture, activity design, or implementation may begin until that fresh audit passes."
 }
