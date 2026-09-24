@@ -252,8 +252,8 @@ Order:
    - audioText: **我比較喜歡春天。**
    - prompt: **Which season is preferred?**
    - options: [`spring`, `winter`, `autumn`]
-   - answer: **春天**
-   - explanation: The audio says 春天.
+   - answer: **spring**
+   - explanation: The audio says 春天, “spring.”
 10. order `u42-spring-o1` using `u42-spring-source`
    - tokens: [`我怕冷`, `我比較喜歡春天`]
 
