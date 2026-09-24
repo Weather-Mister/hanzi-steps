@@ -303,10 +303,10 @@ Order:
    - answer: **the next four hours**
    - explanation: The source reading states a four-hour forecast window.
 9. select `u44-culture-s2`
-   - prompt: **How must these administrative details be framed in Hanzi Steps?**
-   - options: [`as textbook-era historical/source context`, `as verified current 2026 instructions`, `as rules that never changed`]
-   - answer: **as textbook-era historical/source context**
-   - explanation: The source page is not automatically current administrative guidance.
+   - prompt: **According to the textbook's historical account, where was typhoon-day decision-making later vested?**
+   - options: [`regional governments`, `individual students`, `transport companies`]
+   - answer: **regional governments**
+   - explanation: The source says the decision was later vested in regional governments. The culture card already frames this as historical/source context, not current instructions.
 10. listen `u44-typhoon-l1`
    - audioText: **颱風快要來了。**
    - prompt: **What is about to come?**
@@ -634,10 +634,10 @@ No prompt or answer uses 度 or 北.
 
 ### Culture
 42. `u44-review-culture`
-   - prompt: How should the typhoon-day administrative details be understood?
-   - options: [as textbook-era historical/source context, as automatically current 2026 instructions, as timeless law]
-   - answer: as textbook-era historical/source context
-   - explanation: Current claims require separate verification.
+   - prompt: In the textbook's historical account, what changed about who made typhoon-day decisions?
+   - options: [decision-making was vested in regional governments, students individually decided school closures, the weather bureau stopped giving forecasts]
+   - answer: decision-making was vested in regional governments
+   - explanation: This is a source-history comprehension check; it is not presented as current 2026 administrative guidance.
 
 ### Explicit F/S001–004 capstone
 43. `u44-review-cap1`
