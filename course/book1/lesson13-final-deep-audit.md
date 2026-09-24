@@ -107,6 +107,10 @@ The final audit reconfirmed the two Lesson 13 ownership migrations:
 
 No lesson IDs, step IDs, or step positions were added, removed, or reordered by the final fixes. The changes are content-level corrections inside the existing published topology.
 
+## Final-head QA note
+
+Feature QA refreshes generated curriculum artifacts on the PR branch when source modules change. After that generated-artifact commit, this audit requires a fresh human-triggered Feature QA run on the resulting final head before merge; the bot-generated commit alone is not treated as sufficient evidence.
+
 ## Verification contract
 
 The final branch must pass Feature QA on its exact final head:
