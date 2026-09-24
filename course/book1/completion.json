@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "book": 1,
+  "sourceLessonsTotal": 15,
+  "completedThroughSourceLesson": 13,
+  "completedThroughUnit": 41,
+  "currentSourceLesson": 14,
+  "currentStage": "preflight",
+  "stageStatus": "pending",
+  "bookComplete": false,
+  "humanReviewRequired": false,
+  "workingUnitRange": null,
+  "gates": {
+    "source": "pending",
+    "dependencies": "locked",
+    "curriculum": "locked",
+    "activities": "locked",
+    "implementation": "locked",
+    "release": "locked"
+  },
+  "openFindings": [],
+  "artifacts": {
+    "sourceLedger": null,
+    "dependencyLedger": null,
+    "frozenBlueprint": null,
+    "frozenActivitySpec": null,
+    "traceability": null,
+    "releaseReport": null
+  },
+  "notes": "Book 1 Lesson 13 is complete through Hanzi Steps Unit 41. Lesson 14 is the next source lesson."
+}
