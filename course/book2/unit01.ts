@@ -29,12 +29,12 @@ const unit:UnitData = {
     {"text":"路口","pinyin":"lùkǒu","meaning":"intersection","lessonId":"b2-intersection","core":false},
   ],
   reviewVocabulary: ["怎麼","這裡","那裡","請","在","這","個","嗎","什麼","哪裡","是","有","我","好","本","的","請問","到","從","往"],
-  newCharacters: ["直","轉","口"],
-  reviewCharacters: ["問","走","怎","到","師","從","往","前","左","右","路"],
+  newCharacters: ["直","轉"],
+  reviewCharacters: ["問","走","怎","到","師","從","往","前","左","右","路","口"],
   characters: {
     "直": {"hanzi":"直","pinyin":"zhí","zhuyin":"ㄓˊ","meaning":"straight","strokes":8,"layout":"stack","note":"In these directions, 一直 means straight on without changing direction.","memory":"Remember 直 as a cross above a tall, lined frame with a broad base.","parts":[{"label":"十","name":"top cross","role":"Visual component","description":"十 is the two-stroke cross at the top of 直.","strokes":[0,1]},{"label":"lower","name":"lower frame","role":"Visual component","description":"The lower frame contains horizontal lines and rests on a long bottom stroke.","strokes":[2,3,4,5,6,7]}],"example":{"text":"一直走","pinyin":"yìzhí zǒu","meaning":"keep going straight"}},
     "轉": {"hanzi":"轉","pinyin":"zhuǎn","zhuyin":"ㄓㄨㄢˇ","meaning":"turn","strokes":18,"layout":"side","note":"For changing direction use third-tone zhuǎn.","memory":"Remember 轉 as 車 + 專: a lined vehicle shape beside a denser right block ending in 寸.","parts":[{"label":"車","name":"vehicle component","role":"Visual component","description":"車 forms the left side, with a central vertical passing through its box and horizontal lines.","strokes":[0,1,2,3,4,5,6]},{"label":"專","name":"right part","role":"Visual component","description":"專 fills the right side; notice the compact upper block and the 寸 shape with a hook and dot below.","strokes":[7,8,9,10,11,12,13,14,15,16,17]}],"example":{"text":"右轉","pinyin":"yòu zhuǎn","meaning":"turn right"}},
-    "口": {"hanzi":"口","pinyin":"kǒu","zhuyin":"ㄎㄡˇ","meaning":"mouth; opening","strokes":3,"layout":"whole","note":"You have seen 口 inside other characters. Now write it on its own. In 路口 it refers to an opening or junction.","memory":"Remember 口 as a three-stroke box: left edge, top-and-right bend, then the bottom closes it.","parts":[{"label":"口","name":"whole character","role":"Visual component","description":"口 is a single component. Its top and right edges are written together as one bent stroke.","strokes":[0,1,2]}],"example":{"text":"路口","pinyin":"lùkǒu","meaning":"intersection"}},
+
   },
   grammarRules: {
     "b2-ask": {"id":"b2-ask","title":"Ask for directions politely","pattern":"請問，…怎麼走？","explanation":"請問 means excuse me or may I ask. 怎麼 means how; 走 means walk or go. When the destination is understood, 請問，怎麼走？ asks how to get there. These are useful foundation words used in Book 2’s opening dialogue.","examples":[{"text":"請問，怎麼走？","pinyin":"qǐng wèn, zěnme zǒu?","meaning":"Excuse me, how do I get there?"}],"remember":"怎麼 already asks for information, so do not add 嗎. Learn 怎麼 as one word.","words":["請問","怎麼","走"]},
