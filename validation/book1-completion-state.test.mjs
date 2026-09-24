@@ -17,6 +17,7 @@ test("Book 1 completion controller state is internally valid", () => {
 
 test("controller rejects skipping source gate before dependency gate", () => {
   const mutated = structuredClone(state);
+  mutated.gates.source = "pending";
   mutated.gates.dependencies = "pass";
   const errors = validateBook1CompletionState(mutated, manifest);
   assert.ok(errors.some((error) => error.includes("dependency gate cannot pass before source gate")));
