@@ -35,6 +35,9 @@ Preview-only:
 - 我什麼都吃 → Grammar IV in Unit 40.
 - 多吃一點 → Grammar V in Unit 40.
 
+Integrated-activity note:
+- adapt the source Night Market preference task with already-taught food vocabulary rather than importing source-only 臭豆腐／小籠包 glyphs into assessment. Preserve the communicative goal (ask preferences) and the 做了／沒做 contrast.
+
 ## Planned lesson IDs
 
 1. u39-gift — 禮物, 哪裡哪裡.
@@ -86,7 +89,7 @@ Critical rule:
 ## Review gate
 
 Must verify:
-- 8/8 canonical entries;
+- 8/8 indexed first-taught forms (7 ordinary vocabulary + 1 source Phrase form);
 - 6/6 new characters;
 - verbal vs. sentence-final 了;
 - negative verbal-了 restriction;
