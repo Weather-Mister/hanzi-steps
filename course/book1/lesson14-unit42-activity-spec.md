@@ -30,6 +30,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - note: This preserves the safe first clause of B1L14-D1T01. 比 is prior review.
 - tokens: [`外面風那麼大`, `我覺得`, `今天比昨天冷`]
 
+### u42-snow-mountain
+- text: **很高的山會下雪。**
+- pinyin: **Hěn gāo de shān huì xiàxuě.**
+- meaning: **It can snow on very high mountains.**
+- note: Learner-safe preservation of the weather claim in B1L14-D1T02 without requiring 玉山 or 美國.
+- tokens: [`很高的山`, `會下雪`]
+
 ### u42-snow-when
 - text: **下雪的時候，我常去山上滑雪。**
 - pinyin: **Xiàxuě de shíhou, wǒ cháng qù shānshàng huáxuě.**
@@ -50,6 +57,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - meaning: **I'm sensitive to the cold. I prefer spring.**
 - note: Source B1L14-D1T04.
 - tokens: [`我怕冷`, `我比較喜歡春天`]
+
+### u42-spring-comfort
+- text: **春天不錯，天氣很舒服。**
+- pinyin: **Chūntiān búcuò, tiānqì hěn shūfu.**
+- meaning: **Spring is nice; the weather is comfortable.**
+- note: Exact B1L14-D1T05; all support is already known.
+- tokens: [`春天不錯`, `天氣很舒服`]
 
 ### u42-winter-source
 - text: **冬天太冷了。**
@@ -182,30 +196,31 @@ D1T01 weather comparison is covered here; its 會不會下雪 clause is intentio
 Order:
 1. 滑 lifecycle.
 2. 雪 lifecycle.
-3. phrase `u42-snow-when`.
-4. select `u42-snow-s1`
+3. phrase `u42-snow-mountain`.
+4. phrase `u42-snow-when`.
+5. select `u42-snow-s1`
    - prompt: **滑雪 means…**
    - options: [`to ski`, `to rain`, `to walk slowly`]
    - answer: **to ski**
    - explanation: 滑雪 means to ski.
-5. select `u42-snow-s2`
+6. select `u42-snow-s2`
    - prompt: **下雪 means…**
    - options: [`to snow`, `to rain`, `to stop`]
    - answer: **to snow**
    - explanation: 下雪 means to snow.
-6. phrase `u42-snow-guess` — this is the EXPLAIN/CONTEXT card for inferential 吧 review.
-7. select `u42-snow-s3`
+7. phrase `u42-snow-guess` — this is the EXPLAIN/CONTEXT card for inferential 吧 review.
+8. select `u42-snow-s3`
    - prompt: **In 開始下雪了吧？, what is the speaker doing?**
    - options: [`making a likely guess and seeking confirmation`, `giving a command to ski`, `asking how long it snowed`]
    - answer: **making a likely guess and seeking confirmation**
    - explanation: This is the already-taught inferential/guessing use of 吧.
-8. listen `u42-snow-l1`
+9. listen `u42-snow-l1`
    - audioText: **下雪的時候，我常去山上滑雪。**
    - prompt: **Which activity do you hear?**
    - options: [`滑雪`, `下雨`, `上網`]
    - answer: **滑雪**
    - explanation: The sentence says the speaker often goes skiing.
-9. order `u42-snow-o1` using `u42-snow-when`
+10. order `u42-snow-o1` using `u42-snow-when`
    - tokens: [`下雪的時候`, `我常去山上滑雪`]
 
 B1L14-D1T02 is represented by its weather/inferential functions; 玉山 / 美國 remain contextual only and are not assessed.
@@ -216,29 +231,30 @@ Order:
 1. 春 lifecycle.
 2. 冬 lifecycle.
 3. phrase `u42-spring-source`.
-4. select `u42-spring-s1`
+4. phrase `u42-spring-comfort`.
+5. select `u42-spring-s1`
    - prompt: **春天 means…**
    - options: [`spring`, `summer`, `winter`]
    - answer: **spring**
    - explanation: 春天 is spring.
-5. select `u42-winter-s1`
+6. select `u42-winter-s1`
    - prompt: **冬天 means…**
    - options: [`winter`, `autumn`, `spring`]
    - answer: **winter**
    - explanation: 冬天 is winter.
-6. phrase `u42-winter-source`.
-7. select `u42-spring-s2`
+7. phrase `u42-winter-source`.
+8. select `u42-spring-s2`
    - prompt: **Why does the source speaker prefer spring?**
    - options: [`because the speaker is sensitive to cold`, `because spring is a typhoon`, `because spring means New Year`]
    - answer: **because the speaker is sensitive to cold**
    - explanation: 我怕冷 gives the reason for preferring spring.
-8. listen `u42-spring-l1`
+9. listen `u42-spring-l1`
    - audioText: **我比較喜歡春天。**
    - prompt: **Which season is preferred?**
    - options: [`春天`, `冬天`, `夏天`]
    - answer: **春天**
    - explanation: The audio says 春天.
-9. order `u42-spring-o1` using `u42-spring-source`
+10. order `u42-spring-o1` using `u42-spring-source`
    - tokens: [`我怕冷`, `我比較喜歡春天`]
 
 ### u42-summer-autumn — Summer and Autumn
