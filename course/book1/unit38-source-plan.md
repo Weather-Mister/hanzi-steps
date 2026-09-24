@@ -61,7 +61,9 @@ Teach:
 
 Productive boundary:
 - actively test 嗎 questions;
-- 是不是 may be shown as source-supported preview, but independent productive 是不是 waits Unit 41.
+- 是不是 may be shown as source-supported preview, but independent productive 是不是 waits Unit 41;
+- because both 嗎 and 是不是 are source-valid question strategies here, never use one as the false distractor against the other solely on grammaticality;
+- include both a negative Event A example and a negative Event B example. Use learner-safe adaptation 那裡一沒人，我就回家。 for negative Event A rather than importing source-only 拍／照.
 
 ## Ownership migrations
 
@@ -69,15 +71,17 @@ Productive boundary:
 - Unit 38 becomes canonical first vocabulary ownership: “celebrate” in 過生日.
 - Character 過 is review from Unit 33.
 - Book 2 Unit 3 keeps its movement use “go past/cross” as later new-sense/review teaching.
+- B2U3 migration is metadata-only for topology: remove 過 from newVocabulary, add it to reviewVocabulary, preserve b2u3-pass and every existing step ID/position.
 
 ### 口
 - Unit 38 becomes chronological first character ownership through 門口.
-- Book 2 Unit 1 must change 口 from newCharacters to reviewCharacters while preserving existing lesson/activity IDs/topology where practical.
+- Book 2 Unit 1 must move 口 from newCharacters to reviewCharacters and remove its local 口 character record so it resolves to Unit 38.
+- Preserve b2-intersection, unit.chars, 路口 content, and every existing b2-char-口-* step ID/position; those steps become review practice rather than being deleted/reordered.
 
 ## Review gate
 
 Must verify:
-- 10/10 canonical entries;
+- 10/10 indexed first-taught forms (8 ordinary vocabulary + 2 source Phrase forms);
 - 7/7 new characters;
 - 那麼 degree sense vs. Unit 36 connective sense;
 - lexical 一樣 before later Grammar VII;
@@ -90,3 +94,13 @@ Must verify:
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **20 useful activities**:
+- 3 listening;
+- 4 character-retrieval/writing activities sampling the seven new characters;
+- 5 ordinary-vocabulary / fixed-expression retrieval items;
+- 4 independent 一…就… items covering order, polarity, subject omission and question restriction;
+- 2 source-dialogue / appointment items;
+- 2 independent transfer items.

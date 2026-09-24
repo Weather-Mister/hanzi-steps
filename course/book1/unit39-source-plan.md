@@ -35,6 +35,9 @@ Preview-only:
 - 我什麼都吃 → Grammar IV in Unit 40.
 - 多吃一點 → Grammar V in Unit 40.
 
+Integrated-activity note:
+- adapt the source Night Market preference task with already-taught food vocabulary rather than importing source-only 臭豆腐／小籠包 glyphs into assessment. Preserve the communicative goal (ask preferences) and the 做了／沒做 contrast.
+
 ## Planned lesson IDs
 
 1. u39-gift — 禮物, 哪裡哪裡.
@@ -71,7 +74,8 @@ Process verbs:
 - 沒（有） in the source system.
 
 Taiwan note:
-- source says 沒有 + V is more common in Taiwan than bare 沒 + V.
+- source says 沒有 + V is more common in Taiwan than bare 沒 + V;
+- bare 沒 + V remains grammatical in the source system and must not be marked wrong merely because 沒有 is more common in Taiwan.
 
 Critical rule:
 - “verbal 了 disappears under 沒” must never be rewritten as “negative sentences cannot contain 了”.
@@ -86,7 +90,7 @@ Critical rule:
 ## Review gate
 
 Must verify:
-- 8/8 canonical entries;
+- 8/8 indexed first-taught forms (7 ordinary vocabulary + 1 source Phrase form);
 - 6/6 new characters;
 - verbal vs. sentence-final 了;
 - negative verbal-了 restriction;
@@ -100,3 +104,14 @@ Must verify:
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **21 useful activities**:
+- 3 listening;
+- 4 character-retrieval/writing activities sampling the six new characters;
+- 4 lexical/food/expression retrieval items;
+- 4 completed-action 了 items (affirmative, 沒 negation, 沒有 question, verbal-vs-final 了);
+- 4 不 vs. 沒（有） reasoning items across action/state/process verbs;
+- 1 dietary-preference dialogue item;
+- 1 independent transfer item.

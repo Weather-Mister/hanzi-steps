@@ -56,7 +56,7 @@ Learner-facing adaptations:
 ## Review gate
 
 Unit 37 review must verify:
-- 10/10 canonical entries;
+- 10/10 indexed first-taught forms (7 ordinary vocabulary + 3 source Phrase forms);
 - 4/4 new characters;
 - 樂 lè vs. earlier yuè;
 - 怎麼 reaction sense;
@@ -68,3 +68,13 @@ Unit 37 review must verify:
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **19 useful activities**:
+- 3 listening;
+- 4 character-retrieval/writing activities across 忘、記、當、然;
+- 5 ordinary-vocabulary / fixed-expression retrieval items;
+- 3 source-dialogue/context items;
+- 2 special-case items for 樂 lè and 怎麼 “How come?”;
+- 2 independent transfer items.

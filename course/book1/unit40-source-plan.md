@@ -39,7 +39,7 @@ Preview-only:
 3. u40-tradition — 傳統.
 4. u40-most-young — 大部分, 年輕, sentence-final 了 contrast.
 5. u40-more-less — 多／少 + Verb.
-6. u40-customs — integrate birthday-food/customs discussion and prepare comparison.
+6. u40-customs — integrate birthday-food/customs discussion, include the source birthday-culture note, and prepare comparison.
 7. u40-review.
 
 ## Grammar IV requirements
@@ -54,7 +54,8 @@ Affirmative:
 Negative:
 - question word + 都 or 也 + 不 / 沒;
 - negative marker after 都 / 也;
-- total exclusion.
+- total exclusion;
+- 都 and 也 are both source-valid here, so never make them competing single-answer options when both fit.
 
 Questions:
 - source specifies 嗎.
@@ -73,6 +74,19 @@ Teach:
 Exercise demand:
 - situational suggestions using 多/少 + Verb.
 
+## Source cultural-note allocation
+
+u40-customs must include concise learner-safe coverage of the textbook's Taiwanese-birthday reading:
+- traditional lunar-calendar birthdays vs. common modern Gregorian-calendar birthdays;
+- one-month and one-year infant celebrations;
+- special importance of major decades such as 60/70/80;
+- the first-birthday zhuāzhōu “grabbing” custom;
+- traditional birthday-food context already supported by 豬腳麵線 / 蛋.
+
+Do not turn culture-reading terms into formal vocabulary. In particular, do not expose 抓週 as unscaffolded assessed Hanzi; use English/romanization or clearly optional annotated culture text.
+
+Productive culture comparison itself waits for Unit 41 Grammar VII and the Lesson 13 capstone.
+
 ## 了 contrast
 
 Use source line:
@@ -83,7 +97,7 @@ This line must explicitly retrieve sentence-final changed-situation 了 and prov
 ## Review gate
 
 Must verify:
-- 3/3 canonical entries;
+- 3/3 indexed first-taught forms (2 ordinary vocabulary + 1 source Phrase form);
 - 4/4 new characters;
 - all five affirmative totality categories;
 - negative 都/也 + 不/沒;
@@ -97,3 +111,14 @@ Must verify:
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **20 useful activities**:
+- 3 listening;
+- 3 character/vocabulary retrieval activities;
+- 5 question-word totality items spanning affirmative, negative, 都/也 order and 嗎 restriction;
+- 3 多／少 + Verb items including one past and one future context;
+- 2 Dialogue II/customs items;
+- 2 source-culture comprehension items;
+- 2 independent transfer items.

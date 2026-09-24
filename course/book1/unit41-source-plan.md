@@ -80,6 +80,8 @@ Questions:
 - 是不是一樣？
 - 是不是跟…一樣 + property?
 
+Both source question strategies are valid; do not create a single-answer question that treats 一樣不一樣 and 是不是一樣 as mutually exclusive correct/incorrect forms.
+
 Exercise demand:
 - productive comparison writing/ordering.
 
@@ -92,6 +94,8 @@ Do not invent a formal numbered grammar section.
 
 Teach 萬事如意 and 心想事成 as fixed conventional wishes, not decomposable productive syntax.
 
+Include the source cultural-pragmatic point that congratulatory sayings are often fixed four-character auspicious expressions and that these two are presented as broadly useful/all-purpose wishes. This is context, not a new grammar rule.
+
 ## Capstone acceptance criteria
 
 The learner must demonstrate all four source outcomes:
@@ -101,12 +105,12 @@ The learner must demonstrate all four source outcomes:
 3. cultural comparison;
 4. giving/responding to wishes.
 
-Use new scenarios, not only source-dialogue replay.
+Use new scenarios, not only source-dialogue replay. The culture-comparison task should draw on Unit 40's source birthday-culture note rather than introducing Lesson 14 or unrelated culture.
 
 ## Review gate
 
 Unit 41 review must verify:
-- 4/4 canonical entries;
+- 4/4 indexed first-taught forms (2 ordinary vocabulary + 2 source Phrase forms);
 - 3/3 new characters;
 - 對 + person;
 - 是不是 function/placement;
@@ -121,3 +125,15 @@ After Unit 41, Lesson 13 has no deliberate language-content deferrals.
 ## Review quality floor
 
 Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
+
+## Planned review composition
+
+Target **22 useful activities**:
+- 3 listening;
+- 3 character-retrieval/writing activities across 糕、祝、如;
+- 4 lexical/wish/pragmatics retrieval items;
+- 5 Unit 41 grammar items independently assessing 是不是 and 跟…一樣, including negation scope and questions;
+- 5 cumulative grammar-transfer items, one each for Lesson 13 Grammar I–V;
+- 2 Dialogue II / cultural-outcome transfer items.
+
+Together with u41-capstone, this guarantees all seven Lesson 13 grammar sections and all four lesson objectives are productively revisited without turning the review into a 35-item vocabulary dump.
