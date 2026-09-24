@@ -122,7 +122,7 @@ Review / new function:
 - 了 le — completed-action verbal particle; do not create duplicate vocabulary ownership
 
 Canonical source expression:
-- 哪裡，哪裡 nǎlǐ, nǎlǐ
+- 哪裡哪裡 nǎlǐ nǎlǐ
 
 ### Unit 40
 
@@ -679,7 +679,7 @@ Preview boundaries:
 ### u39-gift — “A Birthday Gift”
 Teach:
 - 禮物
-- 哪裡，哪裡
+- 哪裡哪裡
 
 New characters:
 - 禮
@@ -835,7 +835,7 @@ Canonical entries:
 - 麵線
 - 蛋
 - 一點
-- 哪裡，哪裡
+- 哪裡哪裡
 
 No new canonical entry:
 - 了
@@ -1328,7 +1328,7 @@ All 23 Vocabulary I / Name / Phrase entries are assigned.
 | 蛋糕 | U41 NEW |
 | 對 | U41 REVIEW/new prepositional use |
 | 祝 | U41 NEW |
-| 哪裡，哪裡 | U39 canonical expression |
+| 哪裡哪裡 | U39 canonical expression |
 | 大部分 | U40 canonical expression |
 | 萬事如意 | U41 canonical expression |
 | 心想事成 | U41 canonical expression |
@@ -1517,5 +1517,7 @@ Dialogue coverage: **27 / 27 turns**.
 Formal grammar coverage: **7 / 7 sections**.
 
 End-of-lesson outcomes: **4 / 4**.
+
+Canonical-text normalization: the source display 「哪裡，哪裡！」 should be stored as canonical vocabulary text 哪裡哪裡 (no punctuation) for Pinyin Search / Mega Challenge consistency; learner-facing phrase cards may display source punctuation.
 
 No learner-facing Unit 37–41 implementation is part of Phase 2.
