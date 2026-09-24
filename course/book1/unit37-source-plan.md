@@ -6,17 +6,11 @@ Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 13 「生日�
 
 Unit 37 opens Lesson 13 with the birthday phone call. It does not teach a numbered grammar section. Its job is to build the lexical/pragmatic foundation cleanly before Unit 38 introduces 一…就….
 
-Canonical NEW entries:
-- 生日
-- 快樂
-- 回來
-- 啊
-- 忘
-- 記得
-- 當然
-- 生日快樂
-- 我就是
-- 好久不見
+Implementation-indexed first-taught forms:
+- ordinary vocabulary: 生日、快樂、回來、啊、忘、記得、當然
+- source Phrase forms: 生日快樂、我就是、好久不見
+
+Pacing report: **7 ordinary new words + 3 source Phrase forms**. Do not report the phrase forms as three extra ordinary words.
 
 Review/new sense:
 - 怎麼 → “How come? / How could…?” in 我怎麼忘了！
@@ -69,3 +63,8 @@ Unit 37 review must verify:
 - 忘 vs. 記得;
 - 我就是 as a phone formula;
 - learner-safe reconstruction of Dialogue I turns 1–6.
+
+
+## Review quality floor
+
+Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
