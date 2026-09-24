@@ -6,9 +6,9 @@
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
   "currentStage": "activity-engineering",
-  "stageStatus": "pending",
+  "stageStatus": "human-review",
   "bookComplete": false,
-  "humanReviewRequired": false,
+  "humanReviewRequired": true,
   "workingUnitRange": null,
   "gates": {
     "source": "pass",
@@ -31,7 +31,14 @@
     "curriculumBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
     "curriculumSourceFidelityAudit": "course/book1/lesson14-curriculum-source-fidelity-audit.md",
     "curriculumPedagogyAudit": "course/book1/lesson14-curriculum-pedagogy-audit.md",
-    "curriculumAdversarialAudit": "course/book1/lesson14-curriculum-adversarial-audit.md"
+    "curriculumAdversarialAudit": "course/book1/lesson14-curriculum-adversarial-audit.md",
+    "activitySpecCandidate": "course/book1/lesson14-activity-spec.md",
+    "activityUnit42Spec": "course/book1/lesson14-unit42-activity-spec.md",
+    "activityUnit43Spec": "course/book1/lesson14-unit43-activity-spec.md",
+    "activityUnit44Spec": "course/book1/lesson14-unit44-activity-spec.md",
+    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-audit.md",
+    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-audit.md",
+    "activityQuestionAudit": null
   },
-  "notes": "Lesson 14 source and dependency gates are PASS. Gate A now PASS after the fresh-context adversarial curriculum audit repaired same-unit prerequisite sequencing, Search/Mega expansion ownership, character introduction order, and Taipei temperature-task wording. course/book1/lesson14-curriculum-blueprint.md is frozen. Controller advanced to activity-engineering; learner-facing implementation remains locked until Gate B passes."
+  "notes": "Lesson 14 source/dependency gates and Gate A are PASS. Candidate activity specifications for Units 42–44 are complete. Activity Audit 1 (Teaching Quality) and Activity Audit 3 (Cross-Unit Coherence) pass with 0 open BLOCKER/MAJOR findings after repairs. Gate B remains PENDING because the mandatory fresh-context Activity Audit 2 (Question Correctness / Adversarial Audit) has not yet run. No learner-facing implementation may begin before that fresh audit passes and the activity packet is frozen."
 }
