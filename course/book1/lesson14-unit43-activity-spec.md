@@ -101,6 +101,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - tokens: [`你以前住在哪裡`, `你在那裡住了多久`]
 - grammarIds: [`u43-completed-duration`]
 
+### u43-approx-time
+- text: **每年差不多十二月開始下雪。**
+- pinyin: **Měinián chàbuduō shí'èr yuè kāishǐ xiàxuě.**
+- meaning: **It starts snowing around December each year.**
+- note: Source B1L14-D1T03 support. This explicitly transfers known 差不多 to approximate time; contrast with duration + 多 in 半年多.
+- tokens: [`每年`, `差不多十二月`, `開始下雪`]
+
 ### u43-duration-question
 - text: **你在臺灣住了多久了？**
 - pinyin: **Nǐ zài Táiwān zhù le duōjiǔ le?**
@@ -147,11 +154,11 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - grammarIds: [`u43-imminent`]
 
 ### u43-return-plan
-- text: **我打算十二月底回去。**
-- pinyin: **Wǒ dǎsuàn shí'èr yuè dǐ huíqù.**
-- meaning: **I plan to go back at the end of December.**
-- note: Source B1L14-D1T09 with deferred country name omitted.
-- tokens: [`我打算`, `十二月底回去`]
+- text: **我打算十二月底回去。想跟我去玩嗎？**
+- pinyin: **Wǒ dǎsuàn shí'èr yuè dǐ huíqù. Xiǎng gēn wǒ qù wán ma?**
+- meaning: **I plan to go back at the end of December. Do you want to go travel/have fun with me?**
+- note: Learner-safe preservation of B1L14-D1T09: the deferred country name is omitted, but the return plan and invitation are retained.
+- tokens: [`我打算十二月底回去`, `想跟我去玩嗎`]
 
 ### u43-return-reason
 - text: **因為我們只放十天的假，所以一月五號回來。**
@@ -159,6 +166,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - meaning: **Because we only have ten days off, we come back on January 5.**
 - note: Source B1L14-D1T11; 因為…所以… is prior review.
 - tokens: [`因為我們只放十天的假`, `所以一月五號回來`]
+
+### u43-return-question
+- text: **對了，你什麼時候回來？**
+- pinyin: **Duì le, nǐ shénme shíhou huílái?**
+- meaning: **By the way, when are you coming back?**
+- note: Preserves the return-timing question in B1L14-D1T10 with 妳 normalized to 你.
+- tokens: [`對了`, `你什麼時候回來`]
 
 ### u43-nextyear-source
 - text: **冬天太冷了。不過，我想明年秋天去看紅葉。**
@@ -253,30 +267,36 @@ Order:
    - answer: **No; continuation depends on context.**
    - explanation: This is the source distinction.
    - grammarIds: [`u43-duration-to-now`]
-6. phrase `u43-duration-question`.
-7. phrase `u43-a002-model`.
-8. select `u43-duration-contrast`
+6. phrase `u43-approx-time`.
+7. select `u43-approx-s1`
+   - prompt: **Which means “around December”?**
+   - options: [`差不多十二月`, `十二月底`, `明年秋天`]
+   - answer: **差不多十二月**
+   - explanation: 差不多 before a time expression means approximately/around that time.
+8. phrase `u43-duration-question`.
+9. phrase `u43-a002-model`.
+10. select `u43-duration-contrast`
    - prompt: **Which sentence presents a completed one-year stay?**
    - options: [`我在臺灣住了一年。`, `我在臺灣住了一年了。`, `我快要在臺灣住一年了。`]
    - answer: **我在臺灣住了一年。**
    - explanation: G001 presents the duration as completed; the final 了 in G002 shifts to accumulated duration up to now.
-9. select `u43-a002-s1`
+11. select `u43-a002-s1`
    - prompt: **For the source experience task, what two things must you ask about?**
    - options: [`where the person lived and for how long`, `only today's weather`, `only a favorite food`]
    - answer: **where the person lived and for how long**
    - explanation: B1L14-A002 asks for place plus duration.
-10. select `u43-a002-s2`
+12. select `u43-a002-s2`
    - prompt: **After asking the classmate, what does the source task require?**
    - options: [`record the result and report it`, `erase the result`, `translate it into Japanese`]
    - answer: **record the result and report it**
    - explanation: A002 includes recording and reporting.
-11. listen `u43-duration-now-l1`
+13. listen `u43-duration-now-l1`
    - audioText: **我在臺灣住了半年多了。**
    - prompt: **What duration frame do you hear?**
    - options: [`a little over half a year up to now`, `exactly two hours completed`, `an event about to happen`]
    - answer: **a little over half a year up to now**
    - explanation: 半年多了 expresses accumulated duration.
-12. order `u43-duration-now-o1` using `u43-duration-now-source`
+14. order `u43-duration-now-o1` using `u43-duration-now-source`
    - tokens: [`我在臺灣住了半年多了`, `有一點想家`]
 
 ### u43-new-year — New Year Is Almost Here
@@ -383,30 +403,31 @@ Order:
 Order:
 1. 葉 lifecycle.
 2. phrase `u43-nextyear-source`.
-3. select `u43-nextyear-s1`
+3. phrase `u43-return-question`.
+4. select `u43-nextyear-s1`
    - prompt: **明年 means…**
    - options: [`next year`, `New Year`, `last year`]
    - answer: **next year**
    - explanation: 明年 means next year.
-4. select `u43-leaves-s1`
+5. select `u43-leaves-s1`
    - prompt: **紅葉 means…**
    - options: [`red maple leaves`, `rain`, `news`]
    - answer: **red maple leaves**
    - explanation: 紅葉 is the source word for red maple leaves.
-5. phrase `u43-trip-adapted`.
-6. select `u43-trip-s1`
+6. phrase `u43-trip-adapted`.
+7. select `u43-trip-s1`
    - prompt: **Which line is an experience statement with a completed duration?**
    - options: [`我去年五月出去玩了兩個星期。`, `新年快到了。`, `雨快要停了。`]
    - answer: **我去年五月出去玩了兩個星期。**
    - explanation: It reports a completed trip lasting two weeks.
    - grammarIds: [`u43-completed-duration`]
-7. listen `u43-nextyear-l1`
+8. listen `u43-nextyear-l1`
    - audioText: **我想明年秋天去看紅葉。**
    - prompt: **What does the speaker want to see?**
    - options: [`red maple leaves`, `an umbrella`, `a typhoon`]
    - answer: **red maple leaves**
    - explanation: The audio says 紅葉.
-8. order `u43-nextyear-o1` using `u43-nextyear-source`
+9. order `u43-nextyear-o1` using `u43-nextyear-source`
    - tokens: [`冬天太冷了`, `不過`, `我想明年秋天去看紅葉`]
 
 ## 6. Unit 43 review — exact step bank
