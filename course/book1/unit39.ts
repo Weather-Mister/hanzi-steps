@@ -932,7 +932,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "禮物",
         "pinyin": "lǐwù",
@@ -965,7 +965,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "禮物",
         "pinyin": "lǐwù",
@@ -999,7 +999,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "訂",
         "pinyin": "dìng",
@@ -1039,7 +1039,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "豬腳",
         "pinyin": "zhūjiǎo",
@@ -1077,7 +1077,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "豬腳",
         "pinyin": "zhūjiǎo",
@@ -1113,7 +1113,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "蛋",
         "pinyin": "dàn",
