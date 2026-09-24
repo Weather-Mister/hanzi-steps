@@ -620,7 +620,7 @@ No prompt or answer uses 度 or 北.
    - answer: say where an experience happened and how long it lasted
    - explanation: This maps to B1L14-F004/S004.
 
-Review count: **37**. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; the match step directly retrieves the three single-character lexical targets 傘/濕/更, while the remaining nine receive individual select retrieval. G004/G005, the full A003 toolkit, A004, culture, delayed retrieval, and all four outcomes remain explicit.
+Review count: **37 total steps** — 36 review-specific step IDs plus the `u44-weather-interview` phrase step. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; the match step directly retrieves the three single-character lexical targets 傘/濕/更, while the remaining nine receive individual select retrieval. G004/G005, the full A003 toolkit, A004, culture, delayed retrieval, and all four outcomes remain explicit.
 
 ## 7. Lifecycle coverage
 
