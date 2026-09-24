@@ -219,7 +219,7 @@ Order:
 6. phrase `u43-tennis-duration`.
 7. select `u43-duration-s1`
    - prompt: **Which sentence correctly keeps the object before the duration?**
-   - options: [`我打網球打了兩個鐘頭。`, `我打網球了兩個鐘頭。`, `我打了兩個鐘頭網球打。`]
+   - options: [`我打網球打了兩個鐘頭。`, `我打網球了兩個鐘頭。`, `我打網球兩個鐘頭。`]
    - answer: **我打網球打了兩個鐘頭。**
    - explanation: With the object before the duration, repeat the verb.
    - grammarIds: [`u43-completed-duration`]
@@ -257,7 +257,7 @@ Order:
    - explanation: Lesson 14 adds the state-verb sense “miss”; 想家 means miss home.
 4. select `u43-duration-now-s1`
    - prompt: **Which sentence presents the six-month stay as duration accumulated up to now?**
-   - options: [`我在臺灣住了半年了。`, `我在臺灣住了半年。`, `我半年不住臺灣。`]
+   - options: [`我在臺灣住了半年了。`, `我在臺灣住了半年。`, `我在臺灣住半年。`]
    - answer: **我在臺灣住了半年了。**
    - explanation: Final 了 creates the duration-to-now frame.
    - grammarIds: [`u43-duration-to-now`]
@@ -270,24 +270,24 @@ Order:
 6. phrase `u43-approx-time`.
 7. select `u43-approx-s1`
    - prompt: **Which means “around December”?**
-   - options: [`差不多十二月`, `十二月底`, `明年秋天`]
+   - options: [`差不多十二月`, `差不多兩個月`, `十二月開始`]
    - answer: **差不多十二月**
    - explanation: 差不多 before a time expression means approximately/around that time.
 8. phrase `u43-duration-question`.
 9. phrase `u43-a002-model`.
 10. select `u43-duration-contrast`
    - prompt: **Which sentence presents a completed one-year stay?**
-   - options: [`我在臺灣住了一年。`, `我在臺灣住了一年了。`, `我快要在臺灣住一年了。`]
+   - options: [`我在臺灣住了一年。`, `我在臺灣住了一年了。`, `我在臺灣住一年。`]
    - answer: **我在臺灣住了一年。**
    - explanation: G001 presents the duration as completed; the final 了 in G002 shifts to accumulated duration up to now.
 11. select `u43-a002-s1`
    - prompt: **For the source experience task, what two things must you ask about?**
-   - options: [`where the person lived and for how long`, `only today's weather`, `only a favorite food`]
+   - options: [`where the person lived and for how long`, `where the person lives now and what they like`, `when the person returned and why`]
    - answer: **where the person lived and for how long**
    - explanation: B1L14-A002 asks for place plus duration.
 12. select `u43-a002-s2`
    - prompt: **After asking the classmate, what does the source task require?**
-   - options: [`record the result and report it`, `erase the result`, `translate it into Japanese`]
+   - options: [`record the result and report it`, `ask the same questions again without recording anything`, `report before asking for the duration`]
    - answer: **record the result and report it**
    - explanation: A002 includes recording and reporting.
 13. listen `u43-duration-now-l1`
@@ -337,7 +337,7 @@ Order:
    - grammarIds: [`u43-imminent`]
 13. select `u43-imminent-s4`
    - prompt: **Which form does the source identify as especially preferred in Taiwan Mandarin?**
-   - options: [`快要`, `只要`, `更要`]
+   - options: [`快要`, `快`, `要`]
    - answer: **快要**
    - explanation: The textbook explicitly notes the Taiwan preference for disyllabic 快要.
 14. listen `u43-newyear-l1`
@@ -361,7 +361,7 @@ Order:
 3. phrase `u43-stopping`.
 4. select `u43-stop-s2`
    - prompt: **雨快要停了 means…**
-   - options: [`The rain is about to stop.`, `The rain stopped last year.`, `The rain is colder than snow.`]
+   - options: [`The rain is about to stop.`, `The rain has already stopped.`, `The rain often stops.`]
    - answer: **The rain is about to stop.**
    - explanation: 快要…了 marks imminence and 停 means stop.
 5. listen `u43-stop-l1`
@@ -386,7 +386,7 @@ Order:
 4. phrase `u43-return-reason`.
 5. select `u43-plan-s1`
    - prompt: **Which sentence states an end-of-December plan?**
-   - options: [`我打算十二月底回去。`, `我明年秋天去看紅葉。`, `我在臺灣住了半年多了。`]
+   - options: [`我打算十二月底回去。`, `我在臺灣住了半年多了。`, `雨快要停了。`]
    - answer: **我打算十二月底回去。**
    - explanation: 打算 marks the plan and 十二月底 gives the time.
 6. listen `u43-plan-l1`
@@ -448,7 +448,7 @@ Order:
 3. `u43-review-l3`
    - audioText: 雨快要停了。
    - prompt: What is about to happen?
-   - options: [the rain will stop, it will start skiing, New Year ended]
+   - options: [the rain will stop, the rain has already stopped, the rain will continue for two hours]
    - answer: the rain will stop
    - explanation: 快要…了 marks imminence; 停 means stop.
 
@@ -491,25 +491,25 @@ Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
 ### Grammar retrieval
 20. `u43-review-g1`
    - prompt: Which correctly expresses a completed two-hour tennis activity?
-   - options: [我打網球打了兩個鐘頭。, 我打網球了兩個鐘頭。, 我打了網球兩個鐘頭打。]
+   - options: [我打網球打了兩個鐘頭。, 我打網球兩個鐘頭了。, 我打網球兩個鐘頭。]
    - answer: 我打網球打了兩個鐘頭。
    - explanation: Object before duration requires verb repetition.
    - grammarIds: [u43-completed-duration]
 21. `u43-review-g2`
    - prompt: Which presents duration accumulated up to now?
-   - options: [我工作了兩個月了。, 我工作了兩個月。, 我兩個月不工作了。]
+   - options: [我工作了兩個月了。, 我工作了兩個月。, 我快要工作了。]
    - answer: 我工作了兩個月了。
    - explanation: Final 了 creates the duration-to-now frame.
    - grammarIds: [u43-duration-to-now]
 22. `u43-review-g3`
    - prompt: Which means “The game is about to start”?
-   - options: [比賽要開始了。, 比賽開始了兩個月。, 比賽比開始快。]
+   - options: [比賽要開始了。, 比賽已經開始了。, 比賽明天開始。]
    - answer: 比賽要開始了。
    - explanation: 要…了 marks imminence here.
    - grammarIds: [u43-imminent]
 23. `u43-review-g4`
    - prompt: Which presents the stay as completed rather than accumulated-to-now?
-   - options: [我在臺灣住了一年。, 我在臺灣住了一年了。, 我快要在臺灣住一年了。]
+   - options: [我在臺灣住了一年。, 我在臺灣住了一年了。, 我在臺灣住一年。]
    - answer: 我在臺灣住了一年。
    - explanation: G001 completed duration lacks the final sentence 了.
 24. `u43-review-g5`
@@ -518,10 +518,10 @@ Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
    - answer: 他明天快要回來了。
    - explanation: The source blocks explicit-time + 快要.
 25. `u43-review-g6`
-   - prompt: Which confirmation form must be explained before source DR001 uses it?
+   - prompt: Which ending asks for confirmation of a statement?
    - options: [對不對, 多久, 十二月底]
    - answer: 對不對
-   - explanation: 對不對 is the source support confirmation bridge.
+   - explanation: 對不對 asks whether the preceding statement is correct, functioning as a confirmation check.
 
 ### Delayed/cumulative transfer
 26. `u43-review-cum1`
