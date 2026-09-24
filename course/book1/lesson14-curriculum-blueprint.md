@@ -409,22 +409,59 @@ Source:
 - B1L14-G002 / DR002
 - B1L14-X025, X030
 
-### U43-L3 — New Year and Parents
+Transfer:
+- complete B1L14-A002 here, after both G001 and G002 have been taught, using learner-safe place labels/substitutions.
+
+### U43-L3 — New Year Is Almost Here
 Reserved lesson ID: `u43-new-year`
 
 Targets:
 - 新年
 - 父母
 - characters 父、母
+- 快 “soon” expansion
+- 要 auxiliary expansion
+- `u43-imminent`
 
 Outcome:
-- connect homesickness and a coming holiday with returning to see parents.
+- understand and produce 新年快到了 only after the imminence pattern has been explained;
+- connect a coming holiday with returning to see parents;
+- distinguish imminent 快／要／快要…了 from generic future.
+
+Required source constraints:
+- Taiwan source preference for 快要;
+- explicit time word + 快要 restriction;
+- contextual evidence rather than generic future.
 
 Source:
 - B1L14-D1T08
-- B1L14-V007, V009
+- B1L14-V007–V009, V022
+- B1L14-G003 / DR003
+- B1L14-P006
+- B1L14-X003, X004
+- deferred X005 adapted out
 
-### U43-L4 — The End of December
+### U43-L4 — The Rain Is About to Stop
+Reserved lesson ID: `u43-stopping`
+
+Targets:
+- 停
+- character 停
+
+Review:
+- `u43-imminent`
+- Unit-42 rain/weather vocabulary
+
+Outcome:
+- retrieve imminence with safe weather-change examples such as 雨快要停了;
+- learn 停 before it appears in Dialogue II.
+
+Source:
+- B1L14-V031
+
+Do not use B1L14-D2T03 productively here because 颱風 is not taught until Unit 44.
+
+### U43-L5 — The End of December
 Reserved lesson ID: `u43-return-plan`
 
 Targets:
@@ -444,30 +481,6 @@ Source:
 - B1L14-V018
 - B1L14-X028
 
-### U43-L5 — It's About to Happen
-Reserved lesson ID: `u43-imminence`
-
-Targets:
-- 快 “soon” expansion
-- 要 auxiliary expansion
-- 停
-- character 停
-- `u43-imminent`
-
-Outcome:
-- predict an imminent event from evidence;
-- contrast generic explicit-time future with the source 快要 restriction.
-
-Source:
-- B1L14-D1T08 weather/change value
-- B1L14-D2T03 as a preview/retrieval sentence only after 颱風 is later taught; do not productively expose 颱 before Unit 44
-- B1L14-G003 / DR003
-- B1L14-P006
-- B1L14-X003, X004
-- deferred X005 adapted out
-
-Safe examples should use known items such as 下雨 / 結束 / 到 rather than future typhoon vocabulary.
-
 ### U43-L6 — Next Year and Autumn Leaves
 Reserved lesson ID: `u43-next-year`
 
@@ -478,14 +491,12 @@ Targets:
 
 Transfer:
 - integrate B1L14-D1T10;
-- complete B1L14-A002 with learner-safe place labels/substitutions;
+- close Dialogue I;
 - complete B1L14-F004.
 
 Source:
 - B1L14-D1T10
 - B1L14-V011, V013
-- B1L14-A002
-- B1L14-X014 handled contextually
 
 ## Unit 43 review
 
@@ -677,7 +688,8 @@ Required prerequisite order:
 - `u40-more-less-verb` explicitly retrieved before productive 多小心.
 
 Source:
-- B1L14-D2T04–D2T07 partial
+- B1L14-D2T04–D2T06
+- the caution clause 請大家多小心 from B1L14-D2T07, without exposing its comparison clause before G004
 - B1L14-V026, V028, V029
 - B1L14-X032 caution branch
 
@@ -693,7 +705,7 @@ Targets:
 - B1L14-P001
 
 Source:
-- B1L14-D2T07
+- the full B1L14-D2T07, now that G004 is taught
 - B1L14-V027, V033, V034
 - B1L14-G004 / DR004
 - B1L14-X006–X009, X017, X018, X035 as safe/review comparison support
@@ -743,6 +755,7 @@ The dependency ledger explicitly allows redesign instead of teaching support cha
 
 Locked architecture decision:
 - display temperatures as numeric values with **°C**;
+- label the location as Latin-script **Taipei** (or another learner-safe label) rather than introducing untaught 北;
 - do not require the learner to read/write 度;
 - preserve the actual comparison task and all required comparison structures;
 - do not add 度 to vocabulary, Search, Mega, or handwriting;
