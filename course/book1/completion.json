@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "deterministic-qa",
-  "stageStatus": "in-progress",
+  "currentStage": "learner-simulation",
+  "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -48,7 +48,11 @@
       "course/book1/unit43.ts",
       "course/book1/unit44.ts"
     ],
-    "deterministicQa": null
+    "deterministicQa": "course/book1/lesson14-deterministic-qa.md",
+    "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
+    "learnerSimulationA": null,
+    "learnerSimulationB": null,
+    "learnerSimulationC": null
   },
-  "notes": "Lesson 14 source/dependency gates, Gate A, and Gate B are PASS. Units 42–44 are implemented and the implementation-conformance audit passes with 0 open BLOCKER/MAJOR findings. Local runtime-schema listening adaptations and exact Traditional stroke-data provenance are documented in the conformance audit. Deterministic QA is in progress on the final authored implementation head; completedThroughUnit remains 41 until release/production verification."
+  "notes": "Lesson 14 source/dependency gates, Gate A, Gate B, implementation conformance, and deterministic QA are PASS. Feature QA run #418 passed on the final implementation head, including generation, graph validation, changed-unit tests, character coverage, full Search/Mega/practice regression, TypeScript, and Pages build. Stage 7 now requires three independent fresh-context learner simulations (strict prerequisite learner, adversarial test taker, cumulative learner). Release remains locked."
 }
