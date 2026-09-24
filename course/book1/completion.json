@@ -5,17 +5,17 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "activity-engineering",
-  "stageStatus": "human-review",
+  "currentStage": "implementation",
+  "stageStatus": "ready",
   "bookComplete": false,
-  "humanReviewRequired": true,
+  "humanReviewRequired": false,
   "workingUnitRange": null,
   "gates": {
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pending",
-    "implementation": "locked",
+    "activities": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
   "openFindings": [],
@@ -23,7 +23,7 @@
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": null,
+    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -38,7 +38,7 @@
     "activityUnit44Spec": "course/book1/lesson14-unit44-activity-spec.md",
     "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-audit.md",
     "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-audit.md",
-    "activityQuestionAudit": null
+    "activityQuestionAudit": "course/book1/lesson14-activity-question-audit.md"
   },
-  "notes": "Lesson 14 source/dependency gates and Gate A are PASS. Candidate activity specifications for Units 42–44 are complete. Activity Audit 1 (Teaching Quality) and Activity Audit 3 (Cross-Unit Coherence) pass with 0 open BLOCKER/MAJOR findings after repairs. Gate B remains PENDING because the mandatory fresh-context Activity Audit 2 (Question Correctness / Adversarial Audit) has not yet run. No learner-facing implementation may begin before that fresh audit passes and the activity packet is frozen."
+  "notes": "Lesson 14 source/dependency gates, Gate A, and all three Gate-B activity audits are PASS on the same final activity-spec packet with 0 open BLOCKER/MAJOR findings. The activity specification is frozen and the repository is ready for implementation of Units 42–44. No learner-facing implementation has been created yet."
 }
