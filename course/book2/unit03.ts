@@ -21,9 +21,8 @@ const unit:UnitData = {
     {"text":"第一","pinyin":"dì yī","meaning":"first","lessonId":"b2u3-ordinal","core":false,"note":"一 keeps its first tone in ordinals."},
     {"text":"第二","pinyin":"dì èr","meaning":"second","lessonId":"b2u3-ordinal","core":false,"note":"Second in order, not two in total."},
     {"text":"紅綠燈","pinyin":"hónglǜdēng","meaning":"traffic light","lessonId":"b2u3-lights","core":false,"note":"Read 綠 as lǜ, with the ü vowel."},
-    {"text":"過","pinyin":"guò","meaning":"go past; cross","lessonId":"b2u3-pass","core":false,"note":"The main verb before a landmark in this unit."},
   ],
-  reviewVocabulary: ["請問","到","怎麼","走","從","往","前","一直","左轉","右轉","路口","師大","銀行","超商","附近","近","遠","離","在","這","那","這裡","那裡","一","兩","個","有","沒有","嗎","很","不","二","再"],
+  reviewVocabulary: ["請問","到","怎麼","走","從","往","前","一直","左轉","右轉","路口","師大","銀行","超商","附近","近","遠","離","在","這","那","這裡","那裡","一","兩","個","有","沒有","嗎","很","不","二","再","過"],
   newCharacters: ["第","綠","燈"],
   reviewCharacters: ["下","二","紅","過","再"],
   characters: {

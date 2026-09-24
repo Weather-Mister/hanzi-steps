@@ -228,6 +228,30 @@
           "order": 37,
           "title": "Tomorrow Is Your Birthday",
           "path": "course/book1/unit37.ts"
+        },
+        {
+          "id": "unit-38",
+          "order": 38,
+          "title": "I'll See You After Class",
+          "path": "course/book1/unit38.ts"
+        },
+        {
+          "id": "unit-39",
+          "order": 39,
+          "title": "What Did You Order?",
+          "path": "course/book1/unit39.ts"
+        },
+        {
+          "id": "unit-40",
+          "order": 40,
+          "title": "What Does Everyone Eat?",
+          "path": "course/book1/unit40.ts"
+        },
+        {
+          "id": "unit-41",
+          "order": 41,
+          "title": "Happy Birthday and Best Wishes",
+          "path": "course/book1/unit41.ts"
         }
       ]
     },
