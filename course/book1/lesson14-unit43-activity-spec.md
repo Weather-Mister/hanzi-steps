@@ -86,6 +86,14 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - tokens: [`我在臺灣住了半年多了`, `有一點想家`]
 - grammarIds: [`u43-duration-to-now`]
 
+### u43-a002-model
+- text: **你以前住在哪裡？你在那裡住了多久？**
+- pinyin: **Nǐ yǐqián zhù zài nǎlǐ? Nǐ zài nàlǐ zhù le duōjiǔ?**
+- meaning: **Where did you live before? How long did you live there?**
+- note: Learner-safe question pair for the source A002 interview task.
+- tokens: [`你以前住在哪裡`, `你在那裡住了多久`]
+- grammarIds: [`u43-completed-duration`]
+
 ### u43-duration-question
 - text: **你在臺灣住了多久了？**
 - pinyin: **Nǐ zài Táiwān zhù le duōjiǔ le?**
@@ -231,28 +239,29 @@ Order:
    - explanation: This is the source distinction.
    - grammarIds: [`u43-duration-to-now`]
 6. phrase `u43-duration-question`.
-7. select `u43-duration-contrast`
+7. phrase `u43-a002-model`.
+8. select `u43-duration-contrast`
    - prompt: **Which sentence presents a completed one-year stay?**
    - options: [`我在臺灣住了一年。`, `我在臺灣住了一年了。`, `我快要在臺灣住一年了。`]
    - answer: **我在臺灣住了一年。**
    - explanation: G001 presents the duration as completed; the final 了 in G002 shifts to accumulated duration up to now.
-8. select `u43-a002-s1`
+9. select `u43-a002-s1`
    - prompt: **For the source experience task, what two things must you ask about?**
    - options: [`where the person lived and for how long`, `only today's weather`, `only a favorite food`]
    - answer: **where the person lived and for how long**
    - explanation: B1L14-A002 asks for place plus duration.
-9. select `u43-a002-s2`
+10. select `u43-a002-s2`
    - prompt: **After asking the classmate, what does the source task require?**
    - options: [`record the result and report it`, `erase the result`, `translate it into Japanese`]
    - answer: **record the result and report it**
    - explanation: A002 includes recording and reporting.
-10. listen `u43-duration-now-l1`
+11. listen `u43-duration-now-l1`
    - audioText: **我在臺灣住了半年多了。**
    - prompt: **What duration frame do you hear?**
    - options: [`a little over half a year up to now`, `exactly two hours completed`, `an event about to happen`]
    - answer: **a little over half a year up to now**
    - explanation: 半年多了 expresses accumulated duration.
-11. order `u43-duration-now-o1` using `u43-duration-now-source`
+12. order `u43-duration-now-o1` using `u43-duration-now-source`
    - tokens: [`我在臺灣住了半年多了`, `有一點想家`]
 
 ### u43-new-year — New Year Is Almost Here
