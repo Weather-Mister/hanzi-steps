@@ -6,15 +6,11 @@ Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 13 Dialogue I
 
 Unit 39 begins the birthday dinner and pairs completed-action 了 with the source negation system.
 
-Canonical NEW entries:
-- 禮物
-- 今年
-- 訂
-- 豬腳
-- 麵線
-- 蛋
-- 一點
-- 哪裡哪裡 (store without punctuation; display source phrase as 哪裡，哪裡！)
+Implementation-indexed first-taught forms:
+- ordinary vocabulary: 禮物、今年、訂、豬腳、麵線、蛋、一點
+- source Phrase form: 哪裡哪裡 (store without punctuation; display source phrase as 哪裡，哪裡！)
+
+Pacing report: **7 ordinary new words + 1 source Phrase form**, plus two dense grammar systems.
 
 Review/new function:
 - 了 → completed-action verbal particle.
@@ -99,3 +95,8 @@ Must verify:
 - 一點 vs. 有一點;
 - dietary-preference question;
 - Dialogue II turns 1–6.
+
+
+## Review quality floor
+
+Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
