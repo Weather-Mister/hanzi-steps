@@ -275,7 +275,7 @@ Order:
 6. select `u44-umbrella-s3`
    - prompt: **What happened today?**
    - options: [`The speaker forgot to bring the umbrella today.`, `The speaker forgot it yesterday but brought it today.`, `The speaker did not bring an umbrella on either day.`]
-   - answer: **The speaker forgot to bring the umbrella.**
+   - answer: **The speaker forgot to bring the umbrella today.**
    - explanation: 今天忘了帶 means “forgot to bring it today.”
 7. listen `u44-umbrella-l1`
    - audioText: **你怎麼沒帶傘呢？**
@@ -531,7 +531,11 @@ Order:
 17. `u44-review-v8` 這次 → this time / last time / next year → **this time**
 18. `u44-review-v9` 上次 → last time / this time / New Year → **last time**
 19. `u44-review-v11` 可怕 → scary / wet / careful → **scary**
-20. `u44-review-v12` 慢走 → Take care / Bye / compare again / snow → **Take care / Bye**
+20. `u44-review-v12`
+   - prompt: 慢走 means…
+   - options: [`Take care / Bye`, `compare again`, `snow`]
+   - answer: **Take care / Bye**
+   - explanation: 慢走 is a conventional leave-taking formula meaning “Take care / Bye.”
 
 For select rows above, prompt format: **“X means…”**; explanation: **“X means <answer>.”**
 
