@@ -97,7 +97,7 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - text: **你以前住在哪裡？你在那裡住了多久？**
 - pinyin: **Nǐ yǐqián zhù zài nǎlǐ? Nǐ zài nàlǐ zhù le duōjiǔ?**
 - meaning: **Where did you live before? How long did you live there?**
-- note: Learner-safe question pair for the source A002 interview task.
+- note: Learner-safe question pair for the source A002 interview task. **Transfer instruction:** ask a classmate (or rehearse with an imagined partner), record the place and duration on paper, then report one result in Chinese.
 - tokens: [`你以前住在哪裡`, `你在那裡住了多久`]
 - grammarIds: [`u43-completed-duration`]
 
