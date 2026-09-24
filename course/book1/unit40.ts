@@ -841,7 +841,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "傳統",
         "pinyin": "chuántǒng",
@@ -878,7 +878,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "傳統",
         "pinyin": "chuántǒng",
@@ -917,7 +917,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "年輕",
         "pinyin": "niánqīng",
@@ -952,7 +952,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "大部分",
         "pinyin": "dàbùfēn",
