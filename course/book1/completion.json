@@ -6,9 +6,9 @@
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
   "currentStage": "curriculum-architecture",
-  "stageStatus": "ready",
+  "stageStatus": "human-review",
   "bookComplete": false,
-  "humanReviewRequired": false,
+  "humanReviewRequired": true,
   "workingUnitRange": null,
   "gates": {
     "source": "pass",
@@ -27,7 +27,10 @@
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
-    "dependencyAudit": "course/book1/lesson14-dependency-audit.md"
+    "dependencyAudit": "course/book1/lesson14-dependency-audit.md",
+    "curriculumBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
+    "curriculumSourceFidelityAudit": "course/book1/lesson14-curriculum-source-fidelity-audit.md",
+    "curriculumPedagogyAudit": "course/book1/lesson14-curriculum-pedagogy-audit.md"
   },
-  "notes": "Lesson 14 source and dependency gates are PASS. The mandatory fresh-context dependency audit corrected false-REVIEW support records, missing caution/leave-taking prerequisite edges, durable-ID traceability, outcome disposition precision, and G005 prerequisite specificity; final re-audit has 0 open BLOCKER and 0 open MAJOR findings. The repository is ready for curriculum architecture. No Unit 42+ split, activity design, or implementation has begun."
+  "notes": "Lesson 14 source and dependency gates are PASS. Curriculum architecture design passes 1–3 are complete with a final proposed Units 42–44 blueprint. Source-fidelity and pedagogy audit passes on the final proposed blueprint have 0 open BLOCKER/MAJOR findings after sequencing and source-task detail fixes. Gate A remains PENDING because the protocol requires a fresh-context adversarial curriculum audit. No activity engineering or learner-facing implementation may begin until that audit passes and the blueprint is frozen."
 }
