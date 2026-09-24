@@ -1202,7 +1202,7 @@ const unit:UnitData = {
       "text": "我們做語言交換。",
       "pinyin": "Wǒmen zuò yǔyán jiāohuàn.",
       "meaning": "We do a language exchange.",
-      "note": "Learner-safe setup before 西班牙文 is introduced in the next lesson.",
+      "note": "Learner-safe setup before the Spanish-language source phrase is introduced in the next lesson.",
       "tokens": ["我們做","語言交換"]
     },
     "u38-exchange-source": {
