@@ -54,7 +54,8 @@ Affirmative:
 Negative:
 - question word + 都 or 也 + 不 / 沒;
 - negative marker after 都 / 也;
-- total exclusion.
+- total exclusion;
+- 都 and 也 are both source-valid here, so never make them competing single-answer options when both fit.
 
 Questions:
 - source specifies 嗎.
