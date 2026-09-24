@@ -6,9 +6,9 @@
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
   "currentStage": "source-extraction",
-  "stageStatus": "in-progress",
+  "stageStatus": "human-review",
   "bookComplete": false,
-  "humanReviewRequired": false,
+  "humanReviewRequired": true,
   "workingUnitRange": null,
   "gates": {
     "source": "pending",
@@ -27,5 +27,5 @@
     "traceability": null,
     "releaseReport": null
   },
-  "notes": "Preflight confirmed production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, no conflicting open PRs, Book 1 complete through source Lesson 13 / Unit 41, and Lesson 14 spans printed pp. 299-321 (PDF pp. 326-348). Source Extraction A is saved at course/book1/lesson14-source-extraction-a.md. Independent Extraction B and reconciliation are still required before the source gate can advance."
+  "notes": "Preflight confirmed production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, Book 1 complete through source Lesson 13 / Unit 41, and Lesson 14 spans printed pp. 299-321 (PDF pp. 326-348). Source Extraction A is saved. A provisional Extraction B, reconciliation, and reconciled ledger were also produced on this branch, but this context had already read Extraction A before authoring B, so the protocol's blind independent-Extraction-B requirement is not yet satisfied. A fresh context must independently redo Extraction B without reading A/B/reconciliation/ledger first; then refresh reconciliation. A separate fresh-context source audit is required before the source gate can pass. No downstream gate may advance."
 }
