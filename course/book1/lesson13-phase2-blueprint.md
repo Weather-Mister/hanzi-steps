@@ -17,9 +17,10 @@ It is intentionally more specific than the Phase 1 source ledger: it assigns eve
 7. No future-new learner character may appear in a phrase, grammar card, or assessment before its introduction unless the item is explicitly adapted.
 8. Proper names do not automatically create handwriting/vocabulary obligations.
 9. Every indexed first-taught vocabulary/expression must be independently retrieved in its unit review and participate in the normal Pinyin Search / Mega Challenge pipeline after its teaching lesson. Report ordinary vocabulary and source Phrase forms separately so phrase indexing never inflates the pacing count.
-10. Grammar cards must include the source restrictions, not just the positive headline pattern.
-11. Once implemented and published, lesson/activity topology should remain stable. Therefore the lesson IDs below should be treated as reserved implementation targets.
-12. Lesson 13 is complete only when Unit 41's capstone covers all four textbook outcomes, not merely Grammar VI–VII.
+10. All nine textbook Phrase entries are intentionally searchable/challengeable **as exact pragmatic forms**. This follows existing Hanzi Steps precedent for useful fixed expressions (e.g. 加油 / 沒問題 / 不好意思). They remain Phrase forms for pacing/reporting, not nine extra ordinary words. Proper names and review/new-sense items do not get duplicate challenge entries.
+11. Grammar cards must include the source restrictions, not just the positive headline pattern.
+12. Once implemented and published, lesson/activity topology should remain stable. Therefore the lesson IDs below should be treated as reserved implementation targets.
+13. Lesson 13 is complete only when Unit 41's capstone covers all four textbook outcomes, not merely Grammar VI–VII.
 
 ---
 
@@ -88,7 +89,7 @@ Canonical source expressions:
 ### Unit 38
 
 Ordinary source vocabulary:
-- 語言 yǔyán
+- 語言 yǔyán — first standalone vocabulary ownership; the form is partly familiar from Unit 34 語言中心, so implementation should acknowledge that continuity rather than present both characters/concept as wholly unseen
 - 交換 jiāohuàn
 - 熱心 rèxīn
 - 西班牙文 Xībānyá wén
@@ -116,7 +117,7 @@ Ordinary source vocabulary:
 - 豬腳 zhūjiǎo
 - 麵線 miànxiàn
 - 蛋 dàn
-- 一點 yìdiǎn
+- 一點 yìdiǎn — first exact quantity-form ownership; deliberately builds on earlier 有一點 without pretending the chunk is wholly unfamiliar
 
 Review / new function:
 - 了 le — completed-action verbal particle; do not create duplicate vocabulary ownership
@@ -576,12 +577,15 @@ Productive boundary:
 - 是不是 may be shown as a source-permitted comprehension example with an explicit “formal confirmation questions come in Unit 41” note;
 - do not test independent 是不是 production yet.
 
-Safe source examples:
+Safe source/adapted examples:
 - 我一下課，就回來。
 - 他一回國，就找工作。
 - 我妹妹一回去，就給媽媽打電話。
 - 我一下課，就去吃晚飯。
-- 老闆今天早上一到公司，就不開心。
+- **那裡一沒人，我就回家。** — learner-safe adaptation preserving the source's negative Event A pattern without leaking 拍／照.
+- 老闆今天早上一到公司，就不開心。 — negative Event B.
+
+The implementation must include at least one negative Event A and one negative Event B example so the source statement that either event may be negative is actually demonstrated, not merely asserted.
 
 Exercise model:
 - complete short dialogues from situational prompts;
@@ -961,7 +965,7 @@ Retrieve:
 - 過生日
 - 豬腳麵線
 
-Cultural context may briefly explain that the source identifies pork knuckles/fine noodles/egg as traditional birthday food, without importing unrelated new vocabulary.
+Cultural context must include the source's birthday-practice reading in learner-safe form, without converting culture-reading terms into formal vocabulary. In u40-customs, include a concise source note covering: traditional lunar-calendar birthdays vs. common modern Gregorian-calendar birthdays; one-month and one-year infant celebrations; special importance of major decades such as 60/70/80; and the first-birthday zhuāzhōu 'grabbing' custom. Do **not** display 抓週 as unscaffolded assessed Hanzi; use English/romanization or explicitly mark it as optional annotated culture text. Also retain the source's traditional birthday-food context (豬腳麵線/蛋).
 
 ### u40-most-young — “Most Young People”
 Teach:
@@ -1226,6 +1230,8 @@ Do not create a fake numbered grammar section for 祝. Teach a small lexical-syn
 
 Do not decompose 萬事如意 / 心想事成 into invented productive grammar. Teach them as conventional fixed wishes.
 
+Also include the source cultural point that congratulatory sayings are often fixed four-character auspicious expressions and that these two are presented as broadly useful/all-purpose wishes. This is cultural/pragmatic context, not an extra grammar rule.
+
 Core activities:
 - handwriting 祝 / 如;
 - expression matching;
@@ -1386,10 +1392,10 @@ Total = **7 / 7**.
 - Grammar VII comparison writing → U41 comparison production
 
 Integrated activities:
-- Night Market / preferences → U39–40
-- Birthday culture comparison → U40–41
-- Calling a Friend → U37–38 + U41 capstone
-- Congratulatory Words → U41
+- **Night Market / preferences** → U39 supplies completed-action / 沒 and the preference question; U40 may reuse totality. Use previously taught food vocabulary in learner-facing transfer rather than blindly importing source-only 臭豆腐 / 小籠包 characters.
+- **Birthday culture comparison** → U40 supplies source cultural content and comparison preparation; productive similarities/differences wait for U41 Grammar VII and capstone.
+- **Calling a Friend** → language is built in U37–38; the full source-style appointment transfer is required in U41 capstone.
+- **Congratulatory Words** → U41 wishes lesson + birthday-card transfer.
 
 ## Final learning-objective accounting
 
@@ -1442,16 +1448,31 @@ No duplicate canonical vocabulary. Unit 41 formalizes 對 + person “to/toward�
 ## 10. 過
 Migrate canonical vocabulary ownership from Book 2 Unit 3 to Unit 38:
 - U38 meaning: celebrate, especially 過生日;
-- B2 U3: later movement sense “go past / cross”, treated as new sense/review.
+- B2 U3: later movement sense “go past / cross”, treated as new-sense review.
 
-Preserve Book 2 existing lesson/activity IDs and step topology when reclassifying.
+**Exact migration contract for Book 2 Unit 3:**
+- remove 過 from B2U3 newVocabulary;
+- add 過 to B2U3 reviewVocabulary;
+- keep b2u3-pass, its grammar rule, phrases, assessments, lesson ID, and every existing step ID/position intact;
+- keep the B2 movement meaning taught in the lesson/grammar explanation;
+- do not create a second exact-form Mega/Pinyin entry for the same written form under the current first-ownership index model.
+
+The canonical Pinyin Search / Mega entry after Unit 38 therefore represents the first-taught Lesson 13 sense. B2U3 teaches the later movement sense in context without pretending it is a new written vocabulary form.
 
 ## 11. 口
 Migrate chronological character ownership from Book 2 Unit 1 to Unit 38:
 - U38 first teaches 口 through 門口;
 - B2 U1 reuses 口 in 路口 as review.
 
-Preserve Book 2 activity IDs/topology where possible; reword the existing 口 sequence as review rather than deleting steps.
+**Exact migration contract for Book 2 Unit 1:**
+- remove 口 from B2U1 newCharacters;
+- add 口 to B2U1 reviewCharacters;
+- remove B2U1's local character-record declaration for 口 so it resolves to the earlier Unit 38 record;
+- preserve b2-intersection lesson ID and all existing b2-char-口-* step IDs/positions; the intro/trace/select/complete/memory sequence becomes deliberate review practice rather than a new-character declaration;
+- preserve unit.chars and all 路口 vocabulary/grammar content;
+- wording may be adjusted to say “review 口” but no sequence reordering/deletion is allowed.
+
+This avoids saved-progress breakage while repairing chronological ownership.
 
 ## 12. 一點
 Teach exact quantity expression in Unit 39. Contrast with prior 有一點 + description.
@@ -1501,6 +1522,8 @@ Before coding Unit 37:
 During implementation:
 
 - keep **six teaching lessons + one review** exactly as reserved here;
+- fixed Phrase forms deliberately included in newVocabulary for search/challenge are: 生日快樂、我就是、好久不見、不必客氣、太客氣、哪裡哪裡、大部分、萬事如意、心想事成. Store 哪裡哪裡 without punctuation in the vocabulary key; learner-facing display may use 哪裡，哪裡！. Proper-name 西班牙 and review/new-sense forms 怎麼、那麼、了、對 must not create duplicate entries;
+- preserve project pinyin conventions, including contextual 一/不 tone sandhi where already standardized (e.g. yíyàng, yìdiǎn, hǎojiǔ bújiàn, búbì kèqi);
 - each review must contain roughly **18–22 useful activities**, including **at least 3 listening activities**, independently assess every new grammar target, and fairly sample the unit's vocabulary/expressions; these are quality floors, not filler quotas;
 - introduce each NEW character before any learner-facing assessed use;
 - use exact Traditional codepoints;
@@ -1556,7 +1579,7 @@ The five-unit structure is now frozen as:
 - **Unit 40:** totality + 多／少 + birthday customs
 - **Unit 41:** 是不是 + 跟…一樣 + wishes + Lesson 13 capstone
 
-Vocabulary/expression indexing allocation: **35 exact first-taught forms = 26 ordinary vocabulary items + 9 source Phrase forms**, reported separately for pacing.
+Vocabulary/expression indexing allocation: **35 exact first-taught forms = 26 ordinary vocabulary items + 9 source Phrase forms**, reported separately for pacing. The second pass confirms all nine Phrase forms intentionally remain Pinyin Search / Mega Challenge entries as pragmatic expressions.
 
 Character allocation: **24 / 24 chronological new characters**.
 
@@ -1569,3 +1592,28 @@ End-of-lesson outcomes: **4 / 4**.
 Canonical-text normalization: the source display 「哪裡，哪裡！」 should be stored as canonical vocabulary text 哪裡哪裡 (no punctuation) for Pinyin Search / Mega Challenge consistency; learner-facing phrase cards may display source punctuation.
 
 No learner-facing Unit 37–41 implementation is part of Phase 2.
+
+
+# Phase 2 second-pass adversarial findings
+
+A second Phase 2 pass independently re-derived the unit plan from the Phase 1 source ledger and then stress-tested implementation assumptions rather than trusting the first blueprint.
+
+Confirmed unchanged:
+- five-unit split (37–41);
+- 40/40 source-listed items assigned once;
+- 27/27 dialogue turns;
+- 7/7 formal grammar sections;
+- 24/24 chronological new characters;
+- four source learning outcomes;
+- Unit 39 pairing of completed-action 了 with 不 vs. 沒（有）;
+- Unit 40/41 remain grammar-heavy rather than being padded or prematurely mixed with Lesson 14.
+
+Refinements added by this pass:
+1. **Grammar I polarity demonstration:** added a learner-safe negative Event A example, not only a verbal statement that either event may be negative.
+2. **Culture-note allocation:** explicitly assigned the Taiwanese birthday cultural reading to U40 and four-character congratulatory-pragmatics to U41 without creating new vocabulary from culture-reading terms.
+3. **Integrated-activity safety:** source activity goals are retained, but source-only food/name glyphs are not blindly imported into assessment.
+4. **Cross-book migrations made operational:** exact metadata/content changes for 過 (B2U3) and 口 (B2U1) are specified while preserving saved-progress step topology.
+5. **Search/Mega decision made explicit:** all nine source Phrase forms remain indexed exact pragmatic targets, but are reported separately from ordinary vocabulary; review/new-sense forms and the Name entry do not duplicate ownership.
+6. **Partial familiarity is acknowledged:** 語言 is new standalone ownership after 語言中心; 一點 is a new exact quantity form after 有一點.
+
+No source-backed reason was found to change the five-unit split or move a formal grammar section to another unit.
