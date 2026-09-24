@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "preflight",
-  "stageStatus": "pending",
+  "currentStage": "source-extraction",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": null,
@@ -27,5 +27,5 @@
     "traceability": null,
     "releaseReport": null
   },
-  "notes": "Book 1 Lesson 13 is complete through Hanzi Steps Unit 41. Lesson 14 is the next source lesson."
+  "notes": "Preflight confirmed production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, no conflicting open PRs, Book 1 complete through source Lesson 13 / Unit 41, and Lesson 14 spans printed pp. 299-321 (PDF pp. 326-348). Source Extraction A is saved at course/book1/lesson14-source-extraction-a.md. Independent Extraction B and reconciliation are still required before the source gate can advance."
 }
