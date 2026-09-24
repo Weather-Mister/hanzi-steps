@@ -12,7 +12,7 @@ The core sequencing is deliberate:
 
 1. Unit 42 teaches the weather/seasons lexicon needed to understand the opening dialogue and later typhoon discussion.
 2. Unit 43 uses known weather language while teaching experience/duration and imminence. G001 precedes G002; G003 follows the lexical expansions 快/要.
-3. Unit 44 can then present Dialogue II as one coherent typhoon episode and teach its two comparison systems without hidden prerequisites.
+3. Unit 44 can then present Dialogue II as one coherent typhoon episode and teach its two comparison systems without hidden prerequisites. B1L14-V027 更 must be taught with its “even more” baseline before B1L14-G004; G004 must precede the full D2T07 comparison clause, and G005 must precede D2T08.
 
 ---
 
@@ -35,15 +35,15 @@ Formal NEW:
 
 Count: **11 NEW**.
 
-NEW formal characters:
+NEW formal characters, in learner-facing first-introduction order:
 - B1L14-CH003 冷
 - B1L14-CH005 滑
 - B1L14-CH006 雪
 - B1L14-CH007 春
 - B1L14-CH014 冬
+- B1L14-CH033 夏
 - B1L14-CH016 秋
 - B1L14-CH029 雨
-- B1L14-CH033 夏
 
 Count: **8 NEW characters**.
 
@@ -110,13 +110,13 @@ Counts:
 - **3 EXPANSION**
 - **10 lexical learning targets total**
 
-NEW formal characters:
+NEW formal characters, in learner-facing first-introduction order:
+- B1L14-CH019 只
 - B1L14-CH012 父
 - B1L14-CH013 母
-- B1L14-CH018 葉
-- B1L14-CH019 只
-- B1L14-CH028 底
 - B1L14-CH045 停
+- B1L14-CH028 底
+- B1L14-CH018 葉
 
 Count: **6 NEW characters**.
 
@@ -229,7 +229,7 @@ Planned stable grammar IDs:
 2. **A Typhoon Is Coming** — 颱風; retrieve Unit-43 imminence and introduce the textbook-era typhoon-day culture frame as historical/source context, not current administrative advice.
 3. **Wet and Annoying** — 濕、討厭; explicitly license source-attested 濕濕的 as an expansion of the earlier restricted reduplication rule.
 4. **News and Take Care** — 新聞、大家、小心; review question-word + 都 and 多 + Verb; teach the caution clause 請大家多小心 only after all prerequisites are in place. Do not present the full B1L14-D2T07 comparison clause yet.
-5. **This Time Is Even Bigger** — 這次、上次、更; teach B1L14-G004 and B1L14-P001, then present the full B1L14-D2T07.
+5. **This Time Is Even Bigger** — 這次、上次、更; teach 更 and B1L14-P001 first, then B1L14-G004, then present the full B1L14-D2T07.
 6. **Not as Scary — Take Care** — 可怕、慢走; teach B1L14-G005, B1L14-P002, and B1L14-P005; close Dialogue II with 小心慢走.
 
 Then **Unit 44 review + Lesson-14 capstone**.
@@ -293,8 +293,9 @@ No unit is padded with transparent combinations or already-known expressions.
 
 ## Search / Mega policy
 
-- All **30 non-deferred formal NEW** lexical entries must receive one chronological vocabulary ownership and become eligible for normal Pinyin Search / Mega after their teaching lesson.
-- B1L14-V006 想, V008 快, V022 要 remain existing lexical ownerships with new senses/functions; they must be assessed in the new sense without creating duplicate NEW rows.
+- All **30 non-deferred formal NEW** lexical entries receive exactly one chronological canonical vocabulary ownership. Pinyin Search is a global canonical lookup; Mega Challenge is lesson-completion gated.
+- B1L14-V006 想, V008 快, and V022 要 remain earlier canonical ownerships. Do not duplicate them and do not broaden their earlier canonical glosses during Lesson 14, because that would expose the Lesson-14 senses before Unit 43 and alter already-unlocked Mega prompts.
+- Their Lesson-14 senses must instead be assessed in Unit 43 teaching/review and the Lesson-14 capstone. Under the current form-level Search/Mega model, they have no second sense-specific Search/Mega ownership.
 - deferred Names 玉山 / 紐約 are not Search/Mega targets.
 - support-only items do not become Search/Mega targets merely because they occur in a source drill.
 
