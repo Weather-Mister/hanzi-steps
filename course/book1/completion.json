@@ -20,12 +20,12 @@
   },
   "openFindings": [],
   "artifacts": {
-    "sourceLedger": null,
+    "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": null,
     "frozenBlueprint": null,
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null
   },
-  "notes": "Preflight confirmed production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, Book 1 complete through source Lesson 13 / Unit 41, and Lesson 14 spans printed pp. 299-321 (PDF pp. 326-348). Source Extraction A is saved. A provisional Extraction B, reconciliation, and reconciled ledger were also produced on this branch, but this context had already read Extraction A before authoring B, so the protocol's blind independent-Extraction-B requirement is not yet satisfied. A fresh context must independently redo Extraction B without reading A/B/reconciliation/ledger first; then refresh reconciliation. A separate fresh-context source audit is required before the source gate can pass. No downstream gate may advance."
+  "notes": "Preflight remains anchored to production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, with Book 1 complete through source Lesson 13 / Unit 41. For Lesson 14 (printed pp. 299-321 / PDF pp. 326-348), the protocol-required fresh independent Source Extraction B has now been completed without prior exposure to A/B/reconciliation/ledger, the provisional B has been replaced, A vs B has been reconciled against the textbook with 0 unresolved source disagreements, and the reconciled source ledger has been regenerated. The source gate is still pending because a separate fresh-context source audit is mandatory and has not yet been performed. No dependency, curriculum, activity, Unit 42, or learner-facing implementation work is authorized."
 }
