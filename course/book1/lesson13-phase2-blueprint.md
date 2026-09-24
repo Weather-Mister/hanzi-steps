@@ -16,7 +16,7 @@ It is intentionally more specific than the Phase 1 source ledger: it assigns eve
 6. Never productively assess a grammar system before its formal unit, even if the source dialogue previews it.
 7. No future-new learner character may appear in a phrase, grammar card, or assessment before its introduction unless the item is explicitly adapted.
 8. Proper names do not automatically create handwriting/vocabulary obligations.
-9. Every formal NEW vocabulary/expression must be independently retrieved in its unit review and participate in the normal Pinyin Search / Mega Challenge pipeline after its teaching lesson.
+9. Every indexed first-taught vocabulary/expression must be independently retrieved in its unit review and participate in the normal Pinyin Search / Mega Challenge pipeline after its teaching lesson. Report ordinary vocabulary and source Phrase forms separately so phrase indexing never inflates the pacing count.
 10. Grammar cards must include the source restrictions, not just the positive headline pattern.
 11. Once implemented and published, lesson/activity topology should remain stable. Therefore the lesson IDs below should be treated as reserved implementation targets.
 12. Lesson 13 is complete only when Unit 41's capstone covers all four textbook outcomes, not merely Grammar VI–VII.
@@ -150,9 +150,9 @@ Canonical source expressions:
 
 The low lexical count is intentional. Unit 41 carries Grammar VI, Grammar VII, fixed-wish pragmatics, Dialogue II closure, and the full Lesson 13 capstone.
 
-## Canonical vocabulary/expression totals
+## Lexical accounting: indexing vs. pacing
 
-Planned canonical NEW entries:
+For implementation/search purposes, the plan has **35 exact first-taught vocabulary/expression forms**:
 
 - Unit 37: 10
 - Unit 38: 10
@@ -160,14 +160,33 @@ Planned canonical NEW entries:
 - Unit 40: 3
 - Unit 41: 4
 
-**Total: 35 canonical new words/expressions.**
+These 35 are split honestly into:
+- **26 learner-new ordinary vocabulary forms** from Vocabulary I/II;
+- **9 source-listed Phrase forms** taught explicitly as expressions;
+- the source Name **西班牙** remains contextual support rather than a 36th challenge item.
 
-This corresponds to:
-- 26 learner-new ordinary vocabulary forms from the source;
-- all 9 source-listed Phrase entries as explicit canonical expressions;
-- the source Name 西班牙 remains contextual rather than a 36th challenge item.
+Do **not** report all 35 as “35 genuinely new words.” The nine Phrase forms are reported separately because some are fixed formulas or transparent/compositional combinations. Their source status still makes them explicit teaching targets, and indexing them supports Pinyin Search / Mega Challenge after their owning lesson, but they must not be used to inflate pacing.
 
-Already-known forms 怎麼、那麼、了、對 are taught as new senses/functions without duplicate ownership.
+The four already-known exact forms **怎麼、那麼、了、對** are separate again: they are review words receiving new senses/functions, not duplicate NEW ownership.
+
+Per-unit honest source load:
+- Unit 37: 7 ordinary new words + 3 source phrases + 1 review/new-sense form.
+- Unit 38: 8 ordinary new words + 2 source phrases + 1 contextual Name + 1 review/new-sense form.
+- Unit 39: 7 ordinary new words + 1 source phrase + 1 review/new-function form.
+- Unit 40: 2 ordinary new words + 1 source phrase + 2 full grammar systems.
+- Unit 41: 2 ordinary new words + 2 source phrases + 1 review/new-sense form + 2 full grammar systems + capstone.
+
+### Pacing decision for the sparse final units
+
+Units 40–41 remain below the usual 10–13 new-word/form pacing target **by design, not by oversight**.
+
+Rebalancing was checked and rejected for concrete reasons:
+- moving Unit 39 food vocabulary later would either expose untaught glyphs in Dialogue II / verbal-了 work or weaken the natural 訂了 → completed-action grammar anchor;
+- Unit 40 already contains the full five-way question-word totality paradigm, its negative 都／也 + 不／沒 system, question restrictions, 多／少 + Verb, the sentence-final-了 contrast, and birthday-custom integration;
+- Unit 41 contains 是不是 pragmatics, the complete 跟…一樣 system including negation scope/questions, wishes, Dialogue II closure, and the four-objective Lesson 13 capstone;
+- beginning Lesson 14 weather inside Unit 41 would split the Lesson 13 capstone and mix a new topic before the current lesson's comparison/wishes outcomes have been independently consolidated.
+
+The lower lexical counts therefore reflect grammar/capstone density rather than a textbook-boundary quota.
 
 ---
 
@@ -1481,6 +1500,8 @@ Before coding Unit 37:
 
 During implementation:
 
+- keep **six teaching lessons + one review** exactly as reserved here;
+- each review must contain roughly **18–22 useful activities**, including **at least 3 listening activities**, independently assess every new grammar target, and fairly sample the unit's vocabulary/expressions; these are quality floors, not filler quotas;
 - introduce each NEW character before any learner-facing assessed use;
 - use exact Traditional codepoints;
 - hydrate stroke data using repository policy;
@@ -1535,7 +1556,7 @@ The five-unit structure is now frozen as:
 - **Unit 40:** totality + 多／少 + birthday customs
 - **Unit 41:** 是不是 + 跟…一樣 + wishes + Lesson 13 capstone
 
-Vocabulary/expression allocation: **35 canonical NEW entries**.
+Vocabulary/expression indexing allocation: **35 exact first-taught forms = 26 ordinary vocabulary items + 9 source Phrase forms**, reported separately for pacing.
 
 Character allocation: **24 / 24 chronological new characters**.
 
