@@ -50,5 +50,5 @@
     ],
     "deterministicQa": null
   },
-  "notes": "Lesson 14 source/dependency gates, Gate A, and Gate B are PASS. Units 42–44 are implemented and the implementation-conformance audit passes with 0 open BLOCKER/MAJOR findings. Local runtime-schema listening adaptations and exact Traditional stroke-data provenance are documented in the conformance audit. The controller is now at deterministic QA; completedThroughUnit remains 41 until release/production verification."
+  "notes": "Lesson 14 source/dependency gates, Gate A, and Gate B are PASS. Units 42–44 are implemented and the implementation-conformance audit passes with 0 open BLOCKER/MAJOR findings. Local runtime-schema listening adaptations and exact Traditional stroke-data provenance are documented in the conformance audit. Deterministic QA is in progress on the final authored implementation head; completedThroughUnit remains 41 until release/production verification."
 }
