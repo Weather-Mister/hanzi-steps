@@ -222,6 +222,12 @@
           "order": 36,
           "title": "Is That Job Easy to Find?",
           "path": "course/book1/unit36.ts"
+        },
+        {
+          "id": "unit-37",
+          "order": 37,
+          "title": "Tomorrow Is Your Birthday",
+          "path": "course/book1/unit37.ts"
         }
       ]
     },
