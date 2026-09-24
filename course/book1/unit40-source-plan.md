@@ -39,7 +39,7 @@ Preview-only:
 3. u40-tradition — 傳統.
 4. u40-most-young — 大部分, 年輕, sentence-final 了 contrast.
 5. u40-more-less — 多／少 + Verb.
-6. u40-customs — integrate birthday-food/customs discussion and prepare comparison.
+6. u40-customs — integrate birthday-food/customs discussion, include the source birthday-culture note, and prepare comparison.
 7. u40-review.
 
 ## Grammar IV requirements
@@ -73,6 +73,19 @@ Teach:
 Exercise demand:
 - situational suggestions using 多/少 + Verb.
 
+## Source cultural-note allocation
+
+u40-customs must include concise learner-safe coverage of the textbook's Taiwanese-birthday reading:
+- traditional lunar-calendar birthdays vs. common modern Gregorian-calendar birthdays;
+- one-month and one-year infant celebrations;
+- special importance of major decades such as 60/70/80;
+- the first-birthday zhuāzhōu “grabbing” custom;
+- traditional birthday-food context already supported by 豬腳麵線 / 蛋.
+
+Do not turn culture-reading terms into formal vocabulary. In particular, do not expose 抓週 as unscaffolded assessed Hanzi; use English/romanization or clearly optional annotated culture text.
+
+Productive culture comparison itself waits for Unit 41 Grammar VII and the Lesson 13 capstone.
+
 ## 了 contrast
 
 Use source line:
@@ -83,7 +96,7 @@ This line must explicitly retrieve sentence-final changed-situation 了 and prov
 ## Review gate
 
 Must verify:
-- 3/3 canonical entries;
+- 3/3 indexed first-taught forms (2 ordinary vocabulary + 1 source Phrase form);
 - 4/4 new characters;
 - all five affirmative totality categories;
 - negative 都/也 + 不/沒;
