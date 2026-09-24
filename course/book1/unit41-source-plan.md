@@ -6,11 +6,11 @@ Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 13 Dialogue I
 
 Unit 41 closes Lesson 13 and serves as both the final grammar slice and the lesson-level capstone.
 
-Canonical NEW entries:
-- 蛋糕
-- 祝
-- 萬事如意
-- 心想事成
+Implementation-indexed first-taught forms:
+- ordinary vocabulary: 蛋糕、祝
+- source Phrase forms: 萬事如意、心想事成
+
+Pacing report: **2 ordinary new words + 2 source Phrase forms**, plus two full grammar systems and the Lesson 13 capstone. Starting Lesson 14 here would dilute the four-objective Lesson 13 close and is intentionally rejected.
 
 Review/new sense:
 - 對 → productive prepositional “to / toward”.
@@ -116,3 +116,8 @@ Unit 41 review must verify:
 - all four end-of-lesson outcomes.
 
 After Unit 41, Lesson 13 has no deliberate language-content deferrals.
+
+
+## Review quality floor
+
+Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
