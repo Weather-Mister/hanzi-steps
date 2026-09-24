@@ -583,7 +583,8 @@ Required rule content:
 Productive boundary:
 - 嗎 question formation may be actively tested here;
 - 是不是 may be shown as a source-permitted comprehension example with an explicit “formal confirmation questions come in Unit 41” note;
-- do not test independent 是不是 production yet.
+- do not test independent 是不是 production yet;
+- because the source permits both 嗎 and 是不是 question strategies here, never make one the “wrong” distractor solely because the other is the target.
 
 Safe source/adapted examples:
 - 我一下課，就回來。
@@ -826,7 +827,8 @@ Process verbs:
 - 沒（有） only in the source system.
 
 Taiwan usage:
-- preserve source note that 沒有 + V is more common in Taiwan than bare 沒 + V.
+- preserve source note that 沒有 + V is more common in Taiwan than bare 沒 + V;
+- do **not** mark bare 沒 + V ungrammatical merely because Taiwan preference favors 沒有.
 
 Critical 了 scope:
 - verbal completed-action 了 disappears under 沒;
@@ -960,8 +962,9 @@ Source-style examples:
 - 怎麼做都不好吃.
 
 Core activities:
-- choose 都 vs. 也 where both source-valid;
-- position 不 / 沒;
+- explicitly recognize that **both 都 and 也 are source-valid** in negative total-exclusion patterns;
+- never place 都 and 也 against each other as competing single-answer distractors when both fit;
+- position 不 / 沒 after 都 / 也;
 - rewrite into all-exclusive patterns;
 - reject invalid word order.
 
@@ -1222,6 +1225,8 @@ Questions:
 - 一樣不一樣？
 - 是不是一樣？
 - 是不是跟…一樣 + property?
+
+Both source question strategies are valid. Do not create a single-answer item that treats 一樣不一樣 and 是不是一樣 as mutually exclusive grammatical choices.
 
 Exercise model:
 - positive vs. negative scope;
@@ -1637,5 +1642,6 @@ Refinements added by this pass:
 4. **Cross-book migrations made operational:** exact metadata/content changes for 過 (B2U3) and 口 (B2U1) are specified while preserving saved-progress step topology.
 5. **Search/Mega decision made explicit:** all nine source Phrase forms remain indexed exact pragmatic targets, but are reported separately from ordinary vocabulary; review/new-sense forms and the Name entry do not duplicate ownership.
 6. **Partial familiarity is acknowledged:** 語言 is new standalone ownership after 語言中心; 一點 is a new exact quantity form after 有一點.
+7. **Ambiguity guards are explicit:** source-valid alternatives (都/也 in negative totality, 沒/沒有, 嗎/是不是 for 一…就… questions, and the two 跟…一樣 question strategies) must never be turned into false single-answer contrasts.
 
 No source-backed reason was found to change the five-unit split or move a formal grammar section to another unit.
