@@ -14,7 +14,7 @@ Canonical NEW entries:
 - 麵線
 - 蛋
 - 一點
-- 哪裡，哪裡
+- 哪裡哪裡 (store without punctuation; display source phrase as 哪裡，哪裡！)
 
 Review/new function:
 - 了 → completed-action verbal particle.
