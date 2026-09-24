@@ -183,7 +183,7 @@ Order:
 8. listen `u42-weather-l1`
    - audioText: **天氣很冷。**
    - prompt: **Listen for the weather word.**
-   - options: [`天氣`, `新年`, `新聞`]
+   - options: [`天氣`, `風景`, `國家`]
    - answer: **天氣**
    - explanation: The audio begins with 天氣.
 9. order `u42-weather-o1` using `u42-weather-source`
@@ -217,7 +217,7 @@ Order:
 9. listen `u42-snow-l1`
    - audioText: **下雪的時候，我常去山上滑雪。**
    - prompt: **Which activity do you hear?**
-   - options: [`滑雪`, `下雨`, `上網`]
+   - options: [`滑雪`, `打網球`, `上網`]
    - answer: **滑雪**
    - explanation: The sentence says the speaker often goes skiing.
 10. order `u42-snow-o1` using `u42-snow-when`
@@ -245,13 +245,13 @@ Order:
 7. phrase `u42-winter-source`.
 8. select `u42-spring-s2`
    - prompt: **Why does the source speaker prefer spring?**
-   - options: [`because the speaker is sensitive to cold`, `because spring is a typhoon`, `because spring means New Year`]
+   - options: [`because the speaker is sensitive to cold`, `because the speaker prefers cold winter weather`, `because the speaker goes skiing every spring`]
    - answer: **because the speaker is sensitive to cold**
    - explanation: 我怕冷 gives the reason for preferring spring.
 9. listen `u42-spring-l1`
    - audioText: **我比較喜歡春天。**
    - prompt: **Which season is preferred?**
-   - options: [`春天`, `冬天`, `夏天`]
+   - options: [`spring`, `winter`, `autumn`]
    - answer: **春天**
    - explanation: The audio says 春天.
 10. order `u42-spring-o1` using `u42-spring-source`
@@ -330,7 +330,7 @@ Order:
 1. phrase `u42-home-country-model`.
 2. select `u42-seasons-home`
    - prompt: **What is the first part of the source Four Seasons task?**
-   - options: [`describe the climate where you are from`, `compare transport prices`, `describe a birthday meal`]
+   - options: [`describe the climate where you are from`, `name only your favorite season`, `describe only Taiwan's summer weather`]
    - answer: **describe the climate where you are from**
    - explanation: B1L14-A001 begins with the learner's home-country climate.
 3. phrase `u42-season-reason`.
@@ -341,24 +341,24 @@ Order:
    - explanation: The sentence states a preference and explains why.
 5. select `u42-seasons-s2`
    - prompt: **For the source “Four Seasons” task, which pair must you identify?**
-   - options: [`your most- and least-liked seasons`, `only today's temperature and time`, `only one transport method`]
+   - options: [`your most- and least-liked seasons`, `only your favorite season`, `the seasons with the most and least rain`]
    - answer: **your most- and least-liked seasons**
    - explanation: A001 explicitly asks for most/least preferred seasons plus reasons.
 6. phrase `u42-summer-model`.
 7. select `u42-summer-s2`
    - prompt: **Which statement describes Taiwan summer weather?**
-   - options: [`臺灣夏天天氣很熱。`, `臺灣冬天是夏天。`, `臺灣下雪就是滑雪。`]
+   - options: [`臺灣夏天天氣很熱。`, `臺灣夏天天氣很冷。`, `臺灣冬天天氣很熱。`]
    - answer: **臺灣夏天天氣很熱。**
    - explanation: This is a weather statement about summer.
 8. phrase `u42-summer-write`.
 9. select `u42-summer-s3`
    - prompt: **What must the source “Summer in Taiwan” transfer include?**
-   - options: [`summer weather plus distinctive features, common fruit/food, and common activities`, `only the word 夏天`, `only a comparison of train speeds`]
+   - options: [`summer weather plus distinctive features, common fruit/food, and common activities`, `summer weather and one season name only`, `common fruit/food only, without weather or activities`]
    - answer: **summer weather plus distinctive features, common fruit/food, and common activities**
    - explanation: These are the source A005 fields.
 10. select `u42-summer-s4`
    - prompt: **After discussing the summer findings, what does the source task ask you to do?**
-   - options: [`write the findings in Chinese`, `translate them into French`, `skip recording them`]
+   - options: [`write the findings in Chinese`, `only discuss them orally`, `write only the names of the four seasons`]
    - answer: **write the findings in Chinese**
    - explanation: A005 explicitly requires writing the findings in Chinese.
 11. order `u42-seasons-o1` using `u42-season-reason`
@@ -372,13 +372,13 @@ Review must use these steps in this order unless a question-correctness fix requ
 1. `u42-review-l1`
    - audioText: 天氣很冷。
    - prompt: Listen for “weather.”
-   - options: [天氣, 新年, 新聞]
+   - options: [天氣, 風景, 國家]
    - answer: 天氣
    - explanation: 天氣 means weather.
 2. `u42-review-l2`
    - audioText: 下雪的時候，我常去山上滑雪。
    - prompt: Which activity do you hear?
-   - options: [滑雪, 下雨, 上網]
+   - options: [滑雪, 打網球, 上網]
    - answer: 滑雪
    - explanation: The speaker says 滑雪.
 3. `u42-review-l3`
@@ -426,7 +426,7 @@ Every vocabulary item above uses prompt format **“X means…”** and explanat
    - explanation: 常不常 asks about frequency.
 25. `u42-review-t1`
    - prompt: Which answer best completes the Four Seasons source task?
-   - options: [state a most/least preferred season and give a reason, only name one season, only say today's date]
+   - options: [state a most/least preferred season and give a reason, state only one preferred season with no reason, list all four seasons without a preference]
    - answer: state a most/least preferred season and give a reason
    - explanation: B1L14-A001 requires preference plus reasons.
 
