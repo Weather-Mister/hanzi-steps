@@ -8,12 +8,19 @@
   ],
   "characters": [
     "傘",
-    "颱",
     "濕",
     "討",
     "厭",
     "聞",
     "更"
   ],
-  "note": "Traditional Hanzi Steps targets for Unit 44. Feature QA hydrates exact codepoints from AnimCJK, preferring graphicsZhHant.txt; never substitute a Simplified/Japanese codepoint."
+  "note": "Traditional Hanzi Steps targets for Unit 44. Feature QA hydrates 傘、濕、討、厭、聞、更 from AnimCJK, preferring graphicsZhHant.txt. 颱 is pre-seeded from chanind/hanzi-writer-data data/颱.json (Make Me A Hanzi / Arphic Public License), because AnimCJK lacks that exact Traditional codepoint. Never substitute 台/台风 or another Simplified/Japanese codepoint.",
+  "manualCharacters": [
+    {
+      "character": "颱",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/颱.json",
+      "license": "Arphic Public License (already included at public/licenses/arphic.txt)"
+    }
+  ]
 }
