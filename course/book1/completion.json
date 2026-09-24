@@ -5,15 +5,15 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "dependency-ledger",
-  "stageStatus": "human-review",
+  "currentStage": "curriculum-architecture",
+  "stageStatus": "ready",
   "bookComplete": false,
-  "humanReviewRequired": true,
+  "humanReviewRequired": false,
   "workingUnitRange": null,
   "gates": {
     "source": "pass",
-    "dependencies": "pending",
-    "curriculum": "locked",
+    "dependencies": "pass",
+    "curriculum": "pending",
     "activities": "locked",
     "implementation": "locked",
     "release": "locked"
@@ -26,7 +26,8 @@
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
-    "sourceAudit": "course/book1/lesson14-source-audit.md"
+    "sourceAudit": "course/book1/lesson14-source-audit.md",
+    "dependencyAudit": "course/book1/lesson14-dependency-audit.md"
   },
-  "notes": "Lesson 14 source gate is PASS. The dependency ledger is now built at course/book1/lesson14-dependency-ledger.md against the cumulative production curriculum through Unit 41. Builder pass found 0 open BLOCKER/MAJOR findings after resolving false-known, hidden-glyph, proper-name, reduplication, and duration-integration risks. The dependency gate remains PENDING because the protocol requires a separate fresh-context dependency audit. No Unit 42+ architecture, activity design, or implementation may begin until that fresh audit passes."
+  "notes": "Lesson 14 source and dependency gates are PASS. The mandatory fresh-context dependency audit corrected false-REVIEW support records, missing caution/leave-taking prerequisite edges, durable-ID traceability, outcome disposition precision, and G005 prerequisite specificity; final re-audit has 0 open BLOCKER and 0 open MAJOR findings. The repository is ready for curriculum architecture. No Unit 42+ split, activity design, or implementation has begun."
 }
