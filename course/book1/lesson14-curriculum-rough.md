@@ -141,6 +141,9 @@ Formal grammar:
 - B1L14-G004 比…更…
 - B1L14-G005 A 沒有 B 那麼／這麼 + State Verb
 
+Prerequisite note:
+- B1L14-V027 更 must precede productive B1L14-G004 use; G004 must precede the full D2T07 comparison clause.
+
 Source dialogue:
 - Dialogue II turns B1L14-D2T01–B1L14-D2T11
 
@@ -169,9 +172,10 @@ Selected architecture: **Units 42–44**.
 
 Pass 2 must refine:
 - exact lexical ordering within units;
+- lesson-aligned character first-introduction order;
 - exact lesson arcs;
 - dialogue ownership/adaptation;
-- G001→G002 and G003 sequencing;
+- G001→G002, V008/V022→G003, and V027→G004 sequencing;
 - support-item routing;
 - B1L14-X015 度;
 - review/capstone placement.
