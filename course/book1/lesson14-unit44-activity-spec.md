@@ -53,6 +53,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - note: Source B1L14-D2T02; completed-action 了 is review.
 - tokens: [`我昨天帶了`, `可是今天忘了帶`]
 
+### u44-typhoon-basic
+- text: **這裡有颱風。**
+- pinyin: **Zhèlǐ yǒu táifēng.**
+- meaning: **There are typhoons here.**
+- note: Meaning-first card for 颱風 before its first assessment.
+- tokens: [`這裡`, `有颱風`]
+
 ### u44-typhoon-coming
 - text: **颱風快要來了。**
 - pinyin: **Táifēng kuài yào lái le.**
@@ -82,12 +89,40 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - note: Teach 濕 before the reduplicated form.
 - tokens: [`這裡`, `很濕`]
 
+### u44-annoy-basic
+- text: **這個天氣真討厭。**
+- pinyin: **Zhège tiānqì zhēn tǎoyàn.**
+- meaning: **This weather is really annoying.**
+- note: Meaning-first card for 討厭 before its first assessment.
+- tokens: [`這個天氣`, `真討厭`]
+
 ### u44-wet-source
 - text: **哪裡都濕濕的。真討厭。**
 - pinyin: **Nǎlǐ dōu shīshī de. Zhēn tǎoyàn.**
 - meaning: **It's wet everywhere. Really annoying.**
 - note: Source B1L14-D2T06. Lesson 14 specifically licenses 濕濕的 as a source-attested extension of the earlier restricted state-verb reduplication system; do not generalize this to every state verb.
 - tokens: [`哪裡都濕濕的`, `真討厭`]
+
+### u44-news-basic
+- text: **我看新聞。**
+- pinyin: **Wǒ kàn xīnwén.**
+- meaning: **I watch/read the news.**
+- note: Meaning-first card for 新聞.
+- tokens: [`我看新聞`]
+
+### u44-everyone-basic
+- text: **大家都來了。**
+- pinyin: **Dàjiā dōu lái le.**
+- meaning: **Everyone came.**
+- note: Meaning-first card for 大家.
+- tokens: [`大家都來了`]
+
+### u44-careful-basic
+- text: **請小心。**
+- pinyin: **Qǐng xiǎoxīn.**
+- meaning: **Please be careful.**
+- note: Meaning-first card for 小心.
+- tokens: [`請小心`]
 
 ### u44-heard
 - text: **我已經聽說了。**
@@ -102,6 +137,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - meaning: **The TV news says everyone should be extra careful.**
 - note: Safe caution clause from B1L14-D2T07. 大家 and 小心 must be taught before this card; 多 + Verb is prior review.
 - tokens: [`電視新聞說`, `請大家多小心`]
+
+### u44-this-last-basic
+- text: **這次跟上次不一樣。**
+- pinyin: **Zhè cì gēn shàng cì bù yíyàng.**
+- meaning: **This time is different from last time.**
+- note: Meaning-first card for 這次 and 上次 before their first assessment.
+- tokens: [`這次`, `跟上次不一樣`]
 
 ### u44-geng-baseline
 - text: **星期天我更忙。**
@@ -139,6 +181,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - meaning: **Great! Thanks for your umbrella. Bye.**
 - note: Source B1L14-D2T10.
 - tokens: [`太好了`, `謝謝你的傘`, `再見`]
+
+### u44-scary-basic
+- text: **颱風很可怕。**
+- pinyin: **Táifēng hěn kěpà.**
+- meaning: **Typhoons are scary.**
+- note: Meaning-first card for 可怕 before its first assessment.
+- tokens: [`颱風`, `很可怕`]
 
 ### u44-manzou
 - text: **慢走。**
@@ -234,36 +283,37 @@ Order:
 
 Order:
 1. 颱 lifecycle.
-2. select `u44-typhoon-s1`
+2. phrase `u44-typhoon-basic`.
+3. select `u44-typhoon-s1`
    - prompt: **颱風 means…**
    - options: [`typhoon`, `season`, `umbrella`]
    - answer: **typhoon**
    - explanation: 颱風 means typhoon.
-3. phrase `u44-typhoon-coming`.
-4. select `u44-typhoon-s2`
+4. phrase `u44-typhoon-coming`.
+5. select `u44-typhoon-s2`
    - prompt: **Which earlier grammar does 颱風快要來了 retrieve?**
    - options: [`imminence with 快要…了`, `completed duration`, `equality with 跟…一樣`]
    - answer: **imminence with 快要…了**
    - explanation: 快要…了 was taught in Unit 43.
-5. phrase `u44-typhoon-summer`.
-6. phrase `u44-culture-note` — EXPLAIN culture before culture questions.
-7. select `u44-culture-s1`
+6. phrase `u44-typhoon-summer`.
+7. phrase `u44-culture-note` — EXPLAIN culture before culture questions.
+8. select `u44-culture-s1`
    - prompt: **In the textbook's historical typhoon-day reading, what forecast window is mentioned?**
    - options: [`the next four hours`, `the next four days`, `the next month`]
    - answer: **the next four hours**
    - explanation: The source reading states a four-hour forecast window.
-8. select `u44-culture-s2`
+9. select `u44-culture-s2`
    - prompt: **How must these administrative details be framed in Hanzi Steps?**
    - options: [`as textbook-era historical/source context`, `as verified current 2026 instructions`, `as rules that never changed`]
    - answer: **as textbook-era historical/source context**
    - explanation: The source page is not automatically current administrative guidance.
-9. listen `u44-typhoon-l1`
+10. listen `u44-typhoon-l1`
    - audioText: **颱風快要來了。**
    - prompt: **What is about to come?**
    - options: [`a typhoon`, `New Year`, `red leaves`]
    - answer: **a typhoon**
    - explanation: The audio says 颱風.
-10. order `u44-typhoon-o1` using `u44-typhoon-coming`
+11. order `u44-typhoon-o1` using `u44-typhoon-coming`
    - tokens: [`颱風`, `快要來了`]
 
 ### u44-wet — Wet and Annoying
@@ -273,64 +323,68 @@ Order:
 2. 討 lifecycle.
 3. 厭 lifecycle.
 4. phrase `u44-wet-basic` — teach 濕 before reduplication.
-5. select `u44-wet-s1`
+5. phrase `u44-annoy-basic`.
+6. select `u44-wet-s1`
    - prompt: **濕 means…**
    - options: [`wet`, `cold`, `scary`]
    - answer: **wet**
    - explanation: 濕 means wet.
-6. select `u44-annoy-s1`
+7. select `u44-annoy-s1`
    - prompt: **討厭 means…**
    - options: [`annoying`, `careful`, `even more`]
    - answer: **annoying**
    - explanation: 討厭 describes something as annoying here.
-7. phrase `u44-wet-source` — EXPLAIN the specific 濕濕的 extension.
-8. select `u44-wet-s2`
+8. phrase `u44-wet-source` — EXPLAIN the specific 濕濕的 extension.
+9. select `u44-wet-s2`
    - prompt: **What does Lesson 14 establish about 濕濕的?**
    - options: [`It is a source-attested reduplicated form for 濕.`, `Every state verb may now be doubled freely.`, `濕 cannot be reduplicated.`]
    - answer: **It is a source-attested reduplicated form for 濕.**
    - explanation: This is a specific extension of the earlier restricted reduplication system.
-9. listen `u44-wet-l1`
+10. listen `u44-wet-l1`
    - audioText: **哪裡都濕濕的。真討厭。**
    - prompt: **How does the speaker feel about the wet conditions?**
    - options: [`annoyed`, `excited about skiing`, `unsure about New Year`]
    - answer: **annoyed**
    - explanation: 真討厭 expresses annoyance.
-10. order `u44-wet-o1` using `u44-wet-source`
+11. order `u44-wet-o1` using `u44-wet-source`
     - tokens: [`哪裡都濕濕的`, `真討厭`]
 
 ### u44-news — News and Take Care
 
 Order:
 1. 聞 lifecycle.
-2. select `u44-news-s1`
+2. phrase `u44-news-basic`.
+3. select `u44-news-s1`
    - prompt: **新聞 means…**
    - options: [`news`, `New Year`, `weather only`]
    - answer: **news**
    - explanation: 新聞 means news.
-3. select `u44-everyone-s1`
+4. phrase `u44-everyone-basic`.
+5. select `u44-everyone-s1`
    - prompt: **大家 means…**
    - options: [`everyone`, `parents`, `last time`]
    - answer: **everyone**
    - explanation: 大家 means everyone.
-4. select `u44-careful-s1`
+6. phrase `u44-careful-basic`.
+7. select `u44-careful-s1`
    - prompt: **小心 means…**
    - options: [`be careful / take care`, `be scary`, `be wet`]
    - answer: **be careful / take care**
    - explanation: 小心 is a caution expression.
-5. phrase `u44-heard`.
-6. select `u44-moreverb-s1`
+8. phrase `u44-heard`.
+9. select `u44-moreverb-s1`
    - prompt: **Before 請大家多小心, what does 多 do?**
    - options: [`it tells people to be more/extra careful`, `it means many umbrellas`, `it changes 大家 into a question`]
    - answer: **it tells people to be more/extra careful**
    - explanation: This retrieves the prior 多 + Verb pattern.
-7. phrase `u44-caution` — only after 大家, 小心 and 多+Verb retrieval.
-8. listen `u44-news-l1`
+10. phrase `u44-caution` — only after 大家, 小心 and 多+Verb retrieval.
+11. listen `u44-news-l1`
    - audioText: **電視新聞說，請大家多小心。**
    - prompt: **What does the news ask everyone to do?**
    - options: [`be extra careful`, `go skiing`, `miss home`]
    - answer: **be extra careful**
    - explanation: 請大家多小心 gives the caution.
-9. order `u44-news-o1` using `u44-caution`
+12. order `u44-news-o1` using `u44-caution`
    - tokens: [`電視新聞說`, `請大家多小心`]
 
 The full D2T07 comparison clause is not shown in this lesson.
@@ -339,91 +393,93 @@ The full D2T07 comparison clause is not shown in this lesson.
 
 Order:
 1. 更 lifecycle.
-2. select `u44-this-s1`
+2. phrase `u44-this-last-basic`.
+3. select `u44-this-s1`
    - prompt: **這次 means…**
    - options: [`this time`, `last time`, `next year`]
    - answer: **this time**
    - explanation: 這次 means this time.
-3. select `u44-last-s1`
+4. select `u44-last-s1`
    - prompt: **上次 means…**
    - options: [`last time`, `this time`, `New Year`]
    - answer: **last time**
    - explanation: 上次 means last time.
-4. phrase `u44-geng-baseline` — EXPLAIN 更 baseline meaning first.
-5. select `u44-geng-s1`
+5. phrase `u44-geng-baseline` — EXPLAIN 更 baseline meaning first.
+6. select `u44-geng-s1`
    - prompt: **In 星期天我更忙, 更 means…**
    - options: [`even more`, `only`, `not as`]
    - answer: **even more**
    - explanation: 更 adds an “even more” baseline.
-6. grammar `u44-even-more`.
-7. select `u44-g4-s1`
+7. grammar `u44-even-more`.
+8. select `u44-g4-s1`
    - prompt: **Which means “This year is even colder than last year”?**
    - options: [`今年比去年更冷。`, `今年跟去年一樣冷。`, `今年沒有去年那麼冷。`]
    - answer: **今年比去年更冷。**
    - explanation: 比…更… gives the “even more” comparison.
    - grammarIds: [`u44-even-more`]
-8. phrase `u44-comparison-source` — full D2T07 only now.
-9. select `u44-g4-s2`
+9. phrase `u44-comparison-source` — full D2T07 only now.
+10. select `u44-g4-s2`
    - prompt: **Why is 更 not just a neutral “more” here?**
    - options: [`it presupposes an established/understood baseline`, `it marks a completed duration`, `it means everyone`]
    - answer: **it presupposes an established/understood baseline**
    - explanation: The source's “even more” value is part of G004.
-10. listen `u44-g4-l1`
+11. listen `u44-g4-l1`
     - audioText: **這次的颱風會比上次的更大。**
     - prompt: **Which time is the comparison baseline?**
     - options: [`上次`, `這次`, `明年`]
     - answer: **上次**
     - explanation: This typhoon is compared against the previous one.
-11. order `u44-g4-o1` using `u44-comparison-source`
+12. order `u44-g4-o1` using `u44-comparison-source`
     - tokens: [`這次的颱風`, `會比上次的更大`, `請大家多小心`]
 
 ### u44-not-as — Not as Scary — Take Care
 
 Order:
-1. select `u44-scary-s1`
+1. phrase `u44-scary-basic`.
+2. select `u44-scary-s1`
    - prompt: **可怕 means…**
    - options: [`scary`, `careful`, `wet`]
    - answer: **scary**
    - explanation: 可怕 means scary.
-2. phrase `u44-manzou` — EXPLAIN 慢走 as a conventional formula before assessment.
-3. select `u44-manzou-s1`
+3. phrase `u44-manzou` — EXPLAIN 慢走 as a conventional formula before assessment.
+4. select `u44-manzou-s1`
    - prompt: **In this lesson, 慢走 is best understood as…**
    - options: [`a conventional “Take care / Bye” formula`, `a command that only means walk slowly`, `a comparison marker`]
    - answer: **a conventional “Take care / Bye” formula**
    - explanation: This is the source pragmatic value.
-4. grammar `u44-not-as`.
-5. select `u44-g5-s1`
+5. grammar `u44-not-as`.
+6. select `u44-g5-s1`
    - prompt: **Which says the train is not as fast as the HSR?**
    - options: [`火車沒有高鐵那麼快。`, `火車比高鐵更快。`, `火車跟高鐵一樣快。`]
    - answer: **火車沒有高鐵那麼快。**
    - explanation: 沒有…那麼… expresses lower degree.
    - grammarIds: [`u44-not-as`]
-6. select `u44-g5-s2`
+7. select `u44-g5-s2`
    - prompt: **Which is the source's three-way comparison set?**
    - options: [`跟…一樣 / 沒有…那麼 / 比`, `快要 / 只 / 已經`, `都 / 也 / 呢`]
    - answer: **跟…一樣 / 沒有…那麼 / 比**
    - explanation: These express equal, inferior, and superior degree.
-7. select `u44-g5-s3`
+8. select `u44-g5-s3`
    - prompt: **What can 今天有沒有昨天熱？ imply in the source explanation?**
    - options: [`yesterday was salient as fairly hot`, `today must be colder`, `the speaker forgot an umbrella`]
    - answer: **yesterday was salient as fairly hot**
    - explanation: The source notes a baseline presupposition in this question.
-8. phrase `u44-not-as-source` — D2T08 only after G005.
-9. phrase `u44-rain-stopped`.
-10. phrase `u44-thanks`.
-11. phrase `u44-leave-source` — full leave-taking only after 慢走 teaching.
-12. select `u44-leave-s1`
+9. phrase `u44-not-as-source` — D2T08 only after G005.
+10. phrase `u44-rain-stopped`.
+11. phrase `u44-thanks`.
+12. phrase `u44-leave-source` — full leave-taking only after 慢走 teaching.
+13. select `u44-leave-s1`
     - prompt: **Which line is the conventional leave-taking/care formula?**
     - options: [`小心慢走。`, `這次更大。`, `新年快到了。`]
     - answer: **小心慢走。**
     - explanation: 小心慢走 closes the source interaction.
-13. listen `u44-g5-l1`
+14. listen `u44-g5-l1`
     - audioText: **希望這次的沒有上次的那麼可怕。**
     - prompt: **What comparison do you hear?**
     - options: [`this one is not as scary as the last one`, `this one is even scarier than the last one`, `both are equally scary`]
     - answer: **this one is not as scary as the last one**
     - explanation: 沒有…那麼… gives the inferior comparison.
-14. order `u44-g5-o1` using `u44-not-as-source`
+15. order `u44-g5-o1` using `u44-not-as-source`
     - tokens: [`希望`, `這次的沒有上次的那麼可怕`]
 
 ## 6. Unit 44 review + Lesson-14 capstone — exact step bank
