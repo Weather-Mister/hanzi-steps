@@ -677,7 +677,10 @@ const unit:UnitData = {
             "only after 左右"
           ],
           "answer": "when seeking confirmation of expected/known information",
-          "explanation": "Confirmation is its key pragmatic function."
+          "explanation": "Confirmation is its key pragmatic function.",
+          "grammarIds": [
+            "u41-shibushi"
+          ]
         },
         {
           "id": "u41-review-g2",
@@ -689,7 +692,10 @@ const unit:UnitData = {
             "A 不 B 跟"
           ],
           "answer": "A 跟 B 一樣",
-          "explanation": "That is Grammar VII's core."
+          "explanation": "That is Grammar VII's core.",
+          "grammarIds": [
+            "u41-gen-yiyang"
+          ]
         },
         {
           "id": "u41-review-g3",
@@ -701,7 +707,10 @@ const unit:UnitData = {
             "A 跟 B 都"
           ],
           "answer": "A 跟 B 不一樣",
-          "explanation": "不 before 一樣 negates sameness."
+          "explanation": "不 before 一樣 negates sameness.",
+          "grammarIds": [
+            "u41-gen-yiyang"
+          ]
         },
         {
           "id": "u41-review-g4",
@@ -713,7 +722,10 @@ const unit:UnitData = {
             "the tense"
           ],
           "answer": "the comparison target",
-          "explanation": "This is the scope distinction."
+          "explanation": "This is the scope distinction.",
+          "grammarIds": [
+            "u41-gen-yiyang"
+          ]
         },
         {
           "id": "u41-review-g5",
@@ -725,7 +737,10 @@ const unit:UnitData = {
             "only 是不是一樣？"
           ],
           "answer": "一樣不一樣？ / 是不是一樣？",
-          "explanation": "Both are source-valid."
+          "explanation": "Both are source-valid.",
+          "grammarIds": [
+            "u41-gen-yiyang"
+          ]
         },
         {
           "id": "u41-review-cum1",
