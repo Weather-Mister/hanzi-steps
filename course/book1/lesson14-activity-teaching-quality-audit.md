@@ -343,3 +343,25 @@ PASS.
 Activity Audit 1 — Teaching Quality passes.
 
 Gate B remains pending. The mandatory fresh-context question-correctness/adversarial audit and the cross-unit coherence audit are still required.
+
+
+---
+
+## Final activity-spec-head confirmation
+
+After the independent Activity Audit 2 was completed and persisted, this audit's scope was rechecked against the final repaired activity-spec packet.
+
+Final normative blob set:
+
+- `lesson14-activity-spec.md` — `cd75e06073c189eb286c4fca8c463bcf18e13d82`
+- `lesson14-unit42-activity-spec.md` — `16e75013df33ca8abcd546bce5ddfcd31f1fbcd2`
+- `lesson14-unit43-activity-spec.md` — `8cbb44f72db4472d7eb2388c87f87c5efc95fd98`
+- `lesson14-unit44-activity-spec.md` — `619c83e0feccc0256ab75f91eac04eb0957465a2`
+
+The post-audit repairs change distractors, exact answer-key wording, review cross-references/grammar tags, and visible review ordinals only. They do not move explanation cards, teaching order, target ownership, character introduction order, lifecycle coverage, transfer tasks, review floors, or Search/Mega policy. The repairs remove premature distractor exposure and therefore strengthen, rather than weaken, explain-before-test behavior.
+
+Same-head result:
+- original Teaching Quality verdict: **PASS**
+- final repaired packet remains within this audit's PASS conclusions: **PASS**
+- open BLOCKER in this audit scope: **0**
+- open MAJOR in this audit scope: **0**
