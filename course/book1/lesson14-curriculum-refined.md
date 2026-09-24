@@ -134,11 +134,11 @@ Planned stable grammar IDs:
 ## Refined six-lesson arc
 
 1. **A Finished Stay** — B1L14-G001 completed duration; introduce 只 inside safe duration examples and review verb repetition from Unit 28.
-2. **How Long Up to Now?** — B1L14-G002, contrasted directly with G001; teach 想 “miss” through 想家 after the duration pattern is understood.
-3. **New Year and Parents** — 新年、父母; connect accumulated time in Taiwan to homesickness and returning home.
-4. **The End of December** — 十二月底; future plan/return language using known 打算 and 因為…所以….
-5. **It's About to Happen** — 快/要 expansions + B1L14-G003; introduce 停 through safe weather-change examples such as 雨快要停了. Include Taiwan-preferred 快要 and the explicit-time restriction.
-6. **Next Year and Autumn Leaves** — 明年、紅葉; integrate travel plans and complete B1L14-A002 with learner-safe place substitutions.
+2. **How Long Up to Now?** — B1L14-G002, contrasted directly with G001; teach 想 “miss” through 想家 and complete B1L14-A002 with learner-safe place substitutions.
+3. **New Year Is Almost Here** — 新年、父母 plus the 快/要 expansions and B1L14-G003, so the source turn 新年快到了 is not exposed before its grammar is taught. Include Taiwan-preferred 快要 and the explicit-time restriction.
+4. **The Rain Is About to Stop** — 停; retrieve G003 with safe weather-change examples such as 雨快要停了.
+5. **The End of December** — 十二月底; future plan/return language using known 打算 and 因為…所以….
+6. **Next Year and Autumn Leaves** — 明年、紅葉; integrate the remaining Dialogue-I travel plans and close the unit.
 
 Then **Unit 43 review**.
 
@@ -228,8 +228,8 @@ Planned stable grammar IDs:
 1. **Where's Your Umbrella?** — 傘; review V 得 + degree phrase and completed-action 了 through the opening of Dialogue II.
 2. **A Typhoon Is Coming** — 颱風; retrieve Unit-43 imminence and introduce the textbook-era typhoon-day culture frame as historical/source context, not current administrative advice.
 3. **Wet and Annoying** — 濕、討厭; explicitly license source-attested 濕濕的 as an expansion of the earlier restricted reduplication rule.
-4. **News and Take Care** — 新聞、大家、小心; review question-word + 都 and 多 + Verb; teach 請大家多小心 only after all prerequisites are in place.
-5. **This Time Is Even Bigger** — 這次、上次、更; teach B1L14-G004 and B1L14-P001.
+4. **News and Take Care** — 新聞、大家、小心; review question-word + 都 and 多 + Verb; teach the caution clause 請大家多小心 only after all prerequisites are in place. Do not present the full B1L14-D2T07 comparison clause yet.
+5. **This Time Is Even Bigger** — 這次、上次、更; teach B1L14-G004 and B1L14-P001, then present the full B1L14-D2T07.
 6. **Not as Scary — Take Care** — 可怕、慢走; teach B1L14-G005, B1L14-P002, and B1L14-P005; close Dialogue II with 小心慢走.
 
 Then **Unit 44 review + Lesson-14 capstone**.
@@ -263,7 +263,7 @@ Prerequisite safety:
 ## B1L14-X015 度 decision
 
 Use the **permitted redesign branch** from the dependency ledger:
-- the temperature-comparison activity displays values as e.g. **18°C**, not “十八度” in assessed Chinese;
+- the temperature-comparison activity displays values as e.g. **18°C**, not “十八度” in assessed Chinese; the location label may be written as Latin-script **Taipei** rather than introducing untaught 北;
 - the activity preserves the source capability of comparing temperatures;
 - 度 does not become canonical vocabulary, Search/Mega content, or a handwriting target;
 - an implementation note may say the textbook's support word is *dù* “degree,” but the untaught character 度 must not appear in an assessed prompt unless this architecture is explicitly reopened and the character is taught.
