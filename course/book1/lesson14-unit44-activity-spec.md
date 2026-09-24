@@ -169,6 +169,13 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - tokens: [`今年夏天`, `比去年夏天更熱`]
 - grammarIds: [`u44-even-more`]
 
+### u44-weather-interview
+- text: **春天的天氣怎麼樣？夏天的天氣怎麼樣？秋天的天氣怎麼樣？冬天的天氣怎麼樣？有沒有颱風？常不常下雨？會不會下雪？**
+- pinyin: **Chūntiān de tiānqì zěnmeyàng? Xiàtiān de tiānqì zěnmeyàng? Qiūtiān de tiānqì zěnmeyàng? Dōngtiān de tiānqì zěnmeyàng? Yǒu méiyǒu táifēng? Cháng bù cháng xiàyǔ? Huì bú huì xiàxuě?**
+- meaning: **What is the weather like in spring/summer/autumn/winter? Are there typhoons? Does it often rain? Does it snow?**
+- note: Source B1L14-A004 interview card. Ask a classmate these core questions, ask for additional information, compare the answers with your own home-country climate, and record the results in the chart.
+- tokens: [`春天的天氣怎麼樣`, `夏天的天氣怎麼樣`, `秋天的天氣怎麼樣`, `冬天的天氣怎麼樣`, `有沒有颱風`, `常不常下雨`, `會不會下雪`]
+
 ### u44-less-model
 - text: **今年冬天沒有去年冬天那麼熱。**
 - pinyin: **Jīnnián dōngtiān méiyǒu qùnián dōngtiān nàme rè.**
@@ -204,10 +211,10 @@ Order:
    - explanation: 傘 means umbrella.
 3. phrase `u44-umbrella-source` — comprehension card; 呢 is explicitly non-assessed.
 4. select `u44-umbrella-s2`
-   - prompt: **Why is the umbrella question not introducing a new 呢 rule?**
-   - options: [`呢 is comprehension-only in this source context`, `呢 means umbrella`, `呢 is the new comparison marker`]
-   - answer: **呢 is comprehension-only in this source context**
-   - explanation: The source does not define a new 呢 rule here.
+   - prompt: **Which translation best matches 你怎麼沒帶傘呢？**
+   - options: [`How come you didn't bring an umbrella?`, `How long did you have an umbrella?`, `Is the umbrella bigger than last time?`]
+   - answer: **How come you didn't bring an umbrella?**
+   - explanation: The whole source question is understood contextually; 呢 remains comprehension-only and is not generalized into a new rule.
 5. phrase `u44-umbrella-reply`.
 6. select `u44-umbrella-s3`
    - prompt: **What happened today?**
@@ -494,19 +501,29 @@ Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
    - options: [it invokes an established/understood baseline, it marks past tense, it means everyone]
    - answer: it invokes an established/understood baseline
    - explanation: The “even more” baseline is required by the source.
+28. `u44-review-g6`
+   - prompt: Which uses 比較 for an implicit/relative comparison without naming a 比-target?
+   - options: [今年春天比較冷。, 今年春天比去年春天更冷。, 今年春天跟去年春天一樣冷。]
+   - answer: 今年春天比較冷。
+   - explanation: 比較 + description gives the source toolkit's implicit/relative comparison.
+29. `u44-review-g7`
+   - prompt: Which uses plain 比 to name both sides without 更?
+   - options: [今年比去年冷。, 今年比去年更冷。, 今年跟去年一樣冷。]
+   - answer: 今年比去年冷。
+   - explanation: This retrieves the earlier plain 比 comparison required by A003.
 
 ### A003 temperature comparison — Taipei, numeric °C only
-28. `u44-review-a003-1`
+30. `u44-review-a003-1`
    - prompt: **Taipei chart: last summer 29°C; this summer 31°C. Which sentence is correct?**
    - options: [`今年夏天比去年夏天更熱。`, `今年夏天跟去年夏天一樣熱。`, `今年夏天沒有去年夏天那麼熱。`]
    - answer: **今年夏天比去年夏天更熱。**
    - explanation: 31°C is higher than 29°C.
-29. `u44-review-a003-2`
+31. `u44-review-a003-2`
    - prompt: **Taipei chart: last autumn 24°C; this autumn 24°C. Which sentence is correct?**
    - options: [`今年秋天跟去年秋天一樣熱。`, `今年秋天比去年秋天更熱。`, `今年秋天沒有去年秋天那麼熱。`]
    - answer: **今年秋天跟去年秋天一樣熱。**
    - explanation: The temperatures are equal.
-30. `u44-review-a003-3`
+32. `u44-review-a003-3`
    - prompt: **Taipei chart: last winter 18°C; this winter 16°C. Which sentence is correct?**
    - options: [`今年冬天沒有去年冬天那麼熱。`, `今年冬天比去年冬天更熱。`, `今年冬天跟去年冬天一樣熱。`]
    - answer: **今年冬天沒有去年冬天那麼熱。**
@@ -515,69 +532,80 @@ Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
 No prompt or answer uses 度 or 北.
 
 ### A004 weather interview
-31. `u44-review-a004-1`
+33. phrase `u44-weather-interview`
+34. `u44-review-a004-1`
    - prompt: Which set belongs in the source weather interview?
    - options: [four seasons + typhoon + rain frequency + snow occurrence, only birthday food, only transport prices]
    - answer: four seasons + typhoon + rain frequency + snow occurrence
    - explanation: These are B1L14-A004's weather-comparison fields.
-32. `u44-review-a004-2`
+35. `u44-review-a004-2`
    - prompt: Besides asking the listed weather questions, what does the source task require?
    - options: [ask for additional information and record the results, stop after one question, avoid recording anything]
    - answer: ask for additional information and record the results
    - explanation: A004 explicitly requires both.
+36. `u44-review-a004-3`
+   - prompt: Which asks whether it snows?
+   - options: [會不會下雪？, 常不常下雨？, 有沒有颱風？]
+   - answer: 會不會下雪？
+   - explanation: 會不會 asks whether the snow event occurs.
+37. `u44-review-a004-4`
+   - prompt: Which asks whether there are typhoons?
+   - options: [有沒有颱風？, 會不會下雪？, 秋天的天氣怎麼樣？]
+   - answer: 有沒有颱風？
+   - explanation: 有沒有 asks whether typhoons are present/occur in the place.
 
 ### Delayed retrieval from Units 42–43
-33. `u44-review-cum1`
+38. `u44-review-cum1`
    - prompt: Which asks whether it often rains?
    - options: [常不常下雨？, 會不會下雪？, 有沒有昨天熱？]
    - answer: 常不常下雨？
    - explanation: Unit 42 used 常不常 for frequency.
-34. `u44-review-cum2`
+39. `u44-review-cum2`
    - prompt: Which sentence presents duration accumulated up to now?
    - options: [我在臺灣住了半年了。, 我在臺灣住了半年。, 我打網球打了兩個鐘頭。]
    - answer: 我在臺灣住了半年了。
    - explanation: This retrieves Unit-43 G002.
-35. `u44-review-cum3`
+40. `u44-review-cum3`
    - prompt: Which sentence shows imminence?
    - options: [颱風快要來了。, 颱風來了兩個月。, 颱風跟雨一樣。]
    - answer: 颱風快要來了。
    - explanation: 快要…了 marks an imminent event.
-36. `u44-review-cum4`
+41. `u44-review-cum4`
    - prompt: In 想家, what does 想 mean?
    - options: [miss, compare, be careful]
    - answer: miss
    - explanation: This retrieves the Lesson-14 expansion sense from Unit 43.
 
 ### Culture
-37. `u44-review-culture`
+42. `u44-review-culture`
    - prompt: How should the typhoon-day administrative details be understood?
    - options: [as textbook-era historical/source context, as automatically current 2026 instructions, as timeless law]
    - answer: as textbook-era historical/source context
    - explanation: Current claims require separate verification.
 
 ### Explicit F/S001–004 capstone
-38. `u44-review-cap1`
+43. `u44-review-cap1`
    - prompt: Which task demonstrates the weather/typhoon outcome?
    - options: [describe rain/snow/typhoon conditions and appropriate caution, only say your birthday, only list transport]
    - answer: describe rain/snow/typhoon conditions and appropriate caution
    - explanation: This maps to B1L14-F001/S001.
-39. `u44-review-cap2`
+44. `u44-review-cap2`
    - prompt: Which task demonstrates the seasons/preference outcome?
    - options: [name the seasons and explain which you like/dislike and why, only count months, only compare buses]
    - answer: name the seasons and explain which you like/dislike and why
    - explanation: This maps to B1L14-F002/S002.
-40. `u44-review-cap3`
+45. `u44-review-cap3`
    - prompt: Which task demonstrates the comparison outcome?
    - options: [compare conditions with 比…更 / 跟…一樣 / 沒有…那麼, only use 了, only say 新年]
    - answer: compare conditions with 比…更 / 跟…一樣 / 沒有…那麼
    - explanation: This maps to B1L14-F003/S003.
-41. `u44-review-cap4`
+46. `u44-review-cap4`
    - prompt: Which task demonstrates the experience outcome?
    - options: [say where an experience happened and how long it lasted, only name an umbrella, only ask if it rains]
    - answer: say where an experience happened and how long it lasted
    - explanation: This maps to B1L14-F004/S004.
 
-Review count: **41**. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; G004/G005, A003/A004, culture, delayed retrieval, and all four outcomes are explicit.
+Review count: **46**. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; G004/G005, A003/A004, culture, delayed retrieval, and all four outcomes are explicit.
 
 ## 7. Lifecycle coverage
 
@@ -593,8 +621,8 @@ Review count: **41**. Listening: **3**. All 12 NEW vocabulary targets and all 7 
 | G004 | baseline + grammar + source turn | lesson-5 select/order/listen | review-g1/g5 | A003/capstone |
 | G005 | grammar before D2T08 | lesson-6 selects/order/listen | review-g2–g4 | A003/capstone |
 | CUL001 | culture note | culture selects | review-culture | final source context |
-| A003 | models + review chart questions | review-a003-1–3 | same | F003 |
-| A004 | Unit42 prep + review interview questions | review-a004-1–2 | same | F001/F003 |
+| A003 | models + full 比 / 比較 / 更 / 跟…一樣 / 沒有…那麼 toolkit | review-g1–g7 + review-a003-1–3 | same | F003 |
+| A004 | Unit42 prep + exact u44-weather-interview card | review-a004-1–4 | same | F001/F003 |
 | F/S001–004 | prior unit lifecycle | capstone items 38–41 | same | Lesson-14 closure |
 
 ## 8. Search/Mega and deferral rules
