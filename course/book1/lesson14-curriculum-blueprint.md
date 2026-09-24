@@ -1,4 +1,4 @@
-# Book 1 Lesson 14 — Final Proposed Curriculum Blueprint
+# Book 1 Lesson 14 — Frozen Curriculum Blueprint
 
 Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 14 「天氣這麼冷！」.
 
@@ -10,9 +10,9 @@ Architecture history:
 - Pass 1: `lesson14-curriculum-rough.md`
 - Pass 2: `lesson14-curriculum-refined.md`
 
-This is the **final proposed unit-level curriculum blueprint** for the curriculum-audit stage. It is not yet the Gate-A frozen blueprint. Gate A remains pending until the required source-fidelity, pedagogy, and adversarial curriculum audits pass with zero BLOCKER and zero MAJOR findings.
+This is the **Gate-A frozen unit-level curriculum blueprint**. Source and dependency gates are PASS, and all three required curriculum audits have passed with zero open BLOCKER or MAJOR findings after repair.
 
-No learner-facing TypeScript or activity implementation is authorized by this file.
+Activity engineering may proceed from this file. Learner-facing Unit 42 TypeScript, stroke files, manifest entries, or other implementation remain locked until Gate B passes.
 
 ---
 
@@ -61,6 +61,14 @@ This keeps Dialogue II intact as one typhoon episode after its weather and immin
 | B1L14-G005 沒有…那麼／這麼… | 44 | `u44-not-as` |
 
 B1L14-X020 會不會 / 常不常 receives an explicit support bridge in Unit 42, but does **not** become a sixth formal source grammar target.
+
+## Frozen prerequisite edges
+
+These edges are part of Gate A and may not be reordered away during activity engineering:
+
+- **Unit 42:** teach B1L14-V017 下雪 and B1L14-V019/B1L14-V032 雨/下雨 before productive B1L14-X020 會不會下雪 / 常不常下雨 assessment.
+- **Unit 43:** B1L14-G001 → B1L14-G002; B1L14-V008 快 + B1L14-V022 要 → B1L14-G003; the B1L14-X034 對不對 confirmation bridge must precede any DR001 prompt that uses 對不對.
+- **Unit 44:** B1L14-V024 濕 → B1L14-X029 濕濕的; B1L14-V028 大家 + B1L14-V029 小心 + prior `u40-more-less-verb` → 請大家多小心; B1L14-V027 更 + B1L14-P001 → B1L14-G004 → full B1L14-D2T07; B1L14-G005 → B1L14-D2T08; B1L14-V029 小心 + B1L14-V035 慢走 → B1L14-P005 / 小心慢走.
 
 ## Outcome ownership
 
@@ -124,9 +132,9 @@ Approximate load:
 - 雪
 - 春
 - 冬
+- 夏
 - 秋
 - 雨
-- 夏
 
 All other characters in the Unit-42 formal lexical set are already owned.
 
@@ -322,12 +330,12 @@ No duplicate vocabulary ownership is created for 想 / 快 / 要.
 
 ## New characters
 
+- 只
 - 父
 - 母
-- 葉
-- 只
-- 底
 - 停
+- 底
+- 葉
 
 ## Formal grammar
 
@@ -386,6 +394,9 @@ Source:
 - B1L14-G001 / DR001
 - B1L14-X002, X033, X034
 
+Support prerequisite:
+- B1L14-X034 對不對 is an EXPANSION, not assumed-known support. Briefly explain its transparent confirmation use before any DR001 prompt or assessment that uses it.
+
 Adaptation:
 - source 紐約 / 臺北 examples may be replaced or glossed so no deferred glyph becomes assessed.
 
@@ -422,6 +433,11 @@ Targets:
 - 快 “soon” expansion
 - 要 auxiliary expansion
 - `u43-imminent`
+
+Required prerequisite order:
+- teach the Lesson-14 快 and 要 expansions first;
+- then explain `u43-imminent`;
+- only then assess source-style imminence such as 新年快到了.
 
 Outcome:
 - understand and produce 新年快到了 only after the imminence pattern has been explained;
@@ -664,6 +680,7 @@ Targets:
 - B1L14-X029 濕濕的 expansion
 
 Required explanation:
+- teach B1L14-V024 濕 before exposing or assessing 濕濕的;
 - Unit 30 taught a restricted reduplication set;
 - Lesson 14 explicitly licenses 濕濕的;
 - this is a source-attested extension, not permission to double every state verb.
@@ -707,6 +724,11 @@ Targets:
 - `u44-even-more`
 - B1L14-P001
 
+Required prerequisite order:
+- teach 更 with its “even more” baseline meaning and B1L14-P001 first;
+- then teach `u44-even-more`;
+- only then present or assess the full B1L14-D2T07 comparison clause.
+
 Source:
 - the full B1L14-D2T07, now that G004 is taught
 - B1L14-V027, V033, V034
@@ -724,6 +746,10 @@ Targets:
 - `u44-not-as`
 - B1L14-P002
 - B1L14-P005
+
+Required prerequisite order:
+- teach `u44-not-as` before productive B1L14-D2T08;
+- teach 慢走 before the conventional 小心慢走 formula is assessed.
 
 Outcome:
 - say a typhoon/event is not as scary as another;
@@ -759,7 +785,7 @@ The dependency ledger explicitly allows redesign instead of teaching support cha
 
 Locked architecture decision:
 - display temperatures as numeric values with **°C**;
-- label the location as Latin-script **Taipei** (or another learner-safe label) rather than introducing untaught 北;
+- preserve the source activity's location as Latin-script **Taipei** rather than introducing untaught 北;
 - do not require the learner to read/write 度;
 - preserve the actual comparison task and all required comparison structures;
 - do not add 度 to vocabulary, Search, Mega, or handwriting;
@@ -791,15 +817,17 @@ Deferral/adaptation:
 # 6. Character ownership
 
 ## Unit 42
-冷、滑、雪、春、冬、秋、雨、夏
+冷、滑、雪、春、冬、夏、秋、雨
 
 ## Unit 43
-父、母、葉、只、底、停
+只、父、母、停、底、葉
 
 ## Unit 44
 傘、颱、濕、討、厭、聞、更
 
 Total: **21 / 21 non-deferred formal NEW characters**.
+
+These are the frozen **learner-facing first-introduction orders**, aligned with the six-lesson sequence. Canonical B1L14-CH source IDs retain their original source-ledger order; ownership is unchanged.
 
 Deferred proper-name characters:
 - 玉
@@ -821,7 +849,7 @@ All 30 non-deferred formal NEW lexical entries receive exactly one first-teachin
 - Unit 43: 7
 - Unit 44: 12
 
-They become eligible for normal Pinyin Search / Mega Challenge only after their owning lesson.
+Each receives exactly one canonical first-teaching row at its owning lesson. Under the current product behavior, Pinyin Search is a global canonical lookup rather than a progress-gated assessment, while Mega Challenge eligibility is gated by the canonical row's lesson completion. No second ownership row may be created.
 
 ## Expansion forms
 
@@ -836,7 +864,7 @@ Activity engineering must still assess:
 - 快 = soon;
 - 要 = future/imminence auxiliary.
 
-Pinyin Search must not claim a second first-teaching location. If the product's canonical gloss can safely represent multiple senses, implementation may broaden the single gloss; that is not required to freeze architecture.
+Do **not** broaden the existing pre-Unit-43 canonical glosses for 想 / 快 / 要 during Lesson-14 implementation. Their canonical rows are owned by earlier lessons, so broadening those rows would expose the Lesson-14 senses before Unit 43 and would also change Mega prompts for already-learned entries. Under the current form-level Search/Mega model, the Lesson-14 senses therefore receive **no second Search/Mega ownership** and no duplicate row; their required sense-specific retrieval lives in Unit 43 teaching/review and the Lesson-14 capstone. A future product feature for progress-gated sense metadata would be a separate architecture change, not part of this Gate-A freeze.
 
 ## Formal Names
 
@@ -938,13 +966,22 @@ Delayed/cumulative retrieval:
 
 ---
 
-# 11. Proposed Gate-A status
+# 11. Gate-A freeze status
 
 Architecture design passes 1–3: **complete**.
 
-This blueprint is ready for the curriculum audits:
-1. source fidelity;
-2. pedagogy;
-3. adversarial architecture.
+Curriculum audits:
+1. source fidelity — recorded PASS;
+2. pedagogy — recorded PASS;
+3. fresh-context adversarial architecture — **PASS after the repairs frozen in this file**.
 
-It must not be marked `frozenBlueprint` in `completion.json` and Gate A must not pass until those audits return zero BLOCKER and zero MAJOR findings.
+Final Gate-A condition:
+- source gate PASS;
+- dependency gate PASS;
+- curriculum audits PASS;
+- open BLOCKER: 0;
+- open MAJOR: 0.
+
+**Gate A: PASS. This file is the frozen blueprint.**
+
+The controller may advance to **activity-engineering**. No learner-facing Unit 42 implementation is authorized until Gate B passes.
