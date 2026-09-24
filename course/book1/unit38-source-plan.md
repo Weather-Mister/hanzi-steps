@@ -6,17 +6,11 @@ Authoritative source: *A Course in Contemporary Chinese 1*, Lesson 13 Dialogue I
 
 Unit 38 completes Dialogue I and teaches the first numbered grammar section.
 
-Canonical NEW entries:
-- 語言
-- 交換
-- 熱心
-- 西班牙文
-- 一樣
-- 過
-- 左右
-- 門口
-- 不必客氣
-- 太客氣
+Implementation-indexed first-taught forms:
+- ordinary vocabulary: 語言、交換、熱心、西班牙文、一樣、過、左右、門口
+- source Phrase forms: 不必客氣、太客氣
+
+Pacing report: **8 ordinary new words + 2 source Phrase forms**. Report 西班牙 separately as contextual Name support.
 
 Review/new sense:
 - 那麼 → “so / that [state]” in 那麼熱心.
@@ -91,3 +85,8 @@ Must verify:
 - 左右 after the approximate number/time;
 - Grammar I restrictions and transfer;
 - complete Dialogue I turns 7–14.
+
+
+## Review quality floor
+
+Implementation must give the review roughly **18–22 useful activities** with **at least 3 listening activities**, independently assess every new grammar target owned by the unit, and fairly retrieve the unit's indexed vocabulary/expressions. Do not add filler merely to hit the floor.
