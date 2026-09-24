@@ -6,15 +6,56 @@
     "graphicsZhHans.txt",
     "graphicsJa.txt"
   ],
-  "characters": [
-    "冷",
-    "滑",
-    "雪",
-    "春",
-    "冬",
-    "夏",
-    "秋",
-    "雨"
-  ],
-  "note": "Traditional Hanzi Steps targets for Unit 42. Feature QA hydrates exact codepoints from AnimCJK, preferring graphicsZhHant.txt; never substitute a Simplified/Japanese codepoint."
+  "characters": [],
+  "note": "All Unit 42 NEW-character geometry is pre-seeded from exact codepoints in chanind/hanzi-writer-data (Make Me A Hanzi / Arphic Public License, public/licenses/arphic.txt). This keeps the frozen character order 冷、滑、雪、春、冬、夏、秋、雨 and avoids cross-locale fallback glyph sources.",
+  "manualCharacters": [
+    {
+      "character": "冷",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/冷.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "滑",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/滑.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "雪",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/雪.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "春",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/春.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "冬",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/冬.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "夏",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/夏.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "秋",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/秋.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "雨",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/雨.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    }
+  ]
 }
