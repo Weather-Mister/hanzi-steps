@@ -5,14 +5,14 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "source-extraction",
-  "stageStatus": "human-review",
+  "currentStage": "dependency-ledger",
+  "stageStatus": "ready",
   "bookComplete": false,
-  "humanReviewRequired": true,
+  "humanReviewRequired": false,
   "workingUnitRange": null,
   "gates": {
-    "source": "pending",
-    "dependencies": "locked",
+    "source": "pass",
+    "dependencies": "pending",
     "curriculum": "locked",
     "activities": "locked",
     "implementation": "locked",
@@ -25,7 +25,8 @@
     "frozenBlueprint": null,
     "frozenActivitySpec": null,
     "traceability": null,
-    "releaseReport": null
+    "releaseReport": null,
+    "sourceAudit": "course/book1/lesson14-source-audit.md"
   },
-  "notes": "Preflight remains anchored to production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, with Book 1 complete through source Lesson 13 / Unit 41. For Lesson 14 (printed pp. 299-321 / PDF pp. 326-348), the protocol-required fresh independent Source Extraction B has now been completed without prior exposure to A/B/reconciliation/ledger, the provisional B has been replaced, A vs B has been reconciled against the textbook with 0 unresolved source disagreements, and the reconciled source ledger has been regenerated. The source gate is still pending because a separate fresh-context source audit is mandatory and has not yet been performed. No dependency, curriculum, activity, Unit 42, or learner-facing implementation work is authorized."
+  "notes": "Preflight remains anchored to production main caf8bef722d1bd43a0acaa48e1cc5dffc1010ffb, with Book 1 complete through source Lesson 13 / Unit 41. Lesson 14 source extraction and A↔B reconciliation are complete. A mandatory fresh-context audit checked the authoritative Lesson 14 range (printed pp. 299-321 / PDF pp. 326-348) against the reconciled source ledger and source-stage protocol rules. Initial source-ledger defects were repaired; the final re-audit passes with 0 BLOCKER, 0 MAJOR, 0 MINOR, and 0 unresolved source disagreements. The source gate is PASS and the repository is ready for the dependency-ledger stage. No dependency ledger, curriculum architecture, Unit 42 design, learner-facing activities, or implementation has begun."
 }
