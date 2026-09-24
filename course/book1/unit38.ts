@@ -933,9 +933,7 @@ const unit:UnitData = {
     "門",
     "口"
   ],
-  "reviewCharacters": [
-    "過"
-  ],
+  "reviewCharacters": [],
   "characters": {
     "交": {
       "hanzi": "交",
