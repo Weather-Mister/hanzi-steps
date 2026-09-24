@@ -112,8 +112,8 @@ const unit:UnitData = {
           "prompt": "Which opening best fits a phone call?",
           "options": [
             "喂，是你嗎？",
-            "謝謝你還記得。",
-            "最近太忙了。"
+            "你最近忙嗎？",
+            "謝謝！"
           ],
           "answer": "喂，是你嗎？",
           "explanation": "喂 is the already-known phone greeting. The textbook uses the person's name after 喂; Hanzi Steps keeps the line learner-safe."
@@ -1126,7 +1126,7 @@ const unit:UnitData = {
       "text": "喂，是你嗎？",
       "pinyin": "Wèi, shì nǐ ma?",
       "meaning": "Hello, is that you?",
-      "note": "Learner-safe adaptation of the source opening 喂，安同嗎？ The proper name is omitted so 安／同 do not become handwriting targets.",
+      "note": "Learner-safe adaptation of the source opening, which uses the addressee's proper name after 喂. The name is omitted so proper-name characters do not become handwriting targets.",
       "tokens": [
         "喂",
         "是你嗎"
@@ -1166,7 +1166,7 @@ const unit:UnitData = {
       "text": "我剛從臺東回來。",
       "pinyin": "Wǒ gāng cóng Táidōng huílái.",
       "meaning": "I just came back from Taitung.",
-      "note": "Learner-safe core of Dialogue I turn 3. The source first denies going to Hualien; Hanzi Steps does not expose untaught 蓮.",
+      "note": "Learner-safe core of Dialogue I turn 3. The source first denies going to Hualien; Hanzi Steps keeps that place-name character out of learner-facing Chinese.",
       "tokens": [
         "我剛",
         "從臺東",
@@ -1219,7 +1219,7 @@ const unit:UnitData = {
       "text": "謝謝你還記得。",
       "pinyin": "Xièxie nǐ hái jìde.",
       "meaning": "Thank you for still remembering.",
-      "note": "Source Dialogue I turn 6 with the source 妳 normalized to 你.",
+      "note": "Source Dialogue I turn 6 with the source's gender-specific second-person form normalized to 你.",
       "tokens": [
         "謝謝你",
         "還記得"
