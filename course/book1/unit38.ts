@@ -763,7 +763,10 @@ const unit:UnitData = {
             "也"
           ],
           "answer": "一",
-          "explanation": "一 precedes Event A."
+          "explanation": "一 precedes Event A.",
+          "grammarIds": [
+            "u38-yi-jiu"
+          ]
         },
         {
           "id": "u38-review-g2",
@@ -787,7 +790,10 @@ const unit:UnitData = {
             "五點左右。"
           ],
           "answer": "那裡一沒人，我就回家。",
-          "explanation": "一沒人 is negative Event A."
+          "explanation": "一沒人 is negative Event A.",
+          "grammarIds": [
+            "u38-yi-jiu"
+          ]
         },
         {
           "id": "u38-review-g4",
@@ -799,7 +805,10 @@ const unit:UnitData = {
             "Questions cannot use 嗎."
           ],
           "answer": "The source allows 嗎 or 是不是; ordinary A-not-A is unavailable.",
-          "explanation": "Both source-valid question strategies remain valid."
+          "explanation": "Both source-valid question strategies remain valid.",
+          "grammarIds": [
+            "u38-yi-jiu"
+          ]
         },
         {
           "id": "u38-review-d1",
