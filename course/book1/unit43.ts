@@ -170,14 +170,15 @@ const unit:UnitData = {
           "id": "u43-duration-l1",
           "type": "listen",
           "audioText": "我打網球打了兩個鐘頭。",
-          "prompt": "How long was the tennis activity?",
+          "prompt": "Which duration do you hear?",
           "options": [
-            "two hours",
-            "two months",
-            "two years"
+            "兩個鐘頭",
+            "兩個月",
+            "兩年"
           ],
-          "answer": "two hours",
-          "explanation": "兩個鐘頭 means two hours."
+          "answer": "兩個鐘頭",
+          "explanation": "The audio says 兩個鐘頭, “two hours.”",
+          "char": "鐘"
         },
         {
           "id": "u43-duration-o1",
@@ -318,14 +319,15 @@ const unit:UnitData = {
           "id": "u43-duration-now-l1",
           "type": "listen",
           "audioText": "我在臺灣住了半年多了。",
-          "prompt": "What duration frame do you hear?",
+          "prompt": "Which duration phrase do you hear?",
           "options": [
-            "a little over half a year up to now",
-            "exactly two hours completed",
-            "an event about to happen"
+            "半年多",
+            "兩個月",
+            "兩個鐘頭"
           ],
-          "answer": "a little over half a year up to now",
-          "explanation": "半年多了 expresses accumulated duration."
+          "answer": "半年多",
+          "explanation": "The audio says 半年多, a little over half a year.",
+          "char": "年"
         },
         {
           "id": "u43-duration-now-o1",
@@ -506,12 +508,13 @@ const unit:UnitData = {
           "audioText": "新年快到了。",
           "prompt": "What is about to arrive?",
           "options": [
-            "New Year",
-            "a typhoon",
-            "autumn leaves"
+            "新年",
+            "臺灣",
+            "比賽"
           ],
-          "answer": "New Year",
-          "explanation": "新年 is New Year."
+          "answer": "新年",
+          "explanation": "The audio says 新年, “New Year.”",
+          "char": "新"
         },
         {
           "id": "u43-newyear-o1",
@@ -600,7 +603,8 @@ const unit:UnitData = {
             "想"
           ],
           "answer": "停",
-          "explanation": "The audio ends with 停了."
+          "explanation": "The audio ends with 停了.",
+          "char": "停"
         },
         {
           "id": "u43-stop-o1",
@@ -689,12 +693,13 @@ const unit:UnitData = {
           "audioText": "我打算十二月底回去。",
           "prompt": "When is the planned return?",
           "options": [
-            "at the end of December",
-            "next autumn",
-            "after two hours"
+            "十二月底",
+            "明天",
+            "今年"
           ],
-          "answer": "at the end of December",
-          "explanation": "十二月底 is the end of December."
+          "answer": "十二月底",
+          "explanation": "The audio says 十二月底, “the end of December.”",
+          "char": "底"
         },
         {
           "id": "u43-plan-o1",
@@ -803,12 +808,13 @@ const unit:UnitData = {
           "audioText": "我想明年秋天去看紅葉。",
           "prompt": "What does the speaker want to see?",
           "options": [
-            "red maple leaves",
-            "an umbrella",
-            "a typhoon"
+            "紅葉",
+            "春天",
+            "下雪"
           ],
-          "answer": "red maple leaves",
-          "explanation": "The audio says 紅葉."
+          "answer": "紅葉",
+          "explanation": "The audio says 紅葉, “red maple leaves.”",
+          "char": "葉"
         },
         {
           "id": "u43-nextyear-o1",
@@ -844,38 +850,41 @@ const unit:UnitData = {
           "audioText": "我打網球打了兩個鐘頭。",
           "prompt": "Which duration do you hear?",
           "options": [
-            "two hours",
-            "two months",
-            "two years"
+            "兩個鐘頭",
+            "兩個月",
+            "兩年"
           ],
-          "answer": "two hours",
-          "explanation": "兩個鐘頭 means two hours."
+          "answer": "兩個鐘頭",
+          "explanation": "The audio says 兩個鐘頭, “two hours.”",
+          "char": "鐘"
         },
         {
           "id": "u43-review-l2",
           "type": "listen",
           "audioText": "我在臺灣住了半年多了。有一點想家。",
-          "prompt": "What does 想 mean here?",
+          "prompt": "Which expression do you hear for “miss home”?",
           "options": [
-            "miss",
-            "compare",
-            "stop"
+            "想家",
+            "想買",
+            "打算"
           ],
-          "answer": "miss",
-          "explanation": "想家 means miss home."
+          "answer": "想家",
+          "explanation": "The audio says 想家, “miss home.”",
+          "char": "想"
         },
         {
           "id": "u43-review-l3",
           "type": "listen",
           "audioText": "雨快要停了。",
-          "prompt": "What is about to happen?",
+          "prompt": "Which imminent phrase do you hear?",
           "options": [
-            "the rain will stop",
-            "the rain has already stopped",
-            "the rain will continue for two hours"
+            "快要停了",
+            "已經停了",
+            "常下雨"
           ],
-          "answer": "the rain will stop",
-          "explanation": "快要…了 marks imminence; 停 means stop."
+          "answer": "快要停了",
+          "explanation": "The audio says 快要停了, “is about to stop.”",
+          "char": "停"
         },
         {
           "id": "u43-review-zhi",
