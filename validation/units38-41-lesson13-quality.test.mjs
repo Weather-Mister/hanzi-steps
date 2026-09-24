@@ -47,11 +47,17 @@ test('Units 38–41 assign the remaining 20 Lesson 13 characters exactly once',(
   assert.equal(new Set(all).size,20);
 });
 
-test('Every Unit 38–41 new vocabulary/expression is independently retrieved in its review',()=>{
+test('Every Unit 38–41 new vocabulary/expression is independently targeted in its review',()=>{
   for(const u of units){
     const review=u.lessons.find(l=>l.id===u.reviewLessonId);
-    const blob=JSON.stringify(review);
-    for(const word of u.newVocabulary) assert.ok(blob.includes(word.text),u.unit.id+' review never retrieves '+word.text);
+    const targetText=[];
+    for(const step of review.steps){
+      for(const key of ['prompt','answer','audioText'])if(typeof step[key]==='string')targetText.push(step[key]);
+      if(step.type==='order'&&step.phrase&&u.phrases[step.phrase])targetText.push(u.phrases[step.phrase].text);
+    }
+    const blob=targetText.join('\n');
+    for(const word of u.newVocabulary)
+      assert.ok(blob.includes(word.text),u.unit.id+' review never independently targets '+word.text);
   }
 });
 
@@ -131,11 +137,12 @@ test('Grammar I through VII remain assigned to the planned units',()=>{
   assert.match(u41.grammarRules['u41-gen-yiyang'].explanation,/一樣不一樣 or 是不是一樣/);
 });
 
-test('Unit 40 preserves the 了 scope contrast and source culture allocation',()=>{
+test('Unit 40 preserves the 了 scope contrast and actually teaches the source culture reading',()=>{
   assert.equal(u40.phrases['u40-young-source'].text,'現在大部分年輕人過生日不吃這些東西了。');
   const customs=JSON.stringify(u40.lessons.find(l=>l.id==='u40-customs'));
-  for(const phrase of ['lunar calendar','one month and one year','60, 70, and 80','optional annotated culture context'])
+  for(const phrase of ['lunar calendar','Gregorian calendar','one month and one year','60, 70, and 80','future character or profession'])
     assert.ok(customs.includes(phrase),'Unit 40 culture lesson misses '+phrase);
+  assert.ok(customs.includes("zhuāzhōu"),'Unit 40 should identify the first-birthday custom in romanization');
   assert.ok(!customs.includes('抓週'),'Unit 40 leaks culture-only Hanzi 抓週');
 });
 
@@ -171,4 +178,30 @@ test('Source-specific ambiguity guards remain explicit',()=>{
   assert.match(u39.grammarRules['u39-bu-vs-mei'].explanation,/bare 沒 \+ V is still grammatical/);
   assert.match(u40.grammarRules['u40-questionword-totality'].explanation,/Both 都 and 也 are source-valid/);
   assert.match(u41.grammarRules['u41-gen-yiyang'].explanation,/both are source-valid/);
+});
+
+
+test('Unit 39 review tests completed-action listening and directly retrieves the formerly distractor-only forms',()=>{
+  const review=u39.lessons.find(l=>l.id==='u39-review');
+  const listening=review.steps.find(s=>s.id==='u39-review-l3');
+  assert.equal(listening.type,'listen');
+  assert.equal(listening.audioText,'我今天沒吃蛋。');
+  assert.equal(listening.answer,'沒吃蛋');
+  assert.deepEqual(listening.grammarIds,['u39-verbal-le','u39-bu-vs-mei']);
+  assert.equal(review.steps.find(s=>s.id==='u39-review-v4').answer,'pork knuckles');
+  assert.equal(review.steps.find(s=>s.id==='u39-review-t1').answer,'a little; some amount');
+});
+
+test('Unit 41 keeps comparison scope semantically neutral in English',()=>{
+  assert.equal(
+    u41.phrases['u41-not-target'].meaning,
+    "He isn't the same height as me; he's the same height as you."
+  );
+});
+
+test('Lesson 13 learner activities do not expose curriculum-planning meta',()=>{
+  const learnerText=units.flatMap(u=>u.lessons).flatMap(l=>l.steps).flatMap(s=>[
+    s.prompt,s.answer,s.explanation,...(s.options??[])
+  ]).filter(Boolean).join('\n');
+  assert.doesNotMatch(learnerText,/\bUnit\s+\d+\b|formal grammar here|new Hanzi target|which unit|curriculum/i);
 });
