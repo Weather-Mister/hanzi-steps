@@ -457,7 +457,7 @@ B1L14-G001 combines prior duration grammar, prior object-repeat duration, and pr
 
 **None in the builder pass.**
 
-This does **not** pass the dependency gate yet. The protocol requires a separate fresh-context dependency audit.
+The mandatory fresh-context dependency audit is recorded in `course/book1/lesson14-dependency-audit.md` and passes with zero open BLOCKER or MAJOR findings.
 
 ---
 
@@ -475,6 +475,6 @@ Builder checks:
 - open builder BLOCKER: 0;
 - open builder MAJOR: 0.
 
-**Dependency gate remains PENDING** until the mandatory fresh-context dependency audit passes.
+**Dependency gate: PASS.** The repository may proceed to curriculum architecture only; Unit 42+ splitting/design has not begun.
 
 No curriculum unit split, Unit 42 design, activity freeze, or implementation is authorized yet.
