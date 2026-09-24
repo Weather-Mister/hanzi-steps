@@ -94,11 +94,11 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - tokens: [`這裡`, `常不常下雨`]
 
 ### u42-home-country-model
-- text: **我家那裡夏天很熱，冬天很冷。**
-- pinyin: **Wǒ jiā nàlǐ xiàtiān hěn rè, dōngtiān hěn lěng.**
-- meaning: **Where I'm from, summers are hot and winters are cold.**
-- note: Model for the source A001 home-country climate description without adding new country-name vocabulary.
-- tokens: [`我家那裡`, `夏天很熱`, `冬天很冷`]
+- text: **我的國家夏天很熱，冬天很冷。**
+- pinyin: **Wǒ de guójiā xiàtiān hěn rè, dōngtiān hěn lěng.**
+- meaning: **In my country, summers are hot and winters are cold.**
+- note: Model for the source A001 home-country climate description using already-known 國家.
+- tokens: [`我的國家`, `夏天很熱`, `冬天很冷`]
 
 ### u42-season-reason
 - text: **因為我怕冷，所以我比較喜歡春天。**
