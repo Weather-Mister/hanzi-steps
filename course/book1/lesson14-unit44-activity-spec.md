@@ -558,18 +558,18 @@ For select rows above, prompt format: **“X means…”**; explanation: **“X 
    - explanation: This retrieves the earlier plain 比 comparison required by A003.
 
 ### A003 temperature comparison — Taipei, numeric °C only
-30. `u44-review-a003-1`
+24. `u44-review-a003-1`
    - prompt: **Taipei chart: last summer 29°C; this summer 31°C. Which sentence is correct?**
    - options: [`今年夏天比去年夏天更熱。`, `今年夏天跟去年夏天一樣熱。`, `今年夏天沒有去年夏天那麼熱。`]
    - answer: **今年夏天比去年夏天更熱。**
    - explanation: 31°C is higher than 29°C.
    - grammarIds: [u44-even-more]
-31. `u44-review-a003-2`
+25. `u44-review-a003-2`
    - prompt: **Taipei chart: last autumn 24°C; this autumn 24°C. Which sentence is correct?**
    - options: [`今年秋天跟去年秋天一樣熱。`, `今年秋天比去年秋天更熱。`, `今年秋天沒有去年秋天那麼熱。`]
    - answer: **今年秋天跟去年秋天一樣熱。**
    - explanation: The temperatures are equal.
-32. `u44-review-a003-3`
+26. `u44-review-a003-3`
    - prompt: **Taipei chart: last winter 18°C; this winter 16°C. Which sentence is correct?**
    - options: [`今年冬天沒有去年冬天那麼熱。`, `今年冬天比去年冬天更熱。`, `今年冬天跟去年冬天一樣熱。`]
    - answer: **今年冬天沒有去年冬天那麼熱。**
@@ -579,57 +579,57 @@ For select rows above, prompt format: **“X means…”**; explanation: **“X 
 No prompt or answer uses 度 or 北.
 
 ### A004 weather interview
-33. phrase `u44-weather-interview`
-34. `u44-review-a004-1`
+27. phrase `u44-weather-interview`
+28. `u44-review-a004-1`
    - prompt: Which set belongs in the source weather interview?
    - options: [four seasons + typhoon + rain frequency + snow occurrence, only birthday food, only transport prices]
    - answer: four seasons + typhoon + rain frequency + snow occurrence
    - explanation: These are B1L14-A004's weather-comparison fields.
-35. `u44-review-a004-2`
+29. `u44-review-a004-2`
    - prompt: Besides asking the listed weather questions, what does the source task require?
    - options: [ask for additional information and record the results, stop after one question, avoid recording anything]
    - answer: ask for additional information and record the results
    - explanation: A004 explicitly requires both.
 ### Delayed retrieval from Units 42–43
-38. `u44-review-cum1`
+30. `u44-review-cum1`
    - prompt: Which asks whether it often rains?
    - options: [常不常下雨？, 會不會下雪？, 有沒有昨天熱？]
    - answer: 常不常下雨？
    - explanation: Unit 42 used 常不常 for frequency.
-39. `u44-review-cum2`
+31. `u44-review-cum2`
    - prompt: Which sentence presents duration accumulated up to now?
    - options: [我在臺灣住了半年了。, 我在臺灣住了半年。, 我打網球打了兩個鐘頭。]
    - answer: 我在臺灣住了半年了。
    - explanation: This retrieves Unit-43 G002.
-40. `u44-review-cum3`
+32. `u44-review-cum3`
    - prompt: Which sentence shows imminence?
    - options: [颱風快要來了。, 颱風來了兩個月。, 颱風跟雨一樣。]
    - answer: 颱風快要來了。
    - explanation: 快要…了 marks an imminent event.
 ### Culture
-42. `u44-review-culture`
+33. `u44-review-culture`
    - prompt: In the textbook's historical account, what changed about who made typhoon-day decisions?
    - options: [decision-making was vested in regional governments, students individually decided school closures, the weather bureau stopped giving forecasts]
    - answer: decision-making was vested in regional governments
    - explanation: This is a source-history comprehension check; it is not presented as current 2026 administrative guidance.
 
 ### Explicit F/S001–004 capstone
-43. `u44-review-cap1`
+34. `u44-review-cap1`
    - prompt: Which task demonstrates the weather/typhoon outcome?
    - options: [describe rain/snow/typhoon conditions and appropriate caution, compare seasonal temperatures, report where someone lived and for how long]
    - answer: describe rain/snow/typhoon conditions and appropriate caution
    - explanation: This maps to B1L14-F001/S001.
-44. `u44-review-cap2`
+35. `u44-review-cap2`
    - prompt: Which task demonstrates the seasons/preference outcome?
    - options: [name the seasons and explain which you like/dislike and why, describe a typhoon warning, report a completed travel duration]
    - answer: name the seasons and explain which you like/dislike and why
    - explanation: This maps to B1L14-F002/S002.
-45. `u44-review-cap3`
+36. `u44-review-cap3`
    - prompt: Which task demonstrates the comparison outcome?
    - options: [compare conditions with 比…更 / 跟…一樣 / 沒有…那麼, explain seasonal preferences, report where an experience happened and how long it lasted]
    - answer: compare conditions with 比…更 / 跟…一樣 / 沒有…那麼
    - explanation: This maps to B1L14-F003/S003.
-46. `u44-review-cap4`
+37. `u44-review-cap4`
    - prompt: Which task demonstrates the experience outcome?
    - options: [say where an experience happened and how long it lasted, compare seasonal temperatures, describe typhoon conditions and caution]
    - answer: say where an experience happened and how long it lasted
