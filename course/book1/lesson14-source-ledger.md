@@ -499,11 +499,8 @@ Fresh independent Extraction B: **complete**.
 
 A ↔ B reconciliation: **complete**, with **0 unresolved source disagreements**.
 
-Source gate: **pending**.
+Source gate: **PASS** — fresh-context audit recorded in `course/book1/lesson14-source-audit.md`, with **0 BLOCKER**, **0 MAJOR**, **0 MINOR**, and **0 unresolved source disagreements** after repairs.
 
-The next mandatory protocol action is a **fresh-context source audit** using only:
-- the authoritative Lesson-14 textbook range;
-- this reconciled ledger;
-- the source-stage rules in `automation/book1/PROTOCOL.md`.
+The next mandatory protocol action is the **dependency-ledger stage**.
 
-No dependency ledger, Unit 42 design, learner-facing curriculum, or implementation may begin until that audit returns PASS with 0 BLOCKER and 0 MAJOR findings.
+No unit design, learner-facing curriculum, activity engineering, or implementation has begun.
