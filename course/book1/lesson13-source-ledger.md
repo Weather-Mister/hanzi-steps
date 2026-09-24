@@ -203,7 +203,7 @@ The second-pass audit caught an important ordering nuance: 口 exists in the rep
 
 Because 門口 is formal Lesson 13 Vocabulary I, this is not merely a warning: **Book 1 Lesson 13 must become the chronological first character teaching of 口.** The existing Book 2 Unit 1 character treatment of 口 must later be converted to review/reuse rather than continuing to claim first character ownership.
 
-This is the complete first-pass handwriting / learner-facing character risk pool from the formal source inventory. Phase 2 must decide which phrase-only characters receive formal handwriting teaching and must ensure that no assessment exposes a future NEW character before its introduction.
+This is the complete formal-inventory handwriting / learner-facing character risk pool at the Unit 36 boundary. Phase 2 must decide which phrase-only characters receive formal handwriting teaching and must ensure that no assessment exposes a future NEW character before its introduction.
 
 ### Dialogue-only glyph risks
 
