@@ -222,7 +222,7 @@ const unit:UnitData = {
             "approximately"
           ],
           "answer": "so / that (degree)",
-          "explanation": "This is the degree use; Unit 36 used 那麼 as 'then/in that case'."
+          "explanation": "Here 那麼 means 'so / that' before a degree description, not 'then / in that case'."
         },
         {
           "id": "u38-enthusiastic-l1",
