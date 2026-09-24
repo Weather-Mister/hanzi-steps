@@ -20,6 +20,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - name: Run curriculum regression tests
+        run: npm run test:curriculum
       - run: npm run build:pages
       - uses: actions/upload-pages-artifact@v3
         with:
