@@ -61,7 +61,8 @@ Teach:
 
 Productive boundary:
 - actively test 嗎 questions;
-- 是不是 may be shown as source-supported preview, but independent productive 是不是 waits Unit 41.
+- 是不是 may be shown as source-supported preview, but independent productive 是不是 waits Unit 41;
+- include both a negative Event A example and a negative Event B example. Use learner-safe adaptation 那裡一沒人，我就回家。 for negative Event A rather than importing source-only 拍／照.
 
 ## Ownership migrations
 
@@ -69,15 +70,17 @@ Productive boundary:
 - Unit 38 becomes canonical first vocabulary ownership: “celebrate” in 過生日.
 - Character 過 is review from Unit 33.
 - Book 2 Unit 3 keeps its movement use “go past/cross” as later new-sense/review teaching.
+- B2U3 migration is metadata-only for topology: remove 過 from newVocabulary, add it to reviewVocabulary, preserve b2u3-pass and every existing step ID/position.
 
 ### 口
 - Unit 38 becomes chronological first character ownership through 門口.
-- Book 2 Unit 1 must change 口 from newCharacters to reviewCharacters while preserving existing lesson/activity IDs/topology where practical.
+- Book 2 Unit 1 must move 口 from newCharacters to reviewCharacters and remove its local 口 character record so it resolves to Unit 38.
+- Preserve b2-intersection, unit.chars, 路口 content, and every existing b2-char-口-* step ID/position; those steps become review practice rather than being deleted/reordered.
 
 ## Review gate
 
 Must verify:
-- 10/10 canonical entries;
+- 10/10 indexed first-taught forms (8 ordinary vocabulary + 2 source Phrase forms);
 - 7/7 new characters;
 - 那麼 degree sense vs. Unit 36 connective sense;
 - lexical 一樣 before later Grammar VII;
