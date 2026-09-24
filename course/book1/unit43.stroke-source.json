@@ -1,0 +1,18 @@
+{
+  "source": "AnimCJK",
+  "url": "https://github.com/parsimonhi/animCJK",
+  "preference": [
+    "graphicsZhHant.txt",
+    "graphicsZhHans.txt",
+    "graphicsJa.txt"
+  ],
+  "characters": [
+    "只",
+    "父",
+    "母",
+    "停",
+    "底",
+    "葉"
+  ],
+  "note": "Traditional Hanzi Steps targets for Unit 43. Feature QA hydrates exact codepoints from AnimCJK, preferring graphicsZhHant.txt; never substitute a Simplified/Japanese codepoint."
+}
