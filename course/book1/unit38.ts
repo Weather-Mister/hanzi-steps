@@ -134,16 +134,15 @@ const unit:UnitData = {
         {
           "id": "u38-exchange-p1",
           "type": "phrase",
-          "phrase": "u38-exchange-source"
+          "phrase": "u38-exchange-safe"
         },
         {
           "id": "u38-exchange-o1",
           "type": "order",
-          "phrase": "u38-exchange-source",
+          "phrase": "u38-exchange-safe",
           "tokens": [
-            "語言交換的時候",
-            "你那麼熱心",
-            "教我西班牙文"
+            "我們做",
+            "語言交換"
           ]
         }
       ]
@@ -183,6 +182,11 @@ const unit:UnitData = {
           "id": "u38-enthusiastic-牙-memory",
           "type": "memory",
           "char": "牙"
+        },
+        {
+          "id": "u38-enthusiastic-p1",
+          "type": "phrase",
+          "phrase": "u38-exchange-source"
         },
         {
           "id": "u38-enthusiastic-s1",
@@ -378,8 +382,8 @@ const unit:UnitData = {
           "prompt": "Which phrase means 'celebrate a birthday'?",
           "options": [
             "過生日",
-            "回生日",
-            "生日左右"
+            "生日快樂",
+            "回來生日"
           ],
           "answer": "過生日",
           "explanation": "過生日 is the source combination."
@@ -1194,6 +1198,13 @@ const unit:UnitData = {
   ],
   "reviewGrammar": [],
   "phrases": {
+    "u38-exchange-safe": {
+      "text": "我們做語言交換。",
+      "pinyin": "Wǒmen zuò yǔyán jiāohuàn.",
+      "meaning": "We do a language exchange.",
+      "note": "Learner-safe setup before 西班牙文 is introduced in the next lesson.",
+      "tokens": ["我們做","語言交換"]
+    },
     "u38-exchange-source": {
       "text": "語言交換的時候，你那麼熱心教我西班牙文。",
       "pinyin": "Yǔyán jiāohuàn de shíhou, nǐ nàme rèxīn jiāo wǒ Xībānyá wén.",
@@ -1209,7 +1220,7 @@ const unit:UnitData = {
       "text": "不必客氣，你也一樣。",
       "pinyin": "Búbì kèqi, nǐ yě yíyàng.",
       "meaning": "No need to be so polite; you are the same.",
-      "note": "Source turn 8 with 妳 normalized to 你.",
+      "note": "Source turn 8 with the source second-person form normalized to 你.",
       "tokens": [
         "不必客氣",
         "你也一樣"
@@ -1229,7 +1240,7 @@ const unit:UnitData = {
       "text": "你太客氣了！我們在哪裡見面呢？",
       "pinyin": "Nǐ tài kèqi le! Wǒmen zài nǎlǐ jiànmiàn ne?",
       "meaning": "You're too kind! Where shall we meet?",
-      "note": "Source turn 10 with 妳 normalized to 你.",
+      "note": "Source turn 10 with the source second-person form normalized to 你.",
       "tokens": [
         "你太客氣了",
         "我們在哪裡見面呢"
@@ -1288,7 +1299,7 @@ const unit:UnitData = {
       "text": "好，我會在學校門口等你。",
       "pinyin": "Hǎo, wǒ huì zài xuéxiào ménkǒu děng nǐ.",
       "meaning": "Okay, I'll wait for you at the school entrance.",
-      "note": "Source turn 14 with 妳 normalized to 你.",
+      "note": "Source turn 14 with the source second-person form normalized to 你.",
       "tokens": [
         "好",
         "我會在學校門口等你"
