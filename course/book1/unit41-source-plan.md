@@ -80,6 +80,8 @@ Questions:
 - 是不是一樣？
 - 是不是跟…一樣 + property?
 
+Both source question strategies are valid; do not create a single-answer question that treats 一樣不一樣 and 是不是一樣 as mutually exclusive correct/incorrect forms.
+
 Exercise demand:
 - productive comparison writing/ordering.
 
