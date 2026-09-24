@@ -961,7 +961,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "交換",
         "pinyin": "jiāohuàn",
@@ -998,7 +998,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "交換",
         "pinyin": "jiāohuàn",
@@ -1027,7 +1027,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "西班牙文",
         "pinyin": "Xībānyá wén",
@@ -1057,7 +1057,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "不必客氣",
         "pinyin": "búbì kèqi",
@@ -1092,7 +1092,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "客氣",
         "pinyin": "kèqi",
@@ -1125,7 +1125,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "門口",
         "pinyin": "ménkǒu",
@@ -1153,7 +1153,7 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "single",
+      "layout": "whole",
       "example": {
         "text": "門口",
         "pinyin": "ménkǒu",
