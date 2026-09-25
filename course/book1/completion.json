@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "learner-simulation",
+  "currentStage": "activity-engineering",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,8 +17,8 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pass",
-    "implementation": "pass",
+    "activities": "pending",
+    "implementation": "locked",
     "release": "locked"
   },
   "openFindings": [],
@@ -26,7 +26,7 @@
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
+    "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -52,7 +52,11 @@
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
     "learnerSimulationA": null,
     "learnerSimulationB": null,
-    "learnerSimulationC": null
+    "learnerSimulationC": null,
+    "activityTeachingQualityReaudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
+    "activityCrossUnitReaudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
+    "activityQuestionReaudit": null,
+    "activityQuestionReauditHandoff": "course/book1/lesson14-activity-question-reaudit-handoff.md"
   },
-  "notes": "Lesson 14 source/dependency gates, Gate A, Gate B, implementation conformance, and deterministic QA are PASS. Feature QA run #418 passed on the final implementation head, including generation, graph validation, changed-unit tests, character coverage, full Search/Mega/practice regression, TypeScript, and Pages build. Stage 7 now requires three independent fresh-context learner simulations (strict prerequisite learner, adversarial test taker, cumulative learner). Release remains locked."
+  "notes": "Stage-7 learner simulations A/B/C found prerequisite, activity-conformance, capstone, delayed-retrieval, and Pinyin Search timing defects. Gate B is reopened. The candidate activity packet has been repaired without changing Gate-A curriculum ownership or boundaries. Repaired Teaching Quality and Cross-Unit audits pass with 0 open BLOCKER/MAJOR. Mandatory fresh-context Activity Audit 2 re-audit is pending. Existing Unit 42–44 implementation is now stale/locked and must not be repaired until Gate B re-freezes."
 }
