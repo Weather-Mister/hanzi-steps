@@ -83,7 +83,29 @@ Pronunciation safeguard:
   - do not confuse that with Unit-39 negated **verbal-了**, whose completed-action 了 is removed under negation.
 - remember: **specific object + outward action + source final-了 pattern; 沒/別 before 把.**
 
-## 4. Exact phrase/support records
+## 4. Meaning-first lexical EXPLAIN cards
+
+These are mandatory learner-facing teaching cards. Each appears after any required NEW-character lifecycle for the words on the card and before the first assessed lexical select.
+
+### u46-cold-lex
+- **感冒 gǎnmào** — to have/catch a cold
+
+### u46-medicine-lex
+- **藥 yào** — medicine
+- **藥局 yàojú** — pharmacy
+- **拿 ná** — to get
+
+### u46-ba-lex
+- **把 bǎ** — disposal marker used in the source construction taught below
+- **別 bié** — don't; imperative negation
+
+### u46-recover-lex
+- **水 shuǐ** — water
+- **休息 xiūxí** — to rest
+- **睡覺 shuìjiào** — to sleep; 覺 is **jiào** here, not **jué** as in 覺得
+- **早一點 zǎo yìdiǎn** — a bit earlier
+
+## 5. Exact phrase/support records
 
 ### u46-cold-source
 - text: **我有一點發燒，是感冒。**
@@ -159,7 +181,7 @@ Pronunciation safeguard:
 - meaning: **Who ate my watermelon?**
 - response: **對不起，我不知道是你的。**
 
-## 5. Character lifecycle IDs
+## 6. Character lifecycle IDs
 
 Each prefix expands to `intro → trace → build → complete → memory`, preceded by recognition/reading.
 
@@ -175,13 +197,14 @@ Each prefix expands to `intro → trace → build → complete → memory`, prec
 | u46-recover | 息 | u46-recover-息 |
 | u46-recover | 睡 | u46-recover-睡 |
 
-## 6. Teaching lessons — exact assessed payloads
+## 7. Teaching lessons — exact assessed payloads
 
 ### u46-cold — It Is a Cold
 
 Order:
 1. 感 recognition/read → lifecycle.
 2. 冒 recognition/read → lifecycle.
+**Mandatory before step 3:** EXPLAIN `u46-cold-lex`.
 3. select `u46-cold-s1`
    - prompt: **感冒 means…**
    - options: [`have a cold`, `have a fever`, `be inflamed`]
@@ -243,6 +266,7 @@ Order:
 1. 藥 recognition/read → lifecycle.
 2. 局 recognition/read → lifecycle.
 3. 拿 recognition/read → lifecycle.
+**Mandatory before step 4:** EXPLAIN `u46-medicine-lex`.
 4. select `u46-med-s1`: 藥 → medicine / water / insurance → **medicine**
 5. select `u46-med-s2`: 藥局 → pharmacy / health center / hospital room → **pharmacy**
 6. select `u46-med-s3`: 拿 → get / rest / vomit → **get**
@@ -272,6 +296,7 @@ Order:
 
 Order:
 1. 把 recognition/read → lifecycle.
+**Mandatory before step 2:** EXPLAIN `u46-ba-lex`.
 2. select `u46-ba-v1`
    - prompt: **別 means…**
    - options: [`don't (imperative)`, `a few`, `must`]
@@ -326,6 +351,7 @@ Order:
 2. 息 recognition/read → lifecycle.
 3. 睡 recognition/read → lifecycle.
 4. note card: 水 is NEW standalone vocabulary but its character is already known.
+**Mandatory before step 5:** EXPLAIN `u46-recover-lex`.
 5. select `u46-rec-s1`: 水 → water / medicine / soup → **water**
 6. select `u46-rec-s2`: 休息 → rest / get medicine / vomit → **rest**
 7. select `u46-rec-s3`
@@ -392,7 +418,7 @@ Order:
     - answer: **whether they have to take medicine**
     - explanation: 得 děi expresses necessity.
 
-## 7. Unit 46 review — exact step bank
+## 8. Unit 46 review — exact step bank
 
 ### Listening
 1. `u46-review-l1`
@@ -504,7 +530,7 @@ Order:
 
 Review count: **34**. Listening: **3**. All NEW vocabulary, the 幾 expansion, all NEW characters, G001, G002, modal 得, A004, and Unit-45 delayed retrieval are explicit.
 
-## 8. Lifecycle coverage
+## 9. Lifecycle coverage
 
 | Target | Explain/recognize | Controlled | Contextual use | Retrieval | Delayed | Cumulative |
 |---|---|---|---|---|---|---|
@@ -516,7 +542,7 @@ Review count: **34**. Listening: **3**. All NEW vocabulary, the 幾 expansion, a
 | 水/休息/睡覺/早一點 + 多+V | L5 | rec-s1–s6 | D1T11 | review-v7–v10 | U47/U48 advice | A002/capstone |
 | 您 support | L6 explanation | nin-s1 | D1T12 | local comprehension | U48 politeness mix | no Search/Mega |
 
-## 9. Search / Mega / deferral rules
+## 10. Search / Mega / deferral rules
 
 - Ten canonical NEW forms receive Unit-46 first ownership and normal ownership-gated Mega eligibility.
 - 幾 receives no new canonical row, no new Search gloss, and no new Mega ownership.
