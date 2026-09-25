@@ -1234,7 +1234,7 @@ const unit:UnitData = {
         {
           "id": "u44-review-u43-1",
           "type": "order",
-          "phrase": "u44-cum-miss",
+          "phrase": "u43-duration-now-source",
           "tokens": [
             "我在臺灣住了半年多了",
             "有一點想家"
@@ -1243,7 +1243,7 @@ const unit:UnitData = {
         {
           "id": "u44-review-u43-2",
           "type": "order",
-          "phrase": "u44-cum-newyear",
+          "phrase": "u43-newyear-source",
           "tokens": [
             "新年快到了",
             "想回去看父母嗎"
@@ -1252,19 +1252,20 @@ const unit:UnitData = {
         {
           "id": "u44-review-u43-3",
           "type": "order",
-          "phrase": "u44-cum-december",
+          "phrase": "u43-return-plan",
           "tokens": [
-            "我打算",
-            "十二月底回去"
+            "我打算十二月底回去",
+            "想跟我去玩嗎"
           ]
         },
         {
           "id": "u44-review-u43-4",
           "type": "order",
-          "phrase": "u44-cum-leaves",
+          "phrase": "u43-nextyear-source",
           "tokens": [
-            "我想明年秋天",
-            "去看紅葉"
+            "冬天太冷了",
+            "不過",
+            "我想明年秋天去看紅葉"
           ]
         },
         {
@@ -1282,16 +1283,17 @@ const unit:UnitData = {
         {
           "id": "u44-review-cap1",
           "type": "order",
-          "phrase": "u44-cap-weather",
+          "phrase": "u44-comparison-source",
           "tokens": [
-            "颱風快要來了",
+            "這次的颱風",
+            "會比上次的更大",
             "請大家多小心"
           ]
         },
         {
           "id": "u44-review-cap2",
           "type": "order",
-          "phrase": "u44-cap-season",
+          "phrase": "u42-season-reason",
           "tokens": [
             "因為我怕冷",
             "所以我比較喜歡春天"
@@ -1300,16 +1302,16 @@ const unit:UnitData = {
         {
           "id": "u44-review-cap3",
           "type": "order",
-          "phrase": "u44-less-model",
+          "phrase": "u44-not-as-source",
           "tokens": [
-            "今年冬天",
-            "沒有去年冬天那麼熱"
+            "希望",
+            "這次的沒有上次的那麼可怕"
           ]
         },
         {
           "id": "u44-review-cap4",
           "type": "order",
-          "phrase": "u44-cap-experience",
+          "phrase": "u43-finished-stay",
           "tokens": [
             "我在臺灣",
             "住了一年"
