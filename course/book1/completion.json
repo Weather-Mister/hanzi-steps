@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "implementation",
+  "currentStage": "implementation-conformance-audit",
   "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -53,7 +53,8 @@
     "activityTeachingQualityAudit": "course/book1/lesson15-activity-teaching-quality-audit.md",
     "activityQuestionAudit": "course/book1/lesson15-activity-question-audit.md",
     "activityCrossUnitAudit": "course/book1/lesson15-activity-cross-unit-audit.md",
-    "implementationHandoff": "course/book1/lesson15-implementation-handoff.md"
+    "implementationHandoff": "course/book1/lesson15-implementation-handoff.md",
+    "implementationConformanceAuditHandoff": "course/book1/lesson15-implementation-conformance-audit-handoff.md"
   },
-  "notes": "Lesson 15 Gate B PASS with all three activity audits at 0 open BLOCKER / 0 open MAJOR. The frozen Units 45–48 activity packet is ready for Stage 5 implementation. Implementation handoff is persisted at course/book1/lesson15-implementation-handoff.md. Implementation remains pending; release remains locked; Units 45–48 are not yet implemented, merged, or published. The required 一直 / 直 first-ownership migration must be performed during implementation."
+  "notes": "Lesson 15 Stage 5 implementation is persisted for Units 45–48 from the Gate-B-frozen packet. 一直 / 直 canonical first ownership has migrated from Book-2 Unit 1 to Book-1 Unit 45; Book 2 is not a prerequisite. Implementation remains pending until independent conformance review and release remains locked. Two schema-representation constraints are handed to the auditor: phrase-level listens whose frozen English semantic answers cannot satisfy the current literal-audio validator use equivalent Chinese audio-contained discriminators with a relevant character anchor; and A002's required source illustrations cannot be embedded by the current UnitData schema, so their frozen source-illustration identities and role shells are represented as non-invented textual cards."
 }
