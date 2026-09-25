@@ -1,6 +1,6 @@
 # Lesson 15 Activity Spec — Unit 45
 
-Status: **Stage-4 activity candidate; Gate B pending.**
+Status: **Gate B PASS — frozen activity specification. Implementation pending.**
 
 Frozen Gate-A identity: **Unit 45 — Symptoms and Feeling Sick**.  
 Six teaching lessons plus review.  
