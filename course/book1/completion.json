@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "learner-simulation",
+  "currentStage": "final-release-audit",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -27,7 +27,7 @@
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
     "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
-    "traceability": null,
+    "traceability": "course/book1/lesson14-traceability.md",
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
     "dependencyAudit": "course/book1/lesson14-dependency-audit.md",
@@ -50,9 +50,9 @@
     ],
     "deterministicQa": "course/book1/lesson14-deterministic-qa.md",
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
-    "learnerSimulationA": null,
-    "learnerSimulationB": null,
-    "learnerSimulationC": null,
+    "learnerSimulationA": "course/book1/lesson14-learner-simulation-a-final2.md",
+    "learnerSimulationB": "course/book1/lesson14-learner-simulation-b-final2.md",
+    "learnerSimulationC": "course/book1/lesson14-learner-simulation-c-final2.md",
     "activityTeachingQualityReaudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
     "activityCrossUnitReaudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
     "activityQuestionReaudit": "course/book1/lesson14-activity-question-reaudit.md",
@@ -66,7 +66,8 @@
     "activityCrossUnitReaudit3": "course/book1/lesson14-activity-cross-unit-reaudit3.md",
     "activityQuestionReaudit3": "course/book1/lesson14-activity-question-reaudit3.md",
     "activityQuestionReaudit3Handoff": "course/book1/lesson14-activity-question-reaudit3-handoff.md",
-    "learnerSimulationRerun2Handoff": "course/book1/lesson14-learner-simulation-rerun2-handoff.md"
+    "learnerSimulationRerun2Handoff": "course/book1/lesson14-learner-simulation-rerun2-handoff.md",
+    "finalReleaseAuditHandoff": "course/book1/lesson14-final-release-audit-handoff.md"
   },
-  "notes": "Final prerequisite-repaired implementation passes Feature QA #478 with all deterministic checks green. Unit-43 future-vocabulary exposure and global standalone handwriting bypass are fixed. Because learner-facing behavior changed after the prior learner simulations, Stage 7 requires one final A/B/C rerun on the current code. Release remains locked."
+  "notes": "Final-rerun-2 learner simulations A/B/C all PASS with zero open BLOCKER/MAJOR, and no learner-facing code changed after the final implementation baseline. Stage 8 bidirectional traceability PASS: unresolved source items 0, orphan production concepts 0. Stage 9 mandatory fresh-context hostile release audit is pending. Release remains locked."
 }
