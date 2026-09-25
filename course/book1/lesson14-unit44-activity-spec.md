@@ -659,13 +659,13 @@ No prompt or answer uses 度 or 北.
    - options: [颱風快要來了。, 颱風來了兩個月。, 颱風跟雨一樣。]
    - answer: 颱風快要來了。
    - explanation: 快要…了 marks an imminent event.
-33. order `u44-review-u43-1` using `u44-cum-miss`
+33. `u44-review-u43-1` order `u44-cum-miss`
    - tokens: [`我在臺灣住了半年多了`, `有一點想家`]
-34. order `u44-review-u43-2` using `u44-cum-newyear`
+34. `u44-review-u43-2` order `u44-cum-newyear`
    - tokens: [`新年快到了`, `想回去看父母嗎`]
-35. order `u44-review-u43-3` using `u44-cum-december`
+35. `u44-review-u43-3` order `u44-cum-december`
    - tokens: [`我打算`, `十二月底回去`]
-36. order `u44-review-u43-4` using `u44-cum-leaves`
+36. `u44-review-u43-4` order `u44-cum-leaves`
    - tokens: [`我想明年秋天`, `去看紅葉`]
 
 ### Culture
@@ -676,13 +676,13 @@ No prompt or answer uses 度 or 北.
    - explanation: This is a source-history comprehension check; it is not presented as current 2026 administrative guidance.
 
 ### Explicit F/S001–004 capstone
-38. order `u44-review-cap1` using `u44-cap-weather`
+38. `u44-review-cap1` order `u44-cap-weather`
    - tokens: [`颱風快要來了`, `請大家多小心`]
-39. order `u44-review-cap2` using `u44-cap-season`
+39. `u44-review-cap2` order `u44-cap-season`
    - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
-40. order `u44-review-cap3` using `u44-less-model`
+40. `u44-review-cap3` order `u44-less-model`
    - tokens: [`今年冬天`, `沒有去年冬天那麼熱`]
-41. order `u44-review-cap4` using `u44-cap-experience`
+41. `u44-review-cap4` order `u44-cap-experience`
    - tokens: [`我在臺灣`, `住了一年`]
 
 These four capstone steps require the learner to construct actual Chinese for the weather/typhoon, seasons/preference, comparison, and experience outcomes rather than identify English curriculum metadata.
