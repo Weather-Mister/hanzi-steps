@@ -545,30 +545,30 @@ Prior units teach pieces of G004–G007, but not the exact Lesson-15 extensions.
 
 **None.**
 
-The mandatory **fresh-context dependency audit has not been performed**. Therefore the dependency gate remains **PENDING** regardless of the clean builder pass.
+The mandatory fresh-context dependency audit has now been completed and is persisted in `course/book1/lesson15-dependency-audit.md`. Audit-discovered dependency defects were repaired in this ledger and re-audited.
 
 ---
 
 # 15. Dependency-stage checkpoint
 
-Builder dependency ledger: **COMPLETE**.
+Dependency ledger: **COMPLETE AND FRESH-AUDITED**.
 
-Builder checks completed:
-- all pedagogically relevant F/V/G/P/X/CH/D/DR/A/CUL/S source records disposed;
-- false-KNOWN scan complete;
-- semantic-lookalike scan complete;
-- hidden vocabulary prerequisite scan complete;
-- hidden character prerequisite scan complete;
-- hidden grammar/pragmatics prerequisite scan complete;
-- future dependency scan complete;
-- duplicate NEW ownership scan complete;
-- circularity scan complete;
-- explicit DEFERRED destinations recorded;
-- builder open BLOCKER: **0**;
-- builder open MAJOR: **0**.
+Final checks:
+- all 213 pedagogically relevant F/V/G/P/X/CH/D/DR/A/CUL/S source records are explicitly covered;
+- formal lexical classification remains **42 NEW + 2 EXPANSION**;
+- formal character classification remains **30 NEW + 33 KNOWN**;
+- false-KNOWN / false-REVIEW scan: clear;
+- semantic-lookalike scan: clear;
+- hidden vocabulary / character / grammar / pragmatics prerequisite scan: clear;
+- source-required activity paths: clear after repairs;
+- future dependency scan: clear;
+- duplicate NEW ownership scan: clear, with the required Lesson-15-first migration for 一直 / 直 recorded;
+- circularity scan: clear;
+- all 9 DEFERRED support records have explicit safe destinations;
+- fresh-audit open BLOCKER: **0**;
+- fresh-audit open MAJOR: **0**;
+- fresh-audit open MINOR: **0**.
 
-**Dependency gate: PENDING.**
+**Dependency gate: PASS.**
 
-Next mandatory action: run the separate fresh-context dependency audit from `course/book1/lesson15-dependency-audit-handoff.md`.
-
-No Lesson-15 unit boundaries, curriculum blueprint, learner-facing activity specification, implementation, merge, or publication has been created or authorized here.
+The repository is ready for the **curriculum-architecture stage** only. No Lesson-15 unit boundaries, rough split, curriculum blueprint, learner-facing activity specification, implementation, merge, or publication has been created or authorized here.
