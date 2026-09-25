@@ -133,7 +133,7 @@ Rules:
 - include 想 / 快 / 要 in Unit-43 `reviewVocabulary`;
 - assess the Lesson-14 senses only through Unit-43 teaching/review and Unit-44 cumulative review;
 - Search/Mega continue using their earlier canonical rows under the current product model.
-- **Pinyin Search prerequisite rule:** a canonical vocabulary result is visible only after its owning lesson is completed; its writing-practice action therefore cannot bypass the character's lesson introduction.
+- **Pinyin Search safety rule (Gate-A compatible):** preserve the frozen Gate-A behavior that canonical results remain globally visible as lookup entries. For Lesson-14-owned characters, the Search writing-practice action must remain locked until the owning lesson (and therefore the character introduction) is complete. Mega Challenge eligibility remains gated by canonical-row lesson completion. Do not implement progress-gated Search visibility without reopening Gate A.
 
 ## 5. New-character ownership and first-introduction order
 
