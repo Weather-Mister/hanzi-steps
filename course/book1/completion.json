@@ -24,7 +24,7 @@
   "openFindings": [
     {
       "severity": "BLOCKER",
-      "summary": "Stage 9 FR-001: B1L14-A001 is modeled in Unit 42 but never assigned as the required learner transfer task (own home-country climate, most/least-liked seasons, and reasons). Reopen Gate B; smallest blast radius ACTIVITY."
+      "summary": "Stage 9 FR-001 identified missing learner-facing B1L14-A001 personal transfer. Activity candidate repaired; fresh Activity Audit 2 re-audit4 is required before Gate B can re-freeze."
     }
   ],
   "artifacts": {
@@ -72,7 +72,11 @@
     "activityQuestionReaudit3": "course/book1/lesson14-activity-question-reaudit3.md",
     "activityQuestionReaudit3Handoff": "course/book1/lesson14-activity-question-reaudit3-handoff.md",
     "learnerSimulationRerun2Handoff": "course/book1/lesson14-learner-simulation-rerun2-handoff.md",
-    "finalReleaseAuditHandoff": "course/book1/lesson14-final-release-audit-handoff.md"
+    "finalReleaseAuditHandoff": "course/book1/lesson14-final-release-audit-handoff.md",
+    "activityTeachingQualityReaudit4": "course/book1/lesson14-activity-teaching-quality-reaudit4.md",
+    "activityCrossUnitReaudit4": "course/book1/lesson14-activity-cross-unit-reaudit4.md",
+    "activityQuestionReaudit4": null,
+    "activityQuestionReaudit4Handoff": "course/book1/lesson14-activity-question-reaudit4-handoff.md"
   },
-  "notes": "Stage 9 fresh hostile release audit FAIL: FR-001 is an open BLOCKER. The frozen Gate-B packet and Unit 42 production model B1L14-A001 but never give the learner its required personalized transfer instruction. Gate A remains valid; Gate B is reopened at activity engineering. Implementation and release are locked. Do not merge or publish."
+  "notes": "Stage 9 FR-001 is repaired at the activity layer: Unit 42 now explicitly assigns the learner their own A001 climate + most/least season + reason transfer rather than only modeling it. Gate A remains valid. Same-context Teaching Quality and Cross-Unit re-audit4 pass. Mandatory fresh Activity Audit 2 re-audit4 is pending; implementation and release remain locked. Prior traceability/release evidence is stale and must be rebuilt downstream."
 }
