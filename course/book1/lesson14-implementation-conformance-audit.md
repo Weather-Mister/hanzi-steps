@@ -1,51 +1,68 @@
-# Book 1 Lesson 14 — Implementation Conformance Re-audit 2
+# Book 1 Lesson 14 — Implementation Conformance Re-audit 3
 
-Gate B: **PASS / re-frozen after post-QA fresh Activity Audit 2 re-audit**.
+Gate B: **PASS / re-frozen after final strict-prerequisite Activity Audit 2 re-audit 3**.
 
 Scope:
-- final re-frozen activity packet;
+- final re-frozen Lesson-14 activity packet;
 - actual Units 42–44;
-- Pinyin Search global-lookup / writing-practice gate.
+- all standalone character-practice entry points;
+- Pinyin Search / Mega / adaptive-practice prerequisite behavior.
 
-## Post-QA repair transcribed
+## Final strict-prerequisite repairs
 
-The deterministic-QA failure from Feature QA #451 was caused by Unit-44 review order activities referencing new alias phrase IDs that had never appeared in an earlier phrase-teaching step.
+### A-01 — future NEW 明年 in Unit 43 assessment
 
-The final frozen packet repaired this by reusing already-taught phrase IDs.
+Frozen repair:
+- `u43-a002-s2` third distractor is now `你在臺灣住了半年嗎？`.
 
-Actual Unit 44 now matches that repair:
-- `u44-review-u43-1` → `u43-duration-now-source`;
-- `u44-review-u43-2` → `u43-newyear-source`;
-- `u44-review-u43-3` → `u43-return-plan`;
-- `u44-review-u43-4` → `u43-nextyear-source`;
-- `u44-review-cap1` → `u44-comparison-source`;
-- `u44-review-cap2` → `u42-season-reason`;
-- `u44-review-cap3` → `u44-not-as-source`;
-- `u44-review-cap4` → `u43-finished-stay`.
+Actual `course/book1/unit43.ts` matches the frozen prompt, options, answer, and explanation exactly.
 
-The Unit-44 review remains exactly **41** steps.
+The repaired item uses only material available by `u43-duration-now` and no longer exposes future-owned `明年`.
 
-## Unit-level conformance
+Status: **resolved**.
 
-- Unit 42: 6 teaching lessons + review; 25 review steps; no duplicate step IDs.
-- Unit 43: 6 teaching lessons + review; 28 review steps; no duplicate step IDs.
-- Unit 44: 6 teaching lessons + review; 41 review steps; no duplicate step IDs.
-- all order activities retain non-empty token banks;
-- all five Lesson-14 formal grammar records remain in their frozen owners;
-- all 30 canonical NEW vocabulary rows and all 21 NEW character owners remain unchanged.
+### A-02 — standalone character practice bypass
 
-## Pinyin Search safety
+The frozen activity contract now requires every learner-facing `practice-<character>` entry point to obey the character's first non-review teaching lesson.
 
-Implementation preserves frozen Gate-A behavior:
-- canonical Pinyin Search visibility remains global;
-- handwriting actions are filtered through `searchPracticeCharacters(item, completed)`;
-- a character's writing action unlocks only after its first non-review teaching lesson is complete;
-- Mega/adaptive-practice ownership remains lesson-gated;
-- targeted tests cover future 冷 and 颱風 lookup visibility plus delayed handwriting unlock.
+Implementation now centralizes this invariant in:
 
-## Upstream integrity
+`characterPracticeAvailable(char, completed)`
 
-No source, dependency, curriculum, unit-boundary, vocabulary-ownership, grammar-ownership, character-ownership, or deferral decision changed in this implementation repair.
+in `lib/curriculum.ts`.
+
+The helper:
+- resolves the first non-review lesson whose `chars` contains the character;
+- requires that lesson to be completed before standalone practice is available.
+
+Enforcement:
+- `LearningApp.start()` now rejects **every** `practice-<character>` lesson whose first teaching lesson is incomplete. This is the central safety boundary, so future shortcuts cannot bypass it merely by calling `start()`.
+- the unit character-detail dialog disables the Practice action and shows “Practice unlocks after its lesson” until the same boundary is satisfied;
+- Pinyin Search uses the same central helper instead of maintaining a separate first-teaching map;
+- Search vocabulary visibility remains global;
+- Mega/adaptive vocabulary gating remains unchanged.
+
+Targeted regression coverage verifies:
+- 葉 cannot be practiced before `u43-next-year`;
+- 葉 unlocks after `u43-next-year`;
+- 更 cannot be practiced before `u44-even-more`;
+- 更 unlocks after `u44-even-more`;
+- 紅葉 remains globally searchable while its writing action obeys the same gate.
+
+Status: **resolved**.
+
+## Frozen upstream integrity
+
+No repair changes:
+- source ledger;
+- dependency classifications;
+- Gate-A unit boundaries;
+- canonical NEW vocabulary ownership;
+- formal grammar ownership;
+- character ownership/order;
+- Search visibility policy;
+- Mega ownership;
+- source deferrals.
 
 ## Findings
 
@@ -55,4 +72,4 @@ No source, dependency, curriculum, unit-boundary, vocabulary-ownership, grammar-
 
 # Result: PASS
 
-Implementation conforms to the final re-frozen Gate-B packet. Deterministic QA may run on the final implementation head.
+The implementation conforms to the final re-frozen Gate-B packet. Deterministic QA must pass after these final code changes before learner simulation is repeated.
