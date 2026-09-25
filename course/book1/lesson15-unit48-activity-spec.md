@@ -394,10 +394,10 @@ Order:
     - answer: **他走路走得比我快。**
     - explanation: The action phrase is repeated before 得 where required.
 12. select `u48-g5-s3`
-    - prompt: **Where does 不 go for negation?**
-    - options: [`before 比`, `after 得`, `after the state word`]
-    - answer: **before 比**
-    - explanation: Source negation is 不比.
+    - prompt: **Which sequence gives the source negation order?**
+    - options: [`不比`, `比不`, `比 + state + 不`]
+    - answer: **不比**
+    - explanation: 不 immediately precedes 比 in the comparison portion.
 13. select `u48-g5-s4`
     - prompt: **Which is a source-style question?**
     - options: [`他是不是走路走得比你快？`, `他走路走不走得比你快？`, `他比不比走路得快？`]
