@@ -111,7 +111,20 @@ NEW formal character:
 - safeguard: do not invent productive separation for a word not already lexically available.
 - remember: the inserted material goes between the V and N components of a separable form.
 
-## 4. Exact phrase/support records
+## 4. Meaning-first lexical EXPLAIN cards
+
+These are mandatory learner-facing teaching cards. They appear before the first assessed lexical select. For 冰, the meaning card appears only after the complete NEW-character lifecycle so the first assessed vocabulary item still follows memory.
+
+### u48-advice-lex-a
+- **回家 huí jiā** — go home
+- **油 yóu** — oily; greasy
+
+### u48-advice-lex-b
+- **冰 bīng** — icy
+- **關心 guānxīn** — be concerned about; show concern for
+- **最好 zuìhǎo** — it would be best; should, as an advice frame
+
+## 5. Exact phrase/support records
 
 ### u48-gen-recipient
 - text: **跟老師說**
@@ -182,13 +195,14 @@ NEW formal character:
 - grammarIds: [`u48-separable-verbs`, `u48-comparison-degree`]
 - note: full line appears only after G007.
 
-## 5. Source-transfer support records
+## 6. Source-transfer support records
 
 ### A002 visual-role-play contract
 Task 1 must preserve the three source illustration prompts from printed pp. 346–347 / PDF pp. 373–374 as required visual input:
-- `u48-a002-visual-1`: exact source illustration 1 + source role shell; **同意建議**; response closes with **好的。**
-- `u48-a002-visual-2`: exact source illustration 2 + source role shell; **同意建議**; response closes with **謝謝你。**
-- `u48-a002-visual-3`: exact source illustration 3 + source role shell; **拒絕建議**; response begins **謝謝你的關心。** and leaves the rejection completion open.
+- `u48-a002-visual-1`: exact source illustration 1 + source role shell; learner-safe instruction **accept the suggestion**; response closes with **好的。**
+- `u48-a002-visual-2`: exact source illustration 2 + source role shell; learner-safe instruction **accept the suggestion**; response closes with **謝謝你。**
+- `u48-a002-visual-3`: exact source illustration 3 + source role shell; learner-safe instruction **politely reject the suggestion**; response begins **謝謝你的關心。** and leaves the rejection completion open.
+- Source labels such as **同意建議 / 拒絕建議** may be preserved only as inert source metadata or visibly glossed material. The learner is never required to read, select, type, or handwrite deferred **拒 / 絕** to perform the task.
 - source suggestion inventory available to the role play: **看病、多休息、早一點睡覺、多喝水**.
 - the visual symptom/advice mapping must be transcribed from the source illustrations; do not invent a replacement image meaning.
 - these three are communicative role-play prompts, not auto-graded picture-identification questions. Their source visuals are required inputs.
@@ -228,7 +242,7 @@ Before any A003 question, explicitly explain:
 
 The source inference is **4 doses/day × 3 days = 12 packets**. Twelve is arithmetic, not lexical ownership.
 
-## 6. Character lifecycle
+## 7. Character lifecycle
 
 Only 冰 is NEW formal character in Unit 48.
 
@@ -237,7 +251,7 @@ Prefix `u48-advice-冰` expands:
 
 A recognition/read card **冰 bīng** precedes the lifecycle; the first assessed 冰 vocabulary item follows `memory`. The review contains later `complete` retrieval.
 
-## 7. Teaching lessons — exact assessed payloads
+## 8. Teaching lessons — exact assessed payloads
 
 ### u48-advice — Advice and Concern
 
@@ -253,9 +267,11 @@ Order:
    - options: [`跟朋友去看電影`, `跟老師說`, `比老師好`]
    - answer: **跟朋友去看電影**
    - explanation: Unit 24 already owns 跟 “with”; Unit 48 adds recipient 跟.
+**Mandatory before step 4:** EXPLAIN `u48-advice-lex-a`.
 4. select `u48-advice-v1`: 回家 → go home / see a doctor / rest → **go home**
 5. select `u48-advice-v2`: 油 → oily/greasy / icy / healthy → **oily/greasy**
 6. 冰 recognition/read → lifecycle.
+**Mandatory after the 冰 memory step and before step 7:** EXPLAIN `u48-advice-lex-b`.
 7. select `u48-advice-v3`: 冰 → icy / oily / painful → **icy**
 8. select `u48-advice-v4`: 關心 → be concerned about / insure / vomit → **be concerned about**
 9. select `u48-advice-v5`
@@ -581,7 +597,7 @@ Order:
     - answer: **30 minutes after meals**
     - explanation: 飯後三十分鐘 gives the timing.
 
-## 8. Unit 48 review + Lesson-15 capstone — exact step bank
+## 9. Unit 48 review + Lesson-15 capstone — exact step bank
 
 ### Listening
 1. `u48-review-l1`
@@ -800,32 +816,68 @@ Use the exact three-option payloads and explanations from u48-prescription.
     - answer: **他吃了藥就睡覺。**
     - explanation: Completed event then immediate next event.
 
+### Additional positive delayed retrieval from Units 45–47
+48. `u48-review-cum7`
+    - prompt: **Which pair retrieves two Unit-45 doctor-visit targets?**
+    - options: [`醫生／喉嚨有一點發炎`, `保險／健康中心`, `回家／最好`]
+    - answer: **醫生／喉嚨有一點發炎**
+    - explanation: This positively retrieves 醫生 and 發炎 after Unit 45.
+49. `u48-review-cum8`
+    - prompt: **Which pair retrieves the Unit-46 illness and pharmacy action?**
+    - options: [`感冒／去藥局拿藥`, `發燒／陪你看病`, `肚子／健康中心`]
+    - answer: **感冒／去藥局拿藥**
+    - explanation: This positively retrieves 感冒 and 拿 in the medicine context.
+50. `u48-review-cum9`
+    - prompt: **Which phrase says that someone's complexion looks bad?**
+    - options: [`臉色很難看`, `胃口很好`, `喉嚨有一點發炎`]
+    - answer: **臉色很難看**
+    - explanation: This is delayed retrieval of Unit-47 臉色 / 難看.
+51. `u48-review-cum10`
+    - prompt: **Which phrase offers to accompany someone to see a doctor?**
+    - options: [`我陪你去看病`, `我跟老師說`, `我回家休息`]
+    - answer: **我陪你去看病**
+    - explanation: This positively retrieves Unit-47 陪 and 看病.
+52. `u48-review-cum11`
+    - prompt: **Which pair belongs to the Unit-47 help/medical-setting episode?**
+    - options: [`健康保險／健康中心`, `鼻水／胃口`, `小時／分鐘`]
+    - answer: **健康保險／健康中心**
+    - explanation: This positively retrieves 保險 and 健康中心 rather than using them only as distractors.
+53. `u48-review-cum12`
+    - prompt: **Which pairing correctly retrieves the two Unit-47 support expansions?**
+    - options: [
+      `對學生很客氣 = polite to students；買藥就好了 = buying medicine will be enough`,
+      `對學生很客氣 = compare students；買藥就好了 = buy medicine immediately after eating`,
+      `對學生很客氣 = insure students；買藥就好了 = medicine is better`
+      ]
+    - answer: **對學生很客氣 = polite to students；買藥就好了 = buying medicine will be enough**
+    - explanation: This delays X010 and X011 beyond their owning Unit-47 lesson.
+
 ### Culture
-48. `u48-review-culture`
+54. `u48-review-culture`
     - prompt: **What is the status of the mask reading in this course?**
     - options: [`textbook-era source culture, not current medical/policy guidance`, `current 2026 legal instructions`, `a new vocabulary list`]
     - answer: **textbook-era source culture, not current medical/policy guidance**
     - explanation: CUL001 remains explicitly source-framed.
 
 ### Explicit F/S001–S004 capstone
-49. `u48-review-cap1` — S001/F001
+55. `u48-review-cap1` — S001/F001
     - order phrase: **哪裡不舒服？**
     - tokens: [`哪裡`, `不舒服`]
-50. `u48-review-cap2` — S002/F002
+56. `u48-review-cap2` — S002/F002
     - order phrase: **我一直流鼻水，頭很痛。**
     - tokens: [`我一直流鼻水`, `頭很痛`]
-51. `u48-review-cap3` — S003/F003
+57. `u48-review-cap3` — S003/F003
     - order phrase: **多喝水，多休息，早一點睡覺。**
     - tokens: [`多喝水`, `多休息`, `早一點睡覺`]
-52. `u48-review-cap4` — S004/F004
+58. `u48-review-cap4` — S004/F004
     - prompt: **A friend says 你應該去看病. Which reply politely rejects the suggestion?**
     - options: [`謝謝你的關心。不用了。`, `好的，謝謝你。`, `你怎麼了？`]
     - answer: **謝謝你的關心。不用了。**
     - explanation: This performs polite rejection using P006 + P002.
 
-Review count: **52**. Listening: **3**. Every Unit-48 lexical target, 跟 expansion, 冰 handwriting, G004–G007, A001–A005 functions, prescription reading, culture, modal/complement 得 contrast, 幾/跟 sense contrasts, delayed Units 45–47, and S001–S004 are explicitly retrieved.
+Review count: **58**. Listening: **3**. Every Unit-48 lexical target, 跟 expansion, 冰 handwriting, G004–G007, A001–A005 functions, prescription reading, culture, modal/complement 得 contrast, 幾/跟 sense contrasts, delayed Units 45–47, and S001–S004 are explicitly retrieved.
 
-## 9. Lifecycle coverage
+## 10. Lifecycle coverage
 
 | Target | Explain/recognize | Controlled practice | Contextual use | Retrieval | Delayed retrieval | Cumulative mixing |
 |---|---|---|---|---|---|---|
@@ -840,7 +892,7 @@ Review count: **52**. Listening: **3**. Every Unit-48 lexical target, 跟 expans
 | CUL001 | L6 source-era card | culture checks | source reading context | review-culture | final review | no current-policy inference |
 | F/S001–S004 | Units 45–48 | activities/dialogues | A002/A004/A005 | cap1–cap4 | — | Lesson-15 closure |
 
-## 10. Search / Mega / deferred handling
+## 11. Search / Mega / deferred handling
 
 - Eight canonical NEW forms receive Unit-48 first ownership and normal owning-lesson-gated Mega eligibility.
 - 跟 receives no second canonical Search row, no gloss broadening of Unit-24 “with,” and no new Mega ownership.
