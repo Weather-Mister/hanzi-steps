@@ -310,10 +310,10 @@ const unit:UnitData = {
           "options": [
             "你在那裡住了多久？",
             "你以前住在哪裡？",
-            "你明年回來嗎？"
+            "你在臺灣住了半年嗎？"
           ],
           "answer": "你在那裡住了多久？",
-          "explanation": "多久 asks for the duration. The source-transfer card still instructs the learner to record and report the answer."
+          "explanation": "多久 asks for an unknown duration. 你在臺灣住了半年嗎？ is a yes/no question about a stated six-month duration, not a request for how long."
         },
         {
           "id": "u43-duration-now-l1",
