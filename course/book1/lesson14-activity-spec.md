@@ -1,6 +1,6 @@
 # Book 1 Lesson 14 — Frozen Activity Specification
 
-Status: **Gate B REOPENED — final strict-prerequisite simulation found a future-NEW distractor and an ungated standalone handwriting-practice route. Repaired candidate awaits fresh Activity Audit 2.**
+Status: **Gate B PASS — final strict-prerequisite repairs passed fresh Activity Audit 2 re-audit 3; the activity packet is re-frozen for implementation.**
 
 Upstream:
 - source gate: PASS
@@ -14,7 +14,7 @@ Normative activity-spec packet:
 - `course/book1/lesson14-unit43-activity-spec.md`;
 - `course/book1/lesson14-unit44-activity-spec.md`.
 
-Gate B is reopened after final Learner Simulation A found two prerequisite defects. The activity packet now removes the premature 明年 distractor and explicitly requires first-teaching gating for every standalone handwriting-practice entry point. Implementation is locked until the repaired packet passes the mandatory fresh Activity Audit 2 re-audit.
+Final Learner Simulation A reopened Gate B after finding two prerequisite defects. The activity packet removed the premature 明年 distractor and now requires first-teaching gating for every standalone handwriting-practice entry point. The repaired packet has passed the mandatory fresh Activity Audit 2 re-audit 3 and is re-frozen; implementation may now proceed by faithful transcription.
 
 ## 1. Activity-engineering rules
 
@@ -259,18 +259,27 @@ Unit 44 review:
 
 ## 11. Gate-B status
 
-Gate B was reopened after deterministic QA found a global explain-before-order regression in several Unit-44 delayed-retrieval/capstone order steps. The activity packet was repaired by removing redundant alias phrase records and reusing phrase IDs that had already been taught earlier in the learner sequence. No Gate-A curriculum decision changed.
+Gate B was reopened after the final strict-prerequisite learner simulation found:
+1. a future-NEW `明年` distractor in `u43-a002-s2`;
+2. an ungated standalone `practice-<character>` route through the general character-library/detail UI.
 
-The post-QA repaired packet has now passed:
-1. Activity Audit 1 re-audit 2 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit2.md`);
-2. mandatory fresh-context Activity Audit 2 re-audit 2 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit2.md`);
-3. Activity Audit 3 re-audit 2 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit2.md`);
+The repaired activity packet:
+- replaces that distractor with `你在臺灣住了半年嗎？`, an already-available yes/no duration question;
+- requires every standalone handwriting-practice entry point to remain locked until the character's first non-review teaching lesson is complete;
+- preserves globally visible canonical Pinyin Search results;
+- preserves owning-lesson-gated Mega eligibility;
+- changes no Gate-A vocabulary, character, grammar, source, or unit ownership.
+
+The final repaired packet has now passed all three required Activity audits:
+1. Activity Audit 1 re-audit 3 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit3.md`);
+2. mandatory fresh-context Activity Audit 2 re-audit 3 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit3.md`);
+3. Activity Audit 3 re-audit 3 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit3.md`);
 4. open BLOCKER: **0**;
 5. open MAJOR: **0**.
 
-The repaired Unit-44 order steps now reference only phrases previously taught in Units 42–44. Delayed retrieval still covers 想家, 新年/父母, 十二月底, and 明年/紅葉; the 41-step Unit-44 review and four-outcome Chinese-construction capstone remain intact.
+The repaired `u43-a002-s2` has exactly one defensible answer, contains no future Lesson-14 NEW form, and keeps `明年` in its frozen owning lesson `u43-next-year`.
 
-Pinyin Search keeps the frozen Gate-A contract: canonical lookup remains globally visible, Lesson-14 character writing actions are gated until the owning lesson / first character teaching, and Mega eligibility is owning-lesson gated.
+The global handwriting rule gates the practice action only. It does not hide canonical Search results, move character ownership, change unit exploration policy, or alter the frozen curriculum architecture.
 
 **Gate B: PASS. This packet is re-frozen.**
 
