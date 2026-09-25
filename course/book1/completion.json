@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "activity-engineering",
+  "currentStage": "implementation",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,21 +17,16 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pending",
-    "implementation": "locked",
+    "activities": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
-  "openFindings": [
-    {
-      "severity": "BLOCKER",
-      "summary": "Stage 9 FR-001 identified missing learner-facing B1L14-A001 personal transfer. Activity candidate repaired; fresh Activity Audit 2 re-audit4 is required before Gate B can re-freeze."
-    }
-  ],
+  "openFindings": [],
   "artifacts": {
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": null,
+    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
     "traceability": null,
     "releaseReport": "course/book1/lesson14-final-release-audit.md",
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -44,9 +39,9 @@
     "activityUnit42Spec": "course/book1/lesson14-unit42-activity-spec.md",
     "activityUnit43Spec": "course/book1/lesson14-unit43-activity-spec.md",
     "activityUnit44Spec": "course/book1/lesson14-unit44-activity-spec.md",
-    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-reaudit3.md",
-    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-reaudit3.md",
-    "activityQuestionAudit": "course/book1/lesson14-activity-question-reaudit3.md",
+    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-reaudit4.md",
+    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-reaudit4.md",
+    "activityQuestionAudit": "course/book1/lesson14-activity-question-reaudit4.md",
     "implementationConformanceAudit": "course/book1/lesson14-implementation-conformance-audit.md",
     "implementationUnits": [
       "course/book1/unit42.ts",
@@ -75,8 +70,8 @@
     "finalReleaseAuditHandoff": "course/book1/lesson14-final-release-audit-handoff.md",
     "activityTeachingQualityReaudit4": "course/book1/lesson14-activity-teaching-quality-reaudit4.md",
     "activityCrossUnitReaudit4": "course/book1/lesson14-activity-cross-unit-reaudit4.md",
-    "activityQuestionReaudit4": null,
+    "activityQuestionReaudit4": "course/book1/lesson14-activity-question-reaudit4.md",
     "activityQuestionReaudit4Handoff": "course/book1/lesson14-activity-question-reaudit4-handoff.md"
   },
-  "notes": "Stage 9 FR-001 is repaired at the activity layer: Unit 42 now explicitly assigns the learner their own A001 climate + most/least season + reason transfer rather than only modeling it. Gate A remains valid. Same-context Teaching Quality and Cross-Unit re-audit4 pass. Mandatory fresh Activity Audit 2 re-audit4 is pending; implementation and release remain locked. Prior traceability/release evidence is stale and must be rebuilt downstream."
+  "notes": "FR-001 is repaired at the activity layer and all three re-audit4 activity audits PASS with zero open BLOCKER/MAJOR. Gate B is re-frozen. Current stage is implementation pending; release remains locked. Prior implementation/QA/simulation/traceability/release evidence is stale and must be rebuilt downstream."
 }
