@@ -318,9 +318,9 @@ Order:
 11. listen `u44-typhoon-l1`
    - audioText: **颱風快要來了。**
    - prompt: **What is about to come?**
-   - options: [`a typhoon`, `New Year`, `red leaves`]
-   - answer: **a typhoon**
-   - explanation: The audio says 颱風.
+   - options: [`颱風`, `新年`, `下雨`]
+   - answer: **颱風**
+   - explanation: The audio says 颱風, “typhoon.”
 12. order `u44-typhoon-o1` using `u44-typhoon-coming`
    - tokens: [`颱風`, `快要來了`]
 
@@ -350,10 +350,10 @@ Order:
    - explanation: This is a specific extension of the earlier restricted reduplication system.
 10. listen `u44-wet-l1`
    - audioText: **哪裡都濕濕的。真討厭。**
-   - prompt: **How does the speaker feel about the wet conditions?**
-   - options: [`annoyed`, `pleased with the conditions`, `indifferent to the conditions`]
-   - answer: **annoyed**
-   - explanation: 真討厭 expresses annoyance.
+   - prompt: **Which reaction do you hear?**
+   - options: [`討厭`, `開心`, `舒服`]
+   - answer: **討厭**
+   - explanation: The audio says 真討厭, expressing annoyance.
 11. order `u44-wet-o1` using `u44-wet-source`
     - tokens: [`哪裡都濕濕的`, `真討厭`]
 
@@ -388,10 +388,10 @@ Order:
 10. phrase `u44-caution` — only after 大家, 小心 and 多+Verb retrieval.
 11. listen `u44-news-l1`
    - audioText: **電視新聞說，請大家多小心。**
-   - prompt: **What does the news ask everyone to do?**
-   - options: [`be extra careful`, `bring an umbrella`, `wait until the rain stops`]
-   - answer: **be extra careful**
-   - explanation: 請大家多小心 gives the caution.
+   - prompt: **What caution phrase do you hear?**
+   - options: [`多小心`, `去滑雪`, `想家`]
+   - answer: **多小心**
+   - explanation: The audio says 請大家多小心, asking everyone to be extra careful.
 12. order `u44-news-o1` using `u44-caution`
    - tokens: [`電視新聞說`, `請大家多小心`]
 
@@ -421,7 +421,7 @@ Order:
 7. grammar `u44-even-more`.
 8. select `u44-g4-s1`
    - prompt: **Which means “This year is even colder than last year”?**
-   - options: [`今年比去年更冷。`, `今年跟去年一樣冷。`, `今年沒有去年那麼冷。`]
+   - options: [`今年比去年更冷。`, `今年跟去年一樣冷。`, `今年比較冷。`]
    - answer: **今年比去年更冷。**
    - explanation: 比…更… gives the “even more” comparison.
    - grammarIds: [`u44-even-more`]
@@ -432,11 +432,11 @@ Order:
    - answer: **it presupposes an established/understood baseline**
    - explanation: The source's “even more” value is part of G004.
 11. listen `u44-g4-l1`
-    - audioText: **這次的颱風會比上次的更大。**
-    - prompt: **Which time is the comparison baseline?**
-    - options: [`上次`, `這次`, `明年`]
-    - answer: **上次**
-    - explanation: This typhoon is compared against the previous one.
+   - audioText: **這次的颱風會比上次的更大。**
+   - prompt: **Which comparison chunk do you hear?**
+   - options: [`比上次的更大`, `比去年更大`, `跟上次的一樣大`]
+   - answer: **比上次的更大**
+   - explanation: The audio uses 比上次的更大, “even bigger than last time.”
 12. order `u44-g4-o1` using `u44-comparison-source`
     - tokens: [`這次的颱風`, `會比上次的更大`, `請大家多小心`]
 
@@ -482,11 +482,11 @@ Order:
     - answer: **小心慢走。**
     - explanation: 小心慢走 closes the source interaction.
 14. listen `u44-g5-l1`
-    - audioText: **希望這次的沒有上次的那麼可怕。**
-    - prompt: **What comparison do you hear?**
-    - options: [`this one is not as scary as the last one`, `this one is even scarier than the last one`, `both are equally scary`]
-    - answer: **this one is not as scary as the last one**
-    - explanation: 沒有…那麼… gives the inferior comparison.
+   - audioText: **希望這次的沒有上次的那麼可怕。**
+   - prompt: **Which comparison phrase do you hear?**
+   - options: [`沒有上次的那麼可怕`, `比上次的更可怕`, `跟上次的一樣可怕`]
+   - answer: **沒有上次的那麼可怕**
+   - explanation: The audio says this one is not as scary as the last one.
 15. order `u44-g5-o1` using `u44-not-as-source`
     - tokens: [`希望`, `這次的沒有上次的那麼可怕`]
 
@@ -494,24 +494,23 @@ Order:
 
 ### Listening
 1. `u44-review-l1`
-   - audioText: 颱風快要來了。
-   - prompt: What is about to come?
-   - options: [a typhoon, New Year, autumn leaves]
-   - answer: a typhoon
-   - explanation: 颱風 means typhoon.
+   - audioText: **颱風快要來了。**
+   - prompt: **What is about to come?**
+   - options: [`颱風`, `新年`, `下雨`]
+   - answer: **颱風**
+   - explanation: The audio says 颱風, “typhoon.”
 2. `u44-review-l2`
-   - audioText: 電視新聞說，請大家多小心。
-   - prompt: What is the warning?
-   - options: [everyone should be extra careful, everyone should go skiing, everyone should miss home]
-   - answer: everyone should be extra careful
-   - explanation: 請大家多小心 is the caution.
+   - audioText: **電視新聞說，請大家多小心。**
+   - prompt: **What caution phrase do you hear?**
+   - options: [`多小心`, `去滑雪`, `想家`]
+   - answer: **多小心**
+   - explanation: The audio says 請大家多小心.
 3. `u44-review-l3`
-   - audioText: 希望這次的沒有上次的那麼可怕。
-   - prompt: What does the speaker hope?
-   - options: [this one is not as scary as the last one, this one is even bigger, both are identical]
-   - answer: this one is not as scary as the last one
-   - explanation: 沒有…那麼… expresses lower degree.
-
+   - audioText: **希望這次的沒有上次的那麼可怕。**
+   - prompt: **Which comparison phrase do you hear?**
+   - options: [`沒有上次的那麼可怕`, `比上次的更可怕`, `跟上次的一樣可怕`]
+   - answer: **沒有上次的那麼可怕**
+   - explanation: The audio uses 沒有…那麼… to express lower degree.
 ### Handwriting retrieval
 4. `u44-review-san` — complete 傘
 5. `u44-review-tai` — complete 颱
