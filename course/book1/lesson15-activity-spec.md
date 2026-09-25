@@ -1,17 +1,20 @@
-# Book 1 Lesson 15 — Activity Engineering Specification
+# Book 1 Lesson 15 — Frozen Activity Specification
 
-Status: **STAGE 4 ENGINEERED — ACTIVITY AUDITS PENDING**.
+Status: **GATE B PASS — FROZEN ACTIVITY SPECIFICATION**.
 
 Upstream state:
 - source gate: PASS;
 - dependency gate: PASS;
 - Gate A / curriculum: PASS;
 - frozen curriculum blueprint: `course/book1/lesson15-curriculum-blueprint.md`;
-- Gate B / activities: **PENDING**;
-- implementation: **LOCKED**;
+- Activity Audit 1 — Teaching Quality: **PASS**, 0 open BLOCKER / 0 open MAJOR;
+- Activity Audit 2 — Question Correctness / Adversarial: **PASS**, 0 open BLOCKER / 0 open MAJOR;
+- Activity Audit 3 — Cross-Unit Coherence: **PASS**, 0 open BLOCKER / 0 open MAJOR;
+- Gate B / activities: **PASS / FROZEN**;
+- implementation: **PENDING — READY TO BEGIN FROM THIS FROZEN PACKET**;
 - release: **LOCKED**.
 
-This file and the four unit files below are the complete Stage-4 activity-engineering candidate packet. They are **not frozen** until all three activity audits pass:
+This file and the four unit files below are the frozen Stage-4 activity-specification packet:
 - `course/book1/lesson15-unit45-activity-spec.md`
 - `course/book1/lesson15-unit46-activity-spec.md`
 - `course/book1/lesson15-unit47-activity-spec.md`
