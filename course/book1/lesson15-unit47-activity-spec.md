@@ -1,6 +1,6 @@
 # Lesson 15 Activity Spec — Unit 47
 
-Status: **Stage-4 activity candidate; Gate B pending.**
+Status: **Gate B PASS — frozen activity specification. Implementation pending.**
 
 Frozen Gate-A identity: **Unit 47 — Stomach Trouble and Getting Help**.  
 Six teaching lessons plus review.  
