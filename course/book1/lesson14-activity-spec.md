@@ -133,6 +133,7 @@ Rules:
 - include 想 / 快 / 要 in Unit-43 `reviewVocabulary`;
 - assess the Lesson-14 senses only through Unit-43 teaching/review and Unit-44 cumulative review;
 - Search/Mega continue using their earlier canonical rows under the current product model.
+- **Pinyin Search prerequisite rule:** a canonical vocabulary result is visible only after its owning lesson is completed; its writing-practice action therefore cannot bypass the character's lesson introduction.
 
 ## 5. New-character ownership and first-introduction order
 
@@ -251,11 +252,13 @@ Unit 44 review:
 - G004/G005 independently assessed;
 - all 7 NEW characters handwriting-retrieved;
 - cumulative 比 / 比較 / 更 / 跟…一樣 / 沒有…那麼 mixing;
-- delayed Unit-42 and Unit-43 retrieval;
+- delayed Unit-42 and Unit-43 retrieval, including productive retrieval of 想 “miss”, 新年/父母, 十二月底, and 明年/紅葉;
 - A003/A004 transfer;
-- explicit F/S001–004 capstone checks.
+- explicit F/S001–004 capstone **Chinese construction** checks rather than English outcome-metadata recognition.
 
 ## 11. Gate-B status
+
+**Stage-7 repair status:** Gate B was reopened after learner simulations found prerequisite, conformance, capstone, delayed-retrieval, and Pinyin Search timing defects. This packet is the repaired activity-engineering candidate and must receive fresh audit approval before it can be frozen again.
 
 This packet is the activity-engineering candidate.
 
