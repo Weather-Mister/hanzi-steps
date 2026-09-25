@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "deterministic-qa",
+  "currentStage": "activity-engineering",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,8 +17,8 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pass",
-    "implementation": "pass",
+    "activities": "pending",
+    "implementation": "locked",
     "release": "locked"
   },
   "openFindings": [],
@@ -26,7 +26,7 @@
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
+    "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -56,7 +56,11 @@
     "activityTeachingQualityReaudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
     "activityCrossUnitReaudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
     "activityQuestionReaudit": "course/book1/lesson14-activity-question-reaudit.md",
-    "activityQuestionReauditHandoff": "course/book1/lesson14-activity-question-reaudit-handoff.md"
+    "activityQuestionReauditHandoff": "course/book1/lesson14-activity-question-reaudit-handoff.md",
+    "activityTeachingQualityReaudit2": "course/book1/lesson14-activity-teaching-quality-reaudit2.md",
+    "activityCrossUnitReaudit2": "course/book1/lesson14-activity-cross-unit-reaudit2.md",
+    "activityQuestionReaudit2": null,
+    "activityQuestionReaudit2Handoff": "course/book1/lesson14-activity-question-reaudit2-handoff.md"
   },
-  "notes": "Gate B is re-frozen and the repaired Units 42–44 plus Pinyin Search handwriting gating now conform to the frozen activity packet. Implementation conformance re-audit passes with 0 open BLOCKER/MAJOR. Deterministic QA is pending on the repaired implementation head. Prior learner-simulation reports remain historical failure evidence and must be rerun fresh after deterministic QA passes."
+  "notes": "After Gate B re-freeze, Feature QA run #451 failed the global explain-before-order regression because Unit-44 delayed/capstone order steps referenced newly defined phrase IDs that had never been taught. Gate B is reopened. The activity repair now reuses previously taught Unit-42/43/44 phrase IDs while preserving the same delayed-retrieval and four-outcome goals. Same-context Teaching Quality and Cross-Unit re-audits pass. Mandatory fresh Activity Audit 2 re-audit is pending. Implementation is locked/stale until Gate B re-freezes again."
 }
