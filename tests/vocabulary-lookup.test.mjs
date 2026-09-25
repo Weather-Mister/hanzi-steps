@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {compactPinyin,normalizePinyin,searchPracticeCharacters,searchVocabulary,uniquePracticeCharacters,vocabularyLookup} from '../lib/vocabulary-lookup.ts';
+import {characterPracticeAvailable} from '../lib/curriculum.ts';
 
 test('pinyin normalization accepts tones, numbers, spacing, case, and v for ü',()=>{
  assert.equal(normalizePinyin('  XǏ HuĀN  '),'xi huan');
@@ -68,4 +69,19 @@ test('pinyin search keeps future vocabulary visible but gates writing practice b
  assert.ok(typhoon,'Unit 44 颱風 must remain globally searchable');
  assert.ok(searchPracticeCharacters(typhoon,new Set()).length===0);
  assert.ok(searchPracticeCharacters(typhoon,new Set(['u44-typhoon'])).includes('颱'));
+});
+
+
+test('standalone character practice cannot bypass first teaching from any entry point',()=>{
+ assert.equal(characterPracticeAvailable('葉',new Set()),false);
+ assert.equal(characterPracticeAvailable('葉',new Set(['u43-duration-now'])),false);
+ assert.equal(characterPracticeAvailable('葉',new Set(['u43-next-year'])),true);
+
+ assert.equal(characterPracticeAvailable('更',new Set(['u44-news'])),false);
+ assert.equal(characterPracticeAvailable('更',new Set(['u44-even-more'])),true);
+
+ const leaves=searchVocabulary('hongye',100).find(item=>item.traditional==='紅葉');
+ assert.ok(leaves);
+ assert.ok(!searchPracticeCharacters(leaves,new Set()).includes('葉'));
+ assert.ok(searchPracticeCharacters(leaves,new Set(['u43-next-year'])).includes('葉'));
 });
