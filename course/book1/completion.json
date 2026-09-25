@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "dependency-ledger",
+  "currentStage": "dependency-audit",
   "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -21,12 +21,12 @@
   "openFindings": [],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
-    "dependencyLedger": null,
+    "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
     "frozenBlueprint": null,
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson15-source-audit.md"
   },
-  "notes": "Lesson 15 dual source extraction and A ↔ B reconciliation are complete. The mandatory fresh-context source audit checked the authoritative Lesson 15 range (printed pp. 323–350 / PDF pp. 350–377) against the reconciled source ledger and Stage-1 protocol rules. Initial source-ledger defects in classroom-task preservation, dependency-facing support coverage, and source-detail fidelity were repaired; the final re-audit passes with 0 BLOCKER, 0 MAJOR, 0 MINOR, and 0 unresolved source disagreements. The source gate is PASS and the repository is ready for the dependency-ledger stage. No dependency classifications, dependency ledger, Lesson-15 unit design, learner-facing activities, or implementation have begun."
+  "notes": "Lesson 15 source gate remains PASS. The dependency-builder stage is complete against the actual cumulative Book 1 production curriculum through Unit 44. Every pedagogically relevant source-ledger record has a NEW / KNOWN / REVIEW / EXPANSION / DEFERRED disposition where applicable; the formal 63-character inventory resolves to 30 NEW and 33 KNOWN characters. Builder checks addressed semantic false-known risks (including 幾 and 跟), modal 得 vs complement 得, hidden support vocabulary/characters, prescription support, future dependencies, circularity, and the current Book-2 Unit-1 first-ownership collision for 一直 / 直 by recording a required ownership migration. Builder open BLOCKER = 0 and MAJOR = 0. The dependency gate is still PENDING: the mandatory fresh-context dependency audit has not been performed. No Lesson-15 unit boundaries, curriculum blueprint, learner-facing activity design, or implementation has begun."
 }
