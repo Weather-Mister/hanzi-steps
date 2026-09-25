@@ -1,21 +1,23 @@
-# Book 1 Lesson 14 — Deterministic QA Final Re-run after prerequisite repairs
+# Book 1 Lesson 14 — Deterministic QA Re-run after FR-001 repair
 
-Final authored implementation head tested: `6a94446ce76eeddc8086e56a9d3002baa2fdefa1`
+Final authored implementation head tested: `f0fed1858b2205752164b709e077b91c71a501d0`
 
 Generated-artifact follow-up commit:
-- `e01073f25f2da06917b9c265e9c84d860a36ea60`
+- `83911f87205c9c86284181ff4a92849ad09c71a1`
 - message: `Generate curriculum artifacts`
 - generated-only change: `course/registry.generated.ts`
 
 GitHub Actions:
 - workflow: **Feature QA**
-- run: **#478**
-- run id: `36126675182`
+- run: **#496**
+- run id: `36133132593`
 - conclusion: **SUCCESS**
 
-## Required checks
+The automatic workflow on the generated-only follow-up head is `action_required`; this is the expected recursion/permission behavior for the bot-generated artifact commit and is not a failing test run.
 
-All deterministic checks succeeded on the final authored implementation head:
+## Required deterministic checks
+
+All checks on the final authored implementation head passed:
 
 1. `npm ci` — PASS
 2. Traditional stroke-source hydration — PASS
@@ -26,24 +28,23 @@ All deterministic checks succeeded on the final authored implementation head:
 7. full regression suite — PASS
 8. `npx tsc --noEmit` — PASS
 9. `npm run build:pages` — PASS
-10. generated curriculum artifacts committed successfully
+10. generated curriculum artifacts committed — PASS
 
-## Final prerequisite repairs verified by QA
+## FR-001 implementation under test
 
-### Unit 43 future-vocabulary repair
-`u43-a002-s2` no longer contains future-owned `明年`. Its third distractor is the already-available `你在臺灣住了半年嗎？`.
+The learner-visible change is limited to two Unit-42 phrase notes:
+- `u42-home-country-model.note`
+- `u42-season-reason.note`
 
-### Global standalone handwriting gate
-`characterPracticeAvailable(char, completed)` is now the central first-teaching invariant.
+The repaired first note explicitly requires the learner to:
+- describe their own home-country/place climate in Chinese;
+- identify their own most- and least-liked seasons;
+- give their own reason with 因為…所以…;
+- say or write the response instead of merely copying the fixed model.
 
-Regression coverage verifies:
-- 葉 is unavailable for standalone practice before `u43-next-year`;
-- 葉 unlocks after `u43-next-year`;
-- 更 is unavailable before `u44-even-more`;
-- 更 unlocks after `u44-even-more`;
-- Pinyin Search keeps canonical vocabulary globally visible while handwriting actions remain gated.
+The second note reinforces that the fixed spring sentence is only a scaffold.
 
-The application-level `start()` path enforces the same rule for every `practice-<character>` lesson, including character-library/detail shortcuts.
+No lesson topology, assessed question payload, review count, ownership, grammar, Search/Mega behavior, or handwriting timing changed.
 
 ## Findings
 
@@ -53,6 +54,6 @@ The application-level `start()` path enforces the same rule for every `practice-
 
 # Result: PASS
 
-Stage 6 deterministic QA passes on the final prerequisite-repaired implementation.
+Stage 6 deterministic QA passes after the FR-001 implementation repair.
 
-Because learner-facing behavior changed after the previous final learner-simulation rerun, Stage 7 must be repeated on this final code before traceability/release.
+Because the repair changes learner-visible instructional behavior, Stage 7 must be rerun in three independent fresh contexts before traceability/release evidence can be rebuilt.
