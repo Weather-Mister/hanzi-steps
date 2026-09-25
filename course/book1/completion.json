@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "source-extraction",
-  "stageStatus": "in-progress",
+  "currentStage": "source-audit",
+  "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": null,
@@ -20,12 +20,12 @@
   },
   "openFindings": [],
   "artifacts": {
-    "sourceLedger": null,
+    "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": null,
     "frozenBlueprint": null,
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null
   },
-  "notes": "Lesson 15 source extraction is in progress on draft PR #69. Preflight passed and Source Extraction A is persisted. Source Extraction B is pending in a fresh context."
+  "notes": "Lesson 15 dual source extraction and A ↔ B reconciliation are complete on draft PR #69. The reconciled source ledger is ready for the mandatory fresh-context source audit. Source gate remains pending; all downstream gates remain locked."
 }
