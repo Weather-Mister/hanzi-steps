@@ -107,22 +107,22 @@ Source-boundary records **B1L15-SRC001–B1L15-SRC009** are bibliographic metada
 | ID | Disposition | Required prerequisites | Dependency decision |
 |---|---|---|---|
 | **B1L15-G001** Non-committal question-word declaratives under negation | **EXPANSION** | ordinary question words; `u40-questionword-totality`; `u39-bu-vs-mei`; B1L15-V026 expansion where 幾 is used | Unit 40 teaches question-word totality with 都/也. Lesson 15 adds a distinct indefinite/non-specific **negative declarative without requiring 都/也**. Preserve the source rule that these statements are always negative; do not flatten it into Unit-40 totality. |
-| **B1L15-G002** Introductory 把 disposal | **NEW** | B1L15-V017 把; B1L15-V035 別 for the imperative-negation branch; `u39-verbal-le`; `u39-bu-vs-mei`; `u41-shibushi` for the source confirmation-question branch; known definiteness/modifier patterns; known outward verbs as examples | No prior 把 ownership. Teach the source’s definite-object bias, bare outward-transitive action-verb restriction, rejection of inward verbs, sentence-final 了 pattern, 沒/別-before-把 negation, and source question forms. |
+| **B1L15-G002** Introductory 把 disposal | **NEW** | B1L15-V017 把; B1L15-V035 別 for the imperative-negation branch; `u39-verbal-le`; `u39-bu-vs-mei`; `u31-sentential-le`; `u41-shibushi` for the source confirmation-question branch; known definiteness/modifier patterns; known outward verbs as examples | No prior 把 ownership. Teach the source’s definite-object bias, bare outward-transitive action-verb restriction, rejection of inward verbs, sentence-final 了 pattern, 沒/別-before-把 negation, and source question forms. The source negative examples keep a **sentence-final** 了; explicitly contrast that with Unit 39's rule that negating a **verbal-了 completed action** removes verbal 了. |
 | **B1L15-G003** V了…就… | **EXPANSION** | `u39-verbal-le`; `u38-yi-jiu`; `u36-yihou-after`; `u41-shibushi` / 嗎 for source questions | Prior 一…就… and completed-action 了 are known separately. Lesson 15 integrates completion + immediate succession and explicitly contrasts it with Lesson-13 一…就…. A-not-A remains unavailable here. |
 | **B1L15-G004** 一點 quantity/degree system | **EXPANSION** | Unit-39 `一點 + NP`; Unit-16 `有一點 + Vs`; `u40-more-less-verb` | Quantity 一點 and pre-state 有一點 are known. Lesson 15 adds/completes **Vs + 一點** as comparative degree, the contrast with 有（一）點 + Vs, 一點點, and their coordinated drill system. |
 | **B1L15-G005** Comparing actions with 得 | **EXPANSION** | Unit-16 performance 得 / object-repeat pattern; `u25-bi-comparison`; `u25-bi-negation`; `u41-shibushi` | The learner knows 得 complements and 比 comparisons separately. Lesson 15 combines them into action comparison, including Pattern 2 verb repetition, 不比 negation placement, and 嗎/是不是 questions. |
 | **B1L15-G006** Comparison degree complements 一點 / 得多 / 多了 | **EXPANSION** | `u25-bi-comparison`; B1L15-G004 for comparative 一點; `u41-shibushi` | Basic comparison is known. Lesson 15 adds the source’s postverbal degree-complement system and the contrast among slight and large differences. |
-| **B1L15-G007** Separable verbs and insertion behavior | **EXPANSION** | `u28-separable-duration`; `u39-verbal-le`; known prior separable-verb vocabulary plus new Lesson-15 separable verbs | Unit 28 already teaches duration insertion into a separable verb. Lesson 15 explicitly formalizes the category and adds verbal-了 insertion and object/recipient insertion. Do not re-own the already-taught duration rule as wholly NEW. |
+| **B1L15-G007** Separable verbs and insertion behavior | **EXPANSION** | `u28-separable-duration`; `u39-verbal-le`; known prior separable-verb vocabulary; B1L15-V011 生病; B1L15-V020 睡覺; B1L15-V029 看病 where productive separation is used; B1L15-V043 回家 for the source example 回了家 | Unit 28 already teaches duration insertion into a separable verb. Lesson 15 explicitly formalizes the category and adds verbal-了 insertion and object/recipient insertion. Do not re-own the already-taught duration rule as wholly NEW. New Lesson-15 forms must be introduced lexically before they are productively split. |
 
 ## Required intra-Lesson-15 edges
 
-- **B1L15-V017 + B1L15-V035 + prior `u39-verbal-le` / `u39-bu-vs-mei` / `u41-shibushi` → B1L15-G002**.
+- **B1L15-V017 + B1L15-V035 + prior `u39-verbal-le` / `u39-bu-vs-mei` / `u31-sentential-le` / `u41-shibushi` → B1L15-G002**.
 - **B1L15-G004 → B1L15-G006** for the comparative `Vs + 一點` branch.
 - **B1L15-V026 + B1L15-V027 → B1L15-X008** (`好幾次`).
 - **B1L15-V044 + prior `u27-yinggai` → B1L15-P004 / F003**.
 - **B1L15-G005 + B1L15-G006 → B1L15-A001**.
 - **B1L15-G002 → B1L15-A004**.
-- **B1L15-G007** must precede productive assessment of new separable-verb insertion beyond the already-known duration pattern.
+- **B1L15-V011 / V020 / V029 / V043 → B1L15-G007** when those Lesson-15 forms are productively separated; **B1L15-G007** must precede productive assessment of their new insertion behavior beyond the already-known duration pattern.
 
 No formal Lesson-15 grammar target requires a future Book-2 rule.
 
@@ -288,7 +288,7 @@ The cumulative Book-1 character index through Unit 44 already owns:
 
 Disposition for each: **KNOWN**.
 
-Character-level KNOWN does **not** imply the Lesson-15 lexical sense is known. In particular, 差, 油, 別, 包, 頭, 水 and other component characters still participate in NEW formal vocabulary above.
+Character-level KNOWN does **not** imply the Lesson-15 lexical sense, pronunciation, or word is known. In particular, 差, 油, 別, 包, 頭, 水 and other component characters still participate in NEW formal vocabulary above. Two pronunciation traps are explicit: **B1L15-V008 差 chā** must be taught despite prior glyph familiarity, and **B1L15-V020 睡覺 shuìjiào** introduces the 覺 reading **jiào**, distinct from prior 覺得 **juéde**.
 
 Counts: **30 NEW + 33 KNOWN = 63 / 63**.
 
@@ -361,9 +361,12 @@ Dialogue-II:
 - D1T02 depends on V002–V008 and REVIEW X003.
 - D1T03–D1T04 depend on X004 symptom-duration integration.
 - D1T05 depends on V009/V010 + REVIEW X005.
-- D1T06–D1T07 depend on health vocabulary and G001 non-committal interpretation where applicable.
-- D1T08 depends on **NEW support modal 得** (X006), not prior complement 得.
-- D1T11 depends on G002 把, EXPANSION X007, and new health vocabulary.
+- D1T06 depends on V011 生病 plus prior 的-nominalization/identity support; its literal split must not be treated as free evidence that all separable-verb insertions are already known.
+- D1T07 depends on V012/V013 + G001 for 沒有什麼關係.
+- D1T08 depends on V014 藥 + **NEW support modal 得** (X006), not prior complement 得.
+- D1T09 depends on V014/V015/V016 before the pharmacy instruction is used productively.
+- D1T10 depends on V011 生病 plus prior 會-likelihood/question support.
+- D1T11 depends on V014/V018/V019/V020/V021 + G002 把 + EXPANSION X007.
 - D1T12 depends on NEW-support 您 under P007.
 - D2T01 depends on V022/V023/V040 + P001 for the condition inquiry and facial-condition description.
 - D2T02 depends on V024/V025 + G003 + NEW X008.
@@ -441,12 +444,12 @@ The self-assessment restates outcomes and creates no separate teaching ownership
 Existing production nodes:
 
 - ordinary question words + `u40-questionword-totality` + `u39-bu-vs-mei` → **B1L15-G001**
-- B1L15-V017 + B1L15-V035 + `u39-verbal-le` + `u39-bu-vs-mei` + `u41-shibushi` → **B1L15-G002**
+- B1L15-V017 + B1L15-V035 + `u39-verbal-le` + `u39-bu-vs-mei` + `u31-sentential-le` + `u41-shibushi` → **B1L15-G002**
 - `u39-verbal-le` + `u38-yi-jiu` + `u36-yihou-after` → **B1L15-G003**
 - Unit-39 一點 + Unit-16 有一點 + `u40-more-less-verb` → **B1L15-G004**
 - Unit-16 performance 得 + `u25-bi-comparison` / `u25-bi-negation` → **B1L15-G005**
 - `u25-bi-comparison` + **B1L15-G004** → **B1L15-G006**
-- `u28-separable-duration` + `u39-verbal-le` → **B1L15-G007**
+- `u28-separable-duration` + `u39-verbal-le` + B1L15-V011/V020/V029/V043 where those forms are productively split → **B1L15-G007**
 - Unit-10 好不好 agreement → **B1L15-P003 / X009**
 - `u27-yinggai` + B1L15-V044 → **B1L15-P004 / F003**
 - `u14-capability` → REVIEW **B1L15-X012**
