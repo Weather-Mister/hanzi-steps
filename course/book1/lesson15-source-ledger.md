@@ -140,7 +140,7 @@ Source: printed pp. 330–331 / PDF pp. 357–358.
 
 | ID | Item | Pinyin | Source class | Source gloss |
 |---|---|---|---|---|
-| **B1L15-V022** | 臉色 | liǎnsè | N | a person’s facial color/complexion |
+| **B1L15-V022** | 臉色 | liǎnsè | N | a person’s “color” (said of the face when healthy or sick, pleased or angry, etc.) |
 | **B1L15-V023** | 難看 | nánkàn | Vs | not to look good |
 | **B1L15-V024** | 肚子 | dùzi | N | stomach; abdomen |
 | **B1L15-V025** | 吐 | tù | V | to throw up; to vomit |
@@ -471,14 +471,14 @@ These items occur in dialogues, grammar examples/drills, classroom tasks, or act
 | ID | Support item/context | Source anchor |
 |---|---|---|
 | **B1L15-X018** | 房租 | G001/G006/Activity I |
-| **B1L15-X019** | 週末 / 打算 / 便利商店 | G001 drill |
-| **B1L15-X020** | 牛肉麵 / 豬腳麵線 / 湯 / 房東 / 賣 / 功課 / 寫 / 早餐 / 手機 | G002 |
-| **B1L15-X021** | 放假 / 旅行 / 臺北101 / 熱湯 / 臭豆腐 | G003 |
-| **B1L15-X022** | 訂蛋糕 / 裝有線電視 / 付學費 / 紅葉 | G003 drill |
-| **B1L15-X023** | 年輕 / 晚 / 辣 / 累 | G004 |
-| **B1L15-X024** | 做飯 / 走路 / 念書 / 打網球 | G005 |
-| **B1L15-X025** | 捷運站 / 公車站 / 高鐵票 / 火車票 | G006 |
-| **B1L15-X026** | 唱歌 / 上班 / 上網 / 上課 / 看書 / 滑雪 / 游泳 / 照相 / 吃飯 / 見面 | G007 |
+| **B1L15-X019** | 房租 / 一個月 / 週末快到了 / 打算 / 去…玩 / 在看什麼 / 臺灣有很多朋友 / 便利商店 / 買…東西 | G001 drill |
+| **B1L15-X020** | 牛肉麵 / 豬腳麵線 / 湯 / 房東 / 賣 / 書 / 功課 / 寫 / 早餐 / 手機 / 咖啡 / 小籠包 / 機車 / 老闆 | G002 examples / questions / picture drill |
+| **B1L15-X021** | 放假 / 旅行 / 臺北101 / 熱湯 / 臭豆腐 / 見面 / 咖啡 / 下課 / KTV / 紐約 / 兩個星期 / 回來 | G003 examples / questions |
+| **B1L15-X022** | 買禮物 / 訂蛋糕 / 足球比賽 / 裝有線電視 / 日本旅行 / 放假 / 開始上課 / 付學費 / 回來 / 看紅葉 | G003 drill |
+| **B1L15-X023** | 咖啡 / 錢 / 麵線 / 超市 / 雨 / 年輕 / 早 / 晚 / 辣 / 累 / 湯 / 籃球比賽 / 網球比賽 / 工作 / 十個鐘頭 / 房租 / 學費 / 衣服 / 臭豆腐 | G004 examples / drills |
+| **B1L15-X024** | 做飯 / 走路 / 念書 / 打網球 / 豬腳麵線 / 牛肉麵 / 花…鐘頭 / 咖啡 / 烏龍茶 / 下雪 / KTV / 捷運站 / 從…到… / 分鐘 | G005 examples / drill |
+| **B1L15-X025** | 捷運站 / 公車站 / 高鐵票 / 火車票 / 西瓜 / 芒果 / 安同 / 田中 / 便利商店 / 超市 / 玩得開心 | G006 examples / drill |
+| **B1L15-X026** | 唱歌 / 上班 / 上網 / 上課 / 看書 / 滑雪 / 游泳 / 照相 / 吃飯 / 見面; 每天 / 八個鐘頭 / 新年 / 放幾天假 / 三小時 / 很久 | G007 examples / drill |
 | **B1L15-X027** | 比 + state/action comparison | G004–G006 |
 | **B1L15-X028** | basic 得-complement syntax | D2/G005 |
 | **B1L15-X029** | 是不是 / 嗎 question frames | G002/G003/G005/G006 |
@@ -489,14 +489,14 @@ These items occur in dialogues, grammar examples/drills, classroom tasks, or act
 
 | ID | Support item/context | Source anchor |
 |---|---|---|
-| **B1L15-X032** | 田中 / 月美 / 李開明 / 陳文同 / 王先生 | Activities I–II |
+| **B1L15-X032** | 田中 / 月美 / 李開明 / 陳文同 / 王先生; address forms 老李 / 小陳 | Activities I–II |
 | **B1L15-X033** | 臺南 | Activity I |
 | **B1L15-X034** | 計程車 / 火車 / 機車 / 高鐵 | Activity I |
-| **B1L15-X035** | 碗; 一碗半 / 兩碗半 and related fractional-quantity expressions | Activity I |
+| **B1L15-X035** | 碗; 兩碗 / 一碗半 / 兩碗半 / 半碗 and related fractional-quantity expressions | Activity I |
 | **B1L15-X036** | 健康診所 | Activity III prescription visual |
-| **B1L15-X037** | 一日…次 / …日份 | Activity III prescription visual |
-| **B1L15-X038** | 飯前 / 飯後 | Activity III prescription visual |
-| **B1L15-X039** | 分鐘 / 30分鐘 | Activity III prescription visual |
+| **B1L15-X037** | 一日4次 / 3日份 | Activity III prescription visual |
+| **B1L15-X038** | 飯前 / 飯後; the source prescription marks 飯後 | Activity III prescription visual |
+| **B1L15-X039** | 分鐘 / 飯後30分鐘 | Activity III prescription visual |
 | **B1L15-X040** | 加油 / 一定要 / 沒有問題 | Activity IV |
 | **B1L15-X041** | 要是…就… | Activity IV |
 | **B1L15-X042** | 小籠包 / 西瓜 / 打籃球 | Activity IV |
@@ -527,11 +527,18 @@ Goal:
 
 Required source task content:
 - compare 田中、如玉、安同、月美;
-- dinner amount in bowls;
-- rent;
-- transport mode and travel duration to 臺南;
+- preserve the source comparison table:
+
+| Student | 晚飯吃幾碗 | 房租 | 怎麼去臺南玩 | Travel duration |
+|---|---:|---:|---|---|
+| 田中 | 兩碗 | NT$18,000 | 計程車 | 三個半小時 |
+| 如玉 | 一碗半 | NT$6,500 | 火車 | 四個半小時 |
+| 安同 | 兩碗半 | NT$15,000 | 機車 | 八個小時 |
+| 月美 | 半碗 | NT$6,200 | 高鐵 | 一個小時四十分鐘 |
+
+- task families are **吃晚飯**, **房租**, and **怎麼去臺南玩**;
 - action comparisons with 得;
-- varying degree comparison using the lesson’s comparison toolkit.
+- varying-degree comparison using the lesson’s comparison toolkit.
 
 ### B1L15-A002 — Who Is Taking Care of Me?
 
@@ -542,11 +549,13 @@ Goal:
 - give suggestions to somebody who is sick.
 
 Task 1:
-- 你怎麼了？
-- symptom statement;
-- 你應該／最好…;
+- model: 你怎麼了？ / 我喉嚨發炎。 / 你應該／最好… / 好的，謝謝你的關心。;
 - source suggestion prompts: 看病、多休息、早一點睡覺、多喝水;
-- explicit **同意建議** and **拒絕建議** response slots.
+- three picture-driven role prompts for 李開明、陳文同、王先生;
+- address forms in the printed dialogue shells: **老李** and **小陳**;
+- first two prompts are explicitly labeled **同意建議** and end with **好的。** / **謝謝你。**;
+- the third is explicitly labeled **拒絕建議** and begins its response **謝謝你的關心。** followed by an open completion slot;
+- the symptom and advice content for those three prompts is supplied by the source illustrations and remains a required visual input rather than fixed printed wording.
 
 Task 2:
 - role-play as patient and doctor;
@@ -568,10 +577,12 @@ Required questions:
 
 Prescription-image support to preserve for dependency checking:
 - 健康診所;
-- 一日…次;
-- …日份;
-- 飯前 / 飯後;
-- 30分鐘.
+- **一日4次**;
+- **3日份**;
+- 飯前 / 飯後, with **飯後** marked in the source visual;
+- **飯後30分鐘**.
+
+The visual therefore supports: four doses per day, a three-day supply, medication taken 30 minutes after meals, and a 12-packet total for the three-day course (4 × 3) when answering the third source question.
 
 ### B1L15-A004 — Use 把 Construction
 
@@ -580,16 +591,19 @@ Source: printed p. 348 / PDF p. 375.
 Goal:
 - use the disposal construction 把.
 
-Picture-dialogue contexts:
-- 50 個小籠包;
-- today’s homework before permission to play basketball;
-- asking who acted on/ate the speaker’s watermelon.
+Picture-dialogue completion frames and required 把 outcomes:
+1. **加油！我們今天一定要把這50個小籠包吃了。** / 好的，沒有問題。
+2. **要是你把今天的功課寫了，就可以去打籃球。** / 太好了。
+3. **誰把我的西瓜吃了？** / 對不起，我不知道是你的。
+
+The printed page leaves 把 and the action verb as picture-supported completion material; the source pictures cue **吃 / 寫 / 吃** respectively. Preserve both the frame and the required disposal-construction outcome.
 
 Support language includes:
 - 加油;
 - 一定要;
 - 要是…就…;
 - 沒有問題;
+- 太好了;
 - 對不起;
 - 不知道.
 
@@ -612,11 +626,11 @@ Task:
 Source: printed p. 349 / PDF p. 376.
 
 The reading describes reasons people in Taiwan wear surgical masks:
-- illness prevention / reducing transmission during cold season;
-- crowded public buses / MRT;
+- as a preventative measure; when the seasons are changing, the source says colds are easily caught and transmitted via the respiratory system, and masks on crowded public buses / MRT can help prevent transmission;
 - warmth and air-pollution filtering while riding scooters in winter;
-- restaurant food-service hygiene;
-- hospital infection prevention.
+- restaurant food-service hygiene by keeping particles from unintentionally landing in food;
+- hospital workers and patients using masks to prevent viral infections;
+- helping people stay healthy and helping prevent transmission of diseases.
 
 The page includes photographs of mask use in an MRT station and in a hospital.
 
