@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "final-release-audit",
+  "currentStage": "gate-c",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -28,7 +28,7 @@
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
     "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
     "traceability": "course/book1/lesson14-traceability.md",
-    "releaseReport": null,
+    "releaseReport": "course/book1/lesson14-final-release-audit-rerun.md",
     "sourceAudit": "course/book1/lesson14-source-audit.md",
     "dependencyAudit": "course/book1/lesson14-dependency-audit.md",
     "curriculumBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
@@ -75,5 +75,5 @@
     "learnerSimulationRerun3Handoff": "course/book1/lesson14-learner-simulation-rerun3-handoff.md",
     "finalReleaseAuditRerunHandoff": "course/book1/lesson14-final-release-audit-rerun-handoff.md"
   },
-  "notes": "FR-001 final-rerun-3 learner simulations A/B/C all PASS with zero open BLOCKER/MAJOR. No learner-facing code changed after the simulated baseline. Stage 8 traceability is rebuilt and PASS with 0 unresolved source items / 0 orphan production concepts. A new mandatory fresh-context Stage 9 hostile release audit rerun is pending. Release remains locked."
+  "notes": "FR-001 final-rerun-3 learner simulations A/B/C all PASS with zero open BLOCKER/MAJOR. No learner-facing code changed after the simulated baseline. Stage 8 traceability is rebuilt and PASS with 0 unresolved source items / 0 orphan production concepts. A new mandatory fresh-context Stage 9 hostile release audit rerun is pending. Release remains locked. Fresh Stage 9 hostile release audit rerun PASS: zero open BLOCKER/MAJOR/MINOR; report persisted; advanced to Gate C pending; release remains locked."
 }
