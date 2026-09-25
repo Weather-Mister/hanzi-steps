@@ -412,7 +412,7 @@ const unit:UnitData = {
         {
           "id": "u47-g3-p1",
           "type": "phrase",
-          "phrase": "u47-d2t02-full"
+          "phrase": "u47-g3-order"
         },
         {
           "id": "u47-g3-s5",
@@ -936,7 +936,7 @@ const unit:UnitData = {
         {
           "id": "u47-a005-o1",
           "type": "order",
-          "phrase": "u47-a005-order",
+          "phrase": "u47-a005-scenario",
           "tokens": [
             "哪裡不舒服",
             "有沒有發燒"
@@ -1212,7 +1212,10 @@ const unit:UnitData = {
             "他吃藥不吃藥就睡覺。"
           ],
           "answer": "他吃了藥就睡覺。",
-          "explanation": "G003 links a completed first event to an immediate next event."
+          "explanation": "G003 links a completed first event to an immediate next event.",
+          "grammarIds": [
+            "u47-vle-jiu"
+          ]
         },
         {
           "id": "u47-review-g3contrast",
@@ -1898,12 +1901,13 @@ const unit:UnitData = {
       ]
     },
     "u47-a005-scenario": {
-      "text": "如玉 (Rúyù) 生病在家。請打電話關心她，問四個問題：哪裡不舒服？有沒有發燒？喉嚨怎麼樣？胃口怎麼樣？",
-      "pinyin": "Rúyù shēngbìng zài jiā. Qǐng dǎ diànhuà guānxīn tā.",
-      "meaning": "Source scenario: Rúyù is sick at home. Call and ask four questions about her condition.",
-      "note": "玉 is contextual/non-assessed.",
+      "text": "哪裡不舒服？有沒有發燒？",
+      "pinyin": "Nǎlǐ bù shūfu? Yǒu méiyǒu fāshāo?",
+      "meaning": "Rúyù is sick at home. Call and ask four source questions: 哪裡不舒服？有沒有發燒？喉嚨怎麼樣？胃口怎麼樣？",
+      "note": "Source Activity V scenario; the contextual proper name is romanized so its untaught name glyph is not exposed.",
       "tokens": [
-        "如玉 (Rúyù) 生病在家。請打電話關心她，問四個問題：哪裡不舒服？有沒有發燒？喉嚨怎麼樣？胃口怎麼樣？"
+        "哪裡不舒服",
+        "有沒有發燒"
       ]
     },
     "u47-a005-order": {

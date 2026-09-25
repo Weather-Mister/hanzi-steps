@@ -190,7 +190,7 @@ const unit:UnitData = {
         {
           "id": "u48-advice-review",
           "type": "phrase",
-          "phrase": "u48-d2t09"
+          "phrase": "u48-cap2"
         },
         {
           "id": "u48-advice-p1",
@@ -332,7 +332,7 @@ const unit:UnitData = {
         {
           "id": "u48-g4-review",
           "type": "phrase",
-          "phrase": "u48-improvement-scale"
+          "phrase": "u48-cap3"
         },
         {
           "id": "u48-a-little-degree",
@@ -1211,7 +1211,10 @@ const unit:UnitData = {
             "一點好"
           ],
           "answer": "好一點",
-          "explanation": "Vs + 一點 is comparative degree."
+          "explanation": "Vs + 一點 is comparative degree.",
+          "grammarIds": [
+            "u48-a-little-degree"
+          ]
         },
         {
           "id": "u48-review-g4-2",
@@ -1247,7 +1250,10 @@ const unit:UnitData = {
             "他得走路比我快。"
           ],
           "answer": "他走路走得比我快。",
-          "explanation": "Verb repetition + 得 + comparative state."
+          "explanation": "Verb repetition + 得 + comparative state.",
+          "grammarIds": [
+            "u48-action-comparison-de"
+          ]
         },
         {
           "id": "u48-review-g5-2",
@@ -1283,7 +1289,10 @@ const unit:UnitData = {
             "大多了"
           ],
           "answer": "大一點",
-          "explanation": "一點 is the small-difference form."
+          "explanation": "一點 is the small-difference form.",
+          "grammarIds": [
+            "u48-comparison-degree"
+          ]
         },
         {
           "id": "u48-review-g6-2",
@@ -1319,7 +1328,10 @@ const unit:UnitData = {
             "把家回了"
           ],
           "answer": "回了家",
-          "explanation": "G007 separates V and N."
+          "explanation": "G007 separates V and N.",
+          "grammarIds": [
+            "u48-separable-verbs"
+          ]
         },
         {
           "id": "u48-review-g7-2",
@@ -1660,7 +1672,7 @@ const unit:UnitData = {
         {
           "id": "u48-review-cap1",
           "type": "order",
-          "phrase": "u48-cap1",
+          "phrase": "u45-health-inquiry",
           "tokens": [
             "哪裡",
             "不舒服"
@@ -2098,39 +2110,41 @@ const unit:UnitData = {
       ]
     },
     "u48-a002-visual-1": {
-      "text": "來源圖一：接受建議（回應以「好的。」收束）",
-      "pinyin": "Yuánliào tú yī",
-      "meaning": "Source illustration 1: accept the suggestion; close with 好的.",
-      "note": "Schema representation preserves the frozen role shell and source-illustration identity; the source image itself is not representable in UnitData.",
+      "text": "Source illustration 1 — 好的。",
+      "pinyin": "Hǎo de.",
+      "meaning": "Source illustration 1: accept the suggestion; close with 好的。",
+      "note": "Exact source-illustration identity and response role are preserved textually because UnitData has no image field.",
       "tokens": [
-        "來源圖一：接受建議（回應以「好的。」收束）"
+        "好的"
       ]
     },
     "u48-a002-visual-2": {
-      "text": "來源圖二：接受建議（回應以「謝謝你。」收束）",
-      "pinyin": "Yuánliào tú èr",
-      "meaning": "Source illustration 2: accept the suggestion; close with 謝謝你.",
-      "note": "Schema representation preserves the frozen role shell and source-illustration identity; the source image itself is not representable in UnitData.",
+      "text": "Source illustration 2 — 謝謝你。",
+      "pinyin": "Xièxie nǐ.",
+      "meaning": "Source illustration 2: accept the suggestion; close with 謝謝你。",
+      "note": "Exact source-illustration identity and response role are preserved textually because UnitData has no image field.",
       "tokens": [
-        "來源圖二：接受建議（回應以「謝謝你。」收束）"
+        "謝謝你"
       ]
     },
     "u48-a002-visual-3": {
-      "text": "來源圖三：禮貌拒絕建議（先說「謝謝你的關心。」）",
-      "pinyin": "Yuánliào tú sān",
-      "meaning": "Source illustration 3: politely reject the suggestion; begin with 謝謝你的關心.",
-      "note": "Schema representation preserves the frozen role shell and source-illustration identity; deferred 拒/絕 are not assessed.",
+      "text": "Source illustration 3 — 謝謝你的關心。不用了。",
+      "pinyin": "Xièxie nǐ de guānxīn. Búyòng le.",
+      "meaning": "Source illustration 3: politely reject the suggestion after thanking the other person for their concern.",
+      "note": "Exact source-illustration identity and rejection role are preserved textually; deferred rejection glyphs are not exposed.",
       "tokens": [
-        "來源圖三：禮貌拒絕建議（先說「謝謝你的關心。」）"
+        "謝謝你的關心",
+        "不用了"
       ]
     },
     "u48-a002-task2": {
-      "text": "昨晚吃了晚飯以後吐了，肚子很不舒服。病人描述症狀；醫生給建議。",
+      "text": "昨晚吃了晚飯以後吐了，肚子很不舒服。",
       "pinyin": "Zuówǎn chī le wǎnfàn yǐhòu tù le, dùzi hěn bù shūfu.",
-      "meaning": "After dinner last night the patient vomited and had stomach discomfort; the doctor gives advice.",
+      "meaning": "After dinner last night the patient vomited and had stomach discomfort; the patient describes symptoms and the doctor gives advice.",
       "note": "A002 Task 2 fixed scenario.",
       "tokens": [
-        "昨晚吃了晚飯以後吐了，肚子很不舒服。病人描述症狀；醫生給建議。"
+        "昨晚吃了晚飯以後吐了",
+        "肚子很不舒服"
       ]
     },
     "u48-fraction-support": {
@@ -2143,39 +2157,49 @@ const unit:UnitData = {
       ]
     },
     "u48-a001-table": {
-      "text": "學生一（田中 Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（如玉 Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（安同 Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（月美 Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘",
-      "pinyin": "Xuéshēng yī...",
+      "text": "學生一（Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘",
+      "pinyin": "Xuéshēng yī... / xuéshēng èr... / xuéshēng sān... / xuéshēng sì...",
       "meaning": "Exact A001 source data for dinner bowls, rent, travel to 臺南, and travel duration.",
-      "note": "臺南 is preserved and glossed contextually; name glyphs are non-assessed.",
+      "note": "Source names are romanized so contextual untaught name glyphs are not exposed; 臺南 remains source context.",
       "tokens": [
-        "學生一（田中 Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（如玉 Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（安同 Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（月美 Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘"
+        "學生一",
+        "兩碗",
+        "學生二",
+        "一碗半",
+        "學生三",
+        "兩碗半",
+        "學生四",
+        "半碗"
       ]
     },
     "u48-prescription-support": {
-      "text": "一日4次／3日份／飯前／飯後／飯後30分鐘",
-      "pinyin": "yí rì sì cì / sān rì fèn / fànqián / fànhòu / fànhòu sānshí fēnzhōng",
+      "text": "4 times/day／3-day supply／飯前／飯後／飯後30分鐘",
+      "pinyin": "fànqián / fànhòu / fànhòu sānshí fēnzhōng",
       "meaning": "four times per day / three-day supply / before meals / after meals / 30 minutes after meals",
-      "note": "份 is support-only; source marks 飯後.",
+      "note": "The source supply-count glyph is support-only and withheld from learner-facing Chinese.",
       "tokens": [
-        "一日4次／3日份／飯前／飯後／飯後30分鐘"
+        "飯前",
+        "飯後",
+        "飯後30分鐘"
       ]
     },
     "u48-prescription-visual": {
-      "text": "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘",
-      "pinyin": "Jiànkāng zhěnsuǒ",
+      "text": "Health Clinic｜4 times/day｜3-day supply｜飯後｜飯後30分鐘",
+      "pinyin": "fànhòu / fànhòu sānshí fēnzhōng",
       "meaning": "Source prescription data: four times per day, three-day supply, after meals, 30 minutes after meals.",
-      "note": "健康診所 is a glossed, non-assessed header; 診 is deferred.",
+      "note": "The source clinic-header and supply-count glyphs are deferred; exact medication data are preserved.",
       "tokens": [
-        "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘"
+        "飯後",
+        "飯後30分鐘"
       ]
     },
     "u48-culture-source-era": {
-      "text": "口罩使用：課本時代背景",
+      "text": "Mask use — textbook-era source context",
       "pinyin": "kǒuzhào shǐyòng",
       "meaning": "Wearing surgical masks — textbook-era source context",
-      "note": "The source reading reports contexts including cold-season transmission prevention, crowded buses/MRT, scooter warmth/air-pollution filtering, food-service hygiene, and hospitals. This is source-era content, not current 2026 medical or policy guidance.",
+      "note": "Source reading contexts include cold-season transmission prevention, crowded buses/MRT, scooter warmth/air-pollution filtering, food-service hygiene, and hospitals. This is source-era content, not current 2026 medical or policy guidance.",
       "tokens": [
-        "口罩使用：課本時代背景"
+        "Mask use"
       ]
     },
     "u48-cap1": {

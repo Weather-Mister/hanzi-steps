@@ -248,7 +248,7 @@ const unit:UnitData = {
         {
           "id": "u46-g1-p1",
           "type": "phrase",
-          "phrase": "u46-g1-source"
+          "phrase": "u46-g1-order"
         },
         {
           "id": "u46-g1-s4",
@@ -637,7 +637,7 @@ const unit:UnitData = {
         {
           "id": "u46-ba-o1",
           "type": "order",
-          "phrase": "u46-ba-neg",
+          "phrase": "u46-ba-lex",
           "tokens": [
             "別",
             "把我的藥",
@@ -1245,7 +1245,10 @@ const unit:UnitData = {
             "你想買什麼？"
           ],
           "answer": "我沒買什麼東西。",
-          "explanation": "G001 is a negative non-specific declarative."
+          "explanation": "G001 is a negative non-specific declarative.",
+          "grammarIds": [
+            "u46-noncommittal-question-words"
+          ]
         },
         {
           "id": "u46-review-g1b",
@@ -1858,12 +1861,14 @@ const unit:UnitData = {
       ]
     },
     "u46-ba-lex": {
-      "text": "把／別",
-      "pinyin": "bǎ / bié",
-      "meaning": "disposal marker / don't (imperative)",
-      "note": "Meaning-first lexical explanation.",
+      "text": "別把我的藥吃了。",
+      "pinyin": "Bié bǎ wǒ de yào chī le.",
+      "meaning": "Don't take my medicine.",
+      "note": "Meaning-first explanation: 把 bǎ is the disposal marker; 別 bié gives the negative command.",
       "tokens": [
-        "把／別"
+        "別",
+        "把我的藥",
+        "吃了"
       ]
     },
     "u46-recover-lex": {
@@ -1941,21 +1946,22 @@ const unit:UnitData = {
       ]
     },
     "u46-honorific-nin": {
-      "text": "您",
+      "text": "nín",
       "pinyin": "nín",
       "meaning": "polite “you”",
-      "note": "Support only.",
+      "note": "Support only. The source honorific is taught by pronunciation/meaning without exposing its not-yet-owned character.",
       "tokens": [
-        "您"
+        "nín"
       ]
     },
     "u46-thanks-nin": {
-      "text": "好的，謝謝您。",
-      "pinyin": "Hǎo de, xièxie nín.",
+      "text": "好的，謝謝你。",
+      "pinyin": "Hǎo de, xièxie nǐ.",
       "meaning": "Okay, thank you.",
-      "note": "",
+      "note": "Source-pragmatic equivalent. The polite nín support is explained separately without exposing the untaught glyph.",
       "tokens": [
-        "好的，謝謝您。"
+        "好的",
+        "謝謝你"
       ]
     },
     "u46-a004-support-sorry": {
