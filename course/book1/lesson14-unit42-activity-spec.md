@@ -111,14 +111,14 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - text: **我的國家夏天很熱，冬天很冷。**
 - pinyin: **Wǒ de guójiā xiàtiān hěn rè, dōngtiān hěn lěng.**
 - meaning: **In my country, summers are hot and winters are cold.**
-- note: Model for the source A001 home-country climate description using already-known 國家.
+- note: **Source-transfer instruction (A001):** This sentence is only a model. Before continuing, describe the climate of **your own home country/place** in Chinese using the seasons you know. Then say which season **you personally like most and least**, and explain **your own reason** with 因為…所以…. Say the answer aloud or write it on paper; do not copy the model unless it is genuinely true for you.
 - tokens: [`我的國家`, `夏天很熱`, `冬天很冷`]
 
 ### u42-season-reason
 - text: **因為我怕冷，所以我比較喜歡春天。**
 - pinyin: **Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.**
 - meaning: **Because I'm sensitive to the cold, I prefer spring.**
-- note: Source A001 transfer using prior 因為…所以….
+- note: **A001 personal-transfer reminder:** The model shows how to give a reason with 因為…所以…. Your own transfer answer must name your most- and least-liked seasons and give your own reason; the fixed spring sentence is practice, not a substitute for your personal response.
 - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
 
 ### u42-summer-model
@@ -326,8 +326,13 @@ Order:
 
 ### u42-seasons — My Seasons and Summer
 
+A001 transfer requirement:
+- the learner-facing note on `u42-home-country-model` must explicitly instruct the learner to perform the source task with **their own** information before continuing;
+- the response must cover: (1) own home-country/place climate, (2) personally most-liked and least-liked seasons, and (3) a personal reason using 因為…所以…;
+- the fixed sentences below are models/controlled practice only and must not be treated as satisfying the personal transfer on the learner's behalf.
+
 Order:
-1. phrase `u42-home-country-model`.
+1. phrase `u42-home-country-model` — this card carries the explicit learner-facing A001 personal-transfer instruction.
 2. select `u42-seasons-home`
    - prompt: **Which sentence describes the climate where the speaker is from?**
    - options: [`我的國家夏天很熱，冬天很冷。`, `我最喜歡秋天，最不喜歡冬天。`, `臺灣夏天天氣很熱。`]
@@ -438,7 +443,7 @@ Review count: **25**. Listening count: **3**. All 11 NEW forms and all 8 NEW cha
 | 夏天/秋天 | u42-four-seasons/season-most | u42-summer/autumn selects | u42-review-v8–v9 | Unit 44 seasonal comparison |
 | 雨/下雨 | u42-rain-basic | u42-rain-s1–s4/o1 | u42-review-v10–v11 | Unit 43 停 + Unit 44 typhoon |
 | 會不會/常不常 | u42-q-snow/q-rain notes | u42-rain-s3–s4 | u42-review-q1–q2 | Unit 44 A004 |
-| A001/A005 | u42-season-reason/summer-write | lesson-6 selects/order | u42-review-t1 | Unit 44 capstone F002 |
+| A001/A005 | u42-home-country-model personal-transfer instruction + u42-season-reason + u42-summer-write | lesson-6 personal response + selects/order | u42-review-t1 | Unit 44 capstone F002 |
 
 ## 7. Search/Mega and deferral rules
 
