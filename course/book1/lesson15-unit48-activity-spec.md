@@ -315,7 +315,7 @@ Order:
 23. A002 Task-2 scenario card: **昨晚吃了晚飯以後吐了，肚子很不舒服。病人描述症狀；醫生給建議。**
 24. select `u48-a002-s3`
     - prompt: **Which doctor response fits the Task-2 scenario?**
-    - options: [`你應該多休息，多喝水。`, `你的房租比我的貴得多。`, `你把功課寫了沒有？`]
+    - options: [`你應該多休息，多喝水。`, `我的房租很貴。`, `你把功課寫了沒有？`]
     - answer: **你應該多休息，多喝水。**
     - explanation: The scenario requires health advice.
 25. listen `u48-advice-l1`
