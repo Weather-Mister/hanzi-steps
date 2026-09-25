@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "implementation",
+  "currentStage": "deterministic-qa",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -18,7 +18,7 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
   "openFindings": [],
@@ -62,5 +62,5 @@
     "activityQuestionReaudit2": "course/book1/lesson14-activity-question-reaudit2.md",
     "activityQuestionReaudit2Handoff": "course/book1/lesson14-activity-question-reaudit2-handoff.md"
   },
-  "notes": "Post-QA Gate B re-freeze complete. The repaired activity packet reuses previously taught phrase IDs for Unit-44 delayed retrieval and capstone order steps. Activity Audit 1 re-audit 2, mandatory fresh Activity Audit 2 re-audit 2, and Activity Audit 3 re-audit 2 all PASS with zero open BLOCKER/MAJOR findings. Gate B is re-frozen and the controller is advanced to implementation. Existing Unit 42–44 implementation is stale until it is conformed to the re-frozen packet; no implementation files were edited in this audit context."
+  "notes": "Post-QA Gate B is re-frozen and the final Unit-44 phrase-reference repair has been transcribed. Units 42–44 and Pinyin Search now conform to the final frozen packet. Implementation conformance re-audit 2 passes with 0 open BLOCKER/MAJOR. Deterministic QA is pending on the final implementation head. Earlier learner simulations and Feature QA #451 remain historical failure evidence."
 }
