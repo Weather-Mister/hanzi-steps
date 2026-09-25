@@ -232,7 +232,7 @@ Order:
    - grammarIds: [`u43-completed-duration`]
 10. phrase `u43-confirm-bridge` — EXPLAIN 對不對 before testing.
 11. select `u43-confirm-s1`
-   - prompt: **In the source-style prompt, 對不對 is used to…**
+   - prompt: **At the end of a statement, 對不對 is used to…**
    - options: [`seek confirmation of the statement`, `ask how many months`, `mean “only”`]
    - answer: **seek confirmation of the statement**
    - explanation: The bridge has already explained 對不對 as a confirmation form.
