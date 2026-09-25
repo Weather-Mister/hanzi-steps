@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "activity-engineering",
+  "currentStage": "activity-audit",
   "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -38,7 +38,15 @@
     "curriculumSourceFidelityAudit": "course/book1/lesson15-curriculum-source-fidelity-audit.md",
     "curriculumPedagogyAudit": "course/book1/lesson15-curriculum-pedagogy-audit.md",
     "curriculumAdversarialAudit": "course/book1/lesson15-curriculum-adversarial-audit.md",
-    "activityEngineeringHandoff": "course/book1/lesson15-activity-engineering-handoff.md"
+    "activityEngineeringHandoff": "course/book1/lesson15-activity-engineering-handoff.md",
+    "activitySpec": "course/book1/lesson15-activity-spec.md",
+    "unit45ActivitySpec": "course/book1/lesson15-unit45-activity-spec.md",
+    "unit46ActivitySpec": "course/book1/lesson15-unit46-activity-spec.md",
+    "unit47ActivitySpec": "course/book1/lesson15-unit47-activity-spec.md",
+    "unit48ActivitySpec": "course/book1/lesson15-unit48-activity-spec.md",
+    "activityTeachingQualityAuditHandoff": "course/book1/lesson15-activity-teaching-quality-audit-handoff.md",
+    "activityQuestionAuditHandoff": "course/book1/lesson15-activity-question-audit-handoff.md",
+    "activityCrossUnitAuditHandoff": "course/book1/lesson15-activity-cross-unit-audit-handoff.md"
   },
-  "notes": "Lesson 15 Gate A PASS. Source, dependency, and all three curriculum audits pass with 0 open BLOCKER and 0 open MAJOR. The curriculum blueprint for Units 45–48 is frozen. Activity Engineering is ready via course/book1/lesson15-activity-engineering-handoff.md; no activity specification, activity audit, implementation, merge, or publication has begun."
+  "notes": "Lesson 15 Stage 4 Activity Engineering complete. The learner-facing activity-spec packet for Units 45–48 is persisted, along with separate teaching-quality, fresh-context question/adversarial, and cross-unit audit handoffs. Gate B remains pending; frozenActivitySpec remains null; no activity audit has been run; implementation and release remain locked; Units 45–48 have not been implemented, merged, or published."
 }
