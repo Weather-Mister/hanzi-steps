@@ -35,7 +35,8 @@
     "curriculumSourceFidelityAuditHandoff": "course/book1/lesson15-curriculum-source-fidelity-audit-handoff.md",
     "curriculumPedagogyAuditHandoff": "course/book1/lesson15-curriculum-pedagogy-audit-handoff.md",
     "curriculumAdversarialAuditHandoff": "course/book1/lesson15-curriculum-adversarial-handoff.md",
-    "curriculumSourceFidelityAudit": "course/book1/lesson15-curriculum-source-fidelity-audit.md"
+    "curriculumSourceFidelityAudit": "course/book1/lesson15-curriculum-source-fidelity-audit.md",
+    "curriculumPedagogyAudit": "course/book1/lesson15-curriculum-pedagogy-audit.md"
   },
-  "notes": "Lesson 15 Independent Curriculum Audit 1 — Source Fidelity PASS after repairing three within-unit dialogue prerequisite placements (D2T04/不用 了, D2T08/回家, D2T12/包) and making source-required activity and G005/G006 fidelity constraints explicit. Final source-fidelity findings: 0 BLOCKER, 0 MAJOR, 0 MINOR open. Pedagogy and adversarial curriculum audits remain pending; Gate A remains PENDING; activity engineering and implementation remain locked."
+  "notes": "Lesson 15 Independent Curriculum Audit 1 — Source Fidelity PASS and Independent Curriculum Audit 2 — Pedagogy PASS. Pedagogy found 0 BLOCKER, 0 MAJOR, and 0 MINOR open; no architecture repair was required. The adversarial curriculum audit remains pending, so Gate A remains PENDING and activity engineering / implementation remain locked."
 }
