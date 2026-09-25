@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "final-release-audit",
+  "currentStage": "activity-engineering",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,18 +17,23 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pass",
-    "implementation": "pass",
+    "activities": "pending",
+    "implementation": "locked",
     "release": "locked"
   },
-  "openFindings": [],
+  "openFindings": [
+    {
+      "severity": "BLOCKER",
+      "summary": "Stage 9 FR-001: B1L14-A001 is modeled in Unit 42 but never assigned as the required learner transfer task (own home-country climate, most/least-liked seasons, and reasons). Reopen Gate B; smallest blast radius ACTIVITY."
+    }
+  ],
   "artifacts": {
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
-    "traceability": "course/book1/lesson14-traceability.md",
-    "releaseReport": null,
+    "frozenActivitySpec": null,
+    "traceability": null,
+    "releaseReport": "course/book1/lesson14-final-release-audit.md",
     "sourceAudit": "course/book1/lesson14-source-audit.md",
     "dependencyAudit": "course/book1/lesson14-dependency-audit.md",
     "curriculumBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
@@ -48,7 +53,7 @@
       "course/book1/unit43.ts",
       "course/book1/unit44.ts"
     ],
-    "deterministicQa": "course/book1/lesson14-deterministic-qa.md",
+    "deterministicQa": null,
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
     "learnerSimulationA": "course/book1/lesson14-learner-simulation-a-final2.md",
     "learnerSimulationB": "course/book1/lesson14-learner-simulation-b-final2.md",
@@ -69,5 +74,5 @@
     "learnerSimulationRerun2Handoff": "course/book1/lesson14-learner-simulation-rerun2-handoff.md",
     "finalReleaseAuditHandoff": "course/book1/lesson14-final-release-audit-handoff.md"
   },
-  "notes": "Final-rerun-2 learner simulations A/B/C all PASS with zero open BLOCKER/MAJOR, and no learner-facing code changed after the final implementation baseline. Stage 8 bidirectional traceability PASS: unresolved source items 0, orphan production concepts 0. Stage 9 mandatory fresh-context hostile release audit is pending. Release remains locked."
+  "notes": "Stage 9 fresh hostile release audit FAIL: FR-001 is an open BLOCKER. The frozen Gate-B packet and Unit 42 production model B1L14-A001 but never give the learner its required personalized transfer instruction. Gate A remains valid; Gate B is reopened at activity engineering. Implementation and release are locked. Do not merge or publish."
 }
