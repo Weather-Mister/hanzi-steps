@@ -222,7 +222,7 @@ Order:
 11. listen `u45-runny-l1`
    - audioText: **我一直流鼻水。**
    - prompt: **Which symptom do you hear?**
-   - options: [`流鼻水`, `發燒`, `胃口很差`]
+   - options: [`流鼻水`, `不舒服`, `醫生`]
    - answer: **流鼻水**
    - explanation: The audio says the speaker continuously has a runny nose.
 12. order `u45-runny-o1` using `u45-runny-source`
@@ -261,13 +261,13 @@ Order:
 11. phrase `u45-head-appetite-source`.
 12. select `u45-head-s5`
    - prompt: **Which sentence says the speaker's appetite is poor?**
-   - options: [`胃口很差。`, `頭很痛。`, `喉嚨發炎。`]
+   - options: [`胃口很差。`, `頭很痛。`, `我一直流鼻水。`]
    - answer: **胃口很差。**
    - explanation: 胃口很差 means “the appetite is poor.”
 13. phrase `u45-totality-review` — REVIEW Unit-40 totality.
 14. select `u45-head-s6`
    - prompt: **In 什麼東西都不想吃, what does 什麼東西…都 express?**
-   - options: [`totality under negation: not wanting to eat anything`, `a non-specific negative answer without 都`, `a duration question`]
+   - options: [`totality under negation: not wanting to eat anything`, `a question asking which food the person wants`, `a duration question`]
    - answer: **totality under negation: not wanting to eat anything**
    - explanation: This retrieves the earlier question-word + 都 pattern; G001 is not taught until Unit 46.
 
@@ -449,10 +449,10 @@ For simple rows 16–22 and 24–27, prompt is **“X means…”** and explanat
     - answer: **大概多久了？／已經四、五天了。**
     - explanation: X004 integrates the question and duration-to-now answer.
 30. `u45-review-f3`
-    - prompt: **Which sentence uses the earlier Unit-40 totality pattern, not Unit-46 G001?**
-    - options: [`什麼東西都不想吃。`, `我沒買什麼東西。`, `我沒有幾個朋友。`]
+    - prompt: **Which sentence uses the earlier Unit-40 question-word + 都 totality pattern?**
+    - options: [`什麼東西都不想吃。`, `我一直流鼻水。`, `胃口很差。`]
     - answer: **什麼東西都不想吃。**
-    - explanation: Question-word + 都 is the earlier totality pattern. The Unit-46 non-specific rule has not been taught yet.
+    - explanation: 什麼東西 + 都 expresses the earlier totality pattern under negation.
 
 ### Contextual reconstruction
 31. order `u45-review-o1` using `u45-head-appetite-source`
