@@ -6,7 +6,7 @@
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
   "currentStage": "curriculum-architecture",
-  "stageStatus": "pending",
+  "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": null,
@@ -28,7 +28,13 @@
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson15-source-audit.md",
     "dependencyAudit": "course/book1/lesson15-dependency-audit.md",
-    "curriculumArchitectureHandoff": "course/book1/lesson15-curriculum-architecture-handoff.md"
+    "curriculumArchitectureHandoff": "course/book1/lesson15-curriculum-architecture-handoff.md",
+    "curriculumRough": "course/book1/lesson15-curriculum-rough.md",
+    "curriculumRefined": "course/book1/lesson15-curriculum-refined.md",
+    "curriculumBlueprint": "course/book1/lesson15-curriculum-blueprint.md",
+    "curriculumSourceFidelityAuditHandoff": "course/book1/lesson15-curriculum-source-fidelity-audit-handoff.md",
+    "curriculumPedagogyAuditHandoff": "course/book1/lesson15-curriculum-pedagogy-audit-handoff.md",
+    "curriculumAdversarialAuditHandoff": "course/book1/lesson15-curriculum-adversarial-handoff.md"
   },
-  "notes": "Lesson 15 source gate and dependency gate PASS. The mandatory fresh-context dependency audit repaired prerequisite-graph defects in G002/G007, Activity I, dialogue traceability, and the unsafe 臺南 substitution option, then re-audited the complete dependency state to 0 BLOCKER / 0 MAJOR / 0 MINOR open findings. Final classifications remain 42 NEW + 2 EXPANSION formal lexical entries and 30 NEW + 33 KNOWN formal characters. The 一直 / 直 Book-2 ownership collision remains an explicit later migration requirement, not prior knowledge or a future prerequisite. Controller is now at curriculum-architecture readiness; no Lesson-15 unit boundaries, rough split, blueprint, activities, implementation, merge, or publication have begun."
+  "notes": "Lesson 15 Stage 3 design passes are complete. The proposed architecture is Units 45–48: U45 symptoms/illness, U46 diagnosis/medicine/G001–G002, U47 stomach trouble/help/G003, and U48 advice/comparisons/separable verbs/prescription/capstone with G004–G007. Formal allocation is 42 NEW + 2 EXPANSION lexical entries and 30 NEW formal characters, with validated prerequisite pull-forwards V026 幾 before G001 and V035 別 before G002. This blueprint is NOT frozen. Source-fidelity, pedagogy, and fresh adversarial curriculum audits are all pending; Gate A remains PENDING and activity engineering/implementation remain locked."
 }
