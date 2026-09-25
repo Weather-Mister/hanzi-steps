@@ -117,7 +117,7 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 ### u42-season-reason
 - text: **因為我怕冷，所以我比較喜歡春天。**
 - pinyin: **Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.**
-- meaning: **Because I dislike the cold, I prefer spring.**
+- meaning: **Because I'm sensitive to the cold, I prefer spring.**
 - note: Source A001 transfer using prior 因為…所以….
 - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
 
@@ -442,7 +442,7 @@ Review count: **25**. Listening count: **3**. All 11 NEW forms and all 8 NEW cha
 
 ## 7. Search/Mega and deferral rules
 
-- All 11 canonical NEW forms are normal Search/Mega entries after their owning lesson.
+- All 11 canonical NEW forms receive one canonical row at their owning lesson. Per frozen Gate A, Pinyin Search remains a global lookup; Search writing practice for a Lesson-14-owned character stays locked until that owning lesson/character introduction is complete. Mega eligibility remains gated by owning-lesson completion.
 - inferential 吧, 比較, 因為…所以…, …的時候, 每…都… / 常 are review only.
 - 玉山 / 美國 are not answer options, new vocabulary, Search, Mega, or handwriting.
 - No assessed step requires 玉 / 紐 / 約 / 漂 / 亮 / 妳 / 北 or any other deferred glyph.
