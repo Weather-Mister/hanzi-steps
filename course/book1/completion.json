@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "preflight",
-  "stageStatus": "pending",
+  "currentStage": "source-extraction",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": null,
@@ -27,5 +27,5 @@
     "traceability": null,
     "releaseReport": null
   },
-  "notes": "Book 1 Lesson 14 is complete through Hanzi Steps Unit 44 after Gate C and production verification. Production verification is recorded in course/book1/lesson14-production-verification.md. Lesson 15 is the next source lesson. Book 1 is not complete until Lesson 15 and the final whole-book audit pass."
+  "notes": "Lesson 15 source extraction is in progress on draft PR #69. Preflight passed and Source Extraction A is persisted. Source Extraction B is pending in a fresh context."
 }
