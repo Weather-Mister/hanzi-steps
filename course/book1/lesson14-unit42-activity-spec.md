@@ -306,15 +306,15 @@ Order:
 5. phrase `u42-q-snow` — EXPLAIN 會不會 before testing it.
 6. phrase `u42-q-rain` — EXPLAIN 常不常 before testing it.
 7. select `u42-rain-s3`
-   - prompt: **Which asks whether it snows in Taiwan?**
-   - options: [`臺灣會不會下雪？`, `臺灣常不常下雨？`, `臺灣下雪的時候？`]
+   - prompt: **Which asks whether snow occurs in Taiwan, without asking about frequency?**
+   - options: [`臺灣會不會下雪？`, `臺灣常不常下雪？`, `臺灣會不會下雨？`]
    - answer: **臺灣會不會下雪？**
-   - explanation: 會不會 asks whether the event occurs.
+   - explanation: 會不會 asks whether the snow event occurs; 常不常 would ask about frequency.
 8. select `u42-rain-s4`
-   - prompt: **Which asks “Does it often rain here?”**
-   - options: [`這裡常不常下雨？`, `這裡會不會滑雪？`, `這裡比昨天冷？`]
+   - prompt: **Which asks whether rain is frequent here?**
+   - options: [`這裡常不常下雨？`, `這裡會不會下雨？`, `這裡常不常下雪？`]
    - answer: **這裡常不常下雨？**
-   - explanation: 常不常 asks about frequency.
+   - explanation: 常不常 asks about frequency; 下雨 identifies rain.
 9. listen `u42-rain-l1`
    - audioText: **夏天常下雨。**
    - prompt: **What weather event do you hear?**
