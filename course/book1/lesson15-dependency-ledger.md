@@ -107,7 +107,7 @@ Source-boundary records **B1L15-SRC001–B1L15-SRC009** are bibliographic metada
 | ID | Disposition | Required prerequisites | Dependency decision |
 |---|---|---|---|
 | **B1L15-G001** Non-committal question-word declaratives under negation | **EXPANSION** | ordinary question words; `u40-questionword-totality`; `u39-bu-vs-mei`; B1L15-V026 expansion where 幾 is used | Unit 40 teaches question-word totality with 都/也. Lesson 15 adds a distinct indefinite/non-specific **negative declarative without requiring 都/也**. Preserve the source rule that these statements are always negative; do not flatten it into Unit-40 totality. |
-| **B1L15-G002** Introductory 把 disposal | **NEW** | B1L15-V017 把; B1L15-V035 別 for the imperative-negation branch; `u39-verbal-le`; `u39-bu-vs-mei`; `u31-sentential-le`; `u41-shibushi` for the source confirmation-question branch; known definiteness/modifier patterns; known outward verbs as examples | No prior 把 ownership. Teach the source’s definite-object bias, bare outward-transitive action-verb restriction, rejection of inward verbs, sentence-final 了 pattern, 沒/別-before-把 negation, and source question forms. The source negative examples keep a **sentence-final** 了; explicitly contrast that with Unit 39's rule that negating a **verbal-了 completed action** removes verbal 了. |
+| **B1L15-G002** Introductory 把 disposal | **NEW** | B1L15-V017 把; B1L15-V035 別 for the imperative-negation branch; B1L15-X031 definite modifiers/possessives; `u39-verbal-le`; `u39-bu-vs-mei`; `u31-sentential-le`; `u41-shibushi` for the source confirmation-question branch; known outward verbs as examples | No prior 把 ownership. Teach the source’s definite-object bias, bare outward-transitive action-verb restriction, rejection of inward verbs, sentence-final 了 pattern, 沒/別-before-把 negation, and source question forms. The source negative examples keep a **sentence-final** 了; explicitly contrast that with Unit 39's rule that negating a **verbal-了 completed action** removes verbal 了. |
 | **B1L15-G003** V了…就… | **EXPANSION** | `u39-verbal-le`; `u38-yi-jiu`; `u36-yihou-after`; `u41-shibushi` / 嗎 for source questions | Prior 一…就… and completed-action 了 are known separately. Lesson 15 integrates completion + immediate succession and explicitly contrasts it with Lesson-13 一…就…. A-not-A remains unavailable here. |
 | **B1L15-G004** 一點 quantity/degree system | **EXPANSION** | Unit-39 `一點 + NP`; Unit-16 `有一點 + Vs`; `u40-more-less-verb` | Quantity 一點 and pre-state 有一點 are known. Lesson 15 adds/completes **Vs + 一點** as comparative degree, the contrast with 有（一）點 + Vs, 一點點, and their coordinated drill system. |
 | **B1L15-G005** Comparing actions with 得 | **EXPANSION** | Unit-16 performance 得 / object-repeat pattern; `u25-bi-comparison`; `u25-bi-negation`; `u41-shibushi` | The learner knows 得 complements and 比 comparisons separately. Lesson 15 combines them into action comparison, including Pattern 2 verb repetition, 不比 negation placement, and 嗎/是不是 questions. |
@@ -116,7 +116,7 @@ Source-boundary records **B1L15-SRC001–B1L15-SRC009** are bibliographic metada
 
 ## Required intra-Lesson-15 edges
 
-- **B1L15-V017 + B1L15-V035 + prior `u39-verbal-le` / `u39-bu-vs-mei` / `u31-sentential-le` / `u41-shibushi` → B1L15-G002**.
+- **B1L15-V017 + B1L15-V035 + B1L15-X031 + prior `u39-verbal-le` / `u39-bu-vs-mei` / `u31-sentential-le` / `u41-shibushi` → B1L15-G002**.
 - **B1L15-G004 → B1L15-G006** for the comparative `Vs + 一點` branch.
 - **B1L15-V026 + B1L15-V027 → B1L15-X008** (`好幾次`).
 - **B1L15-V044 + prior `u27-yinggai` → B1L15-P004 / F003**.
@@ -182,7 +182,7 @@ These records remain **support**, not formal Lesson-15 vocabulary ownership. The
 | B1L15-X030 | Lesson-13 一…就… contrast | **REVIEW** | Unit 38 exact grammar; it is a required contrast base for G003, not a new Lesson-15 rule. |
 | B1L15-X031 | definite modifiers / possessives in 把 explanation | **REVIEW** | Demonstratives and possessive 的 are prior production grammar. |
 | B1L15-X032 | activity proper names / 老李 / 小陳 | **DEFERRED** | 田/李/陳/王/安 and one-off name/address forms would create artificial character/vocabulary obligations. Destination: contextual labels/pinyin/generic roles; no Search/Mega/handwriting/productive assessment. |
-| B1L15-X033 | 臺南 | **DEFERRED** | Exact place name is not canonical vocabulary. Destination: contextual/glossed Activity-I destination or a learner-safe known-place substitute; do not create lexical ownership. |
+| B1L15-X033 | 臺南 | **DEFERRED** | Exact place name is not canonical vocabulary, although 臺 and 南 are already-known characters. Destination: preserve **臺南** as the source-required contextual/glossed Activity-I destination; do not assess it as vocabulary, Search/Mega ownership, or handwriting. **Do not substitute a different place**, because A001 explicitly requires the source comparison table. |
 | B1L15-X034 | 計程車 / 火車 / 機車 / 高鐵 | **REVIEW** | Exact transport vocabulary from Units 24–25. |
 | B1L15-X035 | 碗 + half-bowl quantity expressions | **EXPANSION** | 碗, 半 and numbers are known, but noun-measure fractional combinations such as 一碗半 / 兩碗半 require explicit transfer before Activity I. |
 | B1L15-X036 | 健康診所 | **DEFERRED** | Prescription header only; 診 is untaught and clinic name is not needed to answer A003. Destination: non-assessed/glossed visual label unless later architecture explicitly teaches it. |
@@ -400,6 +400,8 @@ Dialogue-II:
 
 Each classroom activity is a **NEW source-required transfer task**. This means the task itself is newly required; it does not duplicate ownership of prerequisite vocabulary or grammar.
 
+**Activity dependency invariant:** literal source tables, prescription text, completion frames, participant labels, and required prompts inherit every NEW / EXPANSION formal or support dependency they contain. A DEFERRED contextual item may be glossed or rendered non-assessingly, but may not be substituted when the source ledger explicitly requires that exact content to be preserved.
+
 - **B1L15-A001 — NEW**
   - prerequisites: B1L15-G005 + B1L15-G006; B1L15-V039 小時; B1L15-X039 分鐘 support for the source travel-duration row; X035 fractional bowl quantities; REVIEW X034 transport; KNOWN X018 rent; X025/X032 plus the hidden-name rule for contextual/deferred participant names (田中 / 如玉 / 安同 / 月美); X033 contextual/deferred 臺南 handling.
   - The exact comparison table values remain source-required data, not new vocabulary ownership.
@@ -444,7 +446,7 @@ The self-assessment restates outcomes and creates no separate teaching ownership
 Existing production nodes:
 
 - ordinary question words + `u40-questionword-totality` + `u39-bu-vs-mei` → **B1L15-G001**
-- B1L15-V017 + B1L15-V035 + `u39-verbal-le` + `u39-bu-vs-mei` + `u31-sentential-le` + `u41-shibushi` → **B1L15-G002**
+- B1L15-V017 + B1L15-V035 + B1L15-X031 + `u39-verbal-le` + `u39-bu-vs-mei` + `u31-sentential-le` + `u41-shibushi` → **B1L15-G002**
 - `u39-verbal-le` + `u38-yi-jiu` + `u36-yihou-after` → **B1L15-G003**
 - Unit-39 一點 + Unit-16 有一點 + `u40-more-less-verb` → **B1L15-G004**
 - Unit-16 performance 得 + `u25-bi-comparison` / `u25-bi-negation` → **B1L15-G005**
