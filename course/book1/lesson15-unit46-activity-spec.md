@@ -1,6 +1,6 @@
 # Lesson 15 Activity Spec — Unit 46
 
-Status: **Stage-4 activity candidate; Gate B pending.**
+Status: **Gate B PASS — frozen activity specification. Implementation pending.**
 
 Frozen Gate-A identity: **Unit 46 — Diagnosis, Medicine, and Treatment**.  
 Six teaching lessons plus review.  
