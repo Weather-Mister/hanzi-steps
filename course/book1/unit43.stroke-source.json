@@ -1,0 +1,49 @@
+{
+  "source": "AnimCJK",
+  "url": "https://github.com/parsimonhi/animCJK",
+  "preference": [
+    "graphicsZhHant.txt",
+    "graphicsZhHans.txt",
+    "graphicsJa.txt"
+  ],
+  "characters": [],
+  "note": "All Unit 43 NEW-character geometry is pre-seeded from exact codepoints in chanind/hanzi-writer-data (Make Me A Hanzi / Arphic Public License, public/licenses/arphic.txt). This keeps the frozen character order 只、父、母、停、底、葉 and avoids cross-locale fallback glyph sources.",
+  "manualCharacters": [
+    {
+      "character": "只",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/只.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "父",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/父.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "母",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/母.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "停",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/停.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "底",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/底.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "葉",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/葉.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "source": "AnimCJK",
+  "url": "https://github.com/parsimonhi/animCJK",
+  "preference": [
+    "graphicsZhHant.txt",
+    "graphicsZhHans.txt",
+    "graphicsJa.txt"
+  ],
+  "characters": [],
+  "note": "All Unit 44 NEW-character geometry is pre-seeded from exact Traditional codepoints in chanind/hanzi-writer-data (Make Me A Hanzi / Arphic Public License, already included at public/licenses/arphic.txt). This avoids fallback substitution and preserves the frozen character order 傘、颱、濕、討、厭、聞、更. Feature QA has nothing further to hydrate for this unit.",
+  "manualCharacters": [
+    {
+      "character": "傘",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/傘.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "颱",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/颱.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "濕",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/濕.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "討",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/討.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "厭",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/厭.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "聞",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/聞.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    },
+    {
+      "character": "更",
+      "source": "Hanzi Writer Data / Make Me A Hanzi",
+      "url": "https://github.com/chanind/hanzi-writer-data/blob/master/data/更.json",
+      "license": "Arphic Public License (public/licenses/arphic.txt)"
+    }
+  ]
+}

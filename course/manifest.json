@@ -252,6 +252,24 @@
           "order": 41,
           "title": "Happy Birthday and Best Wishes",
           "path": "course/book1/unit41.ts"
+        },
+        {
+          "id": "unit-42",
+          "order": 42,
+          "title": "Weather and the Four Seasons",
+          "path": "course/book1/unit42.ts"
+        },
+        {
+          "id": "unit-43",
+          "order": 43,
+          "title": "How Long and What's About to Happen",
+          "path": "course/book1/unit43.ts"
+        },
+        {
+          "id": "unit-44",
+          "order": 44,
+          "title": "Typhoons and Comparisons",
+          "path": "course/book1/unit44.ts"
         }
       ]
     },

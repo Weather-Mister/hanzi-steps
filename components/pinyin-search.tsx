@@ -2,16 +2,17 @@
 import {useMemo,useState} from 'react';
 import {PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
+import {searchPracticeCharacters,searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
 
 export function PinyinSearch({
- open,onOpenChange,theme,onPracticeCharacter,
+ open,onOpenChange,theme,onPracticeCharacter,completed,
 }:{
  open:boolean;
  onOpenChange:(open:boolean)=>void;
  theme:string;
  onPracticeCharacter:(char:string)=>void;
+ completed:Set<string>;
 }){
  const [query,setQuery]=useState('');
  const matches=useMemo(()=>searchVocabulary(query,81),[query]);
@@ -49,7 +50,8 @@ export function PinyinSearch({
      <>
       <p className="search-count">{matches.length>80?'Showing the first 80 matches — type more to narrow your search':results.length+' '+(results.length===1?'match':'matches')}</p>
       <div className="search-result-list">{results.map(item=>{
-       const chars=uniquePracticeCharacters(item).filter(char=>Boolean(strokeData[char]));
+       const availableChars=uniquePracticeCharacters(item).filter(char=>Boolean(strokeData[char]));
+       const chars=searchPracticeCharacters(item,completed).filter(char=>Boolean(strokeData[char]));
        return <article className="search-result-card" key={item.id}>
         <div className="search-result-copy">
          <div className="search-result-title">
@@ -68,7 +70,7 @@ export function PinyinSearch({
          >
           <PenLine size={15}/>{chars.length===1?'Practice':<>Practice <span lang="zh-Hant-TW">{char}</span></>}
          </button>)}
-        </div>:<span className="search-practice-unavailable">Writing practice unavailable</span>}
+        </div>:<span className="search-practice-unavailable">{availableChars.length?'Writing practice unlocks after its lesson':'Writing practice unavailable'}</span>}
        </article>;
       })}</div>
      </>}

@@ -1,4 +1,4 @@
-import {books,characters,lessons,units,vocabulary} from './curriculum.ts';
+import {books,characterPracticeAvailable,characters,lessons,units,vocabulary} from './curriculum.ts';
 
 export type VocabularyLookupItem={
  id:string;
@@ -43,6 +43,16 @@ export const compactPinyin=(value:string)=>normalizePinyin(value).replace(/\s/g,
 // Search offers one practice action per glyph; recall retains repeated glyphs.
 export function uniquePracticeCharacters(item:VocabularyLookupItem):string[]{
  return [...new Set(item.characters)].filter(char=>Boolean(characters[char]));
+}
+
+/**
+ * Pinyin Search is a global canonical lookup, but its handwriting action must
+ * never bypass the character's first teaching lesson. Results stay visible;
+ * only writing practice is progress-gated through the same invariant used by
+ * every other standalone character-practice entry point.
+ */
+export function searchPracticeCharacters(item:VocabularyLookupItem,completed:Set<string>):string[]{
+ return uniquePracticeCharacters(item).filter(char=>characterPracticeAvailable(char,completed));
 }
 
 const lessonById=new Map(lessons.map(lesson=>[lesson.id,lesson]));
