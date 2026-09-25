@@ -1,4 +1,4 @@
-# Book 1 Lesson 15 — Final Proposed Curriculum Blueprint
+# Book 1 Lesson 15 — Frozen Curriculum Blueprint
 
 Authoritative source: A Course in Contemporary Chinese 1, Lesson 15 「我很不舒服」.
 
@@ -10,15 +10,15 @@ Architecture history:
 - Pass 1: course/book1/lesson15-curriculum-rough.md
 - Pass 2: course/book1/lesson15-curriculum-refined.md
 
-Status: **PROPOSED — NOT FROZEN**.
+Status: **FROZEN — GATE A PASS**.
 
-This file completes Stage 3 design Pass 3. Gate A remains PENDING until all three independent curriculum audits pass with 0 BLOCKER and 0 MAJOR. Activity engineering, implementation, merge, and publication remain locked.
+This is the **Gate-A frozen unit-level curriculum blueprint**. Source and dependency gates are PASS, and all three required curriculum audits have passed with zero open BLOCKER or MAJOR findings after repair. Activity engineering is the next stage, but no activity engineering or implementation is performed by this freeze.
 
 ---
 
-# 1. Final proposed unit architecture
+# 1. Final unit architecture
 
-Lesson 15 is proposed across **four Hanzi Steps units: Units 45–48**.
+Lesson 15 is allocated across **four Hanzi Steps units: Units 45–48**.
 
 | Unit | Working title | Core communicative goal | Formal NEW | Lexical EXPANSION | NEW formal chars | Formal grammar |
 |---|---|---|---:|---:|---:|---|
@@ -945,7 +945,21 @@ The validated dependency decisions remain unchanged:
 - **份** — explicit NEW support in Unit 48 before literal prescription reading.
 - **臺南** — preserved exactly in A001 as contextual/glossed source data; no substitution and no productive vocabulary ownership.
 
-Search/Mega/handwriting ownership for DEFERRED support is prohibited. Formal NEW/EXPANSION inclusion strategy is deferred to activity engineering after Gate A.
+Search/Mega/handwriting ownership for DEFERRED support is prohibited. NEW-support 您 / 份 also remain support-only: explaining or reading them does not create formal vocabulary, canonical Search/Mega, or handwriting ownership.
+
+## Expansion-sense Search/Mega guardrail
+
+B1L15-V026 幾 and B1L15-V032 跟 are semantic EXPANSION targets with earlier canonical vocabulary ownership:
+- 幾 remains canonically owned by Unit 7 as interrogative “how many”;
+- 跟 remains canonically owned by Unit 24 as companionship “with.”
+
+Under the current form-level lookup/challenge model:
+- do **not** create a second canonical NEW-vocabulary row for 幾 or 跟 in Units 46/48;
+- do **not** broaden the earlier canonical row meanings to include the Lesson-15 senses, because Pinyin Search is a global canonical lookup and Mega eligibility is tied to the canonical row's original lesson;
+- teach and retrieve 幾 “a few / several / non-specific” only inside Unit 46 learner content/review and 跟 “to / recipient-addressee” only inside Unit 48 learner content/review/capstone;
+- the two expansion senses receive no second Search/Mega ownership under the current model. Any future progress-gated sense-level Search/Mega design would be a curriculum/tooling change and must reopen the affected gate before use.
+
+This guardrail prevents Lesson-15 senses from leaking into earlier-unit Search/Mega prompts while preserving single chronological form ownership.
 
 ---
 
@@ -963,7 +977,7 @@ Book 2 is not a prerequisite for Lesson 15.
 
 # 10. Source coverage summary
 
-All validated source categories have explicit proposed homes:
+All validated source categories have explicit frozen homes:
 
 - F001–F004: Units 45–48 as mapped above
 - D1T01–D1T12: Units 45–46
@@ -984,16 +998,16 @@ No validated source item is intentionally discarded. No upstream classification 
 
 # 11. Gate state and next action
 
-This blueprint is **not frozen**.
+This blueprint is **frozen at Gate A**.
 
-Current Gate A state:
+Final Gate A state:
 - source gate: PASS
 - dependency gate: PASS
-- curriculum source-fidelity audit: PENDING
-- curriculum pedagogy audit: PENDING
-- curriculum adversarial audit: PENDING
-- curriculum gate: PENDING
+- curriculum source-fidelity audit: PASS — 0 open BLOCKER / 0 open MAJOR
+- curriculum pedagogy audit: PASS — 0 open BLOCKER / 0 open MAJOR
+- curriculum adversarial audit: PASS — 0 open BLOCKER / 0 open MAJOR after the expansion-sense Search/Mega guardrail repair
+- curriculum gate: PASS
 
-Required next work is three independent curriculum audits. Only after all three pass with 0 BLOCKER and 0 MAJOR may this blueprint be frozen and Gate A pass.
+The next controller stage is activity engineering. Do not alter source ownership, curriculum boundaries, prerequisite order, or the expansion-sense ownership guardrail without reopening Gate A.
 
-Do not begin activity engineering or implementation from this proposed blueprint yet.
+No activity engineering or implementation is included in this Gate-A freeze.
