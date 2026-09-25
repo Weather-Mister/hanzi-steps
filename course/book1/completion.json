@@ -5,14 +5,14 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "source-audit",
-  "stageStatus": "pending",
+  "currentStage": "dependency-ledger",
+  "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": null,
   "gates": {
-    "source": "pending",
-    "dependencies": "locked",
+    "source": "pass",
+    "dependencies": "pending",
     "curriculum": "locked",
     "activities": "locked",
     "implementation": "locked",
@@ -25,7 +25,8 @@
     "frozenBlueprint": null,
     "frozenActivitySpec": null,
     "traceability": null,
-    "releaseReport": null
+    "releaseReport": null,
+    "sourceAudit": "course/book1/lesson15-source-audit.md"
   },
-  "notes": "Lesson 15 dual source extraction and A ↔ B reconciliation are complete on draft PR #69. The reconciled source ledger is ready for the mandatory fresh-context source audit. Source gate remains pending; all downstream gates remain locked."
+  "notes": "Lesson 15 dual source extraction and A ↔ B reconciliation are complete. The mandatory fresh-context source audit checked the authoritative Lesson 15 range (printed pp. 323–350 / PDF pp. 350–377) against the reconciled source ledger and Stage-1 protocol rules. Initial source-ledger defects in classroom-task preservation, dependency-facing support coverage, and source-detail fidelity were repaired; the final re-audit passes with 0 BLOCKER, 0 MAJOR, 0 MINOR, and 0 unresolved source disagreements. The source gate is PASS and the repository is ready for the dependency-ledger stage. No dependency classifications, dependency ledger, Lesson-15 unit design, learner-facing activities, or implementation have begun."
 }
