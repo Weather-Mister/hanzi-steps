@@ -38,7 +38,7 @@ const unit:UnitData = {
     "goal": {
       "text": "因為我怕冷，所以我比較喜歡春天。",
       "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
-      "meaning": "Because I dislike the cold, I prefer spring."
+      "meaning": "Because I'm sensitive to the cold, I prefer spring."
     },
     "grammarIds": []
   },
@@ -423,7 +423,7 @@ const unit:UnitData = {
           "options": [
             "春天",
             "冬天",
-            "秋天"
+            "天氣"
           ],
           "answer": "春天",
           "explanation": "The audio says 春天, “spring.”",
@@ -651,26 +651,26 @@ const unit:UnitData = {
         {
           "id": "u42-rain-s3",
           "type": "select",
-          "prompt": "Which asks whether it snows in Taiwan?",
+          "prompt": "Which asks whether snow occurs in Taiwan, without asking about frequency?",
           "options": [
             "臺灣會不會下雪？",
-            "臺灣常不常下雨？",
-            "臺灣下雪的時候？"
+            "臺灣常不常下雪？",
+            "臺灣會不會下雨？"
           ],
           "answer": "臺灣會不會下雪？",
-          "explanation": "會不會 asks whether the event occurs."
+          "explanation": "會不會 asks whether the snow event occurs; 常不常 would ask about frequency."
         },
         {
           "id": "u42-rain-s4",
           "type": "select",
-          "prompt": "Which asks “Does it often rain here?”",
+          "prompt": "Which asks whether rain is frequent here?",
           "options": [
             "這裡常不常下雨？",
-            "這裡會不會滑雪？",
-            "這裡比昨天冷？"
+            "這裡會不會下雨？",
+            "這裡常不常下雪？"
           ],
           "answer": "這裡常不常下雨？",
-          "explanation": "常不常 asks about frequency."
+          "explanation": "常不常 asks about frequency; 下雨 identifies rain."
         },
         {
           "id": "u42-rain-l1",
@@ -714,14 +714,14 @@ const unit:UnitData = {
         {
           "id": "u42-seasons-home",
           "type": "select",
-          "prompt": "What is the first part of the source Four Seasons task?",
+          "prompt": "Which sentence describes the climate where the speaker is from?",
           "options": [
-            "describe the climate where you are from",
-            "name only your favorite season",
-            "describe only Taiwan's summer weather"
+            "我的國家夏天很熱，冬天很冷。",
+            "我最喜歡秋天，最不喜歡冬天。",
+            "臺灣夏天天氣很熱。"
           ],
-          "answer": "describe the climate where you are from",
-          "explanation": "B1L14-A001 begins with the learner's home-country climate."
+          "answer": "我的國家夏天很熱，冬天很冷。",
+          "explanation": "我的國家… describes the speaker's home-country climate."
         },
         {
           "id": "u42-seasons-p2",
@@ -743,14 +743,14 @@ const unit:UnitData = {
         {
           "id": "u42-seasons-s2",
           "type": "select",
-          "prompt": "For the source “Four Seasons” task, which pair must you identify?",
+          "prompt": "Which sentence says “I like autumn the most and winter the least”?",
           "options": [
-            "your most- and least-liked seasons",
-            "only your favorite season",
-            "the seasons with the most and least rain"
+            "我最喜歡秋天，最不喜歡冬天。",
+            "我比較喜歡春天。",
+            "冬天太冷了。"
           ],
-          "answer": "your most- and least-liked seasons",
-          "explanation": "A001 explicitly asks for most/least preferred seasons plus reasons."
+          "answer": "我最喜歡秋天，最不喜歡冬天。",
+          "explanation": "最喜歡… / 最不喜歡… gives the most- and least-liked seasons."
         },
         {
           "id": "u42-seasons-p3",
@@ -777,26 +777,26 @@ const unit:UnitData = {
         {
           "id": "u42-summer-s3",
           "type": "select",
-          "prompt": "What must the source “Summer in Taiwan” transfer include?",
+          "prompt": "Which sentence reports both a summer food habit and a common activity?",
           "options": [
-            "summer weather plus distinctive features, common fruit/food, and common activities",
-            "summer weather and one season name only",
-            "common fruit/food only, without weather or activities"
+            "夏天我常吃水果，也常出去玩。",
+            "臺灣夏天天氣很熱。",
+            "冬天太冷了。"
           ],
-          "answer": "summer weather plus distinctive features, common fruit/food, and common activities",
-          "explanation": "These are the source A005 fields."
+          "answer": "夏天我常吃水果，也常出去玩。",
+          "explanation": "The sentence gives both a summer fruit/food habit and an activity."
         },
         {
           "id": "u42-summer-s4",
           "type": "select",
-          "prompt": "After discussing the summer findings, what does the source task ask you to do?",
+          "prompt": "Which sentence reports Taiwan summer weather?",
           "options": [
-            "write the findings in Chinese",
-            "only discuss them orally",
-            "write only the names of the four seasons"
+            "臺灣夏天天氣很熱。",
+            "夏天我常吃水果，也常出去玩。",
+            "我最喜歡秋天。"
           ],
-          "answer": "write the findings in Chinese",
-          "explanation": "A005 explicitly requires writing the findings in Chinese."
+          "answer": "臺灣夏天天氣很熱。",
+          "explanation": "This sentence directly reports Taiwan summer weather. The preceding source-transfer card still instructs the learner to write the full findings in Chinese."
         },
         {
           "id": "u42-seasons-o1",
@@ -1067,15 +1067,12 @@ const unit:UnitData = {
         },
         {
           "id": "u42-review-t1",
-          "type": "select",
-          "prompt": "Which answer best completes the Four Seasons source task?",
-          "options": [
-            "state a most/least preferred season and give a reason",
-            "state only one preferred season with no reason",
-            "list all four seasons without a preference"
-          ],
-          "answer": "state a most/least preferred season and give a reason",
-          "explanation": "B1L14-A001 requires preference plus reasons."
+          "type": "order",
+          "phrase": "u42-season-reason",
+          "tokens": [
+            "因為我怕冷",
+            "所以我比較喜歡春天"
+          ]
         }
       ]
     }
@@ -1613,7 +1610,7 @@ const unit:UnitData = {
     "u42-season-reason": {
       "text": "因為我怕冷，所以我比較喜歡春天。",
       "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
-      "meaning": "Because I dislike the cold, I prefer spring.",
+      "meaning": "Because I'm sensitive to the cold, I prefer spring.",
       "note": "Source A001 transfer using prior 因為…所以….",
       "tokens": [
         "因為我怕冷",
