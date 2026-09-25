@@ -352,10 +352,10 @@ Order:
    - explanation: 颱風 means typhoon.
 4. phrase `u44-typhoon-coming`.
 5. select `u44-typhoon-s2`
-   - prompt: **Which earlier grammar does 颱風快要來了 retrieve?**
-   - options: [`imminence with 快要…了`, `completed duration`, `equality with 跟…一樣`]
-   - answer: **imminence with 快要…了**
-   - explanation: 快要…了 was taught in Unit 43.
+   - prompt: **What does 颱風快要來了 mean?**
+   - options: [`A typhoon is about to come.`, `Typhoons come every summer.`, `The rain is about to stop.`]
+   - answer: **A typhoon is about to come.**
+   - explanation: 快要…了 marks an imminent event; 颱風 is the event that is about to arrive.
 6. phrase `u44-typhoon-summer`.
 7. phrase `u44-typhoon-conditions`.
 8. phrase `u44-culture-note` — EXPLAIN culture before culture questions.
@@ -398,10 +398,10 @@ Order:
    - explanation: 討厭 describes something as annoying here.
 8. phrase `u44-wet-source` — EXPLAIN the specific 濕濕的 extension.
 9. select `u44-wet-s2`
-   - prompt: **What does Lesson 14 establish about 濕濕的?**
-   - options: [`It is a source-attested reduplicated form for 濕.`, `Every state verb may now be doubled freely.`, `濕 cannot be reduplicated.`]
-   - answer: **It is a source-attested reduplicated form for 濕.**
-   - explanation: This is a specific extension of the earlier restricted reduplication system.
+   - prompt: **In 哪裡都濕濕的, what does 濕濕的 describe?**
+   - options: [`a wet/damp condition`, `a completed duration`, `something even bigger than before`]
+   - answer: **a wet/damp condition**
+   - explanation: 濕濕的 is the source-attested reduplicated description of a wet condition.
 10. listen `u44-wet-l1`
    - audioText: **哪裡都濕濕的。真討厭。**
    - prompt: **Which reaction do you hear?**
@@ -517,10 +517,10 @@ Order:
    - explanation: 沒有…那麼… expresses lower degree.
    - grammarIds: [`u44-not-as`]
 7. select `u44-g5-s2`
-   - prompt: **Which is the source's three-way comparison set?**
-   - options: [`跟…一樣 / 沒有…那麼 / 比`, `快要 / 只 / 已經`, `都 / 也 / 呢`]
+   - prompt: **Which set gives equal degree, lower degree, and higher degree in that order?**
+   - options: [`跟…一樣 / 沒有…那麼 / 比`, `比 / 跟…一樣 / 沒有…那麼`, `沒有…那麼 / 比 / 跟…一樣`]
    - answer: **跟…一樣 / 沒有…那麼 / 比**
-   - explanation: These express equal, inferior, and superior degree.
+   - explanation: 跟…一樣 gives equality, 沒有…那麼 gives lower degree, and 比 gives higher degree.
 8. select `u44-g5-s3`
    - prompt: **What can 今天有沒有昨天熱？ imply in the source explanation?**
    - options: [`yesterday was salient as fairly hot`, `today must be colder`, `the speaker forgot an umbrella`]
