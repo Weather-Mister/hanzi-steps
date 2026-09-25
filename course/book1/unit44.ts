@@ -214,14 +214,14 @@ const unit:UnitData = {
         {
           "id": "u44-typhoon-s2",
           "type": "select",
-          "prompt": "Which earlier grammar does 颱風快要來了 retrieve?",
+          "prompt": "What does 颱風快要來了 mean?",
           "options": [
-            "imminence with 快要…了",
-            "completed duration",
-            "equality with 跟…一樣"
+            "A typhoon is about to come.",
+            "Typhoons come every summer.",
+            "The rain is about to stop."
           ],
-          "answer": "imminence with 快要…了",
-          "explanation": "快要…了 was taught in Unit 43."
+          "answer": "A typhoon is about to come.",
+          "explanation": "快要…了 marks an imminent event; 颱風 is the event that is about to arrive."
         },
         {
           "id": "u44-typhoon-p3",
@@ -417,14 +417,14 @@ const unit:UnitData = {
         {
           "id": "u44-wet-s2",
           "type": "select",
-          "prompt": "What does Lesson 14 establish about 濕濕的?",
+          "prompt": "In 哪裡都濕濕的, what does 濕濕的 describe?",
           "options": [
-            "It is a source-attested reduplicated form for 濕.",
-            "Every state verb may now be doubled freely.",
-            "濕 cannot be reduplicated."
+            "a wet/damp condition",
+            "a completed duration",
+            "something even bigger than before"
           ],
-          "answer": "It is a source-attested reduplicated form for 濕.",
-          "explanation": "This is a specific extension of the earlier restricted reduplication system."
+          "answer": "a wet/damp condition",
+          "explanation": "濕濕的 is the source-attested reduplicated description of a wet condition."
         },
         {
           "id": "u44-wet-l1",
@@ -679,7 +679,7 @@ const unit:UnitData = {
           "options": [
             "今年比去年更冷。",
             "今年跟去年一樣冷。",
-            "今年沒有去年那麼冷。"
+            "今年比較冷。"
           ],
           "answer": "今年比去年更冷。",
           "explanation": "比…更… gives the “even more” comparison.",
@@ -708,14 +708,14 @@ const unit:UnitData = {
           "id": "u44-g4-l1",
           "type": "listen",
           "audioText": "這次的颱風會比上次的更大。",
-          "prompt": "Which time is the comparison baseline?",
+          "prompt": "Which comparison chunk do you hear?",
           "options": [
-            "上次",
-            "明年",
-            "去年"
+            "比上次的更大",
+            "比去年更大",
+            "跟上次的一樣大"
           ],
-          "answer": "上次",
-          "explanation": "The audio compares this typhoon with 上次, “last time.”",
+          "answer": "比上次的更大",
+          "explanation": "The audio uses 比上次的更大, “even bigger than last time.”",
           "char": "更"
         },
         {
@@ -796,14 +796,14 @@ const unit:UnitData = {
         {
           "id": "u44-g5-s2",
           "type": "select",
-          "prompt": "Which is the source's three-way comparison set?",
+          "prompt": "Which set gives equal degree, lower degree, and higher degree in that order?",
           "options": [
             "跟…一樣 / 沒有…那麼 / 比",
-            "快要 / 只 / 已經",
-            "都 / 也 / 呢"
+            "比 / 跟…一樣 / 沒有…那麼",
+            "沒有…那麼 / 比 / 跟…一樣"
           ],
           "answer": "跟…一樣 / 沒有…那麼 / 比",
-          "explanation": "These express equal, inferior, and superior degree."
+          "explanation": "跟…一樣 gives equality, 沒有…那麼 gives lower degree, and 比 gives higher degree."
         },
         {
           "id": "u44-g5-s3",
@@ -1088,7 +1088,7 @@ const unit:UnitData = {
         {
           "id": "u44-review-g5",
           "type": "select",
-          "prompt": "Why does 更 mean more than neutral “more” here?",
+          "prompt": "In Lesson 14, why is 更 translated as “even more” rather than neutral “more”?",
           "options": [
             "it invokes an established/understood baseline",
             "it marks past tense",
@@ -1174,26 +1174,26 @@ const unit:UnitData = {
         {
           "id": "u44-review-a004-1",
           "type": "select",
-          "prompt": "Which set belongs in the source weather interview?",
+          "prompt": "Which asks what the winter weather is like?",
           "options": [
-            "four seasons + typhoon + rain frequency + snow occurrence",
-            "only birthday food",
-            "only transport prices"
+            "冬天的天氣怎麼樣？",
+            "冬天常不常下雨？",
+            "冬天會不會下雪？"
           ],
-          "answer": "four seasons + typhoon + rain frequency + snow occurrence",
-          "explanation": "These are B1L14-A004's weather-comparison fields."
+          "answer": "冬天的天氣怎麼樣？",
+          "explanation": "…的天氣怎麼樣？ asks what the weather is like."
         },
         {
           "id": "u44-review-a004-2",
           "type": "select",
-          "prompt": "Besides asking the listed weather questions, what does the source task require?",
+          "prompt": "Which asks whether there are typhoons?",
           "options": [
-            "ask for additional information and record the results",
-            "stop after one question",
-            "avoid recording anything"
+            "有沒有颱風？",
+            "會不會下雪？",
+            "常不常下雨？"
           ],
-          "answer": "ask for additional information and record the results",
-          "explanation": "A004 explicitly requires both."
+          "answer": "有沒有颱風？",
+          "explanation": "有沒有颱風？ asks whether typhoons occur/are present. The source-transfer card still instructs the learner to ask for additional information and record the results."
         },
         {
           "id": "u44-review-cum1",
@@ -1225,11 +1225,47 @@ const unit:UnitData = {
           "prompt": "Which sentence shows imminence?",
           "options": [
             "颱風快要來了。",
-            "颱風來了兩個月。",
+            "颱風已經來了。",
             "颱風跟雨一樣。"
           ],
           "answer": "颱風快要來了。",
           "explanation": "快要…了 marks an imminent event."
+        },
+        {
+          "id": "u44-review-u43-1",
+          "type": "order",
+          "phrase": "u44-cum-miss",
+          "tokens": [
+            "我在臺灣住了半年多了",
+            "有一點想家"
+          ]
+        },
+        {
+          "id": "u44-review-u43-2",
+          "type": "order",
+          "phrase": "u44-cum-newyear",
+          "tokens": [
+            "新年快到了",
+            "想回去看父母嗎"
+          ]
+        },
+        {
+          "id": "u44-review-u43-3",
+          "type": "order",
+          "phrase": "u44-cum-december",
+          "tokens": [
+            "我打算",
+            "十二月底回去"
+          ]
+        },
+        {
+          "id": "u44-review-u43-4",
+          "type": "order",
+          "phrase": "u44-cum-leaves",
+          "tokens": [
+            "我想明年秋天",
+            "去看紅葉"
+          ]
         },
         {
           "id": "u44-review-culture",
@@ -1245,51 +1281,39 @@ const unit:UnitData = {
         },
         {
           "id": "u44-review-cap1",
-          "type": "select",
-          "prompt": "Which task demonstrates the weather/typhoon outcome?",
-          "options": [
-            "describe rain/snow/typhoon conditions and appropriate caution",
-            "compare seasonal temperatures",
-            "report where someone lived and for how long"
-          ],
-          "answer": "describe rain/snow/typhoon conditions and appropriate caution",
-          "explanation": "This maps to B1L14-F001/S001."
+          "type": "order",
+          "phrase": "u44-cap-weather",
+          "tokens": [
+            "颱風快要來了",
+            "請大家多小心"
+          ]
         },
         {
           "id": "u44-review-cap2",
-          "type": "select",
-          "prompt": "Which task demonstrates the seasons/preference outcome?",
-          "options": [
-            "name the seasons and explain which you like/dislike and why",
-            "describe a typhoon warning",
-            "report a completed travel duration"
-          ],
-          "answer": "name the seasons and explain which you like/dislike and why",
-          "explanation": "This maps to B1L14-F002/S002."
+          "type": "order",
+          "phrase": "u44-cap-season",
+          "tokens": [
+            "因為我怕冷",
+            "所以我比較喜歡春天"
+          ]
         },
         {
           "id": "u44-review-cap3",
-          "type": "select",
-          "prompt": "Which task demonstrates the comparison outcome?",
-          "options": [
-            "compare conditions with 比…更 / 跟…一樣 / 沒有…那麼",
-            "explain seasonal preferences",
-            "report where an experience happened and how long it lasted"
-          ],
-          "answer": "compare conditions with 比…更 / 跟…一樣 / 沒有…那麼",
-          "explanation": "This maps to B1L14-F003/S003."
+          "type": "order",
+          "phrase": "u44-less-model",
+          "tokens": [
+            "今年冬天",
+            "沒有去年冬天那麼熱"
+          ]
         },
         {
           "id": "u44-review-cap4",
-          "type": "select",
-          "prompt": "Which task demonstrates the experience outcome?",
-          "options": [
-            "say where an experience happened and how long it lasted",
-            "compare seasonal temperatures",
-            "describe typhoon conditions and caution"
-          ],
-          "answer": "say where an experience happened and how long it lasted",
-          "explanation": "This maps to B1L14-F004/S004."
+          "type": "order",
+          "phrase": "u44-cap-experience",
+          "tokens": [
+            "我在臺灣",
+            "住了一年"
+          ]
         }
       ]
     }
@@ -1819,7 +1843,7 @@ const unit:UnitData = {
     "u44-typhoon-conditions": {
       "text": "颱風來的時候，風和雨都很大，做什麼都很不方便。",
       "pinyin": "Táifēng lái de shíhou, fēng hé yǔ dōu hěn dà, zuò shénme dōu hěn bù fāngbiàn.",
-      "meaning": "When a typhoon comes, the wind and rain are both strong, and everything is inconvenient to do.",
+      "meaning": "When a typhoon comes, the wind is strong and the rain is heavy, and everything is inconvenient to do.",
       "note": "Preserves the condition/totality content of B1L14-D2T05; …的時候 and question-word + 都 are prior review.",
       "tokens": [
         "颱風來的時候",
@@ -2057,6 +2081,88 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u44-not-as"
+      ]
+    },
+    "u44-cap-weather": {
+      "text": "颱風快要來了，請大家多小心。",
+      "pinyin": "Táifēng kuài yào lái le, qǐng dàjiā duō xiǎoxīn.",
+      "meaning": "A typhoon is about to come; everyone, please be extra careful.",
+      "note": "Lesson-14 weather/typhoon capstone production line. It retrieves Unit-43 imminence and Unit-44 caution language.",
+      "tokens": [
+        "颱風快要來了",
+        "請大家多小心"
+      ],
+      "grammarIds": [
+        "u43-imminent"
+      ]
+    },
+    "u44-cap-season": {
+      "text": "因為我怕冷，所以我比較喜歡春天。",
+      "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
+      "meaning": "Because I'm sensitive to the cold, I prefer spring.",
+      "note": "Lesson-14 seasons/preference capstone line, retrieving Unit-42 preference/reason language.",
+      "tokens": [
+        "因為我怕冷",
+        "所以我比較喜歡春天"
+      ]
+    },
+    "u44-cap-experience": {
+      "text": "我在臺灣住了一年。",
+      "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
+      "meaning": "I lived in Taiwan for one year.",
+      "note": "Lesson-14 experience capstone line, retrieving Unit-43 completed duration.",
+      "tokens": [
+        "我在臺灣",
+        "住了一年"
+      ],
+      "grammarIds": [
+        "u43-completed-duration"
+      ]
+    },
+    "u44-cum-miss": {
+      "text": "我在臺灣住了半年多了。有一點想家。",
+      "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le. Yǒu yìdiǎn xiǎng jiā.",
+      "meaning": "I have been in Taiwan for a little over half a year. I miss home a little.",
+      "note": "Delayed retrieval of Unit-43 duration-to-now and 想 = “miss”.",
+      "tokens": [
+        "我在臺灣住了半年多了",
+        "有一點想家"
+      ],
+      "grammarIds": [
+        "u43-duration-to-now"
+      ]
+    },
+    "u44-cum-newyear": {
+      "text": "新年快到了。想回去看父母嗎？",
+      "pinyin": "Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?",
+      "meaning": "New Year is almost here. Do you want to go back to see your parents?",
+      "note": "Delayed retrieval of Unit-43 新年, 父母 and imminence.",
+      "tokens": [
+        "新年快到了",
+        "想回去看父母嗎"
+      ],
+      "grammarIds": [
+        "u43-imminent"
+      ]
+    },
+    "u44-cum-december": {
+      "text": "我打算十二月底回去。",
+      "pinyin": "Wǒ dǎsuàn shí'èr yuè dǐ huíqù.",
+      "meaning": "I plan to go back at the end of December.",
+      "note": "Delayed retrieval of Unit-43 十二月底.",
+      "tokens": [
+        "我打算",
+        "十二月底回去"
+      ]
+    },
+    "u44-cum-leaves": {
+      "text": "我想明年秋天去看紅葉。",
+      "pinyin": "Wǒ xiǎng míngnián qiūtiān qù kàn hóngyè.",
+      "meaning": "I want to go see red maple leaves next autumn.",
+      "note": "Delayed retrieval of Unit-43 明年 and 紅葉.",
+      "tokens": [
+        "我想明年秋天",
+        "去看紅葉"
       ]
     }
   },
