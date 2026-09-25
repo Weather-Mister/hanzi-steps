@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {compactPinyin,normalizePinyin,searchVocabulary,uniquePracticeCharacters,vocabularyLookup} from '../lib/vocabulary-lookup.ts';
+import {compactPinyin,normalizePinyin,searchPracticeCharacters,searchVocabulary,uniquePracticeCharacters,vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 test('pinyin normalization accepts tones, numbers, spacing, case, and v for ü',()=>{
  assert.equal(normalizePinyin('  XǏ HuĀN  '),'xi huan');
@@ -55,4 +55,17 @@ test('canonical lookup does not emit duplicate vocabulary results',()=>{
 test('canonical vocabulary keys are unique and stable-position based',()=>{
  assert.equal(new Set(vocabularyLookup.map(item=>item.id)).size,vocabularyLookup.length);
  assert.ok(vocabularyLookup.every(item=>item.id.startsWith('v1:'+item.lessonId+':')));
+});
+
+
+test('pinyin search keeps future vocabulary visible but gates writing practice by first character lesson',()=>{
+ const future=searchVocabulary('leng',100).find(item=>item.traditional==='冷');
+ assert.ok(future,'Unit 42 冷 must remain globally searchable');
+ assert.deepEqual(searchPracticeCharacters(future,new Set()),[]);
+ assert.deepEqual(searchPracticeCharacters(future,new Set(['u42-weather'])),['冷']);
+
+ const typhoon=searchVocabulary('taifeng',100).find(item=>item.traditional==='颱風');
+ assert.ok(typhoon,'Unit 44 颱風 must remain globally searchable');
+ assert.ok(searchPracticeCharacters(typhoon,new Set()).length===0);
+ assert.ok(searchPracticeCharacters(typhoon,new Set(['u44-typhoon'])).includes('颱'));
 });
