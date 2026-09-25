@@ -1,6 +1,6 @@
 # Book 1 Lesson 14 — Frozen Activity Specification
 
-Status: **Gate B PASS — re-frozen after the mandatory post-QA fresh Activity Audit 2 re-audit.**
+Status: **Gate B REOPENED — final strict-prerequisite simulation found a future-NEW distractor and an ungated standalone handwriting-practice route. Repaired candidate awaits fresh Activity Audit 2.**
 
 Upstream:
 - source gate: PASS
@@ -14,7 +14,7 @@ Normative activity-spec packet:
 - `course/book1/lesson14-unit43-activity-spec.md`;
 - `course/book1/lesson14-unit44-activity-spec.md`.
 
-Gate B has passed again after the post-QA repair and mandatory fresh Activity Audit 2 re-audit. Implementation may transcribe this frozen packet. Any unavoidable implementation deviation must be documented; any curriculum/source change reopens the affected upstream gate.
+Gate B is reopened after final Learner Simulation A found two prerequisite defects. The activity packet now removes the premature 明年 distractor and explicitly requires first-teaching gating for every standalone handwriting-practice entry point. Implementation is locked until the repaired packet passes the mandatory fresh Activity Audit 2 re-audit.
 
 ## 1. Activity-engineering rules
 
@@ -134,6 +134,7 @@ Rules:
 - assess the Lesson-14 senses only through Unit-43 teaching/review and Unit-44 cumulative review;
 - Search/Mega continue using their earlier canonical rows under the current product model.
 - **Pinyin Search safety rule (Gate-A compatible):** preserve the frozen Gate-A behavior that canonical results remain globally visible as lookup entries. For Lesson-14-owned characters, the Search writing-practice action must remain locked until the owning lesson (and therefore the character introduction) is complete. Mega Challenge eligibility remains gated by canonical-row lesson completion. Do not implement progress-gated Search visibility without reopening Gate A.
+- **Global handwriting-practice safety rule:** no learner-facing entry point may start a `practice-<character>` lesson before that character's first non-review teaching lesson is complete. This includes Pinyin Search, the unit character mini-grid/library, character-detail dialogs, locked-but-explorable units, and any future shortcut into standalone character practice. A character may be visually listed for navigation/preview, but its independent writing-practice action must be disabled or withheld until first teaching is complete.
 
 ## 5. New-character ownership and first-introduction order
 
