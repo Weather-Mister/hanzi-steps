@@ -117,7 +117,7 @@ const unit:UnitData = {
         {
           "id": "u43-duration-s1",
           "type": "select",
-          "prompt": "Which sentence correctly keeps the object before the duration?",
+          "prompt": "Which sentence uses the Lesson-14 completed-duration pattern with verb repetition?",
           "options": [
             "我打網球打了兩個鐘頭。",
             "我打網球了兩個鐘頭。",
@@ -157,7 +157,7 @@ const unit:UnitData = {
         {
           "id": "u43-confirm-s1",
           "type": "select",
-          "prompt": "In the source-style prompt, 對不對 is used to…",
+          "prompt": "At the end of a statement, 對不對 is used to…",
           "options": [
             "seek confirmation of the statement",
             "ask how many months",
@@ -294,26 +294,26 @@ const unit:UnitData = {
         {
           "id": "u43-a002-s1",
           "type": "select",
-          "prompt": "For the source experience task, what two things must you ask about?",
+          "prompt": "Which question asks where someone lived before?",
           "options": [
-            "where the person lived and for how long",
-            "where the person lives now and what they like",
-            "when the person returned and why"
+            "你以前住在哪裡？",
+            "你在那裡住了多久？",
+            "你什麼時候回來？"
           ],
-          "answer": "where the person lived and for how long",
-          "explanation": "B1L14-A002 asks for place plus duration."
+          "answer": "你以前住在哪裡？",
+          "explanation": "哪裡 asks for the place where the person lived."
         },
         {
           "id": "u43-a002-s2",
           "type": "select",
-          "prompt": "After asking the classmate, what does the source task require?",
+          "prompt": "Which question asks how long someone lived there?",
           "options": [
-            "record the result and report it",
-            "ask the same questions again without recording anything",
-            "report before asking for the duration"
+            "你在那裡住了多久？",
+            "你以前住在哪裡？",
+            "你明年回來嗎？"
           ],
-          "answer": "record the result and report it",
-          "explanation": "A002 includes recording and reporting."
+          "answer": "你在那裡住了多久？",
+          "explanation": "多久 asks for the duration. The source-transfer card still instructs the learner to record and report the answer."
         },
         {
           "id": "u43-duration-now-l1",
@@ -1124,22 +1124,19 @@ const unit:UnitData = {
           "options": [
             "夏天常下雨。",
             "新年快到了。",
-            "紅葉很冷。"
+            "冬天太冷了。"
           ],
           "answer": "夏天常下雨。",
           "explanation": "This retrieves Unit-42 weather before Unit 44."
         },
         {
           "id": "u43-review-cum2",
-          "type": "select",
-          "prompt": "For the source experience task, what comes after asking where/how long?",
-          "options": [
-            "record and report the result",
-            "introduce a typhoon comparison",
-            "skip the result"
-          ],
-          "answer": "record and report the result",
-          "explanation": "This retrieves A002's transfer requirement."
+          "type": "order",
+          "phrase": "u43-a002-model",
+          "tokens": [
+            "你以前住在哪裡",
+            "你在那裡住了多久"
+          ]
         },
         {
           "id": "u43-review-o1",
@@ -1710,7 +1707,7 @@ const unit:UnitData = {
     "u43-return-reason": {
       "text": "因為我們只放十天的假，所以一月五號回來。",
       "pinyin": "Yīnwèi wǒmen zhǐ fàng shí tiān de jià, suǒyǐ yī yuè wǔ hào huílái.",
-      "meaning": "Because we only have ten days off, we come back on January 5.",
+      "meaning": "Because we only have ten days off, we'll come back on January 5.",
       "note": "Source B1L14-D1T11; 因為…所以… is prior review.",
       "tokens": [
         "因為我們只放十天的假",
