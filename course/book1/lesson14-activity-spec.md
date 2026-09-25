@@ -258,20 +258,19 @@ Unit 44 review:
 
 ## 11. Gate-B status
 
-Gate B was reopened after Stage-7 learner simulations found prerequisite, conformance, capstone, delayed-retrieval, and Pinyin Search timing defects.
+Gate B was reopened after deterministic QA found a global explain-before-order regression in several Unit-44 delayed-retrieval/capstone order steps. The activity packet was repaired by removing redundant alias phrase records and reusing phrase IDs that had already been taught earlier in the learner sequence. No Gate-A curriculum decision changed.
 
-The repaired packet has now passed:
-1. Activity Audit 1 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit.md`);
-2. fresh-context Activity Audit 2 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit.md`);
-3. Activity Audit 3 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit.md`);
+The post-QA repaired packet has now passed:
+1. Activity Audit 1 re-audit 2 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit2.md`);
+2. mandatory fresh-context Activity Audit 2 re-audit 2 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit2.md`);
+3. Activity Audit 3 re-audit 2 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit2.md`);
 4. open BLOCKER: **0**;
 5. open MAJOR: **0**.
 
-Fresh Activity Audit 2 also corrected the Search timing contract to match frozen Gate A:
-- canonical Pinyin Search lookup remains global;
-- Lesson-14 Search writing practice is gated until the owning lesson / character introduction;
-- Mega/adaptive practice remains owning-lesson gated.
+The repaired Unit-44 order steps now reference only phrases previously taught in Units 42–44. Delayed retrieval still covers 想家, 新年/父母, 十二月底, and 明年/紅葉; the 41-step Unit-44 review and four-outcome Chinese-construction capstone remain intact.
 
-**Gate B: PASS. This packet is frozen.**
+Pinyin Search keeps the frozen Gate-A contract: canonical lookup remains globally visible, Lesson-14 character writing actions are gated until the owning lesson / first character teaching, and Mega eligibility is owning-lesson gated.
 
-The controller may advance to **implementation**. Implementation must conform to this packet; curriculum invention or an upstream architecture change reopens the appropriate gate.
+**Gate B: PASS. This packet is re-frozen.**
+
+The controller is authorized to advance to **implementation**. Implementation must conform to this packet; curriculum invention or an upstream architecture change reopens the appropriate gate.
