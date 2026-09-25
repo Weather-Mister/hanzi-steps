@@ -37,7 +37,8 @@
     "curriculumAdversarialAuditHandoff": "course/book1/lesson15-curriculum-adversarial-handoff.md",
     "curriculumSourceFidelityAudit": "course/book1/lesson15-curriculum-source-fidelity-audit.md",
     "curriculumPedagogyAudit": "course/book1/lesson15-curriculum-pedagogy-audit.md",
-    "curriculumAdversarialAudit": "course/book1/lesson15-curriculum-adversarial-audit.md"
+    "curriculumAdversarialAudit": "course/book1/lesson15-curriculum-adversarial-audit.md",
+    "activityEngineeringHandoff": "course/book1/lesson15-activity-engineering-handoff.md"
   },
-  "notes": "Lesson 15 Gate A PASS. Source gate, dependency gate, source-fidelity curriculum audit, pedagogy curriculum audit, and adversarial curriculum audit all pass with 0 open BLOCKER and 0 open MAJOR. The adversarial audit repaired one MAJOR cross-unit Search/Mega exposure risk by freezing sense-expansion ownership for 幾 and 跟 without changing unit boundaries, source allocation, or prerequisite topology. The curriculum blueprint is frozen. Activity engineering is the next stage and has not been performed."
+  "notes": "Lesson 15 Gate A PASS. Source, dependency, and all three curriculum audits pass with 0 open BLOCKER and 0 open MAJOR. The curriculum blueprint for Units 45–48 is frozen. Activity Engineering is ready via course/book1/lesson15-activity-engineering-handoff.md; no activity specification, activity audit, implementation, merge, or publication has begun."
 }
