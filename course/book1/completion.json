@@ -52,7 +52,8 @@
     "activityCrossUnitAuditHandoff": "course/book1/lesson15-activity-cross-unit-audit-handoff.md",
     "activityTeachingQualityAudit": "course/book1/lesson15-activity-teaching-quality-audit.md",
     "activityQuestionAudit": "course/book1/lesson15-activity-question-audit.md",
-    "activityCrossUnitAudit": "course/book1/lesson15-activity-cross-unit-audit.md"
+    "activityCrossUnitAudit": "course/book1/lesson15-activity-cross-unit-audit.md",
+    "implementationHandoff": "course/book1/lesson15-implementation-handoff.md"
   },
-  "notes": "Lesson 15 Activity Audit 3 — Cross-Unit Coherence completed and PASS on Units 45–48 with 0 BLOCKER / 0 MAJOR / 0 MINOR. Activity Audits 1, 2, and 3 each separately PASS with zero open BLOCKER/MAJOR, so Gate B is PASS and the Lesson 15 activity packet is frozen. Current stage is implementation readiness only; implementation is pending and release remains locked. Units 45–48 have not been implemented, merged, or published. During implementation, canonical first ownership of 一直 / 直 must migrate from the later Book-2 Unit-1 declaration to Book-1 Unit 45 as required by the frozen blueprint."
+  "notes": "Lesson 15 Gate B PASS with all three activity audits at 0 open BLOCKER / 0 open MAJOR. The frozen Units 45–48 activity packet is ready for Stage 5 implementation. Implementation handoff is persisted at course/book1/lesson15-implementation-handoff.md. Implementation remains pending; release remains locked; Units 45–48 are not yet implemented, merged, or published. The required 一直 / 直 first-ownership migration must be performed during implementation."
 }
