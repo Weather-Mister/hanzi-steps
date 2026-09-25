@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "implementation",
+  "currentStage": "deterministic-qa",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -18,7 +18,7 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
   "openFindings": [],
@@ -28,7 +28,7 @@
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
     "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
     "traceability": null,
-    "releaseReport": "course/book1/lesson14-final-release-audit.md",
+    "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
     "dependencyAudit": "course/book1/lesson14-dependency-audit.md",
     "curriculumBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
@@ -50,9 +50,9 @@
     ],
     "deterministicQa": null,
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
-    "learnerSimulationA": "course/book1/lesson14-learner-simulation-a-final2.md",
-    "learnerSimulationB": "course/book1/lesson14-learner-simulation-b-final2.md",
-    "learnerSimulationC": "course/book1/lesson14-learner-simulation-c-final2.md",
+    "learnerSimulationA": null,
+    "learnerSimulationB": null,
+    "learnerSimulationC": null,
     "activityTeachingQualityReaudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
     "activityCrossUnitReaudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
     "activityQuestionReaudit": "course/book1/lesson14-activity-question-reaudit.md",
@@ -73,5 +73,5 @@
     "activityQuestionReaudit4": "course/book1/lesson14-activity-question-reaudit4.md",
     "activityQuestionReaudit4Handoff": "course/book1/lesson14-activity-question-reaudit4-handoff.md"
   },
-  "notes": "FR-001 is repaired at the activity layer and all three re-audit4 activity audits PASS with zero open BLOCKER/MAJOR. Gate B is re-frozen. Current stage is implementation pending; release remains locked. Prior implementation/QA/simulation/traceability/release evidence is stale and must be rebuilt downstream."
+  "notes": "FR-001 learner-facing A001 transfer is implemented in Unit 42 phrase notes. Implementation conformance re-audit4 passes with 0 open BLOCKER/MAJOR. Deterministic QA is pending. Downstream learner simulations, traceability, and release audit must be rebuilt after this learner-visible change."
 }
