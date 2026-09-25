@@ -302,10 +302,10 @@ Global handwriting safeguard:
 | Target family | Explain/recognize | Controlled/contextual | Retrieval | Delayed retrieval | Cumulative mixing |
 |---|---|---|---|---|---|
 | U45 symptoms + health inquiry | U45 L1–L6 | D1T01–D1T05 | u45-review | u46/u47 reviews | u48 capstone |
-| U46 diagnosis/medicine | U46 L1/L3/L5/L6 | D1T06–D1T12 | u46-review | u47 review | u48 capstone |
-| 幾 expansion + G001 | U46 L2 | negative non-specific drills/D1T07 | u46-review | u47 好幾次 | u48 sense contrast |
+| U46 diagnosis/medicine | U46 L1/L3/L5/L6 | D1T06–D1T12 | u46-review | u47 reuse + explicit u48 delayed retrieval | u48 capstone |
+| 幾 expansion + G001 | U46 L2 | negative non-specific drills/D1T07 | u46-review | u47 好幾次 for 幾; u48 cumulative G001 retrieval | u48 sense contrast |
 | G002 把 | U46 L4 | controlled restrictions + A004 | u46-review | u47/u48 cumulative items | u48 capstone |
-| U47 stomach/help lexicon | U47 L1–L6 | D2T01–D2T07/A005 | u47-review | u48 review | u48 F001–F004 mix |
+| U47 stomach/help lexicon | U47 L1–L6 | D2T01–D2T07/A005 | u47-review | explicit u48 positive delayed-retrieval block | u48 F001–F004 mix |
 | G003 | U47 L3 | source sequence drills | u47-review | u48 delayed item | u48 cumulative grammar mix |
 | 跟 recipient + advice | U48 L1 | D2T08–D2T10/A002 | u48-review | same-unit delayed review | final capstone |
 | G004 | U48 L2 | D2T11 | u48-review | L4/G006 and review | A001/capstone |
@@ -321,6 +321,8 @@ Prepared separately:
 1. `course/book1/lesson15-activity-teaching-quality-audit-handoff.md`
 2. `course/book1/lesson15-activity-question-audit-handoff.md`
 3. `course/book1/lesson15-activity-cross-unit-audit-handoff.md`
+
+Teaching-quality repairs add meaning-first lexical EXPLAIN cards where exact NEW words had previously been first exposed by assessment feedback, plus explicit positive delayed retrieval in the Unit-48 capstone for earlier targets that otherwise disappeared after their owning unit. These are activity-level repairs only; frozen Gate-A ownership and topology are unchanged.
 
 The question/adversarial audit must run in a fresh context.
 
