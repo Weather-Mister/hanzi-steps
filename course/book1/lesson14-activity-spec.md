@@ -1,6 +1,6 @@
 # Book 1 Lesson 14 — Frozen Activity Specification
 
-Status: **Gate B PASS — re-frozen after fresh Activity Audit 2 re-audit on 2026-09-25**.
+Status: **Gate B REOPENED — deterministic QA found untaught phrase IDs in Unit-44 order retrieval; repaired candidate awaits a fresh Activity Audit 2 re-audit.**
 
 Upstream:
 - source gate: PASS
@@ -14,7 +14,7 @@ Normative activity-spec packet:
 - `course/book1/lesson14-unit43-activity-spec.md`;
 - `course/book1/lesson14-unit44-activity-spec.md`.
 
-Gate B has passed. Implementation may now transcribe this frozen packet. Any unavoidable implementation deviation must be documented; any curriculum/source change reopens the affected upstream gate.
+Gate B is temporarily reopened after deterministic QA exposed an activity-structure defect. The candidate packet has been repaired without changing Gate A. Implementation is locked until the repaired packet passes the mandatory fresh Activity Audit 2 re-audit and Gate B is re-frozen.
 
 ## 1. Activity-engineering rules
 
