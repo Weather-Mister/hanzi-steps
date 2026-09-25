@@ -107,7 +107,7 @@ Source-boundary records **B1L15-SRC001–B1L15-SRC009** are bibliographic metada
 | ID | Disposition | Required prerequisites | Dependency decision |
 |---|---|---|---|
 | **B1L15-G001** Non-committal question-word declaratives under negation | **EXPANSION** | ordinary question words; `u40-questionword-totality`; `u39-bu-vs-mei`; B1L15-V026 expansion where 幾 is used | Unit 40 teaches question-word totality with 都/也. Lesson 15 adds a distinct indefinite/non-specific **negative declarative without requiring 都/也**. Preserve the source rule that these statements are always negative; do not flatten it into Unit-40 totality. |
-| **B1L15-G002** Introductory 把 disposal | **NEW** | B1L15-V017 把; `u39-verbal-le`; known definiteness/modifier patterns; known outward verbs as examples | No prior 把 ownership. Teach the source’s definite-object bias, bare outward-transitive action-verb restriction, rejection of inward verbs, sentence-final 了 pattern, 沒/別-before-把 negation, and source question forms. |
+| **B1L15-G002** Introductory 把 disposal | **NEW** | B1L15-V017 把; B1L15-V035 別 for the imperative-negation branch; `u39-verbal-le`; `u39-bu-vs-mei`; `u41-shibushi` for the source confirmation-question branch; known definiteness/modifier patterns; known outward verbs as examples | No prior 把 ownership. Teach the source’s definite-object bias, bare outward-transitive action-verb restriction, rejection of inward verbs, sentence-final 了 pattern, 沒/別-before-把 negation, and source question forms. |
 | **B1L15-G003** V了…就… | **EXPANSION** | `u39-verbal-le`; `u38-yi-jiu`; `u36-yihou-after`; `u41-shibushi` / 嗎 for source questions | Prior 一…就… and completed-action 了 are known separately. Lesson 15 integrates completion + immediate succession and explicitly contrasts it with Lesson-13 一…就…. A-not-A remains unavailable here. |
 | **B1L15-G004** 一點 quantity/degree system | **EXPANSION** | Unit-39 `一點 + NP`; Unit-16 `有一點 + Vs`; `u40-more-less-verb` | Quantity 一點 and pre-state 有一點 are known. Lesson 15 adds/completes **Vs + 一點** as comparative degree, the contrast with 有（一）點 + Vs, 一點點, and their coordinated drill system. |
 | **B1L15-G005** Comparing actions with 得 | **EXPANSION** | Unit-16 performance 得 / object-repeat pattern; `u25-bi-comparison`; `u25-bi-negation`; `u41-shibushi` | The learner knows 得 complements and 比 comparisons separately. Lesson 15 combines them into action comparison, including Pattern 2 verb repetition, 不比 negation placement, and 嗎/是不是 questions. |
@@ -116,7 +116,7 @@ Source-boundary records **B1L15-SRC001–B1L15-SRC009** are bibliographic metada
 
 ## Required intra-Lesson-15 edges
 
-- **B1L15-V017 → B1L15-G002**.
+- **B1L15-V017 + B1L15-V035 + prior `u39-verbal-le` / `u39-bu-vs-mei` / `u41-shibushi` → B1L15-G002**.
 - **B1L15-G004 → B1L15-G006** for the comparative `Vs + 一點` branch.
 - **B1L15-V026 + B1L15-V027 → B1L15-X008** (`好幾次`).
 - **B1L15-V044 + prior `u27-yinggai` → B1L15-P004 / F003**.
@@ -305,7 +305,8 @@ Dependency disposition:
 - **您 — NEW support** under B1L15-P007. It must be introduced/glossed before literal doctor-patient productive use.
 - **份 — NEW support** under B1L15-X037 if the literal prescription visual is retained.
 - **妳 — DEFERRED source orthography**. Preserve it in source artifacts; learner-facing material may normalize direct address to already-known 你 unless architecture deliberately adds support. Do not create a silent handwriting obligation.
-- **白、玉、安、田、李、陳、王 — DEFERRED proper-name glyphs** under X001/X025/X032. Use pinyin/generic role labels or other contextual support rather than productive testing.
+- **白、安、田、李、陳、王 — DEFERRED proper-name glyphs** under X001/X025/X032. Use pinyin/generic role labels or other contextual support rather than productive testing.
+- **玉 — DEFERRED source-name glyph**. It occurs in 如玉 speaker labels and the A005 context but has no separate lexical ownership record; handle it with pinyin/generic role labeling and never make it a handwriting/Search/Mega prerequisite.
 - **北、紐、約 — DEFERRED place-name/example glyphs** under X021.
 - **烏、龍 — DEFERRED drill-support glyphs** under X024.
 - **診 — DEFERRED prescription-header glyph** under X036.
@@ -322,6 +323,8 @@ Each of the **25 source dialogue turns** either contains a Lesson-15 NEW/EXPANSI
 **NEW — source integration utterance**
 
 This classification does **not** create 25 extra lexical ownership records. It means the eventual architecture must make each turn comprehensible only after its vocabulary/grammar/support dependencies are available.
+
+**Dialogue dependency invariant:** every dialogue turn has prerequisite edges from every NEW / EXPANSION formal lexical item, support item, grammar/pragmatics item, and hidden name/orthography handling actually present in that turn. The bullets below call out the non-obvious structural/support edges and do not waive those lexical edges.
 
 Dialogue-I:
 - B1L15-D1T01
@@ -362,15 +365,17 @@ Dialogue-II:
 - D1T08 depends on **NEW support modal 得** (X006), not prior complement 得.
 - D1T11 depends on G002 把, EXPANSION X007, and new health vocabulary.
 - D1T12 depends on NEW-support 您 under P007.
-- D2T02 instantiates G003 and NEW X008.
-- D2T03 depends on new 陪 / 看病 plus REVIEW P003.
+- D2T01 depends on V022/V023/V040 + P001 for the condition inquiry and facial-condition description.
+- D2T02 depends on V024/V025 + G003 + NEW X008.
+- D2T03 depends on new V028 陪 / V029 看病 plus REVIEW P003.
 - D2T04–D2T06 depend on new health/insurance vocabulary and P002/X010/X011.
-- D2T08 depends on V032 recipient 跟 expansion + REVIEW 不能.
-- D2T09 depends on V033/V034/V035/V044 and P009.
+- D2T07 depends on V029 看病 before the confirmation question can be used productively.
+- D2T08 depends on V011 生病 + V032 recipient 跟 expansion + REVIEW X012 不能.
+- D2T09 depends on REVIEW X013 自己 + EXPANSION X007 多 + V advice + V033/V034/V035/V044 + P009.
 - D2T10 depends on V036/P006.
-- D2T11 depends on P008/G004.
-- D2T12 depends on G005 plus REVIEW 以後.
-- D2T13 depends on G006/G007 and V039.
+- D2T11 depends on X002 health-inquiry integration + P008/G004.
+- D2T12 depends on V037 包 + V038 睡 + G005 + REVIEW X014 以後.
+- D2T13 depends on V038 睡 + V039 小時 + G006/G007.
 
 ---
 
@@ -393,7 +398,7 @@ Dialogue-II:
 Each classroom activity is a **NEW source-required transfer task**. This means the task itself is newly required; it does not duplicate ownership of prerequisite vocabulary or grammar.
 
 - **B1L15-A001 — NEW**
-  - prerequisites: B1L15-G005 + B1L15-G006; X035 fractional bowl quantities; REVIEW X034 transport; KNOWN X018 rent; X033 contextual/deferred 臺南 handling.
+  - prerequisites: B1L15-G005 + B1L15-G006; B1L15-V039 小時; B1L15-X039 分鐘 support for the source travel-duration row; X035 fractional bowl quantities; REVIEW X034 transport; KNOWN X018 rent; X025/X032 plus the hidden-name rule for contextual/deferred participant names (田中 / 如玉 / 安同 / 月美); X033 contextual/deferred 臺南 handling.
   - The exact comparison table values remain source-required data, not new vocabulary ownership.
 
 - **B1L15-A002 — NEW**
@@ -409,7 +414,7 @@ Each classroom activity is a **NEW source-required transfer task**. This means t
   - Preserve the source-required 把 outcomes rather than reducing the activity to generic object fronting.
 
 - **B1L15-A005 — NEW**
-  - prerequisites: F001 + F002, symptom vocabulary, health inquiry P001/X002, and sufficient dialogue integration to ask four condition questions.
+  - prerequisites: F001 + F002, symptom vocabulary, health inquiry P001/X002, sufficient dialogue integration to ask four condition questions, and deferred source-name handling for 如玉 / 玉 under the hidden non-formal character rule.
 
 ---
 
@@ -436,7 +441,7 @@ The self-assessment restates outcomes and creates no separate teaching ownership
 Existing production nodes:
 
 - ordinary question words + `u40-questionword-totality` + `u39-bu-vs-mei` → **B1L15-G001**
-- `u39-verbal-le` + B1L15-V017 → **B1L15-G002**
+- B1L15-V017 + B1L15-V035 + `u39-verbal-le` + `u39-bu-vs-mei` + `u41-shibushi` → **B1L15-G002**
 - `u39-verbal-le` + `u38-yi-jiu` + `u36-yihou-after` → **B1L15-G003**
 - Unit-39 一點 + Unit-16 有一點 + `u40-more-less-verb` → **B1L15-G004**
 - Unit-16 performance 得 + `u25-bi-comparison` / `u25-bi-negation` → **B1L15-G005**
@@ -455,7 +460,7 @@ New Lesson-15 nodes:
 - B1L15-V041 → **B1L15-P002**
 - NEW-support 您 + known 請問 → **B1L15-P007**
 - B1L15-V033 + V034 + V035 + V044 + known totality/nominalization → **B1L15-P009**
-- **B1L15-G005 + B1L15-G006 + X035 → B1L15-A001**
+- **B1L15-G005 + B1L15-G006 + B1L15-V039 + B1L15-X035 + B1L15-X039 + contextual/deferred participant-name handling → B1L15-A001**
 - **B1L15-X037 + X038 + X039 + V027 + V037 → B1L15-A003**
 - **B1L15-G002 + X040 + X041 + X042 + X043 → B1L15-A004**
 
