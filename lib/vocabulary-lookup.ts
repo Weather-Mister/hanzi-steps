@@ -45,6 +45,24 @@ export function uniquePracticeCharacters(item:VocabularyLookupItem):string[]{
  return [...new Set(item.characters)].filter(char=>Boolean(characters[char]));
 }
 
+const firstTeachingLessonByCharacter=new Map<string,string>();
+for(const lesson of lessons){
+ if(lesson.review)continue;
+ for(const char of lesson.chars)if(!firstTeachingLessonByCharacter.has(char))firstTeachingLessonByCharacter.set(char,lesson.id);
+}
+
+/**
+ * Pinyin Search is a global canonical lookup, but its handwriting action must
+ * never bypass the character's first teaching lesson. Results stay visible;
+ * only writing practice is progress-gated.
+ */
+export function searchPracticeCharacters(item:VocabularyLookupItem,completed:Set<string>):string[]{
+ return uniquePracticeCharacters(item).filter(char=>{
+  const owner=firstTeachingLessonByCharacter.get(char);
+  return Boolean(owner&&completed.has(owner));
+ });
+}
+
 const lessonById=new Map(lessons.map(lesson=>[lesson.id,lesson]));
 const unitById=new Map(units.map(unit=>[unit.id,unit]));
 const bookByUnitId=new Map(books.flatMap(book=>book.unitIds.map(unitId=>[unitId,book] as const)));
