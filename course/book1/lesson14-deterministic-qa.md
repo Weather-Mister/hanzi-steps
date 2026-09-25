@@ -1,24 +1,24 @@
-# Book 1 Lesson 14 — Deterministic QA Re-run after final Gate-B repair
+# Book 1 Lesson 14 — Deterministic QA Final Re-run after prerequisite repairs
 
-Final learner-facing implementation head tested: `26b982412a05da2adcbf99727ec72dbe3dba79d4`
+Final authored implementation head tested: `6a94446ce76eeddc8086e56a9d3002baa2fdefa1`
 
 Generated-artifact follow-up commit:
-- `151bae5d541fcfe60cef6a0b79d945a6479c0da6`
+- `e01073f25f2da06917b9c265e9c84d860a36ea60`
 - message: `Generate curriculum artifacts`
 - generated-only change: `course/registry.generated.ts`
 
 GitHub Actions:
 - workflow: **Feature QA**
-- run: **#459**
-- run id: `36114550736`
+- run: **#478**
+- run id: `36126675182`
 - conclusion: **SUCCESS**
 
 ## Required checks
 
-All deterministic checks succeeded on the final learner-facing implementation head:
+All deterministic checks succeeded on the final authored implementation head:
 
 1. `npm ci` — PASS
-2. declared Traditional stroke-source hydration — PASS
+2. Traditional stroke-source hydration — PASS
 3. curriculum artifact generation — PASS
 4. curriculum graph validation — PASS
 5. targeted tests for changed unit modules — PASS
@@ -28,16 +28,22 @@ All deterministic checks succeeded on the final learner-facing implementation he
 9. `npm run build:pages` — PASS
 10. generated curriculum artifacts committed successfully
 
-The regression suite now includes the global explain-before-order invariant that previously failed Feature QA #451. The repaired Unit-44 delayed retrieval and capstone order steps pass that invariant by reusing phrases taught earlier in Units 42–44.
+## Final prerequisite repairs verified by QA
 
-## Pinyin Search / practice regression
+### Unit 43 future-vocabulary repair
+`u43-a002-s2` no longer contains future-owned `明年`. Its third distractor is the already-available `你在臺灣住了半年嗎？`.
 
-The final implementation preserves the frozen Gate-A product model:
-- future canonical vocabulary remains visible in Pinyin Search;
-- writing-practice actions are hidden until the character's first teaching lesson is complete;
-- Mega/adaptive practice remains owning-lesson gated.
+### Global standalone handwriting gate
+`characterPracticeAvailable(char, completed)` is now the central first-teaching invariant.
 
-Targeted regression coverage verifies this behavior for Lesson-14 material.
+Regression coverage verifies:
+- 葉 is unavailable for standalone practice before `u43-next-year`;
+- 葉 unlocks after `u43-next-year`;
+- 更 is unavailable before `u44-even-more`;
+- 更 unlocks after `u44-even-more`;
+- Pinyin Search keeps canonical vocabulary globally visible while handwriting actions remain gated.
+
+The application-level `start()` path enforces the same rule for every `practice-<character>` lesson, including character-library/detail shortcuts.
 
 ## Findings
 
@@ -47,6 +53,6 @@ Targeted regression coverage verifies this behavior for Lesson-14 material.
 
 # Result: PASS
 
-Stage 6 deterministic QA passes on the final repaired learner-facing implementation.
+Stage 6 deterministic QA passes on the final prerequisite-repaired implementation.
 
-Stage 7 must now be rerun in three independent fresh contexts because the learner-facing activity packet changed after the earlier learner simulations.
+Because learner-facing behavior changed after the previous final learner-simulation rerun, Stage 7 must be repeated on this final code before traceability/release.
