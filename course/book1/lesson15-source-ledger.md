@@ -453,7 +453,7 @@ These items occur in dialogues, grammar examples/drills, classroom tasks, or act
 | **B1L15-X003** | 什麼東西都不想吃 | D1, p. 324 |
 | **B1L15-X004** | 大概多久了 / 已經…天了 | D1, p. 324 |
 | **B1L15-X005** | 有一點 + state | D1 + G004 |
-| **B1L15-X006** | 得 + V necessity, e.g. 得吃藥嗎 | D1, p. 325 |
+| **B1L15-X006** | 得 + V necessity, e.g. 得吃藥嗎 | D1, p. 324 |
 | **B1L15-X007** | 多 + V advice: 多喝水 / 多休息 / 多小心 | D1/D2 |
 | **B1L15-X008** | 好幾次 | D2, p. 327 |
 | **B1L15-X009** | 好不好 proposal/agreement frame | D2, p. 327 |
