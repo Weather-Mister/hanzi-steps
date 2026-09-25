@@ -78,7 +78,7 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 ### u44-typhoon-conditions
 - text: **颱風來的時候，風和雨都很大，做什麼都很不方便。**
 - pinyin: **Táifēng lái de shíhou, fēng hé yǔ dōu hěn dà, zuò shénme dōu hěn bù fāngbiàn.**
-- meaning: **When a typhoon comes, the wind and rain are both strong, and everything is inconvenient to do.**
+- meaning: **When a typhoon comes, the wind is strong and the rain is heavy, and everything is inconvenient to do.**
 - note: Preserves the condition/totality content of B1L14-D2T05; …的時候 and question-word + 都 are prior review.
 - tokens: [`颱風來的時候`, `風和雨都很大`, `做什麼都很不方便`]
 
@@ -252,7 +252,7 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 ### u44-cap-season
 - text: **因為我怕冷，所以我比較喜歡春天。**
 - pinyin: **Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.**
-- meaning: **Because I dislike the cold, I prefer spring.**
+- meaning: **Because I'm sensitive to the cold, I prefer spring.**
 - note: Lesson-14 seasons/preference capstone line, retrieving Unit-42 preference/reason language.
 - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
 
@@ -594,7 +594,7 @@ For select rows above, prompt format: **“X means…”**; explanation: **“X 
 
 ### Grammar/comparison retrieval
 21. `u44-review-g5`
-   - prompt: Why does 更 mean more than neutral “more” here?
+   - prompt: In Lesson 14, why is 更 translated as “even more” rather than neutral “more”?
    - options: [it invokes an established/understood baseline, it marks past tense, it means everyone]
    - answer: it invokes an established/understood baseline
    - explanation: The “even more” baseline is required by the source.
@@ -656,7 +656,7 @@ No prompt or answer uses 度 or 北.
    - explanation: This retrieves Unit-43 G002.
 32. `u44-review-cum3`
    - prompt: Which sentence shows imminence?
-   - options: [颱風快要來了。, 颱風來了兩個月。, 颱風跟雨一樣。]
+   - options: [颱風快要來了。, 颱風已經來了。, 颱風跟雨一樣。]
    - answer: 颱風快要來了。
    - explanation: 快要…了 marks an imminent event.
 33. `u44-review-u43-1` order `u44-cum-miss`
@@ -710,7 +710,7 @@ Review count: **41 total steps** — 40 review-specific step IDs plus the `u44-w
 
 ## 8. Search/Mega and deferral rules
 
-- all 12 canonical NEW forms receive one normal Search/Mega ownership row.
+- all 12 canonical NEW forms receive one canonical ownership row at their owning lesson. Per frozen Gate A, Pinyin Search remains a global lookup; Search writing practice for a Lesson-14-owned character stays locked until that owning lesson/character introduction is complete. Mega eligibility remains gated by owning-lesson completion.
 - no support-only comparison nouns gain ownership.
 - no 度 / 北 in assessed A003 text; use **Taipei** and numeric **°C**.
 - 呢 in D2T01 is never a tested grammar target.
