@@ -163,7 +163,7 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 ### u43-return-reason
 - text: **因為我們只放十天的假，所以一月五號回來。**
 - pinyin: **Yīnwèi wǒmen zhǐ fàng shí tiān de jià, suǒyǐ yī yuè wǔ hào huílái.**
-- meaning: **Because we only have ten days off, we come back on January 5.**
+- meaning: **Because we only have ten days off, we'll come back on January 5.**
 - note: Source B1L14-D1T11; 因為…所以… is prior review.
 - tokens: [`因為我們只放十天的假`, `所以一月五號回來`]
 
@@ -218,7 +218,7 @@ Order:
 5. phrase `u43-finished-stay`.
 6. phrase `u43-tennis-duration`.
 7. select `u43-duration-s1`
-   - prompt: **Which sentence correctly keeps the object before the duration?**
+   - prompt: **Which sentence uses the Lesson-14 completed-duration pattern with verb repetition?**
    - options: [`我打網球打了兩個鐘頭。`, `我打網球了兩個鐘頭。`, `我打網球兩個鐘頭。`]
    - answer: **我打網球打了兩個鐘頭。**
    - explanation: With the object before the duration, repeat the verb.
@@ -525,7 +525,7 @@ Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
 ### Delayed/cumulative transfer
 26. `u43-review-cum1`
    - prompt: Which earlier weather sentence says it often rains in summer?
-   - options: [夏天常下雨。, 新年快到了。, 紅葉很冷。]
+   - options: [夏天常下雨。, 新年快到了。, 冬天太冷了。]
    - answer: 夏天常下雨。
    - explanation: This retrieves Unit-42 weather before Unit 44.
 27. `u43-review-cum2` order `u43-a002-model`
@@ -552,7 +552,7 @@ Review count: **28**. Listening: **3**. All 7 NEW lexical targets, all 3 expansi
 
 ## 8. Search/Mega and deferral rules
 
-- 7 canonical NEW forms receive normal Search/Mega ownership.
+- 7 canonical NEW forms receive one canonical ownership row at their owning lesson. Per frozen Gate A, Pinyin Search remains a global lookup; Search writing practice for a Lesson-14-owned character stays locked until that owning lesson/character introduction is complete. Mega eligibility remains gated by owning-lesson completion.
 - 想 / 快 / 要 receive **no** new canonical row and no altered old gloss.
 - 紐約 / 美國 / 臺北 / 法國 / 西班牙 / 上海 are never required answers.
 - B1L14-D1T06 uses the safe adaptation in `u43-trip-adapted`.
