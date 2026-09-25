@@ -5,17 +5,20 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "activity-audit",
+  "currentStage": "implementation",
   "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
-  "workingUnitRange": null,
+  "workingUnitRange": {
+    "start": 45,
+    "end": 48
+  },
   "gates": {
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pending",
-    "implementation": "locked",
+    "activities": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
   "openFindings": [],
@@ -23,7 +26,7 @@
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson15-curriculum-blueprint.md",
-    "frozenActivitySpec": null,
+    "frozenActivitySpec": "course/book1/lesson15-activity-spec.md",
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson15-source-audit.md",
@@ -48,7 +51,8 @@
     "activityQuestionAuditHandoff": "course/book1/lesson15-activity-question-audit-handoff.md",
     "activityCrossUnitAuditHandoff": "course/book1/lesson15-activity-cross-unit-audit-handoff.md",
     "activityTeachingQualityAudit": "course/book1/lesson15-activity-teaching-quality-audit.md",
-    "activityQuestionAudit": "course/book1/lesson15-activity-question-audit.md"
+    "activityQuestionAudit": "course/book1/lesson15-activity-question-audit.md",
+    "activityCrossUnitAudit": "course/book1/lesson15-activity-cross-unit-audit.md"
   },
-  "notes": "Lesson 15 Activity Audit 2 — Question Correctness / Adversarial completed and PASS after local activity-spec repairs for premature future-prerequisite distractors, exact order phrase/token bindings, source-faithful G002 distractors, and a G005 multiple-answer ambiguity. Open Question Correctness findings: 0 BLOCKER / 0 MAJOR / 0 MINOR. Activity Audit 1 was previously completed; Activity Audit 3 has not been run. Gate B remains pending; frozenActivitySpec remains null; implementation and release remain locked; Units 45–48 have not been implemented, merged, or published."
+  "notes": "Lesson 15 Activity Audit 3 — Cross-Unit Coherence completed and PASS on Units 45–48 with 0 BLOCKER / 0 MAJOR / 0 MINOR. Activity Audits 1, 2, and 3 each separately PASS with zero open BLOCKER/MAJOR, so Gate B is PASS and the Lesson 15 activity packet is frozen. Current stage is implementation readiness only; implementation is pending and release remains locked. Units 45–48 have not been implemented, merged, or published. During implementation, canonical first ownership of 一直 / 直 must migrate from the later Book-2 Unit-1 declaration to Book-1 Unit 45 as required by the frozen blueprint."
 }
