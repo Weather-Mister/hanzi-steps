@@ -90,11 +90,18 @@ The repaired activity packet now specifies runtime-compatible contextual listeni
 
 No listening item requires a future Unit-42/43/44 form.
 
-## Search / practice prerequisite rule
+## Search / practice prerequisite rule — focused correction after Activity Audit 2
 
-The activity contract now explicitly requires Pinyin Search to expose a canonical vocabulary item only after its owning lesson is complete. This matches the existing Mega/adaptive-practice prerequisite model and prevents Search from bypassing character introduction.
+Fresh Activity Audit 2 found that progress-gating Pinyin Search result visibility would contradict the frozen Gate-A policy, which explicitly defines Pinyin Search as a **global canonical lookup**.
 
-This rule is an implementation obligation after Gate B re-freezes.
+The repaired activity contract therefore:
+- preserves global Search lookup visibility;
+- keeps Mega/adaptive practice gated by owning-lesson completion;
+- gates the **Search writing-practice action** for Lesson-14-owned characters until the owning lesson (and therefore the character introduction) is complete.
+
+Focused teaching-quality re-check: passive lookup visibility is not an assessment or handwriting lifecycle step. With the writing-practice action gated, Search cannot bypass character introduction, and the explain-before-test / handwriting sequence remains intact.
+
+PASS.
 
 ## Findings
 
