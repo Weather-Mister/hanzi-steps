@@ -2110,20 +2110,6 @@ const unit:UnitData = {
         "u46-noncommittal-question-words"
       ]
     },
-    "u46-ba-neg": {
-      "text": "別把我的藥吃了。",
-      "pinyin": "Bié bǎ wǒ de yào chī le.",
-      "meaning": "Don't take my medicine.",
-      "note": "",
-      "tokens": [
-        "別",
-        "把我的藥",
-        "吃了"
-      ],
-      "grammarIds": [
-        "u46-ba-disposal"
-      ]
-    },
     "u46-doctor-recovery-question": {
       "text": "請問我的病什麼時候會好？",
       "pinyin": "Qǐngwèn wǒ de bìng shénme shíhou huì hǎo?",

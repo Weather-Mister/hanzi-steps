@@ -2115,7 +2115,7 @@ const unit:UnitData = {
       "meaning": "Source illustration 1: accept the suggestion; close with 好的。",
       "note": "Exact source-illustration identity and response role are preserved textually because UnitData has no image field.",
       "tokens": [
-        "好的"
+        "Source illustration 1 — 好的。"
       ]
     },
     "u48-a002-visual-2": {
@@ -2124,7 +2124,7 @@ const unit:UnitData = {
       "meaning": "Source illustration 2: accept the suggestion; close with 謝謝你。",
       "note": "Exact source-illustration identity and response role are preserved textually because UnitData has no image field.",
       "tokens": [
-        "謝謝你"
+        "Source illustration 2 — 謝謝你。"
       ]
     },
     "u48-a002-visual-3": {
@@ -2133,8 +2133,7 @@ const unit:UnitData = {
       "meaning": "Source illustration 3: politely reject the suggestion after thanking the other person for their concern.",
       "note": "Exact source-illustration identity and rejection role are preserved textually; deferred rejection glyphs are not exposed.",
       "tokens": [
-        "謝謝你的關心",
-        "不用了"
+        "Source illustration 3 — 謝謝你的關心。不用了。"
       ]
     },
     "u48-a002-task2": {
@@ -2162,14 +2161,7 @@ const unit:UnitData = {
       "meaning": "Exact A001 source data for dinner bowls, rent, travel to 臺南, and travel duration.",
       "note": "Source names are romanized so contextual untaught name glyphs are not exposed; 臺南 remains source context.",
       "tokens": [
-        "學生一",
-        "兩碗",
-        "學生二",
-        "一碗半",
-        "學生三",
-        "兩碗半",
-        "學生四",
-        "半碗"
+        "學生一（Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘"
       ]
     },
     "u48-prescription-support": {
@@ -2178,9 +2170,7 @@ const unit:UnitData = {
       "meaning": "four times per day / three-day supply / before meals / after meals / 30 minutes after meals",
       "note": "The source supply-count glyph is support-only and withheld from learner-facing Chinese.",
       "tokens": [
-        "飯前",
-        "飯後",
-        "飯後30分鐘"
+        "4 times/day／3-day supply／飯前／飯後／飯後30分鐘"
       ]
     },
     "u48-prescription-visual": {
@@ -2189,8 +2179,7 @@ const unit:UnitData = {
       "meaning": "Source prescription data: four times per day, three-day supply, after meals, 30 minutes after meals.",
       "note": "The source clinic-header and supply-count glyphs are deferred; exact medication data are preserved.",
       "tokens": [
-        "飯後",
-        "飯後30分鐘"
+        "Health Clinic｜4 times/day｜3-day supply｜飯後｜飯後30分鐘"
       ]
     },
     "u48-culture-source-era": {
@@ -2199,17 +2188,7 @@ const unit:UnitData = {
       "meaning": "Wearing surgical masks — textbook-era source context",
       "note": "Source reading contexts include cold-season transmission prevention, crowded buses/MRT, scooter warmth/air-pollution filtering, food-service hygiene, and hospitals. This is source-era content, not current 2026 medical or policy guidance.",
       "tokens": [
-        "Mask use"
-      ]
-    },
-    "u48-cap1": {
-      "text": "哪裡不舒服？",
-      "pinyin": "Nǎlǐ bù shūfu?",
-      "meaning": "Where do you feel unwell?",
-      "note": "",
-      "tokens": [
-        "哪裡",
-        "不舒服"
+        "Mask use — textbook-era source context"
       ]
     },
     "u48-cap2": {

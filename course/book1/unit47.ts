@@ -1910,16 +1910,6 @@ const unit:UnitData = {
         "有沒有發燒"
       ]
     },
-    "u47-a005-order": {
-      "text": "哪裡不舒服？有沒有發燒？",
-      "pinyin": "Nǎlǐ bù shūfu? Yǒu méiyǒu fāshāo?",
-      "meaning": "Where do you feel unwell? Do you have a fever?",
-      "note": "",
-      "tokens": [
-        "哪裡不舒服",
-        "有沒有發燒"
-      ]
-    },
     "u47-臉-read": {
       "text": "臉",
       "pinyin": "liǎn",
