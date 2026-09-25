@@ -628,11 +628,11 @@ const unit:UnitData = {
           "prompt": "Which word gives the negative command?",
           "options": [
             "別",
-            "把",
-            "藥"
+            "沒",
+            "不要"
           ],
           "answer": "別",
-          "explanation": "別 means “don't.”"
+          "explanation": "別 is the negative command word in this audio."
         },
         {
           "id": "u46-ba-o1",
