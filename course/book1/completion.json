@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "deterministic-qa",
+  "currentStage": "learner-simulation",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -48,7 +48,7 @@
       "course/book1/unit43.ts",
       "course/book1/unit44.ts"
     ],
-    "deterministicQa": null,
+    "deterministicQa": "course/book1/lesson14-deterministic-qa.md",
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
     "learnerSimulationA": null,
     "learnerSimulationB": null,
@@ -71,7 +71,8 @@
     "activityTeachingQualityReaudit4": "course/book1/lesson14-activity-teaching-quality-reaudit4.md",
     "activityCrossUnitReaudit4": "course/book1/lesson14-activity-cross-unit-reaudit4.md",
     "activityQuestionReaudit4": "course/book1/lesson14-activity-question-reaudit4.md",
-    "activityQuestionReaudit4Handoff": "course/book1/lesson14-activity-question-reaudit4-handoff.md"
+    "activityQuestionReaudit4Handoff": "course/book1/lesson14-activity-question-reaudit4-handoff.md",
+    "learnerSimulationRerun3Handoff": "course/book1/lesson14-learner-simulation-rerun3-handoff.md"
   },
-  "notes": "FR-001 learner-facing A001 transfer is implemented in Unit 42 phrase notes. Implementation conformance re-audit4 passes with 0 open BLOCKER/MAJOR. Deterministic QA is pending. Downstream learner simulations, traceability, and release audit must be rebuilt after this learner-visible change."
+  "notes": "FR-001 learner-facing repair passes Feature QA #496 with all deterministic checks green. Stage 7 must now be rerun in three fresh contexts because the A001 learner instruction changed after prior simulations. Release remains locked; traceability and hostile release audit are stale and must be rebuilt downstream."
 }
