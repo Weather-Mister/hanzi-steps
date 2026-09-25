@@ -47,7 +47,8 @@
     "activityTeachingQualityAuditHandoff": "course/book1/lesson15-activity-teaching-quality-audit-handoff.md",
     "activityQuestionAuditHandoff": "course/book1/lesson15-activity-question-audit-handoff.md",
     "activityCrossUnitAuditHandoff": "course/book1/lesson15-activity-cross-unit-audit-handoff.md",
-    "activityTeachingQualityAudit": "course/book1/lesson15-activity-teaching-quality-audit.md"
+    "activityTeachingQualityAudit": "course/book1/lesson15-activity-teaching-quality-audit.md",
+    "activityQuestionAudit": "course/book1/lesson15-activity-question-audit.md"
   },
-  "notes": "Lesson 15 Activity Audit 1 — Teaching Quality completed and PASS after activity-level repairs for meaning-first lexical teaching, positive delayed retrieval, and deferred-glyph-safe A002 instructions. Open Teaching Quality findings: 0 BLOCKER / 0 MAJOR / 0 MINOR. Activity Audit 2 (question correctness/adversarial) and Activity Audit 3 (cross-unit coherence) have not been run. Gate B remains pending; frozenActivitySpec remains null; implementation and release remain locked; Units 45–48 have not been implemented, merged, or published."
+  "notes": "Lesson 15 Activity Audit 2 — Question Correctness / Adversarial completed and PASS after local activity-spec repairs for premature future-prerequisite distractors, exact order phrase/token bindings, source-faithful G002 distractors, and a G005 multiple-answer ambiguity. Open Question Correctness findings: 0 BLOCKER / 0 MAJOR / 0 MINOR. Activity Audit 1 was previously completed; Activity Audit 3 has not been run. Gate B remains pending; frozenActivitySpec remains null; implementation and release remain locked; Units 45–48 have not been implemented, merged, or published."
 }
