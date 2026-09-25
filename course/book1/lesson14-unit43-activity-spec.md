@@ -281,15 +281,15 @@ Order:
    - answer: **我在臺灣住了一年。**
    - explanation: G001 presents the duration as completed; the final 了 in G002 shifts to accumulated duration up to now.
 11. select `u43-a002-s1`
-   - prompt: **For the source experience task, what two things must you ask about?**
-   - options: [`where the person lived and for how long`, `where the person lives now and what they like`, `when the person returned and why`]
-   - answer: **where the person lived and for how long**
-   - explanation: B1L14-A002 asks for place plus duration.
+   - prompt: **Which question asks where someone lived before?**
+   - options: [`你以前住在哪裡？`, `你在那裡住了多久？`, `你什麼時候回來？`]
+   - answer: **你以前住在哪裡？**
+   - explanation: 哪裡 asks for the place where the person lived.
 12. select `u43-a002-s2`
-   - prompt: **After asking the classmate, what does the source task require?**
-   - options: [`record the result and report it`, `ask the same questions again without recording anything`, `report before asking for the duration`]
-   - answer: **record the result and report it**
-   - explanation: A002 includes recording and reporting.
+   - prompt: **Which question asks how long someone lived there?**
+   - options: [`你在那裡住了多久？`, `你以前住在哪裡？`, `你明年回來嗎？`]
+   - answer: **你在那裡住了多久？**
+   - explanation: 多久 asks for the duration. The source-transfer card still instructs the learner to record and report the answer.
 13. listen `u43-duration-now-l1`
    - audioText: **我在臺灣住了半年多了。**
    - prompt: **Which duration phrase do you hear?**
@@ -528,11 +528,8 @@ Prompt format: **“X means…”**; explanation: **“X means <answer>.”**
    - options: [夏天常下雨。, 新年快到了。, 紅葉很冷。]
    - answer: 夏天常下雨。
    - explanation: This retrieves Unit-42 weather before Unit 44.
-27. `u43-review-cum2`
-   - prompt: For the source experience task, what comes after asking where/how long?
-   - options: [record and report the result, introduce a typhoon comparison, skip the result]
-   - answer: record and report the result
-   - explanation: This retrieves A002's transfer requirement.
+27. `u43-review-cum2` order `u43-a002-model`
+   - tokens: [`你以前住在哪裡`, `你在那裡住了多久`]
 28. `u43-review-o1` order `u43-tennis-duration`
    - tokens: [`我打網球`, `打了兩個鐘頭`]
 
