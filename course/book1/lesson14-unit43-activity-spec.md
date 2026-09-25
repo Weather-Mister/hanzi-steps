@@ -544,13 +544,13 @@ Review count: **28**. Listening: **3**. All 7 NEW lexical targets, all 3 expansi
 |---|---|---|---|---|
 | 只 | char + u43-only-chinese | u43-only-s1 | review-v1 | later reason/plan lines |
 | G001 | grammar + finished/tennis phrases | duration-s1/s2/order | review-g1/g4/o1 | trip-adapted + Unit44 completed-action review |
-| G002 | grammar + duration-now-source | duration-now-s1/s2/contrast | review-g2/g4 | Unit44 capstone experience |
-| 想 “miss” | duration-now-source note | miss-s1 | review-e1 | Unit44 capstone |
-| 新年/父母 | character + newyear source | newyear/parents selects | review-v2/v3 | capstone |
-| 快/要 senses + G003 | sense cards → grammar → source phrase | imminent-s1–s4 | review-e2/e3/g3/g5 | u43-stopping + Unit44 typhoon |
+| G002 | grammar + duration-now-source | duration-now-s1/s2/contrast | review-g2/g4 | Unit44 review-cum2 + review-u43-1 |
+| 想 “miss” | duration-now-source note | miss-s1 | review-e1 | Unit44 review-u43-1 |
+| 新年/父母 | character + newyear source | newyear/parents selects | review-v2/v3 | Unit44 review-u43-2 |
+| 快/要 senses + G003 | sense cards → grammar → source phrase | imminent-s1–s4 | review-e2/e3/g3/g5 | u43-stopping + Unit44 typhoon/capstone |
 | 停 | char + u43-stopping | stop-s1/s2 | review-v4 | D2T09 Unit44 |
-| 十二月底 | char + return-plan | endmonth/plan selects | review-v5 | capstone plans |
-| 明年/紅葉 | char + nextyear source | nextyear/leaves/trip selects | review-v6/v7 | capstone |
+| 十二月底 | char + return-plan | endmonth/plan selects | review-v5 | Unit44 review-u43-3 |
+| 明年/紅葉 | char + nextyear source | nextyear/leaves/trip selects | review-v6/v7 | Unit44 review-u43-4 |
 | A002 | lesson-2 selects | duration questions/order | review-cum2 | F004 capstone |
 
 ## 8. Search/Mega and deferral rules
