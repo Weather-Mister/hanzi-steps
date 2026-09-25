@@ -1,6 +1,6 @@
 # Book 1 Lesson 14 — Frozen Activity Specification
 
-Status: **Gate B PASS — final strict-prerequisite repairs passed fresh Activity Audit 2 re-audit 3; the activity packet is re-frozen for implementation.**
+Status: **Gate B REOPENED — Stage 9 hostile release audit found missing learner-facing A001 personal transfer; repaired activity candidate awaits fresh Activity Audit 2.**
 
 Upstream:
 - source gate: PASS
@@ -14,7 +14,7 @@ Normative activity-spec packet:
 - `course/book1/lesson14-unit43-activity-spec.md`;
 - `course/book1/lesson14-unit44-activity-spec.md`.
 
-Final Learner Simulation A reopened Gate B after finding two prerequisite defects. The activity packet removed the premature 明年 distractor and now requires first-teaching gating for every standalone handwriting-practice entry point. The repaired packet has passed the mandatory fresh Activity Audit 2 re-audit 3 and is re-frozen; implementation may now proceed by faithful transcription.
+Final Learner Simulation A's prerequisite defects remain repaired. Stage 9 later found a separate source-transfer omission: A001 was modeled but never actually assigned as a personal learner task. The Unit-42 activity candidate now adds explicit learner-facing instructions for the learner's own climate, most/least-liked seasons, and personal reason. Gate A remains valid; implementation is locked until the repaired packet passes the mandatory fresh Activity Audit 2 re-audit.
 
 ## 1. Activity-engineering rules
 
@@ -213,7 +213,7 @@ All 22 source turns remain represented by exact source wording where safe or by 
 ## 9. Source transfer/capstone contract
 
 Unit 42:
-- A001: home-country climate; most/least preferred seasons; reasons.
+- A001: home-country climate; most/least preferred seasons; reasons. **This must be an explicit learner-facing personal transfer, not only fixed-model recognition:** the learner must be instructed to describe their own home-country/place climate, identify their own most- and least-liked seasons, and give their own reason using 因為…所以…. Fixed model sentences are scaffolds only and do not satisfy A001 on the learner's behalf.
 - A005: Taiwan summer weather, distinctive features, fruit, common activities, plus an explicit instruction to write findings in Chinese outside the app.
 
 Unit 43:
