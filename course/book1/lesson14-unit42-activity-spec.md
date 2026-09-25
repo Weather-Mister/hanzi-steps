@@ -251,8 +251,8 @@ Order:
 9. listen `u42-spring-l1`
    - audioText: **我比較喜歡春天。**
    - prompt: **Which season is preferred?**
-   - options: [`spring`, `winter`, `autumn`]
-   - answer: **spring**
+   - options: [`春天`, `冬天`, `天氣`]
+   - answer: **春天**
    - explanation: The audio says 春天, “spring.”
 10. order `u42-spring-o1` using `u42-spring-source`
    - tokens: [`我怕冷`, `我比較喜歡春天`]
@@ -281,10 +281,10 @@ Order:
    - explanation: 最不喜歡冬天 means “like winter the least.”
 8. listen `u42-season-l1`
    - audioText: **春天、夏天、秋天、冬天。**
-   - prompt: **Which set do you hear?**
-   - options: [`the four seasons`, `four kinds of transport`, `four weather warnings`]
-   - answer: **the four seasons**
-   - explanation: The audio names spring, summer, autumn, and winter.
+   - prompt: **Which season word do you hear?**
+   - options: [`春天`, `天氣`, `水果`]
+   - answer: **春天**
+   - explanation: The audio includes 春天 in the four-season sequence.
 9. order `u42-season-o1` using `u42-season-most`
    - tokens: [`我最喜歡秋天`, `最不喜歡冬天`]
 
@@ -370,24 +370,23 @@ Review must use these steps in this order unless a question-correctness fix requ
 
 ### Listening
 1. `u42-review-l1`
-   - audioText: 天氣很冷。
-   - prompt: Listen for “weather.”
-   - options: [天氣, 風景, 國家]
-   - answer: 天氣
+   - audioText: **天氣很冷。**
+   - prompt: **Listen for “weather.”**
+   - options: [`天氣`, `風景`, `國家`]
+   - answer: **天氣**
    - explanation: 天氣 means weather.
 2. `u42-review-l2`
-   - audioText: 下雪的時候，我常去山上滑雪。
-   - prompt: Which activity do you hear?
-   - options: [滑雪, 打網球, 上網]
-   - answer: 滑雪
+   - audioText: **下雪的時候，我常去山上滑雪。**
+   - prompt: **Which activity do you hear?**
+   - options: [`滑雪`, `打網球`, `上網`]
+   - answer: **滑雪**
    - explanation: The speaker says 滑雪.
 3. `u42-review-l3`
-   - audioText: 這裡常不常下雨？
-   - prompt: What is being asked?
-   - options: [whether it often rains here, whether winter is cold, whether someone misses home]
-   - answer: whether it often rains here
-   - explanation: 常不常 asks about frequency and 下雨 means rain.
-
+   - audioText: **這裡常不常下雨？**
+   - prompt: **Which question pattern do you hear?**
+   - options: [`常不常`, `會不會`, `有沒有`]
+   - answer: **常不常**
+   - explanation: The audio uses 常不常 to ask about frequency.
 ### Handwriting retrieval
 4. `u42-review-cold` — complete 冷
 5. `u42-review-hua` — complete 滑
