@@ -235,7 +235,7 @@ Order:
 11. phrase `u47-several-times`.
 12. select `u47-stomach-s5`
     - prompt: **Which says “vomited several times”?**
-    - options: [`吐了好幾次。`, `吐了幾次？`, `好幾個小時。`]
+    - options: [`吐了好幾次。`, `吐了幾次？`, `吐了一次。`]
     - answer: **吐了好幾次。**
     - explanation: 好幾次 is a statement meaning several times.
 13. listen `u47-stomach-l1`
@@ -315,11 +315,11 @@ Order:
 8. listen `u47-acc-l1`
    - audioText: **我陪你去看病，好不好？**
    - prompt: **Which helpful action do you hear?**
-   - options: [`陪你去看病`, `把藥吃了`, `回家休息`]
+   - options: [`陪你去看病`, `把藥吃了`, `多休息`]
    - answer: **陪你去看病**
    - explanation: The offer is to accompany the listener to see a doctor.
 9. order `u47-acc-o1` using `u47-accompany-source`
-   - tokens: [`我陪你`, `去看病`, `好不好`]
+   - tokens: [`你這麼不舒服`, `我陪你`, `去看病`, `好不好`]
 
 ### u47-health-center — Health Insurance and the Health Center
 
