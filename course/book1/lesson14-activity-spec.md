@@ -1,6 +1,6 @@
 # Book 1 Lesson 14 — Frozen Activity Specification
 
-Status: **Gate B REOPENED — Stage 9 hostile release audit found missing learner-facing A001 personal transfer; repaired activity candidate awaits fresh Activity Audit 2.**
+Status: **Gate B PASS — re-frozen after FR-001 Activity Audit re-audit4. Implementation is the current pending stage; release remains locked.**
 
 Upstream:
 - source gate: PASS
@@ -259,28 +259,25 @@ Unit 44 review:
 
 ## 11. Gate-B status
 
-Gate B was reopened after the final strict-prerequisite learner simulation found:
-1. a future-NEW `明年` distractor in `u43-a002-s2`;
-2. an ungated standalone `practice-<character>` route through the general character-library/detail UI.
+Gate B was reopened after Stage 9 identified FR-001: B1L14-A001 was modeled but not actually assigned as the learner's personal source-transfer task.
 
-The repaired activity packet:
-- replaces that distractor with `你在臺灣住了半年嗎？`, an already-available yes/no duration question;
-- requires every standalone handwriting-practice entry point to remain locked until the character's first non-review teaching lesson is complete;
-- preserves globally visible canonical Pinyin Search results;
+The repaired activity packet now:
+- explicitly instructs the learner on `u42-home-country-model` to describe their own home-country/place climate;
+- requires the learner's own most- and least-liked seasons;
+- requires a personal reason using 因為…所以…;
+- explicitly identifies the fixed model and spring sentence as scaffolds rather than substitutes for the learner's response;
+- changes no Gate-A vocabulary, character, grammar, source ownership, unit boundary, or prerequisite decision;
+- preserves globally visible canonical Pinyin Search lookup;
 - preserves owning-lesson-gated Mega eligibility;
-- changes no Gate-A vocabulary, character, grammar, source, or unit ownership.
+- preserves the standalone handwriting-practice lock until first teaching.
 
-The final repaired packet has now passed all three required Activity audits:
-1. Activity Audit 1 re-audit 3 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit3.md`);
-2. mandatory fresh-context Activity Audit 2 re-audit 3 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit3.md`);
-3. Activity Audit 3 re-audit 3 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit3.md`);
+The FR-001 repaired packet has passed the required re-audit4 activity checks:
+1. Activity Audit 1 re-audit 4 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit4.md`);
+2. mandatory fresh-context Activity Audit 2 re-audit 4 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit4.md`);
+3. Activity Audit 3 re-audit 4 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit4.md`);
 4. open BLOCKER: **0**;
 5. open MAJOR: **0**.
 
-The repaired `u43-a002-s2` has exactly one defensible answer, contains no future Lesson-14 NEW form, and keeps `明年` in its frozen owning lesson `u43-next-year`.
-
-The global handwriting rule gates the practice action only. It does not hide canonical Search results, move character ownership, change unit exploration policy, or alter the frozen curriculum architecture.
-
 **Gate B: PASS. This packet is re-frozen.**
 
-The controller is authorized to advance to **implementation**. Implementation must conform to this packet; curriculum invention or an upstream architecture change reopens the appropriate gate.
+The controller is authorized to advance to **implementation**. Implementation must conform to this packet; curriculum invention or an upstream architecture change reopens the appropriate gate. Release remains locked.
