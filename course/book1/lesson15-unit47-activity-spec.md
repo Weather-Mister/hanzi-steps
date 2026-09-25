@@ -66,7 +66,30 @@ Required prior expansion:
   - do **not** create an ordinary A-not-A branch for G003.
 - remember: **completed first event + 就 + next event; 以後 is compatible; A-not-A is not the question route.**
 
-## 4. Exact phrase/support records
+## 4. Meaning-first lexical EXPLAIN cards
+
+These are mandatory learner-facing teaching cards. Each appears after any required NEW-character lifecycle for the words on the card and before the first assessed lexical select.
+
+### u47-what-lex
+- **怎麼了 zěnme le** — What's wrong?; concern/condition inquiry
+- **臉色 liǎnsè** — facial complexion / color
+- **難看 nánkàn** — not to look good; look bad
+
+### u47-stomach-lex
+- **肚子 dùzi** — stomach; abdomen
+- **吐 tù** — to vomit
+- **次 cì** — measure word for occurrences / times
+
+### u47-accompany-lex
+- **陪 péi** — accompany; go/stay with somebody
+- **看病 kànbìng** — see a doctor
+
+### u47-health-lex
+- **健康 jiànkāng** — health
+- **保險 bǎoxiǎn** — insurance
+- **健康中心 jiànkāng zhōngxīn** — health center
+
+## 5. Exact phrase/support records
 
 ### u47-whats-wrong-source
 - text: **你怎麼了？臉色這麼難看。**
@@ -140,7 +163,7 @@ Required prior expansion:
     4. **胃口怎麼樣？**
 - note: 玉 is contextual/deferred. The four questions are the learner's required source-transfer output; 玉 is never typed/written as an answer.
 
-## 5. Character lifecycle IDs
+## 6. Character lifecycle IDs
 
 Each prefix expands to `intro → trace → build → complete → memory`, preceded by recognition/reading.
 
@@ -155,13 +178,14 @@ Each prefix expands to `intro → trace → build → complete → memory`, prec
 | u47-health-center | 保 | u47-health-center-保 |
 | u47-health-center | 險 | u47-health-center-險 |
 
-## 6. Teaching lessons — exact assessed payloads
+## 7. Teaching lessons — exact assessed payloads
 
 ### u47-whats-wrong — What Is Wrong?
 
 Order:
 1. 臉 recognition/read → lifecycle.
 2. EXPLAIN P001: **怎麼了？** is a concern/condition inquiry, not generic 怎麼樣.
+**Mandatory before step 3:** EXPLAIN `u47-what-lex`.
 3. select `u47-what-s1`
    - prompt: **怎麼了 means…**
    - options: [`What's wrong?`, `How many?`, `How long?`]
@@ -196,6 +220,7 @@ Order:
 1. 肚 recognition/read → lifecycle.
 2. 吐 recognition/read → lifecycle.
 3. note card: 次 is NEW measure-word vocabulary, though the character is already known.
+**Mandatory before step 4:** EXPLAIN `u47-stomach-lex`.
 4. select `u47-stomach-s1`: 肚子 → stomach/abdomen / throat / head → **stomach/abdomen**
 5. select `u47-stomach-s2`: 吐 → vomit / rest / accompany → **vomit**
 6. select `u47-stomach-s3`: 次 → occurrence counter / packet counter / hour → **occurrence counter**
@@ -272,6 +297,7 @@ Order:
 
 Order:
 1. 陪 recognition/read → lifecycle.
+**Mandatory before step 2:** EXPLAIN `u47-accompany-lex`.
 2. select `u47-acc-s1`: 陪 → accompany / vomit / insure → **accompany**
 3. select `u47-acc-s2`: 看病 → see a doctor / have a cold / take medicine → **see a doctor**
 4. REVIEW P003 好不好: proposal/agreement checking.
@@ -308,6 +334,7 @@ Order:
 4. 康 recognition/read → lifecycle.
 5. 保 recognition/read → lifecycle.
 6. 險 recognition/read → lifecycle.
+**Mandatory before step 7:** EXPLAIN `u47-health-lex`.
 7. select `u47-health-s2`: 健康 → health / medicine / concern → **health**
 8. select `u47-health-s3`: 保險 → insurance / pharmacy / condition → **insurance**
 9. select `u47-health-s4`: 健康中心 → health center / pharmacy / home → **health center**
@@ -380,7 +407,7 @@ Order:
     - answer: **that the person really will not see a doctor**
     - explanation: The question confirms refusal to go see a doctor.
 
-## 7. Unit 47 review — exact step bank
+## 8. Unit 47 review — exact step bank
 
 ### Listening
 1. `u47-review-l1`
@@ -474,7 +501,7 @@ For 28–31, use the exact three-option payloads from `u47-refuse-help`; the sou
 
 Review count: **34**. Listening: **3**. All 12 NEW items, all 8 NEW characters, G003, P001/P002, 幾 expansion retrieval, A005, and delayed Unit-45/46 retrieval are explicit.
 
-## 8. Lifecycle coverage
+## 9. Lifecycle coverage
 
 | Target | Explain/recognize | Controlled | Contextual use | Retrieval | Delayed | Cumulative |
 |---|---|---|---|---|---|---|
@@ -485,7 +512,7 @@ Review count: **34**. Listening: **3**. All 12 NEW items, all 8 NEW characters, 
 | 不用了/健康/保險/健康中心 | L5 | health-s1–s6 | D2T04–D2T06 | review-v9–v12/refuse | U48 | capstone |
 | A005/F001–F002 | L6 scenario | four exact question checks | health call | review-a005-* | U48 | S001/S002 |
 
-## 9. Search / Mega / deferral rules
+## 10. Search / Mega / deferral rules
 
 - All 12 canonical NEW forms receive Unit-47 canonical ownership and owning-lesson-gated Mega eligibility.
 - 幾 remains owned by Unit 7 for Search/Mega; Unit 47 only retrieves the Lesson-15 expansion locally.
