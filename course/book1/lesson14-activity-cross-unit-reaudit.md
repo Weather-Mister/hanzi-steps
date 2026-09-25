@@ -90,16 +90,18 @@ These are downstream of all required teaching and require ordering the actual Ch
 
 PASS.
 
-## 8. Pinyin Search / Mega / practice timing contract
+## 8. Pinyin Search / Mega / practice timing contract — focused correction after Activity Audit 2
 
-The repaired master activity contract states a single prerequisite boundary:
-- canonical vocabulary becomes visible in Pinyin Search only after its owning lesson;
-- Mega/adaptive practice remain owning-lesson gated;
-- writing practice cannot be opened from Search before the owning lesson.
+Fresh Activity Audit 2 identified an upstream inconsistency in the prior repair: progress-gating Pinyin Search result visibility would redefine the frozen Gate-A policy, which explicitly keeps Pinyin Search as a **global canonical lookup**.
 
-This closes the cross-unit design inconsistency identified by Learner C. Code implementation and deterministic tests must enforce it after Gate B passes.
+The corrected cross-unit contract is:
+- canonical Search lookup remains globally visible, as frozen by Gate A;
+- Mega/adaptive practice remain gated by owning-lesson completion;
+- Search may not open writing practice for a Lesson-14-owned character until the owning lesson (and therefore the character introduction) is complete.
 
-PASS at the activity-contract level.
+This addresses Learner C's actual prerequisite bypass — entering future handwriting practice from Search — without changing frozen lexical ownership or the Gate-A Search architecture.
+
+PASS at the activity-contract level after focused re-check.
 
 ## 9. Review balance after repair
 
