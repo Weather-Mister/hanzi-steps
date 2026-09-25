@@ -431,7 +431,14 @@ Reserved ID: u46-doctor-visit
 Targets:
 - integrated D1T06–D1T12
 - NEW-support 您 under P007
-- A004 after support X040–X043 is reviewed/explained
+- A004 only after X040–X042 are reviewed and NEW support X043 is explicitly explained
+
+A004 source-fidelity guardrail:
+- preserve all three source completion frames and required 把 outcomes:
+  1. 把這50個小籠包吃了
+  2. 把今天的功課寫了
+  3. 把我的西瓜吃了
+- do not reduce A004 to generic object-fronting practice.
 
 Outcomes:
 - F002 completed for Dialogue I
@@ -591,25 +598,31 @@ Source:
 Reserved ID: u47-health-center
 
 Targets:
+- 不用了
+- P002
 - 健康
 - 保險
 - 健康中心
 
 Support:
-- X010
-- X011
+- X010 EXPANSION
+- X011 EXPANSION
 
 Source:
-- D2T04–D2T06
+- D2T04–D2T06 only after 不用了 / P002 and the health vocabulary above have been introduced;
+- explain X010/X011 before presenting their literal dialogue uses.
 
-### U47-L6 — No Need, Thanks
+### U47-L6 — Health Check-In
 Reserved ID: u47-refuse-help
 
 Targets:
-- 不用了
-- P002
 - integrated D2T01–D2T07
 - A005 cumulative health call
+
+A005 source-fidelity guardrail:
+- preserve the source scenario that 如玉 is sick at home and the learner calls to find out how she is feeling;
+- preserve the requirement to ask **four questions** about her condition;
+- 如玉 / 玉 remain contextual/deferred name support, never a productive character prerequisite.
 
 Outcomes:
 - F001 completed
@@ -730,6 +743,7 @@ Reserved ID: u48-advice
 
 Targets:
 - 跟 recipient/addressee EXPANSION
+- 回家
 - 油
 - 冰
 - 關心
@@ -743,8 +757,13 @@ Review:
 - 自己
 
 Source:
-- D2T08–D2T10
-- A002 after advice acceptance/rejection support is available
+- D2T08–D2T10 only after 回家 and the other new targets in those turns have been introduced;
+- A002 after advice acceptance/rejection support is available.
+
+A002 source-fidelity guardrail:
+- preserve Task 1's three picture-driven role prompts, including two acceptance prompts and one rejection prompt, with source illustration content retained as required visual input;
+- preserve Task 2's patient/doctor role-play about vomiting after dinner and an upset stomach;
+- proper names/address forms remain contextual/deferred and non-assessed.
 
 ### U48-L2 — A Little Better
 Reserved ID: u48-a-little
@@ -768,6 +787,7 @@ Source:
 Reserved ID: u48-action-compare
 
 Targets:
+- 包
 - 睡
 - 小時
 - X039 分鐘 support
@@ -778,8 +798,13 @@ Review:
 - 比 / 不比
 - question frames
 
+G005 source-fidelity guardrail:
+- preserve both source action-comparison patterns, including the object-triggered verb-repetition pattern;
+- preserve 不 before 比 for negation and 嗎 / 是不是 question routes;
+- keep action comparison with 得 distinct from G006 degree complements.
+
 Source:
-- D2T12
+- D2T12 only after 包, 睡, P008/G004 improvement support, and the G005 structure are available
 - DR005
 
 ### U48-L4 — How Much Better?
@@ -790,13 +815,21 @@ Targets:
 - X035 fractional bowl bridge
 - A001 exact source table after X039 and contextual labels are safe
 
+G006 source-fidelity guardrail:
+- preserve the three source degree-comparison outcomes: 一點 / 得多 / 多了;
+- keep these postverbal comparison-degree forms distinct from G005 action comparison.
+
 Source:
-- D2T13 degree branch
+- D2T13 degree branch only; do not present the still-untaught G007 separable-verb branch as productive material here
 - DR006
 - A001
 
+A001 source-fidelity guardrail:
+- preserve the exact source table values and participants;
+- preserve the three task families 吃晚飯 / 房租 / 怎麼去臺南玩 and the travel-duration comparisons;
+- preserve 臺南 exactly.
+
 Context rules:
-- preserve 臺南 exactly;
 - source participant names are contextual/non-assessed;
 - no hidden name glyph becomes handwriting/Search/Mega ownership.
 
@@ -804,14 +837,13 @@ Context rules:
 Reserved ID: u48-separable
 
 Targets:
-- 回家
 - G007
 
 Required availability:
 - 生病 from Unit 45
 - 睡覺 from Unit 46
 - 看病 from Unit 47
-- 回家 before productive separation here
+- 回家 from U48-L1 before productive separation here
 
 Teach:
 - verbal 了 insertion;
@@ -827,15 +859,16 @@ Source:
 Reserved ID: u48-prescription
 
 Targets:
-- 包
+- retrieve 包 from U48-L3
 - X037 一日4次 / 3日份
 - NEW-support 份
 - X038 飯前 / 飯後
 - X039 飯後30分鐘 retrieval
 
 Transfer:
-- A003 only after support is available;
-- 12 packets is an arithmetic inference, not lexical ownership;
+- A003 only after all prescription support above is available;
+- preserve all three source questions: doses per day, when to take the medicine, and how many packets are inside;
+- 12 packets is an arithmetic inference from 4 × 3, not lexical ownership;
 - CUL001 source-era culture reading after the prescription task.
 
 ## Unit 48 review + Lesson-15 capstone
