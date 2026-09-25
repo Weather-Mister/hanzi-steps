@@ -1600,7 +1600,7 @@ const unit:UnitData = {
       "text": "我的國家夏天很熱，冬天很冷。",
       "pinyin": "Wǒ de guójiā xiàtiān hěn rè, dōngtiān hěn lěng.",
       "meaning": "In my country, summers are hot and winters are cold.",
-      "note": "**Source-transfer instruction (A001):** This sentence is only a model. Before continuing, describe the climate of **your own home country/place** in Chinese using the seasons you know. Then say which season **you personally like most and least**, and explain **your own reason** with 因為…所以…. Say the answer aloud or write it on paper; do not copy the model unless it is genuinely true for you.",
+      "note": "Source-transfer instruction (A001): This sentence is only a model. Before continuing, describe the climate of your own home country/place in Chinese using the seasons you know. Then say which season you personally like most and least, and explain your own reason with 因為…所以…. Say the answer aloud or write it on paper; do not copy the model unless it is genuinely true for you.",
       "tokens": [
         "我的國家",
         "夏天很熱",
@@ -1611,7 +1611,7 @@ const unit:UnitData = {
       "text": "因為我怕冷，所以我比較喜歡春天。",
       "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
       "meaning": "Because I'm sensitive to the cold, I prefer spring.",
-      "note": "**A001 personal-transfer reminder:** The model shows how to give a reason with 因為…所以…. Your own transfer answer must name your most- and least-liked seasons and give your own reason; the fixed spring sentence is practice, not a substitute for your personal response.",
+      "note": "A001 personal-transfer reminder: The model shows how to give a reason with 因為…所以…. Your own transfer answer must name your most- and least-liked seasons and give your own reason; the fixed spring sentence is practice, not a substitute for your personal response.",
       "tokens": [
         "因為我怕冷",
         "所以我比較喜歡春天"
