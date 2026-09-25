@@ -497,7 +497,7 @@ These items occur in dialogues, grammar examples/drills, classroom tasks, or act
 | **B1L15-X037** | 一日4次 / 3日份 | Activity III prescription visual |
 | **B1L15-X038** | 飯前 / 飯後; the source prescription marks 飯後 | Activity III prescription visual |
 | **B1L15-X039** | 分鐘 / 飯後30分鐘 | Activity III prescription visual |
-| **B1L15-X040** | 加油 / 一定要 / 沒有問題 | Activity IV |
+| **B1L15-X040** | 加油 / 一定要 / 沒有問題 / 太好了 | Activity IV |
 | **B1L15-X041** | 要是…就… | Activity IV |
 | **B1L15-X042** | 小籠包 / 西瓜 / 打籃球 | Activity IV |
 | **B1L15-X043** | 對不起 / 不知道 | Activity IV |
