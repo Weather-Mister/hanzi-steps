@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "curriculum-architecture",
+  "currentStage": "activity-engineering",
   "stageStatus": "ready",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -13,8 +13,8 @@
   "gates": {
     "source": "pass",
     "dependencies": "pass",
-    "curriculum": "pending",
-    "activities": "locked",
+    "curriculum": "pass",
+    "activities": "pending",
     "implementation": "locked",
     "release": "locked"
   },
@@ -22,7 +22,7 @@
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
-    "frozenBlueprint": null,
+    "frozenBlueprint": "course/book1/lesson15-curriculum-blueprint.md",
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
@@ -36,7 +36,8 @@
     "curriculumPedagogyAuditHandoff": "course/book1/lesson15-curriculum-pedagogy-audit-handoff.md",
     "curriculumAdversarialAuditHandoff": "course/book1/lesson15-curriculum-adversarial-handoff.md",
     "curriculumSourceFidelityAudit": "course/book1/lesson15-curriculum-source-fidelity-audit.md",
-    "curriculumPedagogyAudit": "course/book1/lesson15-curriculum-pedagogy-audit.md"
+    "curriculumPedagogyAudit": "course/book1/lesson15-curriculum-pedagogy-audit.md",
+    "curriculumAdversarialAudit": "course/book1/lesson15-curriculum-adversarial-audit.md"
   },
-  "notes": "Lesson 15 Independent Curriculum Audit 1 — Source Fidelity PASS and Independent Curriculum Audit 2 — Pedagogy PASS. Pedagogy found 0 BLOCKER, 0 MAJOR, and 0 MINOR open; no architecture repair was required. The adversarial curriculum audit remains pending, so Gate A remains PENDING and activity engineering / implementation remain locked."
+  "notes": "Lesson 15 Gate A PASS. Source gate, dependency gate, source-fidelity curriculum audit, pedagogy curriculum audit, and adversarial curriculum audit all pass with 0 open BLOCKER and 0 open MAJOR. The adversarial audit repaired one MAJOR cross-unit Search/Mega exposure risk by freezing sense-expansion ownership for 幾 and 跟 without changing unit boundaries, source allocation, or prerequisite topology. The curriculum blueprint is frozen. Activity engineering is the next stage and has not been performed."
 }
