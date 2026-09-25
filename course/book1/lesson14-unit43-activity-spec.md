@@ -238,10 +238,10 @@ Order:
    - explanation: The bridge has already explained 對不對 as a confirmation form.
 12. listen `u43-duration-l1`
    - audioText: **我打網球打了兩個鐘頭。**
-   - prompt: **How long was the tennis activity?**
-   - options: [`two hours`, `two months`, `two years`]
-   - answer: **two hours**
-   - explanation: 兩個鐘頭 means two hours.
+   - prompt: **Which duration do you hear?**
+   - options: [`兩個鐘頭`, `兩個月`, `兩年`]
+   - answer: **兩個鐘頭**
+   - explanation: The audio says 兩個鐘頭, “two hours.”
 13. order `u43-duration-o1` using `u43-tennis-duration`
    - tokens: [`我打網球`, `打了兩個鐘頭`]
 
@@ -292,10 +292,10 @@ Order:
    - explanation: A002 includes recording and reporting.
 13. listen `u43-duration-now-l1`
    - audioText: **我在臺灣住了半年多了。**
-   - prompt: **What duration frame do you hear?**
-   - options: [`a little over half a year up to now`, `exactly two hours completed`, `an event about to happen`]
-   - answer: **a little over half a year up to now**
-   - explanation: 半年多了 expresses accumulated duration.
+   - prompt: **Which duration phrase do you hear?**
+   - options: [`半年多`, `兩個月`, `兩個鐘頭`]
+   - answer: **半年多**
+   - explanation: The audio says 半年多, a little over half a year.
 14. order `u43-duration-now-o1` using `u43-duration-now-source`
    - tokens: [`我在臺灣住了半年多了`, `有一點想家`]
 
@@ -343,9 +343,9 @@ Order:
 14. listen `u43-newyear-l1`
    - audioText: **新年快到了。**
    - prompt: **What is about to arrive?**
-   - options: [`New Year`, `a typhoon`, `autumn leaves`]
-   - answer: **New Year**
-   - explanation: 新年 is New Year.
+   - options: [`新年`, `臺灣`, `比賽`]
+   - answer: **新年**
+   - explanation: The audio says 新年, “New Year.”
 15. order `u43-newyear-o1` using `u43-newyear-source`
    - tokens: [`新年快到了`, `想回去看父母嗎`]
 
@@ -392,9 +392,9 @@ Order:
 6. listen `u43-plan-l1`
    - audioText: **我打算十二月底回去。**
    - prompt: **When is the planned return?**
-   - options: [`at the end of December`, `next autumn`, `after two hours`]
-   - answer: **at the end of December**
-   - explanation: 十二月底 is the end of December.
+   - options: [`十二月底`, `明天`, `今年`]
+   - answer: **十二月底**
+   - explanation: The audio says 十二月底, “the end of December.”
 7. order `u43-plan-o1` using `u43-return-reason`
    - tokens: [`因為我們只放十天的假`, `所以一月五號回來`]
 
@@ -424,9 +424,9 @@ Order:
 8. listen `u43-nextyear-l1`
    - audioText: **我想明年秋天去看紅葉。**
    - prompt: **What does the speaker want to see?**
-   - options: [`red maple leaves`, `an umbrella`, `a typhoon`]
-   - answer: **red maple leaves**
-   - explanation: The audio says 紅葉.
+   - options: [`紅葉`, `春天`, `下雪`]
+   - answer: **紅葉**
+   - explanation: The audio says 紅葉, “red maple leaves.”
 9. order `u43-nextyear-o1` using `u43-nextyear-source`
    - tokens: [`冬天太冷了`, `不過`, `我想明年秋天去看紅葉`]
 
@@ -434,24 +434,23 @@ Order:
 
 ### Listening
 1. `u43-review-l1`
-   - audioText: 我打網球打了兩個鐘頭。
-   - prompt: Which duration do you hear?
-   - options: [two hours, two months, two years]
-   - answer: two hours
-   - explanation: 兩個鐘頭 means two hours.
+   - audioText: **我打網球打了兩個鐘頭。**
+   - prompt: **Which duration do you hear?**
+   - options: [`兩個鐘頭`, `兩個月`, `兩年`]
+   - answer: **兩個鐘頭**
+   - explanation: The audio says 兩個鐘頭, “two hours.”
 2. `u43-review-l2`
-   - audioText: 我在臺灣住了半年多了。有一點想家。
-   - prompt: What does 想 mean here?
-   - options: [miss, compare, stop]
-   - answer: miss
-   - explanation: 想家 means miss home.
+   - audioText: **我在臺灣住了半年多了。有一點想家。**
+   - prompt: **Which expression do you hear for “miss home”?**
+   - options: [`想家`, `想買`, `打算`]
+   - answer: **想家**
+   - explanation: The audio says 想家, “miss home.”
 3. `u43-review-l3`
-   - audioText: 雨快要停了。
-   - prompt: What is about to happen?
-   - options: [the rain will stop, the rain has already stopped, the rain will continue for two hours]
-   - answer: the rain will stop
-   - explanation: 快要…了 marks imminence; 停 means stop.
-
+   - audioText: **雨快要停了。**
+   - prompt: **Which imminent phrase do you hear?**
+   - options: [`快要停了`, `已經停了`, `常下雨`]
+   - answer: **快要停了**
+   - explanation: The audio says 快要停了, “is about to stop.”
 ### Handwriting retrieval
 4. `u43-review-zhi` — complete 只
 5. `u43-review-fu` — complete 父
