@@ -634,15 +634,15 @@ No prompt or answer uses 度 or 北.
 ### A004 weather interview
 27. phrase `u44-weather-interview`
 28. `u44-review-a004-1`
-   - prompt: Which set belongs in the source weather interview?
-   - options: [four seasons + typhoon + rain frequency + snow occurrence, only birthday food, only transport prices]
-   - answer: four seasons + typhoon + rain frequency + snow occurrence
-   - explanation: These are B1L14-A004's weather-comparison fields.
+   - prompt: Which asks what the winter weather is like?
+   - options: [冬天的天氣怎麼樣？, 冬天常不常下雨？, 冬天會不會下雪？]
+   - answer: 冬天的天氣怎麼樣？
+   - explanation: …的天氣怎麼樣？ asks what the weather is like.
 29. `u44-review-a004-2`
-   - prompt: Besides asking the listed weather questions, what does the source task require?
-   - options: [ask for additional information and record the results, stop after one question, avoid recording anything]
-   - answer: ask for additional information and record the results
-   - explanation: A004 explicitly requires both.
+   - prompt: Which asks whether there are typhoons?
+   - options: [有沒有颱風？, 會不會下雪？, 常不常下雨？]
+   - answer: 有沒有颱風？
+   - explanation: 有沒有颱風？ asks whether typhoons occur/are present. The source-transfer card still instructs the learner to ask for additional information and record the results.
 ### Delayed retrieval from Units 42–43
 30. `u44-review-cum1`
    - prompt: Which asks whether it often rains?
