@@ -5,15 +5,15 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "dependency-audit",
-  "stageStatus": "ready",
+  "currentStage": "curriculum-architecture",
+  "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": null,
   "gates": {
     "source": "pass",
-    "dependencies": "pending",
-    "curriculum": "locked",
+    "dependencies": "pass",
+    "curriculum": "pending",
     "activities": "locked",
     "implementation": "locked",
     "release": "locked"
@@ -26,7 +26,9 @@
     "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
-    "sourceAudit": "course/book1/lesson15-source-audit.md"
+    "sourceAudit": "course/book1/lesson15-source-audit.md",
+    "dependencyAudit": "course/book1/lesson15-dependency-audit.md",
+    "curriculumArchitectureHandoff": "course/book1/lesson15-curriculum-architecture-handoff.md"
   },
-  "notes": "Lesson 15 source gate remains PASS. The dependency-builder stage is complete against the actual cumulative Book 1 production curriculum through Unit 44. Every pedagogically relevant source-ledger record has a NEW / KNOWN / REVIEW / EXPANSION / DEFERRED disposition where applicable; the formal 63-character inventory resolves to 30 NEW and 33 KNOWN characters. Builder checks addressed semantic false-known risks (including 幾 and 跟), modal 得 vs complement 得, hidden support vocabulary/characters, prescription support, future dependencies, circularity, and the current Book-2 Unit-1 first-ownership collision for 一直 / 直 by recording a required ownership migration. Builder open BLOCKER = 0 and MAJOR = 0. The dependency gate is still PENDING: the mandatory fresh-context dependency audit has not been performed. No Lesson-15 unit boundaries, curriculum blueprint, learner-facing activity design, or implementation has begun."
+  "notes": "Lesson 15 source gate and dependency gate PASS. The mandatory fresh-context dependency audit repaired prerequisite-graph defects in G002/G007, Activity I, dialogue traceability, and the unsafe 臺南 substitution option, then re-audited the complete dependency state to 0 BLOCKER / 0 MAJOR / 0 MINOR open findings. Final classifications remain 42 NEW + 2 EXPANSION formal lexical entries and 30 NEW + 33 KNOWN formal characters. The 一直 / 直 Book-2 ownership collision remains an explicit later migration requirement, not prior knowledge or a future prerequisite. Controller is now at curriculum-architecture readiness; no Lesson-15 unit boundaries, rough split, blueprint, activities, implementation, merge, or publication have begun."
 }
