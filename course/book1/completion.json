@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "gate-c",
-  "stageStatus": "pending",
+  "currentStage": "waiting-for-merge",
+  "stageStatus": "pass",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -19,7 +19,7 @@
     "curriculum": "pass",
     "activities": "pass",
     "implementation": "pass",
-    "release": "locked"
+    "release": "pass"
   },
   "openFindings": [],
   "artifacts": {
@@ -75,5 +75,5 @@
     "learnerSimulationRerun3Handoff": "course/book1/lesson14-learner-simulation-rerun3-handoff.md",
     "finalReleaseAuditRerunHandoff": "course/book1/lesson14-final-release-audit-rerun-handoff.md"
   },
-  "notes": "FR-001 final-rerun-3 learner simulations A/B/C all PASS with zero open BLOCKER/MAJOR. No learner-facing code changed after the simulated baseline. Stage 8 traceability is rebuilt and PASS with 0 unresolved source items / 0 orphan production concepts. Fresh Stage 9 hostile release audit rerun PASS with zero open BLOCKER/MAJOR/MINOR; report persisted; advanced to Gate C pending. Release remains locked."
+  "notes": "Gate C PASS. Fresh Stage 9 hostile release audit rerun passed with zero BLOCKER/MAJOR/MINOR; final3 learner simulations pass; rebuilt traceability passes; Feature QA #506 passes on the current pre-Gate-C head. Lesson 14 is approved for merge. Production verification remains required after deploy before advancing completedThroughSourceLesson/completedThroughUnit."
 }
