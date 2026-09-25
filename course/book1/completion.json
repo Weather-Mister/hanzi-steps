@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "implementation",
+  "currentStage": "deterministic-qa",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -18,7 +18,7 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
   "openFindings": [],
@@ -48,7 +48,7 @@
       "course/book1/unit43.ts",
       "course/book1/unit44.ts"
     ],
-    "deterministicQa": "course/book1/lesson14-deterministic-qa.md",
+    "deterministicQa": null,
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
     "learnerSimulationA": null,
     "learnerSimulationB": null,
@@ -58,5 +58,5 @@
     "activityQuestionReaudit": "course/book1/lesson14-activity-question-reaudit.md",
     "activityQuestionReauditHandoff": "course/book1/lesson14-activity-question-reaudit-handoff.md"
   },
-  "notes": "Gate B re-frozen on 2026-09-25 after repaired Activity Audit 1 PASS, mandatory fresh-context Activity Audit 2 re-audit PASS, and repaired Activity Audit 3 PASS, with 0 open BLOCKER and 0 open MAJOR. Fresh Audit 2 corrected the Search contract to preserve frozen Gate-A global canonical lookup while gating Search writing practice until the owning lesson/character introduction; Mega/adaptive practice remains owning-lesson gated. Implementation is now pending and authorized to conform to the frozen activity packet. Existing Unit 42–44 implementation remains stale until repaired in the implementation stage; release remains locked."
+  "notes": "Gate B is re-frozen and the repaired Units 42–44 plus Pinyin Search handwriting gating now conform to the frozen activity packet. Implementation conformance re-audit passes with 0 open BLOCKER/MAJOR. Deterministic QA is pending on the repaired implementation head. Prior learner-simulation reports remain historical failure evidence and must be rerun fresh after deterministic QA passes."
 }
