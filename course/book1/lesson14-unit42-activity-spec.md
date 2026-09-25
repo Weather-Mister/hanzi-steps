@@ -329,10 +329,10 @@ Order:
 Order:
 1. phrase `u42-home-country-model`.
 2. select `u42-seasons-home`
-   - prompt: **What is the first part of the source Four Seasons task?**
-   - options: [`describe the climate where you are from`, `name only your favorite season`, `describe only Taiwan's summer weather`]
-   - answer: **describe the climate where you are from**
-   - explanation: B1L14-A001 begins with the learner's home-country climate.
+   - prompt: **Which sentence describes the climate where the speaker is from?**
+   - options: [`我的國家夏天很熱，冬天很冷。`, `我最喜歡秋天，最不喜歡冬天。`, `臺灣夏天天氣很熱。`]
+   - answer: **我的國家夏天很熱，冬天很冷。**
+   - explanation: 我的國家… describes the speaker's home-country climate.
 3. phrase `u42-season-reason`.
 4. select `u42-seasons-s1`
    - prompt: **Which answer gives both a season preference and a reason?**
@@ -340,10 +340,10 @@ Order:
    - answer: **因為我怕冷，所以我比較喜歡春天。**
    - explanation: The sentence states a preference and explains why.
 5. select `u42-seasons-s2`
-   - prompt: **For the source “Four Seasons” task, which pair must you identify?**
-   - options: [`your most- and least-liked seasons`, `only your favorite season`, `the seasons with the most and least rain`]
-   - answer: **your most- and least-liked seasons**
-   - explanation: A001 explicitly asks for most/least preferred seasons plus reasons.
+   - prompt: **Which sentence says “I like autumn the most and winter the least”?**
+   - options: [`我最喜歡秋天，最不喜歡冬天。`, `我比較喜歡春天。`, `冬天太冷了。`]
+   - answer: **我最喜歡秋天，最不喜歡冬天。**
+   - explanation: 最喜歡… / 最不喜歡… gives the most- and least-liked seasons.
 6. phrase `u42-summer-model`.
 7. select `u42-summer-s2`
    - prompt: **Which statement describes Taiwan summer weather?**
@@ -352,15 +352,15 @@ Order:
    - explanation: This is a weather statement about summer.
 8. phrase `u42-summer-write`.
 9. select `u42-summer-s3`
-   - prompt: **What must the source “Summer in Taiwan” transfer include?**
-   - options: [`summer weather plus distinctive features, common fruit/food, and common activities`, `summer weather and one season name only`, `common fruit/food only, without weather or activities`]
-   - answer: **summer weather plus distinctive features, common fruit/food, and common activities**
-   - explanation: These are the source A005 fields.
+   - prompt: **Which sentence reports both a summer food habit and a common activity?**
+   - options: [`夏天我常吃水果，也常出去玩。`, `臺灣夏天天氣很熱。`, `冬天太冷了。`]
+   - answer: **夏天我常吃水果，也常出去玩。**
+   - explanation: The sentence gives both a summer fruit/food habit and an activity.
 10. select `u42-summer-s4`
-   - prompt: **After discussing the summer findings, what does the source task ask you to do?**
-   - options: [`write the findings in Chinese`, `only discuss them orally`, `write only the names of the four seasons`]
-   - answer: **write the findings in Chinese**
-   - explanation: A005 explicitly requires writing the findings in Chinese.
+   - prompt: **Which sentence reports Taiwan summer weather?**
+   - options: [`臺灣夏天天氣很熱。`, `夏天我常吃水果，也常出去玩。`, `我最喜歡秋天。`]
+   - answer: **臺灣夏天天氣很熱。**
+   - explanation: This sentence directly reports Taiwan summer weather. The preceding source-transfer card still instructs the learner to write the full findings in Chinese.
 11. order `u42-seasons-o1` using `u42-season-reason`
    - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
 
@@ -423,11 +423,8 @@ Every vocabulary item above uses prompt format **“X means…”** and explanat
    - options: [常不常下雨？, 會不會下雪？, 下雨了嗎？]
    - answer: 常不常下雨？
    - explanation: 常不常 asks about frequency.
-25. `u42-review-t1`
-   - prompt: Which answer best completes the Four Seasons source task?
-   - options: [state a most/least preferred season and give a reason, state only one preferred season with no reason, list all four seasons without a preference]
-   - answer: state a most/least preferred season and give a reason
-   - explanation: B1L14-A001 requires preference plus reasons.
+25. `u42-review-t1` order `u42-season-reason`
+   - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
 
 Review count: **25**. Listening count: **3**. All 11 NEW forms and all 8 NEW characters are independently retrieved.
 
