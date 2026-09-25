@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "activity-engineering",
+  "currentStage": "implementation",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,8 +17,8 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pending",
-    "implementation": "locked",
+    "activities": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
   "openFindings": [],
@@ -26,7 +26,7 @@
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": null,
+    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -39,9 +39,9 @@
     "activityUnit42Spec": "course/book1/lesson14-unit42-activity-spec.md",
     "activityUnit43Spec": "course/book1/lesson14-unit43-activity-spec.md",
     "activityUnit44Spec": "course/book1/lesson14-unit44-activity-spec.md",
-    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-audit.md",
-    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-audit.md",
-    "activityQuestionAudit": "course/book1/lesson14-activity-question-audit.md",
+    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
+    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
+    "activityQuestionAudit": "course/book1/lesson14-activity-question-reaudit.md",
     "implementationConformanceAudit": "course/book1/lesson14-implementation-conformance-audit.md",
     "implementationUnits": [
       "course/book1/unit42.ts",
@@ -55,8 +55,8 @@
     "learnerSimulationC": null,
     "activityTeachingQualityReaudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
     "activityCrossUnitReaudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
-    "activityQuestionReaudit": null,
+    "activityQuestionReaudit": "course/book1/lesson14-activity-question-reaudit.md",
     "activityQuestionReauditHandoff": "course/book1/lesson14-activity-question-reaudit-handoff.md"
   },
-  "notes": "Stage-7 learner simulations A/B/C found prerequisite, activity-conformance, capstone, delayed-retrieval, and Pinyin Search timing defects. Gate B is reopened. The candidate activity packet has been repaired without changing Gate-A curriculum ownership or boundaries. Repaired Teaching Quality and Cross-Unit audits pass with 0 open BLOCKER/MAJOR. Mandatory fresh-context Activity Audit 2 re-audit is pending. Existing Unit 42–44 implementation is now stale/locked and must not be repaired until Gate B re-freezes."
+  "notes": "Gate B re-frozen on 2026-09-25 after repaired Activity Audit 1 PASS, mandatory fresh-context Activity Audit 2 re-audit PASS, and repaired Activity Audit 3 PASS, with 0 open BLOCKER and 0 open MAJOR. Fresh Audit 2 corrected the Search contract to preserve frozen Gate-A global canonical lookup while gating Search writing practice until the owning lesson/character introduction; Mega/adaptive practice remains owning-lesson gated. Implementation is now pending and authorized to conform to the frozen activity packet. Existing Unit 42–44 implementation remains stale until repaired in the implementation stage; release remains locked."
 }
