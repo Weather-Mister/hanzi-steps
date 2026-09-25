@@ -1,68 +1,47 @@
-# Book 1 Lesson 14 — Implementation Conformance Re-audit 3
+# Book 1 Lesson 14 — Implementation Conformance Re-audit 4
 
-Gate B: **PASS / re-frozen after final strict-prerequisite Activity Audit 2 re-audit 3**.
+Gate B: **PASS / re-frozen after FR-001 fresh Activity Audit 2 re-audit4**.
 
 Scope:
-- final re-frozen Lesson-14 activity packet;
-- actual Units 42–44;
-- all standalone character-practice entry points;
-- Pinyin Search / Mega / adaptive-practice prerequisite behavior.
+- final re-frozen Lesson-14 activity packet after FR-001;
+- production Unit 42 learner-facing A001 transfer;
+- unchanged Units 43–44 and prerequisite/practice behavior.
 
-## Final strict-prerequisite repairs
+## FR-001 implementation
 
-### A-01 — future NEW 明年 in Unit 43 assessment
+Frozen repair requires the Unit-42 A001 phrase card to explicitly tell the learner to:
+1. describe the climate of their own home country/place in Chinese;
+2. name their own most-liked and least-liked seasons;
+3. give their own reason with 因為…所以…;
+4. say the response aloud or write it rather than merely copy the model.
 
-Frozen repair:
-- `u43-a002-s2` third distractor is now `你在臺灣住了半年嗎？`.
+Production `course/book1/unit42.ts` now implements this in the learner-visible `u42-home-country-model.note`.
 
-Actual `course/book1/unit43.ts` matches the frozen prompt, options, answer, and explanation exactly.
+The adjacent `u42-season-reason.note` explicitly reminds the learner that the fixed spring-preference sentence is only a scaffold and cannot substitute for the learner's own response.
 
-The repaired item uses only material available by `u43-duration-now` and no longer exposes future-owned `明年`.
+The application already renders `phrase.note` on phrase steps under the learner-facing “How the phrase works” block, so the repaired instruction is actually visible during `u42-seasons`.
 
-Status: **resolved**.
+Markdown emphasis delimiters from the specification are intentionally not emitted into the plain-text runtime note; the learner-facing wording and required semantics are otherwise faithfully transcribed.
 
-### A-02 — standalone character practice bypass
+## Blast-radius check
 
-The frozen activity contract now requires every learner-facing `practice-<character>` entry point to obey the character's first non-review teaching lesson.
+Repository comparison from the re-frozen Gate-B head `3d7d88b9074c433640283bd309e884cc16773127` to the implementation head shows only two changed lines in `course/book1/unit42.ts`:
+- `u42-home-country-model.note`
+- `u42-season-reason.note`
 
-Implementation now centralizes this invariant in:
+No lesson order, question payload, phrase text, pinyin, meaning, token bank, review count, vocabulary ownership, grammar ownership, character ownership, Search behavior, Mega/adaptive behavior, or standalone handwriting gating changed.
 
-`characterPracticeAvailable(char, completed)`
+## Existing invariants retained
 
-in `lib/curriculum.ts`.
-
-The helper:
-- resolves the first non-review lesson whose `chars` contains the character;
-- requires that lesson to be completed before standalone practice is available.
-
-Enforcement:
-- `LearningApp.start()` now rejects **every** `practice-<character>` lesson whose first teaching lesson is incomplete. This is the central safety boundary, so future shortcuts cannot bypass it merely by calling `start()`.
-- the unit character-detail dialog disables the Practice action and shows “Practice unlocks after its lesson” until the same boundary is satisfied;
-- Pinyin Search uses the same central helper instead of maintaining a separate first-teaching map;
-- Search vocabulary visibility remains global;
-- Mega/adaptive vocabulary gating remains unchanged.
-
-Targeted regression coverage verifies:
-- 葉 cannot be practiced before `u43-next-year`;
-- 葉 unlocks after `u43-next-year`;
-- 更 cannot be practiced before `u44-even-more`;
-- 更 unlocks after `u44-even-more`;
-- 紅葉 remains globally searchable while its writing action obeys the same gate.
-
-Status: **resolved**.
-
-## Frozen upstream integrity
-
-No repair changes:
-- source ledger;
-- dependency classifications;
-- Gate-A unit boundaries;
-- canonical NEW vocabulary ownership;
-- formal grammar ownership;
-- character ownership/order;
-- Search visibility policy;
-- Mega ownership;
-- source deferrals.
+- canonical NEW vocabulary: 30
+- NEW characters: 21
+- formal Lesson-14 grammar: 5
+- Unit review sizes: 25 / 28 / 41
+- global Pinyin Search lookup preserved
+- standalone writing practice remains first-teaching gated
+- Mega/adaptive eligibility remains lesson-gated
+- Unit-43 future-vocabulary repair remains intact
+- Unit-44 explain-before-order repair remains intact
 
 ## Findings
 
@@ -72,4 +51,6 @@ No repair changes:
 
 # Result: PASS
 
-The implementation conforms to the final re-frozen Gate-B packet. Deterministic QA must pass after these final code changes before learner simulation is repeated.
+Implementation conforms to the final FR-001-repaired Gate-B packet.
+
+Deterministic QA must rerun because learner-visible production copy changed.
