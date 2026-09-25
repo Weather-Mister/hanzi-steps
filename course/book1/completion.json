@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "activity-engineering",
+  "currentStage": "implementation",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,8 +17,8 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pending",
-    "implementation": "locked",
+    "activities": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
   "openFindings": [],
@@ -26,7 +26,7 @@
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": null,
+    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -39,9 +39,9 @@
     "activityUnit42Spec": "course/book1/lesson14-unit42-activity-spec.md",
     "activityUnit43Spec": "course/book1/lesson14-unit43-activity-spec.md",
     "activityUnit44Spec": "course/book1/lesson14-unit44-activity-spec.md",
-    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-reaudit2.md",
-    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-reaudit2.md",
-    "activityQuestionAudit": "course/book1/lesson14-activity-question-reaudit2.md",
+    "activityTeachingQualityAudit": "course/book1/lesson14-activity-teaching-quality-reaudit3.md",
+    "activityCrossUnitAudit": "course/book1/lesson14-activity-cross-unit-reaudit3.md",
+    "activityQuestionAudit": "course/book1/lesson14-activity-question-reaudit3.md",
     "implementationConformanceAudit": "course/book1/lesson14-implementation-conformance-audit.md",
     "implementationUnits": [
       "course/book1/unit42.ts",
@@ -64,8 +64,8 @@
     "learnerSimulationRerunHandoff": "course/book1/lesson14-learner-simulation-rerun-handoff.md",
     "activityTeachingQualityReaudit3": "course/book1/lesson14-activity-teaching-quality-reaudit3.md",
     "activityCrossUnitReaudit3": "course/book1/lesson14-activity-cross-unit-reaudit3.md",
-    "activityQuestionReaudit3": null,
+    "activityQuestionReaudit3": "course/book1/lesson14-activity-question-reaudit3.md",
     "activityQuestionReaudit3Handoff": "course/book1/lesson14-activity-question-reaudit3-handoff.md"
   },
-  "notes": "Final Learner Simulation A failed with two BLOCKER prerequisite defects: future NEW 明年 in u43-a002-s2 and ungated standalone character practice through the general character library/detail route. Simulation B/C passed but cannot advance Stage 7 while A fails. Gate B is reopened. The activity candidate removes the future distractor and adds a global first-teaching gate for all practice-<character> entry points. Same-context Teaching Quality and Cross-Unit re-audit3 pass. Mandatory fresh Activity Audit 2 re-audit3 is pending. Implementation is locked until Gate B re-freezes."
+  "notes": "Mandatory fresh Activity Audit 2 re-audit3 PASS with zero open BLOCKER/MAJOR findings. Teaching Quality re-audit3 and Cross-Unit re-audit3 also PASS; Gate A remains PASS. Gate B is re-frozen on the repaired candidate: u43-a002-s2 uses the already-available yes/no duration distractor 你在臺灣住了半年嗎？, and every standalone practice-<character> action is gated until the character's first non-review teaching lesson is complete while canonical Pinyin Search visibility remains global. Advanced to implementation with implementation pending; release remains locked."
 }
