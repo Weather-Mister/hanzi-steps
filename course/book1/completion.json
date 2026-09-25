@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 13,
   "completedThroughUnit": 41,
   "currentSourceLesson": 14,
-  "currentStage": "learner-simulation",
+  "currentStage": "activity-engineering",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -17,8 +17,8 @@
     "source": "pass",
     "dependencies": "pass",
     "curriculum": "pass",
-    "activities": "pass",
-    "implementation": "pass",
+    "activities": "pending",
+    "implementation": "locked",
     "release": "locked"
   },
   "openFindings": [],
@@ -26,7 +26,7 @@
     "sourceLedger": "course/book1/lesson14-source-ledger.md",
     "dependencyLedger": "course/book1/lesson14-dependency-ledger.md",
     "frozenBlueprint": "course/book1/lesson14-curriculum-blueprint.md",
-    "frozenActivitySpec": "course/book1/lesson14-activity-spec.md",
+    "frozenActivitySpec": null,
     "traceability": null,
     "releaseReport": null,
     "sourceAudit": "course/book1/lesson14-source-audit.md",
@@ -48,11 +48,11 @@
       "course/book1/unit43.ts",
       "course/book1/unit44.ts"
     ],
-    "deterministicQa": "course/book1/lesson14-deterministic-qa.md",
+    "deterministicQa": null,
     "learnerSimulationHandoff": "course/book1/lesson14-learner-simulation-handoff.md",
-    "learnerSimulationA": null,
-    "learnerSimulationB": null,
-    "learnerSimulationC": null,
+    "learnerSimulationA": "course/book1/lesson14-learner-simulation-a-final.md",
+    "learnerSimulationB": "course/book1/lesson14-learner-simulation-b-final.md",
+    "learnerSimulationC": "course/book1/lesson14-learner-simulation-c-final.md",
     "activityTeachingQualityReaudit": "course/book1/lesson14-activity-teaching-quality-reaudit.md",
     "activityCrossUnitReaudit": "course/book1/lesson14-activity-cross-unit-reaudit.md",
     "activityQuestionReaudit": "course/book1/lesson14-activity-question-reaudit.md",
@@ -61,7 +61,11 @@
     "activityCrossUnitReaudit2": "course/book1/lesson14-activity-cross-unit-reaudit2.md",
     "activityQuestionReaudit2": "course/book1/lesson14-activity-question-reaudit2.md",
     "activityQuestionReaudit2Handoff": "course/book1/lesson14-activity-question-reaudit2-handoff.md",
-    "learnerSimulationRerunHandoff": "course/book1/lesson14-learner-simulation-rerun-handoff.md"
+    "learnerSimulationRerunHandoff": "course/book1/lesson14-learner-simulation-rerun-handoff.md",
+    "activityTeachingQualityReaudit3": "course/book1/lesson14-activity-teaching-quality-reaudit3.md",
+    "activityCrossUnitReaudit3": "course/book1/lesson14-activity-cross-unit-reaudit3.md",
+    "activityQuestionReaudit3": null,
+    "activityQuestionReaudit3Handoff": "course/book1/lesson14-activity-question-reaudit3-handoff.md"
   },
-  "notes": "Final repaired Lesson-14 implementation passes deterministic QA on Feature QA #459. The prior explain-before-order failure from #451 is resolved. Generated registry artifacts were committed by the successful run. Stage 7 now requires three new independent learner-simulation reruns because the learner-facing packet changed after the earlier simulations. Release remains locked."
+  "notes": "Final Learner Simulation A failed with two BLOCKER prerequisite defects: future NEW 明年 in u43-a002-s2 and ungated standalone character practice through the general character library/detail route. Simulation B/C passed but cannot advance Stage 7 while A fails. Gate B is reopened. The activity candidate removes the future distractor and adds a global first-teaching gate for all practice-<character> entry points. Same-context Teaching Quality and Cross-Unit re-audit3 pass. Mandatory fresh Activity Audit 2 re-audit3 is pending. Implementation is locked until Gate B re-freezes."
 }
