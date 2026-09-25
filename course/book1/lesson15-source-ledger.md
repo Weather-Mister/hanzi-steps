@@ -675,10 +675,14 @@ This does **not** establish which characters are new after Unit 44. Dialogue-, g
 - formal-lexical unique characters: **63**
 - unsupported formal additions: **0**
 
-The source stage is **reconciled but not audited**.
+Fresh source audit: **PASS** — recorded in `course/book1/lesson15-source-audit.md`.
 
-The source gate remains **pending** until a separate fresh-context source audit checks this ledger against the authoritative Lesson-15 source and returns PASS with:
-- BLOCKER = 0
-- MAJOR = 0
+Final source-audit state:
+- BLOCKER: **0**
+- MAJOR: **0**
+- MINOR: **0**
+- unresolved source disagreements: **0**
 
-No dependency classifications or Lesson-15 Hanzi Steps unit design are authorized before that gate passes.
+The source gate is **PASS**.
+
+The next mandatory protocol action is the **dependency-ledger stage**. No dependency classifications or Lesson-15 Hanzi Steps unit design were created during the source audit.
