@@ -1,6 +1,6 @@
-# Book 1 Lesson 14 — Candidate Activity Specification
+# Book 1 Lesson 14 — Frozen Activity Specification
 
-Status: **Gate-B candidate, not frozen yet**.
+Status: **Gate B PASS — re-frozen after fresh Activity Audit 2 re-audit on 2026-09-25**.
 
 Upstream:
 - source gate: PASS
@@ -14,7 +14,7 @@ Normative activity-spec packet:
 - `course/book1/lesson14-unit43-activity-spec.md`;
 - `course/book1/lesson14-unit44-activity-spec.md`.
 
-No learner-facing TypeScript, strokes, manifest entries, or generated curriculum files may be authored until Gate B passes.
+Gate B has passed. Implementation may now transcribe this frozen packet. Any unavoidable implementation deviation must be documented; any curriculum/source change reopens the affected upstream gate.
 
 ## 1. Activity-engineering rules
 
@@ -258,17 +258,20 @@ Unit 44 review:
 
 ## 11. Gate-B status
 
-**Stage-7 repair status:** Gate B was reopened after learner simulations found prerequisite, conformance, capstone, delayed-retrieval, and Pinyin Search timing defects. This packet is the repaired activity-engineering candidate and must receive fresh audit approval before it can be frozen again.
+Gate B was reopened after Stage-7 learner simulations found prerequisite, conformance, capstone, delayed-retrieval, and Pinyin Search timing defects.
 
-This packet is the activity-engineering candidate.
+The repaired packet has now passed:
+1. Activity Audit 1 — teaching quality: **PASS** (`lesson14-activity-teaching-quality-reaudit.md`);
+2. fresh-context Activity Audit 2 — question correctness/adversarial: **PASS** (`lesson14-activity-question-reaudit.md`);
+3. Activity Audit 3 — cross-unit coherence: **PASS** (`lesson14-activity-cross-unit-reaudit.md`);
+4. open BLOCKER: **0**;
+5. open MAJOR: **0**.
 
-Before it may be frozen:
-1. Activity Audit 1 — teaching quality must PASS.
-2. A **fresh-context** Activity Audit 2 — question correctness/adversarial audit must PASS.
-3. Activity Audit 3 — cross-unit coherence must PASS.
-4. Open BLOCKER = 0.
-5. Open MAJOR = 0.
+Fresh Activity Audit 2 also corrected the Search timing contract to match frozen Gate A:
+- canonical Pinyin Search lookup remains global;
+- Lesson-14 Search writing practice is gated until the owning lesson / character introduction;
+- Mega/adaptive practice remains owning-lesson gated.
 
-Until then:
-- `completion.json.artifacts.frozenActivitySpec` remains null;
-- implementation remains locked.
+**Gate B: PASS. This packet is frozen.**
+
+The controller may advance to **implementation**. Implementation must conform to this packet; curriculum invention or an upstream architecture change reopens the appropriate gate.
