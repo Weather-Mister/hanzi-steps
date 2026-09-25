@@ -240,6 +240,60 @@ This file is normative for Gate B together with `lesson14-activity-spec.md`.
 - tokens: [`今年冬天`, `沒有去年冬天那麼熱`]
 - grammarIds: [`u44-not-as`]
 
+
+### u44-cap-weather
+- text: **颱風快要來了，請大家多小心。**
+- pinyin: **Táifēng kuài yào lái le, qǐng dàjiā duō xiǎoxīn.**
+- meaning: **A typhoon is about to come; everyone, please be extra careful.**
+- note: Lesson-14 weather/typhoon capstone production line. It retrieves Unit-43 imminence and Unit-44 caution language.
+- tokens: [`颱風快要來了`, `請大家多小心`]
+- grammarIds: [`u43-imminent`]
+
+### u44-cap-season
+- text: **因為我怕冷，所以我比較喜歡春天。**
+- pinyin: **Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.**
+- meaning: **Because I dislike the cold, I prefer spring.**
+- note: Lesson-14 seasons/preference capstone line, retrieving Unit-42 preference/reason language.
+- tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
+
+### u44-cap-experience
+- text: **我在臺灣住了一年。**
+- pinyin: **Wǒ zài Táiwān zhù le yì nián.**
+- meaning: **I lived in Taiwan for one year.**
+- note: Lesson-14 experience capstone line, retrieving Unit-43 completed duration.
+- tokens: [`我在臺灣`, `住了一年`]
+- grammarIds: [`u43-completed-duration`]
+
+### u44-cum-miss
+- text: **我在臺灣住了半年多了。有一點想家。**
+- pinyin: **Wǒ zài Táiwān zhù le bànnián duō le. Yǒu yìdiǎn xiǎng jiā.**
+- meaning: **I have been in Taiwan for a little over half a year. I miss home a little.**
+- note: Delayed retrieval of Unit-43 duration-to-now and 想 = “miss”.
+- tokens: [`我在臺灣住了半年多了`, `有一點想家`]
+- grammarIds: [`u43-duration-to-now`]
+
+### u44-cum-newyear
+- text: **新年快到了。想回去看父母嗎？**
+- pinyin: **Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?**
+- meaning: **New Year is almost here. Do you want to go back to see your parents?**
+- note: Delayed retrieval of Unit-43 新年, 父母 and imminence.
+- tokens: [`新年快到了`, `想回去看父母嗎`]
+- grammarIds: [`u43-imminent`]
+
+### u44-cum-december
+- text: **我打算十二月底回去。**
+- pinyin: **Wǒ dǎsuàn shí'èr yuè dǐ huíqù.**
+- meaning: **I plan to go back at the end of December.**
+- note: Delayed retrieval of Unit-43 十二月底.
+- tokens: [`我打算`, `十二月底回去`]
+
+### u44-cum-leaves
+- text: **我想明年秋天去看紅葉。**
+- pinyin: **Wǒ xiǎng míngnián qiūtiān qù kàn hóngyè.**
+- meaning: **I want to go see red maple leaves next autumn.**
+- note: Delayed retrieval of Unit-43 明年 and 紅葉.
+- tokens: [`我想明年秋天`, `去看紅葉`]
+
 ## 4. Character lifecycle IDs
 
 Each expands to ordered `intro → trace → build → complete → memory`.
@@ -605,36 +659,35 @@ No prompt or answer uses 度 or 北.
    - options: [颱風快要來了。, 颱風來了兩個月。, 颱風跟雨一樣。]
    - answer: 颱風快要來了。
    - explanation: 快要…了 marks an imminent event.
+33. order `u44-review-u43-1` using `u44-cum-miss`
+   - tokens: [`我在臺灣住了半年多了`, `有一點想家`]
+34. order `u44-review-u43-2` using `u44-cum-newyear`
+   - tokens: [`新年快到了`, `想回去看父母嗎`]
+35. order `u44-review-u43-3` using `u44-cum-december`
+   - tokens: [`我打算`, `十二月底回去`]
+36. order `u44-review-u43-4` using `u44-cum-leaves`
+   - tokens: [`我想明年秋天`, `去看紅葉`]
+
 ### Culture
-33. `u44-review-culture`
+37. `u44-review-culture`
    - prompt: In the textbook's historical account, what changed about who made typhoon-day decisions?
    - options: [decision-making was vested in regional governments, students individually decided school closures, the weather bureau stopped giving forecasts]
    - answer: decision-making was vested in regional governments
    - explanation: This is a source-history comprehension check; it is not presented as current 2026 administrative guidance.
 
 ### Explicit F/S001–004 capstone
-34. `u44-review-cap1`
-   - prompt: Which task demonstrates the weather/typhoon outcome?
-   - options: [describe rain/snow/typhoon conditions and appropriate caution, compare seasonal temperatures, report where someone lived and for how long]
-   - answer: describe rain/snow/typhoon conditions and appropriate caution
-   - explanation: This maps to B1L14-F001/S001.
-35. `u44-review-cap2`
-   - prompt: Which task demonstrates the seasons/preference outcome?
-   - options: [name the seasons and explain which you like/dislike and why, describe a typhoon warning, report a completed travel duration]
-   - answer: name the seasons and explain which you like/dislike and why
-   - explanation: This maps to B1L14-F002/S002.
-36. `u44-review-cap3`
-   - prompt: Which task demonstrates the comparison outcome?
-   - options: [compare conditions with 比…更 / 跟…一樣 / 沒有…那麼, explain seasonal preferences, report where an experience happened and how long it lasted]
-   - answer: compare conditions with 比…更 / 跟…一樣 / 沒有…那麼
-   - explanation: This maps to B1L14-F003/S003.
-37. `u44-review-cap4`
-   - prompt: Which task demonstrates the experience outcome?
-   - options: [say where an experience happened and how long it lasted, compare seasonal temperatures, describe typhoon conditions and caution]
-   - answer: say where an experience happened and how long it lasted
-   - explanation: This maps to B1L14-F004/S004.
+38. order `u44-review-cap1` using `u44-cap-weather`
+   - tokens: [`颱風快要來了`, `請大家多小心`]
+39. order `u44-review-cap2` using `u44-cap-season`
+   - tokens: [`因為我怕冷`, `所以我比較喜歡春天`]
+40. order `u44-review-cap3` using `u44-less-model`
+   - tokens: [`今年冬天`, `沒有去年冬天那麼熱`]
+41. order `u44-review-cap4` using `u44-cap-experience`
+   - tokens: [`我在臺灣`, `住了一年`]
 
-Review count: **37 total steps** — 36 review-specific step IDs plus the `u44-weather-interview` phrase step. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; the match step directly retrieves the three single-character lexical targets 傘/濕/更, while the remaining nine receive individual select retrieval. G004/G005, the full A003 toolkit, A004, culture, delayed retrieval, and all four outcomes remain explicit.
+These four capstone steps require the learner to construct actual Chinese for the weather/typhoon, seasons/preference, comparison, and experience outcomes rather than identify English curriculum metadata.
+
+Review count: **41 total steps** — 40 review-specific step IDs plus the `u44-weather-interview` phrase step. Listening: **3**. All 12 NEW vocabulary targets and all 7 NEW characters are independently retrieved; the match step directly retrieves the three single-character lexical targets 傘/濕/更, while the remaining nine receive individual select retrieval. G004/G005, the full A003 toolkit, A004, culture, explicit delayed Unit-43 lexical/sense retrieval, and all four outcomes remain explicit.
 
 ## 7. Lifecycle coverage
 
@@ -652,7 +705,8 @@ Review count: **37 total steps** — 36 review-specific step IDs plus the `u44-w
 | CUL001 | culture note | culture selects | review-culture | final source context |
 | A003 | models + full 比 / 比較 / 更 / 跟…一樣 / 沒有…那麼 toolkit | review-g5–g7 + review-a003-1–3 | same | F003 |
 | A004 | Unit42 prep + exact u44-weather-interview card | u44-weather-interview + review-a004-1–2 | same | F001/F003 |
-| F/S001–004 | prior unit lifecycle | review-cap1–review-cap4 | same | Lesson-14 closure |
+| Unit-43 delayed lexical/sense targets | Unit-43 lessons/review | review-u43-1–review-u43-4 | order production | capstone retention |
+| F/S001–004 | prior unit lifecycle | review-cap1–review-cap4 as Chinese order production | same | Lesson-14 closure |
 
 ## 8. Search/Mega and deferral rules
 
