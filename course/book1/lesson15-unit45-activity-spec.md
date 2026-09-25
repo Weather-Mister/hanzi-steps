@@ -50,6 +50,33 @@ Pronunciation guardrail: 差 is **chā** here. Do not reuse a different familiar
 
 These records are learner-facing explanation/context cards and may be referenced by `phrase` / `order` steps.
 
+### Meaning-first lexical EXPLAIN cards
+
+These cards are mandatory learner-facing teaching, not answer-feedback. Each appears after any required NEW-character lifecycle for the words on the card and before the first assessed lexical select.
+
+#### u45-doctor-lex
+- **醫生 yīshēng** — doctor
+
+#### u45-runny-lex
+- **一直 yìzhí** — continuously; all the way
+- **流 liú** — to flow
+- **鼻水 bíshuǐ** — nasal mucus; a runny nose
+
+#### u45-head-lex
+- **頭 tóu** — head
+- **痛 tòng** — painful; hurts
+- **胃口 wèikǒu** — appetite
+- **差 chā** — poor; bad in **胃口很差**
+
+#### u45-throat-lex
+- **喉嚨 hóulóng** — throat
+- **發炎 fāyán** — to be inflamed
+
+#### u45-sick-lex
+- **生病 shēngbìng** — to fall ill / be sick
+- **發燒 fāshāo** — to have a fever
+
+
 ### u45-health-inquiry
 - text: **哪裡不舒服？**
 - pinyin: **Nǎlǐ bù shūfu?**
@@ -145,6 +172,7 @@ For each prefix, the character's recognition/reading card precedes `intro`, and 
 Order:
 1. 醫 recognition/read card: 醫 **yī**, seen in 醫生.
 2. 醫 lifecycle `u45-doctor-醫-*`.
+**Mandatory before step 3:** EXPLAIN `u45-doctor-lex`.
 3. select `u45-doctor-s1`
    - prompt: **醫生 means…**
    - options: [`doctor`, `pharmacy`, `medicine`]
@@ -174,6 +202,7 @@ Order:
 4. 流 lifecycle.
 5. 鼻 recognition/read card: 鼻 **bí**; 鼻水 **bíshuǐ**.
 6. 鼻 lifecycle.
+**Mandatory before step 7:** EXPLAIN `u45-runny-lex`.
 7. select `u45-runny-s1`
    - prompt: **一直 means…**
    - options: [`continuously`, `only once`, `a little`]
@@ -207,6 +236,7 @@ Order:
 3. 痛 lifecycle.
 4. 胃 recognition/read card: 胃 **wèi**; 胃口 **wèikǒu**.
 5. 胃 lifecycle.
+**Mandatory before step 6:** EXPLAIN `u45-head-lex`.
 6. select `u45-head-s1`
    - prompt: **頭 means…**
    - options: [`head`, `throat`, `stomach/appetite`]
@@ -252,6 +282,7 @@ Order:
 6. 發 lifecycle.
 7. 炎 recognition/read card: 炎 **yán**.
 8. 炎 lifecycle.
+**Mandatory before step 9:** EXPLAIN `u45-throat-lex`.
 9. select `u45-throat-s1`
    - prompt: **喉嚨 means…**
    - options: [`throat`, `appetite`, `head`]
@@ -285,6 +316,7 @@ Order:
 2. 病 lifecycle.
 3. 燒 recognition/read card: 燒 **shāo** in 發燒.
 4. 燒 lifecycle.
+**Mandatory before step 5:** EXPLAIN `u45-sick-lex`.
 5. select `u45-sick-s1`
    - prompt: **生病 means…**
    - options: [`to be/fall sick`, `to see a doctor`, `to recover`]
