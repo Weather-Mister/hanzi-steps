@@ -286,11 +286,11 @@ Order:
 12. listen `u46-med-l1`
     - audioText: **你到藥局去拿藥。**
     - prompt: **Where should the person go?**
-    - options: [`藥局`, `健康中心`, `家`]
+    - options: [`藥局`, `學校`, `家`]
     - answer: **藥局**
     - explanation: The instruction says to go to the pharmacy to get medicine.
 13. order `u46-med-o1` using `u46-pharmacy-source`
-    - tokens: [`到藥局去`, `拿藥`]
+    - tokens: [`你`, `到藥局去`, `拿藥`]
 
 ### u46-ba — The 把 Construction
 
@@ -304,10 +304,10 @@ Order:
    - explanation: 別 bié is imperative negation.
 3. grammar `u46-ba-disposal`.
 4. select `u46-g2-s1`
-   - prompt: **Under the textbook's introductory 把 pattern, which is the model with a specific/referential object?**
-   - options: [`我把這個小籠包吃了。`, `我把一個手機買了。`, `我把中文學了。`]
+   - prompt: **Under the textbook's introductory 把 pattern, which sentence follows the source model?**
+   - options: [`我把這個小籠包吃了。`, `我想把一支手機賣了。`, `我把中文學了。`]
    - answer: **我把這個小籠包吃了。**
-   - explanation: The source introduction prefers a definite/referential 把 object and an outward action verb.
+   - explanation: The model uses a definite/referential object and an allowed outward action; the source rejects the indefinite 一支手機 example and inward 學.
    - grammarIds: [`u46-ba-disposal`]
 5. select `u46-g2-s2`
    - prompt: **Which verb is source-compatible as the bare action verb in this introductory 把 pattern?**
@@ -398,13 +398,13 @@ Order:
 10. support review card: X040 **加油 / 一定要 / 沒有問題 / 太好了** and X041 **要是…就…** and X042 **小籠包 / 西瓜 / 打籃球** are prior material.
 11. support card `u46-a004-support-sorry` plus **不知道 = don't know**. Explain before source task 3.
 12. phrase `u46-a004-1`.
-13. order `u46-a004-o1`
-    - tokens: [`我們今天一定要`, `把這50個小籠包`, `吃了`]
+13. order `u46-a004-o1` using `u46-a004-1`
+    - tokens: [`加油`, `我們今天一定要`, `把這50個小籠包`, `吃了`]
 14. phrase `u46-a004-2`.
-15. order `u46-a004-o2`
+15. order `u46-a004-o2` using `u46-a004-2`
     - tokens: [`要是你`, `把今天的功課寫了`, `就可以去打籃球`]
 16. phrase `u46-a004-3`.
-17. order `u46-a004-o3`
+17. order `u46-a004-o3` using `u46-a004-3`
     - tokens: [`誰`, `把我的西瓜`, `吃了`]
 18. select `u46-a004-s1`
     - prompt: **What do all three Activity-IV source outcomes practice?**
@@ -430,7 +430,7 @@ Order:
 2. `u46-review-l2`
    - audioText: **你到藥局去拿藥。**
    - prompt: **Which place is named?**
-   - options: [`藥局`, `健康中心`, `家`]
+   - options: [`藥局`, `學校`, `家`]
    - answer: **藥局**
    - explanation: The audio names the pharmacy.
 3. `u46-review-l3`
@@ -485,7 +485,7 @@ Order:
     - explanation: The source says these statements are always negative.
 26. `u46-review-g2`
     - prompt: **Which source-introductory 把 sentence uses an allowed outward action?**
-    - options: [`我把這個小籠包吃了。`, `我把中文學了。`, `我把一支手機買了。`]
+    - options: [`我把這個小籠包吃了。`, `我把中文學了。`, `我把這支手機買了。`]
     - answer: **我把這個小籠包吃了。**
     - explanation: 吃 is outward/transitive here; 學/買 are source-rejected in the introductory bare-verb pattern.
 27. `u46-review-g2neg`
@@ -510,7 +510,7 @@ Order:
 
 ### A004 retrieval
 30. order `u46-review-a004-1` using `u46-a004-1`
-    - tokens: [`我們今天一定要`, `把這50個小籠包`, `吃了`]
+    - tokens: [`加油`, `我們今天一定要`, `把這50個小籠包`, `吃了`]
 31. order `u46-review-a004-2` using `u46-a004-2`
     - tokens: [`要是你`, `把今天的功課寫了`, `就可以去打籃球`]
 32. order `u46-review-a004-3` using `u46-a004-3`
@@ -519,7 +519,7 @@ Order:
 ### Delayed Unit-45 retrieval
 33. `u46-review-u45-1`
     - prompt: **Which pair describes a runny nose and poor appetite?**
-    - options: [`一直流鼻水／胃口很差`, `多休息／藥局`, `發炎／保險`]
+    - options: [`一直流鼻水／胃口很差`, `多休息／藥局`, `發炎／感冒`]
     - answer: **一直流鼻水／胃口很差**
     - explanation: This retrieves Unit-45 symptom language.
 34. `u46-review-u45-2`
