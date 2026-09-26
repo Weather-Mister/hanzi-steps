@@ -25,6 +25,7 @@ test("controller rejects skipping source gate before dependency gate", () => {
 
 test("controller rejects false Book 1 completion", () => {
   const mutated = structuredClone(state);
+  mutated.completedThroughSourceLesson = Math.max(0, state.sourceLessonsTotal - 1);
   mutated.bookComplete = true;
   mutated.currentSourceLesson = null;
   mutated.currentStage = "complete";
