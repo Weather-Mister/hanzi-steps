@@ -1924,6 +1924,22 @@ const unit:UnitData = {
         "你真的不去看病嗎？"
       ]
     },
+    "u47-d2t01-07-integrated": {
+      "text": "A：你怎麼了？臉色這麼難看。\nB：昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。\nA：你這麼不舒服，我陪你去看病，好不好？\nB：不用了。我在臺灣沒有健康保險。\nA：那麼，我陪你去學校的健康中心。那裡的醫生很好，對學生也很客氣。\nB：謝謝你。我想去藥局買藥就好了。\nA：你真的不去看病嗎？",
+      "pinyin": "A: Nǐ zěnme le? Liǎnsè zhème nánkàn. / B: Zuótiān wǎnshang dùzi hěn bù shūfu, chī le dōngxi jiù tù, hái tù le hǎo jǐ cì. / A: Nǐ zhème bù shūfu, wǒ péi nǐ qù kànbìng, hǎo bu hǎo? / B: Búyòng le. Wǒ zài Táiwān méiyǒu jiànkāng bǎoxiǎn. / A: Nàme, wǒ péi nǐ qù xuéxiào de jiànkāng zhōngxīn. Nàlǐ de yīshēng hěn hǎo, duì xuéshēng yě hěn kèqi. / B: Xièxie nǐ. Wǒ xiǎng qù yàojú mǎi yào jiù hǎo le. / A: Nǐ zhēnde bù qù kànbìng ma?",
+      "meaning": "Integrated Dialogue-II turns 1–7 replay with generic speaker roles.",
+      "note": "Source-faithful cumulative replay. Proper names are replaced by generic roles and direct-address 妳 is normalized to learner-known 你; no source-name glyph is assessed.",
+      "tokens": [
+        "A：你怎麼了？臉色這麼難看。",
+        "B：昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。",
+        "A：你這麼不舒服，我陪你去看病，好不好？",
+        "B：不用了。我在臺灣沒有健康保險。",
+        "A：那麼，我陪你去學校的健康中心。那裡的醫生很好，對學生也很客氣。",
+        "B：謝謝你。我想去藥局買藥就好了。",
+        "A：你真的不去看病嗎？"
+      ],
+      "practice": false
+    },
     "u47-a005-scenario": {
       "text": "哪裡不舒服？有沒有發燒？",
       "pinyin": "Nǎlǐ bù shūfu? Yǒu méiyǒu fāshāo?",
