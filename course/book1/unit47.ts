@@ -444,6 +444,11 @@ const unit:UnitData = {
           "semanticAnswer": true
         },
         {
+          "id": "u47-g3-p2",
+          "type": "phrase",
+          "phrase": "u47-g3-order"
+        },
+        {
           "id": "u47-g3-o1",
           "type": "order",
           "phrase": "u47-g3-order",
