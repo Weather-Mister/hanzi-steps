@@ -2,7 +2,7 @@
 import {useMemo,useState} from 'react';
 import {PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {searchPracticeCharacters,searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
+import {searchLearnedVocabulary,searchPracticeCharacters,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
 
 export function PinyinSearch({
@@ -15,7 +15,7 @@ export function PinyinSearch({
  completed:Set<string>;
 }){
  const [query,setQuery]=useState('');
- const matches=useMemo(()=>searchVocabulary(query,81),[query]);
+ const matches=useMemo(()=>searchLearnedVocabulary(query,completed,81),[query,completed]);
  const results=matches.slice(0,80);
  const trimmed=query.trim();
 
@@ -28,7 +28,7 @@ export function PinyinSearch({
   <DialogContent data-unit-theme={theme} className="pinyin-search-dialog">
    <div className="pinyin-search-heading">
     <DialogTitle>Find by pinyin</DialogTitle>
-    <DialogDescription>Search all course vocabulary with or without tones, spaces, or tone numbers. Use ü, v, or u: for ü. Results include all tones; practice opens regular character practice.</DialogDescription>
+    <DialogDescription>Search vocabulary from lessons you have completed, with or without tones, spaces, or tone numbers. Use ü, v, or u: for ü. Results include all learned tones; practice opens regular character practice.</DialogDescription>
    </div>
    <div className="pinyin-search-box">
     <Search size={18}/>
