@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "learner-simulation",
-  "stageStatus": "pending",
+  "currentStage": "implementation",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -18,10 +18,12 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
-  "openFindings": [],
+  "openFindings": [
+    "SIM-A-01 BLOCKER: Unit 48 A003 learner-facing prescription support/visual replaces required source notation 一日4次 / 3日份 / 份 / 健康診所 with English/sanitized labels, so the strict prerequisite learner does not learn to parse the frozen source prescription."
+  ],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -64,7 +66,9 @@
     "implementationConformanceReaudit2": "course/book1/lesson15-implementation-conformance-reaudit2.md",
     "deterministicQaHandoff": "course/book1/lesson15-deterministic-qa-handoff.md",
     "deterministicQa": "course/book1/lesson15-deterministic-qa.md",
-    "learnerSimulationHandoff": "course/book1/lesson15-learner-simulation-handoff.md"
+    "learnerSimulationHandoff": "course/book1/lesson15-learner-simulation-handoff.md",
+    "learnerSimulationA": "course/book1/lesson15-learner-simulation-a.md",
+    "simulationARepairHandoff": "course/book1/lesson15-simulation-a-repair-handoff.md"
   },
-  "notes": "Lesson 15 Stage 6 deterministic QA is PASS. Earlier Feature QA run #612 (id 36220445206) on implementation head 2b815fe6bd5db73b48f854f5d9543d63d26b571f was cancelled during regressions and did not establish PASS. Fresh run #614 exposed and Stage 6 repaired the A002 practice-token reconstruction defect plus the unintended Units-21–25 legacy-test scope spillover. Full Feature QA run #615 (id 36221331734) passed on final authored repair head b6fd19faff87bfe42e075cc94d95a7b1241b68f9: generation, course validation, targeted Unit 45–48 and Book-2 Unit-1 tests, character coverage, 196-test vocabulary/Mega/practice/validation suite (195 pass, 0 fail, 1 intentional skip), TypeScript, Pages build, and generated artifacts. The workflow then pushed generated-only commit 73ac28d0f09595bff45836dcea9351beb7a4c222 changing course/registry.generated.ts; follow-up Feature QA #616 is action_required with 0 jobs, the expected bot-recursion/permission state rather than a failing test run. Stage 7 learner simulations A/B/C are ready but not run. Release remains locked and Book 1 remains incomplete."
+  "notes": "Stage 7 Simulation A (strict prerequisite learner) FAILED with 1 BLOCKER / 0 MAJOR / 0 MINOR. SIM-A-01 is a narrow Unit-48 A003 implementation/support divergence: production replaced the frozen source prescription notation 一日4次 / 3日份 / support-only 份 / contextual 健康診所 with English/sanitized learner-facing labels. Gate B remains pass/frozen because the frozen activity requirement is already correct. The smallest upstream area is reopened at Stage 5 implementation. Previous deterministic QA PASS is historical and must be rerun after the learner-facing repair. Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
 }
