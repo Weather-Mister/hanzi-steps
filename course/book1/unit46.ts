@@ -632,7 +632,8 @@ const unit:UnitData = {
             "藥"
           ],
           "answer": "別",
-          "explanation": "別 means “don't.”"
+          "explanation": "別 means “don't.”",
+          "semanticAnswer": true
         },
         {
           "id": "u46-ba-o1",
@@ -848,7 +849,8 @@ const unit:UnitData = {
             "vomit, sleep, compare"
           ],
           "answer": "drink more water, rest more, sleep earlier",
-          "explanation": "These are the three advice phrases in the audio."
+          "explanation": "These are the three advice phrases in the audio.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -993,7 +995,8 @@ const unit:UnitData = {
             "how many hours they slept"
           ],
           "answer": "whether they have to take medicine",
-          "explanation": "得 děi expresses necessity."
+          "explanation": "得 děi expresses necessity.",
+          "semanticAnswer": true
         }
       ]
     },
