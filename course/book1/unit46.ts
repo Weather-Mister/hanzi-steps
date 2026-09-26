@@ -945,7 +945,7 @@ const unit:UnitData = {
           "id": "u46-a004-r1",
           "type": "phrase",
           "phrase": "u46-a004-response-1"
-        }
+        },
         {
           "id": "u46-a004-p2",
           "type": "phrase",
@@ -965,7 +965,7 @@ const unit:UnitData = {
           "id": "u46-a004-r2",
           "type": "phrase",
           "phrase": "u46-a004-response-2"
-        }
+        },
         {
           "id": "u46-a004-p3",
           "type": "phrase",
@@ -985,7 +985,7 @@ const unit:UnitData = {
           "id": "u46-a004-r3",
           "type": "phrase",
           "phrase": "u46-a004-response-3"
-        }
+        },
         {
           "id": "u46-a004-s1",
           "type": "select",
