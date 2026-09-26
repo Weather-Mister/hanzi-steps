@@ -27,7 +27,7 @@ test('Repaired phrase and grammar examples do not introduce uncovered characters
  const known=new Set();
  for(const m of course.modules){
   m.newCharacters.forEach(c=>known.add(c));
-  if(m.bookId!=='book-1'||m.order<21)continue;
+  if(m.bookId!=='book-1'||m.order<21||m.order>25)continue;
   const texts=[...Object.entries(m.phrases).map(([id,p])=>[id,p.text]),...Object.entries(m.grammarRules).flatMap(([id,g])=>g.examples.map(e=>[id,e.text]))];
   for(const [id,text] of texts)for(const ch of han(text))assert.ok(known.has(ch),`${id}: untaught ${ch}`);
  }

@@ -13,6 +13,7 @@ const spotlightAmendment=readJSON('validation/fixtures/spotlight-word-amendment.
 const lesson11Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson11.json');
 const polishAmendment=readJSON('validation/fixtures/units29-33-polish-amendment.json');
 const lesson13Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson13.json');
+const lesson15Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson15.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -40,12 +41,15 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const polishExpected=polish?.after??lesson11Expected;
    const lesson13=lesson13Amendment.records?.[key]?.[id];
    if(lesson13)assert.equal(lesson13.before,polishExpected,`Lesson 13 amendment must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),lesson13?.after??polishExpected,`${key} ${id}`);
+   const lesson13Expected=lesson13?.after??polishExpected;
+   const lesson15=lesson15Amendment.records?.[key]?.[id];
+   if(lesson15)assert.equal(lesson15.before,lesson13Expected,`Lesson 15 amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),lesson15?.after??lesson13Expected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
  for(const b of baseline.books){const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);}
- assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson13Amendment.characterOrder??lesson11Amendment.characterOrder??lesson10Amendment.characterOrder??amendment.characterOrder);
+ assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson15Amendment.characterOrder??lesson13Amendment.characterOrder??lesson11Amendment.characterOrder??lesson10Amendment.characterOrder??amendment.characterOrder);
  for(const [ch,digest]of Object.entries(baseline.practice)){
   const first=amendment.practice?.[ch];
   if(first)assert.equal(first.before,digest,`practice amendment must identify original ${ch}`);
@@ -58,7 +62,10 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
   const lesson11PracticeExpected=lesson11?.after??priorExpected;
   const lesson13=lesson13Amendment.practice?.[ch];
   if(lesson13)assert.equal(lesson13.before,lesson11PracticeExpected,`Lesson 13 amendment must identify prior practice ${ch}`);
-  assert.equal(hash(current.practiceLesson(ch)),lesson13?.after??lesson11PracticeExpected,`practice-${ch}`);
+  const lesson13PracticeExpected=lesson13?.after??lesson11PracticeExpected;
+  const lesson15=lesson15Amendment.practice?.[ch];
+  if(lesson15)assert.equal(lesson15.before,lesson13PracticeExpected,`Lesson 15 amendment must identify prior practice ${ch}`);
+  assert.equal(hash(current.practiceLesson(ch)),lesson15?.after??lesson13PracticeExpected,`practice-${ch}`);
  }
 });
 test('Original complete and partial progress checkpoints remain valid',()=>{

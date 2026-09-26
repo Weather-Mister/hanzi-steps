@@ -104,6 +104,12 @@ export function searchVocabulary(query:string,limit=80):VocabularyLookupItem[]{
   .map(result=>result.item);
 }
 
+export function searchLearnedVocabulary(query:string,completed:Set<string>,limit=80):VocabularyLookupItem[]{
+ return searchVocabulary(query,vocabularyLookup.length)
+  .filter(item=>completed.has(item.lessonId))
+  .slice(0,limit);
+}
+
 export function learnedVocabulary(completed:Set<string>):VocabularyLookupItem[]{
  return vocabularyLookup.filter(item=>
   completed.has(item.lessonId)&&

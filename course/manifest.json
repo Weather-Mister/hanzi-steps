@@ -270,6 +270,30 @@
           "order": 44,
           "title": "Typhoons and Comparisons",
           "path": "course/book1/unit44.ts"
+        },
+        {
+          "id": "unit-45",
+          "order": 45,
+          "title": "Symptoms and Feeling Sick",
+          "path": "course/book1/unit45.ts"
+        },
+        {
+          "id": "unit-46",
+          "order": 46,
+          "title": "Diagnosis, Medicine, and Treatment",
+          "path": "course/book1/unit46.ts"
+        },
+        {
+          "id": "unit-47",
+          "order": 47,
+          "title": "Stomach Trouble and Getting Help",
+          "path": "course/book1/unit47.ts"
+        },
+        {
+          "id": "unit-48",
+          "order": 48,
+          "title": "Advice, Comparisons, and Recovery",
+          "path": "course/book1/unit48.ts"
         }
       ]
     },
