@@ -128,14 +128,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "醫",
           "audioText": "你哪裡不舒服？",
-          "prompt": "Which health phrase do you hear?",
+          "prompt": "What is the speaker asking about?",
           "options": [
-            "哪裡不舒服",
-            "住在哪裡",
-            "天氣怎麼樣"
+            "where the person feels unwell",
+            "where the person lives",
+            "what the weather is like"
           ],
-          "answer": "哪裡不舒服",
-          "explanation": "The audio asks where the person feels unwell."
+          "answer": "where the person feels unwell",
+          "explanation": "The question asks about the location of discomfort."
         },
         {
           "id": "u45-doctor-o1",
@@ -833,14 +833,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "病",
           "audioText": "我生病了，還有一點發燒。",
-          "prompt": "Which full condition report do you hear?",
+          "prompt": "Which two ideas are stated?",
           "options": [
-            "生病了，還有一點發燒",
-            "胃口很好，也休息了",
-            "去藥局拿藥"
+            "being sick and having a slight fever",
+            "having a good appetite and resting",
+            "going to a pharmacy and taking medicine"
           ],
-          "answer": "生病了，還有一點發燒",
-          "explanation": "The audio reports being sick and having a slight fever."
+          "answer": "being sick and having a slight fever",
+          "explanation": "生病 and 發燒 are both present."
         },
         {
           "id": "u45-sick-safety",
@@ -907,13 +907,13 @@ const unit:UnitData = {
           "type": "listen",
           "char": "直",
           "audioText": "大概多久了？已經四、五天了。",
-          "prompt": "Which complete duration exchange do you hear?",
+          "prompt": "What information is being exchanged?",
           "options": [
-            "大概多久了？已經四、五天了。",
-            "哪裡不舒服？胃口很差。",
-            "請問我得吃藥嗎？"
+            "duration of the condition",
+            "where the pharmacy is",
+            "how much medicine costs"
           ],
-          "answer": "大概多久了？已經四、五天了。",
+          "answer": "duration of the condition",
           "explanation": "The question and answer concern how long the condition has lasted."
         },
         {
@@ -981,14 +981,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "痛",
           "audioText": "頭很痛，胃口很差。",
-          "prompt": "Which complete problem pair do you hear?",
+          "prompt": "Which two problems are mentioned?",
           "options": [
-            "頭很痛，胃口很差",
-            "喉嚨發炎，還有發燒",
-            "拿藥，多休息"
+            "head pain and poor appetite",
+            "throat inflammation and fever",
+            "medicine and rest"
           ],
-          "answer": "頭很痛，胃口很差",
-          "explanation": "The audio states head pain and poor appetite."
+          "answer": "head pain and poor appetite",
+          "explanation": "頭很痛 + 胃口很差."
         },
         {
           "id": "u45-review-l3",
