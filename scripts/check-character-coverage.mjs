@@ -1,10 +1,11 @@
 import {fileURLToPath} from 'node:url';
 import fs from 'node:fs';
+import {strokeGeometryLooksAligned} from '../lib/stroke-data-validation.ts';
 import {books,units,vocabulary,characters,unitLibraryCharacters,practiceLesson} from '../lib/curriculum.ts';
 
 const strokes=JSON.parse(fs.readFileSync(new URL('../lib/stroke-data.json',import.meta.url),'utf8'));
 const hanzi=text=>[...text].filter(char=>/\p{Script=Han}/u.test(char));
-const generic=/^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square/i;
+const generic=/^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square|^write all \d+ strokes|^practice .+ as a complete traditional character|^.+ is (?:first taught|learned) in unit \d+ through|^.+ is formally introduced here|^.+ is the character taught here for|^for .+, keep the complete \d+-stroke/i;
 const toneMark=/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜńňǹḿ]/i;
 
 // Check the displayed teaching lists independently of the function that builds them.
@@ -46,6 +47,7 @@ export function validateCharacterCoverage({courseBooks=books,courseUnits=units,w
    if(!entry.parts?.length||entry.parts.some(part=>!part.description?.trim()||generic.test(part.description)))fail('is missing a character-specific component explanation');
    const shape=strokes[char];
    if(!shape||shape.strokes.length!==entry.strokes||shape.medians.length!==entry.strokes)fail('is missing complete handwriting geometry');
+   else if(!strokeGeometryLooksAligned(shape))fail('has stroke guides that do not align with the character outline');
    const covered=entry.parts?.flatMap(part=>part.strokes).sort((a,b)=>a-b);
    if(JSON.stringify(covered)!==JSON.stringify(Array.from({length:entry.strokes},(_,index)=>index)))fail('has incomplete or duplicate component strokes');
    try{

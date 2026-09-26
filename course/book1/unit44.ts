@@ -1454,14 +1454,14 @@ const unit:UnitData = {
       "zhuyin": "ㄙㄢˇ",
       "meaning": "umbrella",
       "strokes": 12,
-      "note": "傘 is first taught in Unit 44 through 傘.",
-      "memory": "Connect 傘 with 傘 (umbrella) while writing its 12 strokes in order.",
+      "note": "傘 sǎn means “umbrella.” It is useful when talking about rain and staying dry.",
+      "memory": "Picture an umbrella: a broad 人-shaped canopy, paired small shapes underneath, and a central handle.",
       "parts": [
         {
           "label": "傘",
-          "name": "傘 whole form",
-          "role": "Whole character",
-          "description": "Write all 12 strokes of 傘 in standard order and connect the shape to 傘.",
+          "name": "umbrella form",
+          "role": "Visual component",
+          "description": "Picture an umbrella: a broad 人-shaped canopy, paired small shapes underneath, and a central handle.",
           "strokes": [
             0,
             1,
@@ -1491,14 +1491,14 @@ const unit:UnitData = {
       "zhuyin": "ㄊㄞˊ",
       "meaning": "typhoon component",
       "strokes": 14,
-      "note": "颱 is first taught in Unit 44 through 颱風.",
-      "memory": "Connect 颱 with 颱風 (typhoon) while writing its 14 strokes in order.",
+      "note": "颱 tái is used in 颱風 táifēng, “typhoon.” Write the Traditional form with 風 on the left.",
+      "memory": "Wind 風 beside 台: the wind component helps you recognize the weather word.",
       "parts": [
         {
-          "label": "颱",
-          "name": "颱 whole form",
-          "role": "Whole character",
-          "description": "Write all 14 strokes of 颱 in standard order and connect the shape to 颱風.",
+          "label": "風",
+          "name": "wind component",
+          "role": "Visual component",
+          "description": "Wind component in 颱: strokes 1–9. Wind 風 beside 台: the wind component helps you recognize the weather word.",
           "strokes": [
             0,
             1,
@@ -1508,7 +1508,15 @@ const unit:UnitData = {
             5,
             6,
             7,
-            8,
+            8
+          ]
+        },
+        {
+          "label": "台",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 颱: strokes 10–14. Wind 風 beside 台: the wind component helps you recognize the weather word.",
+          "strokes": [
             9,
             10,
             11,
@@ -1517,12 +1525,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "颱風",
         "pinyin": "táifēng",
         "meaning": "typhoon"
-      }
+      },
+      "practiceBuild": false
     },
     "濕": {
       "hanzi": "濕",
@@ -1530,18 +1539,26 @@ const unit:UnitData = {
       "zhuyin": "ㄕ",
       "meaning": "wet",
       "strokes": 17,
-      "note": "濕 is first taught in Unit 44 through 濕濕的.",
-      "memory": "Connect 濕 with 濕濕的 (wet) while writing its 17 strokes in order.",
+      "note": "濕 shī means “wet.” 濕濕的 describes something as wet or damp.",
+      "memory": "Water 氵 is on the left. On the right, 日 sits over two small thread-like forms and four bottom dots.",
       "parts": [
         {
-          "label": "濕",
-          "name": "濕 whole form",
-          "role": "Whole character",
-          "description": "Write all 17 strokes of 濕 in standard order and connect the shape to 濕濕的.",
+          "label": "氵",
+          "name": "water component",
+          "role": "Visual component",
+          "description": "Water component in 濕: strokes 1–3. Water 氵 is on the left. On the right, 日 sits over two small thread-like forms and four bottom dots.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "㬎",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 濕: strokes 4–17. Water 氵 is on the left. On the right, 日 sits over two small thread-like forms and four bottom dots.",
+          "strokes": [
             3,
             4,
             5,
@@ -1559,12 +1576,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "濕濕的",
         "pinyin": "shīshī de",
         "meaning": "wet"
-      }
+      },
+      "practiceBuild": false
     },
     "討": {
       "hanzi": "討",
@@ -1572,14 +1590,14 @@ const unit:UnitData = {
       "zhuyin": "ㄊㄠˇ",
       "meaning": "ask for; discuss; annoying component",
       "strokes": 10,
-      "note": "討 is first taught in Unit 44 through 討厭.",
-      "memory": "Connect 討 with 討厭 (annoying) while writing its 10 strokes in order.",
+      "note": "討 is the first character of 討厭 tǎoyàn, “annoying; to dislike.” Learn the combined word rather than translating each character.",
+      "memory": "Speech 言 on the left and 寸 on the right: keep the seven speech strokes narrow.",
       "parts": [
         {
-          "label": "討",
-          "name": "討 whole form",
-          "role": "Whole character",
-          "description": "Write all 10 strokes of 討 in standard order and connect the shape to 討厭.",
+          "label": "言",
+          "name": "speech component",
+          "role": "Visual component",
+          "description": "Speech component in 討: strokes 1–7. Speech 言 on the left and 寸 on the right: keep the seven speech strokes narrow.",
           "strokes": [
             0,
             1,
@@ -1587,19 +1605,28 @@ const unit:UnitData = {
             3,
             4,
             5,
-            6,
+            6
+          ]
+        },
+        {
+          "label": "寸",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 討: strokes 8–10. Speech 言 on the left and 寸 on the right: keep the seven speech strokes narrow.",
+          "strokes": [
             7,
             8,
             9
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "討厭",
         "pinyin": "tǎoyàn",
         "meaning": "annoying"
-      }
+      },
+      "practiceBuild": false
     },
     "厭": {
       "hanzi": "厭",
@@ -1607,17 +1634,25 @@ const unit:UnitData = {
       "zhuyin": "ㄧㄢˋ",
       "meaning": "dislike; annoying component",
       "strokes": 14,
-      "note": "厭 is first taught in Unit 44 through 討厭.",
-      "memory": "Connect 厭 with 討厭 (annoying) while writing its 14 strokes in order.",
+      "note": "厭 is the second character of 討厭 tǎoyàn. 真討厭 can express “How annoying!”",
+      "memory": "The sloping 厂 shelters an inner block with two stacked boxes and 犬 alongside.",
       "parts": [
         {
-          "label": "厭",
-          "name": "厭 whole form",
-          "role": "Whole character",
-          "description": "Write all 14 strokes of 厭 in standard order and connect the shape to 討厭.",
+          "label": "厂",
+          "name": "outer frame",
+          "role": "Visual component",
+          "description": "Outer frame in 厭: strokes 1–2. The sloping 厂 shelters an inner block with two stacked boxes and 犬 alongside.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "猒",
+          "name": "inner component",
+          "role": "Visual component",
+          "description": "Inner component in 厭: strokes 3–14. The sloping 厂 shelters an inner block with two stacked boxes and 犬 alongside.",
+          "strokes": [
             2,
             3,
             4,
@@ -1638,7 +1673,9 @@ const unit:UnitData = {
         "text": "討厭",
         "pinyin": "tǎoyàn",
         "meaning": "annoying"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "聞": {
       "hanzi": "聞",
@@ -1646,14 +1683,14 @@ const unit:UnitData = {
       "zhuyin": "ㄨㄣˊ",
       "meaning": "hear; news component",
       "strokes": 14,
-      "note": "聞 is first taught in Unit 44 through 新聞.",
-      "memory": "Connect 聞 with 新聞 (news) while writing its 14 strokes in order.",
+      "note": "聞 relates to hearing. 新聞 xīnwén means “news,” not simply “new hearing.”",
+      "memory": "An ear 耳 inside a gate 門 is a useful image for hearing news through a doorway.",
       "parts": [
         {
-          "label": "聞",
-          "name": "聞 whole form",
-          "role": "Whole character",
-          "description": "Write all 14 strokes of 聞 in standard order and connect the shape to 新聞.",
+          "label": "門",
+          "name": "gate component",
+          "role": "Visual component",
+          "description": "Gate component in 聞: strokes 1–8. An ear 耳 inside a gate 門 is a useful image for hearing news through a doorway.",
           "strokes": [
             0,
             1,
@@ -1662,7 +1699,15 @@ const unit:UnitData = {
             4,
             5,
             6,
-            7,
+            7
+          ]
+        },
+        {
+          "label": "耳",
+          "name": "ear component",
+          "role": "Visual component",
+          "description": "Ear component in 聞: strokes 9–14. An ear 耳 inside a gate 門 is a useful image for hearing news through a doorway.",
+          "strokes": [
             8,
             9,
             10,
@@ -1677,7 +1722,9 @@ const unit:UnitData = {
         "text": "新聞",
         "pinyin": "xīnwén",
         "meaning": "news"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "更": {
       "hanzi": "更",
@@ -1685,14 +1732,14 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄥˋ",
       "meaning": "even more",
       "strokes": 7,
-      "note": "更 is first taught in Unit 44 through 更大.",
-      "memory": "Connect 更 with 更大 (even bigger) while writing its 7 strokes in order.",
+      "note": "更 gèng means “even more” in comparisons. 更大 means “even bigger”; 更小 means “even smaller.”",
+      "memory": "Keep the top line and flat box above the two long crossing strokes. The final stroke sweeps down to the right.",
       "parts": [
         {
           "label": "更",
-          "name": "更 whole form",
-          "role": "Whole character",
-          "description": "Write all 7 strokes of 更 in standard order and connect the shape to 更大.",
+          "name": "crossing form",
+          "role": "Visual component",
+          "description": "Keep the top line and flat box above the two long crossing strokes. The final stroke sweeps down to the right.",
           "strokes": [
             0,
             1,
@@ -2178,4 +2225,5 @@ const unit:UnitData = {
     "u44-review-cum3"
   ]
 };
+
 export default unit;

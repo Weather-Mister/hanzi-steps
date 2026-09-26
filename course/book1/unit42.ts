@@ -1188,17 +1188,25 @@ const unit:UnitData = {
       "zhuyin": "ㄌㄥˇ",
       "meaning": "cold",
       "strokes": 7,
-      "note": "冷 is first taught in Unit 42 through 天氣很冷.",
-      "memory": "Connect 冷 with 天氣很冷 (the weather is cold) while writing its 7 strokes in order.",
+      "note": "冷 lěng describes being cold: 天氣很冷 means “the weather is cold.”",
+      "memory": "The two ice strokes 冫 on the left are a cue for cold; 令 fills the right side.",
       "parts": [
         {
-          "label": "冷",
-          "name": "冷 whole form",
-          "role": "Whole character",
-          "description": "Write all 7 strokes of 冷 in standard order and connect the shape to 天氣很冷.",
+          "label": "冫",
+          "name": "ice component",
+          "role": "Visual component",
+          "description": "Ice component in 冷: strokes 1–2. The two ice strokes 冫 on the left are a cue for cold; 令 fills the right side.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "令",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 冷: strokes 3–7. The two ice strokes 冫 on the left are a cue for cold; 令 fills the right side.",
+          "strokes": [
             2,
             3,
             4,
@@ -1207,12 +1215,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "天氣很冷",
         "pinyin": "tiānqì hěn lěng",
         "meaning": "the weather is cold"
-      }
+      },
+      "practiceBuild": false
     },
     "滑": {
       "hanzi": "滑",
@@ -1220,18 +1229,26 @@ const unit:UnitData = {
       "zhuyin": "ㄏㄨㄚˊ",
       "meaning": "glide; ski component",
       "strokes": 12,
-      "note": "滑 is first taught in Unit 42 through 滑雪.",
-      "memory": "Connect 滑 with 滑雪 (to ski) while writing its 12 strokes in order.",
+      "note": "滑 means “slide; slippery.” In 滑雪 huáxuě, the whole word means “ski.”",
+      "memory": "Water 氵 on the left can remind you of a slippery surface; keep the taller 骨 on the right.",
       "parts": [
         {
-          "label": "滑",
-          "name": "滑 whole form",
-          "role": "Whole character",
-          "description": "Write all 12 strokes of 滑 in standard order and connect the shape to 滑雪.",
+          "label": "氵",
+          "name": "water component",
+          "role": "Visual component",
+          "description": "Water component in 滑: strokes 1–3. Water 氵 on the left can remind you of a slippery surface; keep the taller 骨 on the right.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "骨",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 滑: strokes 4–12. Water 氵 on the left can remind you of a slippery surface; keep the taller 骨 on the right.",
+          "strokes": [
             3,
             4,
             5,
@@ -1244,12 +1261,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "滑雪",
         "pinyin": "huáxuě",
         "meaning": "to ski"
-      }
+      },
+      "practiceBuild": false
     },
     "雪": {
       "hanzi": "雪",
@@ -1257,14 +1275,14 @@ const unit:UnitData = {
       "zhuyin": "ㄒㄩㄝˇ",
       "meaning": "snow",
       "strokes": 11,
-      "note": "雪 is first taught in Unit 42 through 下雪.",
-      "memory": "Connect 雪 with 下雪 (to snow) while writing its 11 strokes in order.",
+      "note": "雪 xuě means “snow.” 下雪 means “to snow,” with 下 describing precipitation falling.",
+      "memory": "The rain component 雨 sits above a short three-stroke base. Picture snow falling from the sky.",
       "parts": [
         {
-          "label": "雪",
-          "name": "雪 whole form",
-          "role": "Whole character",
-          "description": "Write all 11 strokes of 雪 in standard order and connect the shape to 下雪.",
+          "label": "雨",
+          "name": "rain component",
+          "role": "Visual component",
+          "description": "Rain component in 雪: strokes 1–8. The rain component 雨 sits above a short three-stroke base. Picture snow falling from the sky.",
           "strokes": [
             0,
             1,
@@ -1273,19 +1291,28 @@ const unit:UnitData = {
             4,
             5,
             6,
-            7,
+            7
+          ]
+        },
+        {
+          "label": "彐",
+          "name": "lower component",
+          "role": "Visual component",
+          "description": "Lower component in 雪: strokes 9–11. The rain component 雨 sits above a short three-stroke base. Picture snow falling from the sky.",
+          "strokes": [
             8,
             9,
             10
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "下雪",
         "pinyin": "xiàxuě",
         "meaning": "to snow"
-      }
+      },
+      "practiceBuild": false
     },
     "春": {
       "hanzi": "春",
@@ -1293,48 +1320,14 @@ const unit:UnitData = {
       "zhuyin": "ㄔㄨㄣ",
       "meaning": "spring",
       "strokes": 9,
-      "note": "春 is first taught in Unit 42 through 春天.",
-      "memory": "Connect 春 with 春天 (spring) while writing its 9 strokes in order.",
+      "note": "春 chūn means “spring.” Learn 春天 chūntiān as the season name.",
+      "memory": "Three horizontal lines and two spreading strokes sit above 日. Keep the lower sun centered.",
       "parts": [
         {
-          "label": "春",
-          "name": "春 whole form",
-          "role": "Whole character",
-          "description": "Write all 9 strokes of 春 in standard order and connect the shape to 春天.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8
-          ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "春天",
-        "pinyin": "chūntiān",
-        "meaning": "spring"
-      }
-    },
-    "冬": {
-      "hanzi": "冬",
-      "pinyin": "dōng",
-      "zhuyin": "ㄉㄨㄥ",
-      "meaning": "winter",
-      "strokes": 5,
-      "note": "冬 is first taught in Unit 42 through 冬天.",
-      "memory": "Connect 冬 with 冬天 (winter) while writing its 5 strokes in order.",
-      "parts": [
-        {
-          "label": "冬",
-          "name": "冬 whole form",
-          "role": "Whole character",
-          "description": "Write all 5 strokes of 冬 in standard order and connect the shape to 冬天.",
+          "label": "春上部",
+          "name": "upper strokes",
+          "role": "Visual component",
+          "description": "Upper strokes in 春: strokes 1–5. Three horizontal lines and two spreading strokes sit above 日. Keep the lower sun centered.",
           "strokes": [
             0,
             1,
@@ -1342,70 +1335,13 @@ const unit:UnitData = {
             3,
             4
           ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "冬天",
-        "pinyin": "dōngtiān",
-        "meaning": "winter"
-      }
-    },
-    "夏": {
-      "hanzi": "夏",
-      "pinyin": "xià",
-      "zhuyin": "ㄒㄧㄚˋ",
-      "meaning": "summer",
-      "strokes": 10,
-      "note": "夏 is first taught in Unit 42 through 夏天.",
-      "memory": "Connect 夏 with 夏天 (summer) while writing its 10 strokes in order.",
-      "parts": [
+        },
         {
-          "label": "夏",
-          "name": "夏 whole form",
-          "role": "Whole character",
-          "description": "Write all 10 strokes of 夏 in standard order and connect the shape to 夏天.",
+          "label": "日",
+          "name": "sun component",
+          "role": "Visual component",
+          "description": "Sun component in 春: strokes 6–9. Three horizontal lines and two spreading strokes sit above 日. Keep the lower sun centered.",
           "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "夏天",
-        "pinyin": "xiàtiān",
-        "meaning": "summer"
-      }
-    },
-    "秋": {
-      "hanzi": "秋",
-      "pinyin": "qiū",
-      "zhuyin": "ㄑㄧㄡ",
-      "meaning": "autumn",
-      "strokes": 9,
-      "note": "秋 is first taught in Unit 42 through 秋天.",
-      "memory": "Connect 秋 with 秋天 (autumn) while writing its 9 strokes in order.",
-      "parts": [
-        {
-          "label": "秋",
-          "name": "秋 whole form",
-          "role": "Whole character",
-          "description": "Write all 9 strokes of 秋 in standard order and connect the shape to 秋天.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
             5,
             6,
             7,
@@ -1413,12 +1349,147 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
+      "example": {
+        "text": "春天",
+        "pinyin": "chūntiān",
+        "meaning": "spring"
+      },
+      "practiceBuild": false
+    },
+    "冬": {
+      "hanzi": "冬",
+      "pinyin": "dōng",
+      "zhuyin": "ㄉㄨㄥ",
+      "meaning": "winter",
+      "strokes": 5,
+      "note": "冬 dōng means “winter.” 冬天 dōngtiān names the season.",
+      "memory": "A three-stroke upper shape sits above two separate dots. Keep both dots below the crossing upper strokes.",
+      "parts": [
+        {
+          "label": "夂",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "Upper component in 冬: strokes 1–3. A three-stroke upper shape sits above two separate dots. Keep both dots below the crossing upper strokes.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "冬下部",
+          "name": "lower dots",
+          "role": "Visual component",
+          "description": "Lower dots in 冬: strokes 4–5. A three-stroke upper shape sits above two separate dots. Keep both dots below the crossing upper strokes.",
+          "strokes": [
+            3,
+            4
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "冬天",
+        "pinyin": "dōngtiān",
+        "meaning": "winter"
+      },
+      "practiceBuild": false
+    },
+    "夏": {
+      "hanzi": "夏",
+      "pinyin": "xià",
+      "zhuyin": "ㄒㄧㄚˋ",
+      "meaning": "summer",
+      "strokes": 10,
+      "note": "夏 xià means “summer.” 夏天 xiàtiān names the season.",
+      "memory": "Remember three levels: a top line, a tall 自, then the crossing strokes of 夂 below.",
+      "parts": [
+        {
+          "label": "一",
+          "name": "top line",
+          "role": "Visual component",
+          "description": "Top line in 夏: strokes 1–1. Remember three levels: a top line, a tall 自, then the crossing strokes of 夂 below.",
+          "strokes": [
+            0
+          ]
+        },
+        {
+          "label": "自",
+          "name": "middle component",
+          "role": "Visual component",
+          "description": "Middle component in 夏: strokes 2–7. Remember three levels: a top line, a tall 自, then the crossing strokes of 夂 below.",
+          "strokes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "夂",
+          "name": "lower component",
+          "role": "Visual component",
+          "description": "Lower component in 夏: strokes 8–10. Remember three levels: a top line, a tall 自, then the crossing strokes of 夂 below.",
+          "strokes": [
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "夏天",
+        "pinyin": "xiàtiān",
+        "meaning": "summer"
+      },
+      "practiceBuild": false
+    },
+    "秋": {
+      "hanzi": "秋",
+      "pinyin": "qiū",
+      "zhuyin": "ㄑㄧㄡ",
+      "meaning": "autumn",
+      "strokes": 9,
+      "note": "秋 qiū means “autumn; fall.” 秋天 qiūtiān names the season.",
+      "memory": "禾, the grain plant, stands beside 火, fire. Think of the harvest season as a memory cue.",
+      "parts": [
+        {
+          "label": "禾",
+          "name": "grain component",
+          "role": "Visual component",
+          "description": "Grain component in 秋: strokes 1–5. 禾, the grain plant, stands beside 火, fire. Think of the harvest season as a memory cue.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "label": "火",
+          "name": "fire component",
+          "role": "Visual component",
+          "description": "Fire component in 秋: strokes 6–9. 禾, the grain plant, stands beside 火, fire. Think of the harvest season as a memory cue.",
+          "strokes": [
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "layout": "side",
       "example": {
         "text": "秋天",
         "pinyin": "qiūtiān",
         "meaning": "autumn"
-      }
+      },
+      "practiceBuild": false
     },
     "雨": {
       "hanzi": "雨",
@@ -1426,14 +1497,14 @@ const unit:UnitData = {
       "zhuyin": "ㄩˇ",
       "meaning": "rain",
       "strokes": 8,
-      "note": "雨 is first taught in Unit 42 through 下雨.",
-      "memory": "Connect 雨 with 下雨 (to rain) while writing its 8 strokes in order.",
+      "note": "雨 yǔ means “rain.” 下雨 xiàyǔ means “to rain.”",
+      "memory": "Picture drops under a shelter: a top line and outer frame surround a central stroke and four rain-like dots.",
       "parts": [
         {
           "label": "雨",
-          "name": "雨 whole form",
-          "role": "Whole character",
-          "description": "Write all 8 strokes of 雨 in standard order and connect the shape to 下雨.",
+          "name": "rain shape",
+          "role": "Visual component",
+          "description": "Picture drops under a shelter: a top line and outer frame surround a central stroke and four rain-like dots.",
           "strokes": [
             0,
             1,
@@ -1647,4 +1718,5 @@ const unit:UnitData = {
     "u42-review-q2"
   ]
 };
+
 export default unit;

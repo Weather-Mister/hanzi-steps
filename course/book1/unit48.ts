@@ -1763,56 +1763,64 @@ const unit:UnitData = {
       "pinyin": "huí jiā",
       "meaning": "go home",
       "lessonId": "u48-advice",
-      "core": false
+      "core": false,
+      "note": "Go or return home. 回 means return; 家 means home."
     },
     {
       "text": "油",
       "pinyin": "yóu",
       "meaning": "oily; greasy",
       "lessonId": "u48-advice",
-      "core": false
+      "core": false,
+      "note": "Oily or greasy when describing food here; as a noun, 油 also means oil."
     },
     {
       "text": "冰",
       "pinyin": "bīng",
       "meaning": "icy",
       "lessonId": "u48-advice",
-      "core": false
+      "core": false,
+      "note": "Icy or ice-cold when describing food or drinks here; as a noun, 冰 means ice."
     },
     {
       "text": "關心",
       "pinyin": "guānxīn",
       "meaning": "be concerned about",
       "lessonId": "u48-advice",
-      "core": false
+      "core": false,
+      "note": "Care about or be concerned about someone. 謝謝你關心 means “Thank you for caring.”"
     },
     {
       "text": "最好",
       "pinyin": "zuìhǎo",
       "meaning": "it would be best; should",
       "lessonId": "u48-advice",
-      "core": false
+      "core": false,
+      "note": "Introduce advice: “It would be best to…” or “You should…” This is stronger than merely listing a preference."
     },
     {
       "text": "包",
       "pinyin": "bāo",
       "meaning": "packet/package measure word",
       "lessonId": "u48-action-compare",
-      "core": false
+      "core": false,
+      "note": "A measure word for bags or packets, such as a packet of medicine. 三包 means “three packets.”"
     },
     {
       "text": "睡",
       "pinyin": "shuì",
       "meaning": "sleep",
       "lessonId": "u48-action-compare",
-      "core": false
+      "core": false,
+      "note": "The verb “sleep,” also found in 睡覺. Use 睡 when comparing how long people sleep."
     },
     {
       "text": "小時",
       "pinyin": "xiǎoshí",
       "meaning": "hour",
       "lessonId": "u48-action-compare",
-      "core": false
+      "core": false,
+      "note": "An hour as a duration: 三個小時 means “three hours.” It does not state a clock time."
     }
   ],
   "reviewVocabulary": [],
@@ -1827,17 +1835,25 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄧㄥ",
       "meaning": "ice; icy",
       "strokes": 6,
-      "note": "冰 is the new formal character in Unit 48 and appears in the advice about icy foods.",
-      "memory": "Connect the complete 6-stroke traditional form 冰 with icy/cold food in 油的、冰的東西.",
+      "note": "冰 means “ice,” and describes something icy or ice-cold here. 冰的東西 refers to cold or icy things to eat or drink.",
+      "memory": "Two ice strokes 冫 beside 水: picture water turning icy. The left has two strokes, not the three of 氵.",
       "parts": [
         {
-          "label": "冰",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 冰 form used in 冰的東西; this group covers all strokes.",
+          "label": "冫",
+          "name": "ice component",
+          "role": "Visual component",
+          "description": "Write the dot and rising stroke on the left.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "水",
+          "name": "water component",
+          "role": "Visual component",
+          "description": "The four-stroke 水 occupies the right side.",
+          "strokes": [
             2,
             3,
             4,
@@ -1845,12 +1861,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "冰的東西",
         "pinyin": "bīng de dōngxi",
         "meaning": "icy things"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -2248,4 +2265,5 @@ const unit:UnitData = {
   },
   "revisionStepIds": []
 };
+
 export default unit;

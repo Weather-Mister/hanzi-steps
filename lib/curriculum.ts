@@ -12,7 +12,8 @@ function characterSteps(c:string):Step[]{
  const d=characters[c];
  const list:Omit<Step,'id'>[]=[{type:'intro',char:c},{type:'trace',char:c}];
  if(d.partQuestion)list.push({type:'parts',char:c,...d.partQuestion});
- if(d.layout!=='whole')list.push({type:'build',char:c});
+ // Display layout can improve without inserting a step into saved practice sessions.
+ if(d.practiceBuild??(d.layout!=='whole'))list.push({type:'build',char:c});
  list.push({type:'complete',char:c},{type:'select',char:c,prompt:`Which character means “${d.meaning}”?`,answer:c,options:characterOrder.filter(x=>x===c||(['你','好','我','是'].includes(x))).slice(0,4),explanation:`${c} (${d.pinyin}) means ${d.meaning}.`},{type:'memory',char:c});
  const select=list.find(s=>s.type==='select')!;
  select.options=[c,...characterOrder.filter(x=>x!==c).slice(0,3)];

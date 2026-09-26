@@ -840,17 +840,25 @@ const unit:UnitData = {
       "zhuyin": "ㄔㄨㄢˊ",
       "meaning": "pass on; transmit",
       "strokes": 13,
-      "note": "傳 is learned in Unit 40 through 傳統.",
-      "memory": "Practice 傳 as a complete Traditional character and connect it to 傳統.",
+      "note": "傳 chuán relates to passing something on. 傳統 chuántǒng means “tradition; traditional.”",
+      "memory": "A person 亻 stands beside 專. Imagine traditions being passed from person to person as a memory cue.",
       "parts": [
         {
-          "label": "傳",
-          "name": "傳 whole form",
-          "role": "Whole character",
-          "description": "Write all 13 strokes in standard order.",
+          "label": "亻",
+          "name": "person component",
+          "role": "Visual component",
+          "description": "Person component in 傳: strokes 1–2. A person 亻 stands beside 專. Imagine traditions being passed from person to person as a memory cue.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "專",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 傳: strokes 3–13. A person 亻 stands beside 專. Imagine traditions being passed from person to person as a memory cue.",
+          "strokes": [
             2,
             3,
             4,
@@ -865,12 +873,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "傳統",
         "pinyin": "chuántǒng",
         "meaning": "tradition"
-      }
+      },
+      "practiceBuild": false
     },
     "統": {
       "hanzi": "統",
@@ -878,21 +887,29 @@ const unit:UnitData = {
       "zhuyin": "ㄊㄨㄥˇ",
       "meaning": "unify; system component",
       "strokes": 12,
-      "note": "統 is learned in Unit 40 through 傳統.",
-      "memory": "Practice 統 as a complete Traditional character and connect it to 傳統.",
+      "note": "統 tǒng appears in 傳統 chuántǒng, “tradition; traditional.” Learn the whole word rather than guessing from the parts.",
+      "memory": "Threads 糹 stand beside 充. Think of traditions linked together like threads as a visual mnemonic.",
       "parts": [
         {
-          "label": "統",
-          "name": "統 whole form",
-          "role": "Whole character",
-          "description": "Write all 12 strokes in standard order.",
+          "label": "糹",
+          "name": "thread component",
+          "role": "Visual component",
+          "description": "Thread component in 統: strokes 1–6. Threads 糹 stand beside 充. Think of traditions linked together like threads as a visual mnemonic.",
           "strokes": [
             0,
             1,
             2,
             3,
             4,
-            5,
+            5
+          ]
+        },
+        {
+          "label": "充",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 統: strokes 7–12. Threads 糹 stand beside 充. Think of traditions linked together like threads as a visual mnemonic.",
+          "strokes": [
             6,
             7,
             8,
@@ -902,12 +919,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "傳統",
         "pinyin": "chuántǒng",
         "meaning": "tradition"
-      }
+      },
+      "practiceBuild": false
     },
     "輕": {
       "hanzi": "輕",
@@ -915,14 +933,14 @@ const unit:UnitData = {
       "zhuyin": "ㄑㄧㄥ",
       "meaning": "light; young component",
       "strokes": 14,
-      "note": "輕 is learned in Unit 40 through 年輕.",
-      "memory": "Practice 輕 as a complete Traditional character and connect it to 年輕.",
+      "note": "輕 qīng means “light,” the opposite of heavy. 年輕 niánqīng is the whole word for “young.”",
+      "memory": "車 is on the left and 巠 is on the right. Keep the two seven-stroke blocks balanced.",
       "parts": [
         {
-          "label": "輕",
-          "name": "輕 whole form",
-          "role": "Whole character",
-          "description": "Write all 14 strokes in standard order.",
+          "label": "車",
+          "name": "vehicle component",
+          "role": "Visual component",
+          "description": "Vehicle component in 輕: strokes 1–7. 車 is on the left and 巠 is on the right. Keep the two seven-stroke blocks balanced.",
           "strokes": [
             0,
             1,
@@ -930,7 +948,15 @@ const unit:UnitData = {
             3,
             4,
             5,
-            6,
+            6
+          ]
+        },
+        {
+          "label": "巠",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 輕: strokes 8–14. 車 is on the left and 巠 is on the right. Keep the two seven-stroke blocks balanced.",
+          "strokes": [
             7,
             8,
             9,
@@ -941,12 +967,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "年輕",
         "pinyin": "niánqīng",
         "meaning": "young"
-      }
+      },
+      "practiceBuild": false
     },
     "部": {
       "hanzi": "部",
@@ -954,14 +981,14 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄨˋ",
       "meaning": "part; section",
       "strokes": 10,
-      "note": "部 is learned in Unit 40 through 大部分.",
-      "memory": "Practice 部 as a complete Traditional character and connect it to 大部分.",
+      "note": "部 bù refers to a part or section. 大部分 dàbùfen means “most; the greater part.”",
+      "memory": "立 over 口 forms the left block 咅; the narrow 阝 is on the right. Compare 陪, where 阝 is on the left.",
       "parts": [
         {
-          "label": "部",
-          "name": "部 whole form",
-          "role": "Whole character",
-          "description": "Write all 10 strokes in standard order.",
+          "label": "咅",
+          "name": "left component",
+          "role": "Visual component",
+          "description": "Left component in 部: strokes 1–8. 立 over 口 forms the left block 咅; the narrow 阝 is on the right. Compare 陪, where 阝 is on the left.",
           "strokes": [
             0,
             1,
@@ -970,18 +997,27 @@ const unit:UnitData = {
             4,
             5,
             6,
-            7,
+            7
+          ]
+        },
+        {
+          "label": "阝",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 部: strokes 9–10. 立 over 口 forms the left block 咅; the narrow 阝 is on the right. Compare 陪, where 阝 is on the left.",
+          "strokes": [
             8,
             9
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "大部分",
         "pinyin": "dàbùfēn",
         "meaning": "most"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -1244,4 +1280,5 @@ const unit:UnitData = {
     "u40-review-g4"
   ]
 };
+
 export default unit;

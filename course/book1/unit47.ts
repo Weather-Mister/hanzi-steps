@@ -1358,84 +1358,96 @@ const unit:UnitData = {
       "pinyin": "zěnme le",
       "meaning": "What's wrong?",
       "lessonId": "u47-whats-wrong",
-      "core": false
+      "core": false,
+      "note": "Ask this when someone seems unwell or something seems wrong: “What’s wrong?”"
     },
     {
       "text": "臉色",
       "pinyin": "liǎnsè",
       "meaning": "facial complexion / color",
       "lessonId": "u47-whats-wrong",
-      "core": false
+      "core": false,
+      "note": "The color or appearance of someone’s face, especially as a sign of health or emotion."
     },
     {
       "text": "難看",
       "pinyin": "nánkàn",
       "meaning": "not to look good",
       "lessonId": "u47-whats-wrong",
-      "core": false
+      "core": false,
+      "note": "Not good to look at. Describing 臉色, it means the person looks unwell, not that you are insulting their appearance."
     },
     {
       "text": "肚子",
       "pinyin": "dùzi",
       "meaning": "stomach; abdomen",
       "lessonId": "u47-stomach",
-      "core": false
+      "core": false,
+      "note": "The belly or abdomen; 子 is pronounced with a neutral tone: dùzi."
     },
     {
       "text": "吐",
       "pinyin": "tù",
       "meaning": "to vomit",
       "lessonId": "u47-stomach",
-      "core": false
+      "core": false,
+      "note": "Pronounced tù (fourth tone) for “vomit; throw up.”"
     },
     {
       "text": "次",
       "pinyin": "cì",
       "meaning": "measure word for occurrences",
       "lessonId": "u47-stomach",
-      "core": false
+      "core": false,
+      "note": "Counts occurrences of an action: 三次 means “three times.” It does not measure how long the action lasts."
     },
     {
       "text": "陪",
       "pinyin": "péi",
       "meaning": "accompany",
       "lessonId": "u47-accompany",
-      "core": false
+      "core": false,
+      "note": "Go or stay with someone, often to keep them company or help: 陪你去看病."
     },
     {
       "text": "看病",
       "pinyin": "kànbìng",
       "meaning": "see a doctor",
       "lessonId": "u47-accompany",
-      "core": false
+      "core": false,
+      "note": "To see a doctor as a patient. Learn the phrase together rather than translating 看 as “look at.”"
     },
     {
       "text": "不用了",
       "pinyin": "búyòng le",
       "meaning": "no need / it's not necessary",
       "lessonId": "u47-health-center",
-      "core": false
+      "core": false,
+      "note": "Politely decline an offer: “No need, thanks.” It does not mean that something is broken or unusable."
     },
     {
       "text": "健康",
       "pinyin": "jiànkāng",
       "meaning": "health",
       "lessonId": "u47-health-center",
-      "core": false
+      "core": false,
+      "note": "Health; also healthy in descriptive uses. 健康中心 is a health center."
     },
     {
       "text": "保險",
       "pinyin": "bǎoxiǎn",
       "meaning": "insurance",
       "lessonId": "u47-health-center",
-      "core": false
+      "core": false,
+      "note": "Insurance. 健康保險 means “health insurance.”"
     },
     {
       "text": "健康中心",
       "pinyin": "jiànkāng zhōngxīn",
       "meaning": "health center",
       "lessonId": "u47-health-center",
-      "core": false
+      "core": false,
+      "note": "A health center, such as the place on campus where students can seek care."
     }
   ],
   "reviewVocabulary": [],
@@ -1457,19 +1469,27 @@ const unit:UnitData = {
       "zhuyin": "ㄌㄧㄢˇ",
       "meaning": "face",
       "strokes": 17,
-      "note": "臉 is formally introduced here in 臉色.",
-      "memory": "Link the complete 17-stroke traditional form 臉 to 臉色.",
+      "note": "臉 means “face.” 臉色 liǎnsè is someone’s facial color or complexion, which can show how they feel.",
+      "memory": "The flesh component 月 is on the left and the wider 僉 is on the right. A face is part of the body.",
       "parts": [
         {
-          "label": "臉",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 臉 form used in 臉色; this group covers all of its strokes.",
+          "label": "月",
+          "name": "flesh component",
+          "role": "Visual component",
+          "description": "This four-stroke 月-shaped component relates to the body.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "僉",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Keep the paired lower shapes under the broad top of 僉.",
+          "strokes": [
             4,
             5,
             6,
@@ -1486,12 +1506,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "臉色",
         "pinyin": "liǎnsè",
         "meaning": "complexion"
-      }
+      },
+      "practiceBuild": false
     },
     "肚": {
       "hanzi": "肚",
@@ -1499,31 +1520,40 @@ const unit:UnitData = {
       "zhuyin": "ㄉㄨˋ",
       "meaning": "belly; abdomen",
       "strokes": 7,
-      "note": "肚 is formally introduced here in 肚子.",
-      "memory": "Link the complete 7-stroke traditional form 肚 to 肚子.",
+      "note": "肚 appears in 肚子 dùzi, “belly; abdomen.” The 子 syllable is neutral-tone zi in this word.",
+      "memory": "Put flesh 月 next to 土. The body component helps distinguish 肚 from the mouth character 吐.",
       "parts": [
         {
-          "label": "肚",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 肚 form used in 肚子; this group covers all of its strokes.",
+          "label": "月",
+          "name": "flesh component",
+          "role": "Visual component",
+          "description": "The four-stroke body component sits on the left.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "土",
+          "name": "earth component",
+          "role": "Visual component",
+          "description": "The three-stroke 土 sits on the right.",
+          "strokes": [
             4,
             5,
             6
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "肚子",
         "pinyin": "dùzi",
         "meaning": "stomach; abdomen"
-      }
+      },
+      "practiceBuild": false
     },
     "吐": {
       "hanzi": "吐",
@@ -1531,30 +1561,39 @@ const unit:UnitData = {
       "zhuyin": "ㄊㄨˋ",
       "meaning": "vomit",
       "strokes": 6,
-      "note": "吐 is formally introduced here in 吐.",
-      "memory": "Link the complete 6-stroke traditional form 吐 to 吐.",
+      "note": "吐 is tù, fourth tone, when it means “vomit.” Learn this reading in the illness context.",
+      "memory": "Mouth 口 plus 土: remember something coming out of the mouth. Compare 肚, which has 月 instead.",
       "parts": [
         {
-          "label": "吐",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 吐 form used in 吐; this group covers all of its strokes.",
+          "label": "口",
+          "name": "mouth component",
+          "role": "Visual component",
+          "description": "The small mouth is on the left.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "土",
+          "name": "earth component",
+          "role": "Visual component",
+          "description": "Write the three-stroke 土 on the right.",
+          "strokes": [
             3,
             4,
             5
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "吐",
         "pinyin": "tù",
         "meaning": "vomit"
-      }
+      },
+      "practiceBuild": false
     },
     "陪": {
       "hanzi": "陪",
@@ -1562,17 +1601,25 @@ const unit:UnitData = {
       "zhuyin": "ㄆㄟˊ",
       "meaning": "accompany",
       "strokes": 10,
-      "note": "陪 is formally introduced here in 陪你去看病.",
-      "memory": "Link the complete 10-stroke traditional form 陪 to 陪你去看病.",
+      "note": "陪 péi means “accompany; go or stay with someone.” 陪你去看病 means “go with you to see a doctor.”",
+      "memory": "The narrow 阝 stands beside 咅. Keep the left side slim so the right-hand 立-over-口 shape has room.",
       "parts": [
         {
-          "label": "陪",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 陪 form used in 陪你去看病; this group covers all of its strokes.",
+          "label": "阝",
+          "name": "left component",
+          "role": "Visual component",
+          "description": "The left-side 阝 uses two strokes in this dataset.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "咅",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Write 立 above 口 to form the right-hand block.",
+          "strokes": [
             2,
             3,
             4,
@@ -1584,12 +1631,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "陪你去看病",
         "pinyin": "péi nǐ qù kànbìng",
         "meaning": "accompany you to see a doctor"
-      }
+      },
+      "practiceBuild": false
     },
     "健": {
       "hanzi": "健",
@@ -1597,17 +1645,25 @@ const unit:UnitData = {
       "zhuyin": "ㄐㄧㄢˋ",
       "meaning": "healthy; strong",
       "strokes": 10,
-      "note": "健 is formally introduced here in 健康.",
-      "memory": "Link the complete 10-stroke traditional form 健 to 健康.",
+      "note": "健 is the first character in 健康 jiànkāng, “health; healthy.” Learn both syllables together.",
+      "memory": "A person 亻 stands beside 建. The person component is a useful cue for a healthy person.",
       "parts": [
         {
-          "label": "健",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 健 form used in 健康; this group covers all of its strokes.",
+          "label": "亻",
+          "name": "person component",
+          "role": "Visual component",
+          "description": "The standing person occupies the left edge.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "建",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The eight-stroke 建 fills the right side; its final sweeping stroke runs underneath.",
+          "strokes": [
             2,
             3,
             4,
@@ -1619,12 +1675,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "健康",
         "pinyin": "jiànkāng",
         "meaning": "health"
-      }
+      },
+      "practiceBuild": false
     },
     "康": {
       "hanzi": "康",
@@ -1632,18 +1689,26 @@ const unit:UnitData = {
       "zhuyin": "ㄎㄤ",
       "meaning": "healthy; well",
       "strokes": 11,
-      "note": "康 is formally introduced here in 健康.",
-      "memory": "Link the complete 11-stroke traditional form 康 to 健康.",
+      "note": "康 is the second character in 健康 jiànkāng, “health; healthy.” 健康中心 means “health center.”",
+      "memory": "A broad 广 roof covers the inner strokes. Keep the central vertical visible and the lower strokes balanced.",
       "parts": [
         {
-          "label": "康",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 康 form used in 健康; this group covers all of its strokes.",
+          "label": "广",
+          "name": "outer roof",
+          "role": "Visual component",
+          "description": "The first three strokes form the roof and left side.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "康內部",
+          "name": "inner strokes",
+          "role": "Visual component",
+          "description": "Write the eight inner strokes beneath 广, leaving room for the lower spreading strokes.",
+          "strokes": [
             3,
             4,
             5,
@@ -1660,7 +1725,9 @@ const unit:UnitData = {
         "text": "健康",
         "pinyin": "jiànkāng",
         "meaning": "health"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "保": {
       "hanzi": "保",
@@ -1668,17 +1735,25 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄠˇ",
       "meaning": "protect; insure",
       "strokes": 9,
-      "note": "保 is formally introduced here in 保險.",
-      "memory": "Link the complete 9-stroke traditional form 保 to 保險.",
+      "note": "保 means “protect; preserve.” In 保險 bǎoxiǎn, the whole word means “insurance.”",
+      "memory": "A person 亻 stands beside 呆, a 口 over 木. Use the image of a person protecting something as a memory cue.",
       "parts": [
         {
-          "label": "保",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 保 form used in 保險; this group covers all of its strokes.",
+          "label": "亻",
+          "name": "person component",
+          "role": "Visual component",
+          "description": "Write the two person strokes on the left.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "呆",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The three-stroke 口 sits above the four-stroke 木.",
+          "strokes": [
             2,
             3,
             4,
@@ -1689,12 +1764,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "保險",
         "pinyin": "bǎoxiǎn",
         "meaning": "insurance"
-      }
+      },
+      "practiceBuild": false
     },
     "險": {
       "hanzi": "險",
@@ -1702,17 +1778,25 @@ const unit:UnitData = {
       "zhuyin": "ㄒㄧㄢˇ",
       "meaning": "risk; insurance component",
       "strokes": 15,
-      "note": "險 is formally introduced here in 保險.",
-      "memory": "Link the complete 15-stroke traditional form 險 to 保險.",
+      "note": "險 means “danger; risk.” In 保險 bǎoxiǎn, learn the combined meaning “insurance.”",
+      "memory": "The narrow 阝 stands beside 僉. Compare 臉: the right component is shared, but the left component changes.",
       "parts": [
         {
-          "label": "險",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the full 險 form used in 保險; this group covers all of its strokes.",
+          "label": "阝",
+          "name": "left component",
+          "role": "Visual component",
+          "description": "This left-side 阝 uses two strokes.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "僉",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The thirteen-stroke right side matches the right side of 臉.",
+          "strokes": [
             2,
             3,
             4,
@@ -1729,12 +1813,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "保險",
         "pinyin": "bǎoxiǎn",
         "meaning": "insurance"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -2038,4 +2123,5 @@ const unit:UnitData = {
   },
   "revisionStepIds": []
 };
+
 export default unit;

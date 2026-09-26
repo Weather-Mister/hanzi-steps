@@ -14,13 +14,20 @@ test('Week 1 Exam Study has valid handwriting coverage or safe fallback',()=>{
  for(const char of chars){
   const local=strokeData[char];
   if(!local)continue; // Hanzi Writer fallback is intentional for new exam-only chars.
-  if(char==='國'){
-   assert.equal(strokeGeometryLooksAligned(local),false,'國 must be rejected because its bundled medians do not match its stroke paths');
-  }
+  assert.equal(strokeGeometryLooksAligned(local),true,`${char} must have aligned local guides`);
  }
 });
 
-test('stroke geometry validator accepts known-good local data and rejects broken 國 data',()=>{
+test('stroke geometry validator accepts repaired data and rejects inverted 國 guides',()=>{
  assert.equal(strokeGeometryLooksAligned(strokeData['人']),true);
- assert.equal(strokeGeometryLooksAligned(strokeData['國']),false);
+ const guo=strokeData['國'];
+ assert.equal(strokeGeometryLooksAligned(guo),true);
+ const inverted={...guo,medians:guo.medians.map(stroke=>stroke.map(([x,y])=>[x,1024-y]))};
+ assert.equal(strokeGeometryLooksAligned(inverted),false);
+});
+
+test('every bundled character has guides aligned with its visible strokes',()=>{
+ for(const [char,data] of Object.entries(strokeData)){
+  assert.equal(strokeGeometryLooksAligned(data),true,`${char}: misaligned handwriting guide`);
+ }
 });

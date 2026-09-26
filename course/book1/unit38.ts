@@ -950,14 +950,14 @@ const unit:UnitData = {
       "zhuyin": "ㄐㄧㄠ",
       "meaning": "exchange; hand over",
       "strokes": 6,
-      "note": "交 is learned in Unit 38 through 交換.",
-      "memory": "Practice 交 as a complete Traditional character and connect it to 交換.",
+      "note": "交 appears in 交換 jiāohuàn, “exchange.” Learn the two-character word as a unit.",
+      "memory": "A dot and horizontal sit over two small strokes and a wide crossing pair. The crossing shape is a visual cue for exchange.",
       "parts": [
         {
           "label": "交",
-          "name": "交 whole form",
-          "role": "Whole character",
-          "description": "Write all 6 strokes in standard order.",
+          "name": "crossing form",
+          "role": "Visual component",
+          "description": "A dot and horizontal sit over two small strokes and a wide crossing pair. The crossing shape is a visual cue for exchange.",
           "strokes": [
             0,
             1,
@@ -981,18 +981,26 @@ const unit:UnitData = {
       "zhuyin": "ㄏㄨㄢˋ",
       "meaning": "exchange; change",
       "strokes": 12,
-      "note": "換 is learned in Unit 38 through 交換.",
-      "memory": "Practice 換 as a complete Traditional character and connect it to 交換.",
+      "note": "換 means “change; exchange.” 交換 jiāohuàn means to exchange something with someone.",
+      "memory": "A hand 扌 stands beside 奐. Use the hand as a cue for changing or exchanging something.",
       "parts": [
         {
-          "label": "換",
-          "name": "換 whole form",
-          "role": "Whole character",
-          "description": "Write all 12 strokes in standard order.",
+          "label": "扌",
+          "name": "hand component",
+          "role": "Visual component",
+          "description": "Hand component in 換: strokes 1–3. A hand 扌 stands beside 奐. Use the hand as a cue for changing or exchanging something.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "奐",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 換: strokes 4–12. A hand 扌 stands beside 奐. Use the hand as a cue for changing or exchanging something.",
+          "strokes": [
             3,
             4,
             5,
@@ -1005,12 +1013,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "交換",
         "pinyin": "jiāohuàn",
         "meaning": "exchange"
-      }
+      },
+      "practiceBuild": false
     },
     "牙": {
       "hanzi": "牙",
@@ -1018,14 +1027,14 @@ const unit:UnitData = {
       "zhuyin": "ㄧㄚˊ",
       "meaning": "tooth; character in Spanish",
       "strokes": 4,
-      "note": "牙 is learned in Unit 38 through 西班牙文.",
-      "memory": "Practice 牙 as a complete Traditional character and connect it to 西班牙文.",
+      "note": "牙 means “tooth” on its own. In 西班牙文, it is part of the name for Spanish; do not translate that name character by character.",
+      "memory": "Notice the angular top, the long hooked stroke, and the final slant crossing down to the left.",
       "parts": [
         {
           "label": "牙",
-          "name": "牙 whole form",
-          "role": "Whole character",
-          "description": "Write all 4 strokes in standard order.",
+          "name": "tooth form",
+          "role": "Visual component",
+          "description": "Notice the angular top, the long hooked stroke, and the final slant crossing down to the left.",
           "strokes": [
             0,
             1,
@@ -1047,14 +1056,14 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄧˋ",
       "meaning": "must; component of 不必",
       "strokes": 5,
-      "note": "必 is learned in Unit 38 through 不必客氣.",
-      "memory": "Practice 必 as a complete Traditional character and connect it to 不必客氣.",
+      "note": "必 relates to necessity. 不必 in 不必客氣 means “there is no need to”; the phrase means “You’re welcome / don’t mention it.”",
+      "memory": "It resembles 心 with an extra diagonal passing through it. Follow the animation: the writing order is not simply 心 plus a final slash.",
       "parts": [
         {
           "label": "必",
-          "name": "必 whole form",
-          "role": "Whole character",
-          "description": "Write all 5 strokes in standard order.",
+          "name": "crossed-heart form",
+          "role": "Visual component",
+          "description": "It resembles 心 with an extra diagonal passing through it. Follow the animation: the writing order is not simply 心 plus a final slash.",
           "strokes": [
             0,
             1,
@@ -1077,19 +1086,27 @@ const unit:UnitData = {
       "zhuyin": "ㄑㄧˋ",
       "meaning": "air; manner; component of 客氣",
       "strokes": 10,
-      "note": "氣 is learned in Unit 38 through 客氣.",
-      "memory": "Practice 氣 as a complete Traditional character and connect it to 客氣.",
+      "note": "氣 means “air; breath,” but 客氣 kèqì is a whole word about politeness. 不必客氣 is a polite response to thanks.",
+      "memory": "The sweeping 气 encloses 米. Leave room for the rice-like lower strokes beneath the top.",
       "parts": [
         {
-          "label": "氣",
-          "name": "氣 whole form",
-          "role": "Whole character",
-          "description": "Write all 10 strokes in standard order.",
+          "label": "气",
+          "name": "outer component",
+          "role": "Visual component",
+          "description": "Outer component in 氣: strokes 1–4. The sweeping 气 encloses 米. Leave room for the rice-like lower strokes beneath the top.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "米",
+          "name": "inner component",
+          "role": "Visual component",
+          "description": "Inner component in 氣: strokes 5–10. The sweeping 气 encloses 米. Leave room for the rice-like lower strokes beneath the top.",
+          "strokes": [
             4,
             5,
             6,
@@ -1104,7 +1121,9 @@ const unit:UnitData = {
         "text": "客氣",
         "pinyin": "kèqi",
         "meaning": "polite; courteous"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "門": {
       "hanzi": "門",
@@ -1112,14 +1131,14 @@ const unit:UnitData = {
       "zhuyin": "ㄇㄣˊ",
       "meaning": "door; gate",
       "strokes": 8,
-      "note": "門 is learned in Unit 38 through 門口.",
-      "memory": "Practice 門 as a complete Traditional character and connect it to 門口.",
+      "note": "門 mén means “door; gate.” 門口 ménkǒu is the entrance or doorway.",
+      "memory": "Picture two tall door panels facing each other, with an opening between them. Write the left panel before the right.",
       "parts": [
         {
           "label": "門",
-          "name": "門 whole form",
-          "role": "Whole character",
-          "description": "Write all 8 strokes in standard order.",
+          "name": "paired door panels",
+          "role": "Visual component",
+          "description": "Picture two tall door panels facing each other, with an opening between them. Write the left panel before the right.",
           "strokes": [
             0,
             1,
@@ -1325,4 +1344,5 @@ const unit:UnitData = {
     "u38-review-g4"
   ]
 };
+
 export default unit;
