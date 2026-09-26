@@ -4,7 +4,7 @@ const generic = /^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted grou
 const object = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const text = x => typeof x === 'string' && x.trim().length > 0;
 const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
-const types = new Set(['intro','trace','complete','memory','select','parts','build','match','phrase','order','listen','grammar']);
+const types = new Set(['intro','trace','complete','memory','select','parts','build','match','phrase','order','listen','grammar','visual']);
 
 export function validateCourse(manifest, modules, geometry = {}) {
  const errors = [], seen = {book:new Set(),unit:new Set(),lesson:new Set(),activity:new Set(),phrase:new Set(),grammar:new Set(),word:new Map(),character:new Map(),concept:new Set()}, memories=new Map();
@@ -119,6 +119,10 @@ export function validateCourse(manifest, modules, geometry = {}) {
     if(s.audioText!==undefined){
      if(s.type!=='listen'||!text(s.audioText))fail(sa,'audioText requires a listening exercise and nonempty text');
      else if(!s.semanticAnswer&&(!Array.isArray(s.options)||!s.audioText.includes(s.answer)||s.options.filter(o=>s.audioText.includes(o)).length!==1))fail(sa,'contextual audio must contain only one answer option unless semanticAnswer is true');
+    }
+    if(s.type==='visual'){
+     required(s,['prompt','visualRole','visualInstruction','visualClosing','visualSource'],sa);
+     strings(s.visualSuggestions,sa+' visualSuggestions',{empty:false});
     }
     if(s.type==='match'){
      if(strings(s.chars,`${sa} chars`,{empty:false})&&s.chars.length<2)fail(sa,'match requires at least two characters');
