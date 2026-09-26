@@ -615,7 +615,7 @@ Order:
 3. `u48-review-l3`
    - audioText: **你睡了幾個小時的覺以後，現在臉色比早上好得多了。**
    - prompt: **Which combination is heard?**
-   - options: [`separable duration + much-better comparison`, `G001 + 把`, `pharmacy + insurance`]
+   - options: [`separable duration + much-better comparison`, `negative non-specific question-word pattern + 把`, `pharmacy + insurance`]
    - answer: **separable duration + much-better comparison**
    - explanation: G007 and G006 are combined.
 
