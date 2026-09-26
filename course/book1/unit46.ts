@@ -942,6 +942,11 @@ const unit:UnitData = {
           ]
         },
         {
+          "id": "u46-a004-r1",
+          "type": "phrase",
+          "phrase": "u46-a004-response-1"
+        }
+        {
           "id": "u46-a004-p2",
           "type": "phrase",
           "phrase": "u46-a004-2"
@@ -957,6 +962,11 @@ const unit:UnitData = {
           ]
         },
         {
+          "id": "u46-a004-r2",
+          "type": "phrase",
+          "phrase": "u46-a004-response-2"
+        }
+        {
           "id": "u46-a004-p3",
           "type": "phrase",
           "phrase": "u46-a004-3"
@@ -971,6 +981,11 @@ const unit:UnitData = {
             "吃了"
           ]
         },
+        {
+          "id": "u46-a004-r3",
+          "type": "phrase",
+          "phrase": "u46-a004-response-3"
+        }
         {
           "id": "u46-a004-s1",
           "type": "select",
@@ -1977,7 +1992,8 @@ const unit:UnitData = {
       "tokens": [
         "好的",
         "謝謝您"
-      ]
+      ],
+      "practice": false
     },
     "u46-a004-support-sorry": {
       "text": "對不起",
@@ -1986,7 +2002,38 @@ const unit:UnitData = {
       "note": "Support only; also explain 不知道 before task 3.",
       "tokens": [
         "對不起"
-      ]
+      ],
+      "practice": false
+    },
+    "u46-a004-response-1": {
+      "text": "好的，沒有問題。",
+      "pinyin": "Hǎo de, méiyǒu wèntí.",
+      "meaning": "Okay, no problem.",
+      "note": "Frozen A004 response outcome; learner-visible source transfer only.",
+      "tokens": [
+        "好的，沒有問題。"
+      ],
+      "practice": false
+    },
+    "u46-a004-response-2": {
+      "text": "太好了。",
+      "pinyin": "Tài hǎo le.",
+      "meaning": "Great!",
+      "note": "Frozen A004 response outcome; learner-visible source transfer only.",
+      "tokens": [
+        "太好了。"
+      ],
+      "practice": false
+    },
+    "u46-a004-response-3": {
+      "text": "對不起，我不知道是你的。",
+      "pinyin": "Duìbuqǐ, wǒ bù zhīdào shì nǐ de.",
+      "meaning": "Sorry, I didn't know it was yours.",
+      "note": "Frozen A004 response outcome; learner-visible source transfer only. 對不起 remains support-only.",
+      "tokens": [
+        "對不起，我不知道是你的。"
+      ],
+      "practice": false
     },
     "u46-a004-1": {
       "text": "加油！我們今天一定要把這50個小籠包吃了。",
