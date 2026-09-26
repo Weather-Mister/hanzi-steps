@@ -345,14 +345,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "油的、冰的東西最好都別吃。",
-          "prompt": "Which advice chunk do you hear?",
+          "prompt": "What kind of advice do you hear?",
           "options": [
-            "油的、冰的東西最好都別吃",
-            "吃好幾包藥",
-            "睡得比昨天好"
+            "avoid oily and icy foods",
+            "eat several packets of medicine",
+            "sleep more hours than yesterday"
           ],
-          "answer": "油的、冰的東西最好都別吃",
-          "explanation": "The source gives negative advice about oily and icy things."
+          "answer": "avoid oily and icy foods",
+          "explanation": "最好都別吃 is negative advice."
         }
       ]
     },
@@ -465,13 +465,13 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "現在覺得怎麼樣？好一點了嗎？",
-          "prompt": "Which improvement phrase do you hear?",
+          "prompt": "What is the speaker checking?",
           "options": [
-            "好一點了嗎",
-            "吃幾包藥",
-            "房租便宜"
+            "whether the person feels a little better",
+            "how many packets remain",
+            "whether the rent is cheaper"
           ],
-          "answer": "好一點了嗎",
+          "answer": "whether the person feels a little better",
           "explanation": "The health check uses G004."
         }
       ]
@@ -626,14 +626,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "我吃了一包藥以後，睡得比昨天好。",
-          "prompt": "Which comparison chunk do you hear?",
+          "prompt": "What improved compared with yesterday?",
           "options": [
-            "睡得比昨天好",
-            "房租比昨天貴",
-            "胃口很差"
+            "sleeping",
+            "rent",
+            "appetite only"
           ],
-          "answer": "睡得比昨天好",
-          "explanation": "Sleeping improved compared with yesterday."
+          "answer": "sleeping",
+          "explanation": "睡得比昨天好 is the action comparison."
         },
         {
           "id": "u48-g5-o1",
@@ -802,13 +802,13 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "現在臉色比早上好得多了。",
-          "prompt": "Which degree chunk do you hear?",
+          "prompt": "How large is the improvement presented?",
           "options": [
-            "好得多了",
-            "好一點了",
-            "沒有比較"
+            "much better",
+            "a tiny amount only",
+            "no comparison"
           ],
-          "answer": "好得多了",
+          "answer": "much better",
           "explanation": "得多 marks a large difference."
         }
       ]
@@ -1025,14 +1025,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "這種藥一天吃四次，飯後三十分鐘吃。",
-          "prompt": "Which timing phrase do you hear?",
+          "prompt": "When is the medicine taken?",
           "options": [
-            "飯後三十分鐘",
-            "飯前三十分鐘",
-            "睡覺以前"
+            "30 minutes after meals",
+            "before meals",
+            "once before sleep"
           ],
-          "answer": "飯後三十分鐘",
-          "explanation": "The medicine is taken 30 minutes after meals."
+          "answer": "30 minutes after meals",
+          "explanation": "飯後三十分鐘 gives the timing."
         }
       ]
     },
@@ -1052,27 +1052,27 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "油的、冰的東西最好都別吃。",
-          "prompt": "Which advice chunk do you hear?",
+          "prompt": "What advice is heard?",
           "options": [
-            "油的、冰的東西最好都別吃",
-            "吃好幾碗",
-            "買健康保險"
+            "avoid oily and icy things",
+            "eat several bowls",
+            "buy health insurance"
           ],
-          "answer": "油的、冰的東西最好都別吃",
-          "explanation": "The advice avoids oily and icy things."
+          "answer": "avoid oily and icy things",
+          "explanation": "最好都別吃 gives the advice."
         },
         {
           "id": "u48-review-l2",
           "type": "listen",
           "char": "冰",
           "audioText": "我吃了一包藥以後，睡得比昨天好。",
-          "prompt": "Which comparison chunk do you hear?",
+          "prompt": "What is compared?",
           "options": [
-            "睡得比昨天好",
-            "房租比較貴",
-            "有十二包"
+            "sleep quality",
+            "rent",
+            "number of packets"
           ],
-          "answer": "睡得比昨天好",
+          "answer": "sleep quality",
           "explanation": "This is G005 action comparison."
         },
         {
