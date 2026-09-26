@@ -2,17 +2,14 @@
   "schemaVersion": 1,
   "book": 1,
   "sourceLessonsTotal": 15,
-  "completedThroughSourceLesson": 14,
-  "completedThroughUnit": 44,
-  "currentSourceLesson": 15,
-  "currentStage": "waiting-for-merge",
+  "completedThroughSourceLesson": 15,
+  "completedThroughUnit": 48,
+  "currentSourceLesson": null,
+  "currentStage": "complete",
   "stageStatus": "pass",
-  "bookComplete": false,
+  "bookComplete": true,
   "humanReviewRequired": false,
-  "workingUnitRange": {
-    "start": 45,
-    "end": 48
-  },
+  "workingUnitRange": null,
   "gates": {
     "source": "pass",
     "dependencies": "pass",
@@ -92,7 +89,9 @@
     "learnerSimulationB": "course/book1/lesson15-learner-simulation-b.md",
     "learnerSimulationC": "course/book1/lesson15-learner-simulation-c.md",
     "simBcRepairQa": "course/book1/lesson15-sim-bc-repair-qa.md",
-    "deepFinalAudit": "course/book1/lesson15-deep-final-audit.md"
+    "deepFinalAudit": "course/book1/lesson15-deep-final-audit.md",
+    "productionVerification": "course/book1/lesson15-production-verification.md",
+    "finalBookAudit": "course/book1/book1-final-audit.md"
   },
-  "notes": "User explicitly requested a consolidated deep audit and release finish rather than further fresh-chat protocol handoffs. The current release candidate passed a comprehensive same-context re-audit with 0 BLOCKER / 0 MAJOR / 0 MINOR, rebuilt bidirectional traceability with 0 unresolved source items and 0 orphan production concepts, and passed a consolidated hostile release audit. Historical Simulation B/C failure reports are preserved, but every one of their five findings has been repaired and directly re-tested in current production with deterministic guards. Current-head Feature QA #694 / id 36244125255 succeeded with 206 tests, 205 pass, 0 fail, 1 intentional skip, plus TypeScript and Pages build PASS. Gate C is PASS. Await merge and production verification; Book 1 remains incomplete until production and whole-book verification."
+  "notes": "Book 1 is complete. Lesson 15 / Units 45–48 passed the user-requested consolidated deep final audit, bidirectional traceability, hostile release audit, Gate C, merge, and production verification. PR #69 merged as 062bda490d9704dee2b88ea699d09c61758f89f4. GitHub Pages run #162 / id 36247133565 successfully built and deployed that exact merge SHA. Production regression: 163 tests, 162 pass, 0 fail, 1 intentional skip; full course generated/validated at 51 units, 355 lessons, 471 unique first-time characters. Final PR Feature QA #697 also passed 206 tests, 205 pass, 0 fail, 1 intentional skip, TypeScript and Pages build. Final whole-Book-1 audit PASS with 0 BLOCKER / 0 MAJOR / 0 MINOR. Book 1 source lessons 1–15 are complete through Hanzi Steps Unit 48."
 }
