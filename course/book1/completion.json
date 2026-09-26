@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "implementation-conformance",
+  "currentStage": "deterministic-qa",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -18,12 +18,10 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
-  "openFindings": [
-    "SIM-A-01 BLOCKER repair applied to the Unit 48 A003 learner-facing prescription support/source representation; fresh affected-path implementation conformance is pending. Simulation A remains historical FAIL until it is rerun."
-  ],
+  "openFindings": [],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -69,7 +67,9 @@
     "learnerSimulationHandoff": "course/book1/lesson15-learner-simulation-handoff.md",
     "learnerSimulationA": "course/book1/lesson15-learner-simulation-a.md",
     "simulationARepairHandoff": "course/book1/lesson15-simulation-a-repair-handoff.md",
-    "simulationARepairConformanceHandoff": "course/book1/lesson15-simulation-a-repair-conformance-handoff.md"
+    "simulationARepairConformanceHandoff": "course/book1/lesson15-simulation-a-repair-conformance-handoff.md",
+    "simulationARepairConformance": "course/book1/lesson15-simulation-a-repair-conformance.md",
+    "deterministicQaRerunHandoff": "course/book1/lesson15-deterministic-qa-rerun-handoff.md"
   },
-  "notes": "SIM-A-01 narrow implementation repair is applied. Unit 48 now shows the frozen source prescription notation before A003: 一日4次, 3日份, support-only 份 fèn, 飯前, 飯後, 飯後30分鐘, plus contextual/glossed/non-assessed 健康診所 with 診 deferred. The two learner-facing support/source phrase cards use empty practice tokens so they remain visible in the lesson without entering adaptive/Mega phrase practice; canonical vocabulary/character ownership, Search, Mega target ownership, and handwriting ownership are unchanged. A003 answer keys remain 四次, 飯後30分鐘, 十二包; frozen IDs are unchanged. No schema or renderer change was required. Implementation remains pending until fresh affected-path conformance. Prior deterministic QA PASS is historical and deterministic QA is pending after this learner-facing change. Simulation A remains recorded as FAIL historical evidence until rerun; Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
+  "notes": "Lesson 15 SIM-A-01 affected-path implementation conformance PASS: 0 BLOCKER / 0 MAJOR / 0 MINOR. Unit 48 now visibly teaches the frozen A003 prescription notation before assessment: 一日4次, 3日份, support-only 份 fèn, 飯前, 飯後, 飯後30分鐘, plus contextual/glossed/non-assessed 健康診所 with 診 deferred. The two support/source phrase records remain learner-visible while tokens: [] excludes them from productive phrase practice; 份 and 診 remain outside canonical vocabulary/character ownership, Search, Mega, and handwriting. A003 answers remain 四次 / 飯後30分鐘 / 十二包. Regression spot-checks re-pass A002, five semantic listening repairs, support-only 您, 42 NEW lexical forms, 幾/跟 expansions, 30 NEW characters, seven grammar rules, prerequisites, handwriting, all 25 dialogue turns, A001/A004/A005, review floors, delayed retrieval, Search/Mega behavior, Unit-48 closure, and 一直/直 migration. Implementation gate is restored to PASS. Historical deterministic QA PASS is invalidated by the learner-facing repair and a complete deterministic QA rerun is pending. Simulation A remains historical FAIL until rerun; B/C are not run. Release remains locked and Book 1 remains incomplete."
 }
