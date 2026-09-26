@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 Lesson 10 now first-teaches 往 before the existing Book 2 directions unit, 紅 before Book 2 Unit 3, and 弟 as formal Book 1 handwriting rather than a legacy-only practice character. The immutable earlier amendment remains unchanged. Book 2 lesson IDs and step sequences remain stable.",
+  "reason": "Book 1 Lesson 10 first-teaches 往 and 紅, and 弟 becomes a formal Book 1 handwriting character. This amendment records the reviewed Book 1 ownership changes.",
   "records": {
     "vocabulary": {
       "往": {
@@ -17,12 +17,7 @@
         "after": "fd5671b5d5977d09d46679fa1668f966411a30e4b4db81dd7bdcb867469ab15b"
       }
     },
-    "cards": {
-      "book-2-unit-1": {
-        "before": "2582041e64d76f0a0d29aa664f5c8d982e7722496830fcb166d2a2d54316737f",
-        "after": "95b4507adb4264317fb535a86fbc8eed4d032b0dc48753d4d101f4c0afdee9fa"
-      }
-    }
+    "cards": {}
   },
   "characterOrder": [
     "你",
@@ -127,12 +122,9 @@
     "直",
     "左",
     "右",
-    "轉",
     "路",
     "口",
-    "銀",
-    "超",
-    "離"
+    "超"
   ],
   "practice": {
     "往": {

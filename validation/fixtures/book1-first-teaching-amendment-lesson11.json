@@ -1,16 +1,7 @@
 {
-  "reason": "Book 1 Lesson 11 now first-teaches 房 in the rental context and first-teaches 走、左、右、路、超 before their existing Book 2 direction/store units. Historical character-card metadata and practice behavior are preserved exactly; later Book 2 lesson/activity IDs remain unchanged. Only per-unit first-teaching card ownership and the global first-occurrence order change.",
+  "reason": "Book 1 Lesson 11 first-teaches 房、走、左、右、路、超. Historical character-card metadata and practice behavior remain stable; only reviewed Book 1 first-teaching ownership changes are recorded.",
   "records": {
-    "cards": {
-      "book-2-unit-1": {
-        "before": "95b4507adb4264317fb535a86fbc8eed4d032b0dc48753d4d101f4c0afdee9fa",
-        "after": "23639d30f2680dc455f9fcc2d07ac12fe8e86d6116889ad48ecff132b446cdab"
-      },
-      "book-2-unit-2": {
-        "before": "673b58f125dafc00d0434b6d6b1e1cff6c480dce0697af7bb4b7957be8118219",
-        "after": "9e2d9e6cbbc77acb598bba875cd2481f6a096816378ec82181a9ad72d66d6b1a"
-      }
-    }
+    "cards": {}
   },
   "characterOrder": [
     "你",
@@ -117,9 +108,6 @@
     "走",
     "路",
     "直",
-    "轉",
-    "口",
-    "銀",
-    "離"
+    "口"
   ]
 }

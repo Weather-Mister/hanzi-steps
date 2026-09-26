@@ -1,12 +1,7 @@
 {
-  "reason": "Book 1 Lesson 13 Unit 38 now first-teaches 口 through 門口. The historical 口 character metadata and all Book 2 Unit 1 lesson/activity IDs remain unchanged; only character-card ownership moves from Book 2 Unit 1 to Book 1 Unit 38. This amendment records the reviewed downstream card change.",
+  "reason": "Book 1 Lesson 13 Unit 38 first-teaches 口 through 門口. This amendment records the reviewed Book 1 character-card ownership change.",
   "records": {
-    "cards": {
-      "book-2-unit-1": {
-        "before": "23639d30f2680dc455f9fcc2d07ac12fe8e86d6116889ad48ecff132b446cdab",
-        "after": "8fcc382ee6fecb76569d5a3f23cd4da4747fd8936220371b537b125fe7116ba9"
-      }
-    }
+    "cards": {}
   },
   "characterOrder": [
     "你",
@@ -113,9 +108,6 @@
     "走",
     "路",
     "口",
-    "直",
-    "轉",
-    "銀",
-    "離"
+    "直"
   ]
 }
