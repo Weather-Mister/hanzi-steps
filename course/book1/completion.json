@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "implementation-conformance",
-  "stageStatus": "pending",
+  "currentStage": "deterministic-qa",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -18,7 +18,7 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
   "openFindings": [],
@@ -81,7 +81,8 @@
     "learnerSimulationRerun2Handoff": "course/book1/lesson15-learner-simulation-rerun2-handoff.md",
     "learnerSimulationARerun2": "course/book1/lesson15-learner-simulation-a-rerun2.md",
     "simulationARerun2RepairHandoff": "course/book1/lesson15-simulation-a-rerun2-repair-handoff.md",
-    "simulationARerun2RepairConformanceHandoff": "course/book1/lesson15-simulation-a-rerun2-repair-conformance-handoff.md"
+    "simulationARerun2RepairConformanceHandoff": "course/book1/lesson15-simulation-a-rerun2-repair-conformance-handoff.md",
+    "simulationARerun2RepairConformance": "course/book1/lesson15-simulation-a-rerun2-repair-conformance.md"
   },
-  "notes": "SIM-A-RERUN2-01 learner-facing production drift has been repaired against the unchanged frozen Unit 45–48 activity specifications. Twenty assessed listening payloads were restored exactly for prompt/options/answer/explanation while preserving source-correct audioText; a narrow regression test now pins those payloads. A fresh affected-path implementation conformance check is required before implementation can return to PASS. Deterministic QA is pending; the prior deterministic QA rerun 2 PASS remains historical only. Historical Simulation A, Simulation A rerun, and Simulation A rerun 2 failure reports are preserved. Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
+  "notes": "SIM-A-RERUN2-01 repair conformance PASS: 0 BLOCKER / 0 MAJOR / 0 MINOR. Twenty learner-facing assessed listening payloads across Units 45–48 are restored to the exact frozen learner-safe payloads and pinned by regression tests. The restored semantic listening choices are explicitly marked semanticAnswer:true, a non-learner-facing validator metadata correction. Feature QA #652 passed generation, graph validation, targeted changed-unit tests, character coverage, and all Lesson-15 repaired-path guards; its regression phase failed only because the temporary controller stage label implementation-conformance is not a valid state enum. This state now uses the valid deterministic-qa stage. Implementation is PASS. A complete final-head deterministic rerun is required; release remains locked, all three historical Simulation-A failure reports are preserved, B/C are not run, and Book 1 remains incomplete."
 }
