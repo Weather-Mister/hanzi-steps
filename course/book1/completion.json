@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "deterministic-qa",
-  "stageStatus": "in-progress",
+  "currentStage": "learner-simulation",
+  "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -87,5 +87,5 @@
     "stage7FinalHandoff": "course/book1/lesson15-stage7-final-handoff.md",
     "finalSimulationARepairConformance": "course/book1/lesson15-final-simulation-a-repair-conformance.md"
   },
-  "notes": "Final Simulation A found 2 MAJOR findings. Both are now repaired and fresh combined conformance PASS: u45-review-f1 no longer exposes future NEW 回家; the Unit-45 Gate-B item was narrowly corrected and re-frozen with learner-safe 什麼東西都不想吃？. Unit 47 u47-g3-review now reviews prior 了 / 一…就… / 以後 only, G003 is taught next, and full u47-d2t02-full appears only after the controlled G003 checks. Regression guards pin both repairs. Activities and implementation are PASS. Deterministic QA is running on the final authored state. Historical learner-simulation failures remain evidence; B/C are not run; release remains locked; Book 1 remains incomplete."
+  "notes": "Final Simulation-A findings SIM-A-FINAL-01 and SIM-A-FINAL-02 are repaired and conformance PASS. Unit-45 u45-review-f1 no longer exposes future NEW 回家; the corrected Gate-B item is re-frozen. Unit-47 G003 now reviews prior 了 / 一…就… / 以後 first, teaches G003, then shows the full D2T02 source line, with explicit phrase-before-order support. Feature QA #665 / id 36239036536 passed the complete final-head deterministic suite: generation, graph validation, targeted Units 45–48 plus Book-2 Unit-1 tests, character coverage, 201-test regression suite (200 pass, 0 fail, 1 intentional skip), TypeScript, and Pages build. Generated-only follow-up f946e01a6e75ff20dc65963e5f1c2744eb41cfca changed only course/registry.generated.ts; #666 is action_required as expected. Stage 7 is ready for one final fresh strict-prerequisite Simulation A rerun. Release remains locked and Book 1 remains incomplete."
 }
