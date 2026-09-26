@@ -878,14 +878,15 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "你睡了幾個小時的覺以後，現在臉色比早上好得多了。",
-          "prompt": "Which combined chunk do you hear?",
+          "prompt": "Which two systems are combined?",
           "options": [
-            "睡了幾個小時的覺",
-            "別把我的藥吃了",
-            "得吃藥嗎"
+            "separable-verb duration + degree comparison",
+            "把 + G001",
+            "modal 得 + prescription notation"
           ],
-          "answer": "睡了幾個小時的覺",
-          "explanation": "The full line combines G007 and G006."
+          "answer": "separable-verb duration + degree comparison",
+          "explanation": "The line combines G007 separable-duration structure with G006 degree comparison.",
+          "semanticAnswer": true
         },
         {
           "id": "u48-g7-o1",
@@ -1043,14 +1044,15 @@ const unit:UnitData = {
           "type": "listen",
           "char": "冰",
           "audioText": "你睡了幾個小時的覺以後，現在臉色比早上好得多了。",
-          "prompt": "Which separable chunk do you hear?",
+          "prompt": "Which combination is heard?",
           "options": [
-            "睡了幾個小時的覺",
-            "沒買什麼東西",
-            "把藥吃了"
+            "separable duration + much-better comparison",
+            "G001 + 把",
+            "pharmacy + insurance"
           ],
-          "answer": "睡了幾個小時的覺",
-          "explanation": "This line combines G007 and G006."
+          "answer": "separable duration + much-better comparison",
+          "explanation": "The line combines G007 duration insertion with the G006 much-better comparison.",
+          "semanticAnswer": true
         },
         {
           "id": "u48-review-冰",
