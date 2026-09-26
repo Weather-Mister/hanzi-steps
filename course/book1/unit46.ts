@@ -187,7 +187,7 @@ const unit:UnitData = {
         {
           "id": "u46-ji-explain",
           "type": "phrase",
-          "phrase": "u46-g1-source"
+          "phrase": "u46-ji-expansion"
         },
         {
           "id": "u46-ji-s1",
@@ -1898,6 +1898,16 @@ const unit:UnitData = {
       "note": "Fixed source chunk; does not teach G007.",
       "tokens": [
         "請問我生的是什麼病？"
+      ]
+    },
+    "u46-ji-expansion": {
+      "text": "她沒有幾個朋友。",
+      "pinyin": "Tā méiyǒu jǐ ge péngyǒu.",
+      "meaning": "She does not have many friends / has only a few friends.",
+      "note": "幾 jǐ was introduced in Unit 7 as the question word “how many?”. In Lesson 15, the same word also means “a few / several” in a statement or other non-question context. This is a semantic expansion of the Unit-7 word, not new vocabulary.",
+      "tokens": [
+        "她沒有",
+        "幾個朋友"
       ]
     },
     "u46-g1-source": {
