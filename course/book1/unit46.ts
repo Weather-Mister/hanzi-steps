@@ -1021,14 +1021,15 @@ const unit:UnitData = {
           "type": "listen",
           "char": "藥",
           "audioText": "請問我得吃藥嗎？",
-          "prompt": "Which modal phrase do you hear?",
+          "prompt": "Which meaning of 得 is heard?",
           "options": [
-            "得吃藥",
-            "睡得好",
-            "拿藥"
+            "must/have to",
+            "performance complement marker",
+            "to obtain"
           ],
-          "answer": "得吃藥",
-          "explanation": "This is modal 得 děi."
+          "answer": "must/have to",
+          "explanation": "This is modal 得 děi, meaning must/have to.",
+          "semanticAnswer": true
         },
         {
           "id": "u46-review-l2",
@@ -1049,14 +1050,15 @@ const unit:UnitData = {
           "type": "listen",
           "char": "休",
           "audioText": "多喝水，多休息，早一點睡覺。",
-          "prompt": "Which advice chunk is heard?",
+          "prompt": "Which item is NOT part of the advice?",
           "options": [
-            "多休息",
             "去買房子",
-            "吐了好幾次"
+            "多休息",
+            "早一點睡覺"
           ],
-          "answer": "多休息",
-          "explanation": "The source advice includes resting more."
+          "answer": "去買房子",
+          "explanation": "The complete advice is to drink more water, rest more, and sleep earlier.",
+          "semanticAnswer": true
         },
         {
           "id": "u46-review-感",
@@ -1946,22 +1948,22 @@ const unit:UnitData = {
       ]
     },
     "u46-honorific-nin": {
-      "text": "nín",
+      "text": "您",
       "pinyin": "nín",
       "meaning": "polite “you”",
-      "note": "Support only. The source honorific is taught by pronunciation/meaning without exposing its not-yet-owned character.",
+      "note": "Support only; no canonical vocabulary, Search/Mega, or handwriting ownership.",
       "tokens": [
-        "nín"
+        "您"
       ]
     },
     "u46-thanks-nin": {
-      "text": "好的，謝謝你。",
-      "pinyin": "Hǎo de, xièxie nǐ.",
+      "text": "好的，謝謝您。",
+      "pinyin": "Hǎo de, xièxie nín.",
       "meaning": "Okay, thank you.",
-      "note": "Source-pragmatic equivalent. The polite nín support is explained separately without exposing the untaught glyph.",
+      "note": "Source honorific register; 您 remains support-only.",
       "tokens": [
         "好的",
-        "謝謝你"
+        "謝謝您"
       ]
     },
     "u46-a004-support-sorry": {
