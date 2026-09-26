@@ -60,7 +60,8 @@
     "implementationConformanceAudit": "course/book1/lesson15-implementation-conformance-audit.md",
     "implementationRepairHandoff": "course/book1/lesson15-implementation-repair-handoff.md",
     "implementationConformanceReauditHandoff": "course/book1/lesson15-implementation-conformance-reaudit-handoff.md",
-    "implementationConformanceReaudit": "course/book1/lesson15-implementation-conformance-reaudit.md"
+    "implementationConformanceReaudit": "course/book1/lesson15-implementation-conformance-reaudit.md",
+    "implementationIc01RepairHandoff": "course/book1/lesson15-implementation-ic01-repair-handoff.md"
   },
-  "notes": "Lesson 15 fresh implementation-conformance re-audit completed and FAILED with 1 BLOCKER / 0 MAJOR / 0 MINOR. IC-02 semantic listening and IC-03 support-only 您 are resolved; all previously passing regression areas remain conformant. IC-01 remains open because the A002 visual cards render generic role silhouettes/dialogue shells and the common suggestion inventory but do not preserve the source-specific symptom/advice information required by frozen Gate B. Gate A and Gate B remain pass/frozen; implementation remains pending; deterministic QA readiness is not reached and release remains locked. Next valid action is the smallest Stage-5 IC-01 repair followed by another fresh conformance re-audit."
+  "notes": "Lesson 15 implementation-conformance re-audit FAIL with only IC-01 remaining: the A002 learner-facing visual cards are still generic and omit the source-specific symptom/advice information communicated by the three frozen textbook illustrations. IC-02 semantic listening and IC-03 support-only 您 remain resolved. Gate A and Gate B stay pass/frozen; implementation remains pending; deterministic QA is not ready; release remains locked. Next authorized action is the narrow IC-01 Stage-5 repair via course/book1/lesson15-implementation-ic01-repair-handoff.md, followed by a second independent conformance re-audit."
 }
