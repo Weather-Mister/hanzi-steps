@@ -155,14 +155,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "臉",
           "audioText": "你怎麼了？臉色這麼難看。",
-          "prompt": "Which observation do you hear?",
+          "prompt": "What observation follows the concern question?",
           "options": [
-            "臉色這麼難看",
-            "睡了八個小時",
-            "有健康保險"
+            "the person's complexion looks bad",
+            "the person slept eight hours",
+            "the person has insurance"
           ],
-          "answer": "臉色這麼難看",
-          "explanation": "The audio observes that the person's complexion looks bad."
+          "answer": "the person's complexion looks bad",
+          "explanation": "臉色這麼難看 describes the person's appearance."
         }
       ]
     },
@@ -434,12 +434,12 @@ const unit:UnitData = {
           "audioText": "吃了東西就吐。",
           "prompt": "What happened right after eating?",
           "options": [
-            "吐",
-            "睡覺",
-            "去藥局"
+            "vomiting",
+            "sleeping",
+            "going to a pharmacy"
           ],
-          "answer": "吐",
-          "explanation": "就 introduces vomiting as the immediate next event."
+          "answer": "vomiting",
+          "explanation": "就 introduces the immediate next event."
         },
         {
           "id": "u47-g3-o1",
@@ -948,13 +948,13 @@ const unit:UnitData = {
           "type": "listen",
           "char": "臉",
           "audioText": "你真的不去看病嗎？",
-          "prompt": "Which confirmation phrase do you hear?",
+          "prompt": "What is being confirmed?",
           "options": [
-            "真的不去看病",
-            "有健康保險",
-            "睡了幾個小時"
+            "that the person really will not see a doctor",
+            "that the person has insurance",
+            "that the person slept several hours"
           ],
-          "answer": "真的不去看病",
+          "answer": "that the person really will not see a doctor",
           "explanation": "The question confirms refusal to go see a doctor."
         }
       ]
@@ -982,14 +982,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "臉",
           "audioText": "你怎麼了？臉色這麼難看。",
-          "prompt": "Which concern phrase do you hear?",
+          "prompt": "What concern is expressed?",
           "options": [
-            "臉色這麼難看",
-            "藥很貴",
-            "去臺南"
+            "the person's condition/appearance",
+            "the price of medicine",
+            "travel time"
           ],
-          "answer": "臉色這麼難看",
-          "explanation": "The audio expresses concern about appearance."
+          "answer": "the person's condition/appearance",
+          "explanation": "怎麼了 + 臉色這麼難看 is a health concern."
         },
         {
           "id": "u47-review-l2",
@@ -998,11 +998,11 @@ const unit:UnitData = {
           "audioText": "還吐了好幾次。",
           "prompt": "How often?",
           "options": [
-            "好幾次",
-            "一次",
-            "八個小時"
+            "several times",
+            "one time",
+            "for several hours"
           ],
-          "answer": "好幾次",
+          "answer": "several times",
           "explanation": "好幾次 means several times."
         },
         {
@@ -1012,12 +1012,12 @@ const unit:UnitData = {
           "audioText": "我陪你去看病，好不好？",
           "prompt": "What is being offered?",
           "options": [
-            "陪你去看病",
-            "買健康保險",
-            "讀藥袋"
+            "accompanying the person to see a doctor",
+            "buying insurance",
+            "reading a prescription"
           ],
-          "answer": "陪你去看病",
-          "explanation": "The offer is to accompany the person."
+          "answer": "accompanying the person to see a doctor",
+          "explanation": "陪你去看病 is the offer."
         },
         {
           "id": "u47-review-臉",
