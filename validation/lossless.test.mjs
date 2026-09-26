@@ -16,25 +16,12 @@ const lesson13Amendment=readJSON('validation/fixtures/book1-first-teaching-amend
 const lesson15Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson15.json');
 const characterQualityAmendment=readJSON('validation/fixtures/book1-character-quality-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
-const removedBook2Vocabulary=new Set(['走','師大','前','左','右','轉','左轉','右轉','路','路口','銀行','超商','離','下','第','第一','第二','紅綠燈']);
-const removedBook2Characters=new Set(['轉','銀','離','第','綠','燈']);
-function intentionallyRemovedBook2Record(key,id){
- if(key==='units'||key==='cards')return String(id).startsWith('book-2-unit-');
- if(key==='lessons'||key==='grammarRules'||key==='phrases')return /^(?:b2|b2u\d)/.test(String(id));
- if(key==='vocabulary')return removedBook2Vocabulary.has(id);
- if(key==='characters')return removedBook2Characters.has(id);
- return false;
-}
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
  const data={...current,cards:Object.fromEntries(current.units.map(u=>[u.id,current.unitLibraryCharacters(u)]))};
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){
-   if(actual[id]===undefined){
-    assert.ok(intentionallyRemovedBook2Record(key,id),`unexpected missing ${key} ${id}`);
-    continue;
-   }
    const first=amendment.records[key]?.[id];
    if(first)assert.equal(first.before,digest,`amendment must identify original ${key} ${id}`);
    const firstExpected=first?.after??digest;
@@ -64,17 +51,10 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    assert.equal(hash(actual[id]),characterQuality?.after??lesson15Expected,`${key} ${id}`);
   }
  }
- const retainedBaselineOrder=baseline.order.filter(id=>!id.startsWith('book-2-unit-'));
- assert.deepEqual(current.units.filter(u=>retainedBaselineOrder.includes(u.id)).map(u=>u.id),retainedBaselineOrder);
- for(const b of baseline.books){
-  const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);
-  if(b.id==='book-2'){assert.deepEqual(live.unitIds,[]);assert.equal(live.available,false);}
-  else assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);
- }
- const expectedCharacterOrder=lesson15Amendment.characterOrder??lesson13Amendment.characterOrder??lesson11Amendment.characterOrder??lesson10Amendment.characterOrder??amendment.characterOrder;
- assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),expectedCharacterOrder.filter(c=>current.characters[c]||!removedBook2Characters.has(c)));
+ assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
+ for(const b of baseline.books){const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);}
+ assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson15Amendment.characterOrder??lesson13Amendment.characterOrder??lesson11Amendment.characterOrder??lesson10Amendment.characterOrder??amendment.characterOrder);
  for(const [ch,digest]of Object.entries(baseline.practice)){
-  if(!current.characters[ch]){assert.ok(removedBook2Characters.has(ch),`unexpected missing practice character ${ch}`);continue;}
   const first=amendment.practice?.[ch];
   if(first)assert.equal(first.before,digest,`practice amendment must identify original ${ch}`);
   const firstExpected=first?.after??digest;
