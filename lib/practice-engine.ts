@@ -2,7 +2,7 @@ import {books,characters,lessons,phrases,shuffled,units} from './curriculum.ts';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from './vocabulary-lookup.ts';
 
 export type PracticeMode='recognition'|'recall'|'pinyin'|'input'|'sentence'|'handwriting'|'context';
-export type PracticeSessionKind='lesson'|'daily'|'revenge'|'mega'|'taiwan';
+export type PracticeSessionKind='lesson'|'daily'|'mega';
 export type PracticeSkillState={
  itemId:string;
  mode:PracticeMode;
@@ -43,22 +43,6 @@ export type PracticeQuestion={
  mode:PracticeMode;
  sessionKind:PracticeSessionKind;
  context?:PracticeContextPrompt;
-};
-
-export type TaiwanMissionStep={
- prompt:string;
- speaker?:string;
- answer:string;
- options:string[];
- note?:string;
-};
-export type TaiwanMission={
- id:string;
- stamp:string;
- title:string;
- subtitle:string;
- unlockUnitId:string;
- steps:TaiwanMissionStep[];
 };
 
 const skillKey=(itemId:string,mode:PracticeMode)=>itemId+'::'+mode;
@@ -272,14 +256,14 @@ export function practicePromptIsAmbiguous(item:PracticeItem,mode:PracticeMode,it
  );
 }
 
-export function isRevengeCandidate(states:PracticeStateMap,item:PracticeItem):boolean{
+export function isWeakPracticeCandidate(states:PracticeStateMap,item:PracticeItem):boolean{
  const rows=supportedModes(item)
   .map(mode=>stateFor(states,item.id,mode))
   .filter((row):row is PracticeSkillState=>Boolean(row));
  const unresolved=rows.filter(row=>row.misses>0&&row.strength<0.72&&row.streak===0);
  if(!unresolved.length)return false;
 
- // Historical misses should not live in Revenge forever. A later clean recovery
+ // Historical misses should not keep an item weak forever. A later clean recovery
  // clears older weak spots for this item; only a newer mistake can bring it back.
  const latestUnresolved=Math.max(...unresolved.map(row=>row.lastSeen));
  const latestCleanRecovery=Math.max(0,...rows.filter(row=>row.streak>0).map(row=>row.lastSeen));
@@ -316,8 +300,8 @@ type DailyRow=ReturnType<typeof aggregateItemState>&{item:PracticeItem};
 
 function hardScore(states:PracticeStateMap,row:DailyRow):number{
  if(row.attempts===0)return 0;
- const revenge=isRevengeCandidate(states,row.item)?35:0;
- return revenge+row.misses*12+(1-row.strength)*55;
+ const weaknessBoost=isWeakPracticeCandidate(states,row.item)?35:0;
+ return weaknessBoost+row.misses*12+(1-row.strength)*55;
 }
 
 function forgottenScore(row:DailyRow,now:number):number{
@@ -496,37 +480,6 @@ export function makeDailyTen(items:PracticeItem[],states:PracticeStateMap,seed:s
  });
 }
 
-export function makeRevengeRound(items:PracticeItem[],states:PracticeStateMap,seed:string):PracticeQuestion[]{
- const candidates=items
-  .map(item=>({item,...aggregateItemState(states,item)}))
-  .filter(row=>row.attempts>0&&isRevengeCandidate(states,row.item))
-  .sort((a,b)=>b.misses-a.misses||a.strength-b.strength||a.lastSeen-b.lastSeen);
- const target=candidates[0]?.item;
- if(!target)return [];
- const modes=supportedModes(target);
- const preferred:PracticeMode[]=[
-  failedMode(states,target)||'recall',
-  'recognition',
-  target.kind==='phrase'?'sentence':'handwriting',
-  'pinyin',
-  'input',
-  ...modes,
- ];
- const chosen:PracticeMode[]=[];
- for(const rawMode of preferred){
-  if(!modes.includes(rawMode))continue;
-  const mode=viableMode(target,rawMode,items);
-  if(!chosen.includes(mode))chosen.push(mode);
-  if(chosen.length===3)break;
- }
- return chosen.map((mode,index)=>({
-  id:'revenge:'+seed+':'+index+':'+target.id,
-  item:target,
-  mode,
-  sessionKind:'revenge',
- }));
-}
-
 export function megaCheckpointUnits(completed:Set<string>):string[]{
  for(let bookIndex=books.length-1;bookIndex>=0;bookIndex--){
   const completedUnits=books[bookIndex].unitIds.filter(unitId=>unitComplete(completed,unitId));
@@ -702,77 +655,6 @@ export function practiceAttemptForStep(step:{type:string;char?:string;phrase?:st
  if(step.type==='select')return {itemId,mode:'recall'};
  if(step.type==='listen')return {itemId,mode:'recognition'};
  return null;
-}
-
-export const taiwanMissions:TaiwanMission[]=[
- {
-  id:'first-conversation',stamp:'👋',title:'First conversation',subtitle:'Greet someone and introduce yourself.',unlockUnitId:'unit-1',
-  steps:[
-   {speaker:'Other person',prompt:'你好！',answer:'你好！',options:['你好！','我是學生。','你是學生嗎？','是。'],note:'Return the greeting.'},
-   {speaker:'Other person',prompt:'你是學生嗎？',answer:'是，我是學生。',options:['是，我是學生。','你是學生嗎？','我是學生嗎？','你好！'],note:'Say yes and answer with a complete sentence.'},
-   {speaker:'You',prompt:'Ask whether the other person is a student.',answer:'你是學生嗎？',options:['你是學生嗎？','我是學生。','你是學生。','你好！']},
-  ],
- },
- {
-  id:'tea-break',stamp:'🍵',title:'Tea break',subtitle:'Talk about drinks and preferences.',unlockUnitId:'unit-5',
-  steps:[
-   {speaker:'Friend',prompt:'你喜歡喝茶嗎？',answer:'我喜歡喝茶。',options:['我喜歡喝茶。','我喜歡喝咖啡。','我喝茶嗎？','茶很好喝。'],note:'Say that you like tea.'},
-   {speaker:'Friend',prompt:'咖啡呢？',answer:'我也喜歡咖啡。',options:['我也喜歡咖啡。','我喜歡喝茶。','咖啡好喝嗎？','你呢？'],note:'Say that you like coffee too.'},
-   {speaker:'You',prompt:'Thank your friend.',answer:'謝謝！',options:['謝謝！','請。','你好！','咖啡呢？']},
-  ],
- },
- {
-  id:'weekend-plan',stamp:'🎬',title:'Make a weekend plan',subtitle:'Suggest an activity and share an opinion.',unlockUnitId:'unit-8',
-  steps:[
-   {speaker:'Friend',prompt:'我們明天一起去游泳，怎麼樣？',answer:'好啊！',options:['好啊！','我明天去游泳。','我們一起看電影。','你呢？'],note:'Accept the suggestion.'},
-   {speaker:'You',prompt:'Suggest watching a movie instead.',answer:'我們一起看電影吧！',options:['我們一起看電影吧！','我們明天一起去游泳。','我覺得游泳很好玩。','今天我們去看電影。']},
-   {speaker:'Friend',prompt:'看電影好玩嗎？',answer:'我覺得看電影很好玩。',options:['我覺得看電影很好玩。','我覺得游泳很好玩。','我們一起看電影吧！','好啊！'],note:'Say that you think watching movies is fun.'},
-  ],
- },
- {
-  id:'buy-a-drink',stamp:'🧋',title:'Buy a drink',subtitle:'Order, choose takeout, and ask the total.',unlockUnitId:'unit-13',
-  steps:[
-   {speaker:'Clerk',prompt:'外帶還是內用？',answer:'外帶，謝謝。',options:['外帶，謝謝。','內用，謝謝。','一杯茶，謝謝。','請問，多少錢？'],note:'Choose takeout.'},
-   {speaker:'You',prompt:'Ask how much it costs altogether.',answer:'請問，一共多少錢？',options:['請問，一共多少錢？','請問，一杯多少錢？','一共一百二十塊。','請幫我微波。']},
-   {speaker:'Clerk',prompt:'一百二十塊。',answer:'好的，謝謝。',options:['好的，謝謝。','外帶，謝謝。','請問，一共多少錢？','請幫我微波。']},
-  ],
- },
- {
-  id:'order-food',stamp:'🍜',title:'Order food',subtitle:'Choose a dish and react to the food.',unlockUnitId:'unit-17',
-  steps:[
-   {speaker:'Clerk',prompt:'你要吃什麼？',answer:'我要一碗牛肉麵。',options:['我要一碗牛肉麵。','我要一杯茶。','我要一個包子。','我喜歡牛肉麵。'],note:'Order one bowl of beef noodles.'},
-   {speaker:'Friend',prompt:'這個有一點辣。',answer:'我不怕辣。',options:['我不怕辣。','我怕辣。','這個有一點辣。','我喜歡甜點。'],note:'Say that spicy food does not bother you.'},
-   {speaker:'Friend',prompt:'小籠包也很好吃。',answer:'太好了！',options:['太好了！','我知道。','我怕辣。','有一點辣。'],note:'React enthusiastically.'},
-  ],
- },
- {
-  id:'find-the-library',stamp:'📚',title:'Find the library',subtitle:'Ask where a place is on campus.',unlockUnitId:'unit-20',
-  steps:[
-   {speaker:'You',prompt:'Ask where the library is.',answer:'圖書館在哪裡？',options:['圖書館在哪裡？','教室在哪裡？','商店在哪裡？','宿舍在哪裡？']},
-   {speaker:'Classmate',prompt:'在教室旁邊。',answer:'謝謝！',options:['謝謝！','很近嗎？','教室在哪裡？','圖書館在哪裡？'],note:'Thank the classmate.'},
-   {speaker:'You',prompt:'Confirm that it is nearby.',answer:'很近嗎？',options:['很近嗎？','很遠嗎？','方便嗎？','教室在哪裡？']},
-  ],
- },
- {
-  id:'make-a-time-plan',stamp:'🕘',title:'Make a time plan',subtitle:'Ask when someone is free and arrange a meeting.',unlockUnitId:'unit-21',
-  steps:[
-   {speaker:'You',prompt:'Ask when your friend is free.',answer:'你什麼時候有空？',options:['你什麼時候有空？','你今天有空嗎？','你後天有空嗎？','你晚上有空嗎？']},
-   {speaker:'Friend',prompt:'我後天有空。晚上七點可以嗎？',answer:'沒問題！',options:['沒問題！','我晚上有空。','下次一起去吧！','你什麼時候有空？'],note:'Confirm that 7 PM works.'},
-   {speaker:'You',prompt:'Confirm the plan: meet at 7 PM the day after tomorrow.',answer:'我們後天晚上七點見面。',options:['我們後天晚上七點見面。','我們九點二十分見面。','我中午在餐廳吃飯。','我後天和朋友見面。']},
-  ],
- },
- {
-  id:'choose-a-ride',stamp:'🚆',title:'Choose a ride',subtitle:'Talk about transport and compare a train with High Speed Rail.',unlockUnitId:'unit-24',
-  steps:[
-   {speaker:'Friend',prompt:'你怎麼去學校？',answer:'我坐火車去學校。',options:['我坐火車去學校。','我坐高鐵去學校。','我跟朋友去玩。','我明天去學校。'],note:'Say that you are taking the train to school.'},
-   {speaker:'Friend',prompt:'火車比較慢。',answer:'高鐵比較快。',options:['高鐵比較快。','火車比較慢。','高鐵車票有一點貴。','高鐵又快又舒服。'],note:'Reply with the faster option.'},
-   {speaker:'Friend',prompt:'高鐵又快又舒服。',answer:'好，我坐高鐵去。',options:['好，我坐高鐵去。','我坐火車去學校。','我跟朋友一起去。','高鐵車票有一點貴。'],note:'Choose High Speed Rail.'},
-  ],
- },
-];
-
-export function availableTaiwanMissions(completed:Set<string>){
- return taiwanMissions.map(mission=>({...mission,unlocked:unitComplete(completed,mission.unlockUnitId)}));
 }
 
 export function updatePracticeState(previous:PracticeSkillState|undefined,args:{
