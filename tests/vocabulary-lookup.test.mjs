@@ -59,29 +59,26 @@ test('canonical vocabulary keys are unique and stable-position based',()=>{
 });
 
 
-test('pinyin search keeps future vocabulary visible but gates writing practice by first character lesson',()=>{
+test('pinyin search and handwriting practice stay globally available',()=>{
  const future=searchVocabulary('leng',100).find(item=>item.traditional==='冷');
  assert.ok(future,'Unit 42 冷 must remain globally searchable');
- assert.deepEqual(searchPracticeCharacters(future,new Set()),[]);
- assert.deepEqual(searchPracticeCharacters(future,new Set(['u42-weather'])),['冷']);
+ assert.deepEqual(searchPracticeCharacters(future,new Set()),['冷']);
 
  const typhoon=searchVocabulary('taifeng',100).find(item=>item.traditional==='颱風');
  assert.ok(typhoon,'Unit 44 颱風 must remain globally searchable');
- assert.ok(searchPracticeCharacters(typhoon,new Set()).length===0);
- assert.ok(searchPracticeCharacters(typhoon,new Set(['u44-typhoon'])).includes('颱'));
+ assert.ok(searchPracticeCharacters(typhoon,new Set()).includes('颱'));
 });
 
 
-test('standalone character practice cannot bypass first teaching from any entry point',()=>{
- assert.equal(characterPracticeAvailable('葉',new Set()),false);
- assert.equal(characterPracticeAvailable('葉',new Set(['u43-duration-now'])),false);
+test('standalone character practice is available before lesson completion',()=>{
+ assert.equal(characterPracticeAvailable('葉',new Set()),true);
+ assert.equal(characterPracticeAvailable('葉',new Set(['u43-duration-now'])),true);
  assert.equal(characterPracticeAvailable('葉',new Set(['u43-next-year'])),true);
 
- assert.equal(characterPracticeAvailable('更',new Set(['u44-news'])),false);
+ assert.equal(characterPracticeAvailable('更',new Set(['u44-news'])),true);
  assert.equal(characterPracticeAvailable('更',new Set(['u44-even-more'])),true);
 
  const leaves=searchVocabulary('hongye',100).find(item=>item.traditional==='紅葉');
  assert.ok(leaves);
- assert.ok(!searchPracticeCharacters(leaves,new Set()).includes('葉'));
- assert.ok(searchPracticeCharacters(leaves,new Set(['u43-next-year'])).includes('葉'));
+ assert.ok(searchPracticeCharacters(leaves,new Set()).includes('葉'));
 });

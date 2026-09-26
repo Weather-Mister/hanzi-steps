@@ -46,6 +46,10 @@ jobs:
             exit 0
           fi
           for path in "${UNIT_PATHS[@]}"; do
+            if [ ! -f "$path" ]; then
+              echo "Deleted unit module: $path (no targeted unit test required)."
+              continue
+            fi
             unit_id=$(node -e '
               const fs=require("fs");
               const manifest=JSON.parse(fs.readFileSync("course/manifest.json","utf8"));

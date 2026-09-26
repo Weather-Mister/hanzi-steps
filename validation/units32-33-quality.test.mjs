@@ -6,9 +6,6 @@ import {han} from './validate.mjs';
 const course=await loadCourse();
 const u32=course.modules.find(m=>m.unit.id==='unit-32');
 const u33=course.modules.find(m=>m.unit.id==='unit-33');
-const b2u1=course.modules.find(m=>m.unit.id==='book-2-unit-1');
-const b2u2=course.modules.find(m=>m.unit.id==='book-2-unit-2');
-const b2u3=course.modules.find(m=>m.unit.id==='book-2-unit-3');
 
 function reviewBlob(module){
   const review=module.lessons.find(l=>l.id===module.reviewLessonId);
@@ -152,31 +149,12 @@ test('Units 32-33 phrases and grammar examples use already-covered or local Han 
   }
 });
 
-test('Book 2 keeps its lessons while first-teaching ownership moves earlier',()=>{
-  for(const ch of ['走','左','右','路']){
-    assert.ok(u32.newCharacters.includes(ch));
-    assert.ok(!b2u1.newCharacters.includes(ch));
-    assert.ok(b2u1.reviewCharacters.includes(ch));
-  }
+test('Former direction vocabulary keeps its Book 1 ownership after the Book 2 reset',()=>{
+  for(const ch of ['走','左','右','路'])assert.ok(u32.newCharacters.includes(ch));
   assert.ok(u32.newCharacters.includes('超'));
-  assert.ok(!b2u2.newCharacters.includes('超'));
-  assert.ok(b2u2.reviewCharacters.includes('超'));
-
   assert.ok(u33.newCharacters.includes('過'));
-  assert.ok(!b2u3.newCharacters.includes('過'));
-  assert.ok(b2u3.reviewCharacters.includes('過'));
-
   assert.ok(u32.newCharacters.includes('再'));
-  assert.ok(!b2u3.newCharacters.includes('再'));
-  assert.ok(b2u3.reviewCharacters.includes('再'));
   assert.ok(u32.newVocabulary.some(v=>v.text==='再'));
-  assert.ok(!b2u3.newVocabulary.some(v=>v.text==='再'));
-  assert.ok(b2u3.reviewVocabulary.includes('再'));
-
-  assert.ok(b2u1.lessons.find(l=>l.id==='b2-turn').steps.some(s=>s.char==='左'));
-  assert.ok(b2u2.lessons.find(l=>l.id==='b2u2-store').steps.some(s=>s.char==='超'));
-  assert.ok(b2u3.lessons.find(l=>l.id==='b2u3-pass').steps.some(s=>s.char==='過'));
-  assert.ok(b2u3.lessons.find(l=>l.id==='b2u3-then').steps.some(s=>s.char==='再'));
 });
 
 

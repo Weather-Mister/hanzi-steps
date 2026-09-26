@@ -3,8 +3,8 @@
 Traditional Chinese and Taiwanese Mandarin.
 
 **Curriculum authoring starts at [ADDING_A_UNIT.md](ADDING_A_UNIT.md).**
-The live curriculum is isolated in `course/book1/` and `course/book2/`, with
-`course/manifest.json`, a generated compact index and structural validation.
+The live curriculum is currently isolated in `course/book1/`; Book 2 is intentionally
+empty for a clean rebuild. `course/manifest.json`, a generated compact index and structural validation keep the curriculum wired together.
 The descriptions below document the original foundation units.
 
 Unit 1 keeps its original four lessons and review: 68 short activities around

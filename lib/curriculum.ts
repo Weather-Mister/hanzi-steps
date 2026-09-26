@@ -50,7 +50,6 @@ export const unitFiveLessons=courseModules.find(m=>m.unit.id==='unit-5')!.lesson
 export const unitFiveCharacterOrder=courseModules.find(m=>m.unit.id==='unit-5')!.unit.chars;
 export const unitSixLessons=courseModules.find(m=>m.unit.id==='unit-6')!.lessons;
 export const unitSixCharacterOrder=courseModules.find(m=>m.unit.id==='unit-6')!.unit.chars;
-export const bookTwoLessons=courseModules.find(m=>m.unit.id==='book-2-unit-1')!.lessons;
 export const unitFiveCharacters=courseModules.find(m=>m.unit.id==='unit-5')!.characters;
 export const unitFiveGrammar=courseModules.find(m=>m.unit.id==='unit-5')!.grammarRules;
 export const unitFivePhrases=courseModules.find(m=>m.unit.id==='unit-5')!.phrases;

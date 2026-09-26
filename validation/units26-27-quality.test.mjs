@@ -6,7 +6,6 @@ import {han} from './validate.mjs';
 const course=await loadCourse();
 const u26=course.modules.find(m=>m.unit.id==='unit-26');
 const u27=course.modules.find(m=>m.unit.id==='unit-27');
-const b2u2=course.modules.find(m=>m.unit.id==='book-2-unit-2');
 
 test('Units 26-27 keep the intended honest novelty and review sizes',()=>{
   assert.equal(u26.newVocabulary.length,11);
@@ -45,15 +44,8 @@ test('Every new grammar target is independently assessed in its review',()=>{
   }
 });
 
-test('行 is first-taught as xing in Book 1 but bank pronunciation remains explicitly hang',()=>{
+test('行 remains first-taught as xíng in Book 1',()=>{
   assert.ok(u26.newCharacters.includes('行'));
   assert.equal(u26.characters['行'].pinyin,'xíng');
   assert.equal(u26.characters['行'].audioText,'不行');
-  assert.ok(!b2u2.newCharacters.includes('行'));
-  assert.ok(!Object.hasOwn(b2u2.characters,'行'));
-  const bank=b2u2.lessons.find(l=>l.id==='b2u2-bank');
-  assert.ok(!bank.chars.includes('行'));
-  const pronunciation=bank.steps.find(s=>s.id==='b2u2-bank-5');
-  assert.equal(pronunciation.answer,'háng');
-  assert.match(pronunciation.explanation,/yínháng/);
 });
