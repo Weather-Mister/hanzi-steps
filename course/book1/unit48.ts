@@ -1090,7 +1090,7 @@ const unit:UnitData = {
           "prompt": "Which combination is heard?",
           "options": [
             "separable duration + much-better comparison",
-            "G001 + 把",
+            "negative non-specific question-word pattern + 把",
             "pharmacy + insurance"
           ],
           "answer": "separable duration + much-better comparison",
