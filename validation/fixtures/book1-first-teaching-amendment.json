@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 first teaching now precedes Book 2 for previously migrated location/direction material and for 行 in Unit 26 不行. Original snapshot remains immutable; only explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record change. Historical Book 2 lesson IDs and bank pronunciation instruction remain stable.",
+  "reason": "Book 1 first-teaching ownership adjustments for location and direction material plus 行 in Unit 26 不行. The snapshot remains immutable except for explicitly reviewed ownership, first-time card membership, character order, and the polyphonic 行 teaching card/practice record.",
   "records": {
     "vocabulary": {
       "到": {
@@ -53,28 +53,9 @@
         "after": "b493783fbb94dc56c7a8beb560c7c3f6da49c384206cc1242a48fe23d7fe0150"
       }
     },
-    "cards": {
-      "book-2-unit-1": {
-        "before": "ebe79ee84e202275bc744fe8fdd70588800670709f6e86b4e5414b0c4eca6472",
-        "after": "2582041e64d76f0a0d29aa664f5c8d982e7722496830fcb166d2a2d54316737f"
-      },
-      "book-2-unit-2": {
-        "before": "a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb",
-        "after": "673b58f125dafc00d0434b6d6b1e1cff6c480dce0697af7bb4b7957be8118219"
-      }
-    },
-    "units": {
-      "book-2-unit-2": {
-        "before": "8a10434edb672bc6abdee93d031307697f76addf7ff537214b6c7ef906697ec5",
-        "after": "4489da3b1363f9dcab4d98a858731caf1ea279c27569b829ec07f52db42be553"
-      }
-    },
-    "lessons": {
-      "b2u2-bank": {
-        "before": "bb3b8640470f9d667c1280b739ce5ce62300355516b3c5d54c42dbd30feebdbf",
-        "after": "1a3689b80433a838c60141a8960800e32f72d9751fc29b61a80ab574c7eb8931"
-      }
-    }
+    "cards": {},
+    "units": {},
+    "lessons": {}
   },
   "characterOrder": [
     "你",
