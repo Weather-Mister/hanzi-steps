@@ -18,16 +18,6 @@
       "available": true
     },
     {
-      "id": "book-2",
-      "number": 2,
-      "title": "A Course in Contemporary Chinese",
-      "unitIds": [
-        "book-2-unit-1",
-        "book-2-unit-2"
-      ],
-      "available": true
-    },
-    {
       "id": "book-3",
       "number": 3,
       "title": "A Course in Contemporary Chinese",
@@ -43,9 +33,7 @@
     "unit-5",
     "unit-6",
     "unit-7",
-    "unit-8",
-    "book-2-unit-1",
-    "book-2-unit-2"
+    "unit-8"
   ],
   "records": {
     "units": {
@@ -56,9 +44,7 @@
       "unit-5": "43b95748267d6cd659edf30d532f759d9d727b13b71a9abbab522c2b036b252e",
       "unit-6": "0e7c50a0e58a0de50df1a28076b175d7498917c0bc6e67b9f5a6231284f81e85",
       "unit-7": "406c85895f170e103207b328a6ba5a76e0a458495b374b0a501920291582f4a7",
-      "unit-8": "b3a064c0ee9d96fbff721523e7846d31af3823ca7dd39a295300d3913148ef5b",
-      "book-2-unit-1": "6603e113e9516fdfe555b9fa8b55404ad4df7a555c35d0a2263a13f2346627b2",
-      "book-2-unit-2": "8a10434edb672bc6abdee93d031307697f76addf7ff537214b6c7ef906697ec5"
+      "unit-8": "b3a064c0ee9d96fbff721523e7846d31af3823ca7dd39a295300d3913148ef5b"
     },
     "lessons": {
       "hello": "4a70586d477200c9dcb401d06ca202526885b172edfb2ae9f0fa4c7ce8a85e15",
@@ -114,21 +100,7 @@
       "u8-v2-invite": "07e24f8fc228ad88a049b762e77b2b562cb39365d994ca57af9da392e6914cb6",
       "u8-v2-possible": "984963f036fa051dc4fc0afe55ec3c4343328b36f135543e957196123a1d71eb",
       "u8-v2-agree": "47fa26cb68630cfb8de3680036e9b2674123a972f6b2c029e7de7c253f7d743e",
-      "u8-v2-review": "72b7f11565e2d2d5cae8d41a37a90ccfddfa9bec1f9898b83f0efe92b6d2ab4a",
-      "b2-ask": "191f1ebf2267ec71339934ca81d38cfd9d0d106664e9ae9d352c9d29d10d6259",
-      "b2-destination": "bf2c20abf96edd2abf25d8f2a61fac01b0c04c50697b28205f86f4fc744c2399",
-      "b2-from-toward": "d55d3ec810e25031b9dea4fad15cdf93d7a4b270110959c85c4af9add3b73749",
-      "b2-straight": "cc8a401b93b4d993a4fbdc1bf3bedb2244d7702c6dcfab8bfd6ce99b05f35a45",
-      "b2-turn": "680aef858a350527c056647c08827cc13fa0c21e98349182005f7d121bcbe3ee",
-      "b2-intersection": "9ef31871ae7f8cd86eb87915ca59703a92f7d6e878d45ced79879bace5a448d5",
-      "b2-review": "cf62952abe88987040ed1cb91be4fd1e268f166e97364566b0c04bb650026d85",
-      "b2u2-bank": "bb3b8640470f9d667c1280b739ce5ce62300355516b3c5d54c42dbd30feebdbf",
-      "b2u2-store": "a4d1b781ea8665299641bb7eb6ff535e8134d42b1cac92734b6ef56074daebad",
-      "b2u2-nearby": "641d0eb94ad788ebc413f1d7e45e39fb9227d209dbab39fbf702d748e2bc016c",
-      "b2u2-near-far": "947dd97c2f5e637b44aed52eeb74ca89069da9842c26aa5ac71c26100939e855",
-      "b2u2-distance": "537a6287f9de6bb6af85f32c2cbbe17b0cb659ad6b7a33bd44f181d1b51aa4f0",
-      "b2u2-distance-question": "1316398c34ccd85be695eddb389261d78b969c042e9cffa092d1b989cd45ba15",
-      "b2u2-review": "781f1fddad28ca5c148c0a7876ea01f1a6b971743cb62fab0e75f54865d6fac2"
+      "u8-v2-review": "72b7f11565e2d2d5cae8d41a37a90ccfddfa9bec1f9898b83f0efe92b6d2ab4a"
     },
     "vocabulary": {
       "你": "eb1fb16d7a1c495729dd77a76ac0687d5bcccae0cde4c39c884123d9afb8beb3",
@@ -215,26 +187,13 @@
       "可以": "7e6a1023d4f725f4c3548bd4b3255c543ac4af6308fcdff707518c834a978dcb",
       "請問": "35a1cfb17ff7b8e96fdfe2c3c96c69ea2a5496a6315b568ddc89c868f1f01cff",
       "怎麼": "475e0a8a90cda526135a7710468963ece488e9ac528b7e8d37d550f666dfb72e",
-      "走": "f2bf05a47b01302a26e8f82bec6bb1d984448129605d07a47933eb4caa6c8d97",
       "到": "37311f549b123e63d5609a479c227e946b7e494929cb81defce8e79bef123601",
-      "師大": "0f30c66474bfe872909b1fc181cf729c53b6ec55fdab15d175d46eef7ef55d67",
       "從": "bed137ce813c3dd59484e8d750a39bddee9a4e0368b84a266299e20cbc3e67f0",
       "往": "480e510dd255fa15b3c455b4215cc267314d8a4d8db18911c9de78b39c98067d",
-      "前": "28fcae132ffe024f7ea0b72eaf02f899b8b40fe06a32728fc557830028a762cd",
       "一直": "3e7b3074e8d59d930c2866a762f384af5293690f7fc52f36bf420c1818c08233",
-      "左": "45dcb42c646b4d985d7b4169fa0a17780cd43225e59ec16163fdcbd2d7336003",
-      "右": "173e653ab867efbb4a0d0e82e469738e5207705491623657c128164951e77828",
-      "轉": "92b24f0ed7db4c5d3b1b0acb7975854b558d6c9358040f1867d8e8624e047a20",
-      "左轉": "916b93fb4dba0f5b282da378a681df3c8bead26040f825e19a32ab7ce4a167bd",
-      "右轉": "d630c31c18b14b9948227787c5c2bcd74de4e85961a78997ec4cc51a3ce9412b",
-      "路": "2d20a594214c979ce16ebbee464dfb5889251127263a6d36893dd352d2727116",
-      "路口": "20925e4dc95aa9c178f7be307206fec9e76b2b53f3fe7c3d9010699cd550237e",
-      "銀行": "1e2be6293e46d7902f1a001880a51cafbec966446fd2c40bbf5ac2c4ad917b7d",
-      "超商": "3d27c60aa81a89e5d9f45af46648977f47c35c27be7af146f6c944a0d25a83c6",
       "附近": "f5a9a16a03d2f40f44eb7f744c1599b8be33e93df3ab2d333b52f30cc137192a",
       "近": "ebdefa13d928fb04b96ca4142def20c7bf01552308fc386c0df6d3287e3fb330",
-      "遠": "04118655d2ba7fd07216b14e19bc6053ac9d4b43ece817b0a593692479b98df7",
-      "離": "6427f9b957eafbb481332f7d6ca2ece373caf9ed7abc692801fb3faab915ca7d"
+      "遠": "04118655d2ba7fd07216b14e19bc6053ac9d4b43ece817b0a593692479b98df7"
     },
     "characters": {
       "你": "b274f25dbf00772dd2169924d94b2cf129193076c6d547fca60fe5b36c484ccf",
@@ -340,17 +299,14 @@
       "直": "2188d0677c1ea94b9eb8d955f4648654bc369684fa9dd429a3edbb72e80dfb60",
       "左": "80613ec0f8e524acff27d94221870e941aac879d9f6763da15b3629667593c1e",
       "右": "41eed225415b509dfca5180accc1f432b1f45297e6ea2bf7ead410a988052fb7",
-      "轉": "499863dd0d45e4a22b61166e81d14da1cedbedd08262eb6d9b5c9a41ba8f5ae3",
       "路": "ed9a04ad7f34267e7a5d8c088f9e8acf68a8e789e7cce7daf365917e571641fd",
       "口": "5a3bb055a3fadf83ecadb2ef7e017343b3640583e083ad6c454161c1dd494ef2",
-      "銀": "c59a5fafb9fa37c55ee6fcc989020745425bad3b6d3bd971afdb6842841a1b23",
       "行": "372451a965de7a6f5655640bfedb78ec4452f5c2851075d2c13a5021d1cee403",
       "超": "6db7c6cdd01cfda2a3a3b1cf08bc4669387c6911d960f9c589eb2db3e79c7ed6",
       "商": "c94ac2da0a2efce26640814557d02d1a109410437d7ff73f9c1e11a2d8e49d3a",
       "附": "441bb0782ceff5b1cf9b061601d47ee0b5e0dc2e1e85976d8092fb74c668b2f2",
       "近": "c3970e58a9bf107615992e4dc83a9eaec3dc4546154479130debf2e2ad0b3f81",
       "遠": "b8cfb9e4a7a0f226224fcaa54e261d738cf45f640e6d176946b6467797737369",
-      "離": "3b48ab9a285ae1a864ae12a897c52bf4c822057852f405d96a08ff252834d790",
       "兄": "58909d0bd193cfdc4c6c426cc1cdee740e7c2640c4298f6b31f209788604d6ab",
       "弟": "78392f5b0717e68354bcf15f0f61a7f1f891ed74d606d0cbcbf0ee55a5777c81",
       "漂": "7e248bed21f3f45cb0e68945461dae4ec4b0e49de02dea19d278c8181d889bc0",
@@ -423,19 +379,7 @@
       "u8-together": "6e5ff313f65e49b5ed2b163d2ff0d92decb29fe7b3791618c2989f4ad4adbb67",
       "u8-invite": "84c7841318d713928595ae857233b2d84896861d5fe8800e2aa288059ee77fc4",
       "u8-possible": "2b17ec6876565b2b8cf370ed5a774e06d24c8656905250824a075e9025456b08",
-      "u8-counteroffer": "beedb78ad26990fe9e1858b9dcba1e3ee5459e3491a1d744e190faa80685ec9b",
-      "b2-ask": "60f8c6117379c5758272f8f2878e160c2fd5575c99a0687708ebba8a1b96f5ff",
-      "b2-destination": "713afad416f697b5301119a48514842e74a58236a23e911f7b0a01d6ff1d04f6",
-      "b2-from-toward": "426026ca468fb2f44da8b74dfa18dd69e5c391a0ea5627c3886f640cf373aeaf",
-      "b2-straight": "328600a337ca1edcfba292333a873a794b1ff7eb308f8dcaba8eb83280d4c6f2",
-      "b2-turn": "fc9104f95a260b9ba4e40a26ca82dec3369391cc1170697f496d745ed3709861",
-      "b2-intersection": "e66040758aea8395256bf2164b5213c69d2103406e45b21ccd63831c7498ef61",
-      "b2u2-bank": "141f620a90f15913eddaf4a391c2de845f930685833376c1ecfe2ee2f752414e",
-      "b2u2-store": "2a399241edd1a26daa6b7fd2053e9a20d7cc74e6b830d13f8ea9a2f9cf0cf7a4",
-      "b2u2-nearby": "9c4ce5515f4bdb266247320e73e795a5cc952ba7d4afa34832ad472f27f95ba8",
-      "b2u2-near-far": "b0a8f8e58699c3c5dceb515bb0bc1214aab9f0c6844bade8f1445f6e254008e8",
-      "b2u2-distance": "193b20373af3e273d39d12c07efd69e393c1ac6c3d36a559cc0d4273d08e3708",
-      "b2u2-distance-question": "47b67e762167e8db6b108f567e8f518407d2af3f81a8d176974b8ece2acb0617"
+      "u8-counteroffer": "beedb78ad26990fe9e1858b9dcba1e3ee5459e3491a1d744e190faa80685ec9b"
     },
     "phrases": {
       "hello": "be6ea1b392bd5e504248748280bab218de85b83380aaeb5daa81a387c77d749e",
@@ -559,32 +503,7 @@
       "u8-tomorrow": "382d8f904e533c8fd609f10f7708e94230676fea2b9e65e76085e10d67efd72c",
       "u8-today": "a60be1b97da330bea654e9aa23a2fddf9ab8f6f9da71d7a36652bfdea2f897e6",
       "u8-want-together": "5d566a8daa192d120b579ef8e68fce230d54cadfee08e3b2f719205efca6aa4f",
-      "u8-final-plan": "e607ce6c8d0fb8c46fec984e26c28c06977020e32bfa9ca8bc9afb6c71de552d",
-      "b2-ask": "b02fb2b35471e71c0bfc059c759f80746685a8f4dbb00ecf8aa7e045ebda7112",
-      "b2-destination": "4d01c7402bd93363a6e0276bc0c2cbed74355c10fca88e54f6d72e7e407dc8da",
-      "b2-from": "334c957a789694a4dffd39447ff15f445c558a81e1752189f89a5afa8ebdba9a",
-      "b2-toward": "f82d59deefbbc314e5d8c0be644da0498288e7fa51370d621658c0316b37d97b",
-      "b2-straight": "e2397ef2935014d0c65eac3ecf090e2f544230922b05ab88a1178474af8e6f15",
-      "b2-forward": "92f229e5651bae65922e80c0b9b667530bdc60157757412bfdc05f83e2f61849",
-      "b2-left": "d63145153502fc7306721ecd9d122a5f52374c9e5d7a2cb32946646bc44a8f63",
-      "b2-right": "da307ac7860946808b0b4ebd24587aa2fd310bba2badcc505a458d251fa7f6c7",
-      "b2-intersection": "3c6ab625ef49b2adf012a3818ce0fd461d9c076d4ed941a4ca9b1b2b3f9cb446",
-      "b2-junction-from": "cec8ba1022a6f879bb0401da7d8f1e701b5bd6d9b9c458eced950e8f1d3359aa",
-      "b2u2-bank-route": "d1202321bf6a01a308f808a582b5e5c01dedb7ce8f5611fabc2e3f522afe0389",
-      "b2u2-bank-here": "22461fb4d149ec6a9b1234f5ccf1ebdd2428b6556ff88f9db6f6380432521c3d",
-      "b2u2-store-here": "3072bea20833e34d29cd6a975fe46cca7384674eb020eb458e3a53bcd32dc852",
-      "b2u2-no-bank": "bb5a41249c272fd921bbc911e88f2d98afaaf565a5b1354c1c77be2d9ef56112",
-      "b2u2-nearby-bank": "fc88b85f9a4ab6f904f5e1c9b41eccb759688e9d2fdfca3e22355d21e11d0f78",
-      "b2u2-nearby-store": "aa95903b13636942f80905bd3e2dd5e3c08754b3bd7fa5980274dcf827d3b350",
-      "b2u2-near-bank": "f162b639d222c22110f086e66ef5be9dd60031cae2053bda1948bbd8e7a7a408",
-      "b2u2-far-store": "692e708eec52f2552cce1ab9b53308868abc675f665b1a4206d3b2093b6be42c",
-      "b2u2-bank-distance": "665f67ea464c3a13243f4e9c3945446322e1baec18664c13314a1dcad23fd4a4",
-      "b2u2-store-distance": "689a8aac0833c3033f6d10bc9a42c7df2d40e339135a05cf108a6b5a68027314",
-      "b2u2-bank-store": "163eb6a5aa3e5e3c01c194ac0a06af6e808b3224896489662a399be4164437d5",
-      "b2u2-far-question": "698c4984ed83ede870a279086485917bf8ed4b0aca124690f98a1470a213bc96",
-      "b2u2-not-far": "0e07fd3afa3e0616094406982b01104acce9396e85c421e38e0239f14c6e2bec",
-      "b2u2-not-near": "a87ca239447a2cb0bfbb4b649dc0d62605a177d2a529c3a18bd848b2dd160f1b",
-      "b2u2-ma-question": "fe3505e04c53b6c785777503587dec423793f69ac62e5281c6846426dc42d0e9"
+      "u8-final-plan": "e607ce6c8d0fb8c46fec984e26c28c06977020e32bfa9ca8bc9afb6c71de552d"
     },
     "cards": {
       "unit-1": "fc1f6c05f6561433845c59ee1eff8b7d92c60d755a5f8cb01190e2313f3e1c3d",
@@ -594,9 +513,7 @@
       "unit-5": "be6fb47a158b183a6ac63454a9c5f5853360143afa99db2f89ee0db686d39e27",
       "unit-6": "341b718dd7c92568038948d23a7a75d89115e2c2d310f5c3846aef4396c6d4b7",
       "unit-7": "275cf3099e5cf64044fb2d5ec08bc6a1260540c193eca394e80499f9e70c17ba",
-      "unit-8": "42e49d95619080bbde7e941387ed09fd7ba194467f974d93968beac4b2d7a33c",
-      "book-2-unit-1": "ebe79ee84e202275bc744fe8fdd70588800670709f6e86b4e5414b0c4eca6472",
-      "book-2-unit-2": "a63b3376e5aa72931301e551972f37d9e4041b144b0b79798ee337b5ba2507bb"
+      "unit-8": "42e49d95619080bbde7e941387ed09fd7ba194467f974d93968beac4b2d7a33c"
     }
   },
   "practice": {
@@ -703,17 +620,14 @@
     "直": "3d11375eba2b3bb4e6ee1c15ca4ef653f9fd50413073cb667290049bd65fd9b3",
     "左": "037ca9f3e50d18e8da38b9f2442ed406cd95b20728390162658d7d330ca278bd",
     "右": "b7e44b49c30a18dcbf7a287942083480b5730ebac3a87adc478582ef6ef4af51",
-    "轉": "055fbfcf72e7aa7b61958dd5ce00e9f89ece3e5cbba5a0e40ea89485a7ab05b8",
     "路": "8b9bb4e84206580e6e2193dc49b562bd6cb83235c0c8a4fb761527be7139af82",
     "口": "01b9ab81467982a9ee3e59673cdfcae2e4f8edb878fc30bf854ea64f471aa8b6",
-    "銀": "311f37b278215b45afeffbb1f4ac570465b33892b937b9139d9b5d134abfe6d2",
     "行": "1b7aa5dd6e506527a21ef7463bdfaac6164e55ddcd4c06acb1b316a8e1903d6c",
     "超": "5ca39a243976a84a4f0bfd4282e4b9cbc39980ad134e3863c9712f7373b6bd6d",
     "商": "82a65c45b547f8b2e2346edc8c2fdac543eb129d8a3226cd85edad085f7c58e5",
     "附": "93c062289c7131b68818c990e111d7d6deae8266a46559278d8b85dc2007b6cf",
     "近": "7d75a3148318a3acdc71ab77b145d35cf7866b48c933d997b277eb4288f92a23",
     "遠": "e9acf260526c5f18e96a63464df2eb31998425495a4fb75b69fe17dbd5cdab01",
-    "離": "725081a94f0c341d96c2a6e75754cd557aac1cac7a6afe6d955e03b8357d2fca",
     "兄": "700229fbea3f4b3666626c97a674b380ee6214f9e8e89058cba262ed2b16e856",
     "弟": "8bc54aa77845908e551f4452265dc667b2f788847d8989811274c96d267cd0b9",
     "漂": "1fa4dc900cb321af823f67764184bd56cf5303eb3e7d2ecfa9b670f0c08e545c",
@@ -850,16 +764,13 @@
     "直",
     "左",
     "右",
-    "轉",
     "路",
     "口",
-    "銀",
     "行",
     "超",
     "商",
     "附",
     "近",
-    "遠",
-    "離"
+    "遠"
   ]
 }
