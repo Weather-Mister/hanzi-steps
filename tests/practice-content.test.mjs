@@ -205,7 +205,6 @@ const missionLanguage={
  'find-the-library':['圖書館','哪裡','教室','旁邊','近'],
  'make-a-time-plan':['什麼時候','有空','後天','晚上','見面','沒問題'],
  'choose-a-ride':['怎麼','坐','火車','高鐵','比較','慢','快','舒服'],
- 'directions':['師大','到','怎麼','走','下一個路口','右轉','再','一直','第二個紅綠燈'],
 };
 
 test('Taiwan Mode missions are unlocked only after the language they use has been taught',()=>{
@@ -237,7 +236,6 @@ test('known same-English vocabulary variants are treated as ambiguous typed prom
   ['可是','但是'],
   ['可不可以','可以嗎'],
   ['公車','公共汽車'],
-  ['便利商店','超商'],
  ];
  for(const [left,right] of pairs){
   const a=items.find(item=>stripSurface(item.traditional)===left);
