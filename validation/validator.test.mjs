@@ -2,6 +2,8 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {loadCourse,curriculumIndex} from './course-io.mjs';
 import {validateCourse} from './validate.mjs';
+import {learnedPracticeItems} from '../lib/practice-engine.ts';
+import {searchLearnedVocabulary} from '../lib/vocabulary-lookup.ts';
 const baseline=await loadCourse();
 const run=mutate=>{const c=structuredClone(baseline);mutate(c);return validateCourse(c.manifest,c.modules,c.geometry).join('\n')};
 
@@ -438,4 +440,87 @@ test('Lesson 15 final strict-prerequisite fixes keep 回家 out of Unit 45 and w
  assert.equal(u47.phrases['u47-g3-prereq-review'].practice,false);
  assert.doesNotMatch(u47.phrases['u47-g3-prereq-review'].text,/吃了東西就吐/);
  assert.equal(u47.phrases['u47-d2t02-full'].text,'昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。');
+});
+
+
+test('Lesson 15 support and source-data phrases stay out of productive adaptive and Mega practice',()=>{
+ const completed=new Set(
+  baseline.modules
+   .filter(m=>m.bookId==='book-1'&&m.order>=45&&m.order<=48)
+   .flatMap(m=>m.lessons.map(l=>l.id))
+ );
+ const ids=new Set(learnedPracticeItems(completed).map(item=>item.id));
+ for(const phraseId of [
+  'u46-thanks-nin',
+  'u46-a004-support-sorry',
+  'u46-a004-response-1',
+  'u46-a004-response-2',
+  'u46-a004-response-3',
+  'u47-d2t01-07-integrated',
+  'u48-minute-support',
+  'u48-a001-table',
+  'u48-prescription-support',
+  'u48-prescription-visual',
+ ]){
+  assert.equal(ids.has('phrase:'+phraseId),false,phraseId+' must not enter productive practice');
+ }
+});
+
+test('Pinyin Search learner results unlock only after the owning lesson',()=>{
+ assert.equal(searchLearnedVocabulary('yisheng',new Set()).some(item=>item.traditional==='醫生'),false);
+ assert.equal(searchLearnedVocabulary('yisheng',new Set(['u45-doctor'])).some(item=>item.traditional==='醫生'),true);
+ const through47=new Set(
+  baseline.modules
+   .filter(m=>m.bookId==='book-1'&&m.order<=47)
+   .flatMap(m=>m.lessons.map(l=>l.id))
+ );
+ assert.equal(searchLearnedVocabulary('huijia',through47).some(item=>item.traditional==='回家'),false);
+ through47.add('u48-advice');
+ assert.equal(searchLearnedVocabulary('huijia',through47).some(item=>item.traditional==='回家'),true);
+});
+
+test('Lesson 15 A004 preserves all three frozen response outcomes without promoting them to practice',()=>{
+ const u46=baseline.modules.find(m=>m.unit.id==='unit-46');
+ const lesson=u46.lessons.find(l=>l.id==='u46-doctor-visit');
+ const expected=[
+  ['u46-a004-r1','u46-a004-response-1','好的，沒有問題。'],
+  ['u46-a004-r2','u46-a004-response-2','太好了。'],
+  ['u46-a004-r3','u46-a004-response-3','對不起，我不知道是你的。'],
+ ];
+ for(const [stepId,phraseId,text] of expected){
+  const step=lesson.steps.find(s=>s.id===stepId);
+  assert.ok(step,stepId+' missing');
+  assert.equal(step.phrase,phraseId);
+  assert.equal(u46.phrases[phraseId].text,text);
+  assert.equal(u46.phrases[phraseId].practice,false);
+ }
+});
+
+test('Lesson 15 assessed prompts and choices do not require hidden grammar IDs',()=>{
+ for(const unit of baseline.modules.filter(m=>m.bookId==='book-1'&&m.order>=45&&m.order<=48)){
+  for(const step of unit.lessons.flatMap(l=>l.steps)){
+   if(!['select','listen','order'].includes(step.type))continue;
+   const learnerText=[step.prompt,...(step.options||[]),step.answer].filter(Boolean).join(' ');
+   assert.doesNotMatch(learnerText,/\bG00[1-7]\b/,step.id+' exposes an internal grammar ID');
+   assert.doesNotMatch(learnerText,/lexically available before/i,step.id+' tests curriculum sequencing metadata');
+  }
+ }
+});
+
+test('Unit 47 integrated replay preserves D2T01 through D2T07 cumulatively',()=>{
+ const u47=baseline.modules.find(m=>m.unit.id==='unit-47');
+ const lesson=u47.lessons.find(l=>l.id==='u47-refuse-help');
+ const step=lesson.steps.find(s=>s.id==='u47-integrated');
+ assert.equal(step.phrase,'u47-d2t01-07-integrated');
+ const phrase=u47.phrases['u47-d2t01-07-integrated'];
+ assert.equal(phrase.practice,false);
+ for(const turn of [
+  '你怎麼了？臉色這麼難看。',
+  '昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。',
+  '你這麼不舒服，我陪你去看病，好不好？',
+  '不用了。我在臺灣沒有健康保險。',
+  '我陪你去學校的健康中心。那裡的醫生很好，對學生也很客氣。',
+  '謝謝你。我想去藥局買藥就好了。',
+  '你真的不去看病嗎？',
+ ]) assert.ok(phrase.text.includes(turn),turn+' missing from integrated replay');
 });
