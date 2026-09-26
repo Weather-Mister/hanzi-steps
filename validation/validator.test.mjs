@@ -94,6 +94,44 @@ test('Lesson 15 repair preserves semantic listening targets and support-only hon
 
 
 
+test('Lesson 15 幾 expansion is taught before testing without stealing Unit-7 ownership',()=>{
+ const u46=baseline.modules.find(m=>m.unit.id==='unit-46');
+ const u47=baseline.modules.find(m=>m.unit.id==='unit-47');
+ const lesson=u46.lessons.find(l=>l.id==='u46-nonspecific');
+ const ids=lesson.steps.map(s=>s.id);
+ assert.ok(ids.indexOf('u46-ji-explain')>=0);
+ assert.ok(ids.indexOf('u46-ji-explain')<ids.indexOf('u46-ji-s1'));
+ const explain=lesson.steps.find(s=>s.id==='u46-ji-explain');
+ assert.equal(explain.type,'phrase');
+ assert.equal(explain.phrase,'u46-ji-expansion');
+ const expansion=u46.phrases['u46-ji-expansion'];
+ assert.equal(expansion.text,'她沒有幾個朋友。');
+ assert.equal(expansion.pinyin,'Tā méiyǒu jǐ ge péngyǒu.');
+ assert.equal(expansion.meaning,'She does not have many friends / has only a few friends.');
+ assert.match(expansion.note,/Unit 7/);
+ assert.match(expansion.note,/how many/);
+ assert.match(expansion.note,/a few \/ several/);
+ assert.match(expansion.note,/statement or other non-question context/);
+ assert.match(expansion.note,/semantic expansion/);
+ const check=lesson.steps.find(s=>s.id==='u46-ji-s1');
+ assert.equal(check.answer,'幾 = a few/several in a statement');
+ const index=curriculumIndex(baseline);
+ assert.deepEqual(index.vocabulary['幾'],['jǐ','how many','book-1','unit-7','u7-v2-numbers']);
+ assert.equal(index.characters['幾'][3],'unit-7');
+ assert.equal(u46.newVocabulary.some(w=>w.text==='幾'),false);
+ assert.equal(u46.newCharacters.includes('幾'),false);
+ assert.equal(u46.lessons.flatMap(l=>l.steps).some(s=>s.char==='幾'),false);
+ assert.equal(u47.newVocabulary.some(w=>w.text==='幾'||w.text==='好幾次'),false);
+ assert.equal(u47.newCharacters.includes('幾'),false);
+ const stomach=u47.lessons.find(l=>l.id==='u47-stomach');
+ const stomachIds=stomach.steps.map(s=>s.id);
+ assert.ok(stomachIds.indexOf('u47-stomach-ji-review')<stomachIds.indexOf('u47-stomach-s4'));
+ assert.equal(u47.phrases['u47-several-times'].text,'吐了好幾次。');
+ assert.equal(u47.phrases['u47-several-times'].note,'Requires the Unit-46 幾 expansion.');
+ assert.equal(stomach.steps.find(s=>s.id==='u47-stomach-s4').answer,'a few/several');
+});
+
+
 test('Lesson 15 A003 source notation stays visible while support-only material remains non-canonical',()=>{
  const u48=baseline.modules.find(m=>m.unit.id==='unit-48');
  const support=u48.phrases['u48-prescription-support'];
