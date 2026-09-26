@@ -921,11 +921,11 @@ const unit:UnitData = {
           "prompt": "Which two systems are combined?",
           "options": [
             "separable-verb duration + degree comparison",
-            "把 + G001",
+            "把 + a negative non-specific question-word pattern",
             "modal 得 + prescription notation"
           ],
           "answer": "separable-verb duration + degree comparison",
-          "explanation": "The line combines G007 separable-duration structure with G006 degree comparison.",
+          "explanation": "The line combines separable-verb duration insertion with a degree comparison.",
           "semanticAnswer": true
         },
         {
