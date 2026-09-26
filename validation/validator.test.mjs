@@ -53,7 +53,24 @@ test('Lesson 15 source visual role cards require complete learner-facing metadat
  const target=c=>unit(c).lessons.flatMap(l=>l.steps).find(s=>s.id==='u48-a002-visual-1');
  assert.doesNotMatch(run(c=>{const s=target(c);s.type='visual'}),/activity u48-a002-visual-1/);
  assert.match(run(c=>{const s=target(c);delete s.visualRole}),/activity u48-a002-visual-1: missing\/invalid visualRole/);
+ assert.match(run(c=>{const s=target(c);delete s.visualCue}),/activity u48-a002-visual-1: missing\/invalid visualCue/);
+ assert.match(run(c=>{const s=target(c);s.visualScene='generic'}),/activity u48-a002-visual-1: invalid source-specific visualScene/);
  assert.match(run(c=>{const s=target(c);s.visualSuggestions=[]}),/activity u48-a002-visual-1 visualSuggestions: expected an array of nonempty strings/);
+});
+
+test('Lesson 15 A002 cards preserve three distinct source illustration transcriptions',()=>{
+ const u48=baseline.modules.find(m=>m.unit.id==='unit-48');
+ const step=id=>u48.lessons.flatMap(l=>l.steps).find(s=>s.id===id);
+ const cards=['u48-a002-visual-1','u48-a002-visual-2','u48-a002-visual-3'].map(step);
+ assert.deepEqual(cards.map(s=>s.visualScene),['restroom','bed','throat']);
+ assert.deepEqual(cards.map(s=>s.visualCue),[
+  "Source illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen.",
+  'Source illustration: a man lies in bed under a blanket with his head on a pillow.',
+  'Source illustration: a man stands with one hand held at his throat/neck.'
+ ]);
+ assert.equal(new Set(cards.map(s=>s.visualScene)).size,3);
+ assert.deepEqual(cards.map(s=>s.visualClosing),['好的。','謝謝你。','謝謝你的關心。……']);
+ assert.ok(cards.every(s=>JSON.stringify(s.visualSuggestions)===JSON.stringify(['看病','多休息','早一點睡覺','多喝水'])));
 });
 
 test('Lesson 15 repair preserves semantic listening targets and support-only honorifics',()=>{

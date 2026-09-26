@@ -21,9 +21,7 @@
     "implementation": "pending",
     "release": "locked"
   },
-  "openFindings": [
-    "IC-01 BLOCKER — A002 learner-facing visual cards still omit the source-specific symptom/advice information supplied by the three frozen source illustrations."
-  ],
+  "openFindings": [],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -61,7 +59,8 @@
     "implementationRepairHandoff": "course/book1/lesson15-implementation-repair-handoff.md",
     "implementationConformanceReauditHandoff": "course/book1/lesson15-implementation-conformance-reaudit-handoff.md",
     "implementationConformanceReaudit": "course/book1/lesson15-implementation-conformance-reaudit.md",
-    "implementationIc01RepairHandoff": "course/book1/lesson15-implementation-ic01-repair-handoff.md"
+    "implementationIc01RepairHandoff": "course/book1/lesson15-implementation-ic01-repair-handoff.md",
+    "implementationConformanceReaudit2Handoff": "course/book1/lesson15-implementation-conformance-reaudit2-handoff.md"
   },
-  "notes": "Lesson 15 implementation-conformance re-audit FAIL with only IC-01 remaining: the A002 learner-facing visual cards are still generic and omit the source-specific symptom/advice information communicated by the three frozen textbook illustrations. IC-02 semantic listening and IC-03 support-only 您 remain resolved. Gate A and Gate B stay pass/frozen; implementation remains pending; deterministic QA is not ready; release remains locked. Next authorized action is the narrow IC-01 Stage-5 repair via course/book1/lesson15-implementation-ic01-repair-handoff.md, followed by a second independent conformance re-audit."
+  "notes": "Lesson 15 narrow Stage-5 IC-01 repair is persisted from the authoritative A002 source illustrations: the three learner-facing cards now carry distinct structured visual transcriptions for the restroom/lower-abdomen scene, the bed scene, and the throat/neck scene while preserving the shared source advice bank, two acceptance roles, one polite-rejection role, deferred-glyph safety, IC-02 semantic listening, and IC-03 support-only 您. Implementation remains pending until a fresh independent conformance re-audit2. Deterministic QA is not ready; release remains locked."
 }

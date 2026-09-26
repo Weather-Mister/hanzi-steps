@@ -261,7 +261,9 @@ const unit:UnitData = {
             "早一點睡覺",
             "多喝水"
           ],
-          "visualSource": "A002 source prompt 1"
+          "visualSource": "A002 source prompt 1",
+          "visualScene": "restroom",
+          "visualCue": "Source illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen."
         },
         {
           "id": "u48-a002-visual-2",
@@ -276,7 +278,9 @@ const unit:UnitData = {
             "早一點睡覺",
             "多喝水"
           ],
-          "visualSource": "A002 source prompt 2"
+          "visualSource": "A002 source prompt 2",
+          "visualScene": "bed",
+          "visualCue": "Source illustration: a man lies in bed under a blanket with his head on a pillow."
         },
         {
           "id": "u48-a002-visual-3",
@@ -291,7 +295,9 @@ const unit:UnitData = {
             "早一點睡覺",
             "多喝水"
           ],
-          "visualSource": "A002 source prompt 3"
+          "visualSource": "A002 source prompt 3",
+          "visualScene": "throat",
+          "visualCue": "Source illustration: a man stands with one hand held at his throat/neck."
         },
         {
           "id": "u48-a002-s1",

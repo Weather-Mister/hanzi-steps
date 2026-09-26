@@ -121,8 +121,9 @@ export function validateCourse(manifest, modules, geometry = {}) {
      else if(!s.semanticAnswer&&(!Array.isArray(s.options)||!s.audioText.includes(s.answer)||s.options.filter(o=>s.audioText.includes(o)).length!==1))fail(sa,'contextual audio must contain only one answer option unless semanticAnswer is true');
     }
     if(s.type==='visual'){
-     required(s,['prompt','visualRole','visualInstruction','visualClosing','visualSource'],sa);
+     required(s,['prompt','visualRole','visualInstruction','visualClosing','visualSource','visualScene','visualCue'],sa);
      strings(s.visualSuggestions,sa+' visualSuggestions',{empty:false});
+     if(!['restroom','bed','throat'].includes(s.visualScene))fail(sa,'invalid source-specific visualScene');
     }
     if(s.type==='match'){
      if(strings(s.chars,`${sa} chars`,{empty:false})&&s.chars.length<2)fail(sa,'match requires at least two characters');
