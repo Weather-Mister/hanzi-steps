@@ -879,21 +879,29 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄠ",
       "meaning": "cake",
       "strokes": 16,
-      "note": "糕 is learned in Unit 41 through 蛋糕.",
-      "memory": "Practice 糕 as a complete Traditional character and connect it to 蛋糕.",
+      "note": "糕 gāo appears in 蛋糕 dàngāo, “cake.” It is also used in names of other cakes and prepared foods.",
+      "memory": "Rice 米 sits beside 羔. The rice component helps you remember that 糕 is a food character.",
       "parts": [
         {
-          "label": "糕",
-          "name": "糕 whole form",
-          "role": "Whole character",
-          "description": "Write all 16 strokes in standard order.",
+          "label": "米",
+          "name": "rice component",
+          "role": "Visual component",
+          "description": "Rice component in 糕: strokes 1–6. Rice 米 sits beside 羔. The rice component helps you remember that 糕 is a food character.",
           "strokes": [
             0,
             1,
             2,
             3,
             4,
-            5,
+            5
+          ]
+        },
+        {
+          "label": "羔",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 糕: strokes 7–16. Rice 米 sits beside 羔. The rice component helps you remember that 糕 is a food character.",
+          "strokes": [
             6,
             7,
             8,
@@ -907,12 +915,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "蛋糕",
         "pinyin": "dàngāo",
         "meaning": "cake"
-      }
+      },
+      "practiceBuild": false
     },
     "祝": {
       "hanzi": "祝",
@@ -920,19 +929,27 @@ const unit:UnitData = {
       "zhuyin": "ㄓㄨˋ",
       "meaning": "wish; offer wishes",
       "strokes": 9,
-      "note": "祝 is learned in Unit 41 through 祝你生日快樂.",
-      "memory": "Practice 祝 as a complete Traditional character and connect it to 祝你生日快樂.",
+      "note": "祝 zhù means “wish” when offering good wishes: 祝你生日快樂, “Wish you a happy birthday.”",
+      "memory": "A four-stroke 礻 sits beside 兄. Keep 礻 distinct from the five-stroke clothing component 衤.",
       "parts": [
         {
-          "label": "祝",
-          "name": "祝 whole form",
-          "role": "Whole character",
-          "description": "Write all 9 strokes in standard order.",
+          "label": "礻",
+          "name": "ritual component",
+          "role": "Visual component",
+          "description": "Ritual component in 祝: strokes 1–4. A four-stroke 礻 sits beside 兄. Keep 礻 distinct from the five-stroke clothing component 衤.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "兄",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 祝: strokes 5–9. A four-stroke 礻 sits beside 兄. Keep 礻 distinct from the five-stroke clothing component 衤.",
+          "strokes": [
             4,
             5,
             6,
@@ -941,12 +958,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "祝你生日快樂",
         "pinyin": "zhù nǐ shēngrì kuàilè",
         "meaning": "wish you a happy birthday"
-      }
+      },
+      "practiceBuild": false
     },
     "如": {
       "hanzi": "如",
@@ -954,30 +972,39 @@ const unit:UnitData = {
       "zhuyin": "ㄖㄨˊ",
       "meaning": "as; according to; wish-expression component",
       "strokes": 6,
-      "note": "如 is learned in Unit 41 through 萬事如意.",
-      "memory": "Practice 如 as a complete Traditional character and connect it to 萬事如意.",
+      "note": "如 rú means “as; like.” In 萬事如意, it expresses things going as wished: “May everything go your way.”",
+      "memory": "女 stands beside a small 口. Keep the woman component narrower so the mouth has room on the right.",
       "parts": [
         {
-          "label": "如",
-          "name": "如 whole form",
-          "role": "Whole character",
-          "description": "Write all 6 strokes in standard order.",
+          "label": "女",
+          "name": "woman component",
+          "role": "Visual component",
+          "description": "Woman component in 如: strokes 1–3. 女 stands beside a small 口. Keep the woman component narrower so the mouth has room on the right.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "口",
+          "name": "mouth component",
+          "role": "Visual component",
+          "description": "Mouth component in 如: strokes 4–6. 女 stands beside a small 口. Keep the woman component narrower so the mouth has room on the right.",
+          "strokes": [
             3,
             4,
             5
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "萬事如意",
         "pinyin": "wànshì rúyì",
         "meaning": "may everything go your way"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -1189,4 +1216,5 @@ const unit:UnitData = {
     "u41-review-cum2"
   ]
 };
+
 export default unit;

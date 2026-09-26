@@ -1,0 +1,17 @@
+{
+  "reason": "Book 1 maintenance: character explanations/components and vocabulary usage notes. Preserve canonical ownership, assessed lesson payloads and saved checkpoint sequences.",
+  "records": {
+    "characters": {
+      "直": {
+        "before": "4c0d03d4b69ff324171bc01cd785919925d7e2f867335ca33968ca587676acae",
+        "after": "2980abf41b5ec50a6130e79d75d8048333db9340117711cd50fae9002945ba5f"
+      }
+    },
+    "vocabulary": {
+      "一直": {
+        "before": "5e629b003b89b71de111f8ff10504e75cdad391a32ad6a95f5314bd2b3255324",
+        "after": "45d6364663e9050622a750f3f057fb8c83ace20742b1c0d232606c5fc1f6f060"
+      }
+    }
+  }
+}

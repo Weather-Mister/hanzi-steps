@@ -1235,29 +1235,38 @@ const unit:UnitData = {
       "zhuyin": "ㄓˇ",
       "meaning": "only; merely",
       "strokes": 5,
-      "note": "只 is first taught in Unit 43 through 只.",
-      "memory": "Connect 只 with 只 (only) while writing its 5 strokes in order.",
+      "note": "只 zhǐ means “only” here. Put it before what is limited, as in 只去了兩天, “went for only two days.”",
+      "memory": "A small 口 sits above two spreading lower strokes. Keep those strokes separate from the mouth.",
       "parts": [
         {
-          "label": "只",
-          "name": "只 whole form",
-          "role": "Whole character",
-          "description": "Write all 5 strokes of 只 in standard order and connect the shape to 只.",
+          "label": "口",
+          "name": "upper mouth",
+          "role": "Visual component",
+          "description": "Upper mouth in 只: strokes 1–3. A small 口 sits above two spreading lower strokes. Keep those strokes separate from the mouth.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "八",
+          "name": "lower strokes",
+          "role": "Visual component",
+          "description": "Lower strokes in 只: strokes 4–5. A small 口 sits above two spreading lower strokes. Keep those strokes separate from the mouth.",
+          "strokes": [
             3,
             4
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "只",
         "pinyin": "zhǐ",
         "meaning": "only"
-      }
+      },
+      "practiceBuild": false
     },
     "父": {
       "hanzi": "父",
@@ -1265,14 +1274,14 @@ const unit:UnitData = {
       "zhuyin": "ㄈㄨˋ",
       "meaning": "father",
       "strokes": 4,
-      "note": "父 is first taught in Unit 43 through 父母.",
-      "memory": "Connect 父 with 父母 (parents) while writing its 4 strokes in order.",
+      "note": "父 fù means “father.” 父母 fùmǔ combines “father” and “mother” to mean “parents.”",
+      "memory": "Write the two short upper strokes, then the longer crossing strokes below. The lower pair spreads wider.",
       "parts": [
         {
           "label": "父",
-          "name": "父 whole form",
-          "role": "Whole character",
-          "description": "Write all 4 strokes of 父 in standard order and connect the shape to 父母.",
+          "name": "crossing form",
+          "role": "Visual component",
+          "description": "Write the two short upper strokes, then the longer crossing strokes below. The lower pair spreads wider.",
           "strokes": [
             0,
             1,
@@ -1294,14 +1303,14 @@ const unit:UnitData = {
       "zhuyin": "ㄇㄨˇ",
       "meaning": "mother",
       "strokes": 5,
-      "note": "母 is first taught in Unit 43 through 父母.",
-      "memory": "Connect 母 with 父母 (parents) while writing its 5 strokes in order.",
+      "note": "母 mǔ means “mother.” Learn it with 父 in 父母, “parents.”",
+      "memory": "Notice the slanting outer shape and the two inner dots crossed by a horizontal stroke. Keep both dots visible.",
       "parts": [
         {
           "label": "母",
-          "name": "母 whole form",
-          "role": "Whole character",
-          "description": "Write all 5 strokes of 母 in standard order and connect the shape to 父母.",
+          "name": "enclosing form",
+          "role": "Visual component",
+          "description": "Notice the slanting outer shape and the two inner dots crossed by a horizontal stroke. Keep both dots visible.",
           "strokes": [
             0,
             1,
@@ -1324,17 +1333,25 @@ const unit:UnitData = {
       "zhuyin": "ㄊㄧㄥˊ",
       "meaning": "stop",
       "strokes": 11,
-      "note": "停 is first taught in Unit 43 through 雨快要停了.",
-      "memory": "Connect 停 with 雨快要停了 (the rain is about to stop) while writing its 11 strokes in order.",
+      "note": "停 tíng means “stop.” 雨快要停了 means “the rain is about to stop.”",
+      "memory": "A person 亻 stands beside 亭. Imagine someone stopping beside a pavilion as a visual memory cue.",
       "parts": [
         {
-          "label": "停",
-          "name": "停 whole form",
-          "role": "Whole character",
-          "description": "Write all 11 strokes of 停 in standard order and connect the shape to 雨快要停了.",
+          "label": "亻",
+          "name": "person component",
+          "role": "Visual component",
+          "description": "Person component in 停: strokes 1–2. A person 亻 stands beside 亭. Imagine someone stopping beside a pavilion as a visual memory cue.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "亭",
+          "name": "pavilion component",
+          "role": "Visual component",
+          "description": "Pavilion component in 停: strokes 3–11. A person 亻 stands beside 亭. Imagine someone stopping beside a pavilion as a visual memory cue.",
+          "strokes": [
             2,
             3,
             4,
@@ -1347,12 +1364,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "雨快要停了",
         "pinyin": "yǔ kuài yào tíng le",
         "meaning": "the rain is about to stop"
-      }
+      },
+      "practiceBuild": false
     },
     "底": {
       "hanzi": "底",
@@ -1360,18 +1378,26 @@ const unit:UnitData = {
       "zhuyin": "ㄉㄧˇ",
       "meaning": "bottom; end",
       "strokes": 8,
-      "note": "底 is first taught in Unit 43 through 十二月底.",
-      "memory": "Connect 底 with 十二月底 (the end of December) while writing its 8 strokes in order.",
+      "note": "底 dǐ means “bottom; end.” At the end of a month expression, 月底 means “the end of the month.”",
+      "memory": "The roof 广 covers 氐. Remember the small final dot underneath 氏; leaving it out changes the component.",
       "parts": [
         {
-          "label": "底",
-          "name": "底 whole form",
-          "role": "Whole character",
-          "description": "Write all 8 strokes of 底 in standard order and connect the shape to 十二月底.",
+          "label": "广",
+          "name": "outer roof",
+          "role": "Visual component",
+          "description": "Outer roof in 底: strokes 1–3. The roof 广 covers 氐. Remember the small final dot underneath 氏; leaving it out changes the component.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "氐",
+          "name": "inner component",
+          "role": "Visual component",
+          "description": "Inner component in 底: strokes 4–8. The roof 广 covers 氐. Remember the small final dot underneath 氏; leaving it out changes the component.",
+          "strokes": [
             3,
             4,
             5,
@@ -1385,7 +1411,9 @@ const unit:UnitData = {
         "text": "十二月底",
         "pinyin": "shí'èr yuè dǐ",
         "meaning": "the end of December"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "葉": {
       "hanzi": "葉",
@@ -1393,24 +1421,40 @@ const unit:UnitData = {
       "zhuyin": "ㄧㄝˋ",
       "meaning": "leaf",
       "strokes": 13,
-      "note": "葉 is first taught in Unit 43 through 紅葉.",
-      "memory": "Connect 葉 with 紅葉 (red maple leaves) while writing its 13 strokes in Taiwan Traditional order.",
+      "note": "葉 yè means “leaf; leaves.” 紅葉 hóngyè refers to red autumn leaves in this lesson.",
+      "memory": "Stack the grass top, 世, and 木. Plant shapes at the top and bottom help you remember leaves.",
       "parts": [
         {
-          "label": "葉",
-          "name": "葉 whole form",
-          "role": "Whole character",
-          "description": "Write all 13 strokes of 葉 in standard Taiwan Traditional order and connect the shape to 紅葉.",
+          "label": "艹",
+          "name": "grass component",
+          "role": "Visual component",
+          "description": "Grass component in 葉: strokes 1–4. Stack the grass top, 世, and 木. Plant shapes at the top and bottom help you remember leaves.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "世",
+          "name": "middle component",
+          "role": "Visual component",
+          "description": "Middle component in 葉: strokes 5–9. Stack the grass top, 世, and 木. Plant shapes at the top and bottom help you remember leaves.",
+          "strokes": [
             4,
             5,
             6,
             7,
-            8,
+            8
+          ]
+        },
+        {
+          "label": "木",
+          "name": "tree component",
+          "role": "Visual component",
+          "description": "Tree component in 葉: strokes 10–13. Stack the grass top, 世, and 木. Plant shapes at the top and bottom help you remember leaves.",
+          "strokes": [
             9,
             10,
             11,
@@ -1418,12 +1462,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "紅葉",
         "pinyin": "hóngyè",
         "meaning": "red maple leaves"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -1759,4 +1804,5 @@ const unit:UnitData = {
     "u43-review-g6"
   ]
 };
+
 export default unit;

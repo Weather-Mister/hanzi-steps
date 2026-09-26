@@ -1394,70 +1394,80 @@ const unit:UnitData = {
       "pinyin": "gǎnmào",
       "meaning": "to have a cold",
       "lessonId": "u46-cold",
-      "core": false
+      "core": false,
+      "note": "A common cold; used as a verb for catching or having one."
     },
     {
       "text": "藥",
       "pinyin": "yào",
       "meaning": "medicine",
       "lessonId": "u46-medicine",
-      "core": false
+      "core": false,
+      "note": "Medicine. Say 吃藥 chī yào for “take medicine,” even though 吃 usually means “eat.”"
     },
     {
       "text": "藥局",
       "pinyin": "yàojú",
       "meaning": "pharmacy",
       "lessonId": "u46-medicine",
-      "core": false
+      "core": false,
+      "note": "A pharmacy or drugstore where you get medicine. 藥 means medicine."
     },
     {
       "text": "拿",
       "pinyin": "ná",
       "meaning": "to get",
       "lessonId": "u46-medicine",
-      "core": false
+      "core": false,
+      "note": "To take, hold, or get something. 拿藥 means to collect or get medicine."
     },
     {
       "text": "把",
       "pinyin": "bǎ",
       "meaning": "disposal marker",
       "lessonId": "u46-ba",
-      "core": false
+      "core": false,
+      "note": "Marks the affected object before the action: 把藥吃了, “take the medicine.” It has no separate English translation in this pattern."
     },
     {
       "text": "別",
       "pinyin": "bié",
       "meaning": "don't (imperative)",
       "lessonId": "u46-ba",
-      "core": false
+      "core": false,
+      "note": "Put before an action to tell someone not to do it. This is the imperative “don’t,” not the “other” sense."
     },
     {
       "text": "水",
       "pinyin": "shuǐ",
       "meaning": "water",
       "lessonId": "u46-recover",
-      "core": false
+      "core": false,
+      "note": "Water as a drink here. 多喝水 means “drink more water.”"
     },
     {
       "text": "休息",
       "pinyin": "xiūxí",
       "meaning": "to rest",
       "lessonId": "u46-recover",
-      "core": false
+      "core": false,
+      "note": "To rest or take a break. 多休息 means “get more rest.”"
     },
     {
       "text": "睡覺",
       "pinyin": "shuìjiào",
       "meaning": "to sleep",
       "lessonId": "u46-recover",
-      "core": false
+      "core": false,
+      "note": "To sleep. It is a separable verb: later you will see material placed between 睡 and 覺."
     },
     {
       "text": "早一點",
       "pinyin": "zǎo yìdiǎn",
       "meaning": "a bit earlier",
       "lessonId": "u46-recover",
-      "core": false
+      "core": false,
+      "note": "A little earlier. 早一點睡覺 means “go to sleep a little earlier.”"
     }
   ],
   "reviewVocabulary": [],
@@ -1480,52 +1490,14 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄢˇ",
       "meaning": "feel; sense",
       "strokes": 13,
-      "note": "感 is formally introduced here in 感冒.",
-      "memory": "Connect the 13-stroke traditional shape 感 with 感冒 while practicing it.",
+      "note": "感 relates to feeling. 感冒 gǎnmào is the complete word for “catch/have a cold.”",
+      "memory": "The heart 心 sits below 咸: connect the heart shape with feeling, while learning 感冒 as one word.",
       "parts": [
         {
-          "label": "感",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 感 form used in 感冒; this stroke group covers the whole character.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12
-          ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "感冒",
-        "pinyin": "gǎnmào",
-        "meaning": "have a cold"
-      }
-    },
-    "冒": {
-      "hanzi": "冒",
-      "pinyin": "mào",
-      "zhuyin": "ㄇㄠˋ",
-      "meaning": "emit; risk; in 感冒",
-      "strokes": 9,
-      "note": "冒 is formally introduced here in 感冒.",
-      "memory": "Connect the 9-stroke traditional shape 冒 with 感冒 while practicing it.",
-      "parts": [
-        {
-          "label": "冒",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 冒 form used in 感冒; this stroke group covers the whole character.",
+          "label": "咸",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "This nine-stroke block sits above the heart.",
           "strokes": [
             0,
             1,
@@ -1537,14 +1509,70 @@ const unit:UnitData = {
             7,
             8
           ]
+        },
+        {
+          "label": "心",
+          "name": "heart component",
+          "role": "Visual component",
+          "description": "The four heart strokes form a broad lower base.",
+          "strokes": [
+            9,
+            10,
+            11,
+            12
+          ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "感冒",
         "pinyin": "gǎnmào",
         "meaning": "have a cold"
-      }
+      },
+      "practiceBuild": false
+    },
+    "冒": {
+      "hanzi": "冒",
+      "pinyin": "mào",
+      "zhuyin": "ㄇㄠˋ",
+      "meaning": "part of 感冒, catch/have a cold",
+      "strokes": 9,
+      "note": "冒 is the second character in 感冒 gǎnmào, “catch/have a cold.” Do not translate its parts separately to guess the word.",
+      "memory": "Stack a short upper box above the taller 目. Notice the different heights of the two blocks.",
+      "parts": [
+        {
+          "label": "冃",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "Write the short four-stroke upper block first.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "目",
+          "name": "lower component",
+          "role": "Visual component",
+          "description": "The five-stroke 目 is taller and sits directly below.",
+          "strokes": [
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "感冒",
+        "pinyin": "gǎnmào",
+        "meaning": "have a cold"
+      },
+      "practiceBuild": false
     },
     "藥": {
       "hanzi": "藥",
@@ -1552,19 +1580,27 @@ const unit:UnitData = {
       "zhuyin": "ㄧㄠˋ",
       "meaning": "medicine",
       "strokes": 19,
-      "note": "藥 is formally introduced here in 藥.",
-      "memory": "Connect the 19-stroke traditional shape 藥 with 藥 while practicing it.",
+      "note": "藥 yào means “medicine.” 吃藥 means “take medicine”; Chinese uses 吃, “eat,” for taking medicine.",
+      "memory": "A grass top 艹 sits over 樂. Picture medicinal plants above the dense lower block.",
       "parts": [
         {
-          "label": "藥",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 藥 form used in 藥; this stroke group covers the whole character.",
+          "label": "艹",
+          "name": "grass component",
+          "role": "Visual component",
+          "description": "This Taiwan Traditional stroke order uses four strokes for the grass top.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "樂",
+          "name": "lower component",
+          "role": "Visual component",
+          "description": "Keep the central 白 and the side forms above the 木 at the bottom.",
+          "strokes": [
             4,
             5,
             6,
@@ -1583,12 +1619,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "藥",
         "pinyin": "yào",
         "meaning": "medicine"
-      }
+      },
+      "practiceBuild": false
     },
     "局": {
       "hanzi": "局",
@@ -1596,19 +1633,35 @@ const unit:UnitData = {
       "zhuyin": "ㄐㄩˊ",
       "meaning": "office; bureau; in 藥局",
       "strokes": 7,
-      "note": "局 is formally introduced here in 藥局.",
-      "memory": "Connect the 7-stroke traditional shape 局 with 藥局 while practicing it.",
+      "note": "局 jú appears in 藥局 yàojú, “pharmacy.” Learn the place name as a whole word.",
+      "memory": "The upper 尸 bends over an inner 口; keep the mouth tucked inside the outer shape.",
       "parts": [
         {
-          "label": "局",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 局 form used in 藥局; this stroke group covers the whole character.",
+          "label": "尸",
+          "name": "upper frame",
+          "role": "Visual component",
+          "description": "The first three strokes form the upper and left frame.",
           "strokes": [
             0,
             1,
-            2,
-            3,
+            2
+          ]
+        },
+        {
+          "label": "𠃌",
+          "name": "outer bend",
+          "role": "Visual component",
+          "description": "This bent stroke extends the frame around the inner mouth.",
+          "strokes": [
+            3
+          ]
+        },
+        {
+          "label": "口",
+          "name": "inner mouth",
+          "role": "Visual component",
+          "description": "Finish with the three strokes of the small inner 口.",
+          "strokes": [
             4,
             5,
             6
@@ -1620,7 +1673,9 @@ const unit:UnitData = {
         "text": "藥局",
         "pinyin": "yàojú",
         "meaning": "pharmacy"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "upper frame, outer bend, inner mouth"
     },
     "拿": {
       "hanzi": "拿",
@@ -1628,81 +1683,14 @@ const unit:UnitData = {
       "zhuyin": "ㄋㄚˊ",
       "meaning": "take; get",
       "strokes": 10,
-      "note": "拿 is formally introduced here in 拿藥.",
-      "memory": "Connect the 10-stroke traditional shape 拿 with 拿藥 while practicing it.",
+      "note": "拿 ná means “take; hold; get.” In 拿藥 ná yào, it means to get or collect medicine.",
+      "memory": "合 sits over 手: imagine a hand reaching up to take something.",
       "parts": [
         {
-          "label": "拿",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 拿 form used in 拿藥; this stroke group covers the whole character.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9
-          ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "拿藥",
-        "pinyin": "ná yào",
-        "meaning": "get medicine"
-      }
-    },
-    "把": {
-      "hanzi": "把",
-      "pinyin": "bǎ",
-      "zhuyin": "ㄅㄚˇ",
-      "meaning": "disposal marker",
-      "strokes": 7,
-      "note": "把 is formally introduced here in 把藥吃了.",
-      "memory": "Connect the 7-stroke traditional shape 把 with 把藥吃了 while practicing it.",
-      "parts": [
-        {
-          "label": "把",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 把 form used in 把藥吃了; this stroke group covers the whole character.",
-          "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "把藥吃了",
-        "pinyin": "bǎ yào chī le",
-        "meaning": "take the medicine"
-      }
-    },
-    "休": {
-      "hanzi": "休",
-      "pinyin": "xiū",
-      "zhuyin": "ㄒㄧㄡ",
-      "meaning": "rest",
-      "strokes": 6,
-      "note": "休 is formally introduced here in 休息.",
-      "memory": "Connect the 6-stroke traditional shape 休 with 休息 while practicing it.",
-      "parts": [
-        {
-          "label": "休",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 休 form used in 休息; this stroke group covers the whole character.",
+          "label": "合",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "The six strokes form 合 above the hand.",
           "strokes": [
             0,
             1,
@@ -1711,36 +1699,13 @@ const unit:UnitData = {
             4,
             5
           ]
-        }
-      ],
-      "layout": "whole",
-      "example": {
-        "text": "休息",
-        "pinyin": "xiūxí",
-        "meaning": "rest"
-      }
-    },
-    "息": {
-      "hanzi": "息",
-      "pinyin": "xí",
-      "zhuyin": "ㄒㄧˊ",
-      "meaning": "rest; breath",
-      "strokes": 10,
-      "note": "息 is formally introduced here in 休息.",
-      "memory": "Connect the 10-stroke traditional shape 息 with 休息 while practicing it.",
-      "parts": [
+        },
         {
-          "label": "息",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 息 form used in 休息; this stroke group covers the whole character.",
+          "label": "手",
+          "name": "hand component",
+          "role": "Visual component",
+          "description": "The four-stroke 手 sits underneath and cues taking or holding.",
           "strokes": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
             6,
             7,
             8,
@@ -1748,12 +1713,138 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
+      "example": {
+        "text": "拿藥",
+        "pinyin": "ná yào",
+        "meaning": "get medicine"
+      },
+      "practiceBuild": false
+    },
+    "把": {
+      "hanzi": "把",
+      "pinyin": "bǎ",
+      "zhuyin": "ㄅㄚˇ",
+      "meaning": "disposal marker",
+      "strokes": 7,
+      "note": "把 bǎ places the affected object before the action: 把藥吃了 means “take the medicine.” It is not translated as a separate English word here.",
+      "memory": "Remember the hand 扌 on the left and 巴 on the right. Learn the grammar separately from this visual cue.",
+      "parts": [
+        {
+          "label": "扌",
+          "name": "hand component",
+          "role": "Visual component",
+          "description": "Write the three narrow hand strokes on the left.",
+          "strokes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "巴",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The four-stroke 巴 occupies the right side and cues the sound bǎ.",
+          "strokes": [
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layout": "side",
+      "example": {
+        "text": "把藥吃了",
+        "pinyin": "bǎ yào chī le",
+        "meaning": "take the medicine"
+      },
+      "practiceBuild": false
+    },
+    "休": {
+      "hanzi": "休",
+      "pinyin": "xiū",
+      "zhuyin": "ㄒㄧㄡ",
+      "meaning": "rest",
+      "strokes": 6,
+      "note": "休 appears in 休息 xiūxí, “to rest.” Use the whole word when telling someone to rest.",
+      "memory": "A person 亻 beside a tree 木 makes a useful picture of someone resting in the shade.",
+      "parts": [
+        {
+          "label": "亻",
+          "name": "person component",
+          "role": "Visual component",
+          "description": "The two-stroke standing person is on the left.",
+          "strokes": [
+            0,
+            1
+          ]
+        },
+        {
+          "label": "木",
+          "name": "tree component",
+          "role": "Visual component",
+          "description": "The four-stroke tree fills the right side.",
+          "strokes": [
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layout": "side",
       "example": {
         "text": "休息",
         "pinyin": "xiūxí",
         "meaning": "rest"
-      }
+      },
+      "practiceBuild": false
+    },
+    "息": {
+      "hanzi": "息",
+      "pinyin": "xí",
+      "zhuyin": "ㄒㄧˊ",
+      "meaning": "rest; breath",
+      "strokes": 10,
+      "note": "息 is the second character in 休息 xiūxí, “to rest.” It also relates to breathing and resting in other words.",
+      "memory": "自 sits above 心. Picture settling your breathing and heart as you rest.",
+      "parts": [
+        {
+          "label": "自",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "Write the six-stroke 自 above the heart.",
+          "strokes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "label": "心",
+          "name": "heart component",
+          "role": "Visual component",
+          "description": "The four-stroke 心 spreads below the upper block.",
+          "strokes": [
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "layout": "stack",
+      "example": {
+        "text": "休息",
+        "pinyin": "xiūxí",
+        "meaning": "rest"
+      },
+      "practiceBuild": false
     },
     "睡": {
       "hanzi": "睡",
@@ -1761,20 +1852,28 @@ const unit:UnitData = {
       "zhuyin": "ㄕㄨㄟˋ",
       "meaning": "sleep",
       "strokes": 13,
-      "note": "睡 is formally introduced here in 睡覺.",
-      "memory": "Connect the 13-stroke traditional shape 睡 with 睡覺 while practicing it.",
+      "note": "睡 shuì means “to sleep.” 睡覺 shuìjiào is the fuller word used for sleeping.",
+      "memory": "The eye 目 is on the left: connect it with closing your eyes to sleep. 垂 fills the right side.",
       "parts": [
         {
-          "label": "睡",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "The complete 睡 form used in 睡覺; this stroke group covers the whole character.",
+          "label": "目",
+          "name": "eye component",
+          "role": "Visual component",
+          "description": "Keep the five-stroke eye tall and narrow.",
           "strokes": [
             0,
             1,
             2,
             3,
-            4,
+            4
+          ]
+        },
+        {
+          "label": "垂",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The eight-stroke 垂 has several crossing horizontal lines; keep them evenly spaced.",
+          "strokes": [
             5,
             6,
             7,
@@ -1786,12 +1885,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "睡覺",
         "pinyin": "shuìjiào",
         "meaning": "sleep"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -2184,4 +2284,5 @@ const unit:UnitData = {
   },
   "revisionStepIds": []
 };
+
 export default unit;

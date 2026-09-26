@@ -1276,84 +1276,96 @@ const unit:UnitData = {
       "pinyin": "yīshēng",
       "meaning": "doctor",
       "lessonId": "u45-doctor",
-      "core": false
+      "core": false,
+      "note": "A person who treats patients. 醫生 yīshēng is “doctor”; use it as a title or a noun."
     },
     {
       "text": "一直",
       "pinyin": "yìzhí",
       "meaning": "continuously; all the way",
       "lessonId": "u45-runny-nose",
-      "core": false
+      "core": false,
+      "note": "Put 一直 before the continuing action: 一直流鼻水 means “keep having a runny nose.”"
     },
     {
       "text": "流",
       "pinyin": "liú",
       "meaning": "to flow",
       "lessonId": "u45-runny-nose",
-      "core": false
+      "core": false,
+      "note": "A verb for liquid flowing. In 流鼻水, it describes a runny nose."
     },
     {
       "text": "鼻水",
       "pinyin": "bíshuǐ",
       "meaning": "nasal mucus; a runny nose",
       "lessonId": "u45-runny-nose",
-      "core": false
+      "core": false,
+      "note": "The mucus from the nose. Use 流鼻水 for the symptom “have a runny nose.”"
     },
     {
       "text": "頭",
       "pinyin": "tóu",
       "meaning": "head",
       "lessonId": "u45-head-appetite",
-      "core": false
+      "core": false,
+      "note": "The body part “head” here. 頭很痛 means “my/the head hurts.”"
     },
     {
       "text": "痛",
       "pinyin": "tòng",
       "meaning": "painful; hurts",
       "lessonId": "u45-head-appetite",
-      "core": false
+      "core": false,
+      "note": "Use after the body part that hurts: 頭很痛. It describes pain, not the action of injuring someone."
     },
     {
       "text": "胃口",
       "pinyin": "wèikǒu",
       "meaning": "appetite",
       "lessonId": "u45-head-appetite",
-      "core": false
+      "core": false,
+      "note": "Appetite, not the stomach itself. 胃口很差 means “have a poor appetite.”"
     },
     {
       "text": "差",
       "pinyin": "chā",
       "meaning": "poor; bad",
       "lessonId": "u45-head-appetite",
-      "core": false
+      "core": false,
+      "note": "Pronounced chā here: poor or bad in quality, as in 胃口很差."
     },
     {
       "text": "喉嚨",
       "pinyin": "hóulóng",
       "meaning": "throat",
       "lessonId": "u45-throat",
-      "core": false
+      "core": false,
+      "note": "The two characters form one word, “throat.” Learn hóulóng together."
     },
     {
       "text": "發炎",
       "pinyin": "fāyán",
       "meaning": "to be inflamed",
       "lessonId": "u45-throat",
-      "core": false
+      "core": false,
+      "note": "To become inflamed. 喉嚨發炎 means “the throat is inflamed.”"
     },
     {
       "text": "生病",
       "pinyin": "shēngbìng",
       "meaning": "to fall ill / be sick",
       "lessonId": "u45-sick-fever",
-      "core": false
+      "core": false,
+      "note": "To fall ill or be sick. 生 and 病 form a separable verb, revisited later in this lesson."
     },
     {
       "text": "發燒",
       "pinyin": "fāshāo",
       "meaning": "to have a fever",
       "lessonId": "u45-sick-fever",
-      "core": false
+      "core": false,
+      "note": "To have a fever. Learn the whole word; it is not translated as “send out burning.”"
     }
   ],
   "reviewVocabulary": [],
@@ -1379,14 +1391,14 @@ const unit:UnitData = {
       "zhuyin": "ㄧ",
       "meaning": "medical; medicine",
       "strokes": 18,
-      "note": "醫 is the character taught here for medical; medicine; notice its full traditional form before writing it independently.",
-      "memory": "For 醫, keep the complete 18-stroke traditional shape together and connect it to 醫生.",
+      "note": "Medical care; learn 醫 in 醫生 yīshēng, “doctor.” The upper section has two blocks, with 酉 underneath.",
+      "memory": "Think of a doctor’s equipment on a shelf: two upper blocks above the wide 酉 base. Write the upper left, upper right, then the base.",
       "parts": [
         {
-          "label": "醫",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 醫 shape as used in 醫生; this group accounts for every stroke in this character.",
+          "label": "医",
+          "name": "upper-left block",
+          "role": "Visual component",
+          "description": "The seven-stroke upper-left block encloses 矢; its final enclosing stroke comes after the inner strokes.",
           "strokes": [
             0,
             1,
@@ -1394,11 +1406,27 @@ const unit:UnitData = {
             3,
             4,
             5,
-            6,
+            6
+          ]
+        },
+        {
+          "label": "殳",
+          "name": "upper-right block",
+          "role": "Visual component",
+          "description": "Write this compact four-stroke block beside 医, above the base.",
+          "strokes": [
             7,
             8,
             9,
-            10,
+            10
+          ]
+        },
+        {
+          "label": "酉",
+          "name": "bottom block",
+          "role": "Visual component",
+          "description": "The broad seven-stroke 酉 supports both upper blocks.",
+          "strokes": [
             11,
             12,
             13,
@@ -1409,12 +1437,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "醫生",
         "pinyin": "yīshēng",
         "meaning": "doctor"
-      }
+      },
+      "practiceBuild": false
     },
     "直": {
       "hanzi": "直",
@@ -1422,32 +1451,49 @@ const unit:UnitData = {
       "zhuyin": "ㄓˊ",
       "meaning": "straight; continuous",
       "strokes": 8,
-      "note": "直 is the character taught here for straight; continuous; notice its full traditional form before writing it independently.",
-      "memory": "For 直, keep the complete 8-stroke traditional shape together and connect it to 一直.",
+      "note": "直 means “straight.” In 一直 yìzhí, it contributes the idea of continuing without a break.",
+      "memory": "Stack the top cross above the narrow middle, then finish with the long bottom stroke. Picture a straight, continuous route.",
       "parts": [
         {
-          "label": "直",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 直 shape as used in 一直; this group accounts for every stroke in this character.",
+          "label": "十",
+          "name": "top cross",
+          "role": "Visual component",
+          "description": "The first horizontal and vertical cross above the middle.",
           "strokes": [
             0,
-            1,
+            1
+          ]
+        },
+        {
+          "label": "目",
+          "name": "middle box",
+          "role": "Visual component",
+          "description": "Keep the five-stroke middle narrow and its horizontal lines evenly spaced.",
+          "strokes": [
             2,
             3,
             4,
             5,
-            6,
+            6
+          ]
+        },
+        {
+          "label": "一",
+          "name": "bottom stroke",
+          "role": "Visual component",
+          "description": "The final horizontal extends underneath the middle.",
+          "strokes": [
             7
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "一直",
         "pinyin": "yìzhí",
         "meaning": "continuously; all the way"
-      }
+      },
+      "practiceBuild": false
     },
     "流": {
       "hanzi": "流",
@@ -1455,18 +1501,26 @@ const unit:UnitData = {
       "zhuyin": "ㄌㄧㄡˊ",
       "meaning": "flow",
       "strokes": 10,
-      "note": "流 is the character taught here for flow; notice its full traditional form before writing it independently.",
-      "memory": "For 流, keep the complete 10-stroke traditional shape together and connect it to 流鼻水.",
+      "note": "流 means “to flow.” In 流鼻水 liú bíshuǐ, nasal mucus is flowing: “have a runny nose.”",
+      "memory": "The three water strokes on the left remind you of flowing liquid; the right side ends in three descending strokes.",
       "parts": [
         {
-          "label": "流",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 流 shape as used in 流鼻水; this group accounts for every stroke in this character.",
+          "label": "氵",
+          "name": "water component",
+          "role": "Visual component",
+          "description": "The narrow three-stroke water component goes on the left.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "㐬",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Write the upper strokes before the three descending strokes below.",
+          "strokes": [
             3,
             4,
             5,
@@ -1477,12 +1531,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "流鼻水",
         "pinyin": "liú bíshuǐ",
         "meaning": "have a runny nose"
-      }
+      },
+      "practiceBuild": false
     },
     "鼻": {
       "hanzi": "鼻",
@@ -1490,38 +1545,55 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄧˊ",
       "meaning": "nose",
       "strokes": 14,
-      "note": "鼻 is the character taught here for nose; notice its full traditional form before writing it independently.",
-      "memory": "For 鼻, keep the complete 14-stroke traditional shape together and connect it to 鼻水.",
+      "note": "鼻 means “nose.” 鼻水 bíshuǐ is nasal mucus; 流鼻水 means “have a runny nose.”",
+      "memory": "Remember three stacked levels: 自, then 田, then the small base. Keep the levels centered.",
       "parts": [
         {
-          "label": "鼻",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 鼻 shape as used in 鼻水; this group accounts for every stroke in this character.",
+          "label": "自",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "The six-stroke 自 shape occupies the top.",
           "strokes": [
             0,
             1,
             2,
             3,
             4,
-            5,
+            5
+          ]
+        },
+        {
+          "label": "田",
+          "name": "middle component",
+          "role": "Visual component",
+          "description": "The five-stroke 田 sits directly below 自.",
+          "strokes": [
             6,
             7,
             8,
             9,
-            10,
+            10
+          ]
+        },
+        {
+          "label": "丌",
+          "name": "bottom component",
+          "role": "Visual component",
+          "description": "Finish with the horizontal and two descending strokes beneath 田.",
+          "strokes": [
             11,
             12,
             13
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "鼻水",
         "pinyin": "bíshuǐ",
         "meaning": "nasal mucus; runny nose"
-      }
+      },
+      "practiceBuild": false
     },
     "痛": {
       "hanzi": "痛",
@@ -1529,20 +1601,28 @@ const unit:UnitData = {
       "zhuyin": "ㄊㄨㄥˋ",
       "meaning": "painful; hurt",
       "strokes": 12,
-      "note": "痛 is the character taught here for painful; hurt; notice its full traditional form before writing it independently.",
-      "memory": "For 痛, keep the complete 12-stroke traditional shape together and connect it to 頭很痛.",
+      "note": "痛 means “to hurt; painful.” A body part can come before it: 頭很痛 tóu hěn tòng means “the head hurts.”",
+      "memory": "Use the illness frame 疒 around 甬. The frame links this shape with pain and illness.",
       "parts": [
         {
-          "label": "痛",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 痛 shape as used in 頭很痛; this group accounts for every stroke in this character.",
+          "label": "疒",
+          "name": "illness frame",
+          "role": "Visual component",
+          "description": "These five strokes form the top and left frame; the two left strokes belong to the frame.",
           "strokes": [
             0,
             1,
             2,
             3,
-            4,
+            4
+          ]
+        },
+        {
+          "label": "甬",
+          "name": "inner component",
+          "role": "Visual component",
+          "description": "Write the seven-stroke inner component inside the open frame.",
+          "strokes": [
             5,
             6,
             7,
@@ -1558,7 +1638,9 @@ const unit:UnitData = {
         "text": "頭很痛",
         "pinyin": "tóu hěn tòng",
         "meaning": "the head hurts"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "胃": {
       "hanzi": "胃",
@@ -1566,20 +1648,28 @@ const unit:UnitData = {
       "zhuyin": "ㄨㄟˋ",
       "meaning": "stomach",
       "strokes": 9,
-      "note": "胃 is the character taught here for stomach; notice its full traditional form before writing it independently.",
-      "memory": "For 胃, keep the complete 9-stroke traditional shape together and connect it to 胃口.",
+      "note": "胃 means “stomach,” the organ. 胃口 wèikǒu means “appetite,” rather than a literal “stomach mouth.”",
+      "memory": "A compact 田 sits above the flesh component 月. Keep the two blocks stacked, not side by side.",
       "parts": [
         {
-          "label": "胃",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 胃 shape as used in 胃口; this group accounts for every stroke in this character.",
+          "label": "田",
+          "name": "upper block",
+          "role": "Visual component",
+          "description": "The five strokes of 田 form the upper block.",
           "strokes": [
             0,
             1,
             2,
             3,
-            4,
+            4
+          ]
+        },
+        {
+          "label": "月",
+          "name": "flesh component",
+          "role": "Visual component",
+          "description": "This 月-shaped lower component is associated with the body here.",
+          "strokes": [
             5,
             6,
             7,
@@ -1587,31 +1677,40 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "胃口",
         "pinyin": "wèikǒu",
         "meaning": "appetite"
-      }
+      },
+      "practiceBuild": false
     },
     "喉": {
       "hanzi": "喉",
       "pinyin": "hóu",
       "zhuyin": "ㄏㄡˊ",
-      "meaning": "throat component",
+      "meaning": "throat (in 喉嚨)",
       "strokes": 12,
-      "note": "喉 is the character taught here for throat component; notice its full traditional form before writing it independently.",
-      "memory": "For 喉, keep the complete 12-stroke traditional shape together and connect it to 喉嚨.",
+      "note": "喉 is the first syllable of 喉嚨 hóulóng, “throat.” Learn and say the two-character word together.",
+      "memory": "A small mouth 口 sits to the left of the taller 侯. Both characters in 喉嚨 have a mouth component.",
       "parts": [
         {
-          "label": "喉",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 喉 shape as used in 喉嚨; this group accounts for every stroke in this character.",
+          "label": "口",
+          "name": "mouth component",
+          "role": "Visual component",
+          "description": "Keep the three-stroke mouth small on the left.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "侯",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "The nine-stroke 侯 is the larger right-hand block; it also cues the sound hóu.",
+          "strokes": [
             3,
             4,
             5,
@@ -1624,31 +1723,40 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "喉嚨",
         "pinyin": "hóulóng",
         "meaning": "throat"
-      }
+      },
+      "practiceBuild": false
     },
     "嚨": {
       "hanzi": "嚨",
       "pinyin": "lóng",
       "zhuyin": "ㄌㄨㄥˊ",
-      "meaning": "throat component",
+      "meaning": "throat (in 喉嚨)",
       "strokes": 19,
-      "note": "嚨 is the character taught here for throat component; notice its full traditional form before writing it independently.",
-      "memory": "For 嚨, keep the complete 19-stroke traditional shape together and connect it to 喉嚨.",
+      "note": "嚨 is the second syllable of 喉嚨 hóulóng, “throat.” It normally appears here as part of the whole word.",
+      "memory": "Remember mouth 口 beside the detailed 龍 shape. Leave most of the width for the right-hand component.",
       "parts": [
         {
-          "label": "嚨",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 嚨 shape as used in 喉嚨; this group accounts for every stroke in this character.",
+          "label": "口",
+          "name": "mouth component",
+          "role": "Visual component",
+          "description": "Write the small mouth on the left first.",
           "strokes": [
             0,
             1,
-            2,
+            2
+          ]
+        },
+        {
+          "label": "龍",
+          "name": "dragon component",
+          "role": "Visual component",
+          "description": "The sixteen-stroke 龍 provides the sound cue lóng; keep its internal strokes distinct.",
+          "strokes": [
             3,
             4,
             5,
@@ -1668,12 +1776,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "喉嚨",
         "pinyin": "hóulóng",
         "meaning": "throat"
-      }
+      },
+      "practiceBuild": false
     },
     "發": {
       "hanzi": "發",
@@ -1681,23 +1790,39 @@ const unit:UnitData = {
       "zhuyin": "ㄈㄚ",
       "meaning": "emit; develop",
       "strokes": 12,
-      "note": "發 is the character taught here for emit; develop; notice its full traditional form before writing it independently.",
-      "memory": "For 發, keep the complete 12-stroke traditional shape together and connect it to 發炎.",
+      "note": "發 has several meanings. Here it means developing a condition: 發炎 fāyán, “be inflamed,” and 發燒 fāshāo, “have a fever.”",
+      "memory": "Think of a roof-like top over two lower blocks: the bent 弓 on the left and 殳 on the right.",
       "parts": [
         {
-          "label": "發",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 發 shape as used in 發炎; this group accounts for every stroke in this character.",
+          "label": "癶",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "These five spreading strokes form the top of 發.",
           "strokes": [
             0,
             1,
             2,
             3,
-            4,
+            4
+          ]
+        },
+        {
+          "label": "弓",
+          "name": "lower-left component",
+          "role": "Visual component",
+          "description": "The three bent strokes form the lower-left block.",
+          "strokes": [
             5,
             6,
-            7,
+            7
+          ]
+        },
+        {
+          "label": "殳",
+          "name": "lower-right component",
+          "role": "Visual component",
+          "description": "Finish the four-stroke block on the lower right.",
+          "strokes": [
             8,
             9,
             10,
@@ -1710,7 +1835,9 @@ const unit:UnitData = {
         "text": "發炎",
         "pinyin": "fāyán",
         "meaning": "be inflamed"
-      }
+      },
+      "layoutLabel": "Top + two lower blocks",
+      "partOrderLabel": "top, lower left, lower right"
     },
     "炎": {
       "hanzi": "炎",
@@ -1718,19 +1845,27 @@ const unit:UnitData = {
       "zhuyin": "ㄧㄢˊ",
       "meaning": "inflammation",
       "strokes": 8,
-      "note": "炎 is the character taught here for inflammation; notice its full traditional form before writing it independently.",
-      "memory": "For 炎, keep the complete 8-stroke traditional shape together and connect it to 發炎.",
+      "note": "炎 relates to inflammation here. Learn 發炎 fāyán as “to be inflamed,” as in 喉嚨發炎, “the throat is inflamed.”",
+      "memory": "Two 火 shapes are stacked: heat above heat. Use that image to remember inflammation.",
       "parts": [
         {
-          "label": "炎",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 炎 shape as used in 發炎; this group accounts for every stroke in this character.",
+          "label": "火",
+          "name": "upper fire",
+          "role": "Visual component",
+          "description": "The first four strokes form the smaller upper 火.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "火",
+          "name": "lower fire",
+          "role": "Visual component",
+          "description": "The second 火 sits below and spreads wider to support the top.",
+          "strokes": [
             4,
             5,
             6,
@@ -1738,12 +1873,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "發炎",
         "pinyin": "fāyán",
         "meaning": "be inflamed"
-      }
+      },
+      "practiceBuild": false
     },
     "病": {
       "hanzi": "病",
@@ -1751,20 +1887,28 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄧㄥˋ",
       "meaning": "illness; sick",
       "strokes": 10,
-      "note": "病 is the character taught here for illness; sick; notice its full traditional form before writing it independently.",
-      "memory": "For 病, keep the complete 10-stroke traditional shape together and connect it to 生病.",
+      "note": "病 means “illness; sick.” 生病 shēngbìng means “fall ill / be sick.”",
+      "memory": "The illness frame 疒 surrounds 丙. Keep the frame open on the right and bottom.",
       "parts": [
         {
-          "label": "病",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 病 shape as used in 生病; this group accounts for every stroke in this character.",
+          "label": "疒",
+          "name": "illness frame",
+          "role": "Visual component",
+          "description": "Write the five-stroke top-and-left frame first.",
           "strokes": [
             0,
             1,
             2,
             3,
-            4,
+            4
+          ]
+        },
+        {
+          "label": "丙",
+          "name": "inner component",
+          "role": "Visual component",
+          "description": "The five-stroke 丙 sits inside; it provides a sound cue for bìng.",
+          "strokes": [
             5,
             6,
             7,
@@ -1778,27 +1922,37 @@ const unit:UnitData = {
         "text": "生病",
         "pinyin": "shēngbìng",
         "meaning": "be sick"
-      }
+      },
+      "layoutLabel": "Frame + inside",
+      "partOrderLabel": "outer frame first, then the inside"
     },
     "燒": {
       "hanzi": "燒",
       "pinyin": "shāo",
       "zhuyin": "ㄕㄠ",
-      "meaning": "burn; fever component",
+      "meaning": "burn; have a fever in 發燒",
       "strokes": 16,
-      "note": "燒 is the character taught here for burn; fever component; notice its full traditional form before writing it independently.",
-      "memory": "For 燒, keep the complete 16-stroke traditional shape together and connect it to 發燒.",
+      "note": "燒 means “to burn.” In 發燒 fāshāo, the whole word means “have a fever.”",
+      "memory": "Fire 火 stands on the left; the tall 堯 block stands on the right. The fire is your cue for burning and fever.",
       "parts": [
         {
-          "label": "燒",
-          "name": "complete form",
-          "role": "Whole-character structure",
-          "description": "Practice the complete 燒 shape as used in 發燒; this group accounts for every stroke in this character.",
+          "label": "火",
+          "name": "fire component",
+          "role": "Visual component",
+          "description": "The four-stroke 火 narrows to fit the left side.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "堯",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Keep the repeated 土 shapes above the final lower strokes.",
+          "strokes": [
             4,
             5,
             6,
@@ -1814,12 +1968,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "發燒",
         "pinyin": "fāshāo",
         "meaning": "have a fever"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {},
@@ -2080,4 +2235,5 @@ const unit:UnitData = {
   },
   "revisionStepIds": []
 };
+
 export default unit;

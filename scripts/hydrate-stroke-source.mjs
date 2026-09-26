@@ -1,14 +1,17 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import {strokeGeometryLooksAligned} from '../lib/stroke-data-validation.ts';
 const root=process.cwd(),courseRoot=path.join(root,'course');
 async function walk(dir){const out=[];for(const e of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())out.push(...await walk(f));else if(e.name.endsWith('.stroke-source.json'))out.push(f)}return out}
 async function rows(name){const url=`https://raw.githubusercontent.com/parsimonhi/animCJK/master/${name}`;const r=await fetch(url);if(!r.ok)throw Error(`AnimCJK download failed ${r.status}: ${name}`);return (await r.text()).split(/\r?\n/).filter(Boolean).map(JSON.parse)}
 function normalizeGeometry(row){
-  const medians=row.medians.map(stroke=>stroke.map(([x,y])=>[
-    Math.max(0,Math.min(1024,Math.round(x))),
-    Math.max(0,Math.min(1024,Math.round(1024-y)))
-  ]));
-  return {strokes:row.strokes,medians};
+  const medians=row.medians;
+  // AnimCJK paths and medians already share the same y-up coordinate system.
+  // Flipping only the medians breaks tracing and handwriting recognition.
+  // Preserve coordinates outside 0..1024 too: source strokes can extend there.
+  const geometry={strokes:row.strokes,medians};
+  if(!strokeGeometryLooksAligned(geometry))throw Error(`Misaligned stroke source: ${row.character}`);
+  return geometry;
 }
 const files=await walk(courseRoot);if(!files.length)process.exit(0);
 const specs=[],wanted=new Set();

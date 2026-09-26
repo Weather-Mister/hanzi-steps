@@ -931,19 +931,27 @@ const unit:UnitData = {
       "zhuyin": "ㄌㄧˇ",
       "meaning": "courtesy; gift component",
       "strokes": 17,
-      "note": "禮 is learned in Unit 39 through 禮物.",
-      "memory": "Practice 禮 as a complete Traditional character and connect it to 禮物.",
+      "note": "禮 relates to ceremony or courtesy. 禮物 lǐwù means “gift; present.”",
+      "memory": "A narrow 礻 stands beside the dense 豊. Keep the left component distinct from 衤, which has an extra stroke.",
       "parts": [
         {
-          "label": "禮",
-          "name": "禮 whole form",
-          "role": "Whole character",
-          "description": "Write all 17 strokes in standard order.",
+          "label": "礻",
+          "name": "ritual component",
+          "role": "Visual component",
+          "description": "Ritual component in 禮: strokes 1–4. A narrow 礻 stands beside the dense 豊. Keep the left component distinct from 衤, which has an extra stroke.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "豊",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 禮: strokes 5–17. A narrow 礻 stands beside the dense 豊. Keep the left component distinct from 衤, which has an extra stroke.",
+          "strokes": [
             4,
             5,
             6,
@@ -960,12 +968,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "禮物",
         "pinyin": "lǐwù",
         "meaning": "gift"
-      }
+      },
+      "practiceBuild": false
     },
     "物": {
       "hanzi": "物",
@@ -973,19 +982,27 @@ const unit:UnitData = {
       "zhuyin": "ㄨˋ",
       "meaning": "thing; object",
       "strokes": 8,
-      "note": "物 is learned in Unit 39 through 禮物.",
-      "memory": "Practice 物 as a complete Traditional character and connect it to 禮物.",
+      "note": "物 means “thing; object.” In 禮物 lǐwù, the whole word means “gift.”",
+      "memory": "The narrow 牛 component stands beside 勿. Leave space for the two slanting inner strokes on the right.",
       "parts": [
         {
-          "label": "物",
-          "name": "物 whole form",
-          "role": "Whole character",
-          "description": "Write all 8 strokes in standard order.",
+          "label": "牜",
+          "name": "ox component",
+          "role": "Visual component",
+          "description": "Ox component in 物: strokes 1–4. The narrow 牛 component stands beside 勿. Leave space for the two slanting inner strokes on the right.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "勿",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 物: strokes 5–8. The narrow 牛 component stands beside 勿. Leave space for the two slanting inner strokes on the right.",
+          "strokes": [
             4,
             5,
             6,
@@ -993,12 +1010,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "禮物",
         "pinyin": "lǐwù",
         "meaning": "gift"
-      }
+      },
+      "practiceBuild": false
     },
     "訂": {
       "hanzi": "訂",
@@ -1006,14 +1024,14 @@ const unit:UnitData = {
       "zhuyin": "ㄉㄧㄥˋ",
       "meaning": "order/reserve in advance",
       "strokes": 9,
-      "note": "訂 is learned in Unit 39 through 訂.",
-      "memory": "Practice 訂 as a complete Traditional character and connect it to 訂.",
+      "note": "訂 dìng means “order; reserve” here, as when arranging something in advance.",
+      "memory": "Speech 言 stands beside 丁. The two-stroke right side also helps you remember the sound dìng.",
       "parts": [
         {
-          "label": "訂",
-          "name": "訂 whole form",
-          "role": "Whole character",
-          "description": "Write all 9 strokes in standard order.",
+          "label": "言",
+          "name": "speech component",
+          "role": "Visual component",
+          "description": "Speech component in 訂: strokes 1–7. Speech 言 stands beside 丁. The two-stroke right side also helps you remember the sound dìng.",
           "strokes": [
             0,
             1,
@@ -1021,18 +1039,27 @@ const unit:UnitData = {
             3,
             4,
             5,
-            6,
+            6
+          ]
+        },
+        {
+          "label": "丁",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 訂: strokes 8–9. Speech 言 stands beside 丁. The two-stroke right side also helps you remember the sound dìng.",
+          "strokes": [
             7,
             8
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "訂",
         "pinyin": "dìng",
         "meaning": "order/reserve in advance"
-      }
+      },
+      "practiceBuild": false
     },
     "豬": {
       "hanzi": "豬",
@@ -1040,14 +1067,14 @@ const unit:UnitData = {
       "zhuyin": "ㄓㄨ",
       "meaning": "pig; pork",
       "strokes": 15,
-      "note": "豬 is learned in Unit 39 through 豬腳.",
-      "memory": "Practice 豬 as a complete Traditional character and connect it to 豬腳.",
+      "note": "豬 zhū means “pig.” In 豬腳 zhūjiǎo, it identifies pork trotters as a food.",
+      "memory": "The pig component 豕 sits beside 者. Keep the long slanting strokes on the left separate from the right-hand block.",
       "parts": [
         {
-          "label": "豬",
-          "name": "豬 whole form",
-          "role": "Whole character",
-          "description": "Write all 15 strokes in standard order.",
+          "label": "豕",
+          "name": "pig component",
+          "role": "Visual component",
+          "description": "Pig component in 豬: strokes 1–7. The pig component 豕 sits beside 者. Keep the long slanting strokes on the left separate from the right-hand block.",
           "strokes": [
             0,
             1,
@@ -1055,7 +1082,15 @@ const unit:UnitData = {
             3,
             4,
             5,
-            6,
+            6
+          ]
+        },
+        {
+          "label": "者",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 豬: strokes 8–15. The pig component 豕 sits beside 者. Keep the long slanting strokes on the left separate from the right-hand block.",
+          "strokes": [
             7,
             8,
             9,
@@ -1067,12 +1102,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "豬腳",
         "pinyin": "zhūjiǎo",
         "meaning": "pork knuckles"
-      }
+      },
+      "practiceBuild": false
     },
     "腳": {
       "hanzi": "腳",
@@ -1080,19 +1116,27 @@ const unit:UnitData = {
       "zhuyin": "ㄐㄧㄠˇ",
       "meaning": "foot; leg",
       "strokes": 13,
-      "note": "腳 is learned in Unit 39 through 豬腳.",
-      "memory": "Practice 腳 as a complete Traditional character and connect it to 豬腳.",
+      "note": "腳 jiǎo means “foot.” 豬腳 means pork trotters, not an instruction involving feet.",
+      "memory": "The flesh component 月 is on the left; the larger 卻 fills the right. The body component is a cue for a foot.",
       "parts": [
         {
-          "label": "腳",
-          "name": "腳 whole form",
-          "role": "Whole character",
-          "description": "Write all 13 strokes in standard order.",
+          "label": "月",
+          "name": "flesh component",
+          "role": "Visual component",
+          "description": "Flesh component in 腳: strokes 1–4. The flesh component 月 is on the left; the larger 卻 fills the right. The body component is a cue for a foot.",
           "strokes": [
             0,
             1,
             2,
-            3,
+            3
+          ]
+        },
+        {
+          "label": "卻",
+          "name": "right component",
+          "role": "Visual component",
+          "description": "Right component in 腳: strokes 5–13. The flesh component 月 is on the left; the larger 卻 fills the right. The body component is a cue for a foot.",
+          "strokes": [
             4,
             5,
             6,
@@ -1105,12 +1149,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "side",
       "example": {
         "text": "豬腳",
         "pinyin": "zhūjiǎo",
         "meaning": "pork knuckles"
-      }
+      },
+      "practiceBuild": false
     },
     "蛋": {
       "hanzi": "蛋",
@@ -1118,20 +1163,28 @@ const unit:UnitData = {
       "zhuyin": "ㄉㄢˋ",
       "meaning": "egg",
       "strokes": 11,
-      "note": "蛋 is learned in Unit 39 through 蛋.",
-      "memory": "Practice 蛋 as a complete Traditional character and connect it to 蛋.",
+      "note": "蛋 dàn means “egg.” In 蛋糕 dàngāo, the whole word means “cake.”",
+      "memory": "Stack the five-stroke upper section above 虫. Keep the lower box and its central vertical centered.",
       "parts": [
         {
-          "label": "蛋",
-          "name": "蛋 whole form",
-          "role": "Whole character",
-          "description": "Write all 11 strokes in standard order.",
+          "label": "疋",
+          "name": "upper component",
+          "role": "Visual component",
+          "description": "Upper component in 蛋: strokes 1–5. Stack the five-stroke upper section above 虫. Keep the lower box and its central vertical centered.",
           "strokes": [
             0,
             1,
             2,
             3,
-            4,
+            4
+          ]
+        },
+        {
+          "label": "虫",
+          "name": "lower component",
+          "role": "Visual component",
+          "description": "Lower component in 蛋: strokes 6–11. Stack the five-stroke upper section above 虫. Keep the lower box and its central vertical centered.",
+          "strokes": [
             5,
             6,
             7,
@@ -1141,12 +1194,13 @@ const unit:UnitData = {
           ]
         }
       ],
-      "layout": "whole",
+      "layout": "stack",
       "example": {
         "text": "蛋",
         "pinyin": "dàn",
         "meaning": "egg"
-      }
+      },
+      "practiceBuild": false
     }
   },
   "grammarRules": {
@@ -1374,4 +1428,5 @@ const unit:UnitData = {
     "u39-review-g2"
   ]
 };
+
 export default unit;
