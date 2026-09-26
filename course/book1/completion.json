@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "learner-simulation",
-  "stageStatus": "pending",
+  "currentStage": "implementation",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -18,10 +18,12 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
-  "openFindings": [],
+  "openFindings": [
+    "SIM-A-RERUN-01 MAJOR: Unit 46 u46-ji-explain does not actually teach the frozen 幾 = a few/several semantic expansion before u46-ji-s1 assesses it."
+  ],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -71,7 +73,9 @@
     "simulationARepairConformance": "course/book1/lesson15-simulation-a-repair-conformance.md",
     "deterministicQaRerunHandoff": "course/book1/lesson15-deterministic-qa-rerun-handoff.md",
     "deterministicQaRerun": "course/book1/lesson15-deterministic-qa-rerun.md",
-    "learnerSimulationRerunHandoff": "course/book1/lesson15-learner-simulation-rerun-handoff.md"
+    "learnerSimulationRerunHandoff": "course/book1/lesson15-learner-simulation-rerun-handoff.md",
+    "learnerSimulationARerun": "course/book1/lesson15-learner-simulation-a-rerun.md",
+    "simulationARerunRepairHandoff": "course/book1/lesson15-simulation-a-rerun-repair-handoff.md"
   },
-  "notes": "Lesson 15 deterministic QA rerun PASS after SIM-A-01 repair. The first repaired-head Feature QA run #623 / id 36226916026 failed correctly at course:generate because empty phrase token arrays were structurally invalid. The narrow deterministic repair introduced an explicit optional phrase practice:false flag, restored nonempty lossless display tokens for the two A003 support/source cards, taught the practice engine to exclude practice:false phrases, and added guards for A003 notation plus support-only isolation without changing frozen learner-facing Chinese, assessed answers, IDs, ownership, prerequisites, A002, semantic listening, 您, handwriting, or review semantics. Final authored head 8868d636607a74571b3d428b4aeeb5e789f45983 passed Feature QA #624 / id 36227457460 completely. Generated-only follow-up cba5aa8093deb6ebc6655873cb3ef9f667dd78be changes only course/registry.generated.ts; follow-up #625 / id 36227952707 is action_required with zero jobs, not a deterministic failure. Regression suite: 198 tests, 197 pass, 0 fail, 1 intentional skip. 份 and 診 remain outside canonical vocabulary/characters, Pinyin Search, Mega, productive phrase practice, and handwriting; A003 answers remain 四次 / 飯後30分鐘 / 十二包. Stage 7 is ready, but historical Simulation A remains FAIL evidence and must be rerun from scratch into a new rerun artifact before B/C. Release remains locked and Book 1 remains incomplete."
+  "notes": "Stage 7 Simulation A rerun FAILED with 0 BLOCKER / 1 MAJOR / 0 MINOR. The repaired A003 path passes. SIM-A-RERUN-01 is a narrow Unit-46 implementation explain-before-test defect: u46-ji-explain currently points to u46-g1-source (沒有什麼關係。) and does not teach 幾 = a few/several before u46-ji-s1 tests that expansion. Gate B remains pass/frozen because the frozen Unit-46 activity spec already requires the correct explanation order. Implementation is reopened pending a narrow repair and fresh affected-path conformance. Latest deterministic QA rerun PASS is historical and must be rerun after the learner-facing repair. Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
 }
