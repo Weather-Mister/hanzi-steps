@@ -1,5 +1,5 @@
 {
-  "reason": "Book 1 Lesson 15 explicitly migrates canonical first ownership of 一直 / 直 from Book-2 Unit 1 to Book-1 Unit 45. This amendment records only the approved migration effects without weakening the lossless gate.",
+  "reason": "Book 1 Lesson 15 explicitly establishes canonical first ownership of 一直 / 直 in Book 1 Unit 45. This amendment records only the approved Book 1 migration effects without weakening the lossless gate.",
   "records": {
     "vocabulary": {
       "一直": {
@@ -13,12 +13,7 @@
         "after": "4c0d03d4b69ff324171bc01cd785919925d7e2f867335ca33968ca587676acae"
       }
     },
-    "cards": {
-      "book-2-unit-1": {
-        "before": "8fcc382ee6fecb76569d5a3f23cd4da4747fd8936220371b537b125fe7116ba9",
-        "after": "eb1459b7b4015bf2d3cbc559baf74ba86bee1235b337319445b7b0734a07ce54"
-      }
-    }
+    "cards": {}
   },
   "practice": {
     "直": {
