@@ -410,3 +410,29 @@ test('Lesson 15 A003 source notation stays visible while support-only material r
   assert.equal(steps.some(s=>s.char===glyph),false,glyph+' must not gain handwriting ownership');
  }
 });
+
+
+test('Lesson 15 final strict-prerequisite fixes keep 回家 out of Unit 45 and withhold full G003 source until teaching',()=>{
+ const u45=baseline.modules.find(m=>m.unit.id==='unit-45');
+ const u47=baseline.modules.find(m=>m.unit.id==='unit-47');
+ const review45=u45.lessons.find(l=>l.id==='u45-review');
+ const f1=review45.steps.find(s=>s.id==='u45-review-f1');
+ assert.deepEqual(f1.options,['哪裡不舒服？','大概多久了？','什麼東西都不想吃？']);
+ assert.equal(f1.answer,'哪裡不舒服？');
+ assert.equal(f1.options.some(option=>option.includes('回家')),false);
+
+ const g3=u47.lessons.find(l=>l.id==='u47-vle-jiu');
+ const ids=g3.steps.map(s=>s.id);
+ const review=g3.steps.find(s=>s.id==='u47-g3-review');
+ const grammar=g3.steps.find(s=>s.id==='u47-vle-jiu');
+ const source=g3.steps.find(s=>s.id==='u47-g3-p1');
+ assert.equal(review.phrase,'u47-g3-prereq-review');
+ assert.equal(source.phrase,'u47-d2t02-full');
+ assert.ok(ids.indexOf('u47-g3-review')<ids.indexOf('u47-vle-jiu'));
+ assert.ok(ids.indexOf('u47-vle-jiu')<ids.indexOf('u47-g3-s1'));
+ assert.ok(ids.indexOf('u47-g3-s4')<ids.indexOf('u47-g3-p1'));
+ assert.ok(ids.indexOf('u47-g3-p1')<ids.indexOf('u47-g3-s5'));
+ assert.equal(u47.phrases['u47-g3-prereq-review'].practice,false);
+ assert.doesNotMatch(u47.phrases['u47-g3-prereq-review'].text,/吃了東西就吐/);
+ assert.equal(u47.phrases['u47-d2t02-full'].text,'昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。');
+});
