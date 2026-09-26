@@ -47,3 +47,31 @@ test('Semantic listening answers require an explicit listening-only opt-in',()=>
  assert.match(run(c=>{const s=target(c);s.prompt='Which meaning of 得 is heard?';s.options=['must/have to','performance complement marker','to obtain'];s.answer='must/have to';delete s.semanticAnswer}),/contextual audio must contain only one answer option/);
  assert.match(run(c=>{const s=c.modules[0].lessons[0].steps.find(s=>s.type==='select');s.semanticAnswer=true}),/semanticAnswer is only valid as true on listening exercises/);
 });
+
+test('Lesson 15 source visual role cards require complete learner-facing metadata',()=>{
+ const unit=c=>c.modules.find(m=>m.unit.id==='unit-48');
+ const target=c=>unit(c).lessons.flatMap(l=>l.steps).find(s=>s.id==='u48-a002-visual-1');
+ assert.doesNotMatch(run(c=>{const s=target(c);s.type='visual'}),/activity u48-a002-visual-1/);
+ assert.match(run(c=>{const s=target(c);delete s.visualRole}),/activity u48-a002-visual-1: missing\/invalid visualRole/);
+ assert.match(run(c=>{const s=target(c);s.visualSuggestions=[]}),/activity u48-a002-visual-1 visualSuggestions: expected an array of nonempty strings/);
+});
+
+test('Lesson 15 repair preserves semantic listening targets and support-only honorifics',()=>{
+ const u46=baseline.modules.find(m=>m.unit.id==='unit-46');
+ const u47=baseline.modules.find(m=>m.unit.id==='unit-47');
+ const u48=baseline.modules.find(m=>m.unit.id==='unit-48');
+ const step=(u,id)=>u.lessons.flatMap(l=>l.steps).find(s=>s.id===id);
+ assert.equal(step(u46,'u46-review-l1').answer,'must/have to');
+ assert.equal(step(u46,'u46-review-l3').answer,'去買房子');
+ assert.equal(step(u47,'u47-stomach-l1').answer,'stomach discomfort and repeated vomiting');
+ assert.equal(step(u48,'u48-g7-l1').answer,'separable-verb duration + degree comparison');
+ assert.equal(step(u48,'u48-review-l3').answer,'separable duration + much-better comparison');
+ for(const id of ['u46-review-l1','u46-review-l3'])assert.equal(step(u46,id).semanticAnswer,true);
+ assert.equal(step(u47,'u47-stomach-l1').semanticAnswer,true);
+ for(const id of ['u48-g7-l1','u48-review-l3'])assert.equal(step(u48,id).semanticAnswer,true);
+ assert.equal(u46.phrases['u46-honorific-nin'].text,'您');
+ assert.equal(u46.phrases['u46-thanks-nin'].text,'好的，謝謝您。');
+ assert.equal(u46.newVocabulary.some(w=>w.text.includes('您')),false);
+ assert.equal(u46.newCharacters.includes('您'),false);
+});
+
