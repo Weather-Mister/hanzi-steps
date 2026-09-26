@@ -1,18 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {books,lessons,phrases,units,vocabulary} from '../lib/curriculum.ts';
+import {books,units} from '../lib/curriculum.ts';
 import {
  adaptivePracticeItems,
- availableTaiwanMissions,
  makeDailyTen,
  makeMegaCheckpoint,
- makeRevengeRound,
  megaCheckpointCount,
  megaCheckpointUnits,
  practiceAttemptForStep,
  practiceSkillKey,
  sentenceDistractors,
- taiwanMissions,
  updatePracticeState,
 } from '../lib/practice-engine.ts';
 
@@ -243,18 +240,7 @@ test('Smart practice avoids one-answer multiple choice when too little material 
  const daily=makeDailyTen([only],{},'tiny-pool',1000);
  assert.equal(daily.length,1);
  assert.equal(daily[0].mode,'input');
-
- const states={
-  [practiceSkillKey(only.id,'recall')]:{
-   itemId:only.id,mode:'recall',attempts:2,correct:1,assisted:0,misses:1,streak:0,
-   strength:.2,lastSeen:100,nextReview:200,
-  },
- };
- const revenge=makeRevengeRound([only],states,'tiny-revenge');
- assert.ok(revenge.length>=2);
- assert.ok(revenge.every(question=>!['recognition','recall','pinyin'].includes(question.mode)));
 });
-
 
 test('Choice viability counts distinct wrong answers and avoids an ambiguous typed fallback',()=>{
  const target={...item(1,'unit-1'),meaning:'same'};
@@ -270,35 +256,6 @@ test('Choice viability counts distinct wrong answers and avoids an ambiguous typ
  const question=daily.find(candidate=>candidate.item.id===target.id);
  assert.ok(question);
  assert.equal(question.mode,'handwriting');
-});
-
-test('Revenge Round attacks one unresolved mistake three different ways and clears it after a clean recovery',()=>{
- const target=item(1);
- const items=[target,item(2),item(3),item(4)];
- const key=practiceSkillKey(target.id,'recall');
- const state={
-  [key]:{
-   itemId:target.id,mode:'recall',attempts:4,correct:2,assisted:0,misses:2,streak:0,
-   strength:.4,lastSeen:100,nextReview:200,
-  },
- };
- const round=makeRevengeRound(items,state,'revenge-test');
- assert.equal(round.length,3);
- assert.equal(new Set(round.map(question=>question.item.id)).size,1);
- assert.equal(new Set(round.map(question=>question.mode)).size,3);
- assert.equal(round[0].mode,'recall');
-
- const recovered={
-  ...state,
-  [key]:updatePracticeState(state[key],{itemId:target.id,mode:'recall',correct:true,assisted:false,now:300}),
- };
- assert.deepEqual(makeRevengeRound(items,recovered,'revenge-test'),[]);
-
- const freshMistake={
-  ...recovered,
-  [practiceSkillKey(target.id,'handwriting')]:updatePracticeState(undefined,{itemId:target.id,mode:'handwriting',correct:false,assisted:false,now:400}),
- };
- assert.equal(makeRevengeRound(items,freshMistake,'revenge-test').length,3);
 });
 
 test('Mixed Mastery keeps the four-unit picker but turns weak definition prompts into sentence recall',()=>{
@@ -367,17 +324,6 @@ test('Mixed Mastery keeps the four-unit picker but turns weak definition prompts
  assert.ok(queue.every(question=>['context','input','handwriting'].includes(question.mode)));
 });
 
-test('Taiwan missions stay locked until their prerequisite unit is complete',()=>{
- const firstBook=books.find(book=>book.id==='book-1');
- assert.ok(firstBook);
- const firstUnit=units.find(unit=>unit.id===firstBook.unitIds[0]);
- assert.ok(firstUnit);
- const before=availableTaiwanMissions(new Set()).find(mission=>mission.id==='first-conversation');
- assert.equal(before?.unlocked,false);
- const after=availableTaiwanMissions(new Set([firstUnit.lessonIds[firstUnit.lessonIds.length-1]])).find(mission=>mission.id==='first-conversation');
- assert.equal(after?.unlocked,true);
-});
-
 test('lesson assessment steps map into the same mastery IDs and modes used by smart practice',()=>{
  const recall=practiceAttemptForStep({type:'select',char:'你'});
  assert.ok(recall);
@@ -396,60 +342,3 @@ test('lesson assessment steps map into the same mastery IDs and modes used by sm
 });
 
 
-test('Taiwan mission steps have one explicit answer and non-duplicated choices',()=>{
- for(const mission of taiwanMissions){
-  assert.ok(units.some(unit=>unit.id===mission.unlockUnitId),mission.id+' has a real unlock unit');
-  assert.ok(mission.steps.length>=3,mission.id+' has enough interaction to feel like a mission');
-  for(const step of mission.steps){
-   assert.ok(step.answer.trim());
-   assert.ok(step.options.includes(step.answer),mission.id+' answer is selectable');
-   assert.equal(new Set(step.options).size,step.options.length,mission.id+' has unique choices');
-   assert.ok(step.options.length>=3,mission.id+' gives meaningful alternatives');
-  }
- }
-});
-
-
-test('Taiwan missions only show Hanzi already exposed by their unlock point',()=>{
- const hanzi=/[\u3400-\u9fff\uf900-\ufaff]/g;
- const addText=(set,text)=>{for(const char of String(text||'').match(hanzi)||[])set.add(char)};
- for(const mission of taiwanMissions){
-  const targetUnit=units.find(unit=>unit.id===mission.unlockUnitId);
-  assert.ok(targetUnit,mission.id+' has an unlock unit');
-  const targetBookIndex=books.findIndex(book=>book.unitIds.includes(mission.unlockUnitId));
-  assert.ok(targetBookIndex>=0,mission.id+' unlock unit belongs to a book');
-  const targetBook=books[targetBookIndex];
-  const targetPosition=targetBook.unitIds.indexOf(mission.unlockUnitId);
-  const allowedUnitIds=new Set([
-   ...books.slice(0,targetBookIndex).flatMap(book=>book.unitIds),
-   ...targetBook.unitIds.slice(0,targetPosition+1),
-  ]);
-  const allowedLessons=lessons.filter(lesson=>allowedUnitIds.has(lesson.unitId));
-  const allowedLessonIds=new Set(allowedLessons.map(lesson=>lesson.id));
-  const allowed=new Set();
-
-  for(const word of vocabulary)if(allowedLessonIds.has(word.lessonId))addText(allowed,word.text);
-  for(const unit of units)if(allowedUnitIds.has(unit.id)){
-   for(const char of unit.chars)addText(allowed,char);
-   addText(allowed,unit.banner.text);
-   addText(allowed,unit.goal.text);
-  }
-  for(const lesson of allowedLessons){
-   for(const char of lesson.chars)addText(allowed,char);
-   for(const step of lesson.steps){
-    if(step.phrase&&phrases[step.phrase])addText(allowed,phrases[step.phrase].text);
-    addText(allowed,step.prompt);
-    addText(allowed,step.answer);
-    for(const option of step.options||[])addText(allowed,option);
-   }
-  }
-
-  for(const step of mission.steps){
-   assert.equal((step.speaker||'').match(hanzi),null,mission.id+' speaker labels stay readable in English');
-   for(const text of [step.prompt,step.answer,...step.options]){
-    const unseen=(String(text).match(hanzi)||[]).filter(char=>!allowed.has(char));
-    assert.deepEqual([...new Set(unseen)],[],mission.id+' contains unseen Hanzi in '+text);
-   }
-  }
- }
-});
