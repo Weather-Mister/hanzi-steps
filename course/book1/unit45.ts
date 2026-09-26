@@ -1219,7 +1219,7 @@ const unit:UnitData = {
           "options": [
             "哪裡不舒服？",
             "大概多久了？",
-            "什麼時候回家？"
+            "什麼東西都不想吃？"
           ],
           "answer": "哪裡不舒服？",
           "explanation": "This retrieves F001/X002."
