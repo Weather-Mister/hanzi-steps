@@ -153,6 +153,20 @@ These are mandatory learner-facing teaching cards. Each appears after any requir
 - pinyin: **Nǐ zhēnde bù qù kànbìng ma?**
 - meaning: **Are you really not going to see a doctor?**
 
+### u47-d2t01-07-integrated
+- learner-facing cumulative replay of D2T01–D2T07 with generic speaker roles A/B;
+- preserves the seven source turns in order;
+- proper names are omitted and direct-address **妳** is normalized to learner-known **你**;
+- the card is contextual replay only and must be `practice:false`.
+- text:
+  1. **A：你怎麼了？臉色這麼難看。**
+  2. **B：昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。**
+  3. **A：你這麼不舒服，我陪你去看病，好不好？**
+  4. **B：不用了。我在臺灣沒有健康保險。**
+  5. **A：那麼，我陪你去學校的健康中心。那裡的醫生很好，對學生也很客氣。**
+  6. **B：謝謝你。我想去藥局買藥就好了。**
+  7. **A：你真的不去看病嗎？**
+
 ### u47-a005-scenario
 - learner-facing source task:
   - **Source context: 如玉 (Rúyù; name only, non-assessed) is sick at home. Call and ask how she is feeling. Ask four questions about her condition.**
