@@ -328,14 +328,15 @@ const unit:UnitData = {
           "type": "listen",
           "char": "吐",
           "audioText": "肚子很不舒服，還吐了好幾次。",
-          "prompt": "Which symptom phrase do you hear?",
+          "prompt": "Which two problems do you hear?",
           "options": [
-            "吐了好幾次",
-            "一直流鼻水",
-            "喉嚨有一點發炎"
+            "stomach discomfort and repeated vomiting",
+            "a cold and poor appetite",
+            "head pain and throat inflammation"
           ],
-          "answer": "吐了好幾次",
-          "explanation": "The audio includes repeated vomiting."
+          "answer": "stomach discomfort and repeated vomiting",
+          "explanation": "The audio combines 肚子很不舒服 with 吐了好幾次.",
+          "semanticAnswer": true
         }
       ]
     },
