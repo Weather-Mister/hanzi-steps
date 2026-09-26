@@ -289,7 +289,8 @@ Order:
    - options: [`vomiting`, `sleeping`, `going to a pharmacy`]
    - answer: **vomiting**
    - explanation: 就 introduces the immediate next event.
-10. order `u47-g3-o1`
+10. phrase `u47-g3-order` — explicitly show the exact target before ordering.
+11. order `u47-g3-o1`
     - phrase: **他吃了藥以後，就睡覺。**
     - tokens: [`他吃了藥以後`, `就睡覺`]
 
