@@ -628,11 +628,11 @@ const unit:UnitData = {
           "prompt": "Which word gives the negative command?",
           "options": [
             "別",
-            "沒",
-            "不要"
+            "把",
+            "藥"
           ],
           "answer": "別",
-          "explanation": "別 is the negative command word in this audio."
+          "explanation": "別 means “don't.”"
         },
         {
           "id": "u46-ba-o1",
@@ -841,14 +841,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "休",
           "audioText": "多喝水，多休息，早一點睡覺。",
-          "prompt": "Which complete advice sequence do you hear?",
+          "prompt": "Which three kinds of advice do you hear?",
           "options": [
-            "多喝水，多休息，早一點睡覺",
-            "去買房子，回家，吃少一點",
-            "吐了幾次，睡覺，比較"
+            "drink more water, rest more, sleep earlier",
+            "buy medicine, go home, eat less",
+            "vomit, sleep, compare"
           ],
-          "answer": "多喝水，多休息，早一點睡覺",
-          "explanation": "These are the three source advice phrases."
+          "answer": "drink more water, rest more, sleep earlier",
+          "explanation": "These are the three advice phrases in the audio."
         }
       ]
     },
@@ -986,14 +986,14 @@ const unit:UnitData = {
           "type": "listen",
           "char": "藥",
           "audioText": "請問我得吃藥嗎？",
-          "prompt": "Which medicine question do you hear?",
+          "prompt": "What is the patient asking?",
           "options": [
-            "得吃藥嗎",
-            "哪裡不舒服",
-            "幾個小時"
+            "whether they have to take medicine",
+            "where their head hurts",
+            "how many hours they slept"
           ],
-          "answer": "得吃藥嗎",
-          "explanation": "The patient asks whether they have to take medicine."
+          "answer": "whether they have to take medicine",
+          "explanation": "得 děi expresses necessity."
         }
       ]
     },
