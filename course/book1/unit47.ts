@@ -874,7 +874,7 @@ const unit:UnitData = {
         {
           "id": "u47-integrated",
           "type": "phrase",
-          "phrase": "u47-d2t02-full"
+          "phrase": "u47-d2t01-07-integrated"
         },
         {
           "id": "u47-integrated-s1",
