@@ -135,7 +135,8 @@ const unit:UnitData = {
             "what the weather is like"
           ],
           "answer": "where the person feels unwell",
-          "explanation": "The question asks about the location of discomfort."
+          "explanation": "The question asks about the location of discomfort.",
+          "semanticAnswer": true
         },
         {
           "id": "u45-doctor-o1",
@@ -840,7 +841,8 @@ const unit:UnitData = {
             "going to a pharmacy and taking medicine"
           ],
           "answer": "being sick and having a slight fever",
-          "explanation": "生病 and 發燒 are both present."
+          "explanation": "生病 and 發燒 are both present.",
+          "semanticAnswer": true
         },
         {
           "id": "u45-sick-safety",
@@ -914,7 +916,8 @@ const unit:UnitData = {
             "how much medicine costs"
           ],
           "answer": "duration of the condition",
-          "explanation": "The question and answer concern how long the condition has lasted."
+          "explanation": "The question and answer concern how long the condition has lasted.",
+          "semanticAnswer": true
         },
         {
           "id": "u45-duration-o1",
@@ -988,7 +991,8 @@ const unit:UnitData = {
             "medicine and rest"
           ],
           "answer": "head pain and poor appetite",
-          "explanation": "頭很痛 + 胃口很差."
+          "explanation": "頭很痛 + 胃口很差.",
+          "semanticAnswer": true
         },
         {
           "id": "u45-review-l3",
