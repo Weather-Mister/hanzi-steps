@@ -162,7 +162,8 @@ const unit:UnitData = {
             "the person has insurance"
           ],
           "answer": "the person's complexion looks bad",
-          "explanation": "臉色這麼難看 describes the person's appearance."
+          "explanation": "臉色這麼難看 describes the person's appearance.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -439,7 +440,8 @@ const unit:UnitData = {
             "going to a pharmacy"
           ],
           "answer": "vomiting",
-          "explanation": "就 introduces the immediate next event."
+          "explanation": "就 introduces the immediate next event.",
+          "semanticAnswer": true
         },
         {
           "id": "u47-g3-o1",
@@ -955,7 +957,8 @@ const unit:UnitData = {
             "that the person slept several hours"
           ],
           "answer": "that the person really will not see a doctor",
-          "explanation": "The question confirms refusal to go see a doctor."
+          "explanation": "The question confirms refusal to go see a doctor.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -989,7 +992,8 @@ const unit:UnitData = {
             "travel time"
           ],
           "answer": "the person's condition/appearance",
-          "explanation": "怎麼了 + 臉色這麼難看 is a health concern."
+          "explanation": "怎麼了 + 臉色這麼難看 is a health concern.",
+          "semanticAnswer": true
         },
         {
           "id": "u47-review-l2",
@@ -1003,7 +1007,8 @@ const unit:UnitData = {
             "for several hours"
           ],
           "answer": "several times",
-          "explanation": "好幾次 means several times."
+          "explanation": "好幾次 means several times.",
+          "semanticAnswer": true
         },
         {
           "id": "u47-review-l3",
@@ -1017,7 +1022,8 @@ const unit:UnitData = {
             "reading a prescription"
           ],
           "answer": "accompanying the person to see a doctor",
-          "explanation": "陪你去看病 is the offer."
+          "explanation": "陪你去看病 is the offer.",
+          "semanticAnswer": true
         },
         {
           "id": "u47-review-臉",
