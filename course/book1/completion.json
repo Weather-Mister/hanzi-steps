@@ -5,7 +5,7 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "deterministic-qa",
+  "currentStage": "learner-simulation",
   "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
@@ -62,7 +62,9 @@
     "implementationIc01RepairHandoff": "course/book1/lesson15-implementation-ic01-repair-handoff.md",
     "implementationConformanceReaudit2Handoff": "course/book1/lesson15-implementation-conformance-reaudit2-handoff.md",
     "implementationConformanceReaudit2": "course/book1/lesson15-implementation-conformance-reaudit2.md",
-    "deterministicQaHandoff": "course/book1/lesson15-deterministic-qa-handoff.md"
+    "deterministicQaHandoff": "course/book1/lesson15-deterministic-qa-handoff.md",
+    "deterministicQa": "course/book1/lesson15-deterministic-qa.md",
+    "learnerSimulationHandoff": "course/book1/lesson15-learner-simulation-handoff.md"
   },
-  "notes": "Lesson 15 implementation conformance is PASS after re-audit2 with 0 BLOCKER / 0 MAJOR / 0 MINOR. Implementation gate is PASS. Stage 6 deterministic QA is pending and authorized via course/book1/lesson15-deterministic-qa-handoff.md. At handoff creation, Feature QA run #612 (id 36220445206) was in progress for implementation head 2b815fe6bd5db73b48f854f5d9543d63d26b571f. Release remains locked and Book 1 remains incomplete."
+  "notes": "Lesson 15 Stage 6 deterministic QA is PASS. Earlier Feature QA run #612 (id 36220445206) on implementation head 2b815fe6bd5db73b48f854f5d9543d63d26b571f was cancelled during regressions and did not establish PASS. Fresh run #614 exposed and Stage 6 repaired the A002 practice-token reconstruction defect plus the unintended Units-21–25 legacy-test scope spillover. Full Feature QA run #615 (id 36221331734) passed on final authored repair head b6fd19faff87bfe42e075cc94d95a7b1241b68f9: generation, course validation, targeted Unit 45–48 and Book-2 Unit-1 tests, character coverage, 196-test vocabulary/Mega/practice/validation suite (195 pass, 0 fail, 1 intentional skip), TypeScript, Pages build, and generated artifacts. The workflow then pushed generated-only commit 73ac28d0f09595bff45836dcea9351beb7a4c222 changing course/registry.generated.ts; follow-up Feature QA #616 is action_required with 0 jobs, the expected bot-recursion/permission state rather than a failing test run. Stage 7 learner simulations A/B/C are ready but not run. Release remains locked and Book 1 remains incomplete."
 }
