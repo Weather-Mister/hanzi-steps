@@ -523,7 +523,7 @@ Order:
    - answer: **睡了八個小時的覺**
    - explanation: Duration is inserted between 睡 and 覺.
 6. select `u48-g7-s4`
-   - prompt: **Which Lesson-15 separable forms were lexically available before this grammar lesson?**
+   - prompt: **Which set contains the separable verbs used for insertion practice here?**
    - options: [
      `生病、睡覺、看病、回家`,
      `感冒、藥局、保險、關心`,
@@ -538,7 +538,7 @@ Order:
    - answer: **睡了幾個小時的覺**
    - explanation: 睡 and 覺 are separated by the duration phrase.
 9. select `u48-g7-s6`
-   - prompt: **Which chunk in the same line is G006 rather than G007?**
+   - prompt: **Which chunk in the same line is a degree comparison rather than separable-verb insertion?**
    - options: [`比早上好得多了`, `睡了幾個小時的覺`, `幾個小時的覺`]
    - answer: **比早上好得多了**
    - explanation: That is the comparison-degree branch.
@@ -796,7 +796,7 @@ Use the exact three-option payloads and explanations from u48-prescription.
     - answer: **大概多久了？／已經四、五天了。**
     - explanation: Delayed X004 retrieval.
 44. `u48-review-cum3`
-    - prompt: **Which is Unit-46 G001?**
+    - prompt: **Which sentence uses a question word in a negative non-specific statement?**
     - options: [`我沒買什麼東西。`, `什麼東西都不想吃。`, `你買什麼？`]
     - answer: **我沒買什麼東西。**
     - explanation: Negative non-specific declarative.
@@ -811,7 +811,7 @@ Use the exact three-option payloads and explanations from u48-prescription.
     - answer: **吐了好幾次**
     - explanation: Delayed U47 + 幾 expansion retrieval.
 47. `u48-review-cum6`
-    - prompt: **Which sentence uses U47 G003?**
+    - prompt: **Which sentence uses a completed event followed immediately by 就 + the next event?**
     - options: [`他吃了藥就睡覺。`, `他一吃了藥以後，就睡覺。`, `他吃藥不吃藥就睡覺。`]
     - answer: **他吃了藥就睡覺。**
     - explanation: Completed event then immediate next event.
