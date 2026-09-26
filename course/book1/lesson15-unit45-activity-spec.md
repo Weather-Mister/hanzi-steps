@@ -436,7 +436,7 @@ For simple rows 16–22 and 24–27, prompt is **“X means…”** and explanat
 ### Health inquiry / duration retrieval
 28. `u45-review-f1`
     - prompt: **Which question starts a health check by asking where the discomfort is?**
-    - options: [`哪裡不舒服？`, `大概多久了？`, `什麼時候回家？`]
+    - options: [`哪裡不舒服？`, `大概多久了？`, `什麼東西都不想吃？`]
     - answer: **哪裡不舒服？**
     - explanation: This retrieves F001/X002.
 29. `u45-review-f2`
