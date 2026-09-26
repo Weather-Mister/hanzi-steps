@@ -352,7 +352,8 @@ const unit:UnitData = {
             "sleep more hours than yesterday"
           ],
           "answer": "avoid oily and icy foods",
-          "explanation": "最好都別吃 is negative advice."
+          "explanation": "最好都別吃 is negative advice.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -472,7 +473,8 @@ const unit:UnitData = {
             "whether the rent is cheaper"
           ],
           "answer": "whether the person feels a little better",
-          "explanation": "The health check uses G004."
+          "explanation": "The health check uses G004.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -633,7 +635,8 @@ const unit:UnitData = {
             "appetite only"
           ],
           "answer": "sleeping",
-          "explanation": "睡得比昨天好 is the action comparison."
+          "explanation": "睡得比昨天好 is the action comparison.",
+          "semanticAnswer": true
         },
         {
           "id": "u48-g5-o1",
@@ -809,7 +812,8 @@ const unit:UnitData = {
             "no comparison"
           ],
           "answer": "much better",
-          "explanation": "得多 marks a large difference."
+          "explanation": "得多 marks a large difference.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -1032,7 +1036,8 @@ const unit:UnitData = {
             "once before sleep"
           ],
           "answer": "30 minutes after meals",
-          "explanation": "飯後三十分鐘 gives the timing."
+          "explanation": "飯後三十分鐘 gives the timing.",
+          "semanticAnswer": true
         }
       ]
     },
@@ -1059,7 +1064,8 @@ const unit:UnitData = {
             "buy health insurance"
           ],
           "answer": "avoid oily and icy things",
-          "explanation": "最好都別吃 gives the advice."
+          "explanation": "最好都別吃 gives the advice.",
+          "semanticAnswer": true
         },
         {
           "id": "u48-review-l2",
@@ -1073,7 +1079,8 @@ const unit:UnitData = {
             "number of packets"
           ],
           "answer": "sleep quality",
-          "explanation": "This is G005 action comparison."
+          "explanation": "This is G005 action comparison.",
+          "semanticAnswer": true
         },
         {
           "id": "u48-review-l3",
