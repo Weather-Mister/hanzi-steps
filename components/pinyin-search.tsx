@@ -2,20 +2,19 @@
 import {useMemo,useState} from 'react';
 import {PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {searchLearnedVocabulary,searchPracticeCharacters,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
+import {searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
 
 export function PinyinSearch({
- open,onOpenChange,theme,onPracticeCharacter,completed,
+ open,onOpenChange,theme,onPracticeCharacter,
 }:{
  open:boolean;
  onOpenChange:(open:boolean)=>void;
  theme:string;
  onPracticeCharacter:(char:string)=>void;
- completed:Set<string>;
 }){
  const [query,setQuery]=useState('');
- const matches=useMemo(()=>searchLearnedVocabulary(query,completed,81),[query,completed]);
+ const matches=useMemo(()=>searchVocabulary(query,81),[query]);
  const results=matches.slice(0,80);
  const trimmed=query.trim();
 
@@ -28,7 +27,7 @@ export function PinyinSearch({
   <DialogContent data-unit-theme={theme} className="pinyin-search-dialog">
    <div className="pinyin-search-heading">
     <DialogTitle>Find by pinyin</DialogTitle>
-    <DialogDescription>Search vocabulary from lessons you have completed, with or without tones, spaces, or tone numbers. Use ü, v, or u: for ü. Results include all learned tones; practice opens regular character practice.</DialogDescription>
+    <DialogDescription>Search all Hanzi Steps vocabulary, with or without tones, spaces, or tone numbers. Use ü, v, or u: for ü. All vocabulary and available handwriting practice are unlocked here from the start.</DialogDescription>
    </div>
    <div className="pinyin-search-box">
     <Search size={18}/>
@@ -50,8 +49,7 @@ export function PinyinSearch({
      <>
       <p className="search-count">{matches.length>80?'Showing the first 80 matches — type more to narrow your search':results.length+' '+(results.length===1?'match':'matches')}</p>
       <div className="search-result-list">{results.map(item=>{
-       const availableChars=uniquePracticeCharacters(item).filter(char=>Boolean(strokeData[char]));
-       const chars=searchPracticeCharacters(item,completed).filter(char=>Boolean(strokeData[char]));
+       const chars=uniquePracticeCharacters(item).filter(char=>Boolean(strokeData[char]));
        return <article className="search-result-card" key={item.id}>
         <div className="search-result-copy">
          <div className="search-result-title">
@@ -70,7 +68,7 @@ export function PinyinSearch({
          >
           <PenLine size={15}/>{chars.length===1?'Practice':<>Practice <span lang="zh-Hant-TW">{char}</span></>}
          </button>)}
-        </div>:<span className="search-practice-unavailable">{availableChars.length?'Writing practice unlocks after its lesson':'Writing practice unavailable'}</span>}
+        </div>:<span className="search-practice-unavailable">Writing practice unavailable</span>}
        </article>;
       })}</div>
      </>}
