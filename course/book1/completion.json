@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "learner-simulation",
-  "stageStatus": "pending",
+  "currentStage": "deterministic-qa",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -84,7 +84,8 @@
     "simulationARerun2RepairConformanceHandoff": "course/book1/lesson15-simulation-a-rerun2-repair-conformance-handoff.md",
     "simulationARerun2RepairConformance": "course/book1/lesson15-simulation-a-rerun2-repair-conformance.md",
     "deterministicQaRerun3": "course/book1/lesson15-deterministic-qa-rerun3.md",
-    "stage7FinalHandoff": "course/book1/lesson15-stage7-final-handoff.md"
+    "stage7FinalHandoff": "course/book1/lesson15-stage7-final-handoff.md",
+    "finalSimulationARepairConformance": "course/book1/lesson15-final-simulation-a-repair-conformance.md"
   },
-  "notes": "Lesson 15 repair conformance PASS and deterministic QA rerun 3 PASS. Final authored/state QA head 579a62bb75ff69acc01a847dfbbf1236eb13309f passed Feature QA #654 / id 36236868785: generation, graph validation, targeted changed-unit tests, character coverage, 200-test regression suite (199 pass, 0 fail, 1 intentional skip), TypeScript, Pages build, and valid completion-state schema. The 20 restored learner-safe listening payloads are pinned to frozen audioText/prompt/options/answer/explanation and explicitly marked semanticAnswer:true where required. Generated-only follow-up 8c0f9a7505404dba1e02425f59cac28eabba6feb changed only course/registry.generated.ts; follow-up #655 is action_required with no executable QA job. Stage 7 final learner simulations are ready. Run final strict-prerequisite Simulation A from scratch first; only on PASS may B and C run in separate fresh contexts, and they may run in parallel. Release remains locked and Book 1 remains incomplete."
+  "notes": "Final Simulation A found 2 MAJOR findings. Both are now repaired and fresh combined conformance PASS: u45-review-f1 no longer exposes future NEW 回家; the Unit-45 Gate-B item was narrowly corrected and re-frozen with learner-safe 什麼東西都不想吃？. Unit 47 u47-g3-review now reviews prior 了 / 一…就… / 以後 only, G003 is taught next, and full u47-d2t02-full appears only after the controlled G003 checks. Regression guards pin both repairs. Activities and implementation are PASS. Deterministic QA is running on the final authored state. Historical learner-simulation failures remain evidence; B/C are not run; release remains locked; Book 1 remains incomplete."
 }
