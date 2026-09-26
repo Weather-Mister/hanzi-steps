@@ -2089,7 +2089,8 @@ const unit:UnitData = {
       "note": "Support only; no formal vocabulary/Search/Mega ownership.",
       "tokens": [
         "分鐘"
-      ]
+      ],
+      "practice": false
     },
     "u48-packet": {
       "text": "一包藥",
@@ -2191,7 +2192,8 @@ const unit:UnitData = {
       "note": "Source names are romanized so contextual untaught name glyphs are not exposed; 臺南 remains source context.",
       "tokens": [
         "學生一（Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘"
-      ]
+      ],
+      "practice": false
     },
     "u48-prescription-support": {
       "text": "一日4次／3日份／份／飯前／飯後／飯後30分鐘",
