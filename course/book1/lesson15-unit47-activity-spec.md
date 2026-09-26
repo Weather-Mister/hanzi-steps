@@ -264,7 +264,7 @@ Order:
    - answer: **他吃了藥以後，就睡覺。**
    - explanation: G003 allows 以後; the source rejects 一 + V了…以後 in this contrast.
 5. select `u47-g3-s3`
-   - prompt: **How should G003 normally form a question in this lesson?**
+   - prompt: **How should the completed-event + 就 pattern normally form a question in this lesson?**
    - options: [`with 嗎 or 是不是`, `with an ordinary A-not-A of the first verb`, `with 都`]
    - answer: **with 嗎 or 是不是**
    - explanation: The source explicitly says ordinary A-not-A is unavailable.
@@ -461,7 +461,7 @@ Order:
    - answer: **他吃了藥就睡覺。**
    - explanation: G003 links a completed first event to an immediate next event.
 25. `u47-review-g3contrast`
-   - prompt: **Which statement about G003 is correct?**
+   - prompt: **Which statement about the completed-event + 就 pattern is correct?**
    - options: [`It may use 以後 and does not use ordinary A-not-A.`, `It cannot use 以後.`, `It is identical to 一…就… in every restriction.`]
    - answer: **It may use 以後 and does not use ordinary A-not-A.**
    - explanation: Both points are source-required.
