@@ -246,22 +246,52 @@ const unit:UnitData = {
         {
           "id": "u48-a002-explain",
           "type": "phrase",
-          "phrase": "u48-a002-visual-1"
+          "phrase": "u48-a002-explain"
         },
         {
           "id": "u48-a002-visual-1",
-          "type": "phrase",
-          "phrase": "u48-a002-visual-1"
+          "type": "visual",
+          "prompt": "Use the source role prompt and accept the suggestion.",
+          "visualRole": "老李",
+          "visualInstruction": "Ask how he feels, respond from the source prompt, then accept the suggestion.",
+          "visualClosing": "好的。",
+          "visualSuggestions": [
+            "看病",
+            "多休息",
+            "早一點睡覺",
+            "多喝水"
+          ],
+          "visualSource": "A002 source prompt 1"
         },
         {
           "id": "u48-a002-visual-2",
-          "type": "phrase",
-          "phrase": "u48-a002-visual-2"
+          "type": "visual",
+          "prompt": "Use the source role prompt and accept the suggestion.",
+          "visualRole": "小陳",
+          "visualInstruction": "Ask how he feels, respond from the source prompt, then accept the suggestion.",
+          "visualClosing": "謝謝你。",
+          "visualSuggestions": [
+            "看病",
+            "多休息",
+            "早一點睡覺",
+            "多喝水"
+          ],
+          "visualSource": "A002 source prompt 2"
         },
         {
           "id": "u48-a002-visual-3",
-          "type": "phrase",
-          "phrase": "u48-a002-visual-3"
+          "type": "visual",
+          "prompt": "Use the source role prompt and politely reject the suggestion.",
+          "visualRole": "王先生",
+          "visualInstruction": "Ask how he feels, respond from the source prompt, then thank the speaker and complete a polite rejection.",
+          "visualClosing": "謝謝你的關心。……",
+          "visualSuggestions": [
+            "看病",
+            "多休息",
+            "早一點睡覺",
+            "多喝水"
+          ],
+          "visualSource": "A002 source prompt 3"
         },
         {
           "id": "u48-a002-s1",
@@ -2109,6 +2139,17 @@ const unit:UnitData = {
       ],
       "grammarIds": [
         "u48-separable-verbs"
+      ]
+    },
+    "u48-a002-explain": {
+      "text": "你怎麼了？／我……／你應該／最好……",
+      "pinyin": "Nǐ zěnme le? / Wǒ… / Nǐ yīnggāi / zuìhǎo…",
+      "meaning": "Use the source role prompt to ask how the person feels, give a health suggestion, then accept or politely reject it.",
+      "note": "A002 communicative frame. Source-only names stay contextual; deferred rejection glyphs are not required.",
+      "tokens": [
+        "你怎麼了？",
+        "我……",
+        "你應該／最好……"
       ]
     },
     "u48-a002-visual-1": {
