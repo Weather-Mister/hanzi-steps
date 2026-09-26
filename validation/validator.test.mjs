@@ -432,6 +432,9 @@ test('Lesson 15 final strict-prerequisite fixes keep 回家 out of Unit 45 and w
  assert.ok(ids.indexOf('u47-vle-jiu')<ids.indexOf('u47-g3-s1'));
  assert.ok(ids.indexOf('u47-g3-s4')<ids.indexOf('u47-g3-p1'));
  assert.ok(ids.indexOf('u47-g3-p1')<ids.indexOf('u47-g3-s5'));
+ assert.ok(ids.indexOf('u47-g3-l1')<ids.indexOf('u47-g3-p2'));
+ assert.ok(ids.indexOf('u47-g3-p2')<ids.indexOf('u47-g3-o1'));
+ assert.equal(g3.steps.find(s=>s.id==='u47-g3-p2').phrase,'u47-g3-order');
  assert.equal(u47.phrases['u47-g3-prereq-review'].practice,false);
  assert.doesNotMatch(u47.phrases['u47-g3-prereq-review'].text,/吃了東西就吐/);
  assert.equal(u47.phrases['u47-d2t02-full'].text,'昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。');
