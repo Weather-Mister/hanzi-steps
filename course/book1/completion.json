@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "implementation",
-  "stageStatus": "in-progress",
+  "currentStage": "deterministic-qa",
+  "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -18,12 +18,10 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
-  "openFindings": [
-    "SIM-A-RERUN-01 narrow learner-facing repair applied to u46-ji-explain; fresh affected-path conformance is pending before the implementation gate can close."
-  ],
+  "openFindings": [],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -76,7 +74,8 @@
     "learnerSimulationRerunHandoff": "course/book1/lesson15-learner-simulation-rerun-handoff.md",
     "learnerSimulationARerun": "course/book1/lesson15-learner-simulation-a-rerun.md",
     "simulationARerunRepairHandoff": "course/book1/lesson15-simulation-a-rerun-repair-handoff.md",
-    "simulationARerunRepairConformanceHandoff": "course/book1/lesson15-simulation-a-rerun-repair-conformance-handoff.md"
+    "simulationARerunRepairConformanceHandoff": "course/book1/lesson15-simulation-a-rerun-repair-conformance-handoff.md",
+    "simulationARerunRepairConformance": "course/book1/lesson15-simulation-a-rerun-repair-conformance.md"
   },
-  "notes": "Stage 7 Simulation A rerun previously FAILED with 0 BLOCKER / 1 MAJOR / 0 MINOR. SIM-A-RERUN-01 has now received the narrow learner-facing repair: u46-ji-explain explicitly teaches 幾 jǐ as the Lesson-15 semantic expansion 'a few / several' in a statement/non-question context, contrasted with the earlier Unit-7 interrogative 'how many?' sense, before unchanged u46-ji-s1. Gate B remains pass/frozen and canonical 幾 ownership remains Unit 7 with no duplicate Search/Mega ownership. The repaired A003 path and all other previously passing Lesson-15 behavior are intended to remain unchanged. Implementation remains pending until fresh affected-path conformance. Deterministic QA is pending because learner-facing code changed; the latest deterministic-QA rerun is historical evidence only. Historical Simulation-A reports are preserved. Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
+  "notes": "Fresh affected-path conformance after SIM-A-RERUN-01 PASSED with 0 BLOCKER / 0 MAJOR / 0 MINOR. u46-ji-explain now explicitly teaches 幾 jǐ as the Lesson-15 semantic expansion “a few / several” in a statement/non-question context, contrasts the earlier Unit-7 “how many?” sense, and uses 她沒有幾個朋友。 before unchanged u46-ji-s1 and formal G001. Canonical 幾 ownership remains Unit 7 with no duplicate vocabulary/Search/Mega/handwriting ownership, and Unit 47 好幾次 now has the intended taught prerequisite. Regression spot-checks passed for A003 notation/practice isolation, A002 visuals, semantic listening, support-only 您, lexical/character/grammar totals, prerequisites, handwriting locks, all 25 dialogue turns, A001–A005, review/delayed retrieval, Search/Mega behavior, Unit-48 closure, and 一直/直 migration. Deterministic QA is pending because learner-facing code changed after the last historical PASS. Historical Simulation A and Simulation-A-rerun failure evidence remain preserved; Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
 }
