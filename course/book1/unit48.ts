@@ -2152,33 +2152,6 @@ const unit:UnitData = {
         "你應該／最好……"
       ]
     },
-    "u48-a002-visual-1": {
-      "text": "Source illustration 1 — 好的。",
-      "pinyin": "Hǎo de.",
-      "meaning": "Source illustration 1: accept the suggestion; close with 好的。",
-      "note": "Exact source-illustration identity and response role are preserved textually because UnitData has no image field.",
-      "tokens": [
-        "Source illustration 1 — 好的。"
-      ]
-    },
-    "u48-a002-visual-2": {
-      "text": "Source illustration 2 — 謝謝你。",
-      "pinyin": "Xièxie nǐ.",
-      "meaning": "Source illustration 2: accept the suggestion; close with 謝謝你。",
-      "note": "Exact source-illustration identity and response role are preserved textually because UnitData has no image field.",
-      "tokens": [
-        "Source illustration 2 — 謝謝你。"
-      ]
-    },
-    "u48-a002-visual-3": {
-      "text": "Source illustration 3 — 謝謝你的關心。不用了。",
-      "pinyin": "Xièxie nǐ de guānxīn. Búyòng le.",
-      "meaning": "Source illustration 3: politely reject the suggestion after thanking the other person for their concern.",
-      "note": "Exact source-illustration identity and rejection role are preserved textually; deferred rejection glyphs are not exposed.",
-      "tokens": [
-        "Source illustration 3 — 謝謝你的關心。不用了。"
-      ]
-    },
     "u48-a002-task2": {
       "text": "昨晚吃了晚飯以後吐了，肚子很不舒服。",
       "pinyin": "Zuówǎn chī le wǎnfàn yǐhòu tù le, dùzi hěn bù shūfu.",
