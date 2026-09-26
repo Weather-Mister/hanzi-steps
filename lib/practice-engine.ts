@@ -73,6 +73,10 @@ function phraseItems(completed:Set<string>):PracticeItem[]{
    if(!step.phrase||seen.has(step.phrase))continue;
    const phrase=phrases[step.phrase];
    if(!phrase?.tokens?.length)continue;
+   const phraseCharacters=Array.from(phrase.text).filter(char=>Boolean(characters[char]));
+   // Explanatory/source-metadata cards with no learned Hanzi belong in the lesson
+   // but not in adaptive Hanzi practice or Mixed Mastery.
+   if(!phraseCharacters.length)continue;
    const unit=units.find(candidate=>candidate.id===lesson.unitId);
    const book=books.find(candidate=>candidate.unitIds.includes(unit?.id||''));
    seen.add(step.phrase);
@@ -82,7 +86,7 @@ function phraseItems(completed:Set<string>):PracticeItem[]{
     traditional:phrase.text,
     pinyin:phrase.pinyin,
     meaning:phrase.meaning,
-    characters:Array.from(phrase.text).filter(char=>Boolean(characters[char])),
+    characters:phraseCharacters,
     unitId:lesson.unitId,
     unitNumber:unit?.displayNumber??unit?.number,
     bookId:book?.id,
