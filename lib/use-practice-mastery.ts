@@ -11,7 +11,7 @@ import {
 } from './practice-engine';
 
 const modes:PracticeMode[]=['recognition','recall','pinyin','input','sentence','handwriting','context'];
-const sessionKinds:PracticeSessionKind[]=['lesson','daily','revenge','mega','taiwan'];
+const sessionKinds:PracticeSessionKind[]=['lesson','daily','mega'];
 const storageKey=(userKey:string)=>'hanzi-steps-practice-v1-'+userKey;
 const pendingKey=(userKey:string)=>'hanzi-steps-practice-pending-v1-'+userKey;
 
