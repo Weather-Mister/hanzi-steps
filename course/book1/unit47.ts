@@ -390,7 +390,7 @@ const unit:UnitData = {
         {
           "id": "u47-g3-s3",
           "type": "select",
-          "prompt": "How should G003 normally form a question in this lesson?",
+          "prompt": "How should the completed-event + 就 pattern normally form a question in this lesson?",
           "options": [
             "with 嗎 or 是不是",
             "with an ordinary A-not-A of the first verb",
@@ -1232,7 +1232,7 @@ const unit:UnitData = {
         {
           "id": "u47-review-g3contrast",
           "type": "select",
-          "prompt": "Which statement about G003 is correct?",
+          "prompt": "Which statement about the completed-event + 就 pattern is correct?",
           "options": [
             "It may use 以後 and does not use ordinary A-not-A.",
             "It cannot use 以後.",
