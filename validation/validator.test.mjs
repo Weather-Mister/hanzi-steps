@@ -40,3 +40,10 @@ test('Activities reject missing correct answers, broken references and incomplet
  assert.match(run(c=>c.modules[1].grammarIntroductions[0].stepId='absent'),/broken teaching lesson\/activity/);
  assert.match(run(c=>c.modules[1].grammarIntroductions.push(c.modules[1].grammarIntroductions[0])),/duplicate first-teaching ID/);
 });
+
+test('Semantic listening answers require an explicit listening-only opt-in',()=>{
+ const target=c=>c.modules.find(m=>m.unit.id==='unit-46').lessons.find(l=>l.id==='u46-review').steps.find(s=>s.id==='u46-review-l1');
+ assert.doesNotMatch(run(c=>{const s=target(c);s.prompt='Which meaning of 得 is heard?';s.options=['must/have to','performance complement marker','to obtain'];s.answer='must/have to';s.semanticAnswer=true}),/contextual audio must contain only one answer option/);
+ assert.match(run(c=>{const s=target(c);s.prompt='Which meaning of 得 is heard?';s.options=['must/have to','performance complement marker','to obtain'];s.answer='must/have to';delete s.semanticAnswer}),/contextual audio must contain only one answer option/);
+ assert.match(run(c=>{const s=c.modules[0].lessons[0].steps.find(s=>s.type==='select');s.semanticAnswer=true}),/semanticAnswer is only valid as true on listening exercises/);
+});
