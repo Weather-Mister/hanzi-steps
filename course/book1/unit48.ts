@@ -2153,8 +2153,8 @@ const unit:UnitData = {
       "meaning": "Use the source role prompt to ask how the person feels, give a health suggestion, then accept or politely reject it.",
       "note": "A002 communicative frame. Source-only names stay contextual; deferred rejection glyphs are not required.",
       "tokens": [
-        "你怎麼了？",
-        "我……",
+        "你怎麼了？／",
+        "我……／",
         "你應該／最好……"
       ]
     },
