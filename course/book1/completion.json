@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "learner-simulation",
-  "stageStatus": "pending",
+  "currentStage": "implementation",
+  "stageStatus": "in-progress",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -18,10 +18,15 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pass",
+    "implementation": "pending",
     "release": "locked"
   },
-  "openFindings": [],
+  "openFindings": [
+    {
+      "severity": "MAJOR",
+      "summary": "SIM-A-RERUN2-01: learner-visible assessment distractors across Units 45–48 expose later Lesson-15 vocabulary and, in several cases, later formal NEW characters before their intended teaching point; restore the exact frozen learner-safe distractor payloads in implementation."
+    }
+  ],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -78,7 +83,9 @@
     "simulationARerunRepairConformance": "course/book1/lesson15-simulation-a-rerun-repair-conformance.md",
     "deterministicQaRerun2Handoff": "course/book1/lesson15-deterministic-qa-rerun2-handoff.md",
     "deterministicQaRerun2": "course/book1/lesson15-deterministic-qa-rerun2.md",
-    "learnerSimulationRerun2Handoff": "course/book1/lesson15-learner-simulation-rerun2-handoff.md"
+    "learnerSimulationRerun2Handoff": "course/book1/lesson15-learner-simulation-rerun2-handoff.md",
+    "learnerSimulationARerun2": "course/book1/lesson15-learner-simulation-a-rerun2.md",
+    "simulationARerun2RepairHandoff": "course/book1/lesson15-simulation-a-rerun2-repair-handoff.md"
   },
-  "notes": "Lesson 15 deterministic QA rerun 2 PASS: 0 BLOCKER / 0 MAJOR / 0 MINOR. Final authored QA head 686ea019eef9d4147dce410bad407fa31872666b passed Feature QA #636 (id 36233164058): complete generation/checks, targeted Units 45–48 and Book-2 Unit-1, character coverage, Pinyin Search/vocabulary lookup, Mega, practice/content regressions, full validation (199 tests: 198 pass, 0 fail, 1 intentional skip), TypeScript, Pages build, generated-artifact currency, and completion-state schema. A dedicated deterministic guard now enforces u46-ji-explain before u46-ji-s1, the Lesson-15 幾 'a few / several' expansion, canonical 幾 ownership remaining Unit 7, no duplicate Unit-46/47 ownership or handwriting, and the Unit-47 好幾次 dependency. A002 visuals, five semantic-listening repairs, support-only 您, repaired A003 notation/practice:false isolation, and 一直 / 直 migration also pass. Stage 7 learner-simulation readiness is authorized. Historical Simulation-A failures remain preserved; Simulation A rerun 2 must be run from scratch and pass before B/C. Release remains locked and Book 1 remains incomplete."
+  "notes": "Stage 7 Simulation A rerun 2 FAILED with 0 BLOCKER / 1 MAJOR / 0 MINOR. The repaired Unit-46 幾 path and repaired Unit-48 A003 path both pass. SIM-A-RERUN2-01 is a cross-unit implementation-conformance defect: multiple learner-visible assessment distractors expose later Lesson-15 vocabulary and, in several cases, later formal NEW characters before their owning teaching point, even though the frozen activity specs already provide learner-safe semantic distractors. Gate B remains pass/frozen. Implementation is reopened pending a narrow cross-unit distractor repair and fresh affected-path conformance. Deterministic QA rerun 2 PASS is now historical and must be rerun after learner-facing changes. Simulations B/C are not run. Release remains locked and Book 1 remains incomplete."
 }
