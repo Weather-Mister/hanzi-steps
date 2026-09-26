@@ -2,18 +2,14 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {books,characters,lessons,units} from '../lib/curriculum.ts';
 import {
- availableTaiwanMissions,
  distractorPool,
  learnedPracticeItems,
  makeDailyTen,
  makeMegaCheckpoint,
- makeRevengeRound,
  megaCheckpointCount,
  practiceModesForItem,
  practicePromptIsAmbiguous,
- practiceSkillKey,
  sentenceDistractors,
- taiwanMissions,
 } from '../lib/practice-engine.ts';
 import {eligibleMegaVocabulary,makeMegaQueue} from '../lib/mega-challenge.ts';
 import {vocabularyLookup} from '../lib/vocabulary-lookup.ts';
@@ -102,7 +98,7 @@ test('full learned practice pool has complete, unique, non-redundant content',()
  }
 });
 
-test('every progression checkpoint generates content-safe Daily 10, Revenge, Mixed Mastery, and Mega Challenge pools',()=>{
+test('every progression checkpoint generates content-safe Daily 10, Mixed Mastery, and Mega Challenge pools',()=>{
  for(const unitId of allUnitIds){
   const completed=completedThrough(unitId);
   const items=learnedPracticeItems(completed);
@@ -117,22 +113,6 @@ test('every progression checkpoint generates content-safe Daily 10, Revenge, Mix
     assert.equal(question.sessionKind,'daily');
     assertQuestionContent(question,items,unitId+' Daily 10');
    }
-  }
-
-  const target=items[0];
-  const weakStates={
-   [practiceSkillKey(target.id,'recall')]:{
-    itemId:target.id,mode:'recall',attempts:4,correct:1,assisted:0,misses:3,streak:0,
-    strength:.18,lastSeen:100,nextReview:200,
-   },
-  };
-  const revenge=makeRevengeRound(items,weakStates,unitId+':revenge');
-  assert.ok(revenge.length>=2,unitId+' Revenge Round did not build enough distinct attacks');
-  assert.equal(new Set(revenge.map(question=>question.item.id)).size,1,unitId+' Revenge Round changed targets');
-  assert.equal(new Set(revenge.map(question=>question.mode)).size,revenge.length,unitId+' Revenge Round repeats a mode');
-  for(const question of revenge){
-   assert.equal(question.sessionKind,'revenge');
-   assertQuestionContent(question,items,unitId+' Revenge Round');
   }
 
   if(megaCheckpointCount(completed)>0&&items.length>=12){
@@ -192,38 +172,6 @@ test('all sentence-builder content reconstructs the taught phrase and uses disti
    const distractors=sentenceDistractors(item,items,item.id+':'+seed);
    assert.equal(new Set(distractors).size,distractors.length,'duplicate distractor for '+item.traditional);
    assert.ok(distractors.every(token=>!item.tokens.includes(token)),'answer token reused as distractor for '+item.traditional);
-  }
- }
-});
-
-const missionLanguage={
- 'first-conversation':['你好','學生'],
- 'tea-break':['喜歡','喝','茶','咖啡','謝謝'],
- 'weekend-plan':['明天','一起','游泳','怎麼樣','看電影','覺得','好玩'],
- 'buy-a-drink':['外帶','內用','請問','一共','多少','錢'],
- 'order-food':['牛肉','麵','碗','有一點','辣','怕','小籠包','好吃','太好了'],
- 'find-the-library':['圖書館','哪裡','教室','旁邊','近'],
- 'make-a-time-plan':['什麼時候','有空','後天','晚上','見面','沒問題'],
- 'choose-a-ride':['怎麼','坐','火車','高鐵','比較','慢','快','舒服'],
-};
-
-test('Taiwan Mode missions are unlocked only after the language they use has been taught',()=>{
- assert.equal(Object.keys(missionLanguage).length,taiwanMissions.length,'mission language audit map must cover every mission');
- for(const mission of taiwanMissions){
-  const completed=completedThrough(mission.unlockUnitId);
-  const unlocked=availableTaiwanMissions(completed).find(candidate=>candidate.id===mission.id);
-  assert.equal(unlocked?.unlocked,true,mission.id+' should unlock at its declared unit');
-
-  const corpus=learnedPracticeItems(completed).map(item=>stripSurface(item.traditional)).join('\n');
-  for(const chunk of missionLanguage[mission.id]||[]){
-   assert.ok(corpus.includes(stripSurface(chunk)),mission.id+' uses language before it appears in learned practice: '+chunk);
-  }
-
-  for(const step of mission.steps){
-   assert.ok(step.answer.trim(),mission.id+' has a blank answer');
-   assert.ok(step.options.includes(step.answer),mission.id+' answer is not selectable');
-   assert.equal(new Set(step.options).size,step.options.length,mission.id+' has duplicate choices');
-   assert.ok(step.options.length>=3,mission.id+' has too few choices');
   }
  }
 });
