@@ -235,24 +235,24 @@ Order:
    - explanation: Unit 46 adds the non-interrogative few/several sense.
 3. grammar `u46-noncommittal-question-words`.
 4. select `u46-g1-s1`
-   - prompt: **Under the Lesson-15 G001 rule, which sentence is a negative non-specific declarative?**
+   - prompt: **Which sentence uses a question word inside a negative statement to mean something non-specific?**
    - options: [`我沒買什麼東西。`, `你想買什麼東西？`, `什麼東西都很好吃。`]
    - answer: **我沒買什麼東西。**
    - explanation: G001 uses a question word inside a negative declarative without requiring 都/也.
    - grammarIds: [`u46-noncommittal-question-words`]
 5. select `u46-g1-s2`
-   - prompt: **What restriction does the source give for G001 statements?**
+   - prompt: **What restriction applies to these non-specific question-word statements?**
    - options: [`They are always negative.`, `They always require 都.`, `They must be questions.`]
    - answer: **They are always negative.**
    - explanation: The textbook explicitly states the non-committal statements are always negative.
 6. select `u46-g1-s3`
-   - prompt: **Which sentence is the earlier Unit-40 totality pattern rather than G001?**
+   - prompt: **Which sentence uses the earlier question-word + 都 totality pattern instead?**
    - options: [`什麼東西都不想吃。`, `我沒買什麼東西。`, `我沒去哪裡。`]
    - answer: **什麼東西都不想吃。**
    - explanation: 都 marks the earlier totality pattern.
 7. phrase `u46-g1-source`.
 8. select `u46-g1-s4`
-   - prompt: **Why is 沒有什麼關係 relevant to G001?**
+   - prompt: **Why is 沒有什麼關係 an example of the negative non-specific question-word pattern?**
    - options: [`什麼 appears in a negative non-specific statement`, `什麼 asks a literal information question`, `都 makes the sentence totality`]
    - answer: **什麼 appears in a negative non-specific statement**
    - explanation: 沒有 supplies the negative environment required by the source rule.
@@ -474,12 +474,12 @@ Order:
 
 ### Grammar / support retrieval
 24. `u46-review-g1`
-    - prompt: **Which sentence is G001 rather than Unit-40 totality?**
+    - prompt: **Which sentence is a negative non-specific question-word statement rather than the earlier totality pattern?**
     - options: [`我沒買什麼東西。`, `什麼東西都不想吃。`, `你想買什麼？`]
     - answer: **我沒買什麼東西。**
     - explanation: G001 is a negative non-specific declarative.
 25. `u46-review-g1b`
-    - prompt: **What is mandatory in the source G001 rule?**
+    - prompt: **What is required in the negative non-specific question-word pattern taught here?**
     - options: [`negation`, `都`, `a question mark`]
     - answer: **negation**
     - explanation: The source says these statements are always negative.
