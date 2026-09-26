@@ -353,7 +353,7 @@ const unit:UnitData = {
         {
           "id": "u47-g3-review",
           "type": "phrase",
-          "phrase": "u47-d2t02-full"
+          "phrase": "u47-g3-prereq-review"
         },
         {
           "id": "u47-vle-jiu",
@@ -414,7 +414,7 @@ const unit:UnitData = {
         {
           "id": "u47-g3-p1",
           "type": "phrase",
-          "phrase": "u47-g3-order"
+          "phrase": "u47-d2t02-full"
         },
         {
           "id": "u47-g3-s5",
@@ -1831,6 +1831,18 @@ const unit:UnitData = {
       "tokens": [
         "吐了好幾次。"
       ]
+    },
+    "u47-g3-prereq-review": {
+      "text": "吃了藥。／一吃藥就睡覺。／吃藥以後睡覺。",
+      "pinyin": "Chī le yào. / Yì chī yào jiù shuìjiào. / Chī yào yǐhòu shuìjiào.",
+      "meaning": "Review: completed action with 了 / as soon as...then... / after...",
+      "note": "REVIEW only: Unit 39 completed-action 了; Unit 38 一…就…; Unit 36 以後. The new G003 V了…就… pattern is taught next.",
+      "tokens": [
+        "吃了藥。",
+        "一吃藥就睡覺。",
+        "吃藥以後睡覺。"
+      ],
+      "practice": false
     },
     "u47-d2t02-full": {
       "text": "昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。",
