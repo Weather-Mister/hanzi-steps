@@ -5,8 +5,8 @@
   "completedThroughSourceLesson": 14,
   "completedThroughUnit": 44,
   "currentSourceLesson": 15,
-  "currentStage": "implementation",
-  "stageStatus": "in-progress",
+  "currentStage": "deterministic-qa",
+  "stageStatus": "pending",
   "bookComplete": false,
   "humanReviewRequired": false,
   "workingUnitRange": {
@@ -18,7 +18,7 @@
     "dependencies": "pass",
     "curriculum": "pass",
     "activities": "pass",
-    "implementation": "pending",
+    "implementation": "pass",
     "release": "locked"
   },
   "openFindings": [],
@@ -60,7 +60,8 @@
     "implementationConformanceReauditHandoff": "course/book1/lesson15-implementation-conformance-reaudit-handoff.md",
     "implementationConformanceReaudit": "course/book1/lesson15-implementation-conformance-reaudit.md",
     "implementationIc01RepairHandoff": "course/book1/lesson15-implementation-ic01-repair-handoff.md",
-    "implementationConformanceReaudit2Handoff": "course/book1/lesson15-implementation-conformance-reaudit2-handoff.md"
+    "implementationConformanceReaudit2Handoff": "course/book1/lesson15-implementation-conformance-reaudit2-handoff.md",
+    "implementationConformanceReaudit2": "course/book1/lesson15-implementation-conformance-reaudit2.md"
   },
-  "notes": "Lesson 15 narrow Stage-5 IC-01 repair is persisted from the authoritative A002 source illustrations: the three learner-facing cards now carry distinct structured visual transcriptions for the restroom/lower-abdomen scene, the bed scene, and the throat/neck scene while preserving the shared source advice bank, two acceptance roles, one polite-rejection role, deferred-glyph safety, IC-02 semantic listening, and IC-03 support-only 您. Implementation remains pending until a fresh independent conformance re-audit2. Deterministic QA is not ready; release remains locked."
+  "notes": "Lesson 15 Implementation Conformance Re-audit 2 PASS: 0 BLOCKER, 0 MAJOR, 0 MINOR. IC-01 now preserves the three distinct A002 source scenes (restroom/lower abdomen accept; bed accept; throat/neck polite reject) with the shared source suggestion bank and no invented fixed symptom→advice mapping. IC-02 semantic listening and IC-03 support-only 您 remain correct. All frozen IDs, ownership, prerequisites, 42 NEW lexical forms, 30 NEW characters, seven grammar rules, handwriting lifecycle/locks, dialogue/source tasks, review floors, delayed retrieval, Search/Mega behavior, Unit-48 closure, and the 一直/直 migration re-pass. Implementation gate is PASS. Stage 6 deterministic QA is ready but has not been run; release remains locked."
 }
