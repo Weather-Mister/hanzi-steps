@@ -1,6 +1,6 @@
 'use client';
 import {Fragment,useEffect,useRef,useState,type ReactNode} from 'react';
-import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,Flame,GraduationCap,Lightbulb,Lock,MapPin,Play,RotateCcw,Settings2,Sparkles,Swords,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
+import {ArrowRight,BookOpen,Check,CheckCircle2,ChevronRight,CloudCheck,CloudUpload,Flame,GraduationCap,Lightbulb,Lock,Play,RotateCcw,Settings2,Sparkles,Volume2,X,PenLine,Shapes,Trophy,Pause,Search} from 'lucide-react';
 import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {Switch} from '@/components/ui/switch';
@@ -18,7 +18,7 @@ import {MegaChallenge} from './mega-challenge';
 import {ExamStudy} from './exam-study';
 import {PinyinSearch} from './pinyin-search';
 import {visualUnitTheme} from '@/lib/unit-theme';
-import {adaptivePracticeItems,availableTaiwanMissions,learnedPracticeItems,makeRevengeRound,megaCheckpointCount,practiceAttemptForStep,taiwanMissions} from '@/lib/practice-engine';
+import {adaptivePracticeItems,learnedPracticeItems,megaCheckpointCount,practiceAttemptForStep} from '@/lib/practice-engine';
 import {usePracticeMastery} from '@/lib/use-practice-mastery';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
 import {unitSourceReference} from '@/lib/unit-source-reference';
@@ -75,14 +75,12 @@ function Exercise({step,prefs,onAdvance,onAttempt}:{step:Step;prefs:Preferences;
  </section><footer className={`exercise-footer ${feedback==='good'?'success':feedback==='wrong'?'error':''}`}><div className="feedback-area" aria-live="polite">{feedback?<><span className="feedback-icon">{feedback==='good'?<Check size={27}/>:<RotateCcw size={25}/>}</span><div><strong>{feedback==='good'?(hadHelp?'Good practice!':'Nicely done!'):'Let’s try that again'}</strong><p>{explanation}</p></div></>:<p>{introduction?(step.type==='intro'?'Take your time. Learn the shape and its parts.':'Notice the pattern. You will use it next.'):writing?'One stroke at a time. You have unlimited tries.':'Take your time. There is no timer.'}</p>}</div><button className="primary-button continue-button" disabled={!ready} onClick={introduction||feedback?proceed:check}>{feedback==='wrong'?'Try again':introduction||feedback==='good'?'Continue':'Check answer'}<ArrowRight size={19}/></button></footer></>
 }
 
-type BonusStageKind='daily'|'revenge'|'mixed'|'mega'|'taiwan';
+type BonusStageKind='daily'|'mixed'|'mega';
 function BonusStage({kind,onStart}:{kind:BonusStageKind;onStart:()=>void}){
  const meta={
   daily:{label:'BONUS STAGE',title:'Daily 10',subtitle:'A quick adaptive mix from what you have been learning.',icon:Flame},
-  revenge:{label:'REVENGE STAGE',title:'Revenge Round',subtitle:'One weak spot is back. Beat it a few different ways.',icon:Swords},
   mixed:{label:'POWER CHECK',title:'Mixed Mastery',subtitle:'A surprise four-unit checkpoint with sentence clozes, contextual recall, typing, and memory writing.',icon:Sparkles},
   mega:{label:'HANDWRITING BOSS',title:'Mega Challenge',subtitle:'A longer handwriting run when you feel like going for it.',icon:Trophy},
-  taiwan:{label:'TAIWAN DETOUR',title:'Taiwan Mode',subtitle:'Use what you know in a short real-life situation.',icon:MapPin},
  }[kind];
  const Icon=meta.icon;
  return <div className={`path-row bonus-stage bonus-${kind}`}>
@@ -96,7 +94,7 @@ function BonusStage({kind,onStart}:{kind:BonusStageKind;onStart:()=>void}){
 }
 
 function chooseBonusStage(seed:string,ready:Record<BonusStageKind,boolean>):BonusStageKind|null{
- const weighted:BonusStageKind[]=(['daily','daily','revenge','mixed','taiwan','mega'] as BonusStageKind[]).filter(kind=>ready[kind]);
+ const weighted:BonusStageKind[]=(['daily','daily','mixed','mega'] as BonusStageKind[]).filter(kind=>ready[kind]);
  if(!weighted.length)return null;
  let hash=2166136261;
  for(let i=0;i<seed.length;i++){hash^=seed.charCodeAt(i);hash=Math.imul(hash,16777619)}
@@ -128,21 +126,17 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const unitCompleted=unitLessons.filter(l=>completed.has(l.id)).length;
  const nextLesson=unitLessons.find(l=>!completed.has(l.id))||unitLessons[unitLessons.length-1];
  const practiceItems=adaptivePracticeItems(learnedPracticeItems(completed),megaMastery.mastered);
- const revengeReady=makeRevengeRound(practiceItems,practiceMastery.states,'path-preview').length>0;
  const mixedReady=megaCheckpointCount(completed)>0;
- const taiwanReady=availableTaiwanMissions(completed).some(mission=>mission.unlocked);
  const completedUnitsTotal=units.filter(candidate=>completed.has(candidate.lessonIds[candidate.lessonIds.length-1])).length;
  const bonusReady:Record<BonusStageKind,boolean>={
   daily:practiceItems.length>=3,
-  revenge:revengeReady,
   mixed:mixedReady,
   mega:completedUnitsTotal>=2&&practiceItems.length>=8,
-  taiwan:taiwanReady,
  };
  // Bonus stages should feel discovered rather than scheduled. The pick is
  // pseudo-random per user + unit, so it stays stable while the page rerenders.
- // Daily 10 gets a little extra weight; Revenge and Mixed Mastery have equal
- // chances whenever each is ready.
+ // Daily 10 gets a little extra weight; the remaining bonus stages stay
+ // available whenever their prerequisites are ready.
  const bonusKind=chooseBonusStage(userKey+':'+unit.id,bonusReady);
  const bonusAfterIndex=Math.max(0,Math.min(unitLessons.length-2,Math.floor((unitLessons.length-1)/2)));
  const bonusVisible=Boolean(bonusKind&&completed.has(unitLessons[bonusAfterIndex]?.id));
@@ -151,7 +145,6 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const currentBook=books.find(b=>b.unitIds.includes(currentUnit.id));
  const currentTheme=visualUnitTheme(currentUnit,currentBook?.number??1);
  const followingUnit=units.find(u=>u.id===currentBook?.unitIds[(currentBook?.unitIds.indexOf(currentUnit.id)??-1)+1]);
- const currentMission=taiwanMissions.find(mission=>mission.unlockUnitId===currentUnit.id);
  useEffect(()=>{if(loading||unitChosen.current)return;unitChosen.current=true;const done=completedLessonIds(sessions.filter(s=>s.complete).map(s=>s.lessonId));const next=lessons.find(l=>!done.has(l.id));setUnitId(next?.unitId||units[units.length-1].id);setBookId(books.find(b=>b.unitIds.includes(next?.unitId||units[units.length-1].id))?.id||'book-1')},[loading,sessions]);
  function chooseUnit(id:string){setBookId(books.find(b=>b.unitIds.includes(id))?.id||'book-1');unitChosen.current=true;setUnitId(id)}
  function start(lesson:Lesson){if(loading)return;if(lesson.id.startsWith('practice-')){const char=lesson.id.slice(9);if(!characterPracticeAvailable(char,completed))return}else if(!lessonAvailable(lesson.id,completed))return;const checkpoint=sessions.find(s=>s.lessonId===lesson.id&&!s.complete);const s=checkpoint||{id:crypto.randomUUID(),lessonId:lesson.id,index:0,independent:0,assisted:0,complete:false,updatedAt:Date.now()};setDetail(null);setActive(s);if(!checkpoint)save(s);window.scrollTo({top:0,behavior:'instant'})}
@@ -221,7 +214,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  </main> : active.complete&&current ? <main className="completion-main">
   <div className="completion-medal">{current.review?<Trophy size={54}/>:<Check size={58}/>}</div><p className="eyebrow">{current.review?`UNIT ${String(currentUnit.number).padStart(2,'0')} COMPLETE`:current.id.startsWith('practice-')?'PRACTICE COMPLETE':'LESSON COMPLETE'}</p><h1>{current.review?(currentUnit.number===1?'Your first conversation starts here.':'More words. More ways to connect.'):'One step closer.'}</h1><p>You practiced {current.chars.length===1?'one character':`${current.chars.length} characters`} through shapes, strokes, and meaning.</p>
   <div className="completion-characters" lang="zh-Hant-TW">{current.chars.map(c=><button key={c} onClick={()=>setDetail(c)}>{c}</button>)}</div><div className="completion-stats"><div><strong>{active.independent}</strong><span>Without retries or hints</span></div><div><strong>{active.assisted}</strong><span>With learning support</span></div></div><p className="completion-note">Guided tracing is practice. Writing from memory is a separate step.</p>{!needsSignIn&&saveState==='error'&&<p className="storage-notice" role="status">{saveError||loadError}</p>}
-  {current.review&&<div className="final-phrase"><p lang="zh-Hant-TW">{currentUnit.goal.text}</p><span>{currentUnit.goal.meaning}</span><AudioButton text={currentUnit.goal.text}/></div>}{current.review&&currentMission&&<button className="secondary-button taiwan-unlock-button" onClick={()=>{setPracticeStart('taiwan');setPracticeOpen(true)}}><MapPin size={18}/><span><strong>Taiwan mission ready</strong><small>{currentMission.stamp} {currentMission.title}</small></span><ArrowRight size={18}/></button>}
+  {current.review&&<div className="final-phrase"><p lang="zh-Hant-TW">{currentUnit.goal.text}</p><span>{currentUnit.goal.meaning}</span><AudioButton text={currentUnit.goal.text}/></div>}
   <button className="primary-button" onClick={()=>{if(current.review&&followingUnit)chooseUnit(followingUnit.id);home()}}>{current.review&&followingUnit?`Continue to Unit ${followingUnit.displayNumber??followingUnit.number}`:'Back to the unit'}<ArrowRight size={19}/></button><button className={`sync-state ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button>
  </main> : current ? <main className="lesson-main">
   <div className="lesson-topline"><button className="icon-button" aria-label="Pause this lesson" onClick={()=>setExitOpen(true)}><X size={23}/></button><div><div className="lesson-progress-label"><span>{current.title}</span><span>{active.index+1} / {current.steps.length}</span></div><Progress className="lesson-progress" value={active.index/current.steps.length*100} aria-label="Lesson progress"/></div><button className={`sync-indicator ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()} aria-label={saveLabel}>{saveState==='saved'?<CloudCheck size={19}/>:<CloudUpload size={19}/>}</button></div>{!needsSignIn&&saveState==='error'&&<div className="save-inline" role="status">{saveError||loadError||'Your progress has not synced yet.'} <button onClick={()=>void retrySave()}>Try again</button></div>}<Exercise key={`${active.id}-${active.index}`} step={current.steps[active.index]} prefs={prefs} onAdvance={advance} onAttempt={recordLessonAttempt}/>
