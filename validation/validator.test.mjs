@@ -73,6 +73,258 @@ test('Lesson 15 A002 cards preserve three distinct source illustration transcrip
  assert.ok(cards.every(s=>JSON.stringify(s.visualSuggestions)===JSON.stringify(['看病','多休息','早一點睡覺','多喝水'])));
 });
 
+test('Lesson 15 learner-safe listening payloads stay pinned to the frozen activity specs',()=>{
+ const expected={
+   "u45-doctor-l1": {
+     "unit": "unit-45",
+     "audioText": "你哪裡不舒服？",
+     "prompt": "What is the speaker asking about?",
+     "options": [
+       "where the person feels unwell",
+       "where the person lives",
+       "what the weather is like"
+     ],
+     "answer": "where the person feels unwell",
+     "explanation": "The question asks about the location of discomfort."
+   },
+   "u45-sick-l1": {
+     "unit": "unit-45",
+     "audioText": "我生病了，還有一點發燒。",
+     "prompt": "Which two ideas are stated?",
+     "options": [
+       "being sick and having a slight fever",
+       "having a good appetite and resting",
+       "going to a pharmacy and taking medicine"
+     ],
+     "answer": "being sick and having a slight fever",
+     "explanation": "生病 and 發燒 are both present."
+   },
+   "u45-duration-l1": {
+     "unit": "unit-45",
+     "audioText": "大概多久了？已經四、五天了。",
+     "prompt": "What information is being exchanged?",
+     "options": [
+       "duration of the condition",
+       "where the pharmacy is",
+       "how much medicine costs"
+     ],
+     "answer": "duration of the condition",
+     "explanation": "The question and answer concern how long the condition has lasted."
+   },
+   "u45-review-l2": {
+     "unit": "unit-45",
+     "audioText": "頭很痛，胃口很差。",
+     "prompt": "Which two problems are mentioned?",
+     "options": [
+       "head pain and poor appetite",
+       "throat inflammation and fever",
+       "medicine and rest"
+     ],
+     "answer": "head pain and poor appetite",
+     "explanation": "頭很痛 + 胃口很差."
+   },
+   "u46-ba-l1": {
+     "unit": "unit-46",
+     "audioText": "別把我的藥吃了。",
+     "prompt": "Which word gives the negative command?",
+     "options": [
+       "別",
+       "把",
+       "藥"
+     ],
+     "answer": "別",
+     "explanation": "別 means “don't.”"
+   },
+   "u46-rec-l1": {
+     "unit": "unit-46",
+     "audioText": "多喝水，多休息，早一點睡覺。",
+     "prompt": "Which three kinds of advice do you hear?",
+     "options": [
+       "drink more water, rest more, sleep earlier",
+       "buy medicine, go home, eat less",
+       "vomit, sleep, compare"
+     ],
+     "answer": "drink more water, rest more, sleep earlier",
+     "explanation": "These are the three advice phrases in the audio."
+   },
+   "u46-visit-l1": {
+     "unit": "unit-46",
+     "audioText": "請問我得吃藥嗎？",
+     "prompt": "What is the patient asking?",
+     "options": [
+       "whether they have to take medicine",
+       "where their head hurts",
+       "how many hours they slept"
+     ],
+     "answer": "whether they have to take medicine",
+     "explanation": "得 děi expresses necessity."
+   },
+   "u47-what-l1": {
+     "unit": "unit-47",
+     "audioText": "你怎麼了？臉色這麼難看。",
+     "prompt": "What observation follows the concern question?",
+     "options": [
+       "the person's complexion looks bad",
+       "the person slept eight hours",
+       "the person has insurance"
+     ],
+     "answer": "the person's complexion looks bad",
+     "explanation": "臉色這麼難看 describes the person's appearance."
+   },
+   "u47-g3-l1": {
+     "unit": "unit-47",
+     "audioText": "吃了東西就吐。",
+     "prompt": "What happened right after eating?",
+     "options": [
+       "vomiting",
+       "sleeping",
+       "going to a pharmacy"
+     ],
+     "answer": "vomiting",
+     "explanation": "就 introduces the immediate next event."
+   },
+   "u47-a005-l1": {
+     "unit": "unit-47",
+     "audioText": "你真的不去看病嗎？",
+     "prompt": "What is being confirmed?",
+     "options": [
+       "that the person really will not see a doctor",
+       "that the person has insurance",
+       "that the person slept several hours"
+     ],
+     "answer": "that the person really will not see a doctor",
+     "explanation": "The question confirms refusal to go see a doctor."
+   },
+   "u47-review-l1": {
+     "unit": "unit-47",
+     "audioText": "你怎麼了？臉色這麼難看。",
+     "prompt": "What concern is expressed?",
+     "options": [
+       "the person's condition/appearance",
+       "the price of medicine",
+       "travel time"
+     ],
+     "answer": "the person's condition/appearance",
+     "explanation": "怎麼了 + 臉色這麼難看 is a health concern."
+   },
+   "u47-review-l2": {
+     "unit": "unit-47",
+     "audioText": "還吐了好幾次。",
+     "prompt": "How often?",
+     "options": [
+       "several times",
+       "one time",
+       "for several hours"
+     ],
+     "answer": "several times",
+     "explanation": "好幾次 means several times."
+   },
+   "u47-review-l3": {
+     "unit": "unit-47",
+     "audioText": "我陪你去看病，好不好？",
+     "prompt": "What is being offered?",
+     "options": [
+       "accompanying the person to see a doctor",
+       "buying insurance",
+       "reading a prescription"
+     ],
+     "answer": "accompanying the person to see a doctor",
+     "explanation": "陪你去看病 is the offer."
+   },
+   "u48-advice-l1": {
+     "unit": "unit-48",
+     "audioText": "油的、冰的東西最好都別吃。",
+     "prompt": "What kind of advice do you hear?",
+     "options": [
+       "avoid oily and icy foods",
+       "eat several packets of medicine",
+       "sleep more hours than yesterday"
+     ],
+     "answer": "avoid oily and icy foods",
+     "explanation": "最好都別吃 is negative advice."
+   },
+   "u48-g4-l1": {
+     "unit": "unit-48",
+     "audioText": "現在覺得怎麼樣？好一點了嗎？",
+     "prompt": "What is the speaker checking?",
+     "options": [
+       "whether the person feels a little better",
+       "how many packets remain",
+       "whether the rent is cheaper"
+     ],
+     "answer": "whether the person feels a little better",
+     "explanation": "The health check uses G004."
+   },
+   "u48-g5-l1": {
+     "unit": "unit-48",
+     "audioText": "我吃了一包藥以後，睡得比昨天好。",
+     "prompt": "What improved compared with yesterday?",
+     "options": [
+       "sleeping",
+       "rent",
+       "appetite only"
+     ],
+     "answer": "sleeping",
+     "explanation": "睡得比昨天好 is the action comparison."
+   },
+   "u48-g6-l1": {
+     "unit": "unit-48",
+     "audioText": "現在臉色比早上好得多了。",
+     "prompt": "How large is the improvement presented?",
+     "options": [
+       "much better",
+       "a tiny amount only",
+       "no comparison"
+     ],
+     "answer": "much better",
+     "explanation": "得多 marks a large difference."
+   },
+   "u48-prescription-l1": {
+     "unit": "unit-48",
+     "audioText": "這種藥一天吃四次，飯後三十分鐘吃。",
+     "prompt": "When is the medicine taken?",
+     "options": [
+       "30 minutes after meals",
+       "before meals",
+       "once before sleep"
+     ],
+     "answer": "30 minutes after meals",
+     "explanation": "飯後三十分鐘 gives the timing."
+   },
+   "u48-review-l1": {
+     "unit": "unit-48",
+     "audioText": "油的、冰的東西最好都別吃。",
+     "prompt": "What advice is heard?",
+     "options": [
+       "avoid oily and icy things",
+       "eat several bowls",
+       "buy health insurance"
+     ],
+     "answer": "avoid oily and icy things",
+     "explanation": "最好都別吃 gives the advice."
+   },
+   "u48-review-l2": {
+     "unit": "unit-48",
+     "audioText": "我吃了一包藥以後，睡得比昨天好。",
+     "prompt": "What is compared?",
+     "options": [
+       "sleep quality",
+       "rent",
+       "number of packets"
+     ],
+     "answer": "sleep quality",
+     "explanation": "This is G005 action comparison."
+   }
+ };
+ const step=(unitId,id)=>baseline.modules.find(m=>m.unit.id===unitId).lessons.flatMap(l=>l.steps).find(s=>s.id===id);
+ for(const [id,payload] of Object.entries(expected)){
+  const actual=step(payload.unit,id);
+  assert.ok(actual,id+' missing from learner-facing curriculum');
+  assert.deepEqual({audioText:actual.audioText,prompt:actual.prompt,options:actual.options,answer:actual.answer,explanation:actual.explanation},
+   {audioText:payload.audioText,prompt:payload.prompt,options:payload.options,answer:payload.answer,explanation:payload.explanation},id+' drifted from the frozen learner-safe assessed payload');
+ }
+});
+
 test('Lesson 15 repair preserves semantic listening targets and support-only honorifics',()=>{
  const u46=baseline.modules.find(m=>m.unit.id==='unit-46');
  const u47=baseline.modules.find(m=>m.unit.id==='unit-47');
