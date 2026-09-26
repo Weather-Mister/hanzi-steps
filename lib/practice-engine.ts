@@ -769,14 +769,6 @@ export const taiwanMissions:TaiwanMission[]=[
    {speaker:'Friend',prompt:'高鐵又快又舒服。',answer:'好，我坐高鐵去。',options:['好，我坐高鐵去。','我坐火車去學校。','我跟朋友一起去。','高鐵車票有一點貴。'],note:'Choose High Speed Rail.'},
   ],
  },
- {
-  id:'directions',stamp:'🚇',title:'Ask for directions',subtitle:'Follow the Shida route from Book 2 in a short exchange.',unlockUnitId:'book-2-unit-3',
-  steps:[
-   {speaker:'You',prompt:'Ask how to get to Shida.',answer:'請問，到師大怎麼走？',options:['請問，到師大怎麼走？','這附近有銀行嗎？','師大離這裡遠嗎？','在第二個路口右轉嗎？']},
-   {speaker:'Passerby',prompt:'到下一個路口，右轉。',answer:'好的。',options:['好的。','左轉嗎？','一直走嗎？','第二個路口嗎？'],note:'Acknowledge the first route step.'},
-   {speaker:'Passerby',prompt:'再往前一直走，過第二個紅綠燈。',answer:'謝謝！',options:['謝謝！','好的。','右轉嗎？','下一個路口嗎？'],note:'Thank the person after the final direction.'},
-  ],
- },
 ];
 
 export function availableTaiwanMissions(completed:Set<string>){

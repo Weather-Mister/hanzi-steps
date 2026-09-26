@@ -104,14 +104,6 @@ Selected graphics: /stroke-source/unit-nine-graphics.txt
 Selected dictionary: /stroke-source/unit-nine-dictionary.txt
 Existing AnimCJK, Arphic and LGPL attribution and licenses apply.
 
-Book 2 Unit 3 — Past the second traffic light
-Original explanations and exercises aligned to A Course in Contemporary Chinese 2,
-Lesson 1, printed pages 2, 4–6. No textbook scans are redistributed.
-Eight unmodified Taiwan glyph records (下 二 第 紅 綠 燈 過 再), retrieved 2026-09-11:
-/stroke-source/book-two-unit-three-graphics.txt (Arphic Public License).
-/stroke-source/book-two-unit-three-dictionary.txt (LGPL v3+).
-Source: https://github.com/parsimonhi/animCJK (graphicsZhHant.txt and dictionaryZhHant.txt).
-Existing attribution and license files apply; paths and medians are unchanged.
 
 Book 1 Units 13–14 — shopping requests, larger prices and choosing a phone
 Original explanations and exercises verified against the supplied A Course in

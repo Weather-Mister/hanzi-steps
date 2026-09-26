@@ -301,27 +301,8 @@
       "id": "book-2",
       "number": 2,
       "title": "A Course in Contemporary Chinese",
-      "available": true,
-      "units": [
-        {
-          "id": "book-2-unit-1",
-          "order": 1,
-          "title": "Which way to Shida?",
-          "path": "course/book2/unit01.ts"
-        },
-        {
-          "id": "book-2-unit-2",
-          "order": 2,
-          "title": "Is there a bank nearby?",
-          "path": "course/book2/unit02.ts"
-        },
-        {
-          "id": "book-2-unit-3",
-          "order": 3,
-          "title": "Past the second traffic light",
-          "path": "course/book2/unit03.ts"
-        }
-      ]
+      "available": false,
+      "units": []
     },
     {
       "id": "book-3",

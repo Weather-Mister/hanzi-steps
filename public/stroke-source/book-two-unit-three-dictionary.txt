@@ -1,8 +1,0 @@
-{"character":"下","set":["t31","taiwan4808"],"definition":"under, underneath, below; down; inferior; bring down","radical":"一","decomposition":"⿱一卜","acjk":"下⿱一.1卜2"}
-{"character":"二","set":["t31","taiwan4808"],"definition":"two; Kangxi radical 7","radical":"二","decomposition":"⿱一一","acjk":"二.⿱一1一1"}
-{"character":"再","set":["t31","taiwan4808"],"definition":"again, twice, re-","radical":"冂","decomposition":"⿱一冉","acjk":"再⿱一1冉⿻冂.2土3"}
-{"character":"燈","set":["t32","taiwan4808"],"definition":"lantern, lamp","radical":"火","decomposition":"⿰火登","acjk":"燈⿰火.4登12"}
-{"character":"第","set":["t31","taiwan4808"],"definition":"sequence, number; grade, degree","radical":"𥫗 (竹)","decomposition":"⿱𥫗𢎨","acjk":"第⿱𥫗.6𢎨5"}
-{"character":"紅","set":["t32","taiwan4808"],"definition":"red, vermillion; blush, flush","radical":"糹 (糸)","decomposition":"⿰糹工","acjk":"紅⿰糹.6工3"}
-{"character":"綠","set":["t32","taiwan4808"],"definition":"green; chlorine","radical":"糹 (糸)","decomposition":"⿰糹彔","acjk":"綠⿰糹.6彔8"}
-{"character":"過","set":["t31","taiwan4808"],"definition":"pass, pass through, go across","radical":"⻎ (辵)","decomposition":"⿺⻎咼","acjk":"過⿺咼9⻎.4"}
