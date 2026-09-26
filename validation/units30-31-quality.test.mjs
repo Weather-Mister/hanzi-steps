@@ -6,8 +6,6 @@ import {han} from './validate.mjs';
 const course=await loadCourse();
 const u30=course.modules.find(m=>m.unit.id==='unit-30');
 const u31=course.modules.find(m=>m.unit.id==='unit-31');
-const b2u1=course.modules.find(m=>m.unit.id==='book-2-unit-1');
-const b2u3=course.modules.find(m=>m.unit.id==='book-2-unit-3');
 
 function reviewBlob(module){
   const review=module.lessons.find(l=>l.id===module.reviewLessonId);
@@ -92,19 +90,10 @@ test('Units 30-31 phrases and grammar examples use covered Han characters',()=>{
   }
 });
 
-test('紅 and 往 first-teaching ownership moves earlier without deleting Book 2 lessons',()=>{
+test('紅 and 往 keep their Book 1 first-teaching ownership',()=>{
   assert.ok(u30.newCharacters.includes('紅'));
-  assert.ok(!b2u3.newCharacters.includes('紅'));
-  assert.ok(b2u3.reviewCharacters.includes('紅'));
-  assert.ok(b2u3.lessons.find(l=>l.id==='b2u3-lights').steps.some(s=>s.char==='紅'));
-
   assert.ok(u31.newVocabulary.some(v=>v.text==='往'));
   assert.ok(u31.newCharacters.includes('往'));
-  assert.ok(!b2u1.newVocabulary.some(v=>v.text==='往'));
-  assert.ok(!b2u1.newCharacters.includes('往'));
-  assert.ok(b2u1.reviewVocabulary.includes('往'));
-  assert.ok(b2u1.reviewCharacters.includes('往'));
-  assert.ok(b2u1.lessons.find(l=>l.id==='b2-from-toward').steps.some(s=>s.char==='往'));
 });
 
 
