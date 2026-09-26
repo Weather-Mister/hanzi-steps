@@ -20,9 +20,8 @@ function characterSteps(c:string):Step[]{
  return list.map((step,i)=>({...step,id:`${c}-${i}`}));
 }
 export function lessonAvailable(lessonId:string,completed:Set<string>){const done=completedLessonIds(completed);const i=lessons.findIndex(l=>l.id===lessonId);return i>=0&&(done.has(lessonId)||books.some(b=>units.find(u=>u.id===b.unitIds[0])?.lessonIds[0]===lessonId)||done.has(lessons[i-1]?.id));}
-export function characterPracticeAvailable(char:string,completed:Set<string>){
- const owner=lessons.find(lesson=>!lesson.review&&lesson.chars.includes(char));
- return Boolean(owner&&completedLessonIds(completed).has(owner.id));
+export function characterPracticeAvailable(char:string,_completed:Set<string>){
+ return Boolean(characters[char]);
 }
 export function practiceLesson(char:string):Lesson {return {id:`practice-${char}`,title:`Practice ${char}`,subtitle:characters[char].meaning,chars:[char],minutes:'3–4 min',steps:characterSteps(char)}}
 export function findLesson(id:string){return lessons.find(x=>x.id===id)||(id.startsWith('practice-')&&characters[id.slice(9)]?practiceLesson(id.slice(9)):undefined)}
