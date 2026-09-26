@@ -21,7 +21,9 @@
     "implementation": "pending",
     "release": "locked"
   },
-  "openFindings": [],
+  "openFindings": [
+    "IC-01 BLOCKER — A002 learner-facing visual cards still omit the source-specific symptom/advice information supplied by the three frozen source illustrations."
+  ],
   "artifacts": {
     "sourceLedger": "course/book1/lesson15-source-ledger.md",
     "dependencyLedger": "course/book1/lesson15-dependency-ledger.md",
@@ -57,7 +59,8 @@
     "implementationConformanceAuditHandoff": "course/book1/lesson15-implementation-conformance-audit-handoff.md",
     "implementationConformanceAudit": "course/book1/lesson15-implementation-conformance-audit.md",
     "implementationRepairHandoff": "course/book1/lesson15-implementation-repair-handoff.md",
-    "implementationConformanceReauditHandoff": "course/book1/lesson15-implementation-conformance-reaudit-handoff.md"
+    "implementationConformanceReauditHandoff": "course/book1/lesson15-implementation-conformance-reaudit-handoff.md",
+    "implementationConformanceReaudit": "course/book1/lesson15-implementation-conformance-reaudit.md"
   },
-  "notes": "Lesson 15 Stage-5 implementation repair applied for IC-01/IC-02/IC-03. A002 text placeholders were replaced by a dedicated learner-facing source-role visual-card path without external image assets or invented fixed symptom mappings; the five disputed listening items now use an explicit semantic-listening representation; and 您 / 好的，謝謝您。 are restored as support-only source register. Gate A and Gate B remain pass/frozen; implementation remains pending and release locked. Next authorized action is the fresh implementation-conformance re-audit via course/book1/lesson15-implementation-conformance-reaudit-handoff.md. Deterministic QA is not yet authorized."
+  "notes": "Lesson 15 fresh implementation-conformance re-audit completed and FAILED with 1 BLOCKER / 0 MAJOR / 0 MINOR. IC-02 semantic listening and IC-03 support-only 您 are resolved; all previously passing regression areas remain conformant. IC-01 remains open because the A002 visual cards render generic role silhouettes/dialogue shells and the common suggestion inventory but do not preserve the source-specific symptom/advice information required by frozen Gate B. Gate A and Gate B remain pass/frozen; implementation remains pending; deterministic QA readiness is not reached and release remains locked. Next valid action is the smallest Stage-5 IC-01 repair followed by another fresh conformance re-audit."
 }
