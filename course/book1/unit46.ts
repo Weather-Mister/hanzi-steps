@@ -209,7 +209,7 @@ const unit:UnitData = {
         {
           "id": "u46-g1-s1",
           "type": "select",
-          "prompt": "Under the Lesson-15 G001 rule, which sentence is a negative non-specific declarative?",
+          "prompt": "Which sentence uses a question word inside a negative statement to mean something non-specific?",
           "options": [
             "我沒買什麼東西。",
             "你想買什麼東西？",
@@ -224,7 +224,7 @@ const unit:UnitData = {
         {
           "id": "u46-g1-s2",
           "type": "select",
-          "prompt": "What restriction does the source give for G001 statements?",
+          "prompt": "What restriction applies to these non-specific question-word statements?",
           "options": [
             "They are always negative.",
             "They always require 都.",
@@ -236,7 +236,7 @@ const unit:UnitData = {
         {
           "id": "u46-g1-s3",
           "type": "select",
-          "prompt": "Which sentence is the earlier Unit-40 totality pattern rather than G001?",
+          "prompt": "Which sentence uses the earlier question-word + 都 totality pattern instead?",
           "options": [
             "什麼東西都不想吃。",
             "我沒買什麼東西。",
@@ -253,7 +253,7 @@ const unit:UnitData = {
         {
           "id": "u46-g1-s4",
           "type": "select",
-          "prompt": "Why is 沒有什麼關係 relevant to G001?",
+          "prompt": "Why is 沒有什麼關係 an example of the negative non-specific question-word pattern?",
           "options": [
             "什麼 appears in a negative non-specific statement",
             "什麼 asks a literal information question",
@@ -1258,7 +1258,7 @@ const unit:UnitData = {
         {
           "id": "u46-review-g1",
           "type": "select",
-          "prompt": "Which sentence is G001 rather than Unit-40 totality?",
+          "prompt": "Which sentence is a negative non-specific question-word statement rather than the earlier totality pattern?",
           "options": [
             "我沒買什麼東西。",
             "什麼東西都不想吃。",
@@ -1273,7 +1273,7 @@ const unit:UnitData = {
         {
           "id": "u46-review-g1b",
           "type": "select",
-          "prompt": "What is mandatory in the source G001 rule?",
+          "prompt": "What is required in the negative non-specific question-word pattern taught here?",
           "options": [
             "negation",
             "都",
