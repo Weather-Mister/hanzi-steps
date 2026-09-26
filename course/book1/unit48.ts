@@ -2187,22 +2187,18 @@ const unit:UnitData = {
       ]
     },
     "u48-prescription-support": {
-      "text": "4 times/day／3-day supply／飯前／飯後／飯後30分鐘",
-      "pinyin": "fànqián / fànhòu / fànhòu sānshí fēnzhōng",
-      "meaning": "four times per day / three-day supply / before meals / after meals / 30 minutes after meals",
-      "note": "The source supply-count glyph is support-only and withheld from learner-facing Chinese.",
-      "tokens": [
-        "4 times/day／3-day supply／飯前／飯後／飯後30分鐘"
-      ]
+      "text": "一日4次／3日份／份／飯前／飯後／飯後30分鐘",
+      "pinyin": "yí rì sì cì / sān rì fèn / fèn / fànqián / fànhòu / fànhòu sānshí fēnzhōng",
+      "meaning": "four times per day / three-day supply / 份 fèn = support-only supply/portion unit / before meals / after meals / 30 minutes after meals",
+      "note": "Read the Chinese prescription notation directly. 份 fèn is local support only: it has no canonical vocabulary, Search, Mega, or handwriting ownership.",
+      "tokens": []
     },
     "u48-prescription-visual": {
-      "text": "Health Clinic｜4 times/day｜3-day supply｜飯後｜飯後30分鐘",
-      "pinyin": "fànhòu / fànhòu sānshí fēnzhōng",
-      "meaning": "Source prescription data: four times per day, three-day supply, after meals, 30 minutes after meals.",
-      "note": "The source clinic-header and supply-count glyphs are deferred; exact medication data are preserved.",
-      "tokens": [
-        "Health Clinic｜4 times/day｜3-day supply｜飯後｜飯後30分鐘"
-      ]
+      "text": "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘",
+      "pinyin": "jiànkāng zhěnsuǒ / yí rì sì cì / sān rì fèn / fànhòu / fànhòu sānshí fēnzhōng",
+      "meaning": "Health Clinic (context only; not assessed) / four times per day / three-day supply / after meals / 30 minutes after meals",
+      "note": "Source-prescription representation. 健康診所 is a glossed contextual header; 診 is deferred and non-assessed. 份 remains support-only with no canonical vocabulary, Search, Mega, or handwriting ownership.",
+      "tokens": []
     },
     "u48-culture-source-era": {
       "text": "Mask use — textbook-era source context",
