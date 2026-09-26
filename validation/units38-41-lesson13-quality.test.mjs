@@ -154,23 +154,12 @@ test('Unit 41 capstone covers all four Lesson 13 objectives',()=>{
   assert.ok(cap.includes('birthday wishes'));
 });
 
-test('Book 2 ownership migrations preserve topology while moving first ownership to Unit 38',()=>{
-  const b2u1=byId('book-2-unit-1');
-  const b2u3=byId('book-2-unit-3');
-  assert.ok(!b2u1.newCharacters.includes('口'));
-  assert.ok(b2u1.reviewCharacters.includes('口'));
-  assert.equal(b2u1.characters['口'],undefined);
-  const intersection=b2u1.lessons.find(l=>l.id==='b2-intersection');
-  for(const id of ['b2-char-口-0','b2-char-口-1','b2-char-口-2','b2-char-口-3','b2-char-口-4'])
-    assert.ok(intersection.steps.some(s=>s.id===id),'B2U1 lost saved-progress step '+id);
-
-  assert.ok(!b2u3.newVocabulary.some(v=>v.text==='過'));
-  assert.ok(b2u3.reviewVocabulary.includes('過'));
-  const pass=b2u3.lessons.find(l=>l.id==='b2u3-pass');
-  for(let i=1;i<=14;i++){
-    const id='b2u3-pass-'+String(i).padStart(2,'0');
-    assert.ok(pass.steps.some(s=>s.id===id),'B2U3 lost saved-progress step '+id);
-  }
+test('Book 2 is an intentional clean slate',()=>{
+  const book2=course.manifest.books.find(book=>book.id==='book-2');
+  assert.ok(book2);
+  assert.equal(book2.available,false);
+  assert.deepEqual(book2.units,[]);
+  assert.equal(course.modules.some(module=>module.bookId==='book-2'),false);
 });
 
 test('Source-specific ambiguity guards remain explicit',()=>{
