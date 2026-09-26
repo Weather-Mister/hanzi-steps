@@ -72,6 +72,7 @@ function phraseItems(completed:Set<string>):PracticeItem[]{
   for(const step of lesson.steps){
    if(!step.phrase||seen.has(step.phrase))continue;
    const phrase=phrases[step.phrase];
+   if(phrase?.practice===false)continue;
    if(!phrase?.tokens?.length)continue;
    const phraseCharacters=Array.from(phrase.text).filter(char=>Boolean(characters[char]));
    // Explanatory/source-metadata cards with no learned Hanzi belong in the lesson

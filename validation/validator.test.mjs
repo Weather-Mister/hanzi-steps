@@ -92,3 +92,31 @@ test('Lesson 15 repair preserves semantic listening targets and support-only hon
  assert.equal(u46.newCharacters.includes('您'),false);
 });
 
+
+
+test('Lesson 15 A003 source notation stays visible while support-only material remains non-canonical',()=>{
+ const u48=baseline.modules.find(m=>m.unit.id==='unit-48');
+ const support=u48.phrases['u48-prescription-support'];
+ const visual=u48.phrases['u48-prescription-visual'];
+ assert.equal(support.text,'一日4次／3日份／份／飯前／飯後／飯後30分鐘');
+ assert.equal(visual.text,'健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘');
+ assert.equal(support.practice,false);
+ assert.equal(visual.practice,false);
+ assert.equal(support.tokens.join(''),support.text);
+ assert.equal(visual.tokens.join(''),visual.text);
+ const steps=u48.lessons.flatMap(l=>l.steps);
+ const ids=steps.map(s=>s.id);
+ assert.ok(ids.indexOf('u48-prescription-support')<ids.indexOf('u48-a003-s1'));
+ assert.ok(ids.indexOf('u48-prescription-visual')<ids.indexOf('u48-a003-s1'));
+ assert.equal(steps.find(s=>s.id==='u48-a003-s1').answer,'四次');
+ assert.equal(steps.find(s=>s.id==='u48-a003-s2').answer,'飯後30分鐘');
+ assert.equal(steps.find(s=>s.id==='u48-a003-s3').answer,'十二包');
+ const index=curriculumIndex(baseline);
+ for(const glyph of ['份','診']){
+  assert.equal(Object.hasOwn(index.vocabulary,glyph),false,glyph+' must not become canonical vocabulary');
+  assert.equal(Object.hasOwn(index.characters,glyph),false,glyph+' must not become a canonical character');
+  assert.equal(u48.newVocabulary.some(w=>w.text===glyph),false);
+  assert.equal(u48.newCharacters.includes(glyph),false);
+  assert.equal(steps.some(s=>s.char===glyph),false,glyph+' must not gain handwriting ownership');
+ }
+});

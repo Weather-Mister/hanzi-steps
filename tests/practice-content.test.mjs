@@ -16,6 +16,7 @@ import {
  taiwanMissions,
 } from '../lib/practice-engine.ts';
 import {eligibleMegaVocabulary,makeMegaQueue} from '../lib/mega-challenge.ts';
+import {vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 const stripSurface=value=>String(value).normalize('NFKC').trim().replace(/[\s，。！？、,.!?;；:：'"“”‘’（）()]/g,'');
 const allUnitIds=books.flatMap(book=>book.unitIds);
@@ -245,5 +246,21 @@ test('known same-English vocabulary variants are treated as ambiguous typed prom
   assert.equal(a.meaning,b.meaning,left+' / '+right+' fixture no longer shares the same English prompt');
   assert.equal(practicePromptIsAmbiguous(a,'input',items),true,left+' typed recall should be recognized as ambiguous');
   assert.equal(practicePromptIsAmbiguous(b,'input',items),true,right+' typed recall should be recognized as ambiguous');
+ }
+});
+
+
+test('Lesson 15 A003 support-only prescription material is isolated from Search, Mega, phrase practice, and handwriting',()=>{
+ const completed=completedThrough('unit-48');
+ const items=learnedPracticeItems(completed);
+ for(const phraseId of ['u48-prescription-support','u48-prescription-visual']){
+  assert.equal(items.some(item=>item.id==='phrase:'+phraseId),false,phraseId+' leaked into productive phrase practice');
+ }
+ for(const glyph of ['份','診']){
+  assert.equal(vocabularyLookup.some(item=>item.traditional.includes(glyph)),false,glyph+' leaked into canonical Pinyin Search vocabulary');
+  const mega=eligibleMegaVocabulary(completed,new Set());
+  assert.equal(mega.some(item=>item.traditional.includes(glyph)),false,glyph+' leaked into Mega Challenge vocabulary');
+  assert.equal(Boolean(characters[glyph]),false,glyph+' gained canonical character/handwriting ownership');
+  assert.equal(items.some(item=>item.characters.includes(glyph)),false,glyph+' leaked into productive practice handwriting targets');
  }
 });
