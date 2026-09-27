@@ -15,11 +15,11 @@ const polishAmendment=readJSON('validation/fixtures/units29-33-polish-amendment.
 const lesson13Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson13.json');
 const lesson15Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson15.json');
 const characterQualityAmendment=readJSON('validation/fixtures/book1-character-quality-amendment.json');
+const selfContainedAmendment=readJSON('validation/fixtures/book1-self-contained-learner-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
  const data={...current,cards:Object.fromEntries(current.units.map(u=>[u.id,current.unitLibraryCharacters(u)]))};
- const mismatches=[];
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){
@@ -49,12 +49,12 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const lesson15Expected=lesson15?.after??lesson13Expected;
    const characterQuality=characterQualityAmendment.records?.[key]?.[id];
    if(characterQuality)assert.equal(characterQuality.before,lesson15Expected,`character quality amendment must identify prior ${key} ${id}`);
-   const expected=characterQuality?.after??lesson15Expected;
-   const actualDigest=hash(actual[id]);
-   if(actualDigest!==expected)mismatches.push({key,id,before:expected,after:actualDigest});
+   const characterQualityExpected=characterQuality?.after??lesson15Expected;
+   const selfContained=selfContainedAmendment.records?.[key]?.[id];
+   if(selfContained)assert.equal(selfContained.before,characterQualityExpected,`self-contained amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),selfContained?.after??characterQualityExpected,`${key} ${id}`);
   }
  }
- assert.deepEqual(mismatches,[],`Intentional curriculum record changes need an explicit amendment:\n${JSON.stringify(mismatches,null,2)}`);
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);
  for(const b of baseline.books){const live=current.books.find(x=>x.id===b.id);assert.ok(live,b.id);assert.equal(live.title,b.title);assert.equal(live.number,b.number);assert.deepEqual(live.unitIds.filter(id=>b.unitIds.includes(id)),b.unitIds);}
  assert.deepEqual(current.characterOrder.filter(c=>baseline.characterOrder.includes(c)),lesson15Amendment.characterOrder??lesson13Amendment.characterOrder??lesson11Amendment.characterOrder??lesson10Amendment.characterOrder??amendment.characterOrder);

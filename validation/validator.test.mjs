@@ -315,7 +315,7 @@ test('Lesson 15 learner-safe listening payloads stay pinned to the frozen activi
        "number of packets"
      ],
      "answer": "sleep quality",
-     "explanation": "This is G005 action comparison."
+     "explanation": "This compares sleep quality using the action-comparison pattern."
    }
  };
  const step=(unitId,id)=>baseline.modules.find(m=>m.unit.id===unitId).lessons.flatMap(l=>l.steps).find(s=>s.id===id);

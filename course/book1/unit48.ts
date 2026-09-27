@@ -1079,7 +1079,7 @@ const unit:UnitData = {
             "number of packets"
           ],
           "answer": "sleep quality",
-          "explanation": "This is action-comparison pattern action comparison.",
+          "explanation": "This compares sleep quality using the action-comparison pattern.",
           "semanticAnswer": true
         },
         {
