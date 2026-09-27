@@ -53,7 +53,7 @@ const unit:UnitData = {
     {
       "id": "u29-date",
       "title": "A Visit Date — and What to Eat",
-      "subtitle": "Say when someone is coming, then carry that visit naturally into the first Lesson 10 word 水果.",
+      "subtitle": "Say when someone is coming, then carry that visit naturally into the first this lesson word 水果.",
       "chars": [
         "月",
         "號",
@@ -652,7 +652,7 @@ const unit:UnitData = {
             "Only in questions"
           ],
           "answer": "Yes, as in 你要是沒空…",
-          "explanation": "Lesson 9 explicitly allows 要是 before or after the subject of the condition clause.",
+          "explanation": "this lesson explicitly allows 要是 before or after the subject of the condition clause.",
           "grammarIds": [
             "u29-yaoshi-jiu"
           ]
@@ -757,7 +757,7 @@ const unit:UnitData = {
     {
       "id": "u29-review",
       "title": "Unit 29 Review",
-      "subtitle": "Dates, conditions, and the first fruit-description vocabulary from Lesson 10.",
+      "subtitle": "Dates, conditions, and the first fruit-description vocabulary from this lesson.",
       "chars": [],
       "minutes": "15–19 min",
       "unitId": "unit-29",
@@ -991,7 +991,7 @@ const unit:UnitData = {
         {
           "id": "u29-review-20",
           "type": "select",
-          "prompt": "In Lesson 9 Vocabulary II, what does 女 do in 女學生?",
+          "prompt": "In this lesson the vocabulary set, what does 女 do in 女學生?",
           "options": [
             "Marks the person as female",
             "Means the person is young",
@@ -1120,7 +1120,7 @@ const unit:UnitData = {
       "meaning": "female-; girl- (before a person noun)",
       "lessonId": "u29-date",
       "core": false,
-      "note": "Lesson 9 Vocabulary II gives 女 + noun as a productive person label, for example 女學生."
+      "note": "this lesson the vocabulary set gives 女 + noun as a productive person label, for example 女學生."
     },
     {
       "text": "逛",
@@ -1587,7 +1587,7 @@ const unit:UnitData = {
       "meaning": "wander around; look around",
       "strokes": 10,
       "layout": "side",
-      "note": "逛 is fourth-tone guàng. Lesson 9 uses 去逛逛 for going to look around a night market.",
+      "note": "逛 is fourth-tone guàng. this lesson uses 去逛逛 for going to look around a night market.",
       "memory": "Write the seven-stroke 狂 body first, then finish with the three-stroke movement component 辶 wrapping along the lower-left.",
       "parts": [
         {
@@ -1654,7 +1654,7 @@ const unit:UnitData = {
     "u29-yaoshi-jiu": {
       "id": "u29-yaoshi-jiu",
       "title": "Condition and consequence with 要是…就…",
-      "pattern": "要是 + Condition，(Subject) + 就 + Consequence  /  Subject + 要是 + Condition，Subject + 就 + Consequence",
+      "pattern": "要是 + Condition，(Subject) + 就 + Consequence / Subject + 要是 + Condition，Subject + 就 + Consequence",
       "explanation": "要是 introduces the condition. 就 stands at the beginning of the predicate in the consequence clause. The subject can come before 要是 or after it. The condition or consequence may be negative; keep 就 in the consequence clause.",
       "examples": [
         {
@@ -1701,7 +1701,7 @@ const unit:UnitData = {
       "text": "我女朋友九月三十號要來看我。",
       "pinyin": "Wǒ nǚpéngyou jiǔyuè sānshí hào yào lái kàn wǒ.",
       "meaning": "My girlfriend is coming to see me on September 30.",
-      "note": "九月三十號 is a complete Time-When expression. Lesson 9 also gives 女 + person noun as female-/girl- (for example 女學生); 女朋友 is the fixed word girlfriend.",
+      "note": "九月三十號 is a complete Time-When expression. this lesson also gives 女 + person noun as female-/girl- (for example 女學生); 女朋友 is the fixed word girlfriend.",
       "tokens": [
         "我女朋友九月三十號",
         "要來看我"

@@ -1357,7 +1357,7 @@ const unit:UnitData = {
       "text": "我回國以後，也想找個有機會說中文的工作。",
       "pinyin": "Wǒ huíguó yǐhòu, yě xiǎng zhǎo ge yǒu jīhuì shuō Zhōngwén de gōngzuò.",
       "meaning": "After I go back home, I would also like to find a job with opportunities to speak Chinese.",
-      "note": "the conversation source sentence. Here 以後 follows the event 回國 and means 'after returning home'.",
+      "note": "This sentence uses 以後 after 回國 to mean 'after returning home'.",
       "tokens": [
         "我回國以後",
         "也想找個有機會說中文的工作"

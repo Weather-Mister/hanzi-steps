@@ -1325,7 +1325,7 @@ const unit:UnitData = {
           "options": [
             "得 děi + V = must; V 得 de + state = performance complement",
             "得 de + V = must; 得 děi always marks comparison",
-            "得 has only one Lesson-15 reading"
+            "得 has only one reading here"
           ],
           "answer": "得 děi + V = must; V 得 de + state = performance complement",
           "explanation": "Modal 得 and complement 得 are distinct."

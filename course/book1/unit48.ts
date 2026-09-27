@@ -1017,7 +1017,7 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "How should this culture card be interpreted?",
           "options": [
-            "as textbook-era source content, not current medical/policy advice",
+            "as historical lesson context, not current medical/policy advice",
             "as a current 2026 legal requirement",
             "as new Chinese vocabulary ownership"
           ],
@@ -1707,7 +1707,7 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "What is the status of the mask reading in this course?",
           "options": [
-            "textbook-era source culture, not current medical/policy guidance",
+            "historical lesson context, not current medical/policy guidance",
             "current 2026 legal instructions",
             "a new vocabulary list"
           ],

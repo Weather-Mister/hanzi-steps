@@ -109,7 +109,7 @@ const unit:UnitData = {
             "Is the umbrella bigger than last time?"
           ],
           "answer": "How come you didn't bring an umbrella?",
-          "explanation": "The whole source question is understood contextually; 呢 remains comprehension-only and is not generalized into a new rule."
+          "explanation": "The whole question is understood contextually; 呢 remains comprehension-only and is not generalized into a new rule."
         },
         {
           "id": "u44-umbrella-p2",
@@ -1999,7 +1999,7 @@ const unit:UnitData = {
       "text": "星期天我更忙。",
       "pinyin": "Xīngqítiān wǒ gèng máng.",
       "meaning": "I am even busier on Sunday.",
-      "note": "Source baseline example. This card teaches 更 = “even more” before the 更 comparison grammar card.",
+      "note": "Baseline example. This card teaches 更 = “even more” before the 更 comparison grammar card.",
       "tokens": [
         "星期天",
         "我更忙"

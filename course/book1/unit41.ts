@@ -457,7 +457,7 @@ const unit:UnitData = {
             "我什麼都找你。"
           ],
           "answer": "我一下課，就去找你。",
-          "explanation": "This retrieves Grammar I and the phone-appointment outcome."
+          "explanation": "This retrieves the earlier immediate-sequence pattern and the phone-appointment outcome."
         },
         {
           "id": "u41-capstone-o2",
@@ -481,7 +481,7 @@ const unit:UnitData = {
             "我少買東西。"
           ],
           "answer": "我什麼都吃。",
-          "explanation": "This retrieves Grammar IV."
+          "explanation": "This retrieves the earlier question-word totality pattern."
         },
         {
           "id": "u41-capstone-o4",

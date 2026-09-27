@@ -1198,7 +1198,7 @@ const unit:UnitData = {
       "text": "啊，我怎麼忘了！",
       "pinyin": "A, wǒ zěnme wàng le!",
       "meaning": "Oh! How could I forget!",
-      "note": "This conversation reaction. 忘了 is learned here as the source chunk 'forgot'; Unit 39 later teaches completed-action verbal 了 as a general system.",
+      "note": "In this reaction, 忘了 is learned as the fixed chunk 'forgot'; Unit 39 later teaches completed-action verbal 了 as a general system.",
       "tokens": [
         "啊",
         "我怎麼",
