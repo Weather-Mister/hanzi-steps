@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "Visit plans, conditions & fruit",
     "title": "If You Come to Visit",
-    "description": "Finish Lesson 9 visit dates and conditions with the remaining source vocabulary, then transition into Lesson 10 fruit language through one continuing visit-and-hosting context.",
+    "description": "Finish visit dates and conditions, then transition into fruit language through one continuing visit-and-hosting context.",
     "chars": [
       "月",
       "號",
@@ -408,14 +408,14 @@ const unit:UnitData = {
         {
           "id": "u29-maokong-s1",
           "type": "select",
-          "prompt": "Which place name from Dialogue II is associated with tea and scenery?",
+          "prompt": "Which Taipei place is associated here with tea and scenery?",
           "options": [
             "貓空",
             "夜市",
             "茶館"
           ],
           "answer": "貓空",
-          "explanation": "貓空 is the named Taipei destination in the dialogue."
+          "explanation": "貓空 is the Taipei destination associated here with tea and scenery."
         },
         {
           "id": "u29-maokong-l1",
@@ -875,7 +875,7 @@ const unit:UnitData = {
             "決定"
           ],
           "answer": "逛",
-          "explanation": "逛 means to wander or look around; the dialogue uses 去逛逛 for a casual visit."
+          "explanation": "逛 means to wander or look around; 去逛逛 describes a casual visit."
         },
         {
           "id": "u29-review-11",
@@ -1128,7 +1128,7 @@ const unit:UnitData = {
       "meaning": "to wander around; look around",
       "lessonId": "u29-integrate",
       "core": false,
-      "note": "The dialogue uses 去逛逛 for going to look around a night market."
+      "note": "去逛逛 describes casually going to look around a night market."
     }
   ],
   "reviewVocabulary": [
@@ -1631,7 +1631,7 @@ const unit:UnitData = {
       "id": "u29-calendar-date",
       "title": "Say a month and date",
       "pattern": "Number + 月 + Number + 號 / 日",
-      "explanation": "A month is formed with a number plus 月. A spoken day of the month commonly uses a number plus 號; the textbook also lists 日 as a written date form. The whole date functions as a Time-When expression and therefore comes before the action.",
+      "explanation": "A month is formed with a number plus 月. A spoken day of the month commonly uses a number plus 號; 日 is also used as a written date form. The whole date functions as a Time-When expression and therefore comes before the action.",
       "examples": [
         {
           "text": "我女朋友九月三十號要來看我。",
@@ -1750,7 +1750,7 @@ const unit:UnitData = {
       "text": "貓空的風景很美。",
       "pinyin": "Māokōng de fēngjǐng hěn měi.",
       "meaning": "The scenery in Maokong is beautiful.",
-      "note": "貓空 is the Taipei place name from Lesson 9 Dialogue II.",
+      "note": "貓空 is the Taipei place name used in this visit context.",
       "tokens": [
         "貓空的風景",
         "很美"
@@ -1786,7 +1786,7 @@ const unit:UnitData = {
       "text": "她來的時候，我們一起吃水果。",
       "pinyin": "Tā lái de shíhou, wǒmen yìqǐ chī shuǐguǒ.",
       "meaning": "When she comes, we will eat fruit together.",
-      "note": "水果 opens Lesson 10 while 的時候 deliberately recycles the Lesson 9 time-setting pattern.",
+      "note": "水果 begins the fruit topic while 的時候 deliberately recycles the earlier time-setting pattern.",
       "tokens": [
         "她來的時候",
         "我們一起吃水果"
@@ -1858,7 +1858,7 @@ const unit:UnitData = {
       "text": "夜市很有名，你們應該去逛逛。",
       "pinyin": "Yèshì hěn yǒumíng, nǐmen yīnggāi qù guàngguang.",
       "meaning": "Night markets are famous; you should go look around.",
-      "note": "This restores the Lesson 9 dialogue use of 逛 without introducing the separately deferred 臺 character. Reduplication 逛逛 makes the activity light/casual here.",
+      "note": "This uses 逛 in the visit context without introducing the separately deferred 臺 character. Reduplication 逛逛 makes the activity light/casual here.",
       "tokens": [
         "夜市很有名",
         "你們應該去逛逛"

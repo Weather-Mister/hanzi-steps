@@ -462,7 +462,7 @@ const unit:UnitData = {
             "As a time expression"
           ],
           "answer": "As a noun: suggestion/advice",
-          "explanation": "The Lesson 9 dialogue uses 建議 as a noun."
+          "explanation": "建議 is used as a noun here."
         },
         {
           "id": "u27-suggest-s2",
@@ -977,7 +977,7 @@ const unit:UnitData = {
             "decision"
           ],
           "answer": "suggestion / advice",
-          "explanation": "This is the noun use from the Lesson 9 dialogue."
+          "explanation": "This is the noun use of 建議."
         },
         {
           "id": "u27-review-16",
@@ -1085,7 +1085,7 @@ const unit:UnitData = {
       "meaning": "suggestion; advice",
       "lessonId": "u27-suggest",
       "core": true,
-      "note": "In the textbook dialogue, 建議 is used as a noun in 你有什麼建議？"
+      "note": "In 你有什麼建議？, 建議 is used as a noun."
     },
     {
       "text": "應該",
@@ -1481,7 +1481,7 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄞ",
       "meaning": "should; ought to",
       "strokes": 13,
-      "note": "該 is first-tone gāi. Together, 應該 is the textbook expression for should.",
+      "note": "該 is first-tone gāi. Together, 應該 means should.",
       "memory": "言 is the seven-stroke left side; 亥 is the six-stroke right side.",
       "parts": [
         {
@@ -1842,7 +1842,7 @@ const unit:UnitData = {
       "text": "你有什麼建議？",
       "pinyin": "Nǐ yǒu shénme jiànyì?",
       "meaning": "What suggestions do you have?",
-      "note": "Here 建議 is a noun, matching the Lesson 9 dialogue.",
+      "note": "Here 建議 is a noun.",
       "tokens": [
         "你有",
         "什麼建議"

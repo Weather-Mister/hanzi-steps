@@ -1249,7 +1249,7 @@ const unit:UnitData = {
       "meaning": "comparatively; relatively; more",
       "lessonId": "u24-degree",
       "core": true,
-      "note": "In the Taiwan usage taught by the textbook, 比較 signals a comparison even when the standard is understood from context."
+      "note": "In the Taiwan usage taught here, 比較 signals a comparison even when the standard is understood from context."
     },
     {
       "text": "快",
@@ -1967,7 +1967,7 @@ const unit:UnitData = {
       "id": "u24-bijiao",
       "title": "Implicit comparison with 比較",
       "pattern": "比較 + State Verb / Description",
-      "explanation": "比較 marks an implicit comparison: the comparison standard is understood from context. In the Taiwan usage presented by the textbook, 比較 retains this comparative meaning. If the description is negated, put the negative with the main description, as in 比較不貴, rather than negating 比較 itself.",
+      "explanation": "比較 marks an implicit comparison: the comparison standard is understood from context. In the Taiwan usage taught here, 比較 retains this comparative meaning. If the description is negated, put the negative with the main description, as in 比較不貴, rather than negating 比較 itself.",
       "examples": [
         {
           "text": "火車比較慢。",
@@ -1996,7 +1996,7 @@ const unit:UnitData = {
       "id": "u24-you-you",
       "title": "Both A and B with 又…又…",
       "pattern": "又 + Property A + 又 + Property B",
-      "explanation": "Use 又 before each of two coordinated properties to say that something has both qualities. The two descriptions apply to the same topic. The textbook also uses this pattern with wishes or abilities, not only simple adjectives. To make both descriptions negative, place 不 after each 又: 又不…又不….",
+      "explanation": "Use 又 before each of two coordinated properties to say that something has both qualities. The two descriptions apply to the same topic. The pattern can also be used with wishes or abilities, not only simple adjectives. To make both descriptions negative, place 不 after each 又: 又不…又不….",
       "examples": [
         {
           "text": "高鐵又快又舒服。",

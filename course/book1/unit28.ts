@@ -955,7 +955,7 @@ const unit:UnitData = {
         {
           "id": "u28-review-18",
           "type": "select",
-          "prompt": "Which is the full textbook expression for “bus”?",
+          "prompt": "Which is the full expression for “bus” taught here?",
           "options": [
             "公共汽車",
             "計程車",
@@ -1089,7 +1089,7 @@ const unit:UnitData = {
       "meaning": "convenience store",
       "lessonId": "u28-object",
       "core": true,
-      "note": "Taiwan textbook term for convenience store. Pronounce 便 as biàn here; compare 便宜 piányi, where 便 is pián."
+      "note": "Taiwan term used here for convenience store. Pronounce 便 as biàn here; compare 便宜 piányi, where 便 is pián."
     },
     {
       "text": "公共汽車",
@@ -1588,7 +1588,7 @@ const unit:UnitData = {
       "id": "u28-object-duration",
       "title": "Repeat the verb when a duration follows an object",
       "pattern": "Subject + Verb + Object + Verb + Duration",
-      "explanation": "When the verb has an object and you also state how long the activity lasts, Lesson 9 repeats the verb before the duration. The first verb takes the object; the repeated verb introduces the length of time.",
+      "explanation": "When the verb has an object and you also state how long the activity lasts, repeat the verb before the duration. The first verb takes the object; the repeated verb introduces the length of time.",
       "examples": [
         {
           "text": "我學中文學一年。",
@@ -1817,7 +1817,7 @@ const unit:UnitData = {
       "text": "我在便利商店買票。",
       "pinyin": "Wǒ zài biànlì shāngdiàn mǎi piào.",
       "meaning": "I buy a ticket at a convenience store.",
-      "note": "便利商店 is the Taiwan textbook term for convenience store. Here 便 is pronounced biàn in 便利, unlike pián in 便宜.",
+      "note": "便利商店 is the Taiwan term used here for convenience store. Here 便 is pronounced biàn in 便利, unlike pián in 便宜.",
       "tokens": [
         "我",
         "在便利商店",
@@ -1840,7 +1840,7 @@ const unit:UnitData = {
       "text": "我兩天不能坐公共汽車。",
       "pinyin": "Wǒ liǎng tiān bù néng zuò gōnggòng qìchē.",
       "meaning": "I cannot take the bus for two days.",
-      "note": "The duration 兩天 comes before 不能. 公共汽車 is the full textbook form for bus.",
+      "note": "The duration 兩天 comes before 不能. 公共汽車 is the full form for bus taught here.",
       "tokens": [
         "我",
         "兩天",

@@ -1382,7 +1382,7 @@ const unit:UnitData = {
       "id": "u23-permission-negative",
       "title": "Not permitted: 不可以",
       "pattern": "Subject + 不可以 + Verb Phrase",
-      "explanation": "不可以 says an action is not permitted. The textbook specifically treats this negative form as permission/prohibition rather than the earlier possibility sense of 可以.",
+      "explanation": "不可以 says an action is not permitted. Here 不可以 expresses permission/prohibition rather than the earlier possibility sense of 可以.",
       "examples": [
         {
           "text": "你不可以在這裡唱歌。",
@@ -1404,7 +1404,7 @@ const unit:UnitData = {
       "id": "u23-permission-questions",
       "title": "Ask permission",
       "pattern": "可不可以 + VP? / 可以 + VP + 嗎?",
-      "explanation": "To ask whether an action is permitted, use the A-not-A form 可不可以 before the action, or use 可以 before the action and add 嗎 at the end. In other contexts the A-not-A form can also ask about possibility; here the situation makes the permission reading clear.",
+      "explanation": "To ask whether an action is permitted, use 可不可以 before the action, or use 可以 before the action and add 嗎 at the end. In other contexts the A-not-A form can also ask about possibility; here the situation makes the permission reading clear.",
       "examples": [
         {
           "text": "我可不可以去看比賽？",

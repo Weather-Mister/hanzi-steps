@@ -325,7 +325,7 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s2",
           "type": "select",
-          "prompt": "Which is the textbook-style combination for 'fragrant and sweet'?",
+          "prompt": "Which is this lesson-style combination for 'fragrant and sweet'?",
           "options": [
             "香香甜甜的",
             "很香香很甜甜的",
@@ -340,7 +340,7 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s3",
           "type": "select",
-          "prompt": "Which familiar state verb does the textbook ALLOW in this reduplication pattern?",
+          "prompt": "Which familiar state verb does this lesson ALLOW in this reduplication pattern?",
           "options": [
             "美",
             "貴",
@@ -789,14 +789,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-14",
           "type": "select",
-          "prompt": "Which pair gives an allowed subjective description and an excluded form in the textbook?",
+          "prompt": "Which pair gives an allowed subjective description and an excluded form in this lesson?",
           "options": [
             "美美的 is allowed; 貴貴的 is excluded",
             "貴貴的 is allowed; 美美的 is excluded",
             "忙忙的 and 貴貴的 are both allowed"
           ],
           "answer": "美美的 is allowed; 貴貴的 is excluded",
-          "explanation": "The textbook explicitly permits 美 and excludes 貴 and 忙.",
+          "explanation": "this lesson explicitly permits 美 and excludes 貴 and 忙.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -885,7 +885,7 @@ const unit:UnitData = {
         {
           "id": "u30-review-22",
           "type": "select",
-          "prompt": "You are simply ordering hot coffee, not praising its feel. Which wording fits the textbook usage note?",
+          "prompt": "You are simply ordering hot coffee, not praising its feel. Which wording fits this lesson usage note?",
           "options": [
             "我要一杯熱咖啡。",
             "我要一杯很熱熱的咖啡。",
@@ -981,7 +981,7 @@ const unit:UnitData = {
       "meaning": "clothes; clothing",
       "lessonId": "u30-clothes",
       "core": true,
-      "note": "The textbook gives yīfú, with second-tone 服."
+      "note": "this lesson gives yīfú, with second-tone 服."
     }
   ],
   "reviewVocabulary": [
@@ -1368,7 +1368,7 @@ const unit:UnitData = {
       "id": "u30-state-redup",
       "title": "Give a subjective impression by reduplicating a state verb",
       "pattern": "State verb + state verb + 的",
-      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. The textbook's permitted set is 香、甜、高、熱、大、美、遠、辣、矮; its excluded set is 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
+      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. this lesson's permitted set is 香、甜、高、熱、大、美、遠、辣、矮; its excluded set is 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
       "examples": [
         {
           "text": "這個水果香香的。",
@@ -1381,7 +1381,7 @@ const unit:UnitData = {
           "meaning": "This fruit is fragrant and sweet."
         }
       ],
-      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. The textbook allows 香、甜、高、熱、大、美、遠、辣、矮 and excludes 多、貴、近、忙、新、少."
+      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. this lesson allows 香、甜、高、熱、大、美、遠、辣、矮 and excludes 多、貴、近、忙、新、少."
     }
   },
   "grammarIntroductions": [
@@ -1427,7 +1427,7 @@ const unit:UnitData = {
       "text": "這個黃色的水果是芒果。我給你一塊。",
       "pinyin": "Zhège huángsè de shuǐguǒ shì mángguǒ. Wǒ gěi nǐ yí kuài.",
       "meaning": "This yellow fruit is mango. I'll give you a piece.",
-      "note": "This keeps the textbook's yellow-mango context while using already-covered 是 rather than introducing 叫 before it is taught. 塊 counts a piece of food after the fruit is understood.",
+      "note": "This keeps this lesson's yellow-mango context while using already-covered 是 rather than introducing 叫 before it is taught. 塊 counts a piece of food after the fruit is understood.",
       "tokens": [
         "這個黃色的水果是芒果",
         "我給你一塊"
