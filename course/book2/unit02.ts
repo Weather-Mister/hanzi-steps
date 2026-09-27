@@ -1371,13 +1371,13 @@ const unit:UnitData = {
       "meaning": "level; peace",
       "strokes": 5,
       "note": "平 is part of 和平, the road name Heping.",
-      "memory": "Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+      "memory": "Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
       "parts": [
         {
           "label": "一",
           "name": "top line",
           "role": "Character component",
-          "description": "In 平, write 一 (top line) as the first 1 stroke; Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+          "description": "In 平, this top line uses strokes 1. Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
           "strokes": [
             0
           ]
@@ -1386,17 +1386,17 @@ const unit:UnitData = {
           "label": "丷",
           "name": "two dots",
           "role": "Character component",
-          "description": "In 平, write 丷 (two dots) as the following 2 strokes; Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+          "description": "In 平, this two dots uses strokes 2, 3. Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
           "strokes": [
             1,
             2
           ]
         },
         {
-          "label": "干",
+          "label": "十",
           "name": "lower crossing strokes",
           "role": "Character component",
-          "description": "In 平, write 干 (lower crossing strokes) as the following 2 strokes; Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+          "description": "In 平, this lower crossing strokes uses strokes 4, 5. Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
           "strokes": [
             3,
             4
