@@ -301,8 +301,33 @@
       "id": "book-2",
       "number": 2,
       "title": "A Course in Contemporary Chinese",
-      "available": false,
-      "units": []
+      "available": true,
+      "units": [
+        {
+          "id": "book-2-unit-1",
+          "order": 1,
+          "title": "Lost? Ask the Way",
+          "path": "course/book2/unit01.ts"
+        },
+        {
+          "id": "book-2-unit-2",
+          "order": 2,
+          "title": "Lights, Cash, and Local Help",
+          "path": "course/book2/unit02.ts"
+        },
+        {
+          "id": "book-2-unit-3",
+          "order": 3,
+          "title": "Walk with a Map",
+          "path": "course/book2/unit03.ts"
+        },
+        {
+          "id": "book-2-unit-4",
+          "order": 4,
+          "title": "Near the Noodle Shop",
+          "path": "course/book2/unit04.ts"
+        }
+      ]
     },
     {
       "id": "book-3",

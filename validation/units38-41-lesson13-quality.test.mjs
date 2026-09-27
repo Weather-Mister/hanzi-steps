@@ -154,12 +154,13 @@ test('Unit 41 capstone covers all four Lesson 13 objectives',()=>{
   assert.ok(cap.includes('birthday wishes'));
 });
 
-test('Book 2 is an intentional clean slate',()=>{
+test('Book 1 Lesson 13 keeps its canonical ownership after Book 2 resumes',()=>{
   const book2=course.manifest.books.find(book=>book.id==='book-2');
   assert.ok(book2);
-  assert.equal(book2.available,false);
-  assert.deepEqual(book2.units,[]);
-  assert.equal(course.modules.some(module=>module.bookId==='book-2'),false);
+  const book1Forms=new Set(course.modules.filter(module=>module.bookId==='book-1').flatMap(module=>module.newVocabulary.map(word=>word.text)));
+  for(const form of ['過','往','附近','應該','便利商店'])assert.ok(book1Forms.has(form));
+  for(const module of course.modules.filter(module=>module.bookId==='book-2'))
+    for(const word of module.newVocabulary)assert.ok(!book1Forms.has(word.text),`Book 2 stole Book 1 ownership of ${word.text}`);
 });
 
 test('Source-specific ambiguity guards remain explicit',()=>{
