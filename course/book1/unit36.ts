@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "orange",
     "label": "Work, after-events & easy/hard actions",
     "title": "Is That Job Easy to Find?",
-    "description": "Complete Lesson 12 with Dialogue II: work and business, returning home, Event + 以後, finding a job, trying, and the special 好/難 + verb patterns.",
+    "description": "Complete this lesson with the conversation: work and business, returning home, Event + 以後, finding a job, trying, and the special 好/難 + verb patterns.",
     "chars": [
       "工",
       "作",
@@ -133,7 +133,7 @@ const unit:UnitData = {
         {
           "id": "u36-work-s2",
           "type": "select",
-          "prompt": "Which source word means “last year”?",
+          "prompt": "Which word means “last year”?",
           "options": [
             "去年",
             "以後",
@@ -145,14 +145,14 @@ const unit:UnitData = {
         {
           "id": "u36-work-s3",
           "type": "select",
-          "prompt": "Lesson 12 lists 工作 both as a verb and as a noun. Which pair is correct?",
+          "prompt": "this lesson lists 工作 both as a verb and as a noun. Which pair is correct?",
           "options": [
             "to work / job, work",
             "to study / school",
             "to pay / tuition"
           ],
           "answer": "to work / job, work",
-          "explanation": "The same written word 工作 is used in Dialogue II both for the activity 'to work' and for a job/work."
+          "explanation": "The same written word 工作 is used in the conversation both for the activity 'to work' and for a job/work."
         }
       ]
     },
@@ -207,7 +207,7 @@ const unit:UnitData = {
             "The staff are all university students."
           ],
           "answer": "The company does business with Taiwanese people.",
-          "explanation": "The dialogue says 因為我們公司跟臺灣人做生意, so the business relationship motivates the language study."
+          "explanation": "the conversation says 因為我們公司跟臺灣人做生意, so the business relationship motivates the language study."
         },
         {
           "id": "u36-business-s3",
@@ -385,14 +385,14 @@ const unit:UnitData = {
         {
           "id": "u36-job-s3",
           "type": "select",
-          "prompt": "Which source word means “country”?",
+          "prompt": "Which word means “country”?",
           "options": [
             "國家",
             "公司",
             "生意"
           ],
           "answer": "國家",
-          "explanation": "國家 is the source noun for country."
+          "explanation": "國家 is the lesson noun for country."
         },
         {
           "id": "u36-job-s4",
@@ -404,7 +404,7 @@ const unit:UnitData = {
             "這樣的工作在你們國家好找嗎？"
           ],
           "answer": "日本菜好吃也好看。",
-          "explanation": "With perception verbs such as 吃/喝/看/聽, the textbook treats forms like 好吃 as single words describing a pleasant perception.",
+          "explanation": "With perception verbs such as 吃/喝/看/聽, the rule here treats forms like 好吃 as single words describing a pleasant perception.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -414,7 +414,7 @@ const unit:UnitData = {
     {
       "id": "u36-try",
       "title": "Give It a Try",
-      "subtitle": "Learn 試 and the source phrase 試試看, while practicing 好不好 + verb questions.",
+      "subtitle": "Learn 試 and the phrase 試試看, while practicing 好不好 + verb questions.",
       "chars": [
         "試"
       ],
@@ -462,7 +462,7 @@ const unit:UnitData = {
             "to decide"
           ],
           "answer": "to try",
-          "explanation": "試 is 'to try'. 試試看 is the source phrase 'give it a try / try and see what happens'."
+          "explanation": "試 is 'to try'. 試試看 is the phrase 'give it a try / try and see what happens'."
         },
         {
           "id": "u36-try-s2",
@@ -493,7 +493,7 @@ const unit:UnitData = {
     {
       "id": "u36-hard",
       "title": "What If It Is Hard to Find?",
-      "subtitle": "Learn 那麼, finish Dialogue II, and practice negatives/questions across both 好/難 + verb branches.",
+      "subtitle": "Learn 那麼, finish the conversation, and practice negatives/questions across both 好/難 + verb branches.",
       "chars": [],
       "minutes": "9–12 min",
       "unitId": "unit-36",
@@ -549,7 +549,7 @@ const unit:UnitData = {
         {
           "id": "u36-hard-s3",
           "type": "select",
-          "prompt": "Which negative follows the textbook pattern?",
+          "prompt": "Which negative follows the pattern taught here?",
           "options": [
             "便宜的咖啡不好喝。",
             "便宜的咖啡好不喝。",
@@ -564,14 +564,14 @@ const unit:UnitData = {
         {
           "id": "u36-hard-s4",
           "type": "select",
-          "prompt": "Which A-not-A form matches the textbook's perception-verb question?",
+          "prompt": "Which A-not-A form matches the perception-verb pattern taught here?",
           "options": [
             "你覺得那個電影好看不好看？",
             "你覺得那個電影好看不看？",
             "你覺得那個電影好不看？"
           ],
           "answer": "你覺得那個電影好看不好看？",
-          "explanation": "For the perception word 好看, the textbook's A-not-A example repeats the whole compound: 好看不好看.",
+          "explanation": "For the perception word 好看, the rule here A-not-A example repeats the whole compound: 好看不好看.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -581,7 +581,7 @@ const unit:UnitData = {
     {
       "id": "u36-review",
       "title": "Unit 36 Review",
-      "subtitle": "Retrieve Dialogue II, both new grammar systems, all eight new lexical items, and the four new characters.",
+      "subtitle": "Retrieve the conversation, both new grammar systems, all eight new lexical items, and the four new characters.",
       "chars": [
         "工",
         "作",
@@ -604,7 +604,7 @@ const unit:UnitData = {
             "念書"
           ],
           "answer": "工作",
-          "explanation": "工作 is the source word for working here."
+          "explanation": "工作 is the word for working here."
         },
         {
           "id": "u36-review-l2",
@@ -618,7 +618,7 @@ const unit:UnitData = {
             "見面"
           ],
           "answer": "試試看",
-          "explanation": "試試看 is the source phrase 'give it a try'."
+          "explanation": "試試看 is the phrase 'give it a try'."
         },
         {
           "id": "u36-review-l3",
@@ -637,14 +637,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-v1",
           "type": "select",
-          "prompt": "工作 can mean which pair in Lesson 12?",
+          "prompt": "工作 can mean which pair in this lesson?",
           "options": [
             "to work / job, work",
             "to travel / ticket",
             "to pay / tuition"
           ],
           "answer": "to work / job, work",
-          "explanation": "Vocabulary II lists 工作 twice with verb and noun uses."
+          "explanation": "the vocabulary set lists 工作 twice with verb and noun uses."
         },
         {
           "id": "u36-review-v2",
@@ -724,7 +724,7 @@ const unit:UnitData = {
         {
           "id": "u36-review-v8",
           "type": "select",
-          "prompt": "那麼 in the dialogue means…",
+          "prompt": "那麼 in the conversation means…",
           "options": [
             "then; in that case",
             "so many",
@@ -772,7 +772,7 @@ const unit:UnitData = {
             "They always mean exactly the same thing."
           ],
           "answer": "Standalone 以後 means 'in the future'; 回國以後 means 'after returning home'.",
-          "explanation": "Lesson 12 explicitly distinguishes these two functions.",
+          "explanation": "this lesson explicitly distinguishes these two functions.",
           "grammarIds": [
             "u36-yihou-after"
           ]
@@ -780,7 +780,7 @@ const unit:UnitData = {
         {
           "id": "u36-review-g4",
           "type": "select",
-          "prompt": "Which source sentence correctly puts 很 before a perception word?",
+          "prompt": "Which sentence correctly puts 很 before a perception word?",
           "options": [
             "我媽媽做的菜很好吃。",
             "我媽媽做的菜好很吃。",
@@ -795,7 +795,7 @@ const unit:UnitData = {
         {
           "id": "u36-review-g5",
           "type": "select",
-          "prompt": "Which pair belongs to the textbook's perception branch?",
+          "prompt": "Which pair belongs to the perception branch taught here?",
           "options": [
             "好喝 / 難喝",
             "好找 / 難找",
@@ -810,14 +810,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g6",
           "type": "select",
-          "prompt": "Which source sentence correctly negates a 難 + perception word?",
+          "prompt": "Which sentence correctly negates a 難 + perception word?",
           "options": [
             "學校餐廳的菜不難吃。",
             "學校餐廳的菜難不吃。",
             "學校餐廳的菜沒難吃。"
           ],
           "answer": "學校餐廳的菜不難吃。",
-          "explanation": "Put 不 before the whole perception word. The source uses 不難吃 here to mean the cafeteria food is not bad to eat / tastes okay.",
+          "explanation": "Put 不 before the whole perception word. The uses 不難吃 here to mean the cafeteria food is not bad to eat / tastes okay.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -825,14 +825,14 @@ const unit:UnitData = {
         {
           "id": "u36-review-g7",
           "type": "select",
-          "prompt": "Which source-style A-not-A question asks whether the dessert taught today is hard to learn to make?",
+          "prompt": "Which A-not-A question asks whether the dessert taught today is hard to learn to make?",
           "options": [
             "老師今天教的甜點難不難學？",
             "老師今天教的甜點難不學？",
             "老師今天教的甜點不難學難？"
           ],
           "answer": "老師今天教的甜點難不難學？",
-          "explanation": "The source uses 難不難 + action verb here: 難不難學 asks whether it is difficult to learn to make the dessert.",
+          "explanation": "The uses 難不難 + action verb here: 難不難學 asks whether it is difficult to learn to make the dessert.",
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
@@ -846,7 +846,7 @@ const unit:UnitData = {
             "你什麼是時候來臺灣工作？"
           ],
           "answer": "你是什麼時候來臺灣工作的？",
-          "explanation": "The Dialogue II opening retrieves the past-event focus/question construction.",
+          "explanation": "The the conversation opening retrieves the past-event focus/question construction.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -920,7 +920,7 @@ const unit:UnitData = {
       "meaning": "to work; job, work",
       "lessonId": "u36-work",
       "core": true,
-      "note": "Lesson 12 Vocabulary II lists 工作 twice: as an intransitive verb 'to work' and as a noun 'job, work'. Hanzi Steps teaches the written form once and keeps both source uses."
+      "note": "this lesson the vocabulary set lists 工作 twice: as an intransitive verb 'to work' and as a noun 'job, work'. Hanzi Steps teaches the written form once and keeps both uses."
     },
     {
       "text": "去年",
@@ -935,7 +935,7 @@ const unit:UnitData = {
       "meaning": "business",
       "lessonId": "u36-business",
       "core": true,
-      "note": "In the dialogue it appears in 做生意 'to do business'; 做 is review vocabulary."
+      "note": "In the conversation it appears in 做生意 'to do business'; 做 is review vocabulary."
     },
     {
       "text": "這樣",
@@ -957,7 +957,7 @@ const unit:UnitData = {
       "meaning": "to try",
       "lessonId": "u36-try",
       "core": true,
-      "note": "The source phrase 試試看 is taught in the lesson as a transparent reduplicated phrase and is not counted as an additional new lexical item."
+      "note": "The phrase 試試看 is taught in the lesson as a transparent reduplicated phrase and is not counted as an additional new lexical item."
     },
     {
       "text": "難",
@@ -965,7 +965,7 @@ const unit:UnitData = {
       "meaning": "hard to; difficult to",
       "lessonId": "u36-job",
       "core": true,
-      "note": "Grammar IV gives 難 a special pre-verbal meaning 'hard/difficult to' with action verbs, e.g. 難找."
+      "note": "this pattern gives 難 a special pre-verbal meaning 'hard/difficult to' with action verbs, e.g. 難找."
     },
     {
       "text": "那麼",
@@ -1026,7 +1026,7 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄨㄥ",
       "meaning": "work; labor",
       "strokes": 3,
-      "note": "工 is first-tone gōng. It is the first character of 工作, the Lesson 12 word for both 'to work' and 'job/work'.",
+      "note": "工 is first-tone gōng. It is the first character of 工作, the this lesson word for both 'to work' and 'job/work'.",
       "memory": "A top line, a central vertical, and a longer base make a simple workbench-like 工.",
       "parts": [
         {
@@ -1094,7 +1094,7 @@ const unit:UnitData = {
       "zhuyin": "ㄕˋ",
       "meaning": "try; test",
       "strokes": 13,
-      "note": "試 is fourth-tone shì. The dialogue uses 試 in 試試看, 'give it a try / try and see what happens.'",
+      "note": "試 is fourth-tone shì. the conversation uses 試 in 試試看, 'give it a try / try and see what happens.'",
       "memory": "Build 言 on the left for speech, then 式 on the right; together they form 試.",
       "parts": [
         {
@@ -1140,7 +1140,7 @@ const unit:UnitData = {
       "zhuyin": "ㄋㄢˊ",
       "meaning": "difficult; hard to",
       "strokes": 19,
-      "note": "難 is second-tone nán. Before an action verb in Lesson 12, it means 'hard/difficult to': 難找 'hard to find', 難學 'hard to learn'.",
+      "note": "難 is second-tone nán. Before an action verb in this lesson, it means 'hard/difficult to': 難找 'hard to find', 難學 'hard to learn'.",
       "memory": "Build the eleven-stroke left side as 廿 above an interwoven 口 and 夫, then add the eight-stroke 隹 'short-tailed bird' on the right.",
       "parts": [
         {
@@ -1192,7 +1192,7 @@ const unit:UnitData = {
       "id": "u36-yihou-after",
       "title": "After an event with …以後",
       "pattern": "Event / Time expression + 以後，Later event",
-      "explanation": "Lesson 12 gives 以後 two functions. Unit 35 already taught standalone 以後 as a time word meaning 'in the future'. Here, an event or time expression comes before 以後: A + 以後 means 'after A' or 'later than A', and the later event follows. The textbook uses 回國以後, 來臺灣以後, 下課以後, and time expressions such as 半年以後.",
+      "explanation": "this lesson gives 以後 two functions. Unit 35 already taught standalone 以後 as a time word meaning 'in the future'. Here, an event or time expression comes before 以後: A + 以後 means 'after A' or 'later than A', and the later event follows. The rule here uses 回國以後, 來臺灣以後, 下課以後, and time expressions such as 半年以後.",
       "examples": [
         {
           "text": "我回國以後，也想找個有機會說中文的工作。",
@@ -1221,7 +1221,7 @@ const unit:UnitData = {
       "id": "u36-hao-nan-verb",
       "title": "Special meanings of 好 / 難 + verbs",
       "pattern": "好 / 難 + Verb",
-      "explanation": "The textbook separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Both branches can form 嗎 questions. For A-not-A questions, the source's perception example repeats the whole compound (好看不好看), while action-verb examples put the contrast before the action verb (好不好賣, 難不難學).",
+      "explanation": "The rule here separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Both branches can form 嗎 questions. For A-not-A questions, the source's perception example repeats the whole compound (好看不好看), while action-verb examples put the contrast before the action verb (好不好賣, 難不難學).",
       "examples": [
         {
           "text": "日本菜好吃也好看。",
@@ -1277,7 +1277,7 @@ const unit:UnitData = {
       "text": "你是什麼時候來臺灣工作的？",
       "pinyin": "Nǐ shì shénme shíhou lái Táiwān gōngzuò de?",
       "meaning": "When did you come to Taiwan to work?",
-      "note": "The textbook dialogue includes the listener's name as a vocative before this question. Hanzi Steps omits the name here so the focus stays on the already-taught 是…的 question. 工作 is the verb 'to work' here; Vocabulary II also lists the same written form as the noun 'job, work'.",
+      "note": "The rule here conversation includes the listener's name as a vocative before this question. Hanzi Steps omits the name here so the focus stays on the already-taught 是…的 question. 工作 is the verb 'to work' here; the vocabulary set also lists the same written form as the noun 'job, work'.",
       "tokens": [
         "你是什麼時候",
         "來臺灣工作的"
@@ -1290,7 +1290,7 @@ const unit:UnitData = {
       "text": "去年，我已經在臺灣工作一年了。",
       "pinyin": "Qùnián, wǒ yǐjīng zài Táiwān gōngzuò yì nián le.",
       "meaning": "Last year. I have been working in Taiwan for a year.",
-      "note": "Source Dialogue II. Treat this as the dialogue's duration-to-date statement; Unit 36 keeps it as dialogue comprehension rather than declaring an additional duration grammar rule.",
+      "note": "This conversation Treat this as the conversation's duration-to-date statement; Unit 36 keeps it as conversation comprehension rather than declaring an additional duration grammar rule.",
       "tokens": [
         "去年",
         "我已經在臺灣",
@@ -1301,7 +1301,7 @@ const unit:UnitData = {
       "text": "為什麼你們公司要替你付學費？",
       "pinyin": "Wèishénme nǐmen gōngsī yào tì nǐ fù xuéfèi?",
       "meaning": "Why does your company pay your tuition for you?",
-      "note": "Dialogue II retrieves 公司、替、付 and 學費 from Unit 35 before Tianzhong explains the business reason.",
+      "note": "the conversation retrieves 公司、替、付 and 學費 from Unit 35 before Tianzhong explains the business reason.",
       "tokens": [
         "為什麼",
         "你們公司",
@@ -1312,7 +1312,7 @@ const unit:UnitData = {
       "text": "因為我們公司跟臺灣人做生意。",
       "pinyin": "Yīnwèi wǒmen gōngsī gēn Táiwān rén zuò shēngyì.",
       "meaning": "Because our company does business with Taiwanese people.",
-      "note": "生意 is new; 做 and 因為 are review. 做生意 is a transparent source combination, not an extra new-vocabulary count.",
+      "note": "生意 is new; 做 and 因為 are review. 做生意 is a transparent combination, not an extra new-vocabulary count.",
       "tokens": [
         "因為我們公司",
         "跟臺灣人",
@@ -1323,7 +1323,7 @@ const unit:UnitData = {
       "text": "老闆希望我們都會說中文。",
       "pinyin": "Lǎobǎn xīwàng wǒmen dōu huì shuō Zhōngwén.",
       "meaning": "My boss wants us all to speak Chinese.",
-      "note": "Source Dialogue II; 老闆, 希望, 都, 會, and 中文 are review.",
+      "note": "This conversation; 老闆, 希望, 都, 會, and 中文 are review.",
       "tokens": [
         "老闆希望",
         "我們都會說中文"
@@ -1333,7 +1333,7 @@ const unit:UnitData = {
       "text": "我覺得你們公司真好。",
       "pinyin": "Wǒ juéde nǐmen gōngsī zhēn hǎo.",
       "meaning": "I think your company is really good.",
-      "note": "Dialogue II response. 覺得、公司 and 好 are review vocabulary.",
+      "note": "the conversation response. 覺得、公司 and 好 are review vocabulary.",
       "tokens": [
         "我覺得",
         "你們公司真好"
@@ -1343,7 +1343,7 @@ const unit:UnitData = {
       "text": "對了，你回國以後，打算做什麼？",
       "pinyin": "Duìle, nǐ huíguó yǐhòu, dǎsuàn zuò shénme?",
       "meaning": "By the way, what do you plan to do after you go back to your country?",
-      "note": "The textbook prints a gender-specific form of 'you' for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 while preserving the sentence and grammar. 回國、打算 and 做 are review.",
+      "note": "The rule here prints a gender-specific form of 'you' for Yue-mei; Hanzi Steps uses the already-taught general pronoun 你 while preserving the sentence and grammar. 回國、打算 and 做 are review.",
       "tokens": [
         "對了",
         "你回國以後",
@@ -1357,7 +1357,7 @@ const unit:UnitData = {
       "text": "我回國以後，也想找個有機會說中文的工作。",
       "pinyin": "Wǒ huíguó yǐhòu, yě xiǎng zhǎo ge yǒu jīhuì shuō Zhōngwén de gōngzuò.",
       "meaning": "After I go back home, I would also like to find a job with opportunities to speak Chinese.",
-      "note": "Dialogue II source sentence. Here 以後 follows the event 回國 and means 'after returning home'.",
+      "note": "the conversation source sentence. Here 以後 follows the event 回國 and means 'after returning home'.",
       "tokens": [
         "我回國以後",
         "也想找個有機會說中文的工作"
@@ -1370,7 +1370,7 @@ const unit:UnitData = {
       "text": "來臺灣以後，我每星期上五天的中文課。",
       "pinyin": "Lái Táiwān yǐhòu, wǒ měi xīngqí shàng wǔ tiān de Zhōngwén kè.",
       "meaning": "After coming to Taiwan, I have Chinese class five days a week.",
-      "note": "Grammar III source example for Event + 以後.",
+      "note": "this pattern example for Event + 以後.",
       "tokens": [
         "來臺灣以後",
         "我每星期",
@@ -1384,7 +1384,7 @@ const unit:UnitData = {
       "text": "我下課以後，常在圖書館上網。",
       "pinyin": "Wǒ xiàkè yǐhòu, cháng zài túshūguǎn shàngwǎng.",
       "meaning": "After class, I often go online in the library.",
-      "note": "Grammar III source example for Event + 以後.",
+      "note": "this pattern example for Event + 以後.",
       "tokens": [
         "我下課以後",
         "常在圖書館上網"
@@ -1397,7 +1397,7 @@ const unit:UnitData = {
       "text": "不錯，這樣的工作在你們國家好找嗎？",
       "pinyin": "Búcuò, zhèyàng de gōngzuò zài nǐmen guójiā hǎo zhǎo ma?",
       "meaning": "Not bad. Is this kind of job easy to find in your country?",
-      "note": "Dialogue II introduces 這樣、國家 and the action-verb use 好找 'easy to find'.",
+      "note": "the conversation introduces 這樣、國家 and the action-verb use 好找 'easy to find'.",
       "tokens": [
         "不錯",
         "這樣的工作",
@@ -1411,7 +1411,7 @@ const unit:UnitData = {
       "text": "好工作很難找。",
       "pinyin": "Hǎo gōngzuò hěn nán zhǎo.",
       "meaning": "Good jobs are hard to find.",
-      "note": "Grammar IV source example: 難 + action verb means 'hard to do'.",
+      "note": "this pattern example: 難 + action verb means 'hard to do'.",
       "tokens": [
         "好工作",
         "很難找"
@@ -1424,7 +1424,7 @@ const unit:UnitData = {
       "text": "不知道好不好找，我試試看。",
       "pinyin": "Bù zhīdào hǎo bù hǎo zhǎo, wǒ shìshi kàn.",
       "meaning": "I don't know whether it is easy to find; I'll give it a try.",
-      "note": "Dialogue II source line. 試試看 is the listed source phrase; it is taught as a transparent phrase built from new 試 and known 看.",
+      "note": "the conversation sentence. 試試看 is the listed phrase; it is taught as a transparent phrase built from new 試 and known 看.",
       "tokens": [
         "不知道好不好找",
         "我試試看"
@@ -1437,7 +1437,7 @@ const unit:UnitData = {
       "text": "要是難找呢？",
       "pinyin": "Yàoshi nán zhǎo ne?",
       "meaning": "What if it is hard to find?",
-      "note": "Dialogue II. 難 + 找 means 'hard to find'. 要是 introduces the hypothetical condition; with sentence-final 呢, this asks 'what if...?' and leaves the consequence for the other speaker to supply, so no 就-clause is stated here.",
+      "note": "the conversation. 難 + 找 means 'hard to find'. 要是 introduces the hypothetical condition; with sentence-final 呢, this asks 'what if...?' and leaves the consequence for the other speaker to supply, so no 就-clause is stated here.",
       "tokens": [
         "要是",
         "難找呢"
@@ -1462,7 +1462,7 @@ const unit:UnitData = {
       "text": "太好了！那我們就可以再見面了。",
       "pinyin": "Tài hǎo le! Nà wǒmen jiù kěyǐ zài jiànmiàn le.",
       "meaning": "Great! Then we can see each other again.",
-      "note": "This completes Dialogue II. Here 那 is the short conversational 'then / in that case' leading into the result; compare new 那麼 in the previous turn. 太好了、就、可以、再、見面 are review.",
+      "note": "This completes the conversation. Here 那 is the short conversational 'then / in that case' leading into the result; compare new 那麼 in the previous turn. 太好了、就、可以、再、見面 are review.",
       "tokens": [
         "太好了",
         "那我們就可以",
@@ -1473,7 +1473,7 @@ const unit:UnitData = {
       "text": "老師常常說中文不難學。",
       "pinyin": "Lǎoshī chángcháng shuō Zhōngwén bù nán xué.",
       "meaning": "The teacher often says Chinese is not hard to learn.",
-      "note": "Grammar IV source negation: 不 comes before 難學.",
+      "note": "this pattern negation: 不 comes before 難學.",
       "tokens": [
         "老師常常說",
         "中文不難學"

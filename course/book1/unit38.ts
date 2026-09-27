@@ -236,14 +236,14 @@ const unit:UnitData = {
             "英文"
           ],
           "answer": "西班牙文",
-          "explanation": "The source says 西班牙文."
+          "explanation": "The example uses 西班牙文."
         }
       ]
     },
     {
       "id": "u38-polite",
       "title": "No Need to Be So Polite",
-      "subtitle": "Learn 一樣 and the source politeness expressions.",
+      "subtitle": "Learn 一樣 and the politeness expressions.",
       "chars": [
         "必",
         "氣"
@@ -459,7 +459,7 @@ const unit:UnitData = {
             "一 moves to the end"
           ],
           "answer": "the repeated second subject may be omitted",
-          "explanation": "The source allows omission of the repeated subject."
+          "explanation": "The pattern allows omission of the repeated subject."
         },
         {
           "id": "u38-as-soon-s3",
@@ -471,7 +471,7 @@ const unit:UnitData = {
             "Neither event can be negative."
           ],
           "answer": "Either Event A or Event B can be negative.",
-          "explanation": "The source permits both."
+          "explanation": "The pattern permits both."
         },
         {
           "id": "u38-as-soon-s4",
@@ -1192,7 +1192,7 @@ const unit:UnitData = {
       "id": "u38-yi-jiu",
       "title": "As soon as… with 一…就…",
       "pattern": "Subject + 一 + Event A，(Subject) + 就 + Event B",
-      "explanation": "一…就… links two events when Event B follows Event A immediately. 一 comes before Event A and 就 before Event B; both follow the subject. If the subject is the same, the repeated subject may be omitted. Either event can be affirmative or negative. The textbook does not use ordinary A-not-A inside this construction; yes/no questions can use 嗎 or 是不是. Both question strategies are source-valid.",
+      "explanation": "一…就… links two events when Event B follows Event A immediately. 一 comes before Event A and 就 before Event B; both follow the subject. If the subject is the same, the repeated subject may be omitted. Either event can be affirmative or negative. The rule here does not use ordinary A-not-A inside this construction; yes/no questions can use 嗎 or 是不是. Both question strategies are valid.",
       "examples": [
         {
           "text": "我一下課，就回來。",
@@ -1228,7 +1228,7 @@ const unit:UnitData = {
       "text": "我們做語言交換。",
       "pinyin": "Wǒmen zuò yǔyán jiāohuàn.",
       "meaning": "We do a language exchange.",
-      "note": "Learner-safe setup before the Spanish-language source phrase is introduced in the next lesson.",
+      "note": "Learner-safe setup before the Spanish-language phrase is introduced in the next lesson.",
       "tokens": [
         "我們做",
         "語言交換"
@@ -1238,7 +1238,7 @@ const unit:UnitData = {
       "text": "語言交換的時候，你那麼熱心教我西班牙文。",
       "pinyin": "Yǔyán jiāohuàn de shíhou, nǐ nàme rèxīn jiāo wǒ Xībānyá wén.",
       "meaning": "During language exchange, you were so enthusiastic about teaching me Spanish.",
-      "note": "Source Dialogue I turn 7 with the name omitted.",
+      "note": "This conversation with the name omitted.",
       "tokens": [
         "語言交換的時候",
         "你那麼熱心",
