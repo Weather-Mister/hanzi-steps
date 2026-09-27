@@ -11,7 +11,7 @@ const unit:UnitData = {
     "bookReference": "Lesson 13 Dialogue II turns 10–13, Vocabulary II entries 11–13 plus Phrases 16–17, Grammar VI–VII, integrated activities, congratulatory-expression culture note, and self-assessment.",
     "label": "Confirmation, comparison & birthday wishes",
     "title": "Happy Birthday and Best Wishes",
-    "description": "Finish Lesson 13 with confirmation questions, equality comparisons, birthday wishes, and a four-objective capstone.",
+    "description": "Finish the birthday topic with confirmation questions, equality comparisons, birthday wishes, and a four-objective capstone.",
     "chars": [
       "糕",
       "祝",
@@ -45,7 +45,7 @@ const unit:UnitData = {
     {
       "id": "u41-cake",
       "title": "The Same Birthday Food",
-      "subtitle": "Learn 蛋糕 and close the food part of Dialogue II.",
+      "subtitle": "Learn 蛋糕 and close the food part of the conversation.",
       "chars": [
         "糕"
       ],
@@ -155,7 +155,7 @@ const unit:UnitData = {
             "mean approximately"
           ],
           "answer": "confirm information already expected/known",
-          "explanation": "The source distinguishes confirmation from neutral information-seeking."
+          "explanation": "The pattern distinguishes confirmation from neutral information-seeking."
         },
         {
           "id": "u41-confirm-s2",
@@ -422,12 +422,12 @@ const unit:UnitData = {
             "as place names"
           ],
           "answer": "as fixed conventional four-character wishes",
-          "explanation": "The source presents conventional auspicious expressions."
+          "explanation": "These examples present conventional auspicious expressions."
         },
         {
           "id": "u41-wishes-s4",
           "type": "select",
-          "prompt": "What cultural point does the source make?",
+          "prompt": "What cultural point is illustrated by these wishes?",
           "options": [
             "Congratulatory sayings often use fixed four-character auspicious expressions.",
             "Birthday wishes must always rhyme.",
@@ -441,7 +441,7 @@ const unit:UnitData = {
     {
       "id": "u41-capstone",
       "title": "Birthday Across Cultures",
-      "subtitle": "Use the full Lesson 13 toolkit in new birthday scenarios.",
+      "subtitle": "Use the full birthday toolkit in new birthday scenarios.",
       "chars": [],
       "minutes": "14–18 min",
       "unitId": "unit-41",
@@ -469,7 +469,7 @@ const unit:UnitData = {
             "五點左右？"
           ],
           "answer": "有沒有不吃的東西？",
-          "explanation": "This meets the source dietary-preference objective."
+          "explanation": "This meets the dietary-preference objective."
         },
         {
           "id": "u41-capstone-o3",
@@ -517,7 +517,7 @@ const unit:UnitData = {
             "不一樣高。"
           ],
           "answer": "謝謝！",
-          "explanation": "The source response is 謝謝."
+          "explanation": "The response is 謝謝."
         },
         {
           "id": "u41-capstone-o7",
@@ -541,14 +541,14 @@ const unit:UnitData = {
             "only discuss height"
           ],
           "answer": "agree on when and where to meet",
-          "explanation": "The source activity requires arranging the meeting."
+          "explanation": "The activity requires arranging the meeting."
         }
       ]
     },
     {
       "id": "u41-review",
-      "title": "Unit 41 + Lesson 13 Review",
-      "subtitle": "Close Lesson 13 with confirmation, comparison, wishes, and cumulative transfer.",
+      "title": "Unit 41 Review",
+      "subtitle": "Review confirmation, comparison, wishes, and cumulative transfer.",
       "chars": [
         "糕",
         "祝",
@@ -692,7 +692,7 @@ const unit:UnitData = {
             "A 不 B 跟"
           ],
           "answer": "A 跟 B 一樣",
-          "explanation": "That is Grammar VII's core.",
+          "explanation": "That is the equality-comparison core.",
           "grammarIds": [
             "u41-gen-yiyang"
           ]
@@ -745,7 +745,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-cum1",
           "type": "select",
-          "prompt": "Grammar I: which shows immediate sequence?",
+          "prompt": "Which sentence shows an immediate sequence?",
           "options": [
             "我一下課，就回來。",
             "我左右回來。",
@@ -757,7 +757,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-cum2",
           "type": "select",
-          "prompt": "Grammar II: correct negative of a completed meal?",
+          "prompt": "Which is the correct negative of a completed meal?",
           "options": [
             "我沒吃晚飯。",
             "我沒吃了晚飯。",
@@ -769,7 +769,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-cum3",
           "type": "select",
-          "prompt": "Grammar III: past non-occurrence uses…",
+          "prompt": "For past non-occurrence, which negative is used?",
           "options": [
             "沒（有）",
             "不 only",
@@ -781,7 +781,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-cum4",
           "type": "select",
-          "prompt": "Grammar IV: which means 'I eat anything'?",
+          "prompt": "Which means 'I eat anything'?",
           "options": [
             "我什麼都吃。",
             "我都什麼吃。",
@@ -793,7 +793,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-cum5",
           "type": "select",
-          "prompt": "Grammar V: which means 'eat a little more'?",
+          "prompt": "Which means 'eat a little more'?",
           "options": [
             "多吃一點",
             "一點多吃",
@@ -805,7 +805,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-d1",
           "type": "select",
-          "prompt": "Which source line closes the birthday wishes?",
+          "prompt": "Which line closes the birthday wishes?",
           "options": [
             "謝謝！謝謝！",
             "大概幾點？",
@@ -817,7 +817,7 @@ const unit:UnitData = {
         {
           "id": "u41-review-d2",
           "type": "select",
-          "prompt": "Which task best demonstrates Lesson 13 cultural comparison?",
+          "prompt": "Which task best demonstrates birthday-cultural comparison?",
           "options": [
             "Use 跟…一樣 / 不一樣 to compare birthday customs.",
             "Only list food names.",
@@ -1012,7 +1012,7 @@ const unit:UnitData = {
       "id": "u41-shibushi",
       "title": "Confirmation questions with 是不是",
       "pattern": "Subject + 是不是 + VP?",
-      "explanation": "是不是 asks the listener to confirm information the speaker already knows, expects, or sees as likely. It is not simply interchangeable with every neutral 嗎 or A-not-A question. The textbook uses 是不是 in environments where ordinary A-not-A is unavailable, including 比 comparisons and 太…了. When multiple grammatical strategies are possible, context must make the confirmation reading clear.",
+      "explanation": "是不是 asks the listener to confirm information the speaker already knows, expects, or sees as likely. It is not simply interchangeable with every neutral 嗎 or A-not-A question. This lesson uses 是不是 in environments where ordinary A-not-A is unavailable, including 比 comparisons and 太…了. When multiple grammatical strategies are possible, context must make the confirmation reading clear.",
       "examples": [
         {
           "text": "你是不是最近太忙了？",
@@ -1036,7 +1036,7 @@ const unit:UnitData = {
       "id": "u41-gen-yiyang",
       "title": "Comparison with 跟…一樣",
       "pattern": "A + 跟 + B + 一樣 (+ property)",
-      "explanation": "A 跟 B 一樣 says A and B are the same; a property can follow 一樣 to show equal degree. Put 不 before 一樣 to say the two differ in the relevant quality. Put 不 before 跟 to reject B as the comparison target, often followed by another target. Questions can use 一樣不一樣 or 是不是一樣; both are source-valid.",
+      "explanation": "A 跟 B 一樣 says A and B are the same; a property can follow 一樣 to show equal degree. Put 不 before 一樣 to say the two differ in the relevant quality. Put 不 before 跟 to reject B as the comparison target, often followed by another target. Questions can use 一樣不一樣 or 是不是一樣; both are valid.",
       "examples": [
         {
           "text": "我的生日跟你的生日一樣。",
@@ -1090,7 +1090,7 @@ const unit:UnitData = {
       "text": "跟你們一樣，吃蛋糕。今天我也訂了一個生日蛋糕。",
       "pinyin": "Gēn nǐmen yíyàng, chī dàngāo. Jīntiān wǒ yě dìng le yí ge shēngrì dàngāo.",
       "meaning": "The same as you: we eat cake. Today I also ordered a birthday cake.",
-      "note": "Source Dialogue II turn 10. The first clause is comprehension-first until comparison is formally taught.",
+      "note": "Source the conversation turn 10. The first clause is comprehension-first until comparison is formally taught.",
       "tokens": [
         "跟你們一樣",
         "吃蛋糕",
@@ -1101,7 +1101,7 @@ const unit:UnitData = {
       "text": "臺灣人過生日是不是都吃這些東西？",
       "pinyin": "Táiwān rén guò shēngrì shì bú shì dōu chī zhèxiē dōngxi?",
       "meaning": "Do Taiwanese people all eat these things for birthdays?",
-      "note": "Source confirmation question retrieved after formal teaching.",
+      "note": "Confirmation question retrieved after formal teaching.",
       "tokens": [
         "臺灣人過生日",
         "是不是都吃這些東西"
@@ -1179,7 +1179,7 @@ const unit:UnitData = {
       "text": "你對我真好。",
       "pinyin": "Nǐ duì wǒ zhēn hǎo.",
       "meaning": "You're really good to me.",
-      "note": "Source turn 11; 對 + person is the prepositional 'to/toward' use.",
+      "note": "Conversation turn; 對 + person is the prepositional 'to/toward' use.",
       "tokens": [
         "你對我",
         "真好"
@@ -1189,7 +1189,7 @@ const unit:UnitData = {
       "text": "祝你生日快樂、萬事如意、心想事成。",
       "pinyin": "Zhù nǐ shēngrì kuàilè, wànshì rúyì, xīnxiǎng shìchéng.",
       "meaning": "Happy birthday; may everything go your way and all your wishes come true.",
-      "note": "Source turn 12. The four-character wishes are fixed conventional expressions.",
+      "note": "Birthday-wish turn. The four-character wishes are fixed conventional expressions.",
       "tokens": [
         "祝你生日快樂",
         "萬事如意",
@@ -1200,7 +1200,7 @@ const unit:UnitData = {
       "text": "謝謝！謝謝！",
       "pinyin": "Xièxie! Xièxie!",
       "meaning": "Thank you! Thank you!",
-      "note": "Source response to the birthday wishes.",
+      "note": "Response to the birthday wishes.",
       "tokens": [
         "謝謝",
         "謝謝"

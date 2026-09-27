@@ -121,7 +121,7 @@ const unit:UnitData = {
             "你去哪裡？"
           ],
           "answer": "哪裡不舒服？",
-          "explanation": "哪裡不舒服？ is the Lesson-15 health inquiry."
+          "explanation": "哪裡不舒服？ is the health-inquiry question taught here."
         },
         {
           "id": "u45-doctor-l1",
@@ -457,7 +457,7 @@ const unit:UnitData = {
             "chāi"
           ],
           "answer": "chā",
-          "explanation": "The Lesson-15 source gives 差 chā for “poor/bad” in this expression."
+          "explanation": "In 胃口很差, 差 is chā and means “poor/bad.”"
         },
         {
           "id": "u45-head-p1",
@@ -491,7 +491,7 @@ const unit:UnitData = {
             "a duration question"
           ],
           "answer": "totality under negation: not wanting to eat anything",
-          "explanation": "This retrieves the earlier question-word + 都 pattern; G001 is not taught until Unit 46."
+          "explanation": "This retrieves the earlier question-word + 都 pattern; negative non-specific question-word pattern is not taught until Unit 46."
         }
       ]
     },
@@ -854,7 +854,7 @@ const unit:UnitData = {
     {
       "id": "u45-how-long",
       "title": "How Long Has It Been?",
-      "subtitle": "Integrate symptom duration and the first five source dialogue turns.",
+      "subtitle": "Integrate symptom duration with the opening doctor–patient exchange.",
       "chars": [],
       "minutes": "11–16 min",
       "unitId": "unit-45",
@@ -939,7 +939,7 @@ const unit:UnitData = {
             "ask about insurance → reject help → examine throat → compare actions"
           ],
           "answer": "ask where it hurts → describe symptoms → ask duration → examine throat",
-          "explanation": "That is the D1T01–D1T05 communicative arc."
+          "explanation": "That is the communicative arc of the opening doctor visit."
         }
       ]
     },
@@ -1155,7 +1155,7 @@ const unit:UnitData = {
         {
           "id": "u45-review-v8",
           "type": "select",
-          "prompt": "Which reading/meaning pair is correct for Lesson-15 差?",
+          "prompt": "In 胃口很差, which reading/meaning pair for 差 is correct?",
           "options": [
             "chā — poor/bad",
             "chà — several",
@@ -1222,7 +1222,7 @@ const unit:UnitData = {
             "什麼東西都不想吃？"
           ],
           "answer": "哪裡不舒服？",
-          "explanation": "This retrieves F001/X002."
+          "explanation": "This retrieves the health-inquiry frame and symptom vocabulary."
         },
         {
           "id": "u45-review-f2",
@@ -1234,7 +1234,7 @@ const unit:UnitData = {
             "胃口怎麼樣？／我一直。"
           ],
           "answer": "大概多久了？／已經四、五天了。",
-          "explanation": "X004 integrates the question and duration-to-now answer."
+          "explanation": "This integrates the duration question with its duration-to-now answer."
         },
         {
           "id": "u45-review-f3",
@@ -2226,8 +2226,8 @@ const unit:UnitData = {
     "u45-dialogue-1-5": {
       "text": "醫生：你哪裡不舒服？\n病人：我一直流鼻水，頭很痛，胃口很差。什麼東西都不想吃。\n醫生：大概多久了？\n病人：已經四、五天了。\n醫生：我看看你的喉嚨。喉嚨有一點發炎。",
       "pinyin": "Yīshēng: Nǐ nǎlǐ bù shūfu?\nBìngrén: Wǒ yìzhí liú bíshuǐ, tóu hěn tòng, wèikǒu hěn chā. Shénme dōngxi dōu bù xiǎng chī.\nYīshēng: Dàgài duōjiǔ le?\nBìngrén: Yǐjīng sì, wǔ tiān le.\nYīshēng: Wǒ kànkan nǐ de hóulóng. Hóulóng yǒu yìdiǎn fāyán.",
-      "meaning": "Adapted source doctor-patient exchange, D1T01–D1T05.",
-      "note": "Direct address is normalized to 你; source name glyphs are not required.",
+      "meaning": "A doctor–patient exchange about symptoms, duration, and a throat check.",
+      "note": "Direct address uses 你; proper-name glyphs are not required.",
       "tokens": [
         "醫生：你哪裡不舒服？\n病人：我一直流鼻水，頭很痛，胃口很差。什麼東西都不想吃。\n醫生：大概多久了？\n病人：已經四、五天了。\n醫生：我看看你的喉嚨。喉嚨有一點發炎。"
       ]

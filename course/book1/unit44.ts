@@ -11,7 +11,7 @@ const unit:UnitData = {
     "bookReference": "Lesson 14 Dialogue II, Grammar IV–V, Activities III–IV, typhoon-day culture reading, and Lesson-14 self-assessment.",
     "label": "Typhoons & comparisons",
     "title": "Typhoons and Comparisons",
-    "description": "Discuss typhoons, give caution, compare conditions with 更 and 沒有…那麼, and complete the Lesson 14 capstone.",
+    "description": "Discuss typhoons, give caution, compare conditions with 更 and 沒有…那麼, and complete the cumulative weather capstone.",
     "chars": [
       "傘",
       "颱",
@@ -49,7 +49,7 @@ const unit:UnitData = {
     {
       "id": "u44-umbrella",
       "title": "Where's Your Umbrella?",
-      "subtitle": "Open Dialogue II with the umbrella exchange.",
+      "subtitle": "Open with the umbrella exchange.",
       "chars": [
         "傘"
       ],
@@ -241,26 +241,26 @@ const unit:UnitData = {
         {
           "id": "u44-culture-s1",
           "type": "select",
-          "prompt": "In the textbook's historical typhoon-day reading, what forecast window is mentioned?",
+          "prompt": "In the historical typhoon summary above, what forecast window is mentioned?",
           "options": [
             "the next four hours",
             "the next four days",
             "the next month"
           ],
           "answer": "the next four hours",
-          "explanation": "The source reading states a four-hour forecast window."
+          "explanation": "the historical summary states a four-hour forecast window."
         },
         {
           "id": "u44-culture-s2",
           "type": "select",
-          "prompt": "According to the textbook's historical account, where was typhoon-day decision-making later vested?",
+          "prompt": "In the historical typhoon summary above, where was typhoon-day decision-making later vested?",
           "options": [
             "regional governments",
             "individual students",
             "transport companies"
           ],
           "answer": "regional governments",
-          "explanation": "The source says the decision was later vested in regional governments. The culture card already frames this as historical/source context, not current instructions."
+          "explanation": "The historical summary says the decision was later vested in regional governments. The culture card already frames this as historical context, not current instructions."
         },
         {
           "id": "u44-typhoon-l1",
@@ -290,7 +290,7 @@ const unit:UnitData = {
     {
       "id": "u44-wet",
       "title": "Wet and Annoying",
-      "subtitle": "Describe wet conditions and the source-attested 濕濕的 form.",
+      "subtitle": "Describe wet conditions and the attested here 濕濕的 form.",
       "chars": [
         "濕",
         "討",
@@ -424,7 +424,7 @@ const unit:UnitData = {
             "something even bigger than before"
           ],
           "answer": "a wet/damp condition",
-          "explanation": "濕濕的 is the source-attested reduplicated description of a wet condition."
+          "explanation": "濕濕的 is the attested here reduplicated description of a wet condition."
         },
         {
           "id": "u44-wet-l1",
@@ -702,7 +702,7 @@ const unit:UnitData = {
             "it means everyone"
           ],
           "answer": "it presupposes an established/understood baseline",
-          "explanation": "The source's “even more” value is part of G004."
+          "explanation": "The source's “even more” value is part of 更 comparison."
         },
         {
           "id": "u44-g4-l1",
@@ -771,7 +771,7 @@ const unit:UnitData = {
             "a comparison marker"
           ],
           "answer": "a conventional “Take care / Bye” formula",
-          "explanation": "This is the source pragmatic value."
+          "explanation": "This is the pragmatic value."
         },
         {
           "id": "u44-not-as",
@@ -808,14 +808,14 @@ const unit:UnitData = {
         {
           "id": "u44-g5-s3",
           "type": "select",
-          "prompt": "What can 今天有沒有昨天熱？ imply in the source explanation?",
+          "prompt": "What can 今天有沒有昨天熱？ imply?",
           "options": [
             "yesterday was salient as fairly hot",
             "today must be colder",
             "the speaker forgot an umbrella"
           ],
           "answer": "yesterday was salient as fairly hot",
-          "explanation": "The source notes a baseline presupposition in this question."
+          "explanation": "The pattern notes a baseline presupposition in this question."
         },
         {
           "id": "u44-not-as-p3",
@@ -847,7 +847,7 @@ const unit:UnitData = {
             "新年快到了。"
           ],
           "answer": "小心慢走。",
-          "explanation": "小心慢走 closes the source interaction."
+          "explanation": "小心慢走 closes the interaction."
         },
         {
           "id": "u44-g5-l1",
@@ -876,8 +876,8 @@ const unit:UnitData = {
     },
     {
       "id": "u44-review",
-      "title": "Unit 44 + Lesson 14 Review",
-      "subtitle": "Close Lesson 14 with typhoon language, comparison, culture, and cumulative transfer.",
+      "title": "Unit 44 Review",
+      "subtitle": "Review typhoon language, comparison, culture, and cumulative transfer.",
       "chars": [
         "傘",
         "颱",
@@ -1088,7 +1088,7 @@ const unit:UnitData = {
         {
           "id": "u44-review-g5",
           "type": "select",
-          "prompt": "In Lesson 14, why is 更 translated as “even more” rather than neutral “more”?",
+          "prompt": "Why is 更 translated as “even more” rather than neutral “more” here?",
           "options": [
             "it invokes an established/understood baseline",
             "it marks past tense",
@@ -1110,7 +1110,7 @@ const unit:UnitData = {
             "今年春天跟去年春天一樣冷。"
           ],
           "answer": "今年春天比較冷。",
-          "explanation": "比較 + description gives the source toolkit's implicit/relative comparison."
+          "explanation": "比較 + description gives the comparison toolkit's implicit/relative comparison."
         },
         {
           "id": "u44-review-g7",
@@ -1122,7 +1122,7 @@ const unit:UnitData = {
             "今年跟去年一樣冷。"
           ],
           "answer": "今年比去年冷。",
-          "explanation": "This retrieves the earlier plain 比 comparison required by A003."
+          "explanation": "This retrieves the earlier plain 比 comparison required by comparison review."
         },
         {
           "id": "u44-review-a003-1",
@@ -1193,7 +1193,7 @@ const unit:UnitData = {
             "常不常下雨？"
           ],
           "answer": "有沒有颱風？",
-          "explanation": "有沒有颱風？ asks whether typhoons occur/are present. The source-transfer card still instructs the learner to ask for additional information and record the results."
+          "explanation": "有沒有颱風？ asks whether typhoons occur/are present. The personal-transfer card still instructs the learner to ask for additional information and record the results."
         },
         {
           "id": "u44-review-cum1",
@@ -1217,7 +1217,7 @@ const unit:UnitData = {
             "我打網球打了兩個鐘頭。"
           ],
           "answer": "我在臺灣住了半年了。",
-          "explanation": "This retrieves Unit-43 G002."
+          "explanation": "This retrieves Unit-43 duration-to-now pattern."
         },
         {
           "id": "u44-review-cum3",
@@ -1271,14 +1271,14 @@ const unit:UnitData = {
         {
           "id": "u44-review-culture",
           "type": "select",
-          "prompt": "In the textbook's historical account, what changed about who made typhoon-day decisions?",
+          "prompt": "In the historical typhoon summary above, what changed about who made typhoon-day decisions?",
           "options": [
             "decision-making was vested in regional governments",
             "students individually decided school closures",
             "the weather bureau stopped giving forecasts"
           ],
           "answer": "decision-making was vested in regional governments",
-          "explanation": "This is a source-history comprehension check; it is not presented as current 2026 administrative guidance."
+          "explanation": "This is a historical comprehension check; it is not presented as current 2026 administrative guidance."
         },
         {
           "id": "u44-review-cap1",
@@ -1764,7 +1764,7 @@ const unit:UnitData = {
       "id": "u44-even-more",
       "title": "Comparison with 更 — even more",
       "pattern": "A + 比 + B + 更 + State Verb",
-      "explanation": "更 means “even more” relative to an established or understood baseline. It goes before a state verb. Lesson 14 first shows the baseline meaning in 星期天我更忙, then uses 更 inside 比 comparisons. Do not flatten 更 to neutral “more”; the “even more” baseline is part of the source meaning. Source-style questions can use 是不是.",
+      "explanation": "更 means “even more” relative to an established or understood baseline. It goes before a state verb. this lesson first shows the baseline meaning in 星期天我更忙, then uses 更 inside 比 comparisons. Do not flatten 更 to neutral “more”; the “even more” baseline is part of the meaning. Confirmation questions can use 是不是.",
       "examples": [
         {
           "text": "星期天我更忙。",
@@ -1782,13 +1782,13 @@ const unit:UnitData = {
           "meaning": "Is this typhoon even bigger than the last one?"
         }
       ],
-      "remember": "更 = even more relative to a baseline. In the Lesson-14 comparison: A 比 B 更 + property."
+      "remember": "更 = even more relative to a baseline. In the this lesson comparison: A 比 B 更 + property."
     },
     "u44-not-as": {
       "id": "u44-not-as",
       "title": "Not as…as with 沒有",
       "pattern": "A + 沒有 + B + 那麼／這麼 + State Verb",
-      "explanation": "Use 沒有…那麼／這麼… to say A has a lower degree of a property than B: A is not as X as B. 那麼/這麼 may sometimes be omitted. The source notes that the positive form A 有 B 那麼／這麼 + State Verb is rare except in 嗎 questions. Questions can use 有沒有. Keep this distinct from earlier 不比. The source explicitly contrasts equality 跟…一樣, inferiority 沒有…那麼, and superiority 比.",
+      "explanation": "Use 沒有…那麼／這麼… to say A has a lower degree of a property than B: A is not as X as B. 那麼/這麼 may sometimes be omitted. The pattern notes that the positive form A 有 B 那麼／這麼 + State Verb is rare except in 嗎 questions. Questions can use 有沒有. Keep this distinct from earlier 不比. The source explicitly contrasts equality 跟…一樣, inferiority 沒有…那麼, and superiority 比.",
       "examples": [
         {
           "text": "火車沒有高鐵那麼快。",
@@ -1840,7 +1840,7 @@ const unit:UnitData = {
       "text": "雨下得這麼大，你怎麼沒帶傘呢？",
       "pinyin": "Yǔ xià de zhème dà, nǐ zěnme méi dài sǎn ne?",
       "meaning": "It's raining so hard; how come you didn't bring an umbrella?",
-      "note": "B1L14-D2T01 with 妳 normalized to 你. V 得 + degree is review. 呢 is comprehension-only here; do not infer or assess a new 呢 rule.",
+      "note": "the conversation with 妳 normalized to 你. V 得 + degree is review. 呢 is comprehension-only here; do not infer or assess a new 呢 rule.",
       "tokens": [
         "雨下得這麼大",
         "你怎麼沒帶傘呢"
@@ -1850,7 +1850,7 @@ const unit:UnitData = {
       "text": "我昨天帶了，可是今天忘了帶。",
       "pinyin": "Wǒ zuótiān dài le, kěshì jīntiān wàng le dài.",
       "meaning": "I brought one yesterday, but today I forgot to bring it.",
-      "note": "Source B1L14-D2T02; completed-action 了 is review.",
+      "note": "; completed-action 了 is review.",
       "tokens": [
         "我昨天帶了",
         "可是今天忘了帶"
@@ -1870,7 +1870,7 @@ const unit:UnitData = {
       "text": "颱風快要來了。",
       "pinyin": "Táifēng kuài yào lái le.",
       "meaning": "A typhoon is about to come.",
-      "note": "Source B1L14-D2T03; delayed retrieval of Unit-43 imminence.",
+      "note": "; delayed retrieval of Unit-43 imminence.",
       "tokens": [
         "颱風",
         "快要來了"
@@ -1883,7 +1883,7 @@ const unit:UnitData = {
       "text": "這裡每年夏天都有颱風。",
       "pinyin": "Zhèlǐ měinián xiàtiān dōu yǒu táifēng.",
       "meaning": "There are typhoons here every summer.",
-      "note": "Source B1L14-D2T05; 每…都… is review.",
+      "note": "; 每…都… is review.",
       "tokens": [
         "這裡每年夏天",
         "都有颱風"
@@ -1893,7 +1893,7 @@ const unit:UnitData = {
       "text": "颱風來的時候，風和雨都很大，做什麼都很不方便。",
       "pinyin": "Táifēng lái de shíhou, fēng hé yǔ dōu hěn dà, zuò shénme dōu hěn bù fāngbiàn.",
       "meaning": "When a typhoon comes, the wind is strong and the rain is heavy, and everything is inconvenient to do.",
-      "note": "Preserves the condition/totality content of B1L14-D2T05; …的時候 and question-word + 都 are prior review.",
+      "note": "Preserves the condition/totality content of the conversation; …的時候 and question-word + 都 are prior review.",
       "tokens": [
         "颱風來的時候",
         "風和雨都很大",
@@ -1904,7 +1904,7 @@ const unit:UnitData = {
       "text": "颱風",
       "pinyin": "táifēng",
       "meaning": "typhoon",
-      "note": "Textbook-era culture, not current advice: the source reading describes a historical typhoon-day system using average wind class 7 or higher or gusts class 10 or higher, a forecast window of the next four hours, and suspension of school/work until the storm passed. It describes decision-making that was once assigned to the Directorate-General of Personnel Administration using weather forecasts and local input, and later vested in regional governments. Treat the page as historical/source context; do not present it as current 2026 procedure.",
+      "note": "Historical context only, not current advice: this lesson summarizes an older typhoon-day system that used average wind class 7 or higher or gusts class 10 or higher, a forecast window of the next four hours, and suspension of school/work until the storm passed. Decision-making was once assigned to the Directorate-General of Personnel Administration using weather forecasts and local input, and was later vested in regional governments. Do not treat this as current 2026 procedure.",
       "tokens": [
         "颱風"
       ]
@@ -1933,7 +1933,7 @@ const unit:UnitData = {
       "text": "哪裡都濕濕的。真討厭。",
       "pinyin": "Nǎlǐ dōu shīshī de. Zhēn tǎoyàn.",
       "meaning": "It's wet everywhere. Really annoying.",
-      "note": "Source B1L14-D2T06. Lesson 14 specifically licenses 濕濕的 as a source-attested extension of the earlier restricted state-verb reduplication system; do not generalize this to every state verb.",
+      "note": "this lesson specifically licenses 濕濕的 as a attested here extension of the earlier restricted state-verb reduplication system; do not generalize this to every state verb.",
       "tokens": [
         "哪裡都濕濕的",
         "真討厭"
@@ -1970,7 +1970,7 @@ const unit:UnitData = {
       "text": "我已經聽說了。",
       "pinyin": "Wǒ yǐjīng tīngshuō le.",
       "meaning": "I've already heard about it.",
-      "note": "Source B1L14-D2T04; 已經 and completed 了 are review.",
+      "note": "; 已經 and completed 了 are review.",
       "tokens": [
         "我已經聽說了"
       ]
@@ -1979,7 +1979,7 @@ const unit:UnitData = {
       "text": "電視新聞說，請大家多小心。",
       "pinyin": "Diànshì xīnwén shuō, qǐng dàjiā duō xiǎoxīn.",
       "meaning": "The TV news says everyone should be extra careful.",
-      "note": "Safe caution clause from B1L14-D2T07. 大家 and 小心 must be taught before this card; 多 + Verb is prior review.",
+      "note": "Safe caution clause from the conversation. 大家 and 小心 must be taught before this card; 多 + Verb is prior review.",
       "tokens": [
         "電視新聞說",
         "請大家多小心"
@@ -1999,7 +1999,7 @@ const unit:UnitData = {
       "text": "星期天我更忙。",
       "pinyin": "Xīngqítiān wǒ gèng máng.",
       "meaning": "I am even busier on Sunday.",
-      "note": "Source baseline example. This card teaches 更 = “even more” before the G004 grammar card.",
+      "note": "Source baseline example. This card teaches 更 = “even more” before the 更 comparison grammar card.",
       "tokens": [
         "星期天",
         "我更忙"
@@ -2009,7 +2009,7 @@ const unit:UnitData = {
       "text": "這次的颱風會比上次的更大，請大家多小心。",
       "pinyin": "Zhè cì de táifēng huì bǐ shàng cì de gèng dà, qǐng dàjiā duō xiǎoxīn.",
       "meaning": "This typhoon will be even bigger than the last one; everyone should be extra careful.",
-      "note": "Full B1L14-D2T07; may appear only after 更 baseline teaching and u44-even-more.",
+      "note": "Full the conversation; may appear only after 更 baseline teaching and u44-even-more.",
       "tokens": [
         "這次的颱風",
         "會比上次的更大",
@@ -2023,7 +2023,7 @@ const unit:UnitData = {
       "text": "希望這次的沒有上次的那麼可怕。",
       "pinyin": "Xīwàng zhè cì de méiyǒu shàng cì de nàme kěpà.",
       "meaning": "I hope this one isn't as scary as the last one.",
-      "note": "Source B1L14-D2T08; may appear only after u44-not-as.",
+      "note": "; may appear only after u44-not-as.",
       "tokens": [
         "希望",
         "這次的沒有上次的那麼可怕"
@@ -2036,7 +2036,7 @@ const unit:UnitData = {
       "text": "雨停了。",
       "pinyin": "Yǔ tíng le.",
       "meaning": "The rain stopped.",
-      "note": "Source B1L14-D2T09; retrieves Unit-43 停.",
+      "note": "; retrieves Unit-43 停.",
       "tokens": [
         "雨停了"
       ]
@@ -2045,7 +2045,7 @@ const unit:UnitData = {
       "text": "太好了！謝謝你的傘，再見。",
       "pinyin": "Tài hǎo le! Xièxie nǐ de sǎn, zàijiàn.",
       "meaning": "Great! Thanks for your umbrella. Bye.",
-      "note": "Source B1L14-D2T10.",
+      "note": "",
       "tokens": [
         "太好了",
         "謝謝你的傘",
@@ -2075,7 +2075,7 @@ const unit:UnitData = {
       "text": "不客氣。小心慢走。",
       "pinyin": "Bú kèqi. Xiǎoxīn màn zǒu.",
       "meaning": "You're welcome. Take care.",
-      "note": "Source B1L14-D2T11. The full formula appears only after 小心 and 慢走 are known.",
+      "note": "The full formula appears only after 小心 and 慢走 are known.",
       "tokens": [
         "不客氣",
         "小心慢走"
@@ -2085,7 +2085,7 @@ const unit:UnitData = {
       "text": "今年秋天跟去年秋天一樣熱。",
       "pinyin": "Jīnnián qiūtiān gēn qùnián qiūtiān yíyàng rè.",
       "meaning": "This autumn is as hot as last autumn.",
-      "note": "A003 equality review.",
+      "note": "comparison review equality review.",
       "tokens": [
         "今年秋天",
         "跟去年秋天一樣熱"
@@ -2095,7 +2095,7 @@ const unit:UnitData = {
       "text": "今年夏天比去年夏天更熱。",
       "pinyin": "Jīnnián xiàtiān bǐ qùnián xiàtiān gèng rè.",
       "meaning": "This summer is even hotter than last summer.",
-      "note": "A003 G004 model.",
+      "note": "comparison review 更 comparison model.",
       "tokens": [
         "今年夏天",
         "比去年夏天更熱"
@@ -2108,7 +2108,7 @@ const unit:UnitData = {
       "text": "春天的天氣怎麼樣？夏天的天氣怎麼樣？秋天的天氣怎麼樣？冬天的天氣怎麼樣？有沒有颱風？常不常下雨？會不會下雪？",
       "pinyin": "Chūntiān de tiānqì zěnmeyàng? Xiàtiān de tiānqì zěnmeyàng? Qiūtiān de tiānqì zěnmeyàng? Dōngtiān de tiānqì zěnmeyàng? Yǒu méiyǒu táifēng? Cháng bù cháng xiàyǔ? Huì bú huì xiàxuě?",
       "meaning": "What is the weather like in spring/summer/autumn/winter? Are there typhoons? Does it often rain? Does it snow?",
-      "note": "Source B1L14-A004 interview card. Ask a classmate these core questions, ask for additional information, compare the answers with your own home-country climate, and record the results in the chart.",
+      "note": "interview card. Ask a classmate these core questions, ask for additional information, compare the answers with your own home-country climate, and record the results in the chart.",
       "tokens": [
         "春天的天氣怎麼樣",
         "夏天的天氣怎麼樣",
@@ -2123,7 +2123,7 @@ const unit:UnitData = {
       "text": "今年冬天沒有去年冬天那麼熱。",
       "pinyin": "Jīnnián dōngtiān méiyǒu qùnián dōngtiān nàme rè.",
       "meaning": "This winter is not as hot as last winter.",
-      "note": "A003 G005 model.",
+      "note": "comparison review 沒有…那麼 comparison model.",
       "tokens": [
         "今年冬天",
         "沒有去年冬天那麼熱"
@@ -2136,7 +2136,7 @@ const unit:UnitData = {
       "text": "颱風快要來了，請大家多小心。",
       "pinyin": "Táifēng kuài yào lái le, qǐng dàjiā duō xiǎoxīn.",
       "meaning": "A typhoon is about to come; everyone, please be extra careful.",
-      "note": "Lesson-14 weather/typhoon capstone production line. It retrieves Unit-43 imminence and Unit-44 caution language.",
+      "note": "this lesson weather/typhoon capstone production line. It retrieves Unit-43 imminence and Unit-44 caution language.",
       "tokens": [
         "颱風快要來了",
         "請大家多小心"
@@ -2149,7 +2149,7 @@ const unit:UnitData = {
       "text": "因為我怕冷，所以我比較喜歡春天。",
       "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
       "meaning": "Because I'm sensitive to the cold, I prefer spring.",
-      "note": "Lesson-14 seasons/preference capstone line, retrieving Unit-42 preference/reason language.",
+      "note": "this lesson seasons/preference capstone line, retrieving Unit-42 preference/reason language.",
       "tokens": [
         "因為我怕冷",
         "所以我比較喜歡春天"
@@ -2159,7 +2159,7 @@ const unit:UnitData = {
       "text": "我在臺灣住了一年。",
       "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
       "meaning": "I lived in Taiwan for one year.",
-      "note": "Lesson-14 experience capstone line, retrieving Unit-43 completed duration.",
+      "note": "this lesson experience capstone line, retrieving Unit-43 completed duration.",
       "tokens": [
         "我在臺灣",
         "住了一年"

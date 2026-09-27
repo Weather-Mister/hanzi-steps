@@ -178,7 +178,7 @@ const unit:UnitData = {
     {
       "id": "u46-nonspecific",
       "title": "Not Anything Specific",
-      "subtitle": "Add the non-interrogative 幾 sense and G001.",
+      "subtitle": "Add the non-interrogative 幾 sense and the negative non-specific question-word pattern.",
       "chars": [],
       "minutes": "11–17 min",
       "unitId": "unit-46",
@@ -192,7 +192,7 @@ const unit:UnitData = {
         {
           "id": "u46-ji-s1",
           "type": "select",
-          "prompt": "Which use of 幾 is the new Lesson-15 sense?",
+          "prompt": "Which use of 幾 is the new sense taught here?",
           "options": [
             "幾 = a few/several in a statement",
             "幾 = only the question “how many?”",
@@ -216,7 +216,7 @@ const unit:UnitData = {
             "什麼東西都很好吃。"
           ],
           "answer": "我沒買什麼東西。",
-          "explanation": "G001 uses a question word inside a negative declarative without requiring 都/也.",
+          "explanation": "The negative non-specific question-word pattern uses a question word inside a negative declarative without requiring 都/也.",
           "grammarIds": [
             "u46-noncommittal-question-words"
           ]
@@ -231,7 +231,7 @@ const unit:UnitData = {
             "They must be questions."
           ],
           "answer": "They are always negative.",
-          "explanation": "The textbook states the non-committal statements are always negative."
+          "explanation": "The rule states the non-committal statements are always negative."
         },
         {
           "id": "u46-g1-s3",
@@ -260,7 +260,7 @@ const unit:UnitData = {
             "都 makes the sentence totality"
           ],
           "answer": "什麼 appears in a negative non-specific statement",
-          "explanation": "沒有 supplies the negative environment required by the source rule."
+          "explanation": "沒有 supplies the negative environment required by the rule."
         },
         {
           "id": "u46-g1-o1",
@@ -432,7 +432,7 @@ const unit:UnitData = {
             "dé — obtain"
           ],
           "answer": "děi — must/have to",
-          "explanation": "This is modal 得, new support in Lesson 15."
+          "explanation": "This is modal 得, introduced here as support."
         },
         {
           "id": "u46-med-p1",
@@ -485,7 +485,7 @@ const unit:UnitData = {
     {
       "id": "u46-ba",
       "title": "The 把 Construction",
-      "subtitle": "Use source-accurate introductory 把.",
+      "subtitle": "Use the carefully constrained introductory 把 pattern.",
       "chars": [
         "把"
       ],
@@ -548,7 +548,7 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s1",
           "type": "select",
-          "prompt": "Under the textbook's introductory 把 pattern, which sentence follows the source model?",
+          "prompt": "Under the introductory 把 pattern, which sentence is correct?",
           "options": [
             "我把這個小籠包吃了。",
             "我想把一支手機賣了。",
@@ -563,19 +563,19 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s2",
           "type": "select",
-          "prompt": "Which verb is source-compatible as the bare action verb in this introductory 把 pattern?",
+          "prompt": "Which verb can be used as the bare action verb here?",
           "options": [
             "吃",
             "買",
             "學"
           ],
           "answer": "吃",
-          "explanation": "The source models outward actions such as 吃/喝/寫/賣."
+          "explanation": "The The pattern models outward actions such as 吃/喝/寫/賣."
         },
         {
           "id": "u46-g2-s3",
           "type": "select",
-          "prompt": "Where does 沒 go in a negative 把 sentence under this source pattern?",
+          "prompt": "Where does 沒 go in a negative 把 sentence under this pattern?",
           "options": [
             "before 把",
             "between 把 and the object",
@@ -587,7 +587,7 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s4",
           "type": "select",
-          "prompt": "Which imperative follows the source negation order?",
+          "prompt": "Which imperative has the correct negation order?",
           "options": [
             "別把我的藥吃了。",
             "把別我的藥吃了。",
@@ -599,26 +599,26 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s5",
           "type": "select",
-          "prompt": "Which is a source-style 把 question?",
+          "prompt": "Which question correctly uses the 把 pattern taught here?",
           "options": [
             "你把功課寫了沒有？",
             "你把不把功課寫了？",
             "你功課把寫了嗎？"
           ],
           "answer": "你把功課寫了沒有？",
-          "explanation": "The source uses 了沒有 or 是不是 questions."
+          "explanation": "The pattern uses 了沒有 or 是不是 questions."
         },
         {
           "id": "u46-g2-s6",
           "type": "select",
-          "prompt": "Why does the Unit-39 “negation removes verbal 了” rule not erase the final 了 in the source model 我沒把豬腳麵線吃了？",
+          "prompt": "Why is the final 了 retained in 我沒把豬腳麵線吃了？",
           "options": [
             "This lesson is treating that 了 as sentence-final in the introductory 把 pattern.",
             "Negation never affects any 了.",
             "把 automatically means past tense."
           ],
           "answer": "This lesson is treating that 了 as sentence-final in the introductory 把 pattern.",
-          "explanation": "The source explicitly contrasts this with prior verbal-了."
+          "explanation": "This contrasts this with prior verbal-了."
         },
         {
           "id": "u46-ba-l1",
@@ -818,7 +818,7 @@ const unit:UnitData = {
             "a question about quantity"
           ],
           "answer": "advice to rest more",
-          "explanation": "Lesson 15 extends prior 多 + V into health advice."
+          "explanation": "this lesson extends prior 多 + V into health advice."
         },
         {
           "id": "u46-rec-p1",
@@ -857,7 +857,7 @@ const unit:UnitData = {
     {
       "id": "u46-doctor-visit",
       "title": "The Doctor Visit",
-      "subtitle": "Integrate D1T06–D1T12 and source Activity IV.",
+      "subtitle": "Integrate the rest of the doctor visit and apply the 把 pattern in three responses.",
       "chars": [],
       "minutes": "11–17 min",
       "unitId": "unit-46",
@@ -989,14 +989,14 @@ const unit:UnitData = {
         {
           "id": "u46-a004-s1",
           "type": "select",
-          "prompt": "What do all three Activity-IV source outcomes practice?",
+          "prompt": "What do all three practice responses have in common?",
           "options": [
             "doing something with/to a salient object using 把",
             "question-word totality with 都",
             "action comparison with 得"
           ],
           "answer": "doing something with/to a salient object using 把",
-          "explanation": "A004 is the source transfer for G002."
+          "explanation": "They all practice doing something with or to a salient object using 把."
         },
         {
           "id": "u46-visit-l1",
@@ -1018,7 +1018,7 @@ const unit:UnitData = {
     {
       "id": "u46-review",
       "title": "Unit 46 Review",
-      "subtitle": "Retrieve medicine, advice, G001/G002, and Unit-45 symptoms.",
+      "subtitle": "Retrieve medicine, advice, the non-specific question-word and 把 patterns, and Unit 45 symptoms.",
       "chars": [
         "感",
         "冒",
@@ -1246,7 +1246,7 @@ const unit:UnitData = {
         {
           "id": "u46-review-exp1",
           "type": "select",
-          "prompt": "Which is the Lesson-15 expansion of 幾?",
+          "prompt": "Which is the expanded use of 幾 taught here?",
           "options": [
             "a few/several in a statement",
             "only the question “how many?”",
@@ -1265,7 +1265,7 @@ const unit:UnitData = {
             "你想買什麼？"
           ],
           "answer": "我沒買什麼東西。",
-          "explanation": "G001 is a negative non-specific declarative.",
+          "explanation": "This is a negative non-specific declarative.",
           "grammarIds": [
             "u46-noncommittal-question-words"
           ]
@@ -1280,12 +1280,12 @@ const unit:UnitData = {
             "a question mark"
           ],
           "answer": "negation",
-          "explanation": "The source says these statements are always negative."
+          "explanation": "The rule says these statements are always negative."
         },
         {
           "id": "u46-review-g2",
           "type": "select",
-          "prompt": "Which source-introductory 把 sentence uses an allowed outward action?",
+          "prompt": "Which introductory 把 sentence uses an allowed outward action?",
           "options": [
             "我把這個小籠包吃了。",
             "我把中文學了。",
@@ -1297,7 +1297,7 @@ const unit:UnitData = {
         {
           "id": "u46-review-g2neg",
           "type": "select",
-          "prompt": "Which has correct source negation order?",
+          "prompt": "Which has the correct negation order?",
           "options": [
             "別把我的藥吃了。",
             "把別我的藥吃了。",
@@ -1309,14 +1309,14 @@ const unit:UnitData = {
         {
           "id": "u46-review-g2q",
           "type": "select",
-          "prompt": "Which is a source-supported 把 question?",
+          "prompt": "Which is a supported 把 question?",
           "options": [
             "你是不是把機車賣了？",
             "你把不把機車賣了？",
             "是不是你機車把賣了？"
           ],
           "answer": "你是不是把機車賣了？",
-          "explanation": "是不是 is a source-supported question route."
+          "explanation": "是不是 is a supported question route."
         },
         {
           "id": "u46-review-de",
@@ -1383,7 +1383,7 @@ const unit:UnitData = {
             "哪裡不舒服？／把藥吃了。"
           ],
           "answer": "大概多久了？／已經四、五天了。",
-          "explanation": "This is delayed X004 retrieval."
+          "explanation": "This is delayed retrieval of the duration-to-now question and answer."
         }
       ]
     }
@@ -1899,7 +1899,7 @@ const unit:UnitData = {
       "id": "u46-noncommittal-question-words",
       "title": "Negative, non-specific question words",
       "pattern": "NEG + clause containing 什麼 / 多少 / 幾 / 哪裡 / 誰 / 什麼時候",
-      "explanation": "In Lesson 15, a question word inside a declarative sentence can avoid a specific commitment. The source rule is always negative and is not the Unit-40 都/也 totality pattern.",
+      "explanation": "In this lesson, a question word inside a declarative sentence can avoid a specific commitment. The rule is always negative and is not the Unit-40 都/也 totality pattern.",
       "examples": [
         {
           "text": "我沒買什麼東西。",
@@ -1917,13 +1917,13 @@ const unit:UnitData = {
           "meaning": "She has only a few friends."
         }
       ],
-      "remember": "G001 is negative. Do not add 都/也 merely because a question word appears."
+      "remember": "This pattern is negative. Do not add 都/也 merely because a question word appears."
     },
     "u46-ba-disposal": {
       "id": "u46-ba-disposal",
       "title": "Introductory 把 disposal",
       "pattern": "把 + definite/referential object + bare outward-transitive action verb + sentence-final 了",
-      "explanation": "Use 把 for what is done to a salient object. At this introductory source boundary, favor definite/referential objects and outward actions such as 吃、喝、寫、賣; source-rejected inward verbs include 買、學. 沒/別 precede 把. Questions use 了沒有 or 是不是.",
+      "explanation": "Use 把 for what is done to a salient object. At this introductory introductory stage, favor definite/referential objects and outward actions such as 吃、喝、寫、賣; excluded inward verbs include 買、學. 沒/別 precede 把. Questions use 了沒有 or 是不是.",
       "examples": [
         {
           "text": "我把這個小籠包吃了。",
@@ -1941,7 +1941,7 @@ const unit:UnitData = {
           "meaning": "Did you finish the homework?"
         }
       ],
-      "remember": "Specific object + outward action + source final-了 pattern; 沒/別 before 把."
+      "remember": "Specific object + outward action + final-了 pattern taught here; 沒/別 before 把."
     }
   },
   "grammarIntroductions": [
@@ -2013,7 +2013,7 @@ const unit:UnitData = {
       "text": "請問我生的是什麼病？",
       "pinyin": "Qǐngwèn wǒ shēng de shì shénme bìng?",
       "meaning": "May I ask what illness I have?",
-      "note": "Fixed source chunk; does not teach G007.",
+      "note": "Fixed question from the doctor visit; it does not teach the separable-verb pattern.",
       "tokens": [
         "請問我生的是什麼病？"
       ]
@@ -2022,7 +2022,7 @@ const unit:UnitData = {
       "text": "她沒有幾個朋友。",
       "pinyin": "Tā méiyǒu jǐ ge péngyǒu.",
       "meaning": "She does not have many friends / has only a few friends.",
-      "note": "幾 jǐ was introduced in Unit 7 as the question word “how many?”. In Lesson 15, the same word also means “a few / several” in a statement or other non-question context. This is a semantic expansion of the Unit-7 word, not new vocabulary.",
+      "note": "幾 jǐ was introduced in Unit 7 as the question word “how many?”. In this lesson, the same word also means “a few / several” in a statement or other non-question context. This is a semantic expansion of the Unit-7 word, not new vocabulary.",
       "tokens": [
         "她沒有",
         "幾個朋友"
@@ -2032,7 +2032,7 @@ const unit:UnitData = {
       "text": "沒有什麼關係。",
       "pinyin": "Méiyǒu shénme guānxi.",
       "meaning": "It's nothing serious / It doesn't matter much.",
-      "note": "Contextual G001 source use.",
+      "note": "Contextual use of the negative non-specific question-word pattern.",
       "tokens": [
         "沒有什麼關係。"
       ]
@@ -2070,7 +2070,7 @@ const unit:UnitData = {
       "text": "回去把藥吃了，多喝水，多休息，早一點睡覺，很快就會好。",
       "pinyin": "Huíqù bǎ yào chī le, duō hē shuǐ, duō xiūxí, zǎo yìdiǎn shuìjiào, hěn kuài jiù huì hǎo.",
       "meaning": "Go back and take the medicine, drink more water, rest more, go to sleep a bit earlier, and you'll get better soon.",
-      "note": "G002 + health advice.",
+      "note": "The 把 pattern combined with health advice.",
       "tokens": [
         "回去把藥吃了，多喝水，多休息，早一點睡覺，很快就會好。"
       ]
@@ -2088,7 +2088,7 @@ const unit:UnitData = {
       "text": "好的，謝謝您。",
       "pinyin": "Hǎo de, xièxie nín.",
       "meaning": "Okay, thank you.",
-      "note": "Source honorific register; 您 remains support-only.",
+      "note": "Honorific register; 您 remains support-only.",
       "tokens": [
         "好的",
         "謝謝您"
@@ -2109,7 +2109,7 @@ const unit:UnitData = {
       "text": "好的，沒有問題。",
       "pinyin": "Hǎo de, méiyǒu wèntí.",
       "meaning": "Okay, no problem.",
-      "note": "Frozen A004 response outcome; learner-visible source transfer only.",
+      "note": "Practice response; learner-visible application only.",
       "tokens": [
         "好的，沒有問題。"
       ],
@@ -2119,7 +2119,7 @@ const unit:UnitData = {
       "text": "太好了。",
       "pinyin": "Tài hǎo le.",
       "meaning": "Great!",
-      "note": "Frozen A004 response outcome; learner-visible source transfer only.",
+      "note": "Practice response; learner-visible application only.",
       "tokens": [
         "太好了。"
       ],
@@ -2129,7 +2129,7 @@ const unit:UnitData = {
       "text": "對不起，我不知道是你的。",
       "pinyin": "Duìbuqǐ, wǒ bù zhīdào shì nǐ de.",
       "meaning": "Sorry, I didn't know it was yours.",
-      "note": "Frozen A004 response outcome; learner-visible source transfer only. 對不起 remains support-only.",
+      "note": "Practice response; learner-visible application only. 對不起 remains support-only.",
       "tokens": [
         "對不起，我不知道是你的。"
       ],
