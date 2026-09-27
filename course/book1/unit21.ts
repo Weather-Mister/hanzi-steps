@@ -588,7 +588,7 @@ const unit:UnitData = {
         {
           "id": "u21-time-place-select-1",
           "type": "select",
-          "prompt": "Which order follows the textbook pattern?",
+          "prompt": "Which word order is correct?",
           "options": [
             "我後天晚上在學校見面。",
             "我在學校見面後天晚上。"
@@ -1275,7 +1275,7 @@ const unit:UnitData = {
       "meaning": "to sing",
       "lessonId": "u21-karaoke",
       "core": true,
-      "note": "A separable verb in the textbook."
+      "note": "A separable verb."
     },
     {
       "text": "見面",
@@ -1283,7 +1283,7 @@ const unit:UnitData = {
       "meaning": "to meet",
       "lessonId": "u21-karaoke",
       "core": true,
-      "note": "A separable verb in the textbook."
+      "note": "A separable verb."
     },
     {
       "text": "分",
@@ -1998,7 +1998,7 @@ const unit:UnitData = {
       "id": "u21-time-before-place",
       "title": "Put time before place",
       "pattern": "Subject + Time + Place + Event",
-      "explanation": "When both time and place are stated, Chinese normally places the time before the place, and both come before the event. The subject may come before the time or immediately after it. This follows the textbook’s Time + Place + Event order.",
+      "explanation": "When both time and place are stated, Chinese normally places the time before the place, and both come before the event. The subject may come before the time or immediately after it. Use the order Time + Place + Event.",
       "examples": [
         {
           "text": "我們後天晚上在學校見面。",
@@ -2132,7 +2132,7 @@ const unit:UnitData = {
       "text": "我們去KTV唱歌吧！",
       "pinyin": "Wǒmen qù KTV chànggē ba!",
       "meaning": "Let’s go sing at KTV!",
-      "note": "KTV is the common Taiwan term for a karaoke venue; the textbook lists it as a noun.",
+      "note": "KTV is the common Taiwan term for a karaoke venue; learn it here as a noun.",
       "tokens": [
         "我們",
         "去",

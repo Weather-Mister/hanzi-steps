@@ -503,7 +503,7 @@ const unit:UnitData = {
         {
           "id": "u14-prices-22",
           "type": "select",
-          "prompt": "Choose the Taiwan textbook reading of 便宜.",
+          "prompt": "Which pronunciation is used for 便宜 here?",
           "options": [
             "piányí",
             "biànyí",
@@ -1256,7 +1256,7 @@ const unit:UnitData = {
       "meaning": "inexpensive; cheap",
       "lessonId": "u14-prices",
       "core": false,
-      "note": "Taiwan textbook: both syllables have second tone."
+      "note": "Use second tone on both syllables here."
     },
     {
       "text": "種",
@@ -1693,7 +1693,7 @@ const unit:UnitData = {
       "meaning": "final syllable of 便宜, inexpensive",
       "strokes": 8,
       "layout": "stack",
-      "note": "In the Taiwan textbook, 便宜 is piányí with a second-tone yí.",
+      "note": "Here 便宜 is piányí, with second-tone yí.",
       "memory": "A roof 宀 covers the tiered lines of 且.",
       "parts": [
         {
@@ -1951,7 +1951,7 @@ const unit:UnitData = {
       "id": "u14-phones",
       "title": "Count phones with 支",
       "pattern": "number + 支 + 手機; 這 / 那 + 支 + 手機",
-      "explanation": "手機 shǒujī means mobile phone. Use 支 zhī to count phones in the Taiwan textbook: 一支手機, one phone; 兩支手機, two phones. Put 這 or 那 before 支 to point to a phone: 這支手機, this phone. The noun alone still works when you are not counting or pointing: 我想買手機. Do not replace 支 with 杯, the measure for cups.",
+      "explanation": "手機 shǒujī means mobile phone. Use 支 zhī to count phones here: 一支手機, one phone; 兩支手機, two phones. Put 這 or 那 before 支 to point to a phone: 這支手機, this phone. The noun alone still works when you are not counting or pointing: 我想買手機. Do not replace 支 with 杯, the measure for cups.",
       "examples": [
         {
           "text": "我有兩支手機。",
@@ -2002,7 +2002,7 @@ const unit:UnitData = {
       "id": "u14-price-opinion",
       "title": "Describe the price",
       "pattern": "item + 很 + 貴 / 便宜; item + 不 + 貴",
-      "explanation": "貴 guì means expensive; 便宜 piányí means inexpensive. Follow the Taiwan textbook’s two rising tones in piányí. Use 很 to make an ordinary descriptive statement: 這支手機很貴. 不貴 means not expensive, and 不便宜 means not cheap; those are not exactly the same statement. The familiar A-not-A question works: 貴不貴？ asks whether it is expensive. Actual judgments about price depend on the person and situation.",
+      "explanation": "貴 guì means expensive; 便宜 piányí means inexpensive. Use two rising tones in piányí. Use 很 to make an ordinary descriptive statement: 這支手機很貴. 不貴 means not expensive, and 不便宜 means not cheap; those are not exactly the same statement. The familiar A-not-A question works: 貴不貴？ asks whether it is expensive. Actual judgments about price depend on the person and situation.",
       "examples": [
         {
           "text": "這支手機很貴。",
