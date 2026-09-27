@@ -1010,7 +1010,7 @@ const unit:UnitData = {
             "university exam rooms only"
           ],
           "answer": "crowded public buses/MRT",
-          "explanation": "Crowded buses/MRT are one source context."
+          "explanation": "Crowded buses/MRT are one historical context mentioned above."
         },
         {
           "id": "u48-culture-s2",
@@ -2238,7 +2238,7 @@ const unit:UnitData = {
       "meaning": "Wearing surgical masks — historical lesson context",
       "note": "Historical lesson context, not current 2026 medical/policy guidance. The material mentions cold-season transmission prevention, crowded buses/MRT, scooter warmth/air-pollution filtering, food-service hygiene, and hospitals.",
       "tokens": [
-        "Mask use — textbook-era source context"
+        "Mask use — historical lesson context"
       ]
     },
     "u48-cap2": {
