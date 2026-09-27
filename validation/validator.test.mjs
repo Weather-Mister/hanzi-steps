@@ -255,7 +255,7 @@ test('Lesson 15 learner-safe listening payloads stay pinned to the frozen activi
        "whether the rent is cheaper"
      ],
      "answer": "whether the person feels a little better",
-     "explanation": "The health check uses G004."
+     "explanation": "The health check uses 一點 for a small degree."
    },
    "u48-g5-l1": {
      "unit": "unit-48",
