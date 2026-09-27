@@ -1711,7 +1711,7 @@ const unit:UnitData = {
             "current 2026 legal instructions",
             "a new vocabulary list"
           ],
-          "answer": "historical lesson historical culture, not current medical/policy guidance",
+          "answer": "historical lesson context, not current medical/policy guidance",
           "explanation": "The mask information remains explicitly framed as historical context, not current guidance."
         },
         {
