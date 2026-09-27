@@ -66,9 +66,9 @@ test('Lesson 15 A002 cards preserve three distinct source illustration transcrip
  const cards=['u48-a002-visual-1','u48-a002-visual-2','u48-a002-visual-3'].map(step);
  assert.deepEqual(cards.map(s=>s.visualScene),['restroom','bed','throat']);
  assert.deepEqual(cards.map(s=>s.visualCue),[
-  "Source illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen.",
-  'Source illustration: a man lies in bed under a blanket with his head on a pillow.',
-  'Source illustration: a man stands with one hand held at his throat/neck.'
+  "Illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen.",
+  'Illustration: a man lies in bed under a blanket with his head on a pillow.',
+  'Illustration: a man stands with one hand held at his throat/neck.'
  ]);
  assert.equal(new Set(cards.map(s=>s.visualScene)).size,3);
  assert.deepEqual(cards.map(s=>s.visualClosing),['好的。','謝謝你。','謝謝你的關心。……']);

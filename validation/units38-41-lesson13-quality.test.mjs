@@ -131,7 +131,7 @@ test('Grammar I through VII remain assigned to the planned units',()=>{
   assert.match(u38.grammarRules['u38-yi-jiu'].explanation,/嗎 or 是不是/);
   assert.match(u39.grammarRules['u39-verbal-le'].explanation,/remove verbal 了/);
   assert.match(u39.grammarRules['u39-bu-vs-mei'].explanation,/bare 沒 \+ V is still grammatical/);
-  assert.match(u40.grammarRules['u40-questionword-totality'].explanation,/Both 都 and 也 are source-valid/);
+  assert.match(u40.grammarRules['u40-questionword-totality'].explanation,/Both 都 and 也 are valid/);
   assert.match(u40.grammarRules['u40-more-less-verb'].explanation,/past or future/);
   assert.match(u41.grammarRules['u41-shibushi'].explanation,/confirm information/);
   assert.match(u41.grammarRules['u41-gen-yiyang'].explanation,/一樣不一樣 or 是不是一樣/);
@@ -164,10 +164,10 @@ test('Book 1 Lesson 13 keeps its canonical ownership after Book 2 resumes',()=>{
 });
 
 test('Source-specific ambiguity guards remain explicit',()=>{
-  assert.match(u38.grammarRules['u38-yi-jiu'].explanation,/Both question strategies are source-valid/);
+  assert.match(u38.grammarRules['u38-yi-jiu'].explanation,/Both question strategies are valid/);
   assert.match(u39.grammarRules['u39-bu-vs-mei'].explanation,/bare 沒 \+ V is still grammatical/);
-  assert.match(u40.grammarRules['u40-questionword-totality'].explanation,/Both 都 and 也 are source-valid/);
-  assert.match(u41.grammarRules['u41-gen-yiyang'].explanation,/both are source-valid/);
+  assert.match(u40.grammarRules['u40-questionword-totality'].explanation,/Both 都 and 也 are valid/);
+  assert.match(u41.grammarRules['u41-gen-yiyang'].explanation,/both are valid/);
 });
 
 

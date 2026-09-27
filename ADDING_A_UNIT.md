@@ -112,6 +112,27 @@ resolve it explicitly within that approval, never silently edit old content.
 `course/legacy/` preserves standalone practice retained by the live rebalance;
 these entries are not falsely counted as formally taught.
 
+## Learner-facing self-containment
+
+Hanzi Steps must be understandable without the learner having the textbook open.
+Learner-facing fields must not refer to invisible authoring provenance or source
+structure such as “the source”, “the textbook”, “Dialogue II”, “the reading”,
+source turn IDs, or internal curriculum labels such as A004/G003/P006.
+
+If an assessment depends on a culture note, table, reading summary, role prompt,
+prescription, illustration, or other reference material, put that material in a
+visible teaching/reference card before the assessment. The prompt must point to
+that visible local context (“the comparison data above”, “the culture summary
+above”) rather than to an external source.
+
+Source citations and exact provenance belong in `bookReference`, source ledgers,
+audit notes, and other authoring-only files. They must not leak into learner-facing
+titles, subtitles, prompts, options, answers, explanations, phrase notes, grammar
+explanations, visual instructions, or visible reference labels.
+
+Wording-only repairs must preserve lesson IDs, activity IDs, step order, answer
+keys, canonical ownership, and saved-progress positions.
+
 ## Check, build and publish
 
 ### Local/manual path

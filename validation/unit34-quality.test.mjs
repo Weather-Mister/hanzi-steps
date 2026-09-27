@@ -182,7 +182,7 @@ test('Unit 34 preserves the two short Dialogue I turns that connect the exchange
   const plan=u34.lessons.find(l=>l.id==='u34-plan');
   const reply=plan.steps.find(s=>s.id==='u34-plan-s1');
   assert.equal(reply.answer,'五年。');
-  assert.match(u34.phrases['u34-plan'].note,/source reply is 五年/);
+  assert.match(u34.phrases['u34-plan'].note,/reply is 五年/);
   assert.match(u34.phrases['u34-grades'].text,/你呢？$/);
   assert.equal(u34.phrases['u34-grades'].tokens.at(-1),'你呢');
 });
