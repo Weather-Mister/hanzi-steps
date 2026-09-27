@@ -137,7 +137,7 @@ const unit:UnitData = {
             "Marking a question"
           ],
           "answer": "Counting a piece of food",
-          "explanation": "Lesson 10 extends familiar 塊 to a measure word for a piece of food; here it means a piece of mango."
+          "explanation": "this lesson extends familiar 塊 to a measure word for a piece of food; here it means a piece of mango."
         }
       ]
     },
@@ -175,7 +175,7 @@ const unit:UnitData = {
             "Marks a completed action"
           ],
           "answer": "Marks a guess seeking confirmation",
-          "explanation": "This is Lesson 10's guessing use of 吧. Earlier you used 吧 to soften suggestions.",
+          "explanation": "This is this lesson's guessing use of 吧. Earlier you used 吧 to soften suggestions.",
           "grammarIds": [
             "u30-ba-guess"
           ]
@@ -242,7 +242,7 @@ const unit:UnitData = {
             "很好吃"
           ],
           "answer": "吃吃看",
-          "explanation": "吃吃看 is the Lesson 10 VV看 pattern.",
+          "explanation": "吃吃看 is the this lesson VV看 pattern.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -250,14 +250,14 @@ const unit:UnitData = {
         {
           "id": "u30-try-s2",
           "type": "select",
-          "prompt": "Which option follows Lesson 10's VV看 restriction?",
+          "prompt": "Which option follows this lesson's VV看 restriction?",
           "options": [
             "Mention the fruit first, then say 吃吃看",
             "Put 西瓜 directly after 吃吃看",
             "Put 看 before the repeated verb"
           ],
           "answer": "Mention the fruit first, then say 吃吃看",
-          "explanation": "Establish the object first, then use 吃吃看. In this Lesson 10 pattern, an object normally does not follow VV看.",
+          "explanation": "Establish the object first, then use 吃吃看. In this this lesson pattern, an object normally does not follow VV看.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -284,7 +284,7 @@ const unit:UnitData = {
             "Return to one's country"
           ],
           "answer": "Treat you to the food",
-          "explanation": "Lesson 10 extends familiar 請 to 'treat someone to something.'"
+          "explanation": "this lesson extends familiar 請 to 'treat someone to something.'"
         }
       ]
     },
@@ -310,7 +310,7 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s1",
           "type": "select",
-          "prompt": "Which form matches Lesson 10's subjective reduplication pattern?",
+          "prompt": "Which form matches this lesson's subjective reduplication pattern?",
           "options": [
             "香香的",
             "很香香的",
@@ -325,7 +325,7 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s2",
           "type": "select",
-          "prompt": "Which is the textbook-style combination for 'fragrant and sweet'?",
+          "prompt": "Which is this lesson-style combination for 'fragrant and sweet'?",
           "options": [
             "香香甜甜的",
             "很香香很甜甜的",
@@ -340,7 +340,7 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s3",
           "type": "select",
-          "prompt": "Which familiar state verb does the textbook ALLOW in this reduplication pattern?",
+          "prompt": "Which familiar state verb does this lesson ALLOW in this reduplication pattern?",
           "options": [
             "美",
             "貴",
@@ -774,7 +774,7 @@ const unit:UnitData = {
         {
           "id": "u30-review-13",
           "type": "select",
-          "prompt": "Which subjective description follows the Lesson 10 reduplication pattern?",
+          "prompt": "Which subjective description follows the this lesson reduplication pattern?",
           "options": [
             "水果香香甜甜的。",
             "水果很香香甜甜的。",
@@ -789,14 +789,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-14",
           "type": "select",
-          "prompt": "Which pair gives an allowed subjective description and an excluded form in the textbook?",
+          "prompt": "Which pair gives an allowed subjective description and an excluded form in this lesson?",
           "options": [
             "美美的 is allowed; 貴貴的 is excluded",
             "貴貴的 is allowed; 美美的 is excluded",
             "忙忙的 and 貴貴的 are both allowed"
           ],
           "answer": "美美的 is allowed; 貴貴的 is excluded",
-          "explanation": "The textbook explicitly permits 美 and excludes 貴 and 忙.",
+          "explanation": "this lesson explicitly permits 美 and excludes 貴 and 忙.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -861,7 +861,7 @@ const unit:UnitData = {
         {
           "id": "u30-review-20",
           "type": "select",
-          "prompt": "In 我請你吃水果, what special Lesson 10 sense does 請 have?",
+          "prompt": "In 我請你吃水果, what special this lesson sense does 請 have?",
           "options": [
             "Treat someone to food",
             "Guess that something is correct",
@@ -880,12 +880,12 @@ const unit:UnitData = {
             "一個西瓜"
           ],
           "answer": "一塊西瓜",
-          "explanation": "Lesson 10 uses 塊 for a piece of food."
+          "explanation": "this lesson uses 塊 for a piece of food."
         },
         {
           "id": "u30-review-22",
           "type": "select",
-          "prompt": "You are simply ordering hot coffee, not praising its feel. Which wording fits the textbook usage note?",
+          "prompt": "You are simply ordering hot coffee, not praising its feel. Which wording fits this lesson usage note?",
           "options": [
             "我要一杯熱咖啡。",
             "我要一杯很熱熱的咖啡。",
@@ -907,7 +907,7 @@ const unit:UnitData = {
       "meaning": "mango",
       "lessonId": "u30-fruit",
       "core": true,
-      "note": "Lesson 10 Dialogue I identifies the yellow fruit as 芒果."
+      "note": "this lesson the conversation identifies the yellow fruit as 芒果."
     },
     {
       "text": "紅色",
@@ -944,7 +944,7 @@ const unit:UnitData = {
       "meaning": "try tasting it; have a taste and see",
       "lessonId": "u30-try",
       "core": true,
-      "note": "A Lesson 10 VV看 form; do not put the food object after 吃吃看 in this pattern."
+      "note": "A this lesson VV看 form; do not put the food object after 吃吃看 in this pattern."
     },
     {
       "text": "拍",
@@ -952,7 +952,7 @@ const unit:UnitData = {
       "meaning": "to take (a picture); pat",
       "lessonId": "u30-photo",
       "core": true,
-      "note": "In Lesson 10, 拍 is used with 照片: 拍照片, take photos."
+      "note": "In this lesson, 拍 is used with 照片: 拍照片, take photos."
     },
     {
       "text": "笑",
@@ -981,7 +981,7 @@ const unit:UnitData = {
       "meaning": "clothes; clothing",
       "lessonId": "u30-clothes",
       "core": true,
-      "note": "The textbook gives yīfú, with second-tone 服."
+      "note": "this lesson gives yīfú, with second-tone 服."
     }
   ],
   "reviewVocabulary": [
@@ -1023,7 +1023,7 @@ const unit:UnitData = {
       "meaning": "red",
       "strokes": 9,
       "layout": "side",
-      "note": "紅 is second-tone hóng, the color red. In Lesson 10 it combines with 色 to form 紅色.",
+      "note": "紅 is second-tone hóng, the color red. In this lesson it combines with 色 to form 紅色.",
       "memory": "A six-stroke 糹 thread side stands on the left; the simple three-stroke 工 sits on the right.",
       "parts": [
         {
@@ -1095,7 +1095,7 @@ const unit:UnitData = {
       "meaning": "take (a picture); pat",
       "strokes": 8,
       "layout": "side",
-      "note": "拍 is first-tone pāi. Lesson 10 uses 拍照片, 'take a photo.'",
+      "note": "拍 is first-tone pāi. this lesson uses 拍照片, 'take a photo.'",
       "memory": "扌, the hand side, takes three strokes on the left; 白 fills the right with five.",
       "parts": [
         {
@@ -1327,7 +1327,7 @@ const unit:UnitData = {
       "id": "u30-ba-guess",
       "title": "Use 吧 to make a guess",
       "pattern": "Statement + 吧？",
-      "explanation": "You already know 吧 for a softened suggestion such as 我們去吧. Lesson 10 adds a different use: after a statement, 吧 can show that the speaker is making a guess and asking for confirmation. The guessed information comes before 吧; the particle stays at the end.",
+      "explanation": "You already know 吧 for a softened suggestion such as 我們去吧. this lesson adds a different use: after a statement, 吧 can show that the speaker is making a guess and asking for confirmation. The guessed information comes before 吧; the particle stays at the end.",
       "examples": [
         {
           "text": "這是西瓜吧？",
@@ -1346,7 +1346,7 @@ const unit:UnitData = {
       "id": "u30-vv-kan",
       "title": "Try an action with VV看",
       "pattern": "monosyllabic action verb + same verb + 看",
-      "explanation": "Reduplicate a one-syllable action verb and add 看 to mean 'try doing it and see.' The pattern sounds tentative. Lesson 10 contrasts it with ordinary verb reduplication: VV can take an object, but VV看 generally does not put an object after 看. Establish the thing first, then say 吃吃看, 喝喝看, 聽聽看, and so on. Do not add 看 automatically to habitual VV activities: 我有時候看看書 describes an occasional activity, not a trial to find out what it is like.",
+      "explanation": "Reduplicate a one-syllable action verb and add 看 to mean 'try doing it and see.' The pattern sounds tentative. this lesson contrasts it with ordinary verb reduplication: VV can take an object, but VV看 generally does not put an object after 看. Establish the thing first, then say 吃吃看, 喝喝看, 聽聽看, and so on. Do not add 看 automatically to habitual VV activities: 我有時候看看書 describes an occasional activity, not a trial to find out what it is like.",
       "examples": [
         {
           "text": "這個水果很甜，你吃吃看。",
@@ -1359,7 +1359,7 @@ const unit:UnitData = {
           "meaning": "This cup of tea smells good; try drinking it."
         }
       ],
-      "remember": "VV看 = try it and see. Do not normally put the object after VV看 in this Lesson 10 pattern.",
+      "remember": "VV看 = try it and see. Do not normally put the object after VV看 in this this lesson pattern.",
       "words": [
         "吃吃看"
       ]
@@ -1368,7 +1368,7 @@ const unit:UnitData = {
       "id": "u30-state-redup",
       "title": "Give a subjective impression by reduplicating a state verb",
       "pattern": "State verb + state verb + 的",
-      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. The textbook's permitted set is 香、甜、高、熱、大、美、遠、辣、矮; its excluded set is 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
+      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. this lesson's permitted set is 香、甜、高、熱、大、美、遠、辣、矮; its excluded set is 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
       "examples": [
         {
           "text": "這個水果香香的。",
@@ -1381,7 +1381,7 @@ const unit:UnitData = {
           "meaning": "This fruit is fragrant and sweet."
         }
       ],
-      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. The textbook allows 香、甜、高、熱、大、美、遠、辣、矮 and excludes 多、貴、近、忙、新、少."
+      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. this lesson allows 香、甜、高、熱、大、美、遠、辣、矮 and excludes 多、貴、近、忙、新、少."
     }
   },
   "grammarIntroductions": [
@@ -1427,7 +1427,7 @@ const unit:UnitData = {
       "text": "這個黃色的水果是芒果。我給你一塊。",
       "pinyin": "Zhège huángsè de shuǐguǒ shì mángguǒ. Wǒ gěi nǐ yí kuài.",
       "meaning": "This yellow fruit is mango. I'll give you a piece.",
-      "note": "This keeps the textbook's yellow-mango context while using already-covered 是 rather than introducing 叫 before it is taught. 塊 counts a piece of food after the fruit is understood.",
+      "note": "This keeps this lesson's yellow-mango context while using already-covered 是 rather than introducing 叫 before it is taught. 塊 counts a piece of food after the fruit is understood.",
       "tokens": [
         "這個黃色的水果是芒果",
         "我給你一塊"
@@ -1487,7 +1487,7 @@ const unit:UnitData = {
       "text": "我請你吃水果。",
       "pinyin": "Wǒ qǐng nǐ chī shuǐguǒ.",
       "meaning": "I'll treat you to some fruit.",
-      "note": "請 was learned as 'please/invite'; Lesson 10 also uses 請 + person + eat/drink to mean treat someone.",
+      "note": "請 was learned as 'please/invite'; this lesson also uses 請 + person + eat/drink to mean treat someone.",
       "tokens": [
         "我",
         "請你",
@@ -1511,7 +1511,7 @@ const unit:UnitData = {
       "text": "我拍照片。",
       "pinyin": "Wǒ pāi zhàopiàn.",
       "meaning": "I take photos.",
-      "note": "拍照片 is the Lesson 10 photo expression.",
+      "note": "拍照片 is the this lesson photo expression.",
       "tokens": [
         "我",
         "拍照片"

@@ -1,0 +1,23 @@
+{
+  "reason": "Book 1 learner-facing self-containment cleanup: remove internal textbook/source/editor wording while preserving IDs, answer keys, ownership and saved progress. These hashes record the only previously lossless-protected records whose learner-visible notes/explanations changed.",
+  "records": {
+    "vocabulary": {
+      "往": {
+        "before": "f40f0c99f24ab9106ea38e5eaa68215e8503622e4fa8535a81c949062e599f83",
+        "after": "fd5212a020eee98701b8d613393471761d4ed3f407f4e6212d069dc9aa90e972"
+      }
+    },
+    "characters": {
+      "往": {
+        "before": "14eab712417bd9b5c5740fd302fc830049d6ab83768d2c7885ffbd104934bc3b",
+        "after": "c1a662d76ae1dd2e3d9d503ce206f285c880e5e23c8a239dba8d273101148e2d"
+      }
+    },
+    "grammarRules": {
+      "u6-family": {
+        "before": "99adb851951062536b485d62229eb7885704efd486f018a6bcb15cdb0488c107",
+        "after": "f91833609b7d9bbeda349f8dc918f3bce5d7f5f3092d6b16ddd03719f4e37773"
+      }
+    }
+  }
+}

@@ -66,9 +66,9 @@ test('Lesson 15 A002 cards preserve three distinct source illustration transcrip
  const cards=['u48-a002-visual-1','u48-a002-visual-2','u48-a002-visual-3'].map(step);
  assert.deepEqual(cards.map(s=>s.visualScene),['restroom','bed','throat']);
  assert.deepEqual(cards.map(s=>s.visualCue),[
-  "Source illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen.",
-  'Source illustration: a man lies in bed under a blanket with his head on a pillow.',
-  'Source illustration: a man stands with one hand held at his throat/neck.'
+  "Illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen.",
+  'Illustration: a man lies in bed under a blanket with his head on a pillow.',
+  'Illustration: a man stands with one hand held at his throat/neck.'
  ]);
  assert.equal(new Set(cards.map(s=>s.visualScene)).size,3);
  assert.deepEqual(cards.map(s=>s.visualClosing),['好的。','謝謝你。','謝謝你的關心。……']);
@@ -255,7 +255,7 @@ test('Lesson 15 learner-safe listening payloads stay pinned to the frozen activi
        "whether the rent is cheaper"
      ],
      "answer": "whether the person feels a little better",
-     "explanation": "The health check uses G004."
+     "explanation": "The health check uses 一點 for a small degree."
    },
    "u48-g5-l1": {
      "unit": "unit-48",
@@ -315,7 +315,7 @@ test('Lesson 15 learner-safe listening payloads stay pinned to the frozen activi
        "number of packets"
      ],
      "answer": "sleep quality",
-     "explanation": "This is G005 action comparison."
+     "explanation": "This compares sleep quality using the action-comparison pattern."
    }
  };
  const step=(unitId,id)=>baseline.modules.find(m=>m.unit.id===unitId).lessons.flatMap(l=>l.steps).find(s=>s.id===id);

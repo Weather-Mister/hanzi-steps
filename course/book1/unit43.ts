@@ -117,7 +117,7 @@ const unit:UnitData = {
         {
           "id": "u43-duration-s1",
           "type": "select",
-          "prompt": "Which sentence uses the Lesson-14 completed-duration pattern with verb repetition?",
+          "prompt": "Which sentence uses the completed-duration pattern with verb repetition?",
           "options": [
             "我打網球打了兩個鐘頭。",
             "我打網球了兩個鐘頭。",
@@ -144,7 +144,7 @@ const unit:UnitData = {
             "只 forbids verb repetition"
           ],
           "answer": "中文 is fronted as the topic",
-          "explanation": "Fronting the object/topic allows the source pattern without the repeated verb.",
+          "explanation": "Fronting the object/topic allows the pattern without the repeated verb.",
           "grammarIds": [
             "u43-completed-duration"
           ]
@@ -220,7 +220,7 @@ const unit:UnitData = {
             "compare"
           ],
           "answer": "miss",
-          "explanation": "Lesson 14 adds the state-verb sense “miss”; 想家 means miss home."
+          "explanation": "this lesson adds the state-verb sense “miss”; 想家 means miss home."
         },
         {
           "id": "u43-duration-now-s1",
@@ -247,7 +247,7 @@ const unit:UnitData = {
             "No; it always stopped already."
           ],
           "answer": "No; continuation depends on context.",
-          "explanation": "This is the source distinction.",
+          "explanation": "This is the distinction.",
           "grammarIds": [
             "u43-duration-to-now"
           ]
@@ -289,7 +289,7 @@ const unit:UnitData = {
             "我在臺灣住一年。"
           ],
           "answer": "我在臺灣住了一年。",
-          "explanation": "G001 presents the duration as completed; the final 了 in G002 shifts to accumulated duration up to now."
+          "explanation": "The completed-duration pattern presents the duration as finished; the final 了 in the duration-to-now pattern shifts the meaning to accumulated duration up to now."
         },
         {
           "id": "u43-a002-s1",
@@ -461,7 +461,7 @@ const unit:UnitData = {
             "only"
           ],
           "answer": "soon / almost",
-          "explanation": "This is the Lesson-14 temporal sense of 快."
+          "explanation": "This is the this lesson temporal sense of 快."
         },
         {
           "id": "u43-imminent-s2",
@@ -473,19 +473,19 @@ const unit:UnitData = {
             "misses someone"
           ],
           "answer": "is about to / is going to",
-          "explanation": "This is the Lesson-14 imminent-event auxiliary sense."
+          "explanation": "This is the this lesson imminent-event auxiliary sense."
         },
         {
           "id": "u43-imminent-s3",
           "type": "select",
-          "prompt": "According to the textbook's Lesson-14 rule, which sentence is rejected?",
+          "prompt": "Which sentence is rejected by the pattern taught here?",
           "options": [
             "他明天快要回來了。",
             "他快要回來了。",
             "快下雨了。"
           ],
           "answer": "他明天快要回來了。",
-          "explanation": "The source blocks explicit time word + 快要 in this construction.",
+          "explanation": "This pattern blocks explicit time word + 快要 in this construction.",
           "grammarIds": [
             "u43-imminent"
           ]
@@ -493,14 +493,14 @@ const unit:UnitData = {
         {
           "id": "u43-imminent-s4",
           "type": "select",
-          "prompt": "Which form does the source identify as especially preferred in Taiwan Mandarin?",
+          "prompt": "Which form is especially preferred here in Taiwan Mandarin?",
           "options": [
             "快要",
             "快",
             "要"
           ],
           "answer": "快要",
-          "explanation": "The textbook explicitly notes the Taiwan preference for disyllabic 快要."
+          "explanation": "the rule here explicitly notes the Taiwan preference for disyllabic 快要."
         },
         {
           "id": "u43-newyear-l1",
@@ -715,7 +715,7 @@ const unit:UnitData = {
     {
       "id": "u43-next-year",
       "title": "Next Year and Autumn Leaves",
-      "subtitle": "Close Dialogue I with next-year plans and experiences.",
+      "subtitle": "Close the conversation with next-year plans and experiences.",
       "chars": [
         "葉"
       ],
@@ -780,7 +780,7 @@ const unit:UnitData = {
             "news"
           ],
           "answer": "red maple leaves",
-          "explanation": "紅葉 is the source word for red maple leaves."
+          "explanation": "紅葉 is the word for red maple leaves."
         },
         {
           "id": "u43-next-year-p3",
@@ -1010,7 +1010,7 @@ const unit:UnitData = {
             "compare"
           ],
           "answer": "miss",
-          "explanation": "Lesson 14 adds the “miss” sense."
+          "explanation": "this lesson adds the “miss” sense."
         },
         {
           "id": "u43-review-e2",
@@ -1022,7 +1022,7 @@ const unit:UnitData = {
             "only"
           ],
           "answer": "soon / almost",
-          "explanation": "This is the Lesson-14 temporal sense."
+          "explanation": "This is the this lesson temporal sense."
         },
         {
           "id": "u43-review-e3",
@@ -1034,7 +1034,7 @@ const unit:UnitData = {
             "misses someone"
           ],
           "answer": "is about to / is going to",
-          "explanation": "This is the source auxiliary sense."
+          "explanation": "This is the imminent-event auxiliary sense."
         },
         {
           "id": "u43-review-g1",
@@ -1091,19 +1091,19 @@ const unit:UnitData = {
             "我在臺灣住一年。"
           ],
           "answer": "我在臺灣住了一年。",
-          "explanation": "G001 completed duration lacks the final sentence 了."
+          "explanation": "The completed-duration pattern lacks the final sentence 了."
         },
         {
           "id": "u43-review-g5",
           "type": "select",
-          "prompt": "According to the textbook's Lesson-14 rule, which is rejected?",
+          "prompt": "Which form is rejected by the pattern taught here?",
           "options": [
             "他明天快要回來了。",
             "他快要回來了。",
             "快下雨了。"
           ],
           "answer": "他明天快要回來了。",
-          "explanation": "The source blocks explicit-time + 快要."
+          "explanation": "This pattern blocks explicit-time + 快要."
         },
         {
           "id": "u43-review-g6",
@@ -1524,7 +1524,7 @@ const unit:UnitData = {
       "id": "u43-imminent",
       "title": "Something is about to happen",
       "pattern": "快…了 / 要…了 / 快要…了",
-      "explanation": "These patterns present an event or change as imminent. 快 here means “soon/about to,” and 要 is the source auxiliary “will / going to” in this imminent-event system. The source notes that Taiwan Mandarin prefers the disyllabic 快要 form. Under the textbook's Lesson-14 rule, do not combine an explicit time word such as 明天 directly with 快要: *他明天快要回來了. Use this pattern when the context shows that the event is close, not as a generic future marker.",
+      "explanation": "These patterns present an event or change as imminent. 快 here means “soon/about to,” and 要 is the imminent-event auxiliary “will / going to” in this imminent-event system. In Taiwan Mandarin that Taiwan Mandarin prefers the disyllabic 快要 form. Under the rule here this lesson rule, do not combine an explicit time word such as 明天 directly with 快要: *他明天快要回來了. Use this pattern when the context shows that the event is close, not as a generic future marker.",
       "examples": [
         {
           "text": "快下雨了。",
@@ -1542,7 +1542,7 @@ const unit:UnitData = {
           "meaning": "Dad is about to get home."
         }
       ],
-      "remember": "Imminence, not generic future: 快／要／快要…了. The source prefers 快要 in Taiwan Mandarin and blocks explicit-time + 快要 in this Lesson-14 rule."
+      "remember": "Imminence, not generic future: 快／要／快要…了. The source prefers 快要 in Taiwan Mandarin and blocks explicit-time + 快要 in this this lesson rule."
     }
   },
   "grammarIntroductions": [
@@ -1589,7 +1589,7 @@ const unit:UnitData = {
       "text": "我在臺灣住了一年。",
       "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
       "meaning": "I lived in Taiwan for one year.",
-      "note": "G001 completed duration.",
+      "note": "Completed-duration pattern.",
       "tokens": [
         "我在臺灣",
         "住了一年"
@@ -1628,7 +1628,7 @@ const unit:UnitData = {
       "text": "你昨天看電視看了三個鐘頭，對不對？",
       "pinyin": "Nǐ zuótiān kàn diànshì kàn le sān ge zhōngtóu, duì bú duì?",
       "meaning": "You watched TV for three hours yesterday, right?",
-      "note": "Teaching bridge before assessment: 對不對 is a transparent confirmation form here, “right or not / right?”. It checks a proposition. It is source support, not a new formal numbered grammar rule.",
+      "note": "Teaching bridge before assessment: 對不對 is a transparent confirmation form here, “right or not / right?”. It checks a proposition. It is lesson support, not a new formal numbered grammar rule.",
       "tokens": [
         "你昨天看電視",
         "看了三個鐘頭",
@@ -1639,7 +1639,7 @@ const unit:UnitData = {
       "text": "我在臺灣住了半年多了。有一點想家。",
       "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le. Yǒu yìdiǎn xiǎng jiā.",
       "meaning": "I have been in Taiwan for a little over half a year. I miss home a little.",
-      "note": "Source B1L14-D1T07. Here 想 means “miss,” not “want to.”",
+      "note": "Here 想 means “miss,” not “want to.”",
       "tokens": [
         "我在臺灣住了半年多了",
         "有一點想家"
@@ -1652,7 +1652,7 @@ const unit:UnitData = {
       "text": "你以前住在哪裡？你在那裡住了多久？",
       "pinyin": "Nǐ yǐqián zhù zài nǎlǐ? Nǐ zài nàlǐ zhù le duōjiǔ?",
       "meaning": "Where did you live before? How long did you live there?",
-      "note": "Learner-safe question pair for the source A002 interview task. Transfer instruction: ask a classmate (or rehearse with an imagined partner), record the place and duration on paper, then report one result in Chinese.",
+      "note": "Learner-safe question pair for the interview task. Transfer instruction: ask a classmate (or rehearse with an imagined partner), record the place and duration on paper, then report one result in Chinese.",
       "tokens": [
         "你以前住在哪裡",
         "你在那裡住了多久"
@@ -1665,7 +1665,7 @@ const unit:UnitData = {
       "text": "每年差不多十二月開始下雪。",
       "pinyin": "Měinián chàbuduō shí'èr yuè kāishǐ xiàxuě.",
       "meaning": "It starts snowing around December each year.",
-      "note": "Source B1L14-D1T03 support. This explicitly transfers known 差不多 to approximate time; contrast with duration + 多 in 半年多.",
+      "note": "support. This explicitly transfers known 差不多 to approximate time; contrast with duration + 多 in 半年多.",
       "tokens": [
         "每年",
         "差不多十二月",
@@ -1688,8 +1688,8 @@ const unit:UnitData = {
     "u43-kuai-sense": {
       "text": "快",
       "pinyin": "kuài",
-      "meaning": "soon / about to (Lesson-14 sense)",
-      "note": "This card explicitly teaches the Lesson-14 sense before G003. Do not change the earlier canonical vocabulary gloss.",
+      "meaning": "soon / about to",
+      "note": "This card teaches the “soon/about to” sense before the imminence pattern. Do not change the earlier canonical vocabulary gloss.",
       "tokens": [
         "快"
       ]
@@ -1697,8 +1697,8 @@ const unit:UnitData = {
     "u43-yao-sense": {
       "text": "要",
       "pinyin": "yào",
-      "meaning": "will / going to in an imminent-event context (Lesson-14 sense)",
-      "note": "This card explicitly teaches the Lesson-14 auxiliary sense before G003. Do not create a second canonical vocabulary row.",
+      "meaning": "will / going to in an imminent-event context",
+      "note": "This card teaches the imminent-event auxiliary sense before the imminence pattern. Do not create a second canonical vocabulary row.",
       "tokens": [
         "要"
       ]
@@ -1707,7 +1707,7 @@ const unit:UnitData = {
       "text": "新年到了。我想回去看父母。",
       "pinyin": "Xīnnián dào le. Wǒ xiǎng huíqù kàn fùmǔ.",
       "meaning": "New Year has arrived. I want to go back to see my parents.",
-      "note": "Meaning-first card for 新年 and 父母. It deliberately avoids the new imminence pattern until G003 is taught.",
+      "note": "Meaning-first card for 新年 and 父母. It deliberately avoids the new imminence pattern until that pattern is taught.",
       "tokens": [
         "新年到了",
         "我想回去看父母"
@@ -1717,7 +1717,7 @@ const unit:UnitData = {
       "text": "新年快到了。想回去看父母嗎？",
       "pinyin": "Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?",
       "meaning": "New Year is almost here. Do you want to go back to see your parents?",
-      "note": "Source B1L14-D1T08, presented only after 快/要 and G003 have been explained.",
+      "note": ", presented only after 快/要 and imminence pattern have been explained.",
       "tokens": [
         "新年快到了",
         "想回去看父母嗎"
@@ -1730,7 +1730,7 @@ const unit:UnitData = {
       "text": "雨快要停了。",
       "pinyin": "Yǔ kuài yào tíng le.",
       "meaning": "The rain is about to stop.",
-      "note": "Delayed retrieval of G003 with the new verb 停.",
+      "note": "Delayed retrieval of the imminence pattern with the new verb 停.",
       "tokens": [
         "雨",
         "快要停了"
@@ -1743,7 +1743,7 @@ const unit:UnitData = {
       "text": "我打算十二月底回去。想跟我去玩嗎？",
       "pinyin": "Wǒ dǎsuàn shí'èr yuè dǐ huíqù. Xiǎng gēn wǒ qù wán ma?",
       "meaning": "I plan to go back at the end of December. Do you want to go travel/have fun with me?",
-      "note": "Learner-safe preservation of B1L14-D1T09: the deferred country name is omitted, but the return plan and invitation are retained.",
+      "note": "Learner-safe preservation of the conversation: the deferred country name is omitted, but the return plan and invitation are retained.",
       "tokens": [
         "我打算十二月底回去",
         "想跟我去玩嗎"
@@ -1753,7 +1753,7 @@ const unit:UnitData = {
       "text": "因為我們只放十天的假，所以一月五號回來。",
       "pinyin": "Yīnwèi wǒmen zhǐ fàng shí tiān de jià, suǒyǐ yī yuè wǔ hào huílái.",
       "meaning": "Because we only have ten days off, we'll come back on January 5.",
-      "note": "Source B1L14-D1T11; 因為…所以… is prior review.",
+      "note": "; 因為…所以… is prior review.",
       "tokens": [
         "因為我們只放十天的假",
         "所以一月五號回來"
@@ -1763,7 +1763,7 @@ const unit:UnitData = {
       "text": "對了，你什麼時候回來？",
       "pinyin": "Duì le, nǐ shénme shíhou huílái?",
       "meaning": "By the way, when are you coming back?",
-      "note": "Preserves the return-timing question in B1L14-D1T10 with 妳 normalized to 你.",
+      "note": "Preserves the return-timing question in the conversation with 妳 normalized to 你.",
       "tokens": [
         "對了",
         "你什麼時候回來"
@@ -1773,7 +1773,7 @@ const unit:UnitData = {
       "text": "冬天太冷了。不過，我想明年秋天去看紅葉。",
       "pinyin": "Dōngtiān tài lěng le. Búguò, wǒ xiǎng míngnián qiūtiān qù kàn hóngyè.",
       "meaning": "Winter is too cold. But I want to go see the red maple leaves next autumn.",
-      "note": "Source B1L14-D1T10, preserving the travel-plan function without deferred speaker orthography.",
+      "note": ", preserving the travel-plan function without deferred speaker orthography.",
       "tokens": [
         "冬天太冷了",
         "不過",
@@ -1784,7 +1784,7 @@ const unit:UnitData = {
       "text": "我去年五月出去玩了兩個星期。那個時候，風景很好看，我玩得非常開心。",
       "pinyin": "Wǒ qùnián wǔ yuè chūqù wán le liǎng ge xīngqí. Nàge shíhou, fēngjǐng hěn hǎokàn, wǒ wán de fēicháng kāixīn.",
       "meaning": "Last May I went away for two weeks. The scenery was nice, and I had a very good time.",
-      "note": "Gate-A-approved learner-safe adaptation of B1L14-D1T06: no productive 紐約 and 好看 replaces untaught 漂亮.",
+      "note": "Learner-safe adaptation of the conversation: no productive 紐約 and 好看 replaces untaught 漂亮.",
       "tokens": [
         "我去年五月出去玩了兩個星期",
         "那個時候",

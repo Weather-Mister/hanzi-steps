@@ -15,6 +15,7 @@ const polishAmendment=readJSON('validation/fixtures/units29-33-polish-amendment.
 const lesson13Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson13.json');
 const lesson15Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson15.json');
 const characterQualityAmendment=readJSON('validation/fixtures/book1-character-quality-amendment.json');
+const selfContainedAmendment=readJSON('validation/fixtures/book1-self-contained-learner-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -48,7 +49,10 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const lesson15Expected=lesson15?.after??lesson13Expected;
    const characterQuality=characterQualityAmendment.records?.[key]?.[id];
    if(characterQuality)assert.equal(characterQuality.before,lesson15Expected,`character quality amendment must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),characterQuality?.after??lesson15Expected,`${key} ${id}`);
+   const characterQualityExpected=characterQuality?.after??lesson15Expected;
+   const selfContained=selfContainedAmendment.records?.[key]?.[id];
+   if(selfContained)assert.equal(selfContained.before,characterQualityExpected,`self-contained amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),selfContained?.after??characterQualityExpected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);

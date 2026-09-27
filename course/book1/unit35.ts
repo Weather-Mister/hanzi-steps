@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Tuition, future work & past-event focus",
     "title": "Who Paid the Tuition?",
-    "description": "Finish Lesson 12 Dialogue I with tuition, company support, future work plans, studying while working, encouragement, and the 是…的 focus construction for past events.",
+    "description": "Finish this lesson the conversation with tuition, company support, future work plans, studying while working, encouragement, and the 是…的 focus construction for past events.",
     "chars": [
       "費",
       "司",
@@ -50,7 +50,7 @@ const unit:UnitData = {
     {
       "id": "u35-tuition",
       "title": "Who Paid the Tuition?",
-      "subtitle": "Learn 學費, 公司, and 替 through the source line that introduces 是…的.",
+      "subtitle": "Learn 學費, 公司, and 替 through the sentence that introduces 是…的.",
       "chars": [
         "費",
         "司",
@@ -155,7 +155,7 @@ const unit:UnitData = {
             "salary"
           ],
           "answer": "tuition",
-          "explanation": "學費 is the source word for tuition."
+          "explanation": "學費 is the word for tuition."
         },
         {
           "id": "u35-tuition-s2",
@@ -177,7 +177,7 @@ const unit:UnitData = {
     {
       "id": "u35-focus",
       "title": "What Part of the Past Matters?",
-      "subtitle": "Practice subject, time, place, and manner focus, then cover yes/no questions, optional 是, and the source wh-question types.",
+      "subtitle": "Practice subject, time, place, and manner focus, then cover yes/no questions, optional 是, and the wh-question types.",
       "chars": [],
       "minutes": "9–12 min",
       "unitId": "unit-35",
@@ -231,14 +231,14 @@ const unit:UnitData = {
         {
           "id": "u35-focus-s3",
           "type": "select",
-          "prompt": "Which element does the textbook say cannot be the focus in 是…的?",
+          "prompt": "Which element cannot be the focus in 是…的?",
           "options": [
             "the object",
             "the time",
             "the place"
           ],
           "answer": "the object",
-          "explanation": "The source allows subject, time, place, manner, and occasionally the verb as focus, but not the object.",
+          "explanation": "The pattern allows subject, time, place, manner, and occasionally the verb as focus, but not the object.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -276,13 +276,13 @@ const unit:UnitData = {
         {
           "id": "u35-focus-s4",
           "type": "select",
-          "prompt": "Which source-style yes/no question correctly uses 是…的?",
+          "prompt": "Which yes/no question correctly uses 是…的?",
           "options": [
             "你的房租是自己付的嗎？",
             "你的房租是自己嗎付的？"
           ],
           "answer": "你的房租是自己付的嗎？",
-          "explanation": "The textbook shows yes/no questions by keeping the 是…的 frame and adding 嗎.",
+          "explanation": "The rule here shows yes/no questions by keeping the 是…的 frame and adding 嗎.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -290,13 +290,13 @@ const unit:UnitData = {
         {
           "id": "u35-focus-s5",
           "type": "select",
-          "prompt": "What does the textbook say about 是 in this construction?",
+          "prompt": "What is true about 是 in this construction?",
           "options": [
             "是 can sometimes be omitted.",
             "是 can never be omitted."
           ],
           "answer": "是 can sometimes be omitted.",
-          "explanation": "The source explicitly gives examples such as 我跟朋友一起來的 with 是 omitted.",
+          "explanation": "The the rule explicitly gives examples such as 我跟朋友一起來的 with 是 omitted.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -304,13 +304,13 @@ const unit:UnitData = {
         {
           "id": "u35-focus-s6",
           "type": "select",
-          "prompt": "Which list contains only wh-question types the textbook allows with past-event 是…的?",
+          "prompt": "Which list contains only wh-question types allowed with past-event 是…的?",
           "options": [
             "who, when, how, where",
             "what-object, why, how many"
           ],
           "answer": "who, when, how, where",
-          "explanation": "The textbook allows who, when, how, and where, but not 'what' when it is the object.",
+          "explanation": "The rule here allows who, when, how, and where, but not 'what' when it is the object.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -377,7 +377,7 @@ const unit:UnitData = {
     {
       "id": "u35-future",
       "title": "A Good Company in the Future",
-      "subtitle": "Learn 希望, standalone 以後, and 上班 through the next source line.",
+      "subtitle": "Learn 希望, standalone 以後, and 上班 through the next sentence.",
       "chars": [
         "希",
         "望",
@@ -477,19 +477,19 @@ const unit:UnitData = {
             "pay"
           ],
           "answer": "hope",
-          "explanation": "希望 is the source verb 'to hope.'"
+          "explanation": "希望 is the lesson verb 'to hope.'"
         },
         {
           "id": "u35-future-s2",
           "type": "select",
-          "prompt": "What does 以後 mean in this Dialogue I sentence?",
+          "prompt": "What does 以後 mean in this sentence?",
           "options": [
             "in the future",
             "before class",
             "for two years"
           ],
           "answer": "in the future",
-          "explanation": "Here 以後 stands alone as a future time expression. Event + 以後 'after…' comes later in Lesson 12."
+          "explanation": "Here 以後 stands alone as a future time expression. Event + 以後 'after…' comes later in this lesson."
         },
         {
           "id": "u35-future-s3",
@@ -501,7 +501,7 @@ const unit:UnitData = {
             "pay tuition"
           ],
           "answer": "go to work",
-          "explanation": "上班 is the source separable verb 'to go to work.'"
+          "explanation": "上班 is the lesson separable verb 'to go to work.'"
         }
       ]
     },
@@ -583,14 +583,14 @@ const unit:UnitData = {
             "很近"
           ],
           "answer": "很累",
-          "explanation": "累 means tired; 真的很累 intensifies the source reaction."
+          "explanation": "累 means tired; 真的很累 intensifies the reaction."
         }
       ]
     },
     {
       "id": "u35-cheer",
       "title": "Keep It Up",
-      "subtitle": "Finish Dialogue I with 加油 and complete the key negation/question restrictions of 是…的.",
+      "subtitle": "Finish the conversation with 加油 and complete the key negation/question restrictions of 是…的.",
       "chars": [
         "加",
         "油"
@@ -674,12 +674,12 @@ const unit:UnitData = {
             "go to work"
           ],
           "answer": "keep up the good work",
-          "explanation": "In this source phrase, 加油 is encouragement, not a literal instruction about oil."
+          "explanation": "In this phrase, 加油 is encouragement, not a literal instruction about oil."
         },
         {
           "id": "u35-cheer-s2",
           "type": "select",
-          "prompt": "Which negation follows the textbook 是…的 rule?",
+          "prompt": "Which negation follows the rule here 是…的 rule?",
           "options": [
             "我不是在圖書館看書的。",
             "我是不在圖書館看書的。"
@@ -699,7 +699,7 @@ const unit:UnitData = {
             "他是什麼東西來學校的？"
           ],
           "answer": "他是什麼時候來學校的？",
-          "explanation": "是…的 can ask who, when, how, or where about a past event; the textbook excludes 'what' when it is the object.",
+          "explanation": "是…的 can ask who, when, how, or where about a past event; the rule here excludes 'what' when it is the object.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -713,7 +713,7 @@ const unit:UnitData = {
             "no, 是 is never omitted"
           ],
           "answer": "yes, 是 can sometimes be omitted",
-          "explanation": "The textbook explicitly notes that 是 can sometimes be omitted, as in 我跟朋友一起來的.",
+          "explanation": "The rule here explicitly notes that 是 can sometimes be omitted, as in 我跟朋友一起來的.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -798,14 +798,14 @@ const unit:UnitData = {
         {
           "id": "u35-review-s4",
           "type": "select",
-          "prompt": "Which expression means 'in the future' in Dialogue I?",
+          "prompt": "Which expression means 'in the future' in this conversation?",
           "options": [
             "以後",
             "昨天晚上",
             "多久"
           ],
           "answer": "以後",
-          "explanation": "Dialogue I uses standalone 以後 for 'in the future.'"
+          "explanation": "the conversation uses standalone 以後 for 'in the future.'"
         },
         {
           "id": "u35-review-s5",
@@ -862,7 +862,7 @@ const unit:UnitData = {
         {
           "id": "u35-review-g3",
           "type": "select",
-          "prompt": "Which element cannot be focused by 是…的 according to the textbook?",
+          "prompt": "Which element cannot be focused by 是…的?",
           "options": [
             "object",
             "manner",
@@ -897,7 +897,7 @@ const unit:UnitData = {
             "你是什麼東西看的？"
           ],
           "answer": "你是怎麼去的？",
-          "explanation": "The construction can ask how; the textbook rejects using it to ask 'what' as the object.",
+          "explanation": "The construction can ask how; the rule here rejects using it to ask 'what' as the object.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -947,7 +947,7 @@ const unit:UnitData = {
             "決定"
           ],
           "answer": "希望",
-          "explanation": "希望 is the source verb 'to hope.'",
+          "explanation": "希望 is the lesson verb 'to hope.'",
           "audioText": "希望我以後也可以到這麼好的公司上班。"
         },
         {
@@ -991,7 +991,7 @@ const unit:UnitData = {
         {
           "id": "u35-review-g7",
           "type": "select",
-          "prompt": "Which sentence shows the textbook's optional omission of 是?",
+          "prompt": "Which sentence shows the optional omission of 是?",
           "options": [
             "我跟朋友一起來的。",
             "我跟朋友一起是來的。"
@@ -1054,7 +1054,7 @@ const unit:UnitData = {
       "meaning": "in the future",
       "lessonId": "u35-future",
       "core": true,
-      "note": "Dialogue I uses 以後 by itself as a future time expression. Event + 以後 'after…' is taught later in Lesson 12 and is deliberately deferred."
+      "note": "the conversation uses 以後 by itself as a future time expression. Event + 以後 'after…' is taught later in this lesson and is deliberately deferred."
     },
     {
       "text": "上班",
@@ -1401,7 +1401,7 @@ const unit:UnitData = {
       "meaning": "tired",
       "strokes": 11,
       "layout": "stack",
-      "note": "累 is fourth-tone lèi. The Lesson 12 line 真的很累 describes being exhausted from working and studying.",
+      "note": "累 is fourth-tone lèi. The this lesson line 真的很累 describes being exhausted from working and studying.",
       "memory": "Write 田 first, then place the six-stroke 糸 thread component underneath.",
       "parts": [
         {
@@ -1523,7 +1523,7 @@ const unit:UnitData = {
       "id": "u35-shi-de",
       "title": "Focus a past event with 是…的",
       "pattern": "Subject / Topic + 是 + Focus + Activity + 的",
-      "explanation": "是…的 highlights one element of a past event as the focus or contrast. Put 是 directly before the focused element and 的 at the end. The focused element can be the subject, time, place, manner, and occasionally the verb, but never the object. An object is often moved to the very front as the topic, as in 學費是公司替我付的. Put 不 before 是 for negation. The textbook also forms yes/no questions with 嗎, notes that 是 can sometimes be omitted, and allows wh-questions asking who, when, how, or where about a past event; it specifically excludes using the construction to ask 'what' when 'what' is the object.",
+      "explanation": "是…的 highlights one element of a past event as the focus or contrast. Put 是 directly before the focused element and 的 at the end. The focused element can be the subject, time, place, manner, and occasionally the verb, but never the object. An object is often moved to the very front as the topic, as in 學費是公司替我付的. Put 不 before 是 for negation. The rule here also forms yes/no questions with 嗎, notes that 是 can sometimes be omitted, and allows wh-questions asking who, when, how, or where about a past event; it specifically excludes using the construction to ask 'what' when 'what' is the object.",
       "examples": [
         {
           "text": "學費是公司替我付的。",
@@ -1571,7 +1571,7 @@ const unit:UnitData = {
       "text": "我的學費是公司替我付的。",
       "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de.",
       "meaning": "My tuition is paid by my company for me.",
-      "note": "Source Dialogue I. This answers the preceding 你呢？ from the scholarship turn. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
+      "note": "This conversation This answers the preceding 你呢？ from the scholarship turn. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
       "tokens": [
         "我的學費",
         "是公司",
@@ -1595,7 +1595,7 @@ const unit:UnitData = {
       "text": "大概兩年，是公司決定的。",
       "pinyin": "Dàgài liǎng nián, shì gōngsī juédìng de.",
       "meaning": "Probably two years. My company will decide.",
-      "note": "Source Dialogue I. 是…的 focuses 公司 as the decider.",
+      "note": "This conversation 是…的 focuses 公司 as the decider.",
       "tokens": [
         "大概兩年",
         "是公司決定的"
@@ -1608,7 +1608,7 @@ const unit:UnitData = {
       "text": "希望我以後也可以到這麼好的公司上班。",
       "pinyin": "Xīwàng wǒ yǐhòu yě kěyǐ dào zhème hǎo de gōngsī shàngbān.",
       "meaning": "I hope that in the future I can work at such a good company too.",
-      "note": "Here 以後 stands alone as a future time expression. Lesson 12 later teaches Event + 以後 'after…'; that grammar is deliberately deferred.",
+      "note": "Here 以後 stands alone as a future time expression. this lesson later teaches Event + 以後 'after…'; that grammar is deliberately deferred.",
       "tokens": [
         "希望我以後",
         "也可以到這麼好的公司",
@@ -1633,7 +1633,7 @@ const unit:UnitData = {
       "text": "我們一起加油吧！",
       "pinyin": "Wǒmen yìqǐ jiāyóu ba!",
       "meaning": "Let's keep up the good work!",
-      "note": "加油 is the source encouragement phrase at the end of Dialogue I.",
+      "note": "加油 is the source encouragement phrase at the end of the conversation.",
       "tokens": [
         "我們一起",
         "加油吧"
@@ -1682,7 +1682,7 @@ const unit:UnitData = {
       "text": "我不是在圖書館看書的。",
       "pinyin": "Wǒ bú shì zài túshūguǎn kàn shū de.",
       "meaning": "It wasn't at the library that I read.",
-      "note": "The textbook places 不 before 是: 不是…的.",
+      "note": "The rule here places 不 before 是: 不是…的.",
       "tokens": [
         "我不是在圖書館",
         "看書的"
@@ -1708,7 +1708,7 @@ const unit:UnitData = {
       "text": "是我打電話給房東的。",
       "pinyin": "Shì wǒ dǎ diànhuà gěi fángdōng de.",
       "meaning": "It was I who called the landlord.",
-      "note": "The source uses this to show subject focus: 是 comes immediately before 我.",
+      "note": "The uses this to show subject focus: 是 comes immediately before 我.",
       "tokens": [
         "是我",
         "打電話給房東的"
@@ -1721,7 +1721,7 @@ const unit:UnitData = {
       "text": "你的房租是自己付的嗎？",
       "pinyin": "Nǐ de fángzū shì zìjǐ fù de ma?",
       "meaning": "Do you pay your own rent?",
-      "note": "The textbook forms a yes/no question by adding 嗎 to the 是…的 sentence.",
+      "note": "The rule here forms a yes/no question by adding 嗎 to the 是…的 sentence.",
       "tokens": [
         "你的房租",
         "是自己付的嗎"
@@ -1734,7 +1734,7 @@ const unit:UnitData = {
       "text": "我跟朋友一起來的。",
       "pinyin": "Wǒ gēn péngyǒu yìqǐ lái de.",
       "meaning": "I came with friends.",
-      "note": "The textbook notes that 是 can sometimes be omitted; this is the source example with 是 left out.",
+      "note": "The rule here notes that 是 can sometimes be omitted; this is the example with 是 left out.",
       "tokens": [
         "我跟朋友一起",
         "來的"

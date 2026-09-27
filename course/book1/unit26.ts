@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Holidays, plans & feasibility",
     "title": "What Are You Planning?",
-    "description": "11 genuinely new Lesson 8–9 words and forms. Close the Lesson 8 tail, then talk about breaks, travel plans, and when something will happen.",
+    "description": "11 genuinely new these lessons words and forms. Close the this lesson tail, then talk about breaks, travel plans, and when something will happen.",
     "chars": [
       "古",
       "代",
@@ -55,7 +55,7 @@ const unit:UnitData = {
     {
       "id": "u26-tail",
       "title": "Ancient Things — and a Plan That Won’t Work",
-      "subtitle": "Close the two Lesson 8 items intentionally left after Unit 25.",
+      "subtitle": "Close the two this lesson items intentionally left after Unit 25.",
       "chars": [
         "古",
         "代",
@@ -602,7 +602,7 @@ const unit:UnitData = {
             "回國"
           ],
           "answer": "旅行",
-          "explanation": "旅行 is the Lesson 9 verb for travel."
+          "explanation": "旅行 is the verb for travel here."
         }
       ]
     },
@@ -1081,7 +1081,7 @@ const unit:UnitData = {
       "meaning": "won't work; not feasible",
       "lessonId": "u26-tail",
       "core": true,
-      "note": "In the Lesson 8 dialogue, 不行 rejects a proposed plan because it is not feasible."
+      "note": "Here 不行 rejects a proposed plan because it is not feasible."
     },
     {
       "text": "星期",
@@ -1186,7 +1186,7 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄨˇ",
       "meaning": "ancient; old",
       "strokes": 5,
-      "note": "古 is gǔ in 古代, the Lesson 8 word for ancient times or something ancient.",
+      "note": "古 is gǔ in 古代, meaning ancient times or something ancient.",
       "memory": "十 sits above 口. Keep the top cross centered over the box.",
       "parts": [
         {
@@ -1822,7 +1822,7 @@ const unit:UnitData = {
       "id": "u26-buxing-feasibility",
       "title": "Reject an unworkable plan with 不行",
       "pattern": "不行，+ reason / alternative",
-      "explanation": "不行 is a fixed, common response meaning that a proposal will not work or is not feasible. In the Lesson 8 dialogue, taking the MRT is rejected because there is no MRT to the destination. Do not read this use as a simple word-for-word combination of 不 plus every possible meaning of 行.",
+      "explanation": "不行 is a fixed, common response meaning that a proposal will not work or is not feasible. In this situation, taking the MRT is rejected because there is no MRT to the destination. Do not read this use as a simple word-for-word combination of 不 plus every possible meaning of 行.",
       "examples": [
         {
           "text": "不行，這裡沒有捷運。",
@@ -1870,8 +1870,8 @@ const unit:UnitData = {
     "u26-time-when": {
       "id": "u26-time-when",
       "title": "Put a time-when expression before the action",
-      "pattern": "Subject + Time-When + Verb Phrase  /  Time-When + Subject + Verb Phrase",
-      "explanation": "Lesson 9 distinguishes when something happens from how long it lasts. A time-when expression such as 下個星期 identifies the point or period when the event occurs and appears before the main action. It can follow the subject or be moved to the front as the topic.",
+      "pattern": "Subject + Time-When + Verb Phrase / Time-When + Subject + Verb Phrase",
+      "explanation": "this lesson distinguishes when something happens from how long it lasts. A time-when expression such as 下個星期 identifies the point or period when the event occurs and appears before the main action. It can follow the subject or be moved to the front as the topic.",
       "examples": [
         {
           "text": "我下個星期回國。",
@@ -2013,7 +2013,7 @@ const unit:UnitData = {
       "text": "我在家寫功課。",
       "pinyin": "Wǒ zài jiā xiě gōngkè.",
       "meaning": "I do homework at home.",
-      "note": "功課 is the Lesson 9 word for homework.",
+      "note": "功課 means homework here.",
       "tokens": [
         "我在家",
         "寫功課"

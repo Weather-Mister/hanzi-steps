@@ -726,7 +726,7 @@ const unit:UnitData = {
         {
           "id": "u18-inside-outside-25",
           "type": "select",
-          "prompt": "In 地方, which reading matches the supplied Taiwan textbook?",
+          "prompt": "In 地方, which pronunciation is used here?",
           "options": [
             "dìfāng",
             "de fāng",
@@ -1764,7 +1764,7 @@ const unit:UnitData = {
       "zhuyin": "ㄈㄤ",
       "meaning": "direction; fāng in 地方",
       "strokes": 4,
-      "note": "方 is fāng in 地方. This Taiwan textbook writes 地方 as dìfāng, with first tone on 方.",
+      "note": "方 is fāng in 地方. Read 地方 as dìfāng here, with first tone on 方.",
       "memory": "Keep the top dot separate, then place a bending stroke and a long slant below the horizontal.",
       "parts": [
         {
@@ -2099,7 +2099,7 @@ const unit:UnitData = {
       "id": "u18-place",
       "title": "Refer to a place as a thing",
       "pattern": "這 / 那 + 個 + 地方",
-      "explanation": "地方 (dìfāng) means place. Use the familiar measure word 個: 這個地方, this place. Read both syllables with the textbook tones dìfāng. 地方 can name the place you are discussing without naming a particular building.",
+      "explanation": "地方 (dìfāng) means place. Use the familiar measure word 個: 這個地方, this place. Read both syllables as dìfāng. 地方 can name the place you are discussing without naming a particular building.",
       "examples": [
         {
           "text": "這個地方很美。",

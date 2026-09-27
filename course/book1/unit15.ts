@@ -1089,7 +1089,7 @@ const unit:UnitData = {
         {
           "id": "u15-challenge-08",
           "type": "select",
-          "prompt": "Which describes pleasant broth using the textbook’s wording?",
+          "prompt": "Which wording describes broth as pleasant to drink?",
           "options": [
             "湯很多人。",
             "湯很哪裡。",
@@ -1795,7 +1795,7 @@ const unit:UnitData = {
       "id": "u15-soup",
       "title": "Drink the broth; react to the taste",
       "pattern": "湯 + 很好喝; food + 真 + 好吃",
-      "explanation": "湯 tāng is soup or broth. This lesson follows the textbook’s use of 喝湯 for drinking soup and 好喝 for its pleasant taste. 真 zhēn means really before a description: 真好吃, really delicious, or 真好喝, really good to drink. 真 already adds emphasis, so practice 真好吃 as a unit rather than inserting 很 between 真 and 好吃. 真 is your positive reaction here; it does not mean most or how much.",
+      "explanation": "湯 tāng is soup or broth. Use 喝湯 for drinking soup and 好喝 for its pleasant taste. 真 zhēn means really before a description: 真好吃, really delicious, or 真好喝, really good to drink. 真 already adds emphasis, so practice 真好吃 as a unit rather than inserting 很 between 真 and 好吃. 真 is your positive reaction here; it does not mean most or how much.",
       "examples": [
         {
           "text": "這個包子真好吃！",
@@ -1949,7 +1949,7 @@ const unit:UnitData = {
       "id": "u15-approximate",
       "title": "A round number plus a little more",
       "pattern": "round number + 多 + measure word + noun",
-      "explanation": "Lesson 4 uses 多 after a round number to mean more than that number but less than the next unit of that scale. 三十多塊 means over 30 but under 40 dollars; when counting whole dollars, that is 31–39. 一百多塊 means over 100 but under 200. Put 多 before the money measure in these patterns. It does not provide an exact price. 二十多個人 means twenty-something people. Compare 二十多塊 with 二十塊多: the second puts 多 after the money measure and means a little more than 20 dollars, under 21. In these lessons, prices are invented for practice.",
+      "explanation": "this lesson uses 多 after a round number to mean more than that number but less than the next unit of that scale. 三十多塊 means over 30 but under 40 dollars; when counting whole dollars, that is 31–39. 一百多塊 means over 100 but under 200. Put 多 before the money measure in these patterns. It does not provide an exact price. 二十多個人 means twenty-something people. Compare 二十多塊 with 二十塊多: the second puts 多 after the money measure and means a little more than 20 dollars, under 21. In these lessons, prices are invented for practice.",
       "examples": [
         {
           "text": "三十多塊",

@@ -142,7 +142,7 @@ const unit:UnitData = {
             "before 都/也"
           ],
           "answer": "after 都 or 也",
-          "explanation": "The source order is question word + 都/也 + 不/沒."
+          "explanation": "The correct order is question word + 都/也 + 不/沒."
         },
         {
           "id": "u40-nothing-s2",
@@ -257,7 +257,7 @@ const unit:UnitData = {
         {
           "id": "u40-tradition-s2",
           "type": "select",
-          "prompt": "In the source, 豬腳麵線 and 蛋 are discussed as…",
+          "prompt": "Here, 豬腳麵線 and 蛋 are discussed as…",
           "options": [
             "traditional birthday foods",
             "school food only",
@@ -436,14 +436,14 @@ const unit:UnitData = {
             "Past only."
           ],
           "answer": "Yes, both.",
-          "explanation": "The source allows both."
+          "explanation": "Both are allowed."
         }
       ]
     },
     {
       "id": "u40-customs",
       "title": "Birthday Customs",
-      "subtitle": "Connect the dialogue to the source's Taiwanese birthday culture note.",
+      "subtitle": "Learn the Taiwanese birthday customs summarized on the card before answering.",
       "chars": [],
       "minutes": "11–14 min",
       "unitId": "unit-40",
@@ -457,19 +457,19 @@ const unit:UnitData = {
         {
           "id": "u40-customs-c1",
           "type": "select",
-          "prompt": "According to the source culture note, traditional birthdays could follow which calendar?",
+          "prompt": "Based on the culture summary above, traditional birthdays could follow which calendar?",
           "options": [
             "the lunar calendar",
             "only the school calendar",
             "only the Gregorian calendar"
           ],
           "answer": "the lunar calendar",
-          "explanation": "The source contrasts traditional lunar-calendar practice with common modern Gregorian-calendar birthdays."
+          "explanation": "The culture summary contrasts traditional lunar-calendar practice with common modern Gregorian-calendar birthdays."
         },
         {
           "id": "u40-customs-c2",
           "type": "select",
-          "prompt": "Which early-life celebrations does the source highlight?",
+          "prompt": "Which early-life celebrations does the culture summary highlight?",
           "options": [
             "one month and one year",
             "exactly six months only",
@@ -481,14 +481,14 @@ const unit:UnitData = {
         {
           "id": "u40-customs-c3",
           "type": "select",
-          "prompt": "Which ages illustrate important major decades in the source?",
+          "prompt": "Which ages illustrate important major decades in the culture summary?",
           "options": [
             "60, 70, and 80",
             "15, 16, and 17",
             "21 only"
           ],
           "answer": "60, 70, and 80",
-          "explanation": "The source notes major decades such as 60/70/80."
+          "explanation": "The culture summary notes major decades such as 60/70/80."
         },
         {
           "id": "u40-customs-c4",
@@ -505,7 +505,7 @@ const unit:UnitData = {
         {
           "id": "u40-customs-s1",
           "type": "select",
-          "prompt": "According to the reading, what is common for birthdays today?",
+          "prompt": "Based on the culture summary above, what is common for birthdays today?",
           "options": [
             "Celebrating according to the Gregorian calendar.",
             "Using only the lunar calendar.",
@@ -714,7 +714,7 @@ const unit:UnitData = {
             "Only present."
           ],
           "answer": "Yes, both.",
-          "explanation": "The source allows both.",
+          "explanation": "Both are allowed.",
           "grammarIds": [
             "u40-more-less-verb"
           ]
@@ -734,7 +734,7 @@ const unit:UnitData = {
         {
           "id": "u40-review-d2",
           "type": "select",
-          "prompt": "In the source dialogue, 傳統 refers to…",
+          "prompt": "In this birthday conversation, 傳統 refers to…",
           "options": [
             "birthday customs/food tradition",
             "a language exchange",
@@ -1025,7 +1025,7 @@ const unit:UnitData = {
       "id": "u40-questionword-totality",
       "title": "All-inclusive question words with 都 / 也",
       "pattern": "Question word + 都 + … / Question word + 都 or 也 + 不／沒…",
-      "explanation": "Question words can form total inclusion: 誰都 'everyone', 哪裡都 'everywhere', 什麼都 'everything', 什麼時候都 'anytime', and 怎麼 + V + 都 'whichever way'. For total exclusion, use question word + 都 or 也 + 不／沒, with the negative after 都/也. Both 都 and 也 are source-valid in negative total-exclusion. The source forms questions for this pattern with 嗎.",
+      "explanation": "Question words can form total inclusion: 誰都 'everyone', 哪裡都 'everywhere', 什麼都 'everything', 什麼時候都 'anytime', and 怎麼 + V + 都 'whichever way'. For total exclusion, use question word + 都 or 也 + 不／沒, with the negative after 都/也. Both 都 and 也 are valid in negative total-exclusion. The pattern forms questions for this pattern with 嗎.",
       "examples": [
         {
           "text": "我什麼都吃。",
@@ -1095,7 +1095,7 @@ const unit:UnitData = {
       "text": "我什麼都吃。",
       "pinyin": "Wǒ shénme dōu chī.",
       "meaning": "I eat anything / everything.",
-      "note": "Source Dialogue II preview now formalized as Grammar IV.",
+      "note": "This preview is now formalized as the question-word totality pattern.",
       "tokens": [
         "我什麼都吃"
       ],
@@ -1196,7 +1196,7 @@ const unit:UnitData = {
       "text": "臺灣人過生日是不是都吃這些東西？",
       "pinyin": "Táiwān rén guò shēngrì shì bú shì dōu chī zhèxiē dōngxi?",
       "meaning": "Do Taiwanese people all eat these things for birthdays?",
-      "note": "Source turn 7. 是不是 is comprehension-only until Unit 41.",
+      "note": "Conversation continuation. 是不是 is comprehension-only until Unit 41.",
       "tokens": [
         "臺灣人過生日",
         "是不是都吃這些東西"
@@ -1206,7 +1206,7 @@ const unit:UnitData = {
       "text": "這是傳統。",
       "pinyin": "Zhè shì chuántǒng.",
       "meaning": "This is a tradition.",
-      "note": "Source turn 8.",
+      "note": "Birthday-tradition statement.",
       "tokens": [
         "這是傳統"
       ]
@@ -1215,7 +1215,7 @@ const unit:UnitData = {
       "text": "現在大部分年輕人過生日不吃這些東西了。",
       "pinyin": "Xiànzài dàbùfēn niánqīng rén guò shēngrì bù chī zhèxiē dōngxi le.",
       "meaning": "Nowadays, most young people don't eat these things for birthdays anymore.",
-      "note": "Source line. Final 了 marks changed situation.",
+      "note": "Final 了 marks changed situation.",
       "tokens": [
         "現在大部分年輕人",
         "過生日",
@@ -1226,7 +1226,7 @@ const unit:UnitData = {
       "text": "那麼，你們過生日吃什麼呢？",
       "pinyin": "Nàme, nǐmen guò shēngrì chī shénme ne?",
       "meaning": "Then, what do you eat for birthdays?",
-      "note": "Source turn 9; 那麼 retrieves the connective sense.",
+      "note": "Culture summary: traditional birthdays could follow the lunar calendar, while the Gregorian calendar is common today. Early-life celebrations include one month and one year; major decades include 60, 70, and 80. On a first birthday, the zhuāzhōu 'grabbing' custom has the child choose from several objects, traditionally interpreted as a clue to future character or profession. 那麼 also carries the connective sense 'then / in that case' in the sentence above.",
       "tokens": [
         "那麼",
         "你們過生日吃什麼呢"
@@ -1236,7 +1236,7 @@ const unit:UnitData = {
       "text": "你多吃一點。",
       "pinyin": "Nǐ duō chī yìdiǎn.",
       "meaning": "Eat a little more.",
-      "note": "Source anchor for 多 + Verb.",
+      "note": "Practice anchor for 多 + Verb.",
       "tokens": [
         "你多吃一點"
       ],

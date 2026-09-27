@@ -107,7 +107,7 @@ const unit:UnitData = {
             "How long?"
           ],
           "answer": "What's wrong?",
-          "explanation": "怎麼了 is the Lesson-15 condition inquiry."
+          "explanation": "怎麼了 is the condition-inquiry question taught here."
         },
         {
           "id": "u47-what-s2",
@@ -148,7 +148,7 @@ const unit:UnitData = {
             "It compares two people's health."
           ],
           "answer": "It asks with concern about the person's condition.",
-          "explanation": "That is P001's pragmatic function."
+          "explanation": "That is the concern/condition function of 怎麼了？"
         },
         {
           "id": "u47-what-l1",
@@ -378,14 +378,14 @@ const unit:UnitData = {
         {
           "id": "u47-g3-s2",
           "type": "select",
-          "prompt": "Which version is source-compatible with 以後?",
+          "prompt": "Which version correctly uses 以後?",
           "options": [
             "他吃了藥以後，就睡覺。",
             "他一吃了藥以後，就睡覺。",
             "他吃藥不吃藥就睡覺。"
           ],
           "answer": "他吃了藥以後，就睡覺。",
-          "explanation": "G003 allows 以後."
+          "explanation": "The completed-event + 就 pattern allows 以後."
         },
         {
           "id": "u47-g3-s3",
@@ -397,7 +397,7 @@ const unit:UnitData = {
             "with 都"
           ],
           "answer": "with 嗎 or 是不是",
-          "explanation": "The source says ordinary A-not-A is unavailable."
+          "explanation": "Ordinary A-not-A is not used for this pattern."
         },
         {
           "id": "u47-g3-s4",
@@ -409,7 +409,7 @@ const unit:UnitData = {
             "一…就… requires a completed-action 了"
           ],
           "answer": "一…就… favors a short first verbal phrase; V了…就… can take a fuller completed first event",
-          "explanation": "This is the source-required contrast."
+          "explanation": "That is the key contrast."
         },
         {
           "id": "u47-g3-p1",
@@ -619,7 +619,7 @@ const unit:UnitData = {
             "I used it already."
           ],
           "answer": "No need / It's not necessary.",
-          "explanation": "This is the source refusal function."
+          "explanation": "This is a polite refusal."
         },
         {
           "id": "u47-health-健-read",
@@ -839,7 +839,7 @@ const unit:UnitData = {
             "medicine is better than insurance"
           ],
           "answer": "buying medicine will be enough",
-          "explanation": "This is X011's contextual extension."
+          "explanation": "Here V + 就好了 means that doing the action will be enough."
         },
         {
           "id": "u47-health-l1",
@@ -860,7 +860,7 @@ const unit:UnitData = {
     {
       "id": "u47-refuse-help",
       "title": "Health Check-In",
-      "subtitle": "Integrate Dialogue II and complete the four-question health call.",
+      "subtitle": "Integrate the health episode and complete the four-question health call.",
       "chars": [],
       "minutes": "11–17 min",
       "unitId": "unit-47",
@@ -886,7 +886,7 @@ const unit:UnitData = {
             "buy medicine → ask about typhoons → compare actions → refuse food"
           ],
           "answer": "notice bad complexion → hear stomach/vomiting symptoms → offer to accompany → help is declined → suggest health center → pharmacy preferred",
-          "explanation": "This is the D2T01–D2T07 communicative arc."
+          "explanation": "This is the communicative arc of the health episode."
         },
         {
           "id": "u47-a005-p1",
@@ -970,7 +970,7 @@ const unit:UnitData = {
     {
       "id": "u47-review",
       "title": "Unit 47 Review",
-      "subtitle": "Retrieve stomach trouble, help/refusal, G003, and prior-unit health language.",
+      "subtitle": "Retrieve stomach trouble, help/refusal, the completed-event + 就 pattern, and prior-unit health language.",
       "chars": [
         "臉",
         "肚",
@@ -1224,7 +1224,7 @@ const unit:UnitData = {
             "他吃藥不吃藥就睡覺。"
           ],
           "answer": "他吃了藥就睡覺。",
-          "explanation": "G003 links a completed first event to an immediate next event.",
+          "explanation": "The completed-event + 就 pattern links a completed first event to an immediate next event.",
           "grammarIds": [
             "u47-vle-jiu"
           ]
@@ -1239,7 +1239,7 @@ const unit:UnitData = {
             "It is identical to 一…就… in every restriction."
           ],
           "answer": "It may use 以後 and does not use ordinary A-not-A.",
-          "explanation": "Both points are source-required."
+          "explanation": "Both points are required."
         },
         {
           "id": "u47-review-ji",
@@ -1263,7 +1263,7 @@ const unit:UnitData = {
             "怎麼了？"
           ],
           "answer": "不用了。",
-          "explanation": "不用了 is the Lesson-15 refusal phrase."
+          "explanation": "不用了 is the this lesson refusal phrase."
         },
         {
           "id": "u47-review-a005-1",
@@ -1275,7 +1275,7 @@ const unit:UnitData = {
             "胃口怎麼樣？"
           ],
           "answer": "哪裡不舒服？",
-          "explanation": "This is one of the four source questions."
+          "explanation": "This is one of the four health questions."
         },
         {
           "id": "u47-review-a005-2",
@@ -1340,14 +1340,14 @@ const unit:UnitData = {
         {
           "id": "u47-review-cum3",
           "type": "select",
-          "prompt": "Which is a valid source-style negative 把 order?",
+          "prompt": "Which is a valid negative 把 order?",
           "options": [
             "別把我的藥吃了。",
             "把別我的藥吃了。",
             "把我的藥別吃了。"
           ],
           "answer": "別把我的藥吃了。",
-          "explanation": "Delayed G002 retrieval."
+          "explanation": "Delayed retrieval of the 把 pattern."
         }
       ]
     }
@@ -1827,7 +1827,7 @@ const unit:UnitData = {
       "id": "u47-vle-jiu",
       "title": "V了…就… — do B right after completing A",
       "pattern": "[event 1 V了…] + 就 + [event 2]",
-      "explanation": "Event 2 follows immediately or very soon after completion of event 1. G003 can use 以後, contrasts with prior 一…就…, and uses 嗎/是不是 rather than an ordinary A-not-A route.",
+      "explanation": "Event 2 follows immediately or very soon after completion of event 1. This pattern can use 以後, contrasts with prior 一…就…, and uses 嗎/是不是 rather than an ordinary A-not-A route.",
       "examples": [
         {
           "text": "他吃了藥就睡覺。",
@@ -1899,7 +1899,7 @@ const unit:UnitData = {
       "text": "你怎麼了？臉色這麼難看。",
       "pinyin": "Nǐ zěnme le? Liǎnsè zhème nánkàn.",
       "meaning": "What's wrong? Your complexion looks so bad.",
-      "note": "P001 concern/condition use.",
+      "note": "Concern/condition use of 怎麼了？",
       "tokens": [
         "你怎麼了？臉色這麼難看。"
       ]
@@ -1926,7 +1926,7 @@ const unit:UnitData = {
       "text": "吃了藥。／一吃藥就睡覺。／吃藥以後睡覺。",
       "pinyin": "Chī le yào. / Yì chī yào jiù shuìjiào. / Chī yào yǐhòu shuìjiào.",
       "meaning": "Review: completed action with 了 / as soon as...then... / after...",
-      "note": "REVIEW only: Unit 39 completed-action 了; Unit 38 一…就…; Unit 36 以後. The new G003 V了…就… pattern is taught next.",
+      "note": "Review only: Unit 39 completed-action 了; Unit 38 一…就…; Unit 36 以後. The new V了…就… pattern is taught next.",
       "tokens": [
         "吃了藥。",
         "一吃藥就睡覺。",
@@ -1938,7 +1938,7 @@ const unit:UnitData = {
       "text": "昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。",
       "pinyin": "Zuótiān wǎnshang dùzi hěn bù shūfu, chī le dōngxi jiù tù, hái tù le hǎo jǐ cì.",
       "meaning": "My stomach felt very unwell last night; after eating, I vomited, and I vomited several times.",
-      "note": "Shown only after G003.",
+      "note": "Shown only after the V了…就… pattern is taught.",
       "tokens": [
         "昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。"
       ]
@@ -1959,7 +1959,7 @@ const unit:UnitData = {
       "text": "不用了。",
       "pinyin": "Búyòng le.",
       "meaning": "No need / It's not necessary.",
-      "note": "P002 polite refusal.",
+      "note": "Polite refusal.",
       "tokens": [
         "不用了。"
       ]
@@ -1986,7 +1986,7 @@ const unit:UnitData = {
       "text": "那裡的醫生很好，對學生也很客氣。",
       "pinyin": "Nàlǐ de yīshēng hěn hǎo, duì xuéshēng yě hěn kèqi.",
       "meaning": "The doctors there are very good and are also very polite to students.",
-      "note": "X010: 對 + person + 很客氣.",
+      "note": "對 + person + 很客氣.",
       "tokens": [
         "那裡的醫生很好，對學生也很客氣。"
       ]
@@ -1995,7 +1995,7 @@ const unit:UnitData = {
       "text": "我想去藥局買藥就好了。",
       "pinyin": "Wǒ xiǎng qù yàojú mǎi yào jiù hǎo le.",
       "meaning": "I think just going to the pharmacy to buy medicine will be enough.",
-      "note": "X011: V + 就好了 here means that doing the action will be enough.",
+      "note": "V + 就好了 here means that doing the action will be enough.",
       "tokens": [
         "我想去藥局買藥就好了。"
       ]
@@ -2012,8 +2012,8 @@ const unit:UnitData = {
     "u47-d2t01-07-integrated": {
       "text": "A：你怎麼了？臉色這麼難看。\nB：昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。\nA：你這麼不舒服，我陪你去看病，好不好？\nB：不用了。我在臺灣沒有健康保險。\nA：那麼，我陪你去學校的健康中心。那裡的醫生很好，對學生也很客氣。\nB：謝謝你。我想去藥局買藥就好了。\nA：你真的不去看病嗎？",
       "pinyin": "A: Nǐ zěnme le? Liǎnsè zhème nánkàn. / B: Zuótiān wǎnshang dùzi hěn bù shūfu, chī le dōngxi jiù tù, hái tù le hǎo jǐ cì. / A: Nǐ zhème bù shūfu, wǒ péi nǐ qù kànbìng, hǎo bu hǎo? / B: Búyòng le. Wǒ zài Táiwān méiyǒu jiànkāng bǎoxiǎn. / A: Nàme, wǒ péi nǐ qù xuéxiào de jiànkāng zhōngxīn. Nàlǐ de yīshēng hěn hǎo, duì xuéshēng yě hěn kèqi. / B: Xièxie nǐ. Wǒ xiǎng qù yàojú mǎi yào jiù hǎo le. / A: Nǐ zhēnde bù qù kànbìng ma?",
-      "meaning": "Integrated Dialogue-II turns 1–7 replay with generic speaker roles.",
-      "note": "Source-faithful cumulative replay. Proper names are replaced by generic roles and direct-address 妳 is normalized to learner-known 你; no source-name glyph is assessed.",
+      "meaning": "A cumulative health exchange with generic speaker roles.",
+      "note": "Cumulative replay. Proper names are replaced by generic roles and direct-address 妳 is normalized to learner-known 你; no proper-name glyph is assessed.",
       "tokens": [
         "A：你怎麼了？臉色這麼難看。",
         "B：昨天晚上肚子很不舒服，吃了東西就吐，還吐了好幾次。",
@@ -2028,8 +2028,8 @@ const unit:UnitData = {
     "u47-a005-scenario": {
       "text": "哪裡不舒服？有沒有發燒？",
       "pinyin": "Nǎlǐ bù shūfu? Yǒu méiyǒu fāshāo?",
-      "meaning": "Rúyù is sick at home. Call and ask four source questions: 哪裡不舒服？有沒有發燒？喉嚨怎麼樣？胃口怎麼樣？",
-      "note": "Source Activity V scenario; the contextual proper name is romanized so its untaught name glyph is not exposed.",
+      "meaning": "Rúyù is sick at home. Call and ask four health questions: 哪裡不舒服？有沒有發燒？喉嚨怎麼樣？胃口怎麼樣？",
+      "note": "Practice-call scenario; the contextual proper name is romanized so its untaught name glyph is not exposed.",
       "tokens": [
         "哪裡不舒服",
         "有沒有發燒"

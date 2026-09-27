@@ -11,7 +11,7 @@ const unit:UnitData = {
     "bookReference": "Lesson 15 Dialogue II continuation, Grammar IV–VII, Activities I–III, prescription task, culture, and self-assessment.",
     "label": "Advice & recovery",
     "title": "Advice, Comparisons, and Recovery",
-    "description": "Give health advice, compare improvement and actions, use separable verbs, read the source prescription, and close Lesson 15 cumulatively.",
+    "description": "Give health advice, compare improvement and actions, use separable verbs, read the prescription card, and close this lesson cumulatively.",
     "chars": [
       "冰"
     ],
@@ -73,7 +73,7 @@ const unit:UnitData = {
             "than / comparison"
           ],
           "answer": "to / marking the addressee",
-          "explanation": "This is the Lesson-15 recipient/addressee expansion."
+          "explanation": "This is the this lesson recipient/addressee expansion."
         },
         {
           "id": "u48-gen-s2",
@@ -185,7 +185,7 @@ const unit:UnitData = {
             "a few"
           ],
           "answer": "it would be best / should",
-          "explanation": "最好 is the Lesson-15 advice frame."
+          "explanation": "最好 is the this lesson advice frame."
         },
         {
           "id": "u48-advice-review",
@@ -217,14 +217,14 @@ const unit:UnitData = {
         {
           "id": "u48-advice-s2",
           "type": "select",
-          "prompt": "Which combination gives the source advice “It would be best not to eat oily or icy things”?",
+          "prompt": "Which combination gives the advice “It would be best not to eat oily or icy things”?",
           "options": [
             "油的、冰的東西最好都別吃。",
             "油的、冰的東西都吃。",
             "油的比冰的好吃。"
           ],
           "answer": "油的、冰的東西最好都別吃。",
-          "explanation": "最好 + 都 + 別 gives the source advice/negative command."
+          "explanation": "最好 + 都 + 別 gives this advice/negative command."
         },
         {
           "id": "u48-advice-p3",
@@ -241,7 +241,7 @@ const unit:UnitData = {
             "你怎麼了？"
           ],
           "answer": "謝謝你的關心。",
-          "explanation": "This is P006."
+          "explanation": "This is the polite thanks-for-concern expression."
         },
         {
           "id": "u48-a002-explain",
@@ -251,9 +251,9 @@ const unit:UnitData = {
         {
           "id": "u48-a002-visual-1",
           "type": "visual",
-          "prompt": "Use the source role prompt and accept the suggestion.",
+          "prompt": "Use the role prompt above and accept the suggestion.",
           "visualRole": "老李",
-          "visualInstruction": "Ask how he feels, respond from the source prompt, then accept the suggestion.",
+          "visualInstruction": "Ask how he feels, respond from the role prompt, then accept the suggestion.",
           "visualClosing": "好的。",
           "visualSuggestions": [
             "看病",
@@ -261,16 +261,16 @@ const unit:UnitData = {
             "早一點睡覺",
             "多喝水"
           ],
-          "visualSource": "A002 source prompt 1",
+          "visualSource": "Practice prompt 1",
           "visualScene": "restroom",
-          "visualCue": "Source illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen."
+          "visualCue": "Illustration: a man stands hunched beside a men's restroom door with both hands at his lower abdomen."
         },
         {
           "id": "u48-a002-visual-2",
           "type": "visual",
-          "prompt": "Use the source role prompt and accept the suggestion.",
+          "prompt": "Use the role prompt above and accept the suggestion.",
           "visualRole": "小陳",
-          "visualInstruction": "Ask how he feels, respond from the source prompt, then accept the suggestion.",
+          "visualInstruction": "Ask how he feels, respond from the role prompt, then accept the suggestion.",
           "visualClosing": "謝謝你。",
           "visualSuggestions": [
             "看病",
@@ -278,16 +278,16 @@ const unit:UnitData = {
             "早一點睡覺",
             "多喝水"
           ],
-          "visualSource": "A002 source prompt 2",
+          "visualSource": "Practice prompt 2",
           "visualScene": "bed",
-          "visualCue": "Source illustration: a man lies in bed under a blanket with his head on a pillow."
+          "visualCue": "Illustration: a man lies in bed under a blanket with his head on a pillow."
         },
         {
           "id": "u48-a002-visual-3",
           "type": "visual",
-          "prompt": "Use the source role prompt and politely reject the suggestion.",
+          "prompt": "Use the role prompt above and politely reject the suggestion.",
           "visualRole": "王先生",
-          "visualInstruction": "Ask how he feels, respond from the source prompt, then thank the speaker and complete a polite rejection.",
+          "visualInstruction": "Ask how he feels, respond from the role prompt, then thank the speaker and complete a polite rejection.",
           "visualClosing": "謝謝你的關心。……",
           "visualSuggestions": [
             "看病",
@@ -295,9 +295,9 @@ const unit:UnitData = {
             "早一點睡覺",
             "多喝水"
           ],
-          "visualSource": "A002 source prompt 3",
+          "visualSource": "Practice prompt 3",
           "visualScene": "throat",
-          "visualCue": "Source illustration: a man stands with one hand held at his throat/neck."
+          "visualCue": "Illustration: a man stands with one hand held at his throat/neck."
         },
         {
           "id": "u48-a002-s1",
@@ -309,7 +309,7 @@ const unit:UnitData = {
             "我沒有健康保險。"
           ],
           "answer": "你最好多休息。",
-          "explanation": "最好 + advice is P004."
+          "explanation": "最好 + advice gives the recommendation frame."
         },
         {
           "id": "u48-a002-s2",
@@ -473,7 +473,7 @@ const unit:UnitData = {
             "whether the rent is cheaper"
           ],
           "answer": "whether the person feels a little better",
-          "explanation": "The health check uses G004.",
+          "explanation": "The health check uses 一點 for a small degree.",
           "semanticAnswer": true
         }
       ]
@@ -546,7 +546,7 @@ const unit:UnitData = {
         {
           "id": "u48-g5-s1",
           "type": "select",
-          "prompt": "Which is source-compatible Pattern 1 action comparison?",
+          "prompt": "Which is compatible Pattern 1 action comparison?",
           "options": [
             "他比我走得快。",
             "他比我走快得。",
@@ -585,7 +585,7 @@ const unit:UnitData = {
         {
           "id": "u48-g5-s4",
           "type": "select",
-          "prompt": "Which is a source-style question?",
+          "prompt": "Which is a valid question?",
           "options": [
             "他是不是走路走得比你快？",
             "他走路走不走得比你快？",
@@ -621,7 +621,7 @@ const unit:UnitData = {
             "amount of rent"
           ],
           "answer": "quality of sleeping",
-          "explanation": "G005 compares the quality/outcome of sleeping."
+          "explanation": "The action-comparison pattern compares the quality or outcome of sleeping."
         },
         {
           "id": "u48-g5-l1",
@@ -652,7 +652,7 @@ const unit:UnitData = {
     {
       "id": "u48-degree-compare",
       "title": "How Much Better?",
-      "subtitle": "Use 一點 / 得多 / 多了 and complete A001.",
+      "subtitle": "Use 一點 / 得多 / 多了 and complete the comparison-data task.",
       "chars": [],
       "minutes": "12–19 min",
       "unitId": "unit-48",
@@ -719,7 +719,7 @@ const unit:UnitData = {
             "跟老師說"
           ],
           "answer": "比早上好得多了",
-          "explanation": "好得多了 is G006."
+          "explanation": "好得多了 marks a much larger degree of improvement."
         },
         {
           "id": "u48-fraction-explain",
@@ -746,7 +746,7 @@ const unit:UnitData = {
         {
           "id": "u48-a001-s1",
           "type": "select",
-          "prompt": "According to the source table, which action comparison is correct?",
+          "prompt": "According to the comparison data above, which action comparison is correct?",
           "options": [
             "學生三吃晚飯吃得比學生一多。",
             "學生一吃晚飯吃得比學生三多。",
@@ -791,14 +791,14 @@ const unit:UnitData = {
         {
           "id": "u48-a001-s4",
           "type": "select",
-          "prompt": "How long is 學生四's source-table trip?",
+          "prompt": "How long is 學生四's trip in the comparison data above?",
           "options": [
             "一個小時四十分鐘",
             "四個半小時",
             "八個小時"
           ],
           "answer": "一個小時四十分鐘",
-          "explanation": "This preserves the exact source duration and retrieves 分鐘 support."
+          "explanation": "This uses the exact duration shown above and retrieves 分鐘 support."
         },
         {
           "id": "u48-g6-l1",
@@ -846,7 +846,7 @@ const unit:UnitData = {
             "把家回了"
           ],
           "answer": "回了家",
-          "explanation": "G007 shows V and N separating with inserted verbal 了."
+          "explanation": "With separable verbs, V and N can separate with verbal 了 inserted between them."
         },
         {
           "id": "u48-g7-s2",
@@ -892,7 +892,7 @@ const unit:UnitData = {
         {
           "id": "u48-g7-s5",
           "type": "select",
-          "prompt": "Which chunk in the full source line shows duration insertion into 睡覺?",
+          "prompt": "Which chunk in the full sentence shows duration insertion into 睡覺?",
           "options": [
             "睡了幾個小時的覺",
             "比早上好得多了",
@@ -943,7 +943,7 @@ const unit:UnitData = {
     {
       "id": "u48-prescription",
       "title": "Reading a Prescription",
-      "subtitle": "Read the exact source medication schedule and retain source-era culture framing.",
+      "subtitle": "Read the medication schedule and keep the historical culture material clearly framed.",
       "chars": [],
       "minutes": "12–19 min",
       "unitId": "unit-48",
@@ -981,7 +981,7 @@ const unit:UnitData = {
             "睡覺以前"
           ],
           "answer": "飯後30分鐘",
-          "explanation": "The source prescription marks 飯後 and gives 30 minutes."
+          "explanation": "The prescription card marks 飯後 and gives 30 minutes."
         },
         {
           "id": "u48-a003-s3",
@@ -1003,26 +1003,26 @@ const unit:UnitData = {
         {
           "id": "u48-culture-s1",
           "type": "select",
-          "prompt": "Which setting is explicitly mentioned in the textbook-era mask reading?",
+          "prompt": "Which setting is explicitly mentioned in the historical mask summary above?",
           "options": [
             "crowded public buses/MRT",
             "airplane pilot training",
             "university exam rooms only"
           ],
           "answer": "crowded public buses/MRT",
-          "explanation": "Crowded buses/MRT are one source context."
+          "explanation": "Crowded buses/MRT are one historical context mentioned above."
         },
         {
           "id": "u48-culture-s2",
           "type": "select",
           "prompt": "How should this culture card be interpreted?",
           "options": [
-            "as textbook-era source content, not current medical/policy advice",
+            "as historical lesson context, not current medical/policy advice",
             "as a current 2026 legal requirement",
             "as new Chinese vocabulary ownership"
           ],
-          "answer": "as textbook-era source content, not current medical/policy advice",
-          "explanation": "The content remains explicitly source-era framed."
+          "answer": "as historical lesson context, not current medical/policy advice",
+          "explanation": "The content remains explicitly framed as historical context, not current guidance."
         },
         {
           "id": "u48-prescription-l1",
@@ -1043,8 +1043,8 @@ const unit:UnitData = {
     },
     {
       "id": "u48-review",
-      "title": "Unit 48 Review and Lesson-15 Capstone",
-      "subtitle": "Cumulative closure for Lesson 15.",
+      "title": "Unit 48 Review and this lesson Capstone",
+      "subtitle": "Cumulative closure for this lesson.",
       "chars": [
         "冰"
       ],
@@ -1079,7 +1079,7 @@ const unit:UnitData = {
             "number of packets"
           ],
           "answer": "sleep quality",
-          "explanation": "This is G005 action comparison.",
+          "explanation": "This compares sleep quality using the action-comparison pattern.",
           "semanticAnswer": true
         },
         {
@@ -1094,7 +1094,7 @@ const unit:UnitData = {
             "pharmacy + insurance"
           ],
           "answer": "separable duration + much-better comparison",
-          "explanation": "The line combines G007 duration insertion with the G006 much-better comparison.",
+          "explanation": "The line combines separable-verb pattern duration insertion with the degree-comparison pattern much-better comparison.",
           "semanticAnswer": true
         },
         {
@@ -1315,7 +1315,7 @@ const unit:UnitData = {
         {
           "id": "u48-review-g5-3",
           "type": "select",
-          "prompt": "Which question route is source-supported?",
+          "prompt": "Which question route is supported?",
           "options": [
             "他是不是走路走得比你快？",
             "他走路走不走得比你快？",
@@ -1373,7 +1373,7 @@ const unit:UnitData = {
             "把家回了"
           ],
           "answer": "回了家",
-          "explanation": "G007 separates V and N.",
+          "explanation": "separable-verb pattern separates V and N.",
           "grammarIds": [
             "u48-separable-verbs"
           ]
@@ -1405,7 +1405,7 @@ const unit:UnitData = {
         {
           "id": "u48-review-a001-1",
           "type": "select",
-          "prompt": "According to the source table, which action comparison is correct?",
+          "prompt": "According to the comparison data above, which action comparison is correct?",
           "options": [
             "學生三吃晚飯吃得比學生一多。",
             "學生一吃晚飯吃得比學生三多。",
@@ -1441,7 +1441,7 @@ const unit:UnitData = {
         {
           "id": "u48-review-a001-4",
           "type": "select",
-          "prompt": "How long is 學生四's source-table trip?",
+          "prompt": "How long is 學生四's trip in the comparison data above?",
           "options": [
             "一個小時四十分鐘",
             "四個半小時",
@@ -1460,7 +1460,7 @@ const unit:UnitData = {
             "幾個小時？"
           ],
           "answer": "你怎麼了？",
-          "explanation": "This is F001/P001."
+          "explanation": "This is the health-inquiry / concern function."
         },
         {
           "id": "u48-review-a002-2",
@@ -1537,26 +1537,26 @@ const unit:UnitData = {
         {
           "id": "u48-review-a004",
           "type": "select",
-          "prompt": "Which preserves the source A004 disposal outcome?",
+          "prompt": "Which sentence correctly uses the 把 disposal pattern from Unit 46?",
           "options": [
             "要是你把今天的功課寫了，就可以去打籃球。",
             "要是你今天的功課把寫了，就可以去打籃球。",
             "要是你把今天的功課學了，就可以去打籃球。"
           ],
           "answer": "要是你把今天的功課寫了，就可以去打籃球。",
-          "explanation": "This retrieves Unit-46 A004/G002."
+          "explanation": "This retrieves the Unit 46 把 pattern."
         },
         {
           "id": "u48-review-a005",
           "type": "select",
-          "prompt": "Which set contains four health-condition questions suitable for the source A005 call?",
+          "prompt": "Which set contains four health-condition questions suitable for the health call?",
           "options": [
             "哪裡不舒服？／有沒有發燒？／喉嚨怎麼樣？／胃口怎麼樣？",
             "房租多少？／怎麼去臺南？／幾個小時？／吃幾碗？",
             "你把功課寫了沒有？／是不是走得快？／有幾包？／要不要回家？"
           ],
           "answer": "哪裡不舒服？／有沒有發燒？／喉嚨怎麼樣？／胃口怎麼樣？",
-          "explanation": "This retrieves the four-question Unit-47 A005 transfer."
+          "explanation": "This retrieves the four-question health call from Unit 47."
         },
         {
           "id": "u48-review-cum1",
@@ -1580,7 +1580,7 @@ const unit:UnitData = {
             "得吃藥嗎？／四次。"
           ],
           "answer": "大概多久了？／已經四、五天了。",
-          "explanation": "Delayed X004 retrieval."
+          "explanation": "Delayed retrieval of the duration-to-now question and answer."
         },
         {
           "id": "u48-review-cum3",
@@ -1700,19 +1700,19 @@ const unit:UnitData = {
             "對學生很客氣 = insure students；買藥就好了 = medicine is better"
           ],
           "answer": "對學生很客氣 = polite to students；買藥就好了 = buying medicine will be enough",
-          "explanation": "This delays X010 and X011."
+          "explanation": "This delays the 對 + person + 很客氣 and V + 就好了 retrieval."
         },
         {
           "id": "u48-review-culture",
           "type": "select",
           "prompt": "What is the status of the mask reading in this course?",
           "options": [
-            "textbook-era source culture, not current medical/policy guidance",
+            "historical lesson context, not current medical/policy guidance",
             "current 2026 legal instructions",
             "a new vocabulary list"
           ],
-          "answer": "textbook-era source culture, not current medical/policy guidance",
-          "explanation": "CUL001 remains explicitly source-framed."
+          "answer": "historical lesson context, not current medical/policy guidance",
+          "explanation": "The mask information remains explicitly framed as historical context, not current guidance."
         },
         {
           "id": "u48-review-cap1",
@@ -1752,7 +1752,7 @@ const unit:UnitData = {
             "你怎麼了？"
           ],
           "answer": "謝謝你的關心。不用了。",
-          "explanation": "This performs polite rejection using P006 + P002."
+          "explanation": "This performs polite rejection using polite thanks-for-concern expression + polite-refusal function."
         }
       ]
     }
@@ -1947,7 +1947,7 @@ const unit:UnitData = {
       "id": "u48-separable-verbs",
       "title": "Separable verbs and insertion",
       "pattern": "V + inserted material + N",
-      "explanation": "Certain V+N forms can separate for verbal 了, recipient/object material, or duration. Lesson-15 productive forms are restricted to lexically available separable verbs.",
+      "explanation": "Certain V+N forms can separate for verbal 了, recipient/object material, or duration. this lesson productive forms are restricted to lexically available separable verbs.",
       "examples": [
         {
           "text": "他回了家以後，就開始工作。",
@@ -2058,7 +2058,7 @@ const unit:UnitData = {
       "text": "你自己要多小心。油的、冰的東西最好都別吃。",
       "pinyin": "Nǐ zìjǐ yào duō xiǎoxīn. Yóu de, bīng de dōngxi zuìhǎo dōu bié chī.",
       "meaning": "Take extra care of yourself. It would be best not to eat oily or icy things.",
-      "note": "P009.",
+      "note": "practice phrase.",
       "tokens": [
         "你自己要多小心。油的、冰的東西最好都別吃。"
       ]
@@ -2085,7 +2085,7 @@ const unit:UnitData = {
       "text": "好一點了／好多了／好得多了",
       "pinyin": "hǎo yìdiǎn le / hǎo duō le / hǎo de duō le",
       "meaning": "a little better / much better / much better",
-      "note": "P008; structures remain distinct.",
+      "note": "practice phrase; structures remain distinct.",
       "tokens": [
         "好一點了／好多了／好得多了"
       ]
@@ -2175,8 +2175,8 @@ const unit:UnitData = {
     "u48-a002-explain": {
       "text": "你怎麼了？／我……／你應該／最好……",
       "pinyin": "Nǐ zěnme le? / Wǒ… / Nǐ yīnggāi / zuìhǎo…",
-      "meaning": "Use the source role prompt to ask how the person feels, give a health suggestion, then accept or politely reject it.",
-      "note": "A002 communicative frame. Source-only names stay contextual; deferred rejection glyphs are not required.",
+      "meaning": "Use the role prompt to ask how the person feels, give a health suggestion, then accept or politely reject it.",
+      "note": "Role-play communicative frame. Context-only names stay contextual; deferred rejection glyphs are not required.",
       "tokens": [
         "你怎麼了？／",
         "我……／",
@@ -2187,7 +2187,7 @@ const unit:UnitData = {
       "text": "昨晚吃了晚飯以後吐了，肚子很不舒服。",
       "pinyin": "Zuówǎn chī le wǎnfàn yǐhòu tù le, dùzi hěn bù shūfu.",
       "meaning": "After dinner last night the patient vomited and had stomach discomfort; the patient describes symptoms and the doctor gives advice.",
-      "note": "A002 Task 2 fixed scenario.",
+      "note": "Role-play task 2 fixed scenario.",
       "tokens": [
         "昨晚吃了晚飯以後吐了",
         "肚子很不舒服"
@@ -2197,7 +2197,7 @@ const unit:UnitData = {
       "text": "兩碗／一碗半／兩碗半／半碗",
       "pinyin": "liǎng wǎn / yì wǎn bàn / liǎng wǎn bàn / bàn wǎn",
       "meaning": "2 bowls / 1.5 bowls / 2.5 bowls / 0.5 bowl",
-      "note": "X035 source-table quantity bridge.",
+      "note": "Quantity bridge for the comparison data.",
       "tokens": [
         "兩碗／一碗半／兩碗半／半碗"
       ]
@@ -2205,8 +2205,8 @@ const unit:UnitData = {
     "u48-a001-table": {
       "text": "學生一（Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘",
       "pinyin": "Xuéshēng yī... / xuéshēng èr... / xuéshēng sān... / xuéshēng sì...",
-      "meaning": "Exact A001 source data for dinner bowls, rent, travel to 臺南, and travel duration.",
-      "note": "Source names are romanized so contextual untaught name glyphs are not exposed; 臺南 remains source context.",
+      "meaning": "Comparison data for dinner bowls, rent, travel to 臺南, and travel duration.",
+      "note": "Speaker names are romanized so contextual untaught name glyphs are not exposed; 臺南 remains contextual.",
       "tokens": [
         "學生一（Tiánzhōng）：兩碗；NT$18,000；計程車；三個半小時\n學生二（Rúyù）：一碗半；NT$6,500；火車；四個半小時\n學生三（Āntóng）：兩碗半；NT$15,000；機車；八個小時\n學生四（Yuèměi）：半碗；NT$6,200；高鐵；一個小時四十分鐘"
       ],
@@ -2226,19 +2226,19 @@ const unit:UnitData = {
       "text": "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘",
       "pinyin": "jiànkāng zhěnsuǒ / yí rì sì cì / sān rì fèn / fànhòu / fànhòu sānshí fēnzhōng",
       "meaning": "Health Clinic (context only; not assessed) / four times per day / three-day supply / after meals / 30 minutes after meals",
-      "note": "Source-prescription representation. 健康診所 is a glossed contextual header; 診 is deferred and non-assessed. 份 remains support-only with no canonical vocabulary, Search, Mega, or handwriting ownership.",
+      "note": "Prescription card. 健康診所 is a glossed contextual header; 診 is deferred and non-assessed. 份 remains support-only with no canonical vocabulary, Search, Mega, or handwriting ownership.",
       "tokens": [
         "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘"
       ],
       "practice": false
     },
     "u48-culture-source-era": {
-      "text": "Mask use — textbook-era source context",
+      "text": "Mask use — historical lesson context",
       "pinyin": "kǒuzhào shǐyòng",
-      "meaning": "Wearing surgical masks — textbook-era source context",
-      "note": "Source reading contexts include cold-season transmission prevention, crowded buses/MRT, scooter warmth/air-pollution filtering, food-service hygiene, and hospitals. This is source-era content, not current 2026 medical or policy guidance.",
+      "meaning": "Wearing surgical masks — historical lesson context",
+      "note": "Historical lesson context, not current 2026 medical/policy guidance. The material mentions cold-season transmission prevention, crowded buses/MRT, scooter warmth/air-pollution filtering, food-service hygiene, and hospitals.",
       "tokens": [
-        "Mask use — textbook-era source context"
+        "Mask use — historical lesson context"
       ]
     },
     "u48-cap2": {

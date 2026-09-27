@@ -505,14 +505,14 @@ const unit:UnitData = {
         {
           "id": "u13-help-23",
           "type": "select",
-          "prompt": "Which is the Taiwan textbook reading of 微波?",
+          "prompt": "Which pronunciation is used for 微波 here?",
           "options": [
             "wéibō",
             "wēibō",
             "wèibō"
           ],
           "answer": "wéibō",
-          "explanation": "In the Taiwan textbook, 微 has second-tone wéi in 微波."
+          "explanation": "In the Taiwan Mandarin taught here, 微 has second-tone wéi in 微波."
         },
         {
           "id": "u13-help-24",
@@ -1076,14 +1076,14 @@ const unit:UnitData = {
         {
           "id": "u13-challenge-04",
           "type": "select",
-          "prompt": "Which is the Taiwan textbook reading of 微波?",
+          "prompt": "Which pronunciation is used for 微波 here?",
           "options": [
             "wéibō",
             "wēibō",
             "wèibō"
           ],
           "answer": "wéibō",
-          "explanation": "In the Taiwan textbook, 微 has second-tone wéi in 微波."
+          "explanation": "In the Taiwan Mandarin taught here, 微 has second-tone wéi in 微波."
         },
         {
           "id": "u13-challenge-05",
@@ -1222,7 +1222,7 @@ const unit:UnitData = {
       "meaning": "to microwave",
       "lessonId": "u13-help",
       "core": false,
-      "note": "Taiwan textbook reading: wéi has second tone."
+      "note": "Use second-tone wéi in 微波."
     },
     {
       "text": "百",
@@ -1540,7 +1540,7 @@ const unit:UnitData = {
       "meaning": "first syllable of 微波, to microwave",
       "strokes": 13,
       "layout": "side",
-      "note": "Use the Taiwan textbook reading wéi, second tone, in 微波 wéibō.",
+      "note": "Use second-tone wéi in 微波 wéibō.",
       "memory": "A narrow 彳 stands left of a mountain-and-legs middle; the four-stroke 攵 finishes at the right.",
       "parts": [
         {
@@ -1887,7 +1887,7 @@ const unit:UnitData = {
       "id": "u13-buns",
       "title": "Use 個 for buns",
       "pattern": "number + 個 + 包子",
-      "explanation": "包子 bāozi is a filled steamed bun. The textbook describes a meat-filled bun; the word alone does not specify which meat or guarantee a particular filling. Use the familiar 個 to count them: 一個包子, one bun; 兩個包子, two buns. 子 is neutral-tone zi in this food word. Reuse 要 to order and 吃 to talk about eating.",
+      "explanation": "包子 bāozi is a filled steamed bun. The example here uses a meat-filled bun; the word alone does not specify which meat or guarantee a particular filling. Use the familiar 個 to count them: 一個包子, one bun; 兩個包子, two buns. 子 is neutral-tone zi in this food word. Reuse 要 to order and 吃 to talk about eating.",
       "examples": [
         {
           "text": "我要三個包子。",

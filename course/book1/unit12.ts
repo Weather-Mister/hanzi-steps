@@ -1859,7 +1859,7 @@ const unit:UnitData = {
       "zhuyin": "ㄕㄠˇ",
       "meaning": "final syllable of 多少, how much/how many",
       "layout": "whole",
-      "note": "少 completes 多少. Keep the third tone shown in the Taiwan textbook: duōshǎo.",
+      "note": "少 completes 多少. Keep the third tone in duōshǎo.",
       "memory": "少 resembles 小 with an extra long left-falling stroke below. That last stroke sweeps under the upper marks.",
       "parts": [
         {

@@ -296,7 +296,7 @@ const unit:UnitData = {
             "書法"
           ],
           "answer": "比賽",
-          "explanation": "比賽 is the textbook word for a game or competition."
+          "explanation": "比賽 means a game or competition."
         },
         {
           "id": "u22-half-listen-半",
@@ -845,7 +845,7 @@ const unit:UnitData = {
             "after the whole sentence"
           ],
           "answer": "after 都",
-          "explanation": "The source pattern is 每…都不/沒… .",
+          "explanation": "The pattern here is 每…都不/沒… .",
           "grammarIds": [
             "u22-every-negation"
           ]

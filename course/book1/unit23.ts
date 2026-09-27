@@ -46,7 +46,7 @@ const unit:UnitData = {
     {
       "id": "u23-method",
       "title": "Lately, Every Day",
-      "subtitle": "Finish the routine vocabulary from Lesson 7.",
+      "subtitle": "Finish the routine vocabulary from this lesson.",
       "chars": [],
       "minutes": "6–8 min",
       "unitId": "unit-23",
@@ -88,7 +88,7 @@ const unit:UnitData = {
         {
           "id": "u23-method-05",
           "type": "select",
-          "prompt": "Which word means “recently; lately”? ",
+          "prompt": "Which word means “recently; lately”?",
           "options": [
             "最近",
             "每天",
@@ -100,7 +100,7 @@ const unit:UnitData = {
         {
           "id": "u23-method-06",
           "type": "select",
-          "prompt": "Which expression means “every day”? ",
+          "prompt": "Which expression means “every day”?",
           "options": [
             "每天",
             "每",
@@ -408,7 +408,7 @@ const unit:UnitData = {
         {
           "id": "u23-play-05",
           "type": "select",
-          "prompt": "Which expression means “to write characters”? ",
+          "prompt": "Which expression means “to write characters”?",
           "options": [
             "寫字",
             "有意思",
@@ -1360,7 +1360,7 @@ const unit:UnitData = {
       "id": "u23-permission-keyi",
       "title": "Permission with 可以",
       "pattern": "Subject + 可以 + Verb Phrase",
-      "explanation": "可以 was already used earlier for possibility. In Lesson 7 it also grants permission: the speaker says an action is allowed. As an auxiliary verb, 可以 comes before the action.",
+      "explanation": "可以 was already used earlier for possibility. In this lesson it also grants permission: the speaker says an action is allowed. As an auxiliary verb, 可以 comes before the action.",
       "examples": [
         {
           "text": "你可以在這裡寫字。",
@@ -1382,7 +1382,7 @@ const unit:UnitData = {
       "id": "u23-permission-negative",
       "title": "Not permitted: 不可以",
       "pattern": "Subject + 不可以 + Verb Phrase",
-      "explanation": "不可以 says an action is not permitted. The textbook specifically treats this negative form as permission/prohibition rather than the earlier possibility sense of 可以.",
+      "explanation": "不可以 says an action is not permitted. Here 不可以 expresses permission/prohibition rather than the earlier possibility sense of 可以.",
       "examples": [
         {
           "text": "你不可以在這裡唱歌。",
@@ -1404,7 +1404,7 @@ const unit:UnitData = {
       "id": "u23-permission-questions",
       "title": "Ask permission",
       "pattern": "可不可以 + VP? / 可以 + VP + 嗎?",
-      "explanation": "To ask whether an action is permitted, use the A-not-A form 可不可以 before the action, or use 可以 before the action and add 嗎 at the end. In other contexts the A-not-A form can also ask about possibility; here the situation makes the permission reading clear.",
+      "explanation": "To ask whether an action is permitted, use 可不可以 before the action, or use 可以 before the action and add 嗎 at the end. In other contexts the A-not-A form can also ask about possibility; here the situation makes the permission reading clear.",
       "examples": [
         {
           "text": "我可不可以去看比賽？",

@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "People, hotels & reasons",
     "title": "The One in Blue",
-    "description": "Continue Lesson 10 through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, express direction with 往, and connect causes and effects with 因為…所以….",
+    "description": "Continue this lesson through people and hotel descriptions: identify people with modifying clauses, describe changes with sentence-final 了, express direction with 往, and connect causes and effects with 因為…所以….",
     "chars": [
       "住",
       "男",
@@ -132,7 +132,7 @@ const unit:UnitData = {
             "A hotel guest"
           ],
           "answer": "The owner's wife",
-          "explanation": "太太 means wife in this Lesson 10 context."
+          "explanation": "太太 means wife in this this lesson context."
         }
       ]
     },
@@ -268,7 +268,7 @@ const unit:UnitData = {
             "Means the student is younger"
           ],
           "answer": "Marks the student as male",
-          "explanation": "Lesson 10 presents 男 + noun as a male-person expression."
+          "explanation": "this lesson presents 男 + noun as a male-person expression."
         }
       ]
     },
@@ -353,7 +353,7 @@ const unit:UnitData = {
             "Only color words can appear before 的"
           ],
           "answer": "Yes, e.g. 不去夜市的人",
-          "explanation": "Lesson 10 explicitly gives negative modifying clauses.",
+          "explanation": "this lesson explicitly gives negative modifying clauses.",
           "grammarIds": [
             "u31-clause-modifier"
           ]
@@ -518,7 +518,7 @@ const unit:UnitData = {
     {
       "id": "u31-toward",
       "title": "Looking Out the Window",
-      "subtitle": "Use the dialogue’s 從窗戶往外看 to contrast the starting viewpoint 從 with directional 往.",
+      "subtitle": "Use the conversation’s 從窗戶往外看 to contrast the starting viewpoint 從 with directional 往.",
       "chars": [
         "往"
       ],
@@ -656,14 +656,14 @@ const unit:UnitData = {
         {
           "id": "u31-because-s2",
           "type": "select",
-          "prompt": "Which order matches Lesson 10?",
+          "prompt": "Which order matches this lesson?",
           "options": [
             "因為 + cause，所以 + effect",
             "所以 + cause，因為 + effect",
             "effect + 因為 + cause + 所以"
           ],
           "answer": "因為 + cause，所以 + effect",
-          "explanation": "Lesson 10 presents cause first and effect second, normally with the pair 因為…所以….",
+          "explanation": "this lesson presents cause first and effect second, normally with the pair 因為…所以….",
           "grammarIds": [
             "u31-yinwei-suoyi"
           ]
@@ -771,7 +771,7 @@ const unit:UnitData = {
         {
           "id": "u31-review-07",
           "type": "select",
-          "prompt": "Which word means wife in this Lesson 10 context?",
+          "prompt": "Which word means wife in this this lesson context?",
           "options": [
             "太太",
             "弟弟",
@@ -943,7 +943,7 @@ const unit:UnitData = {
             "Either order is taught as identical here"
           ],
           "answer": "The cause introduced by 因為",
-          "explanation": "Lesson 10 teaches cause first, then effect.",
+          "explanation": "this lesson teaches cause first, then effect.",
           "grammarIds": [
             "u31-yinwei-suoyi"
           ]
@@ -1000,7 +1000,7 @@ const unit:UnitData = {
       "meaning": "wife; Mrs.",
       "lessonId": "u31-hotel",
       "core": true,
-      "note": "In the Lesson 10 dialogue, 太太 means a man's wife."
+      "note": "In the this lesson conversation, 太太 means a man's wife."
     },
     {
       "text": "住",
@@ -1015,7 +1015,7 @@ const unit:UnitData = {
       "meaning": "male-; boy- (before a noun)",
       "lessonId": "u31-people",
       "core": true,
-      "note": "Lesson 10 presents 男 + noun as a productive way to mark a male person, e.g. 男學生."
+      "note": "this lesson presents 男 + noun as a productive way to mark a male person, e.g. 男學生."
     },
     {
       "text": "矮",
@@ -1066,7 +1066,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "lessonId": "u31-toward",
       "core": true,
-      "note": "往 introduces the direction of an action. Dialogue II uses 從窗戶往外看: from the window, look outward."
+      "note": "往 introduces the direction of an action. the conversation uses 從窗戶往外看: from the window, look outward."
     },
     {
       "text": "因為",
@@ -1074,7 +1074,7 @@ const unit:UnitData = {
       "meaning": "because",
       "lessonId": "u31-because",
       "core": true,
-      "note": "Lesson 10 pairs 因為 with the already familiar 所以 to express cause before effect."
+      "note": "this lesson pairs 因為 with the already familiar 所以 to express cause before effect."
     },
     {
       "text": "窗戶",
@@ -1082,7 +1082,7 @@ const unit:UnitData = {
       "meaning": "window",
       "lessonId": "u31-toward",
       "core": true,
-      "note": "Dialogue II uses 從窗戶往外看, looking out from the window."
+      "note": "the conversation uses 從窗戶往外看, looking out from the window."
     },
     {
       "text": "上個月",
@@ -1090,7 +1090,7 @@ const unit:UnitData = {
       "meaning": "last month",
       "lessonId": "u31-hotel",
       "core": true,
-      "note": "This is the source-listed phrase that sets the Hualien trip in the previous month."
+      "note": "This is the listed phrase that sets the Hualien trip in the previous month."
     }
   ],
   "reviewVocabulary": [
@@ -1138,7 +1138,7 @@ const unit:UnitData = {
       "meaning": "live; stay",
       "strokes": 7,
       "layout": "side",
-      "note": "住 is fourth-tone zhù. In Lesson 10 it means to stay at a hotel or live somewhere.",
+      "note": "住 is fourth-tone zhù. In this lesson it means to stay at a hotel or live somewhere.",
       "memory": "亻 takes the first two strokes on the left; 主 fills the right with a dot above three horizontals crossed by a vertical.",
       "parts": [
         {
@@ -1178,7 +1178,7 @@ const unit:UnitData = {
       "meaning": "male; man",
       "strokes": 7,
       "layout": "stack",
-      "note": "男 is second-tone nán. Lesson 10 uses 男 before another noun, such as 男學生.",
+      "note": "男 is second-tone nán. this lesson uses 男 before another noun, such as 男學生.",
       "memory": "田 forms the five-stroke top; 力 adds the two-stroke lower part.",
       "parts": [
         {
@@ -1484,7 +1484,7 @@ const unit:UnitData = {
       "meaning": "toward; in the direction of",
       "strokes": 8,
       "layout": "side",
-      "note": "往 is third-tone wǎng. It introduces direction; Dialogue II uses 從窗戶往外看, look outward from the window.",
+      "note": "往 is third-tone wǎng. It introduces direction; the conversation uses 從窗戶往外看, look outward from the window.",
       "memory": "彳 takes three narrow walking strokes on the left; 主 fills the right with five strokes.",
       "parts": [
         {
@@ -1687,7 +1687,7 @@ const unit:UnitData = {
       "id": "u31-yinwei-suoyi",
       "title": "Give a reason with 因為…所以…",
       "pattern": "因為 + cause，所以 + effect",
-      "explanation": "因為 introduces the cause and 所以 introduces the result. In the Lesson 10 pattern, the cause comes first and the two conjunctions normally appear as a pair. Keep the logic clear: the 因為-clause explains why the 所以-clause follows.",
+      "explanation": "因為 introduces the cause and 所以 introduces the result. In the this lesson pattern, the cause comes first and the two conjunctions normally appear as a pair. Keep the logic clear: the 因為-clause explains why the 所以-clause follows.",
       "examples": [
         {
           "text": "因為現在去玩的人比較少，所以旅館不太貴。",
@@ -1866,7 +1866,7 @@ const unit:UnitData = {
       "text": "從窗戶往外看，是藍色的大海。",
       "pinyin": "Cóng chuānghù wǎng wài kàn, shì lánsè de dàhǎi.",
       "meaning": "Looking out from the window, you see the blue sea.",
-      "note": "This is the Dialogue II wording: 從 introduces the viewpoint/source, 往外 gives the outward direction, and 窗戶 is the window.",
+      "note": "This is the the conversation wording: 從 introduces the viewpoint/source, 往外 gives the outward direction, and 窗戶 is the window.",
       "tokens": [
         "從窗戶",
         "往外看",

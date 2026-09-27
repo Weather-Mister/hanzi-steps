@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "cyan",
     "label": "Getting around & explicit comparison",
     "title": "Which Way Is Faster?",
-    "description": "10 new Lesson 8 words and forms. Get around with Taiwan transport vocabulary and compare two choices explicitly with 比.",
+    "description": "10 new this lesson words and forms. Get around with Taiwan transport vocabulary and compare two choices explicitly with 比.",
     "chars": [
       "同",
       "參",
@@ -749,7 +749,7 @@ const unit:UnitData = {
         {
           "id": "u25-negative-06",
           "type": "select",
-          "prompt": "Which basic 比 sentence follows the textbook pattern?",
+          "prompt": "Which basic 比 sentence is correct?",
           "options": [
             "坐捷運比坐火車快。",
             "坐捷運比坐火車很快。"
@@ -1730,7 +1730,7 @@ const unit:UnitData = {
       "id": "u25-bi-negation",
       "title": "Negating a 比 comparison",
       "pattern": "A + 不比 / 不是比 + B + property",
-      "explanation": "The textbook allows either 不比 or 不是比 to negate an explicit comparison. 不比 says A is not more X than B; 不是比 explicitly rejects the proposed comparison. “Not faster” does not necessarily mean “slower”: the speeds could be equal. 不比 rejects the claim that A exceeds B on this property.",
+      "explanation": "Either 不比 or 不是比 can negate an explicit comparison here. 不比 says A is not more X than B; 不是比 explicitly rejects the proposed comparison. “Not faster” does not necessarily mean “slower”: the speeds could be equal. 不比 rejects the claim that A exceeds B on this property.",
       "examples": [
         {
           "text": "坐公車不比坐計程車快。",
@@ -1905,7 +1905,7 @@ const unit:UnitData = {
       "text": "騎機車比坐公車快嗎？",
       "pinyin": "Qí jīchē bǐ zuò gōngchē kuài ma?",
       "meaning": "Is riding a scooter faster than taking the bus?",
-      "note": "This mirrors the Lesson 8 dialogue comparison.",
+      "note": "This reinforces the comparison pattern in context.",
       "tokens": [
         "騎機車",
         "比",

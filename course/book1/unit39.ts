@@ -184,7 +184,7 @@ const unit:UnitData = {
             "你在哪裡見面？"
           ],
           "answer": "有沒有不吃的東西？",
-          "explanation": "This is the source dietary-preference question."
+          "explanation": "This is the dietary-preference question."
         },
         {
           "id": "u39-this-year-p3",
@@ -273,7 +273,7 @@ const unit:UnitData = {
             "It becomes 過."
           ],
           "answer": "It disappears.",
-          "explanation": "The source rejects *沒吃了 and uses 沒吃."
+          "explanation": "The rule rejects *沒吃了 and uses 沒吃."
         },
         {
           "id": "u39-ordered-s3",
@@ -482,7 +482,7 @@ const unit:UnitData = {
             "你吃晚飯左右？"
           ],
           "answer": "你吃了晚飯沒有？",
-          "explanation": "Completed clause + 沒有 is a source pattern."
+          "explanation": "Completed clause + 沒有 is a pattern taught here."
         }
       ]
     },
@@ -542,7 +542,7 @@ const unit:UnitData = {
         {
           "id": "u39-negation-s3",
           "type": "select",
-          "prompt": "Taiwan Mandarin in the source commonly prefers…",
+          "prompt": "Which form is more common in Taiwan Mandarin here?",
           "options": [
             "沒有 + Verb",
             "bare 沒 is impossible",
@@ -742,7 +742,7 @@ const unit:UnitData = {
             "你吃沒有了晚飯？"
           ],
           "answer": "你吃了晚飯沒有？",
-          "explanation": "The source can append 沒有.",
+          "explanation": "The pattern can append 沒有.",
           "grammarIds": [
             "u39-verbal-le"
           ]
@@ -795,7 +795,7 @@ const unit:UnitData = {
         {
           "id": "u39-review-n3",
           "type": "select",
-          "prompt": "State: 'I'm not busy.' Under the source system use…",
+          "prompt": "State: 'I'm not busy.' Which form is correct?",
           "options": [
             "不忙",
             "沒忙",
@@ -832,7 +832,7 @@ const unit:UnitData = {
             "是不是比他高？"
           ],
           "answer": "有沒有不吃的東西？",
-          "explanation": "This is the source dietary-preference question."
+          "explanation": "This is the dietary-preference question."
         },
         {
           "id": "u39-review-t1",
@@ -1208,7 +1208,7 @@ const unit:UnitData = {
       "id": "u39-verbal-le",
       "title": "Completed action with verbal 了",
       "pattern": "Verb + 了 (+ Object)",
-      "explanation": "Postverbal 了 indicates that an action/event has been completed or has taken place. It is not simply a past-tense ending. Negate the completed action with 沒（有） before the verb and remove verbal 了: 我沒吃晚飯, not *我沒吃了晚飯. A source yes/no form puts 沒有 after the completed clause. This is distinct from sentence-final changed-situation 了.",
+      "explanation": "Postverbal 了 indicates that an action/event has been completed or has taken place. It is not simply a past-tense ending. Negate the completed action with 沒（有） before the verb and remove verbal 了: 我沒吃晚飯, not *我沒吃了晚飯. A yes/no form here puts 沒有 after the completed clause. This is distinct from sentence-final changed-situation 了.",
       "examples": [
         {
           "text": "我吃了晚飯。",
@@ -1232,7 +1232,7 @@ const unit:UnitData = {
       "id": "u39-bu-vs-mei",
       "title": "不 vs. 沒（有）",
       "pattern": "不 + V/state vs. 沒（有） + event V",
-      "explanation": "For action verbs, 不 expresses habitual non-action or an intention not to act; 沒（有） says an action did not happen in the past. State verbs use 不 in the textbook's system. Process/change events use 沒（有） for non-happening, as in 還沒到. In Taiwan, 沒有 + V is more common than bare 沒 + V, but bare 沒 + V is still grammatical. When 沒 negates a completed action, verbal 了 disappears; sentence-final changed-situation 了 is a different function.",
+      "explanation": "For action verbs, 不 expresses habitual non-action or an intention not to act; 沒（有） says an action did not happen in the past. State verbs use 不 in this system. Process/change events use 沒（有） for non-happening, as in 還沒到. In Taiwan, 沒有 + V is more common than bare 沒 + V, but bare 沒 + V is still grammatical. When 沒 negates a completed action, verbal 了 disappears; sentence-final changed-situation 了 is a different function.",
       "examples": [
         {
           "text": "我不喝咖啡。",
@@ -1282,7 +1282,7 @@ const unit:UnitData = {
       "text": "謝謝你請我到這麼有名的餐廳吃飯。",
       "pinyin": "Xièxie nǐ qǐng wǒ dào zhème yǒumíng de cāntīng chīfàn.",
       "meaning": "Thank you for treating me to a meal at such a famous restaurant.",
-      "note": "Source Dialogue II turn 1 with the source second-person form normalized to 你.",
+      "note": "Conversation opening with the second-person form normalized to 你.",
       "tokens": [
         "謝謝你請我",
         "到這麼有名的餐廳",
@@ -1293,7 +1293,7 @@ const unit:UnitData = {
       "text": "哪裡，哪裡！這是我給你的禮物。",
       "pinyin": "Nǎlǐ, nǎlǐ! Zhè shì wǒ gěi nǐ de lǐwù.",
       "meaning": "Don't mention it! This is my gift for you.",
-      "note": "Source turn 2. 哪裡哪裡 is an idiomatic polite response.",
+      "note": "Conversation turn. 哪裡哪裡 is an idiomatic polite response.",
       "tokens": [
         "哪裡哪裡",
         "這是我給你的禮物"
@@ -1303,7 +1303,7 @@ const unit:UnitData = {
       "text": "今年有臺灣朋友給我過生日。",
       "pinyin": "Jīnnián yǒu Táiwān péngyǒu gěi wǒ guò shēngrì.",
       "meaning": "This year I have a Taiwanese friend celebrating my birthday with me.",
-      "note": "Source turn 3 core.",
+      "note": "Conversation turn core.",
       "tokens": [
         "今年",
         "有臺灣朋友",
@@ -1314,7 +1314,7 @@ const unit:UnitData = {
       "text": "你想吃什麼？有沒有不吃的東西？",
       "pinyin": "Nǐ xiǎng chī shénme? Yǒu méiyǒu bù chī de dōngxi?",
       "meaning": "What would you like to eat? Is there anything you don't eat?",
-      "note": "Source dietary-preference question.",
+      "note": "dietary-preference question.",
       "tokens": [
         "你想吃什麼",
         "有沒有不吃的東西"
@@ -1346,7 +1346,7 @@ const unit:UnitData = {
       "text": "我已經訂了豬腳麵線和蛋。",
       "pinyin": "Wǒ yǐjīng dìng le zhūjiǎo miànxiàn hé dàn.",
       "meaning": "I already ordered pork knuckles, fine noodles, and an egg.",
-      "note": "Source turn 6.",
+      "note": "Conversation turn.",
       "tokens": [
         "我已經訂了",
         "豬腳麵線和蛋"
@@ -1359,7 +1359,7 @@ const unit:UnitData = {
       "text": "等一下你多吃一點。",
       "pinyin": "Děng yíxià nǐ duō chī yìdiǎn.",
       "meaning": "In a moment, eat a little more.",
-      "note": "Source preview; Unit 40 teaches 多／少 + Verb.",
+      "note": "Preview; Unit 40 teaches 多／少 + Verb.",
       "tokens": [
         "等一下",
         "你多吃一點"
@@ -1396,7 +1396,7 @@ const unit:UnitData = {
       "text": "你吃了晚飯沒有？",
       "pinyin": "Nǐ chī le wǎnfàn méiyǒu?",
       "meaning": "Have you eaten dinner?",
-      "note": "Source-style completed-action yes/no question with 沒有 at the end.",
+      "note": "Lesson-appropriate completed-action yes/no question with 沒有 at the end.",
       "tokens": [
         "你吃了晚飯",
         "沒有"

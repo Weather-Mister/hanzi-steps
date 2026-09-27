@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "teal",
     "label": "Study plans, sequence & scholarships",
     "title": "How Long Will You Study?",
-    "description": "Begin Lesson 12 with study plans and duration, 先…再… sequencing, language-center and university study, total time needed, cost, scholarships, and grades.",
+    "description": "Begin this lesson with study plans and duration, 先…再… sequencing, language-center and university study, total time needed, cost, scholarships, and grades.",
     "chars": [
       "臺",
       "灣",
@@ -54,7 +54,7 @@ const unit:UnitData = {
     {
       "id": "u34-plan",
       "title": "How Long Is the Plan?",
-      "subtitle": "Formally learn 臺灣, 計畫, 久, and 時間 through the opening question of Lesson 12.",
+      "subtitle": "Formally learn 臺灣, 計畫, 久, and 時間 through the opening question of this lesson.",
       "chars": [
         "臺",
         "灣",
@@ -152,33 +152,33 @@ const unit:UnitData = {
         {
           "id": "u34-plan-s1",
           "type": "select",
-          "prompt": "In Dialogue I, what answer follows 你計畫在臺灣學多久的中文？",
+          "prompt": "In the conversation, what answer follows 你計畫在臺灣學多久的中文？",
           "options": [
             "五年。",
             "一年。",
             "兩年。"
           ],
           "answer": "五年。",
-          "explanation": "The source reply is 五年, 'five years.' The next line asks why such a long time."
+          "explanation": "The reply is 五年, 'five years.' The next line asks why such a long time."
         },
         {
           "id": "u34-plan-s2",
           "type": "select",
-          "prompt": "Which Lesson 12 word means 'to plan to'?",
+          "prompt": "Which this lesson word means 'to plan to'?",
           "options": [
             "計畫",
             "時間",
             "久"
           ],
           "answer": "計畫",
-          "explanation": "計畫 is the Lesson 12 verb 'to plan to.' Compare the earlier 打算 'plan/intend.'"
+          "explanation": "計畫 is the this lesson verb 'to plan to.' Compare the earlier 打算 'plan/intend.'"
         }
       ]
     },
     {
       "id": "u34-sequence",
       "title": "First This, Then That",
-      "subtitle": "Learn 先, 念, and the source sequence pattern 先…再….",
+      "subtitle": "Learn 先, 念, and the sequence pattern 先…再….",
       "chars": [
         "先",
         "念"
@@ -434,7 +434,7 @@ const unit:UnitData = {
             "plan"
           ],
           "answer": "need",
-          "explanation": "需要 is the Lesson 12 verb 'to need.'"
+          "explanation": "需要 is the this lesson verb 'to need.'"
         },
         {
           "id": "u34-need-s2",
@@ -453,7 +453,7 @@ const unit:UnitData = {
     {
       "id": "u34-money",
       "title": "That Will Cost Money",
-      "subtitle": "Learn the source cost reaction and the word for a scholarship.",
+      "subtitle": "Learn the cost reaction and the word for a scholarship.",
       "chars": [
         "花",
         "獎",
@@ -577,7 +577,7 @@ const unit:UnitData = {
     {
       "id": "u34-grades",
       "title": "If the Grades Aren't Good",
-      "subtitle": "Learn 成績 and retrieve the earlier 要是…就… conditional in the source scholarship warning.",
+      "subtitle": "Learn 成績 and retrieve the earlier 要是…就… conditional in the scholarship warning.",
       "chars": [
         "成",
         "績"
@@ -651,7 +651,7 @@ const unit:UnitData = {
             "schedule"
           ],
           "answer": "grades; academic results",
-          "explanation": "成績 is the source word for grades."
+          "explanation": "成績 is the word for grades."
         },
         {
           "id": "u34-grades-s2",
@@ -722,14 +722,14 @@ const unit:UnitData = {
         {
           "id": "u34-review-s1",
           "type": "select",
-          "prompt": "Which Lesson 12 word means 'to plan to'?",
+          "prompt": "Which this lesson word means 'to plan to'?",
           "options": [
             "計畫",
             "需要",
             "成績"
           ],
           "answer": "計畫",
-          "explanation": "計畫 is the source verb 'to plan to.'"
+          "explanation": "計畫 is the lesson verb 'to plan to.'"
         },
         {
           "id": "u34-review-s2",
@@ -746,13 +746,13 @@ const unit:UnitData = {
         {
           "id": "u34-review-s3",
           "type": "select",
-          "prompt": "Which source sentence correctly sequences studying language first and university second?",
+          "prompt": "Which sentence correctly sequences studying language first and university second?",
           "options": [
             "他計畫在臺灣先學語言，再念大學。",
             "他計畫在臺灣再學語言，先念大學。"
           ],
           "answer": "他計畫在臺灣先學語言，再念大學。",
-          "explanation": "This is the textbook's Grammar I sequence: 先 marks language study first and 再 marks university study next.",
+          "explanation": "This is the rule here this pattern sequence: 先 marks language study first and 再 marks university study next.",
           "grammarIds": [
             "u34-first-then"
           ]
@@ -779,7 +779,7 @@ const unit:UnitData = {
             "study"
           ],
           "answer": "spend",
-          "explanation": "Here 花 is the source verb 'to spend (time or money).'"
+          "explanation": "Here 花 is the lesson verb 'to spend (time or money).'"
         },
         {
           "id": "u34-review-g1",
@@ -790,7 +790,7 @@ const unit:UnitData = {
             "我昨天晚上再寫功課，先看電視。"
           ],
           "answer": "我昨天晚上先寫功課，再看電視。",
-          "explanation": "The textbook uses 先…再… for past as well as future sequences: 先 marks Event 1 and 再 marks Event 2.",
+          "explanation": "The rule here uses 先…再… for past as well as future sequences: 先 marks Event 1 and 再 marks Event 2.",
           "grammarIds": [
             "u34-first-then"
           ]
@@ -890,7 +890,7 @@ const unit:UnitData = {
       "meaning": "Taiwan",
       "lessonId": "u34-plan",
       "core": true,
-      "note": "A prerequisite-repair item: Lesson 12 assumes 臺灣, but the cumulative Hanzi Steps index had not formally introduced the word or its characters."
+      "note": "A prerequisite-repair item: this lesson assumes 臺灣, but the cumulative Hanzi Steps index had not formally introduced the word or its characters."
     },
     {
       "text": "計畫",
@@ -898,7 +898,7 @@ const unit:UnitData = {
       "meaning": "to plan to",
       "lessonId": "u34-plan",
       "core": true,
-      "note": "Lesson 12 lists 計畫 as a verb; compare earlier 打算 'plan/intend'."
+      "note": "this lesson lists 計畫 as a verb; compare earlier 打算 'plan/intend'."
     },
     {
       "text": "久",
@@ -956,7 +956,7 @@ const unit:UnitData = {
       "meaning": "to spend (time or money)",
       "lessonId": "u34-money",
       "core": true,
-      "note": "Source sense here is the verb 'to spend (time or money).'"
+      "note": "sense here is the verb 'to spend (time or money).'"
     },
     {
       "text": "獎學金",
@@ -1408,7 +1408,7 @@ const unit:UnitData = {
       "meaning": "to spend; flower",
       "strokes": 8,
       "layout": "stack",
-      "note": "花 is first-tone huā. In 這得花不少錢 it is the source verb 'to spend (time or money),' not the noun 'flower.'",
+      "note": "花 is first-tone huā. In 這得花不少錢 it is the lesson verb 'to spend (time or money),' not the noun 'flower.'",
       "memory": "The four-stroke 艹 sits across the top; 化 forms the four strokes below.",
       "parts": [
         {
@@ -1610,7 +1610,7 @@ const unit:UnitData = {
       "id": "u34-first-then",
       "title": "First…, then… with 先…再…",
       "pattern": "Subject + 先 + Event 1，(Subject) + 再 + Event 2",
-      "explanation": "先…再… presents the temporal sequence of two consecutive events. Put 先 before the first event and 再 before the next event. The textbook explicitly uses the pattern for past and future sequences, and its drills also include habitual sequences such as 每天…. When the same subject continues into the second event, the examples normally leave it understood before 再. Here 再 means 'then / next,' not merely 'again.'",
+      "explanation": "先…再… presents the temporal sequence of two consecutive events. Put 先 before the first event and 再 before the next event. The rule here explicitly uses the pattern for past and future sequences, and its drills also include habitual sequences such as 每天…. When the same subject continues into the second event, the examples normally leave it understood before 再. Here 再 means 'then / next,' not merely 'again.'",
       "examples": [
         {
           "text": "我先念中文，再念大學。",
@@ -1653,7 +1653,7 @@ const unit:UnitData = {
       "text": "你計畫在臺灣學多久的中文？",
       "pinyin": "Nǐ jìhuà zài Táiwān xué duō jiǔ de Zhōngwén?",
       "meaning": "How long do you plan to study Chinese in Taiwan?",
-      "note": "This is the opening question of Lesson 12 Dialogue I. The source reply is 五年。 計畫 is close to the earlier 打算; here both can express an intended plan.",
+      "note": "This is the opening question of this lesson the conversation. The reply is 五年。 計畫 is close to the earlier 打算; here both can express an intended plan.",
       "tokens": [
         "你計畫",
         "在臺灣",
@@ -1664,7 +1664,7 @@ const unit:UnitData = {
       "text": "為什麼要這麼久的時間？",
       "pinyin": "Wèishénme yào zhème jiǔ de shíjiān?",
       "meaning": "Why such a long time?",
-      "note": "This follows the source reply 五年。 久 describes a long duration; 時間 is the noun 'time.'",
+      "note": "This follows the reply 五年。 久 describes a long duration; 時間 is the noun 'time.'",
       "tokens": [
         "為什麼",
         "要這麼久的時間"
@@ -1687,7 +1687,7 @@ const unit:UnitData = {
       "text": "我先在語言中心念一年，再念四年大學。",
       "pinyin": "Wǒ xiān zài yǔyán zhōngxīn niàn yì nián, zài niàn sì nián dàxué.",
       "meaning": "I will first study for one year at a language center, then study at university for four years.",
-      "note": "This keeps the study sequence from Lesson 12 Dialogue I. 年 is the measure word for years.",
+      "note": "This keeps the study sequence from this lesson the conversation. 年 is the measure word for years.",
       "tokens": [
         "我先在語言中心念一年",
         "再念四年大學"
@@ -1710,7 +1710,7 @@ const unit:UnitData = {
       "text": "這得花不少錢！",
       "pinyin": "Zhè děi huā bù shǎo qián!",
       "meaning": "That will cost quite a lot of money!",
-      "note": "花 is the source verb 'to spend (time or money).' In this context, 這得花不少錢 is naturally translated as 'That will cost quite a lot of money.' 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
+      "note": "花 is the lesson verb 'to spend (time or money).' In this context, 這得花不少錢 is naturally translated as 'That will cost quite a lot of money.' 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
       "tokens": [
         "這得",
         "花不少錢"
@@ -1720,7 +1720,7 @@ const unit:UnitData = {
       "text": "對，不過我有獎學金。",
       "pinyin": "Duì, búguò wǒ yǒu jiǎngxuéjīn.",
       "meaning": "Right, but I have a scholarship.",
-      "note": "This preserves the source contrast: the study plan costs a lot, but the speaker has a scholarship. 不過 is review from Unit 33.",
+      "note": "This preserves the contrast: the study plan costs a lot, but the speaker has a scholarship. 不過 is review from Unit 33.",
       "tokens": [
         "對",
         "不過我有獎學金"
@@ -1730,7 +1730,7 @@ const unit:UnitData = {
       "text": "要是成績不好，就沒獎學金了。你呢？",
       "pinyin": "Yàoshi chéngjī bù hǎo, jiù méi jiǎngxuéjīn le. Nǐ ne?",
       "meaning": "If my grades are poor, then I won't have a scholarship anymore. And you?",
-      "note": "This completes the source speaker turn. 要是…就… is the earlier condition pattern; the final 了 marks the changed result, and 你呢？ hands the conversation back to the other speaker.",
+      "note": "This completes the speaker turn. 要是…就… is the earlier condition pattern; the final 了 marks the changed result, and 你呢？ hands the conversation back to the other speaker.",
       "tokens": [
         "要是成績不好",
         "就沒獎學金了",

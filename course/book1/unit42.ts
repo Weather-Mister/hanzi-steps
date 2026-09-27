@@ -406,7 +406,7 @@ const unit:UnitData = {
         {
           "id": "u42-spring-s2",
           "type": "select",
-          "prompt": "Why does the source speaker prefer spring?",
+          "prompt": "Why does the speaker prefer spring?",
           "options": [
             "because the speaker is sensitive to cold",
             "because the speaker prefers cold winter weather",
@@ -700,7 +700,7 @@ const unit:UnitData = {
     {
       "id": "u42-seasons",
       "title": "My Seasons and Summer",
-      "subtitle": "Use weather and seasons in source-style transfer.",
+      "subtitle": "Use weather and seasons in personal transfer.",
       "chars": [],
       "minutes": "12–15 min",
       "unitId": "unit-42",
@@ -796,7 +796,7 @@ const unit:UnitData = {
             "我最喜歡秋天。"
           ],
           "answer": "臺灣夏天天氣很熱。",
-          "explanation": "This sentence directly reports Taiwan summer weather. The preceding source-transfer card still instructs the learner to write the full findings in Chinese."
+          "explanation": "This sentence directly reports Taiwan summer weather. The preceding personal-transfer card still instructs the learner to write the full findings in Chinese."
         },
         {
           "id": "u42-seasons-o1",
@@ -1549,7 +1549,7 @@ const unit:UnitData = {
       "text": "外面風那麼大，我覺得今天比昨天冷。",
       "pinyin": "Wàimiàn fēng nàme dà, wǒ juéde jīntiān bǐ zuótiān lěng.",
       "meaning": "The wind outside is so strong; I think today is colder than yesterday.",
-      "note": "This preserves the safe first clause of B1L14-D1T01. 比 is prior review.",
+      "note": "This keeps the first clause while using only already-taught characters. 比 is prior review.",
       "tokens": [
         "外面風那麼大",
         "我覺得",
@@ -1560,7 +1560,7 @@ const unit:UnitData = {
       "text": "很高的山會下雪。",
       "pinyin": "Hěn gāo de shān huì xiàxuě.",
       "meaning": "It can snow on very high mountains.",
-      "note": "Learner-safe preservation of the weather claim in B1L14-D1T02 without requiring 玉山 or 美國.",
+      "note": "This keeps the weather claim without requiring the untaught place-name characters 玉山 or 美國.",
       "tokens": [
         "很高的山",
         "會下雪"
@@ -1570,7 +1570,7 @@ const unit:UnitData = {
       "text": "下雪的時候，我常去山上滑雪。",
       "pinyin": "Xiàxuě de shíhou, wǒ cháng qù shānshàng huáxuě.",
       "meaning": "When it snows, I often go skiing in the mountains.",
-      "note": "Source B1L14-D1T03; …的時候 is review.",
+      "note": "…的時候 is review here.",
       "tokens": [
         "下雪的時候",
         "我常去山上滑雪"
@@ -1589,7 +1589,7 @@ const unit:UnitData = {
       "text": "我怕冷。我比較喜歡春天。",
       "pinyin": "Wǒ pà lěng. Wǒ bǐjiào xǐhuān chūntiān.",
       "meaning": "I'm sensitive to the cold. I prefer spring.",
-      "note": "Source B1L14-D1T04.",
+      "note": "Seasonal preference sentence.",
       "tokens": [
         "我怕冷",
         "我比較喜歡春天"
@@ -1599,7 +1599,7 @@ const unit:UnitData = {
       "text": "春天不錯，天氣很舒服。",
       "pinyin": "Chūntiān búcuò, tiānqì hěn shūfu.",
       "meaning": "Spring is nice; the weather is comfortable.",
-      "note": "Exact B1L14-D1T05; all support is already known.",
+      "note": "All support in this sentence is already known.",
       "tokens": [
         "春天不錯",
         "天氣很舒服"
@@ -1609,7 +1609,7 @@ const unit:UnitData = {
       "text": "冬天太冷了。",
       "pinyin": "Dōngtiān tài lěng le.",
       "meaning": "Winter is too cold.",
-      "note": "Source-supported seasonal comment; 太…了 is review.",
+      "note": "Seasonal comment; 太…了 is review.",
       "tokens": [
         "冬天",
         "太冷了"
@@ -1631,7 +1631,7 @@ const unit:UnitData = {
       "text": "我最喜歡秋天，最不喜歡冬天。",
       "pinyin": "Wǒ zuì xǐhuān qiūtiān, zuì bù xǐhuān dōngtiān.",
       "meaning": "I like autumn the most and winter the least.",
-      "note": "Uses prior 最 to support the source A001 most/least preference task.",
+      "note": "Uses prior 最 for the personal most/least preference task.",
       "tokens": [
         "我最喜歡秋天",
         "最不喜歡冬天"
@@ -1671,7 +1671,7 @@ const unit:UnitData = {
       "text": "我的國家夏天很熱，冬天很冷。",
       "pinyin": "Wǒ de guójiā xiàtiān hěn rè, dōngtiān hěn lěng.",
       "meaning": "In my country, summers are hot and winters are cold.",
-      "note": "Source-transfer instruction (A001): This sentence is only a model. Before continuing, describe the climate of your own home country/place in Chinese using the seasons you know. Then say which season you personally like most and least, and explain your own reason with 因為…所以…. Say the answer aloud or write it on paper; do not copy the model unless it is genuinely true for you.",
+      "note": "Personal transfer: This sentence is only a model. Before continuing, describe the climate of your own home country/place in Chinese using the seasons you know. Then say which season you personally like most and least, and explain your own reason with 因為…所以…. Say the answer aloud or write it on paper; do not copy the model unless it is genuinely true for you.",
       "tokens": [
         "我的國家",
         "夏天很熱",
@@ -1682,7 +1682,7 @@ const unit:UnitData = {
       "text": "因為我怕冷，所以我比較喜歡春天。",
       "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
       "meaning": "Because I'm sensitive to the cold, I prefer spring.",
-      "note": "A001 personal-transfer reminder: The model shows how to give a reason with 因為…所以…. Your own transfer answer must name your most- and least-liked seasons and give your own reason; the fixed spring sentence is practice, not a substitute for your personal response.",
+      "note": "Personal transfer reminder: The model shows how to give a reason with 因為…所以…. Your own transfer answer must name your most- and least-liked seasons and give your own reason; the fixed spring sentence is practice, not a substitute for your personal response.",
       "tokens": [
         "因為我怕冷",
         "所以我比較喜歡春天"
@@ -1692,7 +1692,7 @@ const unit:UnitData = {
       "text": "臺灣夏天天氣很熱。",
       "pinyin": "Táiwān xiàtiān tiānqì hěn rè.",
       "meaning": "Taiwan's summer weather is hot.",
-      "note": "Source A005 weather model.",
+      "note": "Weather model for the final transfer task.",
       "tokens": [
         "臺灣夏天",
         "天氣很熱"
@@ -1702,7 +1702,7 @@ const unit:UnitData = {
       "text": "夏天我常吃水果，也常出去玩。",
       "pinyin": "Xiàtiān wǒ cháng chī shuǐguǒ, yě cháng chūqù wán.",
       "meaning": "In summer I often eat fruit and also often go out.",
-      "note": "Source-transfer instruction: discuss summer weather, one distinctive feature, common fruit/food, and a common activity; then write your findings in Chinese on paper. This card is a model, not the only acceptable content.",
+      "note": "Personal transfer: discuss summer weather, one distinctive feature, common fruit/food, and a common activity; then write your findings in Chinese on paper. This card is a model, not the only acceptable content.",
       "tokens": [
         "夏天",
         "我常吃水果",

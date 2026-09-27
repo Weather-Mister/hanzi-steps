@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "cyan",
     "label": "Renting & rooms",
     "title": "A Place to Rent",
-    "description": "Begin Lesson 11 with renting and the home: landlords, rooms, left/right location, nearby places, walking time, 來 + activity, and the single-sentence 就 that marks unexpectedly little time or distance.",
+    "description": "Begin this lesson with renting and the home: landlords, rooms, left/right location, nearby places, walking time, 來 + activity, and the single-sentence 就 that marks unexpectedly little time or distance.",
     "chars": [
       "租",
       "房",
@@ -57,7 +57,7 @@ const unit:UnitData = {
     {
       "id": "u32-rent",
       "title": "A Place to Rent",
-      "subtitle": "Start Lesson 11 with the core rental words: 租, 房東, 套房, and the 房 character family.",
+      "subtitle": "Start this lesson with the core rental words: 租, 房東, 套房, and the 房 character family.",
       "chars": [
         "租",
         "房",
@@ -169,7 +169,7 @@ const unit:UnitData = {
     {
       "id": "u32-rooms",
       "title": "Living Room, Kitchen, Bathroom",
-      "subtitle": "Build the key room vocabulary from the first rental dialogue.",
+      "subtitle": "Build the key room vocabulary from the first rental conversation.",
       "chars": [
         "客",
         "廚",
@@ -518,7 +518,7 @@ const unit:UnitData = {
         {
           "id": "u32-nearby-s1",
           "type": "select",
-          "prompt": "Which source word means 'to walk'?",
+          "prompt": "Which word means 'to walk'?",
           "options": [
             "走路",
             "超市",
@@ -642,7 +642,7 @@ const unit:UnitData = {
     {
       "id": "u32-quick",
       "title": "Only Five Minutes",
-      "subtitle": "Use the Lesson 11 single-sentence 就 for an event reached sooner than expected, not the earlier conditional 就.",
+      "subtitle": "Use the this lesson single-sentence 就 for an event reached sooner than expected, not the earlier conditional 就.",
       "chars": [],
       "minutes": "8–11 min",
       "unitId": "unit-32",
@@ -673,7 +673,7 @@ const unit:UnitData = {
             "the action is habitual"
           ],
           "answer": "the trip takes less time than expected",
-          "explanation": "This Lesson 11 就 presents the arrival as sooner/easier than expected."
+          "explanation": "This this lesson 就 presents the arrival as sooner/easier than expected."
         },
         {
           "id": "u32-quick-o1",
@@ -783,7 +783,7 @@ const unit:UnitData = {
         {
           "id": "u32-review-g2",
           "type": "select",
-          "prompt": "Which sentence uses the Lesson 11 'sooner than expected' 就?",
+          "prompt": "Which sentence uses the this lesson 'sooner than expected' 就?",
           "options": [
             "走路五分鐘就到了。",
             "要是下雨，我就不去。"
@@ -823,7 +823,7 @@ const unit:UnitData = {
             "右邊"
           ],
           "answer": "左邊",
-          "explanation": "Dialogue I says the kitchen is on the left."
+          "explanation": "the conversation says the kitchen is on the left."
         },
         {
           "id": "u32-review-l2",
@@ -878,7 +878,7 @@ const unit:UnitData = {
             "Measure word for phone calls"
           ],
           "answer": "Preposition 'to', marking the call recipient",
-          "explanation": "Lesson 11 uses 給 as a preposition in 打電話給… 'call …'. This differs from 給你一塊水果, where 給 is the verb 'give'."
+          "explanation": "this lesson uses 給 as a preposition in 打電話給… 'call …'. This differs from 給你一塊水果, where 給 is the verb 'give'."
         },
         {
           "id": "u32-review-s5",
@@ -986,7 +986,7 @@ const unit:UnitData = {
       "meaning": "and then; then",
       "lessonId": "u32-come",
       "core": true,
-      "note": "Orders a later action in the source dialogue: 想想，再打電話."
+      "note": "Orders a later action in the source conversation: 想想，再打電話."
     },
     {
       "text": "電話",
@@ -1001,7 +1001,7 @@ const unit:UnitData = {
       "meaning": "room",
       "lessonId": "u32-sides",
       "core": true,
-      "note": "Vocabulary I lists 房間 as the ordinary noun for a room; 房 and 間 are now both familiar."
+      "note": "the vocabulary set lists 房間 as the ordinary noun for a room; 房 and 間 are now both familiar."
     },
     {
       "text": "請進",
@@ -1009,7 +1009,7 @@ const unit:UnitData = {
       "meaning": "please come in",
       "lessonId": "u32-rent",
       "core": true,
-      "note": "The landlord says 請進 at the start of Dialogue I. 進 means to enter/go in."
+      "note": "The landlord says 請進 at the start of the conversation. 進 means to enter/go in."
     }
   ],
   "reviewVocabulary": [
@@ -1786,7 +1786,7 @@ const unit:UnitData = {
       "text": "還有兩間空房間，一間是套房，一間不是。",
       "pinyin": "Hái yǒu liǎng jiān kōng fángjiān, yì jiān shì tàofáng, yì jiān bú shì.",
       "meaning": "There are two other vacant rooms. One is a suite, and one is not.",
-      "note": "This keeps the Dialogue I wording. 還有 here means 'there are also/still'; 間 counts rooms and 空 kōng means vacant.",
+      "note": "This keeps the the conversation wording. 還有 here means 'there are also/still'; 間 counts rooms and 空 kōng means vacant.",
       "tokens": [
         "還有兩間空房間",
         "一間是套房",
@@ -1797,7 +1797,7 @@ const unit:UnitData = {
       "text": "這裡是客廳，廚房在左邊，右邊有浴室。",
       "pinyin": "Zhèlǐ shì kètīng, chúfáng zài zuǒbiān, yòubiān yǒu yùshì.",
       "meaning": "This is the living room. The kitchen is on the left, and there is a bathroom on the right.",
-      "note": "This preserves the room layout from Dialogue I; the living room itself is not said to be on the left.",
+      "note": "This preserves the room layout from the conversation; the living room itself is not said to be on the left.",
       "tokens": [
         "這裡是客廳",
         "廚房在左邊",
@@ -1818,7 +1818,7 @@ const unit:UnitData = {
       "text": "附近有超市和捷運站。",
       "pinyin": "Fùjìn yǒu chāoshì hé jiéyùnzhàn.",
       "meaning": "Nearby there are a supermarket and an MRT station.",
-      "note": "Dialogue I describes the rental environment with both a supermarket and an MRT station.",
+      "note": "the conversation describes the rental environment with both a supermarket and an MRT station.",
       "tokens": [
         "附近有",
         "超市和捷運站"
@@ -1841,7 +1841,7 @@ const unit:UnitData = {
       "text": "我打電話給房東。",
       "pinyin": "Wǒ dǎ diànhuà gěi fángdōng.",
       "meaning": "I call the landlord.",
-      "note": "打電話 is the ordinary collocation 'make a phone call'. Here 給 is the Lesson 11 preposition 'to', marking the recipient: 打電話給房東. Compare earlier 給你一塊水果, where 給 is the verb 'give'.",
+      "note": "打電話 is the ordinary collocation 'make a phone call'. Here 給 is the this lesson preposition 'to', marking the recipient: 打電話給房東. Compare earlier 給你一塊水果, where 給 is the verb 'give'.",
       "tokens": [
         "我",
         "打電話",
@@ -1904,7 +1904,7 @@ const unit:UnitData = {
       "text": "房子很不錯，這裡很方便。",
       "pinyin": "Fángzi hěn búcuò, zhèlǐ hěn fāngbiàn.",
       "meaning": "The place is pretty good, and this area is very convenient.",
-      "note": "Both 不錯 and 方便 are previously learned words reused directly from Dialogue I.",
+      "note": "Both 不錯 and 方便 are previously learned words reused directly from the conversation.",
       "tokens": [
         "房子很不錯",
         "這裡很方便"
@@ -1914,7 +1914,7 @@ const unit:UnitData = {
       "text": "房間裡面可以上網嗎？",
       "pinyin": "Fángjiān lǐmiàn kěyǐ shàngwǎng ma?",
       "meaning": "Can you access the internet from the room?",
-      "note": "Dialogue I reuses 裡面, 可以 and 上網 while practicing the new rental noun 房間.",
+      "note": "the conversation reuses 裡面, 可以 and 上網 while practicing the new rental noun 房間.",
       "tokens": [
         "房間裡面",
         "可以上網嗎"
@@ -1924,7 +1924,7 @@ const unit:UnitData = {
       "text": "你覺得這間房間怎麼樣？你想租嗎？",
       "pinyin": "Nǐ juéde zhè jiān fángjiān zěnmeyàng? Nǐ xiǎng zū ma?",
       "meaning": "What do you think of this room? Do you want to rent it?",
-      "note": "This keeps the landlord's evaluation-and-decision sequence from Dialogue I, using neutral 你 in the practice version.",
+      "note": "This keeps the landlord's evaluation-and-decision sequence from the conversation, using neutral 你 in the practice version.",
       "tokens": [
         "你覺得這間房間怎麼樣",
         "你想租嗎"
@@ -1934,7 +1934,7 @@ const unit:UnitData = {
       "text": "我回去想想，再打電話給你。",
       "pinyin": "Wǒ huíqù xiǎngxiang, zài dǎ diànhuà gěi nǐ.",
       "meaning": "I'll go back and think about it, then call you.",
-      "note": "This is the closing move of Dialogue I. Here 想想 means 'think it over', extending earlier 想 + VP 'want to'. 再 orders the later action, and 給 in 打電話給你 marks the call recipient.",
+      "note": "This is the closing move of the conversation. Here 想想 means 'think it over', extending earlier 想 + VP 'want to'. 再 orders the later action, and 給 in 打電話給你 marks the call recipient.",
       "tokens": [
         "我回去想想",
         "再打電話給你"
@@ -1944,7 +1944,7 @@ const unit:UnitData = {
       "text": "現在有人住嗎？",
       "pinyin": "Xiànzài yǒu rén zhù ma?",
       "meaning": "Does anyone live here now?",
-      "note": "Dialogue I previews existential 有 here. Unit 33 explains the indefinite-subject grammar formally.",
+      "note": "the conversation previews existential 有 here. Unit 33 explains the indefinite-subject grammar formally.",
       "tokens": [
         "現在",
         "有人住嗎"
@@ -1954,7 +1954,7 @@ const unit:UnitData = {
       "text": "請進。",
       "pinyin": "Qǐng jìn.",
       "meaning": "Please come in.",
-      "note": "This restores the landlord's opening line from Dialogue I. The understood subject is 你; Unit 33 reuses this exact example for zero-pronoun omission.",
+      "note": "This restores the landlord's opening line from the conversation. The understood subject is 你; Unit 33 reuses this exact example for zero-pronoun omission.",
       "tokens": [
         "請進"
       ]

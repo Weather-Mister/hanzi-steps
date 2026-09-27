@@ -11,7 +11,7 @@ const unit:UnitData = {
     "bookReference": "Lesson 13 Dialogue I opening (turns 1–6), Vocabulary I entries 1–8 plus Phrases 19–21.",
     "label": "Birthday calls, returning & remembering",
     "title": "Tomorrow Is Your Birthday",
-    "description": "Begin Lesson 13 with a birthday phone call: identify yourself, greet someone after a long time, say you came back, react to forgetting, and say you remember.",
+    "description": "Begin this lesson with a birthday phone call: identify yourself, greet someone after a long time, say you came back, react to forgetting, and say you remember.",
     "chars": [
       "忘",
       "記",
@@ -69,7 +69,7 @@ const unit:UnitData = {
             "I am also busy."
           ],
           "answer": "This is me speaking.",
-          "explanation": "In the source call, 我就是 identifies the speaker after the caller asks for that person."
+          "explanation": "In the phone call, 我就是 identifies the speaker after the caller asks for that person."
         },
         {
           "id": "u37-phone-o1",
@@ -116,7 +116,7 @@ const unit:UnitData = {
             "謝謝！"
           ],
           "answer": "喂，是你嗎？",
-          "explanation": "喂 is the already-known phone greeting. The textbook uses the person's name after 喂; Hanzi Steps keeps the line learner-safe."
+          "explanation": "喂 is the already-known phone greeting. The rule here uses the person's name after 喂; Hanzi Steps keeps the line learner-safe."
         }
       ]
     },
@@ -267,7 +267,7 @@ const unit:UnitData = {
             "出國"
           ],
           "answer": "回來",
-          "explanation": "The source line ends with 回來, 'come back'."
+          "explanation": "The sentence ends with 回來, 'come back'."
         },
         {
           "id": "u37-return-s3",
@@ -470,7 +470,7 @@ const unit:UnitData = {
             "回來"
           ],
           "answer": "記得",
-          "explanation": "記得 is the remembered action in the source line."
+          "explanation": "記得 is the remembered action in the sentence."
         }
       ]
     },
@@ -587,12 +587,12 @@ const unit:UnitData = {
             "The caller needs a scholarship."
           ],
           "answer": "Tomorrow is the listener's birthday.",
-          "explanation": "Dialogue I turns 4–6 move from the reason for calling to the birthday reminder and the listener's surprised reaction."
+          "explanation": "the conversation move from the reason for calling to the birthday reminder and the listener's surprised reaction."
         },
         {
           "id": "u37-of-course-s3",
           "type": "select",
-          "prompt": "Which source reply naturally follows 啊，我怎麼忘了！最近太忙了。?",
+          "prompt": "Which reply naturally follows 啊，我怎麼忘了！最近太忙了。?",
           "options": [
             "謝謝你還記得。",
             "我剛從臺東回來。",
@@ -606,7 +606,7 @@ const unit:UnitData = {
     {
       "id": "u37-review",
       "title": "Unit 37 Review",
-      "subtitle": "Retrieve the birthday-call vocabulary, four new characters, and source dialogue foundation.",
+      "subtitle": "Retrieve the birthday-call vocabulary, four new characters, and source conversation foundation.",
       "chars": [
         "忘",
         "記",
@@ -719,7 +719,7 @@ const unit:UnitData = {
         {
           "id": "u37-review-v3",
           "type": "select",
-          "prompt": "In the source reaction, 啊 expresses…",
+          "prompt": "In 啊，我怎麼忘了！, 啊 expresses…",
           "options": [
             "sudden realization",
             "comparison",
@@ -738,7 +738,7 @@ const unit:UnitData = {
             "生日快樂"
           ],
           "answer": "我就是",
-          "explanation": "我就是 is the source phone self-identification formula."
+          "explanation": "我就是 is the phone self-identification formula."
         },
         {
           "id": "u37-review-v5",
@@ -836,7 +836,7 @@ const unit:UnitData = {
       "meaning": "this is me speaking (on the phone)",
       "lessonId": "u37-phone",
       "core": true,
-      "note": "Fixed phone self-identification formula from Lesson 13."
+      "note": "Fixed phone self-identification formula from this lesson."
     },
     {
       "text": "好久不見",
@@ -941,7 +941,7 @@ const unit:UnitData = {
       "zhuyin": "ㄨㄤˋ",
       "meaning": "forget",
       "strokes": 7,
-      "note": "忘 is fourth-tone wàng, 'to forget'. In the source reaction 我怎麼忘了, it means 'How could I forget!'",
+      "note": "忘 is fourth-tone wàng, 'to forget'. In the reaction 我怎麼忘了, it means 'How could I forget!'",
       "memory": "Put 亡 'lost/gone' above 心 'heart': when something is gone from the heart/mind, you 忘 'forget'.",
       "parts": [
         {
@@ -1024,7 +1024,7 @@ const unit:UnitData = {
       "zhuyin": "ㄉㄤ",
       "meaning": "to be; act as; in 當然 'of course'",
       "strokes": 13,
-      "note": "當 is first-tone dāng in 當然 dāngrán, the Lesson 13 word for 'of course / certainly'.",
+      "note": "當 is first-tone dāng in 當然 dāngrán, the this lesson word for 'of course / certainly'.",
       "memory": "Build 尚 on top and 田 below; together they form 當.",
       "parts": [
         {
@@ -1126,7 +1126,7 @@ const unit:UnitData = {
       "text": "喂，是你嗎？",
       "pinyin": "Wèi, shì nǐ ma?",
       "meaning": "Hello, is that you?",
-      "note": "Learner-safe adaptation of the source opening, which uses the addressee's proper name after 喂. The name is omitted so proper-name characters do not become handwriting targets.",
+      "note": "Learner-safe adaptation of the opening, which uses the addressee's proper name after 喂. The name is omitted so proper-name characters do not become handwriting targets.",
       "tokens": [
         "喂",
         "是你嗎"
@@ -1136,7 +1136,7 @@ const unit:UnitData = {
       "text": "是，我就是。",
       "pinyin": "Shì, wǒ jiù shì.",
       "meaning": "Yes, this is he / this is me speaking.",
-      "note": "Source phone formula. Here 我就是 identifies the speaker on the phone; do not generalize it into a new 就是 grammar rule.",
+      "note": "phone formula. Here 我就是 identifies the speaker on the phone; do not generalize it into a new 就是 grammar rule.",
       "tokens": [
         "是",
         "我就是"
@@ -1146,7 +1146,7 @@ const unit:UnitData = {
       "text": "好久不見！",
       "pinyin": "Hǎojiǔ bújiàn!",
       "meaning": "Long time no see!",
-      "note": "Fixed source greeting used when meeting or speaking after a long time.",
+      "note": "Fixed greeting used when meeting or speaking after a long time.",
       "tokens": [
         "好久",
         "不見"
@@ -1166,7 +1166,7 @@ const unit:UnitData = {
       "text": "我剛從臺東回來。",
       "pinyin": "Wǒ gāng cóng Táidōng huílái.",
       "meaning": "I just came back from Taitung.",
-      "note": "Learner-safe core of Dialogue I turn 3. The source first denies going to Hualien; Hanzi Steps keeps that place-name character out of learner-facing Chinese.",
+      "note": "Learner-safe core of the conversation. The source first denies going to Hualien; Hanzi Steps keeps that place-name character out of learner-facing Chinese.",
       "tokens": [
         "我剛",
         "從臺東",
@@ -1177,7 +1177,7 @@ const unit:UnitData = {
       "text": "找我有什麼事？",
       "pinyin": "Zhǎo wǒ yǒu shénme shì?",
       "meaning": "What did you want to see me about?",
-      "note": "Source Dialogue I turn 4. 找我 here is naturally 'look for / come see me'.",
+      "note": "This conversation 找我 here is naturally 'look for / come see me'.",
       "tokens": [
         "找我",
         "有什麼事"
@@ -1187,7 +1187,7 @@ const unit:UnitData = {
       "text": "明天是你的生日，對不對？",
       "pinyin": "Míngtiān shì nǐ de shēngrì, duì bu duì?",
       "meaning": "Tomorrow is your birthday, right?",
-      "note": "Source Dialogue I turn 5. 對不對 is review support, not a new canonical vocabulary item.",
+      "note": "This conversation 對不對 is review support, not a new canonical vocabulary item.",
       "tokens": [
         "明天",
         "是你的生日",
@@ -1198,7 +1198,7 @@ const unit:UnitData = {
       "text": "啊，我怎麼忘了！",
       "pinyin": "A, wǒ zěnme wàng le!",
       "meaning": "Oh! How could I forget!",
-      "note": "Source Dialogue I reaction. 忘了 is learned here as the source chunk 'forgot'; Unit 39 later teaches completed-action verbal 了 as a general system.",
+      "note": "In this reaction, 忘了 is learned as the fixed chunk 'forgot'; Unit 39 later teaches completed-action verbal 了 as a general system.",
       "tokens": [
         "啊",
         "我怎麼",
@@ -1209,7 +1209,7 @@ const unit:UnitData = {
       "text": "最近太忙了。",
       "pinyin": "Zuìjìn tài máng le.",
       "meaning": "I've been too busy lately.",
-      "note": "Source Dialogue I support. This final 了 is already-familiar sentence-final usage; Unit 37 does not introduce a new 了 rule.",
+      "note": "This conversation support. This final 了 is already-familiar sentence-final usage; Unit 37 does not introduce a new 了 rule.",
       "tokens": [
         "最近",
         "太忙了"
@@ -1219,7 +1219,7 @@ const unit:UnitData = {
       "text": "謝謝你還記得。",
       "pinyin": "Xièxie nǐ hái jìde.",
       "meaning": "Thank you for still remembering.",
-      "note": "Source Dialogue I turn 6 with the source's gender-specific second-person form normalized to 你.",
+      "note": "This conversation with the source's gender-specific second-person form normalized to 你.",
       "tokens": [
         "謝謝你",
         "還記得"
@@ -1229,7 +1229,7 @@ const unit:UnitData = {
       "text": "當然記得！",
       "pinyin": "Dāngrán jìde!",
       "meaning": "Of course I remember!",
-      "note": "Source Dialogue I turn 7 opening, used here to close the remembering sequence before Unit 38 continues the turn.",
+      "note": "This conversation opening, used here to close the remembering sequence before Unit 38 continues the turn.",
       "tokens": [
         "當然",
         "記得"
