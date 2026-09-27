@@ -12,7 +12,7 @@ const unit:UnitData = {
     "bookReference": "A Course in Contemporary Chinese, Book 2, Lesson 1, pp. 2–14",
     "label": "Reading a map",
     "title": "Walk with a Map",
-    "description": "Follow the reading: a map, ongoing actions, shops, and alleys.",
+    "description": "Learn to use a map, describe continuing actions, and talk about shops and alleys.",
     "chars": [
       "著",
       "品",
@@ -58,14 +58,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l1-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 下載 mean?",
+          "prompt": "What does 下載 mean here?",
           "options": [
             "download",
             "delete a map",
             "borrow a book"
           ],
           "answer": "download",
-          "explanation": "下載地圖 means save a map onto a phone; 載 here is zài."
+          "explanation": "下載 (xiàzài) means download: save digital information from a network to your device. 載 is pronounced zài in this word. Use 下載 before the thing being downloaded; 下載了 adds completed-action 了."
         },
         {
           "id": "b2u3-l1-w2-explain",
@@ -75,14 +75,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l1-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 地圖 mean?",
+          "prompt": "What does 地圖 mean here?",
           "options": [
             "map",
             "photo album",
             "notebook"
           ],
           "answer": "map",
-          "explanation": "地圖 shows roads and places; it helps you find your way while walking."
+          "explanation": "地圖 (dìtú) means map. 下載地圖 (xiàzài dìtú) means “download a map.” 一張地圖 (yì zhāng dìtú) means “one map”; 張 is the measure word you already use for flat items."
         },
         {
           "id": "b2u3-l1-application",
@@ -114,14 +114,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l2-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 好用 mean?",
+          "prompt": "What does 好用 mean here?",
           "options": [
             "handy; easy to use",
             "delicious",
             "beautiful"
           ],
           "answer": "handy; easy to use",
-          "explanation": "地圖好用嗎？ evaluates usability, not whether it tastes good."
+          "explanation": "好用 (hǎoyòng) means easy to use or handy. 這張地圖很好用。 (Zhè zhāng dìtú hěn hǎoyòng.) means “This map is easy to use.” Ask 地圖好用不好用？ (Dìtú hǎoyòng bù hǎoyòng?) to ask whether it is easy to use."
         },
         {
           "id": "b2u3-l2-model-explain",
@@ -146,11 +146,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 我下載了一張地圖。",
           "options": [
             "I downloaded a map.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "I have not downloaded a map.",
+            "I bought a paper map."
           ],
           "answer": "I downloaded a map.",
-          "explanation": "The complete message says: I downloaded a map."
+          "explanation": "下載 is download; 了 after the verb marks the completed action. 一張地圖 is one map, using the familiar measure word 張. Put what was downloaded after 下載了."
         },
         {
           "id": "b2u3-l2-application",
@@ -209,14 +209,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l3-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 著 mean?",
+          "prompt": "What does 著 mean here?",
           "options": [
             "ongoing action/state marker",
             "completed-action particle",
             "plural suffix"
           ],
           "answer": "ongoing action/state marker",
-          "explanation": "看著地圖 means the looking continues; 著 zhe is neutral tone, not the aspect 了."
+          "explanation": "著 (zhe, neutral tone) follows a verb to show a continuing action or state. 看著地圖 (kànzhe dìtú) means “looking at the map,” with the looking continuing. It does not say that the looking has finished."
         },
         {
           "id": "b2u3-l3-g-ongoing-explain",
@@ -233,7 +233,7 @@ const unit:UnitData = {
             "He will buy a map tomorrow."
           ],
           "answer": "He keeps looking at the map.",
-          "explanation": "著 zhe follows an action verb and describes an ongoing state or continuing action. 沒 can negate this pattern; 了 instead presents a completed change. 看著地圖 means keeping your eyes on the map."
+          "explanation": "著 (zhe, neutral tone) follows the verb and presents an action or state as continuing: 看著 means looking, 拿著 (názhe) means holding. In 他看著地圖往前走, looking at the map continues while he walks. 沒 negates the continuing situation; 不是 does not replace it. In a question, 是不是 can come before the whole verb phrase. 著 is not a marker that an action has finished."
         },
         {
           "id": "b2u3-l3-model-explain",
@@ -245,24 +245,24 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u3-l3-model",
           "tokens": [
+            "走",
+            "往前",
             "地圖",
-            "一張",
-            "了",
-            "下載",
-            "我"
+            "看著",
+            "他"
           ]
         },
         {
           "id": "b2u3-l3-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 我下載了一張地圖。",
+          "prompt": "What does 他看著地圖往前走。 mean?",
           "options": [
-            "I downloaded a map.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "He keeps looking at the map as he walks forward.",
+            "He finishes looking at the map before he walks.",
+            "He walks forward without looking at the map."
           ],
-          "answer": "I downloaded a map.",
-          "explanation": "The complete message says: I downloaded a map."
+          "answer": "He keeps looking at the map as he walks forward.",
+          "explanation": "看著地圖 describes the continuing background action: looking at the map. 往前走 is the movement happening with it: walking forward. 著 stays immediately after 看, before 地圖."
         },
         {
           "id": "b2u3-l3-application",
@@ -275,13 +275,43 @@ const unit:UnitData = {
           ],
           "answer": "Continuing.",
           "explanation": "In this context, Continuing."
+        },
+        {
+          "id": "b2u3-ongoing-negative",
+          "type": "select",
+          "prompt": "他沒拿著地圖。 Which scene fits?",
+          "options": [
+            "He is not holding the map.",
+            "He is holding the map.",
+            "He is downloading a map."
+          ],
+          "answer": "He is not holding the map.",
+          "explanation": "拿著 describes holding; 沒 negates that ongoing situation.",
+          "grammarIds": [
+            "b2u3-l3-ongoing"
+          ]
+        },
+        {
+          "id": "b2u3-ongoing-question",
+          "type": "select",
+          "prompt": "他是不是拿著地圖？ What are you checking?",
+          "options": [
+            "Whether he is holding the map.",
+            "Whether he finished downloading a map.",
+            "Whether he sold a map yesterday."
+          ],
+          "answer": "Whether he is holding the map.",
+          "explanation": "是不是 asks about the continuing state described by 拿著.",
+          "grammarIds": [
+            "b2u3-l3-ongoing"
+          ]
         }
       ]
     },
     {
       "id": "b2u3-l4-lesson",
       "title": "Goods on the street",
-      "subtitle": "Recognize daily necessities in the reading.",
+      "subtitle": "Recognize and describe shops selling daily necessities.",
       "chars": [
         "品"
       ],
@@ -321,14 +351,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l4-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 日用品 mean?",
+          "prompt": "What does 日用品 mean here?",
           "options": [
             "daily necessities",
             "electronic maps",
             "snacks only"
           ],
           "answer": "daily necessities",
-          "explanation": "日用品 are things used in daily life, sold in a shop in the reading."
+          "explanation": "日用品 (rìyòngpǐn) are articles used in daily life: daily necessities. 這家店賣日用品。 (Zhè jiā diàn mài rìyòngpǐn.) means “This shop sells daily necessities.” 日用 describes everyday use and 品 means articles or goods."
         },
         {
           "id": "b2u3-l4-model-explain",
@@ -340,24 +370,24 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u3-l4-model",
           "tokens": [
-            "走",
-            "往前",
-            "地圖",
-            "看著",
-            "他"
+            "日用品",
+            "賣",
+            "店",
+            "家",
+            "這"
           ]
         },
         {
           "id": "b2u3-l4-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 他看著地圖往前走。",
+          "prompt": "What does 這家店賣日用品。 mean?",
           "options": [
-            "He keeps looking at the map as he walks forward.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "This shop sells daily necessities.",
+            "This shop buys daily necessities.",
+            "This shop sells only maps."
           ],
-          "answer": "He keeps looking at the map as he walks forward.",
-          "explanation": "The complete message says: He keeps looking at the map as he walks forward."
+          "answer": "This shop sells daily necessities.",
+          "explanation": "這家店 means this shop, using 家 to count shops. 賣 is sell; 日用品 names what the shop sells."
         },
         {
           "id": "b2u3-l4-application",
@@ -416,14 +446,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l5-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 巷子 mean?",
+          "prompt": "What does 巷子 mean here?",
           "options": [
             "alley; lane",
             "main highway",
             "traffic light"
           ],
           "answer": "alley; lane",
-          "explanation": "The small 巷子 leads off the street; 巷子 is a narrow lane."
+          "explanation": "巷子 (xiàngzi) means alley or narrow lane. 這個巷子裡有一家店。 (Zhège xiàngzi lǐ yǒu yì jiā diàn.) means “There is a shop in this alley.” 裡 places the shop inside the alley."
         },
         {
           "id": "b2u3-l5-w2-explain",
@@ -433,14 +463,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l5-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 經過 mean?",
+          "prompt": "What does 經過 mean here?",
           "options": [
             "pass by; go past",
             "stop inside",
             "leave before"
           ],
           "answer": "pass by; go past",
-          "explanation": "經過兩個巷子 means passing two alleys on the way, not entering them."
+          "explanation": "經過 (jīngguò) means pass by or go past. 經過兩個巷子 (jīngguò liǎng ge xiàngzi) means “pass two alleys.” In directions, this tells you to pass those landmarks, without telling you to turn into either alley."
         },
         {
           "id": "b2u3-l5-model-explain",
@@ -452,24 +482,23 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u3-l5-model",
           "tokens": [
-            "走",
-            "往前",
-            "地圖",
-            "看著",
-            "他"
+            "巷子",
+            "兩個",
+            "經過",
+            "我們"
           ]
         },
         {
           "id": "b2u3-l5-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 他看著地圖往前走。",
+          "prompt": "What does 我們經過兩個巷子。 mean?",
           "options": [
-            "He keeps looking at the map as he walks forward.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "We passed two alleys.",
+            "We turned into the second alley.",
+            "We stopped before the first alley."
           ],
-          "answer": "He keeps looking at the map as he walks forward.",
-          "explanation": "The complete message says: He keeps looking at the map as he walks forward."
+          "answer": "We passed two alleys.",
+          "explanation": "我們 is the subject. 經過 means pass by; 兩個巷子 are the two alleys passed. This sentence does not tell you to enter the second alley. Chinese verbs do not change form to mark tense; the translation assumes a trip being retold."
         },
         {
           "id": "b2u3-l5-application",
@@ -501,14 +530,14 @@ const unit:UnitData = {
         {
           "id": "b2u3-l6-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 發現 mean?",
+          "prompt": "What does 發現 mean here?",
           "options": [
             "discover; notice",
             "forget",
             "choose between"
           ],
           "answer": "discover; notice",
-          "explanation": "看著地圖時發現一家店 means noticing a shop while studying the map."
+          "explanation": "發現 (fāxiàn) means discover or notice something you had not noticed before. 我發現一家店。 (Wǒ fāxiàn yì jiā diàn.) means “I discover a shop.” Put what you discover after 發現."
         },
         {
           "id": "b2u3-l6-model-explain",
@@ -520,23 +549,26 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u3-l6-model",
           "tokens": [
+            "店",
+            "一家",
+            "有",
+            "裡",
             "巷子",
-            "兩個",
-            "經過",
-            "我們"
+            "發現",
+            "我"
           ]
         },
         {
           "id": "b2u3-l6-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 我們經過兩個巷子。",
+          "prompt": "What does 我發現巷子裡有一家店。 mean?",
           "options": [
-            "We passed two alleys.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "I discover a shop in the alley.",
+            "I discover a shop inside the school.",
+            "I discover that there is no shop in the alley."
           ],
-          "answer": "We passed two alleys.",
-          "explanation": "The complete message says: We passed two alleys."
+          "answer": "I discover a shop in the alley.",
+          "explanation": "發現 introduces what you notice. 巷子裡有一家店 means there is a shop in the alley. Combine them to say what you discovered."
         },
         {
           "id": "b2u3-l6-application",
@@ -549,6 +581,23 @@ const unit:UnitData = {
           ],
           "answer": "Notice a shop.",
           "explanation": "In this context, Notice a shop."
+        },
+        {
+          "id": "b2u3-walk-context-explain",
+          "type": "phrase",
+          "phrase": "b2u3-walk-context"
+        },
+        {
+          "id": "b2u3-walk-context-check",
+          "type": "select",
+          "prompt": "我們經過兩個巷子，發現一家賣日用品的店。 What do we discover?",
+          "options": [
+            "A shop selling daily necessities.",
+            "A shop selling only maps.",
+            "Two shops inside the school."
+          ],
+          "answer": "A shop selling daily necessities.",
+          "explanation": "發現 introduces the discovery; 賣日用品的店 identifies the shop. All information is in the sentence."
         }
       ]
     },
@@ -696,98 +745,98 @@ const unit:UnitData = {
         {
           "id": "b2u3-l7-vocab-1",
           "type": "select",
-          "prompt": "In Lesson 1, what does 下載 mean?",
+          "prompt": "What does 下載 mean here?",
           "options": [
             "download",
             "delete a map",
             "borrow a book"
           ],
           "answer": "download",
-          "explanation": "下載地圖 means save a map onto a phone; 載 here is zài."
+          "explanation": "下載 (xiàzài) means download: save digital information from a network to your device. 載 is pronounced zài in this word. Use 下載 before the thing being downloaded; 下載了 adds completed-action 了."
         },
         {
           "id": "b2u3-l7-vocab-2",
           "type": "select",
-          "prompt": "In Lesson 1, what does 地圖 mean?",
+          "prompt": "What does 地圖 mean here?",
           "options": [
             "map",
             "photo album",
             "notebook"
           ],
           "answer": "map",
-          "explanation": "地圖 shows roads and places; it helps you find your way while walking."
+          "explanation": "地圖 (dìtú) means map. 下載地圖 (xiàzài dìtú) means “download a map.” 一張地圖 (yì zhāng dìtú) means “one map”; 張 is the measure word you already use for flat items."
         },
         {
           "id": "b2u3-l7-vocab-3",
           "type": "select",
-          "prompt": "In Lesson 1, what does 好用 mean?",
+          "prompt": "What does 好用 mean here?",
           "options": [
             "handy; easy to use",
             "delicious",
             "beautiful"
           ],
           "answer": "handy; easy to use",
-          "explanation": "地圖好用嗎？ evaluates usability, not whether it tastes good."
+          "explanation": "好用 (hǎoyòng) means easy to use or handy. 這張地圖很好用。 (Zhè zhāng dìtú hěn hǎoyòng.) means “This map is easy to use.” Ask 地圖好用不好用？ (Dìtú hǎoyòng bù hǎoyòng?) to ask whether it is easy to use."
         },
         {
           "id": "b2u3-l7-vocab-4",
           "type": "select",
-          "prompt": "In Lesson 1, what does 著 mean?",
+          "prompt": "What does 著 mean here?",
           "options": [
             "ongoing action/state marker",
             "completed-action particle",
             "plural suffix"
           ],
           "answer": "ongoing action/state marker",
-          "explanation": "看著地圖 means the looking continues; 著 zhe is neutral tone, not the aspect 了."
+          "explanation": "著 (zhe, neutral tone) follows a verb to show a continuing action or state. 看著地圖 (kànzhe dìtú) means “looking at the map,” with the looking continuing. It does not say that the looking has finished."
         },
         {
           "id": "b2u3-l7-vocab-5",
           "type": "select",
-          "prompt": "In Lesson 1, what does 日用品 mean?",
+          "prompt": "What does 日用品 mean here?",
           "options": [
             "daily necessities",
             "electronic maps",
             "snacks only"
           ],
           "answer": "daily necessities",
-          "explanation": "日用品 are things used in daily life, sold in a shop in the reading."
+          "explanation": "日用品 (rìyòngpǐn) are articles used in daily life: daily necessities. 這家店賣日用品。 (Zhè jiā diàn mài rìyòngpǐn.) means “This shop sells daily necessities.” 日用 describes everyday use and 品 means articles or goods."
         },
         {
           "id": "b2u3-l7-vocab-6",
           "type": "select",
-          "prompt": "In Lesson 1, what does 巷子 mean?",
+          "prompt": "What does 巷子 mean here?",
           "options": [
             "alley; lane",
             "main highway",
             "traffic light"
           ],
           "answer": "alley; lane",
-          "explanation": "The small 巷子 leads off the street; 巷子 is a narrow lane."
+          "explanation": "巷子 (xiàngzi) means alley or narrow lane. 這個巷子裡有一家店。 (Zhège xiàngzi lǐ yǒu yì jiā diàn.) means “There is a shop in this alley.” 裡 places the shop inside the alley."
         },
         {
           "id": "b2u3-l7-vocab-7",
           "type": "select",
-          "prompt": "In Lesson 1, what does 經過 mean?",
+          "prompt": "What does 經過 mean here?",
           "options": [
             "pass by; go past",
             "stop inside",
             "leave before"
           ],
           "answer": "pass by; go past",
-          "explanation": "經過兩個巷子 means passing two alleys on the way, not entering them."
+          "explanation": "經過 (jīngguò) means pass by or go past. 經過兩個巷子 (jīngguò liǎng ge xiàngzi) means “pass two alleys.” In directions, this tells you to pass those landmarks, without telling you to turn into either alley."
         },
         {
           "id": "b2u3-l7-vocab-8",
           "type": "select",
-          "prompt": "In Lesson 1, what does 發現 mean?",
+          "prompt": "What does 發現 mean here?",
           "options": [
             "discover; notice",
             "forget",
             "choose between"
           ],
           "answer": "discover; notice",
-          "explanation": "看著地圖時發現一家店 means noticing a shop while studying the map."
+          "explanation": "發現 (fāxiàn) means discover or notice something you had not noticed before. 我發現一家店。 (Wǒ fāxiàn yì jiā diàn.) means “I discover a shop.” Put what you discover after 發現."
         },
         {
           "id": "b2u3-l7-listen-1",
@@ -846,11 +895,26 @@ const unit:UnitData = {
           "prompt": "In 他看著地圖。, what is the meaning?",
           "options": [
             "He keeps looking at the map.",
-            "The two places or actions are unrelated.",
-            "This sentence gives someone’s name."
+            "He has finished looking at the map.",
+            "He will buy a map tomorrow."
           ],
           "answer": "He keeps looking at the map.",
-          "explanation": "著 zhe follows an action verb and describes an ongoing state or continuing action. 沒 can negate this pattern; 了 instead presents a completed change. 看著地圖 means keeping your eyes on the map."
+          "explanation": "著 (zhe, neutral tone) follows the verb and presents an action or state as continuing: 看著 means looking, 拿著 (názhe) means holding. In 他看著地圖往前走, looking at the map continues while he walks. 沒 negates the continuing situation; 不是 does not replace it. In a question, 是不是 can come before the whole verb phrase. 著 is not a marker that an action has finished."
+        },
+        {
+          "id": "b2u3-review-holding",
+          "type": "select",
+          "prompt": "他沒拿著地圖。 What is NOT happening?",
+          "options": [
+            "Holding the map.",
+            "Downloading a map.",
+            "Buying a map."
+          ],
+          "answer": "Holding the map.",
+          "explanation": "沒 negates 拿著, holding.",
+          "grammarIds": [
+            "b2u3-l3-ongoing"
+          ]
         }
       ]
     }
@@ -862,7 +926,7 @@ const unit:UnitData = {
       "meaning": "download",
       "lessonId": "b2u3-l1-lesson",
       "core": true,
-      "note": "下載地圖 means save a map onto a phone; 載 here is zài."
+      "note": "下載 (xiàzài) means download: save digital information from a network to your device. 載 is pronounced zài in this word. Use 下載 before the thing being downloaded; 下載了 adds completed-action 了."
     },
     {
       "text": "地圖",
@@ -870,7 +934,7 @@ const unit:UnitData = {
       "meaning": "map",
       "lessonId": "b2u3-l1-lesson",
       "core": true,
-      "note": "地圖 shows roads and places; it helps you find your way while walking."
+      "note": "地圖 (dìtú) means map. 下載地圖 (xiàzài dìtú) means “download a map.” 一張地圖 (yì zhāng dìtú) means “one map”; 張 is the measure word you already use for flat items."
     },
     {
       "text": "好用",
@@ -878,7 +942,7 @@ const unit:UnitData = {
       "meaning": "handy; easy to use",
       "lessonId": "b2u3-l2-lesson",
       "core": true,
-      "note": "地圖好用嗎？ evaluates usability, not whether it tastes good."
+      "note": "好用 (hǎoyòng) means easy to use or handy. 這張地圖很好用。 (Zhè zhāng dìtú hěn hǎoyòng.) means “This map is easy to use.” Ask 地圖好用不好用？ (Dìtú hǎoyòng bù hǎoyòng?) to ask whether it is easy to use."
     },
     {
       "text": "著",
@@ -886,7 +950,7 @@ const unit:UnitData = {
       "meaning": "ongoing action/state marker",
       "lessonId": "b2u3-l3-lesson",
       "core": true,
-      "note": "看著地圖 means the looking continues; 著 zhe is neutral tone, not the aspect 了."
+      "note": "著 (zhe, neutral tone) follows a verb to show a continuing action or state. 看著地圖 (kànzhe dìtú) means “looking at the map,” with the looking continuing. It does not say that the looking has finished."
     },
     {
       "text": "日用品",
@@ -894,7 +958,7 @@ const unit:UnitData = {
       "meaning": "daily necessities",
       "lessonId": "b2u3-l4-lesson",
       "core": true,
-      "note": "日用品 are things used in daily life, sold in a shop in the reading."
+      "note": "日用品 (rìyòngpǐn) are articles used in daily life: daily necessities. 這家店賣日用品。 (Zhè jiā diàn mài rìyòngpǐn.) means “This shop sells daily necessities.” 日用 describes everyday use and 品 means articles or goods."
     },
     {
       "text": "巷子",
@@ -902,7 +966,7 @@ const unit:UnitData = {
       "meaning": "alley; lane",
       "lessonId": "b2u3-l5-lesson",
       "core": true,
-      "note": "The small 巷子 leads off the street; 巷子 is a narrow lane."
+      "note": "巷子 (xiàngzi) means alley or narrow lane. 這個巷子裡有一家店。 (Zhège xiàngzi lǐ yǒu yì jiā diàn.) means “There is a shop in this alley.” 裡 places the shop inside the alley."
     },
     {
       "text": "經過",
@@ -910,7 +974,7 @@ const unit:UnitData = {
       "meaning": "pass by; go past",
       "lessonId": "b2u3-l5-lesson",
       "core": true,
-      "note": "經過兩個巷子 means passing two alleys on the way, not entering them."
+      "note": "經過 (jīngguò) means pass by or go past. 經過兩個巷子 (jīngguò liǎng ge xiàngzi) means “pass two alleys.” In directions, this tells you to pass those landmarks, without telling you to turn into either alley."
     },
     {
       "text": "發現",
@@ -918,7 +982,7 @@ const unit:UnitData = {
       "meaning": "discover; notice",
       "lessonId": "b2u3-l6-lesson",
       "core": true,
-      "note": "看著地圖時發現一家店 means noticing a shop while studying the map."
+      "note": "發現 (fāxiàn) means discover or notice something you had not noticed before. 我發現一家店。 (Wǒ fāxiàn yì jiā diàn.) means “I discover a shop.” Put what you discover after 發現."
     }
   ],
   "reviewVocabulary": [],
@@ -1066,7 +1130,7 @@ const unit:UnitData = {
       "id": "b2u3-l3-ongoing",
       "title": "Keep an action or state going: 著",
       "pattern": "verb + 著 + object/context",
-      "explanation": "著 zhe follows an action verb and describes an ongoing state or continuing action. 沒 can negate this pattern; 了 instead presents a completed change. 看著地圖 means keeping your eyes on the map.",
+      "explanation": "著 (zhe, neutral tone) follows the verb and presents an action or state as continuing: 看著 means looking, 拿著 (názhe) means holding. In 他看著地圖往前走, looking at the map continues while he walks. 沒 negates the continuing situation; 不是 does not replace it. In a question, 是不是 can come before the whole verb phrase. 著 is not a marker that an action has finished.",
       "examples": [
         {
           "text": "他看著地圖。",
@@ -1074,9 +1138,19 @@ const unit:UnitData = {
           "meaning": "He keeps looking at the map."
         },
         {
-          "text": "他看著我。",
-          "pinyin": "Tā kànzhe wǒ.",
-          "meaning": "He keeps looking at me."
+          "text": "他拿著地圖。",
+          "pinyin": "Tā názhe dìtú.",
+          "meaning": "He is holding the map."
+        },
+        {
+          "text": "他沒拿著地圖。",
+          "pinyin": "Tā méi názhe dìtú.",
+          "meaning": "He is not holding the map."
+        },
+        {
+          "text": "他是不是拿著地圖？",
+          "pinyin": "Tā shì bu shì názhe dìtú?",
+          "meaning": "Is he holding the map?"
         }
       ],
       "remember": "著 is neutral-tone zhe after the verb; it does not mean the action has ended."
@@ -1097,7 +1171,7 @@ const unit:UnitData = {
       "text": "下載",
       "pinyin": "xiàzài",
       "meaning": "download",
-      "note": "下載地圖 means save a map onto a phone; 載 here is zài.",
+      "note": "下載 (xiàzài) means download: save digital information from a network to your device. 載 is pronounced zài in this word. Use 下載 before the thing being downloaded; 下載了 adds completed-action 了.",
       "tokens": [
         "下載"
       ],
@@ -1107,7 +1181,7 @@ const unit:UnitData = {
       "text": "地圖",
       "pinyin": "dìtú",
       "meaning": "map",
-      "note": "地圖 shows roads and places; it helps you find your way while walking.",
+      "note": "地圖 (dìtú) means map. 下載地圖 (xiàzài dìtú) means “download a map.” 一張地圖 (yì zhāng dìtú) means “one map”; 張 is the measure word you already use for flat items.",
       "tokens": [
         "地圖"
       ],
@@ -1117,7 +1191,7 @@ const unit:UnitData = {
       "text": "好用",
       "pinyin": "hǎoyòng",
       "meaning": "handy; easy to use",
-      "note": "地圖好用嗎？ evaluates usability, not whether it tastes good.",
+      "note": "好用 (hǎoyòng) means easy to use or handy. 這張地圖很好用。 (Zhè zhāng dìtú hěn hǎoyòng.) means “This map is easy to use.” Ask 地圖好用不好用？ (Dìtú hǎoyòng bù hǎoyòng?) to ask whether it is easy to use.",
       "tokens": [
         "好用"
       ],
@@ -1127,7 +1201,7 @@ const unit:UnitData = {
       "text": "我下載了一張地圖。",
       "pinyin": "Wǒ xiàzài le yì zhāng dìtú.",
       "meaning": "I downloaded a map.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "下載 is download; 了 after the verb marks the completed action. 一張地圖 is one map, using the familiar measure word 張. Put what was downloaded after 下載了.",
       "tokens": [
         "我",
         "下載",
@@ -1141,41 +1215,17 @@ const unit:UnitData = {
       "text": "著",
       "pinyin": "zhe",
       "meaning": "ongoing action/state marker",
-      "note": "看著地圖 means the looking continues; 著 zhe is neutral tone, not the aspect 了.",
+      "note": "著 (zhe, neutral tone) follows a verb to show a continuing action or state. 看著地圖 (kànzhe dìtú) means “looking at the map,” with the looking continuing. It does not say that the looking has finished.",
       "tokens": [
         "著"
       ],
       "practice": false
     },
     "b2u3-l3-model": {
-      "text": "我下載了一張地圖。",
-      "pinyin": "Wǒ xiàzài le yì zhāng dìtú.",
-      "meaning": "I downloaded a map.",
-      "note": "Rebuild this complete source-aligned message from its words.",
-      "tokens": [
-        "我",
-        "下載",
-        "了",
-        "一張",
-        "地圖"
-      ],
-      "practice": true
-    },
-    "b2u3-l4-word-1": {
-      "text": "日用品",
-      "pinyin": "rìyòngpǐn",
-      "meaning": "daily necessities",
-      "note": "日用品 are things used in daily life, sold in a shop in the reading.",
-      "tokens": [
-        "日用品"
-      ],
-      "practice": false
-    },
-    "b2u3-l4-model": {
       "text": "他看著地圖往前走。",
       "pinyin": "Tā kànzhe dìtú wǎng qián zǒu.",
       "meaning": "He keeps looking at the map as he walks forward.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "看著地圖 describes the continuing background action: looking at the map. 往前走 is the movement happening with it: walking forward. 著 stays immediately after 看, before 地圖.",
       "tokens": [
         "他",
         "看著",
@@ -1183,13 +1233,40 @@ const unit:UnitData = {
         "往前",
         "走"
       ],
+      "practice": true,
+      "grammarIds": [
+        "b2u3-l3-ongoing"
+      ]
+    },
+    "b2u3-l4-word-1": {
+      "text": "日用品",
+      "pinyin": "rìyòngpǐn",
+      "meaning": "daily necessities",
+      "note": "日用品 (rìyòngpǐn) are articles used in daily life: daily necessities. 這家店賣日用品。 (Zhè jiā diàn mài rìyòngpǐn.) means “This shop sells daily necessities.” 日用 describes everyday use and 品 means articles or goods.",
+      "tokens": [
+        "日用品"
+      ],
+      "practice": false
+    },
+    "b2u3-l4-model": {
+      "text": "這家店賣日用品。",
+      "pinyin": "Zhè jiā diàn mài rìyòngpǐn.",
+      "meaning": "This shop sells daily necessities.",
+      "note": "這家店 means this shop, using 家 to count shops. 賣 is sell; 日用品 names what the shop sells.",
+      "tokens": [
+        "這",
+        "家",
+        "店",
+        "賣",
+        "日用品"
+      ],
       "practice": true
     },
     "b2u3-l5-word-1": {
       "text": "巷子",
       "pinyin": "xiàngzi",
       "meaning": "alley; lane",
-      "note": "The small 巷子 leads off the street; 巷子 is a narrow lane.",
+      "note": "巷子 (xiàngzi) means alley or narrow lane. 這個巷子裡有一家店。 (Zhège xiàngzi lǐ yǒu yì jiā diàn.) means “There is a shop in this alley.” 裡 places the shop inside the alley.",
       "tokens": [
         "巷子"
       ],
@@ -1199,41 +1276,17 @@ const unit:UnitData = {
       "text": "經過",
       "pinyin": "jīngguò",
       "meaning": "pass by; go past",
-      "note": "經過兩個巷子 means passing two alleys on the way, not entering them.",
+      "note": "經過 (jīngguò) means pass by or go past. 經過兩個巷子 (jīngguò liǎng ge xiàngzi) means “pass two alleys.” In directions, this tells you to pass those landmarks, without telling you to turn into either alley.",
       "tokens": [
         "經過"
       ],
       "practice": false
     },
     "b2u3-l5-model": {
-      "text": "他看著地圖往前走。",
-      "pinyin": "Tā kànzhe dìtú wǎng qián zǒu.",
-      "meaning": "He keeps looking at the map as he walks forward.",
-      "note": "Rebuild this complete source-aligned message from its words.",
-      "tokens": [
-        "他",
-        "看著",
-        "地圖",
-        "往前",
-        "走"
-      ],
-      "practice": true
-    },
-    "b2u3-l6-word-1": {
-      "text": "發現",
-      "pinyin": "fāxiàn",
-      "meaning": "discover; notice",
-      "note": "看著地圖時發現一家店 means noticing a shop while studying the map.",
-      "tokens": [
-        "發現"
-      ],
-      "practice": false
-    },
-    "b2u3-l6-model": {
       "text": "我們經過兩個巷子。",
       "pinyin": "Wǒmen jīngguò liǎng ge xiàngzi.",
       "meaning": "We passed two alleys.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "我們 is the subject. 經過 means pass by; 兩個巷子 are the two alleys passed. This sentence does not tell you to enter the second alley. Chinese verbs do not change form to mark tense; the translation assumes a trip being retold.",
       "tokens": [
         "我們",
         "經過",
@@ -1242,11 +1295,37 @@ const unit:UnitData = {
       ],
       "practice": true
     },
+    "b2u3-l6-word-1": {
+      "text": "發現",
+      "pinyin": "fāxiàn",
+      "meaning": "discover; notice",
+      "note": "發現 (fāxiàn) means discover or notice something you had not noticed before. 我發現一家店。 (Wǒ fāxiàn yì jiā diàn.) means “I discover a shop.” Put what you discover after 發現.",
+      "tokens": [
+        "發現"
+      ],
+      "practice": false
+    },
+    "b2u3-l6-model": {
+      "text": "我發現巷子裡有一家店。",
+      "pinyin": "Wǒ fāxiàn xiàngzi lǐ yǒu yì jiā diàn.",
+      "meaning": "I discover a shop in the alley.",
+      "note": "發現 introduces what you notice. 巷子裡有一家店 means there is a shop in the alley. Combine them to say what you discovered.",
+      "tokens": [
+        "我",
+        "發現",
+        "巷子",
+        "裡",
+        "有",
+        "一家",
+        "店"
+      ],
+      "practice": true
+    },
     "b2u3-l7-cumulative-1": {
       "text": "我下載了一張地圖。",
       "pinyin": "Wǒ xiàzài le yì zhāng dìtú.",
       "meaning": "I downloaded a map.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "下載 is download; 了 after the verb marks the completed action. 一張地圖 is one map, using the familiar measure word 張. Put what was downloaded after 下載了.",
       "tokens": [
         "我",
         "下載",
@@ -1260,7 +1339,7 @@ const unit:UnitData = {
       "text": "他看著地圖往前走。",
       "pinyin": "Tā kànzhe dìtú wǎng qián zǒu.",
       "meaning": "He keeps looking at the map as he walks forward.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "看著地圖 describes the continuing background action: looking at the map. 往前走 is the movement happening with it: walking forward. 著 stays immediately after 看, before 地圖.",
       "tokens": [
         "他",
         "看著",
@@ -1268,13 +1347,16 @@ const unit:UnitData = {
         "往前",
         "走"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u3-l3-ongoing"
+      ]
     },
     "b2u3-l7-cumulative-3": {
       "text": "我們經過兩個巷子。",
       "pinyin": "Wǒmen jīngguò liǎng ge xiàngzi.",
       "meaning": "We passed two alleys.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "我們 is the subject. 經過 means pass by; 兩個巷子 are the two alleys passed. This sentence does not tell you to enter the second alley. Chinese verbs do not change form to mark tense; the translation assumes a trip being retold.",
       "tokens": [
         "我們",
         "經過",
@@ -1282,9 +1364,31 @@ const unit:UnitData = {
         "巷子"
       ],
       "practice": true
+    },
+    "b2u3-walk-context": {
+      "text": "我們看著地圖往前走，經過兩個巷子，發現一家賣日用品的店。",
+      "pinyin": "Wǒmen kànzhe dìtú wǎng qián zǒu, jīngguò liǎng ge xiàngzi, fāxiàn yì jiā mài rìyòngpǐn de diàn.",
+      "meaning": "We walk forward looking at the map, pass two alleys, and discover a shop selling daily necessities.",
+      "note": "This short practice passage gives the entire scene. 看著地圖 is the continuing background action. 賣日用品的店 is a shop that sells daily necessities: 賣日用品 describes 店, linked with 的.",
+      "tokens": [
+        "我們",
+        "看著",
+        "地圖",
+        "往前",
+        "走",
+        "經過",
+        "兩個",
+        "巷子",
+        "發現",
+        "一家",
+        "賣",
+        "日用品",
+        "的",
+        "店"
+      ],
+      "practice": false
     }
   },
   "revisionStepIds": []
 };
-
 export default unit;

@@ -1,6 +1,20 @@
 // Retired sequences keep their original checkpoint bounds. Never reinterpret an
 // old index as a position in a different lesson or rewrite an existing session.
 export const previousLessonLengths:Record<string,number>={
+ // Book 2 self-containment repair appends practice without moving old checkpoints.
+ 'b2u1-l4-lesson':8,
+ 'b2u1-l6-lesson':6,
+ 'b2u1-l7-lesson':27,
+ 'b2u2-l4-lesson':17,
+ 'b2u2-l6-lesson':15,
+ 'b2u2-l7-lesson':39,
+ 'b2u3-l3-lesson':13,
+ 'b2u3-l6-lesson':6,
+ 'b2u3-l7-lesson':27,
+ 'b2u4-l2-lesson':8,
+ 'b2u4-l3-lesson':13,
+ 'b2u4-l6-lesson':8,
+ 'b2u4-l7-lesson':40,
  // Units 21–25 were extended by appending practice; their existing completed
  // checkpoints keep credit at the old lengths. Partial indexes still refer to the same steps.
  'u21-soften':10,
