@@ -7,7 +7,7 @@ const book1=course.modules.filter(module=>module.bookId==='book-1');
 
 const internalKeys=new Set([
   'id','bookId','unitId','lessonId','reviewLessonId','bookReference','grammarIds',
-  'revisionStepIds','reviewGrammar','lessonIds','ref','kind','theme','layout','visualScene'
+  'revisionStepIds','reviewGrammar','lessonIds','ref','kind','theme','layout','visualScene','phrase','grammar'
 ]);
 
 function collect(value,path=[],out=[]){
