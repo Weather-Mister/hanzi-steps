@@ -89,14 +89,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l1-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 餓 mean?",
+          "prompt": "What does 餓 mean here?",
           "options": [
             "hungry",
             "thirsty",
             "full"
           ],
           "answer": "hungry",
-          "explanation": "覺得有點餓 means “feel a little hungry,” a reason to eat noodles."
+          "explanation": "餓 (è) means hungry. 我有一點餓。 (Wǒ yǒu yìdiǎn è.) means “I am a little hungry.” 有一點 softens the degree; 我餓了 (wǒ è le) says “I am hungry now.”"
         },
         {
           "id": "b2u4-l1-w2-explain",
@@ -106,14 +106,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l1-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 麵店 mean?",
+          "prompt": "What does 麵店 mean here?",
           "options": [
             "noodle shop",
             "stationery shop",
             "bank"
           ],
           "answer": "noodle shop",
-          "explanation": "They eat 牛肉麵 in a 麵店; this names a noodle restaurant."
+          "explanation": "麵店 (miàn diàn) means noodle shop: 麵 is noodles and 店 is shop. 我們去麵店吃麵。 (Wǒmen qù miàn diàn chī miàn.) means “We go to a noodle shop to eat noodles.”"
         },
         {
           "id": "b2u4-l1-application",
@@ -145,14 +145,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l2-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 一邊 mean?",
+          "prompt": "What does 一邊 mean here?",
           "options": [
-            "one side; in 一邊…一邊…, while",
+            "while; marks simultaneous actions",
             "first, then",
             "either…or"
           ],
-          "answer": "one side; in 一邊…一邊…, while",
-          "explanation": "Repeat 一邊 before each action to say both actions occur at the same time."
+          "answer": "while; marks simultaneous actions",
+          "explanation": "In this lesson 一邊 (yìbiān) introduces an action happening at the same time as another. Repeat it before both actions: 一邊吃麵，一邊看地圖 (yìbiān chī miàn, yìbiān kàn dìtú), “eat noodles while looking at the map.” It does not mean first do one, then the other."
         },
         {
           "id": "b2u4-l2-g-simultaneous-explain",
@@ -169,7 +169,7 @@ const unit:UnitData = {
             "I eat only after putting away the map."
           ],
           "answer": "I eat noodles while looking at the map.",
-          "explanation": "Repeat 一邊 before each action that happens at the same time. 不可以 or 不要 can prohibit the two-action combination; 一邊…一邊… is not “first, then.”"
+          "explanation": "一邊 (yìbiān) comes before each of two actions performed by the same person at the same time. Both action phrases follow the shared subject. 不可以 or 不要 before the pattern forbids the combination; 沒 before the pattern says the actions did not happen together. Add 好不好 after the two actions to propose doing them together. This pattern does not mean first one action and then the other."
         },
         {
           "id": "b2u4-l2-model-explain",
@@ -195,11 +195,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 他們一邊吃麵，一邊看地圖。",
           "options": [
             "They eat noodles while looking at the map.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "They look at the map after eating noodles.",
+            "They eat noodles without looking at the map."
           ],
           "answer": "They eat noodles while looking at the map.",
-          "explanation": "The complete message says: They eat noodles while looking at the map."
+          "explanation": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern."
         },
         {
           "id": "b2u4-l2-application",
@@ -212,6 +212,36 @@ const unit:UnitData = {
           ],
           "answer": "At the same time.",
           "explanation": "In this context, At the same time."
+        },
+        {
+          "id": "b2u4-simultaneous-negative",
+          "type": "select",
+          "prompt": "不要一邊走路，一邊看手機。 What is discouraged?",
+          "options": [
+            "Looking at a phone while walking.",
+            "Walking after putting the phone away.",
+            "Looking at a phone while sitting."
+          ],
+          "answer": "Looking at a phone while walking.",
+          "explanation": "不要 forbids the two actions happening together.",
+          "grammarIds": [
+            "b2u4-l2-simultaneous"
+          ]
+        },
+        {
+          "id": "b2u4-simultaneous-question",
+          "type": "select",
+          "prompt": "我們一邊吃麵，一邊看地圖，好不好？ What is proposed?",
+          "options": [
+            "Looking at the map while eating noodles.",
+            "Looking at the map after finishing the noodles.",
+            "Finishing the map before starting the noodles."
+          ],
+          "answer": "Looking at the map while eating noodles.",
+          "explanation": "好不好 asks agreement to the simultaneous actions.",
+          "grammarIds": [
+            "b2u4-l2-simultaneous"
+          ]
         }
       ]
     },
@@ -258,14 +288,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l3-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 離 mean?",
+          "prompt": "What does 離 mean here?",
           "options": [
             "from; at a distance from",
             "toward",
             "inside"
           ],
           "answer": "from; at a distance from",
-          "explanation": "A 離 B 很近 describes the distance between A and B; negate 近/遠, not 離."
+          "explanation": "離 (lí) marks the reference place when stating distance. 學校離這裡很近。 (Xuéxiào lí zhèlǐ hěn jìn.) means “The school is close to here.” Name the place being located, then 離 + reference place, then 很近 or 很遠."
         },
         {
           "id": "b2u4-l3-g-distance-explain",
@@ -282,7 +312,7 @@ const unit:UnitData = {
             "The school is inside the post office."
           ],
           "answer": "The post office is close to the school.",
-          "explanation": "離 marks the reference point for distance. Say 離學校不遠 or 離學校很近. Do not negate 離 directly (*不離學校遠). Ask 遠不遠 or 是不是很遠."
+          "explanation": "Place A + 離 + place B + 遠/近 describes the distance between two places. B is the reference point. 很近 means close and 不遠 means not far. Put 不 before the distance word, not before 離. To ask, say 遠不遠 or 是不是很遠. Unlike 從, which gives the start of movement, 離 measures distance without saying that anyone moves."
         },
         {
           "id": "b2u4-l3-model-explain",
@@ -294,25 +324,23 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u4-l3-model",
           "tokens": [
-            "地圖",
-            "看",
-            "一邊",
-            "吃麵",
-            "一邊",
-            "他們"
+            "不遠",
+            "學校",
+            "離",
+            "麵店"
           ]
         },
         {
           "id": "b2u4-l3-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 他們一邊吃麵，一邊看地圖。",
+          "prompt": "What does 麵店離學校不遠。 mean?",
           "options": [
-            "They eat noodles while looking at the map.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "The noodle shop is not far from school.",
+            "The noodle shop is far from school.",
+            "The noodle shop is inside the school."
           ],
-          "answer": "They eat noodles while looking at the map.",
-          "explanation": "The complete message says: They eat noodles while looking at the map."
+          "answer": "The noodle shop is not far from school.",
+          "explanation": "麵店 is the place being located; 離學校 means “from the school.” 不遠 means “not far.” Put 不 before 遠, not before 離."
         },
         {
           "id": "b2u4-l3-application",
@@ -325,6 +353,36 @@ const unit:UnitData = {
           ],
           "answer": "遠",
           "explanation": "In this context, 遠"
+        },
+        {
+          "id": "b2u4-distance-question",
+          "type": "select",
+          "prompt": "麵店離學校遠不遠？ What is being asked?",
+          "options": [
+            "Whether the noodle shop is far from school.",
+            "Which way to walk to school.",
+            "Whether the noodle shop is inside the school."
+          ],
+          "answer": "Whether the noodle shop is far from school.",
+          "explanation": "遠不遠 asks about distance. 離學校 gives the reference place.",
+          "grammarIds": [
+            "b2u4-l3-distance"
+          ]
+        },
+        {
+          "id": "b2u4-distance-negative",
+          "type": "select",
+          "prompt": "You want to say the noodle shop is not far from school. Which sentence works?",
+          "options": [
+            "麵店離學校不遠。",
+            "麵店不離學校遠。",
+            "麵店離不學校遠。"
+          ],
+          "answer": "麵店離學校不遠。",
+          "explanation": "Negate 遠 with 不遠. Keep 離學校 together as the reference-place phrase.",
+          "grammarIds": [
+            "b2u4-l3-distance"
+          ]
         }
       ]
     },
@@ -372,14 +430,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l4-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 背包 mean?",
+          "prompt": "What does 背包 mean here?",
           "options": [
             "backpack",
             "notebook",
             "wallet"
           ],
           "answer": "backpack",
-          "explanation": "A 背包 is a bag worn on the back; the walker in the story wants to buy one."
+          "explanation": "背包 (bēibāo) means backpack. Read 背 as first-tone bēi in this word. 我想買一個背包。 (Wǒ xiǎng mǎi yí ge bēibāo.) means “I want to buy a backpack.” Use 個 to count backpacks."
         },
         {
           "id": "b2u4-l4-w2-explain",
@@ -414,14 +472,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l4-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 正好 mean?",
+          "prompt": "What does 正好 mean here?",
           "options": [
             "just; happen to",
             "far too late",
             "not yet"
           ],
           "answer": "just; happen to",
-          "explanation": "正好想買 means happen to want to buy one at that moment."
+          "explanation": "正好 (zhènghǎo) here means happen to or just at the right time. 我正好想買背包。 (Wǒ zhènghǎo xiǎng mǎi bēibāo.) means “I happen to want to buy a backpack.” 正好 goes before 想買 and connects the wish to the present opportunity."
         },
         {
           "id": "b2u4-l4-model-explain",
@@ -433,23 +491,25 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u4-l4-model",
           "tokens": [
-            "不遠",
-            "學校",
-            "離",
-            "麵店"
+            "背包",
+            "一個",
+            "買",
+            "想",
+            "正好",
+            "我"
           ]
         },
         {
           "id": "b2u4-l4-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 麵店離學校不遠。",
+          "prompt": "What does 我正好想買一個背包。 mean?",
           "options": [
-            "The noodle shop is not far from school.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "I happen to want to buy a backpack.",
+            "I have already bought a backpack.",
+            "I happen to want to sell a backpack."
           ],
-          "answer": "The noodle shop is not far from school.",
-          "explanation": "The complete message says: The noodle shop is not far from school."
+          "answer": "I happen to want to buy a backpack.",
+          "explanation": "正好 goes before 想買 to say the wish fits the present opportunity. 一個背包 means one backpack; 想買 expresses a wish, not an already completed purchase."
         },
         {
           "id": "b2u4-l4-application",
@@ -509,14 +569,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l5-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 筆 mean?",
+          "prompt": "What does 筆 mean here?",
           "options": [
             "pen; writing instrument",
             "a backpack",
             "a receipt"
           ],
           "answer": "pen; writing instrument",
-          "explanation": "筆 is the noun “pen”; it needs a classifier when counted."
+          "explanation": "筆 (bǐ) means pen or writing instrument. 我想買筆。 (Wǒ xiǎng mǎi bǐ.) means “I want to buy pens.” The next card teaches how to count them."
         },
         {
           "id": "b2u4-l5-w2-explain",
@@ -551,14 +611,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l5-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 枝 mean?",
+          "prompt": "What does 枝 mean here?",
           "options": [
             "measure word for pens",
             "a pencil case",
             "a notebook"
           ],
           "answer": "measure word for pens",
-          "explanation": "兩枝筆 counts two pens; 枝 is a classifier, not the noun “pen.”"
+          "explanation": "枝 (zhī) is the measure word for pens here. 一枝筆 (yì zhī bǐ) is one pen; 兩枝筆 (liǎng zhī bǐ) is two pens. The order is number + 枝 + 筆. 枝 counts the items; 筆 names them."
         },
         {
           "id": "b2u4-l5-w3-explain",
@@ -568,14 +628,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l5-w3-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 本子 mean?",
+          "prompt": "What does 本子 mean here?",
           "options": [
             "notebook",
             "a pen",
             "a street map"
           ],
           "answer": "notebook",
-          "explanation": "一本本子 is one notebook; 本 is the earlier Book 1 classifier."
+          "explanation": "本子 (běnzi) means notebook. 一本本子 (yì běn běnzi) is one notebook. The first 本 is the measure word for books; the 本 in 本子 is part of the noun. Keep both: 一 + 本 + 本子."
         },
         {
           "id": "b2u4-l5-model-explain",
@@ -587,23 +647,26 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u4-l5-model",
           "tokens": [
-            "不遠",
-            "學校",
-            "離",
-            "麵店"
+            "本子",
+            "一本",
+            "和",
+            "筆",
+            "兩枝",
+            "買了",
+            "她"
           ]
         },
         {
           "id": "b2u4-l5-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 麵店離學校不遠。",
+          "prompt": "What does 她買了兩枝筆和一本本子。 mean?",
           "options": [
-            "The noodle shop is not far from school.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "She bought two pens and one notebook.",
+            "She bought two notebooks and one pen.",
+            "She wants to buy two pens but has not bought them."
           ],
-          "answer": "The noodle shop is not far from school.",
-          "explanation": "The complete message says: The noodle shop is not far from school."
+          "answer": "She bought two pens and one notebook.",
+          "explanation": "兩枝筆 counts pens with 枝. 一本本子 counts a notebook with 本; 本子 is the noun. 和 joins both things bought."
         },
         {
           "id": "b2u4-l5-application",
@@ -622,7 +685,7 @@ const unit:UnitData = {
     {
       "id": "b2u4-l6-lesson",
       "title": "Finally, on Shida Road",
-      "subtitle": "Close the reading and retell the trip.",
+      "subtitle": "Describe the final purchases and a location on Shida Road.",
       "chars": [],
       "minutes": "8–12 min",
       "unitId": "book-2-unit-4",
@@ -635,14 +698,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l6-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 最後 mean?",
+          "prompt": "What does 最後 mean here?",
           "options": [
             "finally; in the end",
             "at first",
             "at the same time"
           ],
           "answer": "finally; in the end",
-          "explanation": "最後 tells what happened at the end of the shopping trip."
+          "explanation": "最後 (zuìhòu) means finally or in the end. 最後她買了兩枝筆。 (Zuìhòu tā mǎi le liǎng zhī bǐ.) means “Finally she bought two pens.” 最後 puts this event at the end of a sequence."
         },
         {
           "id": "b2u4-l6-w2-explain",
@@ -652,14 +715,14 @@ const unit:UnitData = {
         {
           "id": "b2u4-l6-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 師大路上 mean?",
+          "prompt": "What does 師大路上 mean here?",
           "options": [
             "on Shida Road",
             "inside NTNU",
             "at the post office"
           ],
           "answer": "on Shida Road",
-          "explanation": "A place 師大路上 is on Shida Road, the shopping street in the reading."
+          "explanation": "師大路上 (Shīdà Lù shàng) means on Shida Road. 師大路 is the road name and 上 locates something along it. 師大路上有很多店。 (Shīdà Lù shàng yǒu hěn duō diàn.) means “There are many shops on Shida Road.” It does not mean inside the university."
         },
         {
           "id": "b2u4-l6-model-explain",
@@ -687,11 +750,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 最後她買了兩枝筆和一本本子。",
           "options": [
             "Finally she bought two pens and one notebook.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Finally she bought one pen and two notebooks.",
+            "Finally she bought two notebooks and two pens."
           ],
           "answer": "Finally she bought two pens and one notebook.",
-          "explanation": "The complete message says: Finally she bought two pens and one notebook."
+          "explanation": "最後 means finally. 買了 marks the purchase. 兩枝筆 is two pens; 一本本子 is one notebook. 和 joins the two purchases. Use 枝 for pens and 本 for notebooks."
         },
         {
           "id": "b2u4-l6-application",
@@ -704,6 +767,23 @@ const unit:UnitData = {
           ],
           "answer": "最後",
           "explanation": "In this context, 最後"
+        },
+        {
+          "id": "b2u4-shopping-context-explain",
+          "type": "phrase",
+          "phrase": "b2u4-shopping-context"
+        },
+        {
+          "id": "b2u4-shopping-context-check",
+          "type": "select",
+          "prompt": "他買了一個背包。她買了兩枝筆和一本本子。 What did the woman buy?",
+          "options": [
+            "Two pens and one notebook.",
+            "One backpack.",
+            "Two notebooks and one pen."
+          ],
+          "answer": "Two pens and one notebook.",
+          "explanation": "她 marks the woman; her purchases follow 買了. The backpack belongs to the man in the first sentence."
         }
       ]
     },
@@ -858,134 +938,134 @@ const unit:UnitData = {
         {
           "id": "b2u4-l7-vocab-1",
           "type": "select",
-          "prompt": "In Lesson 1, what does 餓 mean?",
+          "prompt": "What does 餓 mean here?",
           "options": [
             "hungry",
             "thirsty",
             "full"
           ],
           "answer": "hungry",
-          "explanation": "覺得有點餓 means “feel a little hungry,” a reason to eat noodles."
+          "explanation": "餓 (è) means hungry. 我有一點餓。 (Wǒ yǒu yìdiǎn è.) means “I am a little hungry.” 有一點 softens the degree; 我餓了 (wǒ è le) says “I am hungry now.”"
         },
         {
           "id": "b2u4-l7-vocab-2",
           "type": "select",
-          "prompt": "In Lesson 1, what does 麵店 mean?",
+          "prompt": "What does 麵店 mean here?",
           "options": [
             "noodle shop",
             "stationery shop",
             "bank"
           ],
           "answer": "noodle shop",
-          "explanation": "They eat 牛肉麵 in a 麵店; this names a noodle restaurant."
+          "explanation": "麵店 (miàn diàn) means noodle shop: 麵 is noodles and 店 is shop. 我們去麵店吃麵。 (Wǒmen qù miàn diàn chī miàn.) means “We go to a noodle shop to eat noodles.”"
         },
         {
           "id": "b2u4-l7-vocab-3",
           "type": "select",
-          "prompt": "In Lesson 1, what does 一邊 mean?",
+          "prompt": "What does 一邊 mean here?",
           "options": [
-            "one side; in 一邊…一邊…, while",
+            "while; marks simultaneous actions",
             "first, then",
             "either…or"
           ],
-          "answer": "one side; in 一邊…一邊…, while",
-          "explanation": "Repeat 一邊 before each action to say both actions occur at the same time."
+          "answer": "while; marks simultaneous actions",
+          "explanation": "In this lesson 一邊 (yìbiān) introduces an action happening at the same time as another. Repeat it before both actions: 一邊吃麵，一邊看地圖 (yìbiān chī miàn, yìbiān kàn dìtú), “eat noodles while looking at the map.” It does not mean first do one, then the other."
         },
         {
           "id": "b2u4-l7-vocab-4",
           "type": "select",
-          "prompt": "In Lesson 1, what does 離 mean?",
+          "prompt": "What does 離 mean here?",
           "options": [
             "from; at a distance from",
             "toward",
             "inside"
           ],
           "answer": "from; at a distance from",
-          "explanation": "A 離 B 很近 describes the distance between A and B; negate 近/遠, not 離."
+          "explanation": "離 (lí) marks the reference place when stating distance. 學校離這裡很近。 (Xuéxiào lí zhèlǐ hěn jìn.) means “The school is close to here.” Name the place being located, then 離 + reference place, then 很近 or 很遠."
         },
         {
           "id": "b2u4-l7-vocab-5",
           "type": "select",
-          "prompt": "In Lesson 1, what does 背包 mean?",
+          "prompt": "What does 背包 mean here?",
           "options": [
             "backpack",
             "notebook",
             "wallet"
           ],
           "answer": "backpack",
-          "explanation": "A 背包 is a bag worn on the back; the walker in the story wants to buy one."
+          "explanation": "背包 (bēibāo) means backpack. Read 背 as first-tone bēi in this word. 我想買一個背包。 (Wǒ xiǎng mǎi yí ge bēibāo.) means “I want to buy a backpack.” Use 個 to count backpacks."
         },
         {
           "id": "b2u4-l7-vocab-6",
           "type": "select",
-          "prompt": "In Lesson 1, what does 正好 mean?",
+          "prompt": "What does 正好 mean here?",
           "options": [
             "just; happen to",
             "far too late",
             "not yet"
           ],
           "answer": "just; happen to",
-          "explanation": "正好想買 means happen to want to buy one at that moment."
+          "explanation": "正好 (zhènghǎo) here means happen to or just at the right time. 我正好想買背包。 (Wǒ zhènghǎo xiǎng mǎi bēibāo.) means “I happen to want to buy a backpack.” 正好 goes before 想買 and connects the wish to the present opportunity."
         },
         {
           "id": "b2u4-l7-vocab-7",
           "type": "select",
-          "prompt": "In Lesson 1, what does 筆 mean?",
+          "prompt": "What does 筆 mean here?",
           "options": [
             "pen; writing instrument",
             "a backpack",
             "a receipt"
           ],
           "answer": "pen; writing instrument",
-          "explanation": "筆 is the noun “pen”; it needs a classifier when counted."
+          "explanation": "筆 (bǐ) means pen or writing instrument. 我想買筆。 (Wǒ xiǎng mǎi bǐ.) means “I want to buy pens.” The next card teaches how to count them."
         },
         {
           "id": "b2u4-l7-vocab-8",
           "type": "select",
-          "prompt": "In Lesson 1, what does 枝 mean?",
+          "prompt": "What does 枝 mean here?",
           "options": [
             "measure word for pens",
             "a pencil case",
             "a notebook"
           ],
           "answer": "measure word for pens",
-          "explanation": "兩枝筆 counts two pens; 枝 is a classifier, not the noun “pen.”"
+          "explanation": "枝 (zhī) is the measure word for pens here. 一枝筆 (yì zhī bǐ) is one pen; 兩枝筆 (liǎng zhī bǐ) is two pens. The order is number + 枝 + 筆. 枝 counts the items; 筆 names them."
         },
         {
           "id": "b2u4-l7-vocab-9",
           "type": "select",
-          "prompt": "In Lesson 1, what does 本子 mean?",
+          "prompt": "What does 本子 mean here?",
           "options": [
             "notebook",
             "a pen",
             "a street map"
           ],
           "answer": "notebook",
-          "explanation": "一本本子 is one notebook; 本 is the earlier Book 1 classifier."
+          "explanation": "本子 (běnzi) means notebook. 一本本子 (yì běn běnzi) is one notebook. The first 本 is the measure word for books; the 本 in 本子 is part of the noun. Keep both: 一 + 本 + 本子."
         },
         {
           "id": "b2u4-l7-vocab-10",
           "type": "select",
-          "prompt": "In Lesson 1, what does 最後 mean?",
+          "prompt": "What does 最後 mean here?",
           "options": [
             "finally; in the end",
             "at first",
             "at the same time"
           ],
           "answer": "finally; in the end",
-          "explanation": "最後 tells what happened at the end of the shopping trip."
+          "explanation": "最後 (zuìhòu) means finally or in the end. 最後她買了兩枝筆。 (Zuìhòu tā mǎi le liǎng zhī bǐ.) means “Finally she bought two pens.” 最後 puts this event at the end of a sequence."
         },
         {
           "id": "b2u4-l7-vocab-11",
           "type": "select",
-          "prompt": "In Lesson 1, what does 師大路上 mean?",
+          "prompt": "What does 師大路上 mean here?",
           "options": [
             "on Shida Road",
             "inside NTNU",
             "at the post office"
           ],
           "answer": "on Shida Road",
-          "explanation": "A place 師大路上 is on Shida Road, the shopping street in the reading."
+          "explanation": "師大路上 (Shīdà Lù shàng) means on Shida Road. 師大路 is the road name and 上 locates something along it. 師大路上有很多店。 (Shīdà Lù shàng yǒu hěn duō diàn.) means “There are many shops on Shida Road.” It does not mean inside the university."
         },
         {
           "id": "b2u4-l7-book2-cumulative-1",
@@ -997,7 +1077,7 @@ const unit:UnitData = {
             "At the noodle shop."
           ],
           "answer": "Here.",
-          "explanation": "The sentence or source situation means: Here."
+          "explanation": "The sentence shown means: Here."
         },
         {
           "id": "b2u4-l7-book2-cumulative-2",
@@ -1009,19 +1089,19 @@ const unit:UnitData = {
             "The post office."
           ],
           "answer": "The second traffic light.",
-          "explanation": "The sentence or source situation means: The second traffic light."
+          "explanation": "The sentence shown means: The second traffic light."
         },
         {
           "id": "b2u4-l7-book2-cumulative-3",
           "type": "select",
-          "prompt": "Besides a 超商, where can you withdraw cash in the dialogue?",
+          "prompt": "Read: 郵局也可以提錢。 Which place also offers cash withdrawal?",
           "options": [
             "郵局",
             "麵店",
             "路口"
           ],
           "answer": "郵局",
-          "explanation": "The sentence or source situation means: 郵局"
+          "explanation": "郵局 means post office; 也可以提錢 means you can also withdraw money there. The answer comes from the sentence shown."
         },
         {
           "id": "b2u4-l7-book2-cumulative-4",
@@ -1033,7 +1113,7 @@ const unit:UnitData = {
             "NTNU is closed."
           ],
           "answer": "NTNU does not sound far.",
-          "explanation": "The sentence or source situation means: NTNU does not sound far."
+          "explanation": "The sentence shown means: NTNU does not sound far."
         },
         {
           "id": "b2u4-l7-book2-cumulative-5",
@@ -1045,7 +1125,7 @@ const unit:UnitData = {
             "Downloading a new map tomorrow."
           ],
           "answer": "Looking at the map continuously while walking.",
-          "explanation": "The sentence or source situation means: Looking at the map continuously while walking."
+          "explanation": "The sentence shown means: Looking at the map continuously while walking."
         },
         {
           "id": "b2u4-l7-listen-1",
@@ -1131,11 +1211,11 @@ const unit:UnitData = {
           "prompt": "In 我一邊吃麵，一邊看地圖。, what is the meaning?",
           "options": [
             "I eat noodles while looking at the map.",
-            "The two places or actions are unrelated.",
-            "This sentence gives someone’s name."
+            "I look at the map after eating.",
+            "I finish looking at the map before eating."
           ],
           "answer": "I eat noodles while looking at the map.",
-          "explanation": "Repeat 一邊 before each action that happens at the same time. 不可以 or 不要 can prohibit the two-action combination; 一邊…一邊… is not “first, then.”"
+          "explanation": "一邊 (yìbiān) comes before each of two actions performed by the same person at the same time. Both action phrases follow the shared subject. 不可以 or 不要 before the pattern forbids the combination; 沒 before the pattern says the actions did not happen together. Add 好不好 after the two actions to propose doing them together. This pattern does not mean first one action and then the other."
         },
         {
           "id": "b2u4-l7-grammar-2",
@@ -1143,11 +1223,41 @@ const unit:UnitData = {
           "prompt": "In 郵局離學校很近。, what is the meaning?",
           "options": [
             "The post office is close to the school.",
-            "The two places or actions are unrelated.",
-            "This sentence gives someone’s name."
+            "The post office is far from school.",
+            "The school is inside the post office."
           ],
           "answer": "The post office is close to the school.",
-          "explanation": "離 marks the reference point for distance. Say 離學校不遠 or 離學校很近. Do not negate 離 directly (*不離學校遠). Ask 遠不遠 or 是不是很遠."
+          "explanation": "Place A + 離 + place B + 遠/近 describes the distance between two places. B is the reference point. 很近 means close and 不遠 means not far. Put 不 before the distance word, not before 離. To ask, say 遠不遠 or 是不是很遠. Unlike 從, which gives the start of movement, 離 measures distance without saying that anyone moves."
+        },
+        {
+          "id": "b2u4-review-time",
+          "type": "select",
+          "prompt": "他沒一邊吃麵，一邊看地圖。 What does this deny?",
+          "options": [
+            "That he looked at the map while eating noodles.",
+            "That he ever ate noodles.",
+            "That he owns a map."
+          ],
+          "answer": "That he looked at the map while eating noodles.",
+          "explanation": "沒 negates the simultaneous combination; it does not say he never ate noodles.",
+          "grammarIds": [
+            "b2u4-l2-simultaneous"
+          ]
+        },
+        {
+          "id": "b2u4-review-distance-question",
+          "type": "select",
+          "prompt": "郵局離學校遠不遠？ Which reply answers the question?",
+          "options": [
+            "不遠，很近。",
+            "我不知道怎麼走。",
+            "我想買一枝筆。"
+          ],
+          "answer": "不遠，很近。",
+          "explanation": "The question asks about distance, so “not far, quite close” answers it.",
+          "grammarIds": [
+            "b2u4-l3-distance"
+          ]
         }
       ]
     }
@@ -1159,7 +1269,7 @@ const unit:UnitData = {
       "meaning": "hungry",
       "lessonId": "b2u4-l1-lesson",
       "core": true,
-      "note": "覺得有點餓 means “feel a little hungry,” a reason to eat noodles."
+      "note": "餓 (è) means hungry. 我有一點餓。 (Wǒ yǒu yìdiǎn è.) means “I am a little hungry.” 有一點 softens the degree; 我餓了 (wǒ è le) says “I am hungry now.”"
     },
     {
       "text": "麵店",
@@ -1167,15 +1277,15 @@ const unit:UnitData = {
       "meaning": "noodle shop",
       "lessonId": "b2u4-l1-lesson",
       "core": true,
-      "note": "They eat 牛肉麵 in a 麵店; this names a noodle restaurant."
+      "note": "麵店 (miàn diàn) means noodle shop: 麵 is noodles and 店 is shop. 我們去麵店吃麵。 (Wǒmen qù miàn diàn chī miàn.) means “We go to a noodle shop to eat noodles.”"
     },
     {
       "text": "一邊",
       "pinyin": "yìbiān",
-      "meaning": "one side; in 一邊…一邊…, while",
+      "meaning": "while; marks simultaneous actions",
       "lessonId": "b2u4-l2-lesson",
       "core": true,
-      "note": "Repeat 一邊 before each action to say both actions occur at the same time."
+      "note": "In this lesson 一邊 (yìbiān) introduces an action happening at the same time as another. Repeat it before both actions: 一邊吃麵，一邊看地圖 (yìbiān chī miàn, yìbiān kàn dìtú), “eat noodles while looking at the map.” It does not mean first do one, then the other."
     },
     {
       "text": "離",
@@ -1183,7 +1293,7 @@ const unit:UnitData = {
       "meaning": "from; at a distance from",
       "lessonId": "b2u4-l3-lesson",
       "core": true,
-      "note": "A 離 B 很近 describes the distance between A and B; negate 近/遠, not 離."
+      "note": "離 (lí) marks the reference place when stating distance. 學校離這裡很近。 (Xuéxiào lí zhèlǐ hěn jìn.) means “The school is close to here.” Name the place being located, then 離 + reference place, then 很近 or 很遠."
     },
     {
       "text": "背包",
@@ -1191,7 +1301,7 @@ const unit:UnitData = {
       "meaning": "backpack",
       "lessonId": "b2u4-l4-lesson",
       "core": true,
-      "note": "A 背包 is a bag worn on the back; the walker in the story wants to buy one."
+      "note": "背包 (bēibāo) means backpack. Read 背 as first-tone bēi in this word. 我想買一個背包。 (Wǒ xiǎng mǎi yí ge bēibāo.) means “I want to buy a backpack.” Use 個 to count backpacks."
     },
     {
       "text": "正好",
@@ -1199,7 +1309,7 @@ const unit:UnitData = {
       "meaning": "just; happen to",
       "lessonId": "b2u4-l4-lesson",
       "core": true,
-      "note": "正好想買 means happen to want to buy one at that moment."
+      "note": "正好 (zhènghǎo) here means happen to or just at the right time. 我正好想買背包。 (Wǒ zhènghǎo xiǎng mǎi bēibāo.) means “I happen to want to buy a backpack.” 正好 goes before 想買 and connects the wish to the present opportunity."
     },
     {
       "text": "筆",
@@ -1207,7 +1317,7 @@ const unit:UnitData = {
       "meaning": "pen; writing instrument",
       "lessonId": "b2u4-l5-lesson",
       "core": true,
-      "note": "筆 is the noun “pen”; it needs a classifier when counted."
+      "note": "筆 (bǐ) means pen or writing instrument. 我想買筆。 (Wǒ xiǎng mǎi bǐ.) means “I want to buy pens.” The next card teaches how to count them."
     },
     {
       "text": "枝",
@@ -1215,7 +1325,7 @@ const unit:UnitData = {
       "meaning": "measure word for pens",
       "lessonId": "b2u4-l5-lesson",
       "core": true,
-      "note": "兩枝筆 counts two pens; 枝 is a classifier, not the noun “pen.”"
+      "note": "枝 (zhī) is the measure word for pens here. 一枝筆 (yì zhī bǐ) is one pen; 兩枝筆 (liǎng zhī bǐ) is two pens. The order is number + 枝 + 筆. 枝 counts the items; 筆 names them."
     },
     {
       "text": "本子",
@@ -1223,7 +1333,7 @@ const unit:UnitData = {
       "meaning": "notebook",
       "lessonId": "b2u4-l5-lesson",
       "core": true,
-      "note": "一本本子 is one notebook; 本 is the earlier Book 1 classifier."
+      "note": "本子 (běnzi) means notebook. 一本本子 (yì běn běnzi) is one notebook. The first 本 is the measure word for books; the 本 in 本子 is part of the noun. Keep both: 一 + 本 + 本子."
     },
     {
       "text": "最後",
@@ -1231,7 +1341,7 @@ const unit:UnitData = {
       "meaning": "finally; in the end",
       "lessonId": "b2u4-l6-lesson",
       "core": true,
-      "note": "最後 tells what happened at the end of the shopping trip."
+      "note": "最後 (zuìhòu) means finally or in the end. 最後她買了兩枝筆。 (Zuìhòu tā mǎi le liǎng zhī bǐ.) means “Finally she bought two pens.” 最後 puts this event at the end of a sequence."
     },
     {
       "text": "師大路上",
@@ -1239,7 +1349,7 @@ const unit:UnitData = {
       "meaning": "on Shida Road",
       "lessonId": "b2u4-l6-lesson",
       "core": true,
-      "note": "A place 師大路上 is on Shida Road, the shopping street in the reading."
+      "note": "師大路上 (Shīdà Lù shàng) means on Shida Road. 師大路 is the road name and 上 locates something along it. 師大路上有很多店。 (Shīdà Lù shàng yǒu hěn duō diàn.) means “There are many shops on Shida Road.” It does not mean inside the university."
     }
   ],
   "reviewVocabulary": [
@@ -1442,7 +1552,7 @@ const unit:UnitData = {
       "example": {
         "text": "正好",
         "pinyin": "zhènghǎo",
-        "meaning": "just right"
+        "meaning": "just; happen to"
       },
       "practiceBuild": true
     },
@@ -1452,7 +1562,7 @@ const unit:UnitData = {
       "zhuyin": "ㄅㄧˇ",
       "meaning": "pen",
       "strokes": 12,
-      "note": "筆 is a pen in 兩枝筆.",
+      "note": "筆 means pen or writing instrument. You will learn its counting word after this character.",
       "memory": "The bamboo top ⺮ has six strokes, and the writing hand 聿 has six below.",
       "parts": [
         {
@@ -1486,9 +1596,9 @@ const unit:UnitData = {
       ],
       "layout": "stack",
       "example": {
-        "text": "一枝筆",
-        "pinyin": "yì zhī bǐ",
-        "meaning": "a pen"
+        "text": "筆",
+        "pinyin": "bǐ",
+        "meaning": "pen; writing instrument"
       },
       "practiceBuild": true
     },
@@ -1540,7 +1650,7 @@ const unit:UnitData = {
       "id": "b2u4-l2-simultaneous",
       "title": "Two actions at the same time",
       "pattern": "一邊 + action A，一邊 + action B",
-      "explanation": "Repeat 一邊 before each action that happens at the same time. 不可以 or 不要 can prohibit the two-action combination; 一邊…一邊… is not “first, then.”",
+      "explanation": "一邊 (yìbiān) comes before each of two actions performed by the same person at the same time. Both action phrases follow the shared subject. 不可以 or 不要 before the pattern forbids the combination; 沒 before the pattern says the actions did not happen together. Add 好不好 after the two actions to propose doing them together. This pattern does not mean first one action and then the other.",
       "examples": [
         {
           "text": "我一邊吃麵，一邊看地圖。",
@@ -1551,6 +1661,16 @@ const unit:UnitData = {
           "text": "不要一邊走路，一邊看手機。",
           "pinyin": "Bú yào yìbiān zǒulù, yìbiān kàn shǒujī.",
           "meaning": "Do not look at your phone while walking."
+        },
+        {
+          "text": "我們一邊吃麵，一邊看地圖，好不好？",
+          "pinyin": "Wǒmen yìbiān chī miàn, yìbiān kàn dìtú, hǎo bu hǎo?",
+          "meaning": "Shall we look at the map while eating noodles?"
+        },
+        {
+          "text": "他沒一邊吃麵，一邊看地圖。",
+          "pinyin": "Tā méi yìbiān chī miàn, yìbiān kàn dìtú.",
+          "meaning": "He did not look at the map while eating noodles."
         }
       ],
       "remember": "Both actions overlap; keep both 一邊 parts."
@@ -1559,12 +1679,17 @@ const unit:UnitData = {
       "id": "b2u4-l3-distance",
       "title": "Distance between two places: 離",
       "pattern": "place A + 離 + place B + distance (遠/近)",
-      "explanation": "離 marks the reference point for distance. Say 離學校不遠 or 離學校很近. Do not negate 離 directly (*不離學校遠). Ask 遠不遠 or 是不是很遠.",
+      "explanation": "Place A + 離 + place B + 遠/近 describes the distance between two places. B is the reference point. 很近 means close and 不遠 means not far. Put 不 before the distance word, not before 離. To ask, say 遠不遠 or 是不是很遠. Unlike 從, which gives the start of movement, 離 measures distance without saying that anyone moves.",
       "examples": [
         {
           "text": "郵局離學校很近。",
           "pinyin": "Yóujú lí xuéxiào hěn jìn.",
           "meaning": "The post office is close to the school."
+        },
+        {
+          "text": "麵店離學校不遠。",
+          "pinyin": "Miàndiàn lí xuéxiào bù yuǎn.",
+          "meaning": "The noodle shop is not far from school."
         },
         {
           "text": "麵店離學校遠不遠？",
@@ -1601,7 +1726,7 @@ const unit:UnitData = {
       "text": "餓",
       "pinyin": "è",
       "meaning": "hungry",
-      "note": "覺得有點餓 means “feel a little hungry,” a reason to eat noodles.",
+      "note": "餓 (è) means hungry. 我有一點餓。 (Wǒ yǒu yìdiǎn è.) means “I am a little hungry.” 有一點 softens the degree; 我餓了 (wǒ è le) says “I am hungry now.”",
       "tokens": [
         "餓"
       ],
@@ -1611,7 +1736,7 @@ const unit:UnitData = {
       "text": "麵店",
       "pinyin": "miàndiàn",
       "meaning": "noodle shop",
-      "note": "They eat 牛肉麵 in a 麵店; this names a noodle restaurant.",
+      "note": "麵店 (miàn diàn) means noodle shop: 麵 is noodles and 店 is shop. 我們去麵店吃麵。 (Wǒmen qù miàn diàn chī miàn.) means “We go to a noodle shop to eat noodles.”",
       "tokens": [
         "麵店"
       ],
@@ -1620,8 +1745,8 @@ const unit:UnitData = {
     "b2u4-l2-word-1": {
       "text": "一邊",
       "pinyin": "yìbiān",
-      "meaning": "one side; in 一邊…一邊…, while",
-      "note": "Repeat 一邊 before each action to say both actions occur at the same time.",
+      "meaning": "while; marks simultaneous actions",
+      "note": "In this lesson 一邊 (yìbiān) introduces an action happening at the same time as another. Repeat it before both actions: 一邊吃麵，一邊看地圖 (yìbiān chī miàn, yìbiān kàn dìtú), “eat noodles while looking at the map.” It does not mean first do one, then the other.",
       "tokens": [
         "一邊"
       ],
@@ -1631,7 +1756,7 @@ const unit:UnitData = {
       "text": "他們一邊吃麵，一邊看地圖。",
       "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
       "meaning": "They eat noodles while looking at the map.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern.",
       "tokens": [
         "他們",
         "一邊",
@@ -1640,38 +1765,42 @@ const unit:UnitData = {
         "看",
         "地圖"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u4-l2-simultaneous"
+      ]
     },
     "b2u4-l3-word-1": {
       "text": "離",
       "pinyin": "lí",
       "meaning": "from; at a distance from",
-      "note": "A 離 B 很近 describes the distance between A and B; negate 近/遠, not 離.",
+      "note": "離 (lí) marks the reference place when stating distance. 學校離這裡很近。 (Xuéxiào lí zhèlǐ hěn jìn.) means “The school is close to here.” Name the place being located, then 離 + reference place, then 很近 or 很遠.",
       "tokens": [
         "離"
       ],
       "practice": false
     },
     "b2u4-l3-model": {
-      "text": "他們一邊吃麵，一邊看地圖。",
-      "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
-      "meaning": "They eat noodles while looking at the map.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "text": "麵店離學校不遠。",
+      "pinyin": "Miàndiàn lí xuéxiào bù yuǎn.",
+      "meaning": "The noodle shop is not far from school.",
+      "note": "麵店 is the place being located; 離學校 means “from the school.” 不遠 means “not far.” Put 不 before 遠, not before 離.",
       "tokens": [
-        "他們",
-        "一邊",
-        "吃麵",
-        "一邊",
-        "看",
-        "地圖"
+        "麵店",
+        "離",
+        "學校",
+        "不遠"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u4-l3-distance"
+      ]
     },
     "b2u4-l4-word-1": {
       "text": "背包",
       "pinyin": "bēibāo",
       "meaning": "backpack",
-      "note": "A 背包 is a bag worn on the back; the walker in the story wants to buy one.",
+      "note": "背包 (bēibāo) means backpack. Read 背 as first-tone bēi in this word. 我想買一個背包。 (Wǒ xiǎng mǎi yí ge bēibāo.) means “I want to buy a backpack.” Use 個 to count backpacks.",
       "tokens": [
         "背包"
       ],
@@ -1681,22 +1810,24 @@ const unit:UnitData = {
       "text": "正好",
       "pinyin": "zhènghǎo",
       "meaning": "just; happen to",
-      "note": "正好想買 means happen to want to buy one at that moment.",
+      "note": "正好 (zhènghǎo) here means happen to or just at the right time. 我正好想買背包。 (Wǒ zhènghǎo xiǎng mǎi bēibāo.) means “I happen to want to buy a backpack.” 正好 goes before 想買 and connects the wish to the present opportunity.",
       "tokens": [
         "正好"
       ],
       "practice": false
     },
     "b2u4-l4-model": {
-      "text": "麵店離學校不遠。",
-      "pinyin": "Miàndiàn lí xuéxiào bù yuǎn.",
-      "meaning": "The noodle shop is not far from school.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "text": "我正好想買一個背包。",
+      "pinyin": "Wǒ zhènghǎo xiǎng mǎi yí ge bēibāo.",
+      "meaning": "I happen to want to buy a backpack.",
+      "note": "正好 goes before 想買 to say the wish fits the present opportunity. 一個背包 means one backpack; 想買 expresses a wish, not an already completed purchase.",
       "tokens": [
-        "麵店",
-        "離",
-        "學校",
-        "不遠"
+        "我",
+        "正好",
+        "想",
+        "買",
+        "一個",
+        "背包"
       ],
       "practice": true
     },
@@ -1704,7 +1835,7 @@ const unit:UnitData = {
       "text": "筆",
       "pinyin": "bǐ",
       "meaning": "pen; writing instrument",
-      "note": "筆 is the noun “pen”; it needs a classifier when counted.",
+      "note": "筆 (bǐ) means pen or writing instrument. 我想買筆。 (Wǒ xiǎng mǎi bǐ.) means “I want to buy pens.” The next card teaches how to count them.",
       "tokens": [
         "筆"
       ],
@@ -1714,7 +1845,7 @@ const unit:UnitData = {
       "text": "枝",
       "pinyin": "zhī",
       "meaning": "measure word for pens",
-      "note": "兩枝筆 counts two pens; 枝 is a classifier, not the noun “pen.”",
+      "note": "枝 (zhī) is the measure word for pens here. 一枝筆 (yì zhī bǐ) is one pen; 兩枝筆 (liǎng zhī bǐ) is two pens. The order is number + 枝 + 筆. 枝 counts the items; 筆 names them.",
       "tokens": [
         "枝"
       ],
@@ -1724,22 +1855,25 @@ const unit:UnitData = {
       "text": "本子",
       "pinyin": "běnzi",
       "meaning": "notebook",
-      "note": "一本本子 is one notebook; 本 is the earlier Book 1 classifier.",
+      "note": "本子 (běnzi) means notebook. 一本本子 (yì běn běnzi) is one notebook. The first 本 is the measure word for books; the 本 in 本子 is part of the noun. Keep both: 一 + 本 + 本子.",
       "tokens": [
         "本子"
       ],
       "practice": false
     },
     "b2u4-l5-model": {
-      "text": "麵店離學校不遠。",
-      "pinyin": "Miàndiàn lí xuéxiào bù yuǎn.",
-      "meaning": "The noodle shop is not far from school.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "text": "她買了兩枝筆和一本本子。",
+      "pinyin": "Tā mǎi le liǎng zhī bǐ hé yì běn běnzi.",
+      "meaning": "She bought two pens and one notebook.",
+      "note": "兩枝筆 counts pens with 枝. 一本本子 counts a notebook with 本; 本子 is the noun. 和 joins both things bought.",
       "tokens": [
-        "麵店",
-        "離",
-        "學校",
-        "不遠"
+        "她",
+        "買了",
+        "兩枝",
+        "筆",
+        "和",
+        "一本",
+        "本子"
       ],
       "practice": true
     },
@@ -1747,7 +1881,7 @@ const unit:UnitData = {
       "text": "最後",
       "pinyin": "zuìhòu",
       "meaning": "finally; in the end",
-      "note": "最後 tells what happened at the end of the shopping trip.",
+      "note": "最後 (zuìhòu) means finally or in the end. 最後她買了兩枝筆。 (Zuìhòu tā mǎi le liǎng zhī bǐ.) means “Finally she bought two pens.” 最後 puts this event at the end of a sequence.",
       "tokens": [
         "最後"
       ],
@@ -1757,7 +1891,7 @@ const unit:UnitData = {
       "text": "師大路上",
       "pinyin": "Shīdà Lù shàng",
       "meaning": "on Shida Road",
-      "note": "A place 師大路上 is on Shida Road, the shopping street in the reading.",
+      "note": "師大路上 (Shīdà Lù shàng) means on Shida Road. 師大路 is the road name and 上 locates something along it. 師大路上有很多店。 (Shīdà Lù shàng yǒu hěn duō diàn.) means “There are many shops on Shida Road.” It does not mean inside the university.",
       "tokens": [
         "師大路上"
       ],
@@ -1767,7 +1901,7 @@ const unit:UnitData = {
       "text": "最後她買了兩枝筆和一本本子。",
       "pinyin": "Zuìhòu tā mǎi le liǎng zhī bǐ hé yì běn běnzi.",
       "meaning": "Finally she bought two pens and one notebook.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "最後 means finally. 買了 marks the purchase. 兩枝筆 is two pens; 一本本子 is one notebook. 和 joins the two purchases. Use 枝 for pens and 本 for notebooks.",
       "tokens": [
         "最後",
         "她",
@@ -1784,7 +1918,7 @@ const unit:UnitData = {
       "text": "他們一邊吃麵，一邊看地圖。",
       "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
       "meaning": "They eat noodles while looking at the map.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern.",
       "tokens": [
         "他們",
         "一邊",
@@ -1793,26 +1927,32 @@ const unit:UnitData = {
         "看",
         "地圖"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u4-l2-simultaneous"
+      ]
     },
     "b2u4-l7-cumulative-2": {
       "text": "麵店離學校不遠。",
       "pinyin": "Miàndiàn lí xuéxiào bù yuǎn.",
       "meaning": "The noodle shop is not far from school.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "麵店 is the place being located; 離學校 means “from the school.” 不遠 means “not far.” Put 不 before 遠, not before 離.",
       "tokens": [
         "麵店",
         "離",
         "學校",
         "不遠"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u4-l3-distance"
+      ]
     },
     "b2u4-l7-cumulative-3": {
       "text": "最後她買了兩枝筆和一本本子。",
       "pinyin": "Zuìhòu tā mǎi le liǎng zhī bǐ hé yì běn běnzi.",
       "meaning": "Finally she bought two pens and one notebook.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "最後 means finally. 買了 marks the purchase. 兩枝筆 is two pens; 一本本子 is one notebook. 和 joins the two purchases. Use 枝 for pens and 本 for notebooks.",
       "tokens": [
         "最後",
         "她",
@@ -1824,6 +1964,36 @@ const unit:UnitData = {
         "本子"
       ],
       "practice": true
+    },
+    "b2u4-shopping-context": {
+      "text": "他們一邊吃麵，一邊看地圖。他正好想買背包，最後買了一個。她買了兩枝筆和一本本子。",
+      "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú. Tā zhènghǎo xiǎng mǎi bēibāo, zuìhòu mǎi le yí ge. Tā mǎi le liǎng zhī bǐ hé yì běn běnzi.",
+      "meaning": "They look at the map while eating noodles. He happens to want a backpack and finally buys one. She buys two pens and one notebook.",
+      "note": "The first sentence describes simultaneous actions. 他 then refers to the male shopper and 她 to the female shopper. 一個 refers back to the backpack; 枝 counts pens and 本 counts notebooks. This is the complete practice passage.",
+      "tokens": [
+        "他們",
+        "一邊",
+        "吃麵",
+        "一邊",
+        "看",
+        "地圖",
+        "他",
+        "正好",
+        "想",
+        "買",
+        "背包",
+        "最後",
+        "買了",
+        "一個",
+        "她",
+        "買了",
+        "兩枝",
+        "筆",
+        "和",
+        "一本",
+        "本子"
+      ],
+      "practice": false
     }
   },
   "revisionStepIds": [
@@ -1834,5 +2004,4 @@ const unit:UnitData = {
     "b2u4-l7-book2-cumulative-5"
   ]
 };
-
 export default unit;

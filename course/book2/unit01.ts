@@ -59,14 +59,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l1-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 路人 mean?",
+          "prompt": "What does 路人 mean here?",
           "options": [
             "passer-by",
             "a traffic light",
             "a road section"
           ],
           "answer": "passer-by",
-          "explanation": "路人 is a person on the street who can help with directions."
+          "explanation": "路人 (lùrén) is a passer-by: a person you meet on the street. 路 means road and 人 means person. You can politely ask a passer-by for help; the word does not mean a tour guide."
         },
         {
           "id": "b2u1-l1-w2-explain",
@@ -76,14 +76,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l1-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 幫忙 mean?",
+          "prompt": "What does 幫忙 mean here?",
           "options": [
             "help; do a favor",
             "be lost",
             "turn left"
           ],
           "answer": "help; do a favor",
-          "explanation": "需要我幫忙嗎？ is a polite offer: “Do you need my help?”"
+          "explanation": "幫忙 (bāngmáng) means help or do a favor. 你需要我幫忙嗎？ (Nǐ xūyào wǒ bāngmáng ma?) means “Do you need my help?” 需要 means need; 我 is the person offering to help."
         },
         {
           "id": "b2u1-l1-w3-explain",
@@ -118,14 +118,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l1-w3-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 迷路 mean?",
+          "prompt": "What does 迷路 mean here?",
           "options": [
             "be lost; lose one’s way",
             "know the route",
             "find a shop"
           ],
           "answer": "be lost; lose one’s way",
-          "explanation": "我好像迷路了 means “I think I am lost”; 迷路 is a separable verb, not a place."
+          "explanation": "迷路 (mílù) means lose your way. 我好像迷路了。 (Wǒ hǎoxiàng mílù le.) means “I seem to have lost my way.” 好像 softens the claim to “seem”; final 了 marks the new situation. 迷路 describes what happened, not a place."
         },
         {
           "id": "b2u1-l1-application",
@@ -157,14 +157,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l2-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 師大 mean?",
+          "prompt": "What does 師大 mean here?",
           "options": [
             "NTNU; Shida (university)",
             "a convenience store",
             "a train station"
           ],
           "answer": "NTNU; Shida (university)",
-          "explanation": "師大 is the short name of National Taiwan Normal University, a destination in this lesson."
+          "explanation": "師大 (Shīdà) is the short name for National Taiwan Normal University (NTNU) in Taipei. Treat it as a place name. It is the destination in our directions examples."
         },
         {
           "id": "b2u1-l2-w2-explain",
@@ -174,14 +174,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l2-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 走 mean?",
+          "prompt": "What does 走 mean here?",
           "options": [
             "walk; go (toward a destination)",
             "arrive at a destination",
             "ride a bicycle"
           ],
           "answer": "walk; go (toward a destination)",
-          "explanation": "到師大怎麼走？ asks which route to take; 走 is the movement, while 到 names the destination."
+          "explanation": "走 (zǒu) means walk or go along a route. 到師大怎麼走？ (Dào Shīdà zěnme zǒu?) means “How do I get to NTNU?” 到師大 names the destination; 怎麼走 asks how to go there. 走 alone does not say that you have arrived."
         },
         {
           "id": "b2u1-l2-model-explain",
@@ -205,11 +205,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 請問，師大怎麼走？",
           "options": [
             "Excuse me, how do I get to NTNU?",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Excuse me, where is the post office?",
+            "I have already reached NTNU."
           ],
           "answer": "Excuse me, how do I get to NTNU?",
-          "explanation": "The complete message says: Excuse me, how do I get to NTNU?"
+          "explanation": "請問 politely opens a question. 師大 names the destination; 怎麼走 asks which way to go. You can also say 到師大怎麼走, putting 到 before the destination."
         },
         {
           "id": "b2u1-l2-application",
@@ -241,14 +241,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l3-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 下 mean?",
+          "prompt": "What does 下 mean here?",
           "options": [
             "next; following (before a measure word)",
             "the previous one",
             "the second one"
           ],
           "answer": "next; following (before a measure word)",
-          "explanation": "下一個路口 means “the next intersection”; 下 precedes 一個 here."
+          "explanation": "下 (xià) before a number and measure word means next or following. 下一個 (xià yí ge) means “the next one.” This is the “next” sense, not the “down” sense. You will combine it with a place in the next card."
         },
         {
           "id": "b2u1-l3-w2-explain",
@@ -258,14 +258,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l3-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 路口 mean?",
+          "prompt": "What does 路口 mean here?",
           "options": [
             "intersection",
             "a road number",
             "the end of a road"
           ],
           "answer": "intersection",
-          "explanation": "下一個路口 means the next street intersection, where you can turn."
+          "explanation": "路口 (lùkǒu) is an intersection, where streets meet. 下一個路口 (xià yí ge lùkǒu) means “the next intersection.” 下一個 tells you which one; 路口 names the place."
         },
         {
           "id": "b2u1-l3-model-explain",
@@ -277,23 +277,24 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u1-l3-model",
           "tokens": [
-            "走",
-            "怎麼",
-            "師大",
-            "請問"
+            "哪裡",
+            "在",
+            "路口",
+            "一個",
+            "下"
           ]
         },
         {
           "id": "b2u1-l3-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 請問，師大怎麼走？",
+          "prompt": "What does 下一個路口在哪裡？ mean?",
           "options": [
-            "Excuse me, how do I get to NTNU?",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Where is the next intersection?",
+            "Where is the previous intersection?",
+            "Where is NTNU?"
           ],
-          "answer": "Excuse me, how do I get to NTNU?",
-          "explanation": "The complete message says: Excuse me, how do I get to NTNU?"
+          "answer": "Where is the next intersection?",
+          "explanation": "下一個路口 names the next intersection. 在哪裡 asks where it is. Keep the whole place name before 在哪裡."
         },
         {
           "id": "b2u1-l3-application",
@@ -325,14 +326,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l4-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 往前 mean?",
+          "prompt": "What does 往前 mean here?",
           "options": [
             "go forward; ahead",
             "turn around",
             "go upstairs"
           ],
           "answer": "go forward; ahead",
-          "explanation": "往前走 means go forward in the indicated direction; 往 was taught in Book 1."
+          "explanation": "往前 (wǎng qián) means forward or ahead. 往 gives the direction and 前 means front/ahead. 往前走 (wǎng qián zǒu) means “walk forward.” The movement verb is 走; 往前 tells you its direction."
         },
         {
           "id": "b2u1-l4-g-from-toward-explain",
@@ -349,7 +350,7 @@ const unit:UnitData = {
             "Stay at the starting point."
           ],
           "answer": "Go forward from here.",
-          "explanation": "從 names the starting point and 往 the direction. If the starting point is understood, omit 從這裡 and say 往前走. For a prohibited direction use 不能往…, and for a question ask 是不是往…."
+          "explanation": "從 (cóng) marks where movement starts; 往 (wǎng) marks the direction or destination toward which it goes. Put both before 走. If the start is understood, 往前走 is enough. 不能 before the movement means you cannot go that way. To check a route, put 是不是 before the route description."
         },
         {
           "id": "b2u1-l4-model-explain",
@@ -373,11 +374,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 從這裡往前走。",
           "options": [
             "Walk forward from here.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Walk back toward here.",
+            "Turn left from here."
           ],
           "answer": "Walk forward from here.",
-          "explanation": "The complete message says: Walk forward from here."
+          "explanation": "從這裡 gives the starting point, “from here.” 往前 gives the direction, “forward.” 走 is the movement. Put the start and direction before the movement verb."
         },
         {
           "id": "b2u1-l4-application",
@@ -390,6 +391,36 @@ const unit:UnitData = {
           ],
           "answer": "Here.",
           "explanation": "In this context, Here."
+        },
+        {
+          "id": "b2u1-route-negative",
+          "type": "select",
+          "prompt": "不能從這裡往前走。 What does this tell you?",
+          "options": [
+            "You cannot walk forward from here.",
+            "You must walk forward from here.",
+            "You have already walked forward."
+          ],
+          "answer": "You cannot walk forward from here.",
+          "explanation": "不能 negates permission or possibility before the route description.",
+          "grammarIds": [
+            "b2u1-l4-from-toward"
+          ]
+        },
+        {
+          "id": "b2u1-route-question",
+          "type": "select",
+          "prompt": "是不是從這裡往前走？ What is the speaker checking?",
+          "options": [
+            "Whether to go forward from here.",
+            "Whether the destination is closed.",
+            "Whether they already passed two traffic lights."
+          ],
+          "answer": "Whether to go forward from here.",
+          "explanation": "是不是 turns the route into a yes/no question.",
+          "grammarIds": [
+            "b2u1-l4-from-toward"
+          ]
         }
       ]
     },
@@ -436,14 +467,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l5-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 右轉 mean?",
+          "prompt": "What does 右轉 mean here?",
           "options": [
             "turn right",
             "turn left",
             "keep going straight"
           ],
           "answer": "turn right",
-          "explanation": "At a 路口, 右轉 changes direction to the right; compare 左轉."
+          "explanation": "右轉 (yòu zhuǎn) means turn right: 右 is right and 轉 is turn. 到路口右轉。 (Dào lùkǒu yòu zhuǎn.) means “Turn right at the intersection.”"
         },
         {
           "id": "b2u1-l5-w2-explain",
@@ -453,14 +484,14 @@ const unit:UnitData = {
         {
           "id": "b2u1-l5-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 左轉 mean?",
+          "prompt": "What does 左轉 mean here?",
           "options": [
             "turn left",
             "turn right",
             "cross the road"
           ],
           "answer": "turn left",
-          "explanation": "左轉 changes direction to the left. A sign that says 往左轉 points left."
+          "explanation": "左轉 (zuǒ zhuǎn) means turn left: 左 is left and 轉 is turn. Compare 右轉 (yòu zhuǎn), turn right. Both tell you to change direction, whereas 往前走 means walk forward."
         },
         {
           "id": "b2u1-l5-model-explain",
@@ -472,23 +503,22 @@ const unit:UnitData = {
           "type": "order",
           "phrase": "b2u1-l5-model",
           "tokens": [
-            "走",
-            "往前",
-            "這裡",
-            "從"
+            "左轉",
+            "路口",
+            "到"
           ]
         },
         {
           "id": "b2u1-l5-transfer",
           "type": "select",
-          "prompt": "Interpret the full message: 從這裡往前走。",
+          "prompt": "What does 到路口左轉。 mean?",
           "options": [
-            "Walk forward from here.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Turn left at the intersection.",
+            "Turn right at the intersection.",
+            "Walk straight past the intersection."
           ],
-          "answer": "Walk forward from here.",
-          "explanation": "The complete message says: Walk forward from here."
+          "answer": "Turn left at the intersection.",
+          "explanation": "到路口 gives the place where the instruction applies. 左轉 means turn left; 右轉 would send you right."
         },
         {
           "id": "b2u1-l5-application",
@@ -535,11 +565,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 到下一個路口右轉。",
           "options": [
             "Turn right at the next intersection.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Turn left at the next intersection.",
+            "Go straight through the next intersection."
           ],
           "answer": "Turn right at the next intersection.",
-          "explanation": "The complete message says: Turn right at the next intersection."
+          "explanation": "到下一個路口 sets the place for the turn: “at the next intersection.” 右轉 is the instruction “turn right.” Next means the first intersection you reach, not the second one."
         },
         {
           "id": "b2u1-l6-application",
@@ -578,6 +608,23 @@ const unit:UnitData = {
           ],
           "answer": "Start here, go forward, then turn left at the intersection.",
           "explanation": "從這裡 is the starting point, 往前 the first movement, and 左轉 the final turn."
+        },
+        {
+          "id": "b2u1-help-exchange-explain",
+          "type": "phrase",
+          "phrase": "b2u1-help-exchange"
+        },
+        {
+          "id": "b2u1-help-exchange-check",
+          "type": "select",
+          "prompt": "A: 你需要我幫忙嗎？ B: 我好像迷路了。 Why might B need help?",
+          "options": [
+            "B seems to have lost the way.",
+            "A has already reached NTNU.",
+            "B is telling A to turn right."
+          ],
+          "answer": "B seems to have lost the way.",
+          "explanation": "B says 迷路了, has lost the way. A is offering help; the whole exchange is shown."
         }
       ]
     },
@@ -723,122 +770,122 @@ const unit:UnitData = {
         {
           "id": "b2u1-l7-vocab-1",
           "type": "select",
-          "prompt": "In Lesson 1, what does 路人 mean?",
+          "prompt": "What does 路人 mean here?",
           "options": [
             "passer-by",
             "a traffic light",
             "a road section"
           ],
           "answer": "passer-by",
-          "explanation": "路人 is a person on the street who can help with directions."
+          "explanation": "路人 (lùrén) is a passer-by: a person you meet on the street. 路 means road and 人 means person. You can politely ask a passer-by for help; the word does not mean a tour guide."
         },
         {
           "id": "b2u1-l7-vocab-2",
           "type": "select",
-          "prompt": "In Lesson 1, what does 幫忙 mean?",
+          "prompt": "What does 幫忙 mean here?",
           "options": [
             "help; do a favor",
             "be lost",
             "turn left"
           ],
           "answer": "help; do a favor",
-          "explanation": "需要我幫忙嗎？ is a polite offer: “Do you need my help?”"
+          "explanation": "幫忙 (bāngmáng) means help or do a favor. 你需要我幫忙嗎？ (Nǐ xūyào wǒ bāngmáng ma?) means “Do you need my help?” 需要 means need; 我 is the person offering to help."
         },
         {
           "id": "b2u1-l7-vocab-3",
           "type": "select",
-          "prompt": "In Lesson 1, what does 迷路 mean?",
+          "prompt": "What does 迷路 mean here?",
           "options": [
             "be lost; lose one’s way",
             "know the route",
             "find a shop"
           ],
           "answer": "be lost; lose one’s way",
-          "explanation": "我好像迷路了 means “I think I am lost”; 迷路 is a separable verb, not a place."
+          "explanation": "迷路 (mílù) means lose your way. 我好像迷路了。 (Wǒ hǎoxiàng mílù le.) means “I seem to have lost my way.” 好像 softens the claim to “seem”; final 了 marks the new situation. 迷路 describes what happened, not a place."
         },
         {
           "id": "b2u1-l7-vocab-4",
           "type": "select",
-          "prompt": "In Lesson 1, what does 師大 mean?",
+          "prompt": "What does 師大 mean here?",
           "options": [
             "NTNU; Shida (university)",
             "a convenience store",
             "a train station"
           ],
           "answer": "NTNU; Shida (university)",
-          "explanation": "師大 is the short name of National Taiwan Normal University, a destination in this lesson."
+          "explanation": "師大 (Shīdà) is the short name for National Taiwan Normal University (NTNU) in Taipei. Treat it as a place name. It is the destination in our directions examples."
         },
         {
           "id": "b2u1-l7-vocab-5",
           "type": "select",
-          "prompt": "In Lesson 1, what does 走 mean?",
+          "prompt": "What does 走 mean here?",
           "options": [
             "walk; go (toward a destination)",
             "arrive at a destination",
             "ride a bicycle"
           ],
           "answer": "walk; go (toward a destination)",
-          "explanation": "到師大怎麼走？ asks which route to take; 走 is the movement, while 到 names the destination."
+          "explanation": "走 (zǒu) means walk or go along a route. 到師大怎麼走？ (Dào Shīdà zěnme zǒu?) means “How do I get to NTNU?” 到師大 names the destination; 怎麼走 asks how to go there. 走 alone does not say that you have arrived."
         },
         {
           "id": "b2u1-l7-vocab-6",
           "type": "select",
-          "prompt": "In Lesson 1, what does 下 mean?",
+          "prompt": "What does 下 mean here?",
           "options": [
             "next; following (before a measure word)",
             "the previous one",
             "the second one"
           ],
           "answer": "next; following (before a measure word)",
-          "explanation": "下一個路口 means “the next intersection”; 下 precedes 一個 here."
+          "explanation": "下 (xià) before a number and measure word means next or following. 下一個 (xià yí ge) means “the next one.” This is the “next” sense, not the “down” sense. You will combine it with a place in the next card."
         },
         {
           "id": "b2u1-l7-vocab-7",
           "type": "select",
-          "prompt": "In Lesson 1, what does 路口 mean?",
+          "prompt": "What does 路口 mean here?",
           "options": [
             "intersection",
             "a road number",
             "the end of a road"
           ],
           "answer": "intersection",
-          "explanation": "下一個路口 means the next street intersection, where you can turn."
+          "explanation": "路口 (lùkǒu) is an intersection, where streets meet. 下一個路口 (xià yí ge lùkǒu) means “the next intersection.” 下一個 tells you which one; 路口 names the place."
         },
         {
           "id": "b2u1-l7-vocab-8",
           "type": "select",
-          "prompt": "In Lesson 1, what does 往前 mean?",
+          "prompt": "What does 往前 mean here?",
           "options": [
             "go forward; ahead",
             "turn around",
             "go upstairs"
           ],
           "answer": "go forward; ahead",
-          "explanation": "往前走 means go forward in the indicated direction; 往 was taught in Book 1."
+          "explanation": "往前 (wǎng qián) means forward or ahead. 往 gives the direction and 前 means front/ahead. 往前走 (wǎng qián zǒu) means “walk forward.” The movement verb is 走; 往前 tells you its direction."
         },
         {
           "id": "b2u1-l7-vocab-9",
           "type": "select",
-          "prompt": "In Lesson 1, what does 右轉 mean?",
+          "prompt": "What does 右轉 mean here?",
           "options": [
             "turn right",
             "turn left",
             "keep going straight"
           ],
           "answer": "turn right",
-          "explanation": "At a 路口, 右轉 changes direction to the right; compare 左轉."
+          "explanation": "右轉 (yòu zhuǎn) means turn right: 右 is right and 轉 is turn. 到路口右轉。 (Dào lùkǒu yòu zhuǎn.) means “Turn right at the intersection.”"
         },
         {
           "id": "b2u1-l7-vocab-10",
           "type": "select",
-          "prompt": "In Lesson 1, what does 左轉 mean?",
+          "prompt": "What does 左轉 mean here?",
           "options": [
             "turn left",
             "turn right",
             "cross the road"
           ],
           "answer": "turn left",
-          "explanation": "左轉 changes direction to the left. A sign that says 往左轉 points left."
+          "explanation": "左轉 (zuǒ zhuǎn) means turn left: 左 is left and 轉 is turn. Compare 右轉 (yòu zhuǎn), turn right. Both tell you to change direction, whereas 往前走 means walk forward."
         },
         {
           "id": "b2u1-l7-listen-1",
@@ -880,11 +927,26 @@ const unit:UnitData = {
           "prompt": "In 從這裡往前走。, what is the meaning?",
           "options": [
             "Go forward from here.",
-            "The two places or actions are unrelated.",
-            "This sentence gives someone’s name."
+            "Walk toward here from somewhere else.",
+            "Stay here without walking."
           ],
           "answer": "Go forward from here.",
-          "explanation": "從 names the starting point and 往 the direction. If the starting point is understood, omit 從這裡 and say 往前走. For a prohibited direction use 不能往…, and for a question ask 是不是往…."
+          "explanation": "從 (cóng) marks where movement starts; 往 (wǎng) marks the direction or destination toward which it goes. Put both before 走. If the start is understood, 往前走 is enough. 不能 before the movement means you cannot go that way. To check a route, put 是不是 before the route description."
+        },
+        {
+          "id": "b2u1-review-prohibition",
+          "type": "select",
+          "prompt": "不能從這裡往前走。 Can you go forward here?",
+          "options": [
+            "No, that direction is not allowed.",
+            "Yes, the sentence instructs you to go forward.",
+            "The sentence says you are already at school."
+          ],
+          "answer": "No, that direction is not allowed.",
+          "explanation": "不能 applies to the movement that follows.",
+          "grammarIds": [
+            "b2u1-l4-from-toward"
+          ]
         }
       ]
     }
@@ -896,7 +958,7 @@ const unit:UnitData = {
       "meaning": "passer-by",
       "lessonId": "b2u1-l1-lesson",
       "core": true,
-      "note": "路人 is a person on the street who can help with directions."
+      "note": "路人 (lùrén) is a passer-by: a person you meet on the street. 路 means road and 人 means person. You can politely ask a passer-by for help; the word does not mean a tour guide."
     },
     {
       "text": "幫忙",
@@ -904,7 +966,7 @@ const unit:UnitData = {
       "meaning": "help; do a favor",
       "lessonId": "b2u1-l1-lesson",
       "core": true,
-      "note": "需要我幫忙嗎？ is a polite offer: “Do you need my help?”"
+      "note": "幫忙 (bāngmáng) means help or do a favor. 你需要我幫忙嗎？ (Nǐ xūyào wǒ bāngmáng ma?) means “Do you need my help?” 需要 means need; 我 is the person offering to help."
     },
     {
       "text": "迷路",
@@ -912,7 +974,7 @@ const unit:UnitData = {
       "meaning": "be lost; lose one’s way",
       "lessonId": "b2u1-l1-lesson",
       "core": true,
-      "note": "我好像迷路了 means “I think I am lost”; 迷路 is a separable verb, not a place."
+      "note": "迷路 (mílù) means lose your way. 我好像迷路了。 (Wǒ hǎoxiàng mílù le.) means “I seem to have lost my way.” 好像 softens the claim to “seem”; final 了 marks the new situation. 迷路 describes what happened, not a place."
     },
     {
       "text": "師大",
@@ -920,7 +982,7 @@ const unit:UnitData = {
       "meaning": "NTNU; Shida (university)",
       "lessonId": "b2u1-l2-lesson",
       "core": true,
-      "note": "師大 is the short name of National Taiwan Normal University, a destination in this lesson."
+      "note": "師大 (Shīdà) is the short name for National Taiwan Normal University (NTNU) in Taipei. Treat it as a place name. It is the destination in our directions examples."
     },
     {
       "text": "走",
@@ -928,7 +990,7 @@ const unit:UnitData = {
       "meaning": "walk; go (toward a destination)",
       "lessonId": "b2u1-l2-lesson",
       "core": true,
-      "note": "到師大怎麼走？ asks which route to take; 走 is the movement, while 到 names the destination."
+      "note": "走 (zǒu) means walk or go along a route. 到師大怎麼走？ (Dào Shīdà zěnme zǒu?) means “How do I get to NTNU?” 到師大 names the destination; 怎麼走 asks how to go there. 走 alone does not say that you have arrived."
     },
     {
       "text": "下",
@@ -936,7 +998,7 @@ const unit:UnitData = {
       "meaning": "next; following (before a measure word)",
       "lessonId": "b2u1-l3-lesson",
       "core": true,
-      "note": "下一個路口 means “the next intersection”; 下 precedes 一個 here."
+      "note": "下 (xià) before a number and measure word means next or following. 下一個 (xià yí ge) means “the next one.” This is the “next” sense, not the “down” sense. You will combine it with a place in the next card."
     },
     {
       "text": "路口",
@@ -944,7 +1006,7 @@ const unit:UnitData = {
       "meaning": "intersection",
       "lessonId": "b2u1-l3-lesson",
       "core": true,
-      "note": "下一個路口 means the next street intersection, where you can turn."
+      "note": "路口 (lùkǒu) is an intersection, where streets meet. 下一個路口 (xià yí ge lùkǒu) means “the next intersection.” 下一個 tells you which one; 路口 names the place."
     },
     {
       "text": "往前",
@@ -952,7 +1014,7 @@ const unit:UnitData = {
       "meaning": "go forward; ahead",
       "lessonId": "b2u1-l4-lesson",
       "core": true,
-      "note": "往前走 means go forward in the indicated direction; 往 was taught in Book 1."
+      "note": "往前 (wǎng qián) means forward or ahead. 往 gives the direction and 前 means front/ahead. 往前走 (wǎng qián zǒu) means “walk forward.” The movement verb is 走; 往前 tells you its direction."
     },
     {
       "text": "右轉",
@@ -960,7 +1022,7 @@ const unit:UnitData = {
       "meaning": "turn right",
       "lessonId": "b2u1-l5-lesson",
       "core": true,
-      "note": "At a 路口, 右轉 changes direction to the right; compare 左轉."
+      "note": "右轉 (yòu zhuǎn) means turn right: 右 is right and 轉 is turn. 到路口右轉。 (Dào lùkǒu yòu zhuǎn.) means “Turn right at the intersection.”"
     },
     {
       "text": "左轉",
@@ -968,7 +1030,7 @@ const unit:UnitData = {
       "meaning": "turn left",
       "lessonId": "b2u1-l5-lesson",
       "core": true,
-      "note": "左轉 changes direction to the left. A sign that says 往左轉 points left."
+      "note": "左轉 (zuǒ zhuǎn) means turn left: 左 is left and 轉 is turn. Compare 右轉 (yòu zhuǎn), turn right. Both tell you to change direction, whereas 往前走 means walk forward."
     }
   ],
   "reviewVocabulary": [],
@@ -1080,7 +1142,7 @@ const unit:UnitData = {
       "id": "b2u1-l4-from-toward",
       "title": "From a point toward a direction",
       "pattern": "從 + start + 往 + direction + movement",
-      "explanation": "從 names the starting point and 往 the direction. If the starting point is understood, omit 從這裡 and say 往前走. For a prohibited direction use 不能往…, and for a question ask 是不是往….",
+      "explanation": "從 (cóng) marks where movement starts; 往 (wǎng) marks the direction or destination toward which it goes. Put both before 走. If the start is understood, 往前走 is enough. 不能 before the movement means you cannot go that way. To check a route, put 是不是 before the route description.",
       "examples": [
         {
           "text": "從這裡往前走。",
@@ -1091,6 +1153,11 @@ const unit:UnitData = {
           "text": "不能從這個路口往前走。",
           "pinyin": "Bù néng cóng zhège lùkǒu wǎng qián zǒu.",
           "meaning": "You cannot go forward from this intersection."
+        },
+        {
+          "text": "是不是從這裡往前走？",
+          "pinyin": "Shì bu shì cóng zhèlǐ wǎng qián zǒu?",
+          "meaning": "Do I go forward from here?"
         }
       ],
       "remember": "從 = starting point; 往 = direction; 到 = endpoint."
@@ -1111,7 +1178,7 @@ const unit:UnitData = {
       "text": "路人",
       "pinyin": "lùrén",
       "meaning": "passer-by",
-      "note": "路人 is a person on the street who can help with directions.",
+      "note": "路人 (lùrén) is a passer-by: a person you meet on the street. 路 means road and 人 means person. You can politely ask a passer-by for help; the word does not mean a tour guide.",
       "tokens": [
         "路人"
       ],
@@ -1121,7 +1188,7 @@ const unit:UnitData = {
       "text": "幫忙",
       "pinyin": "bāngmáng",
       "meaning": "help; do a favor",
-      "note": "需要我幫忙嗎？ is a polite offer: “Do you need my help?”",
+      "note": "幫忙 (bāngmáng) means help or do a favor. 你需要我幫忙嗎？ (Nǐ xūyào wǒ bāngmáng ma?) means “Do you need my help?” 需要 means need; 我 is the person offering to help.",
       "tokens": [
         "幫忙"
       ],
@@ -1131,7 +1198,7 @@ const unit:UnitData = {
       "text": "迷路",
       "pinyin": "mílù",
       "meaning": "be lost; lose one’s way",
-      "note": "我好像迷路了 means “I think I am lost”; 迷路 is a separable verb, not a place.",
+      "note": "迷路 (mílù) means lose your way. 我好像迷路了。 (Wǒ hǎoxiàng mílù le.) means “I seem to have lost my way.” 好像 softens the claim to “seem”; final 了 marks the new situation. 迷路 describes what happened, not a place.",
       "tokens": [
         "迷路"
       ],
@@ -1141,7 +1208,7 @@ const unit:UnitData = {
       "text": "師大",
       "pinyin": "Shīdà",
       "meaning": "NTNU; Shida (university)",
-      "note": "師大 is the short name of National Taiwan Normal University, a destination in this lesson.",
+      "note": "師大 (Shīdà) is the short name for National Taiwan Normal University (NTNU) in Taipei. Treat it as a place name. It is the destination in our directions examples.",
       "tokens": [
         "師大"
       ],
@@ -1151,7 +1218,7 @@ const unit:UnitData = {
       "text": "走",
       "pinyin": "zǒu",
       "meaning": "walk; go (toward a destination)",
-      "note": "到師大怎麼走？ asks which route to take; 走 is the movement, while 到 names the destination.",
+      "note": "走 (zǒu) means walk or go along a route. 到師大怎麼走？ (Dào Shīdà zěnme zǒu?) means “How do I get to NTNU?” 到師大 names the destination; 怎麼走 asks how to go there. 走 alone does not say that you have arrived.",
       "tokens": [
         "走"
       ],
@@ -1161,7 +1228,7 @@ const unit:UnitData = {
       "text": "請問，師大怎麼走？",
       "pinyin": "Qǐngwèn, Shīdà zěnme zǒu?",
       "meaning": "Excuse me, how do I get to NTNU?",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "請問 politely opens a question. 師大 names the destination; 怎麼走 asks which way to go. You can also say 到師大怎麼走, putting 到 before the destination.",
       "tokens": [
         "請問",
         "師大",
@@ -1174,7 +1241,7 @@ const unit:UnitData = {
       "text": "下",
       "pinyin": "xià",
       "meaning": "next; following (before a measure word)",
-      "note": "下一個路口 means “the next intersection”; 下 precedes 一個 here.",
+      "note": "下 (xià) before a number and measure word means next or following. 下一個 (xià yí ge) means “the next one.” This is the “next” sense, not the “down” sense. You will combine it with a place in the next card.",
       "tokens": [
         "下"
       ],
@@ -1184,22 +1251,23 @@ const unit:UnitData = {
       "text": "路口",
       "pinyin": "lùkǒu",
       "meaning": "intersection",
-      "note": "下一個路口 means the next street intersection, where you can turn.",
+      "note": "路口 (lùkǒu) is an intersection, where streets meet. 下一個路口 (xià yí ge lùkǒu) means “the next intersection.” 下一個 tells you which one; 路口 names the place.",
       "tokens": [
         "路口"
       ],
       "practice": false
     },
     "b2u1-l3-model": {
-      "text": "請問，師大怎麼走？",
-      "pinyin": "Qǐngwèn, Shīdà zěnme zǒu?",
-      "meaning": "Excuse me, how do I get to NTNU?",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "text": "下一個路口在哪裡？",
+      "pinyin": "Xià yí ge lùkǒu zài nǎlǐ?",
+      "meaning": "Where is the next intersection?",
+      "note": "下一個路口 names the next intersection. 在哪裡 asks where it is. Keep the whole place name before 在哪裡.",
       "tokens": [
-        "請問",
-        "師大",
-        "怎麼",
-        "走"
+        "下",
+        "一個",
+        "路口",
+        "在",
+        "哪裡"
       ],
       "practice": true
     },
@@ -1207,7 +1275,7 @@ const unit:UnitData = {
       "text": "往前",
       "pinyin": "wǎng qián",
       "meaning": "go forward; ahead",
-      "note": "往前走 means go forward in the indicated direction; 往 was taught in Book 1.",
+      "note": "往前 (wǎng qián) means forward or ahead. 往 gives the direction and 前 means front/ahead. 往前走 (wǎng qián zǒu) means “walk forward.” The movement verb is 走; 往前 tells you its direction.",
       "tokens": [
         "往前"
       ],
@@ -1217,20 +1285,23 @@ const unit:UnitData = {
       "text": "從這裡往前走。",
       "pinyin": "Cóng zhèlǐ wǎng qián zǒu.",
       "meaning": "Walk forward from here.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "從這裡 gives the starting point, “from here.” 往前 gives the direction, “forward.” 走 is the movement. Put the start and direction before the movement verb.",
       "tokens": [
         "從",
         "這裡",
         "往前",
         "走"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u1-l4-from-toward"
+      ]
     },
     "b2u1-l5-word-1": {
       "text": "右轉",
       "pinyin": "yòu zhuǎn",
       "meaning": "turn right",
-      "note": "At a 路口, 右轉 changes direction to the right; compare 左轉.",
+      "note": "右轉 (yòu zhuǎn) means turn right: 右 is right and 轉 is turn. 到路口右轉。 (Dào lùkǒu yòu zhuǎn.) means “Turn right at the intersection.”",
       "tokens": [
         "右轉"
       ],
@@ -1240,22 +1311,21 @@ const unit:UnitData = {
       "text": "左轉",
       "pinyin": "zuǒ zhuǎn",
       "meaning": "turn left",
-      "note": "左轉 changes direction to the left. A sign that says 往左轉 points left.",
+      "note": "左轉 (zuǒ zhuǎn) means turn left: 左 is left and 轉 is turn. Compare 右轉 (yòu zhuǎn), turn right. Both tell you to change direction, whereas 往前走 means walk forward.",
       "tokens": [
         "左轉"
       ],
       "practice": false
     },
     "b2u1-l5-model": {
-      "text": "從這裡往前走。",
-      "pinyin": "Cóng zhèlǐ wǎng qián zǒu.",
-      "meaning": "Walk forward from here.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "text": "到路口左轉。",
+      "pinyin": "Dào lùkǒu zuǒ zhuǎn.",
+      "meaning": "Turn left at the intersection.",
+      "note": "到路口 gives the place where the instruction applies. 左轉 means turn left; 右轉 would send you right.",
       "tokens": [
-        "從",
-        "這裡",
-        "往前",
-        "走"
+        "到",
+        "路口",
+        "左轉"
       ],
       "practice": true
     },
@@ -1263,7 +1333,7 @@ const unit:UnitData = {
       "text": "到下一個路口右轉。",
       "pinyin": "Dào xià yí ge lùkǒu yòu zhuǎn.",
       "meaning": "Turn right at the next intersection.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "到下一個路口 sets the place for the turn: “at the next intersection.” 右轉 is the instruction “turn right.” Next means the first intersection you reach, not the second one.",
       "tokens": [
         "到",
         "下",
@@ -1277,7 +1347,7 @@ const unit:UnitData = {
       "text": "請問，師大怎麼走？",
       "pinyin": "Qǐngwèn, Shīdà zěnme zǒu?",
       "meaning": "Excuse me, how do I get to NTNU?",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "請問 politely opens a question. 師大 names the destination; 怎麼走 asks which way to go. You can also say 到師大怎麼走, putting 到 before the destination.",
       "tokens": [
         "請問",
         "師大",
@@ -1290,20 +1360,23 @@ const unit:UnitData = {
       "text": "從這裡往前走。",
       "pinyin": "Cóng zhèlǐ wǎng qián zǒu.",
       "meaning": "Walk forward from here.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "從這裡 gives the starting point, “from here.” 往前 gives the direction, “forward.” 走 is the movement. Put the start and direction before the movement verb.",
       "tokens": [
         "從",
         "這裡",
         "往前",
         "走"
       ],
-      "practice": true
+      "practice": true,
+      "grammarIds": [
+        "b2u1-l4-from-toward"
+      ]
     },
     "b2u1-l7-cumulative-3": {
       "text": "到下一個路口右轉。",
       "pinyin": "Dào xià yí ge lùkǒu yòu zhuǎn.",
       "meaning": "Turn right at the next intersection.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "到下一個路口 sets the place for the turn: “at the next intersection.” 右轉 is the instruction “turn right.” Next means the first intersection you reach, not the second one.",
       "tokens": [
         "到",
         "下",
@@ -1312,9 +1385,26 @@ const unit:UnitData = {
         "右轉"
       ],
       "practice": true
+    },
+    "b2u1-help-exchange": {
+      "text": "你需要我幫忙嗎？我好像迷路了。",
+      "pinyin": "Nǐ xūyào wǒ bāngmáng ma? Wǒ hǎoxiàng mílù le.",
+      "meaning": "“Do you need my help?” “I seem to have lost my way.”",
+      "note": "Two speakers: a passer-by offers help in the first sentence; the lost visitor replies in the second. 需要我幫忙 asks whether my help is needed; 好像 means seem.",
+      "tokens": [
+        "你",
+        "需要",
+        "我",
+        "幫忙",
+        "嗎",
+        "我",
+        "好像",
+        "迷路",
+        "了"
+      ],
+      "practice": false
     }
   },
   "revisionStepIds": []
 };
-
 export default unit;

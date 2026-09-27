@@ -1,0 +1,117 @@
+{
+  "baseCommit": "49eadd5",
+  "lessons": {
+    "b2u1-l1-lesson": {
+      "length": 12,
+      "stepIdsSha256": "0cb5d2eacecbfbf45d1b1c42d2591fee4e953bb3c2a375ffd2a30ca4caba59fb"
+    },
+    "b2u1-l2-lesson": {
+      "length": 8,
+      "stepIdsSha256": "7014b40fcaebaf670b83d4d3cde023654c697e5a11e87cbc1ae1948e5a7881bf"
+    },
+    "b2u1-l3-lesson": {
+      "length": 8,
+      "stepIdsSha256": "007f59a55f8ac63239a37d6ad9620901da63e04d039f086e4436e1216ca147bf"
+    },
+    "b2u1-l4-lesson": {
+      "length": 8,
+      "stepIdsSha256": "9e04f44bfdeffcea15618006d602d890e81005faae2cd9db435c4244eec4ee42"
+    },
+    "b2u1-l5-lesson": {
+      "length": 13,
+      "stepIdsSha256": "9337407e70f94797d62c7539de1cfb227903026abe6c8d94a20d51175e2e1595"
+    },
+    "b2u1-l6-lesson": {
+      "length": 6,
+      "stepIdsSha256": "1df3447dec4189b6cc6ea3098389d6c725b20a65aa45c1c5ab7cae327263cffb"
+    },
+    "b2u1-l7-lesson": {
+      "length": 27,
+      "stepIdsSha256": "ca121de5d51d426a0a9940ebcc9541047a93e28d5e48a3d7d07333f1e73bbd5a"
+    },
+    "b2u2-l1-lesson": {
+      "length": 15,
+      "stepIdsSha256": "eb65a4f2248bc5437e32bb2bb6d895869671ec610f14219cd0fb7e18960246ab"
+    },
+    "b2u2-l2-lesson": {
+      "length": 20,
+      "stepIdsSha256": "cf03be69dfcdca9b1a321ab24e5eaea8439e431b8611b76e2541cf5e67cc77b8"
+    },
+    "b2u2-l3-lesson": {
+      "length": 8,
+      "stepIdsSha256": "95b79d7c7c771c99c75ac56418e8e07f609ee88a72daccd043c12d1ec58d4028"
+    },
+    "b2u2-l4-lesson": {
+      "length": 17,
+      "stepIdsSha256": "2acef90606fda0c58cbca99f686e515aff28fb58720b26ed198548e9e7cca80f"
+    },
+    "b2u2-l5-lesson": {
+      "length": 18,
+      "stepIdsSha256": "58c3264bfd07ebd6d7d3425966da8ba757b299cec7177109c92135a6ae0ecc3f"
+    },
+    "b2u2-l6-lesson": {
+      "length": 15,
+      "stepIdsSha256": "4df9bff63943247e669f1826330fa5d4d94eac71215a95d772785bef1b1f68da"
+    },
+    "b2u2-l7-lesson": {
+      "length": 39,
+      "stepIdsSha256": "4aca99bf5ee38b795321a9e91a4017762989b7e806ab24c46bbfd6b31eff80f7"
+    },
+    "b2u3-l1-lesson": {
+      "length": 5,
+      "stepIdsSha256": "b75e01220b6f2ecebb56ea5e6adc75f818c890efc06e49d78695cdd5124b5bb5"
+    },
+    "b2u3-l2-lesson": {
+      "length": 6,
+      "stepIdsSha256": "658e6aaea5cb482d2f100cde19cb1ed767c94c0ea478b81c7122872757ee9274"
+    },
+    "b2u3-l3-lesson": {
+      "length": 13,
+      "stepIdsSha256": "291f50a474c5310327a282eec4f3aefb5c389b779598c7403d86b87602ef3e37"
+    },
+    "b2u3-l4-lesson": {
+      "length": 11,
+      "stepIdsSha256": "1202f7b1ed412824bd5ad2da2ba35002e0f62d785eec8975f00de61c9ca1b817"
+    },
+    "b2u3-l5-lesson": {
+      "length": 13,
+      "stepIdsSha256": "bec2c1e3d15cae5985537d7510bd97bb88562ba5357bb2068e5709e82644bf96"
+    },
+    "b2u3-l6-lesson": {
+      "length": 6,
+      "stepIdsSha256": "301052880bf419c351353fa2c5c7d0dc6c66cb298bb99b9cc8adfc3570518e44"
+    },
+    "b2u3-l7-lesson": {
+      "length": 27,
+      "stepIdsSha256": "da630079e36ad0aabf066944213ec89a4abee499d67d0b4d13afb6d3842ce575"
+    },
+    "b2u4-l1-lesson": {
+      "length": 10,
+      "stepIdsSha256": "a9fe9a6002454459bceffa81465d15675cff5fda45b4a652d13581578cfcadd3"
+    },
+    "b2u4-l2-lesson": {
+      "length": 8,
+      "stepIdsSha256": "c09ad02a46091408b08606148c8f50e2f9655a8c2225c789d58e89b9fd8b2375"
+    },
+    "b2u4-l3-lesson": {
+      "length": 13,
+      "stepIdsSha256": "28013748cff5611871d7749fc91899341e4128a2583403b68bed34ee6e4dd092"
+    },
+    "b2u4-l4-lesson": {
+      "length": 18,
+      "stepIdsSha256": "796aef7da239b8353bc5658382effc353157791ac0ecb633c452839170f1bd58"
+    },
+    "b2u4-l5-lesson": {
+      "length": 20,
+      "stepIdsSha256": "8764ab2f7b6e39e6ab32a53f62b541891a43ce1878a93355b54a59e8aefc32f7"
+    },
+    "b2u4-l6-lesson": {
+      "length": 8,
+      "stepIdsSha256": "3b2ee740a946efcdfd499a1b93115f7a868cd1ca44836abf55507331f161759b"
+    },
+    "b2u4-l7-lesson": {
+      "length": 40,
+      "stepIdsSha256": "ae7f882786e5ffd242cc9a3e9aa72c68aa932756b156c7f1e04b1f0ad4f5015f"
+    }
+  }
+}

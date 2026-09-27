@@ -93,14 +93,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l1-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 和平東路 mean?",
+          "prompt": "What does 和平東路 mean here?",
           "options": [
             "Heping East Road",
             "NTNU campus",
             "Shida Road"
           ],
           "answer": "Heping East Road",
-          "explanation": "This is Heping East Road in Taipei; road section numbers follow the name."
+          "explanation": "和平東路 (Hépíng Dōng Lù) is Heping East Road, a road name in Taipei. 和平 (Hépíng) is the name, 東 (dōng) means east, and 路 (lù) means road. Read the whole name as one destination or landmark."
         },
         {
           "id": "b2u2-l1-w2-explain",
@@ -135,14 +135,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l1-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 段 mean?",
+          "prompt": "What does 段 mean here?",
           "options": [
             "section (of a road)",
             "an intersection",
             "a traffic light"
           ],
           "answer": "section (of a road)",
-          "explanation": "和平東路一段 is Section 1 of Heping East Road; 段 labels the road section."
+          "explanation": "段 (duàn) means a section of a road. 和平東路一段 (Hépíng Dōng Lù yī duàn) is “Section 1 of Heping East Road.” Put the section number after the road name and before 段. Here 一 is a section label, read yī."
         },
         {
           "id": "b2u2-l1-application",
@@ -228,14 +228,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l2-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 紅綠燈 mean?",
+          "prompt": "What does 紅綠燈 mean here?",
           "options": [
             "traffic light",
             "street intersection",
             "post office"
           ],
           "answer": "traffic light",
-          "explanation": "A 紅綠燈 is a red-and-green traffic light; use it as a route landmark."
+          "explanation": "紅綠燈 (hónglǜdēng) means traffic light: 紅 is red, 綠 is green, and 燈 is light. A traffic light can serve as a landmark in directions. 一個紅綠燈 (yí ge hónglǜdēng) means one traffic light."
         },
         {
           "id": "b2u2-l2-w2-explain",
@@ -270,14 +270,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l2-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 第 mean?",
+          "prompt": "What does 第 mean here?",
           "options": [
             "ordinal prefix",
             "approximately",
             "a measure word for lights"
           ],
           "answer": "ordinal prefix",
-          "explanation": "第 + number forms an ordinal: 第二個紅綠燈 is the second traffic light."
+          "explanation": "第 (dì) before a number gives its position in a sequence. 第二 (dì èr) means second. 第二個紅綠燈 (dì èr ge hónglǜdēng) means “the second traffic light”; 兩個紅綠燈 means two traffic lights, a quantity rather than a position."
         },
         {
           "id": "b2u2-l2-application",
@@ -309,14 +309,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l3-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 看見 mean?",
+          "prompt": "What does 看見 mean here?",
           "options": [
             "see; catch sight of",
             "look for",
             "read aloud"
           ],
           "answer": "see; catch sight of",
-          "explanation": "過了紅綠燈，就看見師大了 means the destination comes into view."
+          "explanation": "看見 (kànjiàn) means see or catch sight of. 我看見師大了。 (Wǒ kànjiàn Shīdà le.) means “I can see NTNU now.” 看 is looking; 看見 says that something comes into view."
         },
         {
           "id": "b2u2-l3-guo-cross-explain",
@@ -362,11 +362,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 過了第二個紅綠燈，就看見師大了。",
           "options": [
             "After passing the second traffic light, NTNU comes into view.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "NTNU comes into view before the second traffic light.",
+            "NTNU comes into view after the first traffic light."
           ],
           "answer": "After passing the second traffic light, NTNU comes into view.",
-          "explanation": "The complete message says: After passing the second traffic light, NTNU comes into view."
+          "explanation": "過 here means pass or cross. 第二個紅綠燈 is the second traffic light. The first clause gives the landmark to pass; 就 then links it to the result, seeing NTNU. 看見 means catch sight of, not arrive inside."
         },
         {
           "id": "b2u2-l3-application",
@@ -451,14 +451,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l4-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 告訴 mean?",
+          "prompt": "What does 告訴 mean here?",
           "options": [
             "tell; inform",
             "show someone a map",
             "walk together"
           ],
           "answer": "tell; inform",
-          "explanation": "告訴我 is “tell me”; 能不能再告訴我 politely asks for more information."
+          "explanation": "告訴 (gàosù) means tell someone information. 告訴我 (gàosù wǒ) means “tell me.” Put the person after 告訴, then the information or question: 請告訴我師大在哪裡。 (Qǐng gàosù wǒ Shīdà zài nǎlǐ.) means “Please tell me where NTNU is.”"
         },
         {
           "id": "b2u2-l4-w2-explain",
@@ -468,14 +468,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l4-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 聽起來 mean?",
+          "prompt": "What does 聽起來 mean here?",
           "options": [
             "sound; seem from hearing",
             "hear clearly",
             "speak loudly"
           ],
           "answer": "sound; seem from hearing",
-          "explanation": "聽起來不遠 evaluates how far a route sounds, not a literal upward motion."
+          "explanation": "聽起來 (tīng qǐlái) means “sound” when giving an impression from what you hear. 聽起來不遠。 (Tīng qǐlái bù yuǎn.) means “It does not sound far.” Put the judgment after 起來; this is not a movement upward."
         },
         {
           "id": "b2u2-l4-g-evaluative-explain",
@@ -492,7 +492,7 @@ const unit:UnitData = {
             "Someone has not heard the name of NTNU."
           ],
           "answer": "NTNU does not sound far.",
-          "explanation": "看起來, 聽起來 and 吃起來 describe a speaker’s impression. Negate the evaluation after 起來: 聽起來不遠, never *不聽起來遠. Questions can use 怎麼樣 or 好不好."
+          "explanation": "Verb + 起來 introduces an impression from seeing, hearing, eating, or doing something. 看起來 (kàn qǐlái) means looks; 聽起來 (tīng qǐlái) means sounds; 吃起來 (chī qǐlái) means tastes. Put the judgment afterward. Negate the judgment: 聽起來不遠 means it does not sound far. Ask with 怎麼樣 after 起來, or make the judgment an affirmative-negative question."
         },
         {
           "id": "b2u2-l4-application",
@@ -505,6 +505,36 @@ const unit:UnitData = {
           ],
           "answer": "It does not sound far.",
           "explanation": "In this context, It does not sound far."
+        },
+        {
+          "id": "b2u2-evaluation-negative",
+          "type": "select",
+          "prompt": "這個菜吃起來不辣。 What is the judgment?",
+          "options": [
+            "The dish does not taste spicy.",
+            "The dish cannot be eaten.",
+            "The dish tastes very spicy."
+          ],
+          "answer": "The dish does not taste spicy.",
+          "explanation": "吃起來 gives the impression from eating; 不 negates 辣, spicy.",
+          "grammarIds": [
+            "b2u2-l4-evaluative"
+          ]
+        },
+        {
+          "id": "b2u2-evaluation-question",
+          "type": "select",
+          "prompt": "這個菜吃起來怎麼樣？ What does the speaker want to know?",
+          "options": [
+            "How the dish tastes.",
+            "Who cooked the dish.",
+            "Where the dish was bought."
+          ],
+          "answer": "How the dish tastes.",
+          "explanation": "怎麼樣 asks for the evaluation after 吃起來.",
+          "grammarIds": [
+            "b2u2-l4-evaluative"
+          ]
         }
       ]
     },
@@ -577,14 +607,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l5-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 提款機 mean?",
+          "prompt": "What does 提款機 mean here?",
           "options": [
             "ATM",
             "bank account",
             "convenience store"
           ],
           "answer": "ATM",
-          "explanation": "A 提款機 is the machine used to withdraw cash; 提款 means withdraw money."
+          "explanation": "提款機 (tíkuǎnjī) means ATM. 提款 (tíkuǎn) means withdraw money and 機 (jī) means machine. 這裡有提款機嗎？ (Zhèlǐ yǒu tíkuǎnjī ma?) means “Is there an ATM here?”"
         },
         {
           "id": "b2u2-l5-w2-explain",
@@ -594,14 +624,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l5-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 超商 mean?",
+          "prompt": "What does 超商 mean here?",
           "options": [
             "convenience store (colloquial Taiwan)",
             "supermarket",
             "post office"
           ],
           "answer": "convenience store (colloquial Taiwan)",
-          "explanation": "超商 is a short Taiwanese name for 便利商店; both can refer to the same shop."
+          "explanation": "超商 (chāoshāng) means convenience store in Taiwan, another name for 便利商店 (biànlì shāngdiàn). 超商裡有提款機。 (Chāoshāng lǐ yǒu tíkuǎnjī.) means “There is an ATM inside the convenience store.” This is an example, not a claim that every store has one."
         },
         {
           "id": "b2u2-l5-model-explain",
@@ -627,11 +657,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 請告訴我提款機在哪裡。",
           "options": [
             "Please tell me where the ATM is.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "Please tell me where the post office is.",
+            "Please tell me how much money to withdraw."
           ],
           "answer": "Please tell me where the ATM is.",
-          "explanation": "The complete message says: Please tell me where the ATM is."
+          "explanation": "請 makes the request polite. 告訴我 means “tell me.” 提款機在哪裡 is the information requested: where the ATM is. Keep that question after 告訴我; do not move 哪裡 to the front."
         },
         {
           "id": "b2u2-l5-application",
@@ -690,14 +720,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l6-w1-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 郵局 mean?",
+          "prompt": "What does 郵局 mean here?",
           "options": [
             "post office",
             "bank",
             "street corner"
           ],
           "answer": "post office",
-          "explanation": "郵局 can also have an ATM; it is a post office, not a bank."
+          "explanation": "郵局 (yóujú) means post office. A post office handles mail and may also offer cash withdrawal. 郵局在哪裡？ (Yóujú zài nǎlǐ?) means “Where is the post office?”"
         },
         {
           "id": "b2u2-l6-w2-explain",
@@ -707,14 +737,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l6-w2-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 提 mean?",
+          "prompt": "What does 提 mean here?",
           "options": [
             "withdraw (money); take out",
             "deposit cash",
             "send a letter"
           ],
           "answer": "withdraw (money); take out",
-          "explanation": "In 提錢, 提 means withdraw cash; 提款機 is the machine used for this."
+          "explanation": "提 (tí) here means withdraw money. 提錢 (tí qián) means withdraw cash; 錢 is money. 郵局也可以提錢。 (Yóujú yě kěyǐ tí qián.) means “You can also withdraw money at the post office.”"
         },
         {
           "id": "b2u2-l6-w3-explain",
@@ -724,14 +754,14 @@ const unit:UnitData = {
         {
           "id": "b2u2-l6-w3-meaning",
           "type": "select",
-          "prompt": "In this route or shopping story, what does 那邊 mean?",
+          "prompt": "What does 那邊 mean here?",
           "options": [
             "over there",
             "right here",
             "tomorrow"
           ],
           "answer": "over there",
-          "explanation": "那邊 points to a place away from the speaker; compare 這邊, here."
+          "explanation": "那邊 (nàbiān) means over there, away from the speaker. 那邊有一家郵局。 (Nàbiān yǒu yì jiā yóujú.) means “There is a post office over there.” The word points to a location; it does not specify left or right."
         },
         {
           "id": "b2u2-l6-model-explain",
@@ -756,11 +786,11 @@ const unit:UnitData = {
           "prompt": "Interpret the full message: 那邊的超商有提款機。",
           "options": [
             "The convenience store over there has an ATM.",
-            "The traveler is turning in the opposite direction.",
-            "The traveler has reached a different destination."
+            "The convenience store over there has no ATM.",
+            "The post office over there has an ATM."
           ],
           "answer": "The convenience store over there has an ATM.",
-          "explanation": "The complete message says: The convenience store over there has an ATM."
+          "explanation": "那邊的超商 is “the convenience store over there.” 有 says it has something; 提款機 names the ATM."
         },
         {
           "id": "b2u2-l6-application",
@@ -773,6 +803,23 @@ const unit:UnitData = {
           ],
           "answer": "At the post office over there.",
           "explanation": "In this context, At the post office over there."
+        },
+        {
+          "id": "b2u2-cash-context-explain",
+          "type": "phrase",
+          "phrase": "b2u2-cash-context"
+        },
+        {
+          "id": "b2u2-cash-context-check",
+          "type": "select",
+          "prompt": "超商裡應該有提款機，郵局也可以提錢。 Is the ATM in the convenience store guaranteed?",
+          "options": [
+            "No: 應該 expresses an expectation.",
+            "Yes: the speaker says every store has one.",
+            "No: the sentence says there are no ATMs."
+          ],
+          "answer": "No: 應該 expresses an expectation.",
+          "explanation": "應該 here means should/probably. 也可以 introduces another possibility at the post office."
         }
       ]
     },
@@ -933,146 +980,146 @@ const unit:UnitData = {
         {
           "id": "b2u2-l7-vocab-1",
           "type": "select",
-          "prompt": "In Lesson 1, what does 和平東路 mean?",
+          "prompt": "What does 和平東路 mean here?",
           "options": [
             "Heping East Road",
             "NTNU campus",
             "Shida Road"
           ],
           "answer": "Heping East Road",
-          "explanation": "This is Heping East Road in Taipei; road section numbers follow the name."
+          "explanation": "和平東路 (Hépíng Dōng Lù) is Heping East Road, a road name in Taipei. 和平 (Hépíng) is the name, 東 (dōng) means east, and 路 (lù) means road. Read the whole name as one destination or landmark."
         },
         {
           "id": "b2u2-l7-vocab-2",
           "type": "select",
-          "prompt": "In Lesson 1, what does 段 mean?",
+          "prompt": "What does 段 mean here?",
           "options": [
             "section (of a road)",
             "an intersection",
             "a traffic light"
           ],
           "answer": "section (of a road)",
-          "explanation": "和平東路一段 is Section 1 of Heping East Road; 段 labels the road section."
+          "explanation": "段 (duàn) means a section of a road. 和平東路一段 (Hépíng Dōng Lù yī duàn) is “Section 1 of Heping East Road.” Put the section number after the road name and before 段. Here 一 is a section label, read yī."
         },
         {
           "id": "b2u2-l7-vocab-3",
           "type": "select",
-          "prompt": "In Lesson 1, what does 紅綠燈 mean?",
+          "prompt": "What does 紅綠燈 mean here?",
           "options": [
             "traffic light",
             "street intersection",
             "post office"
           ],
           "answer": "traffic light",
-          "explanation": "A 紅綠燈 is a red-and-green traffic light; use it as a route landmark."
+          "explanation": "紅綠燈 (hónglǜdēng) means traffic light: 紅 is red, 綠 is green, and 燈 is light. A traffic light can serve as a landmark in directions. 一個紅綠燈 (yí ge hónglǜdēng) means one traffic light."
         },
         {
           "id": "b2u2-l7-vocab-4",
           "type": "select",
-          "prompt": "In Lesson 1, what does 第 mean?",
+          "prompt": "What does 第 mean here?",
           "options": [
             "ordinal prefix",
             "approximately",
             "a measure word for lights"
           ],
           "answer": "ordinal prefix",
-          "explanation": "第 + number forms an ordinal: 第二個紅綠燈 is the second traffic light."
+          "explanation": "第 (dì) before a number gives its position in a sequence. 第二 (dì èr) means second. 第二個紅綠燈 (dì èr ge hónglǜdēng) means “the second traffic light”; 兩個紅綠燈 means two traffic lights, a quantity rather than a position."
         },
         {
           "id": "b2u2-l7-vocab-5",
           "type": "select",
-          "prompt": "In Lesson 1, what does 看見 mean?",
+          "prompt": "What does 看見 mean here?",
           "options": [
             "see; catch sight of",
             "look for",
             "read aloud"
           ],
           "answer": "see; catch sight of",
-          "explanation": "過了紅綠燈，就看見師大了 means the destination comes into view."
+          "explanation": "看見 (kànjiàn) means see or catch sight of. 我看見師大了。 (Wǒ kànjiàn Shīdà le.) means “I can see NTNU now.” 看 is looking; 看見 says that something comes into view."
         },
         {
           "id": "b2u2-l7-vocab-6",
           "type": "select",
-          "prompt": "In Lesson 1, what does 告訴 mean?",
+          "prompt": "What does 告訴 mean here?",
           "options": [
             "tell; inform",
             "show someone a map",
             "walk together"
           ],
           "answer": "tell; inform",
-          "explanation": "告訴我 is “tell me”; 能不能再告訴我 politely asks for more information."
+          "explanation": "告訴 (gàosù) means tell someone information. 告訴我 (gàosù wǒ) means “tell me.” Put the person after 告訴, then the information or question: 請告訴我師大在哪裡。 (Qǐng gàosù wǒ Shīdà zài nǎlǐ.) means “Please tell me where NTNU is.”"
         },
         {
           "id": "b2u2-l7-vocab-7",
           "type": "select",
-          "prompt": "In Lesson 1, what does 聽起來 mean?",
+          "prompt": "What does 聽起來 mean here?",
           "options": [
             "sound; seem from hearing",
             "hear clearly",
             "speak loudly"
           ],
           "answer": "sound; seem from hearing",
-          "explanation": "聽起來不遠 evaluates how far a route sounds, not a literal upward motion."
+          "explanation": "聽起來 (tīng qǐlái) means “sound” when giving an impression from what you hear. 聽起來不遠。 (Tīng qǐlái bù yuǎn.) means “It does not sound far.” Put the judgment after 起來; this is not a movement upward."
         },
         {
           "id": "b2u2-l7-vocab-8",
           "type": "select",
-          "prompt": "In Lesson 1, what does 提款機 mean?",
+          "prompt": "What does 提款機 mean here?",
           "options": [
             "ATM",
             "bank account",
             "convenience store"
           ],
           "answer": "ATM",
-          "explanation": "A 提款機 is the machine used to withdraw cash; 提款 means withdraw money."
+          "explanation": "提款機 (tíkuǎnjī) means ATM. 提款 (tíkuǎn) means withdraw money and 機 (jī) means machine. 這裡有提款機嗎？ (Zhèlǐ yǒu tíkuǎnjī ma?) means “Is there an ATM here?”"
         },
         {
           "id": "b2u2-l7-vocab-9",
           "type": "select",
-          "prompt": "In Lesson 1, what does 超商 mean?",
+          "prompt": "What does 超商 mean here?",
           "options": [
             "convenience store (colloquial Taiwan)",
             "supermarket",
             "post office"
           ],
           "answer": "convenience store (colloquial Taiwan)",
-          "explanation": "超商 is a short Taiwanese name for 便利商店; both can refer to the same shop."
+          "explanation": "超商 (chāoshāng) means convenience store in Taiwan, another name for 便利商店 (biànlì shāngdiàn). 超商裡有提款機。 (Chāoshāng lǐ yǒu tíkuǎnjī.) means “There is an ATM inside the convenience store.” This is an example, not a claim that every store has one."
         },
         {
           "id": "b2u2-l7-vocab-10",
           "type": "select",
-          "prompt": "In Lesson 1, what does 郵局 mean?",
+          "prompt": "What does 郵局 mean here?",
           "options": [
             "post office",
             "bank",
             "street corner"
           ],
           "answer": "post office",
-          "explanation": "郵局 can also have an ATM; it is a post office, not a bank."
+          "explanation": "郵局 (yóujú) means post office. A post office handles mail and may also offer cash withdrawal. 郵局在哪裡？ (Yóujú zài nǎlǐ?) means “Where is the post office?”"
         },
         {
           "id": "b2u2-l7-vocab-11",
           "type": "select",
-          "prompt": "In Lesson 1, what does 提 mean?",
+          "prompt": "What does 提 mean here?",
           "options": [
             "withdraw (money); take out",
             "deposit cash",
             "send a letter"
           ],
           "answer": "withdraw (money); take out",
-          "explanation": "In 提錢, 提 means withdraw cash; 提款機 is the machine used for this."
+          "explanation": "提 (tí) here means withdraw money. 提錢 (tí qián) means withdraw cash; 錢 is money. 郵局也可以提錢。 (Yóujú yě kěyǐ tí qián.) means “You can also withdraw money at the post office.”"
         },
         {
           "id": "b2u2-l7-vocab-12",
           "type": "select",
-          "prompt": "In Lesson 1, what does 那邊 mean?",
+          "prompt": "What does 那邊 mean here?",
           "options": [
             "over there",
             "right here",
             "tomorrow"
           ],
           "answer": "over there",
-          "explanation": "那邊 points to a place away from the speaker; compare 這邊, here."
+          "explanation": "那邊 (nàbiān) means over there, away from the speaker. 那邊有一家郵局。 (Nàbiān yǒu yì jiā yóujú.) means “There is a post office over there.” The word points to a location; it does not specify left or right."
         },
         {
           "id": "b2u2-l7-listen-1",
@@ -1178,11 +1225,26 @@ const unit:UnitData = {
           "prompt": "In 師大聽起來不遠。, what is the meaning?",
           "options": [
             "NTNU does not sound far.",
-            "The two places or actions are unrelated.",
-            "This sentence gives someone’s name."
+            "NTNU sounds far away.",
+            "NTNU cannot be heard."
           ],
           "answer": "NTNU does not sound far.",
-          "explanation": "看起來, 聽起來 and 吃起來 describe a speaker’s impression. Negate the evaluation after 起來: 聽起來不遠, never *不聽起來遠. Questions can use 怎麼樣 or 好不好."
+          "explanation": "Verb + 起來 introduces an impression from seeing, hearing, eating, or doing something. 看起來 (kàn qǐlái) means looks; 聽起來 (tīng qǐlái) means sounds; 吃起來 (chī qǐlái) means tastes. Put the judgment afterward. Negate the judgment: 聽起來不遠 means it does not sound far. Ask with 怎麼樣 after 起來, or make the judgment an affirmative-negative question."
+        },
+        {
+          "id": "b2u2-review-impression",
+          "type": "select",
+          "prompt": "聽起來不遠。 Does this prove the speaker has walked the route?",
+          "options": [
+            "No, it reports an impression from hearing about it.",
+            "Yes, the route has already been completed.",
+            "Yes, the speaker is standing inside NTNU."
+          ],
+          "answer": "No, it reports an impression from hearing about it.",
+          "explanation": "聽起來 describes a judgment from what was heard.",
+          "grammarIds": [
+            "b2u2-l4-evaluative"
+          ]
         }
       ]
     }
@@ -1190,11 +1252,11 @@ const unit:UnitData = {
   "newVocabulary": [
     {
       "text": "和平東路",
-      "pinyin": "Hépíng Dōnglù",
+      "pinyin": "Hépíng Dōng Lù",
       "meaning": "Heping East Road",
       "lessonId": "b2u2-l1-lesson",
       "core": true,
-      "note": "This is Heping East Road in Taipei; road section numbers follow the name."
+      "note": "和平東路 (Hépíng Dōng Lù) is Heping East Road, a road name in Taipei. 和平 (Hépíng) is the name, 東 (dōng) means east, and 路 (lù) means road. Read the whole name as one destination or landmark."
     },
     {
       "text": "段",
@@ -1202,7 +1264,7 @@ const unit:UnitData = {
       "meaning": "section (of a road)",
       "lessonId": "b2u2-l1-lesson",
       "core": true,
-      "note": "和平東路一段 is Section 1 of Heping East Road; 段 labels the road section."
+      "note": "段 (duàn) means a section of a road. 和平東路一段 (Hépíng Dōng Lù yī duàn) is “Section 1 of Heping East Road.” Put the section number after the road name and before 段. Here 一 is a section label, read yī."
     },
     {
       "text": "紅綠燈",
@@ -1210,7 +1272,7 @@ const unit:UnitData = {
       "meaning": "traffic light",
       "lessonId": "b2u2-l2-lesson",
       "core": true,
-      "note": "A 紅綠燈 is a red-and-green traffic light; use it as a route landmark."
+      "note": "紅綠燈 (hónglǜdēng) means traffic light: 紅 is red, 綠 is green, and 燈 is light. A traffic light can serve as a landmark in directions. 一個紅綠燈 (yí ge hónglǜdēng) means one traffic light."
     },
     {
       "text": "第",
@@ -1218,7 +1280,7 @@ const unit:UnitData = {
       "meaning": "ordinal prefix",
       "lessonId": "b2u2-l2-lesson",
       "core": true,
-      "note": "第 + number forms an ordinal: 第二個紅綠燈 is the second traffic light."
+      "note": "第 (dì) before a number gives its position in a sequence. 第二 (dì èr) means second. 第二個紅綠燈 (dì èr ge hónglǜdēng) means “the second traffic light”; 兩個紅綠燈 means two traffic lights, a quantity rather than a position."
     },
     {
       "text": "看見",
@@ -1226,7 +1288,7 @@ const unit:UnitData = {
       "meaning": "see; catch sight of",
       "lessonId": "b2u2-l3-lesson",
       "core": true,
-      "note": "過了紅綠燈，就看見師大了 means the destination comes into view."
+      "note": "看見 (kànjiàn) means see or catch sight of. 我看見師大了。 (Wǒ kànjiàn Shīdà le.) means “I can see NTNU now.” 看 is looking; 看見 says that something comes into view."
     },
     {
       "text": "告訴",
@@ -1234,7 +1296,7 @@ const unit:UnitData = {
       "meaning": "tell; inform",
       "lessonId": "b2u2-l4-lesson",
       "core": true,
-      "note": "告訴我 is “tell me”; 能不能再告訴我 politely asks for more information."
+      "note": "告訴 (gàosù) means tell someone information. 告訴我 (gàosù wǒ) means “tell me.” Put the person after 告訴, then the information or question: 請告訴我師大在哪裡。 (Qǐng gàosù wǒ Shīdà zài nǎlǐ.) means “Please tell me where NTNU is.”"
     },
     {
       "text": "聽起來",
@@ -1242,7 +1304,7 @@ const unit:UnitData = {
       "meaning": "sound; seem from hearing",
       "lessonId": "b2u2-l4-lesson",
       "core": true,
-      "note": "聽起來不遠 evaluates how far a route sounds, not a literal upward motion."
+      "note": "聽起來 (tīng qǐlái) means “sound” when giving an impression from what you hear. 聽起來不遠。 (Tīng qǐlái bù yuǎn.) means “It does not sound far.” Put the judgment after 起來; this is not a movement upward."
     },
     {
       "text": "提款機",
@@ -1250,7 +1312,7 @@ const unit:UnitData = {
       "meaning": "ATM",
       "lessonId": "b2u2-l5-lesson",
       "core": true,
-      "note": "A 提款機 is the machine used to withdraw cash; 提款 means withdraw money."
+      "note": "提款機 (tíkuǎnjī) means ATM. 提款 (tíkuǎn) means withdraw money and 機 (jī) means machine. 這裡有提款機嗎？ (Zhèlǐ yǒu tíkuǎnjī ma?) means “Is there an ATM here?”"
     },
     {
       "text": "超商",
@@ -1258,7 +1320,7 @@ const unit:UnitData = {
       "meaning": "convenience store (colloquial Taiwan)",
       "lessonId": "b2u2-l5-lesson",
       "core": true,
-      "note": "超商 is a short Taiwanese name for 便利商店; both can refer to the same shop."
+      "note": "超商 (chāoshāng) means convenience store in Taiwan, another name for 便利商店 (biànlì shāngdiàn). 超商裡有提款機。 (Chāoshāng lǐ yǒu tíkuǎnjī.) means “There is an ATM inside the convenience store.” This is an example, not a claim that every store has one."
     },
     {
       "text": "郵局",
@@ -1266,7 +1328,7 @@ const unit:UnitData = {
       "meaning": "post office",
       "lessonId": "b2u2-l6-lesson",
       "core": true,
-      "note": "郵局 can also have an ATM; it is a post office, not a bank."
+      "note": "郵局 (yóujú) means post office. A post office handles mail and may also offer cash withdrawal. 郵局在哪裡？ (Yóujú zài nǎlǐ?) means “Where is the post office?”"
     },
     {
       "text": "提",
@@ -1274,7 +1336,7 @@ const unit:UnitData = {
       "meaning": "withdraw (money); take out",
       "lessonId": "b2u2-l6-lesson",
       "core": true,
-      "note": "In 提錢, 提 means withdraw cash; 提款機 is the machine used for this."
+      "note": "提 (tí) here means withdraw money. 提錢 (tí qián) means withdraw cash; 錢 is money. 郵局也可以提錢。 (Yóujú yě kěyǐ tí qián.) means “You can also withdraw money at the post office.”"
     },
     {
       "text": "那邊",
@@ -1282,7 +1344,7 @@ const unit:UnitData = {
       "meaning": "over there",
       "lessonId": "b2u2-l6-lesson",
       "core": true,
-      "note": "那邊 points to a place away from the speaker; compare 這邊, here."
+      "note": "那邊 (nàbiān) means over there, away from the speaker. 那邊有一家郵局。 (Nàbiān yǒu yì jiā yóujú.) means “There is a post office over there.” The word points to a location; it does not specify left or right."
     }
   ],
   "reviewVocabulary": [
@@ -1309,13 +1371,13 @@ const unit:UnitData = {
       "meaning": "level; peace",
       "strokes": 5,
       "note": "平 is part of 和平, the road name Heping.",
-      "memory": "Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+      "memory": "Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
       "parts": [
         {
           "label": "一",
           "name": "top line",
           "role": "Character component",
-          "description": "In 平, write 一 (top line) as the first 1 stroke; Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+          "description": "In 平, this top line uses strokes 1. Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
           "strokes": [
             0
           ]
@@ -1324,17 +1386,17 @@ const unit:UnitData = {
           "label": "丷",
           "name": "two dots",
           "role": "Character component",
-          "description": "In 平, write 丷 (two dots) as the following 2 strokes; Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+          "description": "In 平, this two dots uses strokes 2, 3. Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
           "strokes": [
             1,
             2
           ]
         },
         {
-          "label": "干",
+          "label": "十",
           "name": "lower crossing strokes",
           "role": "Character component",
-          "description": "In 平, write 干 (lower crossing strokes) as the following 2 strokes; Start with the top line, set two dots below, and finish the central vertical and crossbar.",
+          "description": "In 平, this lower crossing strokes uses strokes 4, 5. Write the top line and two short slanting strokes, then the lower horizontal and finally the central vertical.",
           "strokes": [
             3,
             4
@@ -1343,9 +1405,9 @@ const unit:UnitData = {
       ],
       "layout": "whole",
       "example": {
-        "text": "和平",
-        "pinyin": "hépíng",
-        "meaning": "peace"
+        "text": "和平東路",
+        "pinyin": "Hépíng Dōng Lù",
+        "meaning": "Heping East Road"
       },
       "practiceBuild": true
     },
@@ -1387,7 +1449,7 @@ const unit:UnitData = {
       "layout": "side",
       "example": {
         "text": "一段",
-        "pinyin": "yí duàn",
+        "pinyin": "yī duàn",
         "meaning": "section one"
       },
       "practiceBuild": true
@@ -1434,9 +1496,9 @@ const unit:UnitData = {
       ],
       "layout": "side",
       "example": {
-        "text": "綠燈",
-        "pinyin": "lǜdēng",
-        "meaning": "green light"
+        "text": "紅綠燈",
+        "pinyin": "hónglǜdēng",
+        "meaning": "traffic light"
       },
       "practiceBuild": true
     },
@@ -1766,7 +1828,7 @@ const unit:UnitData = {
       "id": "b2u2-l4-evaluative",
       "title": "How something seems: V 起來",
       "pattern": "perception/action V + 起來 + evaluation",
-      "explanation": "看起來, 聽起來 and 吃起來 describe a speaker’s impression. Negate the evaluation after 起來: 聽起來不遠, never *不聽起來遠. Questions can use 怎麼樣 or 好不好.",
+      "explanation": "Verb + 起來 introduces an impression from seeing, hearing, eating, or doing something. 看起來 (kàn qǐlái) means looks; 聽起來 (tīng qǐlái) means sounds; 吃起來 (chī qǐlái) means tastes. Put the judgment afterward. Negate the judgment: 聽起來不遠 means it does not sound far. Ask with 怎麼樣 after 起來, or make the judgment an affirmative-negative question.",
       "examples": [
         {
           "text": "師大聽起來不遠。",
@@ -1774,9 +1836,19 @@ const unit:UnitData = {
           "meaning": "NTNU does not sound far."
         },
         {
-          "text": "師大看起來很遠。",
-          "pinyin": "Shīdà kàn qǐlái hěn yuǎn.",
-          "meaning": "NTNU looks far away."
+          "text": "這個菜吃起來不辣。",
+          "pinyin": "Zhège cài chī qǐlái bú là.",
+          "meaning": "This dish does not taste spicy."
+        },
+        {
+          "text": "這個菜吃起來怎麼樣？",
+          "pinyin": "Zhège cài chī qǐlái zěnme yàng?",
+          "meaning": "How does this dish taste?"
+        },
+        {
+          "text": "師大看起來遠不遠？",
+          "pinyin": "Shīdà kàn qǐlái yuǎn bu yuǎn?",
+          "meaning": "Does NTNU look far away?"
         }
       ],
       "remember": "The evaluation follows 起來; it is a judgment from sensory experience."
@@ -1795,9 +1867,9 @@ const unit:UnitData = {
   "phrases": {
     "b2u2-l1-word-1": {
       "text": "和平東路",
-      "pinyin": "Hépíng Dōnglù",
+      "pinyin": "Hépíng Dōng Lù",
       "meaning": "Heping East Road",
-      "note": "This is Heping East Road in Taipei; road section numbers follow the name.",
+      "note": "和平東路 (Hépíng Dōng Lù) is Heping East Road, a road name in Taipei. 和平 (Hépíng) is the name, 東 (dōng) means east, and 路 (lù) means road. Read the whole name as one destination or landmark.",
       "tokens": [
         "和平東路"
       ],
@@ -1807,7 +1879,7 @@ const unit:UnitData = {
       "text": "段",
       "pinyin": "duàn",
       "meaning": "section (of a road)",
-      "note": "和平東路一段 is Section 1 of Heping East Road; 段 labels the road section.",
+      "note": "段 (duàn) means a section of a road. 和平東路一段 (Hépíng Dōng Lù yī duàn) is “Section 1 of Heping East Road.” Put the section number after the road name and before 段. Here 一 is a section label, read yī.",
       "tokens": [
         "段"
       ],
@@ -1817,7 +1889,7 @@ const unit:UnitData = {
       "text": "紅綠燈",
       "pinyin": "hónglǜdēng",
       "meaning": "traffic light",
-      "note": "A 紅綠燈 is a red-and-green traffic light; use it as a route landmark.",
+      "note": "紅綠燈 (hónglǜdēng) means traffic light: 紅 is red, 綠 is green, and 燈 is light. A traffic light can serve as a landmark in directions. 一個紅綠燈 (yí ge hónglǜdēng) means one traffic light.",
       "tokens": [
         "紅綠燈"
       ],
@@ -1827,7 +1899,7 @@ const unit:UnitData = {
       "text": "第",
       "pinyin": "dì",
       "meaning": "ordinal prefix",
-      "note": "第 + number forms an ordinal: 第二個紅綠燈 is the second traffic light.",
+      "note": "第 (dì) before a number gives its position in a sequence. 第二 (dì èr) means second. 第二個紅綠燈 (dì èr ge hónglǜdēng) means “the second traffic light”; 兩個紅綠燈 means two traffic lights, a quantity rather than a position.",
       "tokens": [
         "第"
       ],
@@ -1837,7 +1909,7 @@ const unit:UnitData = {
       "text": "看見",
       "pinyin": "kànjiàn",
       "meaning": "see; catch sight of",
-      "note": "過了紅綠燈，就看見師大了 means the destination comes into view.",
+      "note": "看見 (kànjiàn) means see or catch sight of. 我看見師大了。 (Wǒ kànjiàn Shīdà le.) means “I can see NTNU now.” 看 is looking; 看見 says that something comes into view.",
       "tokens": [
         "看見"
       ],
@@ -1858,7 +1930,7 @@ const unit:UnitData = {
       "text": "過了第二個紅綠燈，就看見師大了。",
       "pinyin": "Guò le dì èr ge hónglǜdēng, jiù kànjiàn Shīdà le.",
       "meaning": "After passing the second traffic light, NTNU comes into view.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "過 here means pass or cross. 第二個紅綠燈 is the second traffic light. The first clause gives the landmark to pass; 就 then links it to the result, seeing NTNU. 看見 means catch sight of, not arrive inside.",
       "tokens": [
         "過了",
         "第",
@@ -1876,7 +1948,7 @@ const unit:UnitData = {
       "text": "告訴",
       "pinyin": "gàosù",
       "meaning": "tell; inform",
-      "note": "告訴我 is “tell me”; 能不能再告訴我 politely asks for more information.",
+      "note": "告訴 (gàosù) means tell someone information. 告訴我 (gàosù wǒ) means “tell me.” Put the person after 告訴, then the information or question: 請告訴我師大在哪裡。 (Qǐng gàosù wǒ Shīdà zài nǎlǐ.) means “Please tell me where NTNU is.”",
       "tokens": [
         "告訴"
       ],
@@ -1886,7 +1958,7 @@ const unit:UnitData = {
       "text": "聽起來",
       "pinyin": "tīng qǐlái",
       "meaning": "sound; seem from hearing",
-      "note": "聽起來不遠 evaluates how far a route sounds, not a literal upward motion.",
+      "note": "聽起來 (tīng qǐlái) means “sound” when giving an impression from what you hear. 聽起來不遠。 (Tīng qǐlái bù yuǎn.) means “It does not sound far.” Put the judgment after 起來; this is not a movement upward.",
       "tokens": [
         "聽起來"
       ],
@@ -1896,7 +1968,7 @@ const unit:UnitData = {
       "text": "提款機",
       "pinyin": "tíkuǎnjī",
       "meaning": "ATM",
-      "note": "A 提款機 is the machine used to withdraw cash; 提款 means withdraw money.",
+      "note": "提款機 (tíkuǎnjī) means ATM. 提款 (tíkuǎn) means withdraw money and 機 (jī) means machine. 這裡有提款機嗎？ (Zhèlǐ yǒu tíkuǎnjī ma?) means “Is there an ATM here?”",
       "tokens": [
         "提款機"
       ],
@@ -1906,7 +1978,7 @@ const unit:UnitData = {
       "text": "超商",
       "pinyin": "chāoshāng",
       "meaning": "convenience store (colloquial Taiwan)",
-      "note": "超商 is a short Taiwanese name for 便利商店; both can refer to the same shop.",
+      "note": "超商 (chāoshāng) means convenience store in Taiwan, another name for 便利商店 (biànlì shāngdiàn). 超商裡有提款機。 (Chāoshāng lǐ yǒu tíkuǎnjī.) means “There is an ATM inside the convenience store.” This is an example, not a claim that every store has one.",
       "tokens": [
         "超商"
       ],
@@ -1916,7 +1988,7 @@ const unit:UnitData = {
       "text": "請告訴我提款機在哪裡。",
       "pinyin": "Qǐng gàosù wǒ tíkuǎnjī zài nǎlǐ.",
       "meaning": "Please tell me where the ATM is.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "請 makes the request polite. 告訴我 means “tell me.” 提款機在哪裡 is the information requested: where the ATM is. Keep that question after 告訴我; do not move 哪裡 to the front.",
       "tokens": [
         "請",
         "告訴",
@@ -1931,7 +2003,7 @@ const unit:UnitData = {
       "text": "郵局",
       "pinyin": "yóujú",
       "meaning": "post office",
-      "note": "郵局 can also have an ATM; it is a post office, not a bank.",
+      "note": "郵局 (yóujú) means post office. A post office handles mail and may also offer cash withdrawal. 郵局在哪裡？ (Yóujú zài nǎlǐ?) means “Where is the post office?”",
       "tokens": [
         "郵局"
       ],
@@ -1941,7 +2013,7 @@ const unit:UnitData = {
       "text": "提",
       "pinyin": "tí",
       "meaning": "withdraw (money); take out",
-      "note": "In 提錢, 提 means withdraw cash; 提款機 is the machine used for this.",
+      "note": "提 (tí) here means withdraw money. 提錢 (tí qián) means withdraw cash; 錢 is money. 郵局也可以提錢。 (Yóujú yě kěyǐ tí qián.) means “You can also withdraw money at the post office.”",
       "tokens": [
         "提"
       ],
@@ -1951,7 +2023,7 @@ const unit:UnitData = {
       "text": "那邊",
       "pinyin": "nàbiān",
       "meaning": "over there",
-      "note": "那邊 points to a place away from the speaker; compare 這邊, here.",
+      "note": "那邊 (nàbiān) means over there, away from the speaker. 那邊有一家郵局。 (Nàbiān yǒu yì jiā yóujú.) means “There is a post office over there.” The word points to a location; it does not specify left or right.",
       "tokens": [
         "那邊"
       ],
@@ -1961,7 +2033,7 @@ const unit:UnitData = {
       "text": "那邊的超商有提款機。",
       "pinyin": "Nàbiān de chāoshāng yǒu tíkuǎnjī.",
       "meaning": "The convenience store over there has an ATM.",
-      "note": "Rebuild this complete source-aligned message from its words.",
+      "note": "那邊的超商 is “the convenience store over there.” 有 says it has something; 提款機 names the ATM.",
       "tokens": [
         "那邊",
         "的",
@@ -1975,7 +2047,7 @@ const unit:UnitData = {
       "text": "過了第二個紅綠燈，就看見師大了。",
       "pinyin": "Guò le dì èr ge hónglǜdēng, jiù kànjiàn Shīdà le.",
       "meaning": "After passing the second traffic light, NTNU comes into view.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "過 here means pass or cross. 第二個紅綠燈 is the second traffic light. The first clause gives the landmark to pass; 就 then links it to the result, seeing NTNU. 看見 means catch sight of, not arrive inside.",
       "tokens": [
         "過了",
         "第",
@@ -1993,7 +2065,7 @@ const unit:UnitData = {
       "text": "請告訴我提款機在哪裡。",
       "pinyin": "Qǐng gàosù wǒ tíkuǎnjī zài nǎlǐ.",
       "meaning": "Please tell me where the ATM is.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "請 makes the request polite. 告訴我 means “tell me.” 提款機在哪裡 is the information requested: where the ATM is. Keep that question after 告訴我; do not move 哪裡 to the front.",
       "tokens": [
         "請",
         "告訴",
@@ -2008,7 +2080,7 @@ const unit:UnitData = {
       "text": "那邊的超商有提款機。",
       "pinyin": "Nàbiān de chāoshāng yǒu tíkuǎnjī.",
       "meaning": "The convenience store over there has an ATM.",
-      "note": "Use the full sentence, not just a matching keyword.",
+      "note": "那邊的超商 is “the convenience store over there.” 有 says it has something; 提款機 names the ATM.",
       "tokens": [
         "那邊",
         "的",
@@ -2017,9 +2089,30 @@ const unit:UnitData = {
         "提款機"
       ],
       "practice": true
+    },
+    "b2u2-cash-context": {
+      "text": "這附近有提款機嗎？超商裡應該有，郵局也可以提錢。",
+      "pinyin": "Zhè fùjìn yǒu tíkuǎnjī ma? Chāoshāng lǐ yīnggāi yǒu, yóujú yě kěyǐ tí qián.",
+      "meaning": "“Is there an ATM nearby?” “There should be one in a convenience store; you can also withdraw money at the post office.”",
+      "note": "A visitor asks about an ATM. The reply uses 應該 (yīnggāi), should/probably, to give an expectation, not a guarantee. 也 adds the post office as another place to withdraw cash.",
+      "tokens": [
+        "這",
+        "附近",
+        "有",
+        "提款機",
+        "嗎",
+        "超商",
+        "裡",
+        "應該",
+        "有",
+        "郵局",
+        "也",
+        "可以",
+        "提錢"
+      ],
+      "practice": false
     }
   },
   "revisionStepIds": []
 };
-
 export default unit;
