@@ -46,7 +46,7 @@ const unit:UnitData = {
     {
       "id": "u23-method",
       "title": "Lately, Every Day",
-      "subtitle": "Finish the routine vocabulary from Lesson 7.",
+      "subtitle": "Finish the routine vocabulary from this lesson.",
       "chars": [],
       "minutes": "6–8 min",
       "unitId": "unit-23",
@@ -88,7 +88,7 @@ const unit:UnitData = {
         {
           "id": "u23-method-05",
           "type": "select",
-          "prompt": "Which word means “recently; lately”? ",
+          "prompt": "Which word means “recently; lately”?",
           "options": [
             "最近",
             "每天",
@@ -100,7 +100,7 @@ const unit:UnitData = {
         {
           "id": "u23-method-06",
           "type": "select",
-          "prompt": "Which expression means “every day”? ",
+          "prompt": "Which expression means “every day”?",
           "options": [
             "每天",
             "每",
@@ -408,7 +408,7 @@ const unit:UnitData = {
         {
           "id": "u23-play-05",
           "type": "select",
-          "prompt": "Which expression means “to write characters”? ",
+          "prompt": "Which expression means “to write characters”?",
           "options": [
             "寫字",
             "有意思",
@@ -1360,7 +1360,7 @@ const unit:UnitData = {
       "id": "u23-permission-keyi",
       "title": "Permission with 可以",
       "pattern": "Subject + 可以 + Verb Phrase",
-      "explanation": "可以 was already used earlier for possibility. In Lesson 7 it also grants permission: the speaker says an action is allowed. As an auxiliary verb, 可以 comes before the action.",
+      "explanation": "可以 was already used earlier for possibility. In this lesson it also grants permission: the speaker says an action is allowed. As an auxiliary verb, 可以 comes before the action.",
       "examples": [
         {
           "text": "你可以在這裡寫字。",

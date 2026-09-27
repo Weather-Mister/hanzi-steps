@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "orange",
     "label": "Duration, free time & suggestions",
     "title": "How Long Will You Be Away?",
-    "description": "10 new Lesson 9 words and forms. Ask how long, describe what happens during free time, and give simple suggestions for places and activities.",
+    "description": "10 new this lesson words and forms. Ask how long, describe what happens during free time, and give simple suggestions for places and activities.",
     "chars": [
       "久",
       "女",
@@ -1077,7 +1077,7 @@ const unit:UnitData = {
       "meaning": "sometimes",
       "lessonId": "u27-sometimes",
       "core": true,
-      "note": "Lesson 9 also uses the paired pattern 有時候…，有時候… for alternating possibilities."
+      "note": "this lesson also uses the paired pattern 有時候…，有時候… for alternating possibilities."
     },
     {
       "text": "建議",
@@ -1649,8 +1649,8 @@ const unit:UnitData = {
     "u27-duration-basic": {
       "id": "u27-duration-basic",
       "title": "Say how long with a duration after the verb",
-      "pattern": "Subject + Verb + Duration  /  ... + 多久?",
-      "explanation": "A time-duration expression tells how long an action lasts, not when it happens. In the basic Lesson 9 pattern, the duration follows the verb directly. 多久 asks for that length of time. More complex cases with an explicit object, negation, and separable verbs are taught in the next continuation unit.",
+      "pattern": "Subject + Verb + Duration /... + 多久?",
+      "explanation": "A time-duration expression tells how long an action lasts, not when it happens. In the basic this lesson pattern, the duration follows the verb directly. 多久 asks for that length of time. More complex cases with an explicit object, negation, and separable verbs are taught in the next continuation unit.",
       "examples": [
         {
           "text": "你想玩多久？",
@@ -1697,7 +1697,7 @@ const unit:UnitData = {
       "id": "u27-you-shihou",
       "title": "Alternate possibilities with 有時候…有時候…",
       "pattern": "有時候 + A，有時候 + B",
-      "explanation": "Lesson 9 uses two 有時候 phrases to present activities that alternate within the same general situation. The two clauses describe different things that happen on different occasions.",
+      "explanation": "this lesson uses two 有時候 phrases to present activities that alternate within the same general situation. The two clauses describe different things that happen on different occasions.",
       "examples": [
         {
           "text": "我有時候在家看電視，有時候出去玩。",
@@ -1713,7 +1713,7 @@ const unit:UnitData = {
     "u27-yinggai": {
       "id": "u27-yinggai",
       "title": "Give a suggestion with 應該",
-      "pattern": "Subject + 應該 + Verb Phrase  /  Subject + 不應該 + Verb Phrase",
+      "pattern": "Subject + 應該 + Verb Phrase / Subject + 不應該 + Verb Phrase",
       "explanation": "應該 introduces what someone should or ought to do. Put the suggested action after 應該. To say someone should not do something, put 不 before 應該.",
       "examples": [
         {

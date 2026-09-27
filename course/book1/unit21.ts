@@ -54,7 +54,7 @@ const unit:UnitData = {
     {
       "id": "u21-soften",
       "title": "Say It More Gently",
-      "subtitle": "Finish Lesson 6 with softened actions and corrective 不是.",
+      "subtitle": "Finish this lesson with softened actions and corrective 不是.",
       "chars": [],
       "minutes": "7–9 min",
       "unitId": "unit-21",
@@ -99,7 +99,7 @@ const unit:UnitData = {
         {
           "id": "u21-soften-06",
           "type": "select",
-          "prompt": "Which version makes the request sound lighter? ",
+          "prompt": "Which version makes the request sound lighter?",
           "options": [
             "請你幫幫我。",
             "請你幫我幫我。"
@@ -137,7 +137,7 @@ const unit:UnitData = {
         {
           "id": "u21-soften-10",
           "type": "select",
-          "prompt": "Someone assumes you do not want to go. Which opening corrects that assumption? ",
+          "prompt": "Someone assumes you do not want to go. Which opening corrects that assumption?",
           "options": [
             "我不是不想去…",
             "我不想去…"

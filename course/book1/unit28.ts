@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "amber",
     "label": "Travel time, duration & transport",
     "title": "How Long Is the Trip?",
-    "description": "Master the Lesson 9 duration system while repairing real Lesson 8 travel vocabulary gaps, with each recovered item tied back to time, routes, tickets, or trip planning.",
+    "description": "Master the this lesson duration system while repairing real this lesson travel vocabulary gaps, with each recovered item tied back to time, routes, tickets, or trip planning.",
     "chars": [
       "年",
       "日",
@@ -477,7 +477,7 @@ const unit:UnitData = {
         {
           "id": "u28-object-s1",
           "type": "select",
-          "prompt": "Which sentence follows Lesson 9's taught object + repeated verb + duration pattern?",
+          "prompt": "Which sentence follows this lesson's taught object + repeated verb + duration pattern?",
           "options": [
             "我學中文學一年。",
             "我明年學中文。",
@@ -707,7 +707,7 @@ const unit:UnitData = {
         {
           "id": "u28-separable-s1",
           "type": "select",
-          "prompt": "Which form puts the duration inside the separable verb 放假, as taught in Lesson 9?",
+          "prompt": "Which form puts the duration inside the separable verb 放假, as taught in this lesson?",
           "options": [
             "放三天的假",
             "放假的時候",
@@ -741,7 +741,7 @@ const unit:UnitData = {
     {
       "id": "u28-review",
       "title": "Unit 28 Review",
-      "subtitle": "Time structure plus the recovered Lesson 8 transport vocabulary.",
+      "subtitle": "Time structure plus the recovered this lesson transport vocabulary.",
       "chars": [],
       "minutes": "15–19 min",
       "unitId": "unit-28",
@@ -986,7 +986,7 @@ const unit:UnitData = {
             "Time-when and duration are interchangeable"
           ],
           "answer": "Time-when locates an event; duration gives its length",
-          "explanation": "That is the core Lesson 9 distinction.",
+          "explanation": "That is the core this lesson distinction.",
           "grammarIds": [
             "u28-when-duration-contrast"
           ]
@@ -1097,7 +1097,7 @@ const unit:UnitData = {
       "meaning": "bus",
       "lessonId": "u28-negation",
       "core": true,
-      "note": "Lesson 8 gives 公共汽車 as the full form and 公車 as the shorter everyday form."
+      "note": "this lesson gives 公共汽車 as the full form and 公車 as the shorter everyday form."
     },
     {
       "text": "中國",
@@ -1563,7 +1563,7 @@ const unit:UnitData = {
     "u28-when-duration-contrast": {
       "id": "u28-when-duration-contrast",
       "title": "When something happens vs. how long it lasts",
-      "pattern": "Time-When + Subject/Verb ...  /  Subject + Verb + Time-Duration",
+      "pattern": "Time-When + Subject/Verb... / Subject + Verb + Time-Duration",
       "explanation": "Time-When expressions locate an event at a point or period on the calendar, while Time-Duration expressions give the length of the action. In the basic patterns here, a when-expression appears before the action, while a duration follows the verb.",
       "examples": [
         {
@@ -1633,7 +1633,7 @@ const unit:UnitData = {
       "id": "u28-separable-duration",
       "title": "Insert duration into a separable verb",
       "pattern": "V + Duration + (的) + Object",
-      "explanation": "With a separable verb, the duration can go between the verb and its object. Lesson 9 shows both forms with and without 的. 放假 can become 放三天的假, and 唱歌 can become 唱三個鐘頭的歌.",
+      "explanation": "With a separable verb, the duration can go between the verb and its object. this lesson shows both forms with and without 的. 放假 can become 放三天的假, and 唱歌 can become 唱三個鐘頭的歌.",
       "examples": [
         {
           "text": "我們放三天的假。",
@@ -1699,7 +1699,7 @@ const unit:UnitData = {
       "text": "我在家看影片。",
       "pinyin": "Wǒ zài jiā kàn yǐngpiàn.",
       "meaning": "I watch films at home.",
-      "note": "影片 is the Lesson 9 word for film or video.",
+      "note": "影片 is the this lesson word for film or video.",
       "tokens": [
         "我",
         "在家",
@@ -1828,7 +1828,7 @@ const unit:UnitData = {
       "text": "在高鐵站或是便利商店都可以。",
       "pinyin": "Zài gāotiě zhàn huòshì biànlì shāngdiàn dōu kěyǐ.",
       "meaning": "Either at an HSR station or at a convenience store is fine.",
-      "note": "This combines the Lesson 8 ticket-buying locations with 或是.",
+      "note": "This combines the this lesson ticket-buying locations with 或是.",
       "tokens": [
         "在高鐵站",
         "或是",

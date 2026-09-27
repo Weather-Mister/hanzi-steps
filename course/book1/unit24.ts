@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "amber",
     "label": "Transportation, companions & implicit comparison",
     "title": "How Are You Getting There?",
-    "description": "12 new words and forms. Start Lesson 8 with transportation, going with someone, asking how, implicit comparison with 比較, and 又…又….",
+    "description": "12 new words and forms. Start this lesson with transportation, going with someone, asking how, implicit comparison with 比較, and 又…又….",
     "chars": [
       "坐",
       "火",
@@ -1943,7 +1943,7 @@ const unit:UnitData = {
     "u24-how-vs-zenmeyang": {
       "id": "u24-how-vs-zenmeyang",
       "title": "怎麼 is not 怎麼樣",
-      "pattern": "怎麼 + Action?  vs.  Topic + 怎麼樣?",
+      "pattern": "怎麼 + Action? vs. Topic + 怎麼樣?",
       "explanation": "怎麼 asks how an action is carried out. 怎麼樣 is a state-verb expression asking how something is or what someone thinks about it. They are not interchangeable.",
       "examples": [
         {

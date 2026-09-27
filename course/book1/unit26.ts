@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Holidays, plans & feasibility",
     "title": "What Are You Planning?",
-    "description": "11 genuinely new Lesson 8–9 words and forms. Close the Lesson 8 tail, then talk about breaks, travel plans, and when something will happen.",
+    "description": "11 genuinely new these lessons words and forms. Close the this lesson tail, then talk about breaks, travel plans, and when something will happen.",
     "chars": [
       "古",
       "代",
@@ -55,7 +55,7 @@ const unit:UnitData = {
     {
       "id": "u26-tail",
       "title": "Ancient Things — and a Plan That Won’t Work",
-      "subtitle": "Close the two Lesson 8 items intentionally left after Unit 25.",
+      "subtitle": "Close the two this lesson items intentionally left after Unit 25.",
       "chars": [
         "古",
         "代",
@@ -1870,8 +1870,8 @@ const unit:UnitData = {
     "u26-time-when": {
       "id": "u26-time-when",
       "title": "Put a time-when expression before the action",
-      "pattern": "Subject + Time-When + Verb Phrase  /  Time-When + Subject + Verb Phrase",
-      "explanation": "Lesson 9 distinguishes when something happens from how long it lasts. A time-when expression such as 下個星期 identifies the point or period when the event occurs and appears before the main action. It can follow the subject or be moved to the front as the topic.",
+      "pattern": "Subject + Time-When + Verb Phrase / Time-When + Subject + Verb Phrase",
+      "explanation": "this lesson distinguishes when something happens from how long it lasts. A time-when expression such as 下個星期 identifies the point or period when the event occurs and appears before the main action. It can follow the subject or be moved to the front as the topic.",
       "examples": [
         {
           "text": "我下個星期回國。",

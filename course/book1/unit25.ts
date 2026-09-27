@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "cyan",
     "label": "Getting around & explicit comparison",
     "title": "Which Way Is Faster?",
-    "description": "10 new Lesson 8 words and forms. Get around with Taiwan transport vocabulary and compare two choices explicitly with 比.",
+    "description": "10 new this lesson words and forms. Get around with Taiwan transport vocabulary and compare two choices explicitly with 比.",
     "chars": [
       "同",
       "參",
