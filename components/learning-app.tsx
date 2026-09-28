@@ -174,7 +174,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
      <div className="course-navigation-heading"><span>COURSE</span><strong>Taiwanese Mandarin</strong></div>
      <section className="course-navigation-section">
       <p className="course-navigation-label">Book</p>
-      <nav className="book-switcher" aria-label="Choose a book">{books.map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
+      <nav className="book-switcher" aria-label="Choose a book">{books.filter(b=>b.number!==3).map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
      </section>
      {book.available&&<section className="course-navigation-section">
       <p className="course-navigation-label">Unit</p>
