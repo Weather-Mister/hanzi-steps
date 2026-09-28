@@ -383,8 +383,8 @@ html[data-feedback-motion=off] button:is(:active,:hover) { transform: none !impo
 }
 @media(max-width:700px) {
  .book-switcher { gap:7px; }
- .book-switcher button { padding:12px 8px; gap:6px; justify-content:center; }
- .book-switcher button > svg { display:none; }
+ .book-switcher button { padding:12px 8px; gap:7px; justify-content:center; }
+ .book-switcher button > svg { display:block; width:18px; height:18px; flex:0 0 auto; }
  .book-switcher small { font-size:.875rem; }
 }
 
