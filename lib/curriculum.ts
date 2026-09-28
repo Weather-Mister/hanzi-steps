@@ -19,7 +19,20 @@ function characterSteps(c:string):Step[]{
  select.options=[c,...characterOrder.filter(x=>x!==c).slice(0,3)];
  return list.map((step,i)=>({...step,id:`${c}-${i}`}));
 }
-export function lessonAvailable(lessonId:string,completed:Set<string>){const done=completedLessonIds(completed);const i=lessons.findIndex(l=>l.id===lessonId);return i>=0&&(done.has(lessonId)||books.some(b=>units.find(u=>u.id===b.unitIds[0])?.lessonIds[0]===lessonId)||done.has(lessons[i-1]?.id));}
+export function lessonAvailable(lessonId:string,completed:Set<string>){
+ const done=completedLessonIds(completed);
+ const lesson=lessons.find(l=>l.id===lessonId);
+ if(!lesson)return false;
+ const unit=units.find(u=>u.id===lesson.unitId);
+ const position=unit?.lessonIds.indexOf(lessonId)??-1;
+ return done.has(lessonId)||position===0||(position>0&&done.has(unit!.lessonIds[position-1]));
+}
+export function latestCourseLesson(sessions:Session[]):Lesson|undefined{
+ const latest=[...sessions]
+  .filter(s=>!s.lessonId.startsWith('practice-')&&lessons.some(l=>l.id===s.lessonId))
+  .sort((a,b)=>b.updatedAt-a.updatedAt)[0];
+ return latest?lessons.find(l=>l.id===latest.lessonId):undefined;
+}
 export function characterPracticeAvailable(char:string,_completed:Set<string>){
  return Boolean(characters[char]);
 }
