@@ -5,7 +5,7 @@ import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
 import {Dialog,DialogContent,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {Switch} from '@/components/ui/switch';
 import {Progress} from '@/components/ui/progress';
-import {Character,characterPracticeAvailable,characters,characterOrder,findLesson,GrammarRule,grammarRules,Lesson,lessonAvailable,lessons,phrases,Session,shuffled,Step,Unit,units,books,vocabulary,wordMeaning,unitLibraryCharacters,completedLessonIds,previousLessonLengths} from '@/lib/curriculum';
+import {Character,characterPracticeAvailable,characters,characterOrder,findLesson,GrammarRule,grammarRules,Lesson,lessonAvailable,lessons,phrases,Session,shuffled,Step,Unit,units,books,vocabulary,wordMeaning,unitLibraryCharacters,completedLessonIds,previousLessonLengths,latestCourseLesson} from '@/lib/curriculum';
 import {useProgress} from '@/lib/use-progress';
 import {useSpeech} from '@/lib/use-speech';
 import {CharacterArt} from './character-art';
@@ -150,7 +150,7 @@ function LearningExperience({userKey,accountPanel,signInPanel}:AppProps){
  const currentBook=books.find(b=>b.unitIds.includes(currentUnit.id));
  const currentTheme=visualUnitTheme(currentUnit,currentBook?.number??1);
  const followingUnit=units.find(u=>u.id===currentBook?.unitIds[(currentBook?.unitIds.indexOf(currentUnit.id)??-1)+1]);
- useEffect(()=>{if(loading||unitChosen.current)return;unitChosen.current=true;const done=completedLessonIds(sessions.filter(s=>s.complete).map(s=>s.lessonId));const next=lessons.find(l=>!done.has(l.id));setUnitId(next?.unitId||units[units.length-1].id);setBookId(books.find(b=>b.unitIds.includes(next?.unitId||units[units.length-1].id))?.id||'book-1')},[loading,sessions]);
+ useEffect(()=>{if(loading||unitChosen.current)return;unitChosen.current=true;const done=completedLessonIds(sessions.filter(s=>s.complete).map(s=>s.lessonId));const next=latestCourseLesson(sessions)||lessons.find(l=>!done.has(l.id));setUnitId(next?.unitId||units[units.length-1].id);setBookId(books.find(b=>b.unitIds.includes(next?.unitId||units[units.length-1].id))?.id||'book-1')},[loading,sessions]);
  function chooseUnit(id:string){setBookId(books.find(b=>b.unitIds.includes(id))?.id||'book-1');unitChosen.current=true;setUnitId(id)}
  function start(lesson:Lesson){if(loading)return;if(lesson.id.startsWith('practice-')){const char=lesson.id.slice(9);if(!characterPracticeAvailable(char,completed))return}else if(!lessonAvailable(lesson.id,completed))return;const checkpoint=sessions.find(s=>s.lessonId===lesson.id&&!s.complete);const s=checkpoint||{id:crypto.randomUUID(),lessonId:lesson.id,index:0,independent:0,assisted:0,complete:false,updatedAt:Date.now()};setDetail(null);setReading(null);setActive(s);if(!checkpoint)save(s);window.scrollTo({top:0,behavior:'instant'})}
  function advance(assessed:boolean,assisted:boolean){if(!active||!current)return;const next={...active,index:active.index+1,independent:active.independent+Number(assessed&&!assisted),assisted:active.assisted+Number(assessed&&assisted),complete:active.index+1===current.steps.length,updatedAt:Date.now()};setActive(next);save(next);if(next.complete)feel('complete')}
