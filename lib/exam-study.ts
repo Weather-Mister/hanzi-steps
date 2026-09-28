@@ -45,6 +45,21 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'什麼',pinyin:'shénme',meaning:'what'},
   ],
  },
+ {
+  id:2,
+  title:'Week 2',
+  words:[
+   {traditional:'名字',pinyin:'míngzi',meaning:'full name; first name; given name'},
+   {traditional:'哪',pinyin:'nǎ / něi',meaning:'which'},
+   {traditional:'呢',pinyin:'ne',meaning:'question particle'},
+   {traditional:'臺灣',pinyin:'Táiwān',meaning:'Taiwan'},
+   {traditional:'他',pinyin:'tā',meaning:'he; him; she; her'},
+   {traditional:'中國',pinyin:'Zhōngguó',meaning:'China; Chinese'},
+   {traditional:'她',pinyin:'tā',meaning:'she; her'},
+   {traditional:'誰',pinyin:'shéi',meaning:'who; whom'},
+   {traditional:'華人',pinyin:'Huárén',meaning:'Ethnic Chinese; overseas Chinese; citizen of Chinese origin'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;

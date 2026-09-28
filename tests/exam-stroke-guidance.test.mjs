@@ -6,15 +6,24 @@ import {examStudyItems,examStudySets} from '../lib/exam-study.ts';
 
 const strokeData=JSON.parse(fs.readFileSync(new URL('../lib/stroke-data.json',import.meta.url),'utf8'));
 
-test('Week 1 Exam Study has valid handwriting coverage or safe fallback',()=>{
- const set=examStudySets.find(candidate=>candidate.id===1);
+test('every Exam Study set has valid handwriting coverage or safe fallback',()=>{
+ for(const set of examStudySets){
+  const chars=[...new Set(examStudyItems(set).flatMap(item=>item.characters))];
+  assert.ok(chars.length>0,`Exam Study ${set.id} must contain handwriting characters`);
+  for(const char of chars){
+   const local=strokeData[char];
+   if(!local)continue; // Hanzi Writer fallback is intentional for exam-only chars without bundled guides.
+   assert.equal(strokeGeometryLooksAligned(local),true,`${char} must have aligned local guides`);
+  }
+ }
+});
+
+test('Week 2 handwriting targets include the supplied Traditional forms',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===2);
  assert.ok(set);
- const chars=[...new Set(examStudyItems(set).flatMap(item=>item.characters))];
- assert.ok(chars.includes('國'));
- for(const char of chars){
-  const local=strokeData[char];
-  if(!local)continue; // Hanzi Writer fallback is intentional for new exam-only chars.
-  assert.equal(strokeGeometryLooksAligned(local),true,`${char} must have aligned local guides`);
+ const chars=new Set(examStudyItems(set).flatMap(item=>item.characters));
+ for(const char of ['名','字','哪','呢','臺','灣','他','中','國','她','誰','華','人']){
+  assert.ok(chars.has(char),`Week 2 must include ${char}`);
  }
 });
 
