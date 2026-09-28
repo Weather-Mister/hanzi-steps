@@ -48,8 +48,9 @@ export function strokeSource(geometry){
  return JSON.stringify(Object.fromEntries([...new Set([...keys,...Object.keys(geometry)])].filter(k=>k in geometry).map(k=>[k,geometry[k]])));
 }
 export function curriculumIndex({manifest,modules}){
- const index={schemaVersion:1,columns:{vocabulary:['pinyin','meaning','book','unit','lesson'],characters:['pinyin','meaning','book','unit','lesson'],grammar:['title','pattern','book','unit','lesson','activity']},order:manifest.books.flatMap(b=>b.units.map(u=>[b.id,u.id,u.order])),vocabulary:{},characters:{},grammar:{}};
+ const index={schemaVersion:1,columns:{vocabulary:['pinyin','meaning','book','unit','lesson'],characters:['pinyin','meaning','book','unit','lesson'],grammar:['title','pattern','book','unit','lesson','activity']},order:manifest.books.flatMap(b=>b.units.map(u=>[b.id,u.id,u.order])),unitReviews:{},vocabulary:{},characters:{},grammar:{}};
  for(const m of modules){
+  index.unitReviews[m.unit.id]=m.reviewLessonId;
   for(const w of m.newVocabulary)index.vocabulary[w.text]=[w.pinyin,w.meaning,m.bookId,m.unit.id,w.lessonId];
   for(const ch of m.newCharacters){const c=m.characters[ch];const l=m.lessons.find(l=>l.steps.some(s=>s.type==='intro'&&s.char===ch));index.characters[ch]=[c.pinyin,c.meaning,m.bookId,m.unit.id,l?.id??null];}
   for(const g of m.grammarIntroductions){const r=g.kind==='rule'?m.grammarRules[g.ref]:m.phrases[g.ref];index.grammar[g.id]=[g.kind==='rule'?r.title:r.text,g.kind==='rule'?r.pattern:r.note,m.bookId,m.unit.id,g.lessonId,g.stepId];}
@@ -57,5 +58,5 @@ export function curriculumIndex({manifest,modules}){
  return index;
 }
 export function indexSource(index){
- return '{\n  "schemaVersion": 1,\n  "columns": '+JSON.stringify(index.columns)+',\n  "order": '+JSON.stringify(index.order)+',\n'+['vocabulary','characters','grammar'].map(k=>'  '+JSON.stringify(k)+': {\n'+Object.entries(index[k]).map(([id,v])=>'    '+JSON.stringify(id)+': '+JSON.stringify(v)).join(',\n')+'\n  }').join(',\n')+'\n}\n';
+ return '{\n  "schemaVersion": 1,\n  "columns": '+JSON.stringify(index.columns)+',\n  "order": '+JSON.stringify(index.order)+',\n  "unitReviews": '+JSON.stringify(index.unitReviews)+',\n'+['vocabulary','characters','grammar'].map(k=>'  '+JSON.stringify(k)+': {\n'+Object.entries(index[k]).map(([id,v])=>'    '+JSON.stringify(id)+': '+JSON.stringify(v)).join(',\n')+'\n  }').join(',\n')+'\n}\n';
 }
