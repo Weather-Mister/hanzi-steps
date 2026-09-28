@@ -1,5 +1,5 @@
 const {chromium}=require('playwright');const fs=require('fs');const {spawn}=require('child_process');const assert=require('node:assert/strict');
-let server;
+let server,activePage;
 (async()=>{
 fs.mkdirSync('test-results/readings',{recursive:true});
 server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--config','vite.pages.config.ts','--host','127.0.0.1','--port','4173'],{stdio:'inherit'});
@@ -9,10 +9,10 @@ const context=await browser.newContext({viewport:{width:390,height:844},deviceSc
 const {lessons}=await import('../../course/runtime.ts');
 const sessions=lessons.map(l=>({id:crypto.randomUUID(),lessonId:l.id,index:l.steps.length,independent:0,assisted:0,complete:true,updatedAt:Date.now()}));
 await context.addInitScript(s=>{if(!localStorage.getItem('test-seeded')){localStorage.setItem('hanzi-steps-unsynced-v1-signed-out',JSON.stringify(s));localStorage.setItem('test-seeded','yes')}},sessions);
-const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
+const page=await context.newPage();activePage=page;const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto('http://127.0.0.1:4173/hanzi-steps/');
 await page.getByRole('button',{name:'Book 1 48 units',exact:true}).click();
-async function choose(n){await page.getByRole('button',{name:/Change unit/}).click();await page.getByRole('button',{name:new RegExp(`^0?${n} Unit ${n} ·`)}).click();}
+async function choose(n){await page.getByRole('button',{name:/Change unit/}).click();await page.getByRole('button',{name:new RegExp(`^Unit ${n} ·`)}).click();}
 await choose(10);await page.getByRole('button',{name:'Start reading',exact:true}).click();
 await page.getByRole('heading',{name:'A plan everyone can enjoy'}).waitFor();
 assert.equal(await page.locator('.reading-pinyin').count(),0);assert.equal(await page.locator('.reading-walkthrough').count(),0);
@@ -44,7 +44,7 @@ await page.getByRole('button',{name:'Book 2 4 units',exact:true}).click();await 
 await page.setViewportSize({width:1365,height:950});await page.screenshot({path:'test-results/readings/desktop.png',fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
 assert.deepEqual(errors,[]);
 // Fresh learner can preview unit but cannot launch its reading.
-const locked=await browser.newContext({viewport:{width:390,height:844}});const p2=await locked.newPage();await p2.goto('http://127.0.0.1:4173/hanzi-steps/');await p2.getByRole('button',{name:/Change unit/}).click();await p2.getByRole('button',{name:/^10 Unit 10 ·/}).click();assert.equal(await p2.getByRole('button',{name:'Finish the unit challenge to unlock'}).isDisabled(),true);
+const locked=await browser.newContext({viewport:{width:390,height:844}});const p2=await locked.newPage();await p2.goto('http://127.0.0.1:4173/hanzi-steps/');await p2.getByRole('button',{name:/Change unit/}).click();await p2.getByRole('button',{name:/^Unit 10 ·/}).click();assert.equal(await p2.getByRole('button',{name:'Finish the unit challenge to unlock'}).isDisabled(),true);
 console.log('PASS: all 14 stages; mobile/desktop; word and character help; hidden pinyin; submit gate; walkthrough; resume; replay; completion; fresh learner lock; no page errors.');
 await browser.close();server.kill();
-})().catch(e=>{console.error(e);server?.kill();process.exit(1)});
+})().catch(async e=>{console.error(e);if(activePage){console.error(await activePage.locator('body').innerText().catch(()=>''));await activePage.screenshot({path:'test-results/readings/failure.png',fullPage:true}).catch(()=>{});}server?.kill();process.exit(1)});

@@ -16,7 +16,7 @@ function Word({token,onHelp}:{token:ReadingToken;onHelp:()=>void}){
  const [open,setOpen]=useState(false),[pinyin,setPinyin]=useState(false),[charHelp,setCharHelp]=useState<string|null>(null);
  if(!token.gloss)return <>{token.text}</>;
  const entry=charHelp?characters[charHelp]:token.gloss;
- return <Popover open={open} onOpenChange={value=>{setOpen(value);setPinyin(false);setCharHelp(null);if(value)onHelp()}}><PopoverTrigger asChild><button type="button" className={`reading-word ${token.gloss.unfamiliar?'reading-new-word':''}`} aria-label={`Explain ${token.text}${token.gloss.unfamiliar?' (new word)':''}`}>{token.text}</button></PopoverTrigger><PopoverContent className="reading-word-help" collisionPadding={16} onOpenAutoFocus={e=>e.preventDefault()}>
+ return <Popover open={open} onOpenChange={value=>{setOpen(value);setPinyin(false);setCharHelp(null);if(value)onHelp()}}><PopoverTrigger asChild><button type="button" className={`reading-word ${token.gloss.unfamiliar?'reading-new-word':''}`} aria-label={`Explain ${token.text}${token.gloss.unfamiliar?' (new word)':''}`}>{token.text}</button></PopoverTrigger><PopoverContent className="reading-word-help" collisionPadding={16}>
   <div className="reading-help-heading"><strong lang="zh-Hant-TW">{charHelp||token.text}</strong><button className="icon-button" aria-label="Close word explanation" onClick={()=>setOpen(false)}><X size={18}/></button></div>
   {token.gloss.unfamiliar&&!charHelp&&<small>Extra word · help provided for this reading</small>}
   <p>{entry?.meaning}</p>{!charHelp&&token.gloss.note&&<p className="reading-help-note">{token.gloss.note}</p>}

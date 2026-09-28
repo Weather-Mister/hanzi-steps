@@ -51,6 +51,7 @@ type SessionRow={
 
 type CourseIndex={
   order:[string,string,number][];
+  unitReviews:Record<string,string>;
   characters:Record<string,[string,string,string,string,string]>;
 };
 
@@ -63,7 +64,6 @@ type Manifest={
 };
 
 let courseCache:{at:number;index:CourseIndex;manifest:Manifest}|null=null;
-const themeCache=new Map<string,{theme:string;reviewLessonId:string}>();
 
 async function jsonFetch<T>(url:string,init?:RequestInit):Promise<T>{
   const response=await fetch(url,{...init,signal:AbortSignal.timeout(10000)});
@@ -78,20 +78,10 @@ async function courseData(){
     jsonFetch<CourseIndex>(INDEX_URL),
     jsonFetch<Manifest>(MANIFEST_URL),
   ]);
-  if(!Array.isArray(index.order)||!index.characters||!Array.isArray(manifest.books))
+  if(!Array.isArray(index.order)||!index.unitReviews||!index.characters||!Array.isArray(manifest.books))
     throw new Error('Invalid curriculum data');
   courseCache={at:now,index,manifest};
   return courseCache;
-}
-
-function unitFromLesson(lessonId:string):string|null{
-  if(['hello','identity','student','question','review'].includes(lessonId))return 'unit-1';
-  const bookOne=/^u(\d+)-/.exec(lessonId);
-  if(bookOne)return `unit-${Number(bookOne[1])}`;
-  const bookTwo=/^b2u(\d+)-/.exec(lessonId);
-  if(bookTwo)return `book-2-unit-${Number(bookTwo[1])}`;
-  if(/^b2-/.test(lessonId))return 'book-2-unit-1';
-  return null;
 }
 
 function manifestUnit(manifest:Manifest,unitId:string){
@@ -102,29 +92,19 @@ function manifestUnit(manifest:Manifest,unitId:string){
   return null;
 }
 
-async function unitDetails(manifest:Manifest,unitId:string){
-  const cached=themeCache.get(unitId);
-  if(cached)return cached;
-  const found=manifestUnit(manifest,unitId);
-  if(!found)throw new Error('Unknown unit');
-  const source=await fetch(GITHUB_RAW+found.unit.path,{signal:AbortSignal.timeout(10000)});
-  if(!source.ok)throw new Error('Unit metadata unavailable');
-  const text=await source.text();
-  const theme=visualUnitTheme(found.book.number,found.unit.order);
-  const reviewLessonId=(text.match(/["']?reviewLessonId["']?\s*:\s*["']([^"']+)["']/)||[])[1]||'';
-  const value={theme,reviewLessonId};
-  themeCache.set(unitId,value);
-  return value;
-}
-
 function accountFromRpc(value:unknown):string{
   if(typeof value!=='string'||!/^account-v1-[a-f0-9]{64}$/.test(value))
     throw new Error('Invalid account mapping');
   return value;
 }
 
-function unitOrderIndex(index:CourseIndex,unitId:string){
-  return index.order.findIndex(([,id])=>id===unitId);
+function earliestOpenUnit(index:CourseIndex,completedLessons:Set<string>){
+  const open=index.order.findIndex(([,unitId])=>{
+    const reviewLessonId=index.unitReviews[unitId];
+    return !reviewLessonId||!completedLessons.has(reviewLessonId);
+  });
+  const order=open>=0?open:Math.max(0,index.order.length-1);
+  return {order,unitId:index.order[order]?.[1]||'unit-1'};
 }
 
 function characterCandidates(index:CourseIndex,from:number){
@@ -184,26 +164,12 @@ Deno.serve(async(request:Request)=>{
     const {index,manifest}=await courseData();
     const completedLessons=new Set(completed.map(row=>row.lesson_id));
 
-    const latestCourse=[...rows]
-      .filter(row=>!row.lesson_id.startsWith('practice-')&&unitFromLesson(row.lesson_id))
-      .sort((a,b)=>b.updated_at-a.updated_at)[0];
-
-    let currentUnitId=latestCourse?unitFromLesson(latestCourse.lesson_id):index.order[0]?.[1]||'unit-1';
-    if(!currentUnitId)currentUnitId='unit-1';
-
-    let currentOrder=unitOrderIndex(index,currentUnitId);
-    if(currentOrder<0){currentOrder=0;currentUnitId=index.order[0]?.[1]||'unit-1';}
-
-    const initialDetails=await unitDetails(manifest,currentUnitId);
-    if(initialDetails.reviewLessonId&&completedLessons.has(initialDetails.reviewLessonId)&&currentOrder+1<index.order.length){
-      currentOrder++;
-      currentUnitId=index.order[currentOrder][1];
-    }
+    const {order:currentOrder,unitId:currentUnitId}=earliestOpenUnit(index,completedLessons);
 
     const currentMeta=manifestUnit(manifest,currentUnitId);
     if(!currentMeta)throw new Error('Current unit unavailable');
-    const currentDetails=await unitDetails(manifest,currentUnitId);
-    const palette=themeColors[currentDetails.theme]||themeColors.blue;
+    const currentTheme=visualUnitTheme(currentMeta.book.number,currentMeta.unit.order);
+    const palette=themeColors[currentTheme]||themeColors.blue;
 
     const learned=new Set<string>();
     for(const [character,row] of Object.entries(index.characters)){
@@ -241,7 +207,7 @@ Deno.serve(async(request:Request)=>{
       unit:index.order[currentOrder]?.[2]??currentMeta.unit.order,
       unitId:currentUnitId,
       unitTitle:currentMeta.unit.title,
-      unitTheme:currentDetails.theme,
+      unitTheme:currentTheme,
       unitColor:palette.accent,
       unitTextColor:palette.onAccent,
       nextCharacter,
