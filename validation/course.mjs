@@ -11,7 +11,7 @@ try{
   const b=course.manifest.books.find(b=>b.id===book);if(!b||!Number.isInteger(before)||before<1||before>b.units.length+1)throw Error('Use a valid --book and --before unit number (including the next unit).');
   const ix=curriculumIndex(course);const order=ix.order;const start=order.findIndex(r=>r[0]===book);const cutoff=(start<0?order.length:start)+before-1;
   const prior=new Set(order.slice(0,cutoff).map(r=>r[1]));
-  const filtered={...ix,order:order.slice(0,cutoff)};for(const k of ['vocabulary','characters','grammar'])filtered[k]=Object.fromEntries(Object.entries(ix[k]).filter(([,r])=>prior.has(r[3])));
+  const filtered={...ix,order:order.slice(0,cutoff),unitReviews:Object.fromEntries(Object.entries(ix.unitReviews).filter(([id])=>prior.has(id)))};for(const k of ['vocabulary','characters','grammar'])filtered[k]=Object.fromEntries(Object.entries(ix[k]).filter(([,r])=>prior.has(r[3])));
   console.log(indexSource(filtered));
  }else{
   for(const [file,source]of Object.entries(outputs)){
