@@ -432,6 +432,8 @@ html[data-feedback-motion=off] button:is(:active,:hover) { transform: none !impo
 .unit-picker-summary strong { font-size:1rem; font-weight:750; line-height:1.4; overflow-wrap:anywhere; }
 .unit-picker-summary small { color:#5c6b80; font-size:.875rem; line-height:1.4; }
 .unit-picker-change { display:flex; align-items:center; gap:9px; font-size:.875rem; font-weight:700; }
+.unit-picker-mobile-book,
+.unit-picker-books-mobile { display:none; }
 .unit-picker-trigger:hover { background:var(--unit-surface); }
 .unit-picker-trigger:focus-visible,.unit-picker-option:focus-visible { outline:3px solid var(--unit-focus,var(--unit-accent)); outline-offset:3px; }
 .unit-picker-dialog { width:calc(100% - 2rem); max-width:36rem; max-height:calc(100dvh - 2rem); padding:24px; grid-template-rows:auto auto minmax(0,1fr); overflow:hidden; border-radius:20px; gap:18px; background:#fff; color:#172642; }
@@ -448,6 +450,33 @@ html[data-feedback-motion=off] button:is(:active,:hover) { transform: none !impo
 .unit-picker-option[aria-pressed=true] { border-color:var(--unit-line); background:var(--unit-tint); color:var(--unit-text); }
 .unit-picker-option > svg { margin-left:auto; color:var(--unit-text); }
 .unit-picker-empty { padding:26px 12px; color:#5c6b80; font-size:1rem; line-height:1.6; overflow-wrap:anywhere; }
+@media(max-width:700px) {
+ .course-navigation-books { display:none; }
+ .unit-picker-mobile-book { display:inline; }
+ .unit-picker-books-mobile {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:7px;
+  margin-top:14px;
+ }
+ .unit-picker-books-mobile button {
+  min-height:40px;
+  padding:8px 10px;
+  border:1.5px solid #d8e1ed;
+  border-radius:11px;
+  background:#fff;
+  color:#53657b;
+  font-size:.82rem;
+  font-weight:800;
+ }
+ .unit-picker-books-mobile button.selected {
+  border-color:var(--unit-line);
+  background:var(--unit-tint);
+  color:var(--unit-text);
+  box-shadow:0 2px 0 var(--unit-border);
+ }
+ .unit-picker-books-mobile button:disabled { opacity:.42; }
+}
 @media(max-width:600px) {
  .unit-picker-trigger { padding:12px; gap:11px; }
  .unit-picker-change { font-size:0; gap:0; }
