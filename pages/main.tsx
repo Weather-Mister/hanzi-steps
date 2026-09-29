@@ -2,6 +2,7 @@ import {FormEvent,useEffect,useRef,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {LearningApp} from '../components/learning-app';
 import {supabase} from './supabase';
+import {NotificationSettings} from './notification-settings';
 import '../app/globals.css';
 import '../app/desktop.css';
 
@@ -96,6 +97,7 @@ function App(){
   userKey={account?.key||'signed-out'}
   accountPanel={accountPanel}
   signInPanel={signInPanel}
+  notificationSettings={<NotificationSettings accountKey={account?.key||null}/>}
  />;
 }
 
