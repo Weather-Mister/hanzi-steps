@@ -29,7 +29,7 @@ export function PinyinSearch({
   <DialogContent data-unit-theme={theme} className="pinyin-search-dialog">
    <div className="pinyin-search-heading">
     <DialogTitle>Find by pinyin</DialogTitle>
-    <DialogDescription>Search all Hanzi Steps vocabulary, with or without tones, spaces, or tone numbers. Use ü, v, or u: for ü. All vocabulary and available handwriting practice are unlocked here from the start.</DialogDescription>
+    <DialogDescription>Search with tones, numbers, or plain pinyin (ü, v, and u: all work). Vocabulary and handwriting practice are unlocked.</DialogDescription>
    </div>
    <div className="pinyin-search-box">
     <Search size={18}/>
