@@ -2013,3 +2013,69 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .source-visual-figure{display:grid;place-items:center;padding:8px}.source-visual-scene{width:100%;height:100%}.source-visual-scene .scene-fill{fill:var(--unit-tint);stroke:var(--unit-edge);stroke-width:3}.source-visual-scene .scene-panel{fill:#fff;stroke:var(--unit-edge);stroke-width:2}.source-visual-scene .scene-ink{fill:var(--unit-edge)}.source-visual-scene .scene-line{fill:none;stroke:var(--unit-edge);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.source-visual-scene .scene-bed-bg{fill:var(--unit-tint);stroke:var(--unit-line);stroke-width:2}.source-visual-scene .scene-pillow{fill:#fff;stroke:var(--unit-edge);stroke-width:2}.source-visual-scene .scene-blanket{fill:var(--unit-accent);opacity:.82}.source-visual-cue{margin:0 0 15px;padding:10px 12px;border-radius:12px;background:var(--unit-tint);color:var(--unit-text);font-size:.84rem;line-height:1.55;font-weight:700}
 
 .notification-test-button{width:100%;margin-top:2px;display:flex;align-items:center;justify-content:center;gap:8px}
+
+/* Settings use compact state buttons instead of generic sliding switches. */
+.settings-state-toggle{
+ min-width:72px;
+ min-height:36px;
+ padding:4px 10px 4px 5px;
+ display:inline-flex;
+ align-items:center;
+ justify-content:flex-start;
+ gap:7px;
+ flex:none;
+ border:1.5px solid var(--unit-border);
+ border-radius:12px;
+ background:#fff;
+ color:#718096;
+ box-shadow:0 3px 0 var(--unit-border);
+ font-size:.76rem;
+ font-weight:900;
+ letter-spacing:.02em;
+ cursor:pointer;
+ transition:transform .14s ease,background .14s ease,border-color .14s ease,box-shadow .14s ease,color .14s ease;
+}
+.settings-state-toggle:hover:not(:disabled){
+ transform:translateY(-1px);
+ border-color:var(--unit-line);
+ box-shadow:0 4px 0 var(--unit-line),0 9px 18px -16px var(--unit-accent);
+}
+.settings-state-toggle:active:not(:disabled){
+ transform:translateY(2px);
+ box-shadow:0 1px 0 var(--unit-line);
+}
+.settings-state-toggle:focus-visible{
+ outline:none;
+ border-color:var(--unit-focus);
+ box-shadow:0 0 0 3px var(--unit-tint),0 3px 0 var(--unit-line);
+}
+.settings-state-toggle.is-on{
+ background:linear-gradient(180deg,#fff 0%,var(--unit-tint) 100%);
+ border-color:var(--unit-line);
+ color:var(--unit-text);
+ box-shadow:0 3px 0 var(--unit-line),0 10px 20px -19px var(--unit-accent);
+}
+.settings-state-toggle:disabled{
+ opacity:.42;
+ cursor:not-allowed;
+ box-shadow:0 2px 0 var(--unit-border);
+}
+.settings-state-dot{
+ width:25px;
+ height:25px;
+ flex:none;
+ display:grid;
+ place-items:center;
+ border:1.5px solid #d7dee8;
+ border-radius:8px;
+ background:#f6f8fb;
+ color:#fff;
+ transition:background .14s ease,border-color .14s ease,transform .14s ease,box-shadow .14s ease;
+}
+.settings-state-toggle.is-on .settings-state-dot{
+ border-color:var(--unit-accent);
+ background:var(--unit-accent);
+ box-shadow:0 2px 0 var(--unit-depth);
+ transform:rotate(-2deg);
+}
+.settings-state-label{min-width:22px;text-align:center}
