@@ -191,6 +191,19 @@ begin
 end
 $$;
 
+create or replace function public.hanzi_push_public_key()
+returns text
+language sql
+stable
+security definer
+set search_path = ''
+as $
+  select vapid_public_key from public.hanzi_push_config where id = 1
+$;
+
+revoke all on function public.hanzi_push_public_key() from public, anon, authenticated;
+grant execute on function public.hanzi_push_public_key() to anon, authenticated, service_role;
+
 revoke all on function public.hanzi_push_read(text,text) from public, anon, authenticated;
 grant execute on function public.hanzi_push_read(text,text) to anon, authenticated, service_role;
 
