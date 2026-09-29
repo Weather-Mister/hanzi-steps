@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import {Bell,BookOpen,Flame,Send,Sparkles} from 'lucide-react';
-import {Switch} from '@/components/ui/switch';
+import {SettingsToggle} from '@/components/settings-toggle';
 import {supabase} from './supabase';
 
 const BASE_URL=import.meta.env.BASE_URL;
@@ -183,19 +183,19 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
   </div>
   <div className="preference-row">
    <label htmlFor="notification-master"><strong>Allow notifications</strong><span>{prefs.enabled?'Hanzi Steps can notify this device.':'Off by default.'}</span></label>
-   <Switch id="notification-master" checked={prefs.enabled} disabled={masterDisabled} onCheckedChange={value=>void(value?enable():disable())}/>
+   <SettingsToggle id="notification-master" checked={prefs.enabled} disabled={masterDisabled} onCheckedChange={value=>void(value?enable():disable())}/>
   </div>
   <div className="notification-kind-row">
    <Flame size={18}/><label htmlFor="notification-streak"><strong>Streak reminders</strong><span>If your current streak is still waiting late in the day.</span></label>
-   <Switch id="notification-streak" checked={prefs.streakReminders} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('streakReminders',value)}/>
+   <SettingsToggle id="notification-streak" checked={prefs.streakReminders} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('streakReminders',value)}/>
   </div>
   <div className="notification-kind-row">
    <Sparkles size={18}/><label htmlFor="notification-encouragement"><strong>Occasional encouragement</strong><span>A light nudge a few times a week, never every day.</span></label>
-   <Switch id="notification-encouragement" checked={prefs.encouragement} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('encouragement',value)}/>
+   <SettingsToggle id="notification-encouragement" checked={prefs.encouragement} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('encouragement',value)}/>
   </div>
   <div className="notification-kind-row">
    <BookOpen size={18}/><label htmlFor="notification-sentences"><strong>Chinese sentence checks</strong><span>Original, pinyin-free sentences around the level of the last 3–4 units you reached.</span></label>
-   <Switch id="notification-sentences" checked={prefs.sentenceChecks} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('sentenceChecks',value)}/>
+   <SettingsToggle id="notification-sentences" checked={prefs.sentenceChecks} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('sentenceChecks',value)}/>
   </div>
   <button type="button" className="secondary-button notification-test-button" disabled={!prefs.enabled||busy} onClick={()=>void sendTest()}>
    <Send size={16}/><span>{busy?'Working…':'Send test notification'}</span>
