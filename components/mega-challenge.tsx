@@ -28,6 +28,7 @@ export function MegaChallenge({
  const [gaveUp,setGaveUp]=useState(false);
  const [attempt,setAttempt]=useState(0);
  const [pinyinInput,setPinyinInput]=useState('');
+ const [meaningRevealed,setMeaningRevealed]=useState(false);
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
@@ -57,6 +58,7 @@ export function MegaChallenge({
   setResult(null);
   setGaveUp(false);
   setPinyinInput('');
+  setMeaningRevealed(false);
  }
 
  function finishCharacter(assisted:boolean){
@@ -153,7 +155,11 @@ export function MegaChallenge({
     </div>}
     <div className="mega-prompt">
      {reverse?<p className="mega-reverse-hanzi" lang="zh-Hant-TW">{current.traditional}</p>:<p className="pinyin">{current.pinyin}</p>}
-     <h2>{current.meaning}</h2>
+     {reverse
+      ?(result||meaningRevealed
+        ?<h2>{current.meaning}</h2>
+        :<button type="button" className="text-button mega-meaning-hint" onClick={()=>setMeaningRevealed(true)}>Show English meaning</button>)
+      :<h2>{current.meaning}</h2>}
      {!reverse&&!result&&<>
       <div className="mega-character-progress" aria-label={`Character ${charIndex+1} of ${current.characters.length}`}>
        {current.characters.map((_,index)=><span key={index} className={index<charIndex?'done':index===charIndex?'current':''}/>)}
