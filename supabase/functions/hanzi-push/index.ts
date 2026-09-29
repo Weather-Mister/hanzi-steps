@@ -136,7 +136,7 @@ Deno.serve(async req=>{
  if(req.method!=='POST')return new Response('POST required',{status:405,headers:CORS_HEADERS});
  const url=Deno.env.get('SUPABASE_URL');
  const serviceKey=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
- if(!url||!serviceKey)return new Response('Missing Supabase runtime configuration',{status:500});
+ if(!url||!serviceKey)return new Response('Missing Supabase runtime configuration',{status:500,headers:CORS_HEADERS});
  const client=createClient(url,serviceKey,{auth:{persistSession:false,autoRefreshToken:false}});
 
  let requestBody:Record<string,unknown>={};
