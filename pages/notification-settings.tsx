@@ -1,5 +1,5 @@
 import {useEffect,useState} from 'react';
-import {Bell,BookOpen,Flame,Sparkles} from 'lucide-react';
+import {Bell,BookOpen,Flame,Send,Sparkles} from 'lucide-react';
 import {Switch} from '@/components/ui/switch';
 import {supabase} from './supabase';
 
@@ -157,6 +157,24 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
   }finally{setBusy(false)}
  }
 
+ async function sendTest(){
+  if(!prefs.enabled||busy)return;
+  if(!accountKey){setMessage('Sign in first.');return}
+  setBusy(true);setMessage('');
+  try{
+   const subscription=await existingSubscription();
+   if(!subscription)throw new Error('Push subscription is missing. Turn notifications off and on again.');
+   const {data,error}=await supabase.functions.invoke('hanzi-push',{
+    body:{action:'test',expectedAccount:accountKey,endpoint:subscription.endpoint},
+   });
+   if(error)throw error;
+   if(!data?.sent)throw new Error(data?.error||'Test notification could not be sent.');
+   setMessage('Test notification sent.');
+  }catch(error){
+   setMessage(error instanceof Error?error.message:'Test notification could not be sent.');
+  }finally{setBusy(false)}
+ }
+
  const masterDisabled=busy||!accountKey||available===false||(isAppleMobile()&&!isStandalone());
  return <section className="notification-settings" aria-labelledby="notification-settings-title">
   <div className="notification-settings-heading">
@@ -179,6 +197,9 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
    <BookOpen size={18}/><label htmlFor="notification-sentences"><strong>Chinese sentence checks</strong><span>Original, pinyin-free sentences around the level of the last 3–4 units you reached.</span></label>
    <Switch id="notification-sentences" checked={prefs.sentenceChecks} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('sentenceChecks',value)}/>
   </div>
+  <button type="button" className="secondary-button notification-test-button" disabled={!prefs.enabled||busy} onClick={()=>void sendTest()}>
+   <Send size={16}/><span>${busy?'Working…':'Send test notification'}</span>
+  </button>
   {permission==='denied'&&<p className="notification-status error">Notifications are blocked by the device. Change the permission in system settings, then return here.</p>}
   {message&&permission!=='denied'&&<p className="notification-status" role="status">{message}</p>}
  </section>;
