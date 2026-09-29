@@ -136,8 +136,18 @@ Deno.serve(async req=>{
  if(!url||!serviceKey)return new Response('Missing Supabase runtime configuration',{status:500});
  const client=createClient(url,serviceKey,{auth:{persistSession:false,autoRefreshToken:false}});
 
- const {data:config,error:configError}=await client.from('hanzi_push_config').select('vapid_public_key,vapid_private_key,subject').eq('id',1).maybeSingle();
- if(configError||!config)return Response.json({error:'Push configuration is not ready.'},{status:503});
+ let {data:config,error:configError}=await client.from('hanzi_push_config').select('vapid_public_key,vapid_private_key,subject').eq('id',1).maybeSingle();
+ if(configError)return Response.json({error:configError.message},{status:500});
+ if(!config){
+  const generated=webpush.generateVAPIDKeys();
+  const fresh={id:1,vapid_public_key:generated.publicKey,vapid_private_key:generated.privateKey,subject:'mailto:hanzi-steps@users.noreply.github.com'};
+  const {error:insertError}=await client.from('hanzi_push_config').insert(fresh);
+  if(insertError){
+   const retry=await client.from('hanzi_push_config').select('vapid_public_key,vapid_private_key,subject').eq('id',1).maybeSingle();
+   if(retry.error||!retry.data)return Response.json({error:'Push configuration could not be created.'},{status:500});
+   config=retry.data;
+  }else config=fresh;
+ }
  webpush.setVapidDetails(config.subject,config.vapid_public_key,config.vapid_private_key);
 
  const {data:subscriptions,error:subscriptionError}=await client.from('hanzi_push_subscriptions').select('*').eq('enabled',true).limit(500);
