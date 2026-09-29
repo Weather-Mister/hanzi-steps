@@ -22,6 +22,8 @@ type PushRow={
 type SessionRow={user_id:string;lesson_id:string;complete:boolean;updated_at:number;completed_at:number|null};
 type Level={book:1|2;unit:number};
 type PushKind='streak'|'encouragement'|'sentence';
+const CORS_HEADERS={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'};
+function json(body:unknown,status=200){return Response.json(body,{status,headers:CORS_HEADERS})}
 
 const TAIPEI='Asia/Taipei';
 const DAY=86_400_000;
@@ -130,30 +132,62 @@ async function sessionRows(client:ReturnType<typeof createClient>,userIds:string
 }
 
 Deno.serve(async req=>{
- if(req.method!=='POST')return new Response('POST required',{status:405});
+ if(req.method==='OPTIONS')return new Response(null,{status:204,headers:CORS_HEADERS});
+ if(req.method!=='POST')return new Response('POST required',{status:405,headers:CORS_HEADERS});
  const url=Deno.env.get('SUPABASE_URL');
  const serviceKey=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
  if(!url||!serviceKey)return new Response('Missing Supabase runtime configuration',{status:500});
  const client=createClient(url,serviceKey,{auth:{persistSession:false,autoRefreshToken:false}});
 
+ let requestBody:Record<string,unknown>={};
+ try{requestBody=await req.json()}catch{}
+
  let {data:config,error:configError}=await client.from('hanzi_push_config').select('vapid_public_key,vapid_private_key,subject').eq('id',1).maybeSingle();
- if(configError)return Response.json({error:configError.message},{status:500});
+ if(configError)return json({error:configError.message},500);
  if(!config){
   const generated=webpush.generateVAPIDKeys();
   const fresh={id:1,vapid_public_key:generated.publicKey,vapid_private_key:generated.privateKey,subject:'mailto:hanzi-steps@users.noreply.github.com'};
   const {error:insertError}=await client.from('hanzi_push_config').insert(fresh);
   if(insertError){
    const retry=await client.from('hanzi_push_config').select('vapid_public_key,vapid_private_key,subject').eq('id',1).maybeSingle();
-   if(retry.error||!retry.data)return Response.json({error:'Push configuration could not be created.'},{status:500});
+   if(retry.error||!retry.data)return json({error:'Push configuration could not be created.'},500);
    config=retry.data;
   }else config=fresh;
  }
  webpush.setVapidDetails(config.subject,config.vapid_public_key,config.vapid_private_key);
 
+ if(requestBody.action==='test'){
+  const expectedAccount=typeof requestBody.expectedAccount==='string'?requestBody.expectedAccount:'';
+  const endpoint=typeof requestBody.endpoint==='string'?requestBody.endpoint:'';
+  if(!expectedAccount||!endpoint)return json({error:'Missing notification target.'},400);
+  const {data:state,error:readError}=await client.rpc('hanzi_push_read',{expected_account:expectedAccount,expected_endpoint:endpoint});
+  if(readError)return json({error:readError.message},400);
+  if(!state?.enabled)return json({error:'Notifications are not enabled on this device.'},404);
+  const {data:target,error:targetError}=await client.from('hanzi_push_subscriptions').select('endpoint,p256dh,auth,enabled').eq('endpoint',endpoint).eq('enabled',true).maybeSingle();
+  if(targetError)return json({error:targetError.message},500);
+  if(!target)return json({error:'Push subscription was not found.'},404);
+  try{
+   await webpush.sendNotification(
+    {endpoint:target.endpoint,keys:{p256dh:target.p256dh,auth:target.auth}},
+    JSON.stringify({title:'Hanzi Steps',body:'Notifications are working! 測試成功 🎉',tag:'hanzi-test',data:{kind:'test',url:'./'}}),
+    {TTL:60,urgency:'high'},
+   );
+   return json({sent:true});
+  }catch(error){
+   const status=typeof error==='object'&&error&&'statusCode' in error?Number((error as {statusCode?:number}).statusCode):0;
+   if(status===404||status===410){
+    await client.from('hanzi_push_subscriptions').delete().eq('endpoint',endpoint);
+    return json({error:'This device push subscription expired. Turn notifications off and on again.'},410);
+   }
+   console.error('test push failed',{status,message:error instanceof Error?error.message:String(error)});
+   return json({error:'Test notification could not be delivered.'},502);
+  }
+ }
+
  const {data:subscriptions,error:subscriptionError}=await client.from('hanzi_push_subscriptions').select('*').eq('enabled',true).limit(500);
- if(subscriptionError)return Response.json({error:subscriptionError.message},{status:500});
+ if(subscriptionError)return json({error:subscriptionError.message},500);
  const rows=(subscriptions||[]) as PushRow[];
- if(!rows.length)return Response.json({checked:0,sent:0,expired:0,failed:0});
+ if(!rows.length)return json({checked:0,sent:0,expired:0,failed:0});
 
  const users=[...new Set(rows.map(row=>row.user_id))];
  const sessions=await sessionRows(client,users);
@@ -164,7 +198,7 @@ Deno.serve(async req=>{
  }
 
  const now=Date.now(),{hour}=dayParts(now);
- if(hour<10||hour>22)return Response.json({checked:rows.length,sent:0,expired:0,failed:0,quietHours:true});
+ if(hour<10||hour>22)return json({checked:rows.length,sent:0,expired:0,failed:0,quietHours:true});
 
  let sent=0,expired=0,failed=0;
  for(let offset=0;offset<rows.length;offset+=15){
@@ -214,5 +248,5 @@ Deno.serve(async req=>{
    }
   }));
  }
- return Response.json({checked:rows.length,sent,expired,failed,hour});
+ return json({checked:rows.length,sent,expired,failed,hour});
 });
