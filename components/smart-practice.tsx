@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowLeft,Check,Flame,GraduationCap,Keyboard,RotateCcw,Sparkles,Trophy,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {Progress} from '@/components/ui/progress';
@@ -75,11 +75,13 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
  const chosen=picked.map(id=>bank.find(token=>token.id===id)?.text||'');
  const built=chosen.join('');
  const full=picked.length>=tokens.length;
+ const checkButton=useRef<HTMLButtonElement>(null);
+ useEffect(()=>{if(full)checkButton.current?.focus({preventScroll:true})},[full]);
  return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>Build the Chinese sentence. Extra tiles are mixed in.</p></div>
   <div className="smart-built-sentence" lang="zh-Hant-TW">{picked.length?chosen.join(' '):'…'}</div>
   <div className="smart-token-bank">{bank.map(token=><button key={token.id} disabled={picked.includes(token.id)||full} onClick={()=>setPicked(old=>[...old,token.id])} lang="zh-Hant-TW">{token.text}</button>)}</div>
   <div className="smart-inline-actions"><button className="text-button" disabled={!picked.length} onClick={()=>setPicked(old=>old.slice(0,-1))}>Undo</button>
-   <button className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
+   <button ref={checkButton} className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
  </div>;
 }
 function HandwritingQuestion({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
@@ -114,7 +116,7 @@ function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subt
   <Progress value={index/queue.length*100} aria-label={String(index)+' of '+String(queue.length)+' complete'}/>
   {!result?<QuestionView question={question} items={items} onAnswer={answer}/>:<div className={'smart-result '+(result.correct?'correct':'wrong')} role="status"><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span>
    <div><strong>{result.correct?(result.assisted?'Completed with help':'Correct'):'Not this time'}</strong><p>{result.correct&&!result.assisted?'That answer strengthens this skill.':<>Answer: <span lang="zh-Hant-TW">{result.answer}</span></>}</p></div>
-   <button className="primary-button" onClick={continueRound}>{index+1===queue.length?'See results':'Continue'}</button></div>}
+   <button className="primary-button" autoFocus onClick={continueRound}>{index+1===queue.length?'See results':'Continue'}</button></div>}
  </section>;
 }
 export type PracticeEntry='hub'|'daily'|'mixed';
