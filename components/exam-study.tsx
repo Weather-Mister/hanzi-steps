@@ -246,7 +246,7 @@ export function ExamStudy({
        <p>{result.perfect?'Correct without help. Continue the round or mark it Mastered for this exam list.':'This word stays in this temporary rotation unless you mark it Mastered for this exam list.'}</p>
       </div>
       <div className="mega-result-actions">
-       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
+       <button className="primary-button" autoFocus onClick={continueAfterResult}>Continue</button>
        <button className="secondary-button mega-master-button" onClick={()=>markMastered(result.item)}><Check size={16}/>Add to Mastered</button>
       </div>
      </div>:
