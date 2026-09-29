@@ -27,7 +27,7 @@ export const notificationSentences:NotificationSentence[]=[
  {id:'b1u15-a',book:1,unit:15,text:'我想吃牛肉麵，不想喝湯。'},
  {id:'b1u16-a',book:1,unit:16,text:'這家餐廳的菜很辣，也很好吃。'},
  {id:'b1u17-a',book:1,unit:17,text:'你知道哪一家有好吃的水餃嗎？'},
- {id:'b1u18-a',book:1,unit:18,text:'圖書館在學校裡面。'},
+ {id:'b1u18-a',book:1,unit:18,text:'我朋友常常在學校的圖書館看中文書。'},
  {id:'b1u19-a',book:1,unit:19,text:'我去朋友家，也去附近的商店。'},
  {id:'b1u20-a',book:1,unit:20,text:'教室在圖書館前面，不在宿舍旁邊。'},
  {id:'b1u21-a',book:1,unit:21,text:'我們下午三點在學校見。'},
