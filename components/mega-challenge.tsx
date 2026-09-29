@@ -131,7 +131,7 @@ export function MegaChallenge({
  return <Dialog open={open} onOpenChange={changeOpen}>
   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
    <div className="mega-title-row">
-    <div><DialogTitle>{reverse?'Reverse Mega Challenge':'Mega Challenge'}</DialogTitle><DialogDescription>{reverse?'See the Traditional Chinese and type its pinyin. Tone marks, tone numbers, and toneless pinyin all count. A correct answer clears the word for this round; Mastered excludes it until you restore it.':'Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.'}</DialogDescription></div>
+    <div><DialogTitle>{reverse?'Pinyin Gauntlet':'Mega Challenge'}</DialogTitle><DialogDescription>{reverse?'See the Traditional Chinese and type its pinyin. Tone marks, tone numbers, and toneless pinyin all count. A correct answer clears the word for this round; Mastered excludes it until you restore it.':'Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.'}</DialogDescription></div>
    </div>
    <div className="mega-tabs" role="group" aria-label="Mega Challenge sections">
     <button className={view==='challenge'?'selected':''} disabled={saving} onClick={()=>switchView('challenge')} aria-pressed={view==='challenge'}>Challenge</button>
@@ -200,7 +200,7 @@ export function MegaChallenge({
    </section>:
    eligible.length>0?<section className="mega-complete">
     <Trophy size={42}/>
-    <h2>{reverse?'Reverse Mega Challenge complete':'Mega Challenge complete'}</h2>
+    <h2>{reverse?'Pinyin Gauntlet complete':'Mega Challenge complete'}</h2>
     <p>No words remain in this round. Words recalled perfectly are cleared for the round; words in Mastered stay excluded.</p>
     <button className="primary-button" onClick={practiceAgain}>Practice again</button>
    </section>:
@@ -209,7 +209,7 @@ export function MegaChallenge({
     <p>All of your currently learned words are in Mastered.</p>
     <button className="secondary-button" onClick={()=>switchView('mastered')}>Open Mastered</button>
    </section>:
-   <section className="mega-complete"><h2>Complete a lesson first</h2><p>{reverse?'Reverse Mega Challenge':'Mega Challenge'} only uses vocabulary you have already studied.</p></section>}
+   <section className="mega-complete"><h2>Complete a lesson first</h2><p>{reverse?'Pinyin Gauntlet':'Mega Challenge'} only uses vocabulary you have already studied.</p></section>}
   </DialogContent>
  </Dialog>;
 }
