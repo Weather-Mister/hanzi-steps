@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue,restoreMegaWord} from '../lib/mega-challenge.ts';
+import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary} from '../lib/mega-challenge.ts';
 import {vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 test('Mega Challenge eligibility follows completed lesson IDs and mastered exclusions',()=>{
@@ -56,4 +56,21 @@ test('newly completed lessons automatically add their vocabulary to eligibility'
  const later=eligibleMegaVocabulary(new Set([first.lessonId,second.lessonId]),new Set());
  assert.ok(later.length>=early.length);
  assert.ok(later.some(item=>item.lessonId===second.lessonId));
+});
+
+test('reverse challenge covers all learned canonical words without requiring stroke cards',()=>{
+ const completed=new Set(vocabularyLookup.map(item=>item.lessonId));
+ const expected=vocabularyLookup.filter(item=>item.characters.length>0);
+ assert.deepEqual(reverseMegaVocabulary(completed).map(item=>item.id),expected.map(item=>item.id));
+ assert.ok(reverseMegaVocabulary(new Set()).length===0);
+});
+
+test('reverse challenge accepts tone marks, tone numbers, and plain pinyin, then rejects wrong syllables',()=>{
+ for(const answer of ['nǐ hǎo','ni3hao3','ni hao','NIHAO','ni3 hao3']){
+  assert.equal(matchesMegaPinyin(answer,'nǐ hǎo'),true,answer);
+ }
+ assert.equal(matchesMegaPinyin('nv3 er2','nǚ ér'),true);
+ assert.equal(matchesMegaPinyin('nu:3er2','nǚ ér'),true);
+ assert.equal(matchesMegaPinyin('ni hao ma','nǐ hǎo'),false);
+ assert.equal(matchesMegaPinyin('','nǐ hǎo'),false);
 });

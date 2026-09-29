@@ -3,6 +3,7 @@ import {useCallback,useEffect,useState} from 'react';
 import {supabase} from '@/pages/supabase';
 
 const storageKey=(userKey:string)=>'hanzi-steps-mastered-v1-'+userKey;
+const reversePrefix='reverse:';
 
 function readLocal(userKey:string):Set<string>{
  try{
@@ -76,7 +77,12 @@ export function useMegaMastery(userKey:string){
   return true;
  },[userKey,applyLocal]);
 
- return {mastered,loading,saving,error,setMastered:setMasteredValue};
+ // Keep the two challenges in the same synced table, but with independent
+ // mastery: knowing how to write a word does not mean its pinyin is mastered.
+ const handwritingMastered=new Set([...mastered].filter(id=>!id.startsWith(reversePrefix)));
+ const reverseMastered=new Set([...mastered].filter(id=>id.startsWith(reversePrefix)).map(id=>id.slice(reversePrefix.length)));
+ const setReverseMastered=(id:string,value:boolean)=>setMasteredValue(reversePrefix+id,value);
+ return {mastered:handwritingMastered,reverseMastered,loading,saving,error,setMastered:setMasteredValue,setReverseMastered};
 }
 
 export type MegaMasteryController=ReturnType<typeof useMegaMastery>;

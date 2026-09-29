@@ -792,6 +792,41 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  line-height:1.2;
  letter-spacing:.015em;
 }
+.mega-prompt .mega-reverse-hanzi {
+ color:var(--unit-text);
+ font-size:clamp(2.4rem,8vw,4rem);
+ font-weight:650;
+ line-height:1.2;
+ overflow-wrap:anywhere;
+}
+.mega-pinyin-form {
+ width:min(100%,520px);
+ display:flex;
+ flex-direction:column;
+ gap:9px;
+ padding:8px 2px;
+}
+.mega-pinyin-form label {
+ color:#52647d;
+ font-size:.84rem;
+ font-weight:750;
+}
+.mega-pinyin-form input {
+ width:100%;
+ min-height:52px;
+ padding:12px 15px;
+ border:1.5px solid #cbd7e5;
+ border-radius:13px;
+ background:#fff;
+ color:#243750;
+ font-size:1.08rem;
+ outline:none;
+}
+.mega-pinyin-form input:focus {
+ border-color:var(--unit-accent);
+ box-shadow:0 0 0 3px var(--unit-tint);
+}
+.mega-pinyin-form .primary-button { align-self:stretch; min-height:46px; }
 .mega-prompt h2 {
  margin-top:7px;
  color:#33465f;

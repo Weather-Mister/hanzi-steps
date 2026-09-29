@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,restoreMegaWord} from '@/lib/mega-challenge';
+import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import type {MegaMasteryController} from '@/lib/use-mega-mastery';
 import {WritingPad} from './writing-pad';
@@ -11,10 +11,12 @@ type Result={item:VocabularyLookupItem;perfect:boolean};
 const itemById=new Map(vocabularyLookup.map(item=>[item.id,item]));
 
 export function MegaChallenge({
- open,onOpenChange,completed,theme,mastery,
-}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController}){
- const {mastered,loading:masteryLoading,saving,error,setMastered}=mastery;
- const learned=useMemo(()=>learnedVocabulary(completed),[completed]);
+ open,onOpenChange,completed,theme,mastery,mode='handwriting',
+}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;mode?:'handwriting'|'pinyin'}){
+ const reverse=mode==='pinyin';
+ const {loading:masteryLoading,saving,error}=mastery;
+ const mastered=reverse?mastery.reverseMastered:mastery.mastered;
+ const learned=useMemo(()=>reverse?reverseMegaVocabulary(completed):learnedVocabulary(completed),[completed,reverse]);
  const eligible=useMemo(()=>learned.filter(item=>!mastered.has(item.id)),[learned,mastered]);
  const masteredItems=useMemo(()=>vocabularyLookup.filter(item=>mastered.has(item.id)),[mastered]);
  const [queue,setQueue]=useState<string[]|null>(null);
@@ -25,6 +27,7 @@ export function MegaChallenge({
  const [view,setView]=useState<'challenge'|'mastered'>('challenge');
  const [gaveUp,setGaveUp]=useState(false);
  const [attempt,setAttempt]=useState(0);
+ const [pinyinInput,setPinyinInput]=useState('');
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
@@ -53,6 +56,7 @@ export function MegaChallenge({
   setWordPerfect(true);
   setResult(null);
   setGaveUp(false);
+  setPinyinInput('');
  }
 
  function finishCharacter(assisted:boolean){
@@ -90,6 +94,12 @@ export function MegaChallenge({
   if(result||gaveUp)return;
   setGaveUp(true);
   setWordPerfect(false);
+  if(reverse&&current)setResult({item:current,perfect:false});
+ }
+
+ function checkPinyin(){
+  if(!reverse||!current||result||!pinyinInput.trim())return;
+  setResult({item:current,perfect:matchesMegaPinyin(pinyinInput,current.pinyin)});
  }
 
  function skipWord(){
@@ -99,14 +109,14 @@ export function MegaChallenge({
  }
 
  async function markMastered(item:VocabularyLookupItem){
-  const saved=await setMastered(item.id,true);
+  const saved=await (reverse?mastery.setReverseMastered:mastery.setMastered)(item.id,true);
   if(!saved)return;
   setQueue(currentQueue=>currentQueue?.filter(id=>id!==item.id)??currentQueue);
   resetWord();
  }
 
  async function restore(item:VocabularyLookupItem){
-  const saved=await setMastered(item.id,false);
+  const saved=await (reverse?mastery.setReverseMastered:mastery.setMastered)(item.id,false);
   if(!saved)return;
   setQueue(currentQueue=>restoreMegaWord(currentQueue,item.id,new Set(learned.map(word=>word.id))));
  }
@@ -119,7 +129,7 @@ export function MegaChallenge({
  return <Dialog open={open} onOpenChange={changeOpen}>
   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
    <div className="mega-title-row">
-    <div><DialogTitle>Mega Challenge</DialogTitle><DialogDescription>Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.</DialogDescription></div>
+    <div><DialogTitle>{reverse?'Reverse Mega Challenge':'Mega Challenge'}</DialogTitle><DialogDescription>{reverse?'See the Traditional Chinese and type its pinyin. Tone marks, tone numbers, and toneless pinyin all count. A correct answer clears the word for this round; Mastered excludes it until you restore it.':'Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.'}</DialogDescription></div>
    </div>
    <div className="mega-tabs" role="group" aria-label="Mega Challenge sections">
     <button className={view==='challenge'?'selected':''} disabled={saving} onClick={()=>switchView('challenge')} aria-pressed={view==='challenge'}>Challenge</button>
@@ -136,36 +146,40 @@ export function MegaChallenge({
      </article>)}
    </section>:
    masteryLoading||queue===null?<p className="search-empty">Preparing your learned words…</p>:
-   current&&currentChar?<section className={result?'mega-practice has-result':'mega-practice'}>
+   current&&(reverse||currentChar)?<section className={result?'mega-practice has-result':'mega-practice'}>
     {!result&&<div className="mega-session-meta" aria-label="Mega Challenge status">
      <span><strong>{queue.length}</strong> {queue.length===1?'word':'words'} in rotation</span>
      <span>{masteredItems.length} mastered</span>
     </div>}
     <div className="mega-prompt">
-     <p className="pinyin">{current.pinyin}</p>
+     {reverse?<p className="mega-reverse-hanzi" lang="zh-Hant-TW">{current.traditional}</p>:<p className="pinyin">{current.pinyin}</p>}
      <h2>{current.meaning}</h2>
-     {!result&&<>
+     {!reverse&&!result&&<>
       <div className="mega-character-progress" aria-label={`Character ${charIndex+1} of ${current.characters.length}`}>
        {current.characters.map((_,index)=><span key={index} className={index<charIndex?'done':index===charIndex?'current':''}/>)}
       </div>
       <p className="mega-character-label">{`Character ${charIndex+1} of ${current.characters.length}`}</p>
      </>}
     </div>
-    <WritingPad
+    {reverse?(!result&&<form className="mega-pinyin-form" onSubmit={event=>{event.preventDefault();checkPinyin()}}>
+     <label htmlFor="mega-pinyin-answer">Type the pinyin</label>
+     <input id="mega-pinyin-answer" value={pinyinInput} onChange={event=>setPinyinInput(event.target.value)} autoComplete="off" autoCapitalize="off" spellCheck={false} inputMode="text" placeholder="nǐ hǎo / ni3hao3 / nihao" />
+     <button className="primary-button" type="submit" disabled={!pinyinInput.trim()}>Check answer</button>
+    </form>):<WritingPad
      key={current.id+':'+attempt+':'+charIndex+':'+(gaveUp?'guided':'memory')}
-     char={currentChar}
+     char={currentChar!}
      mode={gaveUp?'trace':'memory'}
      strict={!gaveUp}
      revealStrokeAfterMisses={gaveUp?undefined:5}
      completionDelayMs={900}
      onComplete={assisted=>finishCharacter(gaveUp||assisted)}
-    />
+    />}
     {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">
      <span className={'mega-result-icon '+(result.perfect?'perfect':'retry')}>{result.perfect?<Check size={22}/>:<RotateCcw size={21}/>}</span>
      <div className="mega-inline-copy">
-      <span className="mega-result-kicker">{result.perfect?'Perfect recall':'Completed with support or corrections'}</span>
+      <span className="mega-result-kicker">{result.perfect?'Perfect recall':reverse?(gaveUp?'Answer revealed':'Try again later'):'Completed with support or corrections'}</span>
       <div><strong lang="zh-Hant-TW">{result.item.traditional}</strong><span className="pinyin">{result.item.pinyin}</span></div>
-      <p>{result.perfect?'Correct without help. Continue, or move it to Mastered.':'This word will stay in rotation unless you move it to Mastered.'}</p>
+      <p>{result.perfect?(reverse?'Correct. The toned pinyin is shown above. Continue, or move it to Mastered.':'Correct without help. Continue, or move it to Mastered.'):'This word will stay in rotation unless you move it to Mastered.'}</p>
      </div>
      <div className="mega-result-actions">
       <button className="primary-button" disabled={saving} onClick={continueAfterResult}>Continue</button>
@@ -175,12 +189,12 @@ export function MegaChallenge({
     <div className="mega-give-up-row">
      <button className="text-button mega-skip-button" onClick={skipWord}>Skip word</button>
      {gaveUp?<span className="mega-guides-on" role="status">All guides are on.</span>:
-      <button className="text-button mega-give-up-button" onClick={giveUp}>Give up · show all guides</button>}
+      <button className="text-button mega-give-up-button" onClick={giveUp}>{reverse?'Give up · show pinyin':'Give up · show all guides'}</button>}
     </div>}
    </section>:
    eligible.length>0?<section className="mega-complete">
     <Trophy size={42}/>
-    <h2>Mega Challenge complete</h2>
+    <h2>{reverse?'Reverse Mega Challenge complete':'Mega Challenge complete'}</h2>
     <p>No words remain in this round. Words recalled perfectly are cleared for the round; words in Mastered stay excluded.</p>
     <button className="primary-button" onClick={practiceAgain}>Practice again</button>
    </section>:
@@ -189,7 +203,7 @@ export function MegaChallenge({
     <p>All of your currently learned words are in Mastered.</p>
     <button className="secondary-button" onClick={()=>switchView('mastered')}>Open Mastered</button>
    </section>:
-   <section className="mega-complete"><h2>Complete a lesson first</h2><p>Mega Challenge only uses vocabulary you have already studied.</p></section>}
+   <section className="mega-complete"><h2>Complete a lesson first</h2><p>{reverse?'Reverse Mega Challenge':'Mega Challenge'} only uses vocabulary you have already studied.</p></section>}
   </DialogContent>
  </Dialog>;
 }
