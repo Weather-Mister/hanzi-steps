@@ -174,13 +174,13 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
    <div className="course-workspace">
     <aside className="course-navigation">
      <div className="course-navigation-heading"><span>COURSE</span><strong>Taiwanese Mandarin</strong></div>
-     <section className="course-navigation-section">
+     <section className="course-navigation-section course-navigation-books">
       <p className="course-navigation-label">Book</p>
       <nav className="book-switcher" aria-label="Choose a book">{books.filter(b=>b.number!==3).map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
      </section>
      {book.available&&<section className="course-navigation-section">
       <p className="course-navigation-label">Unit</p>
-      <UnitPicker unit={unit} units={bookUnits} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
+      <UnitPicker unit={unit} units={bookUnits} allUnits={units} books={books.filter(b=>b.number!==3)} bookId={bookId} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
       <div className="course-milestone"><div><span>Book {book.number} progress</span><strong>{finishedBookUnits}<small> / {book.unitIds.length}</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={`Available Book ${book.number} units completed`}/></div>
      </section>}
      {book.available&&<section className="course-navigation-section course-navigation-tabs"><TabsList className="main-tabs"><TabsTrigger value="learn"><BookOpen size={18}/>Learn</TabsTrigger><TabsTrigger value="characters"><PenLine size={18}/>Characters</TabsTrigger><TabsTrigger value="notes"><Lightbulb size={18}/>Notes</TabsTrigger></TabsList></section>}
