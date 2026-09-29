@@ -2161,3 +2161,21 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .library-meaning-count{display:block;font-size:.72rem;color:var(--unit-text,#34557a);margin-top:7px}
 .search-result-copy .character-meanings{margin:10px 0 0;padding:10px 12px}
 @media(max-width:700px){.character-meanings{padding:12px}.character-sense-heading{font-size:.82rem}.character-meanings summary{font-size:.86rem}}
+
+/* Shared, progressively revealed connections across existing learning surfaces. */
+.knowledge-notes{margin-top:12px;border-top:1px solid var(--border,#dce3dc);padding-top:10px;font-size:.9rem;line-height:1.6;min-width:0;overflow-wrap:anywhere}
+.knowledge-notes summary{cursor:pointer;font-weight:650;padding:5px 0}
+.knowledge-note-list{display:grid;gap:16px;padding-top:12px}
+.knowledge-note p{margin:6px 0;font-size:.9rem}
+.knowledge-example{display:grid;gap:3px;padding:8px 0}
+.knowledge-example>span{font-size:1.1rem}
+.knowledge-family{display:flex;gap:18px;flex-wrap:wrap;padding:10px 0}
+.knowledge-family>span{display:grid;gap:3px;max-width:150px}
+.knowledge-family b{font-size:2rem;line-height:1.4}
+.knowledge-family small{font-size:.8rem}
+.knowledge-question .smart-prompt h2{white-space:pre-line}
+.knowledge-discovery p,.knowledge-reminder{max-width:620px;margin:18px auto;line-height:1.75;text-align:left}
+.knowledge-reminder{padding:15px;border:1px solid var(--border,#dce3dc);border-radius:14px}
+.knowledge-answer{max-width:600px;overflow-wrap:anywhere}
+.knowledge-answer p{margin:9px 0!important}
+.knowledge-answer [lang]{font-size:1.3rem}
