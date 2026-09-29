@@ -7,11 +7,13 @@ test('notification reading checks are unique and not copied from learner-facing 
  const texts=notificationSentences.map(sentence=>sentence.text);
  assert.equal(new Set(texts).size,texts.length,'notification sentence bank contains a duplicate');
  const corpus=JSON.stringify(courseModules);
+ const repeated=[];
  for(const sentence of notificationSentences){
   const stem=sentence.text.replace(/[。？！!?]+$/u,'');
   assert.ok(stem.length>=4,`notification sentence is too short: ${sentence.id}`);
-  assert.equal(corpus.includes(stem),false,`${sentence.id} repeats course content: ${sentence.text}`);
+  if(corpus.includes(stem))repeated.push(`${sentence.id}: ${sentence.text}`);
  }
+ assert.deepEqual(repeated,[],`notification sentences must not repeat course content:\n${repeated.join('\n')}`);
 });
 
 test('reading checks stay within the latest four units of the current level',()=>{
