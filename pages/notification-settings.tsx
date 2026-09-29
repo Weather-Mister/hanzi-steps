@@ -198,7 +198,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
    <Switch id="notification-sentences" checked={prefs.sentenceChecks} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('sentenceChecks',value)}/>
   </div>
   <button type="button" className="secondary-button notification-test-button" disabled={!prefs.enabled||busy} onClick={()=>void sendTest()}>
-   <Send size={16}/><span>${busy?'Working…':'Send test notification'}</span>
+   <Send size={16}/><span>{busy?'Working…':'Send test notification'}</span>
   </button>
   {permission==='denied'&&<p className="notification-status error">Notifications are blocked by the device. Change the permission in system settings, then return here.</p>}
   {message&&permission!=='denied'&&<p className="notification-status" role="status">{message}</p>}
