@@ -3,7 +3,6 @@ import {Bell,BookOpen,Flame,Sparkles} from 'lucide-react';
 import {Switch} from '@/components/ui/switch';
 import {supabase} from './supabase';
 
-const VAPID_PUBLIC_KEY='BEja82dxXHbHlF3YjTAA3-QEWG3IfwNXgrjOSbwh37hebp5SDg9A1FJZP2AfFOvN6X1sjWc7ngFa6fgR0dOtgVE';
 const BASE_URL=import.meta.env.BASE_URL;
 
 type PushPrefs={
@@ -111,9 +110,11 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
     return;
    }
    const registration=await activeRegistration();
+   const {data:publicKey,error:keyError}=await supabase.rpc('hanzi_push_public_key');
+   if(keyError||typeof publicKey!=='string'||!publicKey)throw new Error('Push notifications are still being prepared. Try again in a moment.');
    let subscription=await registration.pushManager.getSubscription();
    if(!subscription){
-    subscription=await registration.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:applicationServerKey(VAPID_PUBLIC_KEY)});
+    subscription=await registration.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:applicationServerKey(publicKey)});
    }
    const next={...prefs,enabled:true};
    await persist(next,subscription);
