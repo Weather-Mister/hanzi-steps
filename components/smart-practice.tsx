@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useMemo,useRef,useState} from 'react';
+import {useEffect,useMemo,useState} from 'react';
 import {ArrowLeft,Check,Flame,GraduationCap,Keyboard,RotateCcw,Sparkles,Trophy,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {Progress} from '@/components/ui/progress';
@@ -75,13 +75,23 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
  const chosen=picked.map(id=>bank.find(token=>token.id===id)?.text||'');
  const built=chosen.join('');
  const full=picked.length>=tokens.length;
- const checkButton=useRef<HTMLButtonElement>(null);
- useEffect(()=>{if(full)checkButton.current?.focus({preventScroll:true})},[full]);
+ useEffect(()=>{
+  if(!full)return;
+  function onKeyDown(event:KeyboardEvent){
+   if(event.key!=='Enter'||event.repeat||event.isComposing||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+   const target=event.target instanceof HTMLElement?event.target:null;
+   if(target?.closest('input,textarea,select,a,summary,[contenteditable="true"]'))return;
+   event.preventDefault();
+   onAnswer(built===tokens.join(''),question.item.traditional);
+  }
+  window.addEventListener('keydown',onKeyDown);
+  return ()=>window.removeEventListener('keydown',onKeyDown);
+ },[full,built,question.item.traditional,tokens,onAnswer]);
  return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>Build the Chinese sentence. Extra tiles are mixed in.</p></div>
   <div className="smart-built-sentence" lang="zh-Hant-TW">{picked.length?chosen.join(' '):'…'}</div>
   <div className="smart-token-bank">{bank.map(token=><button key={token.id} disabled={picked.includes(token.id)||full} onClick={()=>setPicked(old=>[...old,token.id])} lang="zh-Hant-TW">{token.text}</button>)}</div>
   <div className="smart-inline-actions"><button className="text-button" disabled={!picked.length} onClick={()=>setPicked(old=>old.slice(0,-1))}>Undo</button>
-   <button ref={checkButton} className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
+   <button className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
  </div>;
 }
 function HandwritingQuestion({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
@@ -108,6 +118,18 @@ function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subt
  const question=queue[index],complete=index>=queue.length;
  async function answer(correct:boolean,answerText:string,assisted=false){if(result||!question)return;const next={correct,assisted,answer:answerText};setResult(next);setAnswers(old=>[...old,next]);feel(correct?'success':'retry');await onRecord(question,correct,assisted)}
  function continueRound(){if(index+1===queue.length)feel('complete');setResult(null);setIndex(i=>i+1)}
+ useEffect(()=>{
+  if(!result)return;
+  function onKeyDown(event:KeyboardEvent){
+   if(event.key!=='Enter'||event.repeat||event.isComposing||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+   const target=event.target instanceof HTMLElement?event.target:null;
+   if(target?.closest('button,a,input,textarea,select,summary,[contenteditable="true"]'))return;
+   event.preventDefault();
+   continueRound();
+  }
+  window.addEventListener('keydown',onKeyDown);
+  return ()=>window.removeEventListener('keydown',onKeyDown);
+ },[result,index,queue.length]);
  if(!queue.length)return <section className="smart-empty"><RotateCcw size={34}/><h2>Nothing needs this round yet.</h2><p>Keep learning normally. Mistakes and older material will appear here when useful.</p><button className="secondary-button" onClick={onExit}>Back to practice</button></section>;
  if(complete){const clean=answers.filter(a=>a.correct&&!a.assisted).length,wrong=answers.filter(a=>!a.correct).length;return <section className="smart-finish"><Trophy size={42}/><p className="eyebrow">ROUND COMPLETE</p><h2>{title} complete</h2>
   <div className="smart-finish-stats"><div><strong>{clean}</strong><span>clean recalls</span></div><div><strong>{answers.length-wrong}</strong><span>correct</span></div><div><strong>{wrong}</strong><span>to revisit</span></div></div>
@@ -116,7 +138,7 @@ function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subt
   <Progress value={index/queue.length*100} aria-label={String(index)+' of '+String(queue.length)+' complete'}/>
   {!result?<QuestionView question={question} items={items} onAnswer={answer}/>:<div className={'smart-result '+(result.correct?'correct':'wrong')} role="status"><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span>
    <div><strong>{result.correct?(result.assisted?'Completed with help':'Correct'):'Not this time'}</strong><p>{result.correct&&!result.assisted?'That answer strengthens this skill.':<>Answer: <span lang="zh-Hant-TW">{result.answer}</span></>}</p></div>
-   <button className="primary-button" autoFocus onClick={continueRound}>{index+1===queue.length?'See results':'Continue'}</button></div>}
+   <button className="primary-button" onClick={continueRound}>{index+1===queue.length?'See results':'Continue'}</button></div>}
  </section>;
 }
 export type PracticeEntry='hub'|'daily'|'mixed';
