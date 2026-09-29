@@ -79,6 +79,19 @@ export function MegaChallenge({
   resetWord();
  }
 
+ useEffect(()=>{
+  if(!result||saving)return;
+  function onKeyDown(event:KeyboardEvent){
+   if(event.key!=='Enter'||event.repeat||event.isComposing||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+   const target=event.target instanceof HTMLElement?event.target:null;
+   if(target?.closest('button,a,input,textarea,select,summary,[contenteditable="true"]'))return;
+   event.preventDefault();
+   continueAfterResult();
+  }
+  window.addEventListener('keydown',onKeyDown);
+  return ()=>window.removeEventListener('keydown',onKeyDown);
+ },[result,saving]);
+
  function practiceAgain(){
   setQueue(makeMegaQueue(eligible,Date.now().toString(36)+Math.random().toString(36)));
   resetWord();
@@ -188,7 +201,7 @@ export function MegaChallenge({
       <p>{result.perfect?(reverse?'Correct. The toned pinyin is shown above. Continue, or move it to Mastered.':'Correct without help. Continue, or move it to Mastered.'):'This word will stay in rotation unless you move it to Mastered.'}</p>
      </div>
      <div className="mega-result-actions">
-      <button className="primary-button" autoFocus disabled={saving} onClick={continueAfterResult}>Continue</button>
+      <button className="primary-button" disabled={saving} onClick={continueAfterResult}>Continue</button>
       <button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>:
