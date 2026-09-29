@@ -119,6 +119,19 @@ export function ExamStudy({
   resetWord();
  }
 
+ useEffect(()=>{
+  if(!result)return;
+  function onKeyDown(event:KeyboardEvent){
+   if(event.key!=='Enter'||event.repeat||event.isComposing||event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+   const target=event.target instanceof HTMLElement?event.target:null;
+   if(target?.closest('button,a,input,textarea,select,summary,[contenteditable="true"]'))return;
+   event.preventDefault();
+   continueAfterResult();
+  }
+  window.addEventListener('keydown',onKeyDown);
+  return ()=>window.removeEventListener('keydown',onKeyDown);
+ },[result]);
+
  function practiceAgain(){
   setQueue(makeMegaQueue(eligibleItems,Date.now().toString(36)+Math.random().toString(36)));
   resetWord();
@@ -246,7 +259,7 @@ export function ExamStudy({
        <p>{result.perfect?'Correct without help. Continue the round or mark it Mastered for this exam list.':'This word stays in this temporary rotation unless you mark it Mastered for this exam list.'}</p>
       </div>
       <div className="mega-result-actions">
-       <button className="primary-button" autoFocus onClick={continueAfterResult}>Continue</button>
+       <button className="primary-button" onClick={continueAfterResult}>Continue</button>
        <button className="secondary-button mega-master-button" onClick={()=>markMastered(result.item)}><Check size={16}/>Add to Mastered</button>
       </div>
      </div>:
