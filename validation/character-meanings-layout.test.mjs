@@ -11,3 +11,10 @@ test('search headings cannot force supplementary meanings to overflow',()=>{
  assert.match(css,/\.character-meanings\s*\{[^}]*max-width:100%/);
  assert.match(css,/\.character-meanings\s*\{[^}]*box-sizing:border-box/);
 });
+
+test('character detail starts with parts and collapsed supplementary meanings',()=>{
+ const source=readFileSync(new URL('../components/learning-app.tsx',import.meta.url),'utf8');
+ const detail=source.slice(source.indexOf('className="character-dialog"'));
+ assert.ok(detail.indexOf('<CharacterParts key={detail}')<detail.indexOf('<CharacterMeanings key={`meanings-${detail}`}'));
+ assert.match(detail,/<CharacterMeanings key=\{`meanings-\$\{detail\}`\} hanzi=\{detail\} showPinyin=\{prefs\.pinyin\}\/>/);
+});
