@@ -169,7 +169,7 @@ export function MegaChallenge({
     </div>
     {reverse?(!result&&<form className="mega-pinyin-form" onSubmit={event=>{event.preventDefault();checkPinyin()}}>
      <label htmlFor="mega-pinyin-answer">Type the pinyin</label>
-     <input id="mega-pinyin-answer" value={pinyinInput} onChange={event=>setPinyinInput(event.target.value)} autoComplete="off" autoCapitalize="off" spellCheck={false} inputMode="text" placeholder="nǐ hǎo / ni3hao3 / nihao" />
+     <input id="mega-pinyin-answer" value={pinyinInput} onChange={event=>setPinyinInput(event.target.value)} autoFocus autoComplete="off" autoCapitalize="off" spellCheck={false} inputMode="text" placeholder="nǐ hǎo / ni3hao3 / nihao" />
      <button className="primary-button" type="submit" disabled={!pinyinInput.trim()}>Check answer</button>
     </form>):<WritingPad
      key={current.id+':'+attempt+':'+charIndex+':'+(gaveUp?'guided':'memory')}
@@ -188,7 +188,7 @@ export function MegaChallenge({
       <p>{result.perfect?(reverse?'Correct. The toned pinyin is shown above. Continue, or move it to Mastered.':'Correct without help. Continue, or move it to Mastered.'):'This word will stay in rotation unless you move it to Mastered.'}</p>
      </div>
      <div className="mega-result-actions">
-      <button className="primary-button" disabled={saving} onClick={continueAfterResult}>Continue</button>
+      <button className="primary-button" autoFocus disabled={saving} onClick={continueAfterResult}>Continue</button>
       <button className="secondary-button mega-master-button" disabled={saving} onClick={()=>void markMastered(result.item)}><Check size={16}/>{saving?'Saving…':'Add to Mastered'}</button>
      </div>
     </div>:
