@@ -1,3 +1,4 @@
+import type {KnowledgeTask} from './cumulative-knowledge.ts';
 import {books,characters,lessons,phrases,shuffled,units} from './curriculum.ts';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from './vocabulary-lookup.ts';
 
@@ -43,6 +44,7 @@ export type PracticeQuestion={
  mode:PracticeMode;
  sessionKind:PracticeSessionKind;
  context?:PracticeContextPrompt;
+ knowledge?:KnowledgeTask;
 };
 
 const skillKey=(itemId:string,mode:PracticeMode)=>itemId+'::'+mode;

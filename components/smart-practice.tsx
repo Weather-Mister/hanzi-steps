@@ -13,6 +13,9 @@ import {
 import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
 import type {MegaMasteryController} from '@/lib/use-mega-mastery';
 import {useInteractionFeedback} from './interaction-feedback';
+import {KnowledgeQuestion} from './knowledge-question';
+import {KnowledgeNotes} from './knowledge-notes';
+import {availableKnowledge,interleaveKnowledge} from '@/lib/cumulative-knowledge';
 import {examStudySets} from '@/lib/exam-study';
 
 type Result={correct:boolean;assisted:boolean;answer:string};
@@ -106,13 +109,14 @@ function HandwritingQuestion({question,items,onAnswer}:{question:PracticeQuestio
  </div>;
 }
 function QuestionView({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
+ if(question.knowledge)return <KnowledgeQuestion key={question.id} task={question.knowledge} seed={question.id} onAnswer={onAnswer}/>;
  if(question.mode==='recognition'||question.mode==='recall'||question.mode==='pinyin')return <ChoiceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
  if(question.mode==='input')return <InputQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
  if(question.mode==='context')return <ContextQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
  if(question.mode==='sentence')return <SentenceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
  return <HandwritingQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
 }
-function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subtitle:string;queue:PracticeQuestion[];items:PracticeItem[];onExit:()=>void;onRecord:(question:PracticeQuestion,ok:boolean,assisted:boolean)=>Promise<unknown>}){
+function Session({title,subtitle,queue,items,completed,onExit,onRecord}:{title:string;subtitle:string;queue:PracticeQuestion[];items:PracticeItem[];completed:Set<string>;onExit:()=>void;onRecord:(question:PracticeQuestion,ok:boolean,assisted:boolean)=>Promise<unknown>}){
  const {feedback:feel}=useInteractionFeedback();
  const [index,setIndex]=useState(0),[result,setResult]=useState<Result|null>(null),[answers,setAnswers]=useState<Result[]>([]);
  const question=queue[index],complete=index>=queue.length;
@@ -137,7 +141,7 @@ function Session({title,subtitle,queue,items,onExit,onRecord}:{title:string;subt
  return <section className="smart-session"><div className="smart-session-head"><button className="icon-button" aria-label="Back to practice" onClick={onExit}><ArrowLeft size={20}/></button><div><strong>{title}</strong><small>{subtitle}</small></div><span>{index+1}/{queue.length}</span></div>
   <Progress value={index/queue.length*100} aria-label={String(index)+' of '+String(queue.length)+' complete'}/>
   {!result?<QuestionView question={question} items={items} onAnswer={answer}/>:<div className={'smart-result '+(result.correct?'correct':'wrong')} role="status"><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span>
-   <div><strong>{result.correct?(result.assisted?'Completed with help':'Correct'):'Not this time'}</strong><p>{result.correct&&!result.assisted?'That answer strengthens this skill.':<>Answer: <span lang="zh-Hant-TW">{result.answer}</span></>}</p></div>
+   <div><strong>{result.correct?(result.assisted?'Completed with help':'Correct'):'Not this time'}</strong>{!question.knowledge&&<p>{result.correct&&!result.assisted?'That answer strengthens this skill.':<>Answer: <span lang="zh-Hant-TW">{result.answer}</span></>}</p>}{question.knowledge&&<div className="knowledge-answer"><p lang="zh-Hant-TW">{question.knowledge.answer}</p><p className="pinyin">{question.knowledge.pinyin}</p><p>{question.knowledge.explanation}</p></div>}{question.mode==='handwriting'&&!question.knowledge&&<KnowledgeNotes word={question.item.traditional} completed={completed}/>}</div>
    <button className="primary-button" onClick={continueRound}>{index+1===queue.length?'See results':'Continue'}</button></div>}
  </section>;
 }
@@ -148,29 +152,34 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
  const items=useMemo(()=>adaptivePracticeItems(allItems,megaMastery.mastered),[allItems,megaMastery.mastered]);
  const preparing=loading||megaMastery.loading;
  const checkpointCount=useMemo(()=>megaCheckpointCount(completed),[completed]);
- const dailySize=Math.min(10,items.length);
+ const hasKnowledge=useMemo(()=>availableKnowledge(completed).length>0,[completed]);
+ const hasPractice=items.length>0||hasKnowledge;
+ const dailySize=Math.min(10,items.length+(hasKnowledge?3:0));
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState('');
  function back(){setScreen('hub');setQueue([])}
- function startDaily(){setQueue(makeDailyTen(items,states,seed('daily')));setSessionTitle('Daily 10');setSessionSubtitle('Current unit plus the last one or two, with only useful weak review mixed in.');setScreen('session')}
- function startMega(){setQueue(makeMegaCheckpoint(items,states,seed('mega'),completed));setSessionTitle('Mixed Mastery');setSessionSubtitle('12 harder questions from the same adaptive picker, now using sentence context, cloze recall, typing, and handwriting.');setScreen('session')}
+ function startDaily(){setQueue((()=>{const round=seed('daily');return interleaveKnowledge(makeDailyTen(items,states,round),completed,states,round)})());setSessionTitle('Daily 10');setSessionSubtitle('Recent learning, older patterns, and useful connections, with support when needed.');setScreen('session')}
+ function startMega(){setQueue((()=>{const round=seed('mega');return interleaveKnowledge(makeMegaCheckpoint(items,states,round,completed),completed,states,round,12)})());setSessionTitle('Mixed Mastery');setSessionSubtitle('12 harder questions from the same adaptive picker, now using sentence context, cloze recall, typing, and handwriting.');setScreen('session')}
  useEffect(()=>{
   if(!open)return;
   setQueue([]);
-  if(startMode==='daily'&&!preparing&&items.length){startDaily();return}
-  if(startMode==='mixed'&&!preparing&&items.length){startMega();return}
+  if(startMode==='daily'&&!preparing&&hasPractice){startDaily();return}
+  if(startMode==='mixed'&&!preparing&&hasPractice){startMega();return}
   setScreen('hub');
  },[open,startMode,preparing]);
- const recordQuestion=(q:PracticeQuestion,correct:boolean,assisted:boolean)=>record({itemId:q.item.id,mode:q.mode,correct,assisted,sessionKind:q.sessionKind});
+ const recordQuestion=async(q:PracticeQuestion,correct:boolean,assisted:boolean)=>{
+  await record({itemId:q.item.id,mode:q.mode,correct,assisted,sessionKind:q.sessionKind});
+  if(q.knowledge)await record({itemId:q.item.id+':example:'+q.knowledge.exampleId,mode:q.mode,correct,assisted,sessionKind:q.sessionKind});
+ };
  return <Dialog open={open} onOpenChange={value=>{onOpenChange(value);if(!value){setScreen('hub');setQueue([])}}}><DialogContent data-unit-theme={theme} className="smart-practice-dialog">
   {screen==='hub'&&<><div className="smart-title-row"><div><DialogTitle>Practice</DialogTitle><DialogDescription>Adaptive review, handwriting challenges, and focused mastery practice.</DialogDescription></div>{saving&&<span className="smart-saving">Saving…</span>}</div>{error&&<div className="smart-sync-note" role="status"><span>{error}</span><button className="text-button" onClick={()=>void retrySync()}>Try sync</button></div>}
-   {preparing?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:items.length===0?<><div className="smart-empty"><Sparkles size={30}/><h2>Nothing useful to drill right now</h2><p>Words you marked Mastered stay out of adaptive practice. Complete more of your current unit or restore a word from Mega Challenge if you want it back.</p></div><div className="smart-hub-grid"><button className="smart-mode-card pinyin-gauntlet" disabled={!onOpenReverseMegaChallenge} onClick={()=>{onOpenChange(false);onOpenReverseMegaChallenge?.()}}><span className="smart-card-icon"><Keyboard size={23}/></span><span><strong>Pinyin Gauntlet</strong><small>Read learned Hanzi and recall their pinyin.</small></span><b>∞</b></button><button className="smart-mode-card exam-study" disabled={!onOpenExamStudy} onClick={()=>{onOpenChange(false);onOpenExamStudy?.()}}><span className="smart-card-icon"><GraduationCap size={23}/></span><span><strong>Exam Study</strong><small>Off-the-record list practice · never changes progress, streaks, counters, or mastery.</small></span><b>{examStudySets.length}</b></button></div></>:<div className="smart-hub-grid">
-    <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · current + last 1–2 units</small></span><b>{dailySize}</b></button>
+   {preparing?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:!hasPractice?<><div className="smart-empty"><Sparkles size={30}/><h2>Nothing useful to drill right now</h2><p>Words you marked Mastered stay out of adaptive practice. Complete more of your current unit or restore a word from Mega Challenge if you want it back.</p></div><div className="smart-hub-grid"><button className="smart-mode-card pinyin-gauntlet" disabled={!onOpenReverseMegaChallenge} onClick={()=>{onOpenChange(false);onOpenReverseMegaChallenge?.()}}><span className="smart-card-icon"><Keyboard size={23}/></span><span><strong>Pinyin Gauntlet</strong><small>Read learned Hanzi and recall their pinyin.</small></span><b>∞</b></button><button className="smart-mode-card exam-study" disabled={!onOpenExamStudy} onClick={()=>{onOpenChange(false);onOpenExamStudy?.()}}><span className="smart-card-icon"><GraduationCap size={23}/></span><span><strong>Exam Study</strong><small>Off-the-record list practice · never changes progress, streaks, counters, or mastery.</small></span><b>{examStudySets.length}</b></button></div></>:<div className="smart-hub-grid">
+    <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · recent learning + cumulative review</small></span><b>{dailySize}</b></button>
     <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Mastery</strong><small>{checkpointCount?'12 contextual mastery questions · completed 4-unit block':'Complete 4 units in a book to unlock Mixed Mastery.'}</small></span><b>{checkpointCount?12:0}</b></button>
     <button className="smart-mode-card legacy-mega" disabled={!onOpenMegaChallenge} onClick={()=>{onOpenChange(false);onOpenMegaChallenge?.()}}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mega Challenge</strong><small>Original handwriting challenge · clear the full learned-word rotation.</small></span><b>∞</b></button>
     <button className="smart-mode-card pinyin-gauntlet" disabled={!onOpenReverseMegaChallenge} onClick={()=>{onOpenChange(false);onOpenReverseMegaChallenge?.()}}><span className="smart-card-icon"><Keyboard size={23}/></span><span><strong>Pinyin Gauntlet</strong><small>Read learned Hanzi, recall the pinyin · clear the full rotation.</small></span><b>∞</b></button>
     <button className="smart-mode-card exam-study" disabled={!onOpenExamStudy} onClick={()=>{onOpenChange(false);onOpenExamStudy?.()}}><span className="smart-card-icon"><GraduationCap size={23}/></span><span><strong>Exam Study</strong><small>Off-the-record list practice · never changes progress, streaks, counters, or mastery.</small></span><b>{examStudySets.length}</b></button>
    </div>}
   </>}
-  {screen==='session'&&<><DialogTitle className="sr-only">{sessionTitle}</DialogTitle><DialogDescription className="sr-only">{sessionSubtitle}</DialogDescription><Session title={sessionTitle} subtitle={sessionSubtitle} queue={queue} items={items} onExit={back} onRecord={recordQuestion}/></>}
+  {screen==='session'&&<><DialogTitle className="sr-only">{sessionTitle}</DialogTitle><DialogDescription className="sr-only">{sessionSubtitle}</DialogDescription><Session title={sessionTitle} subtitle={sessionSubtitle} queue={queue} items={items} completed={completed} onExit={back} onRecord={recordQuestion}/></>}
  </DialogContent></Dialog>;
 }
