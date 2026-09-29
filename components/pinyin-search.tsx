@@ -4,6 +4,8 @@ import {PenLine,Search,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
+import {CharacterMeanings} from './character-meanings';
+import {characters} from '@/lib/curriculum';
 
 export function PinyinSearch({
  open,onOpenChange,theme,onPracticeCharacter,
@@ -58,6 +60,7 @@ export function PinyinSearch({
          </div>
          <p>{item.meaning}</p>
          {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
+         {uniquePracticeCharacters(item).map(char=><CharacterMeanings key={char} hanzi={char} primaryMeaning={characters[char].meaning}/>)}
         </div>
         {chars.length>0?<div className="search-practice-actions" aria-label={'Practice characters in '+item.traditional}>
          {chars.map(char=><button

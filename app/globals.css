@@ -2079,3 +2079,18 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  transform:rotate(-2deg);
 }
 .settings-state-label{min-width:22px;text-align:center}
+
+/* Supplementary meanings remain separate from the original card gloss. */
+.character-meanings{margin:16px 0;border:1px solid var(--unit-border,#dce3ee);border-radius:14px;background:var(--unit-surface,#f7f9fc);padding:14px 16px;min-width:0;text-align:left;overflow-wrap:anywhere}
+.character-meanings summary{cursor:pointer;font-weight:750;font-size:.93rem;color:var(--unit-text,#34557a);line-height:1.6}
+.character-meanings summary:focus-visible{outline:2px solid var(--unit-accent,#4b73b5);outline-offset:4px;border-radius:3px}
+.character-meanings-hint{font-size:.77rem;line-height:1.6;color:#64748b;margin:9px 0 13px}
+.character-meanings ul{list-style:none;margin:0;padding:0}
+.character-meanings li+li{border-top:1px solid var(--unit-border,#dce3ee);margin-top:13px;padding-top:13px}
+.character-sense-heading{display:flex;gap:9px;flex-wrap:wrap;align-items:baseline;font-size:.85rem;line-height:1.6}
+.character-sense-heading .pinyin{font-size:.9rem;flex-shrink:0}
+.character-sense-example{font-size:1.08rem;line-height:1.7;margin-top:5px}
+.character-sense-pinyin,.character-sense-translation{font-size:.8rem;line-height:1.6;color:#52647c;margin-top:2px}
+.library-meaning-count{display:block;font-size:.72rem;color:var(--unit-text,#34557a);margin-top:7px}
+.search-result-copy .character-meanings{margin:10px 0 0;padding:10px 12px}
+@media(max-width:700px){.character-meanings{padding:12px}.character-sense-heading{font-size:.82rem}.character-meanings summary{font-size:.86rem}}
