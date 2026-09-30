@@ -70,7 +70,7 @@ jobs:
         run: node --experimental-strip-types --test tests/notification-sentences.test.mjs
 
       - name: Run regression tests
-        run: node --experimental-strip-types --test tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs tests/practice-engine.test.mjs tests/practice-content.test.mjs tests/exam-study.test.mjs tests/exam-stroke-guidance.test.mjs validation/*.test.mjs
+        run: node --experimental-strip-types --test tests/order-answer.test.mjs tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs tests/practice-engine.test.mjs tests/practice-content.test.mjs tests/exam-study.test.mjs tests/exam-stroke-guidance.test.mjs validation/*.test.mjs
 
       - run: npx tsc --noEmit
 
