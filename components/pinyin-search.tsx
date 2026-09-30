@@ -64,7 +64,7 @@ export function PinyinSearch({
          <p>{item.meaning}</p>
          {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
          <KnowledgeNotes word={item.traditional} completed={completed}/>
-         {uniquePracticeCharacters(item).map(char=><div key={char}><CharacterMeanings hanzi={char} primaryMeaning={characters[char].meaning} completed={completed}/><CharacterWords hanzi={char} completed={completed}/></div>)}
+         {uniquePracticeCharacters(item).map(char=><div key={char}><CharacterMeanings hanzi={char} primaryMeaning={characters[char].meaning}/><CharacterWords hanzi={char} completed={completed}/></div>)}
         </div>
         {chars.length>0?<div className="search-practice-actions" aria-label={'Practice characters in '+item.traditional}>
          {chars.map(char=><button
