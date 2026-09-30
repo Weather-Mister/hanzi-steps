@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useMemo,useState} from 'react';
-import {ArrowLeft,Check,Flame,GraduationCap,Keyboard,RotateCcw,Sparkles,Trophy,X} from 'lucide-react';
+import {ArrowLeft,BookOpen,Headphones,Check,Flame,GraduationCap,Keyboard,RotateCcw,Sparkles,Trophy,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {Progress} from '@/components/ui/progress';
 import {WritingPad} from './writing-pad';
@@ -16,6 +16,8 @@ import {useInteractionFeedback} from './interaction-feedback';
 import {KnowledgeQuestion} from './knowledge-question';
 import {KnowledgeNotes} from './knowledge-notes';
 import {availableKnowledge,interleaveKnowledge} from '@/lib/cumulative-knowledge';
+import {ListeningQuestion,ListeningFeedback} from './listening-question';
+import {interleaveListening,eligibleListening} from '@/lib/listening-path';
 import {examStudySets} from '@/lib/exam-study';
 
 type Result={correct:boolean;assisted:boolean;answer:string};
@@ -108,7 +110,8 @@ function HandwritingQuestion({question,items,onAnswer}:{question:PracticeQuestio
   <button className="text-button" disabled={guided} onClick={()=>{setGuided(true);setAssisted(true)}}>{guided?'Guides are on':'Show guides'}</button>
  </div>;
 }
-function QuestionView({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
+function QuestionView({question,items,onAnswer,onSkip}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void;onSkip:()=>void}){
+ if(question.listening)return <ListeningQuestion key={question.id} task={question.listening} seed={question.id} onAnswer={onAnswer} onSkip={onSkip}/>;
  if(question.knowledge)return <KnowledgeQuestion key={question.id} task={question.knowledge} seed={question.id} onAnswer={onAnswer}/>;
  if(question.mode==='recognition'||question.mode==='recall'||question.mode==='pinyin')return <ChoiceQuestion key={question.id} question={question} items={items} onAnswer={onAnswer}/>;
  if(question.mode==='input')return <InputQuestion key={question.id} question={question} onAnswer={onAnswer}/>;
@@ -137,17 +140,18 @@ function Session({title,subtitle,queue,items,completed,onExit,onRecord}:{title:s
  if(!queue.length)return <section className="smart-empty"><RotateCcw size={34}/><h2>Nothing needs this round yet.</h2><p>Keep learning normally. Mistakes and older material will appear here when useful.</p><button className="secondary-button" onClick={onExit}>Back to practice</button></section>;
  if(complete){const clean=answers.filter(a=>a.correct&&!a.assisted).length,wrong=answers.filter(a=>!a.correct).length;return <section className="smart-finish"><Trophy size={42}/><p className="eyebrow">ROUND COMPLETE</p><h2>{title} complete</h2>
   <div className="smart-finish-stats"><div><strong>{clean}</strong><span>clean recalls</span></div><div><strong>{answers.length-wrong}</strong><span>correct</span></div><div><strong>{wrong}</strong><span>to revisit</span></div></div>
-  <p>{wrong?String(wrong)+' '+(wrong===1?'item is':'items are')+' now more likely to return in Daily 10.':'No misses this round. Strong items will wait longer before returning.'}</p><button className="primary-button" onClick={onExit}>Back to practice</button></section>}
+  <p>{wrong?String(wrong)+' '+(wrong===1?'item is':'items are')+' now more likely to return in Daily 10.':'No misses among your answered items. Strong items will wait longer before returning.'}</p>{answers.length<queue.length&&<p>{queue.length-answers.length} skipped without scoring. Skipped items keep their previous practice history.</p>}<button className="primary-button" onClick={onExit}>Back to practice</button></section>}
  return <section className="smart-session"><div className="smart-session-head"><button className="icon-button" aria-label="Back to practice" onClick={onExit}><ArrowLeft size={20}/></button><div><strong>{title}</strong><small>{subtitle}</small></div><span>{index+1}/{queue.length}</span></div>
   <Progress value={index/queue.length*100} aria-label={String(index)+' of '+String(queue.length)+' complete'}/>
-  {!result?<QuestionView question={question} items={items} onAnswer={answer}/>:<div className={'smart-result '+(result.correct?'correct':'wrong')} role="status"><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span>
-   <div><strong>{result.correct?(result.assisted?'Completed with help':'Correct'):'Not this time'}</strong>{!question.knowledge&&<p>{result.correct&&!result.assisted?'That answer strengthens this skill.':<>Answer: <span lang="zh-Hant-TW">{result.answer}</span></>}</p>}{question.knowledge&&<div className="knowledge-answer"><p lang="zh-Hant-TW">{question.knowledge.answer}</p><p className="pinyin">{question.knowledge.pinyin}</p><p>{question.knowledge.explanation}</p></div>}{question.mode==='handwriting'&&!question.knowledge&&<KnowledgeNotes word={question.item.traditional} completed={completed}/>}</div>
+  {!result?<QuestionView question={question} items={items} onAnswer={answer} onSkip={continueRound}/>:<div className={'smart-result '+(result.correct?'correct':'wrong')} role="status"><span className="smart-result-icon">{result.correct?<Check size={24}/>:<X size={24}/>}</span>
+   <div><strong>{result.correct?(result.assisted?'Completed with help':'Correct'):'Not this time'}</strong>{!question.knowledge&&!question.listening&&<p>{result.correct&&!result.assisted?'That answer strengthens this skill.':<>Answer: <span lang="zh-Hant-TW">{result.answer}</span></>}</p>}{question.listening&&<ListeningFeedback task={question.listening}/>} {question.knowledge&&<div className="knowledge-answer"><p lang="zh-Hant-TW">{question.knowledge.answer}</p><p className="pinyin">{question.knowledge.pinyin}</p><p>{question.knowledge.explanation}</p></div>}{question.mode==='handwriting'&&!question.knowledge&&<KnowledgeNotes word={question.item.traditional} completed={completed}/>}</div>
    <button className="primary-button" onClick={continueRound}>{index+1===queue.length?'See results':'Continue'}</button></div>}
  </section>;
 }
 export type PracticeEntry='hub'|'daily'|'mixed';
-export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMastery,startMode='hub',onOpenMegaChallenge,onOpenReverseMegaChallenge,onOpenExamStudy}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;megaMastery:MegaMasteryController;startMode?:PracticeEntry;onOpenMegaChallenge?:()=>void;onOpenReverseMegaChallenge?:()=>void;onOpenExamStudy?:()=>void}){
+export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMastery,startMode='hub',onOpenMegaChallenge,onOpenReverseMegaChallenge,onOpenExamStudy,onOpenReadingPath,onOpenListeningPath}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:PracticeMasteryController;megaMastery:MegaMasteryController;startMode?:PracticeEntry;onOpenMegaChallenge?:()=>void;onOpenReverseMegaChallenge?:()=>void;onOpenExamStudy?:()=>void;onOpenReadingPath?:()=>void;onOpenListeningPath?:()=>void}){
  const {states,loading,saving,error,record,retrySync}=mastery;
+ const [includeListening,setIncludeListening]=useState(false);
  const allItems=useMemo(()=>learnedPracticeItems(completed),[completed]);
  const items=useMemo(()=>adaptivePracticeItems(allItems,megaMastery.mastered),[allItems,megaMastery.mastered]);
  const preparing=loading||megaMastery.loading;
@@ -157,7 +161,7 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
  const dailySize=Math.min(10,items.length+(hasKnowledge?3:0));
  const [screen,setScreen]=useState<Screen>('hub'),[queue,setQueue]=useState<PracticeQuestion[]>([]),[sessionTitle,setSessionTitle]=useState(''),[sessionSubtitle,setSessionSubtitle]=useState('');
  function back(){setScreen('hub');setQueue([])}
- function startDaily(){setQueue((()=>{const round=seed('daily');return interleaveKnowledge(makeDailyTen(items,states,round),completed,states,round)})());setSessionTitle('Daily 10');setSessionSubtitle('Recent learning, older patterns, and useful connections, with support when needed.');setScreen('session')}
+ function startDaily(){setQueue((()=>{const round=seed('daily');return interleaveListening(interleaveKnowledge(makeDailyTen(items,states,round),completed,states,round),completed,states,round,includeListening)})());setSessionTitle('Daily 10');setSessionSubtitle('Recent learning, older patterns, and useful connections, with support when needed.');setScreen('session')}
  function startMega(){setQueue((()=>{const round=seed('mega');return interleaveKnowledge(makeMegaCheckpoint(items,states,round,completed),completed,states,round,12)})());setSessionTitle('Mixed Mastery');setSessionSubtitle('12 harder questions from the same adaptive picker, now using sentence context, cloze recall, typing, and handwriting.');setScreen('session')}
  useEffect(()=>{
   if(!open)return;
@@ -172,6 +176,8 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
  };
  return <Dialog open={open} onOpenChange={value=>{onOpenChange(value);if(!value){setScreen('hub');setQueue([])}}}><DialogContent data-unit-theme={theme} className="smart-practice-dialog">
   {screen==='hub'&&<><div className="smart-title-row"><div><DialogTitle>Practice</DialogTitle><DialogDescription>Adaptive review, handwriting challenges, and focused mastery practice.</DialogDescription></div>{saving&&<span className="smart-saving">Saving…</span>}</div>{error&&<div className="smart-sync-note" role="status"><span>{error}</span><button className="text-button" onClick={()=>void retrySync()}>Try sync</button></div>}
+   <div className="smart-hub-grid learning-path-links"><button className="smart-mode-card" disabled={!onOpenReadingPath} onClick={()=>{onOpenChange(false);onOpenReadingPath?.()}}><span className="smart-card-icon"><BookOpen size={23}/></span><span><strong>Reading Path</strong><small>Stories, messages, and situations · read first, then unpack.</small></span></button><button className="smart-mode-card" disabled={!onOpenListeningPath} onClick={()=>{onOpenChange(false);onOpenListeningPath?.()}}><span className="smart-card-icon"><Headphones size={23}/></span><span><strong>Listening Path</strong><small>Hear the meaning, recall pinyin, and follow a short scene.</small></span></button></div>
+   <label className="listening-opt-in"><input type="checkbox" checked={includeListening} onChange={event=>setIncludeListening(event.target.checked)}/> Include a listening question in Daily 10 <small>{eligibleListening(completed).length?'Optional · up to one due audio item per round':'Complete the earlier teaching lessons to unlock audio items.'}</small></label>
    {preparing?<div className="smart-empty"><Sparkles size={30}/><p>Preparing your practice history…</p></div>:!hasPractice?<><div className="smart-empty"><Sparkles size={30}/><h2>Nothing useful to drill right now</h2><p>Words you marked Mastered stay out of adaptive practice. Complete more of your current unit or restore a word from Mega Challenge if you want it back.</p></div><div className="smart-hub-grid"><button className="smart-mode-card pinyin-gauntlet" disabled={!onOpenReverseMegaChallenge} onClick={()=>{onOpenChange(false);onOpenReverseMegaChallenge?.()}}><span className="smart-card-icon"><Keyboard size={23}/></span><span><strong>Pinyin Gauntlet</strong><small>Read learned Hanzi and recall their pinyin.</small></span><b>∞</b></button><button className="smart-mode-card exam-study" disabled={!onOpenExamStudy} onClick={()=>{onOpenChange(false);onOpenExamStudy?.()}}><span className="smart-card-icon"><GraduationCap size={23}/></span><span><strong>Exam Study</strong><small>Off-the-record list practice · never changes progress, streaks, counters, or mastery.</small></span><b>{examStudySets.length}</b></button></div></>:<div className="smart-hub-grid">
     <button className="smart-mode-card daily" onClick={startDaily}><span className="smart-card-icon"><Flame size={23}/></span><span><strong>Daily 10</strong><small>{dailySize<10?'Up to 10 adaptive questions':'10 adaptive questions'} · recent learning + cumulative review</small></span><b>{dailySize}</b></button>
     <button className="smart-mode-card mega" onClick={startMega} disabled={checkpointCount===0}><span className="smart-card-icon"><Trophy size={23}/></span><span><strong>Mixed Mastery</strong><small>{checkpointCount?'12 contextual mastery questions · completed 4-unit block':'Complete 4 units in a book to unlock Mixed Mastery.'}</small></span><b>{checkpointCount?12:0}</b></button>

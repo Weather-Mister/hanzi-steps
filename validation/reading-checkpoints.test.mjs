@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {readingCheckpoints,readingAvailable,tokenizeReading,readingDictionary,freshReadingProgress,validReadingProgress,readReadingProgress,readingStorageKey,readingScore} from '../lib/reading-checkpoints.ts';
 import {units} from '../course/runtime.ts';
+import {readingPrerequisites} from '../lib/curriculum-relations.ts';
 const index=JSON.parse(readFileSync(new URL('../course/index.json',import.meta.url),'utf8'));
 const order=index.order.map(row=>row[1]);
 const han=/\p{Script=Han}/u;
@@ -38,7 +39,8 @@ for(const r of readingCheckpoints){
   const unit=units.find(u=>u.id===r.unitId);
   assert.equal(readingAvailable(r,new Set()),false);
   assert.equal(readingAvailable(r,new Set(unit.lessonIds.slice(0,-1))),false);
-  assert.equal(readingAvailable(r,new Set([unit.lessonIds.at(-1)])),true);
+  assert.equal(readingAvailable(r,new Set([unit.lessonIds.at(-1)])),false,'a review alone is not proof of prior teaching');
+  assert.equal(readingAvailable(r,new Set(readingPrerequisites(r.unitId))),true);
  });
 }
 test('partial, completed, corrupt and old progress; profile isolation and replay',()=>{

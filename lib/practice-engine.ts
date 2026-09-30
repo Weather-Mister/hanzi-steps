@@ -1,3 +1,4 @@
+import type {ListeningTask} from './listening-path.ts';
 import type {KnowledgeTask} from './cumulative-knowledge.ts';
 import {books,characters,lessons,phrases,shuffled,units} from './curriculum.ts';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from './vocabulary-lookup.ts';
@@ -45,6 +46,7 @@ export type PracticeQuestion={
  sessionKind:PracticeSessionKind;
  context?:PracticeContextPrompt;
  knowledge?:KnowledgeTask;
+ listening?:ListeningTask;
 };
 
 const skillKey=(itemId:string,mode:PracticeMode)=>itemId+'::'+mode;

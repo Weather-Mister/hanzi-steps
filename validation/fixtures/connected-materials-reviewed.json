@@ -1,0 +1,59 @@
+{
+  "reviewed": "2026-09-30",
+  "note": "Human-readable adjudication in docs/connected-learning-validation.md. Hashes detect drift; they do not prove natural-language semantics.",
+  "payloads": {
+    "readings": {
+      "reading-unit-10": "801c7633ed288be6ddf792190d2ff755b290d81d09735c9acbc6b6c281bfb285",
+      "reading-unit-13": "1630a41b8f9a48750c4e5f4288393aa0570a096fae0dde67b504d6ce9cb28a51",
+      "reading-unit-16": "6b1398c4cc79927c5451730224e27fdb5249b33362f916f0632e4f81e59fbdbc",
+      "reading-unit-19": "9a969151613424a5ddd4bdc1a65081d781c68d1b247aa1c99d1179c808ebcabd",
+      "reading-unit-22": "bec635d6d66b5cbb9012e899312b02f9a008db85e8589a0dde093cce04c78bfc",
+      "reading-unit-25": "b39d5545a68c5472f2a5184eff6ca877513fe1606219656166279893a79431a6",
+      "reading-unit-28": "581c98b41d6ee7b418c1c701ff61b222991797dcf9c68add99b9cc500e72c7d0",
+      "reading-unit-31": "b35f94f7f252dd66d51c907e6f64a22291bbfaa11e70b22261e6e96bdc3446fb",
+      "reading-unit-34": "53b308762df9b423d5dc26c62d989f06d17a66d71fb6123d7c6737b9441a9570",
+      "reading-unit-37": "09ffe5379c2f6a630f7747d384b3affca9d175d5275590a6820225a5b55b6e2b",
+      "reading-unit-40": "307970fc65b180356571ec92b217059caaafd4d151b33a1fad1d0413ac80dd4d",
+      "reading-unit-44": "d7bfd1a21d23d001bae319f4eb555f32fb7f1a3a258129eb0ce402a425d9e70c",
+      "reading-unit-48": "219ed69de1a44794d14c323030165af8370a57923735da3c75570969005f7802",
+      "reading-book-2-unit-4": "c82e4afe727027862cf2a1e02fd28047b74397ef2da513d8ce8375ed9fdb7db7"
+    },
+    "listening": {
+      "identity": "32de26a6995553c7fb26bc423b3642dd23295f884cea52f51892a3817b372387",
+      "two-books": "27711824e61074bdd3c69b7024dc0356f2e047402e9643932581bc39935a581e",
+      "swimming-opinion": "d08858101ccee95ed72da86f10729c603c6a1aa9c2875e86aa3fb27d12203a67",
+      "buy-for-her": "26b550e6ffa56aebba0a28c0047201a893bcba67ac9f4b6d6552b1bbc9472f71",
+      "spicy-noodles": "da0b868c04398471b5ad508fbfeaad2c901052ed071886b0f3d88bf8813922e4",
+      "shop-location": "0de84e4563a1c7c691fb392300d7fa5ef15479249364efe6cc9f20da58d1b286",
+      "game-end": "c32e36ec0f8f287a19b569a1f29f6054dc9a57af5c07dd412a9b4eff593b7a48",
+      "mrt-faster": "8502833f568ac484c6fd80cddc7d0caf983efb8055d84a3a5b765a8dff831ff6",
+      "last-month": "3ba7c00a2b293dab39de2cc9436c4498462c6470a8968eaa3a1506d4a4000b6a",
+      "finished-dinner": "4d98fb16f1b6268a951a02814a05d569e9bc2b9d1968269dc0da36b921185b3a",
+      "few-friends": "f4447d7d6b486bc94c0dd7ddf0748397dbdafccfd0688f2f0db90dc257dd108c",
+      "recipient": "b080e71ddd62a7d02870eff7458e398b03fcc8bdaadde5a97beb51d18d4ed0bc",
+      "directions": "2df39c0c5b030507d50359d1c15f0b2d19536600622deac524cec872c45b811d",
+      "simultaneous": "04ba4d039a0654503119904e0942149e65bb6bab62a224d88ee48839e0c299ea"
+    },
+    "scenes": [
+      "reading-unit-13",
+      "reading-unit-31",
+      "reading-book-2-unit-4"
+    ],
+    "senses": {
+      "好:0": "acb49399aceb1f1bd1ac4c5a03b421230a6684a12d97c4d718567fc3627e5623",
+      "上:2": "619946d2e24af654eb1fabd4268384f3012c38a69dc10526c2b1e33945a6adfe",
+      "上:3": "e7da8156e61c84d47625b1aa970b43c0af2c1de95cf383f4fa47637f1c947b0a",
+      "下:1": "5a242542eef9f11830bfe550328f5053adc2b4fea726eecb558fec243e95b928",
+      "下:2": "4f3918fd3208335df281ebe007fffdf3409f5a313714961dbaaa2628783fb138",
+      "了:0": "3de38ec3db26b10f709a381a3df7abef58bc718eff893c5ac273da3166973a3c",
+      "了:1": "01b6e9bfe8803e4ffde15a2cd185aedf791c2135a16044b57f2562fd656b832e",
+      "了:2": "102863cb68d2170513e1190bdafe5365aeedfe63d85086f8d943ea294a314ab3",
+      "得:0": "c9a54588b4b9f07cb10959e3de24a41bba913b70c5520218cdc74920c4796d53",
+      "在:0": "b669f3ae2c5ad436152a17069a259a3aa4418ae497f7baa0c296ccc677ddcdf7",
+      "幾:0": "6a91de9c9e462e48f3e0ed8c79a89fdb637a283aeb9ecf4098a9ad8f4d77b595",
+      "跟:0": "63376f31a5692dbff5e75b4d9f998a9f46550c73f78ab5e75c8b9ef88d948132",
+      "課:0": "b75687387a861069bd0cf3a3c7c640bdb1b18fe668e10e939b9f2cb24e58293d",
+      "邊:0": "9de506aa27dbdfc251ff0c34fa427fc620ce1812626b409768225f69e2bb1d45"
+    }
+  }
+}

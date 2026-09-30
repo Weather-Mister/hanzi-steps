@@ -1,5 +1,7 @@
 import rawReadings from '../course/readings/checkpoints.json' with {type:'json'};
 import {characters, vocabulary, units} from '../course/runtime.ts';
+import {characterOwners,knownAtUnit,readingPrerequisites,meetsPrerequisites} from './curriculum-relations.ts';
+import {readingContracts,readingTokenStatus} from './learning-materials.ts';
 
 export type ReadingGloss = {pinyin:string; meaning:string; note?:string; unfamiliar?:boolean};
 export type ReadingLine = {text:string; pinyin:string; translation:string; note:string; speaker?:string};
@@ -8,10 +10,13 @@ export type ReadingCheckpoint = {id:string;unitId:string;title:string;kind:strin
 export const readingCheckpoints:ReadingCheckpoint[] = rawReadings as ReadingCheckpoint[];
 export const readingForUnit=(unitId:string)=>readingCheckpoints.find(r=>r.unitId===unitId);
 export function readingAvailable(reading:ReadingCheckpoint,completed:Set<string>){
- const unit=units.find(u=>u.id===reading.unitId);
- return Boolean(unit&&completed.has(unit.lessonIds[unit.lessonIds.length-1]));
+ return meetsPrerequisites(readingPrerequisites(reading.unitId),completed);
 }
 export type ReadingToken={text:string;gloss?:ReadingGloss};
+export function readingCharacterHelp(reading:ReadingCheckpoint,text:string):string[]{
+ if(readingTokenStatus(reading.id,text)==='support-only')return [];
+ return [...new Set(Array.from(text))].filter(c=>knownAtUnit(characterOwners.get(c),reading.unitId)&&Boolean(characters[c]));
+}
 const dictionaryCache=new Map<string,Map<string,ReadingGloss>>();
 export function readingDictionary(reading:ReadingCheckpoint){
  const cached=dictionaryCache.get(reading.id);if(cached)return cached;
@@ -24,12 +29,15 @@ export function readingDictionary(reading:ReadingCheckpoint){
  for(const word of vocabulary)if(lessonIds.has(word.lessonId))dictionary.set(word.text,{pinyin:word.pinyin,meaning:word.meaning});
  // Some formal characters are deliberately not selected for unit handwriting.
  // Characters are fallback help; complete words always take precedence.
- for(const [char,entry] of Object.entries(characters))if(!dictionary.has(char))dictionary.set(char,{pinyin:entry.pinyin,meaning:entry.meaning});
+ for(const [char,entry] of Object.entries(characters))if(knownAtUnit(characterOwners.get(char),reading.unitId)&&!dictionary.has(char))dictionary.set(char,{pinyin:entry.pinyin,meaning:entry.meaning});
  for(const [word,gloss] of Object.entries(reading.glosses))dictionary.set(word,gloss);
  dictionaryCache.set(reading.id,dictionary);return dictionary;
 }
 export function tokenizeReading(text:string,reading:ReadingCheckpoint):ReadingToken[]{
  const dictionary=readingDictionary(reading);
+ const line=reading.lines.findIndex(l=>l.text===text);
+ const segments=readingContracts[reading.id]?.segments[line];
+ if(segments&&segments.join('')===text)return segments.map(text=>({text,gloss:dictionary.get(text)}));
  const words=[...dictionary.keys()].sort((a,b)=>b.length-a.length);
  const result:ReadingToken[]=[];
  for(let i=0;i<text.length;){
