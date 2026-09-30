@@ -194,7 +194,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
    <SettingsToggle id="notification-encouragement" checked={prefs.encouragement} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('encouragement',value)}/>
   </div>
   <div className="notification-kind-row">
-   <BookOpen size={18}/><label htmlFor="notification-sentences"><strong>Chinese sentence checks</strong><span>Original, pinyin-free sentences around the level of the last 3–4 units you reached.</span></label>
+   <BookOpen size={18}/><label htmlFor="notification-sentences"><strong>Chinese sentence checks</strong><span>Three original, pinyin-free checks a day, spread across daytime hours and matched to the last 3–4 units you reached.</span></label>
    <SettingsToggle id="notification-sentences" checked={prefs.sentenceChecks} disabled={!prefs.enabled||busy} onCheckedChange={value=>void update('sentenceChecks',value)}/>
   </div>
   <button type="button" className="secondary-button notification-test-button" disabled={!prefs.enabled||busy} onClick={()=>void sendTest()}>
