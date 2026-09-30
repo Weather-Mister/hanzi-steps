@@ -44,3 +44,16 @@ test('high-impact grammar and changed readings are explained separately',()=>{
  assert.ok(!characterMeanings('發').some(s=>s.meaning.includes('hair')));
  assert.ok(!characterMeanings('乾').some(s=>s.pinyin==='gàn'));
 });
+
+
+test('supplementary meanings stay fully visible regardless of learner progress',()=>{
+ const component=readFileSync(new URL('../components/character-meanings.tsx',import.meta.url),'utf8');
+ const app=readFileSync(new URL('../components/learning-app.tsx',import.meta.url),'utf8');
+ const search=readFileSync(new URL('../components/pinyin-search.tsx',import.meta.url),'utf8');
+ assert.match(component,/import \{characterMeanings\} from '\.\.\/lib\/character-meanings';/);
+ assert.match(component,/const senses=characterMeanings\(hanzi\);/);
+ assert.doesNotMatch(component,/learnedCharacterMeanings|completed:Set<string>/);
+ assert.match(app,/characterMeanings\(c\)\.length/);
+ assert.doesNotMatch(app,/learnedCharacterMeanings/);
+ assert.doesNotMatch(search,/<CharacterMeanings[^>]*completed=/);
+});
