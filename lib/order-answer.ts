@@ -39,8 +39,8 @@ function canBeTopicOrSubject(token:string|undefined):boolean{
 /**
  * Sentence builders should not mark a natural Mandarin time-topic variant wrong.
  * We only relax one thing: a contiguous time phrase may swap between sentence-initial
- * position and immediately after the first subject/topic token. Everything else,
- * including the internal order of the time phrase, must stay identical.
+ * position and around the first subject/topic token. A multi-part time phrase may also
+ * straddle that topic (明天我早上…), while the time parts keep their original order.\n * Everything else must stay identical.
  */
 export function isOrderAnswerAccepted(
  answerTokens:string[],
@@ -52,23 +52,25 @@ export function isOrderAnswerAccepted(
 
  const leading=leadingTimeCount(canonicalTokens);
  if(leading>0&&leading<canonicalTokens.length&&canBeTopicOrSubject(canonicalTokens[leading])){
-  const alternative=[
-   canonicalTokens[leading],
-   ...canonicalTokens.slice(0,leading),
-   ...canonicalTokens.slice(leading+1),
-  ];
-  if(sameTokens(answerTokens,alternative))return true;
+  const time=canonicalTokens.slice(0,leading);
+  const topic=canonicalTokens[leading];
+  const rest=canonicalTokens.slice(leading+1);
+  for(let boundary=0;boundary<=time.length;boundary++){
+   const alternative=[...time.slice(0,boundary),topic,...time.slice(boundary),...rest];
+   if(sameTokens(answerTokens,alternative))return true;
+  }
  }
 
  if(canBeTopicOrSubject(canonicalTokens[0])){
   const afterSubject=leadingTimeCount(canonicalTokens,1);
   if(afterSubject>0){
-   const alternative=[
-    ...canonicalTokens.slice(1,1+afterSubject),
-    canonicalTokens[0],
-    ...canonicalTokens.slice(1+afterSubject),
-   ];
-   if(sameTokens(answerTokens,alternative))return true;
+   const time=canonicalTokens.slice(1,1+afterSubject);
+   const topic=canonicalTokens[0];
+   const rest=canonicalTokens.slice(1+afterSubject);
+   for(let boundary=0;boundary<=time.length;boundary++){
+    const alternative=[...time.slice(0,boundary),topic,...time.slice(boundary),...rest];
+    if(sameTokens(answerTokens,alternative))return true;
+   }
   }
  }
 
