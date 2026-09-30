@@ -81,12 +81,12 @@ function streakState(rows:SessionRow[],now:number){
  while(days.has(cursor)){current++;cursor--}
  return {today,practicedToday,current};
 }
-function chooseSentence(row:PushRow,level:Level,today:string):NotificationSentence|null{
+function chooseSentence(row:PushRow,level:Level,today:string,hour:number):NotificationSentence|null{
  const candidates=sentencesForLevel(level.book,level.unit);
  if(!candidates.length)return null;
  const fresh=candidates.filter(sentence=>sentence.id!==row.last_sentence_id);
  const source=fresh.length?fresh:candidates;
- return source[fnv(row.endpoint+today+':sentence')%source.length]||null;
+ return source[fnv(row.endpoint+today+`:sentence:${hour}`)%source.length]||null;
 }
 function chooseEncouragement(row:PushRow,today:string){
  return encouragements[fnv(row.endpoint+today+':encouragement')%encouragements.length];
@@ -95,14 +95,22 @@ function dueSlot(row:PushRow,today:string,start:number,span:number,mod:number){
  const hash=fnv(row.endpoint+today);
  return {today:hash%mod===0,hour:start+((hash>>>8)%span)};
 }
-function payloadFor(kind:PushKind,row:PushRow,state:ReturnType<typeof streakState>,level:Level,today:string){
+function sentenceHours(row:PushRow,today:string){
+ const windows=[
+  {key:'morning',start:8,span:4},
+  {key:'afternoon',start:13,span:4},
+  {key:'evening',start:18,span:2},
+ ];
+ return windows.map(window=>window.start+(fnv(row.endpoint+today+`:sentence-slot:${window.key}`)%window.span));
+}
+function payloadFor(kind:PushKind,row:PushRow,state:ReturnType<typeof streakState>,level:Level,today:string,hour:number){
  if(kind==='streak')return {
   title:'🔥 Keep your streak alive',
   body:`${state.current}-day streak — one quick lesson, review, or character practice today keeps it going.`,
   sentence:null as NotificationSentence|null,
  };
  if(kind==='sentence'){
-  const sentence=chooseSentence(row,level,today);
+  const sentence=chooseSentence(row,level,today,hour);
   if(!sentence)return null;
   return {title:'小挑戰 · Can you read this?',body:sentence.text,sentence};
  }
@@ -110,10 +118,7 @@ function payloadFor(kind:PushKind,row:PushRow,state:ReturnType<typeof streakStat
 }
 function pickKind(row:PushRow,state:ReturnType<typeof streakState>,hour:number,now:number):PushKind|null{
  if(row.streak_reminders&&state.current>0&&!state.practicedToday&&hour>=20&&hour<=22&&row.last_streak_day!==state.today)return 'streak';
- if(row.sentence_checks&&elapsed(row.last_sent_at,now)>=20*60*60*1000&&elapsed(row.last_sentence_at,now)>=60*60*60*1000){
-  const slot=dueSlot(row,state.today,12,6,3);
-  if(slot.today&&hour===slot.hour)return 'sentence';
- }
+ if(row.sentence_checks&&elapsed(row.last_sentence_at,now)>=60*60*1000&&sentenceHours(row,state.today).includes(hour))return 'sentence';
  if(row.encouragement&&elapsed(row.last_sent_at,now)>=24*60*60*1000&&elapsed(row.last_encouragement_at,now)>=96*60*60*1000){
   const slot=dueSlot(row,state.today,10,9,4);
   if(slot.today&&hour===slot.hour)return 'encouragement';
@@ -198,7 +203,7 @@ Deno.serve(async req=>{
  }
 
  const now=Date.now(),{hour}=dayParts(now);
- if(hour<10||hour>22)return json({checked:rows.length,sent:0,expired:0,failed:0,quietHours:true});
+ if(hour<8||hour>22)return json({checked:rows.length,sent:0,expired:0,failed:0,quietHours:true});
 
  let sent=0,expired=0,failed=0;
  for(let offset=0;offset<rows.length;offset+=15){
@@ -209,13 +214,13 @@ Deno.serve(async req=>{
    const kind=pickKind(row,state,hour,now);
    if(!kind)return;
    const level=latestLevel(learner);
-   const notification=payloadFor(kind,row,state,level,state.today);
+   const notification=payloadFor(kind,row,state,level,state.today,hour);
    if(!notification)return;
 
    const body=JSON.stringify({
     title:notification.title,
     body:notification.body,
-    tag:`hanzi-${kind}-${state.today}`,
+    tag:`hanzi-${kind}-${state.today}${kind==='sentence'?`-${hour}`:''}`,
     data:{kind,url:'./'},
    });
    try{
