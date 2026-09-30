@@ -2029,16 +2029,41 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 
 @media(max-width:700px) {
  .smart-practice-dialog {
-  width:calc(100vw - 18px);
+  width:min(calc(100vw - 18px),720px);
+  max-width:calc(100vw - 18px);
   max-height:calc(100dvh - 18px);
+  overflow-x:hidden;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  box-sizing:border-box;
   padding:17px 14px;
   gap:13px;
   border-radius:18px;
  }
- .smart-hub-grid { grid-template-columns:1fr; }
- .smart-mode-card { min-height:84px; padding:11px 12px; }
+ .smart-practice-dialog>* { min-width:0; }
+ .smart-hub-grid {
+  min-width:0;
+  max-width:100%;
+  grid-template-columns:1fr;
+ }
+ .smart-mode-card {
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  min-height:84px;
+  padding:11px 12px;
+ }
+ .smart-mode-card>span:nth-child(2),
+ .listening-opt-in,
+ .listening-opt-in small { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+ .smart-session {
+  min-width:0;
+  overflow:visible;
+  flex:none;
+ }
  .smart-finish-stats>div { padding:9px 5px; }
  .smart-question {
+  min-width:0;
   min-height:0;
   justify-content:flex-start;
   padding-top:10px;
