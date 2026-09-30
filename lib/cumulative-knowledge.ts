@@ -1,5 +1,6 @@
 import {characters,grammarRules,lessons,phrases,vocabulary,shuffled,type Step,type Phrase} from './curriculum.ts';
-import {courseModules} from '../course/registry.generated.ts';
+import {learnedCharacter} from './curriculum-relations.ts';
+export {learnedCharacter} from './curriculum-relations.ts';
 import {characterFamilies,usageLinks,phraseGrammarLinks,grammarContrasts,readingKnowledgeLinks,grammarExampleLinks} from '../course/enrichment/knowledge.ts';
 import type {PracticeMode,PracticeQuestion,PracticeStateMap,PracticeSessionKind} from './practice-engine.ts';
 
@@ -18,19 +19,10 @@ for(const link of grammarExampleLinks){
  knowledgePhrases[id]={...example,note:rule.remember,tokens:link.tokens,grammarIds:[link.grammarId]};
  phraseLessons.set(id,grammarLessons.get(link.grammarId)||[]);
 }
-const charOwners=new Map(courseModules.flatMap(m=>m.newCharacters.map(c=>[c,m] as const)));
-const charLessons=new Map<string,string[]>();
-for(const [char,owner] of charOwners){
- const teaching=owner.lessons.filter(l=>l.steps.some(s=>s.type==='intro'&&s.char===char)).map(l=>l.id);
- // Formal recognition-only characters can be introduced through owned words.
- const wordLessons=owner.newVocabulary.filter(w=>w.text.includes(char)).map(w=>w.lessonId);
- charLessons.set(char,[...new Set([...teaching,...wordLessons])]);
-}
 const wordLessons=new Map(vocabulary.map(w=>[w.text,w.lessonId]));
 const hasAny=(completed:Set<string>,ids:string[]|undefined)=>Boolean(ids?.some(id=>completed.has(id)));
 export const phraseConceptGrammar=(id:string)=>[...new Set([...(knowledgePhrases[id]?.grammarIds||[]),...(phraseGrammarLinks[id]||[])])];
 export const taughtGrammar=(id:string,completed:Set<string>)=>hasAny(completed,grammarLessons.get(id));
-export const learnedCharacter=(char:string,completed:Set<string>)=>hasAny(completed,charLessons.get(char));
 export function safeKnowledgePhrase(id:string,completed:Set<string>):boolean{
  const phrase=knowledgePhrases[id];
  if(!phrase||phrase.practice===false||!hasAny(completed,phraseLessons.get(id)))return false;

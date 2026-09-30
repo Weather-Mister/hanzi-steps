@@ -1,14 +1,30 @@
-name: Reading browser QA
+name: Connected learning browser QA
 on:
   pull_request:
     branches: [main]
     paths:
       - 'components/learning-app.tsx'
       - 'components/reading-checkpoint.tsx'
+      - 'components/reading-path.tsx'
+      - 'components/listening-*.tsx'
+      - 'components/character-*.tsx'
+      - 'components/pinyin-search.tsx'
+      - 'components/smart-practice.tsx'
       - 'app/reading.css'
+      - 'app/learning-paths.css'
       - 'lib/reading-checkpoints.ts'
+      - 'lib/learning-materials.ts'
+      - 'lib/curriculum-relations.ts'
+      - 'lib/character-intelligence.ts'
+      - 'lib/listening-path.ts'
+      - 'lib/pinyin.ts'
+      - 'lib/use-speech.ts'
       - 'course/readings/**'
+      - 'course/listening/**'
+      - 'course/materials/**'
+      - 'course/enrichment/**'
       - 'tests/browser/readings.cjs'
+      - 'tests/browser/connected-learning.cjs'
       - '.github/workflows/reading-qa.yml'
 permissions:
   contents: read
@@ -26,8 +42,9 @@ jobs:
       - run: npm install --no-save --package-lock=false playwright@1.56.1
       - run: npx playwright install --with-deps chromium
       - run: node --experimental-strip-types tests/browser/readings.cjs
+      - run: node --experimental-strip-types tests/browser/connected-learning.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: reading-screenshots
-          path: test-results/readings
+          name: connected-learning-screenshots
+          path: test-results

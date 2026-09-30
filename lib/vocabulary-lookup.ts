@@ -15,42 +15,15 @@ export type VocabularyLookupItem={
  bookNumber?:number;
 };
 
-const toneMap:Record<string,string>={
- 'ā':'a','á':'a','ǎ':'a','à':'a',
- 'ē':'e','é':'e','ě':'e','è':'e','ê':'e',
- 'ī':'i','í':'i','ǐ':'i','ì':'i',
- 'ō':'o','ó':'o','ǒ':'o','ò':'o',
- 'ū':'u','ú':'u','ǔ':'u','ù':'u',
- 'ǖ':'v','ǘ':'v','ǚ':'v','ǜ':'v','ü':'v',
- 'ń':'n','ň':'n','ǹ':'n','ḿ':'m',
-};
-
-export function normalizePinyin(value:string):string{
- return value
-  .normalize('NFC')
-  .trim()
-  .toLowerCase()
-  .replace(/u:/g,'v')
-  .replace(/[āáǎàēéěèêīíǐìōóǒòūúǔùǖǘǚǜüńňǹḿ]/g,char=>toneMap[char]||char)
-  .replace(/[0-5]/g,'')
-  .replace(/[^a-zv]+/g,' ')
-  .trim()
-  .replace(/\s+/g,' ');
-}
-
-export const compactPinyin=(value:string)=>normalizePinyin(value).replace(/\s/g,'');
+import {normalizePinyin} from './pinyin.ts';
+export {normalizePinyin,compactPinyin} from './pinyin.ts';
 
 // Search offers one practice action per glyph; recall retains repeated glyphs.
 export function uniquePracticeCharacters(item:VocabularyLookupItem):string[]{
  return [...new Set(item.characters)].filter(char=>Boolean(characters[char]));
 }
 
-/**
- * Pinyin Search is a global canonical lookup, but its handwriting action must
- * never bypass the character's first teaching lesson. Results stay visible;
- * only writing practice is progress-gated through the same invariant used by
- * every other standalone character-practice entry point.
- */
+/** Global reference and standalone writing access do not grant curriculum learning. */
 export function searchPracticeCharacters(item:VocabularyLookupItem,completed:Set<string>):string[]{
  return uniquePracticeCharacters(item).filter(char=>characterPracticeAvailable(char,completed));
 }

@@ -1,5 +1,5 @@
 import {shuffled} from './curriculum.ts';
-import {compactPinyin,learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from './vocabulary-lookup.ts';
+import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from './vocabulary-lookup.ts';
 
 export function eligibleMegaVocabulary(completed:Set<string>,mastered:Set<string>):VocabularyLookupItem[]{
  return learnedVocabulary(completed).filter(item=>!mastered.has(item.id));
@@ -10,10 +10,7 @@ export function reverseMegaVocabulary(completed:Set<string>):VocabularyLookupIte
  return vocabularyLookup.filter(item=>completed.has(item.lessonId)&&item.characters.length>0);
 }
 
-export function matchesMegaPinyin(input:string,expected:string):boolean{
- const answer=compactPinyin(input);
- return answer.length>0&&answer===compactPinyin(expected);
-}
+export {matchesPinyin as matchesMegaPinyin} from './pinyin.ts';
 
 export function makeMegaQueue(items:VocabularyLookupItem[],seed:string):string[]{
  return shuffled([...new Set(items.map(item=>item.id))],seed);
