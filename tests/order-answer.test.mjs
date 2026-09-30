@@ -20,6 +20,10 @@ test('accepts time before or immediately after the subject/topic',()=>{
   ['明天','早上','我','去','游泳'],
  ),true);
  assert.equal(isOrderAnswerAccepted(
+  ['明天','我','早上','去','游泳'],
+  ['明天','早上','我','去','游泳'],
+ ),true);
+ assert.equal(isOrderAnswerAccepted(
   ['明天晚上','我們','一起','去','吃','越南菜'],
   ['我們','明天晚上','一起','去','吃','越南菜'],
  ),true);
