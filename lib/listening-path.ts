@@ -34,7 +34,7 @@ const curatedBySentence=new Map(curatedListeningItems.flatMap(item=>{
 
 function autoDistractors(candidate:Candidate){
  const alternatives=candidates
-  .filter(other=>other.sentence.id!==candidate.sentence.id&&other.position<=candidate.position&&other.sentence.meaning!==candidate.sentence.meaning)
+  .filter(other=>other.sentence.id!==candidate.sentence.id&&other.position<=candidate.position&&other.sentence.meaning!==candidate.sentence.meaning&&!/[\p{Script=Han}]/u.test(other.sentence.meaning))
   .sort((a,b)=>{
    const sameUnitA=Number(a.sentence.unitId!==candidate.sentence.unitId);
    const sameUnitB=Number(b.sentence.unitId!==candidate.sentence.unitId);
