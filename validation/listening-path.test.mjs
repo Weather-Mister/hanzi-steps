@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {listeningItems,listeningStages,listeningStageAvailable,listeningOptions} from '../lib/listening-path.ts';
 import {resolveSentence} from '../lib/learning-materials.ts';
 import {lessonPosition} from '../lib/curriculum-relations.ts';
-import {units} from '../course/runtime.ts';
+import {units,phrases} from '../course/runtime.ts';
 
 function completedThrough(unitId){
  const stop=units.findIndex(unit=>unit.id===unitId);
@@ -39,7 +39,7 @@ test('generated listening choices only use distinct learned meanings',()=>{
   for(const distractor of item.distractors){
    assert.notEqual(distractor.text,source.meaning,item.id+' distractor duplicates the answer');
    if(item.id.startsWith('course-')){
-    const match=listeningItems.map(other=>resolveSentence(other.source)).find(sentence=>sentence?.meaning===distractor.text);
+    const match=Object.keys(phrases).map(id=>resolveSentence({kind:'phrase',id})).find(sentence=>sentence?.meaning===distractor.text);
     assert.ok(match,item.id+' generated distractor must come from another course sentence');
     assert.ok((lessonPosition.get(match.lessonId)??Infinity)<=sourcePosition,item.id+' exposes a future distractor');
    }
