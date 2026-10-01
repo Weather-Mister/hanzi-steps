@@ -922,7 +922,7 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "You ask 你要熱茶還是熱咖啡？ Your sister replies 熱茶，外帶，謝謝。 Which acknowledgment matches her choice?",
+          "prompt": "You ask 你要熱茶還是熱咖啡？ Your sister replies 一杯熱茶，外帶，謝謝。 Which acknowledgment matches her choice?",
           "options": [
             "好的，一杯熱茶，外帶。",
             "好的，一杯熱咖啡，外帶。",
