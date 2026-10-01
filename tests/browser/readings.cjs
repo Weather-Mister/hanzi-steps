@@ -43,7 +43,7 @@ await choose(4,2);await page.getByRole('button',{name:'Start reading',exact:true
 await page.setViewportSize({width:1365,height:950});await page.screenshot({path:'test-results/readings/desktop.png',fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
 assert.deepEqual(errors,[]);
 // Fresh learner can preview unit but cannot launch its reading.
-const locked=await browser.newContext({viewport:{width:390,height:844}});const p2=await locked.newPage();await p2.goto('http://127.0.0.1:4173/hanzi-steps/');await p2.getByRole('button',{name:/Change book or unit/}).click();await p2.getByRole('button',{name:/^Unit 10 ·/}).click();assert.equal(await p2.getByRole('button',{name:'Finish the unit challenge to unlock'}).isDisabled(),true);
+const locked=await browser.newContext({viewport:{width:390,height:844}});const p2=await locked.newPage();await p2.goto('http://127.0.0.1:4173/hanzi-steps/');await p2.getByRole('button',{name:/Change book or unit/}).click();await p2.getByRole('button',{name:/^Unit 10 ·/}).click();assert.equal(await p2.getByRole('button',{name:'Unlocks at end of Unit 10'}).isDisabled(),true);
 console.log('PASS: all 14 stages; mobile/desktop; word and character help; hidden pinyin; submit gate; walkthrough; resume; replay; completion; fresh learner lock; no page errors.');
 await browser.close();server.kill();
 })().catch(async e=>{console.error(e);if(activePage){console.error(await activePage.locator('body').innerText().catch(()=>''));await activePage.screenshot({path:'test-results/readings/failure.png',fullPage:true}).catch(()=>{});}server?.kill();process.exit(1)});
