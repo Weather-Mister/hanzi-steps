@@ -482,7 +482,7 @@ const unit:UnitData = {
           "grammarIds": [
             "u11-buy",
             "u11-size",
-            "u6-close"
+            "u4-wish"
           ],
           "id": "u11-size-18"
         }
