@@ -87,18 +87,14 @@ for(const item of listeningItems){
 }
 
 /**
- * Listening stages are deliberately cumulative. Each stage starts with its
- * current unit's sentences, then adds recent learned material until it has a
- * useful 3-7 item session. This keeps every stage substantial without creating
- * duplicate curriculum ownership.
+ * Listening stages are cumulative and dense: after enough material exists,
+ * every unit gets a 3-7 item stage drawn from the newest available sentences.
+ * This adds practice volume without inventing duplicate curriculum ownership.
  */
 export const listeningStages:ListeningStage[]=units.flatMap((unit,index)=>{
- const own=uniqueItems(itemsByUnit.get(unit.id)||[]);
- if(!own.length)return [];
- const recent=units.slice(0,index).reverse().flatMap(previous=>itemsByUnit.get(previous.id)||[]);
- const items=uniqueItems([...own,...recent]).slice(0,7);
- if(items.length<3)return [];
- return [{id:'listening-stage-'+unit.id,unitId:unit.id,items}];
+ const cumulative=uniqueItems(units.slice(0,index+1).flatMap(candidate=>itemsByUnit.get(candidate.id)||[]));
+ if(cumulative.length<3)return [];
+ return [{id:'listening-stage-'+unit.id,unitId:unit.id,items:cumulative.slice(-7)}];
 });
 
 export function listeningStageAvailable(stage:ListeningStage,completed:Set<string>){
