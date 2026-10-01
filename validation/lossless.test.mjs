@@ -17,6 +17,7 @@ const lesson15Amendment=readJSON('validation/fixtures/book1-first-teaching-amend
 const characterQualityAmendment=readJSON('validation/fixtures/book1-character-quality-amendment.json');
 const selfContainedAmendment=readJSON('validation/fixtures/book1-self-contained-learner-amendment.json');
 const grammarAmendment=readJSON('validation/fixtures/book1-grammar-clarity-amendment.json');
+const teachingAmendment=readJSON('validation/fixtures/teaching-quality-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -56,7 +57,10 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
    const previous=selfContained?.after??characterQualityExpected;
    const grammar=grammarAmendment.records?.[key]?.[id];
    if(grammar)assert.equal(grammar.before,previous,`grammar amendment must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),grammar?.after??previous,`${key} ${id}`);
+   const grammarExpected=grammar?.after??previous;
+   const teaching=teachingAmendment.records?.[key]?.[id];
+   if(teaching)assert.equal(teaching.before,grammarExpected,`teaching amendment must identify prior ${key} ${id}`);
+   assert.equal(hash(actual[id]),teaching?.after??grammarExpected,`${key} ${id}`);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);

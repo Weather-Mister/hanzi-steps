@@ -991,7 +991,7 @@ const unit:UnitData = {
         {
           "id": "u29-review-20",
           "type": "select",
-          "prompt": "In this lesson the vocabulary set, what does 女 do in 女學生?",
+          "prompt": "In 女學生, what does 女 tell you about the student?",
           "options": [
             "Marks the person as female",
             "Means the person is young",
@@ -1701,7 +1701,7 @@ const unit:UnitData = {
       "text": "我女朋友九月三十號要來看我。",
       "pinyin": "Wǒ nǚpéngyou jiǔyuè sānshí hào yào lái kàn wǒ.",
       "meaning": "My girlfriend is coming to see me on September 30.",
-      "note": "九月三十號 is a complete Time-When expression. this lesson also gives 女 + person noun as female-/girl- (for example 女學生); 女朋友 is the fixed word girlfriend.",
+      "note": "九月三十號 means September 30 and comes before 要來看我. 女朋友 is girlfriend; 女 can also modify a person noun, as in 女學生, female student.",
       "tokens": [
         "我女朋友九月三十號",
         "要來看我"
@@ -1858,7 +1858,7 @@ const unit:UnitData = {
       "text": "夜市很有名，你們應該去逛逛。",
       "pinyin": "Yèshì hěn yǒumíng, nǐmen yīnggāi qù guàngguang.",
       "meaning": "Night markets are famous; you should go look around.",
-      "note": "This uses 逛 in the visit context without introducing the separately deferred 臺 character. Reduplication 逛逛 makes the activity light/casual here.",
+      "note": "很有名 means famous. 應該 recommends what to do: you should go. Repeating 逛 as 逛逛 suggests looking around casually or for a little while.",
       "tokens": [
         "夜市很有名",
         "你們應該去逛逛"
@@ -1868,3 +1868,4 @@ const unit:UnitData = {
   "revisionStepIds": []
 };
 export default unit;
+

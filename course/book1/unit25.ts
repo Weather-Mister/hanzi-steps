@@ -1890,7 +1890,7 @@ const unit:UnitData = {
       "text": "坐公車不比坐計程車快。",
       "pinyin": "Zuò gōngchē bù bǐ zuò jìchéngchē kuài.",
       "meaning": "Taking the bus is not faster than taking a taxi.",
-      "note": "不 comes before 比.",
+      "note": "不 goes before 比 to deny that taking the bus is faster than taking a taxi. 不比…快 allows equal speed or a slower speed; it does not by itself assert that the bus is definitely slower.",
       "tokens": [
         "坐公車",
         "不比",

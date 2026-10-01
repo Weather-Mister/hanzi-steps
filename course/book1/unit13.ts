@@ -2086,7 +2086,7 @@ const unit:UnitData = {
         "多少",
         "錢"
       ],
-      "note": "",
+      "note": "老闆 addresses the shop owner; 請問 politely opens the question. 這杯茶 names the item, and 多少錢 asks its price without adding 嗎.",
       "grammarIds": [
         "u13-ask"
       ]
@@ -2102,7 +2102,7 @@ const unit:UnitData = {
         "個",
         "包子"
       ],
-      "note": "",
+      "note": "Use 三 + 個 + 包子 to count three buns. 個 is the measure word; 包子 is the whole food name, with neutral-tone zi.",
       "grammarIds": [
         "u13-buns"
       ]
@@ -2118,7 +2118,7 @@ const unit:UnitData = {
         "個",
         "包子"
       ],
-      "note": "",
+      "note": "幾個 asks how many buns, with 個 as the measure word. 要 asks how many the customer wants; the information question needs no 嗎.",
       "grammarIds": [
         "u13-buns"
       ]
@@ -2134,7 +2134,7 @@ const unit:UnitData = {
         "微波",
         "這個包子"
       ],
-      "note": "",
+      "note": "請 makes the request polite. 幫我 asks someone to do the action for me; 微波 means microwave, and 這個包子 is the item to heat.",
       "grammarIds": [
         "u13-help"
       ]
@@ -2150,7 +2150,7 @@ const unit:UnitData = {
         "買",
         "一杯茶"
       ],
-      "note": "",
+      "note": "幫她 identifies the person helped or benefited. 買一杯茶 is the action requested; 一杯 counts the tea serving.",
       "grammarIds": [
         "u13-help"
       ]
@@ -2165,7 +2165,7 @@ const unit:UnitData = {
         "五",
         "塊"
       ],
-      "note": "",
+      "note": "一百 is one hundred and 零 bridges the missing tens before 五. This is 105, not 一百五十, 150. 塊 marks the price.",
       "grammarIds": [
         "u13-hundreds"
       ]
@@ -2180,7 +2180,7 @@ const unit:UnitData = {
         "五",
         "塊"
       ],
-      "note": "",
+      "note": "兩百 gives 200, 三十 gives 30, and 五 gives 5. State the places from largest to smallest, then 塊 for the price.",
       "grammarIds": [
         "u13-hundreds"
       ]
@@ -2194,7 +2194,7 @@ const unit:UnitData = {
         "五百",
         "塊"
       ],
-      "note": "",
+      "note": "三千 is 3,000 and 五百 is 500. Together they make 3,500. No 零 is needed because the spoken place values are adjacent.",
       "grammarIds": [
         "u13-large-prices"
       ]
@@ -2208,7 +2208,7 @@ const unit:UnitData = {
         "三千",
         "塊"
       ],
-      "note": "",
+      "note": "一萬 is 10,000; 三千 adds 3,000. Chinese groups this amount around 萬, ten thousand, so the total is 13,000.",
       "grammarIds": [
         "u13-large-prices"
       ]
@@ -2224,7 +2224,7 @@ const unit:UnitData = {
         "賣",
         "包子"
       ],
-      "note": "",
+      "note": "賣不賣 asks whether the shop sells buns. 賣 is mài, sell; 買 is mǎi, buy. Do not add 嗎 to this A-not-A question.",
       "grammarIds": [
         "u13-sell"
       ]
@@ -2240,7 +2240,7 @@ const unit:UnitData = {
         "買",
         "兩個包子"
       ],
-      "note": "",
+      "note": "請幫我 asks someone to help by doing the purchase for me. 兩個包子 is two buns; the requested action is 買, not 賣.",
       "grammarIds": [
         "u13-help"
       ]
@@ -2277,3 +2277,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

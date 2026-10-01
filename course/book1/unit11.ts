@@ -1777,7 +1777,7 @@ const unit:UnitData = {
         "杯",
         "咖啡"
       ],
-      "note": "兩 counts two cups.",
+      "note": "Use 兩 before the measure word 杯 to count two cups. 要 expresses the order; 咖啡 names what is in the cups.",
       "grammarIds": [
         "u11-cup"
       ]
@@ -1995,3 +1995,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

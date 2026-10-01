@@ -276,14 +276,14 @@ const unit:UnitData = {
         {
           "id": "u41-different-s2",
           "type": "select",
-          "prompt": "A 不跟 B 一樣… primarily changes…",
+          "prompt": "In 他不跟我一樣高，跟你一樣高, which comparison is corrected in the second clause?",
           "options": [
             "the comparison target",
             "the birthday date",
             "the verb tense"
           ],
           "answer": "the comparison target",
-          "explanation": "不 before 跟 has different scope."
+          "explanation": "The full sentence first rejects equal height with me, then supplies you as the person of equal height. The correction comes from both clauses; 不跟 alone does not always mean that only the comparison target changes."
         },
         {
           "id": "u41-different-s3",
@@ -715,14 +715,14 @@ const unit:UnitData = {
         {
           "id": "u41-review-g4",
           "type": "select",
-          "prompt": "What does A 不跟 B 一樣… change?",
+          "prompt": "In 他不跟我一樣高，跟你一樣高, what does the second clause correct?",
           "options": [
             "the comparison target",
             "the calendar",
             "the tense"
           ],
           "answer": "the comparison target",
-          "explanation": "This is the scope distinction.",
+          "explanation": "跟你一樣高 supplies you as the matching comparison after equal height with me is rejected. The full context establishes the correction.",
           "grammarIds": [
             "u41-gen-yiyang"
           ]
@@ -1090,7 +1090,7 @@ const unit:UnitData = {
       "text": "跟你們一樣，吃蛋糕。今天我也訂了一個生日蛋糕。",
       "pinyin": "Gēn nǐmen yíyàng, chī dàngāo. Jīntiān wǒ yě dìng le yí ge shēngrì dàngāo.",
       "meaning": "The same as you: we eat cake. Today I also ordered a birthday cake.",
-      "note": "Source the conversation turn 10. The first clause is comprehension-first until comparison is formally taught.",
+      "note": "跟你們一樣 means just like you, with eating cake as the shared custom. 今天我也訂了 adds that the speaker has also ordered a birthday cake today; 一個 counts the cake.",
       "tokens": [
         "跟你們一樣",
         "吃蛋糕",
@@ -1127,7 +1127,7 @@ const unit:UnitData = {
       "text": "我的生日跟你的生日一樣。",
       "pinyin": "Wǒ de shēngrì gēn nǐ de shēngrì yíyàng.",
       "meaning": "My birthday is the same as yours.",
-      "note": "Basic A 跟 B 一樣 comparison.",
+      "note": "A 跟 B 一樣 compares two things as the same. Here A is 我的生日 and B is 你的生日: the birthdays fall on the same date.",
       "tokens": [
         "我的生日",
         "跟你的生日一樣"
@@ -1140,7 +1140,7 @@ const unit:UnitData = {
       "text": "我跟你一樣高。",
       "pinyin": "Wǒ gēn nǐ yíyàng gāo.",
       "meaning": "I am as tall as you.",
-      "note": "一樣 + property gives equal degree.",
+      "note": "跟你 identifies the person compared with 我. 一樣高 means equally tall: 一樣 comes before the property 高.",
       "tokens": [
         "我跟你",
         "一樣高"
@@ -1153,7 +1153,7 @@ const unit:UnitData = {
       "text": "我的生日跟你的生日不一樣。",
       "pinyin": "Wǒ de shēngrì gēn nǐ de shēngrì bù yíyàng.",
       "meaning": "My birthday is different from yours.",
-      "note": "不 before 一樣 negates sameness.",
+      "note": "不 before 一樣 denies that the two birthdays are the same. The people are still compared with 跟; the negated part is their sameness.",
       "tokens": [
         "我的生日",
         "跟你的生日不一樣"
@@ -1179,7 +1179,7 @@ const unit:UnitData = {
       "text": "你對我真好。",
       "pinyin": "Nǐ duì wǒ zhēn hǎo.",
       "meaning": "You're really good to me.",
-      "note": "Conversation turn; 對 + person is the prepositional 'to/toward' use.",
+      "note": "對我 identifies the person receiving the kindness: toward me. 真好 expresses how kind you are. 對 here is not the answer right or correct.",
       "tokens": [
         "你對我",
         "真好"
@@ -1218,3 +1218,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

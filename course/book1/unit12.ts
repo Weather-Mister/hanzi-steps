@@ -2241,7 +2241,7 @@ const unit:UnitData = {
         "十",
         "二"
       ],
-      "note": "十 plus 二: 10 + 2.",
+      "note": "十二 is one ten plus two. For 11–19, put the ones digit after 十; 十二 is twelve, while 二十 is twenty.",
       "grammarIds": [
         "u12-tens"
       ]
@@ -2255,7 +2255,7 @@ const unit:UnitData = {
         "十",
         "一"
       ],
-      "note": "Two tens and one more.",
+      "note": "二十一 combines 二十, two tens, with 一, one more. Use 二, not 兩, in the tens place of this number.",
       "grammarIds": [
         "u12-tens"
       ]
@@ -2399,3 +2399,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

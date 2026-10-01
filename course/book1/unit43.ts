@@ -775,12 +775,12 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "紅葉 means…",
           "options": [
-            "red maple leaves",
+            "red autumn leaves",
             "rain",
             "news"
           ],
-          "answer": "red maple leaves",
-          "explanation": "紅葉 is the word for red maple leaves."
+          "answer": "red autumn leaves",
+          "explanation": "紅葉 is the word for red autumn leaves."
         },
         {
           "id": "u43-next-year-p3",
@@ -813,7 +813,7 @@ const unit:UnitData = {
             "下雪"
           ],
           "answer": "紅葉",
-          "explanation": "The audio says 紅葉, “red maple leaves.”",
+          "explanation": "The audio says 紅葉, “red autumn leaves.”",
           "char": "葉"
         },
         {
@@ -993,12 +993,12 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "紅葉 means…",
           "options": [
-            "red maple leaves",
+            "red autumn leaves",
             "rain",
             "umbrella"
           ],
-          "answer": "red maple leaves",
-          "explanation": "紅葉 means red maple leaves."
+          "answer": "red autumn leaves",
+          "explanation": "紅葉 means red autumn leaves."
         },
         {
           "id": "u43-review-e1",
@@ -1039,14 +1039,14 @@ const unit:UnitData = {
         {
           "id": "u43-review-g1",
           "type": "select",
-          "prompt": "Which correctly expresses a completed two-hour tennis activity?",
+          "prompt": "A tennis session has ended. Which sentence reports its two-hour duration with a REPEATED verb followed by 了?",
           "options": [
             "我打網球打了兩個鐘頭。",
             "我打網球兩個鐘頭了。",
             "我打網球兩個鐘頭。"
           ],
           "answer": "我打網球打了兩個鐘頭。",
-          "explanation": "Object before duration requires verb repetition.",
+          "explanation": "打網球 names the activity; 打了兩個鐘頭 repeats the verb and gives its duration. The specified completed-session context and repeated-verb form select this answer; particle count alone does not determine every possible context.",
           "grammarIds": [
             "u43-completed-duration"
           ]
@@ -1084,14 +1084,14 @@ const unit:UnitData = {
         {
           "id": "u43-review-g4",
           "type": "select",
-          "prompt": "Which presents the stay as completed rather than accumulated-to-now?",
+          "prompt": "You have left Taiwan after a one-year stay. Which sentence uses the single-了 pattern to report that stay?",
           "options": [
             "我在臺灣住了一年。",
             "我在臺灣住了一年了。",
             "我在臺灣住一年。"
           ],
           "answer": "我在臺灣住了一年。",
-          "explanation": "The completed-duration pattern lacks the final sentence 了."
+          "explanation": "我在臺灣住了一年 uses 住了 + duration to report the one-year stay in this finished-stay context. The context establishes departure; a single 了 alone does not always prove the person has left."
         },
         {
           "id": "u43-review-g5",
@@ -1196,7 +1196,7 @@ const unit:UnitData = {
     {
       "text": "紅葉",
       "pinyin": "hóngyè",
-      "meaning": "red maple leaves",
+      "meaning": "red autumn leaves",
       "lessonId": "u43-next-year",
       "core": true
     }
@@ -1466,7 +1466,7 @@ const unit:UnitData = {
       "example": {
         "text": "紅葉",
         "pinyin": "hóngyè",
-        "meaning": "red maple leaves"
+        "meaning": "red autumn leaves"
       },
       "practiceBuild": false
     }
@@ -1652,7 +1652,7 @@ const unit:UnitData = {
       "text": "你以前住在哪裡？你在那裡住了多久？",
       "pinyin": "Nǐ yǐqián zhù zài nǎlǐ? Nǐ zài nàlǐ zhù le duōjiǔ?",
       "meaning": "Where did you live before? How long did you live there?",
-      "note": "Learner-safe question pair for the interview task. Transfer instruction: ask a classmate (or rehearse with an imagined partner), record the place and duration on paper, then report one result in Chinese.",
+      "note": "The first question asks for a former home, using 以前 and 住在哪裡. The second asks the duration of that stay with 住了多久. Practise answering with a place and a duration, then report the pair.",
       "tokens": [
         "你以前住在哪裡",
         "你在那裡住了多久"
@@ -1743,7 +1743,7 @@ const unit:UnitData = {
       "text": "我打算十二月底回去。想跟我去玩嗎？",
       "pinyin": "Wǒ dǎsuàn shí'èr yuè dǐ huíqù. Xiǎng gēn wǒ qù wán ma?",
       "meaning": "I plan to go back at the end of December. Do you want to go travel/have fun with me?",
-      "note": "Learner-safe preservation of the conversation: the deferred country name is omitted, but the return plan and invitation are retained.",
+      "note": "打算 introduces the plan and 十二月底 places it at the end of December. 回去 is return away from here. The second sentence invites the listener to go along for fun, with 你 understood.",
       "tokens": [
         "我打算十二月底回去",
         "想跟我去玩嗎"
@@ -1772,8 +1772,8 @@ const unit:UnitData = {
     "u43-nextyear-source": {
       "text": "冬天太冷了。不過，我想明年秋天去看紅葉。",
       "pinyin": "Dōngtiān tài lěng le. Búguò, wǒ xiǎng míngnián qiūtiān qù kàn hóngyè.",
-      "meaning": "Winter is too cold. But I want to go see the red maple leaves next autumn.",
-      "note": ", preserving the travel-plan function without deferred speaker orthography.",
+      "meaning": "Winter is too cold. But I want to go see the red autumn leaves next autumn.",
+      "note": "太冷了 means too cold; 不過 introduces a contrasting point, but. 想 expresses a wish or plan. 明年秋天 is next autumn and goes before 去看. 紅葉 means red autumn leaves, not only maple leaves.",
       "tokens": [
         "冬天太冷了",
         "不過",
@@ -1784,7 +1784,7 @@ const unit:UnitData = {
       "text": "我去年五月出去玩了兩個星期。那個時候，風景很好看，我玩得非常開心。",
       "pinyin": "Wǒ qùnián wǔ yuè chūqù wán le liǎng ge xīngqí. Nàge shíhou, fēngjǐng hěn hǎokàn, wǒ wán de fēicháng kāixīn.",
       "meaning": "Last May I went away for two weeks. The scenery was nice, and I had a very good time.",
-      "note": "Learner-safe adaptation of the conversation: no productive 紐約 and 好看 replaces untaught 漂亮.",
+      "note": "去年五月 places the trip last May; 玩了兩個星期 gives its two-week duration. 那個時候 refers back to the trip, and 玩得非常開心 evaluates how much the speaker enjoyed it.",
       "tokens": [
         "我去年五月出去玩了兩個星期",
         "那個時候",
@@ -1806,3 +1806,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

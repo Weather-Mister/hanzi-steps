@@ -111,7 +111,7 @@ function taskFor(concept:KnowledgeConcept,completed:Set<string>,states:PracticeS
   if(concept.id==='usage:gen-recipient'&&examples.length)return {concept,exampleId:'u48-gen-recipient',format:'choice',prompt:'In 跟老師說, what does 跟 tell you?',answer:'Who is being spoken to',accepted:['Who is being spoken to'],options:['Who is being spoken to','Who accompanies the speaker'],pinyin:phrases['u48-gen-recipient'].pinyin,explanation:concept.explanation,introduce};
   return undefined;
  }
- return {concept,exampleId:example.id,format:'order',prompt:example.meaning,answer:example.text,accepted:[example.text],tokens:example.tokens,pinyin:example.pinyin,explanation:example.note||concept.explanation,introduce};
+ return {concept,exampleId:example.id,format:'order',prompt:example.meaning,answer:example.text,accepted:[example.text,...(example.acceptedTokenOrders||[]).map(tokens=>tokens.join(''))],tokens:example.tokens,pinyin:example.pinyin,explanation:example.note||concept.explanation,introduce};
 }
 export function knowledgeQuestions(completed:Set<string>,states:PracticeStateMap,seed:string,count=3,now=Date.now(),sessionKind:PracticeSessionKind='daily'):PracticeQuestion[]{
  const available=shuffled(availableKnowledge(completed),seed).filter(c=>score(c,states,now)>=0).sort((a,b)=>score(b,states,now)-score(a,states,now));
@@ -151,3 +151,4 @@ export function knowledgeAttemptTargets(step:Step,completed:Set<string>,lessonId
  }
  return targets;
 }
+

@@ -1141,7 +1141,7 @@ const unit:UnitData = {
       "meaning": "year",
       "strokes": 6,
       "layout": "whole",
-      "note": "年 is second-tone nián and names a year or a duration measured in years.",
+      "note": "年 is second-tone nián and names a year or a duration measured in years. 天 tiān measures days: 兩天 means two days. Neither 兩天 nor 兩年 takes 個.",
       "memory": "The six strokes interlock around a central vertical; keep the middle horizontals distinct before the final vertical finish.",
       "parts": [
         {
@@ -1699,7 +1699,7 @@ const unit:UnitData = {
       "text": "我在家看影片。",
       "pinyin": "Wǒ zài jiā kàn yǐngpiàn.",
       "meaning": "I watch films at home.",
-      "note": "影片 is this lesson’s word for film or video.",
+      "note": "在家 gives the location before 看影片. 影片 means a film or video; 看 is the action of watching it.",
       "tokens": [
         "我",
         "在家",
@@ -1865,3 +1865,4 @@ const unit:UnitData = {
   "revisionStepIds": []
 };
 export default unit;
+

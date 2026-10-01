@@ -1747,7 +1747,7 @@ const unit:UnitData = {
       "text": "旅館老闆的太太很開心。",
       "pinyin": "Lǚguǎn lǎobǎn de tàitai hěn kāixīn.",
       "meaning": "The hotel owner's wife is very happy.",
-      "note": "太太 means wife here.",
+      "note": "旅館老闆 is the hotel owner. 的 links that person to 太太, wife, and 很開心 describes how she feels: happy. 太太 can also be a respectful title in other contexts.",
       "tokens": [
         "旅館老闆的太太",
         "很開心"
@@ -1794,7 +1794,7 @@ const unit:UnitData = {
       "text": "穿紅色衣服的人是我朋友。",
       "pinyin": "Chuān hóngsè yīfú de rén shì wǒ péngyǒu.",
       "meaning": "The person wearing red clothes is my friend.",
-      "note": "穿紅色衣服 modifies 人.",
+      "note": "穿紅色衣服 describes the person by what they are wearing. Put this description before 的人: the person wearing red clothes. 是我朋友 then identifies that person as my friend.",
       "tokens": [
         "穿紅色衣服的人",
         "是我朋友"
@@ -1830,7 +1830,7 @@ const unit:UnitData = {
       "text": "海是藍色的。",
       "pinyin": "Hǎi shì lánsè de.",
       "meaning": "The sea is blue.",
-      "note": "藍色 is blue.",
+      "note": "藍色 names the color blue. 海是藍色的 uses 是 + color + 的 to describe the sea's color; 的 closes the color description.",
       "tokens": [
         "海",
         "是藍色的"
@@ -1866,7 +1866,7 @@ const unit:UnitData = {
       "text": "從窗戶往外看，是藍色的大海。",
       "pinyin": "Cóng chuānghù wǎng wài kàn, shì lánsè de dàhǎi.",
       "meaning": "Looking out from the window, you see the blue sea.",
-      "note": "This is the conversation wording: 從 introduces the viewpoint/source, 往外 gives the outward direction, and 窗戶 is the window.",
+      "note": "從窗戶 gives the viewpoint, from the window. 往外 tells the direction of looking, outward. The second clause identifies the blue sea seen from that viewpoint.",
       "tokens": [
         "從窗戶",
         "往外看",

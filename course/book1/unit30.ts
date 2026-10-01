@@ -340,14 +340,14 @@ const unit:UnitData = {
         {
           "id": "u30-taste-s3",
           "type": "select",
-          "prompt": "Which familiar state verb does this lesson ALLOW in this reduplication pattern?",
+          "prompt": "Complete the pleasant description 美美的: which character is repeated?",
           "options": [
             "美",
             "貴",
             "忙"
           ],
           "answer": "美",
-          "explanation": "For the forms practised here, 美 is included while 貴 and 忙 are excluded. This is the practice list for this pattern, not a universal ban in every Mandarin context.",
+          "explanation": "美美的 repeats 美 and adds 的 to give a vivid, subjective description of beauty. This is a word-specific pattern, not a rule that all adjectives repeat in exactly the same way.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -693,14 +693,14 @@ const unit:UnitData = {
         {
           "id": "u30-review-07",
           "type": "select",
-          "prompt": "Which fruit is 芒果?",
+          "prompt": "Which word means mango?",
           "options": [
             "芒果",
             "西瓜",
             "水果"
           ],
           "answer": "芒果",
-          "explanation": "芒果 is mango; 西瓜 is watermelon and 水果 is the general word fruit."
+          "explanation": "芒果 (mángguǒ) means mango. 西瓜 is watermelon; 水果 is the general word for fruit."
         },
         {
           "id": "u30-review-08",
@@ -789,14 +789,10 @@ const unit:UnitData = {
         {
           "id": "u30-review-14",
           "type": "select",
-          "prompt": "Which pair gives an allowed subjective description and an excluded form in this lesson?",
-          "options": [
-            "美美的 is allowed; 貴貴的 is excluded",
-            "貴貴的 is allowed; 美美的 is excluded",
-            "忙忙的 and 貴貴的 are both allowed"
-          ],
-          "answer": "美美的 is allowed; 貴貴的 is excluded",
-          "explanation": "this lesson explicitly permits 美 and excludes 貴 and 忙.",
+          "prompt": "Which description presents something as pleasantly beautiful?",
+          "options": ["美美的","有一點貴","不太忙"],
+          "answer": "美美的",
+          "explanation": "美美的 is a vivid, subjective description of beauty. 有一點貴 means a little expensive; 不太忙 means not too busy. These options differ in meaning, not simply in whether their words may ever be reduplicated.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -861,7 +857,7 @@ const unit:UnitData = {
         {
           "id": "u30-review-20",
           "type": "select",
-          "prompt": "In 我請你吃水果, what special this lesson sense does 請 have?",
+          "prompt": "In 我請你吃水果, what does 請 mean?",
           "options": [
             "Treat someone to food",
             "Guess that something is correct",
@@ -1427,7 +1423,7 @@ const unit:UnitData = {
       "text": "這個黃色的水果是芒果。我給你一塊。",
       "pinyin": "Zhège huángsè de shuǐguǒ shì mángguǒ. Wǒ gěi nǐ yí kuài.",
       "meaning": "This yellow fruit is mango. I'll give you a piece.",
-      "note": "This keeps this lesson's yellow-mango context while using already-covered 是 rather than introducing 叫 before it is taught. 塊 counts a piece of food after the fruit is understood.",
+      "note": "黃色的 describes 水果. 芒果 identifies it as mango. After the fruit is established, 一塊 means one piece of it; the noun can be left understood after the measure word.",
       "tokens": [
         "這個黃色的水果是芒果",
         "我給你一塊"
@@ -1487,7 +1483,7 @@ const unit:UnitData = {
       "text": "我請你吃水果。",
       "pinyin": "Wǒ qǐng nǐ chī shuǐguǒ.",
       "meaning": "I'll treat you to some fruit.",
-      "note": "請 was learned as 'please/invite'; this lesson also uses 請 + person + eat/drink to mean treat someone.",
+      "note": "請 + person + eat or drink can offer to treat someone. Here 我請你吃水果 means I offer you fruit as my guest; it is not a literal command to please.",
       "tokens": [
         "我",
         "請你",
@@ -1511,7 +1507,7 @@ const unit:UnitData = {
       "text": "我拍照片。",
       "pinyin": "Wǒ pāi zhàopiàn.",
       "meaning": "I take photos.",
-      "note": "拍照片 is this lesson’s photo expression.",
+      "note": "拍照片 means take photos: 拍 is the action and 照片 the object. It names taking a photo, not looking at one.",
       "tokens": [
         "我",
         "拍照片"
@@ -1557,3 +1553,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

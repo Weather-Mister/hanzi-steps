@@ -132,14 +132,14 @@ const unit:UnitData = {
         {
           "id": "u17-dumplings-11",
           "type": "select",
-          "prompt": "Which food name contains the new character 籠?",
+          "prompt": "Which food is xiaolongbao, a small steamed dumpling?",
           "options": [
             "小籠包",
             "包子",
             "牛肉麵"
           ],
           "answer": "小籠包",
-          "explanation": "The middle syllable of 小籠包 is 籠 lóng.",
+          "explanation": "小籠包 (xiǎolóngbāo) is the complete food name. 包子 is a bun, and 牛肉麵 is beef noodles.",
           "grammarIds": [
             "u17-dumplings"
           ]
@@ -1806,7 +1806,7 @@ const unit:UnitData = {
       "text": "我要六個小籠包。",
       "pinyin": "Wǒ yào liù ge xiǎolóngbāo.",
       "meaning": "I would like six xiaolongbao.",
-      "note": "",
+      "note": "六個 counts six individual 小籠包. 我要 is a direct ordering expression. 小籠包 is the complete name of the food, not three separate objects.",
       "tokens": [
         "我",
         "要",
@@ -1822,7 +1822,7 @@ const unit:UnitData = {
       "text": "你想吃小籠包還是包子？",
       "pinyin": "Nǐ xiǎng chī xiǎolóngbāo háishì bāozi?",
       "meaning": "Would you like xiaolongbao or baozi?",
-      "note": "",
+      "note": "還是 presents the two choices after 想吃. Answer by naming your choice. The alternatives already form the question, so do not add 嗎.",
       "tokens": [
         "你",
         "想",
@@ -1840,7 +1840,7 @@ const unit:UnitData = {
       "text": "這種臭豆腐很好吃。",
       "pinyin": "Zhè zhǒng chòu dòufǔ hěn hǎochī.",
       "meaning": "This kind of stinky tofu is delicious.",
-      "note": "",
+      "note": "這種 means this kind of, not one individual item. 臭豆腐 names the food; 好吃 evaluates the taste. The name alone does not say it is spicy.",
       "tokens": [
         "這",
         "種",
@@ -1856,7 +1856,7 @@ const unit:UnitData = {
       "text": "我怕辣，所以不想吃辣的臭豆腐。",
       "pinyin": "Wǒ pà là, suǒyǐ bù xiǎng chī là de chòu dòufǔ.",
       "meaning": "I am sensitive to spicy food, so I do not want spicy stinky tofu.",
-      "note": "",
+      "note": "所以 links avoiding spicy food to the decision not to eat it. 辣的臭豆腐 means spicy stinky tofu; 不想 denies wanting, not ability.",
       "tokens": [
         "我",
         "怕",
@@ -1879,7 +1879,7 @@ const unit:UnitData = {
       "text": "那家店的人很少。",
       "pinyin": "Nà jiā diàn de rén hěn shǎo.",
       "meaning": "There are few people at that shop.",
-      "note": "",
+      "note": "那家店的人 identifies the people at that shop. 很少 describes their small number. It does not say the shop has few dishes.",
       "tokens": [
         "那",
         "家",
@@ -1897,7 +1897,7 @@ const unit:UnitData = {
       "text": "這家店有不少好吃的小吃。",
       "pinyin": "Zhè jiā diàn yǒu bù shǎo hǎochī de xiǎochī.",
       "meaning": "This shop has quite a few delicious snacks.",
-      "note": "",
+      "note": "有 introduces what the shop has. 不少 means quite a few, not few; 好吃的 modifies 小吃, the snacks being described.",
       "tokens": [
         "這",
         "家",
@@ -1934,7 +1934,7 @@ const unit:UnitData = {
       "text": "我聽說那家餐廳的菜不辣。",
       "pinyin": "Wǒ tīngshuō nà jiā cāntīng de cài bú là.",
       "meaning": "I have heard that the food at that restaurant is not spicy.",
-      "note": "",
+      "note": "聽說 introduces information heard from others. The full following statement says the restaurant's food is not spicy; it does not claim firsthand experience.",
       "tokens": [
         "我",
         "聽說",
@@ -1954,7 +1954,7 @@ const unit:UnitData = {
       "text": "這家店的菜為什麼這麼貴？",
       "pinyin": "Zhè jiā diàn de cài wèishénme zhème guì?",
       "meaning": "Why is the food at this shop so expensive?",
-      "note": "",
+      "note": "這家店的菜 is the topic. 為什麼 asks why, and 這麼貴 means this expensive or so expensive. Put 這麼 directly before 貴.",
       "tokens": [
         "這",
         "家",
@@ -1973,7 +1973,7 @@ const unit:UnitData = {
       "text": "太好了！我們明天一起去吧。",
       "pinyin": "Tài hǎo le! Wǒmen míngtiān yìqǐ qù ba.",
       "meaning": "Wonderful! Let us go together tomorrow.",
-      "note": "",
+      "note": "太好了 is an enthusiastic response to welcome news. The second sentence proposes going together tomorrow; 吧 softens the suggestion.",
       "tokens": [
         "太好了",
         "我們",
@@ -1990,7 +1990,7 @@ const unit:UnitData = {
       "text": "你一定要吃這家的小籠包。",
       "pinyin": "Nǐ yídìng yào chī zhè jiā de xiǎolóngbāo.",
       "meaning": "You really must try the xiaolongbao at this shop.",
-      "note": "",
+      "note": "一定要 before 吃 makes a strong recommendation: you really must try it. 這家的小籠包 means this establishment's xiaolongbao, with 店 understood.",
       "tokens": [
         "你",
         "一定",
@@ -2009,7 +2009,7 @@ const unit:UnitData = {
       "text": "我知道那家店，我們明天一起去吧。",
       "pinyin": "Wǒ zhīdào nà jiā diàn, wǒmen míngtiān yìqǐ qù ba.",
       "meaning": "I know that shop; let us go together tomorrow.",
-      "note": "",
+      "note": "知道 says the speaker knows which shop it is. The second clause suggests going there together tomorrow; the destination can stay unspoken because it is already clear.",
       "tokens": [
         "我",
         "知道",
@@ -2032,3 +2032,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

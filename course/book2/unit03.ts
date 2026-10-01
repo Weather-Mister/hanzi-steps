@@ -1130,7 +1130,7 @@ const unit:UnitData = {
       "id": "b2u3-l3-ongoing",
       "title": "Keep an action or state going: 著",
       "pattern": "verb + 著 + object/context",
-      "explanation": "著 (zhe, neutral tone) follows the verb and presents an action or state as continuing: 看著 means looking, 拿著 (názhe) means holding. In 他看著地圖往前走, looking at the map continues while he walks. 沒 negates the continuing situation; 不是 does not replace it. In a question, 是不是 can come before the whole verb phrase. 著 is not a marker that an action has finished.",
+      "explanation": "著 (zhe, neutral tone) follows the verb and presents an action or state as continuing: 看著 means looking, 拿著 (názhe) means holding. In 他看著地圖往前走, looking at the map continues while he walks. 沒 negates the continuing situation; 不是 does not replace it. In a question, 是不是 can come before the whole verb phrase. 著 is not a marker that an action has finished. 在 + verb highlights an action in progress; verb + 著 often describes a maintained state or a background action. Compare 他在看地圖 (he is looking at the map) and 他拿著地圖 (he is holding the map). These forms are not interchangeable with every verb.",
       "examples": [
         {
           "text": "他看著地圖。",
@@ -1392,3 +1392,4 @@ const unit:UnitData = {
   "revisionStepIds": []
 };
 export default unit;
+

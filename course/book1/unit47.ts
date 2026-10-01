@@ -1863,7 +1863,7 @@ const unit:UnitData = {
       "text": "怎麼了／臉色／難看",
       "pinyin": "zěnme le / liǎnsè / nánkàn",
       "meaning": "What's wrong? / complexion / look bad",
-      "note": "Meaning-first lexical explanation.",
+      "note": "怎麼了 asks what is wrong or what happened. 臉色 is the appearance or color of someone's face. 臉色很難看 here means the person looks unwell, rather than criticizing their beauty.",
       "tokens": [
         "怎麼了／臉色／難看"
       ]
@@ -1872,7 +1872,7 @@ const unit:UnitData = {
       "text": "肚子／吐／次",
       "pinyin": "dùzi / tù / cì",
       "meaning": "stomach; abdomen / vomit / occurrence counter",
-      "note": "Meaning-first lexical explanation.",
+      "note": "肚子 dùzi means the belly or abdomen. 吐 tù means vomit here. 次 cì counts occurrences: 吐了三次 reports vomiting three times, rather than for three hours.",
       "tokens": [
         "肚子／吐／次"
       ]
@@ -1881,7 +1881,7 @@ const unit:UnitData = {
       "text": "陪／看病",
       "pinyin": "péi / kànbìng",
       "meaning": "accompany / see a doctor",
-      "note": "Meaning-first lexical explanation.",
+      "note": "陪 péi means accompany someone. 看病 means see a doctor as a patient. 陪你去看病 means go with you when you seek medical care.",
       "tokens": [
         "陪／看病"
       ]
@@ -1890,7 +1890,7 @@ const unit:UnitData = {
       "text": "健康／保險／健康中心",
       "pinyin": "jiànkāng / bǎoxiǎn / jiànkāng zhōngxīn",
       "meaning": "health / insurance / health center",
-      "note": "Meaning-first lexical explanation.",
+      "note": "健康 jiànkāng means health or healthy. 保險 bǎoxiǎn means insurance; 健康保險 is health insurance. 健康中心 is a health center, a place that provides health services.",
       "tokens": [
         "健康／保險／健康中心"
       ]
@@ -1908,7 +1908,7 @@ const unit:UnitData = {
       "text": "昨天晚上肚子很不舒服。",
       "pinyin": "Zuótiān wǎnshang dùzi hěn bù shūfu.",
       "meaning": "My stomach felt very unwell last night.",
-      "note": "",
+      "note": "昨天晚上 sets a past time. 肚子 is the abdomen or stomach, and 很不舒服 describes discomfort. The time word supplies the past setting without requiring 了.",
       "tokens": [
         "昨天晚上肚子很不舒服。"
       ]
@@ -1926,7 +1926,7 @@ const unit:UnitData = {
       "text": "吃了藥。／一吃藥就睡覺。／吃藥以後睡覺。",
       "pinyin": "Chī le yào. / Yì chī yào jiù shuìjiào. / Chī yào yǐhòu shuìjiào.",
       "meaning": "Review: completed action with 了 / as soon as...then... / after...",
-      "note": "Review only: Unit 39 completed-action 了; Unit 38 一…就…; Unit 36 以後. The new V了…就… pattern is taught next.",
+      "note": "Compare three familiar pieces: 吃了藥 says the medicine was taken; 一吃藥就睡覺 links taking it immediately to sleeping; 吃藥以後睡覺 puts sleeping after taking it. Notice the separate jobs of 了, 就, and 以後 before combining them.",
       "tokens": [
         "吃了藥。",
         "一吃藥就睡覺。",
@@ -1947,7 +1947,7 @@ const unit:UnitData = {
       "text": "你這麼不舒服，我陪你去看病，好不好？",
       "pinyin": "Nǐ zhème bù shūfu, wǒ péi nǐ qù kànbìng, hǎo bu hǎo?",
       "meaning": "You feel this unwell; I'll go with you to see a doctor, okay?",
-      "note": "",
+      "note": "The first clause acknowledges how unwell the listener feels. 陪你去看病 offers to accompany them to see a doctor; 好不好 asks whether they agree to the proposal.",
       "tokens": [
         "你這麼不舒服",
         "我陪你",
@@ -1968,7 +1968,7 @@ const unit:UnitData = {
       "text": "我在臺灣沒有健康保險。",
       "pinyin": "Wǒ zài Táiwān méiyǒu jiànkāng bǎoxiǎn.",
       "meaning": "I don't have health insurance in Taiwan.",
-      "note": "",
+      "note": "在臺灣 sets the location before 沒有. 健康保險 is health insurance; 沒有 denies having it and says nothing by itself about eligibility for care.",
       "tokens": [
         "我在臺灣沒有健康保險。"
       ]
@@ -1977,7 +1977,7 @@ const unit:UnitData = {
       "text": "我陪你去學校的健康中心。",
       "pinyin": "Wǒ péi nǐ qù xuéxiào de jiànkāng zhōngxīn.",
       "meaning": "I'll accompany you to the school's health center.",
-      "note": "",
+      "note": "陪你 means accompany you. 去學校的健康中心 names the destination, the school's health center. 的 links the center to the school.",
       "tokens": [
         "我陪你去學校的健康中心。"
       ]
@@ -1986,7 +1986,7 @@ const unit:UnitData = {
       "text": "那裡的醫生很好，對學生也很客氣。",
       "pinyin": "Nàlǐ de yīshēng hěn hǎo, duì xuéshēng yě hěn kèqi.",
       "meaning": "The doctors there are very good and are also very polite to students.",
-      "note": "對 + person + 很客氣.",
+      "note": "那裡的醫生 means the doctors there. 對學生 introduces the people they treat politely; 對 + person + 很客氣 means be polite to that person. 也 adds this quality to the earlier 很好.",
       "tokens": [
         "那裡的醫生很好，對學生也很客氣。"
       ]
@@ -2004,7 +2004,7 @@ const unit:UnitData = {
       "text": "你真的不去看病嗎？",
       "pinyin": "Nǐ zhēnde bù qù kànbìng ma?",
       "meaning": "Are you really not going to see a doctor?",
-      "note": "",
+      "note": "真的 asks whether the refusal really holds. 不去看病 is not going to see a doctor, and 嗎 turns the whole statement into a confirmation question.",
       "tokens": [
         "你真的不去看病嗎？"
       ]
@@ -2039,7 +2039,7 @@ const unit:UnitData = {
       "text": "臉",
       "pinyin": "liǎn",
       "meaning": "face",
-      "note": "Recognition/read card.",
+      "note": "臉 means “face.” 臉色 liǎnsè is someone’s facial color or complexion, which can show how they feel.",
       "tokens": [
         "臉"
       ]
@@ -2048,7 +2048,7 @@ const unit:UnitData = {
       "text": "肚",
       "pinyin": "dù",
       "meaning": "belly; abdomen",
-      "note": "Recognition/read card.",
+      "note": "肚 appears in 肚子 dùzi, “belly; abdomen.” The 子 syllable is neutral-tone zi in this word.",
       "tokens": [
         "肚"
       ]
@@ -2057,7 +2057,7 @@ const unit:UnitData = {
       "text": "吐",
       "pinyin": "tù",
       "meaning": "vomit",
-      "note": "Recognition/read card.",
+      "note": "吐 is tù, fourth tone, when it means “vomit.” Learn this reading in the illness context.",
       "tokens": [
         "吐"
       ]
@@ -2066,7 +2066,7 @@ const unit:UnitData = {
       "text": "陪",
       "pinyin": "péi",
       "meaning": "accompany",
-      "note": "Recognition/read card.",
+      "note": "陪 péi means “accompany; go or stay with someone.” 陪你去看病 means “go with you to see a doctor.”",
       "tokens": [
         "陪"
       ]
@@ -2075,7 +2075,7 @@ const unit:UnitData = {
       "text": "健",
       "pinyin": "jiàn",
       "meaning": "healthy; strong",
-      "note": "Recognition/read card.",
+      "note": "健 is the first character in 健康 jiànkāng, “health; healthy.” Learn both syllables together.",
       "tokens": [
         "健"
       ]
@@ -2084,7 +2084,7 @@ const unit:UnitData = {
       "text": "康",
       "pinyin": "kāng",
       "meaning": "healthy; well",
-      "note": "Recognition/read card.",
+      "note": "康 is the second character in 健康 jiànkāng, “health; healthy.” 健康中心 means “health center.”",
       "tokens": [
         "康"
       ]
@@ -2093,7 +2093,7 @@ const unit:UnitData = {
       "text": "保",
       "pinyin": "bǎo",
       "meaning": "protect; insure",
-      "note": "Recognition/read card.",
+      "note": "保 means “protect; preserve.” In 保險 bǎoxiǎn, the whole word means “insurance.”",
       "tokens": [
         "保"
       ]
@@ -2102,7 +2102,7 @@ const unit:UnitData = {
       "text": "險",
       "pinyin": "xiǎn",
       "meaning": "risk; insurance component",
-      "note": "Recognition/read card.",
+      "note": "險 means “danger; risk.” In 保險 bǎoxiǎn, learn the combined meaning “insurance.”",
       "tokens": [
         "險"
       ]
@@ -2111,7 +2111,7 @@ const unit:UnitData = {
       "text": "他吃了藥以後，就睡覺。",
       "pinyin": "Tā chī le yào yǐhòu, jiù shuìjiào.",
       "meaning": "After taking medicine, he went to sleep.",
-      "note": "",
+      "note": "吃了藥以後 sets the first event as completed before sleeping. 就 links the following action closely to it. The same subject 他 is understood in both parts.",
       "tokens": [
         "他吃了藥以後",
         "就睡覺"
@@ -2125,3 +2125,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

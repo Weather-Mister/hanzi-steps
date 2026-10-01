@@ -192,14 +192,14 @@ const unit:UnitData = {
         {
           "id": "u46-ji-s1",
           "type": "select",
-          "prompt": "Which use of 幾 is the new sense taught here?",
+          "prompt": "In the statement 她沒有幾個朋友, what does 幾 mean?",
           "options": [
             "幾 = a few/several in a statement",
             "幾 = only the question “how many?”",
             "幾 = all/every"
           ],
           "answer": "幾 = a few/several in a statement",
-          "explanation": "Unit 46 adds the non-interrogative few/several sense."
+          "explanation": "幾 (jǐ) means a few or several here. With 沒有, the statement says she has few friends; it is not asking how many. In 幾個朋友？, the same form can ask a quantity question."
         },
         {
           "id": "u46-noncommittal-question-words",
@@ -548,14 +548,14 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s1",
           "type": "select",
-          "prompt": "Under the introductory 把 pattern, which sentence is correct?",
+          "prompt": "Which 把 sentence says that I ate this particular xiaolongbao?",
           "options": [
             "我把這個小籠包吃了。",
             "我想把一支手機賣了。",
             "我把中文學了。"
           ],
           "answer": "我把這個小籠包吃了。",
-          "explanation": "這個小籠包 identifies the specific object. 吃了 says what was done to it. The other options do not fit the restricted frame practised here.",
+          "explanation": "我把這個小籠包吃了 puts this specific dumpling after 把 and says what happened to it. The other options do not express eating that dumpling; this question does not declare every other 把 construction impossible.",
           "grammarIds": [
             "u46-ba-disposal"
           ]
@@ -563,14 +563,14 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s2",
           "type": "select",
-          "prompt": "Which verb can be used as the bare action verb here?",
+          "prompt": "Complete 我把這個小籠包＿＿了 to say that I ate this dumpling.",
           "options": [
             "吃",
             "買",
             "學"
           ],
           "answer": "吃",
-          "explanation": "吃 fits this introductory object + action + final-了 frame. Do not generalize the bare-verb restriction here to every possible 把 sentence."
+          "explanation": "吃 is eat, so 吃了 describes eating the specific dumpling after 把. 買 means buy and 學 means learn; neither gives the requested action."
         },
         {
           "id": "u46-g2-s3",
@@ -611,14 +611,10 @@ const unit:UnitData = {
         {
           "id": "u46-g2-s6",
           "type": "select",
-          "prompt": "Why is the final 了 retained in 我沒把豬腳麵線吃了？",
-          "options": [
-            "This lesson is treating that 了 as sentence-final in the introductory 把 pattern.",
-            "Negation never affects any 了.",
-            "把 automatically means past tense."
-          ],
-          "answer": "This lesson is treating that 了 as sentence-final in the introductory 把 pattern.",
-          "explanation": "This contrasts this with prior verbal-了."
+          "prompt": "Why can 別把我的藥吃了 contain 了 even though the action is forbidden?",
+          "options": ["It warns against a possible outcome; it does not report a completed past action.","Negation never affects any 了.","把 automatically means past tense."],
+          "answer": "It warns against a possible outcome; it does not report a completed past action.",
+          "explanation": "別 gives a negative command: do not take my medicine. The final 了 belongs to the warning about an unwanted outcome; the sentence does not say that the medicine has already been taken."
         },
         {
           "id": "u46-ba-l1",
@@ -1246,14 +1242,14 @@ const unit:UnitData = {
         {
           "id": "u46-review-exp1",
           "type": "select",
-          "prompt": "Which is the expanded use of 幾 taught here?",
+          "prompt": "In 她沒有幾個朋友, what does 幾 express?",
           "options": [
             "a few/several in a statement",
             "only the question “how many?”",
             "all/every"
           ],
           "answer": "a few/several in a statement",
-          "explanation": "The new sense is taught locally without duplicate Search/Mega ownership."
+          "explanation": "幾 is a small, unspecified quantity in this statement. 沒有幾個朋友 means having few friends, unlike the information question 幾個朋友？."
         },
         {
           "id": "u46-review-g1",
@@ -1285,14 +1281,14 @@ const unit:UnitData = {
         {
           "id": "u46-review-g2",
           "type": "select",
-          "prompt": "Which introductory 把 sentence uses an allowed outward action?",
+          "prompt": "Which 把 sentence means I ate this particular xiaolongbao?",
           "options": [
             "我把這個小籠包吃了。",
             "我把中文學了。",
             "我把這支手機買了。"
           ],
           "answer": "我把這個小籠包吃了。",
-          "explanation": "吃 acts on the specific object in the introductory 把 + object + 吃了 frame."
+          "explanation": "The object 這個小籠包 goes after 把, followed by 吃了. 買 expresses buying and 學 expresses learning; the question asks for eating, not a universal list of verbs allowed after 把."
         },
         {
           "id": "u46-review-g2neg",
@@ -1966,7 +1962,7 @@ const unit:UnitData = {
       "text": "感冒",
       "pinyin": "gǎnmào",
       "meaning": "to have/catch a cold",
-      "note": "Meaning-first lexical explanation.",
+      "note": "感冒 gǎnmào means have or catch a cold. 我感冒了 reports coming down with a cold; it does not describe being cold because of the weather.",
       "tokens": [
         "感冒"
       ]
@@ -1975,7 +1971,7 @@ const unit:UnitData = {
       "text": "藥／藥局／拿",
       "pinyin": "yào / yàojú / ná",
       "meaning": "medicine / pharmacy / get",
-      "note": "Meaning-first lexical explanation.",
+      "note": "藥 yào is medicine; 藥局 yàojú is a pharmacy. 拿 ná means take, get, or pick up, so 拿藥 means collect medicine. Taking medicine by mouth is expressed with 吃藥.",
       "tokens": [
         "藥／藥局／拿"
       ]
@@ -1995,7 +1991,7 @@ const unit:UnitData = {
       "text": "水／休息／睡覺／早一點",
       "pinyin": "shuǐ / xiūxí / shuìjiào / zǎo yìdiǎn",
       "meaning": "water / rest / sleep / a bit earlier",
-      "note": "Meaning-first lexical explanation; 覺 is jiào in 睡覺.",
+      "note": "水 shuǐ is water; 休息 xiūxí means rest; 睡覺 shuìjiào means sleep. 覺 is jiào in 睡覺, unlike jué in 覺得. 早一點 means a little earlier and can describe when to go to sleep.",
       "tokens": [
         "水／休息／睡覺／早一點"
       ]
@@ -2004,7 +2000,7 @@ const unit:UnitData = {
       "text": "我有一點發燒，是感冒。",
       "pinyin": "Wǒ yǒu yìdiǎn fāshāo, shì gǎnmào.",
       "meaning": "I have a slight fever; it is a cold.",
-      "note": "",
+      "note": "The first clause reports a slight fever. 是感冒 identifies the illness as a cold in this dialogue; the sentence is language practice, not a diagnostic rule.",
       "tokens": [
         "我有一點發燒，是感冒。"
       ]
@@ -2050,7 +2046,7 @@ const unit:UnitData = {
       "text": "請問我得吃藥嗎？",
       "pinyin": "Qǐngwèn wǒ děi chī yào ma?",
       "meaning": "Do I have to take medicine?",
-      "note": "",
+      "note": "請問 politely introduces the question. 得 before 吃藥 is děi, must or have to. 嗎 asks whether taking medicine is necessary.",
       "tokens": [
         "請問我得吃藥嗎？"
       ]
@@ -2059,7 +2055,7 @@ const unit:UnitData = {
       "text": "你到藥局去拿藥。",
       "pinyin": "Nǐ dào yàojú qù ná yào.",
       "meaning": "Go to the pharmacy to get medicine.",
-      "note": "",
+      "note": "到藥局去 gives the destination, the pharmacy. 拿藥 is the purpose, getting the medicine. 拿 identifies getting it rather than taking a dose.",
       "tokens": [
         "你",
         "到藥局去",
@@ -2079,7 +2075,7 @@ const unit:UnitData = {
       "text": "您",
       "pinyin": "nín",
       "meaning": "polite “you”",
-      "note": "Support only; no canonical vocabulary, Search/Mega, or handwriting ownership.",
+      "note": "您 (nín) is a polite form of you, often used when addressing someone respectfully. 謝謝您 (xièxie nín) means thank you. Recognize it in this exchange; the ordinary 你 remains useful too.",
       "tokens": [
         "您"
       ]
@@ -2088,7 +2084,7 @@ const unit:UnitData = {
       "text": "好的，謝謝您。",
       "pinyin": "Hǎo de, xièxie nín.",
       "meaning": "Okay, thank you.",
-      "note": "Honorific register; 您 remains support-only.",
+      "note": "好的 accepts or acknowledges what was said. 您 nín is a respectful form of you, so 謝謝您 is a polite way to thank someone.",
       "tokens": [
         "好的",
         "謝謝您"
@@ -2109,7 +2105,7 @@ const unit:UnitData = {
       "text": "好的，沒有問題。",
       "pinyin": "Hǎo de, méiyǒu wèntí.",
       "meaning": "Okay, no problem.",
-      "note": "Practice response; learner-visible application only.",
+      "note": "好的 accepts the request. 沒有問題 means there is no problem and reassures the other person that you can do what was asked.",
       "tokens": [
         "好的，沒有問題。"
       ],
@@ -2119,7 +2115,7 @@ const unit:UnitData = {
       "text": "太好了。",
       "pinyin": "Tài hǎo le.",
       "meaning": "Great!",
-      "note": "Practice response; learner-visible application only.",
+      "note": "太好了 is an enthusiastic response to good news: great! 太…了 expresses a strong evaluation here, rather than reporting a completed past action.",
       "tokens": [
         "太好了。"
       ],
@@ -2129,7 +2125,7 @@ const unit:UnitData = {
       "text": "對不起，我不知道是你的。",
       "pinyin": "Duìbuqǐ, wǒ bù zhīdào shì nǐ de.",
       "meaning": "Sorry, I didn't know it was yours.",
-      "note": "Practice response; learner-visible application only. 對不起 remains support-only.",
+      "note": "對不起 duìbuqǐ apologizes. 我不知道 means I did not know in this context; 是你的 means it belongs to you. The noun after 你的 is omitted because both speakers know which thing is meant.",
       "tokens": [
         "對不起，我不知道是你的。"
       ],
@@ -2139,7 +2135,7 @@ const unit:UnitData = {
       "text": "加油！我們今天一定要把這50個小籠包吃了。",
       "pinyin": "Jiāyóu! Wǒmen jīntiān yídìng yào bǎ zhè wǔshí ge xiǎolóngbāo chī le.",
       "meaning": "Come on! We definitely have to eat these 50 xiaolongbao today.",
-      "note": "",
+      "note": "加油 encourages the group. 一定要 makes the goal emphatic; 把 places the specific fifty xiaolongbao before 吃. 了 presents finishing that task as the intended outcome, not a past event.",
       "tokens": [
         "加油",
         "我們今天一定要",
@@ -2154,7 +2150,7 @@ const unit:UnitData = {
       "text": "要是你把今天的功課寫了，就可以去打籃球。",
       "pinyin": "Yàoshi nǐ bǎ jīntiān de gōngkè xiě le, jiù kěyǐ qù dǎ lánqiú.",
       "meaning": "If you finish today's homework, then you can go play basketball.",
-      "note": "",
+      "note": "要是 sets a condition: doing today's homework. 把 places that specific homework before 寫. 就可以 introduces what will then be allowed; 了 inside the condition does not put the whole sentence in the past.",
       "tokens": [
         "要是你",
         "把今天的功課寫了",
@@ -2168,7 +2164,7 @@ const unit:UnitData = {
       "text": "誰把我的西瓜吃了？",
       "pinyin": "Shéi bǎ wǒ de xīguā chī le?",
       "meaning": "Who ate my watermelon?",
-      "note": "",
+      "note": "誰 asks who performed the action. 把我的西瓜 places the identifiable watermelon before 吃了; the question is about who ate it.",
       "tokens": [
         "誰",
         "把我的西瓜",
@@ -2182,7 +2178,7 @@ const unit:UnitData = {
       "text": "感",
       "pinyin": "gǎn",
       "meaning": "feel; sense",
-      "note": "Recognition/read card.",
+      "note": "感 relates to feeling. 感冒 gǎnmào is the complete word for “catch/have a cold.”",
       "tokens": [
         "感"
       ]
@@ -2191,7 +2187,7 @@ const unit:UnitData = {
       "text": "冒",
       "pinyin": "mào",
       "meaning": "emit; risk; in 感冒",
-      "note": "Recognition/read card.",
+      "note": "冒 is the second character in 感冒 gǎnmào, “catch/have a cold.” Do not translate its parts separately to guess the word.",
       "tokens": [
         "冒"
       ]
@@ -2200,7 +2196,7 @@ const unit:UnitData = {
       "text": "藥",
       "pinyin": "yào",
       "meaning": "medicine",
-      "note": "Recognition/read card.",
+      "note": "藥 yào means “medicine.” 吃藥 means “take medicine”; Chinese uses 吃, “eat,” for taking medicine.",
       "tokens": [
         "藥"
       ]
@@ -2209,7 +2205,7 @@ const unit:UnitData = {
       "text": "局",
       "pinyin": "jú",
       "meaning": "office; bureau; in 藥局",
-      "note": "Recognition/read card.",
+      "note": "局 jú appears in 藥局 yàojú, “pharmacy.” Learn the place name as a whole word.",
       "tokens": [
         "局"
       ]
@@ -2218,7 +2214,7 @@ const unit:UnitData = {
       "text": "拿",
       "pinyin": "ná",
       "meaning": "take; get",
-      "note": "Recognition/read card.",
+      "note": "拿 ná means “take; hold; get.” In 拿藥 ná yào, it means to get or collect medicine.",
       "tokens": [
         "拿"
       ]
@@ -2227,7 +2223,7 @@ const unit:UnitData = {
       "text": "把",
       "pinyin": "bǎ",
       "meaning": "disposal marker",
-      "note": "Recognition/read card.",
+      "note": "把 bǎ places the affected object before the action: 把藥吃了 means “take the medicine.” It is not translated as a separate English word here.",
       "tokens": [
         "把"
       ]
@@ -2236,7 +2232,7 @@ const unit:UnitData = {
       "text": "休",
       "pinyin": "xiū",
       "meaning": "rest",
-      "note": "Recognition/read card.",
+      "note": "休 appears in 休息 xiūxí, “to rest.” Use the whole word when telling someone to rest.",
       "tokens": [
         "休"
       ]
@@ -2245,7 +2241,7 @@ const unit:UnitData = {
       "text": "息",
       "pinyin": "xí",
       "meaning": "rest; breath",
-      "note": "Recognition/read card.",
+      "note": "息 is the second character in 休息 xiūxí, “to rest.” It also relates to breathing and resting in other words.",
       "tokens": [
         "息"
       ]
@@ -2254,7 +2250,7 @@ const unit:UnitData = {
       "text": "睡",
       "pinyin": "shuì",
       "meaning": "sleep",
-      "note": "Recognition/read card.",
+      "note": "睡 shuì means “to sleep.” 睡覺 shuìjiào is the fuller word used for sleeping.",
       "tokens": [
         "睡"
       ]
@@ -2263,7 +2259,7 @@ const unit:UnitData = {
       "text": "我沒買什麼東西。",
       "pinyin": "Wǒ méi mǎi shénme dōngxi.",
       "meaning": "I didn't buy anything in particular.",
-      "note": "",
+      "note": "什麼 is inside a negative statement here, not asking a question. The sentence can mean I bought nothing in particular or not much; without 都 it need not assert absolute zero.",
       "tokens": [
         "我沒買",
         "什麼東西"
@@ -2276,7 +2272,7 @@ const unit:UnitData = {
       "text": "請問我的病什麼時候會好？",
       "pinyin": "Qǐngwèn wǒ de bìng shénme shíhou huì hǎo?",
       "meaning": "May I ask when my illness will get better?",
-      "note": "",
+      "note": "我的病 is my illness. 什麼時候 asks when; 會好 means will get better. 好 here is recovery, not doing an action well.",
       "tokens": [
         "請問我的病什麼時候會好？"
       ]

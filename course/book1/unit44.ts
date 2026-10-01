@@ -1850,7 +1850,7 @@ const unit:UnitData = {
       "text": "我昨天帶了，可是今天忘了帶。",
       "pinyin": "Wǒ zuótiān dài le, kěshì jīntiān wàng le dài.",
       "meaning": "I brought one yesterday, but today I forgot to bring it.",
-      "note": "; completed-action 了 is review.",
+      "note": "昨天 and 今天 contrast yesterday with today. 帶了 means the speaker brought the umbrella yesterday; 忘了帶 means forgot to bring it today. The umbrella is omitted because both speakers know the topic.",
       "tokens": [
         "我昨天帶了",
         "可是今天忘了帶"
@@ -1883,7 +1883,7 @@ const unit:UnitData = {
       "text": "這裡每年夏天都有颱風。",
       "pinyin": "Zhèlǐ měinián xiàtiān dōu yǒu táifēng.",
       "meaning": "There are typhoons here every summer.",
-      "note": "; 每…都… is review.",
+      "note": "每年夏天 means every summer. 都 connects the recurring times with 有颱風, there are typhoons. 這裡 identifies the place where this happens.",
       "tokens": [
         "這裡每年夏天",
         "都有颱風"
@@ -1943,7 +1943,7 @@ const unit:UnitData = {
       "text": "我看新聞。",
       "pinyin": "Wǒ kàn xīnwén.",
       "meaning": "I watch/read the news.",
-      "note": "Meaning-first card for 新聞.",
+      "note": "看新聞 means watch or read the news. 新聞 names news reports; 看 can describe viewing them on a screen or reading them, depending on context.",
       "tokens": [
         "我看新聞"
       ]
@@ -1952,7 +1952,7 @@ const unit:UnitData = {
       "text": "大家都來了。",
       "pinyin": "Dàjiā dōu lái le.",
       "meaning": "Everyone came.",
-      "note": "Meaning-first card for 大家.",
+      "note": "大家 means everyone in the relevant group. 都 includes the whole group, and 來了 reports that they have arrived. It does not mean every person everywhere.",
       "tokens": [
         "大家都來了"
       ]
@@ -1961,7 +1961,7 @@ const unit:UnitData = {
       "text": "請小心。",
       "pinyin": "Qǐng xiǎoxīn.",
       "meaning": "Please be careful.",
-      "note": "Meaning-first card for 小心.",
+      "note": "請 makes the request polite. 小心 means be careful and can stand alone as a warning or request; it does not need an extra verb meaning be.",
       "tokens": [
         "請小心"
       ]
@@ -1970,7 +1970,7 @@ const unit:UnitData = {
       "text": "我已經聽說了。",
       "pinyin": "Wǒ yǐjīng tīngshuō le.",
       "meaning": "I've already heard about it.",
-      "note": "; 已經 and completed 了 are review.",
+      "note": "聽說 means hear or learn something from others. 已經 means already; 了 presents the news as already received. What was heard is understood from the conversation.",
       "tokens": [
         "我已經聽說了"
       ]
@@ -2036,7 +2036,7 @@ const unit:UnitData = {
       "text": "雨停了。",
       "pinyin": "Yǔ tíng le.",
       "meaning": "The rain stopped.",
-      "note": "; retrieves Unit-43 停.",
+      "note": "雨 is the rain; 停 means stop. Final 了 presents the new situation: the rain has stopped. The sentence describes a change, not a general fact about rain.",
       "tokens": [
         "雨停了"
       ]
@@ -2045,7 +2045,7 @@ const unit:UnitData = {
       "text": "太好了！謝謝你的傘，再見。",
       "pinyin": "Tài hǎo le! Xièxie nǐ de sǎn, zàijiàn.",
       "meaning": "Great! Thanks for your umbrella. Bye.",
-      "note": "",
+      "note": "太好了 expresses relief or pleasure. 謝謝你的傘 thanks the person for making their umbrella available; 再見 closes the exchange.",
       "tokens": [
         "太好了",
         "謝謝你的傘",
@@ -2085,7 +2085,7 @@ const unit:UnitData = {
       "text": "今年秋天跟去年秋天一樣熱。",
       "pinyin": "Jīnnián qiūtiān gēn qùnián qiūtiān yíyàng rè.",
       "meaning": "This autumn is as hot as last autumn.",
-      "note": "comparison review equality review.",
+      "note": "今年秋天 and 去年秋天 are this autumn and last autumn. 跟 introduces the comparison; 一樣熱 says they are equally hot.",
       "tokens": [
         "今年秋天",
         "跟去年秋天一樣熱"
@@ -2136,7 +2136,7 @@ const unit:UnitData = {
       "text": "颱風快要來了，請大家多小心。",
       "pinyin": "Táifēng kuài yào lái le, qǐng dàjiā duō xiǎoxīn.",
       "meaning": "A typhoon is about to come; everyone, please be extra careful.",
-      "note": "this lesson weather/typhoon capstone production line. It retrieves Unit-43 imminence and Unit-44 caution language.",
+      "note": "快要來了 announces an approaching typhoon. 請大家 addresses everyone politely, and 多小心 asks them to take extra care.",
       "tokens": [
         "颱風快要來了",
         "請大家多小心"
@@ -2149,7 +2149,7 @@ const unit:UnitData = {
       "text": "因為我怕冷，所以我比較喜歡春天。",
       "pinyin": "Yīnwèi wǒ pà lěng, suǒyǐ wǒ bǐjiào xǐhuān chūntiān.",
       "meaning": "Because I'm sensitive to the cold, I prefer spring.",
-      "note": "this lesson seasons/preference capstone line, retrieving Unit-42 preference/reason language.",
+      "note": "因為 gives the reason, sensitivity to cold; 所以 gives the resulting preference for spring. 比較 compares the preference with other seasons understood from context.",
       "tokens": [
         "因為我怕冷",
         "所以我比較喜歡春天"
@@ -2159,7 +2159,7 @@ const unit:UnitData = {
       "text": "我在臺灣住了一年。",
       "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
       "meaning": "I lived in Taiwan for one year.",
-      "note": "this lesson experience capstone line, retrieving Unit-43 completed duration.",
+      "note": "In a conversation about a finished stay, 住了一年 reports living in Taiwan for one year. The single 了 presents that duration; context, not particle count alone, establishes that the speaker has left.",
       "tokens": [
         "我在臺灣",
         "住了一年"
@@ -2198,7 +2198,7 @@ const unit:UnitData = {
       "text": "我打算十二月底回去。",
       "pinyin": "Wǒ dǎsuàn shí'èr yuè dǐ huíqù.",
       "meaning": "I plan to go back at the end of December.",
-      "note": "Delayed retrieval of Unit-43 十二月底.",
+      "note": "打算 introduces a plan. 十二月底 means the end of December and comes before 回去, go back away from the speaker's current reference point.",
       "tokens": [
         "我打算",
         "十二月底回去"
@@ -2227,3 +2227,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

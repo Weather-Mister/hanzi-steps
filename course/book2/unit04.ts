@@ -915,11 +915,7 @@ const unit:UnitData = {
           "char": "餓",
           "audioText": "最後她買了兩枝筆和一本本子。",
           "semanticAnswer": true,
-          "options": [
-            "Finally she bought two pens and one notebook.",
-            "Finally she bought two notebooks and one pen.",
-            "Finally she bought one pen and two notebooks."
-          ],
+          "options": ["Finally she bought two pens and one notebook.","Finally she bought two notebooks and one pen.","Finally she bought three pens and one notebook."],
           "answer": "Finally she bought two pens and one notebook.",
           "explanation": "The full utterance means: Finally she bought two pens and one notebook."
         },
@@ -927,11 +923,7 @@ const unit:UnitData = {
           "id": "b2u4-l7-understand-3",
           "type": "select",
           "prompt": "What does 最後她買了兩枝筆和一本本子。 mean?",
-          "options": [
-            "Finally she bought two pens and one notebook.",
-            "Finally she bought two notebooks and one pen.",
-            "Finally she bought one pen and two notebooks."
-          ],
+          "options": ["Finally she bought two pens and one notebook.","Finally she bought two notebooks and one pen.","Finally she bought three pens and one notebook."],
           "answer": "Finally she bought two pens and one notebook.",
           "explanation": "Finally she bought two pens and one notebook."
         },
@@ -1757,6 +1749,7 @@ const unit:UnitData = {
       "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
       "meaning": "They eat noodles while looking at the map.",
       "note": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern.",
+      "acceptedTokenOrders": [["他們", "一邊", "看", "地圖", "一邊", "吃麵"]],
       "tokens": [
         "他們",
         "一邊",
@@ -1919,6 +1912,7 @@ const unit:UnitData = {
       "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
       "meaning": "They eat noodles while looking at the map.",
       "note": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern.",
+      "acceptedTokenOrders": [["他們", "一邊", "看", "地圖", "一邊", "吃麵"]],
       "tokens": [
         "他們",
         "一邊",
@@ -2005,3 +1999,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

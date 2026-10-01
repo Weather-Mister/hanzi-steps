@@ -96,7 +96,13 @@ export function validateCourse(manifest, modules, geometry = {}) {
    if(g.words)strings(g.words,`${at} grammar ${id} words`);
   }
   for(const [id,p]of Object.entries(m.phrases)){
-   unique(seen.phrase,id,at,'phrase');triple(p,`${at} phrase ${id}`);if(typeof p.note!=='string')fail(at,`phrase ${id} missing note field (empty is allowed)`);strings(p.tokens,`${at} phrase ${id} tokens`,{empty:false,unique:false});
+   unique(seen.phrase,id,at,'phrase');triple(p,`${at} phrase ${id}`);if(!text(p.note))fail(at,`phrase ${id} requires a learner-facing explanation`);strings(p.tokens,`${at} phrase ${id} tokens`,{empty:false,unique:false});
+   if(p.acceptedTokenOrders!==undefined){
+    if(!Array.isArray(p.acceptedTokenOrders))fail(at,`phrase ${id} malformed acceptedTokenOrders`);
+    else for(const tokens of p.acceptedTokenOrders){
+     if(strings(tokens,`${at} phrase ${id} alternative tokens`,{empty:false,unique:false})&&JSON.stringify([...tokens].sort())!==JSON.stringify([...(p.tokens||[])].sort()))fail(at,`phrase ${id} alternative must reuse exactly the canonical tokens`);
+    }
+   }
    if(p.grammarIds){strings(p.grammarIds,`${at} phrase ${id} grammarIds`);for(const g of p.grammarIds)if(!allRules[g])fail(at,`phrase ${id} references missing grammar ${g}`);}
   }
   const localSteps=new Map();

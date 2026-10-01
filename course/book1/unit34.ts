@@ -1653,7 +1653,7 @@ const unit:UnitData = {
       "text": "你計畫在臺灣學多久的中文？",
       "pinyin": "Nǐ jìhuà zài Táiwān xué duō jiǔ de Zhōngwén?",
       "meaning": "How long do you plan to study Chinese in Taiwan?",
-      "note": "This is the opening question of this lesson the conversation. The reply is 五年。 計畫 is close to the earlier 打算; here both can express an intended plan.",
+      "note": "計畫 expresses a plan, like 打算. 在臺灣 gives the place, and 學多久的中文 asks how long the Chinese study will last. The reply is 五年, five years.",
       "tokens": [
         "你計畫",
         "在臺灣",
@@ -1687,7 +1687,7 @@ const unit:UnitData = {
       "text": "我先在語言中心念一年，再念四年大學。",
       "pinyin": "Wǒ xiān zài yǔyán zhōngxīn niàn yì nián, zài niàn sì nián dàxué.",
       "meaning": "I will first study for one year at a language center, then study at university for four years.",
-      "note": "This keeps the study sequence from this lesson the conversation. 年 is the measure word for years.",
+      "note": "先 marks studying one year at the language center; 再 introduces the next stage, four years at university. 年 measures the years, for a total plan of five years.",
       "tokens": [
         "我先在語言中心念一年",
         "再念四年大學"
@@ -1749,3 +1749,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

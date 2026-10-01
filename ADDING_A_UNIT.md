@@ -58,7 +58,7 @@ units, application components or the old compatibility facades are needed.
 | `grammarRules` | New unit-owned `GrammarRule` records with stable IDs, title, pattern, explanation, examples, remember, optional words |
 | `grammarIntroductions` | For each new rule: `{id,kind:'rule',ref:id,lessonId,stepId}` referencing its actual grammar teaching card |
 | `reviewGrammar` | Existing earlier rule IDs referenced by review. Refer to them from steps/phrases; do not redeclare their first teaching |
-| `phrases` | Unit-owned `Phrase` records with text, pinyin, meaning, note (may be empty), correct ordered tokens, optional grammarIds |
+| `phrases` | Unit-owned `Phrase` records with text, pinyin, meaning, a substantive learner-facing note, correct ordered tokens, optional grammarIds and explicitly reviewed acceptedTokenOrders |
 | `revisionStepIds` | IDs of activities deliberately reviewing prior material; `[]` if none |
 
 `unit.chars` is the guided handwriting selection and may include REVIEW targets.
