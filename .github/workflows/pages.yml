@@ -20,6 +20,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - name: Regenerate curriculum artifacts from canonical sources
+        run: npm run course:generate
       - name: Run curriculum regression tests
         run: npm run test:curriculum
       - run: npm run build:pages
