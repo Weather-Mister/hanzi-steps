@@ -1,7 +1,7 @@
 import {listeningItems as curatedListeningItems,listeningSceneIds} from '../course/listening/items.ts';
 import {characters,units,books,phrases} from '../course/runtime.ts';
 import {shuffled} from './curriculum.ts';
-import {resolveSentence,sentenceAvailable} from './learning-materials.ts';
+import {resolveSentence,sentenceAvailable,sentenceHasKnownCharacters} from './learning-materials.ts';
 import {lessonPosition} from './curriculum-relations.ts';
 import {matchesPinyin} from './pinyin.ts';
 import type {ListeningItem,SentenceRef} from '../course/materials/schema.ts';
@@ -23,7 +23,7 @@ const unitIndex=new Map(units.map((unit,index)=>[unit.id,index]));
 const candidates:Candidate[]=Object.keys(phrases).flatMap(id=>{
  const source={kind:'phrase' as const,id};
  const sentence=resolveSentence(source);
- if(!sentence?.productive)return [];
+ if(!sentence?.productive||!sentenceHasKnownCharacters(source))return [];
  return [{id,source,sentence,position:lessonPosition.get(sentence.lessonId)??Number.MAX_SAFE_INTEGER,unitIndex:unitIndex.get(sentence.unitId)??Number.MAX_SAFE_INTEGER}];
 });
 
