@@ -25,10 +25,10 @@ let server,browser,page;
  async function practice(){await page.getByRole('button',{name:'Practice',exact:true}).click()}
  async function listening(){await practice();await page.getByRole('button',{name:/Listening Path Hear/}).click()}
  await listening();const dialog=page.getByRole('dialog');
- assert.equal(await dialog.getByRole('button',{name:'Start listening',exact:true}).count(),14);
+ const stageButtons=dialog.getByRole('button',{name:/^Start [3-7]-item stage$/});assert.ok(await stageButtons.count()>10);
  await page.screenshot({path:'test-results/connected-learning/listening-mobile.png',fullPage:true});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
- await dialog.getByRole('button',{name:'Start listening',exact:true}).first().click();
+ await stageButtons.first().click();
  assert.equal(await dialog.locator('.listening-feedback').count(),0);
  assert.equal(await dialog.getByRole('button',{name:'I am a student.',exact:true}).isDisabled(),true);
  await dialog.getByRole('button',{name:'Play audio',exact:true}).click();await dialog.getByText('1 successful play',{exact:true}).waitFor();
@@ -41,7 +41,7 @@ let server,browser,page;
  await dialog.getByRole('button',{name:'Back to Listening Path',exact:true}).last().click();
  await dialog.getByRole('button',{name:'Type pinyin',exact:true}).click();
  await dialog.getByRole('checkbox',{name:'Two-play challenge for single sentences'}).check();
- await dialog.getByRole('button',{name:'Start listening',exact:true}).first().click();
+ await stageButtons.first().click();
  assert.equal(await dialog.getByRole('button',{name:'Slow · with help'}).count(),0);
  await dialog.getByRole('button',{name:'Play audio',exact:true}).click();await dialog.getByText('1 plays remaining',{exact:true}).waitFor();
  await dialog.getByRole('button',{name:'Replay audio',exact:true}).click();await dialog.getByText('0 plays remaining',{exact:true}).waitFor();
@@ -52,17 +52,19 @@ let server,browser,page;
  // A missing voice cannot consume a play or create a mastery attempt.
  const before=await page.evaluate(()=>localStorage.getItem('hanzi-steps-practice-v1-signed-out'));
  await page.evaluate(()=>window.__audioMode='no-voice');
- await dialog.getByRole('button',{name:'Start listening',exact:true}).first().click();await dialog.getByRole('button',{name:'Play audio',exact:true}).click();
+ await stageButtons.first().click();await dialog.getByRole('button',{name:'Play audio',exact:true}).click();
  await dialog.getByText(/A Taiwanese Mandarin voice is not available/).waitFor();
  await dialog.getByText('2 plays remaining',{exact:true}).waitFor();
  assert.equal(await dialog.getByRole('button',{name:'Check pinyin'}).isDisabled(),true);
  await dialog.getByRole('button',{name:'Use transcript without scoring',exact:true}).click();await dialog.getByText('Transcript practice · no listening score recorded.',{exact:true}).waitFor();
  await dialog.getByRole('button',{name:'Back without scoring'}).click();assert.equal(await page.evaluate(()=>localStorage.getItem('hanzi-steps-practice-v1-signed-out')),before);
+ // Stages now contain several items, so an unscored skip advances within the stage. Return to the path before changing session settings.
+ await dialog.getByRole('button',{name:'Back to Listening Path',exact:true}).click();
  await page.evaluate(()=>window.__audioMode='success');
  // A synthesis error is unscored too; slow playback is explicitly assisted.
  await dialog.getByRole('checkbox',{name:'Two-play challenge for single sentences'}).uncheck();
  await dialog.getByRole('button',{name:'Hear the meaning',exact:true}).click();
- await dialog.getByRole('button',{name:'Start listening',exact:true}).first().click();
+ await stageButtons.first().click();
  await page.evaluate(()=>window.__audioMode='fail');
  await dialog.getByRole('button',{name:'Play audio',exact:true}).click();await dialog.getByText(/Audio could not play/).waitFor();
  await dialog.getByText('0 successful plays',{exact:true}).waitFor();
@@ -95,14 +97,15 @@ let server,browser,page;
  await page.getByRole('button',{name:'Back to the unit',exact:true}).click();
  // Global reference access remains, but learned-word details use completed lessons.
  await page.getByRole('button',{name:'Search by pinyin'}).click();await page.getByRole('textbox').fill('shang');
- await page.locator('.character-words').first().waitFor();await page.locator('.character-words summary').first().click();
- assert.ok(await page.locator('.character-words[open] li').count()>0);
+ await page.locator('.character-meanings').first().waitFor();await page.locator('.character-meanings summary').first().click();
+ assert.ok(await page.locator('.character-meanings[open] .character-sense-badge').count()>0);
+ assert.equal(await page.locator('.character-meanings[open] li').first().locator('.character-sense-badge').textContent(),'Previously learned');
  await page.setViewportSize({width:1365,height:950});await page.screenshot({path:'test-results/connected-learning/cards-desktop.png',fullPage:true});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.keyboard.press('Escape');
- await practice();const opt=page.getByRole('checkbox',{name:/Include a listening question/});assert.equal(await opt.isChecked(),false);await opt.check();await page.getByRole('button',{name:/Daily 10 10 adaptive/}).click();
+ await practice();assert.equal(await page.getByRole('checkbox',{name:/Include a listening question/}).count(),0);await page.getByRole('button',{name:/Daily 10 10 adaptive/}).click();
  assert.deepEqual(errors,[]);
  // Fresh state does not unlock listening or reading from global Search/handwriting.
- const fresh=await browser.newContext({viewport:{width:390,height:844}});const p2=await fresh.newPage();await p2.goto('http://127.0.0.1:4174/hanzi-steps/');await p2.getByRole('button',{name:'Practice',exact:true}).click();await p2.getByRole('button',{name:/Listening Path Hear/}).click();assert.equal(await p2.getByRole('button',{name:'Practice available sentences · 0'}).isDisabled(),true);assert.equal(await p2.getByRole('button',{name:'Start listening',exact:true}).count(),0);
- console.log('PASS: paths, mobile/desktop, source audio, hidden transcript, replay budgets, pinyin, failure fallback, mastery isolation, scenes, resume, card words, opt-in and fresh locks.');
+ const fresh=await browser.newContext({viewport:{width:390,height:844}});const p2=await fresh.newPage();await p2.goto('http://127.0.0.1:4174/hanzi-steps/');await p2.getByRole('button',{name:'Practice',exact:true}).click();await p2.getByRole('button',{name:/Listening Path Hear/}).click();assert.equal(await p2.getByRole('button',{name:'Quick listening mix · 0'}).isDisabled(),true);assert.equal(await p2.locator('.listening-stage button:not(:disabled)').count(),0);
+ console.log('PASS: paths, mobile/desktop, source audio, hidden transcript, replay budgets, pinyin, failure fallback, mastery isolation, scenes, resume, unified character meanings, removed opt-in and fresh locks.');
  await browser.close();server.kill();
 })().catch(async error=>{console.error(error);if(page){console.error(await page.locator('body').innerText().catch(()=>''));await page.screenshot({path:'test-results/connected-learning/failure.png',fullPage:true}).catch(()=>{})}await browser?.close();server?.kill();process.exit(1)});

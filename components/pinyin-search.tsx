@@ -5,7 +5,6 @@ import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/u
 import {searchVocabulary,uniquePracticeCharacters} from '@/lib/vocabulary-lookup';
 import {strokeData} from './character-art';
 import {CharacterMeanings} from './character-meanings';
-import {CharacterWords} from './character-words';
 import {KnowledgeNotes} from './knowledge-notes';
 import {characters} from '@/lib/curriculum';
 
@@ -64,7 +63,7 @@ export function PinyinSearch({
          <p>{item.meaning}</p>
          {item.bookNumber&&item.unitNumber&&<small>Book {item.bookNumber} · Unit {item.unitNumber}</small>}
          <KnowledgeNotes word={item.traditional} completed={completed}/>
-         {uniquePracticeCharacters(item).map(char=><div key={char}><CharacterMeanings hanzi={char} primaryMeaning={characters[char].meaning}/><CharacterWords hanzi={char} completed={completed}/></div>)}
+         {uniquePracticeCharacters(item).map(char=><div key={char}><CharacterMeanings hanzi={char} completed={completed} primaryMeaning={characters[char].meaning}/></div>)}
         </div>
         {chars.length>0?<div className="search-practice-actions" aria-label={'Practice characters in '+item.traditional}>
          {chars.map(char=><button

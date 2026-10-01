@@ -10,3 +10,32 @@
 .listening-session{margin-top:20px}.listening-scene{margin-top:20px}.listening-scene>h2{font-size:1.5rem;margin:12px 0}.listening-scene>p{line-height:1.6;margin:12px 0}.listening-scene .reading-questions{margin:20px 0}.listening-transcript article{padding:18px 0;border-bottom:1px solid #dfe5e1;display:grid;gap:9px;line-height:1.65}.listening-transcript article>[lang]{font-size:1.35rem}.listening-transcript>button{margin-top:15px}
 .character-words{box-sizing:border-box;max-width:100%;border:1px solid #dfe5e1;border-radius:12px;padding:12px 14px;margin-top:12px;min-width:0}.character-words summary{cursor:pointer;font-size:.9rem;font-weight:650}.character-words summary span{font-weight:400;color:#5c6b65}.character-words ul{list-style:none;padding:0;display:grid;gap:12px;margin:14px 0 0}.character-words li{display:grid;gap:5px;border-top:1px solid #e4e9e6;padding-top:10px;line-height:1.5;font-size:.9rem;overflow-wrap:anywhere}.character-words li>strong{font-size:1.2rem}.character-words li>small{color:#66736c}.reading-full-translation{padding:16px;border-radius:12px;background:#f6f8f7;margin:18px 0;line-height:1.8}.reading-full-translation summary{cursor:pointer;font-weight:650}.reading-full-translation p{margin-top:10px}
 @media(max-width:600px){.learning-path-dialog{padding:22px 16px;max-height:92dvh}.listening-stage-grid{grid-template-columns:1fr}.listening-stage{padding:17px}.listening-feedback>[lang]{font-size:1.4rem}.learning-path-settings{padding:14px}.learning-path-links .smart-mode-card{min-width:0}.character-words li>strong{font-size:1.1rem}}
+
+
+/* Reading/listening path motion follows the same short, tactile rhythm as lessons. */
+.learning-path-dialog>[data-slot=dialog-title],
+.learning-path-dialog>[data-slot=dialog-description],
+.learning-path-settings,
+.learning-path-note,
+.learning-path-group{animation:learning-path-rise 220ms cubic-bezier(.2,.8,.3,1) both}
+.learning-path-dialog>[data-slot=dialog-description]{animation-delay:30ms}
+.learning-path-settings{animation-delay:55ms}
+.learning-path-group:nth-of-type(2){animation-delay:45ms}
+.learning-path-group:nth-of-type(3){animation-delay:80ms}
+.listening-stage{transition:transform 150ms ease,border-color 150ms ease,box-shadow 150ms ease,background-color 150ms ease;animation:listening-card-in 220ms cubic-bezier(.2,.8,.3,1) both}
+.listening-stage:nth-child(2){animation-delay:35ms}.listening-stage:nth-child(3){animation-delay:70ms}.listening-stage:nth-child(4){animation-delay:105ms}.listening-stage:nth-child(n+5){animation-delay:130ms}
+.listening-stage:hover{transform:translateY(-2px);border-color:var(--unit-line);box-shadow:0 7px 18px #243a5710}
+.listening-stage:has(button:disabled):hover{transform:none;box-shadow:none}
+.listening-session,.listening-scene{animation:learning-path-rise 210ms cubic-bezier(.2,.8,.3,1)}
+.listening-session-progress{display:grid;gap:7px;margin:8px 0 20px}
+.listening-session-progress .listening-meta{margin-bottom:0}.listening-session-progress [data-slot=progress]{height:8px;background:#e8edf1}
+.listening-result{animation:listening-result-in 260ms cubic-bezier(.16,1,.3,1);padding:10px 0}.listening-result>h2{font-size:1.45rem;margin:14px 0}
+.listening-question .smart-prompt{animation:learning-path-rise 190ms ease-out}
+.listening-question .smart-choice-grid>button{animation:listening-answer-in 180ms ease-out both}
+.listening-question .smart-choice-grid>button:nth-child(2){animation-delay:30ms}.listening-question .smart-choice-grid>button:nth-child(3){animation-delay:60ms}.listening-question .smart-choice-grid>button:nth-child(4){animation-delay:90ms}
+.listening-controls .primary-button svg{transition:transform 160ms ease}.listening-controls .primary-button:active:not(:disabled) svg{transform:scale(.88)}
+@keyframes learning-path-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes listening-card-in{from{opacity:0;transform:translateY(7px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes listening-answer-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes listening-result-in{0%{opacity:0;transform:translateY(7px) scale(.985)}70%{opacity:1;transform:translateY(-1px) scale(1.005)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.learning-path-dialog>[data-slot=dialog-title],.learning-path-dialog>[data-slot=dialog-description],.learning-path-settings,.learning-path-note,.learning-path-group,.listening-stage,.listening-session,.listening-scene,.listening-result,.listening-question .smart-prompt,.listening-question .smart-choice-grid>button{animation:none!important}.listening-stage,.listening-controls .primary-button svg{transition:none!important}}
