@@ -1024,7 +1024,7 @@ const unit:UnitData = {
       "zhuyin": "ㄉㄤ",
       "meaning": "to be; act as; in 當然 'of course'",
       "strokes": 13,
-      "note": "當 is first-tone dāng in 當然 dāngrán, the this lesson word for 'of course / certainly'.",
+      "note": "當 is first-tone dāng in 當然 dāngrán, this lesson’s word for 'of course / certainly'.",
       "memory": "Build 尚 on top and 田 below; together they form 當.",
       "parts": [
         {

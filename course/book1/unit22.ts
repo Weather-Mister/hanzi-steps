@@ -1997,7 +1997,7 @@ const unit:UnitData = {
       "id": "u22-progressive-zai",
       "title": "Show an action in progress with 在",
       "pattern": "Subject + 在 + action verb",
-      "explanation": "Before an action verb, 在 marks an activity that is ongoing at the relevant time. This is different from locative 在 + place. Only action verbs work in this progressive pattern. When correcting a mistaken ongoing action, 不是在… is common.",
+      "explanation": "在 before an action describes it as in progress at the time being discussed: 我在寫中文, “I am writing Chinese.” The time can be now or a stated past time; 在 itself does not mean present tense. Compare 在學校, which says where someone is, with 在寫中文, which says what they are doing. Use this progressive pattern with activities, not ordinary state descriptions such as 忙 or 貴. 他不是在看書，他在寫中文 corrects a mistaken claim about the activity.",
       "examples": [
         {
           "text": "我在寫中文。",
@@ -2015,7 +2015,7 @@ const unit:UnitData = {
           "meaning": "He is not reading; he is writing Chinese."
         }
       ],
-      "remember": "在 + place = be at a place. 在 + action verb = action in progress. Do not use progressive 在 with state verbs such as 忙 or 貴.",
+      "remember": "在 + place gives a location; 在 + action gives an activity in progress. For the correction practised here, use 不是在…，是在… or simply state the correct activity next.",
       "words": [
         "在",
         "寫"

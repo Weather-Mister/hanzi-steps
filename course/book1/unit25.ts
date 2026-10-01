@@ -1711,7 +1711,7 @@ const unit:UnitData = {
       "id": "u25-bi-comparison",
       "title": "Explicit comparison with 比",
       "pattern": "A + 比 + B + state verb / property",
-      "explanation": "Use 比 when you name both things being compared. A is described relative to B. Keep A and B comparable: compare two places, two objects, or two ways of travelling. Swapping A and B reverses the direction of the comparison.",
+      "explanation": "Use A + 比 + B + description to name both sides of a comparison. 坐捷運比坐火車快 says that, for the journey under discussion, taking the MRT is faster. It is a sample comparison, not a claim that the MRT is faster on every route. Keep A and B comparable, and keep the same reference point when comparing distances. Swapping A and B reverses the comparison.",
       "examples": [
         {
           "text": "坐捷運比坐火車快。",
@@ -1724,7 +1724,7 @@ const unit:UnitData = {
           "meaning": "Our school is farther away than their school."
         }
       ],
-      "remember": "比較 can leave the comparison target understood; 比 explicitly names A and B."
+      "remember": "比較 can leave the comparison target understood; 比 explicitly names A and B. The description applies to A relative to B."
     },
     "u25-bi-negation": {
       "id": "u25-bi-negation",

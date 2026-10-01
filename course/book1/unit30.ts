@@ -242,7 +242,7 @@ const unit:UnitData = {
             "很好吃"
           ],
           "answer": "吃吃看",
-          "explanation": "吃吃看 is the this lesson VV看 pattern.",
+          "explanation": "吃吃看 is this lesson’s VV看 pattern.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -257,7 +257,7 @@ const unit:UnitData = {
             "Put 看 before the repeated verb"
           ],
           "answer": "Mention the fruit first, then say 吃吃看",
-          "explanation": "Establish the object first, then use 吃吃看. In this this lesson pattern, an object normally does not follow VV看.",
+          "explanation": "Establish the object first, then use 吃吃看. In this lesson pattern, an object normally does not follow VV看.",
           "grammarIds": [
             "u30-vv-kan"
           ]
@@ -347,7 +347,7 @@ const unit:UnitData = {
             "忙"
           ],
           "answer": "美",
-          "explanation": "美 appears in the permitted column; 貴 and 忙 appear in the excluded column. Not every state verb can be doubled.",
+          "explanation": "For the forms practised here, 美 is included while 貴 and 忙 are excluded. This is the practice list for this pattern, not a universal ban in every Mandarin context.",
           "grammarIds": [
             "u30-state-redup"
           ]
@@ -774,7 +774,7 @@ const unit:UnitData = {
         {
           "id": "u30-review-13",
           "type": "select",
-          "prompt": "Which subjective description follows the this lesson reduplication pattern?",
+          "prompt": "Which subjective description follows this lesson’s reduplication pattern?",
           "options": [
             "水果香香甜甜的。",
             "水果很香香甜甜的。",
@@ -880,7 +880,7 @@ const unit:UnitData = {
             "一個西瓜"
           ],
           "answer": "一塊西瓜",
-          "explanation": "this lesson uses 塊 for a piece of food."
+          "explanation": "This lesson uses 塊 for a piece of food."
         },
         {
           "id": "u30-review-22",
@@ -981,7 +981,7 @@ const unit:UnitData = {
       "meaning": "clothes; clothing",
       "lessonId": "u30-clothes",
       "core": true,
-      "note": "this lesson gives yīfú, with second-tone 服."
+      "note": "This lesson gives yīfú, with second-tone 服."
     }
   ],
   "reviewVocabulary": [
@@ -1095,7 +1095,7 @@ const unit:UnitData = {
       "meaning": "take (a picture); pat",
       "strokes": 8,
       "layout": "side",
-      "note": "拍 is first-tone pāi. this lesson uses 拍照片, 'take a photo.'",
+      "note": "拍 is first-tone pāi. This lesson uses 拍照片, 'take a photo.'",
       "memory": "扌, the hand side, takes three strokes on the left; 白 fills the right with five.",
       "parts": [
         {
@@ -1327,7 +1327,7 @@ const unit:UnitData = {
       "id": "u30-ba-guess",
       "title": "Use 吧 to make a guess",
       "pattern": "Statement + 吧？",
-      "explanation": "You already know 吧 for a softened suggestion such as 我們去吧. this lesson adds a different use: after a statement, 吧 can show that the speaker is making a guess and asking for confirmation. The guessed information comes before 吧; the particle stays at the end.",
+      "explanation": "You already know 吧 for a softened suggestion such as 我們去吧. This lesson adds a different use: after a statement, 吧 can show that the speaker is making a guess and asking for confirmation. The guessed information comes before 吧; the particle stays at the end.",
       "examples": [
         {
           "text": "這是西瓜吧？",
@@ -1346,7 +1346,7 @@ const unit:UnitData = {
       "id": "u30-vv-kan",
       "title": "Try an action with VV看",
       "pattern": "monosyllabic action verb + same verb + 看",
-      "explanation": "Reduplicate a one-syllable action verb and add 看 to mean 'try doing it and see.' The pattern sounds tentative. this lesson contrasts it with ordinary verb reduplication: VV can take an object, but VV看 generally does not put an object after 看. Establish the thing first, then say 吃吃看, 喝喝看, 聽聽看, and so on. Do not add 看 automatically to habitual VV activities: 我有時候看看書 describes an occasional activity, not a trial to find out what it is like.",
+      "explanation": "Reduplicate a one-syllable action verb and add 看 to mean 'try doing it and see.' The pattern sounds tentative. This lesson contrasts it with ordinary verb reduplication: VV can take an object, but VV看 generally does not put an object after 看. Establish the thing first, then say 吃吃看, 喝喝看, 聽聽看, and so on. Do not add 看 automatically to habitual VV activities: 我有時候看看書 describes an occasional activity, not a trial to find out what it is like.",
       "examples": [
         {
           "text": "這個水果很甜，你吃吃看。",
@@ -1359,7 +1359,7 @@ const unit:UnitData = {
           "meaning": "This cup of tea smells good; try drinking it."
         }
       ],
-      "remember": "VV看 = try it and see. Do not normally put the object after VV看 in this this lesson pattern.",
+      "remember": "VV看 = try it and see. Do not normally put the object after VV看 in this lesson pattern.",
       "words": [
         "吃吃看"
       ]
@@ -1368,7 +1368,7 @@ const unit:UnitData = {
       "id": "u30-state-redup",
       "title": "Give a subjective impression by reduplicating a state verb",
       "pattern": "State verb + state verb + 的",
-      "explanation": "Certain state verbs can be doubled to express the speaker's subjective impression, often praise or criticism: 香香的 and 甜甜的. Do not add 很 or another degree adverb such as 非常 to this pattern, because the reduplication already intensifies the description. Keep final 的; with two doubled descriptions together, the first 的 may be omitted: 香香甜甜的. This is restricted: not every state verb allows it. this lesson's permitted set is 香、甜、高、熱、大、美、遠、辣、矮; its excluded set is 多、貴、近、忙、新、少. Use this for an expressive impression, not a neutral factual request: to order hot coffee, say 我要一杯熱咖啡, rather than treating 熱熱的 as the default ordering form.",
+      "explanation": "Some describing words can be doubled with 的 to give a vivid, subjective impression: 香香的, pleasantly fragrant; 甜甜的, sweet-tasting. Not every state verb is practised in this pattern. This is not a mechanical way to say “very” with every adjective. Practise the book’s selected forms, including 香、甜、高、熱、大、美、遠、辣、矮; the practice table’s excluded set is 多、貴、近、忙、新、少. That practice list is not an exhaustive claim about every context in Mandarin. Do not add 很 before the doubled form. With paired descriptions, 香香的、甜甜的 can become 香香甜甜的. For a neutral coffee order, 熱咖啡 is the straightforward wording; 熱熱的咖啡 adds an expressive description.",
       "examples": [
         {
           "text": "這個水果香香的。",
@@ -1381,7 +1381,7 @@ const unit:UnitData = {
           "meaning": "This fruit is fragrant and sweet."
         }
       ],
-      "remember": "Subjective impression: permitted doubled state verb + 的. No degree adverb. this lesson allows 香、甜、高、熱、大、美、遠、辣、矮 and excludes 多、貴、近、忙、新、少."
+      "remember": "Use the taught adjective + adjective + 的 forms for a subjective impression, without 很. Learn each form in context instead of doubling every adjective."
     }
   },
   "grammarIntroductions": [
@@ -1511,7 +1511,7 @@ const unit:UnitData = {
       "text": "我拍照片。",
       "pinyin": "Wǒ pāi zhàopiàn.",
       "meaning": "I take photos.",
-      "note": "拍照片 is the this lesson photo expression.",
+      "note": "拍照片 is this lesson’s photo expression.",
       "tokens": [
         "我",
         "拍照片"

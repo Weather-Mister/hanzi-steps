@@ -1986,7 +1986,7 @@ const unit:UnitData = {
       "id": "u9-topic",
       "title": "Put the activity you are discussing first",
       "pattern": "activity，person + comment",
-      "explanation": "You can begin by naming the activity you want to discuss, then say what you think about it. This first part is the topic. 我喜歡打網球 becomes 打網球，我喜歡: “As for playing tennis, I like it.” The person 我 still comes before 喜歡 in the comment. Do not add 是, 的, or a second object for English “it.” Starting with the activity makes clear what your comment is about.",
+      "explanation": "Start with an activity already under discussion, then comment on it. For example, when someone asks about tennis, 打網球，我喜歡 means “As for playing tennis, I like it.” This topic-first order is useful for picking up or contrasting a topic; 我喜歡打網球 is the ordinary neutral order. In the comment, 我 still comes before 喜歡. The activity is understood, so no extra object meaning “it” is needed.",
       "examples": [
         {
           "text": "打網球，我喜歡。",
@@ -1999,7 +1999,7 @@ const unit:UnitData = {
           "meaning": "As for listening to music, I like it a lot."
         }
       ],
-      "remember": "Name the topic first; then say who feels or does what. The order exercises here start with the activity.",
+      "remember": "Use topic-first order to pick up or contrast something in the conversation. In these order exercises, start with the activity as requested.",
       "words": []
     },
     "u9-both-topics": {
@@ -2336,7 +2336,7 @@ const unit:UnitData = {
         "我",
         "喜歡"
       ],
-      "note": "Start with 打網球 as the topic; the comment is 我喜歡.",
+      "note": "Imagine someone has asked about tennis. Pick up 打網球 as the topic, then give the comment 我喜歡. For a neutral statement without that context, 我喜歡打網球 is also natural.",
       "grammarIds": [
         "u9-topic"
       ]

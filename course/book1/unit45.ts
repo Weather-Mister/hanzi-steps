@@ -2102,7 +2102,7 @@ const unit:UnitData = {
       "text": "一直／流／鼻水",
       "pinyin": "yìzhí / liú / bíshuǐ",
       "meaning": "continuously; all the way / flow / nasal mucus; runny nose",
-      "note": "Meaning-first lexical explanation.",
+      "note": "一直 goes before the activity and means it keeps happening: 一直流鼻水, keep having a runny nose. 流 is the action “flow”; 鼻水 names nasal mucus. Here 一直 describes persistence, not a frequency count.",
       "tokens": [
         "一直／流／鼻水"
       ]
@@ -2111,7 +2111,7 @@ const unit:UnitData = {
       "text": "頭／痛／胃口／差",
       "pinyin": "tóu / tòng / wèikǒu / chā",
       "meaning": "head / painful; hurts / appetite / poor; bad",
-      "note": "Meaning-first lexical explanation; 差 is chā in 胃口很差.",
+      "note": "頭 and 胃口 are what you describe; 很痛 and 很差 say how they feel or are. No 是 is needed. 差 is chā here and means poor, so 胃口很差 means having a poor appetite.",
       "tokens": [
         "頭／痛／胃口／差"
       ]
@@ -2138,7 +2138,7 @@ const unit:UnitData = {
       "text": "哪裡不舒服？",
       "pinyin": "Nǎlǐ bù shūfu?",
       "meaning": "Where do you feel unwell?",
-      "note": "Health-condition use of known 哪裡 + 不舒服.",
+      "note": "哪裡 asks which part of the body feels unwell. 不舒服 means not comfortable / unwell. The body part is the missing information, so this is not a yes/no question with 嗎.",
       "tokens": [
         "哪裡",
         "不舒服"
@@ -2169,7 +2169,7 @@ const unit:UnitData = {
       "text": "什麼東西都不想吃。",
       "pinyin": "Shénme dōngxi dōu bù xiǎng chī.",
       "meaning": "I don't want to eat anything.",
-      "note": "Review of Unit-40 question-word + 都 totality.",
+      "note": "什麼東西都 includes all food in this context. 不想吃 applies to every item: “I do not feel like eating anything.” This describes appetite; it does not claim the person is physically unable to eat.",
       "tokens": [
         "什麼東西都不想吃。"
       ]
@@ -2178,7 +2178,7 @@ const unit:UnitData = {
       "text": "大概多久了？",
       "pinyin": "Dàgài duōjiǔ le?",
       "meaning": "About how long has it been?",
-      "note": "Symptom-duration integration.",
+      "note": "The symptoms are already understood. 大概 asks for an approximate answer, 多久 asks their duration, and final 了 asks how long they have lasted up to now. A short duration answer is enough.",
       "tokens": [
         "大概多久了？"
       ]
@@ -2198,7 +2198,7 @@ const unit:UnitData = {
       "text": "喉嚨有一點發炎。",
       "pinyin": "Hóulóng yǒu yìdiǎn fāyán.",
       "meaning": "The throat is a little inflamed.",
-      "note": "有一點 + state is review language.",
+      "note": "有一點 before 發炎 says the inflammation is slight. It is not a comparison with yesterday.",
       "tokens": [
         "喉嚨",
         "有一點",

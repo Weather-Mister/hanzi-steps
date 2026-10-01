@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Holidays, plans & feasibility",
     "title": "What Are You Planning?",
-    "description": "11 genuinely new these lessons words and forms. Close the this lesson tail, then talk about breaks, travel plans, and when something will happen.",
+    "description": "11 genuinely new these lessons words and forms. Close this lesson’s tail, then talk about breaks, travel plans, and when something will happen.",
     "chars": [
       "古",
       "代",
@@ -1871,7 +1871,7 @@ const unit:UnitData = {
       "id": "u26-time-when",
       "title": "Put a time-when expression before the action",
       "pattern": "Subject + Time-When + Verb Phrase / Time-When + Subject + Verb Phrase",
-      "explanation": "this lesson distinguishes when something happens from how long it lasts. A time-when expression such as 下個星期 identifies the point or period when the event occurs and appears before the main action. It can follow the subject or be moved to the front as the topic.",
+      "explanation": "This lesson distinguishes when something happens from how long it lasts. A time-when expression such as 下個星期 identifies the point or period when the event occurs and appears before the main action. It can follow the subject or be moved to the front as the topic.",
       "examples": [
         {
           "text": "我下個星期回國。",

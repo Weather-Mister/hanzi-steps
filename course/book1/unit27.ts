@@ -1650,7 +1650,7 @@ const unit:UnitData = {
       "id": "u27-duration-basic",
       "title": "Say how long with a duration after the verb",
       "pattern": "Subject + Verb + Duration /... + 多久?",
-      "explanation": "A time-duration expression tells how long an action lasts, not when it happens. In the basic this lesson pattern, the duration follows the verb directly. 多久 asks for that length of time. More complex cases with an explicit object, negation, and separable verbs are taught in the next continuation unit.",
+      "explanation": "A duration tells how long an activity lasts, not when it happens. In this basic pattern, it follows the verb: 玩一個星期. In the travel-planning conversation, 你想玩多久？ asks how long someone wants to spend visiting or enjoying a trip; 玩 does not literally mean “be away” in every context. 一個星期 answers “for one week.” The next unit explains patterns with objects, negative spans, and separable verbs.",
       "examples": [
         {
           "text": "你想玩多久？",
@@ -1697,7 +1697,7 @@ const unit:UnitData = {
       "id": "u27-you-shihou",
       "title": "Alternate possibilities with 有時候…有時候…",
       "pattern": "有時候 + A，有時候 + B",
-      "explanation": "this lesson uses two 有時候 phrases to present activities that alternate within the same general situation. The two clauses describe different things that happen on different occasions.",
+      "explanation": "有時候 means sometimes. You can use it once for an occasional activity, or repeat it to contrast what happens on different occasions: 我有時候在家看電視，有時候出去玩. The two choices need not alternate in a fixed order or happen equally often. Keep 有時候 before the activity in each clause.",
       "examples": [
         {
           "text": "我有時候在家看電視，有時候出去玩。",
@@ -1705,7 +1705,7 @@ const unit:UnitData = {
           "meaning": "Sometimes I watch TV at home, and sometimes I go out."
         }
       ],
-      "remember": "Repeat 有時候 before each alternative when you want to contrast two recurring possibilities.",
+      "remember": "Repeated 有時候 contrasts different occasions. It does not mean “first…then…” or require a regular A–B–A–B sequence.",
       "words": [
         "有時候"
       ]
@@ -1828,7 +1828,7 @@ const unit:UnitData = {
       "text": "我有時候在家看電視，有時候出去玩。",
       "pinyin": "Wǒ yǒu shíhou zài jiā kàn diànshì, yǒu shíhou chūqù wán.",
       "meaning": "Sometimes I watch TV at home, and sometimes I go out.",
-      "note": "The repeated 有時候 presents two alternating possibilities.",
+      "note": "Each 有時候 introduces something that happens on some occasions. The activities do not have to alternate regularly or happen equally often.",
       "tokens": [
         "我",
         "有時候在家看電視",

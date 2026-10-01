@@ -1012,7 +1012,7 @@ const unit:UnitData = {
       "id": "u41-shibushi",
       "title": "Confirmation questions with 是不是",
       "pattern": "Subject + 是不是 + VP?",
-      "explanation": "是不是 asks the listener to confirm information the speaker already knows, expects, or sees as likely. It is not simply interchangeable with every neutral 嗎 or A-not-A question. This lesson uses 是不是 in environments where ordinary A-not-A is unavailable, including 比 comparisons and 太…了. When multiple grammatical strategies are possible, context must make the confirmation reading clear.",
+      "explanation": "是不是 before a whole comment can ask the listener to confirm information the speaker suspects: 你是不是最近太忙了？, “Have you been too busy lately?” This confirmation use is the focus here; the speaker need not already know the answer for certain. It also works with the 比 and 太…了 sentences practised here. Earlier 你是不是學生？ was an A-not-A identity question; not every occurrence of 是不是 requires an already-known fact.",
       "examples": [
         {
           "text": "你是不是最近太忙了？",
@@ -1030,13 +1030,13 @@ const unit:UnitData = {
           "meaning": "Do Taiwanese people all eat these things for birthdays?"
         }
       ],
-      "remember": "Use 是不是 when checking/confirming information, not merely asking neutral new information."
+      "remember": "Use the context to hear whether the speaker is checking a suspicion. In these exercises, 是不是 checks the whole following comment; do not add 嗎 to it."
     },
     "u41-gen-yiyang": {
       "id": "u41-gen-yiyang",
       "title": "Comparison with 跟…一樣",
       "pattern": "A + 跟 + B + 一樣 (+ property)",
-      "explanation": "A 跟 B 一樣 says A and B are the same; a property can follow 一樣 to show equal degree. Put 不 before 一樣 to say the two differ in the relevant quality. Put 不 before 跟 to reject B as the comparison target, often followed by another target. Questions can use 一樣不一樣 or 是不是一樣; both are valid.",
+      "explanation": "A 跟 B 一樣 says that A and B are alike in the relevant respect. Add a description for equal degree: 我跟你一樣高, “I am as tall as you.” 跟 B 不一樣 rejects sameness; 不一樣高 means different heights, without saying which person is taller. The book also uses 不跟 B 一樣…，跟 C 一樣… to correct the comparison target. Keep the correction clear. Questions can use 一樣不一樣 or 是不是一樣; both are valid.",
       "examples": [
         {
           "text": "我的生日跟你的生日一樣。",
@@ -1056,10 +1056,10 @@ const unit:UnitData = {
         {
           "text": "他不跟我一樣高，跟你一樣高。",
           "pinyin": "Tā bù gēn wǒ yíyàng gāo, gēn nǐ yíyàng gāo.",
-          "meaning": "He isn't as tall as me; he's as tall as you."
+          "meaning": "He and I are not the same height; he is the same height as you."
         }
       ],
-      "remember": "Same: A 跟 B 一樣. Different quality: A 跟 B 不一樣. Different comparison target: A 不跟 B 一樣. Ask with 一樣不一樣 or 是不是一樣."
+      "remember": "不一樣 means different, not necessarily lower or less. In the target-correction example, he and I differ in height; he and you have the same height."
     }
   },
   "grammarIntroductions": [
@@ -1166,7 +1166,7 @@ const unit:UnitData = {
       "text": "他不跟我一樣高，跟你一樣高。",
       "pinyin": "Tā bù gēn wǒ yíyàng gāo, gēn nǐ yíyàng gāo.",
       "meaning": "He isn't the same height as me; he's the same height as you.",
-      "note": "不 before 跟 changes the comparison target.",
+      "note": "The second clause corrects the comparison target: he is the same height as you, not me. The sentence does not tell us whether he is taller or shorter than me.",
       "tokens": [
         "他不跟我一樣高",
         "跟你一樣高"

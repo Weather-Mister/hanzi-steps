@@ -220,7 +220,7 @@ const unit:UnitData = {
             "compare"
           ],
           "answer": "miss",
-          "explanation": "this lesson adds the state-verb sense “miss”; 想家 means miss home."
+          "explanation": "This lesson adds the state-verb sense “miss”; 想家 means miss home."
         },
         {
           "id": "u43-duration-now-s1",
@@ -282,14 +282,14 @@ const unit:UnitData = {
         {
           "id": "u43-duration-contrast",
           "type": "select",
-          "prompt": "Which sentence presents a completed one-year stay?",
+          "prompt": "You have left Taiwan after a one-year stay. Which sentence uses the single-了 pattern practised here to report that stay?",
           "options": [
             "我在臺灣住了一年。",
             "我在臺灣住了一年了。",
             "我在臺灣住一年。"
           ],
           "answer": "我在臺灣住了一年。",
-          "explanation": "The completed-duration pattern presents the duration as finished; the final 了 in the duration-to-now pattern shifts the meaning to accumulated duration up to now."
+          "explanation": "The stated context makes this a completed stay. 住了一年 reports the one-year span; 住了一年了 highlights the duration reached up to the time being discussed. The number of 了 particles alone does not prove whether someone has left."
         },
         {
           "id": "u43-a002-s1",
@@ -461,7 +461,7 @@ const unit:UnitData = {
             "only"
           ],
           "answer": "soon / almost",
-          "explanation": "This is the this lesson temporal sense of 快."
+          "explanation": "This is this lesson’s temporal sense of 快."
         },
         {
           "id": "u43-imminent-s2",
@@ -473,7 +473,7 @@ const unit:UnitData = {
             "misses someone"
           ],
           "answer": "is about to / is going to",
-          "explanation": "This is the this lesson imminent-event auxiliary sense."
+          "explanation": "This is this lesson’s imminent-event auxiliary sense."
         },
         {
           "id": "u43-imminent-s3",
@@ -1010,7 +1010,7 @@ const unit:UnitData = {
             "compare"
           ],
           "answer": "miss",
-          "explanation": "this lesson adds the “miss” sense."
+          "explanation": "This lesson adds the “miss” sense."
         },
         {
           "id": "u43-review-e2",
@@ -1022,7 +1022,7 @@ const unit:UnitData = {
             "only"
           ],
           "answer": "soon / almost",
-          "explanation": "This is the this lesson temporal sense."
+          "explanation": "This is this lesson’s temporal sense."
         },
         {
           "id": "u43-review-e3",
@@ -1476,7 +1476,7 @@ const unit:UnitData = {
       "id": "u43-completed-duration",
       "title": "Completed duration with verbal 了",
       "pattern": "Subject + V + 了 + Duration / Subject + V + Object + V + 了 + Duration",
-      "explanation": "Use verbal 了 followed by a duration when an activity is viewed as completed. If a transitive verb keeps its object before the duration, repeat the verb before 了 + Duration: 打網球打了兩個鐘頭. If the object or location is fronted as the topic, the repeated verb is not required: 中文我只學了五個月. This integrates earlier duration grammar, object-repeat duration, and completed-action 了.",
+      "explanation": "Put verbal 了 before a duration to report an amount of activity: 我在臺灣住了一年. In this lesson’s completed-stay context, this means “I lived in Taiwan for one year.” The sentence reports that span; by itself, the absence of a final 了 does not prove the person has permanently stopped living there. When you keep an object before the duration, repeat the verb: 打網球打了兩個鐘頭. Moving the object to the topic position avoids repetition: 中文我只學了五個月. The next pattern explicitly highlights a duration accumulated up to now.",
       "examples": [
         {
           "text": "我在臺灣住了一年。",
@@ -1494,13 +1494,13 @@ const unit:UnitData = {
           "meaning": "I studied Chinese for only five months."
         }
       ],
-      "remember": "Completed duration: verbal 了 + duration. With an object before the duration, repeat the verb; fronting the object/location can avoid the repetition."
+      "remember": "V + 了 + duration reports the realized span. Read context to decide whether it ended; do not infer that from the number of 了 characters alone."
     },
     "u43-duration-to-now": {
       "id": "u43-duration-to-now",
       "title": "Duration accumulated up to now",
       "pattern": "Subject + V + 了 + Duration + 了",
-      "explanation": "Use the double-了 pattern for a duration accumulated up to the time of speaking. The situation may continue or may stop depending on context. Do not treat this as automatically “still continuing.” Contrast it with u43-completed-duration, which presents the duration as completed. 多久了 asks for the accumulated duration; 已經 often appears in this context.",
+      "explanation": "In V + 了 + duration + 了, the first 了 follows the verb and the final 了 presents the accumulated duration as the current situation. 我在臺灣住了半年多了 means “I have been living in Taiwan for a little over half a year.” This often suggests continuation, but the situation may continue or stop depending on context. 已經 can emphasize “already.” 多久了 asks how long it has been up to the time being discussed.",
       "examples": [
         {
           "text": "我在臺灣住了半年多了。",
@@ -1518,13 +1518,13 @@ const unit:UnitData = {
           "meaning": "He has studied Chinese for three weeks up to now."
         }
       ],
-      "remember": "One 了 after the verb + duration can present a completed duration; final 了 adds the “up to now” duration frame. Continuation depends on context."
+      "remember": "The final 了 highlights the duration reached by now. Whether the activity continues depends on context; a sentence with only one 了 does not necessarily describe a finished stay."
     },
     "u43-imminent": {
       "id": "u43-imminent",
       "title": "Something is about to happen",
       "pattern": "快…了 / 要…了 / 快要…了",
-      "explanation": "These patterns present an event or change as imminent. 快 here means “soon/about to,” and 要 is the imminent-event auxiliary “will / going to” in this imminent-event system. In Taiwan Mandarin that Taiwan Mandarin prefers the disyllabic 快要 form. Under the rule here this lesson rule, do not combine an explicit time word such as 明天 directly with 快要: *他明天快要回來了. Use this pattern when the context shows that the event is close, not as a generic future marker.",
+      "explanation": "快…了, 要…了, and 快要…了 announce that an event or change is about to happen. 快 means “soon” here, rather than “fast”; 要 signals an approaching event, rather than a wish. 快下雨了 means it is about to rain, and 比賽要開始了 means the game is about to start. The final 了 announces the approaching change; it is not past tense. The book highlights 快要 as common in Taiwan. Practise this relative “soon” frame without putting a fixed time such as 明天 directly before 快要; for a dated future plan, use the time-and-action patterns you already know.",
       "examples": [
         {
           "text": "快下雨了。",
@@ -1542,7 +1542,7 @@ const unit:UnitData = {
           "meaning": "Dad is about to get home."
         }
       ],
-      "remember": "Imminence, not generic future: 快／要／快要…了. The source prefers 快要 in Taiwan Mandarin and blocks explicit-time + 快要 in this this lesson rule."
+      "remember": "An approaching change: 快／要／快要…了. Use context to establish what counts as soon. These forms are not automatic replacements for every English future tense."
     }
   },
   "grammarIntroductions": [
@@ -1589,7 +1589,7 @@ const unit:UnitData = {
       "text": "我在臺灣住了一年。",
       "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
       "meaning": "I lived in Taiwan for one year.",
-      "note": "Completed-duration pattern.",
+      "note": "In this example, the speaker is reporting a completed one-year stay. 了 follows 住 and 一年 gives the duration. Without that context, the sentence alone does not prove the speaker has left Taiwan.",
       "tokens": [
         "我在臺灣",
         "住了一年"
@@ -1639,7 +1639,7 @@ const unit:UnitData = {
       "text": "我在臺灣住了半年多了。有一點想家。",
       "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le. Yǒu yìdiǎn xiǎng jiā.",
       "meaning": "I have been in Taiwan for a little over half a year. I miss home a little.",
-      "note": "Here 想 means “miss,” not “want to.”",
+      "note": "住了半年多了 gives the duration reached by now; 半年多 is a little over half a year. 想家 means “miss home / feel homesick,” not “want a home.” The subject 我 is understood in the second sentence.",
       "tokens": [
         "我在臺灣住了半年多了",
         "有一點想家"
@@ -1676,7 +1676,7 @@ const unit:UnitData = {
       "text": "你在臺灣住了多久了？",
       "pinyin": "Nǐ zài Táiwān zhù le duōjiǔ le?",
       "meaning": "How long have you been in Taiwan up to now?",
-      "note": "多久了 asks for accumulated duration to the speech point.",
+      "note": "多久 asks how long; final 了 asks about the duration reached up to now. Compare 住了一年, a reported one-year span, with 住了一年了, a year reached so far.",
       "tokens": [
         "你在臺灣",
         "住了多久了"
@@ -1689,7 +1689,7 @@ const unit:UnitData = {
       "text": "快",
       "pinyin": "kuài",
       "meaning": "soon / about to",
-      "note": "This card teaches the “soon/about to” sense before the imminence pattern. Do not change the earlier canonical vocabulary gloss.",
+      "note": "Before an event in 快…了, 快 means “soon / about to,” not “fast.” The following grammar card shows how to form the complete sentence.",
       "tokens": [
         "快"
       ]
@@ -1698,7 +1698,7 @@ const unit:UnitData = {
       "text": "要",
       "pinyin": "yào",
       "meaning": "will / going to in an imminent-event context",
-      "note": "This card teaches the imminent-event auxiliary sense before the imminence pattern. Do not create a second canonical vocabulary row.",
+      "note": "要 before an event can mean “be going to / be about to” in the upcoming 要…了 pattern. It does not express wanting in that use.",
       "tokens": [
         "要"
       ]
@@ -1717,7 +1717,7 @@ const unit:UnitData = {
       "text": "新年快到了。想回去看父母嗎？",
       "pinyin": "Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?",
       "meaning": "New Year is almost here. Do you want to go back to see your parents?",
-      "note": ", presented only after 快/要 and imminence pattern have been explained.",
+      "note": "新年快到了 announces an approaching change: New Year is nearly here. In the question, 想 + 回去 asks whether the listener wants to go back; it is the desire use of 想.",
       "tokens": [
         "新年快到了",
         "想回去看父母嗎"
@@ -1753,7 +1753,7 @@ const unit:UnitData = {
       "text": "因為我們只放十天的假，所以一月五號回來。",
       "pinyin": "Yīnwèi wǒmen zhǐ fàng shí tiān de jià, suǒyǐ yī yuè wǔ hào huílái.",
       "meaning": "Because we only have ten days off, we'll come back on January 5.",
-      "note": "; 因為…所以… is prior review.",
+      "note": "因為 gives the reason and 所以 gives the result. 只 limits the break to ten days. 放十天的假 places the duration inside 放假.",
       "tokens": [
         "因為我們只放十天的假",
         "所以一月五號回來"

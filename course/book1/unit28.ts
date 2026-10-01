@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "amber",
     "label": "Travel time, duration & transport",
     "title": "How Long Is the Trip?",
-    "description": "Master the this lesson duration system while repairing real this lesson travel vocabulary gaps, with each recovered item tied back to time, routes, tickets, or trip planning.",
+    "description": "Master this lesson’s duration system while repairing real this lesson travel vocabulary gaps, with each recovered item tied back to time, routes, tickets, or trip planning.",
     "chars": [
       "年",
       "日",
@@ -1097,7 +1097,7 @@ const unit:UnitData = {
       "meaning": "bus",
       "lessonId": "u28-negation",
       "core": true,
-      "note": "this lesson gives 公共汽車 as the full form and 公車 as the shorter everyday form."
+      "note": "This lesson gives 公共汽車 as the full form and 公車 as the shorter everyday form."
     },
     {
       "text": "中國",
@@ -1574,7 +1574,7 @@ const unit:UnitData = {
         {
           "text": "我想玩兩天。",
           "pinyin": "Wǒ xiǎng wán liǎng tiān.",
-          "meaning": "I want to be away / have fun for two days."
+          "meaning": "I want to spend two days having fun on the trip."
         }
       ],
       "remember": "Ask whether the expression answers “when?” or “for how long?” before deciding its position.",
@@ -1588,7 +1588,7 @@ const unit:UnitData = {
       "id": "u28-object-duration",
       "title": "Repeat the verb when a duration follows an object",
       "pattern": "Subject + Verb + Object + Verb + Duration",
-      "explanation": "When the verb has an object and you also state how long the activity lasts, repeat the verb before the duration. The first verb takes the object; the repeated verb introduces the length of time.",
+      "explanation": "To keep an object directly after a verb and then give a duration, use verb + object + the same verb + duration. In a discussion of a one-year study plan, 我學中文學一年 means “I will study Chinese for one year”: 學中文 names the activity; 學一年 gives its planned length. Context supplies the plan. This sentence does not by itself say “I have already studied for one year.” Completed and up-to-now durations are taught later.",
       "examples": [
         {
           "text": "我學中文學一年。",
@@ -1601,7 +1601,7 @@ const unit:UnitData = {
           "meaning": "I teach Chinese for one year."
         }
       ],
-      "remember": "In this repeated-verb pattern: verb + object + the same verb + duration. Other duration patterns are taught separately.",
+      "remember": "This is one duration pattern, not a rule that every duration sentence must repeat its verb. Here the first verb takes the object and the repeated verb takes the duration.",
       "words": [
         "年"
       ]
@@ -1633,7 +1633,7 @@ const unit:UnitData = {
       "id": "u28-separable-duration",
       "title": "Insert duration into a separable verb",
       "pattern": "V + Duration + (的) + Object",
-      "explanation": "With a separable verb, the duration can go between the verb and its object. this lesson shows both forms with and without 的. 放假 can become 放三天的假, and 唱歌 can become 唱三個鐘頭的歌.",
+      "explanation": "Some familiar expressions contain a verb and its object, such as 放假 and 唱歌. In the pattern here, insert the duration between those parts: 放 + 三天 + 假, or 唱 + 三個鐘頭的 + 歌. Both 放三天假 and 放三天的假 work. In a plan for a singing session, 我唱三個鐘頭的歌 means “I will sing for three hours”; it does not mean that one song lasts three hours. Do not split an arbitrary two-character word this way.",
       "examples": [
         {
           "text": "我們放三天的假。",
@@ -1699,7 +1699,7 @@ const unit:UnitData = {
       "text": "我在家看影片。",
       "pinyin": "Wǒ zài jiā kàn yǐngpiàn.",
       "meaning": "I watch films at home.",
-      "note": "影片 is the this lesson word for film or video.",
+      "note": "影片 is this lesson’s word for film or video.",
       "tokens": [
         "我",
         "在家",
@@ -1709,7 +1709,7 @@ const unit:UnitData = {
     "u28-two-days": {
       "text": "我想玩兩天。",
       "pinyin": "Wǒ xiǎng wán liǎng tiān.",
-      "meaning": "I want to be away / have fun for two days.",
+      "meaning": "I want to spend two days having fun on the trip.",
       "note": "兩天 is a duration and follows 玩.",
       "tokens": [
         "我",
@@ -1724,7 +1724,7 @@ const unit:UnitData = {
       "text": "我學中文學一年。",
       "pinyin": "Wǒ xué Zhōngwén xué yì nián.",
       "meaning": "I study Chinese for one year.",
-      "note": "The verb 學 repeats because 中文 is an object before the duration.",
+      "note": "Context: you are explaining a one-year study plan. 學中文 names the activity and 學一年 gives its duration. This bare pattern does not mean “I have already studied for a year.”",
       "tokens": [
         "我學中文",
         "學一年"
@@ -1805,7 +1805,7 @@ const unit:UnitData = {
       "text": "坐高鐵或是坐火車都可以。",
       "pinyin": "Zuò gāotiě huòshì zuò huǒchē dōu kěyǐ.",
       "meaning": "Taking the HSR or taking the train are both possible.",
-      "note": "或是 links alternatives: A or B.",
+      "note": "或是 joins alternatives inside this statement: taking the HSR or taking the train are both acceptable. Contrast the direct choice question with 還是, which asks the listener to select an option.",
       "tokens": [
         "坐高鐵",
         "或是",
@@ -1828,7 +1828,7 @@ const unit:UnitData = {
       "text": "在高鐵站或是便利商店都可以。",
       "pinyin": "Zài gāotiě zhàn huòshì biànlì shāngdiàn dōu kěyǐ.",
       "meaning": "Either at an HSR station or at a convenience store is fine.",
-      "note": "This combines the this lesson ticket-buying locations with 或是.",
+      "note": "The previous question is where to buy tickets. The reply leaves 買票 understood and names two possible locations with 或是. 都可以 says both options work in this practice scenario.",
       "tokens": [
         "在高鐵站",
         "或是",

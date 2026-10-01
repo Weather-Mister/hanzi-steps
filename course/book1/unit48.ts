@@ -73,7 +73,7 @@ const unit:UnitData = {
             "than / comparison"
           ],
           "answer": "to / marking the addressee",
-          "explanation": "This is the this lesson recipient/addressee expansion."
+          "explanation": "This is this lesson’s recipient/addressee expansion."
         },
         {
           "id": "u48-gen-s2",
@@ -185,7 +185,7 @@ const unit:UnitData = {
             "a few"
           ],
           "answer": "it would be best / should",
-          "explanation": "最好 is the this lesson advice frame."
+          "explanation": "最好 is this lesson’s advice frame."
         },
         {
           "id": "u48-advice-review",
@@ -1874,8 +1874,8 @@ const unit:UnitData = {
     "u48-a-little-degree": {
       "id": "u48-a-little-degree",
       "title": "一點 — quantity and degree",
-      "pattern": "一點 + NP / Vs + 一點 / 有（一）點 + Vs / 一點點",
-      "explanation": "一點 + NP gives a small quantity; Vs + 一點 gives a slightly different degree, often comparative; 有（一）點 + Vs gives a slight state rather than a comparison; 一點點 emphasizes a tiny amount or degree.",
+      "pattern": "一點 + noun / description + 一點 / 有（一）點 + description / 一點點",
+      "explanation": "Position changes the meaning of 一點. Before a noun, it means a small quantity: 一點東西, a few things or a little something. After a description, it gives a small difference: 好一點, a little better; 早一點, a little earlier. Before a description, 有（一）點 states a slight degree, often a mild complaint: 有一點冷, a little cold. 一點點 emphasizes a tiny amount or degree. Thus 有一點冷 does not mean colder than before, and 好一點 does not simply mean slightly good.",
       "examples": [
         {
           "text": "一點東西",
@@ -1893,13 +1893,13 @@ const unit:UnitData = {
           "meaning": "a little cold"
         }
       ],
-      "remember": "Post-state 一點 can express comparative improvement; pre-state 有（一）點 expresses a slight state."
+      "remember": "Quantity: 一點 + noun. Small difference: description + 一點. Slight state: 有（一）點 + description. 一點點 means just a tiny bit."
     },
     "u48-action-comparison-de": {
       "id": "u48-action-comparison-de",
       "title": "Comparing actions with 得",
       "pattern": "Comparative + Action + 得 + State / Action + 得 + Comparative + State",
-      "explanation": "Compare how an action is performed using 得 de with 比. Pattern 2 often repeats the verb where an object/action noun requires it. 不 precedes 比; questions use 嗎 or 是不是. This 得 is complement de, not modal děi.",
+      "explanation": "得 (de) links an action to how it is performed. To compare two people, put 比 + person before the action, as in 他比我走得快, or inside the 得 description, as in 他走路走得比我快. Both say he walks faster than I do. In the second example, 走路 names the activity and the repeated 走 introduces 得; 得 follows the verb, not 路. Put 不 before 比 to deny that one exceeds the other. This does not necessarily mean the first person is slower: they could be equally fast.",
       "examples": [
         {
           "text": "他比我走得快。",
@@ -1917,13 +1917,13 @@ const unit:UnitData = {
           "meaning": "After taking one packet of medicine, I slept better than yesterday."
         }
       ],
-      "remember": "Action comparison uses complement 得 de; put 不 before 比."
+      "remember": "Keep 得 immediately after the verb. Compare A 比 B + verb + 得 + description with A + verb + object + verb + 得 + 比 B + description. This 得 is de, not “must” děi."
     },
     "u48-comparison-degree": {
       "id": "u48-comparison-degree",
       "title": "Degree complements in comparisons",
       "pattern": "…一點 / …得多 / …多了",
-      "explanation": "Use 一點 for a small comparison difference and 得多 or 多了 for a large difference. Keep this state-degree system distinct from action comparison with 得.",
+      "explanation": "Put a degree phrase after the comparison’s description to show how large the difference is. 大一點 means a little bigger; 遠得多 means much farther; 舒服多了 means much more comfortable. 得多 and 多了 both mark a large difference here. Do not interpret 多了 as a past-tense ending, or add 很 between 比 B and the description. In 走得快, 得 links an action to its performance; in 遠得多, 得多 marks the size of a difference.",
       "examples": [
         {
           "text": "他的房間比我的大一點。",
@@ -1938,16 +1938,16 @@ const unit:UnitData = {
         {
           "text": "晚上比早上舒服多了。",
           "pinyin": "Wǎnshang bǐ zǎoshang shūfu duō le.",
-          "meaning": "The evening is much more comfortable than the morning."
+          "meaning": "It is much more comfortable in the evening than in the morning."
         }
       ],
-      "remember": "Use 一點 for a small difference; 得多 / 多了 for a much larger difference."
+      "remember": "A small difference: description + 一點. A large difference: description + 得多 or 多了. The comparison target may be stated with 比 or understood from context."
     },
     "u48-separable-verbs": {
       "id": "u48-separable-verbs",
       "title": "Separable verbs and insertion",
-      "pattern": "V + inserted material + N",
-      "explanation": "Certain V+N forms can separate for verbal 了, recipient/object material, or duration. this lesson productive forms are restricted to lexically available separable verbs.",
+      "pattern": "verb + inserted material + noun",
+      "explanation": "Some familiar expressions have a verb + noun structure whose parts can separate. In 回了家, 了 follows the verb 回 and precedes 家. In 見你一面, the person 你 and the count 一 come between 見 and 面: “meet you once.” In 睡了八個小時的覺, the duration appears between 睡 and 覺: “slept for eight hours.” These are word-specific patterns, not permission to split every two-character verb or insert every kind of phrase into every separable expression.",
       "examples": [
         {
           "text": "他回了家以後，就開始工作。",
@@ -1965,7 +1965,7 @@ const unit:UnitData = {
           "meaning": "slept for eight hours"
         }
       ],
-      "remember": "Insert the material between the verbal and nominal parts; only split forms already lexically available."
+      "remember": "Identify the verb and noun in each taught expression. Compare 回家 → 回了家; 見面 → 見你一面; 睡覺 → 睡了八個小時的覺."
     }
   },
   "grammarIntroductions": [
@@ -2004,7 +2004,7 @@ const unit:UnitData = {
       "text": "跟老師說",
       "pinyin": "gēn lǎoshī shuō",
       "meaning": "say/tell it to the teacher",
-      "note": "跟 marks the recipient/addressee.",
+      "note": "With 說, 跟 + person can name the listener: 跟老師說, say or tell it to the teacher. Put the listener before 說. Compare 跟朋友去看電影, where 跟 names a companion in the activity.",
       "tokens": [
         "跟老師說"
       ]
@@ -2013,7 +2013,7 @@ const unit:UnitData = {
       "text": "跟朋友去看電影",
       "pinyin": "gēn péngyǒu qù kàn diànyǐng",
       "meaning": "go watch a movie with a friend",
-      "note": "Earlier companionship sense.",
+      "note": "跟朋友 names who goes along to the movie. Compare 跟老師說, where the following verb 說 makes the person the addressee instead.",
       "tokens": [
         "跟朋友去看電影"
       ]
@@ -2058,7 +2058,7 @@ const unit:UnitData = {
       "text": "你自己要多小心。油的、冰的東西最好都別吃。",
       "pinyin": "Nǐ zìjǐ yào duō xiǎoxīn. Yóu de, bīng de dōngxi zuìhǎo dōu bié chī.",
       "meaning": "Take extra care of yourself. It would be best not to eat oily or icy things.",
-      "note": "practice phrase.",
+      "note": "最好 gives advice: “it would be best to…”. 都 applies the warning 別吃 to both listed categories. 油的、冰的 use 的 to describe oily and icy-cold things. This is the friend’s advice in the conversation.",
       "tokens": [
         "你自己要多小心。油的、冰的東西最好都別吃。"
       ]
@@ -2085,7 +2085,7 @@ const unit:UnitData = {
       "text": "好一點了／好多了／好得多了",
       "pinyin": "hǎo yìdiǎn le / hǎo duō le / hǎo de duō le",
       "meaning": "a little better / much better / much better",
-      "note": "practice phrase; structures remain distinct.",
+      "note": "好一點了 means a little better now; 好多了 and 好得多了 mean much better now. 一點 marks a small change, while 多／得多 marks a large one. Final 了 presents the improvement as a new situation.",
       "tokens": [
         "好一點了／好多了／好得多了"
       ]

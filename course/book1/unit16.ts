@@ -2092,7 +2092,7 @@ const unit:UnitData = {
         {
           "text": "我媽媽喜歡自己做飯。",
           "pinyin": "Wǒ māma xǐhuān zìjǐ zuòfàn.",
-          "meaning": "My mom likes to cook herself."
+          "meaning": "My mom likes to do her own cooking."
         }
       ],
       "remember": "自己 goes before the action it emphasizes; 做飯 names the activity.",
@@ -2171,7 +2171,7 @@ const unit:UnitData = {
       "id": "u16-object-repeat",
       "title": "Repeat the verb after its object",
       "pattern": "verb + object + same verb + 得 + description",
-      "explanation": "If you keep an object immediately after the action verb, repeat the verb before 得. 做飯 becomes 做飯做得很好. 做甜點 becomes 做甜點做得不錯. If the object is understood, you can simply say 做得很好.",
+      "explanation": "One useful way to keep both an object and a description of the action is to repeat the verb: 做飯做得很好. The first 做 takes 飯 as its object; the second 做 is followed immediately by 得 and the description 很好. This is the repeated-verb pattern being practised, not the only possible word order. When the object is understood, 做得很好 is enough; the next card shows an object placed first as the topic.",
       "examples": [
         {
           "text": "我姐姐做飯做得很好。",
