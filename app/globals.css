@@ -2204,3 +2204,8 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .knowledge-answer{max-width:600px;overflow-wrap:anywhere}
 .knowledge-answer p{margin:9px 0!important}
 .knowledge-answer [lang]{font-size:1.3rem}
+
+.character-sense-learned{background:color-mix(in srgb,var(--unit-tint,#eef4ff) 55%,white);border-radius:10px;padding:10px 11px}
+.character-sense-learned+li{margin-top:8px}
+.character-sense-badge{display:inline-flex;align-items:center;min-height:22px;padding:2px 7px;border-radius:999px;background:var(--unit-accent,#4b73b5);color:white;font-size:.64rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
+.character-sense-learned .character-sense-example{font-size:1.18rem;font-weight:650}
