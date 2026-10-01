@@ -439,14 +439,14 @@ const unit:UnitData = {
         {
           "id": "u34-need-s2",
           "type": "select",
-          "prompt": "我先念一年中文，再念兩年大學，所以需要三年。 How are the three years planned?",
+          "prompt": "我先念中文，再念大學，這個計畫要五年。 Which sentence says 'So I need five years'?",
           "options": [
-            "One year of Chinese first, then two years at university",
-            "Two years at university first, then one year of Chinese",
-            "Chinese and university together for only two years"
+            "所以需要五年。",
+            "所以先念五年。",
+            "所以五年很久。"
           ],
-          "answer": "One year of Chinese first, then two years at university",
-          "explanation": "先…再… puts the periods in sequence. 一年 plus 兩年 gives 三年, and 所以需要 states the resulting time needed.",
+          "answer": "所以需要五年。",
+          "explanation": "先…再… gives the order of the plan, and the context already gives its five-year length. 所以需要五年 uses 所以 to state the result and 需要 to say that five years are needed; the other choices change the meaning.",
           "grammarIds": [
             "u34-first-then",
             "u16-result"
