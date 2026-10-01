@@ -6,8 +6,7 @@ import {books,units} from '../course/runtime';
 /** Optional reference: these senses never replace the course's primary meaning. */
 export function CharacterMeanings({hanzi,completed,showPinyin=true,expanded=false,primaryMeaning}:{hanzi:string;completed?:Set<string>;showPinyin?:boolean;expanded?:boolean;primaryMeaning?:string}){
  const learned=completed?learnedWordsForCharacter(hanzi,completed):[];
- const learnedTexts=new Set(learned.map(word=>word.text));
- const senses=characterMeanings(hanzi).filter(sense=>!learnedTexts.has(sense.example.text));
+ const senses=characterMeanings(hanzi);
  if(!learned.length&&!senses.length)return null;
  return <details className="character-meanings" open={expanded||undefined}>
   <summary>Other common meanings of <span lang="zh-Hant-TW">{hanzi}</span></summary>
