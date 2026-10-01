@@ -38,8 +38,11 @@ test('generated listening choices only use distinct learned meanings',()=>{
   const sourcePosition=lessonPosition.get(source.lessonId)??Infinity;
   for(const distractor of item.distractors){
    assert.notEqual(distractor.text,source.meaning,item.id+' distractor duplicates the answer');
-   const match=listeningItems.map(other=>resolveSentence(other.source)).find(sentence=>sentence?.meaning===distractor.text);
-   if(match)assert.ok((lessonPosition.get(match.lessonId)??Infinity)<=sourcePosition,item.id+' exposes a future distractor');
+   if(item.id.startsWith('course-')){
+    const match=listeningItems.map(other=>resolveSentence(other.source)).find(sentence=>sentence?.meaning===distractor.text);
+    assert.ok(match,item.id+' generated distractor must come from another course sentence');
+    assert.ok((lessonPosition.get(match.lessonId)??Infinity)<=sourcePosition,item.id+' exposes a future distractor');
+   }
   }
  }
 });
