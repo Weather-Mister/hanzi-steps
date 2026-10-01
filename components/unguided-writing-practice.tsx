@@ -23,7 +23,6 @@ export function UnguidedWritingPractice({
  },[open,char]);
 
  if(!char||!characters[char])return null;
- const character=characters[char];
  function continueRound(){
   setComplete(false);
   setAssisted(false);
@@ -34,11 +33,11 @@ export function UnguidedWritingPractice({
    <div className="unguided-writing-heading">
     <span className="unguided-writing-icon"><InfinityIcon size={22}/></span>
     <div>
-     <DialogTitle>Unguided practice · <span lang="zh-Hant-TW">{char}</span></DialogTitle>
-     <DialogDescription>{character.pinyin} · {character.meaning} · Round {round}</DialogDescription>
+     <DialogTitle>Unguided practice</DialogTitle>
+     <DialogDescription>Round {round} · write the selected character from memory.</DialogDescription>
     </div>
    </div>
-   <p className="unguided-writing-note">Write from memory. A missed stroke reveals that stroke, then the same round continues. Nothing here changes your course progress.</p>
+   <p className="unguided-writing-note">The answer stays hidden while you write. A missed stroke reveals only that stroke, then the same round continues. Nothing here changes your course progress.</p>
    <WritingPad
     key={char+':free:'+round}
     char={char}
