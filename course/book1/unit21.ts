@@ -2145,7 +2145,7 @@ const unit:UnitData = {
       "text": "我後天和朋友見面。",
       "pinyin": "Wǒ hòutiān hé péngyǒu jiànmiàn.",
       "meaning": "I will meet a friend the day after tomorrow.",
-      "note": "見面 is a separable verb meaning to meet.",
+      "note": "後天 (hòutiān) means the day after tomorrow. 和朋友 identifies who I meet; 見面 is meet. Keep the time before the meeting activity.",
       "tokens": [
         "我",
         "後天",
@@ -2300,3 +2300,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

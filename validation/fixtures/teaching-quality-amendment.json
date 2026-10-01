@@ -1,0 +1,81 @@
+{
+  "reason": "Sentence-by-sentence teaching review; see docs/teaching-quality-review.md. Preserve IDs, ownership and checkpoint sequences; document intentional explanation and assessment corrections.",
+  "records": {
+    "characters": {
+      "房": {
+        "before": "7670e74d3bc2bbbe3a08f08253645c6967051c765de724d40157a3309401fffd",
+        "after": "3dbc0369a4b27f46c0f13b704ff83b557e11d695ac282dbc36f2c130b557b3ab"
+      }
+    },
+    "phrases": {
+      "u6-mom": {
+        "before": "e869378afe153b2c81cf148bd97ca6747ae63c32a4119ba55cb7b40e9572b1c1",
+        "after": "cdb756f71c0e913d900c9c046184197941af52c065b560f00989393a124437e8"
+      },
+      "u6-sisters": {
+        "before": "c573d8785529fadd4f8ce30ac3af2ac0bca634a93713126b3f8a7f3b2f2541b4",
+        "after": "6e01a4f8fce5d3d92557cfa8633c16d48b942a89a3ccc86d0df1b8429b6b00cc"
+      },
+      "u6-no-sister": {
+        "before": "f7ae3d574859e2563bc6539a8dac9628519ae3a0a61df7f04edeb223127a18b7",
+        "after": "770c7dfa19b02fcece83df1571a43f90f4441bc60251823c76a17e43e44ea830"
+      },
+      "u6-who": {
+        "before": "d2664c886e5b7e20ad62ac89fad51a9726b7cbcfd03120ed824fbd977cf66d4d",
+        "after": "256770840601b0449a74e9bf3c7a67e616dbcf1e9914ae49ae5aa63320de0583"
+      },
+      "u6-sister": {
+        "before": "c4e52556a9c7899f21f6bdfeeefa02287b00cf3ede1f130bee0e3f4f001e6b73",
+        "after": "7dc5746399b84a4a4d5a6900e1fae414f1f6cf4f9985436139aac77c2807e9ff"
+      },
+      "u6-which-brother": {
+        "before": "efeefe273edb21cb1b7216b00c0738c1409b27e71e3c7217622a99070501f5c7",
+        "after": "7d00fc04d17b921a14b22bee79ba9a5a3811e47e011c58b282a343fba508aea7"
+      },
+      "u6-one-photo": {
+        "before": "96ea70578515e975924e7ac2ae3f1757cc852c85e882dafca9264d70f203ea89",
+        "after": "c36e3827b9a8b1af96b42d0a4e833609e14babaedafdfcca68535c5113f21c95"
+      },
+      "u6-two-photos": {
+        "before": "2cafec219075d86ea71f0e807661732496df80733053671a1191cb1dc1d58508",
+        "after": "c3ad3ee868bc829e83ae9d7774ab6613fbc42489d42cc3cf4ddc22ae17666f37"
+      },
+      "u6-this-photo": {
+        "before": "0a8cd112877ec05da6f912d0198e52f82492686e44407af2b3447f4ca56f0511",
+        "after": "d16ed1a255fc4e42e91f1e80bc791a3f8e66278bf8fb1893252bfbc25a7625b0"
+      },
+      "u6-have-photos": {
+        "before": "d4e6d38091de664ea027532e5f497bfe59edf72c2de431f8229cdc15dcc58828",
+        "after": "32ec61f4a67dfd911bd9192bfdfd5e4098a7137db2cd4da841735183c0bdc7d6"
+      },
+      "u6-whose": {
+        "before": "4655355753f6aac7ef760ee251d346b2317651dc88e2b5f6e20554d130f3b823",
+        "after": "af5dfc5b6bbe83332298168da77848dca3f77580b2bf38f0074285bab7aff489"
+      },
+      "u6-sister-photo": {
+        "before": "834eaf0a44a86876383b73e15aba10de990c137ec3352e5d4402cde6ea41c51d",
+        "after": "72abd93a61d36fd747707567b318ba5bebfc5a38f836999da3d75a08cb9022af"
+      },
+      "u6-my-home": {
+        "before": "29b2ad080485bd5abfabdba8b5e81c3ec20c6607931c0f166b45c6eecaf0ea36",
+        "after": "231db564859aa2c5e4a81ceb44b3ba065e84e42ebf3c66719a2fc94d284c9a7a"
+      },
+      "u6-my-photo": {
+        "before": "0f350d7276ba586993f9b93e3017c79297634ae7ef927de63b8132aa011bff43",
+        "after": "03c43aa860c1dbdc8874d9c0a82175be1102cfb7acab74835a3e8da064053d21"
+      },
+      "u6-ask-brother": {
+        "before": "3dad8c5e98eff708384fece084f52ec8f3ce2e7faa503c166681319b916ca450",
+        "after": "da51d4e3ed3e9ba004b8cb23431e94ac772801f13d43888e3b032efbb0763f19"
+      },
+      "u6-answer-brother": {
+        "before": "417a7b6a9c8fd842df39a18fc7d8129dbbb05a0b8c9a3fa11ccdfb751d5be57a",
+        "after": "88779b603097cad861c9017cd031a610006965aa49a3be952fbf36d4faa64234"
+      },
+      "u6-final": {
+        "before": "c71428d31139a273f7303fb7fc798e32eb618a5a925b627dbd8fc4ade46aac0d",
+        "after": "aa001d3f1b61f82f46f3220513c1083e35123720c9671d8f93056b10fd0e231f"
+      }
+    }
+  }
+}

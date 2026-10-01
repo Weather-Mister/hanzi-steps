@@ -798,14 +798,10 @@ const unit:UnitData = {
         {
           "id": "u38-review-g4",
           "type": "select",
-          "prompt": "Which statement about 一…就… questions is accurate?",
-          "options": [
-            "Use 嗎 or 是不是; ordinary A-not-A is unavailable.",
-            "Only A-not-A is possible.",
-            "Questions cannot use 嗎."
-          ],
-          "answer": "Use 嗎 or 是不是; ordinary A-not-A is unavailable.",
-          "explanation": "Both 嗎 and 是不是 are valid here; ordinary A-not-A is not.",
+          "prompt": "Which pair can ask for confirmation of the whole 一…就… sequence?",
+          "options": ["Use 嗎 or 是不是.","Only A-not-A is possible.","Questions cannot use 嗎."],
+          "answer": "Use 嗎 or 是不是.",
+          "explanation": "Either add 嗎 to the statement or use 是不是 to check the whole sequence. Do not insert a repeated verb into the taught 一…就… frame.",
           "grammarIds": [
             "u38-yi-jiu"
           ]
@@ -950,7 +946,7 @@ const unit:UnitData = {
       "zhuyin": "ㄐㄧㄠ",
       "meaning": "exchange; hand over",
       "strokes": 6,
-      "note": "交 appears in 交換 jiāohuàn, “exchange.” Learn the two-character word as a unit.",
+      "note": "交 appears in 交換 jiāohuàn, “exchange.” Learn the two-character word as a unit. 語言 yǔyán means language; 語言交換 means language exchange, helping each other practise languages.",
       "memory": "A dot and horizontal sit over two small strokes and a wide crossing pair. The crossing shape is a visual cue for exchange.",
       "parts": [
         {
@@ -1228,7 +1224,7 @@ const unit:UnitData = {
       "text": "我們做語言交換。",
       "pinyin": "Wǒmen zuò yǔyán jiāohuàn.",
       "meaning": "We do a language exchange.",
-      "note": "Learner-safe setup before the Spanish-language phrase is introduced in the next lesson.",
+      "note": "語言 (yǔyán) means language and 交換 (jiāohuàn) means exchange. 語言交換 is language exchange, where partners help each other practise their languages. 做 names taking part in it.",
       "tokens": [
         "我們做",
         "語言交換"
@@ -1238,7 +1234,7 @@ const unit:UnitData = {
       "text": "語言交換的時候，你那麼熱心教我西班牙文。",
       "pinyin": "Yǔyán jiāohuàn de shíhou, nǐ nàme rèxīn jiāo wǒ Xībānyá wén.",
       "meaning": "During language exchange, you were so enthusiastic about teaching me Spanish.",
-      "note": "This conversation with the name omitted.",
+      "note": "語言交換的時候 sets the occasion. 那麼熱心 means so enthusiastic or helpful, and 教我西班牙文 says what the listener helped teach: Spanish.",
       "tokens": [
         "語言交換的時候",
         "你那麼熱心",
@@ -1249,7 +1245,7 @@ const unit:UnitData = {
       "text": "不必客氣，你也一樣。",
       "pinyin": "Búbì kèqi, nǐ yě yíyàng.",
       "meaning": "No need to be so polite; you are the same.",
-      "note": "Source turn 8 with the source second-person form normalized to 你.",
+      "note": "不必客氣 responds warmly to thanks: no need to be so polite. 你也一樣 returns the compliment, meaning you are helpful too in this exchange. 太客氣 (tài kèqi) means too polite or too kind and can acknowledge someone's generous offer.",
       "tokens": [
         "不必客氣",
         "你也一樣"
@@ -1259,7 +1255,7 @@ const unit:UnitData = {
       "text": "明天我想請你吃晚飯，給你過生日。",
       "pinyin": "Míngtiān wǒ xiǎng qǐng nǐ chī wǎnfàn, gěi nǐ guò shēngrì.",
       "meaning": "Tomorrow I'd like to treat you to dinner and celebrate your birthday.",
-      "note": "Source turn 9.",
+      "note": "明天 sets the time. 請你吃晚飯 offers dinner as a treat; 給你過生日 explains that it is to celebrate your birthday. 過生日 is the activity of celebrating a birthday.",
       "tokens": [
         "明天我想請你吃晚飯",
         "給你過生日"
@@ -1269,7 +1265,7 @@ const unit:UnitData = {
       "text": "你太客氣了！我們在哪裡見面呢？",
       "pinyin": "Nǐ tài kèqi le! Wǒmen zài nǎlǐ jiànmiàn ne?",
       "meaning": "You're too kind! Where shall we meet?",
-      "note": "Source turn 10 with the source second-person form normalized to 你.",
+      "note": "你太客氣了 acknowledges the generous offer: you're too kind. The next question asks where to meet; 呢 gives it a conversational follow-up tone, while 哪裡 supplies the question.",
       "tokens": [
         "你太客氣了",
         "我們在哪裡見面呢"
@@ -1279,7 +1275,7 @@ const unit:UnitData = {
       "text": "明天我一下課，就去你們學校找你。",
       "pinyin": "Míngtiān wǒ yí xiàkè, jiù qù nǐmen xuéxiào zhǎo nǐ.",
       "meaning": "Tomorrow, as soon as class ends, I'll go to your school to find you.",
-      "note": "Source turn 11.",
+      "note": "一下課 gives the trigger, as soon as class ends. 就去…找你 gives the immediate following action. 明天 makes this a future plan, and 你們學校 is the destination.",
       "tokens": [
         "明天我一下課",
         "就去你們學校找你"
@@ -1292,7 +1288,7 @@ const unit:UnitData = {
       "text": "那裡一沒人，我就回家。",
       "pinyin": "Nàlǐ yì méi rén, wǒ jiù huí jiā.",
       "meaning": "As soon as nobody is there, I go home.",
-      "note": "Learner-safe negative Event A example.",
+      "note": "沒人 means nobody is there. 一 places that negative situation in the trigger slot; 我就回家 gives the immediate response, going home.",
       "tokens": [
         "那裡一沒人",
         "我就回家"
@@ -1305,7 +1301,7 @@ const unit:UnitData = {
       "text": "老闆今天早上一到公司，就不開心。",
       "pinyin": "Lǎobǎn jīntiān zǎoshang yí dào gōngsī, jiù bù kāixīn.",
       "meaning": "As soon as the boss got to the company this morning, he was unhappy.",
-      "note": "Negative Event B example.",
+      "note": "一到公司 means as soon as the boss arrives at the company. 就 links the immediate result, 不開心. 不 belongs before 開心 in the result clause; it does not negate arriving.",
       "tokens": [
         "老闆今天早上一到公司",
         "就不開心"
@@ -1318,7 +1314,7 @@ const unit:UnitData = {
       "text": "大概幾點？五點左右。",
       "pinyin": "Dàgài jǐ diǎn? Wǔ diǎn zuǒyòu.",
       "meaning": "About what time? Around five.",
-      "note": "Source turns 12–13.",
+      "note": "大概幾點 asks approximately what time. 五點左右 replies around five; 左右 follows the time rather than preceding it.",
       "tokens": [
         "大概幾點",
         "五點左右"
@@ -1328,7 +1324,7 @@ const unit:UnitData = {
       "text": "好，我會在學校門口等你。",
       "pinyin": "Hǎo, wǒ huì zài xuéxiào ménkǒu děng nǐ.",
       "meaning": "Okay, I'll wait for you at the school entrance.",
-      "note": "Source turn 14 with the source second-person form normalized to 你.",
+      "note": "會 here presents the planned future action, waiting. 在學校門口 locates it at the school entrance, and 等你 says who the speaker will wait for.",
       "tokens": [
         "好",
         "我會在學校門口等你"
@@ -1346,3 +1342,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

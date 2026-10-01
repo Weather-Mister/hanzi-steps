@@ -45,10 +45,11 @@ function canBeTopicOrSubject(token:string|undefined):boolean{
 export function isOrderAnswerAccepted(
  answerTokens:string[],
  canonicalTokens:string[],
- options:{strict?:boolean}={},
+ options:{strict?:boolean;alternatives?:string[][]}={},
 ):boolean{
  if(sameTokens(answerTokens,canonicalTokens))return true;
  if(options.strict||answerTokens.length!==canonicalTokens.length)return false;
+ if(options.alternatives?.some(tokens=>sameTokens(answerTokens,tokens)))return true;
 
  const leading=leadingTimeCount(canonicalTokens);
  if(leading>0&&leading<canonicalTokens.length&&canBeTopicOrSubject(canonicalTokens[leading])){

@@ -1842,7 +1842,7 @@ const unit:UnitData = {
       "text": "你有什麼建議？",
       "pinyin": "Nǐ yǒu shénme jiànyì?",
       "meaning": "What suggestions do you have?",
-      "note": "Here 建議 is a noun.",
+      "note": "建議 is a noun here: a suggestion. 有什麼建議 asks what suggestions the listener has. In 我建議…, the same word can function as a verb, I suggest….",
       "tokens": [
         "你有",
         "什麼建議"

@@ -1570,7 +1570,7 @@ const unit:UnitData = {
       "text": "下雪的時候，我常去山上滑雪。",
       "pinyin": "Xiàxuě de shíhou, wǒ cháng qù shānshàng huáxuě.",
       "meaning": "When it snows, I often go skiing in the mountains.",
-      "note": "…的時候 is review here.",
+      "note": "Add 的時候 to 下雪 to say when it snows. That time clause comes before the main statement; 常 marks a habit and 去山上滑雪 means go skiing in the mountains.",
       "tokens": [
         "下雪的時候",
         "我常去山上滑雪"
@@ -1589,7 +1589,7 @@ const unit:UnitData = {
       "text": "我怕冷。我比較喜歡春天。",
       "pinyin": "Wǒ pà lěng. Wǒ bǐjiào xǐhuān chūntiān.",
       "meaning": "I'm sensitive to the cold. I prefer spring.",
-      "note": "Seasonal preference sentence.",
+      "note": "怕冷 means be sensitive to or dislike the cold. 比較喜歡 expresses a relative preference: the speaker prefers spring, with the alternative understood from the conversation.",
       "tokens": [
         "我怕冷",
         "我比較喜歡春天"
@@ -1599,7 +1599,7 @@ const unit:UnitData = {
       "text": "春天不錯，天氣很舒服。",
       "pinyin": "Chūntiān búcuò, tiānqì hěn shūfu.",
       "meaning": "Spring is nice; the weather is comfortable.",
-      "note": "All support in this sentence is already known.",
+      "note": "不錯 gives a positive judgment about spring. The second clause explains that the weather feels comfortable; 天氣 is the subject of 很舒服.",
       "tokens": [
         "春天不錯",
         "天氣很舒服"
@@ -1609,7 +1609,7 @@ const unit:UnitData = {
       "text": "冬天太冷了。",
       "pinyin": "Dōngtiān tài lěng le.",
       "meaning": "Winter is too cold.",
-      "note": "Seasonal comment; 太…了 is review.",
+      "note": "冬天 sets the season. 太冷了 expresses that it is too cold; 了 belongs to this 太…了 expression and does not make the sentence past tense.",
       "tokens": [
         "冬天",
         "太冷了"
@@ -1619,7 +1619,7 @@ const unit:UnitData = {
       "text": "春天、夏天、秋天、冬天。",
       "pinyin": "Chūntiān, xiàtiān, qiūtiān, dōngtiān.",
       "meaning": "spring, summer, autumn, winter",
-      "note": "The complete four-season set.",
+      "note": "The seasons in order are 春天 spring, 夏天 summer, 秋天 autumn, and 冬天 winter. 天 is part of each season name here, rather than a count of individual days.",
       "tokens": [
         "春天",
         "夏天",
@@ -1720,3 +1720,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

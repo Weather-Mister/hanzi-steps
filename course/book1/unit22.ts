@@ -2158,7 +2158,7 @@ const unit:UnitData = {
       "text": "我下午四點半有比賽。",
       "pinyin": "Wǒ xiàwǔ sì diǎn bàn yǒu bǐsài.",
       "meaning": "I have a game at 4:30 in the afternoon.",
-      "note": "四點半 is 4:30.",
+      "note": "下午四點半 means 4:30 in the afternoon. 半 after 點 adds half an hour. 有比賽 says the speaker has a game scheduled.",
       "tokens": [
         "我",
         "下午四點半",
@@ -2380,3 +2380,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

@@ -542,14 +542,14 @@ const unit:UnitData = {
         {
           "id": "u39-negation-s3",
           "type": "select",
-          "prompt": "Which form is more common in Taiwan Mandarin here?",
+          "prompt": "You want to deny that an event happened. Which expression can go before the verb?",
           "options": [
             "沒有 + Verb",
             "bare 沒 is impossible",
             "不 + 了"
           ],
           "answer": "沒有 + Verb",
-          "explanation": "Bare 沒 + V remains grammatical."
+          "explanation": "沒有 + verb denies that an event happened. Bare 沒 + verb is grammatical too. This is a choice of meaning and construction, not a test of which form is most popular."
         },
         {
           "id": "u39-negation-s4",
@@ -1067,7 +1067,7 @@ const unit:UnitData = {
       "zhuyin": "ㄓㄨ",
       "meaning": "pig; pork",
       "strokes": 15,
-      "note": "豬 zhū means “pig.” In 豬腳 zhūjiǎo, it identifies pork trotters as a food.",
+      "note": "豬 zhū means “pig.” In 豬腳 zhūjiǎo, it identifies pork trotters as a food. 麵線 miànxiàn means thin wheat noodles; 豬腳麵線 combines pork trotters and these noodles.",
       "memory": "The pig component 豕 sits beside 者. Keep the long slanting strokes on the left separate from the right-hand block.",
       "parts": [
         {
@@ -1293,7 +1293,7 @@ const unit:UnitData = {
       "text": "哪裡，哪裡！這是我給你的禮物。",
       "pinyin": "Nǎlǐ, nǎlǐ! Zhè shì wǒ gěi nǐ de lǐwù.",
       "meaning": "Don't mention it! This is my gift for you.",
-      "note": "Conversation turn. 哪裡哪裡 is an idiomatic polite response.",
+      "note": "哪裡，哪裡 politely downplays thanks or praise in this exchange; it is not a request for two locations. 我給你的 modifies 禮物: the gift I am giving you.",
       "tokens": [
         "哪裡哪裡",
         "這是我給你的禮物"
@@ -1303,7 +1303,7 @@ const unit:UnitData = {
       "text": "今年有臺灣朋友給我過生日。",
       "pinyin": "Jīnnián yǒu Táiwān péngyǒu gěi wǒ guò shēngrì.",
       "meaning": "This year I have a Taiwanese friend celebrating my birthday with me.",
-      "note": "Conversation turn core.",
+      "note": "今年 sets the time. 有臺灣朋友 introduces Taiwanese friends who are celebrating the speaker's birthday; 給我 names the person the celebration is for.",
       "tokens": [
         "今年",
         "有臺灣朋友",
@@ -1314,7 +1314,7 @@ const unit:UnitData = {
       "text": "你想吃什麼？有沒有不吃的東西？",
       "pinyin": "Nǐ xiǎng chī shénme? Yǒu méiyǒu bù chī de dōngxi?",
       "meaning": "What would you like to eat? Is there anything you don't eat?",
-      "note": "dietary-preference question.",
+      "note": "什麼 asks what the other person wants to eat. 有沒有不吃的東西 asks whether there are foods they do not eat: 不吃的 describes 東西. This asks about dietary preferences or restrictions.",
       "tokens": [
         "你想吃什麼",
         "有沒有不吃的東西"
@@ -1333,7 +1333,7 @@ const unit:UnitData = {
       "text": "我已經訂了車票。",
       "pinyin": "Wǒ yǐjīng dìng le chēpiào.",
       "meaning": "I already booked the ticket.",
-      "note": "Learner-safe completed-action example before the food characters are introduced.",
+      "note": "訂 means book or reserve in advance. 已經 says already, and 了 after 訂 presents the booking as done. It does not say the journey itself has happened.",
       "tokens": [
         "我已經",
         "訂了車票"
@@ -1346,7 +1346,7 @@ const unit:UnitData = {
       "text": "我已經訂了豬腳麵線和蛋。",
       "pinyin": "Wǒ yǐjīng dìng le zhūjiǎo miànxiàn hé dàn.",
       "meaning": "I already ordered pork knuckles, fine noodles, and an egg.",
-      "note": "Conversation turn.",
+      "note": "已經訂了 says the order has already been placed. 豬腳麵線 names pork trotters with thin noodles; 和蛋 adds egg. Ordering the food does not mean it has already been eaten.",
       "tokens": [
         "我已經訂了",
         "豬腳麵線和蛋"
@@ -1430,3 +1430,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

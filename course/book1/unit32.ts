@@ -1090,7 +1090,7 @@ const unit:UnitData = {
       "zhuyin": "ㄈㄤˊ",
       "meaning": "house (in 房子)",
       "layout": "stack",
-      "note": "房 is the first character of 房子, house. Notice the upper-left 戶 and the 方 beneath it.",
+      "note": "房 is the first character of 房子, house. Notice the upper-left 戶 and the 方 beneath it. 房東 fángdōng means landlord: the person who rents a property to someone else.",
       "memory": "房 shelters 方 beneath 戶. The long left stroke of 戶 runs down beside the lower group.",
       "parts": [
         {
@@ -1808,7 +1808,7 @@ const unit:UnitData = {
       "text": "廚房在左邊。",
       "pinyin": "Chúfáng zài zuǒbiān.",
       "meaning": "The kitchen is on the left.",
-      "note": "廚房 means kitchen.",
+      "note": "廚房 is the kitchen. 在 gives its location; 左邊 means the left side, understood relative to the place or viewpoint being discussed.",
       "tokens": [
         "廚房",
         "在左邊"
@@ -1841,7 +1841,7 @@ const unit:UnitData = {
       "text": "我打電話給房東。",
       "pinyin": "Wǒ dǎ diànhuà gěi fángdōng.",
       "meaning": "I call the landlord.",
-      "note": "打電話 is the ordinary collocation 'make a phone call'. Here 給 is this lesson’s preposition 'to', marking the recipient: 打電話給房東. Compare earlier 給你一塊水果, where 給 is the verb 'give'.",
+      "note": "打電話 means make a phone call. 給房東 identifies the recipient, the landlord; here 給 is a preposition meaning to, not giving away a physical telephone.",
       "tokens": [
         "我",
         "打電話",
@@ -1954,7 +1954,7 @@ const unit:UnitData = {
       "text": "請進。",
       "pinyin": "Qǐng jìn.",
       "meaning": "Please come in.",
-      "note": "This restores the landlord's opening line from the conversation. The understood subject is 你; Unit 33 reuses this exact example for zero-pronoun omission.",
+      "note": "請進 politely invites the listener to come in. 你 is understood as the person addressed. 進 supplies the action, so the full subject need not be repeated.",
       "tokens": [
         "請進"
       ]
@@ -1966,3 +1966,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

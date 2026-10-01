@@ -2403,7 +2403,7 @@ const unit:UnitData = {
       "text": "我現在在學校。",
       "pinyin": "Wǒ xiànzài zài xuéxiào.",
       "meaning": "I am at school now.",
-      "note": "",
+      "note": "現在 means now. The next 在 introduces the location 學校, so 現在在 contains two different uses of the written character 在.",
       "tokens": [
         "我",
         "現在",
@@ -2419,7 +2419,7 @@ const unit:UnitData = {
       "text": "你現在在哪裡？",
       "pinyin": "Nǐ xiànzài zài nǎlǐ?",
       "meaning": "Where are you now?",
-      "note": "",
+      "note": "Put 現在 before the location question 在哪裡. 哪裡 stands in the position of the unknown place; no 嗎 is needed.",
       "tokens": [
         "你",
         "現在",
@@ -2434,7 +2434,7 @@ const unit:UnitData = {
       "text": "他們學校在山上。",
       "pinyin": "Tāmen xuéxiào zài shānshàng.",
       "meaning": "Their school is in the mountains.",
-      "note": "",
+      "note": "他們學校 means their school. 在山上 places it on or in the mountains; 山上 does not necessarily mean the exact summit.",
       "tokens": [
         "他們",
         "學校",
@@ -2449,7 +2449,7 @@ const unit:UnitData = {
       "text": "明天我們一起去看海吧。",
       "pinyin": "Míngtiān wǒmen yìqǐ qù kàn hǎi ba.",
       "meaning": "Let us go look at the sea together tomorrow.",
-      "note": "",
+      "note": "明天 sets the time, 一起 makes the outing shared, and 去看海 means go to see the sea. Final 吧 makes it a suggestion.",
       "tokens": [
         "明天",
         "我們",
@@ -2467,7 +2467,7 @@ const unit:UnitData = {
       "text": "我們學校的風景很美。",
       "pinyin": "Wǒmen xuéxiào de fēngjǐng hěn měi.",
       "meaning": "The scenery at our school is beautiful.",
-      "note": "",
+      "note": "我們學校的 modifies 風景: the scenery at our school. 很美 describes that scenery. 的 links the noun phrase; 是 is not needed before 美.",
       "tokens": [
         "我們",
         "學校",
@@ -2484,7 +2484,7 @@ const unit:UnitData = {
       "text": "我聽說那裡的風景很美。",
       "pinyin": "Wǒ tīngshuō nàlǐ de fēngjǐng hěn měi.",
       "meaning": "I have heard that the scenery there is beautiful.",
-      "note": "",
+      "note": "聽說 introduces the report. 那裡的風景 means the scenery there, and 很美 gives the evaluation. The sentence does not prove the speaker has visited.",
       "tokens": [
         "我",
         "聽說",
@@ -2503,7 +2503,7 @@ const unit:UnitData = {
       "text": "學生在學校裡面。",
       "pinyin": "Xuéshēng zài xuéxiào lǐmiàn.",
       "meaning": "The students are inside the school.",
-      "note": "",
+      "note": "在 introduces the location. Put the reference place 學校 before 裡面 to say inside the school; the subject is 學生.",
       "tokens": [
         "學生",
         "在",
@@ -2518,7 +2518,7 @@ const unit:UnitData = {
       "text": "我不在餐廳裡面，我在外面。",
       "pinyin": "Wǒ bú zài cāntīng lǐmiàn, wǒ zài wàimiàn.",
       "meaning": "I am not inside the restaurant; I am outside.",
-      "note": "",
+      "note": "不在 denies the first location. The second clause gives the actual location, outside. The restaurant remains the understood reference point for 外面.",
       "tokens": [
         "我",
         "不",
@@ -2538,7 +2538,7 @@ const unit:UnitData = {
       "text": "學校裡面有圖書館。",
       "pinyin": "Xuéxiào lǐmiàn yǒu túshūguǎn.",
       "meaning": "There is a library inside the school.",
-      "note": "",
+      "note": "Start with the place 學校裡面, then use 有 to introduce what exists there. This answers what the school contains.",
       "tokens": [
         "學校",
         "裡面",
@@ -2554,7 +2554,7 @@ const unit:UnitData = {
       "text": "圖書館在學校裡面。",
       "pinyin": "Túshūguǎn zài xuéxiào lǐmiàn.",
       "meaning": "The library is inside the school.",
-      "note": "",
+      "note": "Start with the known library, then use 在 to say where it is. This answers where the library is; it differs in focus from place + 有 + thing.",
       "tokens": [
         "圖書館",
         "在",
@@ -2570,7 +2570,7 @@ const unit:UnitData = {
       "text": "學校外面有沒有餐廳？",
       "pinyin": "Xuéxiào wàimiàn yǒu méiyǒu cāntīng?",
       "meaning": "Are there any restaurants outside the school?",
-      "note": "",
+      "note": "學校外面 sets the location. 有沒有 asks whether a restaurant exists there. This A-not-A question does not also need 嗎.",
       "tokens": [
         "學校",
         "外面",
@@ -2585,7 +2585,7 @@ const unit:UnitData = {
       "text": "我現在在圖書館裡面看書。",
       "pinyin": "Wǒ xiànzài zài túshūguǎn lǐmiàn kàn shū.",
       "meaning": "I am reading inside the library now.",
-      "note": "",
+      "note": "The order is subject, time, place, action: 我 + 現在 + 在圖書館裡面 + 看書. 在 introduces the library location here.",
       "tokens": [
         "我",
         "現在",
@@ -2603,7 +2603,7 @@ const unit:UnitData = {
       "text": "你在哪裡學中文？",
       "pinyin": "Nǐ zài nǎlǐ xué Zhōngwén?",
       "meaning": "Where do you study Chinese?",
-      "note": "",
+      "note": "在哪裡 asks for the place of learning and comes before 學中文. 中文 remains the object of 學.",
       "tokens": [
         "你",
         "在",
@@ -2619,7 +2619,7 @@ const unit:UnitData = {
       "text": "我們今天在學校上課。",
       "pinyin": "Wǒmen jīntiān zài xuéxiào shàngkè.",
       "meaning": "We have class at school today.",
-      "note": "",
+      "note": "今天 sets the time and 在學校 sets the place before 上課. 上課 means attend or have class; 在 here introduces a location.",
       "tokens": [
         "我們",
         "今天",
@@ -2638,3 +2638,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

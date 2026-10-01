@@ -231,14 +231,14 @@ const unit:UnitData = {
         {
           "id": "u35-focus-s3",
           "type": "select",
-          "prompt": "Which element cannot be the focus in 是…的?",
+          "prompt": "In 學費是公司替我付的, which sentence role belongs to 學費, the topic rather than the focused payer?",
           "options": [
             "the object",
             "the time",
             "the place"
           ],
           "answer": "the object",
-          "explanation": "The pattern allows subject, time, place, manner, and occasionally the verb as focus, but not the object.",
+          "explanation": "學費 is what is paid: the object placed first as the topic. 公司, the company paying, is the focus after 是. This identifies the roles in this sentence, not a ban on every other 是…的 construction.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -304,13 +304,13 @@ const unit:UnitData = {
         {
           "id": "u35-focus-s6",
           "type": "select",
-          "prompt": "Which list contains only wh-question types allowed with past-event 是…的?",
+          "prompt": "After someone arrived, you ask 是誰來的？, 是什麼時候來的？, 是怎麼來的？, and 是在哪裡見面的？ Which set of details do these questions request?",
           "options": [
             "who, when, how, where",
             "what-object, why, how many"
           ],
           "answer": "who, when, how, where",
-          "explanation": "The rule here allows who, when, how, and where, but not 'what' when it is the object.",
+          "explanation": "誰 asks who, 什麼時候 when, 怎麼 how, and 在哪裡 where. Each asks for the highlighted detail of an understood event. This set is not a claim that Mandarin can never ask why with 是…的.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -679,13 +679,13 @@ const unit:UnitData = {
         {
           "id": "u35-cheer-s2",
           "type": "select",
-          "prompt": "Which negation follows the rule here 是…的 rule?",
+          "prompt": "Which sentence rejects the claim that the reading happened AT THE LIBRARY?",
           "options": [
             "我不是在圖書館看書的。",
             "我是不在圖書館看書的。"
           ],
           "answer": "我不是在圖書館看書的。",
-          "explanation": "不 goes before 是: 不是…的.",
+          "explanation": "不是在圖書館 rejects the proposed location. 是不在… can have a different contrastive use, but it is not the location-focus correction requested here.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -862,14 +862,14 @@ const unit:UnitData = {
         {
           "id": "u35-review-g3",
           "type": "select",
-          "prompt": "Which element cannot be focused by 是…的?",
+          "prompt": "In 學費是公司替我付的, which role belongs to 學費, rather than the focused 公司?",
           "options": [
             "object",
             "manner",
             "time"
           ],
           "answer": "object",
-          "explanation": "The object may be moved to the front as topic, but it is not the focused element.",
+          "explanation": "學費 is the object being paid, placed first as the topic; 公司 identifies the payer in focus. Do not confuse the topic with the focused event detail.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -877,13 +877,13 @@ const unit:UnitData = {
         {
           "id": "u35-review-g4",
           "type": "select",
-          "prompt": "Which negative form is correct?",
+          "prompt": "You read somewhere other than the library. Which opening rejects the claim that you read AT THE LIBRARY?",
           "options": [
             "不是…的",
             "是不…的"
           ],
           "answer": "不是…的",
-          "explanation": "不 must come before 是.",
+          "explanation": "不是…的 rejects the proposed event detail: 我不是在圖書館看書的. This focuses on the location correction; it is not a rule banning every occurrence of 是不…的 in Mandarin.",
           "grammarIds": [
             "u35-shi-de"
           ]
@@ -1633,7 +1633,7 @@ const unit:UnitData = {
       "text": "我們一起加油吧！",
       "pinyin": "Wǒmen yìqǐ jiāyóu ba!",
       "meaning": "Let's keep up the good work!",
-      "note": "加油 is the source encouragement phrase at the end of the conversation.",
+      "note": "加油 is an expression of encouragement: keep it up or do your best. 一起 includes both people and 吧 makes this a friendly shared encouragement.",
       "tokens": [
         "我們一起",
         "加油吧"
@@ -1797,3 +1797,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

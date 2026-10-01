@@ -1985,7 +1985,7 @@ const unit:UnitData = {
       "text": "醫",
       "pinyin": "yī",
       "meaning": "medical; seen in 醫生",
-      "note": "Recognition/read card.",
+      "note": "Medical care; learn 醫 in 醫生 yīshēng, “doctor.” The upper section has two blocks, with 酉 underneath.",
       "tokens": [
         "醫"
       ]
@@ -1994,7 +1994,7 @@ const unit:UnitData = {
       "text": "直",
       "pinyin": "zhí",
       "meaning": "straight; in 一直 yìzhí",
-      "note": "Recognition/read card.",
+      "note": "直 means “straight.” In 一直 yìzhí, it contributes the idea of continuing without a break.",
       "tokens": [
         "直"
       ]
@@ -2003,7 +2003,7 @@ const unit:UnitData = {
       "text": "流",
       "pinyin": "liú",
       "meaning": "to flow",
-      "note": "Recognition/read card.",
+      "note": "流 means “to flow.” In 流鼻水 liú bíshuǐ, nasal mucus is flowing: “have a runny nose.”",
       "tokens": [
         "流"
       ]
@@ -2012,7 +2012,7 @@ const unit:UnitData = {
       "text": "鼻",
       "pinyin": "bí",
       "meaning": "nose; in 鼻水",
-      "note": "Recognition/read card.",
+      "note": "鼻 means “nose.” 鼻水 bíshuǐ is nasal mucus; 流鼻水 means “have a runny nose.”",
       "tokens": [
         "鼻"
       ]
@@ -2021,7 +2021,7 @@ const unit:UnitData = {
       "text": "痛",
       "pinyin": "tòng",
       "meaning": "painful; hurts",
-      "note": "Recognition/read card.",
+      "note": "痛 means “to hurt; painful.” A body part can come before it: 頭很痛 tóu hěn tòng means “the head hurts.”",
       "tokens": [
         "痛"
       ]
@@ -2030,7 +2030,7 @@ const unit:UnitData = {
       "text": "胃",
       "pinyin": "wèi",
       "meaning": "stomach; in 胃口",
-      "note": "Recognition/read card.",
+      "note": "胃 means “stomach,” the organ. 胃口 wèikǒu means “appetite,” rather than a literal “stomach mouth.”",
       "tokens": [
         "胃"
       ]
@@ -2039,7 +2039,7 @@ const unit:UnitData = {
       "text": "喉",
       "pinyin": "hóu",
       "meaning": "part of 喉嚨",
-      "note": "Recognition/read card.",
+      "note": "喉 is the first syllable of 喉嚨 hóulóng, “throat.” Learn and say the two-character word together.",
       "tokens": [
         "喉"
       ]
@@ -2048,7 +2048,7 @@ const unit:UnitData = {
       "text": "嚨",
       "pinyin": "lóng",
       "meaning": "part of 喉嚨",
-      "note": "Recognition/read card.",
+      "note": "嚨 is the second syllable of 喉嚨 hóulóng, “throat.” It normally appears here as part of the whole word.",
       "tokens": [
         "嚨"
       ]
@@ -2057,7 +2057,7 @@ const unit:UnitData = {
       "text": "發",
       "pinyin": "fā",
       "meaning": "seen in 發炎 / 發燒",
-      "note": "Recognition/read card.",
+      "note": "發 has several meanings. Here it means developing a condition: 發炎 fāyán, “be inflamed,” and 發燒 fāshāo, “have a fever.”",
       "tokens": [
         "發"
       ]
@@ -2066,7 +2066,7 @@ const unit:UnitData = {
       "text": "炎",
       "pinyin": "yán",
       "meaning": "inflammation; in 發炎",
-      "note": "Recognition/read card.",
+      "note": "炎 relates to inflammation here. Learn 發炎 fāyán as “to be inflamed,” as in 喉嚨發炎, “the throat is inflamed.”",
       "tokens": [
         "炎"
       ]
@@ -2075,7 +2075,7 @@ const unit:UnitData = {
       "text": "病",
       "pinyin": "bìng",
       "meaning": "illness; sick",
-      "note": "Recognition/read card.",
+      "note": "病 means “illness; sick.” 生病 shēngbìng means “fall ill / be sick.”",
       "tokens": [
         "病"
       ]
@@ -2084,7 +2084,7 @@ const unit:UnitData = {
       "text": "燒",
       "pinyin": "shāo",
       "meaning": "burn; in 發燒",
-      "note": "Recognition/read card.",
+      "note": "燒 means “to burn.” In 發燒 fāshāo, the whole word means “have a fever.”",
       "tokens": [
         "燒"
       ]
@@ -2093,7 +2093,7 @@ const unit:UnitData = {
       "text": "醫生",
       "pinyin": "yīshēng",
       "meaning": "doctor",
-      "note": "Meaning-first lexical explanation.",
+      "note": "醫生 yīshēng means doctor. Treat the two characters as one occupation word. 看醫生 means see a doctor as a patient.",
       "tokens": [
         "醫生"
       ]
@@ -2120,7 +2120,7 @@ const unit:UnitData = {
       "text": "喉嚨／發炎",
       "pinyin": "hóulóng / fāyán",
       "meaning": "throat / be inflamed",
-      "note": "Meaning-first lexical explanation.",
+      "note": "喉嚨 hóulóng is the throat. 發炎 fāyán means be inflamed; 喉嚨發炎 says the throat is inflamed. 發 is first-tone fā in this word.",
       "tokens": [
         "喉嚨／發炎"
       ]
@@ -2129,7 +2129,7 @@ const unit:UnitData = {
       "text": "生病／發燒",
       "pinyin": "shēngbìng / fāshāo",
       "meaning": "be sick / have a fever",
-      "note": "Meaning-first lexical explanation; lexical use only.",
+      "note": "生病 shēngbìng means become or be ill. 發燒 fāshāo means have a fever. These are related but different: someone may be ill without having a fever.",
       "tokens": [
         "生病／發燒"
       ]
@@ -2148,7 +2148,7 @@ const unit:UnitData = {
       "text": "我一直流鼻水。",
       "pinyin": "Wǒ yìzhí liú bíshuǐ.",
       "meaning": "I have continuously had a runny nose.",
-      "note": "",
+      "note": "一直 comes before 流鼻水 and says the symptom keeps happening. 鼻水 is nasal mucus; 流鼻水 is the expression for having a runny nose.",
       "tokens": [
         "我",
         "一直",
@@ -2159,7 +2159,7 @@ const unit:UnitData = {
       "text": "頭很痛，胃口很差。",
       "pinyin": "Tóu hěn tòng, wèikǒu hěn chā.",
       "meaning": "My head hurts, and my appetite is poor.",
-      "note": "",
+      "note": "The two clauses report different problems. 頭很痛 describes head pain; 胃口很差 describes poor appetite, not stomach pain. 差 is chā here.",
       "tokens": [
         "頭很痛",
         "胃口很差"
@@ -2187,7 +2187,7 @@ const unit:UnitData = {
       "text": "已經四、五天了。",
       "pinyin": "Yǐjīng sì, wǔ tiān le.",
       "meaning": "It has already been four or five days.",
-      "note": "",
+      "note": "The earlier question supplies the condition being discussed. 已經 + duration + 了 gives how long it has lasted so far. 四、五天 means four or five days, not forty-five.",
       "tokens": [
         "已經",
         "四、五天",
@@ -2218,7 +2218,7 @@ const unit:UnitData = {
       "text": "我有一點發燒。",
       "pinyin": "Wǒ yǒu yìdiǎn fāshāo.",
       "meaning": "I have a slight fever.",
-      "note": "",
+      "note": "有一點 softens the degree of 發燒: a slight fever. 發燒 means have a fever; 發炎 means be inflamed and is a different symptom.",
       "tokens": [
         "我有一點發燒。"
       ]

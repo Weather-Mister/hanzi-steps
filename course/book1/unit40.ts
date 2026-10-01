@@ -417,14 +417,14 @@ const unit:UnitData = {
         {
           "id": "u40-more-less-s2",
           "type": "select",
-          "prompt": "Which means 'buy fewer things'?",
+          "prompt": "Which phrase uses 少 immediately BEFORE the verb to mean buy fewer things?",
           "options": [
             "少買東西",
             "東西少買",
             "少東西買"
           ],
           "answer": "少買東西",
-          "explanation": "少 goes before the verb."
+          "explanation": "少買東西 has 少 before 買, modifying the amount of buying. 東西少買 can be a topic-first instruction in context, so the requested pre-verbal pattern distinguishes this answer."
         },
         {
           "id": "u40-more-less-s3",
@@ -1107,7 +1107,7 @@ const unit:UnitData = {
       "text": "誰都喜歡生日。",
       "pinyin": "Shéi dōu xǐhuān shēngrì.",
       "meaning": "Everyone likes birthdays.",
-      "note": "Affirmative totality with 誰都.",
+      "note": "誰 + 都 in this statement means everyone, rather than asking who. 都 distributes 喜歡生日 across all the people being discussed.",
       "tokens": [
         "誰都",
         "喜歡生日"
@@ -1120,7 +1120,7 @@ const unit:UnitData = {
       "text": "哪裡都可以見面。",
       "pinyin": "Nǎlǐ dōu kěyǐ jiànmiàn.",
       "meaning": "We can meet anywhere.",
-      "note": "Affirmative totality with 哪裡都.",
+      "note": "哪裡 + 都 means anywhere in this statement. 可以見面 says meeting is possible at any of the places under consideration.",
       "tokens": [
         "哪裡都",
         "可以見面"
@@ -1133,7 +1133,7 @@ const unit:UnitData = {
       "text": "我什麼時候都可以。",
       "pinyin": "Wǒ shénme shíhou dōu kěyǐ.",
       "meaning": "Any time is fine for me.",
-      "note": "Affirmative totality with 什麼時候都.",
+      "note": "什麼時候 + 都 means any time. 可以 accepts any proposed time in the conversation; this is a statement of availability, not a question asking when.",
       "tokens": [
         "我什麼時候都可以"
       ],
@@ -1206,7 +1206,7 @@ const unit:UnitData = {
       "text": "這是傳統。",
       "pinyin": "Zhè shì chuántǒng.",
       "meaning": "This is a tradition.",
-      "note": "Birthday-tradition statement.",
+      "note": "這 refers to the custom just discussed. 是 identifies it as 傳統, a tradition: an established custom passed down over time.",
       "tokens": [
         "這是傳統"
       ]
@@ -1215,7 +1215,7 @@ const unit:UnitData = {
       "text": "現在大部分年輕人過生日不吃這些東西了。",
       "pinyin": "Xiànzài dàbùfēn niánqīng rén guò shēngrì bù chī zhèxiē dōngxi le.",
       "meaning": "Nowadays, most young people don't eat these things for birthdays anymore.",
-      "note": "Final 了 marks changed situation.",
+      "note": "大部分年輕人 means most young people. 現在 and final 了 frame a change from an earlier custom: they do not eat these things for birthdays anymore. 不吃 negates the present habit.",
       "tokens": [
         "現在大部分年輕人",
         "過生日",
@@ -1236,7 +1236,7 @@ const unit:UnitData = {
       "text": "你多吃一點。",
       "pinyin": "Nǐ duō chī yìdiǎn.",
       "meaning": "Eat a little more.",
-      "note": "Practice anchor for 多 + Verb.",
+      "note": "多 goes before 吃 to request a greater amount of eating. 一點 makes the increase small: have a little more. It does not mean eat only a little in total.",
       "tokens": [
         "你多吃一點"
       ],
@@ -1261,7 +1261,7 @@ const unit:UnitData = {
       "text": "我想多學一點中文。",
       "pinyin": "Wǒ xiǎng duō xué yìdiǎn Zhōngwén.",
       "meaning": "I want to study a little more Chinese.",
-      "note": "多 + Verb with 一點.",
+      "note": "想 introduces the wish; 多 before 學 asks for more learning. 一點中文 names a small additional amount of Chinese to learn.",
       "tokens": [
         "我想",
         "多學一點中文"
@@ -1282,3 +1282,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

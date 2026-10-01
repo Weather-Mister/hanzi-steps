@@ -2146,7 +2146,7 @@ const unit:UnitData = {
         "常",
         "運動"
       ],
-      "note": "Put 不 before 常.",
+      "note": "不常 means not often, so 不 negates the frequency 常. This allows occasional exercise; it does not mean never exercising.",
       "grammarIds": [
         "u9-frequency"
       ]
@@ -2162,7 +2162,7 @@ const unit:UnitData = {
         "聽",
         "音樂"
       ],
-      "note": "也 comes before 常.",
+      "note": "也 means also and comes before 常, often. The shared habit is 聽音樂, listening to music.",
       "grammarIds": [
         "u9-frequency"
       ]
@@ -2274,7 +2274,7 @@ const unit:UnitData = {
         "打",
         "網球"
       ],
-      "note": "Use 打 for tennis.",
+      "note": "打 is the usual action verb with 網球: 打網球 means play tennis. 喜歡 introduces the activity the speaker likes.",
       "grammarIds": [
         "u9-tennis"
       ]
@@ -2409,3 +2409,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

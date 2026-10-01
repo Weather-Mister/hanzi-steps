@@ -1011,14 +1011,14 @@ const unit:UnitData = {
         {
           "id": "u14-can-15",
           "type": "select",
-          "prompt": "Which new word uses two characters taught in earlier units?",
+          "prompt": "Which activity does 上網 name?",
           "options": [
             "手機",
             "上網",
             "能"
           ],
           "answer": "上網",
-          "explanation": "上 was in 早上/晚上 and 網 in 打網球; the word 上網 is new.",
+          "explanation": "上網 means go online. 手機 is the device, a mobile phone; 能 expresses capability. The activity is 上網.",
           "grammarIds": [
             "u14-capability"
           ]
@@ -2231,7 +2231,7 @@ const unit:UnitData = {
         "支",
         "手機"
       ],
-      "note": "",
+      "note": "兩支 counts two phones. 支 is the measure word for the devices; 有 says the speaker has them.",
       "grammarIds": [
         "u14-phones"
       ]
@@ -2247,7 +2247,7 @@ const unit:UnitData = {
         "多少",
         "錢"
       ],
-      "note": "",
+      "note": "這支手機 names this phone using 支. 多少錢 asks its price; it is an information question, so it does not need 嗎.",
       "grammarIds": [
         "u14-phones"
       ]
@@ -2264,7 +2264,7 @@ const unit:UnitData = {
         "新",
         "手機"
       ],
-      "note": "",
+      "note": "想買 expresses wanting to buy. 一支 counts one phone, and 新 directly describes 手機 as new, not old.",
       "grammarIds": [
         "u14-new-old"
       ]
@@ -2278,7 +2278,7 @@ const unit:UnitData = {
         "很",
         "舊"
       ],
-      "note": "",
+      "note": "那支手機 names that phone. 很舊 describes its condition as old or worn; 舊 is used for objects here, not a person's age.",
       "grammarIds": [
         "u14-new-old"
       ]
@@ -2292,7 +2292,7 @@ const unit:UnitData = {
         "不",
         "貴"
       ],
-      "note": "",
+      "note": "這支手機 is this phone, counted with 支. 不 directly negates 貴: not expensive. There is no 是 in this ordinary description.",
       "grammarIds": [
         "u14-price-opinion"
       ]
@@ -2306,7 +2306,7 @@ const unit:UnitData = {
         "很",
         "便宜"
       ],
-      "note": "",
+      "note": "便宜 is the description inexpensive; 很 connects it naturally to 這支手機. Read 便宜 as piányí, not the biàn of 方便.",
       "grammarIds": [
         "u14-price-opinion"
       ]
@@ -2323,7 +2323,7 @@ const unit:UnitData = {
         "種",
         "手機"
       ],
-      "note": "",
+      "note": "哪種 asks which kind or type. 想買 means want to buy. 種 counts types of phones; 支 counts individual devices.",
       "grammarIds": [
         "u14-kind"
       ]
@@ -2369,7 +2369,7 @@ const unit:UnitData = {
         "貴",
         "了"
       ],
-      "note": "",
+      "note": "太 + 貴 + 了 expresses the reaction that the phone is too expensive. This 了 belongs to the judgment and does not make the sentence past tense.",
       "grammarIds": [
         "u14-too"
       ]
@@ -2385,7 +2385,7 @@ const unit:UnitData = {
         "買",
         "那支手機"
       ],
-      "note": "",
+      "note": "為什麼 asks for a reason and comes before 不買. The question asks why you are not buying that phone; 那支手機 is the object.",
       "grammarIds": [
         "u14-why"
       ]
@@ -2400,7 +2400,7 @@ const unit:UnitData = {
         "上網",
         "嗎"
       ],
-      "note": "",
+      "note": "能 asks about the phone's capability; 上網 means go online. 嗎 makes the whole claim a yes/no question. Answer 能 or 不能.",
       "grammarIds": [
         "u14-capability"
       ]
@@ -2415,7 +2415,7 @@ const unit:UnitData = {
         "能",
         "照相"
       ],
-      "note": "",
+      "note": "不能 denies the capability to 照相, take photos. Put 不 before 能, not inside 照相. 那支手機 identifies that phone.",
       "grammarIds": [
         "u14-capability"
       ]
@@ -2432,7 +2432,7 @@ const unit:UnitData = {
         "能",
         "上網"
       ],
-      "note": "",
+      "note": "The phone has two capabilities: 能照相 and 也能上網. 也 goes before the second 能 and adds also; the same subject is understood in both clauses.",
       "grammarIds": [
         "u14-capability"
       ]
@@ -2451,3 +2451,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

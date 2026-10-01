@@ -32,6 +32,7 @@ export type PracticeItem={
  bookNumber?:number;
  lessonId:string;
  tokens?:string[];
+ acceptedTokenOrders?:string[][];
 };
 
 export type PracticeContextPrompt={
@@ -82,6 +83,7 @@ function phraseItems(completed:Set<string>):PracticeItem[]{
     bookNumber:book?.number,
     lessonId:lesson.id,
     tokens:phrase.tokens,
+    acceptedTokenOrders:phrase.acceptedTokenOrders,
    });
   }
  }
@@ -825,3 +827,4 @@ export function fromLookupItem(item:VocabularyLookupItem):PracticeItem{
   characters:item.characters,unitId:item.unitId,unitNumber:item.unitNumber,bookId:item.bookId,bookNumber:item.bookNumber,lessonId:item.lessonId,
  };
 }
+

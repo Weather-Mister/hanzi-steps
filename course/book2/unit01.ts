@@ -936,14 +936,10 @@ const unit:UnitData = {
         {
           "id": "b2u1-review-prohibition",
           "type": "select",
-          "prompt": "不能從這裡往前走。 Can you go forward here?",
-          "options": [
-            "No, that direction is not allowed.",
-            "Yes, the sentence instructs you to go forward.",
-            "The sentence says you are already at school."
-          ],
-          "answer": "No, that direction is not allowed.",
-          "explanation": "不能 applies to the movement that follows.",
+          "prompt": "A guide says the route ahead is blocked: 不能從這裡往前走。 Can you go forward here?",
+          "options": ["No, you cannot go forward from here.","Yes, the sentence instructs you to go forward.","The sentence says you are already at school."],
+          "answer": "No, you cannot go forward from here.",
+          "explanation": "不能 denies that you can go forward from this starting point. Here the route is blocked; 不能 need not always mean a rule forbids the action.",
           "grammarIds": [
             "b2u1-l4-from-toward"
           ]
@@ -1408,3 +1404,4 @@ const unit:UnitData = {
   "revisionStepIds": []
 };
 export default unit;
+

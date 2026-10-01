@@ -2427,7 +2427,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-dorm"
       ],
-      "note": ""
+      "note": "現在 is the time and 在宿舍 is the location. 宿舍 means dormitory; 在 here says where I am, not that I am going there."
     },
     "u20-dorm-floor": {
       "text": "餐廳在宿舍的一樓。",
@@ -2444,7 +2444,7 @@ const unit:UnitData = {
         "u20-dorm",
         "u20-floor"
       ],
-      "note": ""
+      "note": "在 introduces the location 宿舍的一樓: floor one of the dorm. 一樓 is a floor label; 的 links the building to its floor."
     },
     "u20-second-floor": {
       "text": "我朋友在二樓。",
@@ -2458,7 +2458,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-floor"
       ],
-      "note": ""
+      "note": "二樓 is the second floor. Use 二 for this numbered label, rather than 兩 for counting two objects. 我朋友 is a common short form for my friend."
     },
     "u20-downstairs": {
       "text": "我的朋友在樓下。",
@@ -2472,7 +2472,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-up-down"
       ],
-      "note": ""
+      "note": "樓下 means downstairs or on a lower floor relative to the relevant place. It does not specify a particular numbered floor."
     },
     "u20-upstairs": {
       "text": "我想去樓上找朋友。",
@@ -2489,7 +2489,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-up-down"
       ],
-      "note": ""
+      "note": "想去 says want to go; 樓上 is the destination and 找朋友 the purpose. 樓上 means upstairs relative to the understood location."
     },
     "u20-which-floor": {
       "text": "你在幾樓？",
@@ -2504,7 +2504,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-floor-question"
       ],
-      "note": ""
+      "note": "幾樓 asks for a numbered floor and goes after 在. An answer such as 二樓 gives the location; 幾 already makes this an information question."
     },
     "u20-shop-downstairs": {
       "text": "樓下有一家商店。",
@@ -2536,7 +2536,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-buildings"
       ],
-      "note": ""
+      "note": "這棟大樓 is this building, using 棟 as the measure word. 是 identifies the building as a dormitory."
     },
     "u20-two-buildings": {
       "text": "那兩棟大樓很新。",
@@ -2553,7 +2553,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-buildings"
       ],
-      "note": ""
+      "note": "那兩棟大樓 counts those two buildings. 兩 goes before 棟. 很新 describes both buildings; it is different from 二樓, floor two."
     },
     "u20-which-building": {
       "text": "哪棟大樓是圖書館？",
@@ -2569,7 +2569,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-which-building"
       ],
-      "note": ""
+      "note": "哪棟大樓 asks which building. 棟 counts buildings, and 是宿舍 or 是圖書館 identifies their use."
     },
     "u20-shop-front": {
       "text": "商店在宿舍前面。",
@@ -2584,7 +2584,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-front-back"
       ],
-      "note": ""
+      "note": "商店 is the thing being located. 在宿舍前面 says it is in front of the dorm, with 宿舍 as the reference point."
     },
     "u20-food-behind": {
       "text": "餐廳在圖書館後面。",
@@ -2599,7 +2599,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-front-back"
       ],
-      "note": ""
+      "note": "在圖書館後面 means behind the library. Keep the reference building before 後面; 餐廳 is the place being located."
     },
     "u20-front-library": {
       "text": "前面的圖書館很大。",
@@ -2615,7 +2615,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-location-modifier"
       ],
-      "note": ""
+      "note": "前面的 modifies 圖書館: the library in front. The final noun is the thing being described, and 很大 says it is large."
     },
     "u20-shop-modifier": {
       "text": "宿舍前面的商店很近。",
@@ -2632,7 +2632,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-location-modifier"
       ],
-      "note": ""
+      "note": "宿舍前面的 describes which 商店: the shop in front of the dorm. The whole noun phrase is then described as 很近."
     },
     "u20-beside-library": {
       "text": "商店在圖書館旁邊。",
@@ -2647,7 +2647,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-beside"
       ],
-      "note": ""
+      "note": "在圖書館旁邊 puts the shop beside the library. 旁邊 specifies a side or immediately neighboring position more precisely than 附近."
     },
     "u20-classroom-study": {
       "text": "我們在教室上課。",
@@ -2662,7 +2662,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-classroom"
       ],
-      "note": ""
+      "note": "在教室 gives the location and 上課 the activity. Read 教室 as jiàoshì; 教 has a different reading in 教我, teach me."
     },
     "u20-classroom-floors": {
       "text": "二樓有三個教室。",
@@ -2679,7 +2679,7 @@ const unit:UnitData = {
         "u20-classroom",
         "u20-floor"
       ],
-      "note": ""
+      "note": "二樓 is the location, floor two. 有 introduces the three classrooms there; 三個教室 is a count of rooms, not a floor number."
     },
     "u20-correct-floor": {
       "text": "教室不是在二樓，教室在三樓。",
@@ -2697,7 +2697,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-correction"
       ],
-      "note": ""
+      "note": "不是 rejects the mistaken location claim, then 在三樓 supplies the correction. This emphatic correction differs from simply saying 不在二樓."
     },
     "u20-swim-place": {
       "text": "我在游泳池游泳。",
@@ -2712,7 +2712,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-pool"
       ],
-      "note": ""
+      "note": "在游泳池 gives the location, the swimming pool. The final 游泳 is the action, swim. The repeated written form has two different roles."
     },
     "u20-pool-behind": {
       "text": "圖書館後面有一個游泳池。",
@@ -2730,7 +2730,7 @@ const unit:UnitData = {
         "u20-pool",
         "u20-front-back"
       ],
-      "note": ""
+      "note": "圖書館後面 names the location first. 有 introduces a swimming pool there, and 一個 counts it."
     },
     "u20-welcome": {
       "text": "歡迎你們來我們學校！",
@@ -2745,7 +2745,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u20-welcome"
       ],
-      "note": ""
+      "note": "歡迎 + person + 來 + place welcomes visitors. 你們 addresses more than one person; 來 uses the host's viewpoint at the school."
     },
     "u20-beside-classroom": {
       "text": "圖書館旁邊的教室很大。",
@@ -2764,7 +2764,7 @@ const unit:UnitData = {
         "u20-beside",
         "u20-classroom"
       ],
-      "note": ""
+      "note": "圖書館旁邊的 modifies 教室, identifying the classroom beside the library. 很大 describes the classroom, not the library."
     }
   },
   "revisionStepIds": [
@@ -2788,3 +2788,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

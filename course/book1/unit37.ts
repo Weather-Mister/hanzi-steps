@@ -1126,7 +1126,7 @@ const unit:UnitData = {
       "text": "喂，是你嗎？",
       "pinyin": "Wèi, shì nǐ ma?",
       "meaning": "Hello, is that you?",
-      "note": "Learner-safe adaptation of the opening, which uses the addressee's proper name after 喂. The name is omitted so proper-name characters do not become handwriting targets.",
+      "note": "喂 is a phone greeting. 是你嗎 checks whether the person you have in mind is speaking. The identity depends on the shared context of the call.",
       "tokens": [
         "喂",
         "是你嗎"
@@ -1166,7 +1166,7 @@ const unit:UnitData = {
       "text": "我剛從臺東回來。",
       "pinyin": "Wǒ gāng cóng Táidōng huílái.",
       "meaning": "I just came back from Taitung.",
-      "note": "Learner-safe core of the conversation. The source first denies going to Hualien; Hanzi Steps keeps that place-name character out of learner-facing Chinese.",
+      "note": "剛 says the return happened just recently. 從臺東 names the starting place, Taitung; 回來 means come back toward the speaker's current location.",
       "tokens": [
         "我剛",
         "從臺東",
@@ -1187,7 +1187,7 @@ const unit:UnitData = {
       "text": "明天是你的生日，對不對？",
       "pinyin": "Míngtiān shì nǐ de shēngrì, duì bu duì?",
       "meaning": "Tomorrow is your birthday, right?",
-      "note": "This conversation 對不對 is review support, not a new canonical vocabulary item.",
+      "note": "明天 sets the date and 是 identifies it as the listener's birthday. 對不對 at the end asks for confirmation of that whole statement.",
       "tokens": [
         "明天",
         "是你的生日",
@@ -1219,7 +1219,7 @@ const unit:UnitData = {
       "text": "謝謝你還記得。",
       "pinyin": "Xièxie nǐ hái jìde.",
       "meaning": "Thank you for still remembering.",
-      "note": "This conversation with the source's gender-specific second-person form normalized to 你.",
+      "note": "謝謝你 thanks the listener. 還 before 記得 means still: the speaker appreciates that the listener still remembers the birthday.",
       "tokens": [
         "謝謝你",
         "還記得"
@@ -1247,3 +1247,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

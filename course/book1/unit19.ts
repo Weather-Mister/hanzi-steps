@@ -2094,7 +2094,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-destination"
       ],
-      "note": ""
+      "note": "到我家 names the destination and 來 points toward the host's home. 明天 sets the time; 吧 makes this an invitation."
     },
     "u19-friend": {
       "text": "她是我的朋友。",
@@ -2109,7 +2109,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-friends"
       ],
-      "note": ""
+      "note": "是 identifies who she is. 我的朋友 is my friend, with 的 linking the pronoun and noun. The noun itself does not mark gender."
     },
     "u19-see-friend": {
       "text": "我要去找朋友。",
@@ -2125,7 +2125,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-find"
       ],
-      "note": ""
+      "note": "要去 presents an intention to go. 找朋友 can mean seek out or go see a friend; it need not imply that the friend is lost."
     },
     "u19-visit-question": {
       "text": "你明天到不到我家來？",
@@ -2143,7 +2143,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-destination-question"
       ],
-      "note": ""
+      "note": "到不到 is the A-not-A question about coming to the destination. Keep 我家 between 到不到 and 來; the host treats home as here."
     },
     "u19-not-coming": {
       "text": "他明天不到我家來。",
@@ -2160,7 +2160,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-not-going"
       ],
-      "note": ""
+      "note": "不 comes before 到 to deny the planned visit. 明天 supplies future time, and 來 points toward the speaker's home."
     },
     "u19-near-shop": {
       "text": "那家店很近。",
@@ -2176,7 +2176,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-near-far"
       ],
-      "note": ""
+      "note": "近 is an adjective describing distance; 很近 says the shop is close. The place it is close to is understood from context."
     },
     "u19-school-far": {
       "text": "學校遠不遠？",
@@ -2191,7 +2191,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-distance-question"
       ],
-      "note": ""
+      "note": "遠不遠 asks whether the school is far. The reference point is understood. Do not combine this A-not-A form with 很 or 嗎."
     },
     "u19-convenient": {
       "text": "這家餐廳很近，很方便。",
@@ -2220,7 +2220,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-nearby"
       ],
-      "note": ""
+      "note": "在 introduces a location. 學校附近 means near the school, with 學校 as the reference point; 附近 is not used like 很近."
     },
     "u19-nearby-food": {
       "text": "學校附近有一家餐廳。",
@@ -2237,7 +2237,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-nearby-there-is"
       ],
-      "note": ""
+      "note": "Start with 學校附近, the location, then 有 to introduce a restaurant there. 一家 counts one establishment."
     },
     "u19-nearby-question": {
       "text": "學校附近有沒有餐廳？",
@@ -2253,7 +2253,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-nearby-there-is"
       ],
-      "note": ""
+      "note": "有沒有 asks whether the named location contains a restaurant. 學校附近 identifies the area being asked about, not the restaurant's name."
     },
     "u19-shop-errand": {
       "text": "我在商店買東西。",
@@ -2270,7 +2270,7 @@ const unit:UnitData = {
         "u19-things",
         "u19-store"
       ],
-      "note": ""
+      "note": "在商店 gives the place before 買東西. 東西 is dōngxi, things; 買東西 is the everyday expression for buying things or shopping."
     },
     "u19-store-near-school": {
       "text": "學校附近有一家商店。",
@@ -2288,7 +2288,7 @@ const unit:UnitData = {
         "u19-store",
         "u19-nearby-there-is"
       ],
-      "note": ""
+      "note": "Place + 有 + thing introduces something in an area. 一家商店 means one shop, with 家 as its measure word."
     },
     "u19-meal-plan": {
       "text": "我們去餐廳吃飯吧！",
@@ -2304,7 +2304,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-meal"
       ],
-      "note": ""
+      "note": "去餐廳 gives the destination and 吃飯 the purpose. 吃飯 can mean have a meal without specifying rice. 吧 makes the plan a suggestion."
     },
     "u19-really-near": {
       "text": "這家店真的很近。",
@@ -2319,7 +2319,7 @@ const unit:UnitData = {
       "grammarIds": [
         "u19-really"
       ],
-      "note": ""
+      "note": "真的 strengthens the statement that the shop is close: it really is. 近 describes distance; the reference point comes from context."
     },
     "u19-friend-meal": {
       "text": "我今天要和朋友一起吃飯。",
@@ -2337,7 +2337,7 @@ const unit:UnitData = {
         "u19-friends",
         "u19-meal"
       ],
-      "note": ""
+      "note": "今天 sets the time. 要 expresses the plan, 和朋友 identifies the companion, and 一起 says the meal is shared."
     },
     "u19-reason-plan": {
       "text": "那家餐廳很近，所以我們想去吃飯。",
@@ -2376,3 +2376,4 @@ const unit:UnitData = {
   ]
 };
 export default unit;
+

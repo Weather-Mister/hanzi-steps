@@ -561,7 +561,7 @@ const unit:UnitData = {
         {
           "id": "u48-g5-s2",
           "type": "select",
-          "prompt": "Which uses the source's frequent verb-repetition Pattern 2?",
+          "prompt": "Which sentence repeats the verb before 得比我快 to compare how fast someone walks?",
           "options": [
             "他走路走得比我快。",
             "他走路得比我快。",
@@ -573,7 +573,7 @@ const unit:UnitData = {
         {
           "id": "u48-g5-s3",
           "type": "select",
-          "prompt": "Which sequence gives the source negation order?",
+          "prompt": "Where does 不 go when negating the 比 comparison?",
           "options": [
             "不比",
             "比不",
@@ -1201,14 +1201,14 @@ const unit:UnitData = {
         {
           "id": "u48-review-exp-gen",
           "type": "select",
-          "prompt": "What is the Unit-48 expansion of 跟?",
+          "prompt": "In 請你跟老師說, what role does 跟 give 老師?",
           "options": [
             "recipient/addressee “to”",
             "companionship “with” only",
             "comparison “than”"
           ],
           "answer": "recipient/addressee “to”",
-          "explanation": "Canonical form ownership remains Unit 24; the new sense is local."
+          "explanation": "跟 marks the person addressed by 說: tell or speak to the teacher. In 跟朋友去, it instead names a companion, going with a friend."
         },
         {
           "id": "u48-review-gen-contrast",
@@ -1303,7 +1303,7 @@ const unit:UnitData = {
         {
           "id": "u48-review-g5-2",
           "type": "select",
-          "prompt": "Which negation order is source-correct?",
+          "prompt": "Which sentence uses 不比 to say he does not walk faster than I do?",
           "options": [
             "他走路不比我走得快。",
             "他走路比不我走得快。",
@@ -2022,7 +2022,7 @@ const unit:UnitData = {
       "text": "回家／油",
       "pinyin": "huí jiā / yóu",
       "meaning": "go home / oily; greasy",
-      "note": "Meaning-first lexical explanation.",
+      "note": "回家 means go home. 油 yóu names oil and can also describe food as oily or greasy. 太油 describes excessive oiliness, not the temperature of the food.",
       "tokens": [
         "回家／油"
       ]
@@ -2031,7 +2031,7 @@ const unit:UnitData = {
       "text": "冰",
       "pinyin": "bīng",
       "meaning": "icy; ice",
-      "note": "Recognition/read card before handwriting.",
+      "note": "冰 bīng means ice and also describes an iced or very cold food or drink. In 太冰, 太 expresses an excessive degree of coldness.",
       "tokens": [
         "冰"
       ]
@@ -2040,7 +2040,7 @@ const unit:UnitData = {
       "text": "冰／關心／最好",
       "pinyin": "bīng / guānxīn / zuìhǎo",
       "meaning": "icy / be concerned about / it would be best; should",
-      "note": "Meaning-first lexical explanation.",
+      "note": "冰 bīng can describe an iced or very cold food or drink. 關心 guānxīn means show concern for someone. 最好 zuìhǎo introduces advice, it would be best to; it does not report what has already happened.",
       "tokens": [
         "冰／關心／最好"
       ]
@@ -2049,7 +2049,7 @@ const unit:UnitData = {
       "text": "我想回家休息。請你跟老師說，我生病了，不能上課。",
       "pinyin": "Wǒ xiǎng huí jiā xiūxí. Qǐng nǐ gēn lǎoshī shuō, wǒ shēngbìng le, bù néng shàngkè.",
       "meaning": "I want to go home and rest. Please tell the teacher that I'm sick and can't attend class.",
-      "note": "",
+      "note": "想回家休息 gives the plan to go home and rest. 請你跟老師說 asks the listener to tell the teacher; 跟 marks the addressee. The final clause gives the message: being ill and unable to attend class.",
       "tokens": [
         "我想回家休息。請你跟老師說，我生病了，不能上課。"
       ]
@@ -2067,7 +2067,7 @@ const unit:UnitData = {
       "text": "謝謝你的關心。",
       "pinyin": "Xièxie nǐ de guānxīn.",
       "meaning": "Thank you for your concern.",
-      "note": "",
+      "note": "你的關心 means your concern or care for me. 謝謝 takes this whole phrase as what the speaker is thankful for.",
       "tokens": [
         "謝謝你的關心。"
       ]
@@ -2076,7 +2076,7 @@ const unit:UnitData = {
       "text": "我來看你了。現在覺得怎麼樣？好一點了嗎？",
       "pinyin": "Wǒ lái kàn nǐ le. Xiànzài juéde zěnmeyàng? Hǎo yìdiǎn le ma?",
       "meaning": "I've come to see you. How do you feel now? Are you a little better?",
-      "note": "",
+      "note": "我來看你了 announces the visit as a new situation. 現在 asks about the current condition. 好一點了嗎 asks whether there has been some improvement, not whether the person is completely well.",
       "tokens": [
         "我來看你了。現在覺得怎麼樣？好一點了嗎？"
       ]
@@ -2094,7 +2094,7 @@ const unit:UnitData = {
       "text": "包／睡／小時",
       "pinyin": "bāo / shuì / xiǎoshí",
       "meaning": "packet counter / sleep / hour",
-      "note": "Meaning-first lexical explanation for known characters.",
+      "note": "包 bāo counts packets, as in 一包藥, one packet of medicine. 睡 shuì is the verb sleep. 小時 xiǎoshí measures hours: 睡了兩個小時 means slept for two hours, a duration rather than a clock time.",
       "tokens": [
         "包／睡／小時"
       ]
@@ -2103,7 +2103,7 @@ const unit:UnitData = {
       "text": "分鐘",
       "pinyin": "fēnzhōng",
       "meaning": "minute(s)",
-      "note": "Support only; no formal vocabulary/Search/Mega ownership.",
+      "note": "分鐘 fēnzhōng measures minutes: 三十分鐘 is thirty minutes. In 飯後三十分鐘, 飯後 means after a meal and 三十分鐘 specifies how long after.",
       "tokens": [
         "分鐘"
       ],
@@ -2113,7 +2113,7 @@ const unit:UnitData = {
       "text": "一包藥",
       "pinyin": "yì bāo yào",
       "meaning": "one packet of medicine",
-      "note": "",
+      "note": "一 + 包 + 藥 counts one packet of medicine. 包 is the packet measure; it does not by itself specify a dose or how many times to take it.",
       "tokens": [
         "一包藥"
       ]
@@ -2122,7 +2122,7 @@ const unit:UnitData = {
       "text": "我吃了一包藥以後，睡得比昨天好。",
       "pinyin": "Wǒ chī le yì bāo yào yǐhòu, shuì de bǐ zuótiān hǎo.",
       "meaning": "After taking one packet of medicine, I slept better than yesterday.",
-      "note": "",
+      "note": "吃了一包藥以後 sets the earlier event. 睡得 introduces how well the sleeping went; 比昨天好 means better than yesterday. The comparison is about quality, not the number of hours.",
       "tokens": [
         "我吃了一包藥以後",
         "睡得比昨天好"
@@ -2135,7 +2135,7 @@ const unit:UnitData = {
       "text": "現在臉色比早上好得多了。",
       "pinyin": "Xiànzài liǎnsè bǐ zǎoshang hǎo de duō le.",
       "meaning": "Now your complexion is much better than in the morning.",
-      "note": "",
+      "note": "現在 and 比早上 compare the complexion now with this morning. 好得多 means much better: 得多 follows the adjective to express a large difference. Final 了 highlights the improvement.",
       "tokens": [
         "現在臉色",
         "比早上好得多了"
@@ -2148,7 +2148,7 @@ const unit:UnitData = {
       "text": "你睡了幾個小時的覺以後，現在臉色比早上好得多了。",
       "pinyin": "Nǐ shuì le jǐ ge xiǎoshí de jiào yǐhòu, xiànzài liǎnsè bǐ zǎoshang hǎo de duō le.",
       "meaning": "After you slept for several hours, your complexion is now much better than in the morning.",
-      "note": "",
+      "note": "睡了幾個小時的覺 inserts the duration inside 睡覺. 以後 then marks what follows that sleep. 好得多 means much better than the morning complexion; 幾 here is several, not a question.",
       "tokens": [
         "你睡了幾個小時的覺以後",
         "現在臉色比早上好得多了"
@@ -2162,7 +2162,7 @@ const unit:UnitData = {
       "text": "睡了八個小時的覺",
       "pinyin": "shuì le bā ge xiǎoshí de jiào",
       "meaning": "slept for eight hours",
-      "note": "",
+      "note": "睡覺 is separable: put 了 and the duration between 睡 and 覺. 八個小時的覺 gives eight hours of sleep; 的 links the duration to 覺 in this form.",
       "tokens": [
         "睡了",
         "八個小時",
@@ -2176,7 +2176,7 @@ const unit:UnitData = {
       "text": "你怎麼了？／我……／你應該／最好……",
       "pinyin": "Nǐ zěnme le? / Wǒ… / Nǐ yīnggāi / zuìhǎo…",
       "meaning": "Use the role prompt to ask how the person feels, give a health suggestion, then accept or politely reject it.",
-      "note": "Role-play communicative frame. Context-only names stay contextual; deferred rejection glyphs are not required.",
+      "note": "Start with 你怎麼了, what is wrong? Reply with 我 and a symptom. Give a suggestion with 你應該 (you should) or 最好 (it would be best to). Accept with 好的, or politely decline with 謝謝，可是我不想… (thanks, but I do not want to…).",
       "tokens": [
         "你怎麼了？／",
         "我……／",
@@ -2187,7 +2187,7 @@ const unit:UnitData = {
       "text": "昨晚吃了晚飯以後吐了，肚子很不舒服。",
       "pinyin": "Zuówǎn chī le wǎnfàn yǐhòu tù le, dùzi hěn bù shūfu.",
       "meaning": "After dinner last night the patient vomited and had stomach discomfort; the patient describes symptoms and the doctor gives advice.",
-      "note": "Role-play task 2 fixed scenario.",
+      "note": "昨晚 sets the time, last night. 吃了晚飯以後 means after eating dinner; 吐了 reports vomiting. 肚子很不舒服 describes abdominal discomfort. In the role-play, use these details to describe the problem before giving a suggestion.",
       "tokens": [
         "昨晚吃了晚飯以後吐了",
         "肚子很不舒服"
@@ -2215,8 +2215,8 @@ const unit:UnitData = {
     "u48-prescription-support": {
       "text": "一日4次／3日份／份／飯前／飯後／飯後30分鐘",
       "pinyin": "yí rì sì cì / sān rì fèn / fèn / fànqián / fànhòu / fànhòu sānshí fēnzhōng",
-      "meaning": "four times per day / three-day supply / 份 fèn = support-only supply/portion unit / before meals / after meals / 30 minutes after meals",
-      "note": "Read the Chinese prescription notation directly. 份 fèn is local support only: it has no canonical vocabulary, Search, Mega, or handwriting ownership.",
+      "meaning": "four times per day / three-day supply / 份 fèn = supply/portion unit / before meals / after meals / 30 minutes after meals",
+      "note": "This practice label uses short written forms: 一日4次 (yí rì sì cì) = four times a day; 3日份 (sān rì fèn) = a three-day supply. 份 (fèn) means a portion or supply here. 飯前 (fàn qián) = before meals; 飯後 (fàn hòu) = after meals; 飯後30分鐘 (fàn hòu sānshí fēnzhōng) = 30 minutes after meals. Read these as the label's instructions for this exercise.",
       "tokens": [
         "一日4次／3日份／份／飯前／飯後／飯後30分鐘"
       ],
@@ -2225,8 +2225,8 @@ const unit:UnitData = {
     "u48-prescription-visual": {
       "text": "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘",
       "pinyin": "jiànkāng zhěnsuǒ / yí rì sì cì / sān rì fèn / fànhòu / fànhòu sānshí fēnzhōng",
-      "meaning": "Health Clinic (context only; not assessed) / four times per day / three-day supply / after meals / 30 minutes after meals",
-      "note": "Prescription card. 健康診所 is a glossed contextual header; 診 is deferred and non-assessed. 份 remains support-only with no canonical vocabulary, Search, Mega, or handwriting ownership.",
+      "meaning": "Health Clinic / four times per day / three-day supply / after meals / 30 minutes after meals",
+      "note": "Read the practice label: 健康診所 (Jiànkāng Zhěnsuǒ) is the clinic name in the header. 一日4次 gives four times daily and 3日份 gives a three-day supply. 飯後30分鐘 means 30 minutes after meals. For this exercise, each dose is one packet: four doses a day for three days total twelve packets. The clinic name only identifies the label.",
       "tokens": [
         "健康診所｜一日4次｜3日份｜飯後｜飯後30分鐘"
       ],
@@ -2245,7 +2245,7 @@ const unit:UnitData = {
       "text": "我一直流鼻水，頭很痛。",
       "pinyin": "Wǒ yìzhí liú bíshuǐ, tóu hěn tòng.",
       "meaning": "I have a runny nose and my head hurts.",
-      "note": "",
+      "note": "一直流鼻水 reports a continuing runny nose. 頭很痛 adds a separate symptom, a painful head. The second clause keeps the same person's body as the understood context.",
       "tokens": [
         "我一直流鼻水",
         "頭很痛"
@@ -2255,7 +2255,7 @@ const unit:UnitData = {
       "text": "多喝水，多休息，早一點睡覺。",
       "pinyin": "Duō hē shuǐ, duō xiūxí, zǎo yìdiǎn shuìjiào.",
       "meaning": "Drink more water, rest more, and sleep a little earlier.",
-      "note": "",
+      "note": "多 before 喝水 and 休息 advises doing more of those activities. 早一點 before 睡覺 advises an earlier bedtime. It does not specify a number of hours of sleep.",
       "tokens": [
         "多喝水",
         "多休息",

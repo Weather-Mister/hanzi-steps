@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-10-01",
-  "note": "Human-readable adjudication in docs/connected-learning-validation.md. Hashes detect drift; they do not prove natural-language semantics. Grammar-note-only changes reviewed in docs/book1-grammar-review.md.",
+  "note": "Human-readable adjudication in docs/connected-learning-validation.md. Hashes detect drift; they do not prove natural-language semantics. Grammar-note-only changes reviewed in docs/book1-grammar-review.md. Sentence-explanation changes reviewed in docs/teaching-quality-review.md.",
   "payloads": {
     "readings": {
       "reading-unit-10": "801c7633ed288be6ddf792190d2ff755b290d81d09735c9acbc6b6c281bfb285",
@@ -22,9 +22,9 @@
       "identity": "32de26a6995553c7fb26bc423b3642dd23295f884cea52f51892a3817b372387",
       "two-books": "27711824e61074bdd3c69b7024dc0356f2e047402e9643932581bc39935a581e",
       "swimming-opinion": "d08858101ccee95ed72da86f10729c603c6a1aa9c2875e86aa3fb27d12203a67",
-      "buy-for-her": "26b550e6ffa56aebba0a28c0047201a893bcba67ac9f4b6d6552b1bbc9472f71",
-      "spicy-noodles": "da0b868c04398471b5ad508fbfeaad2c901052ed071886b0f3d88bf8813922e4",
-      "shop-location": "0de84e4563a1c7c691fb392300d7fa5ef15479249364efe6cc9f20da58d1b286",
+      "buy-for-her": "58f434ffd252b9f23015ac06259caf7b7ee8acd8fabfa0952243a213fbd5dae7",
+      "spicy-noodles": "47cb70fc2ec7e9c0ae5743fd31772e5839e9b994ed1a83e8f6fdbdbf5fe4258f",
+      "shop-location": "f387699ff058e10d79019045e9efd5fb97a9b0edfe345dce530cbe4672e673ab",
       "game-end": "c32e36ec0f8f287a19b569a1f29f6054dc9a57af5c07dd412a9b4eff593b7a48",
       "mrt-faster": "8502833f568ac484c6fd80cddc7d0caf983efb8055d84a3a5b765a8dff831ff6",
       "last-month": "3ba7c00a2b293dab39de2cc9436c4498462c6470a8968eaa3a1506d4a4000b6a",
@@ -40,15 +40,15 @@
       "reading-book-2-unit-4"
     ],
     "senses": {
-      "好:0": "acb49399aceb1f1bd1ac4c5a03b421230a6684a12d97c4d718567fc3627e5623",
-      "上:2": "619946d2e24af654eb1fabd4268384f3012c38a69dc10526c2b1e33945a6adfe",
+      "好:0": "49274552bc75f75fb9eedbe0c1d5f7d7f78dfac0ad9f4a231d192cf7052eb744",
+      "上:2": "3aade2110922a57eb02e1a35344994e6abe956733deb7ead8677658b803a8a79",
       "上:3": "e7da8156e61c84d47625b1aa970b43c0af2c1de95cf383f4fa47637f1c947b0a",
       "下:1": "5a242542eef9f11830bfe550328f5053adc2b4fea726eecb558fec243e95b928",
       "下:2": "4f3918fd3208335df281ebe007fffdf3409f5a313714961dbaaa2628783fb138",
       "了:0": "3de38ec3db26b10f709a381a3df7abef58bc718eff893c5ac273da3166973a3c",
       "了:1": "01b6e9bfe8803e4ffde15a2cd185aedf791c2135a16044b57f2562fd656b832e",
       "了:2": "a78b7d66dacd776c0d2a422dd1f9e55ac17f11db2b17c5d02b8f2c05b799ad44",
-      "得:0": "c9a54588b4b9f07cb10959e3de24a41bba913b70c5520218cdc74920c4796d53",
+      "得:0": "415f144c50da6ef5eb7c3fe582f7247296c7767338a5f3d6ea725bceb450d929",
       "在:0": "b669f3ae2c5ad436152a17069a259a3aa4418ae497f7baa0c296ccc677ddcdf7",
       "幾:0": "168808b2ecb0b23a0c1a867d2b773672880f506d5eeba84e548c67384f55a294",
       "跟:0": "0661a6da53191b5f1757f857c81401c3bf80d2dd822cb3ea9aed669a7b853b8a",

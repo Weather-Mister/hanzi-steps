@@ -1,4 +1,5 @@
 'use client';
+import {isOrderAnswerAccepted} from '@/lib/order-answer';
 import {useEffect,useMemo,useState} from 'react';
 import {ArrowLeft,BookOpen,Headphones,Check,Flame,GraduationCap,Keyboard,RotateCcw,Sparkles,Trophy,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
@@ -76,8 +77,7 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
   return shuffled([...tokens,...extras].map((text,index)=>({id:index,text})),question.id+':tokens');
  },[items,question.id,question.item,tokens]);
  const [picked,setPicked]=useState<number[]>([]);
- const chosen=picked.map(id=>bank.find(token=>token.id===id)?.text||'');
- const built=chosen.join('');
+ const chosen=useMemo(()=>picked.map(id=>bank.find(token=>token.id===id)?.text||''),[bank,picked]);
  const full=picked.length>=tokens.length;
  useEffect(()=>{
   if(!full)return;
@@ -86,16 +86,16 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
    const target=event.target instanceof HTMLElement?event.target:null;
    if(target?.closest('input,textarea,select,a,summary,[contenteditable="true"]'))return;
    event.preventDefault();
-   onAnswer(built===tokens.join(''),question.item.traditional);
+   onAnswer(isOrderAnswerAccepted(chosen,tokens,{alternatives:question.item.acceptedTokenOrders}),question.item.traditional);
   }
   window.addEventListener('keydown',onKeyDown);
   return ()=>window.removeEventListener('keydown',onKeyDown);
- },[full,built,question.item.traditional,tokens,onAnswer]);
+ },[full,chosen,question.item.acceptedTokenOrders,question.item.traditional,tokens,onAnswer]);
  return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>Build the Chinese sentence. Extra tiles are mixed in.</p></div>
   <div className="smart-built-sentence" lang="zh-Hant-TW">{picked.length?chosen.join(' '):'…'}</div>
   <div className="smart-token-bank">{bank.map(token=><button key={token.id} disabled={picked.includes(token.id)||full} onClick={()=>setPicked(old=>[...old,token.id])} lang="zh-Hant-TW">{token.text}</button>)}</div>
   <div className="smart-inline-actions"><button className="text-button" disabled={!picked.length} onClick={()=>setPicked(old=>old.slice(0,-1))}>Undo</button>
-   <button className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(built===tokens.join(''),question.item.traditional)}>Check</button></div>
+   <button className="primary-button" disabled={picked.length!==tokens.length} onClick={()=>onAnswer(isOrderAnswerAccepted(chosen,tokens,{alternatives:question.item.acceptedTokenOrders}),question.item.traditional)}>Check</button></div>
  </div>;
 }
 function HandwritingQuestion({question,items,onAnswer}:{question:PracticeQuestion;items:PracticeItem[];onAnswer:(ok:boolean,answer:string,assisted?:boolean)=>void}){
@@ -187,3 +187,4 @@ export function SmartPractice({open,onOpenChange,completed,theme,mastery,megaMas
   {screen==='session'&&<><DialogTitle className="sr-only">{sessionTitle}</DialogTitle><DialogDescription className="sr-only">{sessionSubtitle}</DialogDescription><Session title={sessionTitle} subtitle={sessionSubtitle} queue={queue} items={items} completed={completed} onExit={back} onRecord={recordQuestion}/></>}
  </DialogContent></Dialog>;
 }
+

@@ -2063,7 +2063,7 @@ const unit:UnitData = {
         "牛肉",
         "麵"
       ],
-      "note": "",
+      "note": "喜歡 + activity describes a preference. 吃牛肉麵 means eat beef noodles; 牛肉 specifies beef and 麵 means noodles.",
       "grammarIds": [
         "u15-noodles"
       ]
@@ -2077,7 +2077,7 @@ const unit:UnitData = {
         "很",
         "好吃"
       ],
-      "note": "",
+      "note": "好吃 evaluates food as tasty. 很好吃 is the description of 這個包子. Use 好喝 for something pleasant to drink.",
       "grammarIds": [
         "u15-noodles"
       ]
@@ -2092,7 +2092,7 @@ const unit:UnitData = {
         "很",
         "好喝"
       ],
-      "note": "",
+      "note": "湯 names the soup or broth. 也 adds a matching positive comment, and 好喝 describes its taste as something you drink.",
       "grammarIds": [
         "u15-soup"
       ]
@@ -2106,7 +2106,7 @@ const unit:UnitData = {
         "真",
         "好吃"
       ],
-      "note": "",
+      "note": "真 strengthens the speaker's reaction: really delicious! Put 真 directly before 好吃; no 很 is needed here.",
       "grammarIds": [
         "u15-soup"
       ]
@@ -2122,7 +2122,7 @@ const unit:UnitData = {
         "很",
         "有名"
       ],
-      "note": "",
+      "note": "家 counts shops in 那家店. 有名 is the complete description famous or well-known; 很有名 describes that shop.",
       "grammarIds": [
         "u15-famous",
         "u15-shop-measure"
@@ -2140,7 +2140,7 @@ const unit:UnitData = {
         "店",
         "吧"
       ],
-      "note": "",
+      "note": "去 + place means go to that place. 那家店 is that shop. Final 吧 makes 我們去… a friendly let's-go suggestion.",
       "grammarIds": [
         "u15-shop-measure"
       ]
@@ -2156,7 +2156,7 @@ const unit:UnitData = {
         "吃",
         "什麼"
       ],
-      "note": "",
+      "note": "最喜歡 asks for the highest preference: like best. 什麼 fills the food slot after 吃, so answer with a food, without adding 嗎.",
       "grammarIds": [
         "u15-favorite"
       ]
@@ -2172,7 +2172,7 @@ const unit:UnitData = {
         "吃",
         "牛肉麵"
       ],
-      "note": "",
+      "note": "最 goes before 喜歡 and makes this a favorite, not a statement about frequency. 吃牛肉麵 is the activity liked best.",
       "grammarIds": [
         "u15-favorite"
       ]
@@ -2189,7 +2189,7 @@ const unit:UnitData = {
         "碗",
         "牛肉麵"
       ],
-      "note": "",
+      "note": "想點 means would like to order. 一碗牛肉麵 is one bowl of beef noodles: number + bowl measure + food.",
       "grammarIds": [
         "u15-order"
       ]
@@ -2221,7 +2221,7 @@ const unit:UnitData = {
         "多少",
         "錢"
       ],
-      "note": "",
+      "note": "一碗牛肉麵 names the serving whose price you want. 多少錢 asks how much it costs; the quantity is one bowl, not one noodle.",
       "grammarIds": [
         "u15-order"
       ]
@@ -2256,3 +2256,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+

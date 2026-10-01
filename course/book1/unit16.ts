@@ -2453,7 +2453,7 @@ const unit:UnitData = {
         "吃",
         "晚飯"
       ],
-      "note": "",
+      "note": "昨天晚上 sets the time before 去. 去那家餐廳 gives the destination and 吃晚飯 gives the purpose. The past time comes from 昨天, not a change in the verb form.",
       "grammarIds": [
         "u16-yesterday",
         "u16-restaurant",
@@ -2475,7 +2475,7 @@ const unit:UnitData = {
         "很",
         "貴"
       ],
-      "note": "",
+      "note": "可是 links contrasting facts: the restaurant is famous, but its food is expensive. 菜 here means its dishes or food, not only vegetables.",
       "grammarIds": [
         "u16-restaurant",
         "u16-contrast"
@@ -2496,7 +2496,7 @@ const unit:UnitData = {
         "有一點",
         "辣"
       ],
-      "note": "",
+      "note": "可是 introduces a drawback after the favorable 好吃. 有一點 before 辣 means a little spicy; it is a degree, not a quantity of noodles.",
       "grammarIds": [
         "u16-contrast",
         "u16-a-little"
@@ -2518,7 +2518,7 @@ const unit:UnitData = {
         "的",
         "麵"
       ],
-      "note": "",
+      "note": "怕辣 says spicy food is something you avoid or are sensitive to. 不辣的 describes 麵: noodles that are not spicy. 想點 expresses the desired order.",
       "grammarIds": [
         "u16-sensitive",
         "u16-spicy",
@@ -2540,7 +2540,7 @@ const unit:UnitData = {
         "自己",
         "做飯"
       ],
-      "note": "",
+      "note": "所以 introduces the result of the first clause. 自己 before 做飯 says I cook myself; 喜歡 describes that preference.",
       "grammarIds": [
         "u16-sensitive",
         "u16-result",
@@ -2581,7 +2581,7 @@ const unit:UnitData = {
         "的",
         "甜點"
       ],
-      "note": "",
+      "note": "最喜歡 marks a favorite. 這家餐廳的 describes 甜點: this restaurant's desserts. The final noun names what is liked.",
       "grammarIds": [
         "u16-dessert",
         "u16-restaurant",
@@ -2605,7 +2605,7 @@ const unit:UnitData = {
         "很",
         "不錯"
       ],
-      "note": "",
+      "note": "有一點貴 presents a mild drawback. 可是 contrasts it with the desserts, and 很不錯 is a positive evaluation: quite good.",
       "grammarIds": [
         "u16-a-little",
         "u16-contrast",
@@ -2623,7 +2623,7 @@ const unit:UnitData = {
         "得",
         "怎麼樣"
       ],
-      "note": "",
+      "note": "做飯 names the activity. Repeat 做 before 得怎麼樣 to ask how well it is done. This asks about performance, rather than whether you know how to cook at all.",
       "grammarIds": [
         "u16-performance",
         "u16-object-repeat",
@@ -2643,7 +2643,7 @@ const unit:UnitData = {
         "很",
         "好"
       ],
-      "note": "",
+      "note": "做甜點 gives verb + object. Repeat 做 before 得很好, the performance description. 得 is neutral-tone de here, not děi meaning must.",
       "grammarIds": [
         "u16-performance",
         "u16-object-repeat"
@@ -2660,7 +2660,7 @@ const unit:UnitData = {
         "得",
         "不錯"
       ],
-      "note": "",
+      "note": "甜點 is placed first as the topic: as for desserts. The comment 我做得不錯 evaluates my performance. The object is already understood, so 做 is not repeated.",
       "grammarIds": [
         "u16-object-first",
         "u16-not-bad"
@@ -2682,7 +2682,7 @@ const unit:UnitData = {
         "我",
         "嗎"
       ],
-      "note": "",
+      "note": "學做甜點 means learn to make desserts. 你可以教我嗎 asks whether you can teach me, with the same skill understood after 教我.",
       "grammarIds": [
         "u16-teach",
         "u16-teaching-request"
@@ -2702,7 +2702,7 @@ const unit:UnitData = {
         "不",
         "好"
       ],
-      "note": "",
+      "note": "會做飯 says I have the skill. 可是 contrasts that with 做得不好, doing it poorly. 不 negates 好 after 得; it does not deny having the skill.",
       "grammarIds": [
         "u16-skill-performance",
         "u16-contrast",
@@ -2724,7 +2724,7 @@ const unit:UnitData = {
         "吃",
         "麵"
       ],
-      "note": "",
+      "note": "昨天晚上 locates the event in the past. 去那家餐廳吃麵 means go to that restaurant to eat noodles: destination before purpose.",
       "grammarIds": [
         "u16-yesterday",
         "u16-restaurant"
@@ -2743,7 +2743,7 @@ const unit:UnitData = {
         "自己",
         "做飯"
       ],
-      "note": "",
+      "note": "怕辣 supplies the reason, and 所以 introduces the result. 常 describes frequency; 自己 says the speaker does the cooking.",
       "grammarIds": [
         "u16-sensitive",
         "u16-result",
@@ -2763,7 +2763,7 @@ const unit:UnitData = {
         "得",
         "不錯"
       ],
-      "note": "",
+      "note": "會做飯 states ability. 也做得不錯 adds that the performance is good too. Ability and quality are related but separate claims.",
       "grammarIds": [
         "u16-skill-performance",
         "u16-not-bad"
@@ -2782,7 +2782,7 @@ const unit:UnitData = {
         "甜點",
         "嗎"
       ],
-      "note": "",
+      "note": "教 + person + skill identifies what is taught to whom: 教我做甜點. 可以…嗎 makes this a request asking whether you can teach me.",
       "grammarIds": [
         "u16-teach",
         "u16-teaching-request"
@@ -2798,3 +2798,4 @@ const unit:UnitData = {
 };
 
 export default unit;
+
