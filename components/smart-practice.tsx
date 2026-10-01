@@ -77,7 +77,7 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
   return shuffled([...tokens,...extras].map((text,index)=>({id:index,text})),question.id+':tokens');
  },[items,question.id,question.item,tokens]);
  const [picked,setPicked]=useState<number[]>([]);
- const chosen=picked.map(id=>bank.find(token=>token.id===id)?.text||'');
+ const chosen=useMemo(()=>picked.map(id=>bank.find(token=>token.id===id)?.text||''),[bank,picked]);
  const full=picked.length>=tokens.length;
  useEffect(()=>{
   if(!full)return;
@@ -90,7 +90,7 @@ function SentenceQuestion({question,items,onAnswer}:{question:PracticeQuestion;i
   }
   window.addEventListener('keydown',onKeyDown);
   return ()=>window.removeEventListener('keydown',onKeyDown);
- },[full,built,question.item.traditional,tokens,onAnswer]);
+ },[full,chosen,question.item.acceptedTokenOrders,question.item.traditional,tokens,onAnswer]);
  return <div className="smart-question"><ModeLabel mode={question.mode}/><div className="smart-prompt"><h2>{question.item.meaning}</h2><p>Build the Chinese sentence. Extra tiles are mixed in.</p></div>
   <div className="smart-built-sentence" lang="zh-Hant-TW">{picked.length?chosen.join(' '):'…'}</div>
   <div className="smart-token-bank">{bank.map(token=><button key={token.id} disabled={picked.includes(token.id)||full} onClick={()=>setPicked(old=>[...old,token.id])} lang="zh-Hant-TW">{token.text}</button>)}</div>
