@@ -343,14 +343,17 @@ const unit:UnitData = {
         {
           "id": "u29-hai-s3",
           "type": "select",
-          "prompt": "Which word means the color yellow?",
+          "prompt": "這家店有包子，還有黃色的水果。 What else is available besides buns?",
           "options": [
-            "黃色",
-            "水果",
-            "茶館"
+            "Yellow fruit",
+            "Only buns",
+            "A yellow teahouse"
           ],
-          "answer": "黃色",
-          "explanation": "黃色 is yellow; 色 means color."
+          "answer": "Yellow fruit",
+          "explanation": "還有 adds another available item. 黃色的 describes 水果, so the extra item is yellow fruit. 還 here means also, not still.",
+          "grammarIds": [
+            "u2-have"
+          ]
         }
       ]
     },

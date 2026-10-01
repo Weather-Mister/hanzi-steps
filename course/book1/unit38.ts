@@ -595,14 +595,18 @@ const unit:UnitData = {
         {
           "id": "u38-meet-s3",
           "type": "select",
-          "prompt": "Which estimate is natural?",
+          "prompt": "我下課以後，五點左右在圖書館門口等你。 Which meeting detail is definite?",
           "options": [
-            "五點左右",
-            "左右五點",
-            "五左右點"
+            "The place is the library entrance; the time is around five.",
+            "The place is inside the library; the time is exactly five.",
+            "The place is the library entrance; the time is exactly five."
           ],
-          "answer": "五點左右",
-          "explanation": "左右 follows the complete time expression."
+          "answer": "The place is the library entrance; the time is around five.",
+          "explanation": "下課以後 means after class. 圖書館門口 fixes the meeting place at the entrance; 五點左右 gives an approximate time, not exactly 5:00.",
+          "grammarIds": [
+            "u36-yihou-after",
+            "u21-time-before-place"
+          ]
         }
       ]
     },

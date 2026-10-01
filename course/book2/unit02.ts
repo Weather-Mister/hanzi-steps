@@ -282,14 +282,17 @@ const unit:UnitData = {
         {
           "id": "b2u2-l2-application",
           "type": "select",
-          "prompt": "第二個紅綠燈 is which one?",
+          "prompt": "到第二個紅綠燈右轉，不是第一個。 Which route matches?",
           "options": [
-            "The second traffic light.",
-            "The first intersection.",
-            "The last bus stop."
+            "Turn right at the second traffic light.",
+            "Turn right at the first traffic light.",
+            "Turn left at the second traffic light."
           ],
-          "answer": "The second traffic light.",
-          "explanation": "In this context, The second traffic light."
+          "answer": "Turn right at the second traffic light.",
+          "explanation": "第 makes the numbers ordinal. 第二個 is the second light; 不是第一個 corrects the possible mistake. 右轉 specifies right, not left.",
+          "grammarIds": [
+            "u21-not-the-case"
+          ]
         }
       ]
     },

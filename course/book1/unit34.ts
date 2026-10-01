@@ -439,14 +439,18 @@ const unit:UnitData = {
         {
           "id": "u34-need-s2",
           "type": "select",
-          "prompt": "Which sentence says 'So I need five years'?",
+          "prompt": "我先念中文，再念大學，這個計畫要五年。 Which sentence says 'So I need five years'?",
           "options": [
             "所以需要五年。",
             "所以先念五年。",
             "所以五年很久。"
           ],
           "answer": "所以需要五年。",
-          "explanation": "需要 means 'to need.' In context, the omitted subject is the speaker: 'So I need five years.'"
+          "explanation": "先…再… gives the order of the plan, and the context already gives its five-year length. 所以需要五年 uses 所以 to state the result and 需要 to say that five years are needed; the other choices change the meaning.",
+          "grammarIds": [
+            "u34-first-then",
+            "u16-result"
+          ]
         }
       ]
     },

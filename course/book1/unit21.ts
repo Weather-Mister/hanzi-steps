@@ -446,16 +446,18 @@ const unit:UnitData = {
         {
           "id": "u21-clock-quality-12",
           "type": "select",
-          "prompt": "Your appointment is at 7:40. Which time matches?",
+          "prompt": "我們明天早上七點四十分在宿舍見面。 Which appointment matches?",
           "options": [
-            "七點四十分",
-            "七點十四分",
-            "四點七分"
+            "Tomorrow at 7:40 a.m., at the dorm",
+            "Tomorrow at 7:40 p.m., at the dorm",
+            "Tomorrow at 7:20 a.m., at the dorm"
           ],
-          "answer": "七點四十分",
-          "explanation": "七 is the hour, 四十 is forty minutes.",
+          "answer": "Tomorrow at 7:40 a.m., at the dorm",
+          "explanation": "明天早上 gives tomorrow morning, 七點四十分 is 7:40, and 在宿舍 gives the place. 見面 is the meeting.",
           "grammarIds": [
-            "u21-clock-time"
+            "u21-clock-time",
+            "u10-morning-time",
+            "u3-location"
           ]
         }
       ]
@@ -942,14 +944,18 @@ const unit:UnitData = {
         {
           "id": "u21-conversation-select-1",
           "type": "select",
-          "prompt": "Which phrase means “next time”?",
+          "prompt": "A: 今天一起吃晚飯，好不好？ B: 今天我要上課，下次吧。 What does B suggest?",
           "options": [
-            "下次",
-            "後天",
-            "中午"
+            "Have dinner together another time.",
+            "Have dinner together today.",
+            "Never have dinner together."
           ],
-          "answer": "下次",
-          "explanation": "下次 refers to the next occasion."
+          "answer": "Have dinner together another time.",
+          "explanation": "下次 means next time, and 吧 softens that suggestion. B has class today and proposes another occasion; the reply does not reject all future invitations.",
+          "grammarIds": [
+            "u7-suggest",
+            "u10-how-about"
+          ]
         },
         {
           "id": "u21-conversation-select-2",

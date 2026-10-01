@@ -471,14 +471,18 @@ const unit:UnitData = {
         {
           "id": "u30-photo-s2",
           "type": "select",
-          "prompt": "Which word means happy or cheerful?",
+          "prompt": "我們去夜市的時候，妹妹笑得很開心。 How did the younger sister feel on that outing?",
           "options": [
-            "開心",
-            "機會",
-            "紅色"
+            "Happy",
+            "Unhappy",
+            "The sentence only says she could take photos."
           ],
-          "answer": "開心",
-          "explanation": "開心 means happy/cheerful."
+          "answer": "Happy",
+          "explanation": "去夜市的時候 sets the occasion. 笑得很開心 uses 得 to describe the smiling or laughing: she was happy, rather than merely able to do something.",
+          "grammarIds": [
+            "u16-performance",
+            "u27-de-shihou"
+          ]
         },
         {
           "id": "u30-photo-s3",
@@ -584,14 +588,17 @@ const unit:UnitData = {
         {
           "id": "u30-clothes-s2",
           "type": "select",
-          "prompt": "Which noun means clothes?",
+          "prompt": "要是明天去夜市，我就穿黃色的衣服。 Which plan depends on tomorrow's outing?",
           "options": [
-            "衣服",
-            "照片",
-            "水果"
+            "Wearing yellow clothes if I go to the night market",
+            "Wearing red clothes if I go to the night market",
+            "Going to the night market because I wore yellow clothes"
           ],
-          "answer": "衣服",
-          "explanation": "衣服 means clothes/clothing."
+          "answer": "Wearing yellow clothes if I go to the night market",
+          "explanation": "要是 introduces the condition, and 就 introduces the planned result. 穿黃色的衣服 is wearing yellow clothes; the sentence does not say the outing has already happened.",
+          "grammarIds": [
+            "u29-yaoshi-jiu"
+          ]
         },
         {
           "id": "u30-clothes-o1",

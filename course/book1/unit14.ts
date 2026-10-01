@@ -208,15 +208,19 @@ const unit:UnitData = {
         {
           "id": "u14-phones-22",
           "type": "select",
-          "prompt": "Review: 一萬三千塊 is how much?",
+          "prompt": "這支手機一萬三千塊，那支手機三千塊。 Which price belongs to this phone?",
           "options": [
             "NT$13,000",
-            "NT$1,300",
-            "NT$31,000"
+            "NT$3,000",
+            "NT$30,000"
           ],
           "answer": "NT$13,000",
-          "explanation": "一萬 = 10,000; 三千 = 3,000.",
-          "grammarIds": []
+          "explanation": "這支 points to this phone, whose price is 一萬三千, 13,000. 那支 points to the other phone, priced at 3,000. 支 counts phones.",
+          "grammarIds": [
+            "u14-phones",
+            "u13-large-prices",
+            "u3-point"
+          ]
         }
       ]
     },
@@ -350,15 +354,19 @@ const unit:UnitData = {
         {
           "id": "u14-new-old-18",
           "type": "select",
-          "prompt": "Review: which means “I would like to buy”?",
+          "prompt": "You want your sister to buy a new phone for you. Which request matches?",
           "options": [
-            "我不買",
-            "我想買",
-            "我想賣"
+            "請幫我買一支新手機。",
+            "請幫我買一支舊手機。",
+            "請幫我賣一支新手機。"
           ],
-          "answer": "我想買",
-          "explanation": "想買 is want to buy; 賣 is sell.",
-          "grammarIds": []
+          "answer": "請幫我買一支新手機。",
+          "explanation": "請幫我買 asks the listener to help by buying for you. 一支 counts one phone and 新 describes it. 舊 changes it to old; 賣 changes buying to selling.",
+          "grammarIds": [
+            "u14-new-old",
+            "u13-help",
+            "u14-phones"
+          ]
         }
       ]
     },
@@ -687,15 +695,19 @@ const unit:UnitData = {
         {
           "id": "u14-which-kind-17",
           "type": "select",
-          "prompt": "Review: which word joins alternatives in a question?",
+          "prompt": "You are choosing between a new phone and an old phone. Which question asks that choice?",
           "options": [
-            "和",
-            "都",
-            "還是"
+            "你想買新的還是舊的？",
+            "你想買新的和舊的嗎？",
+            "新的和舊的一共多少錢？"
           ],
-          "answer": "還是",
-          "explanation": "還是 presents a choice; 和 joins nouns.",
-          "grammarIds": []
+          "answer": "你想買新的還是舊的？",
+          "explanation": "新的 and 舊的 stand for the new and old phones. 還是 offers the alternatives. 和…嗎 asks whether you want both; 一共多少錢 asks their total price.",
+          "grammarIds": [
+            "u14-de-ones",
+            "u9-choice",
+            "u12-total"
+          ]
         }
       ]
     },

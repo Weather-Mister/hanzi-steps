@@ -184,17 +184,18 @@ const unit:UnitData = {
         {
           "id": "u18-school-18",
           "type": "select",
-          "prompt": "Which statement says “I am at school now”?",
+          "prompt": "我現在在學校，可是今天不想在這裡吃晚飯。 What is the speaker saying?",
           "options": [
-            "我現在在學校。",
-            "我明天去學校。",
-            "我昨天在家。"
+            "I am at school now, but do not want dinner here today.",
+            "I am not at school now, but want dinner here today.",
+            "I am at school now and want dinner here today."
           ],
-          "answer": "我現在在學校。",
-          "explanation": "現在 says now, and 在學校 says at school.",
+          "answer": "I am at school now, but do not want dinner here today.",
+          "explanation": "現在在學校 gives the current location. 可是 introduces a contrast, and 不想 applies to 吃晚飯, not to being at school.",
           "grammarIds": [
-            "u18-school",
-            "u18-now"
+            "u18-now",
+            "u16-contrast",
+            "u4-negative-wish"
           ]
         },
         {
@@ -711,16 +712,18 @@ const unit:UnitData = {
         {
           "id": "u18-inside-outside-24",
           "type": "select",
-          "prompt": "Which character completes 外__ (outside)?",
+          "prompt": "我聽說餐廳在學校外面，不在裡面。 Where has the speaker heard the restaurant is?",
           "options": [
-            "面",
-            "麵",
-            "美"
+            "Outside the school",
+            "Inside the school",
+            "Inside the restaurant"
           ],
-          "answer": "面",
-          "explanation": "外面 uses 面. 麵 is noodles, even though both characters sound miàn.",
+          "answer": "Outside the school",
+          "explanation": "聽說 marks information heard from someone else. 學校外面 gives the location; 不在裡面 rules out inside the school.",
           "grammarIds": [
-            "u18-inside-outside"
+            "u18-inside-outside",
+            "u18-not-at",
+            "u17-heard"
           ]
         },
         {

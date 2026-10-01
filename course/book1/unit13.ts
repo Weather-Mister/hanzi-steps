@@ -167,15 +167,19 @@ const unit:UnitData = {
         {
           "id": "u13-ask-16",
           "type": "select",
-          "prompt": "Review: a large hot coffee to go is…",
+          "prompt": "You want to ask the shop owner the price of a large hot coffee to go. Which question matches?",
           "options": [
-            "大杯熱咖啡，外帶。",
-            "小杯熱咖啡，內用。",
-            "大杯茶，內用。"
+            "老闆，請問大杯熱咖啡外帶多少錢？",
+            "老闆，請問小杯熱咖啡外帶多少錢？",
+            "老闆，請問大杯熱茶外帶多少錢？"
           ],
-          "answer": "大杯熱咖啡，外帶。",
-          "explanation": "大杯 = large; 熱咖啡 = hot coffee; 外帶 = to go.",
-          "grammarIds": []
+          "answer": "老闆，請問大杯熱咖啡外帶多少錢？",
+          "explanation": "老闆 addresses the owner and 請問 politely introduces the question. Keep all the order details: 大杯, 熱咖啡, 外帶, then ask 多少錢.",
+          "grammarIds": [
+            "u13-ask",
+            "u11-size",
+            "u12-price-question"
+          ]
         },
         {
           "id": "u13-ask-17",
@@ -333,15 +337,19 @@ const unit:UnitData = {
         {
           "id": "u13-buns-19",
           "type": "select",
-          "prompt": "Review: how many is 七十五?",
+          "prompt": "我要兩個包子和一杯熱茶，外帶。 Which order should be packed?",
           "options": [
-            "75",
-            "57",
-            "15"
+            "Two buns and one hot tea",
+            "One bun and two hot teas",
+            "Two buns and one hot coffee"
           ],
-          "answer": "75",
-          "explanation": "七十 is seventy, plus 五.",
-          "grammarIds": []
+          "answer": "Two buns and one hot tea",
+          "explanation": "個 counts 包子 and 杯 counts 茶; 和 joins the two items. 外帶 applies to the order being packed to go.",
+          "grammarIds": [
+            "u13-buns",
+            "u11-cup",
+            "u4-and"
+          ]
         }
       ]
     },
@@ -691,15 +699,19 @@ const unit:UnitData = {
         {
           "id": "u13-hundreds-20",
           "type": "select",
-          "prompt": "Review: which number is 48?",
+          "prompt": "我想買兩杯咖啡，一共一百零五塊。 What does 一百零五塊 price here?",
           "options": [
-            "八十四",
-            "十四",
-            "四十八"
+            "Both coffees together cost NT$105.",
+            "Each coffee costs NT$105.",
+            "Both coffees together cost NT$150."
           ],
-          "answer": "四十八",
-          "explanation": "Four tens and eight ones.",
-          "grammarIds": []
+          "answer": "Both coffees together cost NT$105.",
+          "explanation": "一共 marks the total for the two coffees. 一百零五 is 105: 零 signals the missing tens. 150 would be 一百五十.",
+          "grammarIds": [
+            "u13-hundreds",
+            "u12-total",
+            "u11-buy"
+          ]
         }
       ]
     },

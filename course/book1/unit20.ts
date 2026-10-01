@@ -206,16 +206,17 @@ const unit:UnitData = {
         {
           "id": "u20-dorm-24",
           "type": "select",
-          "prompt": "Which is the label “second floor”?",
+          "prompt": "我要去宿舍的二樓找朋友。 Which destination matches the plan?",
           "options": [
-            "二樓",
-            "兩樓",
-            "兩個樓"
+            "The dorm's second floor",
+            "Two dorm buildings",
+            "The school's second floor"
           ],
-          "answer": "二樓",
-          "explanation": "Use the digit 二 for a floor label. It is different from counting two objects.",
+          "answer": "The dorm's second floor",
+          "explanation": "宿舍的二樓 is floor two of the dorm. 二樓 is a floor label, not a count of buildings. 找朋友 gives the purpose of going there.",
           "grammarIds": [
-            "u20-floor"
+            "u20-floor",
+            "u19-find"
           ]
         },
         {
@@ -521,15 +522,17 @@ const unit:UnitData = {
         {
           "id": "u20-buildings-15",
           "type": "select",
-          "prompt": "Which question needs a building as its answer?",
+          "prompt": "學校附近有兩棟大樓，一棟是宿舍，一棟是圖書館。 Which description matches?",
           "options": [
-            "哪棟大樓是宿舍？",
-            "你朋友在幾樓？"
+            "Two buildings: one dorm and one library",
+            "One building: the library on the dorm's second floor",
+            "Two buildings: both are dorms"
           ],
-          "answer": "哪棟大樓是宿舍？",
-          "explanation": "哪棟大樓 asks which building is the dorm.",
+          "answer": "Two buildings: one dorm and one library",
+          "explanation": "附近 locates the buildings near the school. 兩棟 counts two buildings, and 一棟…一棟… identifies one of each kind.",
           "grammarIds": [
-            "u20-which-building"
+            "u20-buildings",
+            "u19-nearby-there-is"
           ]
         },
         {

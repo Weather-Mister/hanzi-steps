@@ -494,14 +494,17 @@ const unit:UnitData = {
         {
           "id": "u35-future-s3",
           "type": "select",
-          "prompt": "What does 上班 mean?",
+          "prompt": "我希望以後在學校附近的公司上班。 What does the speaker hope for?",
           "options": [
-            "go to work",
-            "study at university",
-            "pay tuition"
+            "To work at a company near the school in the future",
+            "To study at a school near the company in the future",
+            "To stop working at the company now"
           ],
-          "answer": "go to work",
-          "explanation": "上班 is the lesson separable verb 'to go to work.'"
+          "answer": "To work at a company near the school in the future",
+          "explanation": "希望 expresses a hope and 以後 places it in the future. 學校附近的公司 identifies the company; 上班 is going to work there.",
+          "grammarIds": [
+            "u19-nearby"
+          ]
         }
       ]
     },

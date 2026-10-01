@@ -340,16 +340,18 @@ const unit:UnitData = {
         {
           "id": "u19-meet-15",
           "type": "select",
-          "prompt": "Which means “I am going to see a friend”?",
+          "prompt": "我明天要到學校去找朋友，可是今天不去。 When does the speaker plan to see the friend at school?",
           "options": [
-            "我要去找朋友。",
-            "我要去教朋友。",
-            "我要去聽朋友說中文。"
+            "Tomorrow",
+            "Today",
+            "Both today and tomorrow"
           ],
-          "answer": "我要去找朋友。",
-          "explanation": "找朋友 can mean go see a friend. 教 means teach.",
+          "answer": "Tomorrow",
+          "explanation": "明天 gives the plan's time, 到學校去 gives the destination, and 找朋友 means go to see the friend. 今天不去 rules out today.",
           "grammarIds": [
-            "u19-find"
+            "u19-find",
+            "u19-destination",
+            "u16-contrast"
           ]
         },
         {
@@ -650,15 +652,18 @@ const unit:UnitData = {
         {
           "id": "u19-nearby-14",
           "type": "select",
-          "prompt": "Which correctly describes a shop as nearby?",
+          "prompt": "學校裡面沒有餐廳，可是附近有一家。 Which place offers a restaurant?",
           "options": [
-            "那家店在附近。",
-            "那家店很附近。"
+            "Near the school, outside the school itself",
+            "Inside the school",
+            "Neither inside nor near the school"
           ],
-          "answer": "那家店在附近。",
-          "explanation": "附近 is a location expression. For a distance description, use 很近.",
+          "answer": "Near the school, outside the school itself",
+          "explanation": "裡面沒有 rules out inside. 附近有一家 says there is one nearby, with 餐廳 understood after the shop counter 家.",
           "grammarIds": [
-            "u19-nearby"
+            "u19-nearby-there-is",
+            "u18-there-is-question",
+            "u16-contrast"
           ]
         },
         {

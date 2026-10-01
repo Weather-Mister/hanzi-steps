@@ -222,14 +222,19 @@ const unit:UnitData = {
         {
           "id": "u41-same-s2",
           "type": "select",
-          "prompt": "Where can a shared property go?",
+          "prompt": "這個生日蛋糕跟那個一樣大，可是比較貴。 Which comparison matches?",
           "options": [
-            "after 一樣",
-            "before 跟 only",
-            "after the final 嗎 only"
+            "Same size, but this cake is more expensive.",
+            "Same price, but this cake is larger.",
+            "This cake is smaller and cheaper."
           ],
-          "answer": "after 一樣",
-          "explanation": "一樣高 = equally tall."
+          "answer": "Same size, but this cake is more expensive.",
+          "explanation": "跟…一樣大 compares size as equal. 可是 adds a contrast in price: 比較貴 says this cake is more expensive in the comparison being made.",
+          "grammarIds": [
+            "u41-gen-yiyang",
+            "u24-bijiao",
+            "u16-contrast"
+          ]
         },
         {
           "id": "u41-same-o1",

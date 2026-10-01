@@ -1,0 +1,1129 @@
+{
+  "base": "ab143fd50097804d6d5816a7b7f75cdda1f19346",
+  "policy": "One contextual mixed check per selected lesson; replace a direct check in place. Keep all first-teaching cards, canonical data and checkpoint topology.",
+  "units": {
+    "unit-11": {
+      "path": "course/book1/unit11.ts",
+      "unchangedHash": "42fc3d0be648767a12ad41143bd62cf187df8f57462dabb2ae71aecab0b9123f"
+    },
+    "unit-12": {
+      "path": "course/book1/unit12.ts",
+      "unchangedHash": "b90d2ba6ad739749bba62727032a0f55646ca25b93c0031e61fe091b9b907e14"
+    },
+    "unit-13": {
+      "path": "course/book1/unit13.ts",
+      "unchangedHash": "a806646d23607a8bccbb3cf4c03a12e8d99faf369b6435377702fa614e3b6c65"
+    },
+    "unit-14": {
+      "path": "course/book1/unit14.ts",
+      "unchangedHash": "d9495384f070b8b66a7d02086bbf091ffffc0410ccf251c5626b85abc2b9a4e9"
+    },
+    "unit-15": {
+      "path": "course/book1/unit15.ts",
+      "unchangedHash": "d2f0b88f5ec184fb67007d0990b124b4e485d6c12848d1c701f60d1345c9b56f"
+    },
+    "unit-17": {
+      "path": "course/book1/unit17.ts",
+      "unchangedHash": "fd4392107fab24aefbf47539583c22e8889597d312a4282ea252489d9d9ecdf5"
+    },
+    "unit-18": {
+      "path": "course/book1/unit18.ts",
+      "unchangedHash": "6a786aeac1cd4ace2cdd91388506c9ab5c56df61ebaea6276440860d5f7be660"
+    },
+    "unit-19": {
+      "path": "course/book1/unit19.ts",
+      "unchangedHash": "b3655fedf7624c2f201c587f26476fa3ca29ebd14f844b538beb31fb0d07f68c"
+    },
+    "unit-20": {
+      "path": "course/book1/unit20.ts",
+      "unchangedHash": "b6a92c6fb951ada27b2557aa2171c9a8e12f1eae0086e16ef1e03aae894ee821"
+    },
+    "unit-21": {
+      "path": "course/book1/unit21.ts",
+      "unchangedHash": "87dec81782c543548f0854d59e8ce0620d216d298c8346b125ae91e7e38c4d63"
+    },
+    "unit-22": {
+      "path": "course/book1/unit22.ts",
+      "unchangedHash": "e661d58a031b6687a2c6951099461e971f439a07a12cabc949ada85ed38d6a54"
+    },
+    "unit-23": {
+      "path": "course/book1/unit23.ts",
+      "unchangedHash": "d87c84e913d80e26d074fc2d36c61d70fa7ea37f08a6058a1116a8319a3e0763"
+    },
+    "unit-24": {
+      "path": "course/book1/unit24.ts",
+      "unchangedHash": "f7e0097124928ce2f767448c1dc280ec5e639cbbcd301a2cf642bed5224b3c58"
+    },
+    "unit-25": {
+      "path": "course/book1/unit25.ts",
+      "unchangedHash": "f71f624596c9ab0d0899956e2735cbc329e51018234b609f14b70bbee8bdd4a2"
+    },
+    "unit-26": {
+      "path": "course/book1/unit26.ts",
+      "unchangedHash": "c7868817ef56b203ccc29007593a120d92ee8ecdb0516af6f34e9e7bd3515c3a"
+    },
+    "unit-27": {
+      "path": "course/book1/unit27.ts",
+      "unchangedHash": "db100080ea2226b313b52161f7ba0b3f53dd9518ef993d53dec7074bd778f83a"
+    },
+    "unit-28": {
+      "path": "course/book1/unit28.ts",
+      "unchangedHash": "07542af5ed0bf5c4b958ac14ce1142da83a16c4736fc702a678622e66939c8bf"
+    },
+    "unit-29": {
+      "path": "course/book1/unit29.ts",
+      "unchangedHash": "a535dbda1f84938287e0a4bb1400f1e2eaf9559c00ba0741eee03cbf2fadb23a"
+    },
+    "unit-30": {
+      "path": "course/book1/unit30.ts",
+      "unchangedHash": "5079e0a6d340529b31aa0bf53dc2add6465de00ec26a32a7035bcc5db9ecbf55"
+    },
+    "unit-31": {
+      "path": "course/book1/unit31.ts",
+      "unchangedHash": "1b1a7abb4744a71bcd9720edb6dbe98d201e87efab317a1dc6cec47cfda601b1"
+    },
+    "unit-32": {
+      "path": "course/book1/unit32.ts",
+      "unchangedHash": "397b47bfbb67d02a4301274f9ee01e3aee0dbdeb8029a3b67038dac7137a2d51"
+    },
+    "unit-33": {
+      "path": "course/book1/unit33.ts",
+      "unchangedHash": "dabda4189e43ece9552354a80a2dd6e39a0aab225b548f2d9fc7c90cf3654d5f"
+    },
+    "unit-34": {
+      "path": "course/book1/unit34.ts",
+      "unchangedHash": "92d184fe4c02ad7e8702b248eb5e4479d3ceb46c15d999ed617a7fad96f56ea6"
+    },
+    "unit-35": {
+      "path": "course/book1/unit35.ts",
+      "unchangedHash": "380992e18c77edacaf2d30042180b2baf36d1f778473f0d027925cc2487a7787"
+    },
+    "unit-36": {
+      "path": "course/book1/unit36.ts",
+      "unchangedHash": "acc87b7911fa528dd902428d2a3e0a8ad6894855cdf9750f84208ce5ae987e95"
+    },
+    "unit-37": {
+      "path": "course/book1/unit37.ts",
+      "unchangedHash": "4af0b66edab0d06123cabe090ca2f50dcadb155df73327f2b702c66580c479e1"
+    },
+    "unit-38": {
+      "path": "course/book1/unit38.ts",
+      "unchangedHash": "2cfa4ffe1b070c38d718086a723984fca7d350c6ad7a1a5cd0c7761cf9cd6cd3"
+    },
+    "unit-39": {
+      "path": "course/book1/unit39.ts",
+      "unchangedHash": "d4e15450e53d0ca53f3c8a76d9d56c1782da439499e4f73c74d820541c0f05a3"
+    },
+    "unit-40": {
+      "path": "course/book1/unit40.ts",
+      "unchangedHash": "3fce3a75f79b220a67960f1ea02c9c33871411da86dd39b3b525cfca34c69fa1"
+    },
+    "unit-41": {
+      "path": "course/book1/unit41.ts",
+      "unchangedHash": "c37725bdeef01464ffc845d22768d1433d8b29fd395497dd95bb5eda27d099a3"
+    },
+    "book-2-unit-1": {
+      "path": "course/book2/unit01.ts",
+      "unchangedHash": "de371a16f1ecd76661353f1d63f7347f3b232bbb1644169137a119bb9d549930"
+    },
+    "book-2-unit-2": {
+      "path": "course/book2/unit02.ts",
+      "unchangedHash": "f245901e1ef19ca8cfb5266011eb13505d6b7ff9ce2216a563beb8b063a10b96"
+    },
+    "book-2-unit-3": {
+      "path": "course/book2/unit03.ts",
+      "unchangedHash": "0503a53c0dc19d83b27c31f8db81939f8337efbda20c386963a027c0aea3cc6b"
+    },
+    "book-2-unit-4": {
+      "path": "course/book2/unit04.ts",
+      "unchangedHash": "c4892cf5d55a60ba761bf50bd0ae680b59e619b0441aa832dad2f49f11c69601"
+    }
+  },
+  "items": [
+    {
+      "unitId": "unit-11",
+      "lessonId": "u11-cups",
+      "stepId": "u11-cups-14",
+      "current": [
+        "杯"
+      ],
+      "review": [
+        "姐姐",
+        "都"
+      ],
+      "grammarIds": [
+        "u11-cup",
+        "u3-all",
+        "u4-and"
+      ]
+    },
+    {
+      "unitId": "unit-11",
+      "lessonId": "u11-hot",
+      "stepId": "u11-hot-14",
+      "current": [
+        "熱"
+      ],
+      "review": [
+        "不",
+        "都",
+        "喜歡"
+      ],
+      "grammarIds": [
+        "u11-hot",
+        "u10-not-all",
+        "u5-likes"
+      ]
+    },
+    {
+      "unitId": "unit-11",
+      "lessonId": "u11-size",
+      "stepId": "u11-size-18",
+      "current": [
+        "買"
+      ],
+      "review": [
+        "姐姐",
+        "想"
+      ],
+      "grammarIds": [
+        "u11-buy",
+        "u11-size",
+        "u4-wish"
+      ]
+    },
+    {
+      "unitId": "unit-11",
+      "lessonId": "u11-takeout",
+      "stepId": "u11-takeout-18",
+      "current": [
+        "外帶"
+      ],
+      "review": [
+        "今天",
+        "晚上",
+        "一起"
+      ],
+      "grammarIds": [
+        "u11-takeout",
+        "u11-buy",
+        "u10-evening-time",
+        "u8-together"
+      ]
+    },
+    {
+      "unitId": "unit-11",
+      "lessonId": "u11-here",
+      "stepId": "u11-here-19",
+      "current": [
+        "內用"
+      ],
+      "review": [
+        "也",
+        "都"
+      ],
+      "grammarIds": [
+        "u11-here",
+        "u2-also",
+        "u3-all"
+      ]
+    },
+    {
+      "unitId": "unit-11",
+      "lessonId": "u11-order",
+      "stepId": "u11-order-13",
+      "current": [
+        "好的"
+      ],
+      "review": [
+        "還是"
+      ],
+      "grammarIds": [
+        "u11-okay",
+        "u11-takeout",
+        "u9-choice"
+      ]
+    },
+    {
+      "unitId": "unit-12",
+      "lessonId": "u12-two-four",
+      "stepId": "u12-two-four-20",
+      "current": [
+        "三"
+      ],
+      "review": [
+        "熱",
+        "杯",
+        "都"
+      ],
+      "grammarIds": [
+        "u12-small-numbers",
+        "u11-cup",
+        "u3-all"
+      ]
+    },
+    {
+      "unitId": "unit-12",
+      "lessonId": "u12-prices",
+      "stepId": "u12-prices-19",
+      "current": [
+        "塊"
+      ],
+      "review": [
+        "中",
+        "熱"
+      ],
+      "grammarIds": [
+        "u12-price",
+        "u11-size",
+        "u11-hot"
+      ]
+    },
+    {
+      "unitId": "unit-12",
+      "lessonId": "u12-how-much",
+      "stepId": "u12-how-much-17",
+      "current": [
+        "多少"
+      ],
+      "review": [
+        "杯",
+        "熱",
+        "外帶"
+      ],
+      "grammarIds": [
+        "u12-price-question",
+        "u11-cup",
+        "u11-takeout"
+      ]
+    },
+    {
+      "unitId": "unit-13",
+      "lessonId": "u13-ask",
+      "stepId": "u13-ask-16",
+      "current": [
+        "老闆",
+        "請問"
+      ],
+      "review": [
+        "熱",
+        "外帶",
+        "多少"
+      ],
+      "grammarIds": [
+        "u13-ask",
+        "u11-size",
+        "u12-price-question"
+      ]
+    },
+    {
+      "unitId": "unit-13",
+      "lessonId": "u13-buns",
+      "stepId": "u13-buns-19",
+      "current": [
+        "包子"
+      ],
+      "review": [
+        "熱",
+        "外帶",
+        "和"
+      ],
+      "grammarIds": [
+        "u13-buns",
+        "u11-cup",
+        "u4-and"
+      ]
+    },
+    {
+      "unitId": "unit-13",
+      "lessonId": "u13-hundreds",
+      "stepId": "u13-hundreds-20",
+      "current": [
+        "百",
+        "零"
+      ],
+      "review": [
+        "一共",
+        "咖啡"
+      ],
+      "grammarIds": [
+        "u13-hundreds",
+        "u12-total",
+        "u11-buy"
+      ]
+    },
+    {
+      "unitId": "unit-14",
+      "lessonId": "u14-phones",
+      "stepId": "u14-phones-22",
+      "current": [
+        "手機",
+        "支"
+      ],
+      "review": [
+        "萬",
+        "千",
+        "這",
+        "那"
+      ],
+      "grammarIds": [
+        "u14-phones",
+        "u13-large-prices",
+        "u3-point"
+      ]
+    },
+    {
+      "unitId": "unit-14",
+      "lessonId": "u14-new-old",
+      "stepId": "u14-new-old-18",
+      "current": [
+        "新"
+      ],
+      "review": [
+        "幫",
+        "買",
+        "賣"
+      ],
+      "grammarIds": [
+        "u14-new-old",
+        "u13-help",
+        "u14-phones"
+      ]
+    },
+    {
+      "unitId": "unit-14",
+      "lessonId": "u14-which-kind",
+      "stepId": "u14-which-kind-17",
+      "current": [
+        "新",
+        "舊"
+      ],
+      "review": [
+        "還是",
+        "一共"
+      ],
+      "grammarIds": [
+        "u14-de-ones",
+        "u9-choice",
+        "u12-total"
+      ]
+    },
+    {
+      "unitId": "unit-15",
+      "lessonId": "u15-noodles",
+      "stepId": "u15-noodles-23",
+      "current": [
+        "牛肉",
+        "麵"
+      ],
+      "review": [
+        "妹妹",
+        "包子",
+        "不",
+        "都"
+      ],
+      "grammarIds": [
+        "u15-noodles",
+        "u10-not-all"
+      ]
+    },
+    {
+      "unitId": "unit-15",
+      "lessonId": "u15-soup",
+      "stepId": "u15-soup-19",
+      "current": [
+        "湯"
+      ],
+      "review": [
+        "包子",
+        "好喝",
+        "也"
+      ],
+      "grammarIds": [
+        "u15-soup",
+        "u5-taste",
+        "u2-also"
+      ]
+    },
+    {
+      "unitId": "unit-15",
+      "lessonId": "u15-favorite",
+      "stepId": "u15-favorite-14",
+      "current": [
+        "最"
+      ],
+      "review": [
+        "包子",
+        "還是",
+        "常"
+      ],
+      "grammarIds": [
+        "u15-favorite",
+        "u9-choice",
+        "u7-often"
+      ]
+    },
+    {
+      "unitId": "unit-17",
+      "lessonId": "u17-quantity",
+      "stepId": "u17-quantity-13",
+      "current": [
+        "少",
+        "不少"
+      ],
+      "review": [
+        "小吃",
+        "可是"
+      ],
+      "grammarIds": [
+        "u17-quite-a-few",
+        "u17-quantity",
+        "u16-contrast"
+      ]
+    },
+    {
+      "unitId": "unit-18",
+      "lessonId": "u18-school",
+      "stepId": "u18-school-18",
+      "current": [
+        "學校",
+        "現在"
+      ],
+      "review": [
+        "可是",
+        "晚飯"
+      ],
+      "grammarIds": [
+        "u18-now",
+        "u16-contrast",
+        "u4-negative-wish"
+      ]
+    },
+    {
+      "unitId": "unit-18",
+      "lessonId": "u18-inside-outside",
+      "stepId": "u18-inside-outside-24",
+      "current": [
+        "外面",
+        "裡面"
+      ],
+      "review": [
+        "聽說",
+        "餐廳"
+      ],
+      "grammarIds": [
+        "u18-inside-outside",
+        "u18-not-at",
+        "u17-heard"
+      ]
+    },
+    {
+      "unitId": "unit-19",
+      "lessonId": "u19-meet",
+      "stepId": "u19-meet-15",
+      "current": [
+        "找",
+        "朋友"
+      ],
+      "review": [
+        "學校",
+        "明天"
+      ],
+      "grammarIds": [
+        "u19-find",
+        "u19-destination",
+        "u16-contrast"
+      ]
+    },
+    {
+      "unitId": "unit-19",
+      "lessonId": "u19-nearby",
+      "stepId": "u19-nearby-14",
+      "current": [
+        "附近"
+      ],
+      "review": [
+        "裡面",
+        "餐廳"
+      ],
+      "grammarIds": [
+        "u19-nearby-there-is",
+        "u18-there-is-question",
+        "u16-contrast"
+      ]
+    },
+    {
+      "unitId": "unit-20",
+      "lessonId": "u20-dorm",
+      "stepId": "u20-dorm-24",
+      "current": [
+        "宿舍",
+        "樓"
+      ],
+      "review": [
+        "找",
+        "朋友"
+      ],
+      "grammarIds": [
+        "u20-floor",
+        "u19-find"
+      ]
+    },
+    {
+      "unitId": "unit-20",
+      "lessonId": "u20-buildings",
+      "stepId": "u20-buildings-15",
+      "current": [
+        "棟",
+        "大樓"
+      ],
+      "review": [
+        "附近",
+        "圖書館"
+      ],
+      "grammarIds": [
+        "u20-buildings",
+        "u19-nearby-there-is"
+      ]
+    },
+    {
+      "unitId": "unit-21",
+      "lessonId": "u21-clock",
+      "stepId": "u21-clock-quality-12",
+      "current": [
+        "分",
+        "見面"
+      ],
+      "review": [
+        "宿舍",
+        "明天",
+        "早上"
+      ],
+      "grammarIds": [
+        "u21-clock-time",
+        "u10-morning-time",
+        "u3-location"
+      ]
+    },
+    {
+      "unitId": "unit-21",
+      "lessonId": "u21-conversation",
+      "stepId": "u21-conversation-select-1",
+      "current": [
+        "下次"
+      ],
+      "review": [
+        "今天",
+        "一起",
+        "晚飯"
+      ],
+      "grammarIds": [
+        "u7-suggest",
+        "u10-how-about"
+      ]
+    },
+    {
+      "unitId": "unit-22",
+      "lessonId": "u22-half",
+      "stepId": "u22-half-select-2",
+      "current": [
+        "半",
+        "比賽"
+      ],
+      "review": [
+        "見面",
+        "學校"
+      ],
+      "grammarIds": [
+        "u22-half-time",
+        "u21-clock-time",
+        "u7-suggest"
+      ]
+    },
+    {
+      "unitId": "unit-23",
+      "lessonId": "u23-do",
+      "stepId": "u23-do-quality-18",
+      "current": [
+        "等一下"
+      ],
+      "review": [
+        "寫"
+      ],
+      "grammarIds": [
+        "u22-progressive-zai"
+      ]
+    },
+    {
+      "unitId": "unit-24",
+      "lessonId": "u24-frame",
+      "stepId": "u24-frame-04",
+      "current": [
+        "坐",
+        "火車"
+      ],
+      "review": [
+        "每天",
+        "學校"
+      ],
+      "grammarIds": [
+        "u24-zuo-transport",
+        "u22-every-dou"
+      ]
+    },
+    {
+      "unitId": "unit-24",
+      "lessonId": "u24-negation",
+      "stepId": "u24-negation-06",
+      "current": [
+        "車票",
+        "高鐵"
+      ],
+      "review": [
+        "可是",
+        "有一點",
+        "貴"
+      ],
+      "grammarIds": [
+        "u24-bijiao",
+        "u16-contrast",
+        "u16-a-little"
+      ]
+    },
+    {
+      "unitId": "unit-25",
+      "lessonId": "u25-visit",
+      "stepId": "u25-visit-04",
+      "current": [
+        "差不多"
+      ],
+      "review": [
+        "坐",
+        "跟"
+      ],
+      "grammarIds": [
+        "u24-gen-company",
+        "u24-zuo-transport"
+      ]
+    },
+    {
+      "unitId": "unit-26",
+      "lessonId": "u26-home",
+      "stepId": "u26-home-s2",
+      "current": [
+        "電視",
+        "打算"
+      ],
+      "review": [
+        "寫",
+        "家"
+      ],
+      "grammarIds": [
+        "u26-dasuan-plan",
+        "u21-time-before-place"
+      ]
+    },
+    {
+      "unitId": "unit-26",
+      "lessonId": "u26-when",
+      "stepId": "u26-when-s2",
+      "current": [
+        "大概",
+        "回國"
+      ],
+      "review": [
+        "同學",
+        "跟"
+      ],
+      "grammarIds": [
+        "u26-time-when",
+        "u24-gen-company"
+      ]
+    },
+    {
+      "unitId": "unit-27",
+      "lessonId": "u27-duration",
+      "stepId": "u27-duration-s2",
+      "current": [
+        "多久"
+      ],
+      "review": [
+        "打算",
+        "星期"
+      ],
+      "grammarIds": [
+        "u27-duration-basic",
+        "u26-time-when",
+        "u26-dasuan-plan"
+      ]
+    },
+    {
+      "unitId": "unit-27",
+      "lessonId": "u27-places",
+      "stepId": "u27-places-s3",
+      "current": [
+        "特別",
+        "茶館"
+      ],
+      "review": [
+        "放假"
+      ],
+      "grammarIds": [
+        "u27-you-shihou",
+        "u27-de-shihou"
+      ]
+    },
+    {
+      "unitId": "unit-28",
+      "lessonId": "u28-hours",
+      "stepId": "u28-hours-s2",
+      "current": [
+        "或是"
+      ],
+      "review": [
+        "打算",
+        "旅行",
+        "火車",
+        "高鐵"
+      ],
+      "grammarIds": [
+        "u26-dasuan-plan",
+        "u24-zuo-transport"
+      ]
+    },
+    {
+      "unitId": "unit-29",
+      "lessonId": "u29-hai",
+      "stepId": "u29-hai-s3",
+      "current": [
+        "黃色",
+        "還"
+      ],
+      "review": [
+        "包子"
+      ],
+      "grammarIds": [
+        "u2-have"
+      ]
+    },
+    {
+      "unitId": "unit-30",
+      "lessonId": "u30-photo",
+      "stepId": "u30-photo-s2",
+      "current": [
+        "笑",
+        "開心"
+      ],
+      "review": [
+        "夜市",
+        "妹妹"
+      ],
+      "grammarIds": [
+        "u16-performance",
+        "u27-de-shihou"
+      ]
+    },
+    {
+      "unitId": "unit-30",
+      "lessonId": "u30-clothes",
+      "stepId": "u30-clothes-s2",
+      "current": [
+        "穿",
+        "衣服"
+      ],
+      "review": [
+        "黃色",
+        "夜市"
+      ],
+      "grammarIds": [
+        "u29-yaoshi-jiu"
+      ]
+    },
+    {
+      "unitId": "unit-31",
+      "lessonId": "u31-change",
+      "stepId": "u31-change-s2",
+      "current": [
+        "了"
+      ],
+      "review": [
+        "以前",
+        "穿",
+        "衣服",
+        "紅色"
+      ],
+      "grammarIds": [
+        "u31-sentential-le",
+        "u5-likes"
+      ]
+    },
+    {
+      "unitId": "unit-32",
+      "lessonId": "u32-rooms",
+      "stepId": "u32-rooms-s1",
+      "current": [
+        "客廳",
+        "廚房"
+      ],
+      "review": [
+        "乾淨",
+        "可是"
+      ],
+      "grammarIds": [
+        "u25-bi-comparison",
+        "u24-bijiao",
+        "u16-contrast"
+      ]
+    },
+    {
+      "unitId": "unit-32",
+      "lessonId": "u32-nearby",
+      "stepId": "u32-nearby-s1",
+      "current": [
+        "超市",
+        "走路"
+      ],
+      "review": [
+        "近",
+        "因為",
+        "所以"
+      ],
+      "grammarIds": [
+        "u31-yinwei-suoyi"
+      ]
+    },
+    {
+      "unitId": "unit-33",
+      "lessonId": "u33-install",
+      "stepId": "u33-install-s2",
+      "current": [
+        "付",
+        "不過",
+        "裝"
+      ],
+      "review": [
+        "房東",
+        "自己"
+      ],
+      "grammarIds": [
+        "u13-help"
+      ]
+    },
+    {
+      "unitId": "unit-34",
+      "lessonId": "u34-need",
+      "stepId": "u34-need-s2",
+      "current": [
+        "需要"
+      ],
+      "review": [
+        "年",
+        "所以"
+      ],
+      "grammarIds": [
+        "u34-first-then",
+        "u16-result"
+      ]
+    },
+    {
+      "unitId": "unit-35",
+      "lessonId": "u35-future",
+      "stepId": "u35-future-s3",
+      "current": [
+        "上班",
+        "希望",
+        "公司"
+      ],
+      "review": [
+        "學校",
+        "附近"
+      ],
+      "grammarIds": [
+        "u19-nearby"
+      ]
+    },
+    {
+      "unitId": "unit-36",
+      "lessonId": "u36-work",
+      "stepId": "u36-work-s2",
+      "current": [
+        "去年",
+        "工作"
+      ],
+      "review": [
+        "臺灣",
+        "什麼"
+      ],
+      "grammarIds": [
+        "u35-shi-de"
+      ]
+    },
+    {
+      "unitId": "unit-37",
+      "lessonId": "u37-remember",
+      "stepId": "u37-remember-s2",
+      "current": [
+        "記得",
+        "忘"
+      ],
+      "review": [
+        "回國",
+        "明天"
+      ],
+      "grammarIds": [
+        "u16-contrast",
+        "u26-time-when"
+      ]
+    },
+    {
+      "unitId": "unit-38",
+      "lessonId": "u38-meet",
+      "stepId": "u38-meet-s3",
+      "current": [
+        "左右",
+        "門口"
+      ],
+      "review": [
+        "下課",
+        "圖書館",
+        "等"
+      ],
+      "grammarIds": [
+        "u36-yihou-after",
+        "u21-time-before-place"
+      ]
+    },
+    {
+      "unitId": "unit-39",
+      "lessonId": "u39-negation",
+      "stepId": "u39-negation-s2",
+      "current": [
+        "沒"
+      ],
+      "review": [
+        "下課",
+        "晚飯",
+        "昨天"
+      ],
+      "grammarIds": [
+        "u39-bu-vs-mei",
+        "u36-yihou-after"
+      ]
+    },
+    {
+      "unitId": "unit-40",
+      "lessonId": "u40-most-young",
+      "stepId": "u40-most-young-s3",
+      "current": [
+        "大部分"
+      ],
+      "review": [
+        "麵線",
+        "以前"
+      ],
+      "grammarIds": [
+        "u31-sentential-le"
+      ]
+    },
+    {
+      "unitId": "unit-41",
+      "lessonId": "u41-same",
+      "stepId": "u41-same-s2",
+      "current": [
+        "蛋糕",
+        "一樣"
+      ],
+      "review": [
+        "生日",
+        "比較",
+        "貴"
+      ],
+      "grammarIds": [
+        "u41-gen-yiyang",
+        "u24-bijiao",
+        "u16-contrast"
+      ]
+    },
+    {
+      "unitId": "book-2-unit-1",
+      "lessonId": "b2u1-l1-lesson",
+      "stepId": "b2u1-l1-application",
+      "current": [
+        "迷路"
+      ],
+      "review": [
+        "好像",
+        "幫"
+      ],
+      "grammarIds": [
+        "u8-possible"
+      ]
+    },
+    {
+      "unitId": "book-2-unit-1",
+      "lessonId": "b2u1-l3-lesson",
+      "stepId": "b2u1-l3-application",
+      "current": [
+        "路口",
+        "下"
+      ],
+      "review": [
+        "附近",
+        "超市"
+      ],
+      "grammarIds": [
+        "u19-nearby-there-is",
+        "u18-there-is-question"
+      ]
+    },
+    {
+      "unitId": "book-2-unit-2",
+      "lessonId": "b2u2-l2-lesson",
+      "stepId": "b2u2-l2-application",
+      "current": [
+        "第",
+        "紅綠燈"
+      ],
+      "review": [
+        "右轉"
+      ],
+      "grammarIds": [
+        "u21-not-the-case"
+      ]
+    },
+    {
+      "unitId": "book-2-unit-3",
+      "lessonId": "b2u3-l2-lesson",
+      "stepId": "b2u3-l2-application",
+      "current": [
+        "好用",
+        "下載",
+        "地圖"
+      ],
+      "review": [
+        "郵局",
+        "還"
+      ],
+      "grammarIds": [
+        "u31-clause-modifier",
+        "u16-contrast"
+      ]
+    },
+    {
+      "unitId": "book-2-unit-4",
+      "lessonId": "b2u4-l4-lesson",
+      "stepId": "b2u4-l4-application",
+      "current": [
+        "正好",
+        "背包"
+      ],
+      "review": [
+        "超商"
+      ],
+      "grammarIds": [
+        "u34-first-then",
+        "u7-suggest"
+      ]
+    }
+  ]
+}

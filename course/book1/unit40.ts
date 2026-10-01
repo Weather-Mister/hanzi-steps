@@ -362,14 +362,17 @@ const unit:UnitData = {
         {
           "id": "u40-most-young-s3",
           "type": "select",
-          "prompt": "Why is 了 possible after 不吃 here?",
+          "prompt": "以前他們都吃麵線，現在大部分人不吃了。 What has changed?",
           "options": [
-            "It is sentence-final changed-situation 了.",
-            "Because 沒 is missing.",
-            "Because every past sentence needs 了."
+            "Most of them no longer eat vermicelli.",
+            "All of them still eat vermicelli.",
+            "None of them ever ate vermicelli."
           ],
-          "answer": "It is sentence-final changed-situation 了.",
-          "explanation": "This is sentence-final changed-situation 了, not completed-action verbal 了."
+          "answer": "Most of them no longer eat vermicelli.",
+          "explanation": "以前…都吃 describes their earlier habit. 現在大部分人不吃了 changes it for most, not necessarily every person. This final 了 marks a new situation.",
+          "grammarIds": [
+            "u31-sentential-le"
+          ]
         }
       ]
     },

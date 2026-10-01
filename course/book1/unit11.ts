@@ -168,15 +168,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "One cup of tea and two cups of coffee are ordered. Which drink has two cups?",
+          "prompt": "我和姐姐都要一杯茶。 Which order covers both people?",
           "options": [
-            "咖啡",
-            "茶"
+            "兩杯茶",
+            "一杯茶",
+            "兩杯咖啡"
           ],
-          "answer": "咖啡",
-          "explanation": "兩杯咖啡 means two cups of coffee.",
+          "answer": "兩杯茶",
+          "explanation": "都 applies to both 我 and 姐姐: each wants one cup, so the order is 兩杯茶. 杯 counts the drinks; it does not count the people.",
           "grammarIds": [
-            "u11-cup"
+            "u11-cup",
+            "u3-all",
+            "u4-and"
           ],
           "id": "u11-cups-14"
         }
@@ -303,15 +306,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "A drink tastes good, but you have not said its temperature. Which description gives only the taste?",
+          "prompt": "他們不都喜歡喝熱茶。 What do you know about this group?",
           "options": [
-            "好喝",
-            "熱"
+            "At least one person does not like hot tea.",
+            "Nobody in the group likes hot tea.",
+            "Everyone in the group likes hot tea."
           ],
-          "answer": "好喝",
-          "explanation": "好喝 is a familiar taste description; 熱 is a different property.",
+          "answer": "At least one person does not like hot tea.",
+          "explanation": "不都 means not all, so at least one person does not like it; the sentence does not tell us how many do. 都不 would say none of them likes it. 熱茶 is hot tea.",
           "grammarIds": [
-            "u5-taste"
+            "u11-hot",
+            "u10-not-all",
+            "u5-likes"
           ],
           "id": "u11-hot-14"
         }
@@ -465,15 +471,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "Does 買一杯茶 necessarily mean you drink the tea yourself?",
+          "prompt": "我想買兩杯茶。姐姐要大杯，我要小杯。 Which purchase matches?",
           "options": [
-            "No; it only says you buy a cup of tea",
-            "Yes; 買 means drink"
+            "One large tea and one small tea",
+            "Two large teas",
+            "One small tea only"
           ],
-          "answer": "No; it only says you buy a cup of tea",
-          "explanation": "Buying and drinking are separate actions.",
+          "answer": "One large tea and one small tea",
+          "explanation": "兩杯 gives the total. 姐姐要大杯 and 我要小杯 give one size for each person. 買 means buying; 要 states the choice.",
           "grammarIds": [
-            "u11-buy"
+            "u11-buy",
+            "u11-size",
+            "u4-wish"
           ],
           "id": "u11-size-18"
         }
@@ -605,17 +614,19 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "In 我要一杯茶，外帶, which detail is still unspecified?",
+          "prompt": "A friend says 我們今天晚上一起喝茶吧。 You reply 好啊，我要買兩杯茶，外帶。 What is the plan?",
           "options": [
-            "The cup size: large, medium, or small",
-            "Whether it is to go",
-            "The number of cups"
+            "Buy two teas to go, then drink tea together this evening.",
+            "Buy two teas to go, then drink tea together tomorrow evening.",
+            "Buy one tea to go, then drink tea together this evening."
           ],
-          "answer": "The cup size: large, medium, or small",
-          "explanation": "一杯 specifies one cup, and 外帶 says to go. No size was chosen.",
+          "answer": "Buy two teas to go, then drink tea together this evening.",
+          "explanation": "今天晚上 sets the time; 一起 means together. 兩杯茶 is two teas and 外帶 says to take them away. The order supports the evening plan.",
           "grammarIds": [
             "u11-takeout",
-            "u11-size"
+            "u11-buy",
+            "u10-evening-time",
+            "u8-together"
           ],
           "id": "u11-takeout-18"
         }
@@ -758,16 +769,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "The staff asks 外帶還是內用？ What information do they want?",
+          "prompt": "我今天想內用，姐姐也想內用。 Which sentence keeps both choices?",
           "options": [
-            "Whether you will take it away or have it here",
-            "Whether you want tea or coffee",
-            "Whether you want one cup or two"
+            "我們今天都想內用。",
+            "我們今天都想外帶。",
+            "我們今天都不想內用。"
           ],
-          "answer": "Whether you will take it away or have it here",
-          "explanation": "還是 offers the two already-taught service choices.",
+          "answer": "我們今天都想內用。",
+          "explanation": "也 adds the sister's same wish. Since both people want to stay, 都想內用 sums up their choices. 外帶 changes the service choice; 都不想 reverses both wishes.",
           "grammarIds": [
-            "u11-here"
+            "u11-here",
+            "u2-also",
+            "u3-all"
           ],
           "id": "u11-here-19"
         }
@@ -909,16 +922,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "You have ordered a drink, selected a size, and chosen 外帶. What does the final choice tell the staff?",
+          "prompt": "You ask 你要熱茶還是熱咖啡？ Your sister replies 熱茶，外帶，謝謝。 Which acknowledgment matches her choice?",
           "options": [
-            "Pack it to go",
-            "Make it a medium size",
-            "Make it hot"
+            "好的，一杯熱茶，外帶。",
+            "好的，一杯熱咖啡，外帶。",
+            "好的，一杯熱茶，內用。"
           ],
-          "answer": "Pack it to go",
-          "explanation": "The service choice is separate from drink, size, and temperature.",
+          "answer": "好的，一杯熱茶，外帶。",
+          "explanation": "還是 asks her to choose between drinks. She chose 熱茶 and 外帶, so repeat those details with 好的 to acknowledge them.",
           "grammarIds": [
-            "u11-takeout"
+            "u11-okay",
+            "u11-takeout",
+            "u9-choice"
           ],
           "id": "u11-order-13"
         }
