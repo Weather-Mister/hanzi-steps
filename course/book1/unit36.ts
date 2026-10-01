@@ -133,14 +133,17 @@ const unit:UnitData = {
         {
           "id": "u36-work-s2",
           "type": "select",
-          "prompt": "Which word means “last year”?",
+          "prompt": "A friend asks 你是什麼時候來臺灣工作的？ Which reply gives the requested detail?",
           "options": [
-            "去年",
-            "以後",
-            "大概"
+            "我是去年來的。",
+            "我是坐火車來的。",
+            "我是跟朋友來的。"
           ],
-          "answer": "去年",
-          "explanation": "去年 means last year."
+          "answer": "我是去年來的。",
+          "explanation": "什麼時候 asks when. 去年 means last year and supplies that focus in 是…的. A travel method or companion would answer a different question.",
+          "grammarIds": [
+            "u35-shi-de"
+          ]
         },
         {
           "id": "u36-work-s3",

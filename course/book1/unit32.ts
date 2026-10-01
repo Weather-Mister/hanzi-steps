@@ -267,14 +267,19 @@ const unit:UnitData = {
         {
           "id": "u32-rooms-s1",
           "type": "select",
-          "prompt": "Which room is 客廳?",
+          "prompt": "客廳比廚房大，可是廚房比較乾淨。 Which comparison is stated?",
           "options": [
-            "living room",
-            "kitchen",
-            "bathroom"
+            "The living room is larger, but less clean.",
+            "The kitchen is larger, but less clean.",
+            "The living room is larger and cleaner."
           ],
-          "answer": "living room",
-          "explanation": "客廳 is the living room."
+          "answer": "The living room is larger, but less clean.",
+          "explanation": "客廳 is the living room and 廚房 is the kitchen. 比…大 says the living room is larger; 廚房比較乾淨 says the kitchen is cleaner.",
+          "grammarIds": [
+            "u25-bi-comparison",
+            "u24-bijiao",
+            "u16-contrast"
+          ]
         }
       ]
     },
@@ -518,14 +523,17 @@ const unit:UnitData = {
         {
           "id": "u32-nearby-s1",
           "type": "select",
-          "prompt": "Which word means 'to walk'?",
+          "prompt": "因為超市很近，所以我想走路去。 What plan does the speaker give?",
           "options": [
-            "走路",
-            "超市",
-            "套房"
+            "Walk to the supermarket because it is close.",
+            "Take the MRT to the supermarket because it is close.",
+            "Walk to the supermarket because it is far away."
           ],
-          "answer": "走路",
-          "explanation": "走路 is the separable verb 'to walk'."
+          "answer": "Walk to the supermarket because it is close.",
+          "explanation": "因為 gives the reason, 超市很近. 所以 introduces the resulting plan: 走路去, going on foot.",
+          "grammarIds": [
+            "u31-yinwei-suoyi"
+          ]
         }
       ]
     },

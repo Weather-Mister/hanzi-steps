@@ -275,14 +275,17 @@ const unit:UnitData = {
         {
           "id": "u23-do-quality-18",
           "type": "select",
-          "prompt": "Your friend says 等一下. What are they asking you to do?",
+          "prompt": "A friend asks you to meet now. You say 等一下，我在寫中文。 What are you asking them to do?",
           "options": [
-            "Wait a moment",
-            "Come every day",
-            "Start writing"
+            "Wait a moment because you are writing.",
+            "Meet immediately because you have finished writing.",
+            "Wait a moment because you are reading."
           ],
-          "answer": "Wait a moment",
-          "explanation": "等 is wait; 一下 makes it a brief wait."
+          "answer": "Wait a moment because you are writing.",
+          "explanation": "等一下 asks for a short wait. 在寫中文 presents writing Chinese as in progress; it does not say the writing is finished.",
+          "grammarIds": [
+            "u22-progressive-zai"
+          ]
         }
       ]
     },

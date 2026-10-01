@@ -530,14 +530,18 @@ const unit:UnitData = {
         {
           "id": "u39-negation-s2",
           "type": "select",
-          "prompt": "For an action that did not happen yesterday, use…",
+          "prompt": "我昨天下課以後沒吃晚飯。 Which event did NOT happen?",
           "options": [
-            "沒（有）",
-            "不 only",
-            "都"
+            "Eating dinner after class yesterday",
+            "Having class yesterday",
+            "Eating dinner every day"
           ],
-          "answer": "沒（有）",
-          "explanation": "Past non-occurrence uses 沒（有）."
+          "answer": "Eating dinner after class yesterday",
+          "explanation": "昨天下課以後 sets the time. 沒 negates 吃晚飯 as an event that did not happen. It does not describe a general habit or deny having class.",
+          "grammarIds": [
+            "u39-bu-vs-mei",
+            "u36-yihou-after"
+          ]
         },
         {
           "id": "u39-negation-s3",

@@ -165,16 +165,17 @@ const unit:UnitData = {
         {
           "id": "u24-frame-04",
           "type": "select",
-          "prompt": "Which phrase means “take the train”?",
+          "prompt": "我每天都坐火車去學校。 Which statement describes the trip?",
           "options": [
-            "坐火車",
-            "火車坐",
-            "跟火車"
+            "I take the train to school every day.",
+            "I sometimes take the train to school.",
+            "I take the train away from school every day."
           ],
-          "answer": "坐火車",
-          "explanation": "Use 坐 before the vehicle.",
+          "answer": "I take the train to school every day.",
+          "explanation": "每天都 gives the repeated daily habit. 坐火車 names the transport and 去學校 gives its destination.",
           "grammarIds": [
-            "u24-zuo-transport"
+            "u24-zuo-transport",
+            "u22-every-dou"
           ]
         },
         {
@@ -717,14 +718,19 @@ const unit:UnitData = {
         {
           "id": "u24-negation-06",
           "type": "select",
-          "prompt": "Which word means “ticket” in this lesson?",
+          "prompt": "高鐵比較快，可是車票有一點貴。 What trade-off does the speaker describe?",
           "options": [
-            "車票",
-            "火車",
-            "舒服"
+            "A faster trip, but a somewhat expensive ticket",
+            "A slower trip, but a cheap ticket",
+            "A faster trip and a cheap ticket"
           ],
-          "answer": "車票",
-          "explanation": "車票 is a transportation ticket."
+          "answer": "A faster trip, but a somewhat expensive ticket",
+          "explanation": "比較快 gives the speed advantage. 可是 introduces the drawback: 車票有一點貴, a somewhat expensive ticket.",
+          "grammarIds": [
+            "u24-bijiao",
+            "u16-contrast",
+            "u16-a-little"
+          ]
         },
         {
           "id": "u24-negation-listen-鐵",

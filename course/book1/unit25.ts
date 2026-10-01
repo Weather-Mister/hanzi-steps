@@ -569,14 +569,18 @@ const unit:UnitData = {
         {
           "id": "u25-visit-04",
           "type": "select",
-          "prompt": "Two travel times are roughly the same. Which expression fits?",
+          "prompt": "我跟同學去參觀學校。坐捷運和坐公車差不多。 They are comparing travel times. What does 差不多 tell you?",
           "options": [
-            "差不多",
-            "比較快",
-            "非常慢"
+            "The two journeys take roughly the same time.",
+            "The MRT journey is much faster.",
+            "The bus journey is much faster."
           ],
-          "answer": "差不多",
-          "explanation": "差不多 means “about the same” here: the difference is small."
+          "answer": "The two journeys take roughly the same time.",
+          "explanation": "差不多 means approximately the same in the comparison being discussed. Here that is travel time. 跟同學 gives the companion and 參觀學校 gives the purpose.",
+          "grammarIds": [
+            "u24-gen-company",
+            "u24-zuo-transport"
+          ]
         },
         {
           "id": "u25-visit-05",

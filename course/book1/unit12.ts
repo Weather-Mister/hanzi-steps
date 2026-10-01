@@ -194,17 +194,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "You want two cups of tea. Which familiar form counts the two cups?",
+          "prompt": "我們三個人都要一杯熱茶。 Which order gives each person one cup?",
           "options": [
-            "兩杯茶",
-            "三杯茶",
-            "四杯茶"
+            "三杯熱茶",
+            "兩杯熱茶",
+            "三杯熱咖啡"
           ],
-          "answer": "兩杯茶",
-          "explanation": "Use 兩 before 杯 for two cups. 二 names the number two.",
+          "answer": "三杯熱茶",
+          "explanation": "三個人 counts three people. 都要一杯 means each person wants one cup, giving 三杯熱茶 in total.",
           "grammarIds": [
             "u12-small-numbers",
-            "u3-two"
+            "u11-cup",
+            "u3-all"
           ],
           "id": "u12-two-four-20"
         }
@@ -710,16 +711,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "Choose the medium cup size, using Unit 11.",
+          "prompt": "大杯熱茶四十塊，中杯熱茶三十五塊。你要中杯。 How much is your tea?",
           "options": [
-            "中杯",
-            "三杯",
-            "六杯"
+            "三十五塊",
+            "四十塊",
+            "七十五塊"
           ],
-          "answer": "中杯",
-          "explanation": "中杯 is a size. 三杯 and 六杯 are quantities.",
+          "answer": "三十五塊",
+          "explanation": "You chose 中杯, so use its price 三十五塊. 四十塊 belongs to the large tea; 七十五塊 adds both prices even though you chose one.",
           "grammarIds": [
-            "u11-size"
+            "u12-price",
+            "u11-size",
+            "u11-hot"
           ],
           "id": "u12-prices-19"
         }
@@ -847,16 +850,18 @@ const unit:UnitData = {
         },
         {
           "type": "select",
-          "prompt": "Which is the price question practiced here?",
+          "prompt": "You want the price of two hot teas to go. Which question includes that order?",
           "options": [
-            "一杯茶多少錢？",
-            "一杯茶多少錢嗎？",
-            "一杯茶三十五塊。"
+            "兩杯熱茶外帶多少錢？",
+            "一杯熱茶外帶多少錢？",
+            "兩杯熱咖啡外帶多少錢？"
           ],
-          "answer": "一杯茶多少錢？",
-          "explanation": "多少 already asks for the missing amount. Do not add 嗎.",
+          "answer": "兩杯熱茶外帶多少錢？",
+          "explanation": "兩杯 sets the quantity, 熱茶 names the drink, and 外帶 gives the service choice. 多少錢 asks the price of that order.",
           "grammarIds": [
-            "u12-price-question"
+            "u12-price-question",
+            "u11-cup",
+            "u11-takeout"
           ],
           "id": "u12-how-much-17"
         },

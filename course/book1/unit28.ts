@@ -433,14 +433,18 @@ const unit:UnitData = {
         {
           "id": "u28-hours-s2",
           "type": "select",
-          "prompt": "Which word links two alternatives as “or”?",
+          "prompt": "我打算坐火車或是坐高鐵去旅行。 What does 或是 tell you about the travel plan?",
           "options": [
-            "或是",
-            "但是",
-            "非常"
+            "Train and HSR are alternatives.",
+            "The plan requires both train and HSR.",
+            "Neither train nor HSR is possible."
           ],
-          "answer": "或是",
-          "explanation": "或是 joins alternatives: A 或是 B."
+          "answer": "Train and HSR are alternatives.",
+          "explanation": "或是 joins alternatives in this statement. 打算 presents a plan, and 坐 introduces each possible means of transport.",
+          "grammarIds": [
+            "u26-dasuan-plan",
+            "u24-zuo-transport"
+          ]
         }
       ]
     },

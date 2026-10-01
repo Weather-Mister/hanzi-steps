@@ -155,14 +155,18 @@ const unit:UnitData = {
         {
           "id": "b2u3-l2-application",
           "type": "select",
-          "prompt": "地圖好用。 What is being evaluated?",
+          "prompt": "我下載的地圖很好用，可是我還不知道郵局在哪裡。 Which summary fits?",
           "options": [
-            "The map is handy.",
-            "The map is too far away.",
-            "The map is lost."
+            "The downloaded map is useful, but the speaker still does not know where the post office is.",
+            "The downloaded map is useless, but the speaker knows where the post office is.",
+            "The speaker has not downloaded a map yet."
           ],
-          "answer": "The map is handy.",
-          "explanation": "In this context, The map is handy."
+          "answer": "The downloaded map is useful, but the speaker still does not know where the post office is.",
+          "explanation": "我下載的 identifies the map. 好用 praises its usefulness; 可是 contrasts that with 還不知道, still not knowing where the post office is.",
+          "grammarIds": [
+            "u31-clause-modifier",
+            "u16-contrast"
+          ]
         }
       ]
     },

@@ -219,15 +219,18 @@ const unit:UnitData = {
         {
           "id": "u15-noodles-23",
           "type": "select",
-          "prompt": "Review: how do you order two buns?",
+          "prompt": "我想吃牛肉麵，妹妹想吃包子。我們不都想吃牛肉麵。 Which summary fits?",
           "options": [
-            "我要兩杯包子。",
-            "我要二十個包子。",
-            "我要兩個包子。"
+            "One wants beef noodles; the other wants buns.",
+            "Both want beef noodles.",
+            "Neither wants beef noodles."
           ],
-          "answer": "我要兩個包子。",
-          "explanation": "兩個 counts two buns.",
-          "grammarIds": []
+          "answer": "One wants beef noodles; the other wants buns.",
+          "explanation": "牛肉麵 is your choice and 包子 is your sister's. 不都 correctly says not both; 都不 would say neither, contradicting your choice.",
+          "grammarIds": [
+            "u15-noodles",
+            "u10-not-all"
+          ]
         }
       ]
     },
@@ -374,15 +377,19 @@ const unit:UnitData = {
         {
           "id": "u15-soup-19",
           "type": "select",
-          "prompt": "Review: the coffee tastes good. Choose the familiar description.",
+          "prompt": "這個包子很好吃，湯也很好喝。 Which comment matches both items?",
           "options": [
-            "咖啡很好喝。",
-            "咖啡很有。",
-            "咖啡很誰。"
+            "Both the bun and the soup taste good.",
+            "Only the bun tastes good.",
+            "The soup tastes good, but the bun does not."
           ],
-          "answer": "咖啡很好喝。",
-          "explanation": "好喝 describes something pleasant to drink.",
-          "grammarIds": []
+          "answer": "Both the bun and the soup taste good.",
+          "explanation": "好吃 describes the solid food; 好喝 describes the soup. 也 adds a second positive comment. Neither phrase tells us the temperature.",
+          "grammarIds": [
+            "u15-soup",
+            "u5-taste",
+            "u2-also"
+          ]
         }
       ]
     },
@@ -658,15 +665,19 @@ const unit:UnitData = {
         {
           "id": "u15-favorite-14",
           "type": "select",
-          "prompt": "Review: ask someone to choose tea or coffee.",
+          "prompt": "You know someone likes both noodles and buns. Which question asks which one is their favorite?",
           "options": [
-            "你要茶和咖啡。",
-            "你不要茶。",
-            "你要茶還是咖啡？"
+            "你最喜歡吃麵還是包子？",
+            "你常吃麵還是包子？",
+            "你要買幾個包子？"
           ],
-          "answer": "你要茶還是咖啡？",
-          "explanation": "還是 gives two alternatives in a choice question.",
-          "grammarIds": []
+          "answer": "你最喜歡吃麵還是包子？",
+          "explanation": "最喜歡 asks for the strongest preference and 還是 gives two choices. 常 asks about habit, while 幾個 asks how many buns.",
+          "grammarIds": [
+            "u15-favorite",
+            "u9-choice",
+            "u7-often"
+          ]
         }
       ]
     },

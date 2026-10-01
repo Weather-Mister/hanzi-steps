@@ -130,14 +130,17 @@ const unit:UnitData = {
         {
           "id": "b2u1-l1-application",
           "type": "select",
-          "prompt": "我好像迷路了。 What happened?",
+          "prompt": "我好像迷路了。你可以幫我嗎？ What help is the speaker seeking?",
           "options": [
-            "I seem to have lost my way.",
-            "I am helping a passer-by.",
-            "I have reached school."
+            "Help because they seem to have lost their way",
+            "Help because they have definitely arrived",
+            "Help because they want to move house"
           ],
-          "answer": "I seem to have lost my way.",
-          "explanation": "In this context, I seem to have lost my way."
+          "answer": "Help because they seem to have lost their way",
+          "explanation": "好像 softens the claim to seems, 迷路了 describes becoming lost, and 可以幫我嗎 asks for help.",
+          "grammarIds": [
+            "u8-possible"
+          ]
         }
       ]
     },
@@ -299,14 +302,18 @@ const unit:UnitData = {
         {
           "id": "b2u1-l3-application",
           "type": "select",
-          "prompt": "下一個路口在哪裡？ What place is being named?",
+          "prompt": "下一個路口附近有沒有超市？ What does the speaker want to know?",
           "options": [
-            "The next intersection.",
-            "The previous school.",
-            "The post office."
+            "Whether there is a supermarket near the next intersection",
+            "Whether there is a supermarket inside the school",
+            "Whether the supermarket is open next week"
           ],
-          "answer": "The next intersection.",
-          "explanation": "In this context, The next intersection."
+          "answer": "Whether there is a supermarket near the next intersection",
+          "explanation": "下一個路口 gives the landmark. 附近有沒有 asks whether something exists nearby; 超市 is the place being sought.",
+          "grammarIds": [
+            "u19-nearby-there-is",
+            "u18-there-is-question"
+          ]
         }
       ]
     },

@@ -443,16 +443,18 @@ const unit:UnitData = {
         {
           "id": "u17-quantity-13",
           "type": "select",
-          "prompt": "Read: 那家店的人很少。 What is small in number?",
+          "prompt": "這家店有不少小吃，可是人很少。 Which description fits?",
           "options": [
-            "The people at the shop",
-            "The price of the snacks",
-            "The cups of tea"
+            "It has quite a few snacks, but few people.",
+            "It has few snacks, but quite a few people.",
+            "It has quite a few snacks and quite a few people."
           ],
-          "answer": "The people at the shop",
-          "explanation": "The sentence names 人 before 很少, so it describes a small number of people.",
+          "answer": "It has quite a few snacks, but few people.",
+          "explanation": "不少小吃 describes the snack selection; 人很少 describes the people. 可是 contrasts the two facts, so do not attach 少 to the wrong noun.",
           "grammarIds": [
-            "u17-quantity"
+            "u17-quite-a-few",
+            "u17-quantity",
+            "u16-contrast"
           ]
         },
         {

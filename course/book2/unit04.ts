@@ -514,14 +514,18 @@ const unit:UnitData = {
         {
           "id": "b2u4-l4-application",
           "type": "select",
-          "prompt": "正好想買背包 describes what?",
+          "prompt": "我正好想買一個背包。先去超商，再去那家店吧。 Which plan is proposed?",
           "options": [
-            "Happening to want a backpack.",
-            "Already selling a backpack.",
-            "Being far from a backpack."
+            "Go to the convenience store first, then the other shop; the speaker happens to want a backpack.",
+            "Go to the other shop first, then the convenience store; the speaker happens to want a backpack.",
+            "Go to both shops at the same time; the speaker already bought a backpack."
           ],
-          "answer": "Happening to want a backpack.",
-          "explanation": "In this context, Happening to want a backpack."
+          "answer": "Go to the convenience store first, then the other shop; the speaker happens to want a backpack.",
+          "explanation": "正好想買 says the speaker happens to want to buy a backpack. 先…再… gives the order of visits; it does not say a purchase has already happened.",
+          "grammarIds": [
+            "u34-first-then",
+            "u7-suggest"
+          ]
         }
       ]
     },

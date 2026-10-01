@@ -440,14 +440,18 @@ const unit:UnitData = {
         {
           "id": "u37-remember-s2",
           "type": "select",
-          "prompt": "Which pair is opposite in this unit?",
+          "prompt": "我記得你明天要回國，可是忘了你幾點去。 What does the speaker still remember?",
           "options": [
-            "忘 / 記得",
-            "回來 / 剛",
-            "生日 / 快樂"
+            "That you return to your country tomorrow",
+            "What time you leave",
+            "Both the return date and departure time"
           ],
-          "answer": "忘 / 記得",
-          "explanation": "忘 is 'forget'; 記得 is 'remember'."
+          "answer": "That you return to your country tomorrow",
+          "explanation": "記得 applies to 明天要回國. 可是 contrasts that with 忘了: the speaker forgot what time you leave.",
+          "grammarIds": [
+            "u16-contrast",
+            "u26-time-when"
+          ]
         },
         {
           "id": "u37-remember-o1",

@@ -527,14 +527,17 @@ const unit:UnitData = {
         {
           "id": "u33-install-s2",
           "type": "select",
-          "prompt": "付 means…",
+          "prompt": "房東可以幫我裝有線電視，不過我得自己付錢。 Who has to pay?",
           "options": [
-            "pay",
-            "install",
-            "wait"
+            "I do, even though the landlord can help with installation.",
+            "The landlord does because the landlord helps install it.",
+            "Neither person has to pay."
           ],
-          "answer": "pay",
-          "explanation": "付 is to pay."
+          "answer": "I do, even though the landlord can help with installation.",
+          "explanation": "房東可以幫我裝 gives the help offered. 不過 introduces its limit: 我得自己付錢 means I must pay myself. 付 is paying; 自己 identifies who bears that cost.",
+          "grammarIds": [
+            "u13-help"
+          ]
         },
         {
           "id": "u33-install-s3",

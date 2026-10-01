@@ -711,14 +711,18 @@ const unit:UnitData = {
         {
           "id": "u26-home-s2",
           "type": "select",
-          "prompt": "Which expression means “watch TV”?",
+          "prompt": "我打算星期六在家看電視，不出去玩。 Which Saturday plan matches?",
           "options": [
-            "看電視",
-            "看電影",
-            "寫功課"
+            "Stay home to watch TV instead of going out for fun",
+            "Stay home to do homework instead of watching TV",
+            "Go out for fun instead of watching TV"
           ],
-          "answer": "看電視",
-          "explanation": "電視 is television, so 看電視 means watch TV."
+          "answer": "Stay home to watch TV instead of going out for fun",
+          "explanation": "打算 introduces the plan. 星期六 is Saturday, 在家 gives the place, and 看電視 is watching TV. 不出去玩 rules out going out for fun.",
+          "grammarIds": [
+            "u26-dasuan-plan",
+            "u21-time-before-place"
+          ]
         }
       ]
     },
@@ -810,14 +814,18 @@ const unit:UnitData = {
         {
           "id": "u26-when-s2",
           "type": "select",
-          "prompt": "In 我大概下個星期回國, what does 大概 mean?",
+          "prompt": "我大概下個星期跟同學回國。 Which summary keeps 大概?",
           "options": [
-            "probably",
-            "always",
-            "together"
+            "I will probably return to my country with a classmate next week.",
+            "I will definitely return to my country with a classmate next week.",
+            "I will probably return to my country alone next week."
           ],
-          "answer": "probably",
-          "explanation": "大概 can express an approximate judgment or probability; here it means probably."
+          "answer": "I will probably return to my country with a classmate next week.",
+          "explanation": "大概 makes the plan probable, not certain. 下個星期 is next week, 跟同學 names the companion, and 回國 is returning to one's country.",
+          "grammarIds": [
+            "u26-time-when",
+            "u24-gen-company"
+          ]
         }
       ]
     },

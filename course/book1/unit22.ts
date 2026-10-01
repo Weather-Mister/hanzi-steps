@@ -289,14 +289,19 @@ const unit:UnitData = {
         {
           "id": "u22-half-select-2",
           "type": "select",
-          "prompt": "Which word means “game; competition”?",
+          "prompt": "我下午四點半有比賽，我們三點在學校見面吧。 Which plan matches?",
           "options": [
-            "比賽",
-            "午餐",
-            "書法"
+            "Meet at school at 3:00; the game is at 4:30 p.m.",
+            "Meet at school at 4:30; the game is at 3:00 p.m.",
+            "Meet at school at 3:00; the game is at 4:00 p.m."
           ],
-          "answer": "比賽",
-          "explanation": "比賽 means a game or competition."
+          "answer": "Meet at school at 3:00; the game is at 4:30 p.m.",
+          "explanation": "三點 belongs to 見面, while 下午四點半 belongs to 比賽. 半 adds thirty minutes. Keep the meeting and game times separate.",
+          "grammarIds": [
+            "u22-half-time",
+            "u21-clock-time",
+            "u7-suggest"
+          ]
         },
         {
           "id": "u22-half-listen-半",

@@ -501,16 +501,17 @@ const unit:UnitData = {
         {
           "id": "u31-change-s2",
           "type": "select",
-          "prompt": "Which sentence means 'I don't live/stay here anymore'?",
+          "prompt": "我以前喜歡穿紅色的衣服，現在不喜歡了。 What has changed?",
           "options": [
-            "我不住這裡了。",
-            "我以前住這裡。",
-            "我住這裡嗎？"
+            "I no longer like wearing red clothes, though I did before.",
+            "I still like wearing red clothes.",
+            "I now like wearing red clothes, though I did not before."
           ],
-          "answer": "我不住這裡了。",
-          "explanation": "不住 gives the new negative state, and final 了 marks the change.",
+          "answer": "I no longer like wearing red clothes, though I did before.",
+          "explanation": "以前 gives the old preference. 現在不喜歡了 marks the new situation: no longer liking it. 不 negates the preference; final 了 signals its change, not a past-tense ending.",
           "grammarIds": [
-            "u31-sentential-le"
+            "u31-sentential-le",
+            "u5-likes"
           ]
         }
       ]

@@ -138,16 +138,18 @@ const unit:UnitData = {
         {
           "id": "u27-duration-s2",
           "type": "select",
-          "prompt": "In the basic duration pattern, where does 一個星期 go?",
+          "prompt": "我打算下個星期出去玩，想玩兩個星期。 Which part gives the length of the trip?",
           "options": [
-            "After the verb: 玩一個星期",
-            "Before the subject",
-            "Between 想 and 玩"
+            "兩個星期",
+            "下個星期",
+            "打算"
           ],
-          "answer": "After the verb: 玩一個星期",
-          "explanation": "A simple duration follows the verb it measures.",
+          "answer": "兩個星期",
+          "explanation": "兩個星期 answers 多久, how long. 下個星期 answers when the trip starts. The duration follows 玩; the starting time comes before the action.",
           "grammarIds": [
-            "u27-duration-basic"
+            "u27-duration-basic",
+            "u26-time-when",
+            "u26-dasuan-plan"
           ]
         }
       ]
@@ -636,14 +638,18 @@ const unit:UnitData = {
         {
           "id": "u27-places-s3",
           "type": "select",
-          "prompt": "Which description means “special / distinctive”?",
+          "prompt": "放假的時候，我有時候去夜市，有時候去那家很特別的茶館。 Which habit is described?",
           "options": [
-            "特別",
-            "有名",
-            "美"
+            "During breaks, I sometimes visit the night market and sometimes that distinctive teahouse.",
+            "During breaks, I visit both the night market and that teahouse every time.",
+            "During breaks, I never visit the night market or that teahouse."
           ],
-          "answer": "特別",
-          "explanation": "特別 means special or distinctive; 有名 and 美 are different descriptions."
+          "answer": "During breaks, I sometimes visit the night market and sometimes that distinctive teahouse.",
+          "explanation": "放假的時候 sets the occasion. Repeated 有時候 gives different visits on different occasions. 特別 describes the teahouse as distinctive; it does not mean the visits happen every time.",
+          "grammarIds": [
+            "u27-you-shihou",
+            "u27-de-shihou"
+          ]
         }
       ]
     },
