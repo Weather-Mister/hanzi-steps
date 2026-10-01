@@ -58,6 +58,8 @@ let server,browser,page;
  assert.equal(await dialog.getByRole('button',{name:'Check pinyin'}).isDisabled(),true);
  await dialog.getByRole('button',{name:'Use transcript without scoring',exact:true}).click();await dialog.getByText('Transcript practice · no listening score recorded.',{exact:true}).waitFor();
  await dialog.getByRole('button',{name:'Back without scoring'}).click();assert.equal(await page.evaluate(()=>localStorage.getItem('hanzi-steps-practice-v1-signed-out')),before);
+ // Stages now contain several items, so an unscored skip advances within the stage. Return to the path before changing session settings.
+ await dialog.getByRole('button',{name:'Back to Listening Path',exact:true}).click();
  await page.evaluate(()=>window.__audioMode='success');
  // A synthesis error is unscored too; slow playback is explicitly assisted.
  await dialog.getByRole('checkbox',{name:'Two-play challenge for single sentences'}).uncheck();
