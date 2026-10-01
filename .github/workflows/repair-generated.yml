@@ -1,0 +1,56 @@
+name: Repair Book 1 grammar deployment
+
+on:
+  push:
+    branches:
+      - repair/book1-grammar-deploy
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: repair/book1-grammar-deploy
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Hydrate declared Traditional stroke sources
+        run: node scripts/hydrate-stroke-source.mjs
+
+      - name: Regenerate curriculum artifacts
+        run: npm run course:generate
+
+      - name: Validate curriculum graph
+        run: npm run course:check
+
+      - name: Validate character coverage
+        run: npm run check:characters
+
+      - name: Run curriculum regression suite
+        run: npm run test:curriculum
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Build GitHub Pages production bundle
+        run: npm run build:pages
+
+      - name: Commit repaired generated artifacts and remove temporary workflow
+        shell: bash
+        run: |
+          git add course/registry.generated.ts course/index.json lib/stroke-data.json course/book*/*.strokes.json
+          git rm .github/workflows/repair-generated.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Regenerate curriculum artifacts after Book 1 grammar edit"
+          git push origin HEAD:repair/book1-grammar-deploy
