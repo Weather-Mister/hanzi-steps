@@ -10,7 +10,7 @@ const unit:UnitData = {
     "theme": "indigo",
     "label": "Landlords, repairs & natural speech",
     "title": "Settling Into the New Place",
-    "description": "Cover this lesson the conversation through the landlord phone call: already/getting used to, household problems, waiting and appointments, repairs and payment, existential subjects with 有, the likelihood use of 會, and natural omission of understood subjects and objects.",
+    "description": "Continue the conversation through the landlord phone call: already/getting used to, household problems, waiting and appointments, repairs and payment, existential subjects with 有, the likelihood use of 會, and natural omission of understood subjects and objects.",
     "chars": [
       "喂",
       "收",
@@ -701,7 +701,7 @@ const unit:UnitData = {
             "acquired skill"
           ],
           "answer": "future likelihood / will",
-          "explanation": "The future time expression and event reading point to likelihood.",
+          "explanation": "Here 會 predicts a future visit. The complete sentence supplies that meaning; a future time word alone does not rule out the skill meaning.",
           "grammarIds": [
             "u33-hui-likelihood"
           ]
@@ -827,7 +827,7 @@ const unit:UnitData = {
         {
           "id": "u33-review-g2",
           "type": "select",
-          "prompt": "Which 不會 is the this lesson future-likelihood use rather than 'doesn't know how'?",
+          "prompt": "Which 不會 is this lesson’s future-likelihood use rather than 'doesn't know how'?",
           "options": [
             "他明天不會去上書法課。",
             "我不會打籃球。"
@@ -1723,7 +1723,7 @@ const unit:UnitData = {
       "id": "u33-existential-you",
       "title": "Introduce an indefinite subject with 有",
       "pattern": "有 + indefinite person / thing + VP",
-      "explanation": "有 introduces the existence of an indefinite subject, and the following VP says what that subject does: 有人住這裡, 有兩個學生來找你. Because a bare subject is normally definite, a new indefinite subject is introduced with 有. Existential 有 is always negated with 沒有. The rule here also contrasts 地上有一支手機 with 有一支手機在地上: the basic existence is similar, but the first puts the new cellphone information in focus, while the second makes the location 地上 the focus.",
+      "explanation": "有 can introduce someone or something not yet identified, then add what they do: 有人住這裡, “Someone lives here.” In 有兩個學生來找你, 有 introduces two students and 來找你 tells what they came to do. This is a useful way to introduce new participants, not a rule that every indefinite subject in Mandarin must have 有. Negate this existential 有 with 沒有. Compare 地上有一支手機, which introduces a phone at the stated location, with 有一支手機在地上, which introduces a phone and then locates it. Context and emphasis affect which information is most prominent.",
       "examples": [
         {
           "text": "有人住這裡。",
@@ -1756,7 +1756,7 @@ const unit:UnitData = {
           "meaning": "There is a cellphone on the floor."
         }
       ],
-      "remember": "Use 有 before a new indefinite subject and 沒有 for its negative. Word order can shift the information focus even when the existence meaning stays similar.",
+      "remember": "有 introduces a person or thing; the following phrase says what they do or where they are. 沒有人住 means no one lives there.",
       "words": [
         "有",
         "沒有"
@@ -1766,7 +1766,7 @@ const unit:UnitData = {
       "id": "u33-hui-likelihood",
       "title": "會: learned skill or likelihood?",
       "pattern": "會 + VP",
-      "explanation": "The rule here distinguishes two uses of 會. The earlier 會 means an acquired skill: 他會做飯, 'he knows how to cook.' this lesson adds 會 for possibility or likelihood, commonly about a future event: 我明天會去看看他. Context—not the character alone—determines the reading. 不會 likewise can mean either 'doesn't know how' or 'will probably not / won't.'",
+      "explanation": "會 has different meanings in different contexts. With an acquired skill, 他會做飯 means “He knows how to cook.” When predicting a future event, 我明天會去看看他 means “I will go and see him tomorrow.” This predictive 會 need not mean “probably”: it can express a confident expectation or assurance. Likewise, 不會 can mean “does not know how” or “will not,” depending on the sentence.",
       "examples": [
         {
           "text": "他會做飯。",
@@ -1781,15 +1781,15 @@ const unit:UnitData = {
         {
           "text": "我明天會去看看他。",
           "pinyin": "Wǒ míngtiān huì qù kànkan tā.",
-          "meaning": "I'll probably go see him tomorrow."
+          "meaning": "I will go and see him tomorrow."
         },
         {
           "text": "他明天不會去上書法課。",
-          "pinyin": "Tā míngtiān bú huì qù shàng shūfǎkè.",
-          "meaning": "He won't / probably won't go to calligraphy class tomorrow."
+          "pinyin": "Tā míngtiān bú huì qù shàng shūfǎ kè.",
+          "meaning": "He will not go to calligraphy class tomorrow."
         }
       ],
-      "remember": "With a learned activity, 會 can mean know how. With a future event, 會 can mean will / be likely to. Read the whole context.",
+      "remember": "Read the whole situation: skill → know how; prediction → will / be likely to. A future time word helps with context but does not determine the meaning by itself.",
       "words": [
         "會"
       ]
@@ -1918,7 +1918,7 @@ const unit:UnitData = {
       "text": "今天我會去看看。",
       "pinyin": "Jīntiān wǒ huì qù kànkan.",
       "meaning": "I'll go take a look today.",
-      "note": "With a future time and action, 會 expresses likelihood/will, not an acquired skill.",
+      "note": "In this sentence, 會 predicts a visit: “will go and see him.” It is not describing the learned ability to visit someone.",
       "tokens": [
         "今天我",
         "會去看看"
@@ -1971,7 +1971,7 @@ const unit:UnitData = {
       "text": "可以，不過你得自己付錢。",
       "pinyin": "Kěyǐ, búguò nǐ děi zìjǐ fù qián.",
       "meaning": "Yes, but you have to pay for it yourself.",
-      "note": "Here 得 is read děi and means 'must / have to,' distinct from the earlier complement marker 得 de.",
+      "note": "得 is děi before an action and means “must / have to”: 得自己付錢, have to pay yourself. Compare 做得很好, where neutral-tone de follows 做 and introduces how well it is done. Position and meaning distinguish the readings.",
       "tokens": [
         "可以",
         "不過你得自己付錢"

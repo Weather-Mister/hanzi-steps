@@ -705,14 +705,14 @@ const unit:UnitData = {
         {
           "id": "u39-review-g1",
           "type": "select",
-          "prompt": "Completed affirmative action uses…",
+          "prompt": "Which pattern presents an action as having taken place in the examples here?",
           "options": [
             "V + 了",
             "不 + V + 了",
             "都 + V"
           ],
           "answer": "V + 了",
-          "explanation": "Postverbal 了 marks completion.",
+          "explanation": "Postverbal 了 presents the event as having taken place, viewed as a whole. It is not a general past-tense ending or a guarantee that every result is finished.",
           "grammarIds": [
             "u39-verbal-le"
           ]
@@ -802,7 +802,7 @@ const unit:UnitData = {
             "忙了沒有"
           ],
           "answer": "不忙",
-          "explanation": "State verbs use 不.",
+          "explanation": "Use 不 for the ordinary negative description in this sentence. Choose the negative by the intended meaning, rather than treating this as a rule for every use of the verb.",
           "grammarIds": [
             "u39-bu-vs-mei"
           ]
@@ -1208,7 +1208,7 @@ const unit:UnitData = {
       "id": "u39-verbal-le",
       "title": "Completed action with verbal 了",
       "pattern": "Verb + 了 (+ Object)",
-      "explanation": "Postverbal 了 indicates that an action/event has been completed or has taken place. It is not simply a past-tense ending. Negate the completed action with 沒（有） before the verb and remove verbal 了: 我沒吃晚飯, not *我沒吃了晚飯. A yes/no form here puts 沒有 after the completed clause. This is distinct from sentence-final changed-situation 了.",
+      "explanation": "了 immediately after the verb presents an event as having taken place, viewed as a whole: 我吃了晚飯. It does not change the verb into past tense, and “completed” does not mean that every possible result or all of an object is finished. Context tells you when the event happened. To deny that it happened, use 沒（有） before the verb and remove verbal 了: 我沒吃晚飯. The question 你吃了晚飯沒有？ checks whether the event has happened. Distinguish this from sentence-final 了 announcing a changed situation.",
       "examples": [
         {
           "text": "我吃了晚飯。",
@@ -1226,13 +1226,13 @@ const unit:UnitData = {
           "meaning": "Have you eaten dinner?"
         }
       ],
-      "remember": "Completed action: V + 了. Negative: 沒（有） + V, with no verbal 了. Do not equate 了 with past tense."
+      "remember": "V + 了 presents an event as realized; 沒（有） + V denies its occurrence. Do not automatically add 了 to every sentence about yesterday."
     },
     "u39-bu-vs-mei": {
       "id": "u39-bu-vs-mei",
       "title": "不 vs. 沒（有）",
       "pattern": "不 + V/state vs. 沒（有） + event V",
-      "explanation": "For action verbs, 不 expresses habitual non-action or an intention not to act; 沒（有） says an action did not happen in the past. State verbs use 不 in this system. Process/change events use 沒（有） for non-happening, as in 還沒到. In Taiwan, 沒有 + V is more common than bare 沒 + V, but bare 沒 + V is still grammatical. When 沒 negates a completed action, verbal 了 disappears; sentence-final changed-situation 了 is a different function.",
+      "explanation": "Choose the negative by meaning, not simply by English tense. 不 can deny a habit or intention: 我不喝咖啡, “I do not drink coffee”; 我今天不去, “I am not going today.” 沒（有） denies that an event happened or has happened: 我昨天沒有去; 他還沒到. For the ordinary states practised here, use 不, as in 不熱 and 不舒服. 有 still takes 沒有. These are the Book 1 patterns, not a claim that every verb has one fixed negative in all contexts. Both 沒有 + V and bare 沒 + V are used; bare 沒 + V is still grammatical in Taiwan Mandarin.",
       "examples": [
         {
           "text": "我不喝咖啡。",
@@ -1255,7 +1255,7 @@ const unit:UnitData = {
           "meaning": "He hasn't arrived yet."
         }
       ],
-      "remember": "不: habit/intention or contrary state. 沒（有）: an event did not happen. Taiwan commonly prefers 沒有 + V, but bare 沒 + V remains valid."
+      "remember": "不: habit, intention, or ordinary negative description. 沒（有）: an event did not / has not happened. “Not yet” is 還沒; remove verbal 了 when denying an event with 沒."
     }
   },
   "grammarIntroductions": [

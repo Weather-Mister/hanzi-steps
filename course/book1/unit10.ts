@@ -1767,7 +1767,7 @@ const unit:UnitData = {
       "id": "u10-cuisine",
       "title": "Choose something to eat",
       "pattern": "吃 + 菜; country name + 菜",
-      "explanation": "菜 can mean a dish or a cuisine. 吃菜 means to eat dishes or food. A country name before 菜 names that country’s cuisine; you will learn one in the next lesson. Keep the familiar order: person, time if needed, then 吃 and the food.",
+      "explanation": "菜 can mean vegetables, prepared dishes, or cuisine, depending on the phrase. Here imagine dishes already on the table: 我們一起吃菜 means we eat those dishes together. Without that context, 吃菜 can also suggest eating vegetables; it is not a general substitute for every English “eat” or “have a meal.” With a country name, 菜 names a cuisine, which you will practise next. 晚飯 names the evening meal.",
       "examples": [
         {
           "text": "我們一起吃菜。",
@@ -1780,7 +1780,7 @@ const unit:UnitData = {
           "meaning": "I would like to eat some dishes this evening."
         }
       ],
-      "remember": "晚飯 names the meal. 菜 names dishes or a cuisine. Both follow 吃.",
+      "remember": "Read 菜 in context: vegetables or dishes on their own; a cuisine after a country name. 晚飯 specifically names dinner.",
       "words": [
         "菜"
       ]
@@ -2580,7 +2580,7 @@ const unit:UnitData = {
         "吃",
         "菜"
       ],
-      "note": "菜 refers to the dishes, while 晚飯 names the evening meal.",
+      "note": "In this scene, the dishes are already on the table and 菜 refers to them. In another context, 吃菜 can mean eating vegetables. 晚飯 names the evening meal.",
       "grammarIds": [
         "u10-cuisine"
       ]

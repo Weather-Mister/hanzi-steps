@@ -1,0 +1,41 @@
+{
+  "reason": "Reviewed Book 1 grammar clarity corrections; see docs/book1-grammar-review.md. Preserve original migration snapshots, ownership, exercise answers and saved progress.",
+  "records": {
+    "grammarRules": {
+      "u3-point": {
+        "before": "286b933fcd36735916be898e6a511720d753931ca6576ec47caa3cc32987e6ea",
+        "after": "c6a5ec1d4c5dde20b26757c286f8963180c44879d17b44ec1e5b8bdbc5a1a554"
+      },
+      "u3-adjectives": {
+        "before": "69653b50518ea02084de4688e78c76287f090401b591eeefd5ed50b492feb9d7",
+        "after": "f359f1904a12a5ded94937c6791d80444dd44a2d65c08cc064738418a71f1b73"
+      },
+      "u4-actions": {
+        "before": "1dd84d99a3d4a5f92eeb1edee4f67d870abf5cc490d5bce81f27f725d21d5004",
+        "after": "b92865474d8b08dd0aae9e891f71995f340b0ea70973d3446155d07bbc89f274"
+      },
+      "u5-taste": {
+        "before": "817b974b081388e59fd0036889b11a86de2c97da0f915971ba27e4722e4cabdd",
+        "after": "b9836571486d883a18fd9bee832bb33c532eb0798e1b00844c2b3e97ac2c85d1"
+      },
+      "u5-a-not-a": {
+        "before": "bfee792230a025765c66c39602a6b11635dbe9a5e987aa468688fb5dbc0a5808",
+        "after": "2396bd7a63b8f6b6d1a009cc37550c5768cbad4e6f670c6bd787d0fe206beb0a"
+      },
+      "u5-follow-up": {
+        "before": "758e3225d4d9e7c273fdc892931e29fb2c1ca52078214a889fbcc9078e36b2d7",
+        "after": "0c15f617915f2e170129791147d173b8a42e26dc80f558fabaabfa50df476715"
+      },
+      "u8-not-fun": {
+        "before": "79f5b68bfbe913aeefd15b307ad960e95eef5668ec5905dee221a9ca179eddac",
+        "after": "2441f923c940fee2b123d3e3f40be8abbed26a9cbf983f3f65dc7110978294a6"
+      }
+    },
+    "phrases": {
+      "u8-not-fun": {
+        "before": "bfb8bba9c62a8854ff6fff65c368a4488192bb46b7a869b7c121bfd3fbefe86f",
+        "after": "9a5cb1b1a847a44ca5a73d95eac1f4b7f448eb4e151cd0dd8d3c29e4cd1be8f8"
+      }
+    }
+  }
+}

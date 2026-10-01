@@ -1587,7 +1587,7 @@ const unit:UnitData = {
       "meaning": "wander around; look around",
       "strokes": 10,
       "layout": "side",
-      "note": "逛 is fourth-tone guàng. this lesson uses 去逛逛 for going to look around a night market.",
+      "note": "逛 is fourth-tone guàng. This lesson uses 去逛逛 for going to look around a night market.",
       "memory": "Write the seven-stroke 狂 body first, then finish with the three-stroke movement component 辶 wrapping along the lower-left.",
       "parts": [
         {

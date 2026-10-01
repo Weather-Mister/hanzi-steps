@@ -132,7 +132,7 @@ const unit:UnitData = {
             "A hotel guest"
           ],
           "answer": "The owner's wife",
-          "explanation": "太太 means wife in this this lesson context."
+          "explanation": "太太 means wife in this lesson context."
         }
       ]
     },
@@ -771,7 +771,7 @@ const unit:UnitData = {
         {
           "id": "u31-review-07",
           "type": "select",
-          "prompt": "Which word means wife in this this lesson context?",
+          "prompt": "Which word means wife in this lesson context?",
           "options": [
             "太太",
             "弟弟",
@@ -1000,7 +1000,7 @@ const unit:UnitData = {
       "meaning": "wife; Mrs.",
       "lessonId": "u31-hotel",
       "core": true,
-      "note": "In the this lesson conversation, 太太 means a man's wife."
+      "note": "In this lesson’s conversation, 太太 means a man's wife."
     },
     {
       "text": "住",
@@ -1178,7 +1178,7 @@ const unit:UnitData = {
       "meaning": "male; man",
       "strokes": 7,
       "layout": "stack",
-      "note": "男 is second-tone nán. this lesson uses 男 before another noun, such as 男學生.",
+      "note": "男 is second-tone nán. This lesson uses 男 before another noun, such as 男學生.",
       "memory": "田 forms the five-stroke top; 力 adds the two-stroke lower part.",
       "parts": [
         {
@@ -1639,7 +1639,7 @@ const unit:UnitData = {
       "id": "u31-clause-modifier",
       "title": "Use a whole clause to identify a noun",
       "pattern": "[clause] + 的 + noun",
-      "explanation": "A complete clause can modify a noun in Chinese. Put the modifying clause before the noun and place 的 directly before that noun. The modifying clause can be affirmative or negative. This lets you say things such as 'the photos I took,' 'the person wearing red clothes,' or 'people who do not go to the night market.'",
+      "explanation": "A clause can describe a noun. Put that description before 的 + noun: 我拍的照片 means “the photos I took.” Read the noun at the end first to identify what is being named; then read the clause to learn which ones. The noun fills a role understood inside that clause: 我拍的照片 does not repeat 照片 after 拍. The clause can also describe a person doing something, as in 穿紅色衣服的人, or be negative, as in 不去夜市的人.",
       "examples": [
         {
           "text": "這些是我拍的照片。",
@@ -1657,7 +1657,7 @@ const unit:UnitData = {
           "meaning": "People who do not go to the night market can drink tea at home."
         }
       ],
-      "remember": "Put the entire description before 的 + noun. Negative clauses work too."
+      "remember": "Description first, then 的, then the noun. Context gives the time; 的 itself does not make the clause past tense."
     },
     "u31-sentential-le": {
       "id": "u31-sentential-le",
@@ -1687,7 +1687,7 @@ const unit:UnitData = {
       "id": "u31-yinwei-suoyi",
       "title": "Give a reason with 因為…所以…",
       "pattern": "因為 + cause，所以 + effect",
-      "explanation": "因為 introduces the cause and 所以 introduces the result. In the this lesson pattern, the cause comes first and the two conjunctions normally appear as a pair. Keep the logic clear: the 因為-clause explains why the 所以-clause follows.",
+      "explanation": "因為 introduces a reason and 所以 introduces its result. In the full pattern, state the cause first and the consequence second: 因為我喜歡水果，所以我想吃吃看. Mandarin can use both words in one sentence; a natural English translation usually uses “because” or “so,” rather than both. You already used 所以 without 因為 in Unit 16. The pair is useful here, but both words are not mandatory in every explanation.",
       "examples": [
         {
           "text": "因為現在去玩的人比較少，所以旅館不太貴。",
@@ -1700,7 +1700,7 @@ const unit:UnitData = {
           "meaning": "Because I like fruit, I want to try it."
         }
       ],
-      "remember": "Cause first with 因為; effect second with 所以."
+      "remember": "Check the logic: the 因為-clause gives the reason; the 所以-clause gives the result. The full paired form is the practice target."
     }
   },
   "grammarIntroductions": [
@@ -1866,7 +1866,7 @@ const unit:UnitData = {
       "text": "從窗戶往外看，是藍色的大海。",
       "pinyin": "Cóng chuānghù wǎng wài kàn, shì lánsè de dàhǎi.",
       "meaning": "Looking out from the window, you see the blue sea.",
-      "note": "This is the the conversation wording: 從 introduces the viewpoint/source, 往外 gives the outward direction, and 窗戶 is the window.",
+      "note": "This is the conversation wording: 從 introduces the viewpoint/source, 往外 gives the outward direction, and 窗戶 is the window.",
       "tokens": [
         "從窗戶",
         "往外看",

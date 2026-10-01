@@ -1833,7 +1833,7 @@ const unit:UnitData = {
           "meaning": "The school is not far."
         }
       ],
-      "remember": "很 joins the description naturally; it does not always mean an emphatic “very.”",
+      "remember": "很 commonly appears before a description in a neutral affirmative statement. It is a degree adverb, not a word meaning “is,” and need not express an emphatic “very.”",
       "words": [
         "遠",
         "近"

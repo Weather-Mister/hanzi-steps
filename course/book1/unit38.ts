@@ -1192,7 +1192,7 @@ const unit:UnitData = {
       "id": "u38-yi-jiu",
       "title": "As soon as… with 一…就…",
       "pattern": "Subject + 一 + Event A，(Subject) + 就 + Event B",
-      "explanation": "一…就… links two events when Event B follows Event A immediately. 一 comes before Event A and 就 before Event B; both follow the subject. If the subject is the same, the repeated subject may be omitted. Either event can be affirmative or negative. The rule here does not use ordinary A-not-A inside this construction; yes/no questions can use 嗎 or 是不是. Both question strategies are valid.",
+      "explanation": "一…就… links a trigger to what follows immediately or as a direct response. Put 一 before the first event and 就 before the next: 我一下課，就回來. If the same person does both, the second subject can be omitted; with different people, state the second subject before 就. In this pattern 一 does not mean the number “one.” The sentence can describe a habit, a future plan, or a past event; context supplies the time. Either event can be affirmative or negative. A negative situation can also be the trigger, as in 那裡一沒人，我就回家. Ask for confirmation with 嗎 or 是不是. Both question strategies are valid.",
       "examples": [
         {
           "text": "我一下課，就回來。",
@@ -1210,7 +1210,7 @@ const unit:UnitData = {
           "meaning": "As soon as the boss got to the company this morning, he was unhappy."
         }
       ],
-      "remember": "一 before Event A; 就 before the immediate Event B. Same subject may be omitted. Either event may be negative; ask with 嗎 or 是不是, not ordinary A-not-A."
+      "remember": "一 marks the trigger; 就 marks the immediate next event. For a yes/no question about this whole sequence, practise 嗎 or 是不是 rather than inserting ordinary A-not-A into the sequence."
     }
   },
   "grammarIntroductions": [

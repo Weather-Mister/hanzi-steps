@@ -1,6 +1,6 @@
 {
-  "reviewed": "2026-09-30",
-  "note": "Human-readable adjudication in docs/connected-learning-validation.md. Hashes detect drift; they do not prove natural-language semantics.",
+  "reviewed": "2026-10-01",
+  "note": "Human-readable adjudication in docs/connected-learning-validation.md. Hashes detect drift; they do not prove natural-language semantics. Grammar-note-only changes reviewed in docs/book1-grammar-review.md.",
   "payloads": {
     "readings": {
       "reading-unit-10": "801c7633ed288be6ddf792190d2ff755b290d81d09735c9acbc6b6c281bfb285",
@@ -29,8 +29,8 @@
       "mrt-faster": "8502833f568ac484c6fd80cddc7d0caf983efb8055d84a3a5b765a8dff831ff6",
       "last-month": "3ba7c00a2b293dab39de2cc9436c4498462c6470a8968eaa3a1506d4a4000b6a",
       "finished-dinner": "4d98fb16f1b6268a951a02814a05d569e9bc2b9d1968269dc0da36b921185b3a",
-      "few-friends": "f4447d7d6b486bc94c0dd7ddf0748397dbdafccfd0688f2f0db90dc257dd108c",
-      "recipient": "b080e71ddd62a7d02870eff7458e398b03fcc8bdaadde5a97beb51d18d4ed0bc",
+      "few-friends": "5a6228f27fbea204c43e3503773cf3d4ecc160922db8be563ba8fa265b102d97",
+      "recipient": "de9c74a5b3ec03f8ea17817ec6dad984c2e79b6b32021732978c2dc1e3780007",
       "directions": "2df39c0c5b030507d50359d1c15f0b2d19536600622deac524cec872c45b811d",
       "simultaneous": "04ba4d039a0654503119904e0942149e65bb6bab62a224d88ee48839e0c299ea"
     },
@@ -47,11 +47,11 @@
       "下:2": "4f3918fd3208335df281ebe007fffdf3409f5a313714961dbaaa2628783fb138",
       "了:0": "3de38ec3db26b10f709a381a3df7abef58bc718eff893c5ac273da3166973a3c",
       "了:1": "01b6e9bfe8803e4ffde15a2cd185aedf791c2135a16044b57f2562fd656b832e",
-      "了:2": "102863cb68d2170513e1190bdafe5365aeedfe63d85086f8d943ea294a314ab3",
+      "了:2": "a78b7d66dacd776c0d2a422dd1f9e55ac17f11db2b17c5d02b8f2c05b799ad44",
       "得:0": "c9a54588b4b9f07cb10959e3de24a41bba913b70c5520218cdc74920c4796d53",
       "在:0": "b669f3ae2c5ad436152a17069a259a3aa4418ae497f7baa0c296ccc677ddcdf7",
-      "幾:0": "6a91de9c9e462e48f3e0ed8c79a89fdb637a283aeb9ecf4098a9ad8f4d77b595",
-      "跟:0": "63376f31a5692dbff5e75b4d9f998a9f46550c73f78ab5e75c8b9ef88d948132",
+      "幾:0": "168808b2ecb0b23a0c1a867d2b773672880f506d5eeba84e548c67384f55a294",
+      "跟:0": "0661a6da53191b5f1757f857c81401c3bf80d2dd822cb3ea9aed669a7b853b8a",
       "課:0": "b75687387a861069bd0cf3a3c7c640bdb1b18fe668e10e939b9f2cb24e58293d",
       "邊:0": "9de506aa27dbdfc251ff0c34fa427fc620ce1812626b409768225f69e2bb1d45"
     }

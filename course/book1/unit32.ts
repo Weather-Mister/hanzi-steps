@@ -642,7 +642,7 @@ const unit:UnitData = {
     {
       "id": "u32-quick",
       "title": "Only Five Minutes",
-      "subtitle": "Use the this lesson single-sentence 就 for an event reached sooner than expected, not the earlier conditional 就.",
+      "subtitle": "Use this lesson’s single-sentence 就 for an event reached sooner than expected, not the earlier conditional 就.",
       "chars": [],
       "minutes": "8–11 min",
       "unitId": "unit-32",
@@ -783,7 +783,7 @@ const unit:UnitData = {
         {
           "id": "u32-review-g2",
           "type": "select",
-          "prompt": "Which sentence uses the this lesson 'sooner than expected' 就?",
+          "prompt": "Which sentence uses this lesson’s 'sooner than expected' 就?",
           "options": [
             "走路五分鐘就到了。",
             "要是下雨，我就不去。"
@@ -878,7 +878,7 @@ const unit:UnitData = {
             "Measure word for phone calls"
           ],
           "answer": "Preposition 'to', marking the call recipient",
-          "explanation": "this lesson uses 給 as a preposition in 打電話給… 'call …'. This differs from 給你一塊水果, where 給 is the verb 'give'."
+          "explanation": "This lesson uses 給 as a preposition in 打電話給… 'call …'. This differs from 給你一塊水果, where 給 is the verb 'give'."
         },
         {
           "id": "u32-review-s5",
@@ -1741,7 +1741,7 @@ const unit:UnitData = {
         },
         {
           "text": "那個地方很近，很快就到了。",
-          "pinyin": "Nàge dìfang hěn jìn, hěn kuài jiù dào le.",
+          "pinyin": "Nàge dìfāng hěn jìn, hěn kuài jiù dào le.",
           "meaning": "That place is close; you get there very quickly."
         }
       ],
@@ -1786,7 +1786,7 @@ const unit:UnitData = {
       "text": "還有兩間空房間，一間是套房，一間不是。",
       "pinyin": "Hái yǒu liǎng jiān kōng fángjiān, yì jiān shì tàofáng, yì jiān bú shì.",
       "meaning": "There are two other vacant rooms. One is a suite, and one is not.",
-      "note": "This keeps the the conversation wording. 還有 here means 'there are also/still'; 間 counts rooms and 空 kōng means vacant.",
+      "note": "This keeps the conversation wording. 還有 here means 'there are also/still'; 間 counts rooms and 空 kōng means vacant.",
       "tokens": [
         "還有兩間空房間",
         "一間是套房",
@@ -1841,7 +1841,7 @@ const unit:UnitData = {
       "text": "我打電話給房東。",
       "pinyin": "Wǒ dǎ diànhuà gěi fángdōng.",
       "meaning": "I call the landlord.",
-      "note": "打電話 is the ordinary collocation 'make a phone call'. Here 給 is the this lesson preposition 'to', marking the recipient: 打電話給房東. Compare earlier 給你一塊水果, where 給 is the verb 'give'.",
+      "note": "打電話 is the ordinary collocation 'make a phone call'. Here 給 is this lesson’s preposition 'to', marking the recipient: 打電話給房東. Compare earlier 給你一塊水果, where 給 is the verb 'give'.",
       "tokens": [
         "我",
         "打電話",

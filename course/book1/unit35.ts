@@ -1523,7 +1523,7 @@ const unit:UnitData = {
       "id": "u35-shi-de",
       "title": "Focus a past event with 是…的",
       "pattern": "Subject / Topic + 是 + Focus + Activity + 的",
-      "explanation": "是…的 highlights one element of a past event as the focus or contrast. Put 是 directly before the focused element and 的 at the end. The focused element can be the subject, time, place, manner, and occasionally the verb, but never the object. An object is often moved to the very front as the topic, as in 學費是公司替我付的. Put 不 before 是 for negation. The rule here also forms yes/no questions with 嗎, notes that 是 can sometimes be omitted, and allows wh-questions asking who, when, how, or where about a past event; it specifically excludes using the construction to ask 'what' when 'what' is the object.",
+      "explanation": "Use 是…的 here to highlight a detail of an understood past event, rather than to announce simply that it happened. 他是昨天晚上到臺灣的 focuses on when he arrived; 我是坐公車來上課的 focuses on how I came. Put 是 before the focused detail and 的 at the end of this pattern. For a focused person, 是 can precede the subject: 是我打電話給房東的. An object may be placed first as the topic: 學費是公司替我付的 focuses on who paid, not on 學費. The focus can be the subject, time, place, manner, or another circumstance of the event. In the pattern practised here, it is never the object. Negation puts 不 before 是: 不是…的. Ask yes/no questions with 嗎, or ask who, when, how, or where by putting the question word in the focus slot. 是 can sometimes be omitted when the focus is clear.",
       "examples": [
         {
           "text": "學費是公司替我付的。",
@@ -1551,7 +1551,7 @@ const unit:UnitData = {
           "meaning": "It wasn't at the library that I read."
         }
       ],
-      "remember": "Past event: put 是 before the focused information and 的 at the end. Object focus is not allowed. Negation is 不是…的; yes/no questions can add 嗎; 是 can sometimes be omitted; wh-questions can ask who, when, how, or where."
+      "remember": "Ask about the highlighted detail with 誰、什麼時候、怎麼 or 哪裡; add 嗎 for a yes/no check. 的 is not a general past-tense ending, and these are the event-focus uses taught here."
     }
   },
   "grammarIntroductions": [
@@ -1571,7 +1571,7 @@ const unit:UnitData = {
       "text": "我的學費是公司替我付的。",
       "pinyin": "Wǒ de xuéfèi shì gōngsī tì wǒ fù de.",
       "meaning": "My tuition is paid by my company for me.",
-      "note": "This conversation This answers the preceding 你呢？ from the scholarship turn. 學費 is fronted as the topic/object, and 公司 is the focused subject inside 是…的.",
+      "note": "學費 is the topic: we are discussing the tuition. 是公司替我付的 highlights who pays it. 替我 means “for me / on my behalf” and comes before 付.",
       "tokens": [
         "我的學費",
         "是公司",
@@ -1595,7 +1595,7 @@ const unit:UnitData = {
       "text": "大概兩年，是公司決定的。",
       "pinyin": "Dàgài liǎng nián, shì gōngsī juédìng de.",
       "meaning": "Probably two years. My company will decide.",
-      "note": "This conversation 是…的 focuses 公司 as the decider.",
+      "note": "是公司決定的 highlights the company as the decision-maker. The length of study is already the topic, so it need not be repeated after 決定.",
       "tokens": [
         "大概兩年",
         "是公司決定的"
@@ -1608,7 +1608,7 @@ const unit:UnitData = {
       "text": "希望我以後也可以到這麼好的公司上班。",
       "pinyin": "Xīwàng wǒ yǐhòu yě kěyǐ dào zhème hǎo de gōngsī shàngbān.",
       "meaning": "I hope that in the future I can work at such a good company too.",
-      "note": "Here 以後 stands alone as a future time expression. this lesson later teaches Event + 以後 'after…'; that grammar is deliberately deferred.",
+      "note": "Here 以後 stands alone and means “in the future / later.” 希望 introduces the hoped-for situation. Compare the event + 以後 pattern in the following unit, meaning “after that event.”",
       "tokens": [
         "希望我以後",
         "也可以到這麼好的公司",
@@ -1708,7 +1708,7 @@ const unit:UnitData = {
       "text": "是我打電話給房東的。",
       "pinyin": "Shì wǒ dǎ diànhuà gěi fángdōng de.",
       "meaning": "It was I who called the landlord.",
-      "note": "The uses this to show subject focus: 是 comes immediately before 我.",
+      "note": "是 comes immediately before 我 because the speaker is identifying who made the call: “It was I who called the landlord.”",
       "tokens": [
         "是我",
         "打電話給房東的"

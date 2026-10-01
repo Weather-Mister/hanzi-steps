@@ -1263,7 +1263,7 @@ const unit:UnitData = {
             "怎麼了？"
           ],
           "answer": "不用了。",
-          "explanation": "不用了 is the this lesson refusal phrase."
+          "explanation": "不用了 is this lesson’s refusal phrase."
         },
         {
           "id": "u47-review-a005-1",
@@ -1827,7 +1827,7 @@ const unit:UnitData = {
       "id": "u47-vle-jiu",
       "title": "V了…就… — do B right after completing A",
       "pattern": "[event 1 V了…] + 就 + [event 2]",
-      "explanation": "Event 2 follows immediately or very soon after completion of event 1. This pattern can use 以後, contrasts with prior 一…就…, and uses 嗎/是不是 rather than an ordinary A-not-A route.",
+      "explanation": "V了…就… presents the first event as completed before the second follows promptly: 他吃了藥就睡覺, “After taking medicine, he went right to sleep.” The first 了 marks the event boundary; it does not force the whole sentence into the past. Context can describe a past sequence, a routine, or what will happen next. 以後 can make “after” explicit: 他吃了藥以後，就睡覺. Compare 一…就…, which focuses on the trigger and immediate response. Do not combine the two taught templates into 一…了以後就….",
       "examples": [
         {
           "text": "他吃了藥就睡覺。",
@@ -1842,10 +1842,10 @@ const unit:UnitData = {
         {
           "text": "妹妹喝了熱湯，就不覺得冷了。",
           "pinyin": "Mèimei hē le rè tāng, jiù bù juéde lěng le.",
-          "meaning": "After younger sister drank hot soup, she no longer felt cold."
+          "meaning": "After my younger sister drank hot soup, she no longer felt cold."
         }
       ],
-      "remember": "Completed first event + 就 + next event; 以後 is compatible; ordinary A-not-A is not the question route."
+      "remember": "First event completed → next event promptly follows. For a yes/no check of this sequence, use 嗎 or 是不是 in the forms taught here."
     }
   },
   "grammarIntroductions": [
@@ -1899,7 +1899,7 @@ const unit:UnitData = {
       "text": "你怎麼了？臉色這麼難看。",
       "pinyin": "Nǐ zěnme le? Liǎnsè zhème nánkàn.",
       "meaning": "What's wrong? Your complexion looks so bad.",
-      "note": "Concern/condition use of 怎麼了？",
+      "note": "你怎麼了？ asks what is wrong or what has happened. 臉色這麼難看 expresses concern that the person looks unwell; it is not an insult about their attractiveness. 這麼 points to the degree the speaker observes.",
       "tokens": [
         "你怎麼了？臉色這麼難看。"
       ]
@@ -1917,7 +1917,7 @@ const unit:UnitData = {
       "text": "吐了好幾次。",
       "pinyin": "Tù le hǎo jǐ cì.",
       "meaning": "Vomited several times.",
-      "note": "Requires the Unit-46 幾 expansion.",
+      "note": "次 counts occurrences of an action. 好幾次 means quite a few times; 好 here strengthens 幾 rather than meaning “good.” 吐了好幾次 reports repeated vomiting, not a number of hours.",
       "tokens": [
         "吐了好幾次。"
       ]
@@ -1959,7 +1959,7 @@ const unit:UnitData = {
       "text": "不用了。",
       "pinyin": "Búyòng le.",
       "meaning": "No need / It's not necessary.",
-      "note": "Polite refusal.",
+      "note": "不用了 politely declines the offered help: “No, thanks / That will not be necessary.” In this reply, it does not mean that the speaker never needs help.",
       "tokens": [
         "不用了。"
       ]
@@ -1995,7 +1995,7 @@ const unit:UnitData = {
       "text": "我想去藥局買藥就好了。",
       "pinyin": "Wǒ xiǎng qù yàojú mǎi yào jiù hǎo le.",
       "meaning": "I think just going to the pharmacy to buy medicine will be enough.",
-      "note": "V + 就好了 here means that doing the action will be enough.",
+      "note": "In the speaker’s proposed plan, 買藥就好了 means buying medicine would be enough. This 就好了 evaluates the plan as sufficient; it does not say the speaker has already recovered.",
       "tokens": [
         "我想去藥局買藥就好了。"
       ]

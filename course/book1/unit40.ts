@@ -1025,7 +1025,7 @@ const unit:UnitData = {
       "id": "u40-questionword-totality",
       "title": "All-inclusive question words with 都 / 也",
       "pattern": "Question word + 都 + … / Question word + 都 or 也 + 不／沒…",
-      "explanation": "Question words can form total inclusion: 誰都 'everyone', 哪裡都 'everywhere', 什麼都 'everything', 什麼時候都 'anytime', and 怎麼 + V + 都 'whichever way'. For total exclusion, use question word + 都 or 也 + 不／沒, with the negative after 都/也. Both 都 and 也 are valid in negative total-exclusion. The pattern forms questions for this pattern with 嗎.",
+      "explanation": "Question words need not ask questions. With 都, they can include every member of the relevant set: 誰都, everyone; 什麼都, everything; 哪裡都, everywhere; 什麼時候都, anytime. In 怎麼去都可以, 怎麼去 means “whichever way you go.” Both 都 and 也 are valid in these negative patterns. In negative sentences, 都 or 也 can appear before 不／沒 to exclude the whole set: 誰也沒來, “Nobody came.” Compare the ordinary question 你吃什麼？ with 我什麼都吃, “I eat anything.” The scope is the people, things, or times relevant to the conversation.",
       "examples": [
         {
           "text": "我什麼都吃。",
@@ -1043,13 +1043,13 @@ const unit:UnitData = {
           "meaning": "Yesterday I didn't go anywhere."
         }
       ],
-      "remember": "Affirmative: question word + 都. Negative: question word + 都/也 + 不/沒. Put the negative after 都/也."
+      "remember": "The question word comes before 都／也, and the negative follows: 什麼也不想吃. To ask whether the whole statement is true, use 嗎 in this lesson’s pattern."
     },
     "u40-more-less-verb": {
       "id": "u40-more-less-verb",
       "title": "Do more / do less with 多／少 + Verb",
       "pattern": "多 / 少 + Verb (+ 一點 + Object)",
-      "explanation": "Before a verb, 多 means do more than planned/usual and 少 means do less/fewer than planned/usual. This differs from earlier quantity uses. The pattern can refer to past or future events, and 一點 often modifies the object.",
+      "explanation": "Put 多 or 少 before an action to mean do more or less than usual, planned, or otherwise understood: 多看書, read more; 少買東西, buy fewer things. This differs from 多／少 describing the number of things. 一點 can specify a small amount: 你多吃一點, “Eat a little more”; 多學一點中文, “Study a little more Chinese.” Context can place the action in the past or future. The comparison is with an understood baseline, not necessarily a previously stated numerical plan.",
       "examples": [
         {
           "text": "你多吃一點。",
@@ -1067,7 +1067,7 @@ const unit:UnitData = {
           "meaning": "I want to study a little more Chinese."
         }
       ],
-      "remember": "Put 多 or 少 before the action verb to mean do more or less than planned/usual."
+      "remember": "多／少 before the verb adjusts the amount of activity. 一點 after it can make the requested change small."
     }
   },
   "grammarIntroductions": [

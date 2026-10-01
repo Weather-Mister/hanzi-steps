@@ -224,14 +224,14 @@ const unit:UnitData = {
         {
           "id": "u46-g1-s2",
           "type": "select",
-          "prompt": "What restriction applies to these non-specific question-word statements?",
+          "prompt": "What do all the non-specific question-word statements practised in this lesson have in common?",
           "options": [
             "They are always negative.",
             "They always require 都.",
             "They must be questions."
           ],
           "answer": "They are always negative.",
-          "explanation": "The rule states the non-committal statements are always negative."
+          "explanation": "These examples all use negation. This lesson teaches a negative non-specific pattern; it does not claim that every non-question use of a question word requires negation."
         },
         {
           "id": "u46-g1-s3",
@@ -555,7 +555,7 @@ const unit:UnitData = {
             "我把中文學了。"
           ],
           "answer": "我把這個小籠包吃了。",
-          "explanation": "The model uses a definite/referential object and an allowed outward action.",
+          "explanation": "這個小籠包 identifies the specific object. 吃了 says what was done to it. The other options do not fit the restricted frame practised here.",
           "grammarIds": [
             "u46-ba-disposal"
           ]
@@ -570,7 +570,7 @@ const unit:UnitData = {
             "學"
           ],
           "answer": "吃",
-          "explanation": "The The pattern models outward actions such as 吃/喝/寫/賣."
+          "explanation": "吃 fits this introductory object + action + final-了 frame. Do not generalize the bare-verb restriction here to every possible 把 sentence."
         },
         {
           "id": "u46-g2-s3",
@@ -1280,7 +1280,7 @@ const unit:UnitData = {
             "a question mark"
           ],
           "answer": "negation",
-          "explanation": "The rule says these statements are always negative."
+          "explanation": "Negation is required in the particular negative pattern being tested here. Question words have other non-question uses too, including the earlier 都 pattern."
         },
         {
           "id": "u46-review-g2",
@@ -1292,7 +1292,7 @@ const unit:UnitData = {
             "我把這支手機買了。"
           ],
           "answer": "我把這個小籠包吃了。",
-          "explanation": "吃 is outward/transitive here."
+          "explanation": "吃 acts on the specific object in the introductory 把 + object + 吃了 frame."
         },
         {
           "id": "u46-review-g2neg",
@@ -1899,7 +1899,7 @@ const unit:UnitData = {
       "id": "u46-noncommittal-question-words",
       "title": "Negative, non-specific question words",
       "pattern": "NEG + clause containing 什麼 / 多少 / 幾 / 哪裡 / 誰 / 什麼時候",
-      "explanation": "In this lesson, a question word inside a declarative sentence can avoid a specific commitment. The rule is always negative and is not the Unit-40 都/也 totality pattern.",
+      "explanation": "In the negative statements practised here, words that normally ask questions instead leave the people, places, or things non-specific. 我沒買什麼東西 can mean “I did not buy anything in particular” or “I did not buy much,” depending on context; it does not necessarily assert that I bought absolutely nothing. 沒有多少錢 means not much money, and 她沒有幾個朋友 means she has few friends. 幾 here is not asking “how many?” Contrast Unit 40’s 什麼都沒… pattern, which explicitly excludes everything.",
       "examples": [
         {
           "text": "我沒買什麼東西。",
@@ -1917,13 +1917,13 @@ const unit:UnitData = {
           "meaning": "She has only a few friends."
         }
       ],
-      "remember": "This pattern is negative. Do not add 都/也 merely because a question word appears."
+      "remember": "This lesson’s non-specific pattern is negative. That does not mean question words can only occur in negative statements. Do not add 都／也 unless you intend the total-exclusion pattern."
     },
     "u46-ba-disposal": {
       "id": "u46-ba-disposal",
       "title": "Introductory 把 disposal",
-      "pattern": "把 + definite/referential object + bare outward-transitive action verb + sentence-final 了",
-      "explanation": "Use 把 for what is done to a salient object. At this introductory introductory stage, favor definite/referential objects and outward actions such as 吃、喝、寫、賣; excluded inward verbs include 買、學. 沒/別 precede 把. Questions use 了沒有 or 是不是.",
+      "pattern": "subject + 把 + specific object + action + 了",
+      "explanation": "把 brings a specific, understood object before the action and draws attention to what is done to it. Compare 我吃了這個小籠包 with 我把這個小籠包吃了: the second starts from this particular xiaolongbao and says what I did with it. The introductory frame here is subject + 把 + object + action + final 了, with actions such as 吃、喝、寫、賣. This is one restricted 把 pattern, not the full set of 把 constructions. Do not treat “outward action” as a literal physical-direction rule, or attach a bare 買／學 to this template. 沒 or 別 comes before 把. 別把我的藥吃了 is a warning not to take the medicine; its final 了 does not report a completed past event.",
       "examples": [
         {
           "text": "我把這個小籠包吃了。",
@@ -1941,7 +1941,7 @@ const unit:UnitData = {
           "meaning": "Did you finish the homework?"
         }
       ],
-      "remember": "Specific object + outward action + final-了 pattern taught here; 沒/別 before 把."
+      "remember": "Name the specific object after 把, then say what happens to it. Keep this introductory final-了 frame separate from later 把 patterns; ask with 了沒有 or 是不是 here."
     }
   },
   "grammarIntroductions": [
@@ -1984,7 +1984,7 @@ const unit:UnitData = {
       "text": "別把我的藥吃了。",
       "pinyin": "Bié bǎ wǒ de yào chī le.",
       "meaning": "Don't take my medicine.",
-      "note": "Meaning-first explanation: 把 bǎ is the disposal marker; 別 bié gives the negative command.",
+      "note": "別 introduces a command not to act and comes before 把. 我的藥 identifies the medicine concerned; 吃藥 means take medicine. Final 了 is part of this warning pattern, not a statement that someone already took it.",
       "tokens": [
         "別",
         "把我的藥",
@@ -2022,7 +2022,7 @@ const unit:UnitData = {
       "text": "她沒有幾個朋友。",
       "pinyin": "Tā méiyǒu jǐ ge péngyǒu.",
       "meaning": "She does not have many friends / has only a few friends.",
-      "note": "幾 jǐ was introduced in Unit 7 as the question word “how many?”. In this lesson, the same word also means “a few / several” in a statement or other non-question context. This is a semantic expansion of the Unit-7 word, not new vocabulary.",
+      "note": "幾 jǐ asked “how many?” in Unit 7. It can also mean “a few / several” in a statement. Here 沒有幾個朋友 means “does not have many friends / has only a few friends.” It is not a question and does not mean “has no friends.” Keep 個 before 朋友.",
       "tokens": [
         "她沒有",
         "幾個朋友"
@@ -2032,7 +2032,7 @@ const unit:UnitData = {
       "text": "沒有什麼關係。",
       "pinyin": "Méiyǒu shénme guānxi.",
       "meaning": "It's nothing serious / It doesn't matter much.",
-      "note": "Contextual use of the negative non-specific question-word pattern.",
+      "note": "什麼 is non-specific inside this negative statement; it is not asking “what?” In the doctor dialogue, 沒有什麼關係 reassures the patient that it is not very serious. Elsewhere it can mean that something does not matter much; context supplies the interpretation.",
       "tokens": [
         "沒有什麼關係。"
       ]
@@ -2041,7 +2041,7 @@ const unit:UnitData = {
       "text": "得 + V",
       "pinyin": "děi + V",
       "meaning": "must / have to + V",
-      "note": "NEW support; distinct from complement 得 de.",
+      "note": "Read 得 as děi when it comes before an action and means “must / have to,” as in 得吃藥. Neutral-tone de instead follows a verb to introduce a description, as in 做得很好.",
       "tokens": [
         "得 + V"
       ]
@@ -2070,7 +2070,7 @@ const unit:UnitData = {
       "text": "回去把藥吃了，多喝水，多休息，早一點睡覺，很快就會好。",
       "pinyin": "Huíqù bǎ yào chī le, duō hē shuǐ, duō xiūxí, zǎo yìdiǎn shuìjiào, hěn kuài jiù huì hǎo.",
       "meaning": "Go back and take the medicine, drink more water, rest more, go to sleep a bit earlier, and you'll get better soon.",
-      "note": "The 把 pattern combined with health advice.",
+      "note": "In the dialogue, the doctor gives a sequence of instructions. 把藥吃了 starts with the understood medicine; 多喝水 and 多休息 ask for more of each activity; 早一點 asks for an earlier bedtime. 很快就會好 is a prediction of recovery.",
       "tokens": [
         "回去把藥吃了，多喝水，多休息，早一點睡覺，很快就會好。"
       ]

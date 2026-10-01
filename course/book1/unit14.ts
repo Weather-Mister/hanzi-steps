@@ -2078,7 +2078,7 @@ const unit:UnitData = {
       "id": "u14-too",
       "title": "React with 太…了",
       "pattern": "item + 太 + adjective + 了",
-      "explanation": "太 tài before an adjective means too or overly. Add neutral-tone 了 le at the end for an emphatic reaction: 太貴了, too expensive. Here 了 expresses your reaction; it does not mean that the event happened in the past. You can reuse familiar descriptions: 太大了, too big; 太熱了, too hot. 太 does not need 很 as well.",
+      "explanation": "太 + adjective + 了 expresses a strong reaction. With 貴 or 大 in these examples, it means the degree is excessive: 太貴了, too expensive. The same frame can express enthusiastic praise with a positive word, as you will later practise with 太好了. It is not always a complaint. Final 了 belongs to the reaction pattern here; it does not mark past tense. Do not add 很 after 太.",
       "examples": [
         {
           "text": "這支手機太貴了。",
@@ -2091,7 +2091,7 @@ const unit:UnitData = {
           "meaning": "That phone is too big."
         }
       ],
-      "remember": "太 + description + 了. Here 了 is a reaction ending, not a past-tense marker.",
+      "remember": "太貴了 complains about an excessive price. The pattern can also express praise; final 了 does not mean “past.”",
       "words": [
         "太",
         "了"

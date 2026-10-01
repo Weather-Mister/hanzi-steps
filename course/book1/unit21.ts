@@ -1975,7 +1975,7 @@ const unit:UnitData = {
       "id": "u21-clock-time",
       "title": "Tell clock time with 點 and 分",
       "pattern": "number + 點 (+ number + 分)",
-      "explanation": "Use 點 after the hour and 分 after minutes. The character 點 was learned earlier as “to order”; in clock time it is the measure for the hour. 分 here means minute. Put the hour before the minutes.",
+      "explanation": "Put 點 after the hour and 分 after the minutes: 九點二十分 is 9:20. For 2 o’clock use 兩點; within the minute number use 二, as in 二十分 (twenty minutes past the hour). At an exact hour, 七點 is enough. 早上 or 晚上 can clarify morning or evening. This 點 names a clock hour; it is different from the earlier verb 點, “order food.”",
       "examples": [
         {
           "text": "九點二十分",
@@ -1988,7 +1988,7 @@ const unit:UnitData = {
           "meaning": "7:00 in the evening"
         }
       ],
-      "remember": "Clock time is a time-when expression: 九點二十分, not 二十分九點.",
+      "remember": "Clock time answers “when?” Read the hour first, then the minutes. Use 兩點 for 2:00 and 二十分 for twenty minutes past.",
       "words": [
         "點",
         "分"

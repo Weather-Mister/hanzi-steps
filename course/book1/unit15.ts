@@ -1949,7 +1949,7 @@ const unit:UnitData = {
       "id": "u15-approximate",
       "title": "A round number plus a little more",
       "pattern": "round number + 多 + measure word + noun",
-      "explanation": "this lesson uses 多 after a round number to mean more than that number but less than the next unit of that scale. 三十多塊 means over 30 but under 40 dollars; when counting whole dollars, that is 31–39. 一百多塊 means over 100 but under 200. Put 多 before the money measure in these patterns. It does not provide an exact price. 二十多個人 means twenty-something people. Compare 二十多塊 with 二十塊多: the second puts 多 after the money measure and means a little more than 20 dollars, under 21. In these lessons, prices are invented for practice.",
+      "explanation": "This lesson uses 多 after a round number to mean more than that number but less than the next unit of that scale. 三十多塊 means over 30 but under 40 dollars; when counting whole dollars, that is 31–39. 一百多塊 means over 100 but under 200. Put 多 before the money measure in these patterns. It does not provide an exact price. 二十多個人 means twenty-something people. Compare 二十多塊 with 二十塊多: the second puts 多 after the money measure and means a little more than 20 dollars, under 21. In these lessons, prices are invented for practice.",
       "examples": [
         {
           "text": "三十多塊",

@@ -1764,7 +1764,7 @@ const unit:UnitData = {
       "id": "u44-even-more",
       "title": "Comparison with 更 — even more",
       "pattern": "A + 比 + B + 更 + State Verb",
-      "explanation": "更 means “even more” relative to an established or understood baseline. It goes before a state verb. this lesson first shows the baseline meaning in 星期天我更忙, then uses 更 inside 比 comparisons. Do not flatten 更 to neutral “more”; the “even more” baseline is part of the meaning. Confirmation questions can use 是不是.",
+      "explanation": "更 means “even more” against a baseline already stated or understood. If you are busy on other days, 星期天我更忙 means “I am even busier on Sunday.” Inside a 比 sentence, 更 goes before the description: 今年比去年更冷. That says this year is colder still; it does not just add an English-style adjective ending. The weather examples are comparison scenarios, not reports about the current year.",
       "examples": [
         {
           "text": "星期天我更忙。",
@@ -1782,13 +1782,13 @@ const unit:UnitData = {
           "meaning": "Is this typhoon even bigger than the last one?"
         }
       ],
-      "remember": "更 = even more relative to a baseline. In the this lesson comparison: A 比 B 更 + property."
+      "remember": "Put 更 before the description: A 比 B 更冷. Identify the earlier or understood baseline that makes “even more” meaningful."
     },
     "u44-not-as": {
       "id": "u44-not-as",
       "title": "Not as…as with 沒有",
       "pattern": "A + 沒有 + B + 那麼／這麼 + State Verb",
-      "explanation": "Use 沒有…那麼／這麼… to say A has a lower degree of a property than B: A is not as X as B. 那麼/這麼 may sometimes be omitted. The pattern notes that the positive form A 有 B 那麼／這麼 + State Verb is rare except in 嗎 questions. Questions can use 有沒有. Keep this distinct from earlier 不比. The source explicitly contrasts equality 跟…一樣, inferiority 沒有…那麼, and superiority 比.",
+      "explanation": "A 沒有 B 那麼／這麼 + description says A has a lower degree of that property than B. 火車沒有高鐵那麼快 means the train is not as fast as the HSR for the comparison being discussed. 那麼／這麼 may sometimes be omitted. Contrast 不比: “not faster” allows equal speed, whereas “not as fast” presents a lower speed. 有沒有 can ask whether A reaches B’s degree: 今天有沒有昨天熱？ A natural answer can say equal, lower, or higher.",
       "examples": [
         {
           "text": "火車沒有高鐵那麼快。",
@@ -1806,7 +1806,7 @@ const unit:UnitData = {
           "meaning": "Is today as hot as yesterday?"
         }
       ],
-      "remember": "Equal: 跟…一樣. Lower degree: 沒有…那麼／這麼. Higher degree: 比…."
+      "remember": "Equal degree: 跟…一樣. Lower degree: 沒有…那麼. Higher degree: 比…. 不比 only denies being higher; it can include equality."
     }
   },
   "grammarIntroductions": [
@@ -1933,7 +1933,7 @@ const unit:UnitData = {
       "text": "哪裡都濕濕的。真討厭。",
       "pinyin": "Nǎlǐ dōu shīshī de. Zhēn tǎoyàn.",
       "meaning": "It's wet everywhere. Really annoying.",
-      "note": "this lesson specifically licenses 濕濕的 as a attested here extension of the earlier restricted state-verb reduplication system; do not generalize this to every state verb.",
+      "note": "哪裡都 includes all the relevant places. 濕濕的 gives an impression of dampness; it is another taught example of adjective reduplication, not a rule to double every adjective.",
       "tokens": [
         "哪裡都濕濕的",
         "真討厭"
@@ -2023,7 +2023,7 @@ const unit:UnitData = {
       "text": "希望這次的沒有上次的那麼可怕。",
       "pinyin": "Xīwàng zhè cì de méiyǒu shàng cì de nàme kěpà.",
       "meaning": "I hope this one isn't as scary as the last one.",
-      "note": "; may appear only after u44-not-as.",
+      "note": "The typhoons are already being discussed, so 這次的 and 上次的 stand for this typhoon and the previous one. 沒有…那麼可怕 means “not as scary”; 希望 makes this a hope, not an established fact.",
       "tokens": [
         "希望",
         "這次的沒有上次的那麼可怕"

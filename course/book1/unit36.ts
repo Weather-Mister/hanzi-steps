@@ -1026,7 +1026,7 @@ const unit:UnitData = {
       "zhuyin": "ㄍㄨㄥ",
       "meaning": "work; labor",
       "strokes": 3,
-      "note": "工 is first-tone gōng. It is the first character of 工作, the this lesson word for both 'to work' and 'job/work'.",
+      "note": "工 is first-tone gōng. It is the first character of 工作, this lesson’s word for both 'to work' and 'job/work'.",
       "memory": "A top line, a central vertical, and a longer base make a simple workbench-like 工.",
       "parts": [
         {
@@ -1192,7 +1192,7 @@ const unit:UnitData = {
       "id": "u36-yihou-after",
       "title": "After an event with …以後",
       "pattern": "Event / Time expression + 以後，Later event",
-      "explanation": "this lesson gives 以後 two functions. Unit 35 already taught standalone 以後 as a time word meaning 'in the future'. Here, an event or time expression comes before 以後: A + 以後 means 'after A' or 'later than A', and the later event follows. The rule here uses 回國以後, 來臺灣以後, 下課以後, and time expressions such as 半年以後.",
+      "explanation": "This lesson gives 以後 two functions. Unit 35 already taught standalone 以後 as a time word meaning 'in the future'. Here, an event or time expression comes before 以後: A + 以後 means 'after A' or 'later than A', and the later event follows. The rule here uses 回國以後, 來臺灣以後, 下課以後, and time expressions such as 半年以後.",
       "examples": [
         {
           "text": "我回國以後，也想找個有機會說中文的工作。",
@@ -1221,7 +1221,7 @@ const unit:UnitData = {
       "id": "u36-hao-nan-verb",
       "title": "Special meanings of 好 / 難 + verbs",
       "pattern": "好 / 難 + Verb",
-      "explanation": "The rule here separates two uses. With perception verbs, forms such as 好吃/難吃, 好喝/難喝, 好看/難看, and 好聽/難聽 are single words describing a pleasant or unpleasant perception. With action verbs, 好 means 'easy to' and 難 means 'hard/difficult to': 好學/難學, 好寫/難寫, 好做/難做, 好找/難找. Degree adverbs such as 很 can modify either type. Negation puts 不 before the whole predicate (不好找, 不難學, 不好喝). Both branches can form 嗎 questions. For A-not-A questions, the source's perception example repeats the whole compound (好看不好看), while action-verb examples put the contrast before the action verb (好不好賣, 難不難學).",
+      "explanation": "Learn two related uses of 好 / 難 + verb. With perception verbs, 好吃 and 難吃 describe pleasant or unpleasant taste; 好看 and 難看 describe appearance; 好聽 and 難聽 describe sound. With action verbs such as 找 or 學, 好 means “easy to” and 難 means “hard/difficult to”: 好工作很難找, “Good jobs are hard to find.” Read the whole expression: 好吃 does not ordinarily mean “easy to eat.” Both types can take degree adverbs such as 很. Negation puts 不 before the whole description: 不好喝 or 不難學. For A-not-A questions, the book models 好看不好看 and 好不好賣 / 難不難學. The shortened 好不好看 is also a normal question form; the book’s examples are not an exclusive split between the two groups.",
       "examples": [
         {
           "text": "日本菜好吃也好看。",
@@ -1249,7 +1249,7 @@ const unit:UnitData = {
           "meaning": "Cheap suites near the school are not easy to find."
         }
       ],
-      "remember": "Perception branch: 好吃、好看, etc. are whole perception words; a source A-not-A form is 好看不好看. Action branch: 好 = easy to and 難 = hard to; ask 好不好 + V or 難不難 + V. Put 不 before the whole predicate in negatives."
+      "remember": "好吃 = tasty; 好找 = easy to find. 不難學 means not difficult to learn, which need not promise that learning takes no effort. Keep 得 in performance comments such as 做得很好 separate from these compounds."
     }
   },
   "grammarIntroductions": [
@@ -1290,7 +1290,7 @@ const unit:UnitData = {
       "text": "去年，我已經在臺灣工作一年了。",
       "pinyin": "Qùnián, wǒ yǐjīng zài Táiwān gōngzuò yì nián le.",
       "meaning": "Last year. I have been working in Taiwan for a year.",
-      "note": "This conversation Treat this as the conversation's duration-to-date statement; Unit 36 keeps it as conversation comprehension rather than declaring an additional duration grammar rule.",
+      "note": "去年 answers when the speaker came to Taiwan; the sentence then says the speaker has now worked there for a year. Do not read 去年 as saying the one-year duration had already elapsed last year. 已經…一年了 highlights the time reached so far; the duration pattern is developed later.",
       "tokens": [
         "去年",
         "我已經在臺灣",
@@ -1370,7 +1370,7 @@ const unit:UnitData = {
       "text": "來臺灣以後，我每星期上五天的中文課。",
       "pinyin": "Lái Táiwān yǐhòu, wǒ měi xīngqí shàng wǔ tiān de Zhōngwén kè.",
       "meaning": "After coming to Taiwan, I have Chinese class five days a week.",
-      "note": "this pattern example for Event + 以後.",
+      "note": "來臺灣以後 sets the starting event, “after coming to Taiwan.” 每星期上五天的中文課 describes the weekly schedule: five days of Chinese classes each week.",
       "tokens": [
         "來臺灣以後",
         "我每星期",
@@ -1384,7 +1384,7 @@ const unit:UnitData = {
       "text": "我下課以後，常在圖書館上網。",
       "pinyin": "Wǒ xiàkè yǐhòu, cháng zài túshūguǎn shàngwǎng.",
       "meaning": "After class, I often go online in the library.",
-      "note": "this pattern example for Event + 以後.",
+      "note": "下課以後 means “after class ends.” The following clause describes a habit, so 以後 does not by itself make the sentence a one-time future event.",
       "tokens": [
         "我下課以後",
         "常在圖書館上網"
@@ -1473,7 +1473,7 @@ const unit:UnitData = {
       "text": "老師常常說中文不難學。",
       "pinyin": "Lǎoshī chángcháng shuō Zhōngwén bù nán xué.",
       "meaning": "The teacher often says Chinese is not hard to learn.",
-      "note": "this pattern negation: 不 comes before 難學.",
+      "note": "不 negates the complete description 難學: “not difficult to learn.” It does not guarantee that learning requires no time or effort.",
       "tokens": [
         "老師常常說",
         "中文不難學"

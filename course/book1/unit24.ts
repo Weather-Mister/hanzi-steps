@@ -1900,7 +1900,7 @@ const unit:UnitData = {
       "id": "u24-gen-company",
       "title": "Companionship with 跟",
       "pattern": "Subject + 跟 + Person + Verb Phrase",
-      "explanation": "跟 introduces the person who accompanies the subject in an activity. Put 跟 + person before the action phrase.",
+      "explanation": "跟 + person names a companion and goes before the shared action: 我跟朋友去玩. 一起 can make “together” explicit: 我跟朋友一起去玩. To say you are not going with that person, put 不 before 跟: 我不跟他去. That does not necessarily mean you are not going at all; you may go alone or with someone else.",
       "examples": [
         {
           "text": "我跟朋友去玩。",
@@ -1913,7 +1913,7 @@ const unit:UnitData = {
           "meaning": "I take the train with a friend."
         }
       ],
-      "remember": "跟 + person comes before the shared activity.",
+      "remember": "跟朋友 tells us who accompanies you. In 我不跟他去, the rejected detail is going with him.",
       "words": [
         "跟"
       ]
@@ -1944,7 +1944,7 @@ const unit:UnitData = {
       "id": "u24-how-vs-zenmeyang",
       "title": "怎麼 is not 怎麼樣",
       "pattern": "怎麼 + Action? vs. Topic + 怎麼樣?",
-      "explanation": "怎麼 asks how an action is carried out. 怎麼樣 is a state-verb expression asking how something is or what someone thinks about it. They are not interchangeable.",
+      "explanation": "In the contrast practised here, 怎麼 goes before an action to ask the method: 你怎麼去學校？ A reply might name the vehicle. A topic followed by 怎麼樣 asks for an evaluation: 火車怎麼樣？ asks what someone thinks of the train as an option. You have also met verb + 得 + 怎麼樣 to ask about performance. Choose the whole sentence pattern rather than substituting the two expressions word for word.",
       "examples": [
         {
           "text": "你怎麼去學校？",
@@ -1957,7 +1957,7 @@ const unit:UnitData = {
           "meaning": "How is the train? / What do you think of the train?"
         }
       ],
-      "remember": "Method of an action → 怎麼. Evaluation of a topic → 怎麼樣.",
+      "remember": "For these examples: 怎麼去 asks how to get there; 火車怎麼樣 asks how the train is as an option. The earlier 做得怎麼樣 asks how well someone does something.",
       "words": [
         "怎麼",
         "怎麼樣"
@@ -1972,12 +1972,12 @@ const unit:UnitData = {
         {
           "text": "火車比較慢。",
           "pinyin": "Huǒchē bǐjiào màn.",
-          "meaning": "The train is relatively slower."
+          "meaning": "The train is slower (than the option being compared)."
         },
         {
           "text": "高鐵比較快。",
           "pinyin": "Gāotiě bǐjiào kuài.",
-          "meaning": "High Speed Rail is relatively faster."
+          "meaning": "High Speed Rail is faster (than the option being compared)."
         },
         {
           "text": "我最近比較不忙。",
@@ -2132,7 +2132,7 @@ const unit:UnitData = {
     "u24-train-slower": {
       "text": "火車比較慢。",
       "pinyin": "Huǒchē bǐjiào màn.",
-      "meaning": "The train is relatively slower.",
+      "meaning": "The train is slower (than the option being compared).",
       "note": "The comparison standard is supplied by context.",
       "tokens": [
         "火車",
@@ -2145,7 +2145,7 @@ const unit:UnitData = {
     "u24-hsr-faster": {
       "text": "高鐵比較快。",
       "pinyin": "Gāotiě bǐjiào kuài.",
-      "meaning": "High Speed Rail is relatively faster.",
+      "meaning": "High Speed Rail is faster (than the option being compared).",
       "note": "比較 marks an implicit comparison.",
       "tokens": [
         "高鐵",

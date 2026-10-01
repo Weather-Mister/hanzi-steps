@@ -171,7 +171,7 @@ const unit:UnitData = {
             "久"
           ],
           "answer": "計畫",
-          "explanation": "計畫 is the this lesson verb 'to plan to.' Compare the earlier 打算 'plan/intend.'"
+          "explanation": "計畫 is this lesson’s verb 'to plan to.' Compare the earlier 打算 'plan/intend.'"
         }
       ]
     },
@@ -434,7 +434,7 @@ const unit:UnitData = {
             "plan"
           ],
           "answer": "need",
-          "explanation": "需要 is the this lesson verb 'to need.'"
+          "explanation": "需要 is this lesson’s verb 'to need.'"
         },
         {
           "id": "u34-need-s2",

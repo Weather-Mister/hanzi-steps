@@ -365,8 +365,9 @@ test('Lesson 15 幾 expansion is taught before testing without stealing Unit-7 o
  assert.match(expansion.note,/Unit 7/);
  assert.match(expansion.note,/how many/);
  assert.match(expansion.note,/a few \/ several/);
- assert.match(expansion.note,/statement or other non-question context/);
- assert.match(expansion.note,/semantic expansion/);
+ assert.match(expansion.note,/in a statement/);
+ assert.match(expansion.note,/It can also mean/);
+ assert.match(expansion.note,/does not mean “has no friends/);
  const check=lesson.steps.find(s=>s.id==='u46-ji-s1');
  assert.equal(check.answer,'幾 = a few/several in a statement');
  const index=curriculumIndex(baseline);
@@ -381,7 +382,8 @@ test('Lesson 15 幾 expansion is taught before testing without stealing Unit-7 o
  const stomachIds=stomach.steps.map(s=>s.id);
  assert.ok(stomachIds.indexOf('u47-stomach-ji-review')<stomachIds.indexOf('u47-stomach-s4'));
  assert.equal(u47.phrases['u47-several-times'].text,'吐了好幾次。');
- assert.equal(u47.phrases['u47-several-times'].note,'Requires the Unit-46 幾 expansion.');
+ assert.match(u47.phrases['u47-several-times'].note,/好幾次 means quite a few times/);
+ assert.match(u47.phrases['u47-several-times'].note,/次 counts occurrences/);
  assert.equal(stomach.steps.find(s=>s.id==='u47-stomach-s4').answer,'a few/several');
 });
 
