@@ -9,6 +9,9 @@ for(const b of manifest.books)for(const entry of b.units)modules.push((await imp
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const selected=new Map(fixture.items.map(r=>[r.stepId,r]));
 const han=text=>[...new Set([...text].filter(c=>/\p{Script=Han}/u.test(c)))];
+const canonicalMultiCharLexemes=[...new Set(
+ modules.flatMap(m=>(m.newVocabulary||[]).map(v=>v.text))
+)].filter(word=>[...word].filter(c=>/\p{Script=Han}/u.test(c)).length>1);
 
 test('mixed review stays sparse and preserves teaching, ownership, and every checkpoint position',()=>{
  assert.equal(selected.size,fixture.items.length,'duplicate reviewed activity');
@@ -39,6 +42,9 @@ test('mixed questions use already explained words, characters and grammar, inclu
     assert.ok(s.explanation.length>=40,s.id+' needs corrective feedback');
     const payload=[s.prompt,...s.options,s.explanation].join(' ');
     assert.deepEqual(han(payload).filter(ch=>!taughtText.includes(ch)),[],s.id+': unseen character');
+    for(const word of canonicalMultiCharLexemes){
+     if(payload.includes(word))assert.ok(taughtText.includes(word),s.id+': canonical multi-character word used before explanation: '+word);
+    }
     for(const word of record.current)assert.ok(taughtText.includes(word),s.id+': target not explained: '+word);
     for(const word of record.review)assert.ok(priorText.includes(word),s.id+': review not taught in an earlier unit: '+word);
     for(const id of s.grammarIds||[])assert.ok(taughtRules.has(id),s.id+': grammar not taught: '+id);
@@ -51,4 +57,14 @@ test('mixed questions use already explained words, characters and grammar, inclu
   priorText=taughtText;
  }
  assert.equal(checked,selected.size,'missing mixed check');
+});
+
+test('audited mixed-review prompts preserve stated quantity and time certainty',()=>{
+ const u11=modules.find(m=>m.unit.id==='unit-11');
+ const order=u11.lessons.find(l=>l.id==='u11-order').steps.find(s=>s.id==='u11-order-13');
+ assert.match(order.prompt,/一杯熱茶，外帶，謝謝/,'Unit 11 acknowledgment must not invent an unstated quantity');
+
+ const u38=modules.find(m=>m.unit.id==='unit-38');
+ const meet=u38.lessons.find(l=>l.id==='u38-meet').steps.find(s=>s.id==='u38-meet-s3');
+ assert.match(meet.prompt,/fixed place.*approximate time/i,'Unit 38 prompt must distinguish a fixed place from an approximate time');
 });

@@ -595,7 +595,7 @@ const unit:UnitData = {
         {
           "id": "u38-meet-s3",
           "type": "select",
-          "prompt": "我下課以後，五點左右在圖書館門口等你。 Which meeting detail is definite?",
+          "prompt": "我下課以後，五點左右在圖書館門口等你。 Which statement correctly distinguishes the fixed place from the approximate time?",
           "options": [
             "The place is the library entrance; the time is around five.",
             "The place is inside the library; the time is exactly five.",
