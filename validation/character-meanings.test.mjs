@@ -46,14 +46,15 @@ test('high-impact grammar and changed readings are explained separately',()=>{
 });
 
 
-test('supplementary meanings stay fully visible regardless of learner progress',()=>{
+test('supplementary meanings stay fully visible while learned uses are merged in first',()=>{
  const component=readFileSync(new URL('../components/character-meanings.tsx',import.meta.url),'utf8');
  const app=readFileSync(new URL('../components/learning-app.tsx',import.meta.url),'utf8');
  const search=readFileSync(new URL('../components/pinyin-search.tsx',import.meta.url),'utf8');
- assert.match(component,/import \{characterMeanings\} from '\.\.\/lib\/character-meanings';/);
+ assert.match(component,/const learned=completed\?learnedWordsForCharacter\(hanzi,completed\):\[\];/);
  assert.match(component,/const senses=characterMeanings\(hanzi\);/);
- assert.doesNotMatch(component,/learnedCharacterMeanings|completed:Set<string>/);
- assert.match(app,/characterMeanings\(c\)\.length/);
- assert.doesNotMatch(app,/learnedCharacterMeanings/);
- assert.doesNotMatch(search,/<CharacterMeanings[^>]*completed=/);
+ assert.doesNotMatch(component,/characterMeanings\(hanzi\)\.filter/,'learner progress must not hide supplementary senses');
+ assert.ok(component.indexOf('{learned.map(')<component.indexOf('{senses.map('),'previously learned uses must render before supplementary senses');
+ assert.match(component,/Previously learned/);
+ assert.match(app,/completed=\{completed\} showPinyin=\{prefs\.pinyin\}/);
+ assert.match(search,/<CharacterMeanings[^>]*completed=\{completed\}/);
 });
