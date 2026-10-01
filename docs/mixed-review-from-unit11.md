@@ -46,3 +46,14 @@ The exact item inventory is in `validation/fixtures/mixed-review.json`. It recor
 - Full generation, curriculum checks, targeted changed-unit checks, regression suite, TypeScript and Pages build are required through Feature QA before release.
 - No browser layout or device audio behavior changed; no device-audio check claimed.
 
+## Post-merge audit follow-up
+
+A fresh audit after release found two wording-level issues, both corrected without changing lesson topology or curriculum ownership:
+
+- `u11-order-13` now states `一杯熱茶` in the sister's reply before the acknowledgment repeats that one-cup quantity.
+- `u38-meet-s3` now asks the learner to distinguish the fixed meeting place from the approximate time, matching the answer precisely.
+
+The mixed-review regression also now checks every canonical multi-character vocabulary form that appears anywhere in a selected prompt, option, or explanation and rejects the item if that form has not already appeared in learner-facing teaching. This closes the loophole where all individual Han characters might be familiar while the lexical item itself is still a future target.
+
+Feature QA passed generation, curriculum graph validation, targeted unit tests, character checks, notification reading validation, the full regression suite, TypeScript, and the Pages build before merge.
+
