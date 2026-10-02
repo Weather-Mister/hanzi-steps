@@ -19,7 +19,8 @@ test('statistics screen keeps its visual dashboard sections',async()=>{
  ])assert.ok(source.includes(marker),marker+' is missing from the statistics screen');
  assert.ok(css.includes('.statistics-dashboard-grid'));
  assert.ok(css.includes('.statistics-ring-value'));
- assert.ok(source.includes('Darker = more exercises'));
+ assert.ok(source.includes('Darker = more completed lesson exercises'));
+ assert.ok(source.includes('older adaptive-practice history is not stored with a per-day breakdown'));
  assert.ok(source.includes('activity-level-'));
  assert.ok(css.includes('.statistics-heatmap>span.activity-level-4'));
  assert.ok(!source.includes('data-today='));
