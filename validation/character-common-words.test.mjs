@@ -1,15 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {characters,vocabulary} from '../course/runtime.ts';
 import {characterCommonWords,supplementaryCharacterCommonWords} from '../lib/character-common-words.ts';
+import {supplementaryCharacterMeanings} from '../lib/character-meanings.ts';
 
 const canonicalByText=new Map(vocabulary.map(word=>[word.text,word]));
+const courseIndex=JSON.parse(readFileSync(new URL('../course/index.json',import.meta.url),'utf8'));
 
 test('common-word references are valid, curated, and progression-neutral',()=>{
  const keys=Object.keys(supplementaryCharacterCommonWords);
  const total=Object.values(supplementaryCharacterCommonWords).reduce((sum,items)=>sum+items.length,0);
- assert.ok(keys.length>=100,'expected a broad Book 1 audit, got '+keys.length+' characters');
- assert.ok(total>=450,'expected a substantial common-word reference layer, got '+total+' entries');
+ assert.ok(keys.length>=130,'expected a broad Book 1 audit, got '+keys.length+' characters');
+ assert.ok(total>=550,'expected a substantial common-word reference layer, got '+total+' entries');
 
  for(const [char,items] of Object.entries(supplementaryCharacterCommonWords)){
   assert.ok(characters[char],'Unknown character card: '+char);
@@ -31,6 +34,20 @@ test('common-word references are valid, curated, and progression-neutral',()=>{
   }
  }
  assert.deepEqual(characterCommonWords('龘'),[]);
+});
+
+
+test('the Book 1 character audit leaves only genuinely atomic cards without a richer reference path',()=>{
+ const book1Chars=Object.entries(courseIndex.characters).filter(([,row])=>row[2]==='book-1').map(([char])=>char);
+ const courseWords=Object.keys(courseIndex.vocabulary);
+ const intentionallyAtomic=new Set(['她','很','三','四','五','六','七','八','九','百','千','棟','喂']);
+ const uncovered=book1Chars.filter(char=>
+  !supplementaryCharacterCommonWords[char]?.length&&
+  !supplementaryCharacterMeanings[char]?.length&&
+  !courseWords.some(word=>word!==char&&word.includes(char))
+ );
+ assert.deepEqual(uncovered.sort(),[...intentionallyAtomic].sort());
+ assert.equal(book1Chars.length,465);
 });
 
 test('high-value Taiwan Mandarin references include the intended everyday examples',()=>{
