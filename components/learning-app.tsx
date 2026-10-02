@@ -30,7 +30,7 @@ import {PinyinSearch} from './pinyin-search';
 import {UnguidedWritingPractice} from './unguided-writing-practice';
 import {StatisticsScreen} from './statistics-screen';
 import {visualUnitTheme} from '@/lib/unit-theme';
-import {adaptivePracticeItems,learnedPracticeItems,megaCheckpointCount,practiceAttemptForStep,unguidedPracticeCount,unguidedPracticeItemId} from '@/lib/practice-engine';
+import {adaptivePracticeItems,learnedPracticeItems,lessonOrderTokens,megaCheckpointCount,practiceAttemptForStep,unguidedPracticeCount,unguidedPracticeItemId} from '@/lib/practice-engine';
 import {isOrderAnswerAccepted} from '@/lib/order-answer';
 import {usePracticeMastery} from '@/lib/use-practice-mastery';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
@@ -69,7 +69,7 @@ function Exercise({step,prefs,onAdvance,onAttempt,completed}:{step:Step;prefs:Pr
  function result(ok:boolean,text:string,assisted=false){const masteryAssisted=ok&&(assisted||hadHelpRef.current||step.type==='trace'||step.type==='complete');onAttempt?.(step,ok,masteryAssisted);if(assisted)support();if(!ok)support();feel(ok?'success':'retry');setFeedback(ok?'good':'wrong');setExplanation(text)}
  useEffect(()=>{heading.current?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'})},[step.id]);
  const prompts:Record<string,string>={intro:'Meet a new character',trace:'Trace the character',complete:'Finish the missing strokes',memory:'Write it from memory',parts:step.prompt||'Look inside the character',build:'Build the character',match:'Match the pairs',phrase:'Put it into words',grammar:'A useful pattern',visual:step.prompt||'Use the source role prompt',order:step.prompt||'Build the translation',listen:step.prompt||(step.semanticAnswer?'Choose the meaning you hear':textCue?'Match the pinyin':'Which character do you hear?'),select:step.prompt||'Choose the character'};
- const choices=shuffled(step.options||[],step.id);const parts=c?.parts||[];const partOrder=shuffled(parts.map((_,i)=>i),step.id+'parts');const tokens=step.tokens||[];
+ const choices=shuffled(step.options||[],step.id);const parts=c?.parts||[];const partOrder=shuffled(parts.map((_,i)=>i),step.id+'parts');const tokens=step.type==='order'?lessonOrderTokens(step.id,step.phrase,step.tokens||[],completed):(step.tokens||[]);
  async function listen(slow=false){const ok=await speak(step.audioText||step.char!,slow);if(ok)setHeard(true);else{setTextCue(true);support()}}
  function check(){if(step.type==='build')result(picked.length===parts.length&&picked.every((v,i)=>v===i),`${c!.hanzi} is arranged ${c!.partOrderLabel||(c!.layout==='side'?'left to right':'from top to bottom')}: ${parts.map(p=>p.name).join(' + ')}.`);else if(step.type==='order')result(isOrderAnswerAccepted(picked.map(i=>tokens[i]),phrase!.tokens,{strict:step.strictOrder,alternatives:phrase!.acceptedTokenOrders}),`${phrase!.text} ${phrase!.pinyin} — ${phrase!.meaning}${phrase!.note?` ${phrase!.note}`:''}`);else result(selected===step.answer,step.explanation||'')}
  function proceed(){if(feedback==='wrong'){setFeedback(null);setSelected('');setPicked([]);setRetry(r=>r+1);return}stop();onAdvance(!introduction,hadHelpRef.current)}
