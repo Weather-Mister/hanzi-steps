@@ -57,10 +57,10 @@ export function useMegaMastery(userKey:string){
  },[userKey]);
 
  const setMasteredValue=useCallback(async(id:string,value:boolean)=>{
-  if(userKey==='signed-out'){
-   applyLocal(id,value);
-   return true;
-  }
+  // Update the local mastery set first so the challenge and Statistics react
+  // immediately. Signed-in saves roll back if the server rejects the change.
+  applyLocal(id,value);
+  if(userKey==='signed-out')return true;
   setSaving(true);
   const {error:saveError}=await supabase.rpc('hanzi_set_mastered',{
    expected_account:userKey,
@@ -69,10 +69,10 @@ export function useMegaMastery(userKey:string){
   });
   setSaving(false);
   if(saveError){
-   setError('Mastered words could not sync. Nothing changed; try again when you are online.');
+   applyLocal(id,!value);
+   setError('Mastered words could not sync. The change was rolled back; try again when you are online.');
    return false;
   }
-  applyLocal(id,value);
   setError('');
   return true;
  },[userKey,applyLocal]);
