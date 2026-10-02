@@ -81,6 +81,14 @@ test('Taiwan-standard reference readings keep verified contrasts and neutral ton
  assert.equal(get('試','試試').pinyin,'shìshi');
  assert.equal(get('吐','吐司').pinyin,'tǔsī');
  assert.equal(get('湯','湯匙').pinyin,'tāngchí');
+ assert.equal(get('便','便宜').pinyin,'piányí');
+ assert.equal(get('便','便利').pinyin,'biànlì');
+ assert.equal(get('為','為什麼').pinyin,'wèishénme');
+ assert.equal(get('為','認為').pinyin,'rènwéi');
+ assert.equal(get('行','銀行').pinyin,'yínháng');
+ assert.equal(get('行','旅行').pinyin,'lǚxíng');
+ assert.equal(get('吐','吐司').pinyin,'tǔsī');
+ assert.equal(get('吐','嘔吐').pinyin,'ǒutù');
 });
 
 test('future course words can be previewed as reference without becoming duplicate curriculum records',()=>{
