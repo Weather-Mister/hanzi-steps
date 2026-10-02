@@ -5,14 +5,15 @@ import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/u
 import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import type {MegaMasteryController} from '@/lib/use-mega-mastery';
+import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
 import {WritingPad} from './writing-pad';
 
 type Result={item:VocabularyLookupItem;perfect:boolean};
 const itemById=new Map(vocabularyLookup.map(item=>[item.id,item]));
 
 export function MegaChallenge({
- open,onOpenChange,completed,theme,mastery,mode='handwriting',
-}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;mode?:'handwriting'|'pinyin'}){
+ open,onOpenChange,completed,theme,mastery,practiceHistory,mode='handwriting',
+}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;practiceHistory?:PracticeMasteryController;mode?:'handwriting'|'pinyin'}){
  const reverse=mode==='pinyin';
  const {loading:masteryLoading,saving,error}=mastery;
  const mastered=reverse?mastery.reverseMastered:mastery.mastered;
@@ -71,6 +72,7 @@ export function MegaChallenge({
    return;
   }
   setResult({item:current,perfect});
+  void practiceHistory?.record({itemId:current.id,mode:'handwriting',correct:true,assisted:!perfect,sessionKind:'mega'});
  }
 
  function continueAfterResult(){
