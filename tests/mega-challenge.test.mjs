@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary} from '../lib/mega-challenge.ts';
+import {advanceMegaQueue,combineWordPerfect,eligibleMegaVocabulary,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary,scopedMegaVocabulary} from '../lib/mega-challenge.ts';
 import {vocabularyLookup} from '../lib/vocabulary-lookup.ts';
 
 test('Mega Challenge eligibility follows completed lesson IDs and mastered exclusions',()=>{
@@ -63,6 +63,19 @@ test('reverse challenge covers all learned canonical words without requiring str
  const expected=vocabularyLookup.filter(item=>item.characters.length>0);
  assert.deepEqual(reverseMegaVocabulary(completed).map(item=>item.id),expected.map(item=>item.id));
  assert.ok(reverseMegaVocabulary(new Set()).length===0);
+});
+
+test('unit-scoped challenges stay inside the selected unit',()=>{
+ const first=vocabularyLookup.find(item=>item.unitId&&item.characters.length>0);
+ assert.ok(first?.unitId);
+ const completed=new Set(vocabularyLookup.map(item=>item.lessonId));
+ const handwriting=scopedMegaVocabulary(completed,first.unitId,false);
+ const pinyin=scopedMegaVocabulary(completed,first.unitId,true);
+ assert.ok(handwriting.length>0);
+ assert.ok(pinyin.length>=handwriting.length);
+ assert.ok(handwriting.every(item=>item.unitId===first.unitId));
+ assert.ok(pinyin.every(item=>item.unitId===first.unitId));
+ assert.deepEqual(scopedMegaVocabulary(completed,undefined,true).map(item=>item.id),reverseMegaVocabulary(completed).map(item=>item.id));
 });
 
 test('reverse challenge accepts tone marks, tone numbers, and plain pinyin, then rejects wrong syllables',()=>{

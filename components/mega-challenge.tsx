@@ -2,8 +2,8 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {Check,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary} from '@/lib/mega-challenge';
-import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
+import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,scopedMegaVocabulary} from '@/lib/mega-challenge';
+import {vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import type {MegaMasteryController} from '@/lib/use-mega-mastery';
 import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
 import {WritingPad} from './writing-pad';
@@ -12,14 +12,16 @@ type Result={item:VocabularyLookupItem;perfect:boolean};
 const itemById=new Map(vocabularyLookup.map(item=>[item.id,item]));
 
 export function MegaChallenge({
- open,onOpenChange,completed,theme,mastery,practiceHistory,mode='handwriting',
-}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;practiceHistory?:PracticeMasteryController;mode?:'handwriting'|'pinyin'}){
+ open,onOpenChange,completed,theme,mastery,practiceHistory,mode='handwriting',scopeUnitId,scopeUnitLabel,
+}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;practiceHistory?:PracticeMasteryController;mode?:'handwriting'|'pinyin';scopeUnitId?:string;scopeUnitLabel?:string}){
  const reverse=mode==='pinyin';
  const {loading:masteryLoading,saving,error}=mastery;
  const mastered=reverse?mastery.reverseMastered:mastery.mastered;
- const learned=useMemo(()=>reverse?reverseMegaVocabulary(completed):learnedVocabulary(completed),[completed,reverse]);
+ const learned=useMemo(()=>scopedMegaVocabulary(completed,scopeUnitId,reverse),[completed,scopeUnitId,reverse]);
  const eligible=useMemo(()=>learned.filter(item=>!mastered.has(item.id)),[learned,mastered]);
- const masteredItems=useMemo(()=>vocabularyLookup.filter(item=>mastered.has(item.id)),[mastered]);
+ const masteredItems=useMemo(()=>vocabularyLookup.filter(item=>mastered.has(item.id)&&(!scopeUnitId||item.unitId===scopeUnitId)),[mastered,scopeUnitId]);
+ const scopeSuffix=scopeUnitLabel?` · Unit ${scopeUnitLabel}`:'';
+ const scopePrefix=scopeUnitLabel?`Unit ${scopeUnitLabel} only. `:'';
  const [queue,setQueue]=useState<string[]|null>(null);
  const knownLearned=useRef<Set<string>>(new Set());
  const [charIndex,setCharIndex]=useState(0);
@@ -158,7 +160,7 @@ export function MegaChallenge({
  return <Dialog open={open} onOpenChange={changeOpen}>
   <DialogContent data-unit-theme={theme} className="mega-challenge-dialog">
    <div className="mega-title-row">
-    <div><DialogTitle>{reverse?'Pinyin Gauntlet':'Mega Challenge'}</DialogTitle><DialogDescription>{reverse?'See the Traditional Chinese and type its pinyin. Tone marks, tone numbers, and toneless pinyin all count. A correct answer clears the word for this round; Mastered excludes it until you restore it.':'Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.'}</DialogDescription></div>
+    <div><DialogTitle>{reverse?'Pinyin Gauntlet':'Mega Challenge'}{scopeSuffix}</DialogTitle><DialogDescription>{scopePrefix}{reverse?'See the Traditional Chinese and type its pinyin. Tone marks, tone numbers, and toneless pinyin all count. A correct answer clears the word for this round; Mastered excludes it until you restore it.':'Write words from completed lessons using pinyin and meaning. First-pass recall clears a word for this round; Mastered excludes it until you restore it.'}</DialogDescription></div>
    </div>
    <div className="mega-tabs" role="group" aria-label="Mega Challenge sections">
     <button className={view==='challenge'?'selected':''} disabled={saving} onClick={()=>switchView('challenge')} aria-pressed={view==='challenge'}>Challenge</button>
