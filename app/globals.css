@@ -2219,6 +2219,9 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .character-meanings summary{cursor:pointer;font-weight:750;font-size:.93rem;color:var(--unit-text,#34557a);line-height:1.6}
 .character-meanings summary:focus-visible{outline:2px solid var(--unit-accent,#4b73b5);outline-offset:4px;border-radius:3px}
 .character-meanings-hint{font-size:.77rem;line-height:1.6;color:#64748b;margin:9px 0 13px}
+.character-reference-section{min-width:0;margin-top:14px}
+.character-reference-section+ .character-reference-section{margin-top:16px;padding-top:14px;border-top:1px dashed var(--unit-border,#dce3ee)}
+.character-reference-section h4{margin:0 0 8px;font-size:.66rem;line-height:1.4;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:#718096}
 .character-meanings ul{list-style:none;margin:0;padding:0;min-width:0}
 .character-meanings li{min-width:0}
 .character-meanings li+li{border-top:1px solid var(--unit-border,#dce3ee);margin-top:13px;padding-top:13px}
@@ -2251,8 +2254,13 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 
 .character-sense-learned{background:color-mix(in srgb,var(--unit-tint,#eef4ff) 55%,white);border-radius:10px;padding:10px 11px}
 .character-sense-learned+li{margin-top:8px}
-.character-sense-badge{display:inline-flex;align-items:center;min-height:22px;padding:2px 7px;border-radius:999px;background:var(--unit-accent,#4b73b5);color:white;font-size:.64rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
+.character-sense-badge,.character-course-badge,.character-reference-badge{display:inline-flex;align-items:center;min-height:22px;padding:2px 7px;border-radius:999px;font-size:.64rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
+.character-sense-badge{background:var(--unit-accent,#4b73b5);color:white}
+.character-course-badge{border:1px solid var(--unit-line,#bfd0fb);background:var(--unit-tint,#eef4ff);color:var(--unit-text,#34557a)}
+.character-reference-badge{border:1px solid #d8dee8;background:#f7f9fc;color:#68778d}
 .character-sense-learned .character-sense-example{font-size:1.18rem;font-weight:650}
+.character-common-word .character-sense-example{font-size:1.12rem;font-weight:700}
+.character-common-word .character-sense-translation{font-size:.72rem}
 
 
 .character-practice-split{display:grid;grid-template-columns:minmax(0,1fr) 66px;gap:2px;margin-top:4px;border-radius:14px;overflow:hidden;background:var(--unit-depth);box-shadow:0 4px 0 var(--unit-depth)}
