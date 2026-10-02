@@ -2232,7 +2232,6 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .unguided-writing-heading [data-slot=dialog-title]{font-size:1.18rem;line-height:1.35}
 .unguided-writing-heading [data-slot=dialog-title] span{font-size:1.42rem}
 .unguided-writing-heading [data-slot=dialog-description]{margin-top:3px;color:#718099}
-.unguided-writing-count{display:inline-flex;width:max-content;margin-top:6px;padding:3px 8px;border-radius:999px;background:var(--unit-tint);color:var(--unit-text);font-size:.72rem;font-weight:850;letter-spacing:.01em}
 .unguided-writing-note{font-size:.83rem;line-height:1.6;color:#657792;background:var(--unit-surface);border-radius:12px;padding:12px 14px}
 .unguided-writing-dialog .writing-area{margin-top:3px}
 .unguided-writing-result{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:15px 16px;border:1.5px solid #cfe5d8;border-radius:14px;background:#f3faf6}

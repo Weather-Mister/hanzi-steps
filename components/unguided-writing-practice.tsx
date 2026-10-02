@@ -10,9 +10,9 @@ export function UnguidedWritingPractice({
  open,
  onOpenChange,
  theme,
- practiceCount,
+ completedRounds,
  onPracticeComplete,
-}:{char:string|null;open:boolean;onOpenChange:(open:boolean)=>void;theme:string;practiceCount:number;onPracticeComplete:(assisted:boolean)=>void}){
+}:{char:string|null;open:boolean;onOpenChange:(open:boolean)=>void;theme:string;completedRounds:number;onPracticeComplete:(assisted:boolean)=>void}){
  const [round,setRound]=useState(1);
  const [complete,setComplete]=useState(false);
  const [assisted,setAssisted]=useState(false);
@@ -20,7 +20,7 @@ export function UnguidedWritingPractice({
 
  useEffect(()=>{
   if(!open)return;
-  setRound(1);
+  setRound(completedRounds+1);
   setComplete(false);
   setAssisted(false);
   countedRound.current=0;
@@ -46,7 +46,6 @@ export function UnguidedWritingPractice({
     <div>
      <DialogTitle>Unguided practice</DialogTitle>
      <DialogDescription>Round {round} · write the selected character from memory.</DialogDescription>
-     <span className="unguided-writing-count">Practiced {practiceCount} {practiceCount===1?'time':'times'}</span>
     </div>
    </div>
    <p className="unguided-writing-note">The answer stays hidden while you write. A missed stroke reveals only that stroke, then the same round continues. Nothing here changes your course progress.</p>
