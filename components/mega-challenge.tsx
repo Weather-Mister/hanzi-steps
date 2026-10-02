@@ -5,14 +5,15 @@ import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/u
 import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,matchesMegaPinyin,restoreMegaWord,reverseMegaVocabulary} from '@/lib/mega-challenge';
 import {learnedVocabulary,vocabularyLookup,type VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import type {MegaMasteryController} from '@/lib/use-mega-mastery';
+import type {PracticeMasteryController} from '@/lib/use-practice-mastery';
 import {WritingPad} from './writing-pad';
 
 type Result={item:VocabularyLookupItem;perfect:boolean};
 const itemById=new Map(vocabularyLookup.map(item=>[item.id,item]));
 
 export function MegaChallenge({
- open,onOpenChange,completed,theme,mastery,mode='handwriting',
-}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;mode?:'handwriting'|'pinyin'}){
+ open,onOpenChange,completed,theme,mastery,practiceHistory,mode='handwriting',
+}:{open:boolean;onOpenChange:(open:boolean)=>void;completed:Set<string>;theme:string;mastery:MegaMasteryController;practiceHistory?:PracticeMasteryController;mode?:'handwriting'|'pinyin'}){
  const reverse=mode==='pinyin';
  const {loading:masteryLoading,saving,error}=mastery;
  const mastered=reverse?mastery.reverseMastered:mastery.mastered;
@@ -29,6 +30,7 @@ export function MegaChallenge({
  const [attempt,setAttempt]=useState(0);
  const [pinyinInput,setPinyinInput]=useState('');
  const [meaningRevealed,setMeaningRevealed]=useState(false);
+ const recordedResult=useRef(false);
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
@@ -59,6 +61,7 @@ export function MegaChallenge({
   setGaveUp(false);
   setPinyinInput('');
   setMeaningRevealed(false);
+  recordedResult.current=false;
  }
 
  function finishCharacter(assisted:boolean){
@@ -70,7 +73,10 @@ export function MegaChallenge({
    setCharIndex(index=>index+1);
    return;
   }
+  if(recordedResult.current)return;
+  recordedResult.current=true;
   setResult({item:current,perfect});
+  void practiceHistory?.record({itemId:current.id,mode:'handwriting',correct:true,assisted:!perfect,sessionKind:'mega'});
  }
 
  function continueAfterResult(){
@@ -109,12 +115,20 @@ export function MegaChallenge({
   if(result||gaveUp)return;
   setGaveUp(true);
   setWordPerfect(false);
-  if(reverse&&current)setResult({item:current,perfect:false});
+  if(reverse&&current&&!recordedResult.current){
+   recordedResult.current=true;
+   setResult({item:current,perfect:false});
+   void practiceHistory?.record({itemId:current.id,mode:'pinyin',correct:false,assisted:true,sessionKind:'mega'});
+  }
  }
 
  function checkPinyin(){
   if(!reverse||!current||result||!pinyinInput.trim())return;
-  setResult({item:current,perfect:matchesMegaPinyin(pinyinInput,current.pinyin)});
+  if(recordedResult.current)return;
+  recordedResult.current=true;
+  const perfect=matchesMegaPinyin(pinyinInput,current.pinyin);
+  setResult({item:current,perfect});
+  void practiceHistory?.record({itemId:current.id,mode:'pinyin',correct:perfect,assisted:false,sessionKind:'mega'});
  }
 
  function skipWord(){

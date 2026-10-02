@@ -2259,7 +2259,10 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  border:1.5px solid var(--unit-line);border-radius:15px;
  background:var(--unit-tint);color:var(--unit-text);box-shadow:0 3px 0 var(--unit-line)
 }
+.statistics-title-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .statistics-heading [data-slot=dialog-title]{font-size:1.45rem;font-weight:900;letter-spacing:-.02em}
+.statistics-live{display:inline-flex;align-items:center;gap:5px;padding:3px 7px;border:1px solid #cfe5d8;border-radius:999px;background:#f3faf6;color:#2b7550;font-size:.6rem;font-weight:900;letter-spacing:.045em;text-transform:uppercase}
+.statistics-live i{width:7px;height:7px;border-radius:50%;background:#2f9e63;box-shadow:0 0 0 3px #dff3e8}
 .statistics-heading [data-slot=dialog-description]{margin-top:3px;color:#66778f;line-height:1.45}
 .statistics-sync,.statistics-footnote{margin:0;font-size:.78rem;line-height:1.55;color:#6d7e96}
 
@@ -2372,6 +2375,7 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  font-size:.64rem;color:#6c7a8f
 }
 .statistics-practice-foot b{color:var(--unit-text)}
+.statistics-definition{margin:12px 0 0;padding:10px 12px;border-radius:12px;background:var(--unit-surface);border:1px solid var(--unit-border);font-size:.66rem;line-height:1.55;color:#6f7e91}
 
 .statistics-top-words{grid-column:2 / 3;grid-row:2 / 3}
 .statistics-word-bars{display:grid;gap:10px}
