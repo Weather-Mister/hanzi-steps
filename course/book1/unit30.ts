@@ -797,7 +797,11 @@ const unit:UnitData = {
           "id": "u30-review-14",
           "type": "select",
           "prompt": "Which description presents something as pleasantly beautiful?",
-          "options": ["美美的","有一點貴","不太忙"],
+          "options": [
+            "美美的",
+            "有一點貴",
+            "不太忙"
+          ],
           "answer": "美美的",
           "explanation": "美美的 is a vivid, subjective description of beauty. 有一點貴 means a little expensive; 不太忙 means not too busy. These options differ in meaning, not simply in whether their words may ever be reduplicated.",
           "grammarIds": [
@@ -899,6 +903,18 @@ const unit:UnitData = {
           "grammarIds": [
             "u30-state-redup"
           ]
+        },
+        {
+          "type": "select",
+          "id": "u30-review-reading-23",
+          "prompt": "Read: 我朋友穿紅色的衣服。我請你吃水果。 Which summary keeps both facts straight?",
+          "options": [
+            "My friend is wearing red, and I am treating you to fruit.",
+            "My friend is eating red fruit, and you are buying clothes.",
+            "I am wearing red, and my friend is treating me."
+          ],
+          "answer": "My friend is wearing red, and I am treating you to fruit.",
+          "explanation": "穿紅色的衣服 describes the friend’s clothing; 請你吃水果 uses 請 in the treating-someone sense."
         }
       ]
     }
