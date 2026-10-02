@@ -6328,6 +6328,363 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "sīniàn",
       "meaning": "miss; long for"
     }
+  ],
+  "服": [
+    {
+      "text": "舒服",
+      "pinyin": "shūfu",
+      "meaning": "comfortable"
+    },
+    {
+      "text": "衣服",
+      "pinyin": "yīfú",
+      "meaning": "clothes; clothing"
+    },
+    {
+      "text": "服務",
+      "pinyin": "fúwù",
+      "meaning": "service; serve"
+    },
+    {
+      "text": "服裝",
+      "pinyin": "fúzhuāng",
+      "meaning": "clothing; apparel"
+    }
+  ],
+  "計": [
+    {
+      "text": "計程車",
+      "pinyin": "jìchéngchē",
+      "meaning": "taxi"
+    },
+    {
+      "text": "計畫",
+      "pinyin": "jìhuà",
+      "meaning": "to plan to"
+    },
+    {
+      "text": "計算",
+      "pinyin": "jìsuàn",
+      "meaning": "calculate"
+    },
+    {
+      "text": "設計",
+      "pinyin": "shèjì",
+      "meaning": "design"
+    }
+  ],
+  "行": [
+    {
+      "text": "不行",
+      "pinyin": "bùxíng",
+      "meaning": "won't work; not feasible"
+    },
+    {
+      "text": "旅行",
+      "pinyin": "lǚxíng",
+      "meaning": "to travel; take a trip"
+    },
+    {
+      "text": "銀行",
+      "pinyin": "yínháng",
+      "meaning": "bank"
+    },
+    {
+      "text": "行動",
+      "pinyin": "xíngdòng",
+      "meaning": "action; move"
+    }
+  ],
+  "旅": [
+    {
+      "text": "旅行",
+      "pinyin": "lǚxíng",
+      "meaning": "to travel; take a trip"
+    },
+    {
+      "text": "旅館",
+      "pinyin": "lǚguǎn",
+      "meaning": "hotel; inn"
+    },
+    {
+      "text": "旅客",
+      "pinyin": "lǚkè",
+      "meaning": "traveler; passenger"
+    },
+    {
+      "text": "旅遊",
+      "pinyin": "lǚyóu",
+      "meaning": "travel; tourism"
+    }
+  ],
+  "視": [
+    {
+      "text": "電視",
+      "pinyin": "diànshì",
+      "meaning": "television; TV"
+    },
+    {
+      "text": "視力",
+      "pinyin": "shìlì",
+      "meaning": "eyesight; vision"
+    },
+    {
+      "text": "視訊",
+      "pinyin": "shìxùn",
+      "meaning": "video communication; video feed"
+    },
+    {
+      "text": "重視",
+      "pinyin": "zhòngshì",
+      "meaning": "value; take seriously"
+    }
+  ],
+  "久": [
+    {
+      "text": "多久",
+      "pinyin": "duōjiǔ",
+      "meaning": "how long"
+    },
+    {
+      "text": "好久不見",
+      "pinyin": "hǎojiǔ bújiàn",
+      "meaning": "long time no see"
+    },
+    {
+      "text": "很久",
+      "pinyin": "hěnjiǔ",
+      "meaning": "a long time"
+    },
+    {
+      "text": "長久",
+      "pinyin": "chángjiǔ",
+      "meaning": "long-lasting; for a long time"
+    }
+  ],
+  "超": [
+    {
+      "text": "超市",
+      "pinyin": "chāoshì",
+      "meaning": "supermarket"
+    },
+    {
+      "text": "超商",
+      "pinyin": "chāoshāng",
+      "meaning": "convenience store (colloquial Taiwan)"
+    },
+    {
+      "text": "超過",
+      "pinyin": "chāoguò",
+      "meaning": "exceed; more than"
+    },
+    {
+      "text": "超級",
+      "pinyin": "chāojí",
+      "meaning": "super; extremely"
+    }
+  ],
+  "走": [
+    {
+      "text": "走路",
+      "pinyin": "zǒulù",
+      "meaning": "to walk"
+    },
+    {
+      "text": "慢走",
+      "pinyin": "màn zǒu",
+      "meaning": "Take care / Bye"
+    },
+    {
+      "text": "走開",
+      "pinyin": "zǒukāi",
+      "meaning": "go away; move aside"
+    },
+    {
+      "text": "走進",
+      "pinyin": "zǒujìn",
+      "meaning": "walk into"
+    }
+  ],
+  "間": [
+    {
+      "text": "房間",
+      "pinyin": "fángjiān",
+      "meaning": "room"
+    },
+    {
+      "text": "時間",
+      "pinyin": "shíjiān",
+      "meaning": "time"
+    },
+    {
+      "text": "中間",
+      "pinyin": "zhōngjiān",
+      "meaning": "middle; between"
+    },
+    {
+      "text": "一間",
+      "pinyin": "yì jiān",
+      "meaning": "one room; one shop"
+    }
+  ],
+  "經": [
+    {
+      "text": "已經",
+      "pinyin": "yǐjīng",
+      "meaning": "already"
+    },
+    {
+      "text": "經過",
+      "pinyin": "jīngguò",
+      "meaning": "pass by; go past"
+    },
+    {
+      "text": "經驗",
+      "pinyin": "jīngyàn",
+      "meaning": "experience"
+    },
+    {
+      "text": "經常",
+      "pinyin": "jīngcháng",
+      "meaning": "often; frequently"
+    }
+  ],
+  "過": [
+    {
+      "text": "不過",
+      "pinyin": "búguò",
+      "meaning": "however; but"
+    },
+    {
+      "text": "經過",
+      "pinyin": "jīngguò",
+      "meaning": "pass by; go past"
+    },
+    {
+      "text": "過去",
+      "pinyin": "guòqù",
+      "meaning": "the past; go over"
+    },
+    {
+      "text": "過年",
+      "pinyin": "guònián",
+      "meaning": "celebrate the New Year"
+    },
+    {
+      "text": "過來",
+      "pinyin": "guòlái",
+      "meaning": "come over"
+    }
+  ],
+  "關": [
+    {
+      "text": "沒關係",
+      "pinyin": "méi guānxì",
+      "meaning": "no problem; it doesn't matter"
+    },
+    {
+      "text": "關心",
+      "pinyin": "guānxīn",
+      "meaning": "be concerned about"
+    },
+    {
+      "text": "關門",
+      "pinyin": "guānmén",
+      "meaning": "close the door"
+    },
+    {
+      "text": "關掉",
+      "pinyin": "guāndiào",
+      "meaning": "turn off; shut off"
+    }
+  ],
+  "線": [
+    {
+      "text": "路線",
+      "pinyin": "lùxiàn",
+      "meaning": "route"
+    },
+    {
+      "text": "麵線",
+      "pinyin": "miànxiàn",
+      "meaning": "extra-fine noodles"
+    },
+    {
+      "text": "電線",
+      "pinyin": "diànxiàn",
+      "meaning": "electric wire"
+    },
+    {
+      "text": "上線",
+      "pinyin": "shàngxiàn",
+      "meaning": "go online; come online"
+    }
+  ],
+  "語": [
+    {
+      "text": "語言",
+      "pinyin": "yǔyán",
+      "meaning": "language"
+    },
+    {
+      "text": "英語",
+      "pinyin": "Yīngyǔ",
+      "meaning": "English language"
+    },
+    {
+      "text": "國語",
+      "pinyin": "Guóyǔ",
+      "meaning": "Mandarin Chinese"
+    },
+    {
+      "text": "語氣",
+      "pinyin": "yǔqì",
+      "meaning": "tone of voice; manner of speaking"
+    }
+  ],
+  "言": [
+    {
+      "text": "語言",
+      "pinyin": "yǔyán",
+      "meaning": "language"
+    },
+    {
+      "text": "發言",
+      "pinyin": "fāyán",
+      "meaning": "speak; make a statement"
+    },
+    {
+      "text": "言語",
+      "pinyin": "yányǔ",
+      "meaning": "speech; words"
+    },
+    {
+      "text": "留言",
+      "pinyin": "liúyán",
+      "meaning": "leave a message; message"
+    }
+  ],
+  "成": [
+    {
+      "text": "成績",
+      "pinyin": "chéngjī",
+      "meaning": "grades; academic results"
+    },
+    {
+      "text": "成功",
+      "pinyin": "chénggōng",
+      "meaning": "succeed; success"
+    },
+    {
+      "text": "成為",
+      "pinyin": "chéngwéi",
+      "meaning": "become"
+    },
+    {
+      "text": "完成",
+      "pinyin": "wánchéng",
+      "meaning": "complete; finish"
+    }
   ]
 };
 
