@@ -7615,7 +7615,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "正在",
       "pinyin": "zhèngzài",
-      "meaning": "be in the middle of doing"
+      "meaning": "in the process of; currently"
     },
     {
       "text": "正常",
