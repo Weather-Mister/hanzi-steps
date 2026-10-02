@@ -2,7 +2,7 @@
 import {useEffect,useMemo,useState} from 'react';
 import {Activity,BookOpen,CalendarDays,CheckCircle2,Flame,PenLine,Repeat2,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
-import type {Session} from '@/lib/curriculum';
+import {characterOrder,units,type Session} from '@/lib/curriculum';
 import type {PracticeStateMap} from '@/lib/practice-engine';
 import {completionTimestamp,taipeiDay} from '@/lib/streak';
 import {learningStatistics} from '@/lib/statistics';
@@ -11,6 +11,16 @@ function formatDay(day:string|null){
  if(!day)return '—';
  return new Intl.DateTimeFormat('en',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})
   .format(new Date(day+'T00:00:00Z'));
+}
+
+function Ring({value,label,subtle=false}:{value:number;label:string;subtle?:boolean}){
+ return <div className={`statistics-ring ${subtle?'subtle':''}`}>
+  <svg viewBox="0 0 120 120" role="img" aria-label={`${label}: ${value}%`}>
+   <circle className="statistics-ring-track" cx="60" cy="60" r="48" pathLength="100"/>
+   <circle className="statistics-ring-value" cx="60" cy="60" r="48" pathLength="100" strokeDasharray={`${value} 100`}/>
+  </svg>
+  <div><strong>{value}%</strong><span>{label}</span></div>
+ </div>;
 }
 
 type Props={
@@ -57,39 +67,108 @@ export function StatisticsScreen({
   now:now??Date.now(),
  }),[completed,days,practiceStates,mastered,reverseMastered,learnedCharacters,completedUnits,now]);
  const streakReady=days!==null&&now!==null;
-
- const cards=[
-  {label:'Current streak',value:streakReady?String(stats.streak.current):'—',detail:streakReady&&stats.streak.currentStart?'Since '+formatDay(stats.streak.currentStart):'No active streak yet',icon:<Flame size={21}/>},
-  {label:'Longest streak',value:streakReady?String(stats.streak.best):'—',detail:streakReady?(stats.streak.best===1?'1 day':'days'):'Loading study days',icon:<Trophy size={21}/>},
-  {label:'Learned words',value:String(stats.learnedWords),detail:'Unlocked by completed lessons',icon:<BookOpen size={21}/>},
-  {label:'Mastered words',value:String(stats.masteredWords),detail:'Mega Challenge mastery',icon:<CheckCircle2 size={21}/>},
-  {label:'Pinyin mastered',value:String(stats.pinyinMasteredWords),detail:'Pinyin Gauntlet mastery',icon:<Activity size={21}/>},
-  {label:'Characters learned',value:String(stats.learnedCharacters),detail:'Characters reached in the course',icon:<PenLine size={21}/>},
-  {label:'Study days',value:streakReady?String(stats.studyDays):'—',detail:'Distinct days with completed work',icon:<CalendarDays size={21}/>},
-  {label:'Practice attempts',value:String(stats.totalPracticeAttempts),detail:'Tracked adaptive + handwriting attempts',icon:<Repeat2 size={21}/>},
-  {label:'Units completed',value:String(stats.completedUnits),detail:'Across all available books',icon:<CheckCircle2 size={21}/>},
- ];
+ const topWordMax=Math.max(1,...stats.topPracticedWords.map(word=>word.attempts));
+ const modeMax=Math.max(1,...stats.practiceByMode.map(mode=>mode.attempts));
+ const charRate=characterOrder.length?Math.round(stats.learnedCharacters/characterOrder.length*100):0;
+ const unitRate=units.length?Math.round(stats.completedUnits/units.length*100):0;
 
  return <Dialog open={open} onOpenChange={onOpenChange}>
   <DialogContent data-unit-theme={theme} className="statistics-dialog">
    <div className="statistics-heading">
     <span className="statistics-heading-icon"><Activity size={24}/></span>
-    <div><DialogTitle>Your statistics</DialogTitle><DialogDescription>A running snapshot of how far you have taken Hanzi Steps.</DialogDescription></div>
+    <div>
+     <DialogTitle>Learning statistics</DialogTitle>
+     <DialogDescription>Your progress, habits, practice mix, and the words you keep coming back to.</DialogDescription>
+    </div>
    </div>
    {loading&&<p className="statistics-sync" role="status">Refreshing your saved progress…</p>}
-   <div className="statistics-grid">
-    {cards.map(card=><article className="statistics-card" key={card.label}>
-     <span className="statistics-card-icon">{card.icon}</span>
-     <div><span>{card.label}</span><strong>{card.value}</strong><small>{card.detail}</small></div>
-    </article>)}
-   </div>
-   <section className="statistics-favorite">
-    <div>
-     <span className="statistics-favorite-label">MOST PRACTICED WORD</span>
-     {stats.mostPracticedWord?<><strong lang="zh-Hant-TW">{stats.mostPracticedWord.traditional}</strong><p>{stats.mostPracticedWord.pinyin} · {stats.mostPracticedWord.meaning}</p></>:<><strong>—</strong><p>Tracked word practice will show up here.</p></>}
-    </div>
-    {stats.mostPracticedWord&&<span className="statistics-favorite-count">{stats.mostPracticedWord.attempts}<small>{stats.mostPracticedWord.attempts===1?'attempt':'attempts'}</small></span>}
+
+   <section className="statistics-hero-grid">
+    <article className="statistics-streak-hero">
+     <div className="statistics-streak-flame"><Flame size={31}/></div>
+     <div>
+      <span>CURRENT STREAK</span>
+      <strong>{streakReady?stats.streak.current:'—'}<small>{streakReady?' days':''}</small></strong>
+      <p>{streakReady&&stats.streak.currentStart?'Going since '+formatDay(stats.streak.currentStart):'Complete a study day to get one going.'}</p>
+     </div>
+    </article>
+    <article className="statistics-quick-card"><Trophy size={20}/><span>Longest streak</span><strong>{streakReady?stats.streak.best:'—'}</strong><small>days</small></article>
+    <article className="statistics-quick-card"><BookOpen size={20}/><span>Learned words</span><strong>{stats.learnedWords}</strong><small>{stats.masteredWords} mastered</small></article>
+    <article className="statistics-quick-card"><Repeat2 size={20}/><span>Practice attempts</span><strong>{stats.totalPracticeAttempts}</strong><small>{stats.accuracy}% correct</small></article>
    </section>
+
+   <div className="statistics-dashboard-grid">
+    <section className="statistics-panel statistics-activity-panel">
+     <div className="statistics-panel-heading">
+      <div><span>STUDY RHYTHM</span><h3>Active days by week</h3></div>
+      <strong>{streakReady?stats.studyDays:'—'}<small> total study days</small></strong>
+     </div>
+     <div className="statistics-weekly-chart" role="img" aria-label="Active study days per week over the last twelve weeks">
+      {stats.weeklyActivity.map((week,index)=><div className="statistics-week-bar" key={week.start}>
+       <span className="statistics-week-value">{week.activeDays}</span>
+       <span className="statistics-week-column"><i style={{height:`${Math.max(4,week.activeDays/7*100)}%`}} data-empty={week.activeDays===0}/></span>
+       <small>{index%3===0||index===stats.weeklyActivity.length-1?week.label:''}</small>
+      </div>)}
+     </div>
+     <div className="statistics-heatmap-wrap">
+      <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Each square is one day</small></div>
+      <div className="statistics-heatmap" role="img" aria-label="Study-day heatmap for the last twelve weeks">
+       {stats.activityGrid.map(day=><span key={day.date} className={day.active?'active':''} data-today={day.today||undefined} title={day.date+(day.active?' · studied':'')}/>)}
+      </div>
+     </div>
+    </section>
+
+    <section className="statistics-panel statistics-mastery-panel">
+     <div className="statistics-panel-heading"><div><span>MASTERY</span><h3>How much has stuck</h3></div></div>
+     <div className="statistics-rings">
+      <Ring value={stats.masteredRate} label="Mega mastered"/>
+      <Ring value={stats.pinyinMasteredRate} label="Pinyin mastered" subtle/>
+     </div>
+     <div className="statistics-progress-list">
+      <div><span>Characters learned <b>{stats.learnedCharacters}/{characterOrder.length}</b></span><i><b style={{width:`${charRate}%`}}/></i></div>
+      <div><span>Units completed <b>{stats.completedUnits}/{units.length}</b></span><i><b style={{width:`${unitRate}%`}}/></i></div>
+     </div>
+    </section>
+
+    <section className="statistics-panel statistics-practice-panel">
+     <div className="statistics-panel-heading">
+      <div><span>PRACTICE MIX</span><h3>Where your repetitions go</h3></div>
+      <strong>{stats.accuracy}%<small> overall accuracy</small></strong>
+     </div>
+     {stats.practiceByMode.length?<div className="statistics-mode-bars">
+      {stats.practiceByMode.map(mode=><div className="statistics-mode-row" key={mode.mode}>
+       <span>{mode.label}</span>
+       <div><i style={{width:`${mode.attempts/modeMax*100}%`}}/></div>
+       <strong>{mode.attempts}</strong>
+      </div>)}
+     </div>:<p className="statistics-empty">Practice a few items and this graph will fill itself in.</p>}
+     <div className="statistics-practice-foot">
+      <span><b>{stats.totalCorrect}</b> correct</span>
+      <span><b>{stats.totalMisses}</b> misses</span>
+      <span><b>{stats.assistedRate}%</b> assisted</span>
+     </div>
+    </section>
+
+    <section className="statistics-panel statistics-top-words">
+     <div className="statistics-panel-heading"><div><span>FREQUENT FLYERS</span><h3>Most practiced words</h3></div></div>
+     {stats.topPracticedWords.length?<div className="statistics-word-bars">
+      {stats.topPracticedWords.map((word,index)=><div className="statistics-word-row" key={word.id}>
+       <span className="statistics-rank">{index+1}</span>
+       <div className="statistics-word-copy"><strong lang="zh-Hant-TW">{word.traditional}</strong><small>{word.pinyin} · {word.meaning}</small></div>
+       <div className="statistics-word-track"><i style={{width:`${word.attempts/topWordMax*100}%`}}/></div>
+       <b>{word.attempts}</b>
+      </div>)}
+     </div>:<p className="statistics-empty">Tracked word practice will show up here.</p>}
+    </section>
+   </div>
+
+   <section className="statistics-milestones">
+    <article><CalendarDays size={18}/><span>Study days</span><strong>{streakReady?stats.studyDays:'—'}</strong></article>
+    <article><PenLine size={18}/><span>Characters</span><strong>{stats.learnedCharacters}</strong></article>
+    <article><CheckCircle2 size={18}/><span>Mastered words</span><strong>{stats.masteredWords}</strong></article>
+    <article><Activity size={18}/><span>Pinyin mastered</span><strong>{stats.pinyinMasteredWords}</strong></article>
+   </section>
+
    {needsSignIn&&<p className="statistics-footnote">These numbers are using this device’s saved progress. Sign in to keep them consistent across devices.</p>}
   </DialogContent>
  </Dialog>;
