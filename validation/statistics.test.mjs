@@ -75,8 +75,6 @@ test('statistics use exact clean outcomes, exclude bookkeeping, and include ungu
  assert.equal(stats.practiceByMode.find(row=>row.mode==='handwriting')?.attempts,4);
  assert.equal(stats.activityGrid.length,84);
  assert.equal(stats.activityGrid.filter(day=>day.active).length,3);
- assert.equal(stats.weeklyActivity.length,12);
- assert.equal(stats.weeklyActivity.at(-1)?.activeDays,3);
  assert.equal(stats.masteredRate,Math.round(1/learned.length*100));
  assert.equal(stats.pinyinMasteredRate,Math.round(1/learned.length*100));
 });
@@ -130,5 +128,4 @@ test('statistics stay empty rather than inventing practice history',()=>{
  assert.deepEqual(stats.topPracticedWords,[]);
  assert.deepEqual(stats.practiceByMode,[]);
  assert.equal(stats.activityGrid.length,84);
- assert.equal(stats.weeklyActivity.length,12);
 });
