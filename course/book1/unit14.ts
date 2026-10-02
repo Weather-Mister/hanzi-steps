@@ -1023,14 +1023,14 @@ const unit:UnitData = {
         {
           "id": "u14-can-15",
           "type": "select",
-          "prompt": "Which activity does 上網 name?",
+          "prompt": "What does 上網 mean here?",
           "options": [
-            "手機",
-            "上網",
-            "能"
+            "go online",
+            "mobile phone",
+            "be able to"
           ],
-          "answer": "上網",
-          "explanation": "上網 means go online. 手機 is the device, a mobile phone; 能 expresses capability. The activity is 上網.",
+          "answer": "go online",
+          "explanation": "上網 means “go online.” 手機 is a mobile phone; 能 means “can / be able to.”",
           "grammarIds": [
             "u14-capability"
           ]
