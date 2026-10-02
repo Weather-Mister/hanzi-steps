@@ -113,12 +113,26 @@ let server,browser,page;
  await page.getByText('Unit 4 only.',{exact:false}).waitFor();
  await page.keyboard.press('Escape');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ // The recent statistics dashboard must remain contained and usable on mobile.
+ await page.getByRole('button',{name:'Statistics',exact:true}).click();
+ await page.getByRole('heading',{name:'Learning statistics',exact:true}).waitFor();
+ const statisticsDialog=page.getByRole('dialog');
+ const statisticsBox=await statisticsDialog.boundingBox();
+ assert.ok(statisticsBox&&statisticsBox.x>=0&&statisticsBox.x+statisticsBox.width<=390.5,'statistics dialog should fit the mobile viewport');
+ await page.screenshot({path:'test-results/connected-learning/statistics-mobile.png',fullPage:true});
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.keyboard.press('Escape');
  // Global reference access remains, but learned-word details use completed lessons.
  await page.getByRole('button',{name:'Search by pinyin'}).click();await page.getByRole('textbox').fill('shang');
  await page.locator('.character-meanings').first().waitFor();await page.locator('.character-meanings summary').first().click();
  assert.ok(await page.locator('.character-meanings[open] .character-sense-badge').count()>0);
  assert.equal(await page.locator('.character-meanings[open] li').first().locator('.character-sense-badge').textContent(),'Previously learned');
  await page.setViewportSize({width:1365,height:950});await page.screenshot({path:'test-results/connected-learning/cards-desktop.png',fullPage:true});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'Statistics',exact:true}).click();
+ await page.getByRole('heading',{name:'Learning statistics',exact:true}).waitFor();
+ await page.screenshot({path:'test-results/connected-learning/statistics-desktop.png',fullPage:true});
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.keyboard.press('Escape');
  await practice();assert.equal(await page.getByRole('checkbox',{name:/Include a listening question/}).count(),0);await page.getByRole('button',{name:/Daily 10 10 adaptive/}).click();
  assert.deepEqual(errors,[]);
