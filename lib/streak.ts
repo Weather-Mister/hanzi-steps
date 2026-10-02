@@ -32,6 +32,7 @@ export function streakFromDays(activityDays:readonly string[],now:number=Date.no
  const practicedToday=days.has(todayIndex);
  let current=0,cursor=practicedToday?todayIndex:todayIndex-1;
  while(days.has(cursor)){current++;cursor--;}
+ const currentStart=current>0?dayString(cursor+1):null;
  let best=0,run=0,previous=-Infinity;
  for(const index of [...days].sort((a,b)=>a-b)){run=index===previous+1?run+1:1;best=Math.max(best,run);previous=index;}
  const monday=todayIndex-((new Date(todayIndex*DAY).getUTCDay()+6)%7);
@@ -39,5 +40,5 @@ export function streakFromDays(activityDays:readonly string[],now:number=Date.no
   const index=monday+i;
   return {date:dayString(index),label,done:days.has(index),today:index===todayIndex,future:index>todayIndex};
  });
- return {current,best,today,practicedToday,week};
+ return {current,best,currentStart,today,practicedToday,week};
 }
