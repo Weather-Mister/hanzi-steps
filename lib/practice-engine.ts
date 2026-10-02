@@ -844,6 +844,43 @@ export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:
  return ranked.slice(0,Math.min(desired,ranked.length));
 }
 
+
+export function lessonOrderTokens(
+ stepId:string,
+ phraseId:string|undefined,
+ answerTokens:string[],
+ completed:Set<string>,
+):string[]{
+ const unitMatch=/^u(\d+)-/.exec(stepId);
+ const unitNumber=unitMatch?Number(unitMatch[1]):0;
+ if(!phraseId||unitNumber<11||unitNumber>48||answerTokens.length<2)return answerTokens;
+
+ const phrase=phrases[phraseId];
+ if(!phrase?.tokens?.length)return shuffled(answerTokens,stepId+':lesson-order-bank');
+
+ const lesson=lessons.find(candidate=>candidate.steps.some(step=>step.id===stepId));
+ const unit=units.find(candidate=>candidate.id===lesson?.unitId);
+ const book=books.find(candidate=>candidate.unitIds.includes(unit?.id||''));
+ const target:PracticeItem={
+  id:'lesson-order:'+stepId,
+  kind:'phrase',
+  traditional:phrase.text,
+  pinyin:phrase.pinyin,
+  meaning:phrase.meaning,
+  characters:Array.from(phrase.text).filter(char=>Boolean(characters[char])),
+  unitId:unit?.id,
+  unitNumber:unit?.displayNumber??unit?.number??unitNumber,
+  bookId:book?.id,
+  bookNumber:book?.number,
+  lessonId:lesson?.id||stepId,
+  tokens:phrase.tokens,
+  acceptedTokenOrders:phrase.acceptedTokenOrders,
+ };
+ const learned=learnedPracticeItems(completed);
+ const distractors=sentenceDistractors(target,[...learned,target],stepId+':lesson-order-distractors');
+ return shuffled([...answerTokens,...distractors],stepId+':lesson-order-bank');
+}
+
 export function fromLookupItem(item:VocabularyLookupItem):PracticeItem{
  return {
   id:item.id,kind:'word',traditional:item.traditional,pinyin:item.pinyin,meaning:item.meaning,
