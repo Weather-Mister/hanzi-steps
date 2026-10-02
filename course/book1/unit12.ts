@@ -1278,14 +1278,14 @@ const unit:UnitData = {
         {
           "type": "select",
           "id": "u12-challenge-reading-21",
-          "prompt": "Read: 我要三杯茶。一杯茶三十五塊。 How much is the order altogether?",
+          "prompt": "Read: 我要兩杯茶。一杯茶三十五塊。 How much is the order altogether?",
           "options": [
-            "一百零五塊",
             "七十塊",
-            "三十五塊"
+            "三十五塊",
+            "六十塊"
           ],
-          "answer": "一百零五塊",
-          "explanation": "三杯 at 三十五塊 each gives 105. The reading combines quantity and unit price instead of repeating a memorized total.",
+          "answer": "七十塊",
+          "explanation": "兩杯 at 三十五塊 each gives 70. The reading combines quantity and unit price without requiring 百 before it is taught.",
           "grammarIds": [
             "u12-price",
             "u12-total"
