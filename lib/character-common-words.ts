@@ -6736,6 +6736,399 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "yóuyǒngchí",
       "meaning": "swimming pool"
     }
+  ],
+  "你": [
+    {
+      "text": "你好",
+      "pinyin": "nǐ hǎo",
+      "meaning": "hello"
+    },
+    {
+      "text": "你們",
+      "pinyin": "nǐmen",
+      "meaning": "you (plural)"
+    },
+    {
+      "text": "你的",
+      "pinyin": "nǐ de",
+      "meaning": "your; yours"
+    },
+    {
+      "text": "給你",
+      "pinyin": "gěi nǐ",
+      "meaning": "give to you; here you are"
+    }
+  ],
+  "我": [
+    {
+      "text": "我們",
+      "pinyin": "wǒmen",
+      "meaning": "we; us"
+    },
+    {
+      "text": "我的",
+      "pinyin": "wǒ de",
+      "meaning": "my; mine"
+    },
+    {
+      "text": "我想",
+      "pinyin": "wǒ xiǎng",
+      "meaning": "I think; I want to"
+    },
+    {
+      "text": "我知道",
+      "pinyin": "wǒ zhīdào",
+      "meaning": "I know"
+    }
+  ],
+  "們": [
+    {
+      "text": "我們",
+      "pinyin": "wǒmen",
+      "meaning": "we; us"
+    },
+    {
+      "text": "你們",
+      "pinyin": "nǐmen",
+      "meaning": "you (plural)"
+    },
+    {
+      "text": "他們",
+      "pinyin": "tāmen",
+      "meaning": "they; them"
+    },
+    {
+      "text": "她們",
+      "pinyin": "tāmen",
+      "meaning": "they; them (female group)"
+    },
+    {
+      "text": "人們",
+      "pinyin": "rénmen",
+      "meaning": "people"
+    }
+  ],
+  "的": [
+    {
+      "text": "我的",
+      "pinyin": "wǒ de",
+      "meaning": "my; mine"
+    },
+    {
+      "text": "你的",
+      "pinyin": "nǐ de",
+      "meaning": "your; yours"
+    },
+    {
+      "text": "好的",
+      "pinyin": "hǎo de",
+      "meaning": "OK; all right"
+    },
+    {
+      "text": "真的",
+      "pinyin": "zhēnde",
+      "meaning": "really; truly"
+    }
+  ],
+  "什": [
+    {
+      "text": "什麼",
+      "pinyin": "shénme",
+      "meaning": "what"
+    },
+    {
+      "text": "為什麼",
+      "pinyin": "wèishénme",
+      "meaning": "why"
+    },
+    {
+      "text": "什錦",
+      "pinyin": "shíjǐn",
+      "meaning": "assorted; mixed"
+    }
+  ],
+  "麼": [
+    {
+      "text": "什麼",
+      "pinyin": "shénme",
+      "meaning": "what"
+    },
+    {
+      "text": "怎麼",
+      "pinyin": "zěnme",
+      "meaning": "how"
+    },
+    {
+      "text": "這麼",
+      "pinyin": "zhème",
+      "meaning": "so; this much, before a description"
+    },
+    {
+      "text": "那麼",
+      "pinyin": "nàme",
+      "meaning": "then; in that case"
+    },
+    {
+      "text": "為什麼",
+      "pinyin": "wèishénme",
+      "meaning": "why"
+    }
+  ],
+  "哪": [
+    {
+      "text": "哪裡",
+      "pinyin": "nǎlǐ",
+      "meaning": "where"
+    },
+    {
+      "text": "哪個",
+      "pinyin": "nǎ ge",
+      "meaning": "which one"
+    },
+    {
+      "text": "哪邊",
+      "pinyin": "nǎbiān",
+      "meaning": "which side; where"
+    },
+    {
+      "text": "哪一天",
+      "pinyin": "nǎ yì tiān",
+      "meaning": "which day"
+    }
+  ],
+  "得": [
+    {
+      "text": "覺得",
+      "pinyin": "juéde",
+      "meaning": "think; feel (an opinion)"
+    },
+    {
+      "text": "記得",
+      "pinyin": "jìde",
+      "meaning": "remember"
+    },
+    {
+      "text": "得到",
+      "pinyin": "dédào",
+      "meaning": "get; obtain"
+    },
+    {
+      "text": "得意",
+      "pinyin": "déyì",
+      "meaning": "proud of oneself; pleased with oneself"
+    }
+  ],
+  "怎": [
+    {
+      "text": "怎麼",
+      "pinyin": "zěnme",
+      "meaning": "how"
+    },
+    {
+      "text": "怎麼樣",
+      "pinyin": "zěnmeyàng",
+      "meaning": "how about it?; how does that sound?"
+    },
+    {
+      "text": "怎麼辦",
+      "pinyin": "zěnmebàn",
+      "meaning": "what to do; what should I do"
+    },
+    {
+      "text": "怎麼說",
+      "pinyin": "zěnme shuō",
+      "meaning": "how to say; how would you put it"
+    }
+  ],
+  "樣": [
+    {
+      "text": "一樣",
+      "pinyin": "yíyàng",
+      "meaning": "same; alike"
+    },
+    {
+      "text": "這樣",
+      "pinyin": "zhèyàng",
+      "meaning": "this kind (of); like this"
+    },
+    {
+      "text": "那樣",
+      "pinyin": "nàyàng",
+      "meaning": "like that; that way"
+    },
+    {
+      "text": "樣子",
+      "pinyin": "yàngzi",
+      "meaning": "appearance; manner; way"
+    }
+  ],
+  "啊": [
+    {
+      "text": "好啊",
+      "pinyin": "hǎo a",
+      "meaning": "sure!; OK!"
+    },
+    {
+      "text": "是啊",
+      "pinyin": "shì a",
+      "meaning": "yes; that is right"
+    },
+    {
+      "text": "對啊",
+      "pinyin": "duì a",
+      "meaning": "right; exactly"
+    }
+  ],
+  "了": [
+    {
+      "text": "太好了",
+      "pinyin": "tài hǎo le",
+      "meaning": "great!; wonderful!"
+    },
+    {
+      "text": "對了",
+      "pinyin": "duìle",
+      "meaning": "by the way; oh, right"
+    },
+    {
+      "text": "怎麼了",
+      "pinyin": "zěnme le",
+      "meaning": "What's wrong?"
+    },
+    {
+      "text": "了解",
+      "pinyin": "liǎojiě",
+      "meaning": "understand; learn about"
+    }
+  ],
+  "她": [
+    {
+      "text": "她們",
+      "pinyin": "tāmen",
+      "meaning": "they; them (female group)"
+    },
+    {
+      "text": "她的",
+      "pinyin": "tā de",
+      "meaning": "her; hers"
+    }
+  ],
+  "很": [
+    {
+      "text": "很好",
+      "pinyin": "hěn hǎo",
+      "meaning": "very good"
+    },
+    {
+      "text": "很多",
+      "pinyin": "hěnduō",
+      "meaning": "many; a lot"
+    },
+    {
+      "text": "很少",
+      "pinyin": "hěn shǎo",
+      "meaning": "very little; rarely"
+    },
+    {
+      "text": "很久",
+      "pinyin": "hěnjiǔ",
+      "meaning": "a long time"
+    }
+  ],
+  "百": [
+    {
+      "text": "百分之",
+      "pinyin": "bǎifēnzhī",
+      "meaning": "percent; out of one hundred"
+    },
+    {
+      "text": "百貨公司",
+      "pinyin": "bǎihuò gōngsī",
+      "meaning": "department store"
+    },
+    {
+      "text": "幾百",
+      "pinyin": "jǐ bǎi",
+      "meaning": "a few hundred"
+    }
+  ],
+  "千": [
+    {
+      "text": "一千",
+      "pinyin": "yì qiān",
+      "meaning": "one thousand"
+    },
+    {
+      "text": "幾千",
+      "pinyin": "jǐ qiān",
+      "meaning": "a few thousand"
+    },
+    {
+      "text": "千萬",
+      "pinyin": "qiānwàn",
+      "meaning": "by all means; ten million"
+    }
+  ],
+  "棟": [
+    {
+      "text": "一棟房子",
+      "pinyin": "yí dòng fángzi",
+      "meaning": "one house or building"
+    },
+    {
+      "text": "這棟大樓",
+      "pinyin": "zhè dòng dàlóu",
+      "meaning": "this building"
+    }
+  ],
+  "三": [
+    {
+      "text": "三月",
+      "pinyin": "sān yuè",
+      "meaning": "March"
+    }
+  ],
+  "四": [
+    {
+      "text": "四月",
+      "pinyin": "sì yuè",
+      "meaning": "April"
+    }
+  ],
+  "五": [
+    {
+      "text": "五月",
+      "pinyin": "wǔ yuè",
+      "meaning": "May"
+    }
+  ],
+  "六": [
+    {
+      "text": "六月",
+      "pinyin": "liù yuè",
+      "meaning": "June"
+    }
+  ],
+  "七": [
+    {
+      "text": "七月",
+      "pinyin": "qī yuè",
+      "meaning": "July"
+    }
+  ],
+  "八": [
+    {
+      "text": "八月",
+      "pinyin": "bā yuè",
+      "meaning": "August"
+    }
+  ],
+  "九": [
+    {
+      "text": "九月",
+      "pinyin": "jiǔ yuè",
+      "meaning": "September"
+    }
   ]
 };
 
