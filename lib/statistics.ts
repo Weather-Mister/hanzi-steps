@@ -37,6 +37,7 @@ function directPracticeRecord(itemId:string){
  return itemId.startsWith('v1:')||
   itemId.startsWith('phrase:')||
   itemId.startsWith('char:')||
+  itemId.startsWith('listening:')||
   itemId.startsWith('unguided-writing:');
 }
 
