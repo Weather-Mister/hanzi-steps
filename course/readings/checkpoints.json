@@ -1717,5 +1717,2049 @@
         "meaning": "inside; in"
       }
     }
+  },
+  {
+    "id": "reading-unit-10-b",
+    "unitId": "unit-10",
+    "title": "Morning plans and habits",
+    "kind": "Daily routine note",
+    "setup": "Some sentences describe routines; another points to one specific morning. Read for the time frame, not just the activity.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我早上常喝茶。",
+        "pinyin": "Wǒ zǎoshàng cháng hē chá.",
+        "translation": "I often drink tea in the morning.",
+        "note": "早上 sets the time; 常 stays before the action 喝茶.",
+        "sourcePhraseId": "u10-morning-tea"
+      },
+      {
+        "text": "明天早上我們去游泳。",
+        "pinyin": "Míngtiān zǎoshàng wǒmen qù yóuyǒng.",
+        "translation": "Tomorrow morning, we are going swimming.",
+        "note": "明天 is the larger time and comes before 早上.",
+        "sourcePhraseId": "u10-tomorrow-morning-swim"
+      },
+      {
+        "text": "他們也都喜歡早上游泳。",
+        "pinyin": "Tāmen yě dōu xǐhuān zǎoshàng yóuyǒng.",
+        "translation": "They all also like swimming in the morning.",
+        "note": "Context supplies another person who likes morning swimming. 也 adds the match; 都 includes all of 他們.",
+        "sourcePhraseId": "u10-also-all-morning"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which activity is a regular habit?",
+        "options": [
+          "Drinking tea in the morning",
+          "Going swimming tomorrow morning",
+          "Eating dinner tomorrow night"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "常 marks the morning tea as a recurring habit."
+      },
+      {
+        "prompt": "What is planned for a specific future morning?",
+        "options": [
+          "Swimming tomorrow morning",
+          "Tea every morning",
+          "A movie every evening"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "明天早上 makes the swimming sentence a specific plan."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "常 for habits",
+      "明天早上 for a specific time"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-10-c",
+    "unitId": "unit-10",
+    "title": "Dinner is not everyone’s plan",
+    "kind": "Planning dialogue",
+    "setup": "Pay attention to the difference between proposing a plan and saying that a whole group does—or does not—share it.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我們晚上一起吃晚飯，好不好？",
+        "pinyin": "Wǒmen wǎnshàng yìqǐ chī wǎnfàn, hǎo bu hǎo?",
+        "translation": "How about we eat dinner together this evening?",
+        "note": "The full plan comes first; 好不好 asks for agreement.",
+        "sourcePhraseId": "u10-dinner-how-about"
+      },
+      {
+        "text": "他們不都想吃晚飯。",
+        "pinyin": "Tāmen bù dōu xiǎng chī wǎnfàn.",
+        "translation": "Not all of them want to eat dinner.",
+        "note": "不都 means the whole group does not share the statement; some still may want dinner.",
+        "sourcePhraseId": "u10-not-all-want-dinner"
+      },
+      {
+        "text": "我們明天晚上一起去吃越南菜，好不好？",
+        "pinyin": "Wǒmen míngtiān wǎnshàng yìqǐ qù chī Yuènán cài, hǎo bu hǎo?",
+        "translation": "How about we go eat Vietnamese food together tomorrow evening?",
+        "note": "A complete plan: people, time, together, activity, then an invitation to agree.",
+        "sourcePhraseId": "u10-vietnam-plan"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What does the first sentence do?",
+        "options": [
+          "It asks whether the dinner plan sounds good",
+          "It says nobody wants dinner",
+          "It reports that dinner already happened"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "好不好 asks the listener to agree with the proposed plan."
+      },
+      {
+        "prompt": "What does 不都 in the second sentence tell you?",
+        "options": [
+          "Not everyone wants dinner",
+          "Nobody wants dinner",
+          "Everyone wants dinner"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "不都 means the statement is not true of the entire group; some people may still want dinner."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "好不好 for checking a suggestion",
+      "不都 versus 都不"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-13-b",
+    "unitId": "unit-13",
+    "title": "At the snack counter",
+    "kind": "Counter dialogue",
+    "setup": "A customer asks, orders, and then makes one practical request.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "老闆，請問這杯茶多少錢？",
+        "pinyin": "Lǎobǎn, qǐng wèn zhè bēi chá duōshǎo qián?",
+        "translation": "Excuse me, how much is this cup of tea? (to the owner)",
+        "note": "老闆 addresses the shop owner; 請問 politely opens the question. 這杯茶 names the item, and 多少錢 asks its price without adding 嗎.",
+        "sourcePhraseId": "u13-ask-price"
+      },
+      {
+        "text": "我要三個包子。",
+        "pinyin": "Wǒ yào sān ge bāozi.",
+        "translation": "I would like three buns.",
+        "note": "Use 三 + 個 + 包子 to count three buns. 個 is the measure word; 包子 is the whole food name, with neutral-tone zi.",
+        "sourcePhraseId": "u13-three-buns"
+      },
+      {
+        "text": "請幫我微波這個包子。",
+        "pinyin": "Qǐng bāng wǒ wéibō zhè ge bāozi.",
+        "translation": "Please microwave this bun for me.",
+        "note": "請 makes the request polite. 幫我 asks someone to do the action for me; 微波 means microwave, and 這個包子 is the item to heat.",
+        "sourcePhraseId": "u13-heat-bun"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What food does the customer order?",
+        "options": [
+          "Three buns",
+          "Three cups of tea",
+          "One bun"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "三個包子 is three buns."
+      },
+      {
+        "prompt": "What extra help does the customer request?",
+        "options": [
+          "Microwave this bun",
+          "Buy tea for someone else",
+          "Sell the shop"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "請幫我微波這個包子 asks the listener to microwave this bun for the speaker."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Polite 請問",
+      "請幫我 + action"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-13-c",
+    "unitId": "unit-13",
+    "title": "Numbers on the counter",
+    "kind": "Price-board reading",
+    "setup": "Read the amounts as numbers first, then notice the final yes-or-no shop question.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "一百零五塊。",
+        "pinyin": "Yìbǎi líng wǔ kuài.",
+        "translation": "NT$105.",
+        "note": "一百 is one hundred and 零 bridges the missing tens before 五. This is 105, not 一百五十, 150. 塊 marks the price.",
+        "sourcePhraseId": "u13-105"
+      },
+      {
+        "text": "兩百三十五塊。",
+        "pinyin": "Liǎngbǎi sānshíwǔ kuài.",
+        "translation": "NT$235.",
+        "note": "兩百 gives 200, 三十 gives 30, and 五 gives 5. State the places from largest to smallest, then 塊 for the price.",
+        "sourcePhraseId": "u13-235"
+      },
+      {
+        "text": "你們賣不賣包子？",
+        "pinyin": "Nǐmen mài bu mài bāozi?",
+        "translation": "Do you sell buns?",
+        "note": "賣不賣 asks whether the shop sells buns. 賣 is mài, sell; 買 is mǎi, buy. Do not add 嗎 to this A-not-A question.",
+        "sourcePhraseId": "u13-sell-buns"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which price is larger?",
+        "options": [
+          "NT$235",
+          "NT$105",
+          "They are the same"
+        ],
+        "answer": 0,
+        "evidence": [
+          0,
+          1
+        ],
+        "explanation": "兩百三十五 is 235, which is greater than 一百零五, 105."
+      },
+      {
+        "prompt": "What is the final sentence asking?",
+        "options": [
+          "Whether the shop sells buns",
+          "How many buns the customer bought",
+          "Whether the buns cost NT$235"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "賣不賣 is an A-not-A question asking whether the shop sells the item."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Hundreds with 零",
+      "賣不賣 as A-not-A"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-16-b",
+    "unitId": "unit-16",
+    "title": "One restaurant, mixed reviews",
+    "kind": "Mini review",
+    "setup": "The restaurant gets both praise and criticism. Track what 可是 contrasts each time.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我昨天晚上去那家餐廳吃晚飯。",
+        "pinyin": "Wǒ zuótiān wǎnshàng qù nà jiā cāntīng chī wǎnfàn.",
+        "translation": "I went to that restaurant for dinner last night.",
+        "note": "昨天晚上 sets the time before 去. 去那家餐廳 gives the destination and 吃晚飯 gives the purpose. The past time comes from 昨天, not a change in the verb form.",
+        "sourcePhraseId": "u16-yesterday-meal"
+      },
+      {
+        "text": "那家餐廳很有名，可是菜很貴。",
+        "pinyin": "Nà jiā cāntīng hěn yǒumíng, kěshì cài hěn guì.",
+        "translation": "That restaurant is famous, but the food is expensive.",
+        "note": "可是 links contrasting facts: the restaurant is famous, but its food is expensive. 菜 here means its dishes or food, not only vegetables.",
+        "sourcePhraseId": "u16-restaurant-contrast"
+      },
+      {
+        "text": "這家餐廳的菜有一點貴，可是甜點很不錯。",
+        "pinyin": "Zhè jiā cāntīng de cài yǒu yìdiǎn guì, kěshì tiándiǎn hěn búcuò.",
+        "translation": "This restaurant’s food is a little expensive, but the desserts are pretty good.",
+        "note": "有一點貴 presents a mild drawback. 可是 contrasts it with the desserts, and 很不錯 is a positive evaluation: quite good.",
+        "sourcePhraseId": "u16-dessert-comment"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What drawback is mentioned about the restaurant’s food?",
+        "options": [
+          "It is expensive",
+          "It is always cold",
+          "There is no dessert"
+        ],
+        "answer": 0,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "Both evaluative lines mention the food being expensive."
+      },
+      {
+        "prompt": "What gets a positive comment in the final line?",
+        "options": [
+          "The desserts",
+          "The prices",
+          "The location"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "甜點很不錯 says the desserts are pretty good."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "可是 for contrast",
+      "有一點 + description"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-16-c",
+    "unitId": "unit-16",
+    "title": "Learning to cook",
+    "kind": "Conversation",
+    "setup": "A food preference leads into a question about skill and then a request to learn.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我怕辣，所以我喜歡自己做飯。",
+        "pinyin": "Wǒ pà là, suǒyǐ wǒ xǐhuān zìjǐ zuòfàn.",
+        "translation": "I am sensitive to spicy food, so I like to cook myself.",
+        "note": "所以 introduces the result of the first clause. 自己 before 做飯 says I cook myself; 喜歡 describes that preference.",
+        "sourcePhraseId": "u16-cook-reason"
+      },
+      {
+        "text": "你做飯做得怎麼樣？",
+        "pinyin": "Nǐ zuòfàn zuò de zěnmeyàng?",
+        "translation": "How well do you cook?",
+        "note": "做飯 names the activity. Repeat 做 before 得怎麼樣 to ask how well it is done. This asks about performance, rather than whether you know how to cook at all.",
+        "sourcePhraseId": "u16-cooking-question"
+      },
+      {
+        "text": "我想學做甜點，你可以教我嗎？",
+        "pinyin": "Wǒ xiǎng xué zuò tiándiǎn, nǐ kěyǐ jiāo wǒ ma?",
+        "translation": "I want to learn to make desserts. Could you teach me?",
+        "note": "學做甜點 means learn to make desserts. 你可以教我嗎 asks whether you can teach me, with the same skill understood after 教我.",
+        "sourcePhraseId": "u16-teach-desserts"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does the first speaker like cooking for themself?",
+        "options": [
+          "They are sensitive to spicy food",
+          "They own a restaurant",
+          "They dislike desserts"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "我怕辣 gives the reason before 所以."
+      },
+      {
+        "prompt": "What does the speaker want help learning?",
+        "options": [
+          "Making desserts",
+          "Ordering noodles",
+          "Buying a restaurant"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "我想學做甜點 says the speaker wants to learn to make desserts."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "所以 for result",
+      "Verb + 得 for performance"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-19-b",
+    "unitId": "unit-19",
+    "title": "Will you come tomorrow?",
+    "kind": "Message thread",
+    "setup": "Three short lines revolve around the same kind of visit. Watch how invitation, question, and negation differ.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "你明天到我家來吧！",
+        "pinyin": "Nǐ míngtiān dào wǒ jiā lái ba!",
+        "translation": "Come to my home tomorrow!",
+        "note": "到我家 names the destination and 來 points toward the host's home. 明天 sets the time; 吧 makes this an invitation.",
+        "sourcePhraseId": "u19-invite"
+      },
+      {
+        "text": "你明天到不到我家來？",
+        "pinyin": "Nǐ míngtiān dào bu dào wǒ jiā lái?",
+        "translation": "Are you coming to my home tomorrow?",
+        "note": "到不到 is the A-not-A question about coming to the destination. Keep 我家 between 到不到 and 來; the host treats home as here.",
+        "sourcePhraseId": "u19-visit-question"
+      },
+      {
+        "text": "他明天不到我家來。",
+        "pinyin": "Tā míngtiān bú dào wǒ jiā lái.",
+        "translation": "He is not coming to my home tomorrow.",
+        "note": "不 comes before 到 to deny the planned visit. 明天 supplies future time, and 來 points toward the speaker's home.",
+        "sourcePhraseId": "u19-not-coming"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What is the invitation in the first line?",
+        "options": [
+          "Come to my home tomorrow",
+          "Meet at school today",
+          "Go to a restaurant tonight"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "明天到我家來吧 invites the listener to come to the speaker’s home tomorrow."
+      },
+      {
+        "prompt": "What does the third line say about the visit?",
+        "options": [
+          "He is not coming to the speaker’s home tomorrow",
+          "He already came today",
+          "He is asking whether the home is far"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "不到我家來 negates the planned arrival."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "到 + destination + 來",
+      "不到 for a negative plan"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-19-c",
+    "unitId": "unit-19",
+    "title": "An errand near school",
+    "kind": "Location note",
+    "setup": "First identify what the area contains, then follow what the speaker does there.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "學校附近有沒有餐廳？",
+        "pinyin": "Xuéxiào fùjìn yǒu méiyǒu cāntīng?",
+        "translation": "Are there any restaurants near the school?",
+        "note": "有沒有 asks whether the named location contains a restaurant. 學校附近 identifies the area being asked about, not the restaurant's name.",
+        "sourcePhraseId": "u19-nearby-question"
+      },
+      {
+        "text": "學校附近有一家商店。",
+        "pinyin": "Xuéxiào fùjìn yǒu yì jiā shāngdiàn.",
+        "translation": "There is a shop near the school.",
+        "note": "Place + 有 + thing introduces something in an area. 一家商店 means one shop, with 家 as its measure word.",
+        "sourcePhraseId": "u19-store-near-school"
+      },
+      {
+        "text": "我在商店買東西。",
+        "pinyin": "Wǒ zài shāngdiàn mǎi dōngxi.",
+        "translation": "I buy things at a shop.",
+        "note": "在商店 gives the place before 買東西. 東西 is dōngxi, things; 買東西 is the everyday expression for buying things or shopping.",
+        "sourcePhraseId": "u19-shop-errand"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What place is explicitly said to exist near the school?",
+        "options": [
+          "A shop",
+          "A hotel",
+          "A train station"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "學校附近有一家商店 introduces a shop in the area."
+      },
+      {
+        "prompt": "What does the speaker do at the shop?",
+        "options": [
+          "Buys things",
+          "Studies Chinese",
+          "Meets a teacher"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "在商店買東西 means buy things at a shop."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Place + 附近 + 有",
+      "在 + place + action"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-22-b",
+    "unitId": "unit-22",
+    "title": "Before the game ends",
+    "kind": "Schedule card",
+    "setup": "Read the start and end times as a small schedule, then interpret the final question.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "比賽下午四點半開始。",
+        "pinyin": "Bǐsài xiàwǔ sì diǎn bàn kāishǐ.",
+        "translation": "The game starts at 4:30 in the afternoon.",
+        "note": "The game is the topic; the time comes before 開始.",
+        "sourcePhraseId": "u22-game-start"
+      },
+      {
+        "text": "比賽六點半結束。",
+        "pinyin": "Bǐsài liù diǎn bàn jiéshù.",
+        "translation": "The game ends at 6:30.",
+        "note": "結束 is the endpoint process.",
+        "sourcePhraseId": "u22-game-end"
+      },
+      {
+        "text": "比賽幾點結束？",
+        "pinyin": "Bǐsài jǐ diǎn jiéshù?",
+        "translation": "What time does the game end?",
+        "note": "幾點 asks for the clock time.",
+        "sourcePhraseId": "u22-end-question"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "When does the game start?",
+        "options": [
+          "4:30 in the afternoon",
+          "6:30",
+          "Noon"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "下午四點半開始 gives the 4:30 p.m. start."
+      },
+      {
+        "prompt": "What information does the last question request?",
+        "options": [
+          "The game’s ending time",
+          "Who is playing",
+          "Where the game is"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "幾點結束 asks what time the event ends."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Time + 開始 / 結束",
+      "幾點 for clock time"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-22-c",
+    "unitId": "unit-22",
+    "title": "What are they actually doing?",
+    "kind": "Classroom snapshot",
+    "setup": "One line reports an ongoing action, another corrects a mistaken guess, and the last describes a state.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我在寫中文。",
+        "pinyin": "Wǒ zài xiě Zhōngwén.",
+        "translation": "I am writing Chinese.",
+        "note": "Here 在 marks an ongoing action, not a location.",
+        "sourcePhraseId": "u22-writing"
+      },
+      {
+        "text": "他不是在看書，他在寫中文。",
+        "pinyin": "Tā bú shì zài kàn shū, tā zài xiě Zhōngwén.",
+        "translation": "He is not reading; he is writing Chinese.",
+        "note": "不是在… corrects a mistaken claim about the ongoing action.",
+        "sourcePhraseId": "u22-correct-action"
+      },
+      {
+        "text": "我今天很忙。",
+        "pinyin": "Wǒ jīntiān hěn máng.",
+        "translation": "I am very busy today.",
+        "note": "忙 is a state verb, so do not put progressive 在 before it.",
+        "sourcePhraseId": "u22-busy"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "In the correction, what is the person actually doing?",
+        "options": [
+          "Writing Chinese",
+          "Reading a book",
+          "Playing basketball"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "他不是在看書，他在寫中文 corrects reading to writing Chinese."
+      },
+      {
+        "prompt": "Which line describes a state rather than an action in progress?",
+        "options": [
+          "I am very busy today",
+          "I am writing Chinese",
+          "He is writing Chinese"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "忙 is a state; it is not used with progressive 在 here."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "在 + ongoing action",
+      "不是在… correction"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-25-b",
+    "unitId": "unit-25",
+    "title": "Three ways to get around",
+    "kind": "Commute notes",
+    "setup": "Each line uses a different transport situation. Track the vehicle and who travels with whom.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我坐捷運去學校。",
+        "pinyin": "Wǒ zuò jiéyùn qù xuéxiào.",
+        "translation": "I take the MRT to school.",
+        "note": "坐 + vehicle + 去 + destination.",
+        "sourcePhraseId": "u25-mrt-school"
+      },
+      {
+        "text": "我跟同學坐公車。",
+        "pinyin": "Wǒ gēn tóngxué zuò gōngchē.",
+        "translation": "I take the bus with my classmate.",
+        "note": "跟 introduces the companion before the main verb phrase.",
+        "sourcePhraseId": "u25-classmate-bus"
+      },
+      {
+        "text": "我同學騎機車載我。",
+        "pinyin": "Wǒ tóngxué qí jīchē zài wǒ.",
+        "translation": "My classmate gives me a ride on a scooter.",
+        "note": "騎 names riding the scooter; 載 names carrying/giving someone a ride.",
+        "sourcePhraseId": "u25-classmate-ride"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How does the first speaker go to school?",
+        "options": [
+          "By MRT",
+          "By taxi",
+          "By scooter"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "坐捷運去學校 says the speaker takes the MRT to school."
+      },
+      {
+        "prompt": "Who gives the speaker a ride in the third line?",
+        "options": [
+          "The speaker’s classmate",
+          "A taxi driver",
+          "A teacher"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "我同學…載我 says the classmate carries/gives the speaker a ride."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "坐 + vehicle",
+      "跟 for companionship"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-25-c",
+    "unitId": "unit-25",
+    "title": "Faster, or not?",
+    "kind": "Comparison note",
+    "setup": "Three sentences compare travel methods. Be careful: 不比…快 only denies a faster-than claim.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "坐捷運比坐火車快。",
+        "pinyin": "Zuò jiéyùn bǐ zuò huǒchē kuài.",
+        "translation": "Taking the MRT is faster than taking the train.",
+        "note": "A 比 B + property explicitly compares A with B.",
+        "sourcePhraseId": "u25-mrt-faster"
+      },
+      {
+        "text": "坐公車不比坐計程車快。",
+        "pinyin": "Zuò gōngchē bù bǐ zuò jìchéngchē kuài.",
+        "translation": "Taking the bus is not faster than taking a taxi.",
+        "note": "不 goes before 比 to deny that taking the bus is faster than taking a taxi. 不比…快 allows equal speed or a slower speed; it does not by itself assert that the bus is definitely slower.",
+        "sourcePhraseId": "u25-bus-not-faster"
+      },
+      {
+        "text": "騎機車比坐公車快嗎？",
+        "pinyin": "Qí jīchē bǐ zuò gōngchē kuài ma?",
+        "translation": "Is riding a scooter faster than taking the bus?",
+        "note": "This reinforces the comparison pattern in context.",
+        "sourcePhraseId": "u25-scooter-question"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which comparison is stated as a fact?",
+        "options": [
+          "The MRT is faster than the train",
+          "The scooter is definitely faster than the bus",
+          "The bus is definitely slower than the taxi"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "The first line directly states 坐捷運比坐火車快."
+      },
+      {
+        "prompt": "What does 坐公車不比坐計程車快 guarantee?",
+        "options": [
+          "The bus is not faster than the taxi",
+          "The bus is definitely slower",
+          "The two always take exactly the same time"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "不比…快 denies ‘faster than’; equal speed remains possible."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "A 比 B + property",
+      "不比 does not force the opposite"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-28-b",
+    "unitId": "unit-28",
+    "title": "Three days off, two days away",
+    "kind": "Travel note",
+    "setup": "Several durations appear close together. Match each number to the activity it measures.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我們放三天的假。",
+        "pinyin": "Wǒmen fàng sān tiān de jià.",
+        "translation": "We have three days off.",
+        "note": "放假 is separable here: 放 + 三天的 + 假.",
+        "sourcePhraseId": "u28-three-day-break"
+      },
+      {
+        "text": "我兩天不能來上課。",
+        "pinyin": "Wǒ liǎng tiān bù néng lái shàngkè.",
+        "translation": "I cannot come to class for two days.",
+        "note": "The duration 兩天 appears before the negation 不能.",
+        "sourcePhraseId": "u28-two-days-no-class"
+      },
+      {
+        "text": "我想玩兩天。",
+        "pinyin": "Wǒ xiǎng wán liǎng tiān.",
+        "translation": "I want to spend two days having fun on the trip.",
+        "note": "兩天 is a duration and follows 玩.",
+        "sourcePhraseId": "u28-two-days"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How long is the break?",
+        "options": [
+          "Three days",
+          "Two days",
+          "One week"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "放三天的假 gives a three-day break."
+      },
+      {
+        "prompt": "For how long can the speaker not come to class?",
+        "options": [
+          "Two days",
+          "Three days",
+          "Two hours"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "兩天不能來上課 places the two-day duration before the inability."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Duration after an activity",
+      "Duration before 不能"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-28-c",
+    "unitId": "unit-28",
+    "title": "Where can I buy a ticket?",
+    "kind": "Practical travel note",
+    "setup": "A day, a station, and two acceptable ticket-buying locations appear in three short lines.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我星期日去高鐵站買票。",
+        "pinyin": "Wǒ xīngqírì qù gāotiě zhàn mǎi piào.",
+        "translation": "I go to the HSR station to buy a ticket on Sunday.",
+        "note": "星期日 is a Time-When expression; 站 names the travel station.",
+        "sourcePhraseId": "u28-station"
+      },
+      {
+        "text": "坐高鐵或是坐火車都可以。",
+        "pinyin": "Zuò gāotiě huòshì zuò huǒchē dōu kěyǐ.",
+        "translation": "Taking the HSR or taking the train are both possible.",
+        "note": "或是 joins alternatives inside this statement: taking the HSR or taking the train are both acceptable. Contrast the direct choice question with 還是, which asks the listener to select an option.",
+        "sourcePhraseId": "u28-or"
+      },
+      {
+        "text": "在高鐵站或是便利商店都可以。",
+        "pinyin": "Zài gāotiě zhàn huòshì biànlì shāngdiàn dōu kěyǐ.",
+        "translation": "Either at an HSR station or at a convenience store is fine.",
+        "note": "The previous question is where to buy tickets. The reply leaves 買票 understood and names two possible locations with 或是. 都可以 says both options work in this practice scenario.",
+        "sourcePhraseId": "u28-ticket-options"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What does the speaker plan to do on Sunday?",
+        "options": [
+          "Go to the HSR station to buy a ticket",
+          "Stay home to watch a film",
+          "Take a bus for two days"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "星期日去高鐵站買票 gives both the day and purpose."
+      },
+      {
+        "prompt": "Which locations are presented as acceptable options?",
+        "options": [
+          "The HSR station or a convenience store",
+          "Only the train station",
+          "Only the school"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "或是 joins the two locations and 都可以 says either works."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "或是 inside a statement",
+      "都可以 for acceptable alternatives"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-31-b",
+    "unitId": "unit-31",
+    "title": "Who is in the photo?",
+    "kind": "Photo captions",
+    "setup": "Use clothing and physical description to identify people instead of relying on names.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "這些是我拍的照片。",
+        "pinyin": "Zhèxiē shì wǒ pāi de zhàopiàn.",
+        "translation": "These are the photos I took.",
+        "note": "這些 means these and refers to more than one thing. 我拍 identifies which photos; 的 connects that clause to 照片.",
+        "sourcePhraseId": "u31-these-photos"
+      },
+      {
+        "text": "穿紅色衣服的人是我朋友。",
+        "pinyin": "Chuān hóngsè yīfú de rén shì wǒ péngyǒu.",
+        "translation": "The person wearing red clothes is my friend.",
+        "note": "穿紅色衣服 describes the person by what they are wearing. Put this description before 的人: the person wearing red clothes. 是我朋友 then identifies that person as my friend.",
+        "sourcePhraseId": "u31-red-person"
+      },
+      {
+        "text": "這個男學生比較矮。",
+        "pinyin": "Zhège nán xuéshēng bǐjiào ǎi.",
+        "translation": "This male student is shorter.",
+        "note": "男 + noun marks a male person; 比較 gives an implicit comparison.",
+        "sourcePhraseId": "u31-short-man"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Who is identified as the speaker’s friend?",
+        "options": [
+          "The person wearing red clothes",
+          "Every male student",
+          "The photographer"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "穿紅色衣服的人 is identified as 我朋友."
+      },
+      {
+        "prompt": "What is said about the male student?",
+        "options": [
+          "He is comparatively shorter",
+          "He is wearing red",
+          "He owns the hotel"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "比較矮 gives the comparative description ‘shorter.’"
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Clause + 的 + 人",
+      "比較 for implicit comparison"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-31-c",
+    "unitId": "unit-31",
+    "title": "A hotel this month",
+    "kind": "Travel note",
+    "setup": "The passage moves from a past stay to the hotel’s current condition and then explains its price.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "上個月我住在旅館。",
+        "pinyin": "Shàng ge yuè wǒ zhù zài lǚguǎn.",
+        "translation": "Last month I stayed at a hotel.",
+        "note": "上個月 is a transparent Time-When phrase built from familiar parts; 住 is the new verb stay/live.",
+        "sourcePhraseId": "u31-hotel"
+      },
+      {
+        "text": "旅館現在很乾淨。",
+        "pinyin": "Lǚguǎn xiànzài hěn gānjìng.",
+        "translation": "The hotel is clean now.",
+        "note": "乾淨 is the state description clean.",
+        "sourcePhraseId": "u31-clean"
+      },
+      {
+        "text": "因為現在去玩的人比較少，所以旅館不太貴。",
+        "pinyin": "Yīnwèi xiànzài qù wán de rén bǐjiào shǎo, suǒyǐ lǚguǎn bú tài guì.",
+        "translation": "Because fewer people are traveling now, the hotel is not too expensive.",
+        "note": "The 因為 clause gives the cause; the 所以 clause gives the effect. 現在去玩的人 also reviews a clause modifying 人.",
+        "sourcePhraseId": "u31-because"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "When did the speaker stay at the hotel?",
+        "options": [
+          "Last month",
+          "Tomorrow",
+          "Every weekend"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "上個月 places the stay last month."
+      },
+      {
+        "prompt": "Why is the hotel not too expensive now?",
+        "options": [
+          "Fewer people are traveling",
+          "The hotel is dirty",
+          "It is far from the sea"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "因為現在去玩的人比較少 gives the reason before 所以."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Changed time frames",
+      "因為…所以…"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-34-b",
+    "unitId": "unit-34",
+    "title": "A five-year plan",
+    "kind": "Study-plan note",
+    "setup": "Follow the sequence of study stages and add their durations.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "你計畫在臺灣學多久的中文？",
+        "pinyin": "Nǐ jìhuà zài Táiwān xué duō jiǔ de Zhōngwén?",
+        "translation": "How long do you plan to study Chinese in Taiwan?",
+        "note": "計畫 expresses a plan, like 打算. 在臺灣 gives the place, and 學多久的中文 asks how long the Chinese study will last. The reply is 五年, five years.",
+        "sourcePhraseId": "u34-plan"
+      },
+      {
+        "text": "我先在語言中心念一年，再念四年大學。",
+        "pinyin": "Wǒ xiān zài yǔyán zhōngxīn niàn yì nián, zài niàn sì nián dàxué.",
+        "translation": "I will first study for one year at a language center, then study at university for four years.",
+        "note": "先 marks studying one year at the language center; 再 introduces the next stage, four years at university. 年 measures the years, for a total plan of five years.",
+        "sourcePhraseId": "u34-sequence-source"
+      },
+      {
+        "text": "所以需要五年。",
+        "pinyin": "Suǒyǐ xūyào wǔ nián.",
+        "translation": "So I need five years.",
+        "note": "需要 means 'to need.' The subject 我 is understood from the preceding context.",
+        "sourcePhraseId": "u34-need"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What comes first in the plan?",
+        "options": [
+          "One year at a language center",
+          "Four years at university",
+          "Five years of work"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "先 introduces the one-year language-center stage."
+      },
+      {
+        "prompt": "Why does the speaker say five years are needed?",
+        "options": [
+          "One year plus four years",
+          "Five separate language centers",
+          "Because university lasts one year"
+        ],
+        "answer": 0,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "The sequence is one year, then four years, totaling five."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "先…再…",
+      "Adding durations across a plan"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-34-c",
+    "unitId": "unit-34",
+    "title": "Scholarship pressure",
+    "kind": "Conversation",
+    "setup": "A costly plan is softened by one source of support, but that support has a condition.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "這得花不少錢！",
+        "pinyin": "Zhè děi huā bù shǎo qián!",
+        "translation": "That will cost quite a lot of money!",
+        "note": "花 is the lesson verb 'to spend (time or money).' In this context, 這得花不少錢 is naturally translated as 'That will cost quite a lot of money.' 得 is read děi 'must / have to,' a reading already encountered in Unit 33.",
+        "sourcePhraseId": "u34-cost"
+      },
+      {
+        "text": "對，不過我有獎學金。",
+        "pinyin": "Duì, búguò wǒ yǒu jiǎngxuéjīn.",
+        "translation": "Right, but I have a scholarship.",
+        "note": "This preserves the contrast: the study plan costs a lot, but the speaker has a scholarship. 不過 is review from Unit 33.",
+        "sourcePhraseId": "u34-scholarship"
+      },
+      {
+        "text": "要是成績不好，就沒獎學金了。你呢？",
+        "pinyin": "Yàoshi chéngjī bù hǎo, jiù méi jiǎngxuéjīn le. Nǐ ne?",
+        "translation": "If my grades are poor, then I won't have a scholarship anymore. And you?",
+        "note": "This completes the speaker turn. 要是…就… is the earlier condition pattern; the final 了 marks the changed result, and 你呢？ hands the conversation back to the other speaker.",
+        "sourcePhraseId": "u34-grades"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What offsets the concern about the cost?",
+        "options": [
+          "The speaker has a scholarship",
+          "The course is free",
+          "The plan becomes shorter"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "不過 introduces the contrasting fact that the speaker has a scholarship."
+      },
+      {
+        "prompt": "What could cause the scholarship to disappear?",
+        "options": [
+          "Poor grades",
+          "Studying Chinese",
+          "Having a five-year plan"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "要是成績不好，就沒獎學金了 states the condition and consequence."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "不過 for contrast",
+      "要是…就… condition"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-37-b",
+    "unitId": "unit-37",
+    "title": "A familiar voice",
+    "kind": "Phone call",
+    "setup": "Read the opening as a phone exchange: greeting, identity check, and recognition after a long gap.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "喂，是你嗎？",
+        "pinyin": "Wèi, shì nǐ ma?",
+        "translation": "Hello, is that you?",
+        "note": "喂 is a phone greeting. 是你嗎 checks whether the person you have in mind is speaking. The identity depends on the shared context of the call.",
+        "sourcePhraseId": "u37-call-safe"
+      },
+      {
+        "text": "是，我就是。",
+        "pinyin": "Shì, wǒ jiù shì.",
+        "translation": "Yes, this is he / this is me speaking.",
+        "note": "phone formula. Here 我就是 identifies the speaker on the phone; do not generalize it into a new 就是 grammar rule.",
+        "sourcePhraseId": "u37-phone-me"
+      },
+      {
+        "text": "好久不見！",
+        "pinyin": "Hǎojiǔ bújiàn!",
+        "translation": "Long time no see!",
+        "note": "Fixed greeting used when meeting or speaking after a long time.",
+        "sourcePhraseId": "u37-long-time"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What is the caller checking first?",
+        "options": [
+          "Whether the expected person is speaking",
+          "Whether tomorrow is a birthday",
+          "Whether the phone is expensive"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "是你嗎 checks the other person’s identity."
+      },
+      {
+        "prompt": "What does 好久不見 signal?",
+        "options": [
+          "They have not seen each other for a long time",
+          "They just met yesterday",
+          "They are ending the call"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "好久不見 is the fixed greeting ‘long time no see.’"
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Phone greeting 喂",
+      "Identity on the phone"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-37-c",
+    "unitId": "unit-37",
+    "title": "The birthday I almost forgot",
+    "kind": "Message exchange",
+    "setup": "A reminder triggers surprise and then appreciation. Read the emotional sequence, not just each sentence alone.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "明天是你的生日，對不對？",
+        "pinyin": "Míngtiān shì nǐ de shēngrì, duì bu duì?",
+        "translation": "Tomorrow is your birthday, right?",
+        "note": "明天 sets the date and 是 identifies it as the listener's birthday. 對不對 at the end asks for confirmation of that whole statement.",
+        "sourcePhraseId": "u37-birthday-confirm"
+      },
+      {
+        "text": "啊，我怎麼忘了！",
+        "pinyin": "A, wǒ zěnme wàng le!",
+        "translation": "Oh! How could I forget!",
+        "note": "In this reaction, 忘了 is learned as the fixed chunk 'forgot'; Unit 39 later teaches completed-action verbal 了 as a general system.",
+        "sourcePhraseId": "u37-forget-source"
+      },
+      {
+        "text": "謝謝你還記得。",
+        "pinyin": "Xièxie nǐ hái jìde.",
+        "translation": "Thank you for still remembering.",
+        "note": "謝謝你 thanks the listener. 還 before 記得 means still: the speaker appreciates that the listener still remembers the birthday.",
+        "sourcePhraseId": "u37-remember-source"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What event is tomorrow?",
+        "options": [
+          "The listener’s birthday",
+          "A train trip",
+          "A class exam"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "明天是你的生日 identifies tomorrow as the listener’s birthday."
+      },
+      {
+        "prompt": "Why does someone say 謝謝你還記得?",
+        "options": [
+          "They appreciate that the other person still remembers",
+          "They are asking the date",
+          "They want the other person to forget"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "還記得 means still remember; the speaker thanks the listener for remembering."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "對不對 for confirmation",
+      "還 + 記得"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-40-b",
+    "unitId": "unit-40",
+    "title": "Anything, anyone, any time",
+    "kind": "Patterned mini-reading",
+    "setup": "Question words do not ask questions here. With 都, they expand to an all-inclusive meaning.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我什麼都吃。",
+        "pinyin": "Wǒ shénme dōu chī.",
+        "translation": "I eat anything / everything.",
+        "note": "This preview is now formalized as the question-word totality pattern.",
+        "sourcePhraseId": "u40-everything-source"
+      },
+      {
+        "text": "誰都喜歡生日。",
+        "pinyin": "Shéi dōu xǐhuān shēngrì.",
+        "translation": "Everyone likes birthdays.",
+        "note": "誰 + 都 in this statement means everyone, rather than asking who. 都 distributes 喜歡生日 across all the people being discussed.",
+        "sourcePhraseId": "u40-everyone"
+      },
+      {
+        "text": "我什麼時候都可以。",
+        "pinyin": "Wǒ shénme shíhou dōu kěyǐ.",
+        "translation": "Any time is fine for me.",
+        "note": "什麼時候 + 都 means any time. 可以 accepts any proposed time in the conversation; this is a statement of availability, not a question asking when.",
+        "sourcePhraseId": "u40-anytime"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What does 我什麼都吃 mean here?",
+        "options": [
+          "I eat anything / everything",
+          "What do I eat?",
+          "I eat nothing"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "什麼 + 都 is all-inclusive in this statement."
+      },
+      {
+        "prompt": "What does 我什麼時候都可以 communicate?",
+        "options": [
+          "Any time is fine for me",
+          "I do not know the time",
+          "I can only come now"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "什麼時候 + 都 means any time."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Question word + 都",
+      "All-inclusive statements"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-40-c",
+    "unitId": "unit-40",
+    "title": "Nobody, nowhere, nothing",
+    "kind": "Diary contrast",
+    "setup": "The same question words take a negative interpretation when paired with 都/也 and negation.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "誰也沒來。",
+        "pinyin": "Shéi yě méi lái.",
+        "translation": "Nobody came.",
+        "note": "Negative total exclusion: 誰 + 也 + 沒.",
+        "sourcePhraseId": "u40-nobody"
+      },
+      {
+        "text": "昨天我哪裡都沒去。",
+        "pinyin": "Zuótiān wǒ nǎlǐ dōu méi qù.",
+        "translation": "Yesterday I didn't go anywhere.",
+        "note": "Negative total exclusion: 哪裡 + 都 + 沒.",
+        "sourcePhraseId": "u40-nowhere"
+      },
+      {
+        "text": "我今天什麼也不想吃。",
+        "pinyin": "Wǒ jīntiān shénme yě bù xiǎng chī.",
+        "translation": "I don't want to eat anything today.",
+        "note": "Negative total exclusion with 什麼 + 也 + 不.",
+        "sourcePhraseId": "u40-nothing"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Who came in the first line?",
+        "options": [
+          "Nobody",
+          "Everyone",
+          "Only one friend"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "誰也沒來 means nobody came."
+      },
+      {
+        "prompt": "What does the speaker say about yesterday?",
+        "options": [
+          "They did not go anywhere",
+          "They went everywhere",
+          "They stayed at a hotel for a month"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "哪裡都沒去 excludes every destination."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Question word + 也/都 + negation",
+      "Total exclusion"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-43-a",
+    "unitId": "unit-43",
+    "title": "How long did it last?",
+    "kind": "Duration diary",
+    "setup": "Three completed spans use different activities. Keep the duration attached to the correct event.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我在臺灣住了一年。",
+        "pinyin": "Wǒ zài Táiwān zhù le yì nián.",
+        "translation": "I lived in Taiwan for one year.",
+        "note": "In this example, the speaker is reporting a completed one-year stay. 了 follows 住 and 一年 gives the duration. Without that context, the sentence alone does not prove the speaker has left Taiwan.",
+        "sourcePhraseId": "u43-finished-stay"
+      },
+      {
+        "text": "我打網球打了兩個鐘頭。",
+        "pinyin": "Wǒ dǎ wǎngqiú dǎ le liǎng ge zhōngtóu.",
+        "translation": "I played tennis for two hours.",
+        "note": "The object remains before the duration, so the verb repeats.",
+        "sourcePhraseId": "u43-tennis-duration"
+      },
+      {
+        "text": "中文我只學了五個月。",
+        "pinyin": "Zhōngwén wǒ zhǐ xué le wǔ ge yuè.",
+        "translation": "I studied Chinese for only five months.",
+        "note": "Fronted object/topic; 只 means only.",
+        "sourcePhraseId": "u43-only-chinese"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How long was the reported stay in Taiwan?",
+        "options": [
+          "One year",
+          "Two hours",
+          "Five months"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "住了一年 reports a one-year stay."
+      },
+      {
+        "prompt": "Which activity lasted two hours?",
+        "options": [
+          "Playing tennis",
+          "Studying Chinese",
+          "Living in Taiwan"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "打網球打了兩個鐘頭 gives the two-hour duration."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Completed duration with 了",
+      "Verb repetition with an object"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-43-b",
+    "unitId": "unit-43",
+    "title": "How long so far?",
+    "kind": "Travel and weather note",
+    "setup": "One duration reaches up to now, one question asks for that kind of duration, and one sentence uses 差不多 for approximate calendar time.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我在臺灣住了半年多了。有一點想家。",
+        "pinyin": "Wǒ zài Táiwān zhù le bànnián duō le. Yǒu yìdiǎn xiǎng jiā.",
+        "translation": "I have been in Taiwan for a little over half a year. I miss home a little.",
+        "note": "住了半年多了 gives the duration reached by now; 半年多 is a little over half a year. 想家 means “miss home / feel homesick,” not “want a home.” The subject 我 is understood in the second sentence.",
+        "sourcePhraseId": "u43-duration-now-source"
+      },
+      {
+        "text": "你在臺灣住了多久了？",
+        "pinyin": "Nǐ zài Táiwān zhù le duōjiǔ le?",
+        "translation": "How long have you been in Taiwan up to now?",
+        "note": "多久 asks how long; final 了 asks about the duration reached up to now. Compare 住了一年, a reported one-year span, with 住了一年了, a year reached so far.",
+        "sourcePhraseId": "u43-duration-question"
+      },
+      {
+        "text": "每年差不多十二月開始下雪。",
+        "pinyin": "Měinián chàbuduō shí'èr yuè kāishǐ xiàxuě.",
+        "translation": "It starts snowing around December each year.",
+        "note": "support. This explicitly transfers known 差不多 to approximate time; contrast with duration + 多 in 半年多.",
+        "sourcePhraseId": "u43-approx-time"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How long has the speaker been in Taiwan so far?",
+        "options": [
+          "A little over half a year",
+          "Exactly five months",
+          "Two hours"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "半年多了 means a little over half a year has been reached up to now."
+      },
+      {
+        "prompt": "Around when does snow start each year?",
+        "options": [
+          "December",
+          "May",
+          "January 5"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "差不多十二月 means around December."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "Duration + 了 up to now",
+      "差不多 for approximation"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-43-c",
+    "unitId": "unit-43",
+    "title": "Going back for New Year",
+    "kind": "Travel messages",
+    "setup": "Track an approaching holiday, the departure plan, and the reason for the return date.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "新年快到了。想回去看父母嗎？",
+        "pinyin": "Xīnnián kuài dào le. Xiǎng huíqù kàn fùmǔ ma?",
+        "translation": "New Year is almost here. Do you want to go back to see your parents?",
+        "note": "新年快到了 announces an approaching change: New Year is nearly here. In the question, 想 + 回去 asks whether the listener wants to go back; it is the desire use of 想.",
+        "sourcePhraseId": "u43-newyear-source"
+      },
+      {
+        "text": "我打算十二月底回去。想跟我去玩嗎？",
+        "pinyin": "Wǒ dǎsuàn shí'èr yuè dǐ huíqù. Xiǎng gēn wǒ qù wán ma?",
+        "translation": "I plan to go back at the end of December. Do you want to go travel/have fun with me?",
+        "note": "打算 introduces the plan and 十二月底 places it at the end of December. 回去 is return away from here. The second sentence invites the listener to go along for fun, with 你 understood.",
+        "sourcePhraseId": "u43-return-plan"
+      },
+      {
+        "text": "因為我們只放十天的假，所以一月五號回來。",
+        "pinyin": "Yīnwèi wǒmen zhǐ fàng shí tiān de jià, suǒyǐ yī yuè wǔ hào huílái.",
+        "translation": "Because we only have ten days off, we'll come back on January 5.",
+        "note": "因為 gives the reason and 所以 gives the result. 只 limits the break to ten days. 放十天的假 places the duration inside 放假.",
+        "sourcePhraseId": "u43-return-reason"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "When does the speaker plan to go back?",
+        "options": [
+          "At the end of December",
+          "In May",
+          "Tomorrow morning"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "十二月底 sets the planned return-home departure at the end of December."
+      },
+      {
+        "prompt": "Why will they come back on January 5?",
+        "options": [
+          "They only have ten days off",
+          "The train is cheaper then",
+          "They have a two-hour tennis game"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "因為我們只放十天的假 gives the reason for the January 5 return."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "快…了 for an approaching event",
+      "因為…所以… across a travel plan"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-46-a",
+    "unitId": "unit-46",
+    "title": "At the clinic",
+    "kind": "Doctor visit",
+    "setup": "A patient hears what the illness is, asks about medicine, and receives a practical next step.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "我有一點發燒，是感冒。",
+        "pinyin": "Wǒ yǒu yìdiǎn fāshāo, shì gǎnmào.",
+        "translation": "I have a slight fever; it is a cold.",
+        "note": "The first clause reports a slight fever. 是感冒 identifies the illness as a cold in this dialogue; the sentence is language practice, not a diagnostic rule.",
+        "sourcePhraseId": "u46-cold-source"
+      },
+      {
+        "text": "請問我得吃藥嗎？",
+        "pinyin": "Qǐngwèn wǒ děi chī yào ma?",
+        "translation": "Do I have to take medicine?",
+        "note": "請問 politely introduces the question. 得 before 吃藥 is děi, must or have to. 嗎 asks whether taking medicine is necessary.",
+        "sourcePhraseId": "u46-medicine-question"
+      },
+      {
+        "text": "你到藥局去拿藥。",
+        "pinyin": "Nǐ dào yàojú qù ná yào.",
+        "translation": "Go to the pharmacy to get medicine.",
+        "note": "到藥局去 gives the destination, the pharmacy. 拿藥 is the purpose, getting the medicine. 拿 identifies getting it rather than taking a dose.",
+        "sourcePhraseId": "u46-pharmacy-source"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What illness is identified in the first line?",
+        "options": [
+          "A cold",
+          "A stomachache",
+          "An allergy"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "是感冒 identifies the illness as a cold in this practice dialogue."
+      },
+      {
+        "prompt": "Where is the patient told to go for medicine?",
+        "options": [
+          "A pharmacy",
+          "A restaurant",
+          "A train station"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "到藥局去拿藥 directs the patient to the pharmacy to get medicine."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "得 děi = must / have to",
+      "到 + place + 去 + purpose"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-46-b",
+    "unitId": "unit-46",
+    "title": "Recovery instructions",
+    "kind": "Follow-up exchange",
+    "setup": "Read the advice as a sequence, then distinguish it from the patient’s later question about recovery.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "回去把藥吃了，多喝水，多休息，早一點睡覺，很快就會好。",
+        "pinyin": "Huíqù bǎ yào chī le, duō hē shuǐ, duō xiūxí, zǎo yìdiǎn shuìjiào, hěn kuài jiù huì hǎo.",
+        "translation": "Go back and take the medicine, drink more water, rest more, go to sleep a bit earlier, and you'll get better soon.",
+        "note": "In the dialogue, the doctor gives a sequence of instructions. 把藥吃了 starts with the understood medicine; 多喝水 and 多休息 ask for more of each activity; 早一點 asks for an earlier bedtime. 很快就會好 is a prediction of recovery.",
+        "sourcePhraseId": "u46-recovery-source"
+      },
+      {
+        "text": "請問我的病什麼時候會好？",
+        "pinyin": "Qǐngwèn wǒ de bìng shénme shíhou huì hǎo?",
+        "translation": "May I ask when my illness will get better?",
+        "note": "我的病 is my illness. 什麼時候 asks when; 會好 means will get better. 好 here is recovery, not doing an action well.",
+        "sourcePhraseId": "u46-doctor-recovery-question"
+      },
+      {
+        "text": "好的，沒有問題。",
+        "pinyin": "Hǎo de, méiyǒu wèntí.",
+        "translation": "Okay, no problem.",
+        "note": "好的 accepts the request. 沒有問題 means there is no problem and reassures the other person that you can do what was asked.",
+        "sourcePhraseId": "u46-a004-response-1"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which advice appears in the first line?",
+        "options": [
+          "Drink more water, rest more, and sleep earlier",
+          "Exercise for three hours",
+          "Eat fifty buns"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "The instruction lists 多喝水、多休息、早一點睡覺."
+      },
+      {
+        "prompt": "What does the patient ask in the second line?",
+        "options": [
+          "When the illness will get better",
+          "Where the pharmacy is",
+          "How many friends the doctor has"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "什麼時候會好 asks when the illness will improve."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "把藥吃了 inside instructions",
+      "什麼時候 in an information question"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-46-c",
+    "unitId": "unit-46",
+    "title": "Three 把 situations",
+    "kind": "Scenario cards",
+    "setup": "These are three separate mini-situations. Read what object 把 places before the action and what outcome each sentence describes.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "加油！我們今天一定要把這50個小籠包吃了。",
+        "pinyin": "Jiāyóu! Wǒmen jīntiān yídìng yào bǎ zhè wǔshí ge xiǎolóngbāo chī le.",
+        "translation": "Come on! We definitely have to eat these 50 xiaolongbao today.",
+        "note": "加油 encourages the group. 一定要 makes the goal emphatic; 把 places the specific fifty xiaolongbao before 吃. 了 presents finishing that task as the intended outcome, not a past event.",
+        "sourcePhraseId": "u46-a004-1"
+      },
+      {
+        "text": "要是你把今天的功課寫了，就可以去打籃球。",
+        "pinyin": "Yàoshi nǐ bǎ jīntiān de gōngkè xiě le, jiù kěyǐ qù dǎ lánqiú.",
+        "translation": "If you finish today's homework, then you can go play basketball.",
+        "note": "要是 sets a condition: doing today's homework. 把 places that specific homework before 寫. 就可以 introduces what will then be allowed; 了 inside the condition does not put the whole sentence in the past.",
+        "sourcePhraseId": "u46-a004-2"
+      },
+      {
+        "text": "誰把我的西瓜吃了？",
+        "pinyin": "Shéi bǎ wǒ de xīguā chī le?",
+        "translation": "Who ate my watermelon?",
+        "note": "誰 asks who performed the action. 把我的西瓜 places the identifiable watermelon before 吃了; the question is about who ate it.",
+        "sourcePhraseId": "u46-a004-3"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What must the group finish in the first scenario?",
+        "options": [
+          "Fifty xiaolongbao",
+          "Fifty homework pages",
+          "Fifty medicine packets"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "把這50個小籠包吃了 makes the fifty xiaolongbao the affected object."
+      },
+      {
+        "prompt": "What becomes possible after finishing today’s homework?",
+        "options": [
+          "Going to play basketball",
+          "Going to the pharmacy",
+          "Buying a train ticket"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "就可以去打籃球 is the result of finishing the homework condition."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "把 + specific object + action",
+      "Condition then result"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-book-2-unit-4-b",
+    "unitId": "book-2-unit-4",
+    "title": "Noodles, a map, and a backpack",
+    "kind": "Mini story",
+    "setup": "Three details connect a meal, location, and a shopping intention.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "他們一邊吃麵，一邊看地圖。",
+        "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
+        "translation": "They eat noodles while looking at the map.",
+        "note": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern.",
+        "sourcePhraseId": "b2u4-l2-model"
+      },
+      {
+        "text": "麵店離學校不遠。",
+        "pinyin": "Miàndiàn lí xuéxiào bù yuǎn.",
+        "translation": "The noodle shop is not far from school.",
+        "note": "麵店 is the place being located; 離學校 means “from the school.” 不遠 means “not far.” Put 不 before 遠, not before 離.",
+        "sourcePhraseId": "b2u4-l3-model"
+      },
+      {
+        "text": "我正好想買一個背包。",
+        "pinyin": "Wǒ zhènghǎo xiǎng mǎi yí ge bēibāo.",
+        "translation": "I happen to want to buy a backpack.",
+        "note": "正好 goes before 想買 to say the wish fits the present opportunity. 一個背包 means one backpack; 想買 expresses a wish, not an already completed purchase.",
+        "sourcePhraseId": "b2u4-l4-model"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What are they doing at the same time?",
+        "options": [
+          "Eating noodles and looking at a map",
+          "Buying pens and sleeping",
+          "Walking and studying"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "一邊…一邊… links eating noodles and looking at the map as simultaneous actions."
+      },
+      {
+        "prompt": "What does the speaker happen to want to buy?",
+        "options": [
+          "A backpack",
+          "A notebook",
+          "A train ticket"
+        ],
+        "answer": 0,
+        "evidence": [
+          2
+        ],
+        "explanation": "正好想買一個背包 says the speaker happens to want a backpack."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "一邊…一邊…",
+      "離 + place + distance"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-book-2-unit-4-c",
+    "unitId": "book-2-unit-4",
+    "title": "What she bought",
+    "kind": "Shopping sequence",
+    "setup": "The purchase is stated, then framed as the final event; the last line returns to the earlier meal scene.",
+    "version": 1,
+    "lines": [
+      {
+        "text": "她買了兩枝筆和一本本子。",
+        "pinyin": "Tā mǎi le liǎng zhī bǐ hé yì běn běnzi.",
+        "translation": "She bought two pens and one notebook.",
+        "note": "兩枝筆 counts pens with 枝. 一本本子 counts a notebook with 本; 本子 is the noun. 和 joins both things bought.",
+        "sourcePhraseId": "b2u4-l5-model"
+      },
+      {
+        "text": "最後她買了兩枝筆和一本本子。",
+        "pinyin": "Zuìhòu tā mǎi le liǎng zhī bǐ hé yì běn běnzi.",
+        "translation": "Finally she bought two pens and one notebook.",
+        "note": "最後 means finally. 買了 marks the purchase. 兩枝筆 is two pens; 一本本子 is one notebook. 和 joins the two purchases. Use 枝 for pens and 本 for notebooks.",
+        "sourcePhraseId": "b2u4-l6-model"
+      },
+      {
+        "text": "他們一邊吃麵，一邊看地圖。",
+        "pinyin": "Tāmen yìbiān chī miàn, yìbiān kàn dìtú.",
+        "translation": "They eat noodles while looking at the map.",
+        "note": "Put 一邊 before 吃麵 and repeat 一邊 before 看地圖. The same people do both actions at the same time. Both copies are needed in this full pattern.",
+        "sourcePhraseId": "b2u4-l7-cumulative-1"
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What did she buy?",
+        "options": [
+          "Two pens and one notebook",
+          "Two backpacks",
+          "One bowl of noodles"
+        ],
+        "answer": 0,
+        "evidence": [
+          0,
+          1
+        ],
+        "explanation": "兩枝筆和一本本子 gives two pens and one notebook."
+      },
+      {
+        "prompt": "What does 最後 contribute in the second line?",
+        "options": [
+          "It marks this as the final event in a sequence",
+          "It means the purchase is expensive",
+          "It asks a question"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "最後 means finally / in the end."
+      }
+    ],
+    "tips": [
+      "Read once without pinyin before revealing it.",
+      "Use the evidence links after answering to unpack the sentence structure."
+    ],
+    "grammarFocus": [
+      "枝 for pens and 本 for notebooks",
+      "最後 for sequence"
+    ],
+    "glosses": {}
   }
 ]
