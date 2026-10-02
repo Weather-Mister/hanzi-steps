@@ -95,6 +95,23 @@ let server,browser,page;
  await practice();await page.getByRole('button',{name:/Reading Path Stories/}).click();assert.equal(await page.getByRole('button',{name:'Start reading',exact:true}).count(),44);
  await page.getByRole('button',{name:'Start reading',exact:true}).first().click();await page.getByRole('dialog').waitFor({state:'hidden'});await page.getByRole('heading',{name:'A plan everyone can enjoy',level:1}).waitFor();assert.equal(await page.locator('.reading-walkthrough').count(),0);
  await page.getByRole('button',{name:'Back to the unit',exact:true}).click();
+ // Completed units expose both optional unit-scoped challenges side by side on mobile.
+ const unitMega=page.getByRole('button',{name:/^Start Unit 4 Mega Challenge$/});
+ const unitPinyin=page.getByRole('button',{name:/^Start Unit 4 Pinyin Gauntlet$/});
+ assert.equal(await unitMega.count(),1);assert.equal(await unitPinyin.count(),1);
+ const [megaBox,pinyinBox]=await Promise.all([unitMega.boundingBox(),unitPinyin.boundingBox()]);
+ assert.ok(megaBox&&pinyinBox);
+ assert.ok(Math.abs(megaBox.y-pinyinBox.y)<2,'unit challenge cards should share one row');
+ assert.ok(megaBox.x<pinyinBox.x,'Mega Challenge should sit to the left of Pinyin Gauntlet');
+ await unitMega.click();
+ await page.getByRole('heading',{name:'Mega Challenge · Unit 4',exact:true}).waitFor();
+ await page.getByText('Unit 4 only.',{exact:false}).waitFor();
+ await page.keyboard.press('Escape');
+ await unitPinyin.click();
+ await page.getByRole('heading',{name:'Pinyin Gauntlet · Unit 4',exact:true}).waitFor();
+ await page.getByText('Unit 4 only.',{exact:false}).waitFor();
+ await page.keyboard.press('Escape');
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  // Global reference access remains, but learned-word details use completed lessons.
  await page.getByRole('button',{name:'Search by pinyin'}).click();await page.getByRole('textbox').fill('shang');
  await page.locator('.character-meanings').first().waitFor();await page.locator('.character-meanings summary').first().click();
