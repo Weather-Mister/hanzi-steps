@@ -103,6 +103,7 @@ let server,browser,page;
  assert.ok(megaBox&&pinyinBox);
  assert.ok(Math.abs(megaBox.y-pinyinBox.y)<2,'unit challenge cards should share one row');
  assert.ok(megaBox.x<pinyinBox.x,'Mega Challenge should sit to the left of Pinyin Gauntlet');
+ await page.screenshot({path:'test-results/connected-learning/unit-challenges-mobile.png',fullPage:true});
  await unitMega.click();
  await page.getByRole('heading',{name:'Mega Challenge · Unit 4',exact:true}).waitFor();
  await page.getByText('Unit 4 only.',{exact:false}).waitFor();
