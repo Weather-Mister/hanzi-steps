@@ -1,12 +1,12 @@
 # Connected learning: review and verification record
 
-Baseline: `abb1b992b67a310f52ca0140ae7d4beabb67ab8d`. Review date: 2026-09-30.
+Baseline: `abb1b992b67a310f52ca0140ae7d4beabb67ab8d`. Original review date: 2026-09-30. Reading-expansion review: 2026-10-02.
 
 ## Scope and semantic review limits
 
 This is the implementation agent's editorial review, not an independent native-speaker sign-off. The fixture in `validation/fixtures/connected-materials-reviewed.json` records the exact reviewed payloads. Hashes detect changed content; they cannot prove correct pronunciation, natural translation or uniquely defensible answers. Do not refresh the fixture merely to make a failing test green.
 
-The 14 existing readings retain their original Chinese, translations, pinyin, question keys, evidence and progress versions. They are authored supplementary course practice, not claimed textbook extracts. Reading contracts add segmentation and explicit grammar dependencies. The listening phrases and sense examples point directly to existing curriculum phrases; no editable copies of spoken text or canonical answers were introduced.
+The 14 existing readings retain their original Chinese, translations, pinyin, question keys, evidence and progress versions. The 2026-10-02 reading expansion adds 30 checkpoints for 44 total: three-reading sets at the intended milestones, the preserved Unit 44 and Unit 48 bonus readings, and three readings at Book 2 Unit 4. The added checkpoints are authored supplementary course practice, not claimed textbook extracts. Their reading lines reuse already learner-facing canonical phrase records through `sourcePhraseId`; validation pins Traditional text, pinyin, meaning and source chronology so a reading cannot silently redefine curriculum ownership or pull a future phrase backward. Each added checkpoint now has five lines, four questions, explicit evidence, and corrective explanations above the established minimum. Reading contracts add segmentation and explicit grammar dependencies. The listening phrases and sense examples continue to point directly to existing curriculum phrases; no editable copies of spoken text or canonical answers were introduced.
 
 ## Reading adjudication
 
@@ -28,6 +28,12 @@ Each row records the comprehension facts checked against the passage and its exi
 | U44 | Typhoon/wind changes plan; less cold but windier; umbrella insufficient; dinner after rain | 下 is the separated taught 下雨 construction; a future conditional 了 does not assert the rain has already stopped. |
 | U48 | Nose improving but headache remains; medicine already collected; lunch/medicine/rest; evening visit | Advice, completed collection and planned sequence are distinct. This is fictional language practice, not medical guidance. |
 | Book 2 U4 | Post-office start; forward/first right; lane behind store; call on arrival | Store is a landmark, not the destination. |
+
+### 2026-10-02 expanded-reading adjudication
+
+The 30 added checkpoints were reviewed as phrase-backed recombinations of material already taught by their owning unit. For every added line, the canonical source phrase exists in a learner-facing phrase/order step, is not later than the reading's unit boundary, and matches the reading's Traditional text, pinyin and English meaning exactly. The comprehension keys point to explicit line evidence; distractors do not alter the source meaning. Feedback was strengthened where the prior wording merely restated a short phrase, including quantity (三個包子), cause-result (我怕辣…所以), negated arrival (不到我家來), location (在商店買東西), start/end time, holiday duration, relative-clause identification, 上個月, unrestricted 什麼時候 + 都, negative-indefinite 誰也沒來 / 哪裡都沒去, duration 住了一年, approximate 差不多十二月, and sequence-final 最後.
+
+The milestone structure is intentionally three readings per set rather than three independent ownership points. Unit 44 and Unit 48 remain single bonus readings. Legacy reading IDs and `version: 1` are unchanged, so old reading progress keys continue to resolve independently from the new checkpoints.
 
 Unknown/support material remains non-productive. The three scene selections (U13, U31, Book 2 U4) contain no unfamiliar support glosses; a test rejects adding a supported scene until a pre-listening support interaction is designed. All scenes keep the original four questions and translations.
 
@@ -67,7 +73,7 @@ Every learned-word row is derived from canonical vocabulary and its teaching les
 - `validation/connected-materials.test.mjs`: exact passage spans, classification, cumulative and sparse prerequisites, every lesson boundary, safe scene selection, character/word relations, sense gates, source resolution, pinyin parity, adaptive opt-in limits and semantic drift mutations.
 - Existing reading tests: valid keys/evidence, known/support character coverage, storage corruption/version/profile handling, no support-only productive ownership.
 - `tests/browser/connected-learning.cjs`: mobile/desktop paths and card words, natural audio, hidden transcript, disabled pre-audio grading, numbered pinyin, two-play challenge, missing voice and synthesis errors, slow-assisted results, namespaced mastery, scene submission/resume/replay, adaptive opt-in, fresh locks, no page errors.
-- `tests/browser/readings.cjs`: all 14 entry points, hidden pinyin, word/character help, submission-before-breakdown, saved answers, revisit/reset, mobile/desktop overflow and fresh-state locks. Selectors were brought up to date with the existing combined book/unit picker.
+- `tests/browser/readings.cjs`: all 44 entry points, hidden pinyin, word/character help, submission-before-breakdown, saved answers, revisit/reset, mobile/desktop overflow and fresh-state locks. Selectors were brought up to date with the existing combined book/unit picker.
 - Browser speech is a deterministic mock. Real Taiwanese device voice availability, quality and browser TTS differences still require real-device checks. A failed/cancelled mock play cannot consume a replay or earn mastery.
 - GitHub browser QA now runs both suites; curriculum CI discovers the new validation automatically.
 
