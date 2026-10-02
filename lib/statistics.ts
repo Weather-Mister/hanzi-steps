@@ -8,6 +8,7 @@ export type MostPracticedWord={
  pinyin:string;
  meaning:string;
  attempts:number;
+ unguidedRounds?:number;
 };
 
 export type PracticeModeStat={
