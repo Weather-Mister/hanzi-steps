@@ -4027,6 +4027,421 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "páshān",
       "meaning": "hike; climb a mountain"
     }
+  ],
+  "近": [
+    {
+      "text": "附近",
+      "pinyin": "fùjìn",
+      "meaning": "nearby; the surrounding area"
+    },
+    {
+      "text": "最近",
+      "pinyin": "zuìjìn",
+      "meaning": "recently; lately"
+    },
+    {
+      "text": "接近",
+      "pinyin": "jiējìn",
+      "meaning": "approach; be close to"
+    },
+    {
+      "text": "近來",
+      "pinyin": "jìnlái",
+      "meaning": "recently"
+    }
+  ],
+  "午": [
+    {
+      "text": "中午",
+      "pinyin": "zhōngwǔ",
+      "meaning": "noon"
+    },
+    {
+      "text": "下午",
+      "pinyin": "xiàwǔ",
+      "meaning": "afternoon"
+    },
+    {
+      "text": "午餐",
+      "pinyin": "wǔcān",
+      "meaning": "lunch"
+    },
+    {
+      "text": "午休",
+      "pinyin": "wǔxiū",
+      "meaning": "lunch break; midday rest"
+    }
+  ],
+  "次": [
+    {
+      "text": "下次",
+      "pinyin": "xià cì",
+      "meaning": "next time"
+    },
+    {
+      "text": "上次",
+      "pinyin": "shàng cì",
+      "meaning": "last time"
+    },
+    {
+      "text": "這次",
+      "pinyin": "zhè cì",
+      "meaning": "this time"
+    },
+    {
+      "text": "一次",
+      "pinyin": "yí cì",
+      "meaning": "once"
+    },
+    {
+      "text": "每次",
+      "pinyin": "měi cì",
+      "meaning": "every time"
+    }
+  ],
+  "每": [
+    {
+      "text": "每天",
+      "pinyin": "měitiān",
+      "meaning": "every day"
+    },
+    {
+      "text": "每次",
+      "pinyin": "měi cì",
+      "meaning": "every time"
+    },
+    {
+      "text": "每年",
+      "pinyin": "měinián",
+      "meaning": "every year"
+    },
+    {
+      "text": "每個",
+      "pinyin": "měi ge",
+      "meaning": "every; each one"
+    }
+  ],
+  "火": [
+    {
+      "text": "火車",
+      "pinyin": "huǒchē",
+      "meaning": "train"
+    },
+    {
+      "text": "火鍋",
+      "pinyin": "huǒguō",
+      "meaning": "hot pot"
+    },
+    {
+      "text": "火災",
+      "pinyin": "huǒzāi",
+      "meaning": "fire; fire disaster"
+    },
+    {
+      "text": "生火",
+      "pinyin": "shēnghuǒ",
+      "meaning": "start a fire"
+    }
+  ],
+  "票": [
+    {
+      "text": "車票",
+      "pinyin": "chēpiào",
+      "meaning": "transportation ticket"
+    },
+    {
+      "text": "機票",
+      "pinyin": "jīpiào",
+      "meaning": "airline ticket"
+    },
+    {
+      "text": "門票",
+      "pinyin": "ménpiào",
+      "meaning": "admission ticket"
+    },
+    {
+      "text": "買票",
+      "pinyin": "mǎipiào",
+      "meaning": "buy a ticket"
+    }
+  ],
+  "鐵": [
+    {
+      "text": "高鐵",
+      "pinyin": "gāotiě",
+      "meaning": "High Speed Rail (HSR)"
+    },
+    {
+      "text": "鐵路",
+      "pinyin": "tiělù",
+      "meaning": "railway"
+    },
+    {
+      "text": "鐵門",
+      "pinyin": "tiěmén",
+      "meaning": "metal gate; iron door"
+    }
+  ],
+  "觀": [
+    {
+      "text": "參觀",
+      "pinyin": "cānguān",
+      "meaning": "to visit (an institution or site)"
+    },
+    {
+      "text": "觀光",
+      "pinyin": "guānguāng",
+      "meaning": "sightseeing; tourism"
+    },
+    {
+      "text": "觀眾",
+      "pinyin": "guānzhòng",
+      "meaning": "audience; spectator"
+    },
+    {
+      "text": "觀念",
+      "pinyin": "guānniàn",
+      "meaning": "concept; idea"
+    }
+  ],
+  "程": [
+    {
+      "text": "計程車",
+      "pinyin": "jìchéngchē",
+      "meaning": "taxi"
+    },
+    {
+      "text": "課程",
+      "pinyin": "kèchéng",
+      "meaning": "course; curriculum"
+    },
+    {
+      "text": "工程",
+      "pinyin": "gōngchéng",
+      "meaning": "engineering; project"
+    },
+    {
+      "text": "程度",
+      "pinyin": "chéngdù",
+      "meaning": "degree; level"
+    }
+  ],
+  "古": [
+    {
+      "text": "古代",
+      "pinyin": "gǔdài",
+      "meaning": "ancient times; ancient"
+    },
+    {
+      "text": "古老",
+      "pinyin": "gǔlǎo",
+      "meaning": "ancient; old"
+    },
+    {
+      "text": "古蹟",
+      "pinyin": "gǔjī",
+      "meaning": "historic site; monument"
+    },
+    {
+      "text": "古人",
+      "pinyin": "gǔrén",
+      "meaning": "people of ancient times"
+    }
+  ],
+  "星": [
+    {
+      "text": "星期",
+      "pinyin": "xīngqí",
+      "meaning": "week"
+    },
+    {
+      "text": "星星",
+      "pinyin": "xīngxing",
+      "meaning": "star"
+    },
+    {
+      "text": "明星",
+      "pinyin": "míngxīng",
+      "meaning": "celebrity; star"
+    }
+  ],
+  "期": [
+    {
+      "text": "星期",
+      "pinyin": "xīngqí",
+      "meaning": "week"
+    },
+    {
+      "text": "日期",
+      "pinyin": "rìqí",
+      "meaning": "date"
+    },
+    {
+      "text": "學期",
+      "pinyin": "xuéqí",
+      "meaning": "school term; semester"
+    },
+    {
+      "text": "期待",
+      "pinyin": "qídài",
+      "meaning": "look forward to; expect"
+    }
+  ],
+  "放": [
+    {
+      "text": "放假",
+      "pinyin": "fàngjià",
+      "meaning": "to have a holiday; be on break"
+    },
+    {
+      "text": "放心",
+      "pinyin": "fàngxīn",
+      "meaning": "feel relieved; rest assured"
+    },
+    {
+      "text": "放下",
+      "pinyin": "fàngxià",
+      "meaning": "put down; let go"
+    },
+    {
+      "text": "放學",
+      "pinyin": "fàngxué",
+      "meaning": "school lets out; finish school"
+    }
+  ],
+  "假": [
+    {
+      "text": "放假",
+      "pinyin": "fàngjià",
+      "meaning": "to have a holiday; be on break"
+    },
+    {
+      "text": "假日",
+      "pinyin": "jiàrì",
+      "meaning": "holiday; day off"
+    },
+    {
+      "text": "請假",
+      "pinyin": "qǐngjià",
+      "meaning": "ask for leave; take time off"
+    },
+    {
+      "text": "暑假",
+      "pinyin": "shǔjià",
+      "meaning": "summer vacation"
+    }
+  ],
+  "出": [
+    {
+      "text": "出去",
+      "pinyin": "chūqù",
+      "meaning": "to go out"
+    },
+    {
+      "text": "出來",
+      "pinyin": "chūlái",
+      "meaning": "come out"
+    },
+    {
+      "text": "出門",
+      "pinyin": "chūmén",
+      "meaning": "go out; leave home"
+    },
+    {
+      "text": "出發",
+      "pinyin": "chūfā",
+      "meaning": "set out; depart"
+    },
+    {
+      "text": "出國",
+      "pinyin": "chūguó",
+      "meaning": "go abroad"
+    }
+  ],
+  "算": [
+    {
+      "text": "打算",
+      "pinyin": "dǎsuàn",
+      "meaning": "to plan; intend to"
+    },
+    {
+      "text": "計算",
+      "pinyin": "jìsuàn",
+      "meaning": "calculate"
+    },
+    {
+      "text": "算了",
+      "pinyin": "suàn le",
+      "meaning": "forget it; let it go"
+    },
+    {
+      "text": "算是",
+      "pinyin": "suànshì",
+      "meaning": "count as; be considered"
+    }
+  ],
+  "功": [
+    {
+      "text": "功課",
+      "pinyin": "gōngkè",
+      "meaning": "homework"
+    },
+    {
+      "text": "成功",
+      "pinyin": "chénggōng",
+      "meaning": "succeed; success"
+    },
+    {
+      "text": "功能",
+      "pinyin": "gōngnéng",
+      "meaning": "function; feature"
+    }
+  ],
+  "概": [
+    {
+      "text": "大概",
+      "pinyin": "dàgài",
+      "meaning": "approximately; probably"
+    },
+    {
+      "text": "概念",
+      "pinyin": "gàiniàn",
+      "meaning": "concept; idea"
+    }
+  ],
+  "建": [
+    {
+      "text": "建議",
+      "pinyin": "jiànyì",
+      "meaning": "suggestion; advice"
+    },
+    {
+      "text": "建築",
+      "pinyin": "jiànzhú",
+      "meaning": "building; architecture; build"
+    },
+    {
+      "text": "建立",
+      "pinyin": "jiànlì",
+      "meaning": "establish; set up"
+    }
+  ],
+  "議": [
+    {
+      "text": "建議",
+      "pinyin": "jiànyì",
+      "meaning": "suggestion; advice"
+    },
+    {
+      "text": "會議",
+      "pinyin": "huìyì",
+      "meaning": "meeting; conference"
+    },
+    {
+      "text": "議題",
+      "pinyin": "yìtí",
+      "meaning": "issue; topic for discussion"
+    }
   ]
 };
 
