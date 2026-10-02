@@ -7,10 +7,14 @@ import {readingPrerequisites} from '../lib/curriculum-relations.ts';
 const index=JSON.parse(readFileSync(new URL('../course/index.json',import.meta.url),'utf8'));
 const order=index.order.map(row=>row[1]);
 const han=/\p{Script=Han}/u;
-test('14 unique checkpoints from Unit 10, with no gap larger than four units',()=>{
- assert.equal(readingCheckpoints.length,14);
- assert.equal(new Set(readingCheckpoints.map(r=>r.id)).size,14);
- assert.deepEqual(readingCheckpoints.map(r=>r.unitId),[10,13,16,19,22,25,28,31,34,37,40,44,48].map(n=>`unit-${n}`).concat('book-2-unit-4'));
+test('44 unique checkpoints follow the three-reading milestone rhythm and preserve bonus readings',()=>{
+ assert.equal(readingCheckpoints.length,44);
+ assert.equal(new Set(readingCheckpoints.map(r=>r.id)).size,44);
+ const milestones=[10,13,16,19,22,25,28,31,34,37,40,43,46].map(n=>`unit-${n}`);
+ for(const unitId of milestones)assert.equal(readingCheckpoints.filter(r=>r.unitId===unitId).length,3,unitId);
+ assert.equal(readingCheckpoints.filter(r=>r.unitId==='unit-44').length,1);
+ assert.equal(readingCheckpoints.filter(r=>r.unitId==='unit-48').length,1);
+ assert.equal(readingCheckpoints.filter(r=>r.unitId==='book-2-unit-4').length,3);
 });
 for(const r of readingCheckpoints){
  test(`${r.id}: all text has help, unknown language is explicitly supported, questions have evidence`,()=>{
