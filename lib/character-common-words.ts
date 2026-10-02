@@ -5952,6 +5952,382 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "bāng wǒ",
       "meaning": "help me; do something for me"
     }
+  ],
+  "以": [
+    {
+      "text": "可以",
+      "pinyin": "kěyǐ",
+      "meaning": "can (possibility)"
+    },
+    {
+      "text": "所以",
+      "pinyin": "suǒyǐ",
+      "meaning": "so; therefore"
+    },
+    {
+      "text": "以前",
+      "pinyin": "yǐqián",
+      "meaning": "before; in the past"
+    },
+    {
+      "text": "以後",
+      "pinyin": "yǐhòu",
+      "meaning": "in the future"
+    },
+    {
+      "text": "以為",
+      "pinyin": "yǐwéi",
+      "meaning": "think; mistakenly assume"
+    }
+  ],
+  "沒": [
+    {
+      "text": "沒有",
+      "pinyin": "méiyǒu",
+      "meaning": "do not have; there is not / are no"
+    },
+    {
+      "text": "沒問題",
+      "pinyin": "méi wèntí",
+      "meaning": "no problem"
+    },
+    {
+      "text": "沒關係",
+      "pinyin": "méi guānxì",
+      "meaning": "no problem; it doesn't matter"
+    },
+    {
+      "text": "沒事",
+      "pinyin": "méishì",
+      "meaning": "nothing is wrong; be free"
+    }
+  ],
+  "那": [
+    {
+      "text": "那裡",
+      "pinyin": "nàlǐ",
+      "meaning": "there"
+    },
+    {
+      "text": "那麼",
+      "pinyin": "nàme",
+      "meaning": "then; in that case"
+    },
+    {
+      "text": "那邊",
+      "pinyin": "nàbiān",
+      "meaning": "over there"
+    },
+    {
+      "text": "那個",
+      "pinyin": "nà ge",
+      "meaning": "that one"
+    }
+  ],
+  "便": [
+    {
+      "text": "便宜",
+      "pinyin": "piányí",
+      "meaning": "inexpensive; cheap"
+    },
+    {
+      "text": "方便",
+      "pinyin": "fāngbiàn",
+      "meaning": "convenient"
+    },
+    {
+      "text": "便利",
+      "pinyin": "biànlì",
+      "meaning": "convenient"
+    }
+  ],
+  "商": [
+    {
+      "text": "商店",
+      "pinyin": "shāngdiàn",
+      "meaning": "shop; store"
+    },
+    {
+      "text": "超商",
+      "pinyin": "chāoshāng",
+      "meaning": "convenience store (colloquial Taiwan)"
+    },
+    {
+      "text": "商人",
+      "pinyin": "shāngrén",
+      "meaning": "businessperson; merchant"
+    },
+    {
+      "text": "商業",
+      "pinyin": "shāngyè",
+      "meaning": "business; commerce"
+    }
+  ],
+  "歡": [
+    {
+      "text": "喜歡",
+      "pinyin": "xǐhuān",
+      "meaning": "like"
+    },
+    {
+      "text": "歡迎",
+      "pinyin": "huānyíng",
+      "meaning": "welcome"
+    },
+    {
+      "text": "歡樂",
+      "pinyin": "huānlè",
+      "meaning": "joyful; happy"
+    }
+  ],
+  "泳": [
+    {
+      "text": "游泳",
+      "pinyin": "yóuyǒng",
+      "meaning": "swim"
+    },
+    {
+      "text": "游泳池",
+      "pinyin": "yóuyǒngchí",
+      "meaning": "swimming pool"
+    },
+    {
+      "text": "泳衣",
+      "pinyin": "yǒngyī",
+      "meaning": "swimsuit"
+    },
+    {
+      "text": "泳池",
+      "pinyin": "yǒngchí",
+      "meaning": "swimming pool"
+    }
+  ],
+  "少": [
+    {
+      "text": "多少",
+      "pinyin": "duōshǎo",
+      "meaning": "how much; how many"
+    },
+    {
+      "text": "不少",
+      "pinyin": "bù shǎo",
+      "meaning": "quite a few; quite a lot"
+    },
+    {
+      "text": "少數",
+      "pinyin": "shǎoshù",
+      "meaning": "minority; small number"
+    },
+    {
+      "text": "很少",
+      "pinyin": "hěn shǎo",
+      "meaning": "very little; rarely"
+    }
+  ],
+  "共": [
+    {
+      "text": "一共",
+      "pinyin": "yígòng",
+      "meaning": "altogether; in total"
+    },
+    {
+      "text": "公共",
+      "pinyin": "gōnggòng",
+      "meaning": "public; shared"
+    },
+    {
+      "text": "共同",
+      "pinyin": "gòngtóng",
+      "meaning": "common; together"
+    }
+  ],
+  "為": [
+    {
+      "text": "為什麼",
+      "pinyin": "wèishénme",
+      "meaning": "why"
+    },
+    {
+      "text": "因為",
+      "pinyin": "yīnwèi",
+      "meaning": "because"
+    },
+    {
+      "text": "認為",
+      "pinyin": "rènwéi",
+      "meaning": "think; consider"
+    },
+    {
+      "text": "為了",
+      "pinyin": "wèile",
+      "meaning": "in order to; for the sake of"
+    }
+  ],
+  "麵": [
+    {
+      "text": "麵店",
+      "pinyin": "miàndiàn",
+      "meaning": "noodle shop"
+    },
+    {
+      "text": "麵線",
+      "pinyin": "miànxiàn",
+      "meaning": "extra-fine noodles"
+    },
+    {
+      "text": "牛肉麵",
+      "pinyin": "niúròumiàn",
+      "meaning": "beef noodle soup"
+    },
+    {
+      "text": "泡麵",
+      "pinyin": "pàomiàn",
+      "meaning": "instant noodles"
+    }
+  ],
+  "餐": [
+    {
+      "text": "餐廳",
+      "pinyin": "cāntīng",
+      "meaning": "restaurant"
+    },
+    {
+      "text": "午餐",
+      "pinyin": "wǔcān",
+      "meaning": "lunch"
+    },
+    {
+      "text": "早餐",
+      "pinyin": "zǎocān",
+      "meaning": "breakfast"
+    },
+    {
+      "text": "晚餐",
+      "pinyin": "wǎncān",
+      "meaning": "dinner"
+    }
+  ],
+  "廳": [
+    {
+      "text": "餐廳",
+      "pinyin": "cāntīng",
+      "meaning": "restaurant"
+    },
+    {
+      "text": "客廳",
+      "pinyin": "kètīng",
+      "meaning": "living room"
+    },
+    {
+      "text": "大廳",
+      "pinyin": "dàtīng",
+      "meaning": "lobby; main hall"
+    }
+  ],
+  "定": [
+    {
+      "text": "一定",
+      "pinyin": "yídìng",
+      "meaning": "definitely; really must, in 一定要"
+    },
+    {
+      "text": "決定",
+      "pinyin": "juédìng",
+      "meaning": "to decide"
+    },
+    {
+      "text": "確定",
+      "pinyin": "quèdìng",
+      "meaning": "confirm; certain"
+    },
+    {
+      "text": "定位",
+      "pinyin": "dìngwèi",
+      "meaning": "position; positioning"
+    }
+  ],
+  "現": [
+    {
+      "text": "現在",
+      "pinyin": "xiànzài",
+      "meaning": "now"
+    },
+    {
+      "text": "發現",
+      "pinyin": "fāxiàn",
+      "meaning": "discover; notice"
+    },
+    {
+      "text": "現金",
+      "pinyin": "xiànjīn",
+      "meaning": "cash"
+    },
+    {
+      "text": "出現",
+      "pinyin": "chūxiàn",
+      "meaning": "appear; show up"
+    }
+  ],
+  "朋": [
+    {
+      "text": "朋友",
+      "pinyin": "péngyǒu",
+      "meaning": "friend"
+    },
+    {
+      "text": "女朋友",
+      "pinyin": "nǚpéngyou",
+      "meaning": "girlfriend"
+    },
+    {
+      "text": "男朋友",
+      "pinyin": "nánpéngyǒu",
+      "meaning": "boyfriend"
+    }
+  ],
+  "比": [
+    {
+      "text": "比賽",
+      "pinyin": "bǐsài",
+      "meaning": "game; competition"
+    },
+    {
+      "text": "比較",
+      "pinyin": "bǐjiào",
+      "meaning": "comparatively; relatively; more"
+    },
+    {
+      "text": "比如",
+      "pinyin": "bǐrú",
+      "meaning": "for example"
+    },
+    {
+      "text": "比例",
+      "pinyin": "bǐlì",
+      "meaning": "ratio; proportion"
+    }
+  ],
+  "思": [
+    {
+      "text": "意思",
+      "pinyin": "yìsi",
+      "meaning": "meaning"
+    },
+    {
+      "text": "不好意思",
+      "pinyin": "bù hǎoyìsi",
+      "meaning": "sorry; excuse me"
+    },
+    {
+      "text": "思考",
+      "pinyin": "sīkǎo",
+      "meaning": "think; consider"
+    },
+    {
+      "text": "思念",
+      "pinyin": "sīniàn",
+      "meaning": "miss; long for"
+    }
   ]
 };
 
