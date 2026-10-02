@@ -2310,27 +2310,8 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 }
 .statistics-panel-heading>strong small{display:block;margin-top:5px;font-size:.62rem;font-weight:750;color:#7a879a}
 
-.statistics-weekly-chart{
- height:190px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:end;gap:7px;
- padding:12px 10px 2px;border-radius:14px;background:linear-gradient(180deg,var(--unit-surface),#fff);
- border:1px solid var(--unit-border)
-}
-.statistics-week-bar{height:100%;min-width:0;display:grid;grid-template-rows:20px minmax(0,1fr) 20px;align-items:end;text-align:center}
-.statistics-week-value{font-size:.62rem;font-weight:850;color:#738198;font-variant-numeric:tabular-nums}
-.statistics-week-column{
- height:100%;display:flex;align-items:flex-end;justify-content:center;
- border-bottom:1px solid #dce4ef
-}
-.statistics-week-column i{
- width:min(22px,72%);min-height:4px;display:block;border-radius:7px 7px 3px 3px;
- background:linear-gradient(180deg,var(--unit-accent),var(--unit-line));
- box-shadow:0 2px 0 var(--unit-depth);transition:height .25s ease
-}
-.statistics-week-column i[data-empty=true]{background:#dfe5ed;box-shadow:none}
-.statistics-week-bar small{overflow:hidden;white-space:nowrap;font-size:.57rem;color:#8590a2}
-
 .statistics-heatmap-wrap{
- margin-top:14px;display:grid;grid-template-columns:120px minmax(0,1fr);align-items:center;gap:13px
+ margin-top:2px;display:grid;grid-template-columns:120px minmax(0,1fr);align-items:center;gap:13px
 }
 .statistics-heatmap-copy span{display:block;font-size:.61rem;font-weight:900;letter-spacing:.07em;color:#62738b}
 .statistics-heatmap-copy small{display:block;margin-top:3px;font-size:.65rem;color:#8a96a7}
@@ -2429,8 +2410,6 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .statistics-streak-hero{grid-column:1 / -1}
  .statistics-quick-card{padding:12px}
  .statistics-quick-card strong{font-size:1.45rem}
- .statistics-weekly-chart{height:165px;gap:4px;padding-inline:5px}
- .statistics-week-column i{width:min(17px,76%)}
  .statistics-heatmap-wrap{grid-template-columns:1fr;gap:8px}
  .statistics-heatmap{justify-content:start;max-width:100%;overflow-x:auto;padding:2px}
  .statistics-mastery-panel{display:block}
@@ -2448,9 +2427,6 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .statistics-quick-card strong{font-size:1.25rem}
  .statistics-quick-card small{font-size:.6rem}
  .statistics-panel{padding:14px}
- .statistics-weekly-chart{height:150px}
- .statistics-week-value{font-size:.55rem}
- .statistics-week-bar small{font-size:.5rem}
  .statistics-rings{gap:2px}
  .statistics-ring strong{font-size:1.3rem}
  .statistics-ring span{font-size:.55rem}
