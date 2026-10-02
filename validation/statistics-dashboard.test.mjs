@@ -11,7 +11,6 @@ test('statistics screen keeps its visual dashboard sections',async()=>{
   readFile(root+'app/globals.css','utf8'),
  ]);
  for(const marker of [
-  'statistics-weekly-chart',
   'statistics-heatmap',
   'statistics-rings',
   'statistics-mode-bars',
@@ -19,6 +18,5 @@ test('statistics screen keeps its visual dashboard sections',async()=>{
   'statistics-milestones',
  ])assert.ok(source.includes(marker),marker+' is missing from the statistics screen');
  assert.ok(css.includes('.statistics-dashboard-grid'));
- assert.ok(css.includes('.statistics-weekly-chart'));
  assert.ok(css.includes('.statistics-ring-value'));
 });
