@@ -30,6 +30,7 @@ export function MegaChallenge({
  const [attempt,setAttempt]=useState(0);
  const [pinyinInput,setPinyinInput]=useState('');
  const [meaningRevealed,setMeaningRevealed]=useState(false);
+ const recordedResult=useRef(false);
 
  useEffect(()=>{
   if(!open||masteryLoading)return;
@@ -60,6 +61,7 @@ export function MegaChallenge({
   setGaveUp(false);
   setPinyinInput('');
   setMeaningRevealed(false);
+  recordedResult.current=false;
  }
 
  function finishCharacter(assisted:boolean){
