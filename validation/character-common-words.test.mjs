@@ -11,8 +11,8 @@ const courseIndex=JSON.parse(readFileSync(new URL('../course/index.json',import.
 test('common-word references are valid, curated, and progression-neutral',()=>{
  const keys=Object.keys(supplementaryCharacterCommonWords);
  const total=Object.values(supplementaryCharacterCommonWords).reduce((sum,items)=>sum+items.length,0);
- assert.ok(keys.length>=130,'expected a broad Book 1 audit, got '+keys.length+' characters');
- assert.ok(total>=550,'expected a substantial common-word reference layer, got '+total+' entries');
+ assert.ok(keys.length>=320,'expected a broad Book 1 audit, got '+keys.length+' characters');
+ assert.ok(total>=1200,'expected a substantial common-word reference layer, got '+total+' entries');
 
  for(const [char,items] of Object.entries(supplementaryCharacterCommonWords)){
   assert.ok(characters[char],'Unknown character card: '+char);
@@ -61,6 +61,26 @@ test('high-value Taiwan Mandarin references include the intended everyday exampl
  expectWords('氣',['天氣','冷氣','空氣']);
  expectWords('飯',['飯店','白飯']);
  expectWords('高',['高鐵','高中']);
+ expectWords('上',['上班','上課','上車']);
+ expectWords('不',['不要','不知道','不用']);
+ expectWords('行',['不行','旅行','銀行']);
+ expectWords('為',['為什麼','因為','認為']);
+ expectWords('吐',['吐司','嘔吐']);
+ expectWords('健',['健康','健身','健保']);
+ expectWords('禮',['禮物','禮貌','禮拜']);
+});
+
+test('Taiwan-standard reference readings keep verified contrasts and neutral tones straight',()=>{
+ const get=(char,text)=>characterCommonWords(char).find(item=>item.text===text);
+ assert.deepEqual(get('好','好好'),{text:'好好',pinyin:'hǎohǎo',meaning:'properly; carefully; well'});
+ assert.deepEqual(get('生','先生'),{text:'先生',pinyin:'xiānshēng',meaning:'Mr.; husband'});
+ assert.deepEqual(get('人','人家'),{text:'人家',pinyin:'rénjia',meaning:'other people; someone else'});
+ assert.deepEqual(get('笑','笑話'),{text:'笑話',pinyin:'xiàohuà',meaning:'joke'});
+ assert.deepEqual(get('頭','頭髮'),{text:'頭髮',pinyin:'tóufǎ',meaning:'hair'});
+ assert.equal(get('太','太太').pinyin,'tàitai');
+ assert.equal(get('試','試試').pinyin,'shìshi');
+ assert.equal(get('吐','吐司').pinyin,'tǔsī');
+ assert.equal(get('湯','湯匙').pinyin,'tāngchí');
 });
 
 test('future course words can be previewed as reference without becoming duplicate curriculum records',()=>{
