@@ -1753,6 +1753,22 @@ const unit:UnitData = {
           ],
           "answer": "謝謝你的關心。不用了。",
           "explanation": "This performs polite rejection using polite thanks-for-concern expression + polite-refusal function."
+        },
+        {
+          "type": "select",
+          "id": "u48-review-reading-59",
+          "prompt": "Read: 我吃了一包藥以後，睡得比昨天好。現在臉色比早上好得多了。 What improvement is described?",
+          "options": [
+            "The person slept better than yesterday and now looks much better than in the morning.",
+            "The person slept less and looks worse.",
+            "Only the medicine price changed."
+          ],
+          "answer": "The person slept better than yesterday and now looks much better than in the morning.",
+          "explanation": "睡得比昨天好 compares sleep quality; 臉色比早上好得多了 describes a much better complexion.",
+          "grammarIds": [
+            "u48-action-comparison-de",
+            "u48-comparison-degree"
+          ]
         }
       ]
     }
