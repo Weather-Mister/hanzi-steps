@@ -3,6 +3,8 @@ import test from 'node:test';
 import {books,units} from '../lib/curriculum.ts';
 import {
  adaptivePracticeItems,
+ learnedPracticeItems,
+ lessonOrderTokens,
  makeDailyTen,
  makeMegaCheckpoint,
  megaCheckpointCount,
@@ -103,6 +105,40 @@ test('sentence distractors avoid same-meaning synonyms that could create ambiguo
  const distractors=sentenceDistractors(phrase,items,'ambiguous-test',3);
  assert.equal(distractors.includes('姊姊'),false,String(distractors));
  assert.ok(distractors.includes('妹妹'),String(distractors));
+});
+
+
+test('Unit 11-48 lesson sentence builders shuffle the bank and add only already-learned distractors',()=>{
+ const completed=new Set();
+ for(const unit of units.filter(candidate=>(candidate.displayNumber??candidate.number)<=10)){
+  for(const lessonId of unit.lessonIds)completed.add(lessonId);
+ }
+
+ const answer=['茶','杯','一','要','我'];
+ const bank=lessonOrderTokens('u11-cups-09','u11-one-tea',answer,completed);
+ const repeated=lessonOrderTokens('u11-cups-09','u11-one-tea',answer,completed);
+ assert.deepEqual(repeated,bank,'the same lesson should keep a stable bank while the learner works');
+ assert.ok(bank.length>=answer.length+2,String(bank));
+ assert.notDeepEqual(bank,answer,'the answer tiles should not stay in their authored order');
+
+ for(const token of answer){
+  assert.equal(bank.filter(value=>value===token).length,answer.filter(value=>value===token).length,token);
+ }
+
+ const learnedTokens=new Set();
+ for(const learned of learnedPracticeItems(completed)){
+  learnedTokens.add(learned.traditional);
+  for(const token of learned.tokens||[])learnedTokens.add(token);
+ }
+ const extras=bank.filter(token=>!answer.includes(token));
+ assert.ok(extras.length>=2,String(bank));
+ assert.ok(extras.every(token=>learnedTokens.has(token)),String(extras));
+
+ assert.deepEqual(
+  lessonOrderTokens('u10-example','missing-phrase',['我','很好'],completed),
+  ['我','很好'],
+  'Units before 11 keep their authored beginner word bank',
+ );
 });
 
 test('Mega-mastered vocabulary is excluded from adaptive practice pools',()=>{
