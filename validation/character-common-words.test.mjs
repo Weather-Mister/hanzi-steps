@@ -49,6 +49,17 @@ test('the current course character audit leaves only the standalone interjection
  assert.ok(courseChars.length>=486);
 });
 
+
+test('published Book 2 Lesson 1 characters all have useful curated reference sets',()=>{
+ const lesson1Units=new Set(['book-2-unit-1','book-2-unit-2','book-2-unit-3','book-2-unit-4']);
+ const chars=Object.entries(courseIndex.characters).filter(([,row])=>lesson1Units.has(row[3])).map(([char])=>char);
+ assert.equal(chars.length,21);
+ for(const char of chars){
+  const items=characterCommonWords(char);
+  assert.ok(items.length>=3,char+': expected at least three curated common references');
+ }
+});
+
 test('high-value Taiwan Mandarin references include the intended everyday examples',()=>{
  const expectWords=(char,words)=>{
   const actual=new Set(characterCommonWords(char).map(item=>item.text));
