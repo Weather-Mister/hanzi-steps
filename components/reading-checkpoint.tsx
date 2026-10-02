@@ -5,14 +5,15 @@ import {Popover,PopoverContent,PopoverTrigger} from './ui/popover';
 import {KnowledgeNotes} from './knowledge-notes';
 import {knowledgeForReading} from '@/lib/cumulative-knowledge';
 import {characters,units} from '@/lib/curriculum';
-import {freshReadingProgress,readReadingProgress,readingScore,readingStorageKey,tokenizeReading,readingCharacterHelp,type ReadingCheckpoint as Reading,type ReadingProgress,type ReadingToken} from '@/lib/reading-checkpoints';
+import {freshReadingProgress,readReadingProgress,readingScore,readingStorageKey,tokenizeReading,readingCharacterHelp,readingsForUnit,type ReadingCheckpoint as Reading,type ReadingProgress,type ReadingToken} from '@/lib/reading-checkpoints';
 
 export function ReadingStage({reading,available,userKey,onStart}:{reading:Reading;available:boolean;userKey:string;onStart:()=>void}){
  const [phase,setPhase]=useState('read');
  const unit=units.find(candidate=>candidate.id===reading.unitId),unitNumber=unit?.displayNumber??unit?.number;
+ const set=readingsForUnit(reading.unitId),setIndex=set.findIndex(item=>item.id===reading.id),setLabel=set.length>1?` · ${setIndex+1}/${set.length}`:'';
  useEffect(()=>{try{setPhase(readReadingProgress(localStorage,userKey,reading).phase)}catch{}},[reading,userKey]);
  return <section className="reading-stage" aria-label="Reading checkpoint">
-  <span className="reading-stage-icon"><BookOpen size={25}/></span><div><p className="eyebrow">EXTRA STAGE · READING {phase==='review'&&'· COMPLETE'}</p><h3>{reading.title}</h3><p>{reading.kind} · {reading.questions.length} comprehension questions</p><button className="text-button" disabled={!available} onClick={onStart}>{!available?<><Lock size={15}/>Unlocks at end of Unit {unitNumber}</>:<>{phase==='review'?'Revisit reading':phase==='questions'?'Resume reading':'Start reading'}<ArrowRight size={17}/></>}</button></div>
+  <span className="reading-stage-icon"><BookOpen size={25}/></span><div><p className="eyebrow">EXTRA STAGE · READING{setLabel} {phase==='review'&&'· COMPLETE'}</p><h3>{reading.title}</h3><p>{reading.kind} · {reading.questions.length} comprehension questions</p><button className="text-button" disabled={!available} onClick={onStart}>{!available?<><Lock size={15}/>Unlocks at end of Unit {unitNumber}</>:<>{phase==='review'?'Revisit reading':phase==='questions'?'Resume reading':'Start reading'}<ArrowRight size={17}/></>}</button></div>
  </section>;
 }
 function Word({token,onHelp,reading}:{token:ReadingToken;onHelp:()=>void;reading:Reading}){
