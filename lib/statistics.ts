@@ -46,10 +46,6 @@ function dateIndex(day:string){
  return Number.isFinite(value)?Math.floor(value/DAY):0;
 }
 function indexDay(index:number){return new Date(index*DAY).toISOString().slice(0,10)}
-function compactDate(day:string){
- const date=new Date(day+'T00:00:00Z');
- return new Intl.DateTimeFormat('en',{month:'short',day:'numeric',timeZone:'UTC'}).format(date);
-}
 
 export function learningStatistics(args:{
  completed:Set<string>;
@@ -122,17 +118,6 @@ export function learningStatistics(args:{
   const date=indexDay(index);
   return {date,active:studySet.has(date),today:index===todayIndex};
  });
- const weekStart=todayIndex-((new Date(todayIndex*DAY).getUTCDay()+6)%7);
- const weeklyActivity=Array.from({length:12},(_,offset)=>{
-  const start=weekStart-(11-offset)*7;
-  const days=Array.from({length:7},(_,i)=>indexDay(start+i));
-  return {
-   start:days[0],
-   label:compactDate(days[0]),
-   activeDays:days.filter(day=>studySet.has(day)).length,
-  };
- });
-
  const practiceByMode=[...practiceModeMap.values()].filter(row=>row.attempts>0)
   .sort((a,b)=>b.attempts-a.attempts||a.label.localeCompare(b.label));
 
@@ -159,6 +144,5 @@ export function learningStatistics(args:{
   topPracticedWords,
   practiceByMode,
   activityGrid,
-  weeklyActivity,
  };
 }
