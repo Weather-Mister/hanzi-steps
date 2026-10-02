@@ -5,6 +5,13 @@ import {characterOwners,grammarTeaching,knownAtUnit,lessonPosition,meetsPrerequi
 import {phraseGrammarLinks} from '../course/enrichment/knowledge.ts';
 import type {ReadingContract,SentenceRef,TokenStatus} from '../course/materials/schema.ts';
 export const readingContracts=rawContracts as Record<string,ReadingContract>;
+type ReadingPayload={
+ id:string;
+ unitId:string;
+ lines:Array<{text:string;pinyin:string;translation:string;note:string;sourcePhraseId?:string}>;
+ glosses:Record<string,{pinyin:string;meaning:string;unfamiliar?:boolean}>;
+};
+const readingData=readings as ReadingPayload[];
 export function resolveSentence(ref:SentenceRef){
  if(ref.kind==='phrase'){
   const phrase=phrases[ref.id];if(!phrase)return undefined;
@@ -12,7 +19,7 @@ export function resolveSentence(ref:SentenceRef){
   if(!source)return undefined;
   return {id:'phrase:'+ref.id,text:phrase.text,pinyin:phrase.pinyin,meaning:phrase.meaning,note:phrase.note,lessonId:source.id,unitId:source.unitId!,productive:phrase.practice!==false,grammarIds:[...new Set([...(phrase.grammarIds||[]),...(phraseGrammarLinks[ref.id]||[])])]};
  }
- const reading=readings.find(r=>r.id===ref.readingId),line=reading?.lines[ref.line];
+ const reading=readingData.find(r=>r.id===ref.readingId),line=reading?.lines[ref.line];
  if(!reading||!line)return undefined;
  return {id:ref.readingId+':'+ref.line,text:line.text,pinyin:line.pinyin,meaning:line.translation,note:line.note,lessonId:lessons.findLast(l=>l.unitId===reading.unitId)?.id||'',unitId:reading.unitId,productive:false,grammarIds:readingContracts[reading.id]?.grammarIds||[]};
 }
@@ -22,7 +29,7 @@ export function sentenceAvailable(ref:SentenceRef,completed:Set<string>):boolean
 }
 export function readingTokenStatus(readingId:string,text:string):TokenStatus{
  if(!/\p{Script=Han}/u.test(text))return 'punctuation';
- const reading=readings.find(r=>r.id===readingId);if(!reading)return 'unclassified';
+ const reading=readingData.find(r=>r.id===readingId);if(!reading)return 'unclassified';
  const gloss=(reading.glosses as Record<string,{unfamiliar?:boolean}>)[text];
  if(gloss?.unfamiliar)return 'support-only';
  const contextual=readingContracts[readingId]?.contextualForms?.[text];
@@ -36,7 +43,7 @@ export function readingTokenStatus(readingId:string,text:string):TokenStatus{
 /** Structural safety only. Reviewed semantic fixtures preserve human adjudication. */
 export function validateReadingContracts():string[]{
  const errors:string[]=[];
- for(const r of readings){
+ for(const r of readingData){
   const c=readingContracts[r.id];
   if(!c){errors.push(r.id+': missing contract');continue}
   if(c.origin.kind!=='authored-supplement'||!c.origin.note)errors.push(r.id+': missing origin');
