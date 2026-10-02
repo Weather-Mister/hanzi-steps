@@ -44,8 +44,19 @@ test('statistics summarize streaks, learned/mastered words, and practice favorit
  assert.equal(stats.completedUnits,3);
  assert.equal(stats.studyDays,3);
  assert.equal(stats.totalPracticeAttempts,3);
+ assert.equal(stats.totalCorrect,3);
+ assert.equal(stats.accuracy,100);
+ assert.equal(stats.assistedRate,33);
  assert.equal(stats.mostPracticedWord?.id,target.id);
  assert.equal(stats.mostPracticedWord?.attempts,3);
+ assert.equal(stats.topPracticedWords[0]?.id,target.id);
+ assert.equal(stats.practiceByMode.find(row=>row.mode==='handwriting')?.attempts,2);
+ assert.equal(stats.activityGrid.length,84);
+ assert.equal(stats.activityGrid.filter(day=>day.active).length,3);
+ assert.equal(stats.weeklyActivity.length,12);
+ assert.equal(stats.weeklyActivity.at(-1)?.activeDays,3);
+ assert.equal(stats.masteredRate,Math.round(1/learned.length*100));
+ assert.equal(stats.pinyinMasteredRate,Math.round(1/learned.length*100));
 });
 
 test('statistics do not invent a most-practiced word without tracked word attempts',()=>{
@@ -64,4 +75,10 @@ test('statistics do not invent a most-practiced word without tracked word attemp
  assert.equal(stats.mostPracticedWord,null);
  assert.equal(stats.streak.currentStart,null);
  assert.equal(stats.totalPracticeAttempts,0);
+ assert.equal(stats.accuracy,0);
+ assert.equal(stats.assistedRate,0);
+ assert.deepEqual(stats.topPracticedWords,[]);
+ assert.deepEqual(stats.practiceByMode,[]);
+ assert.equal(stats.activityGrid.length,84);
+ assert.equal(stats.weeklyActivity.length,12);
 });
