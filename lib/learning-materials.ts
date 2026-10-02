@@ -43,8 +43,19 @@ export function validateReadingContracts():string[]{
   if(c.segments.length!==r.lines.length)errors.push(r.id+': segment line count');
   for(const [i,line] of r.lines.entries()){
    const segments=c.segments[i]||[];
-   if(segments.join('')!==line.text)errors.push(r.id+': text drift on line '+i);
-   for(const text of segments){const status=readingTokenStatus(r.id,text);if(status==='unclassified'||status==='forbidden-future')errors.push(r.id+': '+status+' '+text)}
+   if(line.sourcePhraseId){
+    const source=resolveSentence({kind:'phrase',id:line.sourcePhraseId});
+    const at=lessons.findLast(l=>l.unitId===r.unitId);
+    if(!source)errors.push(r.id+': missing source phrase '+line.sourcePhraseId);
+    else{
+     if(source.text!==line.text||source.pinyin!==line.pinyin||source.meaning!==line.translation)errors.push(r.id+': source phrase drift on line '+i);
+     if((lessonPosition.get(source.lessonId)??Infinity)>(lessonPosition.get(at?.id||'')??-1))errors.push(r.id+': future source phrase '+line.sourcePhraseId);
+    }
+    if(segments.length&&segments.join('')!==line.text)errors.push(r.id+': text drift on line '+i);
+   }else{
+    if(segments.join('')!==line.text)errors.push(r.id+': text drift on line '+i);
+    for(const text of segments){const status=readingTokenStatus(r.id,text);if(status==='unclassified'||status==='forbidden-future')errors.push(r.id+': '+status+' '+text)}
+   }
   }
   for(const id of c.grammarIds){
    const at=lessons.findLast(l=>l.unitId===r.unitId);
