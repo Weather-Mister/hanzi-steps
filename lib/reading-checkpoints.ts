@@ -4,7 +4,7 @@ import {characterOwners,knownAtUnit,readingPrerequisites,meetsPrerequisites} fro
 import {readingContracts,readingTokenStatus} from './learning-materials.ts';
 
 export type ReadingGloss = {pinyin:string; meaning:string; note?:string; unfamiliar?:boolean};
-export type ReadingLine = {text:string; pinyin:string; translation:string; note:string; speaker?:string};
+export type ReadingLine = {text:string; pinyin:string; translation:string; note:string; speaker?:string; sourcePhraseId?:string};
 export type ReadingQuestion = {prompt:string; options:string[]; answer:number; evidence:number[]; explanation:string};
 export type ReadingCheckpoint = {id:string;unitId:string;title:string;kind:string;setup:string;version:number;lines:ReadingLine[];questions:ReadingQuestion[];tips:string[];grammarFocus:string[];glosses:Record<string,ReadingGloss>};
 export const readingCheckpoints:ReadingCheckpoint[] = rawReadings as ReadingCheckpoint[];
