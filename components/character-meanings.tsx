@@ -10,7 +10,14 @@ const vocabularyByText=new Map(vocabulary.map(word=>[word.text,word]));
 export function CharacterMeanings({hanzi,completed,showPinyin=true,expanded=false,primaryMeaning}:{hanzi:string;completed?:Set<string>;showPinyin?:boolean;expanded?:boolean;primaryMeaning?:string}){
  const learned=(completed?learnedWordsForCharacter(hanzi,completed):[]).filter(word=>word.text!==hanzi);
  const learnedTexts=new Set(learned.map(word=>word.text));
- const common=characterCommonWords(hanzi).filter(word=>!learnedTexts.has(word.text));
+ const curatedCommon=characterCommonWords(hanzi);
+ const fallbackCourse=curatedCommon.length?[]:vocabulary
+  .filter(word=>word.text!==hanzi&&word.text.includes(hanzi))
+  .slice(0,5)
+  .map(word=>({text:word.text,pinyin:word.pinyin,meaning:word.meaning}));
+ const common=[...curatedCommon,...fallbackCourse].filter((word,index,all)=>
+  !learnedTexts.has(word.text)&&all.findIndex(item=>item.text===word.text)===index
+ );
  const senses=characterMeanings(hanzi);
  if(!learned.length&&!common.length&&!senses.length)return null;
  return <details className="character-meanings" open={expanded||undefined}>
