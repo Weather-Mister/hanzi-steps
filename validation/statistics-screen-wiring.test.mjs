@@ -7,6 +7,6 @@ const root=fileURLToPath(new URL('../',import.meta.url));
 
 test('statistics header action actually renders the controlled statistics dialog',async()=>{
  const source=await readFile(root+'components/learning-app.tsx','utf8');
- assert.match(source,/aria-label="Statistics"[^>]*onClick={()=>setStatsOpen(true)}/);
- assert.match(source,/<StatisticsScreen\s+open={statsOpen}\s+onOpenChange={setStatsOpen}/);
+ assert.ok(source.includes('aria-label="Statistics" title="Statistics" onClick={()=>setStatsOpen(true)}'));
+ assert.ok(source.includes('<StatisticsScreen open={statsOpen} onOpenChange={setStatsOpen}'));
 });
