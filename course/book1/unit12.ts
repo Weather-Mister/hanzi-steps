@@ -37,7 +37,10 @@ const unit:UnitData = {
       "u12-total",
       "u12-challenge"
     ],
-    "banner": {"text":"錢","pinyin":"qián"},
+    "banner": {
+      "text": "錢",
+      "pinyin": "qián"
+    },
     "goal": {
       "text": "一共多少錢？七十五塊。",
       "pinyin": "Yígòng duōshǎo qián? Qīshíwǔ kuài.",
@@ -1271,6 +1274,22 @@ const unit:UnitData = {
           "type": "memory",
           "char": "共",
           "id": "u12-challenge-20"
+        },
+        {
+          "type": "select",
+          "id": "u12-challenge-reading-21",
+          "prompt": "Read: 我要三杯茶。一杯茶三十五塊。 How much is the order altogether?",
+          "options": [
+            "一百零五塊",
+            "七十塊",
+            "三十五塊"
+          ],
+          "answer": "一百零五塊",
+          "explanation": "三杯 at 三十五塊 each gives 105. The reading combines quantity and unit price instead of repeating a memorized total.",
+          "grammarIds": [
+            "u12-price",
+            "u12-total"
+          ]
         }
       ]
     }

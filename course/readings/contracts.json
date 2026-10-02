@@ -1516,5 +1516,510 @@
       "b2u4-l2-simultaneous",
       "u39-bu-vs-mei"
     ]
+  },
+  "reading-unit-10-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u10-morning-time",
+      "u9-frequency",
+      "u10-also-all"
+    ]
+  },
+  "reading-unit-10-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u10-how-about",
+      "u10-eat-dinner",
+      "u10-not-all",
+      "u10-vietnam"
+    ]
+  },
+  "reading-unit-13-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u13-ask",
+      "u13-buns",
+      "u13-help"
+    ]
+  },
+  "reading-unit-13-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u13-hundreds",
+      "u13-sell"
+    ]
+  },
+  "reading-unit-16-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u16-yesterday",
+      "u16-restaurant",
+      "u7-go",
+      "u16-contrast",
+      "u16-a-little",
+      "u16-not-bad"
+    ]
+  },
+  "reading-unit-16-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u16-sensitive",
+      "u16-result",
+      "u16-cook-yourself",
+      "u16-performance",
+      "u16-object-repeat",
+      "u16-performance-questions",
+      "u16-teach",
+      "u16-teaching-request"
+    ]
+  },
+  "reading-unit-19-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u19-destination",
+      "u19-destination-question",
+      "u19-not-going"
+    ]
+  },
+  "reading-unit-19-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u19-nearby-there-is",
+      "u19-store",
+      "u19-things"
+    ]
+  },
+  "reading-unit-22-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u22-event-start-end",
+      "u22-half-time"
+    ]
+  },
+  "reading-unit-22-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u22-progressive-zai",
+      "u21-not-the-case"
+    ]
+  },
+  "reading-unit-25-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u24-zuo-transport",
+      "u24-gen-company"
+    ]
+  },
+  "reading-unit-25-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u25-bi-comparison",
+      "u25-bi-negation"
+    ]
+  },
+  "reading-unit-28-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u28-separable-duration",
+      "u28-duration-negation",
+      "u28-when-duration-contrast"
+    ]
+  },
+  "reading-unit-28-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u28-when-duration-contrast"
+    ]
+  },
+  "reading-unit-31-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u31-clause-modifier",
+      "u24-bijiao"
+    ]
+  },
+  "reading-unit-31-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u31-yinwei-suoyi",
+      "u31-clause-modifier"
+    ]
+  },
+  "reading-unit-34-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u34-first-then"
+    ]
+  },
+  "reading-unit-34-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u29-yaoshi-jiu"
+    ]
+  },
+  "reading-unit-37-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": []
+  },
+  "reading-unit-37-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": []
+  },
+  "reading-unit-40-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u40-questionword-totality"
+    ]
+  },
+  "reading-unit-40-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u40-questionword-totality"
+    ]
+  },
+  "reading-unit-43-a": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u43-completed-duration"
+    ]
+  },
+  "reading-unit-43-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u43-duration-to-now"
+    ]
+  },
+  "reading-unit-43-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u43-imminent"
+    ]
+  },
+  "reading-unit-46-a": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": []
+  },
+  "reading-unit-46-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": []
+  },
+  "reading-unit-46-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "u46-ba-disposal"
+    ]
+  },
+  "reading-book-2-unit-4-b": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "b2u4-l2-simultaneous",
+      "b2u4-l3-distance"
+    ]
+  },
+  "reading-book-2-unit-4-c": {
+    "origin": {
+      "kind": "authored-supplement",
+      "note": "Hanzi Steps supplementary reading assembled from canonical, already-taught course phrases; no new lexical ownership is created."
+    },
+    "segments": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "grammarIds": [
+      "b2u4-l2-simultaneous"
+    ]
   }
 }

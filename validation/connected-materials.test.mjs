@@ -20,7 +20,16 @@ test('all reading spans and declared grammar satisfy explicit contracts',()=>{
  assert.deepEqual(validateReadingContracts(),[]);
  for(const r of readingCheckpoints){
   for(const [i,segments] of readingContracts[r.id].segments.entries()){
-   assert.equal(segments.join(''),r.lines[i].text);
+   const line=r.lines[i];
+   if(line.sourcePhraseId){
+    const source=resolveSentence({kind:'phrase',id:line.sourcePhraseId});
+    assert.ok(source,r.id+': missing canonical phrase '+line.sourcePhraseId);
+    assert.equal(source.text,line.text);
+    assert.equal(source.pinyin,line.pinyin);
+    assert.equal(source.meaning,line.translation);
+    continue;
+   }
+   assert.equal(segments.join(''),line.text);
    for(const token of segments)assert.ok(!['forbidden-future','unclassified'].includes(readingTokenStatus(r.id,token)),r.id+':'+token);
   }
  }

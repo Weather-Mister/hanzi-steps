@@ -912,6 +912,18 @@ const unit:UnitData = {
             "試",
             "難"
           ]
+        },
+        {
+          "type": "select",
+          "id": "u36-review-reading-28",
+          "prompt": "Read: 因為我們公司跟臺灣人做生意。老闆希望我們都會說中文。 Why does Chinese matter to the company in this passage?",
+          "options": [
+            "The company does business with Taiwanese people.",
+            "The boss wants to open a restaurant.",
+            "Everyone is moving to a hotel."
+          ],
+          "answer": "The company does business with Taiwanese people.",
+          "explanation": "The 因為 sentence supplies the reason; the boss therefore hopes everyone can speak Chinese."
         }
       ]
     }

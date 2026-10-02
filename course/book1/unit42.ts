@@ -1073,6 +1073,18 @@ const unit:UnitData = {
             "因為我怕冷",
             "所以我比較喜歡春天"
           ]
+        },
+        {
+          "type": "select",
+          "id": "u42-review-reading-26",
+          "prompt": "Read: 因為我怕冷，所以我比較喜歡春天。下雪的時候，我常去山上滑雪。 Which statement is supported by both lines?",
+          "options": [
+            "The speaker prefers spring because of the cold, but often skis when it snows.",
+            "The speaker likes winter best and never goes to the mountains.",
+            "The speaker dislikes spring because it rains."
+          ],
+          "answer": "The speaker prefers spring because of the cold, but often skis when it snows.",
+          "explanation": "The first line gives the spring preference and reason; the second adds a habitual activity during snow."
         }
       ]
     }

@@ -8,6 +8,7 @@ const modules=[];
 for(const b of manifest.books)for(const entry of b.units)modules.push((await import(new URL('../'+entry.path,import.meta.url))).default);
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const selected=new Map(fixture.items.map(r=>[r.stepId,r]));
+const embeddedReadingChecks=new Set(['u12-challenge-reading-21','u18-review-reading-20','u24-review-reading-20','u30-review-reading-23','u36-review-reading-28','u42-review-reading-26','u48-review-reading-59']);
 const han=text=>[...new Set([...text].filter(c=>/\p{Script=Han}/u.test(c)))];
 const canonicalMultiCharLexemes=[...new Set(
  modules.flatMap(m=>(m.newVocabulary||[]).map(v=>v.text))
@@ -22,7 +23,7 @@ test('mixed review stays sparse and preserves teaching, ownership, and every che
   const unit=modules.find(m=>m.unit.id===id);
   assert.ok(unit,id);
   const masked=structuredClone(unit);
-  for(const l of masked.lessons)l.steps=l.steps.map(s=>selected.has(s.id)?{id:s.id,type:s.type}:s);
+  for(const l of masked.lessons)l.steps=l.steps.filter(s=>!embeddedReadingChecks.has(s.id)).map(s=>selected.has(s.id)?{id:s.id,type:s.type}:s);
   assert.equal(hash(masked),baseline.unchangedHash,id+': unrelated content or checkpoint topology changed');
  }
 });

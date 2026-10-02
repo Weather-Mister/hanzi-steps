@@ -36,7 +36,10 @@ const unit:UnitData = {
       "u18-study",
       "u18-review"
     ],
-    "banner": {"text":"圖書館","pinyin":"túshūguǎn"},
+    "banner": {
+      "text": "圖書館",
+      "pinyin": "túshūguǎn"
+    },
     "goal": {
       "text": "我現在在圖書館裡面看書。",
       "pinyin": "Wǒ xiànzài zài túshūguǎn lǐmiàn kàn shū.",
@@ -1300,6 +1303,22 @@ const unit:UnitData = {
           ],
           "answer": "海",
           "explanation": "海 is hǎi: sea or ocean."
+        },
+        {
+          "type": "select",
+          "id": "u18-review-reading-20",
+          "prompt": "Read: 學校裡面有圖書館。學校外面有沒有餐廳？ Which place is explicitly stated to be inside the school?",
+          "options": [
+            "圖書館",
+            "餐廳",
+            "海"
+          ],
+          "answer": "圖書館",
+          "explanation": "學校裡面有圖書館 states that the library is inside. The restaurant sentence only asks whether one exists outside.",
+          "grammarIds": [
+            "u18-inside-outside",
+            "u18-there-is"
+          ]
         }
       ]
     }

@@ -35,7 +35,10 @@ const unit:UnitData = {
       "u24-questions",
       "u24-review"
     ],
-    "banner": {"text":"高鐵","pinyin":"gāotiě"},
+    "banner": {
+      "text": "高鐵",
+      "pinyin": "gāotiě"
+    },
     "goal": {
       "text": "你怎麼去學校？",
       "pinyin": "Nǐ zěnme qù xuéxiào?",
@@ -1201,6 +1204,22 @@ const unit:UnitData = {
           "explanation": "怎麼樣 requests an evaluation; 怎麼 before an action asks about its method.",
           "grammarIds": [
             "u24-how-vs-zenmeyang"
+          ]
+        },
+        {
+          "type": "select",
+          "id": "u24-review-reading-20",
+          "prompt": "Read: 高鐵車票有一點貴。高鐵又快又舒服。 Which summary matches both sentences?",
+          "options": [
+            "The HSR is a little expensive, but it is fast and comfortable.",
+            "The HSR is cheap and slow.",
+            "The HSR is uncomfortable but free."
+          ],
+          "answer": "The HSR is a little expensive, but it is fast and comfortable.",
+          "explanation": "The first sentence gives the price drawback; the second gives two positive qualities with 又…又….",
+          "grammarIds": [
+            "u24-bijiao",
+            "u24-you-you"
           ]
         }
       ]

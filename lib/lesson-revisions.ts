@@ -53,6 +53,15 @@ export const previousLessonLengths:Record<string,number>={
  'u25-choices':5,
  'u25-review':9,
 
+ // Reading-expansion review checks were appended without moving any existing step.
+ // Keep already-completed reviews valid at their previously published bounds.
+ 'u12-challenge':20,
+ 'u18-review':19,
+ 'u30-review':22,
+ 'u36-review':27,
+ 'u42-review':25,
+ 'u48-review':58,
+
  // Units 28–29 were rebalanced after publication by appending source-backed content.
  // Preserve every previously valid completion bound and all partial step positions.
  'u28-film':5,
@@ -83,6 +92,7 @@ export const previousLessonLengths:Record<string,number>={
  * overwriting the first historical bound.
  */
 export const additionalPreviousLessonLengths:Record<string,number[]>={
+ 'u24-review':[19],
  'u28-film':[16],
  'u28-years-days':[21],
  'u28-hours':[19],

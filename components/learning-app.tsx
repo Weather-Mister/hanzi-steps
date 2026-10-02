@@ -19,7 +19,7 @@ import {ReadingPath} from './reading-path';
 import {ListeningPath} from './listening-path';
 import '@/app/learning-paths.css';
 import {ReadingCheckpoint,ReadingStage} from './reading-checkpoint';
-import {readingForUnit,readingAvailable,type ReadingCheckpoint as Reading} from '@/lib/reading-checkpoints';
+import {readingsForUnit,readingAvailable,type ReadingCheckpoint as Reading} from '@/lib/reading-checkpoints';
 import '@/app/reading.css';
 import {StreakCounter} from './streak-counter';
 import {InteractionFeedback,useInteractionFeedback} from './interaction-feedback';
@@ -144,7 +144,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
  const bookUnits=units.filter(u=>book.unitIds.includes(u.id));
  const unit=bookUnits.find(u=>u.id===unitId)||bookUnits[0]||units[0];
  const sourceReference=unitSourceReference(unit,book.number);
- const unitReading=readingForUnit(unit.id);
+ const unitReadings=readingsForUnit(unit.id);
  const nextUnit=bookUnits[bookUnits.findIndex(u=>u.id===unit.id)+1];
  const finishedBookUnits=bookUnits.filter(u=>completed.has(u.lessonIds[u.lessonIds.length-1])).length;
  const unitLessons=lessons.filter(l=>l.unitId===unit.id);
@@ -224,7 +224,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
          <div className="path-copy"><p className="path-step">{lesson.review?'UNIT CHALLENGE':`LESSON ${String(i+1).padStart(2,'0')}`} {done&&<span>COMPLETE</span>}</p><h3>{lesson.title}</h3><p>{lesson.subtitle}</p><div className="lesson-meta"><span lang="zh-Hant-TW">{lesson.chars.join(' · ')}</span><span>{lesson.minutes}</span></div>{next&&<button className="primary-button start-button" disabled={loading} onClick={()=>start(lesson)}>{loading?'Loading progress…':done?'Practice the unit':resume?'Resume lesson':'Start lesson'}<ArrowRight size={18}/></button>}</div>
         </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
        })}
-       {unitReading&&<ReadingStage key={userKey+unitReading.id} reading={unitReading} available={!loading&&readingAvailable(unitReading,completed)} userKey={userKey} onStart={()=>openReading(unitReading)}/>}
+       {unitReadings.map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
        {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
       </section><aside className="course-sidebar">
        <section className="unit-overview-card"><div className="unit-overview-heading"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} · {unit.label.toUpperCase()}</p><h1>{unit.title}</h1></div><div className="unit-overview-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div><p className="unit-overview-description">{unit.description}</p></section>
@@ -246,7 +246,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
   <div className="completion-medal">{current.review?<Trophy size={54}/>:<Check size={58}/>}</div><p className="eyebrow">{current.review?`UNIT ${String(currentUnit.number).padStart(2,'0')} COMPLETE`:current.id.startsWith('practice-')?'PRACTICE COMPLETE':'LESSON COMPLETE'}</p><h1>{current.review?(currentUnit.number===1?'Your first conversation starts here.':'More words. More ways to connect.'):'One step closer.'}</h1><p>You practiced {current.chars.length===1?'one character':`${current.chars.length} characters`} through shapes, strokes, and meaning.</p>
   <div className="completion-characters" lang="zh-Hant-TW">{current.chars.map(c=><button key={c} onClick={()=>setDetail(c)}>{c}</button>)}</div><div className="completion-stats"><div><strong>{active.independent}</strong><span>Without retries or hints</span></div><div><strong>{active.assisted}</strong><span>With learning support</span></div></div><p className="completion-note">Guided tracing is practice. Writing from memory is a separate step.</p>{!needsSignIn&&saveState==='error'&&<p className="storage-notice" role="status">{saveError||loadError}</p>}
   {current.review&&<div className="final-phrase"><p lang="zh-Hant-TW">{currentUnit.goal.text}</p><span>{currentUnit.goal.meaning}</span><AudioButton text={currentUnit.goal.text}/></div>}
-  {current.review&&readingForUnit(currentUnit.id)&&<ReadingStage reading={readingForUnit(currentUnit.id)!} available={!loading&&readingAvailable(readingForUnit(currentUnit.id)!,completed)} userKey={userKey} onStart={()=>openReading(readingForUnit(currentUnit.id)!)}/>}
+  {current.review&&readingsForUnit(currentUnit.id).map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
   <button className="primary-button" onClick={()=>{if(current.review&&followingUnit)chooseUnit(followingUnit.id);home()}}>{current.review&&followingUnit?`Continue to Unit ${followingUnit.displayNumber??followingUnit.number}`:'Back to the unit'}<ArrowRight size={19}/></button><button className={`sync-state ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button>
  </main> : current ? <main className="lesson-main">
   <div className="lesson-topline"><button className="icon-button" aria-label="Pause this lesson" onClick={()=>setExitOpen(true)}><X size={23}/></button><div><div className="lesson-progress-label"><span>{current.title}</span><span>{active.index+1} / {current.steps.length}</span></div><Progress className="lesson-progress" value={active.index/current.steps.length*100} aria-label="Lesson progress"/></div><button className={`sync-indicator ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()} aria-label={saveLabel}>{saveState==='saved'?<CloudCheck size={19}/>:<CloudUpload size={19}/>}</button></div>{!needsSignIn&&saveState==='error'&&<div className="save-inline" role="status">{saveError||loadError||'Your progress has not synced yet.'} <button onClick={()=>void retrySave()}>Try again</button></div>}<Exercise completed={completed} key={`${active.id}-${active.index}`} step={current.steps[active.index]} prefs={prefs} onAdvance={advance} onAttempt={recordLessonAttempt}/>
