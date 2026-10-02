@@ -11,7 +11,7 @@ type ReadingPayload={
  lines:Array<{text:string;pinyin:string;translation:string;note:string;sourcePhraseId?:string}>;
  glosses:Record<string,{pinyin:string;meaning:string;unfamiliar?:boolean}>;
 };
-const readingData=readings as ReadingPayload[];
+const readingData=readings as unknown as ReadingPayload[];
 export function resolveSentence(ref:SentenceRef){
  if(ref.kind==='phrase'){
   const phrase=phrases[ref.id];if(!phrase)return undefined;
