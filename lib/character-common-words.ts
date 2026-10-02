@@ -267,7 +267,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "日文",
       "pinyin": "Rìwén",
-      "meaning": "Japanese (written/language)"
+      "meaning": "Japanese (language)"
     },
     {
       "text": "作文",
@@ -897,7 +897,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "買菜",
       "pinyin": "mǎicài",
-      "meaning": "buy groceries"
+      "meaning": "buy groceries; shop for food"
     }
   ],
   "外": [
@@ -1045,6 +1045,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "包含",
       "pinyin": "bāohán",
       "meaning": "include; contain"
+    },
+    {
+      "text": "背包",
+      "pinyin": "bēibāo",
+      "meaning": "backpack"
     }
   ],
   "子": [
@@ -1136,6 +1141,16 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "相機",
       "pinyin": "xiàngjī",
       "meaning": "camera"
+    },
+    {
+      "text": "機車",
+      "pinyin": "jīchē",
+      "meaning": "scooter; motorcycle"
+    },
+    {
+      "text": "提款機",
+      "pinyin": "tíkuǎnjī",
+      "meaning": "ATM"
     }
   ],
   "新": [
@@ -1299,7 +1314,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "地點",
       "pinyin": "dìdiǎn",
-      "meaning": "location"
+      "meaning": "location; place"
     }
   ],
   "方": [
@@ -1713,7 +1728,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "沒事",
       "pinyin": "méishì",
-      "meaning": "it's fine; nothing is wrong"
+      "meaning": "nothing is wrong; have nothing to do"
     },
     {
       "text": "有事",
@@ -1740,7 +1755,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "意見",
       "pinyin": "yìjiàn",
-      "meaning": "opinion"
+      "meaning": "opinion; view"
     }
   ],
   "坐": [
@@ -1779,7 +1794,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "汽車",
       "pinyin": "qìchē",
-      "meaning": "car"
+      "meaning": "car; automobile"
     },
     {
       "text": "車站",
@@ -1800,6 +1815,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "腳踏車",
       "pinyin": "jiǎotàchē",
       "meaning": "bicycle"
+    },
+    {
+      "text": "機車",
+      "pinyin": "jīchē",
+      "meaning": "scooter; motorcycle"
     }
   ],
   "快": [
@@ -1855,7 +1875,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "同意",
       "pinyin": "tóngyì",
-      "meaning": "agree"
+      "meaning": "agree; consent"
     },
     {
       "text": "相同",
@@ -1899,7 +1919,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "國外",
       "pinyin": "guówài",
-      "meaning": "abroad"
+      "meaning": "abroad; overseas"
     },
     {
       "text": "美國",
@@ -2073,7 +2093,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "租房子",
       "pinyin": "zū fángzi",
-      "meaning": "rent a home; rent a room"
+      "meaning": "rent a home or room"
     }
   ],
   "客": [
@@ -2123,6 +2143,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "走路",
       "pinyin": "zǒulù",
       "meaning": "to walk"
+    },
+    {
+      "text": "迷路",
+      "pinyin": "mílù",
+      "meaning": "be lost; lose one’s way"
     }
   ],
   "話": [
@@ -2524,6 +2549,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "發音",
       "pinyin": "fāyīn",
       "meaning": "pronounce; pronunciation"
+    },
+    {
+      "text": "發票",
+      "pinyin": "fāpiào",
+      "meaning": "receipt; uniform invoice (Taiwan)"
     }
   ],
   "感": [
@@ -2568,6 +2598,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "保證",
       "pinyin": "bǎozhèng",
       "meaning": "guarantee; promise"
+    },
+    {
+      "text": "健保",
+      "pinyin": "jiànbǎo",
+      "meaning": "health insurance; Taiwan NHI"
     }
   ],
   "也": [
@@ -2848,7 +2883,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
   "先": [
     {
       "text": "先生",
-      "pinyin": "xiānsheng",
+      "pinyin": "xiānshēng",
       "meaning": "Mr.; husband"
     },
     {
@@ -3954,7 +3989,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "發音",
       "pinyin": "fāyīn",
-      "meaning": "pronunciation; pronounce"
+      "meaning": "pronounce; pronunciation"
     },
     {
       "text": "音量",
@@ -4163,6 +4198,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "買票",
       "pinyin": "mǎipiào",
       "meaning": "buy a ticket"
+    },
+    {
+      "text": "發票",
+      "pinyin": "fāpiào",
+      "meaning": "receipt; uniform invoice (Taiwan)"
     }
   ],
   "鐵": [
@@ -5088,7 +5128,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "觀念",
       "pinyin": "guānniàn",
-      "meaning": "idea; concept"
+      "meaning": "concept; idea"
     },
     {
       "text": "念頭",
@@ -5340,6 +5380,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "當地",
       "pinyin": "dāngdì",
       "meaning": "local; that place"
+    },
+    {
+      "text": "便當",
+      "pinyin": "biàndāng",
+      "meaning": "boxed meal; bento (Taiwan)"
     }
   ],
   "然": [
@@ -5999,7 +6044,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     {
       "text": "沒事",
       "pinyin": "méishì",
-      "meaning": "nothing is wrong; be free"
+      "meaning": "nothing is wrong; have nothing to do"
     }
   ],
   "那": [
@@ -6039,6 +6084,11 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "便利",
       "pinyin": "biànlì",
       "meaning": "convenient"
+    },
+    {
+      "text": "便當",
+      "pinyin": "biàndāng",
+      "meaning": "boxed meal; bento (Taiwan)"
     }
   ],
   "商": [
@@ -7128,6 +7178,503 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "text": "九月",
       "pinyin": "jiǔ yuè",
       "meaning": "September"
+    }
+  ],
+  "迷": [
+    {
+      "text": "迷路",
+      "pinyin": "mílù",
+      "meaning": "be lost; lose one’s way"
+    },
+    {
+      "text": "球迷",
+      "pinyin": "qiúmí",
+      "meaning": "sports fan"
+    },
+    {
+      "text": "歌迷",
+      "pinyin": "gēmí",
+      "meaning": "music fan"
+    },
+    {
+      "text": "迷人",
+      "pinyin": "mírén",
+      "meaning": "charming; attractive"
+    },
+    {
+      "text": "迷你",
+      "pinyin": "mínǐ",
+      "meaning": "mini; miniature"
+    }
+  ],
+  "轉": [
+    {
+      "text": "右轉",
+      "pinyin": "yòu zhuǎn",
+      "meaning": "turn right"
+    },
+    {
+      "text": "左轉",
+      "pinyin": "zuǒ zhuǎn",
+      "meaning": "turn left"
+    },
+    {
+      "text": "轉車",
+      "pinyin": "zhuǎnchē",
+      "meaning": "transfer to another vehicle"
+    },
+    {
+      "text": "轉彎",
+      "pinyin": "zhuǎnwān",
+      "meaning": "turn; go around a bend"
+    },
+    {
+      "text": "轉身",
+      "pinyin": "zhuǎnshēn",
+      "meaning": "turn around"
+    }
+  ],
+  "平": [
+    {
+      "text": "平安",
+      "pinyin": "píng'ān",
+      "meaning": "safe and sound; peaceful"
+    },
+    {
+      "text": "平常",
+      "pinyin": "píngcháng",
+      "meaning": "usually; ordinary"
+    },
+    {
+      "text": "平均",
+      "pinyin": "píngjūn",
+      "meaning": "average; evenly"
+    },
+    {
+      "text": "水平",
+      "pinyin": "shuǐpíng",
+      "meaning": "level; standard"
+    }
+  ],
+  "段": [
+    {
+      "text": "一段",
+      "pinyin": "yí duàn",
+      "meaning": "a section; a stretch"
+    },
+    {
+      "text": "路段",
+      "pinyin": "lùduàn",
+      "meaning": "section of a road"
+    },
+    {
+      "text": "時段",
+      "pinyin": "shíduàn",
+      "meaning": "time slot; period of time"
+    },
+    {
+      "text": "階段",
+      "pinyin": "jiēduàn",
+      "meaning": "stage; phase"
+    }
+  ],
+  "綠": [
+    {
+      "text": "綠色",
+      "pinyin": "lǜsè",
+      "meaning": "green"
+    },
+    {
+      "text": "綠茶",
+      "pinyin": "lǜchá",
+      "meaning": "green tea"
+    },
+    {
+      "text": "綠燈",
+      "pinyin": "lǜdēng",
+      "meaning": "green light"
+    },
+    {
+      "text": "紅綠燈",
+      "pinyin": "hónglǜdēng",
+      "meaning": "traffic light"
+    }
+  ],
+  "燈": [
+    {
+      "text": "紅綠燈",
+      "pinyin": "hónglǜdēng",
+      "meaning": "traffic light"
+    },
+    {
+      "text": "開燈",
+      "pinyin": "kāidēng",
+      "meaning": "turn on a light"
+    },
+    {
+      "text": "關燈",
+      "pinyin": "guāndēng",
+      "meaning": "turn off a light"
+    },
+    {
+      "text": "路燈",
+      "pinyin": "lùdēng",
+      "meaning": "streetlight"
+    },
+    {
+      "text": "電燈",
+      "pinyin": "diàndēng",
+      "meaning": "electric light; lamp"
+    }
+  ],
+  "第": [
+    {
+      "text": "第一",
+      "pinyin": "dì yī",
+      "meaning": "first"
+    },
+    {
+      "text": "第二",
+      "pinyin": "dì èr",
+      "meaning": "second"
+    },
+    {
+      "text": "第一次",
+      "pinyin": "dì yí cì",
+      "meaning": "the first time"
+    },
+    {
+      "text": "第幾",
+      "pinyin": "dì jǐ",
+      "meaning": "which number; which one in order"
+    }
+  ],
+  "告": [
+    {
+      "text": "告訴",
+      "pinyin": "gàosù",
+      "meaning": "tell; inform"
+    },
+    {
+      "text": "告別",
+      "pinyin": "gàobié",
+      "meaning": "say goodbye; take leave"
+    },
+    {
+      "text": "廣告",
+      "pinyin": "guǎnggào",
+      "meaning": "advertisement"
+    },
+    {
+      "text": "報告",
+      "pinyin": "bàogào",
+      "meaning": "report; report to"
+    }
+  ],
+  "訴": [
+    {
+      "text": "告訴",
+      "pinyin": "gàosù",
+      "meaning": "tell; inform"
+    },
+    {
+      "text": "投訴",
+      "pinyin": "tóusù",
+      "meaning": "complain; file a complaint"
+    },
+    {
+      "text": "申訴",
+      "pinyin": "shēnsù",
+      "meaning": "appeal; lodge a complaint"
+    },
+    {
+      "text": "訴說",
+      "pinyin": "sùshuō",
+      "meaning": "tell; recount"
+    }
+  ],
+  "提": [
+    {
+      "text": "提款機",
+      "pinyin": "tíkuǎnjī",
+      "meaning": "ATM"
+    },
+    {
+      "text": "提醒",
+      "pinyin": "tíxǐng",
+      "meaning": "remind"
+    },
+    {
+      "text": "提到",
+      "pinyin": "tídào",
+      "meaning": "mention"
+    },
+    {
+      "text": "提供",
+      "pinyin": "tígōng",
+      "meaning": "provide"
+    },
+    {
+      "text": "提早",
+      "pinyin": "tízǎo",
+      "meaning": "do earlier; move earlier"
+    }
+  ],
+  "款": [
+    {
+      "text": "提款機",
+      "pinyin": "tíkuǎnjī",
+      "meaning": "ATM"
+    },
+    {
+      "text": "提款",
+      "pinyin": "tíkuǎn",
+      "meaning": "withdraw money"
+    },
+    {
+      "text": "存款",
+      "pinyin": "cúnkuǎn",
+      "meaning": "deposit; savings"
+    },
+    {
+      "text": "付款",
+      "pinyin": "fùkuǎn",
+      "meaning": "pay; make a payment"
+    },
+    {
+      "text": "款式",
+      "pinyin": "kuǎnshì",
+      "meaning": "style; design"
+    }
+  ],
+  "郵": [
+    {
+      "text": "郵局",
+      "pinyin": "yóujú",
+      "meaning": "post office"
+    },
+    {
+      "text": "郵件",
+      "pinyin": "yóujiàn",
+      "meaning": "mail; email"
+    },
+    {
+      "text": "郵票",
+      "pinyin": "yóupiào",
+      "meaning": "postage stamp"
+    },
+    {
+      "text": "郵差",
+      "pinyin": "yóuchāi",
+      "meaning": "postal carrier"
+    },
+    {
+      "text": "郵寄",
+      "pinyin": "yóujì",
+      "meaning": "send by mail"
+    }
+  ],
+  "著": [
+    {
+      "text": "看著",
+      "pinyin": "kànzhe",
+      "meaning": "look at while an action/state continues"
+    },
+    {
+      "text": "拿著",
+      "pinyin": "názhe",
+      "meaning": "hold; be holding"
+    },
+    {
+      "text": "睡著",
+      "pinyin": "shuìzháo",
+      "meaning": "fall asleep; be asleep"
+    },
+    {
+      "text": "著名",
+      "pinyin": "zhùmíng",
+      "meaning": "famous; well-known"
+    }
+  ],
+  "品": [
+    {
+      "text": "日用品",
+      "pinyin": "rìyòngpǐn",
+      "meaning": "daily necessities"
+    },
+    {
+      "text": "產品",
+      "pinyin": "chǎnpǐn",
+      "meaning": "product"
+    },
+    {
+      "text": "食品",
+      "pinyin": "shípǐn",
+      "meaning": "food product; food"
+    },
+    {
+      "text": "品質",
+      "pinyin": "pǐnzhí",
+      "meaning": "quality"
+    },
+    {
+      "text": "作品",
+      "pinyin": "zuòpǐn",
+      "meaning": "work; piece of work"
+    }
+  ],
+  "巷": [
+    {
+      "text": "巷子",
+      "pinyin": "xiàngzi",
+      "meaning": "alley; lane"
+    },
+    {
+      "text": "巷口",
+      "pinyin": "xiàngkǒu",
+      "meaning": "entrance to an alley"
+    },
+    {
+      "text": "小巷",
+      "pinyin": "xiǎoxiàng",
+      "meaning": "small alley"
+    },
+    {
+      "text": "巷弄",
+      "pinyin": "xiàngnòng",
+      "meaning": "alleys and lanes; alleyways"
+    }
+  ],
+  "餓": [
+    {
+      "text": "肚子餓",
+      "pinyin": "dùzi è",
+      "meaning": "be hungry"
+    },
+    {
+      "text": "餓了",
+      "pinyin": "è le",
+      "meaning": "be hungry; have become hungry"
+    },
+    {
+      "text": "飢餓",
+      "pinyin": "jī'è",
+      "meaning": "hunger; hungry"
+    }
+  ],
+  "離": [
+    {
+      "text": "距離",
+      "pinyin": "jùlí",
+      "meaning": "distance; be away from"
+    },
+    {
+      "text": "離開",
+      "pinyin": "líkāi",
+      "meaning": "leave; depart"
+    },
+    {
+      "text": "遠離",
+      "pinyin": "yuǎnlí",
+      "meaning": "stay away from; be far from"
+    },
+    {
+      "text": "分離",
+      "pinyin": "fēnlí",
+      "meaning": "separate; separation"
+    }
+  ],
+  "背": [
+    {
+      "text": "背包",
+      "pinyin": "bēibāo",
+      "meaning": "backpack"
+    },
+    {
+      "text": "背著",
+      "pinyin": "bēizhe",
+      "meaning": "carry on the back"
+    },
+    {
+      "text": "背後",
+      "pinyin": "bèihòu",
+      "meaning": "behind; behind the scenes"
+    },
+    {
+      "text": "背景",
+      "pinyin": "bèijǐng",
+      "meaning": "background"
+    }
+  ],
+  "正": [
+    {
+      "text": "正好",
+      "pinyin": "zhènghǎo",
+      "meaning": "just; happen to"
+    },
+    {
+      "text": "正在",
+      "pinyin": "zhèngzài",
+      "meaning": "be in the middle of doing"
+    },
+    {
+      "text": "正常",
+      "pinyin": "zhèngcháng",
+      "meaning": "normal"
+    },
+    {
+      "text": "正確",
+      "pinyin": "zhèngquè",
+      "meaning": "correct; accurate"
+    },
+    {
+      "text": "正式",
+      "pinyin": "zhèngshì",
+      "meaning": "formal; official"
+    }
+  ],
+  "筆": [
+    {
+      "text": "鉛筆",
+      "pinyin": "qiānbǐ",
+      "meaning": "pencil"
+    },
+    {
+      "text": "筆記",
+      "pinyin": "bǐjì",
+      "meaning": "notes; take notes"
+    },
+    {
+      "text": "毛筆",
+      "pinyin": "máobǐ",
+      "meaning": "writing brush"
+    },
+    {
+      "text": "原子筆",
+      "pinyin": "yuánzǐbǐ",
+      "meaning": "ballpoint pen"
+    }
+  ],
+  "枝": [
+    {
+      "text": "一枝筆",
+      "pinyin": "yì zhī bǐ",
+      "meaning": "one pen"
+    },
+    {
+      "text": "樹枝",
+      "pinyin": "shùzhī",
+      "meaning": "tree branch"
+    },
+    {
+      "text": "枝葉",
+      "pinyin": "zhīyè",
+      "meaning": "branches and leaves"
+    },
+    {
+      "text": "花枝",
+      "pinyin": "huāzhī",
+      "meaning": "cuttlefish; flowering branch"
     }
   ]
 };
