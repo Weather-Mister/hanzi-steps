@@ -5492,6 +5492,381 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "zhūjiǎo",
       "meaning": "pork knuckles"
     }
+  ],
+  "蛋": [
+    {
+      "text": "雞蛋",
+      "pinyin": "jīdàn",
+      "meaning": "egg"
+    },
+    {
+      "text": "蛋糕",
+      "pinyin": "dàngāo",
+      "meaning": "cake"
+    },
+    {
+      "text": "蛋黃",
+      "pinyin": "dànhuáng",
+      "meaning": "egg yolk"
+    }
+  ],
+  "傳": [
+    {
+      "text": "傳統",
+      "pinyin": "chuántǒng",
+      "meaning": "tradition; custom"
+    },
+    {
+      "text": "傳說",
+      "pinyin": "chuánshuō",
+      "meaning": "legend; it is said"
+    },
+    {
+      "text": "上傳",
+      "pinyin": "shàngchuán",
+      "meaning": "upload"
+    }
+  ],
+  "統": [
+    {
+      "text": "傳統",
+      "pinyin": "chuántǒng",
+      "meaning": "tradition; custom"
+    },
+    {
+      "text": "系統",
+      "pinyin": "xìtǒng",
+      "meaning": "system"
+    },
+    {
+      "text": "統一",
+      "pinyin": "tǒngyī",
+      "meaning": "unify; unified"
+    }
+  ],
+  "輕": [
+    {
+      "text": "年輕",
+      "pinyin": "niánqīng",
+      "meaning": "young"
+    },
+    {
+      "text": "輕鬆",
+      "pinyin": "qīngsōng",
+      "meaning": "relaxed; easy"
+    },
+    {
+      "text": "輕聲",
+      "pinyin": "qīngshēng",
+      "meaning": "soft voice; quietly"
+    }
+  ],
+  "部": [
+    {
+      "text": "大部分",
+      "pinyin": "dàbùfēn",
+      "meaning": "most; most of"
+    },
+    {
+      "text": "部分",
+      "pinyin": "bùfèn",
+      "meaning": "part; portion"
+    },
+    {
+      "text": "部門",
+      "pinyin": "bùmén",
+      "meaning": "department"
+    },
+    {
+      "text": "一部",
+      "pinyin": "yí bù",
+      "meaning": "one (film, machine, etc.)"
+    }
+  ],
+  "糕": [
+    {
+      "text": "蛋糕",
+      "pinyin": "dàngāo",
+      "meaning": "cake"
+    },
+    {
+      "text": "年糕",
+      "pinyin": "niángāo",
+      "meaning": "rice cake"
+    }
+  ],
+  "如": [
+    {
+      "text": "如果",
+      "pinyin": "rúguǒ",
+      "meaning": "if"
+    },
+    {
+      "text": "如今",
+      "pinyin": "rújīn",
+      "meaning": "nowadays; now"
+    },
+    {
+      "text": "比如",
+      "pinyin": "bǐrú",
+      "meaning": "for example"
+    }
+  ],
+  "春": [
+    {
+      "text": "春天",
+      "pinyin": "chūntiān",
+      "meaning": "spring"
+    },
+    {
+      "text": "春節",
+      "pinyin": "chūnjié",
+      "meaning": "Lunar New Year; Spring Festival"
+    }
+  ],
+  "冬": [
+    {
+      "text": "冬天",
+      "pinyin": "dōngtiān",
+      "meaning": "winter"
+    },
+    {
+      "text": "冬瓜",
+      "pinyin": "dōngguā",
+      "meaning": "winter melon"
+    }
+  ],
+  "夏": [
+    {
+      "text": "夏天",
+      "pinyin": "xiàtiān",
+      "meaning": "summer"
+    },
+    {
+      "text": "夏季",
+      "pinyin": "xiàjì",
+      "meaning": "summer season"
+    }
+  ],
+  "秋": [
+    {
+      "text": "秋天",
+      "pinyin": "qiūntiān",
+      "meaning": "autumn"
+    },
+    {
+      "text": "中秋節",
+      "pinyin": "Zhōngqiūjié",
+      "meaning": "Mid-Autumn Festival"
+    }
+  ],
+  "葉": [
+    {
+      "text": "紅葉",
+      "pinyin": "hóngyè",
+      "meaning": "red maple leaves"
+    },
+    {
+      "text": "茶葉",
+      "pinyin": "cháyè",
+      "meaning": "tea leaves"
+    },
+    {
+      "text": "葉子",
+      "pinyin": "yèzi",
+      "meaning": "leaf"
+    },
+    {
+      "text": "樹葉",
+      "pinyin": "shùyè",
+      "meaning": "tree leaf; leaves"
+    }
+  ],
+  "聞": [
+    {
+      "text": "新聞",
+      "pinyin": "xīnwén",
+      "meaning": "news"
+    },
+    {
+      "text": "聞到",
+      "pinyin": "wéndào",
+      "meaning": "smell; catch a smell"
+    },
+    {
+      "text": "聽聞",
+      "pinyin": "tīngwén",
+      "meaning": "hear of; hear about"
+    }
+  ],
+  "更": [
+    {
+      "text": "更好",
+      "pinyin": "gènghǎo",
+      "meaning": "better; even better"
+    },
+    {
+      "text": "更加",
+      "pinyin": "gèngjiā",
+      "meaning": "even more"
+    },
+    {
+      "text": "更多",
+      "pinyin": "gèngduō",
+      "meaning": "more; even more"
+    }
+  ],
+  "直": [
+    {
+      "text": "一直",
+      "pinyin": "yìzhí",
+      "meaning": "continuously; all the way"
+    },
+    {
+      "text": "直接",
+      "pinyin": "zhíjiē",
+      "meaning": "direct; directly"
+    },
+    {
+      "text": "直走",
+      "pinyin": "zhí zǒu",
+      "meaning": "go straight"
+    }
+  ],
+  "流": [
+    {
+      "text": "流鼻水",
+      "pinyin": "liú bíshuǐ",
+      "meaning": "have a runny nose"
+    },
+    {
+      "text": "流行",
+      "pinyin": "liúxíng",
+      "meaning": "popular; in fashion"
+    },
+    {
+      "text": "流汗",
+      "pinyin": "liúhàn",
+      "meaning": "sweat; perspire"
+    }
+  ],
+  "鼻": [
+    {
+      "text": "鼻子",
+      "pinyin": "bízi",
+      "meaning": "nose"
+    },
+    {
+      "text": "鼻水",
+      "pinyin": "bíshuǐ",
+      "meaning": "nasal mucus; a runny nose"
+    },
+    {
+      "text": "鼻塞",
+      "pinyin": "bísè",
+      "meaning": "nasal congestion; stuffy nose"
+    }
+  ],
+  "胃": [
+    {
+      "text": "胃口",
+      "pinyin": "wèikǒu",
+      "meaning": "appetite"
+    },
+    {
+      "text": "胃痛",
+      "pinyin": "wèitòng",
+      "meaning": "stomach pain"
+    }
+  ],
+  "炎": [
+    {
+      "text": "發炎",
+      "pinyin": "fāyán",
+      "meaning": "to be inflamed"
+    },
+    {
+      "text": "肺炎",
+      "pinyin": "fèiyán",
+      "meaning": "pneumonia"
+    }
+  ],
+  "冒": [
+    {
+      "text": "感冒",
+      "pinyin": "gǎnmào",
+      "meaning": "to have a cold"
+    },
+    {
+      "text": "冒險",
+      "pinyin": "màoxiǎn",
+      "meaning": "take a risk; adventure"
+    }
+  ],
+  "局": [
+    {
+      "text": "藥局",
+      "pinyin": "yàojú",
+      "meaning": "pharmacy"
+    },
+    {
+      "text": "郵局",
+      "pinyin": "yóujú",
+      "meaning": "post office"
+    },
+    {
+      "text": "警察局",
+      "pinyin": "jǐngchájú",
+      "meaning": "police station"
+    }
+  ],
+  "把": [
+    {
+      "text": "把手",
+      "pinyin": "bǎshǒu",
+      "meaning": "handle; grip"
+    }
+  ],
+  "息": [
+    {
+      "text": "休息",
+      "pinyin": "xiūxí",
+      "meaning": "to rest"
+    },
+    {
+      "text": "消息",
+      "pinyin": "xiāoxi",
+      "meaning": "news; information"
+    },
+    {
+      "text": "利息",
+      "pinyin": "lìxí",
+      "meaning": "interest (on money)"
+    }
+  ],
+  "肚": [
+    {
+      "text": "肚子",
+      "pinyin": "dùzi",
+      "meaning": "stomach; abdomen"
+    },
+    {
+      "text": "肚子痛",
+      "pinyin": "dùzi tòng",
+      "meaning": "stomachache"
+    }
+  ],
+  "吐": [
+    {
+      "text": "吐司",
+      "pinyin": "tǔsī",
+      "meaning": "toast; sliced bread"
+    },
+    {
+      "text": "嘔吐",
+      "pinyin": "ǒutù",
+      "meaning": "vomit; vomiting"
+    }
   ]
 };
 
