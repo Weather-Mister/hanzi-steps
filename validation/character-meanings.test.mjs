@@ -46,15 +46,19 @@ test('high-impact grammar and changed readings are explained separately',()=>{
 });
 
 
-test('supplementary meanings stay fully visible while learned uses are merged in first',()=>{
+test('character references keep learned, common, and supplementary uses separate',()=>{
  const component=readFileSync(new URL('../components/character-meanings.tsx',import.meta.url),'utf8');
  const app=readFileSync(new URL('../components/learning-app.tsx',import.meta.url),'utf8');
  const search=readFileSync(new URL('../components/pinyin-search.tsx',import.meta.url),'utf8');
- assert.match(component,/const learned=completed\?learnedWordsForCharacter\(hanzi,completed\):\[\];/);
+ assert.match(component,/learnedWordsForCharacter\(hanzi,completed\)/);
+ assert.match(component,/const curatedCommon=characterCommonWords\(hanzi\);/);
  assert.match(component,/const senses=characterMeanings\(hanzi\);/);
  assert.doesNotMatch(component,/characterMeanings\(hanzi\)\.filter/,'learner progress must not hide supplementary senses');
- assert.ok(component.indexOf('{learned.map(')<component.indexOf('{senses.map('),'previously learned uses must render before supplementary senses');
- assert.match(component,/Previously learned/);
+ assert.ok(component.indexOf('Uses you\'ve learned')<component.indexOf('Common words & expressions'));
+ assert.ok(component.indexOf('Common words & expressions')<component.indexOf('Other meanings & uses'));
+ assert.match(component,/Course word/);
+ assert.match(component,/Extra reference/);
+ assert.match(component,/Reference only/);
  assert.match(app,/completed=\{completed\} showPinyin=\{prefs\.pinyin\}/);
  assert.match(search,/<CharacterMeanings[^>]*completed=\{completed\}/);
 });
