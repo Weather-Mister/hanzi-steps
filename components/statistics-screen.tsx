@@ -58,6 +58,16 @@ export function StatisticsScreen({
   if(needsSignIn||localDays.length)return [...new Set(localDays)];
   return null;
  },[studyDays,needsSignIn,now,sessions]);
+ const dailyExerciseCounts=useMemo(()=>{
+  if(now===null)return {};
+  const counts:Record<string,number>={};
+  for(const session of sessions){
+   if(!session.complete)continue;
+   const day=taipeiDay(completionTimestamp(session.updatedAt,now));
+   counts[day]=(counts[day]??0)+session.independent+session.assisted;
+  }
+  return counts;
+ },[sessions,now]);
  const stats=useMemo(()=>learningStatistics({
   completed,
   studyDays:days??[],
@@ -66,8 +76,9 @@ export function StatisticsScreen({
   reverseMastered,
   learnedCharacters,
   completedUnits,
+  dailyExerciseCounts,
   now:now??Date.now(),
- }),[completed,days,practiceStates,mastered,reverseMastered,learnedCharacters,completedUnits,now]);
+ }),[completed,days,practiceStates,mastered,reverseMastered,learnedCharacters,completedUnits,dailyExerciseCounts,now]);
  const streakReady=days!==null&&now!==null;
  const topWordMax=Math.max(1,...stats.topPracticedWords.map(word=>word.attempts));
  const modeMax=Math.max(1,...stats.practiceByMode.map(mode=>mode.attempts));
@@ -106,9 +117,9 @@ export function StatisticsScreen({
       <strong>{streakReady?stats.studyDays:'—'}<small> total study days</small></strong>
      </div>
      <div className="statistics-heatmap-wrap">
-      <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Each square is one day</small></div>
+      <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Darker = more exercises</small></div>
       <div className="statistics-heatmap" role="img" aria-label="Study-day heatmap for the last twelve weeks">
-       {stats.activityGrid.map(day=><span key={day.date} className={day.active?'active':''} title={day.date+(day.active?' · studied':'')}/>)}
+       {stats.activityGrid.map(day=><span key={day.date} className={day.active?`active activity-level-${day.level}`:''} title={day.date+(day.active?(day.exercises?` · ${day.exercises} exercise${day.exercises===1?'':'s'}`:' · studied'):'')}/>)}
       </div>
      </div>
     </section>
