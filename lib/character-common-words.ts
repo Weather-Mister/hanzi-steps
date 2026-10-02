@@ -6685,6 +6685,57 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "wánchéng",
       "meaning": "complete; finish"
     }
+  ],
+  "候": [
+    {
+      "text": "時候",
+      "pinyin": "shíhou",
+      "meaning": "time; when (in 什麼時候)"
+    },
+    {
+      "text": "有時候",
+      "pinyin": "yǒu shíhou",
+      "meaning": "sometimes"
+    },
+    {
+      "text": "候車",
+      "pinyin": "hòuchē",
+      "meaning": "wait for a bus or train"
+    },
+    {
+      "text": "問候",
+      "pinyin": "wènhòu",
+      "meaning": "greet; send regards"
+    }
+  ],
+  "始": [
+    {
+      "text": "開始",
+      "pinyin": "kāishǐ",
+      "meaning": "to begin; start"
+    },
+    {
+      "text": "剛開始",
+      "pinyin": "gāng kāishǐ",
+      "meaning": "to have just started; just beginning"
+    },
+    {
+      "text": "始終",
+      "pinyin": "shǐzhōng",
+      "meaning": "from beginning to end; all along"
+    }
+  ],
+  "游": [
+    {
+      "text": "游泳",
+      "pinyin": "yóuyǒng",
+      "meaning": "swim"
+    },
+    {
+      "text": "游泳池",
+      "pinyin": "yóuyǒngchí",
+      "meaning": "swimming pool"
+    }
   ]
 };
 
