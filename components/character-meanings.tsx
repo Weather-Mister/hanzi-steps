@@ -12,7 +12,7 @@ export function CharacterMeanings({hanzi,completed,showPinyin=true,expanded=fals
  const learnedTexts=new Set(learned.map(word=>word.text));
  const curatedCommon=characterCommonWords(hanzi);
  const fallbackCourse=curatedCommon.length?[]:vocabulary
-  .filter(word=>word.text!==hanzi&&word.text.includes(hanzi))
+  .filter(word=>word.text!==hanzi&&word.text.includes(hanzi)&&!learnedTexts.has(word.text))
   .slice(0,5)
   .map(word=>({text:word.text,pinyin:word.pinyin,meaning:word.meaning}));
  const common=[...curatedCommon,...fallbackCourse].filter((word,index,all)=>
