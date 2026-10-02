@@ -3712,6 +3712,321 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "kànqǐlái",
       "meaning": "look; seem"
     }
+  ],
+  "要": [
+    {
+      "text": "需要",
+      "pinyin": "xūyào",
+      "meaning": "to need"
+    },
+    {
+      "text": "重要",
+      "pinyin": "zhòngyào",
+      "meaning": "important"
+    },
+    {
+      "text": "主要",
+      "pinyin": "zhǔyào",
+      "meaning": "main; principal"
+    },
+    {
+      "text": "不要",
+      "pinyin": "bú yào",
+      "meaning": "do not want; do not"
+    }
+  ],
+  "雪": [
+    {
+      "text": "下雪",
+      "pinyin": "xiàxuě",
+      "meaning": "to snow"
+    },
+    {
+      "text": "滑雪",
+      "pinyin": "huáxuě",
+      "meaning": "to ski"
+    },
+    {
+      "text": "雪人",
+      "pinyin": "xuěrén",
+      "meaning": "snowman"
+    },
+    {
+      "text": "雪山",
+      "pinyin": "xuěshān",
+      "meaning": "snow-covered mountain"
+    }
+  ],
+  "女": [
+    {
+      "text": "女人",
+      "pinyin": "nǚrén",
+      "meaning": "woman"
+    },
+    {
+      "text": "女生",
+      "pinyin": "nǚshēng",
+      "meaning": "female student; young woman"
+    },
+    {
+      "text": "女朋友",
+      "pinyin": "nǚpéngyou",
+      "meaning": "girlfriend"
+    },
+    {
+      "text": "女兒",
+      "pinyin": "nǚ'ér",
+      "meaning": "daughter"
+    }
+  ],
+  "夜": [
+    {
+      "text": "夜市",
+      "pinyin": "yèshì",
+      "meaning": "night market"
+    },
+    {
+      "text": "半夜",
+      "pinyin": "bànyè",
+      "meaning": "middle of the night"
+    },
+    {
+      "text": "夜晚",
+      "pinyin": "yèwǎn",
+      "meaning": "night; nighttime"
+    },
+    {
+      "text": "過夜",
+      "pinyin": "guòyè",
+      "meaning": "stay overnight"
+    }
+  ],
+  "市": [
+    {
+      "text": "夜市",
+      "pinyin": "yèshì",
+      "meaning": "night market"
+    },
+    {
+      "text": "市場",
+      "pinyin": "shìchǎng",
+      "meaning": "market"
+    },
+    {
+      "text": "超市",
+      "pinyin": "chāoshì",
+      "meaning": "supermarket"
+    },
+    {
+      "text": "市中心",
+      "pinyin": "shìzhōngxīn",
+      "meaning": "city center"
+    }
+  ],
+  "果": [
+    {
+      "text": "水果",
+      "pinyin": "shuǐguǒ",
+      "meaning": "fruit"
+    },
+    {
+      "text": "芒果",
+      "pinyin": "mángguǒ",
+      "meaning": "mango"
+    },
+    {
+      "text": "如果",
+      "pinyin": "rúguǒ",
+      "meaning": "if"
+    },
+    {
+      "text": "結果",
+      "pinyin": "jiéguǒ",
+      "meaning": "result; outcome"
+    }
+  ],
+  "喜": [
+    {
+      "text": "喜歡",
+      "pinyin": "xǐhuān",
+      "meaning": "like"
+    },
+    {
+      "text": "喜愛",
+      "pinyin": "xǐ'ài",
+      "meaning": "like; be fond of"
+    },
+    {
+      "text": "喜事",
+      "pinyin": "xǐshì",
+      "meaning": "happy occasion"
+    }
+  ],
+  "老": [
+    {
+      "text": "老師",
+      "pinyin": "lǎoshī",
+      "meaning": "teacher"
+    },
+    {
+      "text": "老闆",
+      "pinyin": "lǎobǎn",
+      "meaning": "shop owner; boss"
+    },
+    {
+      "text": "老人",
+      "pinyin": "lǎorén",
+      "meaning": "elderly person"
+    },
+    {
+      "text": "老家",
+      "pinyin": "lǎojiā",
+      "meaning": "hometown; family home"
+    }
+  ],
+  "今": [
+    {
+      "text": "今天",
+      "pinyin": "jīntiān",
+      "meaning": "today"
+    },
+    {
+      "text": "今年",
+      "pinyin": "jīnnián",
+      "meaning": "this year"
+    },
+    {
+      "text": "今晚",
+      "pinyin": "jīnwǎn",
+      "meaning": "tonight"
+    }
+  ],
+  "覺": [
+    {
+      "text": "覺得",
+      "pinyin": "juéde",
+      "meaning": "think; feel (an opinion)"
+    },
+    {
+      "text": "睡覺",
+      "pinyin": "shuìjiào",
+      "meaning": "to sleep"
+    },
+    {
+      "text": "感覺",
+      "pinyin": "gǎnjué",
+      "meaning": "feel; feeling"
+    }
+  ],
+  "起": [
+    {
+      "text": "一起",
+      "pinyin": "yìqǐ",
+      "meaning": "together"
+    },
+    {
+      "text": "起來",
+      "pinyin": "qǐlái",
+      "meaning": "rise; get up; begin to"
+    },
+    {
+      "text": "起床",
+      "pinyin": "qǐchuáng",
+      "meaning": "get out of bed"
+    },
+    {
+      "text": "看起來",
+      "pinyin": "kànqǐlái",
+      "meaning": "look; seem"
+    }
+  ],
+  "音": [
+    {
+      "text": "音樂",
+      "pinyin": "yīnyuè",
+      "meaning": "music"
+    },
+    {
+      "text": "聲音",
+      "pinyin": "shēngyīn",
+      "meaning": "sound; voice"
+    },
+    {
+      "text": "發音",
+      "pinyin": "fāyīn",
+      "meaning": "pronunciation; pronounce"
+    },
+    {
+      "text": "音量",
+      "pinyin": "yīnliàng",
+      "meaning": "volume (sound level)"
+    }
+  ],
+  "運": [
+    {
+      "text": "運動",
+      "pinyin": "yùndòng",
+      "meaning": "to exercise"
+    },
+    {
+      "text": "捷運",
+      "pinyin": "jiéyùn",
+      "meaning": "MRT; metro"
+    },
+    {
+      "text": "運氣",
+      "pinyin": "yùnqì",
+      "meaning": "luck"
+    },
+    {
+      "text": "運送",
+      "pinyin": "yùnsòng",
+      "meaning": "transport; deliver"
+    }
+  ],
+  "色": [
+    {
+      "text": "顏色",
+      "pinyin": "yánsè",
+      "meaning": "color"
+    },
+    {
+      "text": "紅色",
+      "pinyin": "hóngsè",
+      "meaning": "red; the color red"
+    },
+    {
+      "text": "黃色",
+      "pinyin": "huángsè",
+      "meaning": "yellow; the color yellow"
+    },
+    {
+      "text": "藍色",
+      "pinyin": "lánsè",
+      "meaning": "blue; the color blue"
+    }
+  ],
+  "山": [
+    {
+      "text": "山上",
+      "pinyin": "shānshàng",
+      "meaning": "on a mountain; in the mountains"
+    },
+    {
+      "text": "山下",
+      "pinyin": "shānxià",
+      "meaning": "at the foot of a mountain; downhill"
+    },
+    {
+      "text": "高山",
+      "pinyin": "gāoshān",
+      "meaning": "high mountain"
+    },
+    {
+      "text": "爬山",
+      "pinyin": "páshān",
+      "meaning": "hike; climb a mountain"
+    }
   ]
 };
 
