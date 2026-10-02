@@ -67,8 +67,8 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     },
     {
       "text": "好好",
-      "pinyin": "hǎohāo",
-      "meaning": "properly; well"
+      "pinyin": "hǎohǎo",
+      "meaning": "properly; carefully; well"
     },
     {
       "text": "好處",
@@ -94,7 +94,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     },
     {
       "text": "先生",
-      "pinyin": "xiānsheng",
+      "pinyin": "xiānshēng",
       "meaning": "Mr.; husband"
     },
     {
@@ -126,8 +126,8 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     },
     {
       "text": "人家",
-      "pinyin": "rénjiā",
-      "meaning": "other people; someone's household"
+      "pinyin": "rénjia",
+      "meaning": "other people; someone else"
     }
   ],
   "學": [
@@ -2138,7 +2138,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     },
     {
       "text": "笑話",
-      "pinyin": "xiàohua",
+      "pinyin": "xiàohuà",
       "meaning": "joke"
     },
     {
@@ -2397,7 +2397,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
   "頭": [
     {
       "text": "頭髮",
-      "pinyin": "tóufa",
+      "pinyin": "tóufǎ",
       "meaning": "hair"
     },
     {
@@ -2778,7 +2778,7 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
     },
     {
       "text": "笑話",
-      "pinyin": "xiàohua",
+      "pinyin": "xiàohuà",
       "meaning": "joke"
     },
     {
