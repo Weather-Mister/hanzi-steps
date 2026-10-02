@@ -10,6 +10,11 @@ export function reverseMegaVocabulary(completed:Set<string>):VocabularyLookupIte
  return vocabularyLookup.filter(item=>completed.has(item.lessonId)&&item.characters.length>0);
 }
 
+export function scopedMegaVocabulary(completed:Set<string>,unitId?:string,reverse=false):VocabularyLookupItem[]{
+ const items=reverse?reverseMegaVocabulary(completed):learnedVocabulary(completed);
+ return unitId?items.filter(item=>item.unitId===unitId):items;
+}
+
 export {matchesPinyin as matchesMegaPinyin} from './pinyin.ts';
 
 export function makeMegaQueue(items:VocabularyLookupItem[],seed:string):string[]{
