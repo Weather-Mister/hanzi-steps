@@ -689,6 +689,8 @@ export function updatePracticeState(previous:PracticeSkillState|undefined,args:{
   correct:old.correct+Number(args.correct),
   assisted:old.assisted+Number(args.assisted),
   misses:old.misses+Number(!args.correct),
+  cleanCorrect:(old.cleanCorrect??0)+Number(cleanCorrect),
+  cleanTracked:(old.cleanTracked??0)+1,
   streak,
   strength,
   lastSeen:now,
