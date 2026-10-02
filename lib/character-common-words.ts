@@ -3477,6 +3477,241 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "dōngfāng",
       "meaning": "the east; eastern"
     }
+  ],
+  "西": [
+    {
+      "text": "東西",
+      "pinyin": "dōngxi",
+      "meaning": "things; stuff"
+    },
+    {
+      "text": "西瓜",
+      "pinyin": "xīguā",
+      "meaning": "watermelon"
+    },
+    {
+      "text": "西邊",
+      "pinyin": "xībiān",
+      "meaning": "west side"
+    },
+    {
+      "text": "西方",
+      "pinyin": "xīfāng",
+      "meaning": "the west; western"
+    }
+  ],
+  "見": [
+    {
+      "text": "見面",
+      "pinyin": "jiànmiàn",
+      "meaning": "to meet"
+    },
+    {
+      "text": "看見",
+      "pinyin": "kànjiàn",
+      "meaning": "see; catch sight of"
+    },
+    {
+      "text": "再見",
+      "pinyin": "zàijiàn",
+      "meaning": "goodbye"
+    },
+    {
+      "text": "聽見",
+      "pinyin": "tīngjiàn",
+      "meaning": "hear"
+    },
+    {
+      "text": "意見",
+      "pinyin": "yìjiàn",
+      "meaning": "opinion; view"
+    }
+  ],
+  "回": [
+    {
+      "text": "回家",
+      "pinyin": "huí jiā",
+      "meaning": "go home"
+    },
+    {
+      "text": "回來",
+      "pinyin": "huílái",
+      "meaning": "come back; return here"
+    },
+    {
+      "text": "回去",
+      "pinyin": "huíqù",
+      "meaning": "go back"
+    },
+    {
+      "text": "回國",
+      "pinyin": "huíguó",
+      "meaning": "to return to one's country"
+    },
+    {
+      "text": "回答",
+      "pinyin": "huídá",
+      "meaning": "answer; reply"
+    }
+  ],
+  "紅": [
+    {
+      "text": "紅色",
+      "pinyin": "hóngsè",
+      "meaning": "red; the color red"
+    },
+    {
+      "text": "紅茶",
+      "pinyin": "hóngchá",
+      "meaning": "black tea"
+    },
+    {
+      "text": "紅葉",
+      "pinyin": "hóngyè",
+      "meaning": "red maple leaves"
+    },
+    {
+      "text": "紅綠燈",
+      "pinyin": "hónglǜdēng",
+      "meaning": "traffic light"
+    }
+  ],
+  "左": [
+    {
+      "text": "左邊",
+      "pinyin": "zuǒbiān",
+      "meaning": "left side"
+    },
+    {
+      "text": "左轉",
+      "pinyin": "zuǒ zhuǎn",
+      "meaning": "turn left"
+    },
+    {
+      "text": "左右",
+      "pinyin": "zuǒyòu",
+      "meaning": "approximately; around"
+    }
+  ],
+  "右": [
+    {
+      "text": "右邊",
+      "pinyin": "yòubiān",
+      "meaning": "right side"
+    },
+    {
+      "text": "右轉",
+      "pinyin": "yòu zhuǎn",
+      "meaning": "turn right"
+    },
+    {
+      "text": "左右",
+      "pinyin": "zuǒyòu",
+      "meaning": "approximately; around"
+    }
+  ],
+  "口": [
+    {
+      "text": "門口",
+      "pinyin": "ménkǒu",
+      "meaning": "entrance; doorway; gate"
+    },
+    {
+      "text": "路口",
+      "pinyin": "lùkǒu",
+      "meaning": "intersection"
+    },
+    {
+      "text": "胃口",
+      "pinyin": "wèikǒu",
+      "meaning": "appetite"
+    },
+    {
+      "text": "人口",
+      "pinyin": "rénkǒu",
+      "meaning": "population"
+    },
+    {
+      "text": "入口",
+      "pinyin": "rùkǒu",
+      "meaning": "entrance"
+    },
+    {
+      "text": "出口",
+      "pinyin": "chūkǒu",
+      "meaning": "exit; export"
+    }
+  ],
+  "樂": [
+    {
+      "text": "音樂",
+      "pinyin": "yīnyuè",
+      "meaning": "music"
+    },
+    {
+      "text": "快樂",
+      "pinyin": "kuàilè",
+      "meaning": "happy"
+    },
+    {
+      "text": "生日快樂",
+      "pinyin": "shēngrì kuàilè",
+      "meaning": "happy birthday"
+    },
+    {
+      "text": "樂器",
+      "pinyin": "yuèqì",
+      "meaning": "musical instrument"
+    }
+  ],
+  "去": [
+    {
+      "text": "出去",
+      "pinyin": "chūqù",
+      "meaning": "to go out"
+    },
+    {
+      "text": "去年",
+      "pinyin": "qùnián",
+      "meaning": "last year"
+    },
+    {
+      "text": "回去",
+      "pinyin": "huíqù",
+      "meaning": "go back"
+    },
+    {
+      "text": "過去",
+      "pinyin": "guòqù",
+      "meaning": "the past; go over"
+    }
+  ],
+  "來": [
+    {
+      "text": "回來",
+      "pinyin": "huílái",
+      "meaning": "come back; return here"
+    },
+    {
+      "text": "後來",
+      "pinyin": "hòulái",
+      "meaning": "later; afterwards"
+    },
+    {
+      "text": "原來",
+      "pinyin": "yuánlái",
+      "meaning": "originally; it turns out"
+    },
+    {
+      "text": "出來",
+      "pinyin": "chūlái",
+      "meaning": "come out"
+    },
+    {
+      "text": "看起來",
+      "pinyin": "kànqǐlái",
+      "meaning": "look; seem"
+    }
   ]
 };
 
