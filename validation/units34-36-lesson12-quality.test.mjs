@@ -149,7 +149,7 @@ test('Units 34–36 keep published lesson/activity topology stable while content
   const expected={
     'unit-34':[['u34-plan',19],['u34-sequence',14],['u34-center',14],['u34-need',9],['u34-money',19],['u34-grades',13],['u34-review',22]],
     'unit-35':[['u35-tuition',19],['u35-focus',15],['u35-decision',5],['u35-future',19],['u35-workstudy',9],['u35-cheer',17],['u35-review',27]],
-    'unit-36':[['u36-work',15],['u36-business',7],['u36-after',8],['u36-job',12],['u36-try',9],['u36-hard',8],['u36-review',27]],
+    'unit-36':[['u36-work',15],['u36-business',7],['u36-after',8],['u36-job',12],['u36-try',9],['u36-hard',8],['u36-review',28]],
   };
   for(const module of units)
     assert.deepEqual(module.lessons.map(l=>[l.id,l.steps.length]),expected[module.unit.id],module.unit.id+' topology changed');
