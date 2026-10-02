@@ -102,15 +102,8 @@ export function StatisticsScreen({
    <div className="statistics-dashboard-grid">
     <section className="statistics-panel statistics-activity-panel">
      <div className="statistics-panel-heading">
-      <div><span>STUDY RHYTHM</span><h3>Active days by week</h3></div>
+      <div><span>STUDY RHYTHM</span><h3>Study-day history</h3></div>
       <strong>{streakReady?stats.studyDays:'—'}<small> total study days</small></strong>
-     </div>
-     <div className="statistics-weekly-chart" role="img" aria-label="Active study days per week over the last twelve weeks">
-      {stats.weeklyActivity.map((week,index)=><div className="statistics-week-bar" key={week.start}>
-       <span className="statistics-week-value">{week.activeDays}</span>
-       <span className="statistics-week-column"><i style={{height:`${Math.max(4,week.activeDays/7*100)}%`}} data-empty={week.activeDays===0}/></span>
-       <small>{index%3===0||index===stats.weeklyActivity.length-1?week.label:''}</small>
-      </div>)}
      </div>
      <div className="statistics-heatmap-wrap">
       <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Each square is one day</small></div>
