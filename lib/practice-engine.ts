@@ -136,6 +136,11 @@ export function stateFor(states:PracticeStateMap,itemId:string,mode:PracticeMode
  return states[skillKey(itemId,mode)];
 }
 
+export const unguidedPracticeItemId=(char:string)=>'unguided-writing:'+char;
+export function unguidedPracticeCount(states:PracticeStateMap,char:string):number{
+ return stateFor(states,unguidedPracticeItemId(char),'handwriting')?.attempts??0;
+}
+
 export function aggregateItemState(states:PracticeStateMap,item:PracticeItem){
  const records=supportedModes(item).map(mode=>stateFor(states,item.id,mode)).filter(Boolean) as PracticeSkillState[];
  if(!records.length)return {attempts:0,misses:0,strength:0,lastSeen:0,nextReview:0};
