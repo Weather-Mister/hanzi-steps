@@ -5867,6 +5867,91 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "ǒutù",
       "meaning": "vomit; vomiting"
     }
+  ],
+  "健": [
+    {
+      "text": "健康",
+      "pinyin": "jiànkāng",
+      "meaning": "health"
+    },
+    {
+      "text": "健身",
+      "pinyin": "jiànshēn",
+      "meaning": "work out; fitness"
+    },
+    {
+      "text": "健保",
+      "pinyin": "jiànbǎo",
+      "meaning": "health insurance; Taiwan NHI"
+    }
+  ],
+  "康": [
+    {
+      "text": "健康",
+      "pinyin": "jiànkāng",
+      "meaning": "health"
+    },
+    {
+      "text": "康復",
+      "pinyin": "kāngfù",
+      "meaning": "recover; recovery"
+    }
+  ],
+  "險": [
+    {
+      "text": "保險",
+      "pinyin": "bǎoxiǎn",
+      "meaning": "insurance"
+    },
+    {
+      "text": "危險",
+      "pinyin": "wéixiǎn",
+      "meaning": "dangerous; danger"
+    },
+    {
+      "text": "冒險",
+      "pinyin": "màoxiǎn",
+      "meaning": "take a risk; adventure"
+    }
+  ],
+  "冰": [
+    {
+      "text": "冰水",
+      "pinyin": "bīngshuǐ",
+      "meaning": "ice water"
+    },
+    {
+      "text": "冰箱",
+      "pinyin": "bīngxiāng",
+      "meaning": "refrigerator"
+    },
+    {
+      "text": "冰淇淋",
+      "pinyin": "bīngqílín",
+      "meaning": "ice cream"
+    },
+    {
+      "text": "冰塊",
+      "pinyin": "bīngkuài",
+      "meaning": "ice cube"
+    }
+  ],
+  "幫": [
+    {
+      "text": "幫忙",
+      "pinyin": "bāngmáng",
+      "meaning": "help; do a favor"
+    },
+    {
+      "text": "幫助",
+      "pinyin": "bāngzhù",
+      "meaning": "help; assist"
+    },
+    {
+      "text": "幫我",
+      "pinyin": "bāng wǒ",
+      "meaning": "help me; do something for me"
+    }
   ]
 };
 
