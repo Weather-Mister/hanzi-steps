@@ -1990,7 +1990,7 @@
         "evidence": [
           1
         ],
-        "explanation": "三個包子 is three buns."
+        "explanation": "三個包子 means “three buns,” so the quantity is stated directly in the noun phrase, not inferred from the price."
       },
       {
         "prompt": "What extra help does the customer request?",
@@ -2316,7 +2316,7 @@
         "evidence": [
           0
         ],
-        "explanation": "我怕辣 gives the reason before 所以."
+        "explanation": "我怕辣 gives the reason before 所以: the speaker is afraid of spicy food, so the following choice follows from that preference."
       },
       {
         "prompt": "What does the speaker want help learning?",
@@ -2437,7 +2437,7 @@
         "evidence": [
           2
         ],
-        "explanation": "不到我家來 negates the planned arrival."
+        "explanation": "不到我家來 negates the planned arrival: the sentence says the person will not come to the speaker’s home, rather than changing the time."
       },
       {
         "prompt": "Which English meaning matches line 4?",
@@ -2545,7 +2545,7 @@
         "evidence": [
           2
         ],
-        "explanation": "在商店買東西 means buy things at a shop."
+        "explanation": "在商店買東西 means “buy things at a shop”; the location phrase 在商店 tells you where the shopping happens."
       },
       {
         "prompt": "Which English meaning matches line 4?",
@@ -2640,7 +2640,7 @@
         "evidence": [
           0
         ],
-        "explanation": "下午四點半開始 gives the 4:30 p.m. start."
+        "explanation": "下午四點半開始 gives the start time directly: 下午 marks p.m., and 四點半 is 4:30."
       },
       {
         "prompt": "What information does the last question request?",
@@ -2653,7 +2653,7 @@
         "evidence": [
           2
         ],
-        "explanation": "幾點結束 asks what time the event ends."
+        "explanation": "幾點結束 asks what time the event ends, so the question is about the finishing time rather than the starting time."
       },
       {
         "prompt": "Which English meaning matches line 4?",
@@ -3072,7 +3072,7 @@
         "evidence": [
           0
         ],
-        "explanation": "放三天的假 gives a three-day break."
+        "explanation": "放三天的假 states a three-day break explicitly; 三天 gives the duration of the holiday."
       },
       {
         "prompt": "For how long can the speaker not come to class?",
@@ -3288,7 +3288,7 @@
         "evidence": [
           1
         ],
-        "explanation": "穿紅色衣服的人 is identified as 我朋友."
+        "explanation": "穿紅色衣服的人 identifies “the person wearing red clothes,” and the rest of the sentence says that person is the speaker’s friend."
       },
       {
         "prompt": "What is said about the male student?",
@@ -3396,7 +3396,7 @@
         "evidence": [
           0
         ],
-        "explanation": "上個月 places the stay last month."
+        "explanation": "上個月 places the stay last month, so the sentence describes a completed stay in the month before the present one."
       },
       {
         "prompt": "Why is the hotel not too expensive now?",
@@ -3950,7 +3950,7 @@
         "evidence": [
           2
         ],
-        "explanation": "什麼時候 + 都 means any time."
+        "explanation": "什麼時候 + 都 expresses “any time / whenever,” so the sentence is unrestricted with respect to time."
       },
       {
         "prompt": "Which English meaning matches line 4?",
@@ -4045,7 +4045,7 @@
         "evidence": [
           0
         ],
-        "explanation": "誰也沒來 means nobody came."
+        "explanation": "誰也沒來 means nobody came: 誰 combines with 也 and a negative verb to exclude every possible person."
       },
       {
         "prompt": "What does the speaker say about yesterday?",
@@ -4058,7 +4058,7 @@
         "evidence": [
           1
         ],
-        "explanation": "哪裡都沒去 excludes every destination."
+        "explanation": "哪裡都沒去 means the person went nowhere; 哪裡 + 都 with negation excludes every possible destination."
       },
       {
         "prompt": "Which English meaning matches line 4?",
@@ -4153,7 +4153,7 @@
         "evidence": [
           0
         ],
-        "explanation": "住了一年 reports a one-year stay."
+        "explanation": "住了一年 reports a one-year stay: the duration 一年 follows the completed-action verb phrase 住了."
       },
       {
         "prompt": "Which activity lasted two hours?",
@@ -4274,7 +4274,7 @@
         "evidence": [
           2
         ],
-        "explanation": "差不多十二月 means around December."
+        "explanation": "差不多十二月 means approximately December, so the timing is around that month rather than an exact date."
       },
       {
         "prompt": "Which English meaning matches line 4?",
@@ -4923,7 +4923,7 @@
         "evidence": [
           1
         ],
-        "explanation": "最後 means finally / in the end."
+        "explanation": "最後 means “finally / in the end,” marking the last event or result in the sequence described by the passage."
       },
       {
         "prompt": "Which English meaning matches line 4?",
