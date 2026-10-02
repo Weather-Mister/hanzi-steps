@@ -17,6 +17,8 @@ export type PracticeModeStat={
  correct:number;
  assisted:number;
  misses:number;
+ cleanCorrect:number;
+ cleanTracked:number;
 };
 
 const DAY=86_400_000;
@@ -29,6 +31,13 @@ const modeLabels:Record<PracticeMode,string>={
  handwriting:'Handwriting',
  context:'Context',
 };
+
+function directPracticeRecord(itemId:string){
+ return itemId.startsWith('v1:')||
+  itemId.startsWith('phrase:')||
+  itemId.startsWith('char:')||
+  itemId.startsWith('unguided-writing:');
+}
 
 function dateIndex(day:string){
  const value=Date.parse(day+'T00:00:00Z');
@@ -53,28 +62,43 @@ export function learningStatistics(args:{
  const learnedWords=learnedVocabulary(args.completed);
  const learnedWordIds=new Set(learnedWords.map(item=>item.id));
  const attemptsByItem=new Map<string,number>();
+ const unguidedByCharacter=new Map<string,number>();
  const practiceModeMap=new Map<PracticeMode,PracticeModeStat>();
- let totalCorrect=0,totalAttempts=0,totalAssisted=0,totalMisses=0;
+ let totalCorrect=0,totalAttempts=0,totalAssisted=0,totalMisses=0,totalCleanCorrect=0,totalCleanTracked=0;
  for(const row of Object.values(args.practiceStates)){
   attemptsByItem.set(row.itemId,(attemptsByItem.get(row.itemId)??0)+row.attempts);
+  if(row.itemId.startsWith('unguided-writing:')){
+   const char=row.itemId.slice('unguided-writing:'.length);
+   unguidedByCharacter.set(char,(unguidedByCharacter.get(char)??0)+row.attempts);
+  }
+  if(!directPracticeRecord(row.itemId))continue;
   totalAttempts+=row.attempts;
   totalCorrect+=row.correct;
   totalAssisted+=row.assisted;
   totalMisses+=row.misses;
+  totalCleanCorrect+=row.cleanCorrect??0;
+  totalCleanTracked+=row.cleanTracked??0;
   const current=practiceModeMap.get(row.mode)??{
-   mode:row.mode,label:modeLabels[row.mode],attempts:0,correct:0,assisted:0,misses:0,
+   mode:row.mode,label:modeLabels[row.mode],attempts:0,correct:0,assisted:0,misses:0,cleanCorrect:0,cleanTracked:0,
   };
   current.attempts+=row.attempts;
   current.correct+=row.correct;
   current.assisted+=row.assisted;
   current.misses+=row.misses;
+  current.cleanCorrect+=row.cleanCorrect??0;
+  current.cleanTracked+=row.cleanTracked??0;
   practiceModeMap.set(row.mode,current);
  }
 
- const topPracticedWords=learnedWords.map(word=>({
-  id:word.id,traditional:word.traditional,pinyin:word.pinyin,meaning:word.meaning,
-  attempts:attemptsByItem.get(word.id)??0,
- })).filter(word=>word.attempts>0).sort((a,b)=>
+ const topPracticedWords=learnedWords.map(word=>{
+  const chars=Array.from(word.traditional);
+  const unguidedRounds=chars.length===1?(unguidedByCharacter.get(chars[0])??0):0;
+  return {
+   id:word.id,traditional:word.traditional,pinyin:word.pinyin,meaning:word.meaning,
+   attempts:(attemptsByItem.get(word.id)??0)+unguidedRounds,
+   unguidedRounds,
+  };
+ }).filter(word=>word.attempts>0).sort((a,b)=>
   b.attempts-a.attempts||a.traditional.localeCompare(b.traditional,'zh-Hant')
  ).slice(0,5);
  const mostPracticedWord=topPracticedWords[0]??null;
@@ -84,7 +108,9 @@ export function learningStatistics(args:{
  const pinyinMasteredWords=[...args.reverseMastered].filter(id=>learnedWordIds.has(id)).length;
  const masteredRate=learnedWords.length?Math.round(masteredWords/learnedWords.length*100):0;
  const pinyinMasteredRate=learnedWords.length?Math.round(pinyinMasteredWords/learnedWords.length*100):0;
- const accuracy=totalAttempts?Math.round(totalCorrect/totalAttempts*100):0;
+ const successRate=totalAttempts?Math.round(totalCorrect/totalAttempts*100):0;
+ const strictAccuracy=totalCleanTracked?Math.round(totalCleanCorrect/totalCleanTracked*100):0;
+ const strictCoverage=totalAttempts?Math.round(totalCleanTracked/totalAttempts*100):0;
  const assistedRate=totalAttempts?Math.round(totalAssisted/totalAttempts*100):0;
 
  const todayIndex=dateIndex(streak.today);
@@ -121,7 +147,11 @@ export function learningStatistics(args:{
   totalPracticeAttempts:totalAttempts,
   totalCorrect,
   totalMisses,
-  accuracy,
+  totalCleanCorrect,
+  totalCleanTracked,
+  successRate,
+  strictAccuracy,
+  strictCoverage,
   assistedRate,
   mostPracticedWord,
   topPracticedWords,
