@@ -117,9 +117,9 @@ export function StatisticsScreen({
       <strong>{streakReady?stats.studyDays:'—'}<small> total study days</small></strong>
      </div>
      <div className="statistics-heatmap-wrap">
-      <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Darker = more exercises</small></div>
+      <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Darker = more completed lesson exercises</small></div>
       <div className="statistics-heatmap" role="img" aria-label="Study-day heatmap for the last twelve weeks">
-       {stats.activityGrid.map(day=><span key={day.date} className={day.active?`active activity-level-${day.level}`:''} title={day.date+(day.active?(day.exercises?` · ${day.exercises} exercise${day.exercises===1?'':'s'}`:' · studied'):'')}/>)}
+       {stats.activityGrid.map(day=><span key={day.date} className={day.active?`active activity-level-${day.level}`:''} title={day.date+(day.active?(day.exercises?` · ${day.exercises} lesson exercise${day.exercises===1?'':'s'}`:' · studied'):'')}/>)}
       </div>
      </div>
     </section>
@@ -177,7 +177,7 @@ export function StatisticsScreen({
     <article><Activity size={18}/><span>Pinyin mastered</span><strong>{stats.pinyinMasteredWords}</strong></article>
    </section>
 
-   <p className="statistics-footnote">The dashboard recalculates from current app state as you learn. Infinite free-writing rounds count toward a ranked word only when that practiced character is itself a learned one-character word.</p>
+   <p className="statistics-footnote">The dashboard recalculates from current app state as you learn. Heatmap intensity uses completed lesson exercises because older adaptive-practice history is not stored with a per-day breakdown. Infinite free-writing rounds count toward a ranked word only when that practiced character is itself a learned one-character word.</p>
    {needsSignIn&&<p className="statistics-footnote">These numbers are using this device’s saved progress. Sign in to keep them consistent across devices.</p>}
   </DialogContent>
  </Dialog>;

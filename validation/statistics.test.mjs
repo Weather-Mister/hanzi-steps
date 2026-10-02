@@ -39,7 +39,7 @@ test('statistics use exact clean outcomes, exclude bookkeeping, and include ungu
 
  const stats=learningStatistics({
   completed,
-  studyDays:['2026-09-07','2026-09-08','2026-09-09'],
+  studyDays:['2026-09-07','2026-09-08','2026-09-09','2026-09-11','not-a-day'],
   practiceStates:states,
   mastered:new Set([target.id,'phrase:not-a-word']),
   reverseMastered:new Set([target.id]),
@@ -61,7 +61,7 @@ test('statistics use exact clean outcomes, exclude bookkeeping, and include ungu
  assert.equal(stats.pinyinMasteredWords,1);
  assert.equal(stats.learnedCharacters,12);
  assert.equal(stats.completedUnits,3);
- assert.equal(stats.studyDays,3);
+ assert.equal(stats.studyDays,3,'future and malformed dates must not inflate study-day totals');
 
  assert.equal(stats.totalPracticeAttempts,5);
  assert.equal(stats.totalCorrect,5);

@@ -41,9 +41,12 @@ function directPracticeRecord(itemId:string){
   itemId.startsWith('unguided-writing:');
 }
 
-function dateIndex(day:string){
+function dateIndex(day:string):number|null{
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(day))return null;
  const value=Date.parse(day+'T00:00:00Z');
- return Number.isFinite(value)?Math.floor(value/DAY):0;
+ if(!Number.isFinite(value))return null;
+ const index=Math.floor(value/DAY);
+ return indexDay(index)===day?index:null;
 }
 function indexDay(index:number){return new Date(index*DAY).toISOString().slice(0,10)}
 
@@ -112,8 +115,13 @@ export function learningStatistics(args:{
  const strictCoverage=totalAttempts?Math.round(totalCleanTracked/totalAttempts*100):0;
  const assistedRate=totalAttempts?Math.round(totalAssisted/totalAttempts*100):0;
 
- const todayIndex=dateIndex(streak.today);
- const studySet=new Set(args.studyDays);
+ const todayIndex=dateIndex(streak.today)!;
+ // Keep headline totals and the visible grid consistent with streak rules:
+ // malformed or future-dated activity must never count as a study day.
+ const studySet=new Set(args.studyDays.filter(day=>{
+  const index=dateIndex(day);
+  return index!==null&&index<=todayIndex;
+ }));
  const activityGrid=Array.from({length:84},(_,offset)=>{
   const index=todayIndex-83+offset;
   const date=indexDay(index);
@@ -134,7 +142,7 @@ export function learningStatistics(args:{
   pinyinMasteredRate,
   learnedCharacters:args.learnedCharacters,
   completedUnits:args.completedUnits,
-  studyDays:new Set(args.studyDays).size,
+  studyDays:studySet.size,
   totalPracticeAttempts:totalAttempts,
   totalCorrect,
   totalMisses,

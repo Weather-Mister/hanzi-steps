@@ -30,6 +30,10 @@ const familiar=[
   id:'word:買',kind:'word',traditional:'買',pinyin:'mǎi',meaning:'buy',
   characters:['買'],unitId:'unit-10',unitNumber:10,bookId:'book-1',bookNumber:1,lessonId:'u10-c',
  },
+ {
+  id:'word:也',kind:'word',traditional:'也',pinyin:'yě',meaning:'also',
+  characters:['也'],unitId:'unit-2',unitNumber:2,bookId:'book-1',bookNumber:1,lessonId:'u2-also',
+ },
 ];
 
 test('sentence-bank enhancement is scoped exactly to Book 1 Units 11-48',()=>{
@@ -53,9 +57,23 @@ test('Units 11-48 sentence banks add only familiar distractors and keep every to
  });
  assert.equal(bank.distractors.length,1);
  assert.ok(familiar.some(item=>item.traditional===bank.distractors[0]),'distractor should come from familiar material');
+ assert.ok(Array.from(bank.distractors[0]).length>=2,'lesson distractors should avoid flexible single-character grammar words');
+ assert.notEqual(bank.distractors[0],'也','a grammatical add-on such as 也 must not become a false-answer tile');
  assert.ok(!target.tokens.includes(bank.distractors[0]),'answer token must not be reused as a distractor');
  assert.deepEqual(bank.tokens.slice(0,baseTokens.length),baseTokens,'authored lesson bank remains intact');
  assert.deepEqual([...bank.order].sort((a,b)=>a-b),bank.tokens.map((_,index)=>index),'display order must reference each bank token exactly once');
+});
+
+
+test('sentence-bank display order varies by session seed without changing the authored answer',()=>{
+ const baseTokens=['茶','杯','一','要','我'];
+ const orders=new Set(['session-a','session-b','session-c','session-d'].map(seed=>{
+  const bank=buildLessonOrderBank({
+   stepId:'u11-cups-09',baseTokens,answerTokens:target.tokens,learnedItems:familiar,currentItem:target,seed,
+  });
+  return bank.order.join(',');
+ }));
+ assert.ok(orders.size>1,'several sessions should not all present the exact same tile order');
 });
 
 test('outside Units 11-48 the authored sentence bank is left unchanged',()=>{

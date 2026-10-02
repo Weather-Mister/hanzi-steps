@@ -48,9 +48,17 @@ export function buildLessonOrderBank(args:{
 
  const current={...args.currentItem,tokens:[...args.answerTokens]};
  const desired=distractorCount(args.answerTokens);
+ // Lesson builders need unmistakably wrong extra tiles. Phrase fragments and
+ // single-character grammar words (也, 都, 了, 的, etc.) can often be inserted
+ // into an otherwise correct sentence and create a second defensible answer.
+ // Restrict these lesson-only distractors to already-learned multi-character
+ // canonical words; the adaptive practice engine keeps its richer distractors.
+ const safeLearned=args.learnedItems.filter(item=>
+  item.kind==='word'&&Array.from(item.traditional).length>=2
+ );
  const generated=sentenceDistractors(
   current,
-  [...args.learnedItems,current],
+  [...safeLearned,current],
   args.seed+':lesson-order',
   desired+4,
  );
