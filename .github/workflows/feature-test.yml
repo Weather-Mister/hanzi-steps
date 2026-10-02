@@ -27,6 +27,10 @@ jobs:
 
       - run: npm ci
 
+      # Fail on cheap compile errors before spending minutes on exhaustive regressions.
+      - name: TypeScript preflight
+        run: npx tsc --noEmit
+
       - name: Hydrate declared Traditional stroke sources
         run: node scripts/hydrate-stroke-source.mjs
 
@@ -69,12 +73,13 @@ jobs:
       - name: Validate notification reading sentences
         run: node --experimental-strip-types --test tests/notification-sentences.test.mjs
 
+      # Build is also much cheaper than the exhaustive regression sweep, so catch
+      # bundling/import failures before starting the longest step.
+      - name: Build Pages bundle
+        run: npm run build:pages
+
       - name: Run regression tests
         run: node --experimental-strip-types --test tests/order-answer.test.mjs tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs tests/practice-engine.test.mjs tests/practice-content.test.mjs tests/exam-study.test.mjs tests/exam-stroke-guidance.test.mjs validation/*.test.mjs
-
-      - run: npx tsc --noEmit
-
-      - run: npm run build:pages
 
       - name: Commit generated curriculum artifacts
         shell: bash

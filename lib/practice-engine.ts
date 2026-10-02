@@ -718,13 +718,24 @@ type SentenceTokenCandidate={
  phrasePositions:number[];
 };
 
+const meaningStopWords=new Set(['a','an','the','to','of','is','are','am','be','my','your','his','her','their','this','that','these','those','one','some']);
+const meaningWordCache=new Map<string,Set<string>>();
+const visualSimilarityCache=new Map<string,number>();
+const sentenceCandidateCache=new WeakMap<PracticeItem[],SentenceTokenCandidate[]>();
+
 function tokenMeaningWords(value:string|undefined):Set<string>{
  if(!value)return new Set();
- const stop=new Set(['a','an','the','to','of','is','are','am','be','my','your','his','her','their','this','that','these','those','one','some']);
- return new Set(value.toLowerCase().replace(/[^a-z0-9\s-]/g,' ').split(/\s+/).filter(word=>word.length>1&&!stop.has(word)));
+ const cached=meaningWordCache.get(value);
+ if(cached)return cached;
+ const words=new Set(value.toLowerCase().replace(/[^a-z0-9\s-]/g,' ').split(/\s+/).filter(word=>word.length>1&&!meaningStopWords.has(word)));
+ meaningWordCache.set(value,words);
+ return words;
 }
 
 function visualTokenSimilarity(a:string,b:string):number{
+ const cacheKey=a+'\u0000'+b;
+ const cached=visualSimilarityCache.get(cacheKey);
+ if(cached!==undefined)return cached;
  const aa=Array.from(a),bb=Array.from(b);
  let score=0;
  if(aa.length===bb.length)score+=12;
@@ -739,10 +750,13 @@ function visualTokenSimilarity(a:string,b:string):number{
   const shared=right.parts.some(part=>leftParts.has(part.label)||leftParts.has(part.name));
   if(shared)score+=7;
  }
+ visualSimilarityCache.set(cacheKey,score);
  return score;
 }
 
 function sentenceTokenCandidates(items:PracticeItem[]):SentenceTokenCandidate[]{
+ const cached=sentenceCandidateCache.get(items);
+ if(cached)return cached;
  const byToken=new Map<string,SentenceTokenCandidate>();
  const upsert=(token:string,item:PracticeItem,position?:number)=>{
   if(!token||Array.from(token).length>4)return;
@@ -764,11 +778,9 @@ function sentenceTokenCandidates(items:PracticeItem[]):SentenceTokenCandidate[]{
   if(item.kind!=='phrase')upsert(item.traditional,item);
   for(const [index,token] of (item.tokens||[]).entries())upsert(token,item,index);
  }
- return [...byToken.values()];
-}
-
-function targetTokenMetadata(token:string,items:PracticeItem[]):SentenceTokenCandidate|undefined{
- return sentenceTokenCandidates(items).find(candidate=>candidate.token===token);
+ const candidates=[...byToken.values()];
+ sentenceCandidateCache.set(items,candidates);
+ return candidates;
 }
 
 export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:string,count?:number):string[]{
@@ -776,9 +788,11 @@ export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:
  if(!answerTokens.length)return [];
  const desired=count??(answerTokens.length<=4?2:answerTokens.length<=7?3:4);
  const answerSet=new Set(answerTokens);
- const targetMeta=answerTokens.map(token=>({token,meta:targetTokenMetadata(token,items)}));
+ const allCandidates=sentenceTokenCandidates(items);
+ const candidateByToken=new Map(allCandidates.map(candidate=>[candidate.token,candidate]));
+ const targetMeta=answerTokens.map((token,index)=>({token,meta:candidateByToken.get(token),positions:[index]}));
  const targetMeanings=new Set(targetMeta.map(target=>target.meta?.meaning?.trim().toLowerCase()).filter(Boolean));
- const candidates=sentenceTokenCandidates(items).filter(candidate=>{
+ const candidates=allCandidates.filter(candidate=>{
   if(answerSet.has(candidate.token))return false;
   const meaning=candidate.meaning?.trim().toLowerCase();
   return !meaning||!targetMeanings.has(meaning);
@@ -799,8 +813,7 @@ export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:
     if(a[0]&&a[0]===b[0])value+=3;
     if(a.split(/\s+/).length===b.split(/\s+/).length)value+=2;
    }
-   const targetPositions=answerTokens.flatMap((token,index)=>token===target.token?[index]:[]);
-   if(candidate.phrasePositions.some(position=>targetPositions.includes(position)))value+=12;
+   if(candidate.phrasePositions.some(position=>target.positions.includes(position)))value+=12;
    best=Math.max(best,value);
   }
   if(candidate.unitId&&candidate.unitId===item.unitId)best+=15;
@@ -814,8 +827,9 @@ export function sentenceDistractors(item:PracticeItem,items:PracticeItem[],seed:
  };
 
  const ranked=shuffled(candidates,seed+':sentence-distractors')
-  .sort((a,b)=>score(b)-score(a))
-  .map(candidate=>candidate.token)
+  .map(candidate=>({candidate,score:score(candidate)}))
+  .sort((a,b)=>b.score-a.score)
+  .map(row=>row.candidate.token)
   .filter((token,index,array)=>array.indexOf(token)===index);
 
  return ranked.slice(0,Math.min(desired,ranked.length));

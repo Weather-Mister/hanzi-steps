@@ -70,11 +70,15 @@ test('card word relations are derived, exhaustive and gated by canonical teachin
  assert.deepEqual(learnedCharacterMeanings('上',completed),[]);
 });
 test('every lesson boundary gates listening cumulatively and supplies an actionable lock reason',()=>{
+ const requirements=listeningItems.map(item=>{
+  const source=resolveSentence(item.source);
+  assert.ok(source,'missing listening source '+item.id);
+  return {item,required:teachingThroughLesson(source.lessonId)};
+ });
  const completed=new Set();
  for(const lesson of lessons){
   completed.add(lesson.id);
-  for(const item of listeningItems){
-   const source=resolveSentence(item.source),required=teachingThroughLesson(source.lessonId);
+  for(const {item,required} of requirements){
    if(!required.every(id=>completed.has(id))){
     assert.equal(sentenceAvailable(item.source,completed),false,item.id+':'+lesson.id);
     assert.match(prerequisiteHint(required,completed),/^Next prerequisite: Book [12] · Unit \d+ · /);
