@@ -95,7 +95,7 @@ export function StatisticsScreen({
      </div>
     </article>
     <article className="statistics-quick-card"><Trophy size={20}/><span>Longest streak</span><strong>{streakReady?stats.streak.best:'—'}</strong><small>days</small></article>
-    <article className="statistics-quick-card"><BookOpen size={20}/><span>Learned words</span><strong>{stats.learnedWords}</strong><small>{stats.masteredWords} mastered</small></article>
+    <article className="statistics-quick-card"><BookOpen size={20}/><span>Learned words</span><strong>{stats.learnedWords}</strong><small>{stats.masteredWords} writing mastered</small></article>
     <article className="statistics-quick-card"><Repeat2 size={20}/><span>Direct attempts</span><strong>{stats.totalPracticeAttempts}</strong><small>{stats.totalCleanTracked?stats.strictAccuracy+'% strict accuracy':'Strict scoring starts now'}</small></article>
    </section>
 
@@ -116,7 +116,7 @@ export function StatisticsScreen({
     <section className="statistics-panel statistics-mastery-panel">
      <div className="statistics-panel-heading"><div><span>MASTERY</span><h3>How much has stuck</h3></div></div>
      <div className="statistics-rings">
-      <Ring value={stats.masteredRate} label="Mega mastered"/>
+      <Ring value={stats.masteredRate} label="Writing mastered"/>
       <Ring value={stats.pinyinMasteredRate} label="Pinyin mastered" subtle/>
      </div>
      <div className="statistics-progress-list">
@@ -162,7 +162,7 @@ export function StatisticsScreen({
    <section className="statistics-milestones">
     <article><CalendarDays size={18}/><span>Study days</span><strong>{streakReady?stats.studyDays:'—'}</strong></article>
     <article><PenLine size={18}/><span>Characters</span><strong>{stats.learnedCharacters}</strong></article>
-    <article><CheckCircle2 size={18}/><span>Mastered words</span><strong>{stats.masteredWords}</strong></article>
+    <article><CheckCircle2 size={18}/><span>Writing mastered</span><strong>{stats.masteredWords}</strong></article>
     <article><Activity size={18}/><span>Pinyin mastered</span><strong>{stats.pinyinMasteredWords}</strong></article>
    </section>
 
