@@ -33,3 +33,15 @@ test('mastery changes update local state before the network save and roll back o
  assert.ok(apply>=0&&rpc>apply,'mastery should update locally before saving');
  assert.ok(rollback>rpc,'failed mastery saves should roll back the optimistic state');
 });
+
+test('Mega Challenge and Pinyin Gauntlet feed scored results into live practice statistics',async()=>{
+ const [mega,app]=await Promise.all([
+  readFile(root+'components/mega-challenge.tsx','utf8'),
+  readFile(root+'components/learning-app.tsx','utf8'),
+ ]);
+ assert.ok(mega.includes("mode:'handwriting',correct:true,assisted:!perfect,sessionKind:'mega'"));
+ assert.ok(mega.includes("mode:'pinyin',correct:perfect,assisted:false,sessionKind:'mega'"));
+ assert.ok(mega.includes("mode:'pinyin',correct:false,assisted:true,sessionKind:'mega'"));
+ assert.ok(mega.includes('recordedResult.current'));
+ assert.ok(app.includes('mastery={megaMastery} practiceHistory={practiceMastery}'));
+});
