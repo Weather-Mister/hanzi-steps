@@ -3057,6 +3057,156 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "péibàn",
       "meaning": "accompany; keep someone company"
     }
+  ],
+  "不": [
+    {
+      "text": "不要",
+      "pinyin": "bú yào",
+      "meaning": "do not want; do not"
+    },
+    {
+      "text": "不知道",
+      "pinyin": "bù zhīdào",
+      "meaning": "not know"
+    },
+    {
+      "text": "不行",
+      "pinyin": "bùxíng",
+      "meaning": "won't work; not feasible"
+    },
+    {
+      "text": "不錯",
+      "pinyin": "búcuò",
+      "meaning": "not bad; pretty good"
+    },
+    {
+      "text": "不用",
+      "pinyin": "búyòng",
+      "meaning": "do not need to; no need"
+    }
+  ],
+  "上": [
+    {
+      "text": "上班",
+      "pinyin": "shàngbān",
+      "meaning": "to go to work"
+    },
+    {
+      "text": "上課",
+      "pinyin": "shàngkè",
+      "meaning": "to attend class; to have class"
+    },
+    {
+      "text": "上車",
+      "pinyin": "shàngchē",
+      "meaning": "get on a vehicle"
+    },
+    {
+      "text": "上樓",
+      "pinyin": "shànglóu",
+      "meaning": "go upstairs"
+    },
+    {
+      "text": "上面",
+      "pinyin": "shàngmiàn",
+      "meaning": "above; on top"
+    },
+    {
+      "text": "上個月",
+      "pinyin": "shàng ge yuè",
+      "meaning": "last month"
+    }
+  ],
+  "一": [
+    {
+      "text": "一起",
+      "pinyin": "yìqǐ",
+      "meaning": "together"
+    },
+    {
+      "text": "一樣",
+      "pinyin": "yíyàng",
+      "meaning": "same; alike"
+    },
+    {
+      "text": "一定",
+      "pinyin": "yídìng",
+      "meaning": "definitely; really must, in 一定要"
+    },
+    {
+      "text": "一點",
+      "pinyin": "yìdiǎn",
+      "meaning": "a little; some amount"
+    },
+    {
+      "text": "一下",
+      "pinyin": "yíxià",
+      "meaning": "a moment; a little"
+    },
+    {
+      "text": "一般",
+      "pinyin": "yìbān",
+      "meaning": "ordinary; generally"
+    }
+  ],
+  "有": [
+    {
+      "text": "有空",
+      "pinyin": "yǒu kòng",
+      "meaning": "to be free; have available time"
+    },
+    {
+      "text": "有事",
+      "pinyin": "yǒu shì",
+      "meaning": "to have something to do; be occupied"
+    },
+    {
+      "text": "有名",
+      "pinyin": "yǒumíng",
+      "meaning": "famous; well-known"
+    },
+    {
+      "text": "有用",
+      "pinyin": "yǒuyòng",
+      "meaning": "useful"
+    },
+    {
+      "text": "有時候",
+      "pinyin": "yǒu shíhou",
+      "meaning": "sometimes"
+    },
+    {
+      "text": "有錢",
+      "pinyin": "yǒuqián",
+      "meaning": "have money; wealthy"
+    }
+  ],
+  "是": [
+    {
+      "text": "可是",
+      "pinyin": "kěshì",
+      "meaning": "but; however"
+    },
+    {
+      "text": "但是",
+      "pinyin": "dànshì",
+      "meaning": "but; however"
+    },
+    {
+      "text": "還是",
+      "pinyin": "háishì",
+      "meaning": "or (in a choice question)"
+    },
+    {
+      "text": "就是",
+      "pinyin": "jiùshì",
+      "meaning": "exactly; just; that is"
+    },
+    {
+      "text": "是不是",
+      "pinyin": "shì bú shì",
+      "meaning": "is it or not; whether"
+    }
   ]
 };
 
