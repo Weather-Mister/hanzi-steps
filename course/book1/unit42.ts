@@ -1084,10 +1084,7 @@ const unit:UnitData = {
             "The speaker dislikes spring because it rains."
           ],
           "answer": "The speaker prefers spring because of the cold, but often skis when it snows.",
-          "explanation": "The first line gives the spring preference and reason; the second adds a habitual activity during snow.",
-          "grammarIds": [
-            "u42-season-reason"
-          ]
+          "explanation": "The first line gives the spring preference and reason; the second adds a habitual activity during snow."
         }
       ]
     }
