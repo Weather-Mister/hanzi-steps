@@ -135,7 +135,7 @@ let server,browser,page;
  await taiCard.locator('.character-meanings summary').click();
  await taiCard.getByText('Common words & expressions',{exact:true}).waitFor();
  await taiCard.getByText('太太',{exact:true}).waitFor();
- assert.ok(await taiCard.locator('.character-course-badge').count()>0,'future course words should be labelled without becoming learned');
+ assert.ok(await taiCard.locator('.character-sense-learned').filter({hasText:'太太'}).count()>0,'completed course words should move into learned uses');
  assert.ok(await taiCard.locator('.character-reference-badge').count()>0,'extra common words should be visibly reference-only');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.screenshot({path:'test-results/connected-learning/character-common-words-mobile.png',fullPage:true});
