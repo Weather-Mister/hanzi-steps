@@ -116,6 +116,7 @@ let server,browser,page;
  // The recent statistics dashboard must remain contained and usable on mobile.
  await page.getByRole('button',{name:'Statistics',exact:true}).click();
  await page.getByRole('heading',{name:'Learning statistics',exact:true}).waitFor();
+ await page.waitForTimeout(350);
  const statisticsDialog=page.getByRole('dialog');
  const statisticsBox=await statisticsDialog.boundingBox();
  assert.ok(statisticsBox&&statisticsBox.x>=0&&statisticsBox.x+statisticsBox.width<=390.5,'statistics dialog should fit the mobile viewport');
@@ -131,6 +132,7 @@ let server,browser,page;
  await page.keyboard.press('Escape');
  await page.getByRole('button',{name:'Statistics',exact:true}).click();
  await page.getByRole('heading',{name:'Learning statistics',exact:true}).waitFor();
+ await page.waitForTimeout(350);
  await page.screenshot({path:'test-results/connected-learning/statistics-desktop.png',fullPage:true});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.keyboard.press('Escape');
