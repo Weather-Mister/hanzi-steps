@@ -55,6 +55,7 @@ export function learningStatistics(args:{
  reverseMastered:Set<string>;
  learnedCharacters:number;
  completedUnits:number;
+ dailyExerciseCounts?:Readonly<Record<string,number>>;
  now?:number;
 }){
  const learnedWords=learnedVocabulary(args.completed);
@@ -116,7 +117,10 @@ export function learningStatistics(args:{
  const activityGrid=Array.from({length:84},(_,offset)=>{
   const index=todayIndex-83+offset;
   const date=indexDay(index);
-  return {date,active:studySet.has(date),today:index===todayIndex};
+  const active=studySet.has(date);
+  const exercises=Math.max(0,args.dailyExerciseCounts?.[date]??0);
+  const level=!active?0:exercises>=25?4:exercises>=13?3:exercises>=6?2:1;
+  return {date,active,today:index===todayIndex,exercises,level};
  });
  const practiceByMode=[...practiceModeMap.values()].filter(row=>row.attempts>0)
   .sort((a,b)=>b.attempts-a.attempts||a.label.localeCompare(b.label));
