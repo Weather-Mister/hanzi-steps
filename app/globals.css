@@ -2323,7 +2323,6 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  width:10px;height:10px;border-radius:3px;background:#e8edf3;border:1px solid #dde3eb
 }
 .statistics-heatmap>span.active{background:var(--unit-accent);border-color:var(--unit-accent);box-shadow:0 1px 0 var(--unit-depth)}
-.statistics-heatmap>span[data-today=true]{outline:2px solid var(--unit-text);outline-offset:1px}
 
 .statistics-mastery-panel{background:linear-gradient(180deg,#fff,var(--unit-surface))}
 .statistics-rings{display:grid;grid-template-columns:1fr 1fr;gap:10px}
