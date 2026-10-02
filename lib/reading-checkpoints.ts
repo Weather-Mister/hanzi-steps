@@ -8,7 +8,9 @@ export type ReadingLine = {text:string; pinyin:string; translation:string; note:
 export type ReadingQuestion = {prompt:string; options:string[]; answer:number; evidence:number[]; explanation:string};
 export type ReadingCheckpoint = {id:string;unitId:string;title:string;kind:string;setup:string;version:number;lines:ReadingLine[];questions:ReadingQuestion[];tips:string[];grammarFocus:string[];glosses:Record<string,ReadingGloss>};
 export const readingCheckpoints:ReadingCheckpoint[] = rawReadings as ReadingCheckpoint[];
-export const readingForUnit=(unitId:string)=>readingCheckpoints.find(r=>r.unitId===unitId);
+export const readingsForUnit=(unitId:string)=>readingCheckpoints.filter(r=>r.unitId===unitId);
+// Compatibility helper for callers that only need the first checkpoint in a set.
+export const readingForUnit=(unitId:string)=>readingsForUnit(unitId)[0];
 export function readingAvailable(reading:ReadingCheckpoint,completed:Set<string>){
  return meetsPrerequisites(readingPrerequisites(reading.unitId),completed);
 }
