@@ -73,6 +73,8 @@ export function MegaChallenge({
    setCharIndex(index=>index+1);
    return;
   }
+  if(recordedResult.current)return;
+  recordedResult.current=true;
   setResult({item:current,perfect});
   void practiceHistory?.record({itemId:current.id,mode:'handwriting',correct:true,assisted:!perfect,sessionKind:'mega'});
  }
@@ -113,12 +115,20 @@ export function MegaChallenge({
   if(result||gaveUp)return;
   setGaveUp(true);
   setWordPerfect(false);
-  if(reverse&&current)setResult({item:current,perfect:false});
+  if(reverse&&current&&!recordedResult.current){
+   recordedResult.current=true;
+   setResult({item:current,perfect:false});
+   void practiceHistory?.record({itemId:current.id,mode:'pinyin',correct:false,assisted:true,sessionKind:'mega'});
+  }
  }
 
  function checkPinyin(){
   if(!reverse||!current||result||!pinyinInput.trim())return;
-  setResult({item:current,perfect:matchesMegaPinyin(pinyinInput,current.pinyin)});
+  if(recordedResult.current)return;
+  recordedResult.current=true;
+  const perfect=matchesMegaPinyin(pinyinInput,current.pinyin);
+  setResult({item:current,perfect});
+  void practiceHistory?.record({itemId:current.id,mode:'pinyin',correct:perfect,assisted:false,sessionKind:'mega'});
  }
 
  function skipWord(){
