@@ -108,7 +108,7 @@ export function StatisticsScreen({
      <div className="statistics-heatmap-wrap">
       <div className="statistics-heatmap-copy"><span>LAST 12 WEEKS</span><small>Each square is one day</small></div>
       <div className="statistics-heatmap" role="img" aria-label="Study-day heatmap for the last twelve weeks">
-       {stats.activityGrid.map(day=><span key={day.date} className={day.active?'active':''} data-today={day.today||undefined} title={day.date+(day.active?' · studied':'')}/>)}
+       {stats.activityGrid.map(day=><span key={day.date} className={day.active?'active':''} title={day.date+(day.active?' · studied':'')}/>)}
       </div>
      </div>
     </section>
