@@ -2569,6 +2569,494 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "bǎozhèng",
       "meaning": "guarantee; promise"
     }
+  ],
+  "也": [
+    {
+      "text": "也許",
+      "pinyin": "yěxǔ",
+      "meaning": "perhaps; maybe"
+    },
+    {
+      "text": "也好",
+      "pinyin": "yěhǎo",
+      "meaning": "that is fine too; either is fine"
+    }
+  ],
+  "兩": [
+    {
+      "text": "兩邊",
+      "pinyin": "liǎngbiān",
+      "meaning": "both sides"
+    },
+    {
+      "text": "兩次",
+      "pinyin": "liǎng cì",
+      "meaning": "twice"
+    },
+    {
+      "text": "兩個",
+      "pinyin": "liǎng ge",
+      "meaning": "two people or things"
+    }
+  ],
+  "誰": [
+    {
+      "text": "誰的",
+      "pinyin": "shéi de",
+      "meaning": "whose"
+    },
+    {
+      "text": "誰知道",
+      "pinyin": "shéi zhīdào",
+      "meaning": "who knows"
+    }
+  ],
+  "杯": [
+    {
+      "text": "杯子",
+      "pinyin": "bēizi",
+      "meaning": "cup; glass"
+    },
+    {
+      "text": "一杯",
+      "pinyin": "yì bēi",
+      "meaning": "one cup"
+    }
+  ],
+  "賣": [
+    {
+      "text": "買賣",
+      "pinyin": "mǎimài",
+      "meaning": "buying and selling; trade"
+    },
+    {
+      "text": "賣場",
+      "pinyin": "màichǎng",
+      "meaning": "retail store; sales floor"
+    }
+  ],
+  "能": [
+    {
+      "text": "可能",
+      "pinyin": "kěnéng",
+      "meaning": "possible; maybe"
+    },
+    {
+      "text": "能力",
+      "pinyin": "nénglì",
+      "meaning": "ability; capability"
+    },
+    {
+      "text": "功能",
+      "pinyin": "gōngnéng",
+      "meaning": "function; feature"
+    }
+  ],
+  "湯": [
+    {
+      "text": "湯匙",
+      "pinyin": "tāngchí",
+      "meaning": "spoon"
+    },
+    {
+      "text": "湯麵",
+      "pinyin": "tāngmiàn",
+      "meaning": "noodles in soup"
+    }
+  ],
+  "碗": [
+    {
+      "text": "飯碗",
+      "pinyin": "fànwǎn",
+      "meaning": "rice bowl"
+    },
+    {
+      "text": "一碗",
+      "pinyin": "yì wǎn",
+      "meaning": "one bowl"
+    }
+  ],
+  "辣": [
+    {
+      "text": "辣椒",
+      "pinyin": "làjiāo",
+      "meaning": "chili pepper"
+    },
+    {
+      "text": "麻辣",
+      "pinyin": "málà",
+      "meaning": "numbing and spicy"
+    }
+  ],
+  "海": [
+    {
+      "text": "海邊",
+      "pinyin": "hǎibiān",
+      "meaning": "seaside; coast"
+    },
+    {
+      "text": "海水",
+      "pinyin": "hǎishuǐ",
+      "meaning": "seawater"
+    },
+    {
+      "text": "海外",
+      "pinyin": "hǎiwài",
+      "meaning": "overseas"
+    }
+  ],
+  "遠": [
+    {
+      "text": "永遠",
+      "pinyin": "yǒngyuǎn",
+      "meaning": "forever; always"
+    },
+    {
+      "text": "遠方",
+      "pinyin": "yuǎnfāng",
+      "meaning": "a faraway place; the distance"
+    }
+  ],
+  "半": [
+    {
+      "text": "一半",
+      "pinyin": "yíbàn",
+      "meaning": "half"
+    },
+    {
+      "text": "半年",
+      "pinyin": "bànnián",
+      "meaning": "half a year"
+    },
+    {
+      "text": "半天",
+      "pinyin": "bàntiān",
+      "meaning": "half a day"
+    }
+  ],
+  "騎": [
+    {
+      "text": "騎車",
+      "pinyin": "qí chē",
+      "meaning": "ride a bike or scooter"
+    },
+    {
+      "text": "騎腳踏車",
+      "pinyin": "qí jiǎotàchē",
+      "meaning": "ride a bicycle"
+    }
+  ],
+  "逛": [
+    {
+      "text": "逛街",
+      "pinyin": "guàngjiē",
+      "meaning": "go shopping; stroll around shops"
+    },
+    {
+      "text": "逛夜市",
+      "pinyin": "guàng yèshì",
+      "meaning": "visit a night market"
+    }
+  ],
+  "拍": [
+    {
+      "text": "拍照",
+      "pinyin": "pāizhào",
+      "meaning": "take a photo"
+    },
+    {
+      "text": "拍手",
+      "pinyin": "pāishǒu",
+      "meaning": "clap one's hands"
+    }
+  ],
+  "笑": [
+    {
+      "text": "微笑",
+      "pinyin": "wēixiào",
+      "meaning": "smile"
+    },
+    {
+      "text": "笑話",
+      "pinyin": "xiàohua",
+      "meaning": "joke"
+    },
+    {
+      "text": "大笑",
+      "pinyin": "dàxiào",
+      "meaning": "laugh loudly"
+    }
+  ],
+  "男": [
+    {
+      "text": "男生",
+      "pinyin": "nánshēng",
+      "meaning": "male student; young man"
+    },
+    {
+      "text": "男朋友",
+      "pinyin": "nánpéngyǒu",
+      "meaning": "boyfriend"
+    },
+    {
+      "text": "男人",
+      "pinyin": "nánrén",
+      "meaning": "man"
+    }
+  ],
+  "矮": [
+    {
+      "text": "矮小",
+      "pinyin": "ǎixiǎo",
+      "meaning": "short; small in stature"
+    }
+  ],
+  "再": [
+    {
+      "text": "再見",
+      "pinyin": "zàijiàn",
+      "meaning": "goodbye"
+    },
+    {
+      "text": "再次",
+      "pinyin": "zàicì",
+      "meaning": "again; once more"
+    },
+    {
+      "text": "再說",
+      "pinyin": "zàishuō",
+      "meaning": "talk about it later; besides"
+    }
+  ],
+  "付": [
+    {
+      "text": "付錢",
+      "pinyin": "fùqián",
+      "meaning": "pay money"
+    },
+    {
+      "text": "支付",
+      "pinyin": "zhīfù",
+      "meaning": "pay; payment"
+    },
+    {
+      "text": "付費",
+      "pinyin": "fùfèi",
+      "meaning": "pay a fee; paid"
+    }
+  ],
+  "先": [
+    {
+      "text": "先生",
+      "pinyin": "xiānsheng",
+      "meaning": "Mr.; husband"
+    },
+    {
+      "text": "首先",
+      "pinyin": "shǒuxiān",
+      "meaning": "first of all"
+    },
+    {
+      "text": "先後",
+      "pinyin": "xiānhòu",
+      "meaning": "one after another; before and after"
+    }
+  ],
+  "花": [
+    {
+      "text": "花錢",
+      "pinyin": "huāqián",
+      "meaning": "spend money"
+    },
+    {
+      "text": "花園",
+      "pinyin": "huāyuán",
+      "meaning": "garden"
+    },
+    {
+      "text": "花店",
+      "pinyin": "huādiàn",
+      "meaning": "flower shop"
+    },
+    {
+      "text": "花時間",
+      "pinyin": "huā shíjiān",
+      "meaning": "spend time"
+    }
+  ],
+  "替": [
+    {
+      "text": "代替",
+      "pinyin": "dàitì",
+      "meaning": "replace; take the place of"
+    },
+    {
+      "text": "替你",
+      "pinyin": "tì nǐ",
+      "meaning": "for you; in your place"
+    }
+  ],
+  "試": [
+    {
+      "text": "考試",
+      "pinyin": "kǎoshì",
+      "meaning": "exam; test"
+    },
+    {
+      "text": "試試",
+      "pinyin": "shìshi",
+      "meaning": "give it a try"
+    },
+    {
+      "text": "試用",
+      "pinyin": "shìyòng",
+      "meaning": "try out; use on a trial basis"
+    }
+  ],
+  "忘": [
+    {
+      "text": "忘記",
+      "pinyin": "wàngjì",
+      "meaning": "forget"
+    },
+    {
+      "text": "難忘",
+      "pinyin": "nánwàng",
+      "meaning": "unforgettable"
+    }
+  ],
+  "訂": [
+    {
+      "text": "訂房",
+      "pinyin": "dìngfáng",
+      "meaning": "book a room"
+    },
+    {
+      "text": "訂票",
+      "pinyin": "dìngpiào",
+      "meaning": "book a ticket"
+    },
+    {
+      "text": "訂位",
+      "pinyin": "dìngwèi",
+      "meaning": "reserve a seat or table"
+    }
+  ],
+  "祝": [
+    {
+      "text": "祝福",
+      "pinyin": "zhùfú",
+      "meaning": "wish well; blessing"
+    },
+    {
+      "text": "祝你生日快樂",
+      "pinyin": "zhù nǐ shēngrì kuàilè",
+      "meaning": "happy birthday to you"
+    }
+  ],
+  "只": [
+    {
+      "text": "只好",
+      "pinyin": "zhǐhǎo",
+      "meaning": "have no choice but to"
+    },
+    {
+      "text": "只是",
+      "pinyin": "zhǐshì",
+      "meaning": "only; just; however"
+    }
+  ],
+  "停": [
+    {
+      "text": "停車",
+      "pinyin": "tíngchē",
+      "meaning": "park a vehicle"
+    },
+    {
+      "text": "停止",
+      "pinyin": "tíngzhǐ",
+      "meaning": "stop; cease"
+    },
+    {
+      "text": "停電",
+      "pinyin": "tíngdiàn",
+      "meaning": "power outage"
+    }
+  ],
+  "傘": [
+    {
+      "text": "雨傘",
+      "pinyin": "yǔsǎn",
+      "meaning": "umbrella"
+    },
+    {
+      "text": "撐傘",
+      "pinyin": "chēngsǎn",
+      "meaning": "hold or use an umbrella"
+    }
+  ],
+  "濕": [
+    {
+      "text": "濕氣",
+      "pinyin": "shīqì",
+      "meaning": "humidity; dampness"
+    },
+    {
+      "text": "弄濕",
+      "pinyin": "nòngshī",
+      "meaning": "get or make wet"
+    }
+  ],
+  "痛": [
+    {
+      "text": "頭痛",
+      "pinyin": "tóutòng",
+      "meaning": "headache"
+    },
+    {
+      "text": "肚子痛",
+      "pinyin": "dùzi tòng",
+      "meaning": "stomachache"
+    },
+    {
+      "text": "痛苦",
+      "pinyin": "tòngkǔ",
+      "meaning": "painful; suffering"
+    }
+  ],
+  "拿": [
+    {
+      "text": "拿到",
+      "pinyin": "nádào",
+      "meaning": "get; obtain"
+    },
+    {
+      "text": "拿走",
+      "pinyin": "názǒu",
+      "meaning": "take away"
+    },
+    {
+      "text": "拿來",
+      "pinyin": "nálái",
+      "meaning": "bring here"
+    }
+  ],
+  "陪": [
+    {
+      "text": "陪同",
+      "pinyin": "péitóng",
+      "meaning": "accompany"
+    },
+    {
+      "text": "陪你",
+      "pinyin": "péi nǐ",
+      "meaning": "accompany you"
+    },
+    {
+      "text": "陪伴",
+      "pinyin": "péibàn",
+      "meaning": "accompany; keep someone company"
+    }
   ]
 };
 
