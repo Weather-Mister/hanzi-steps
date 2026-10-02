@@ -3207,6 +3207,276 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "shì bú shì",
       "meaning": "is it or not; whether"
     }
+  ],
+  "大": [
+    {
+      "text": "大家",
+      "pinyin": "dàjiā",
+      "meaning": "everyone"
+    },
+    {
+      "text": "大學",
+      "pinyin": "dàxué",
+      "meaning": "university"
+    },
+    {
+      "text": "大樓",
+      "pinyin": "dàlóu",
+      "meaning": "multi-storey building"
+    },
+    {
+      "text": "大概",
+      "pinyin": "dàgài",
+      "meaning": "approximately; probably"
+    },
+    {
+      "text": "大人",
+      "pinyin": "dàrén",
+      "meaning": "adult"
+    },
+    {
+      "text": "大小",
+      "pinyin": "dàxiǎo",
+      "meaning": "size"
+    }
+  ],
+  "可": [
+    {
+      "text": "可以",
+      "pinyin": "kěyǐ",
+      "meaning": "can (possibility)"
+    },
+    {
+      "text": "可是",
+      "pinyin": "kěshì",
+      "meaning": "but; however"
+    },
+    {
+      "text": "可能",
+      "pinyin": "kěnéng",
+      "meaning": "possible; maybe"
+    },
+    {
+      "text": "可愛",
+      "pinyin": "kě'ài",
+      "meaning": "cute; lovable"
+    },
+    {
+      "text": "可怕",
+      "pinyin": "kěpà",
+      "meaning": "scary"
+    }
+  ],
+  "面": [
+    {
+      "text": "裡面",
+      "pinyin": "lǐmiàn",
+      "meaning": "inside; interior"
+    },
+    {
+      "text": "外面",
+      "pinyin": "wàimiàn",
+      "meaning": "outside; exterior"
+    },
+    {
+      "text": "前面",
+      "pinyin": "qiánmiàn",
+      "meaning": "in front; the front"
+    },
+    {
+      "text": "後面",
+      "pinyin": "hòumiàn",
+      "meaning": "behind; the back"
+    },
+    {
+      "text": "見面",
+      "pinyin": "jiànmiàn",
+      "meaning": "to meet"
+    },
+    {
+      "text": "對面",
+      "pinyin": "duìmiàn",
+      "meaning": "opposite; across from"
+    }
+  ],
+  "邊": [
+    {
+      "text": "旁邊",
+      "pinyin": "pángbiān",
+      "meaning": "beside; next to"
+    },
+    {
+      "text": "左邊",
+      "pinyin": "zuǒbiān",
+      "meaning": "left side"
+    },
+    {
+      "text": "右邊",
+      "pinyin": "yòubiān",
+      "meaning": "right side"
+    },
+    {
+      "text": "那邊",
+      "pinyin": "nàbiān",
+      "meaning": "over there"
+    },
+    {
+      "text": "海邊",
+      "pinyin": "hǎibiān",
+      "meaning": "seaside; coast"
+    }
+  ],
+  "這": [
+    {
+      "text": "這裡",
+      "pinyin": "zhèlǐ",
+      "meaning": "here"
+    },
+    {
+      "text": "這些",
+      "pinyin": "zhèxiē",
+      "meaning": "these; these ones"
+    },
+    {
+      "text": "這樣",
+      "pinyin": "zhèyàng",
+      "meaning": "this kind (of); like this"
+    },
+    {
+      "text": "這次",
+      "pinyin": "zhè cì",
+      "meaning": "this time"
+    },
+    {
+      "text": "這邊",
+      "pinyin": "zhèbiān",
+      "meaning": "this side; over here"
+    }
+  ],
+  "裡": [
+    {
+      "text": "這裡",
+      "pinyin": "zhèlǐ",
+      "meaning": "here"
+    },
+    {
+      "text": "那裡",
+      "pinyin": "nàlǐ",
+      "meaning": "there"
+    },
+    {
+      "text": "哪裡",
+      "pinyin": "nǎlǐ",
+      "meaning": "where"
+    },
+    {
+      "text": "裡面",
+      "pinyin": "lǐmiàn",
+      "meaning": "inside; interior"
+    },
+    {
+      "text": "家裡",
+      "pinyin": "jiālǐ",
+      "meaning": "at home; in the home"
+    }
+  ],
+  "小": [
+    {
+      "text": "小吃",
+      "pinyin": "xiǎochī",
+      "meaning": "snacks; small local dishes"
+    },
+    {
+      "text": "小籠包",
+      "pinyin": "xiǎolóngbāo",
+      "meaning": "xiaolongbao; small steamed dumplings"
+    },
+    {
+      "text": "小心",
+      "pinyin": "xiǎoxīn",
+      "meaning": "be careful; take care"
+    },
+    {
+      "text": "小時",
+      "pinyin": "xiǎoshí",
+      "meaning": "hour"
+    },
+    {
+      "text": "小孩",
+      "pinyin": "xiǎohái",
+      "meaning": "child; kid"
+    }
+  ],
+  "多": [
+    {
+      "text": "多少",
+      "pinyin": "duōshǎo",
+      "meaning": "how much; how many"
+    },
+    {
+      "text": "很多",
+      "pinyin": "hěnduō",
+      "meaning": "many; a lot"
+    },
+    {
+      "text": "多久",
+      "pinyin": "duōjiǔ",
+      "meaning": "how long"
+    },
+    {
+      "text": "差不多",
+      "pinyin": "chàbuduō",
+      "meaning": "about the same; almost"
+    },
+    {
+      "text": "多一點",
+      "pinyin": "duō yìdiǎn",
+      "meaning": "a little more"
+    }
+  ],
+  "最": [
+    {
+      "text": "最近",
+      "pinyin": "zuìjìn",
+      "meaning": "recently; lately"
+    },
+    {
+      "text": "最後",
+      "pinyin": "zuìhòu",
+      "meaning": "finally; in the end"
+    },
+    {
+      "text": "最好",
+      "pinyin": "zuìhǎo",
+      "meaning": "it would be best; should"
+    },
+    {
+      "text": "最重要",
+      "pinyin": "zuì zhòngyào",
+      "meaning": "most important"
+    }
+  ],
+  "東": [
+    {
+      "text": "東西",
+      "pinyin": "dōngxi",
+      "meaning": "things; stuff"
+    },
+    {
+      "text": "房東",
+      "pinyin": "fángdōng",
+      "meaning": "landlord"
+    },
+    {
+      "text": "東邊",
+      "pinyin": "dōngbiān",
+      "meaning": "east side"
+    },
+    {
+      "text": "東方",
+      "pinyin": "dōngfāng",
+      "meaning": "the east; eastern"
+    }
   ]
 };
 
