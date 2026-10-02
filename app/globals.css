@@ -2322,7 +2322,11 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
 .statistics-heatmap>span{
  width:10px;height:10px;border-radius:3px;background:#e8edf3;border:1px solid #dde3eb
 }
-.statistics-heatmap>span.active{background:var(--unit-accent);border-color:var(--unit-accent);box-shadow:0 1px 0 var(--unit-depth)}
+.statistics-heatmap>span.active{box-shadow:0 1px 0 color-mix(in srgb,var(--unit-depth) 45%,transparent)}
+.statistics-heatmap>span.activity-level-1{background:color-mix(in srgb,var(--unit-accent) 28%,#fff);border-color:color-mix(in srgb,var(--unit-accent) 38%,#dfe5ef)}
+.statistics-heatmap>span.activity-level-2{background:color-mix(in srgb,var(--unit-accent) 50%,#fff);border-color:color-mix(in srgb,var(--unit-accent) 58%,#dfe5ef)}
+.statistics-heatmap>span.activity-level-3{background:color-mix(in srgb,var(--unit-accent) 72%,#fff);border-color:color-mix(in srgb,var(--unit-accent) 78%,#dfe5ef)}
+.statistics-heatmap>span.activity-level-4{background:var(--unit-accent);border-color:var(--unit-accent);box-shadow:0 1px 0 var(--unit-depth)}
 
 .statistics-mastery-panel{background:linear-gradient(180deg,#fff,var(--unit-surface))}
 .statistics-rings{display:grid;grid-template-columns:1fr 1fr;gap:10px}

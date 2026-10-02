@@ -19,6 +19,9 @@ test('statistics screen keeps its visual dashboard sections',async()=>{
  ])assert.ok(source.includes(marker),marker+' is missing from the statistics screen');
  assert.ok(css.includes('.statistics-dashboard-grid'));
  assert.ok(css.includes('.statistics-ring-value'));
+ assert.ok(source.includes('Darker = more exercises'));
+ assert.ok(source.includes('activity-level-'));
+ assert.ok(css.includes('.statistics-heatmap>span.activity-level-4'));
  assert.ok(!source.includes('data-today='));
  assert.ok(!css.includes('.statistics-heatmap>span[data-today=true]'));
 });

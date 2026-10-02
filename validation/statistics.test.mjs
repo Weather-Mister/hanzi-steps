@@ -45,6 +45,11 @@ test('statistics use exact clean outcomes, exclude bookkeeping, and include ungu
   reverseMastered:new Set([target.id]),
   learnedCharacters:12,
   completedUnits:3,
+  dailyExerciseCounts:{
+   '2026-09-07':2,
+   '2026-09-08':8,
+   '2026-09-09':27,
+  },
   now:Date.parse('2026-09-10T08:00:00Z'),
  });
 
@@ -75,6 +80,9 @@ test('statistics use exact clean outcomes, exclude bookkeeping, and include ungu
  assert.equal(stats.practiceByMode.find(row=>row.mode==='handwriting')?.attempts,4);
  assert.equal(stats.activityGrid.length,84);
  assert.equal(stats.activityGrid.filter(day=>day.active).length,3);
+ const activeDays=stats.activityGrid.filter(day=>day.active);
+ assert.deepEqual(activeDays.map(day=>day.exercises),[2,8,27]);
+ assert.deepEqual(activeDays.map(day=>day.level),[1,2,4]);
  assert.equal(stats.masteredRate,Math.round(1/learned.length*100));
  assert.equal(stats.pinyinMasteredRate,Math.round(1/learned.length*100));
 });
