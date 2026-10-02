@@ -4442,6 +4442,326 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "yìtí",
       "meaning": "issue; topic for discussion"
     }
+  ],
+  "應": [
+    {
+      "text": "應該",
+      "pinyin": "yīnggāi",
+      "meaning": "should; ought to"
+    },
+    {
+      "text": "回應",
+      "pinyin": "huíyìng",
+      "meaning": "respond; response"
+    },
+    {
+      "text": "反應",
+      "pinyin": "fǎnyìng",
+      "meaning": "reaction; respond"
+    },
+    {
+      "text": "應用",
+      "pinyin": "yìngyòng",
+      "meaning": "apply; application"
+    }
+  ],
+  "特": [
+    {
+      "text": "特別",
+      "pinyin": "tèbié",
+      "meaning": "special; distinctive"
+    },
+    {
+      "text": "特價",
+      "pinyin": "tèjià",
+      "meaning": "special price; sale price"
+    },
+    {
+      "text": "特色",
+      "pinyin": "tèsè",
+      "meaning": "distinctive feature; characteristic"
+    }
+  ],
+  "別": [
+    {
+      "text": "特別",
+      "pinyin": "tèbié",
+      "meaning": "special; distinctive"
+    },
+    {
+      "text": "別人",
+      "pinyin": "biérén",
+      "meaning": "other people; someone else"
+    },
+    {
+      "text": "分別",
+      "pinyin": "fēnbié",
+      "meaning": "separate; respectively"
+    },
+    {
+      "text": "告別",
+      "pinyin": "gàobié",
+      "meaning": "say goodbye; take leave"
+    }
+  ],
+  "決": [
+    {
+      "text": "決定",
+      "pinyin": "juédìng",
+      "meaning": "to decide"
+    },
+    {
+      "text": "解決",
+      "pinyin": "jiějué",
+      "meaning": "solve; resolve"
+    },
+    {
+      "text": "決心",
+      "pinyin": "juéxīn",
+      "meaning": "determination; resolve"
+    }
+  ],
+  "鐘": [
+    {
+      "text": "鐘頭",
+      "pinyin": "zhōngtóu",
+      "meaning": "hour"
+    },
+    {
+      "text": "鬧鐘",
+      "pinyin": "nàozhōng",
+      "meaning": "alarm clock"
+    },
+    {
+      "text": "時鐘",
+      "pinyin": "shízhōng",
+      "meaning": "clock"
+    }
+  ],
+  "非": [
+    {
+      "text": "非常",
+      "pinyin": "fēicháng",
+      "meaning": "very; extremely"
+    },
+    {
+      "text": "非法",
+      "pinyin": "fēifǎ",
+      "meaning": "illegal"
+    }
+  ],
+  "但": [
+    {
+      "text": "但是",
+      "pinyin": "dànshì",
+      "meaning": "but; however"
+    },
+    {
+      "text": "不但",
+      "pinyin": "búdàn",
+      "meaning": "not only"
+    }
+  ],
+  "或": [
+    {
+      "text": "或是",
+      "pinyin": "huòshì",
+      "meaning": "or"
+    },
+    {
+      "text": "或者",
+      "pinyin": "huòzhě",
+      "meaning": "or; perhaps"
+    }
+  ],
+  "利": [
+    {
+      "text": "便利",
+      "pinyin": "biànlì",
+      "meaning": "convenient"
+    },
+    {
+      "text": "利用",
+      "pinyin": "lìyòng",
+      "meaning": "use; make use of"
+    },
+    {
+      "text": "有利",
+      "pinyin": "yǒulì",
+      "meaning": "beneficial; favorable"
+    }
+  ],
+  "汽": [
+    {
+      "text": "汽車",
+      "pinyin": "qìchē",
+      "meaning": "car; automobile"
+    },
+    {
+      "text": "汽水",
+      "pinyin": "qìshuǐ",
+      "meaning": "soda; soft drink"
+    }
+  ],
+  "就": [
+    {
+      "text": "就是",
+      "pinyin": "jiùshì",
+      "meaning": "exactly; just; that is"
+    },
+    {
+      "text": "就業",
+      "pinyin": "jiùyè",
+      "meaning": "get a job; employment"
+    }
+  ],
+  "貓": [
+    {
+      "text": "貓空",
+      "pinyin": "Māokōng",
+      "meaning": "Maokong, a Taipei place known for tea and scenery"
+    },
+    {
+      "text": "貓咪",
+      "pinyin": "māomī",
+      "meaning": "cat; kitty"
+    },
+    {
+      "text": "小貓",
+      "pinyin": "xiǎomāo",
+      "meaning": "kitten; small cat"
+    }
+  ],
+  "黃": [
+    {
+      "text": "黃色",
+      "pinyin": "huángsè",
+      "meaning": "yellow; the color yellow"
+    },
+    {
+      "text": "黃金",
+      "pinyin": "huángjīn",
+      "meaning": "gold"
+    },
+    {
+      "text": "蛋黃",
+      "pinyin": "dànhuáng",
+      "meaning": "egg yolk"
+    }
+  ],
+  "本": [
+    {
+      "text": "本子",
+      "pinyin": "běnzi",
+      "meaning": "notebook"
+    },
+    {
+      "text": "本來",
+      "pinyin": "běnlái",
+      "meaning": "originally; at first"
+    },
+    {
+      "text": "日本",
+      "pinyin": "Rìběn",
+      "meaning": "Japan"
+    },
+    {
+      "text": "一本",
+      "pinyin": "yì běn",
+      "meaning": "one volume; one book"
+    }
+  ],
+  "在": [
+    {
+      "text": "現在",
+      "pinyin": "xiànzài",
+      "meaning": "now"
+    },
+    {
+      "text": "在家",
+      "pinyin": "zài jiā",
+      "meaning": "at home"
+    },
+    {
+      "text": "正在",
+      "pinyin": "zhèngzài",
+      "meaning": "in the process of; currently"
+    }
+  ],
+  "瓜": [
+    {
+      "text": "西瓜",
+      "pinyin": "xīguā",
+      "meaning": "watermelon"
+    },
+    {
+      "text": "冬瓜",
+      "pinyin": "dōngguā",
+      "meaning": "winter melon"
+    },
+    {
+      "text": "南瓜",
+      "pinyin": "nánguā",
+      "meaning": "pumpkin"
+    }
+  ],
+  "弟": [
+    {
+      "text": "弟弟",
+      "pinyin": "dìdi",
+      "meaning": "younger brother"
+    },
+    {
+      "text": "兄弟",
+      "pinyin": "xiōngdì",
+      "meaning": "brothers; brother"
+    }
+  ],
+  "些": [
+    {
+      "text": "這些",
+      "pinyin": "zhèxiē",
+      "meaning": "these; these ones"
+    },
+    {
+      "text": "一些",
+      "pinyin": "yìxiē",
+      "meaning": "some"
+    },
+    {
+      "text": "有些",
+      "pinyin": "yǒuxiē",
+      "meaning": "some; somewhat"
+    }
+  ],
+  "乾": [
+    {
+      "text": "乾淨",
+      "pinyin": "gānjìng",
+      "meaning": "clean"
+    },
+    {
+      "text": "乾杯",
+      "pinyin": "gānbēi",
+      "meaning": "cheers; make a toast"
+    },
+    {
+      "text": "乾燥",
+      "pinyin": "gānzào",
+      "meaning": "dry; arid"
+    }
+  ],
+  "淨": [
+    {
+      "text": "乾淨",
+      "pinyin": "gānjìng",
+      "meaning": "clean"
+    },
+    {
+      "text": "清淨",
+      "pinyin": "qīngjìng",
+      "meaning": "quiet and clean; peaceful"
+    }
   ]
 };
 
