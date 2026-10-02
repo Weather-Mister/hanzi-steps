@@ -11,8 +11,8 @@ const courseIndex=JSON.parse(readFileSync(new URL('../course/index.json',import.
 test('common-word references are valid, curated, and progression-neutral',()=>{
  const keys=Object.keys(supplementaryCharacterCommonWords);
  const total=Object.values(supplementaryCharacterCommonWords).reduce((sum,items)=>sum+items.length,0);
- assert.ok(keys.length>=345,'expected a broad Book 1 audit, got '+keys.length+' characters');
- assert.ok(total>=1280,'expected a substantial common-word reference layer, got '+total+' entries');
+ assert.ok(keys.length>=370,'expected a broad current-course audit, got '+keys.length+' characters');
+ assert.ok(total>=1385,'expected a substantial common-word reference layer, got '+total+' entries');
 
  for(const [char,items] of Object.entries(supplementaryCharacterCommonWords)){
   assert.ok(characters[char],'Unknown character card: '+char);
@@ -37,17 +37,27 @@ test('common-word references are valid, curated, and progression-neutral',()=>{
 });
 
 
-test('the Book 1 character audit leaves only genuinely atomic cards without a richer reference path',()=>{
- const book1Chars=Object.entries(courseIndex.characters).filter(([,row])=>row[2]==='book-1').map(([char])=>char);
+test('the current course character audit leaves only the standalone interjection 喂 without a richer reference path',()=>{
+ const courseChars=Object.keys(courseIndex.characters);
  const courseWords=Object.keys(courseIndex.vocabulary);
- const intentionallyAtomic=new Set(['喂']);
- const uncovered=book1Chars.filter(char=>
+ const uncovered=courseChars.filter(char=>
   !supplementaryCharacterCommonWords[char]?.length&&
   !supplementaryCharacterMeanings[char]?.length&&
   !courseWords.some(word=>word!==char&&word.includes(char))
  );
- assert.deepEqual(uncovered.sort(),[...intentionallyAtomic].sort());
- assert.equal(book1Chars.length,465);
+ assert.deepEqual(uncovered,['喂']);
+ assert.ok(courseChars.length>=486);
+});
+
+
+test('published Book 2 Lesson 1 characters all have useful curated reference sets',()=>{
+ const lesson1Units=new Set(['book-2-unit-1','book-2-unit-2','book-2-unit-3','book-2-unit-4']);
+ const chars=Object.entries(courseIndex.characters).filter(([,row])=>lesson1Units.has(row[3])).map(([char])=>char);
+ assert.equal(chars.length,21);
+ for(const char of chars){
+  const items=characterCommonWords(char);
+  assert.ok(items.length>=3,char+': expected at least three curated common references');
+ }
 });
 
 test('high-value Taiwan Mandarin references include the intended everyday examples',()=>{
@@ -74,6 +84,28 @@ test('high-value Taiwan Mandarin references include the intended everyday exampl
  expectWords('麼',['什麼','怎麼','這麼','那麼']);
  expectWords('百',['百分之','百貨公司']);
  expectWords('棟',['一棟房子','這棟大樓']);
+ expectWords('迷',['迷路','球迷','迷人']);
+ expectWords('轉',['轉車','轉彎','右轉','左轉']);
+ expectWords('郵',['郵局','郵件','郵票','郵差']);
+ expectWords('著',['看著','睡著','著名']);
+ expectWords('筆',['鉛筆','筆記','原子筆']);
+ expectWords('巷',['巷子','巷口','巷弄']);
+ expectWords('車',['機車']);
+ expectWords('便',['便當']);
+ expectWords('票',['發票']);
+});
+
+
+test('the same reference word never disagrees across different character cards',()=>{
+ const seen=new Map();
+ for(const [char,items] of Object.entries(supplementaryCharacterCommonWords)){
+  for(const item of items){
+   const signature=item.pinyin+' || '+item.meaning;
+   const prior=seen.get(item.text);
+   if(prior)assert.equal(signature,prior.signature,item.text+': '+char+' disagrees with '+prior.char);
+   else seen.set(item.text,{signature,char});
+  }
+ }
 });
 
 test('Taiwan-standard reference readings keep verified contrasts and neutral tones straight',()=>{
@@ -93,12 +125,19 @@ test('Taiwan-standard reference readings keep verified contrasts and neutral ton
  assert.equal(get('為','認為').pinyin,'rènwéi');
  assert.equal(get('行','銀行').pinyin,'yínháng');
  assert.equal(get('行','旅行').pinyin,'lǚxíng');
- assert.equal(get('吐','吐司').pinyin,'tǔsī');
  assert.equal(get('吐','嘔吐').pinyin,'ǒutù');
  assert.equal(get('什','什錦').pinyin,'shíjǐn');
  assert.equal(get('得','得到').pinyin,'dédào');
  assert.equal(get('得','得意').pinyin,'déyì');
  assert.equal(get('了','了解').pinyin,'liǎojiě');
+ assert.equal(get('轉','轉車').pinyin,'zhuǎnchē');
+ assert.equal(get('著','看著').pinyin,'kànzhe');
+ assert.equal(get('著','睡著').pinyin,'shuìzháo');
+ assert.equal(get('著','著名').pinyin,'zhùmíng');
+ assert.equal(get('背','背包').pinyin,'bēibāo');
+ assert.equal(get('背','背後').pinyin,'bèihòu');
+ assert.equal(get('便','便當').pinyin,'biàndāng');
+ assert.equal(get('筆','原子筆').pinyin,'yuánzǐbǐ');
 });
 
 test('future course words can be previewed as reference without becoming duplicate curriculum records',()=>{
