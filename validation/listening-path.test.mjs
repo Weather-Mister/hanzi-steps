@@ -27,6 +27,11 @@ test('listening stages are cumulative 3-7 item sets that unlock at unit completi
 
 test('generated listening choices only use distinct learned meanings',()=>{
  assert.ok(listeningItems.length>25,'expected listening to cover much more than the curated seed set');
+ const sentenceByMeaning=new Map();
+ for(const id of Object.keys(phrases)){
+  const sentence=resolveSentence({kind:'phrase',id});
+  if(sentence&&!sentenceByMeaning.has(sentence.meaning))sentenceByMeaning.set(sentence.meaning,sentence);
+ }
  for(const item of listeningItems){
   const source=resolveSentence(item.source);
   assert.ok(source,'missing listening source '+item.id);
@@ -39,7 +44,7 @@ test('generated listening choices only use distinct learned meanings',()=>{
   for(const distractor of item.distractors){
    assert.notEqual(distractor.text,source.meaning,item.id+' distractor duplicates the answer');
    if(item.id.startsWith('course-')){
-    const match=Object.keys(phrases).map(id=>resolveSentence({kind:'phrase',id})).find(sentence=>sentence?.meaning===distractor.text);
+    const match=sentenceByMeaning.get(distractor.text);
     assert.ok(match,item.id+' generated distractor must come from another course sentence');
     assert.ok((lessonPosition.get(match.lessonId)??Infinity)<=sourcePosition,item.id+' exposes a future distractor');
    }
