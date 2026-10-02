@@ -4762,6 +4762,356 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "qīngjìng",
       "meaning": "quiet and clean; peaceful"
     }
+  ],
+  "藍": [
+    {
+      "text": "藍色",
+      "pinyin": "lánsè",
+      "meaning": "blue; the color blue"
+    },
+    {
+      "text": "藍天",
+      "pinyin": "lántiān",
+      "meaning": "blue sky"
+    }
+  ],
+  "往": [
+    {
+      "text": "往前",
+      "pinyin": "wǎng qián",
+      "meaning": "go forward; ahead"
+    },
+    {
+      "text": "往後",
+      "pinyin": "wǎnghòu",
+      "meaning": "backward; from now on"
+    },
+    {
+      "text": "往往",
+      "pinyin": "wǎngwǎng",
+      "meaning": "often; frequently"
+    },
+    {
+      "text": "前往",
+      "pinyin": "qiánwǎng",
+      "meaning": "go to; proceed to"
+    }
+  ],
+  "因": [
+    {
+      "text": "因為",
+      "pinyin": "yīnwèi",
+      "meaning": "because"
+    },
+    {
+      "text": "原因",
+      "pinyin": "yuányīn",
+      "meaning": "reason; cause"
+    },
+    {
+      "text": "因此",
+      "pinyin": "yīncǐ",
+      "meaning": "therefore; as a result"
+    }
+  ],
+  "窗": [
+    {
+      "text": "窗戶",
+      "pinyin": "chuānghù",
+      "meaning": "window"
+    },
+    {
+      "text": "窗口",
+      "pinyin": "chuāngkǒu",
+      "meaning": "window; service counter"
+    },
+    {
+      "text": "車窗",
+      "pinyin": "chēchuāng",
+      "meaning": "vehicle window"
+    }
+  ],
+  "戶": [
+    {
+      "text": "窗戶",
+      "pinyin": "chuānghù",
+      "meaning": "window"
+    },
+    {
+      "text": "住戶",
+      "pinyin": "zhùhù",
+      "meaning": "resident household"
+    },
+    {
+      "text": "戶口",
+      "pinyin": "hùkǒu",
+      "meaning": "household registration; registered household"
+    },
+    {
+      "text": "用戶",
+      "pinyin": "yònghù",
+      "meaning": "user; account holder"
+    }
+  ],
+  "租": [
+    {
+      "text": "房租",
+      "pinyin": "fángzū",
+      "meaning": "rent (payment for a room or house)"
+    },
+    {
+      "text": "租房子",
+      "pinyin": "zū fángzi",
+      "meaning": "rent a home or room"
+    },
+    {
+      "text": "出租",
+      "pinyin": "chūzū",
+      "meaning": "rent out"
+    },
+    {
+      "text": "租金",
+      "pinyin": "zūjīn",
+      "meaning": "rent; rental fee"
+    }
+  ],
+  "廚": [
+    {
+      "text": "廚房",
+      "pinyin": "chúfáng",
+      "meaning": "kitchen"
+    },
+    {
+      "text": "廚師",
+      "pinyin": "chúshī",
+      "meaning": "cook; chef"
+    }
+  ],
+  "浴": [
+    {
+      "text": "浴室",
+      "pinyin": "yùshì",
+      "meaning": "bathroom"
+    },
+    {
+      "text": "浴巾",
+      "pinyin": "yùjīn",
+      "meaning": "bath towel"
+    },
+    {
+      "text": "浴缸",
+      "pinyin": "yùgāng",
+      "meaning": "bathtub"
+    }
+  ],
+  "套": [
+    {
+      "text": "套房",
+      "pinyin": "tàofáng",
+      "meaning": "suite; room with a bathroom"
+    },
+    {
+      "text": "一套",
+      "pinyin": "yí tào",
+      "meaning": "one set"
+    },
+    {
+      "text": "外套",
+      "pinyin": "wàitào",
+      "meaning": "coat; jacket"
+    }
+  ],
+  "進": [
+    {
+      "text": "請進",
+      "pinyin": "qǐng jìn",
+      "meaning": "please come in"
+    },
+    {
+      "text": "進去",
+      "pinyin": "jìnqù",
+      "meaning": "go in"
+    },
+    {
+      "text": "進來",
+      "pinyin": "jìnlái",
+      "meaning": "come in"
+    },
+    {
+      "text": "進步",
+      "pinyin": "jìnbù",
+      "meaning": "make progress; progress"
+    }
+  ],
+  "收": [
+    {
+      "text": "收到",
+      "pinyin": "shōudào",
+      "meaning": "to receive"
+    },
+    {
+      "text": "收錢",
+      "pinyin": "shōuqián",
+      "meaning": "collect money; take payment"
+    },
+    {
+      "text": "收拾",
+      "pinyin": "shōushí",
+      "meaning": "tidy up; put things away"
+    }
+  ],
+  "習": [
+    {
+      "text": "習慣",
+      "pinyin": "xíguàn",
+      "meaning": "to get used to; be accustomed to"
+    },
+    {
+      "text": "學習",
+      "pinyin": "xuéxí",
+      "meaning": "study; learn"
+    },
+    {
+      "text": "練習",
+      "pinyin": "liànxí",
+      "meaning": "practice; exercise"
+    }
+  ],
+  "慣": [
+    {
+      "text": "習慣",
+      "pinyin": "xíguàn",
+      "meaning": "to get used to; be accustomed to"
+    },
+    {
+      "text": "慣用",
+      "pinyin": "guànyòng",
+      "meaning": "habitually use; commonly used"
+    }
+  ],
+  "器": [
+    {
+      "text": "熱水器",
+      "pinyin": "rèshuǐqì",
+      "meaning": "water heater"
+    },
+    {
+      "text": "樂器",
+      "pinyin": "yuèqì",
+      "meaning": "musical instrument"
+    },
+    {
+      "text": "機器",
+      "pinyin": "jīqì",
+      "meaning": "machine"
+    },
+    {
+      "text": "電器",
+      "pinyin": "diànqì",
+      "meaning": "electrical appliance"
+    }
+  ],
+  "像": [
+    {
+      "text": "好像",
+      "pinyin": "hǎoxiàng",
+      "meaning": "seem; appear to be"
+    },
+    {
+      "text": "像是",
+      "pinyin": "xiàngshì",
+      "meaning": "seem like; be like"
+    },
+    {
+      "text": "不像",
+      "pinyin": "búxiàng",
+      "meaning": "not look like; unlike"
+    }
+  ],
+  "臺": [
+    {
+      "text": "臺灣",
+      "pinyin": "Táiwān",
+      "meaning": "Taiwan"
+    },
+    {
+      "text": "電視臺",
+      "pinyin": "diànshìtái",
+      "meaning": "television station"
+    },
+    {
+      "text": "陽臺",
+      "pinyin": "yángtái",
+      "meaning": "balcony"
+    }
+  ],
+  "灣": [
+    {
+      "text": "臺灣",
+      "pinyin": "Táiwān",
+      "meaning": "Taiwan"
+    },
+    {
+      "text": "海灣",
+      "pinyin": "hǎiwān",
+      "meaning": "bay; gulf"
+    }
+  ],
+  "畫": [
+    {
+      "text": "計畫",
+      "pinyin": "jìhuà",
+      "meaning": "to plan to"
+    },
+    {
+      "text": "圖畫",
+      "pinyin": "túhuà",
+      "meaning": "drawing; picture"
+    },
+    {
+      "text": "漫畫",
+      "pinyin": "mànhuà",
+      "meaning": "comic; manga"
+    }
+  ],
+  "念": [
+    {
+      "text": "念書",
+      "pinyin": "niànshū",
+      "meaning": "to study"
+    },
+    {
+      "text": "想念",
+      "pinyin": "xiǎngniàn",
+      "meaning": "miss; think of fondly"
+    },
+    {
+      "text": "觀念",
+      "pinyin": "guānniàn",
+      "meaning": "idea; concept"
+    },
+    {
+      "text": "念頭",
+      "pinyin": "niàntou",
+      "meaning": "thought; idea"
+    }
+  ],
+  "需": [
+    {
+      "text": "需要",
+      "pinyin": "xūyào",
+      "meaning": "to need"
+    },
+    {
+      "text": "需求",
+      "pinyin": "xūqiú",
+      "meaning": "need; demand"
+    },
+    {
+      "text": "必需",
+      "pinyin": "bìxū",
+      "meaning": "essential; necessary"
+    }
   ]
 };
 
