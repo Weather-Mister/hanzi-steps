@@ -12,6 +12,8 @@ export type PracticeSkillState={
  correct:number;
  assisted:number;
  misses:number;
+ cleanCorrect?:number;
+ cleanTracked?:number;
  streak:number;
  strength:number;
  lastSeen:number;
@@ -672,7 +674,7 @@ export function updatePracticeState(previous:PracticeSkillState|undefined,args:{
  itemId:string;mode:PracticeMode;correct:boolean;assisted:boolean;now?:number;
 }):PracticeSkillState{
  const now=args.now??Date.now();
- const old=previous??{itemId:args.itemId,mode:args.mode,attempts:0,correct:0,assisted:0,misses:0,streak:0,strength:0,lastSeen:0,nextReview:0};
+ const old=previous??{itemId:args.itemId,mode:args.mode,attempts:0,correct:0,assisted:0,misses:0,cleanCorrect:0,cleanTracked:0,streak:0,strength:0,lastSeen:0,nextReview:0};
  const cleanCorrect=args.correct&&!args.assisted;
  const streak=cleanCorrect?old.streak+1:0;
  let strength:number;
