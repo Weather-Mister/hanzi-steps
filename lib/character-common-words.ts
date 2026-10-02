@@ -5112,6 +5112,386 @@ export const supplementaryCharacterCommonWords:Record<string,CharacterCommonWord
       "pinyin": "bìxū",
       "meaning": "essential; necessary"
     }
+  ],
+  "獎": [
+    {
+      "text": "獎學金",
+      "pinyin": "jiǎngxuéjīn",
+      "meaning": "scholarship"
+    },
+    {
+      "text": "獎金",
+      "pinyin": "jiǎngjīn",
+      "meaning": "prize money; bonus"
+    },
+    {
+      "text": "得獎",
+      "pinyin": "déjiǎng",
+      "meaning": "win a prize; receive an award"
+    }
+  ],
+  "金": [
+    {
+      "text": "獎學金",
+      "pinyin": "jiǎngxuéjīn",
+      "meaning": "scholarship"
+    },
+    {
+      "text": "黃金",
+      "pinyin": "huángjīn",
+      "meaning": "gold"
+    },
+    {
+      "text": "現金",
+      "pinyin": "xiànjīn",
+      "meaning": "cash"
+    },
+    {
+      "text": "金錢",
+      "pinyin": "jīnqián",
+      "meaning": "money"
+    }
+  ],
+  "績": [
+    {
+      "text": "成績",
+      "pinyin": "chéngjī",
+      "meaning": "grades; academic results"
+    },
+    {
+      "text": "業績",
+      "pinyin": "yèjī",
+      "meaning": "work performance; sales results"
+    }
+  ],
+  "費": [
+    {
+      "text": "學費",
+      "pinyin": "xuéfèi",
+      "meaning": "tuition"
+    },
+    {
+      "text": "費用",
+      "pinyin": "fèiyòng",
+      "meaning": "fee; expense; cost"
+    },
+    {
+      "text": "浪費",
+      "pinyin": "làngfèi",
+      "meaning": "waste"
+    },
+    {
+      "text": "免費",
+      "pinyin": "miǎnfèi",
+      "meaning": "free of charge"
+    }
+  ],
+  "司": [
+    {
+      "text": "公司",
+      "pinyin": "gōngsī",
+      "meaning": "company"
+    },
+    {
+      "text": "司機",
+      "pinyin": "sījī",
+      "meaning": "driver"
+    }
+  ],
+  "望": [
+    {
+      "text": "希望",
+      "pinyin": "xīwàng",
+      "meaning": "to hope"
+    },
+    {
+      "text": "失望",
+      "pinyin": "shīwàng",
+      "meaning": "disappointed; disappointment"
+    },
+    {
+      "text": "願望",
+      "pinyin": "yuànwàng",
+      "meaning": "wish; desire"
+    }
+  ],
+  "班": [
+    {
+      "text": "上班",
+      "pinyin": "shàngbān",
+      "meaning": "to go to work"
+    },
+    {
+      "text": "下班",
+      "pinyin": "xiàbān",
+      "meaning": "get off work"
+    },
+    {
+      "text": "班級",
+      "pinyin": "bānjí",
+      "meaning": "class; grade group"
+    },
+    {
+      "text": "班上",
+      "pinyin": "bānshàng",
+      "meaning": "in the class"
+    }
+  ],
+  "加": [
+    {
+      "text": "加油",
+      "pinyin": "jiāyóu",
+      "meaning": "keep up the good work"
+    },
+    {
+      "text": "參加",
+      "pinyin": "cānjiā",
+      "meaning": "participate; join"
+    },
+    {
+      "text": "加入",
+      "pinyin": "jiārù",
+      "meaning": "join; add in"
+    },
+    {
+      "text": "加上",
+      "pinyin": "jiāshàng",
+      "meaning": "add; plus"
+    }
+  ],
+  "油": [
+    {
+      "text": "加油",
+      "pinyin": "jiāyóu",
+      "meaning": "keep up the good work"
+    },
+    {
+      "text": "汽油",
+      "pinyin": "qìyóu",
+      "meaning": "gasoline; petrol"
+    },
+    {
+      "text": "油飯",
+      "pinyin": "yóufàn",
+      "meaning": "Taiwanese-style seasoned glutinous rice"
+    }
+  ],
+  "難": [
+    {
+      "text": "困難",
+      "pinyin": "kùnnán",
+      "meaning": "difficult; difficulty"
+    },
+    {
+      "text": "難過",
+      "pinyin": "nánguò",
+      "meaning": "sad; feel bad"
+    },
+    {
+      "text": "難吃",
+      "pinyin": "nánchī",
+      "meaning": "not tasty; hard to eat"
+    },
+    {
+      "text": "難看",
+      "pinyin": "nánkàn",
+      "meaning": "not to look good"
+    }
+  ],
+  "記": [
+    {
+      "text": "記得",
+      "pinyin": "jìde",
+      "meaning": "remember"
+    },
+    {
+      "text": "忘記",
+      "pinyin": "wàngjì",
+      "meaning": "forget"
+    },
+    {
+      "text": "筆記",
+      "pinyin": "bǐjì",
+      "meaning": "notes; take notes"
+    },
+    {
+      "text": "記住",
+      "pinyin": "jìzhù",
+      "meaning": "remember; keep in mind"
+    }
+  ],
+  "當": [
+    {
+      "text": "當然",
+      "pinyin": "dāngrán",
+      "meaning": "of course; certainly"
+    },
+    {
+      "text": "當時",
+      "pinyin": "dāngshí",
+      "meaning": "at that time"
+    },
+    {
+      "text": "當天",
+      "pinyin": "dāngtiān",
+      "meaning": "that day; the same day"
+    },
+    {
+      "text": "當地",
+      "pinyin": "dāngdì",
+      "meaning": "local; that place"
+    }
+  ],
+  "然": [
+    {
+      "text": "當然",
+      "pinyin": "dāngrán",
+      "meaning": "of course; certainly"
+    },
+    {
+      "text": "然後",
+      "pinyin": "ránhòu",
+      "meaning": "then; afterwards"
+    },
+    {
+      "text": "雖然",
+      "pinyin": "suīrán",
+      "meaning": "although"
+    },
+    {
+      "text": "自然",
+      "pinyin": "zìrán",
+      "meaning": "natural; naturally"
+    }
+  ],
+  "交": [
+    {
+      "text": "交換",
+      "pinyin": "jiāohuàn",
+      "meaning": "exchange"
+    },
+    {
+      "text": "交通",
+      "pinyin": "jiāotōng",
+      "meaning": "transportation; traffic"
+    },
+    {
+      "text": "交朋友",
+      "pinyin": "jiāo péngyǒu",
+      "meaning": "make friends"
+    },
+    {
+      "text": "交作業",
+      "pinyin": "jiāo zuòyè",
+      "meaning": "hand in homework"
+    }
+  ],
+  "換": [
+    {
+      "text": "交換",
+      "pinyin": "jiāohuàn",
+      "meaning": "exchange"
+    },
+    {
+      "text": "換錢",
+      "pinyin": "huànqián",
+      "meaning": "exchange money; get change"
+    },
+    {
+      "text": "換衣服",
+      "pinyin": "huàn yīfú",
+      "meaning": "change clothes"
+    },
+    {
+      "text": "更換",
+      "pinyin": "gēnghuàn",
+      "meaning": "replace; change"
+    }
+  ],
+  "牙": [
+    {
+      "text": "牙齒",
+      "pinyin": "yáchǐ",
+      "meaning": "teeth"
+    },
+    {
+      "text": "牙醫",
+      "pinyin": "yáyī",
+      "meaning": "dentist"
+    },
+    {
+      "text": "牙刷",
+      "pinyin": "yáshuā",
+      "meaning": "toothbrush"
+    }
+  ],
+  "必": [
+    {
+      "text": "必須",
+      "pinyin": "bìxū",
+      "meaning": "must; have to"
+    },
+    {
+      "text": "必要",
+      "pinyin": "bìyào",
+      "meaning": "necessary"
+    },
+    {
+      "text": "不必",
+      "pinyin": "búbì",
+      "meaning": "do not need to; need not"
+    }
+  ],
+  "禮": [
+    {
+      "text": "禮物",
+      "pinyin": "lǐwù",
+      "meaning": "gift; present"
+    },
+    {
+      "text": "禮貌",
+      "pinyin": "lǐmào",
+      "meaning": "manners; politeness"
+    },
+    {
+      "text": "禮拜",
+      "pinyin": "lǐbài",
+      "meaning": "week; Sunday; worship"
+    }
+  ],
+  "物": [
+    {
+      "text": "禮物",
+      "pinyin": "lǐwù",
+      "meaning": "gift; present"
+    },
+    {
+      "text": "動物",
+      "pinyin": "dòngwù",
+      "meaning": "animal"
+    },
+    {
+      "text": "植物",
+      "pinyin": "zhíwù",
+      "meaning": "plant"
+    },
+    {
+      "text": "物品",
+      "pinyin": "wùpǐn",
+      "meaning": "item; goods"
+    }
+  ],
+  "豬": [
+    {
+      "text": "豬肉",
+      "pinyin": "zhūròu",
+      "meaning": "pork"
+    },
+    {
+      "text": "豬腳",
+      "pinyin": "zhūjiǎo",
+      "meaning": "pork knuckles"
+    }
   ]
 };
 
