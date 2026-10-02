@@ -52,9 +52,11 @@ export function StatisticsScreen({
   return()=>window.clearInterval(timer);
  },[open]);
  const days=useMemo(()=>{
-  if(studyDays)return studyDays;
-  if(!needsSignIn||now===null)return null;
-  return sessions.filter(session=>session.complete).map(session=>taipeiDay(completionTimestamp(session.updatedAt,now)));
+  if(now===null)return studyDays;
+  const localDays=sessions.filter(session=>session.complete).map(session=>taipeiDay(completionTimestamp(session.updatedAt,now)));
+  if(studyDays!==null)return [...new Set([...studyDays,...localDays])];
+  if(needsSignIn||localDays.length)return [...new Set(localDays)];
+  return null;
  },[studyDays,needsSignIn,now,sessions]);
  const stats=useMemo(()=>learningStatistics({
   completed,
@@ -77,7 +79,7 @@ export function StatisticsScreen({
    <div className="statistics-heading">
     <span className="statistics-heading-icon"><Activity size={24}/></span>
     <div>
-     <DialogTitle>Learning statistics</DialogTitle>
+     <div className="statistics-title-line"><DialogTitle>Learning statistics</DialogTitle><span className="statistics-live"><i/>Live</span></div>
      <DialogDescription>Your progress, habits, practice mix, and the words you keep coming back to.</DialogDescription>
     </div>
    </div>
@@ -94,7 +96,7 @@ export function StatisticsScreen({
     </article>
     <article className="statistics-quick-card"><Trophy size={20}/><span>Longest streak</span><strong>{streakReady?stats.streak.best:'—'}</strong><small>days</small></article>
     <article className="statistics-quick-card"><BookOpen size={20}/><span>Learned words</span><strong>{stats.learnedWords}</strong><small>{stats.masteredWords} mastered</small></article>
-    <article className="statistics-quick-card"><Repeat2 size={20}/><span>Practice attempts</span><strong>{stats.totalPracticeAttempts}</strong><small>{stats.accuracy}% correct</small></article>
+    <article className="statistics-quick-card"><Repeat2 size={20}/><span>Direct attempts</span><strong>{stats.totalPracticeAttempts}</strong><small>{stats.totalCleanTracked?stats.strictAccuracy+'% strict accuracy':'Strict scoring starts now'}</small></article>
    </section>
 
    <div className="statistics-dashboard-grid">
@@ -133,7 +135,7 @@ export function StatisticsScreen({
     <section className="statistics-panel statistics-practice-panel">
      <div className="statistics-panel-heading">
       <div><span>PRACTICE MIX</span><h3>Where your repetitions go</h3></div>
-      <strong>{stats.accuracy}%<small> overall accuracy</small></strong>
+      <strong>{stats.totalCleanTracked?stats.strictAccuracy+'%':'—'}<small> strict accuracy</small></strong>
      </div>
      {stats.practiceByMode.length?<div className="statistics-mode-bars">
       {stats.practiceByMode.map(mode=><div className="statistics-mode-row" key={mode.mode}>
@@ -143,10 +145,12 @@ export function StatisticsScreen({
       </div>)}
      </div>:<p className="statistics-empty">Practice a few items and this graph will fill itself in.</p>}
      <div className="statistics-practice-foot">
-      <span><b>{stats.totalCorrect}</b> correct</span>
+      <span><b>{stats.totalCleanCorrect}</b> clean</span>
       <span><b>{stats.totalMisses}</b> misses</span>
       <span><b>{stats.assistedRate}%</b> assisted</span>
+      <span><b>{stats.successRate}%</b> overall correct</span>
      </div>
+     <p className="statistics-definition">Strict accuracy counts only correct answers completed without help. Linked knowledge bookkeeping and skipped items are excluded from direct-attempt totals.{stats.strictCoverage<100&&stats.totalPracticeAttempts>0?' '+stats.totalCleanTracked+' of '+stats.totalPracticeAttempts+' direct attempts have exact clean-history data; older legacy attempts are not guessed.':''}</p>
     </section>
 
     <section className="statistics-panel statistics-top-words">
@@ -154,7 +158,7 @@ export function StatisticsScreen({
      {stats.topPracticedWords.length?<div className="statistics-word-bars">
       {stats.topPracticedWords.map((word,index)=><div className="statistics-word-row" key={word.id}>
        <span className="statistics-rank">{index+1}</span>
-       <div className="statistics-word-copy"><strong lang="zh-Hant-TW">{word.traditional}</strong><small>{word.pinyin} · {word.meaning}</small></div>
+       <div className="statistics-word-copy"><strong lang="zh-Hant-TW">{word.traditional}</strong><small>{word.pinyin} · {word.meaning}{word.unguidedRounds?' · '+word.unguidedRounds+' free-writing '+(word.unguidedRounds===1?'round':'rounds'):''}</small></div>
        <div className="statistics-word-track"><i style={{width:`${word.attempts/topWordMax*100}%`}}/></div>
        <b>{word.attempts}</b>
       </div>)}
@@ -169,6 +173,7 @@ export function StatisticsScreen({
     <article><Activity size={18}/><span>Pinyin mastered</span><strong>{stats.pinyinMasteredWords}</strong></article>
    </section>
 
+   <p className="statistics-footnote">The dashboard recalculates from current app state as you learn. Infinite free-writing rounds count toward a ranked word only when that practiced character is itself a learned one-character word.</p>
    {needsSignIn&&<p className="statistics-footnote">These numbers are using this device’s saved progress. Sign in to keep them consistent across devices.</p>}
   </DialogContent>
  </Dialog>;
