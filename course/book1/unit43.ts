@@ -775,12 +775,12 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "紅葉 means…",
           "options": [
-            "red autumn leaves",
+            "red maple leaves",
             "rain",
             "news"
           ],
-          "answer": "red autumn leaves",
-          "explanation": "紅葉 is the word for red autumn leaves."
+          "answer": "red maple leaves",
+          "explanation": "紅葉 is the word for red maple leaves."
         },
         {
           "id": "u43-next-year-p3",
@@ -813,7 +813,7 @@ const unit:UnitData = {
             "下雪"
           ],
           "answer": "紅葉",
-          "explanation": "The audio says 紅葉, “red autumn leaves.”",
+          "explanation": "The audio says 紅葉, “red maple leaves.”",
           "char": "葉"
         },
         {
@@ -993,12 +993,12 @@ const unit:UnitData = {
           "type": "select",
           "prompt": "紅葉 means…",
           "options": [
-            "red autumn leaves",
+            "red maple leaves",
             "rain",
             "umbrella"
           ],
-          "answer": "red autumn leaves",
-          "explanation": "紅葉 means red autumn leaves."
+          "answer": "red maple leaves",
+          "explanation": "紅葉 means red maple leaves."
         },
         {
           "id": "u43-review-e1",
@@ -1196,7 +1196,7 @@ const unit:UnitData = {
     {
       "text": "紅葉",
       "pinyin": "hóngyè",
-      "meaning": "red autumn leaves",
+      "meaning": "red maple leaves",
       "lessonId": "u43-next-year",
       "core": true
     }
@@ -1421,7 +1421,7 @@ const unit:UnitData = {
       "zhuyin": "ㄧㄝˋ",
       "meaning": "leaf",
       "strokes": 13,
-      "note": "葉 yè means “leaf; leaves.” 紅葉 hóngyè refers to red autumn leaves in this lesson.",
+      "note": "葉 yè means “leaf; leaves.” 紅葉 hóngyè refers to red maple leaves in this lesson.",
       "memory": "Stack the grass top, 世, and 木. Plant shapes at the top and bottom help you remember leaves.",
       "parts": [
         {
@@ -1466,7 +1466,7 @@ const unit:UnitData = {
       "example": {
         "text": "紅葉",
         "pinyin": "hóngyè",
-        "meaning": "red autumn leaves"
+        "meaning": "red maple leaves"
       },
       "practiceBuild": false
     }
@@ -1772,8 +1772,8 @@ const unit:UnitData = {
     "u43-nextyear-source": {
       "text": "冬天太冷了。不過，我想明年秋天去看紅葉。",
       "pinyin": "Dōngtiān tài lěng le. Búguò, wǒ xiǎng míngnián qiūtiān qù kàn hóngyè.",
-      "meaning": "Winter is too cold. But I want to go see the red autumn leaves next autumn.",
-      "note": "太冷了 means too cold; 不過 introduces a contrasting point, but. 想 expresses a wish or plan. 明年秋天 is next autumn and goes before 去看. 紅葉 means red autumn leaves, not only maple leaves.",
+      "meaning": "Winter is too cold. But I want to go see the red maple leaves next autumn.",
+      "note": "太冷了 means too cold; 不過 introduces a contrasting point, but. 想 expresses a wish or plan. 明年秋天 is next autumn and goes before 去看. 紅葉 is glossed in this lesson as red maple leaves.",
       "tokens": [
         "冬天太冷了",
         "不過",
