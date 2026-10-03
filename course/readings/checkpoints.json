@@ -4961,5 +4961,2816 @@
       "最後 for sequence"
     ],
     "glosses": {}
+  },
+  {
+    "id": "reading-unit-11-dense",
+    "unitId": "unit-11",
+    "title": "Two drinks, two different orders",
+    "kind": "Extended dialogue",
+    "presentation": "dialogue",
+    "setup": "Read a café conversation. Keep track of which customer wants each drink and where each will drink it.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "我想喝熱茶。你呢？",
+        "pinyin": "Wǒ xiǎng hē rè chá. Nǐ ne?",
+        "translation": "I feel like hot tea. How about you?",
+        "note": "想 introduces a wish. The short follow-up 你呢 asks for the other person’s drink preference, not agreement with Lin’s choice."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我要咖啡，不要茶。",
+        "pinyin": "Wǒ yào kāfēi, bú yào chá.",
+        "translation": "I want coffee, not tea.",
+        "note": "不要 negates what Mei wants. This contrast assigns coffee to Mei and tea to Lin; it does not cancel Lin’s order."
+      },
+      {
+        "speaker": "Staff",
+        "text": "熱咖啡，大杯還是中杯？",
+        "pinyin": "Rè kāfēi, dà bēi háishì zhōng bēi?",
+        "translation": "Hot coffee—large or medium?",
+        "note": "還是 presents two sizes inside a question. 咖啡 is already understood after each size, so it is not repeated."
+      },
+      {
+        "speaker": "Mei",
+        "text": "中杯，謝謝。我的咖啡內用。",
+        "pinyin": "Zhōng bēi, xièxie. Wǒ de kāfēi nèiyòng.",
+        "translation": "Medium, thanks. My coffee is for here.",
+        "note": "The size answers the preceding question. 內用 states the service choice for Mei’s coffee; it does not apply to Lin’s tea."
+      },
+      {
+        "speaker": "Staff",
+        "text": "你的茶也要中杯嗎？",
+        "pinyin": "Nǐ de chá yě yào zhōng bēi ma?",
+        "translation": "Would you also like your tea medium?",
+        "note": "的 links the tea to its customer. 也 asks whether the size is shared; it does not say that the drinks are the same."
+      },
+      {
+        "speaker": "Lin",
+        "text": "不，我要大杯。我的茶外帶。",
+        "pinyin": "Bù, wǒ yào dà bēi. Wǒ de chá wàidài.",
+        "translation": "No, I want large. My tea is to go.",
+        "note": "The first sentence rejects the proposed size. 外帶 specifies takeout for Lin’s tea, without changing Mei’s for-here order."
+      },
+      {
+        "speaker": "Staff",
+        "text": "好的，一杯大杯熱茶外帶，一杯中杯熱咖啡內用。",
+        "pinyin": "Hǎo de, yì bēi dà bēi rè chá wàidài, yì bēi zhōng bēi rè kāfēi nèiyòng.",
+        "translation": "Okay: one large hot tea to go and one medium hot coffee for here.",
+        "note": "一杯 counts each drink; 大杯 and 中杯 specify size. Match each service choice to its own drink, not to the whole order."
+      },
+      {
+        "speaker": "Lin",
+        "text": "謝謝。明天早上我們一起喝茶，好不好？",
+        "pinyin": "Xièxie. Míngtiān zǎoshang wǒmen yìqǐ hē chá, hǎo bù hǎo?",
+        "translation": "Thanks. Shall we have tea together tomorrow morning?",
+        "note": "明天早上 sets a new time. 好不好 makes this an invitation, so the passage does not yet establish that Mei accepts it."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which complete order belongs to Mei?",
+        "options": [
+          "Large hot tea to go",
+          "Medium hot coffee for here",
+          "Medium tea for here",
+          "Large coffee to go"
+        ],
+        "answer": 1,
+        "evidence": [
+          1,
+          3,
+          6
+        ],
+        "explanation": "Mei chooses coffee, then medium and for here. The staff’s summary confirms all three details."
+      },
+      {
+        "prompt": "What does Lin correct?",
+        "options": [
+          "The coffee temperature",
+          "Who is paying",
+          "The proposed tea size",
+          "Tomorrow’s time"
+        ],
+        "answer": 2,
+        "evidence": [
+          4,
+          5
+        ],
+        "explanation": "The staff suggests medium tea; Lin answers no and chooses large. Lin does not reject the tea itself."
+      },
+      {
+        "prompt": "Do both customers take their drinks away?",
+        "options": [
+          "Yes, both are takeout",
+          "The passage never mentions this",
+          "Only Mei takes hers away",
+          "No: Lin takes tea away; Mei stays"
+        ],
+        "answer": 3,
+        "evidence": [
+          3,
+          5,
+          6
+        ],
+        "explanation": "Mei says she will drink here and Lin says takeout. The final order retains that difference."
+      },
+      {
+        "prompt": "What is still only a suggestion?",
+        "options": [
+          "Having tea together tomorrow morning",
+          "Ordering hot tea today",
+          "Making the coffee medium",
+          "Serving the coffee for here"
+        ],
+        "answer": 0,
+        "evidence": [
+          7
+        ],
+        "explanation": "The last line asks for agreement about tomorrow. No reply accepting that invitation appears."
+      }
+    ],
+    "tips": [
+      "Track each speaker’s order separately; a short answer inherits the topic of the previous question.",
+      "A final invitation is not a confirmed event unless somebody accepts it."
+    ],
+    "grammarFocus": [
+      "Count cups of a drink",
+      "Make it hot",
+      "Choose a cup size",
+      "For here or to go?",
+      "Take your order with you"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-14-dense",
+    "unitId": "unit-14",
+    "title": "Which phone is actually for sale?",
+    "kind": "Extended dialogue",
+    "presentation": "dialogue",
+    "setup": "At a phone shop, a customer compares two devices. Read beyond the prices before deciding what they can buy.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Customer",
+        "text": "老闆，請問，這兩支手機都賣嗎？",
+        "pinyin": "Lǎobǎn, qǐngwèn, zhè liǎng zhī shǒujī dōu mài ma?",
+        "translation": "Excuse me, are both of these phones for sale?",
+        "note": "兩支 counts phones and 都 asks about both devices. A question is not evidence that both are available to buy."
+      },
+      {
+        "speaker": "Owner",
+        "text": "新的賣，舊的不賣。舊的是我的。",
+        "pinyin": "Xīn de mài, jiù de bú mài. Jiù de shì wǒ de.",
+        "translation": "The new one is for sale; the old one isn’t. The old one is mine.",
+        "note": "With 手機 understood, 新的 and 舊的 identify the two phones. The owner draws a clear distinction between sale stock and personal property."
+      },
+      {
+        "speaker": "Customer",
+        "text": "新的多少錢？我想買一支便宜的手機。",
+        "pinyin": "Xīn de duōshǎo qián? Wǒ xiǎng mǎi yì zhī piányí de shǒujī.",
+        "translation": "How much is the new one? I want to buy an inexpensive phone.",
+        "note": "多少錢 asks for the price. Wanting an inexpensive phone is the customer’s preference, not proof that this new phone is inexpensive."
+      },
+      {
+        "speaker": "Owner",
+        "text": "這支新手機五千塊。能上網，也能照相。",
+        "pinyin": "Zhè zhī xīn shǒujī wǔ qiān kuài. Néng shàngwǎng, yě néng zhàoxiàng.",
+        "translation": "This new phone is five thousand dollars. It can go online and take photos.",
+        "note": "能 describes the device’s capabilities. The understood subject of the second sentence remains the new phone."
+      },
+      {
+        "speaker": "Customer",
+        "text": "五千塊太貴了！舊的能上網嗎？",
+        "pinyin": "Wǔ qiān kuài tài guì le! Jiù de néng shàngwǎng ma?",
+        "translation": "Five thousand is too expensive! Can the old one go online?",
+        "note": "太…了 expresses an excessive degree, not a completed purchase. The following question switches attention back to the old phone."
+      },
+      {
+        "speaker": "Owner",
+        "text": "能。我很喜歡這支舊手機。",
+        "pinyin": "Néng. Wǒ hěn xǐhuān zhè zhī jiù shǒujī.",
+        "translation": "Yes. I really like this old phone.",
+        "note": "能 answers the capability question by itself. Liking the old phone helps explain the owner’s attachment but does not make it available for sale."
+      },
+      {
+        "speaker": "Customer",
+        "text": "你為什麼不賣舊的？",
+        "pinyin": "Nǐ wèishénme bú mài jiù de?",
+        "translation": "Why won’t you sell the old one?",
+        "note": "為什麼 asks for a reason and appears before 不賣. 舊的 still refers to the phone introduced near the beginning."
+      },
+      {
+        "speaker": "Owner",
+        "text": "我也要上網！我不想買新的手機。",
+        "pinyin": "Wǒ yě yào shàngwǎng! Wǒ bù xiǎng mǎi xīn de shǒujī.",
+        "translation": "I need to go online too! I don’t want to buy a new phone.",
+        "note": "也 connects the owner’s need with the customer’s interest in internet access. Keeping the old phone avoids buying another; no purchase is confirmed."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which phone is available to buy?",
+        "options": [
+          "Only the new one",
+          "Only the old one",
+          "Both phones",
+          "Neither phone"
+        ],
+        "answer": 0,
+        "evidence": [
+          1
+        ],
+        "explanation": "The owner explicitly sells the new one but not the old one. Both are discussed, but only one is for sale."
+      },
+      {
+        "prompt": "Which statement about internet access is supported?",
+        "options": [
+          "Only the old phone can go online",
+          "Neither can go online",
+          "Only the new phone can go online",
+          "Both can go online"
+        ],
+        "answer": 3,
+        "evidence": [
+          3,
+          4,
+          5
+        ],
+        "explanation": "The new phone’s features include internet access; the owner then answers yes about the old one."
+      },
+      {
+        "prompt": "Why does the owner keep the old phone?",
+        "options": [
+          "It belongs to the customer",
+          "The owner also needs a phone for internet use",
+          "It costs five thousand",
+          "It cannot take photos"
+        ],
+        "answer": 1,
+        "evidence": [
+          1,
+          7
+        ],
+        "explanation": "The old phone belongs to the owner, who explains a personal need to use it online."
+      },
+      {
+        "prompt": "What can we conclude about a purchase?",
+        "options": [
+          "The customer buys both",
+          "The owner gives away the old one",
+          "No purchase is confirmed",
+          "The customer pays five thousand"
+        ],
+        "answer": 2,
+        "evidence": [
+          2,
+          4,
+          7
+        ],
+        "explanation": "The customer wants a cheap phone and objects to the price, but the conversation contains no agreement to buy."
+      }
+    ],
+    "tips": [
+      "Keep ownership, capability and availability separate; a working object need not be for sale.",
+      "With 的, recover the omitted noun from the conversation rather than translating 的 alone."
+    ],
+    "grammarFocus": [
+      "Count phones with 支",
+      "Use 的 when the noun is understood",
+      "Describe what a device can do",
+      "Ask for a reason",
+      "React with 太…了"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-17-dense",
+    "unitId": "unit-17",
+    "title": "The dinner chat has a complication",
+    "kind": "LINE-style messages",
+    "presentation": "messages",
+    "setup": "A LINE-style chat between two friends planning dinner. Follow the recommendation, the concern and the eventual choice.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Mei",
+        "text": "你知道那家有名的小吃店嗎？聽說小籠包很好吃。",
+        "pinyin": "Nǐ zhīdào nà jiā yǒumíng de xiǎochī diàn ma? Tīngshuō xiǎolóngbāo hěn hǎochī.",
+        "translation": "Do you know that famous snack shop? I hear its soup dumplings are delicious.",
+        "note": "聽說 marks a report from others, not Mei’s own experience. 家 counts a shop, while 小籠包 is the dish being recommended."
+      },
+      {
+        "speaker": "Lin",
+        "text": "知道。我昨天去那裡吃臭豆腐，有一點辣。",
+        "pinyin": "Zhīdào. Wǒ zuótiān qù nàlǐ chī chòudòufu, yǒuyìdiǎn là.",
+        "translation": "Yes. I went there for stinky tofu yesterday; it was a little spicy.",
+        "note": "昨天 places the visit in the past without requiring 了. The mild criticism 有一點辣 describes the tofu, not every dish at the shop."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我怕辣，所以不想吃臭豆腐。",
+        "pinyin": "Wǒ pà là, suǒyǐ bù xiǎng chī chòudòufu.",
+        "translation": "I’m sensitive to spicy food, so I don’t want the stinky tofu.",
+        "note": "所以 links a reason to its consequence. Mei rejects one dish because of spice; she has not rejected the entire shop."
+      },
+      {
+        "speaker": "Lin",
+        "text": "那家店的小籠包不辣，你一定要吃。",
+        "pinyin": "Nà jiā diàn de xiǎolóngbāo bú là, nǐ yídìng yào chī.",
+        "translation": "The shop’s soup dumplings aren’t spicy. You really should try them.",
+        "note": "一定要 makes a strong recommendation here. The first clause addresses Mei’s concern and keeps the shop a possible dinner choice."
+      },
+      {
+        "speaker": "Mei",
+        "text": "太好了！我要吃小籠包。你呢？",
+        "pinyin": "Tài hǎo le! Wǒ yào chī xiǎolóngbāo. Nǐ ne?",
+        "translation": "Great! I’ll have soup dumplings. How about you?",
+        "note": "The response accepts the suitable dish. 你呢 hands the same food-choice question back to Lin rather than asking about Lin’s ability to cook."
+      },
+      {
+        "speaker": "Lin",
+        "text": "我想吃牛肉麵，也想喝湯。",
+        "pinyin": "Wǒ xiǎng chī niúròu miàn, yě xiǎng hē tāng.",
+        "translation": "I’d like beef noodles and some soup.",
+        "note": "想 states Lin’s choices. 也 adds a second desire for the same speaker; the friends do not have to order identical food."
+      },
+      {
+        "speaker": "Mei",
+        "text": "你自己做飯做得不錯，為什麼今天不自己做？",
+        "pinyin": "Nǐ zìjǐ zuòfàn zuò de búcuò, wèishénme jīntiān bù zìjǐ zuò?",
+        "translation": "You cook pretty well yourself. Why aren’t you cooking today?",
+        "note": "做飯做得 repeats the verb before a performance comment. The final 做 omits the understood meal-making context, not a new skill."
+      },
+      {
+        "speaker": "Lin",
+        "text": "我喜歡做飯，可是今天想和你一起吃。我們晚上去吧！",
+        "pinyin": "Wǒ xǐhuān zuòfàn, kěshì jīntiān xiǎng hé nǐ yìqǐ chī. Wǒmen wǎnshang qù ba!",
+        "translation": "I like cooking, but today I want to eat with you. Let’s go this evening!",
+        "note": "可是 contrasts a general preference with today’s wish. The social reason, not poor cooking ability, motivates the evening outing."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Mei reject the tofu?",
+        "options": [
+          "It is too expensive",
+          "The shop is closed",
+          "She is sensitive to spicy food",
+          "Lin has never tried it"
+        ],
+        "answer": 2,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "Lin calls the tofu a little spicy; Mei then explains that she is sensitive to spice."
+      },
+      {
+        "prompt": "Which pairing matches their choices?",
+        "options": [
+          "Mei: dumplings; Lin: beef noodles and soup",
+          "Mei: tofu; Lin: dumplings",
+          "Both: tofu",
+          "Both: only soup"
+        ],
+        "answer": 0,
+        "evidence": [
+          4,
+          5
+        ],
+        "explanation": "Mei accepts the dumplings, while Lin names beef noodles and soup. The agreement is about eating together, not the same order."
+      },
+      {
+        "prompt": "Which claim begins as second-hand information?",
+        "options": [
+          "Lin ate tofu yesterday",
+          "Mei dislikes spicy food",
+          "Lin cooks well",
+          "The shop’s dumplings are delicious"
+        ],
+        "answer": 3,
+        "evidence": [
+          0
+        ],
+        "explanation": "Mei introduces the dumpling recommendation with 聽說, explicitly presenting it as something she has heard."
+      },
+      {
+        "prompt": "Why does Lin want to go out despite cooking well?",
+        "options": [
+          "To learn to make noodles",
+          "To eat together with Mei",
+          "Because the kitchen is broken",
+          "Because all the food is free"
+        ],
+        "answer": 1,
+        "evidence": [
+          6,
+          7
+        ],
+        "explanation": "Mei acknowledges Lin’s cooking skill. Lin answers that the point today is sharing a meal with Mei."
+      }
+    ],
+    "tips": [
+      "A concern about one dish need not cancel a whole plan. Track how the next message solves that concern.",
+      "Distinguish reported information, first-hand experience and a present preference."
+    ],
+    "grammarFocus": [
+      "Share a report without claiming personal experience",
+      "Make a firm recommendation",
+      "Put the reason first and the result second",
+      "Describe how an action is done",
+      "Connect two contrasting comments"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-20-dense",
+    "unitId": "unit-20",
+    "title": "Find the classroom, not the pool",
+    "kind": "Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read a campus information card and a visitor’s question. The floor and the landmark both matter.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Campus card",
+        "text": "這棟大樓在圖書館旁邊，不在宿舍旁邊。",
+        "pinyin": "Zhè dòng dàlóu zài túshūguǎn pángbiān, bú zài sùshè pángbiān.",
+        "translation": "This building is beside the library, not beside the dormitory.",
+        "note": "棟 counts an entire building. The two location clauses distinguish the correct landmark from a plausible but wrong one."
+      },
+      {
+        "speaker": "Campus card",
+        "text": "中文教室在三樓，英文教室在二樓。",
+        "pinyin": "Zhōngwén jiàoshì zài sān lóu, Yīngwén jiàoshì zài èr lóu.",
+        "translation": "The Chinese classroom is on the third floor; the English classroom is on the second.",
+        "note": "Floor numbers come directly before 樓. Keep each subject with its own floor rather than treating the two rooms as one place."
+      },
+      {
+        "speaker": "Campus card",
+        "text": "中文老師也在三樓，現在在教室裡面。",
+        "pinyin": "Zhōngwén lǎoshī yě zài sān lóu, xiànzài zài jiàoshì lǐmiàn.",
+        "translation": "The Chinese teacher is also on the third floor, inside the classroom now.",
+        "note": "也 adds the teacher to the location already established for Chinese class. 現在 describes current whereabouts, not a permanent room assignment."
+      },
+      {
+        "speaker": "Campus card",
+        "text": "大樓前面有一家商店，後面有游泳池。",
+        "pinyin": "Dàlóu qiánmiàn yǒu yì jiā shāngdiàn, hòumiàn yǒu yóuyǒngchí.",
+        "translation": "There is a shop in front of the building and a swimming pool behind it.",
+        "note": "The building remains the reference landmark in both clauses. 前面 and 後面 identify opposite sides, not different floors."
+      },
+      {
+        "speaker": "Campus card",
+        "text": "商店裡面有茶和咖啡，也有包子。",
+        "pinyin": "Shāngdiàn lǐmiàn yǒu chá hé kāfēi, yě yǒu bāozi.",
+        "translation": "Inside the shop there are tea, coffee and buns.",
+        "note": "裡面 now refers to the shop rather than the classroom building. 有 lists what is available without saying anything about prices."
+      },
+      {
+        "speaker": "Visitor",
+        "text": "我現在在游泳池旁邊。中文教室在這裡嗎？",
+        "pinyin": "Wǒ xiànzài zài yóuyǒngchí pángbiān. Zhōngwén jiàoshì zài zhèlǐ ma?",
+        "translation": "I’m beside the pool now. Is the Chinese classroom here?",
+        "note": "The visitor gives a current location, then asks a question. Do not mistake that question for a correct statement about the classroom."
+      },
+      {
+        "speaker": "Reply",
+        "text": "不是在這裡，是在圖書館旁邊的大樓三樓。",
+        "pinyin": "Bú shì zài zhèlǐ, shì zài túshūguǎn pángbiān de dàlóu sān lóu.",
+        "translation": "Not here—it’s on the third floor of the building beside the library.",
+        "note": "不是…是… corrects the assumption. The location modifier identifies the building first; 三樓 then identifies the floor inside it."
+      },
+      {
+        "speaker": "Reply",
+        "text": "你的朋友也在那裡上課。歡迎你來！",
+        "pinyin": "Nǐ de péngyǒu yě zài nàlǐ shàngkè. Huānyíng nǐ lái!",
+        "translation": "Your friend also has class there. You’re welcome to come!",
+        "note": "那裡 refers back to the classroom just located, not the pool. 在…上課 places the activity at that already-established location."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Where should the visitor look for the Chinese classroom?",
+        "options": [
+          "Second floor beside the dormitory",
+          "Third floor of the building beside the library",
+          "Inside the shop",
+          "Beside the pool"
+        ],
+        "answer": 1,
+        "evidence": [
+          0,
+          1,
+          6
+        ],
+        "explanation": "The card and correction agree: choose the library-side building, then its third floor."
+      },
+      {
+        "prompt": "Which place is on the opposite side of the building from the shop?",
+        "options": [
+          "The English classroom",
+          "The dormitory",
+          "The teachers’ classroom",
+          "The swimming pool"
+        ],
+        "answer": 3,
+        "evidence": [
+          3
+        ],
+        "explanation": "The shop is in front and the pool behind. Both positions use the same building as their landmark."
+      },
+      {
+        "prompt": "What does “there” in the final reply point back to?",
+        "options": [
+          "The Chinese classroom just identified",
+          "The inside of the shop",
+          "The dormitory",
+          "The swimming pool"
+        ],
+        "answer": 0,
+        "evidence": [
+          6,
+          7
+        ],
+        "explanation": "The reply first identifies the correct classroom; the following 那裡 refers to that location."
+      },
+      {
+        "prompt": "What information is NOT provided by the card?",
+        "options": [
+          "The English classroom’s floor",
+          "The shop’s position",
+          "The price of a bun",
+          "The building’s landmark"
+        ],
+        "answer": 2,
+        "evidence": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "explanation": "The card lists buns inside the shop but gives no price. Location and availability do not imply a cost."
+      }
+    ],
+    "tips": [
+      "Follow the reference landmark each time you see front, back or beside.",
+      "Read a correction as a replacement for the mistaken claim, not as a second equally valid location."
+    ],
+    "grammarFocus": [
+      "Name the floor directly",
+      "Use a landmark as the reference",
+      "Next to a landmark",
+      "Correct what someone has assumed",
+      "Say where an activity happens"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-23-dense",
+    "unitId": "unit-23",
+    "title": "Is there time before calligraphy?",
+    "kind": "Schedule and notes",
+    "presentation": "schedule",
+    "setup": "Read Mei’s afternoon schedule and the messages below it. Find a meeting time that fits, without assuming permission has been granted.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "12:00–12:30",
+        "text": "從中午十二點到十二點半，我和朋友吃午餐。",
+        "pinyin": "Cóng zhōngwǔ shí’èr diǎn dào shí’èr diǎn bàn, wǒ hé péngyǒu chī wǔcān.",
+        "translation": "From noon to twelve thirty, I have lunch with a friend.",
+        "note": "從…到… marks the two ends of a time range. 半 means half past the stated hour, not half of the whole lunch period."
+      },
+      {
+        "speaker": "13:00–14:30",
+        "text": "下午一點有中文課，兩點半下課。",
+        "pinyin": "Xiàwǔ yì diǎn yǒu Zhōngwén kè, liǎng diǎn bàn xiàkè.",
+        "translation": "Chinese class is at one in the afternoon; it finishes at two thirty.",
+        "note": "The second time is the end of Chinese class. 一點 is a clock reading here, not the later quantity expression meaning a little."
+      },
+      {
+        "speaker": "15:00–16:00",
+        "text": "書法課三點開始，四點結束。",
+        "pinyin": "Shūfǎ kè sān diǎn kāishǐ, sì diǎn jiéshù.",
+        "translation": "Calligraphy class starts at three and ends at four.",
+        "note": "開始 and 結束 label the two boundaries explicitly. This leaves a gap after Chinese class rather than two overlapping classes."
+      },
+      {
+        "speaker": "After 16:00",
+        "text": "四點我有事，不能和你見面。",
+        "pinyin": "Sì diǎn wǒ yǒushì, bù néng hé nǐ jiànmiàn.",
+        "translation": "I have something to do at four and can’t meet you then.",
+        "note": "有事 says the speaker is occupied without naming the task. The end of a class does not automatically mean the person is free."
+      },
+      {
+        "speaker": "Lin · message",
+        "text": "兩點四十分在教室外面見面，好不好？",
+        "pinyin": "Liǎng diǎn sìshí fēn zài jiàoshì wàimiàn jiànmiàn, hǎo bù hǎo?",
+        "translation": "Shall we meet outside the classroom at two forty?",
+        "note": "Time comes before place and the meeting action. Forty minutes past two falls after the first class and before the next one."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "沒問題。三點我有書法課。",
+        "pinyin": "Méi wèntí. Sān diǎn wǒ yǒu shūfǎ kè.",
+        "translation": "No problem. I have calligraphy at three.",
+        "note": "沒問題 accepts the proposed meeting. The following reminder limits the available time; it does not cancel the acceptance."
+      },
+      {
+        "speaker": "Lin · message",
+        "text": "書法很有意思。我可不可以去看你寫字？",
+        "pinyin": "Shūfǎ hěn yǒuyìsi. Wǒ kě bù kěyǐ qù kàn nǐ xiězì?",
+        "translation": "Calligraphy is interesting. May I come watch you write?",
+        "note": "可不可以 asks permission rather than physical ability. Interest in the class alone does not authorize a visit."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "等一下，我問老師。",
+        "pinyin": "Děng yíxià, wǒ wèn lǎoshī.",
+        "translation": "Wait a moment; I’ll ask the teacher.",
+        "note": "Mei postpones the answer and names whom she will ask. This is neither a refusal nor confirmation that Lin may enter the class."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which suggested time fits between the two classes?",
+        "options": [
+          "13:40",
+          "16:00",
+          "14:40",
+          "15:40"
+        ],
+        "answer": 2,
+        "evidence": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "explanation": "Chinese ends at 14:30 and calligraphy starts at 15:00. The proposed 14:40 meeting lies inside that gap."
+      },
+      {
+        "prompt": "How much time is there from the agreed meeting to calligraphy?",
+        "options": [
+          "20 minutes",
+          "40 minutes",
+          "One hour",
+          "Ten minutes"
+        ],
+        "answer": 0,
+        "evidence": [
+          2,
+          4,
+          5
+        ],
+        "explanation": "They agree on 14:40; calligraphy begins at 15:00, leaving twenty minutes."
+      },
+      {
+        "prompt": "Can Lin definitely attend the calligraphy class?",
+        "options": [
+          "Yes, Mei has already obtained permission",
+          "No, visitors are always forbidden",
+          "Yes, because he is interested",
+          "Not yet established; Mei will ask the teacher"
+        ],
+        "answer": 3,
+        "evidence": [
+          6,
+          7
+        ],
+        "explanation": "Lin asks permission and Mei says she will ask the teacher. The teacher’s answer is not in the passage."
+      },
+      {
+        "prompt": "Why not simply meet at four?",
+        "options": [
+          "Chinese class starts then",
+          "Mei says she has something to do",
+          "Lunch lasts until four",
+          "The classroom is closed"
+        ],
+        "answer": 1,
+        "evidence": [
+          3
+        ],
+        "explanation": "The schedule explicitly says Mei is occupied at four, even though calligraphy has ended."
+      }
+    ],
+    "tips": [
+      "Compare the end of one event with the start of the next, then check notes for extra restrictions.",
+      "A request and a promise to ask are not the same as permission."
+    ],
+    "grammarFocus": [
+      "Tell clock time with 點 and 分",
+      "Mark a range with 從…到…",
+      "Say half past with 半",
+      "Ask permission"
+    ],
+    "glosses": {
+      "一點": {
+        "pinyin": "yì diǎn",
+        "meaning": "one o’clock",
+        "note": "The already-taught clock use of 點, not the later quantity expression."
+      }
+    }
+  },
+  {
+    "id": "reading-unit-26-dense",
+    "unitId": "unit-26",
+    "title": "The Saturday plan changes",
+    "kind": "LINE-style messages",
+    "presentation": "messages",
+    "setup": "Read a LINE-style exchange about a day off. Separate the first idea from the plan both people finally accept.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "這個星期六放假，你打算做什麼？",
+        "pinyin": "Zhè ge xīngqíliù fàngjià, nǐ dǎsuàn zuò shénme?",
+        "translation": "We have this Saturday off. What are you planning to do?",
+        "note": "打算 introduces an intention, not a completed event. The calendar expression sets the day for the whole exchange."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我想跟你坐火車出去玩。早上去，怎麼樣？",
+        "pinyin": "Wǒ xiǎng gēn nǐ zuò huǒchē chūqù wán. Zǎoshang qù, zěnmeyàng?",
+        "translation": "I’d like to take a train trip with you. How about going in the morning?",
+        "note": "跟 introduces a companion and 坐 names the transport. 怎麼樣 invites a reaction, so this first plan remains open to change."
+      },
+      {
+        "speaker": "Lin",
+        "text": "早上不行，我要做功課。大概中午有空。",
+        "pinyin": "Zǎoshang bùxíng, wǒ yào zuò gōngkè. Dàgài zhōngwǔ yǒukòng.",
+        "translation": "Morning won’t work; I need to do homework. I’ll probably be free around noon.",
+        "note": "不行 rejects feasibility rather than granting or refusing permission. 大概 makes the free time approximate, not an exact appointment."
+      },
+      {
+        "speaker": "Mei",
+        "text": "那我們下午去附近的地方吧。",
+        "pinyin": "Nà wǒmen xiàwǔ qù fùjìn de dìfang ba.",
+        "translation": "Then let’s go somewhere nearby in the afternoon.",
+        "note": "那 connects a response to the obstacle just mentioned. The new proposal changes both timing and the kind of outing."
+      },
+      {
+        "speaker": "Lin",
+        "text": "學校附近有一家有名的餐廳，我們去吃飯吧。",
+        "pinyin": "Xuéxiào fùjìn yǒu yì jiā yǒumíng de cāntīng, wǒmen qù chīfàn ba.",
+        "translation": "There’s a famous restaurant near school. Let’s eat there.",
+        "note": "A place-first 有 sentence introduces the restaurant. The following suggestion makes the nearby destination concrete."
+      },
+      {
+        "speaker": "Mei",
+        "text": "坐捷運還是坐公車？捷運比公車快。",
+        "pinyin": "Zuò jiéyùn háishì zuò gōngchē? Jiéyùn bǐ gōngchē kuài.",
+        "translation": "Metro or bus? The metro is faster than the bus.",
+        "note": "還是 asks the choice; 比 supplies one reason to favor the metro. Faster does not imply cheaper, which the passage never compares."
+      },
+      {
+        "speaker": "Lin",
+        "text": "好，我們坐捷運。下午兩點在學校外面見面。",
+        "pinyin": "Hǎo, wǒmen zuò jiéyùn. Xiàwǔ liǎng diǎn zài xuéxiào wàimiàn jiànmiàn.",
+        "translation": "Okay, let’s take the metro. Meet outside the school at two in the afternoon.",
+        "note": "The acceptance selects the metro and gives a precise time and meeting place, replacing the earlier approximate noon availability."
+      },
+      {
+        "speaker": "Mei",
+        "text": "沒問題！晚上我想在家看電視。",
+        "pinyin": "Méi wèntí! Wǎnshang wǒ xiǎng zài jiā kàn diànshì.",
+        "translation": "No problem! In the evening I want to watch television at home.",
+        "note": "沒問題 confirms the meeting. The separate evening intention belongs to Mei and does not say Lin will watch television too."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which plan do they finally agree on?",
+        "options": [
+          "A morning train journey",
+          "Homework together all afternoon",
+          "A bus ride at noon",
+          "An afternoon restaurant outing by metro"
+        ],
+        "answer": 3,
+        "evidence": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "explanation": "The restaurant replaces the train-trip idea; they choose the metro and confirm the afternoon meeting."
+      },
+      {
+        "prompt": "Why is the morning idea dropped?",
+        "options": [
+          "The restaurant is closed",
+          "Lin needs to do homework",
+          "Mei dislikes trains",
+          "The metro is slow"
+        ],
+        "answer": 1,
+        "evidence": [
+          2
+        ],
+        "explanation": "Lin explicitly says morning is not feasible because of homework. No transport failure is mentioned."
+      },
+      {
+        "prompt": "When and where is their confirmed meeting?",
+        "options": [
+          "Two p.m. outside the school",
+          "Noon inside the restaurant",
+          "Two p.m. at Mei’s home",
+          "Morning at the train station"
+        ],
+        "answer": 0,
+        "evidence": [
+          6,
+          7
+        ],
+        "explanation": "Lin proposes a specific two o’clock meeting outside the school, and Mei accepts in the next message."
+      },
+      {
+        "prompt": "What is said only about Mei’s evening?",
+        "options": [
+          "She will do Lin’s homework",
+          "She will take a train",
+          "She wants to watch television at home",
+          "She will eat with the whole class"
+        ],
+        "answer": 2,
+        "evidence": [
+          7
+        ],
+        "explanation": "The evening sentence has Mei as its speaker and subject. It does not extend that plan to both people."
+      }
+    ],
+    "tips": [
+      "Track revisions: the first proposed transport and time may not survive to the accepted plan.",
+      "Approximate availability and a confirmed meeting time serve different purposes."
+    ],
+    "grammarFocus": [
+      "State a plan with 打算",
+      "Reject an unworkable plan with 不行",
+      "Explicit comparison with 比",
+      "Companionship with 跟"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-29-dense",
+    "unitId": "unit-29",
+    "title": "Two dates, one visiting friend",
+    "kind": "Schedule and notes",
+    "presentation": "schedule",
+    "setup": "Read a short visit itinerary and its conditions. A date tells you when; the notes tell you whether the plan is definite.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "5/6 · arrival",
+        "text": "我的朋友五月六號來，要在這裡玩三天。",
+        "pinyin": "Wǒ de péngyǒu wǔ yuè liù hào lái, yào zài zhèlǐ wán sān tiān.",
+        "translation": "My friend comes on May sixth and will spend three days here visiting.",
+        "note": "五月六號 is a date before the action. 三天 follows 玩 to give the duration of the visit rather than another calendar date."
+      },
+      {
+        "speaker": "5/6 · afternoon",
+        "text": "下午我們打算到學校附近吃飯。",
+        "pinyin": "Xiàwǔ wǒmen dǎsuàn dào xuéxiào fùjìn chīfàn.",
+        "translation": "In the afternoon we plan to eat near the school.",
+        "note": "打算 labels an intention and 到 introduces the destination. The date is inherited from this part of the itinerary."
+      },
+      {
+        "speaker": "5/6 · evening",
+        "text": "晚上要是他有空，我們就去逛夜市。",
+        "pinyin": "Wǎnshang yàoshi tā yǒukòng, wǒmen jiù qù guàng yèshì.",
+        "translation": "If he is free in the evening, we’ll visit the night market.",
+        "note": "要是 states a condition and 就 its consequence. The evening outing is not guaranteed merely because it appears on the itinerary."
+      },
+      {
+        "speaker": "5/7 · morning",
+        "text": "七號早上我有中文課，他自己去買水果。",
+        "pinyin": "Qī hào zǎoshang wǒ yǒu Zhōngwén kè, tā zìjǐ qù mǎi shuǐguǒ.",
+        "translation": "On the morning of the seventh I have Chinese class; he will buy fruit by himself.",
+        "note": "The month is understood from the previous date. 自己 makes clear the friend’s errand is separate from the narrator’s class."
+      },
+      {
+        "speaker": "5/7 · afternoon",
+        "text": "下午我們想去貓空。聽說那裡的茶館很有名。",
+        "pinyin": "Xiàwǔ wǒmen xiǎng qù Māokōng. Tīngshuō nàlǐ de cháguǎn hěn yǒumíng.",
+        "translation": "In the afternoon we want to go to Maokong. I hear the tea houses there are famous.",
+        "note": "聽說 presents reported information that motivates the visit. 那裡 refers to Maokong, not the school mentioned in the previous day’s meal plan."
+      },
+      {
+        "speaker": "Travel note",
+        "text": "要是坐公車去，大概要一個鐘頭。",
+        "pinyin": "Yàoshi zuò gōngchē qù, dàgài yào yí ge zhōngtóu.",
+        "translation": "If we go by bus, it will probably take one hour.",
+        "note": "The condition concerns the travel method. 一個鐘頭 is an estimated duration, and 大概 prevents treating it as an exact guaranteed travel time."
+      },
+      {
+        "speaker": "Travel note",
+        "text": "要是他不想去貓空，我們就在附近喝茶。",
+        "pinyin": "Yàoshi tā bù xiǎng qù Māokōng, wǒmen jiù zài fùjìn hē chá.",
+        "translation": "If he doesn’t want to go to Maokong, we’ll drink tea nearby.",
+        "note": "The condition gives an alternative based on the friend’s preference. It does not say that he has already refused Maokong."
+      },
+      {
+        "speaker": "Gift note",
+        "text": "他說要買水果給我。我喜歡又香又甜的水果。",
+        "pinyin": "Tā shuō yào mǎi shuǐguǒ gěi wǒ. Wǒ xǐhuān yòu xiāng yòu tián de shuǐguǒ.",
+        "translation": "He says he wants to buy fruit for me. I like fruit that is fragrant and sweet.",
+        "note": "給 introduces the recipient of the planned fruit purchase. 又…又… joins two qualities; neither clause names a specific fruit variety."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which activity depends on the friend being free?",
+        "options": [
+          "Buying fruit on the seventh",
+          "Attending Chinese class",
+          "Visiting the night market on the sixth",
+          "Arriving on the sixth"
+        ],
+        "answer": 2,
+        "evidence": [
+          2
+        ],
+        "explanation": "The night-market line explicitly starts a condition with 要是他有空. It is not an unconditional appointment."
+      },
+      {
+        "prompt": "Who buys fruit while the narrator is in class?",
+        "options": [
+          "The visiting friend, alone",
+          "The narrator’s teacher",
+          "Both people together",
+          "The narrator, alone"
+        ],
+        "answer": 0,
+        "evidence": [
+          3
+        ],
+        "explanation": "The line contrasts the narrator’s class with 他自己去買水果, assigning the errand to the friend."
+      },
+      {
+        "prompt": "What happens if the friend does not want to visit Maokong?",
+        "options": [
+          "They cancel the entire visit",
+          "They take a faster bus",
+          "They go to class together",
+          "They drink tea nearby"
+        ],
+        "answer": 3,
+        "evidence": [
+          6
+        ],
+        "explanation": "The alternative clause explicitly pairs not wanting Maokong with drinking tea in the nearby area."
+      },
+      {
+        "prompt": "Which statement distinguishes the two time expressions correctly?",
+        "options": [
+          "May sixth is the length of the stay",
+          "May sixth is arrival; three days is the stay length",
+          "Three days means arriving on May third",
+          "The bus trip lasts three days"
+        ],
+        "answer": 1,
+        "evidence": [
+          0,
+          5
+        ],
+        "explanation": "The date gives arrival, the duration gives the stay, and the separate bus note gives an estimated hour of travel."
+      }
+    ],
+    "tips": [
+      "Separate unconditional entries from entries introduced by “if.”",
+      "A calendar date, a visit duration and an estimated journey length answer different questions."
+    ],
+    "grammarFocus": [
+      "Say a month and date",
+      "Condition and consequence with 要是…就…",
+      "Say how long with a duration after the verb",
+      "Mark the time of an event with …的時候"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-32-dense",
+    "unitId": "unit-32",
+    "title": "A room beside the library",
+    "kind": "Notice and conversation",
+    "presentation": "notice",
+    "setup": "A landlord’s short listing and viewing instructions. Match the room’s facilities to the route and meeting details.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Listing",
+        "text": "圖書館旁邊的大樓有一間空房間，在三樓。",
+        "pinyin": "Túshūguǎn pángbiān de dàlóu yǒu yì jiān kōng fángjiān, zài sān lóu.",
+        "translation": "The building beside the library has a vacant room on the third floor.",
+        "note": "旁邊的大樓 identifies which building; 三樓 identifies the floor. 間 counts rooms, while 空 describes availability."
+      },
+      {
+        "speaker": "Listing",
+        "text": "這間是套房，有浴室，沒有廚房。",
+        "pinyin": "Zhè jiān shì tàofáng, yǒu yùshì, méiyǒu chúfáng.",
+        "translation": "It is a studio room with a bathroom but no kitchen.",
+        "note": "有 and 沒有 distinguish an included facility from a missing one. Do not assume a kitchen just because the room is self-contained."
+      },
+      {
+        "speaker": "Layout",
+        "text": "浴室在右邊，窗戶在左邊。房間很乾淨。",
+        "pinyin": "Yùshì zài yòubiān, chuānghù zài zuǒbiān. Fángjiān hěn gānjìng.",
+        "translation": "The bathroom is on the right, the window on the left. The room is clean.",
+        "note": "The two sides refer to the room’s described layout. 乾淨 is a separate assessment of condition, not another location."
+      },
+      {
+        "speaker": "Nearby",
+        "text": "樓下有超市，附近也有餐廳。",
+        "pinyin": "Lóuxià yǒu chāoshì, fùjìn yě yǒu cāntīng.",
+        "translation": "There is a supermarket downstairs and there are also restaurants nearby.",
+        "note": "樓下 and 附近 are different location scopes. The restaurants are nearby; the text does not place all of them downstairs."
+      },
+      {
+        "speaker": "Travel",
+        "text": "從這裡到學校，走路五分鐘就到了。",
+        "pinyin": "Cóng zhèlǐ dào xuéxiào, zǒulù wǔ fēnzhōng jiù dào le.",
+        "translation": "From here to school, it is only a five-minute walk.",
+        "note": "從…到… sets a route. 就 presents arrival as quick or easy; the five-minute figure belongs to walking, not to a bus journey."
+      },
+      {
+        "speaker": "Viewing",
+        "text": "你可以星期六下午來看房間。",
+        "pinyin": "Nǐ kěyǐ xīngqíliù xiàwǔ lái kàn fángjiān.",
+        "translation": "You can come see the room on Saturday afternoon.",
+        "note": "來看房間 states the purpose of coming. This is an invitation to view, not evidence that a rental agreement already exists."
+      },
+      {
+        "speaker": "Viewing",
+        "text": "星期六下午我在樓下。你可以來找我。",
+        "pinyin": "Xīngqíliù xiàwǔ wǒ zài lóuxià. Nǐ kěyǐ lái zhǎo wǒ.",
+        "translation": "I’ll be downstairs on Saturday afternoon. You can come find me.",
+        "note": "The landlord states a location for the viewing time. 來找我 invites the visitor to meet there, distinct from the room’s third-floor location."
+      },
+      {
+        "speaker": "Visitor",
+        "text": "我喜歡自己做飯。這間沒有廚房，我想再看看。",
+        "pinyin": "Wǒ xǐhuān zìjǐ zuòfàn. Zhè jiān méiyǒu chúfáng, wǒ xiǎng zài kànkan.",
+        "translation": "I like cooking for myself. This room has no kitchen; I’d like to look some more.",
+        "note": "The visitor relates the missing facility to a personal preference. 再看看 leaves the decision open rather than confirming a rental."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which facility is in the room?",
+        "options": [
+          "A kitchen",
+          "A bathroom",
+          "A supermarket",
+          "A restaurant"
+        ],
+        "answer": 1,
+        "evidence": [
+          1,
+          3
+        ],
+        "explanation": "The room includes a bathroom and explicitly lacks a kitchen. The supermarket and restaurants are separate nearby facilities."
+      },
+      {
+        "prompt": "Where can the visitor find the landlord?",
+        "options": [
+          "At school",
+          "At the window",
+          "Inside the library",
+          "Downstairs"
+        ],
+        "answer": 3,
+        "evidence": [
+          6
+        ],
+        "explanation": "The landlord says they will be downstairs and invites the visitor to come there, even though the vacant room is on the third floor."
+      },
+      {
+        "prompt": "What is the visitor’s main reservation?",
+        "options": [
+          "There is no kitchen for cooking",
+          "The room is dirty",
+          "The bathroom is missing",
+          "The school is an hour away"
+        ],
+        "answer": 0,
+        "evidence": [
+          1,
+          7
+        ],
+        "explanation": "The visitor likes cooking and explicitly connects hesitation to the missing kitchen."
+      },
+      {
+        "prompt": "What does the five-minute estimate describe?",
+        "options": [
+          "A phone call",
+          "Viewing the bathroom",
+          "Walking from the building to school",
+          "A metro ride"
+        ],
+        "answer": 2,
+        "evidence": [
+          4
+        ],
+        "explanation": "The route names the building and school, and 走路 identifies the method as walking."
+      }
+    ],
+    "tips": [
+      "Do not merge the room’s facilities with amenities elsewhere in the building or neighborhood.",
+      "A viewing arrangement is not a decision to rent."
+    ],
+    "grammarFocus": [
+      "Come here to do something",
+      "Sooner than expected with 就",
+      "Name the floor directly",
+      "Next to a landmark",
+      "Use a whole clause to identify a noun"
+    ],
+    "glosses": {
+      "分鐘": {
+        "pinyin": "fēnzhōng",
+        "meaning": "minute (duration)",
+        "note": "Reading support for the duration expression already used in the Unit 32 walking example; not a new practice target.",
+        "unfamiliar": true
+      }
+    }
+  },
+  {
+    "id": "reading-unit-35-dense",
+    "unitId": "unit-35",
+    "title": "Who pays, and what comes next?",
+    "kind": "LINE-style messages",
+    "presentation": "messages",
+    "setup": "Two friends discuss a study plan in a LINE-style chat. Keep past payment, current study and future hopes separate.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "你在臺灣打算念多久的書？",
+        "pinyin": "Nǐ zài Táiwān dǎsuàn niàn duōjiǔ de shū?",
+        "translation": "How long are you planning to study in Taiwan?",
+        "note": "多久 asks for duration, not a calendar date. 念多久的書 is the taught pattern that places the study duration inside the phrase."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我計畫先在語言中心念一年中文，再念大學。",
+        "pinyin": "Wǒ jìhuà xiān zài yǔyán zhōngxīn niàn yì nián Zhōngwén, zài niàn dàxué.",
+        "translation": "I plan to study Chinese at the language center for a year first, then attend university.",
+        "note": "先…再… gives the sequence. The stated year belongs to Chinese study; it does not give the total length of university study."
+      },
+      {
+        "speaker": "Lin",
+        "text": "學費是你自己付的嗎？",
+        "pinyin": "Xuéfèi shì nǐ zìjǐ fù de ma?",
+        "translation": "Was it you who paid the tuition yourself?",
+        "note": "是…的 focuses on who paid a known expense. The question seeks a detail of the payment rather than asking what the tuition costs."
+      },
+      {
+        "speaker": "Mei",
+        "text": "不是我自己付的，是公司替我付的。",
+        "pinyin": "Bú shì wǒ zìjǐ fù de, shì gōngsī tì wǒ fù de.",
+        "translation": "I didn’t pay it myself; the company paid it for me.",
+        "note": "The correction replaces the assumed payer. 替我 means on my behalf, making the company the payer and Mei the beneficiary."
+      },
+      {
+        "speaker": "Lin",
+        "text": "你也有獎學金嗎？",
+        "pinyin": "Nǐ yě yǒu jiǎngxuéjīn ma?",
+        "translation": "Do you also have a scholarship?",
+        "note": "也 asks about a possible additional source of support. This question does not establish that a scholarship actually exists."
+      },
+      {
+        "speaker": "Mei",
+        "text": "沒有。我希望以後在這家公司上班。",
+        "pinyin": "Méiyǒu. Wǒ xīwàng yǐhòu zài zhè jiā gōngsī shàngbān.",
+        "translation": "No. I hope to work at this company in the future.",
+        "note": "沒有 answers the scholarship question. 希望 marks a hope, so future employment must not be treated as a current job or guaranteed offer."
+      },
+      {
+        "speaker": "Lin",
+        "text": "你每天念書，累不累？",
+        "pinyin": "Nǐ měitiān niànshū, lèi bú lèi?",
+        "translation": "You study every day. Is it tiring?",
+        "note": "每天 describes frequency and 累不累 asks about the resulting feeling. This line adds no new source of money or work arrangement."
+      },
+      {
+        "speaker": "Mei",
+        "text": "有一點累，可是我喜歡學中文。我希望成績好。",
+        "pinyin": "Yǒuyìdiǎn lèi, kěshì wǒ xǐhuān xué Zhōngwén. Wǒ xīwàng chéngjī hǎo.",
+        "translation": "A little tiring, but I like learning Chinese. I hope to get good grades.",
+        "note": "有一點 gives a mild negative assessment. 可是 contrasts that difficulty with enjoyment; the grades remain a hoped-for result."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What is the planned study order?",
+        "options": [
+          "University, then Chinese",
+          "Work, then a scholarship",
+          "Chinese for a year, then university",
+          "A year at university, then stop"
+        ],
+        "answer": 2,
+        "evidence": [
+          1
+        ],
+        "explanation": "先 identifies Chinese study as the first stage and 再 introduces university afterward."
+      },
+      {
+        "prompt": "Who paid the tuition?",
+        "options": [
+          "The company, on Mei’s behalf",
+          "Lin’s family",
+          "Mei personally",
+          "The language teacher"
+        ],
+        "answer": 0,
+        "evidence": [
+          2,
+          3
+        ],
+        "explanation": "Mei explicitly corrects the assumption that she paid it herself and names the company as payer."
+      },
+      {
+        "prompt": "Which statement is a hope rather than an established fact?",
+        "options": [
+          "Mei has no scholarship",
+          "The company paid tuition",
+          "Mei enjoys Chinese",
+          "Mei will work at that company"
+        ],
+        "answer": 3,
+        "evidence": [
+          3,
+          5,
+          7
+        ],
+        "explanation": "Mei uses 希望 for future employment. Payment by the company does not by itself establish a job offer."
+      },
+      {
+        "prompt": "How does Mei describe studying?",
+        "options": [
+          "Easy and boring",
+          "A little tiring but enjoyable",
+          "Impossible without a scholarship",
+          "Something she no longer does"
+        ],
+        "answer": 1,
+        "evidence": [
+          7
+        ],
+        "explanation": "Mei combines slight tiredness with liking Chinese, rather than choosing only a positive or negative description."
+      }
+    ],
+    "tips": [
+      "Separate who performed an action from who benefited from it.",
+      "Hope, intention and fact are different levels of commitment."
+    ],
+    "grammarFocus": [
+      "Focus a past event with 是…的",
+      "First…, then… with 先…再…",
+      "Give a reason with 因為…所以…"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-38-dense",
+    "unitId": "unit-38",
+    "title": "After class means after class",
+    "kind": "Extended dialogue",
+    "presentation": "dialogue",
+    "setup": "Two friends arrange a birthday visit around a language exchange. Find the actual meeting trigger and place.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "好久不見！明天是你的生日，對不對？",
+        "pinyin": "Hǎojiǔ bú jiàn! Míngtiān shì nǐ de shēngrì, duì bú duì?",
+        "translation": "Long time no see! Tomorrow is your birthday, right?",
+        "note": "The greeting establishes a reunion. 對不對 asks for confirmation of the birthday date, rather than introducing a choice between two dates."
+      },
+      {
+        "speaker": "Mei",
+        "text": "對，你還記得！我明天下午有語言交換。",
+        "pinyin": "Duì, nǐ hái jìde! Wǒ míngtiān xiàwǔ yǒu yǔyán jiāohuàn.",
+        "translation": "Yes, you still remember! I have a language exchange tomorrow afternoon.",
+        "note": "還記得 expresses continued memory. The afternoon exchange is a separate commitment that the birthday visit must fit around."
+      },
+      {
+        "speaker": "Lin",
+        "text": "跟誰？是那個很熱心的朋友嗎？",
+        "pinyin": "Gēn shéi? Shì nà ge hěn rèxīn de péngyǒu ma?",
+        "translation": "With whom? Is it that very helpful friend?",
+        "note": "跟誰 asks for the companion. 很熱心的 identifies a person by a known quality, not by a new name the learner must decode."
+      },
+      {
+        "speaker": "Mei",
+        "text": "對。他教我西班牙文，我教他中文。",
+        "pinyin": "Duì. Tā jiāo wǒ Xībānyáwén, wǒ jiāo tā Zhōngwén.",
+        "translation": "Yes. He teaches me Spanish, and I teach him Chinese.",
+        "note": "Each clause reverses teacher and learner. Follow the subject before 教 to avoid swapping who teaches which language."
+      },
+      {
+        "speaker": "Lin",
+        "text": "那我們什麼時候見面？我四點左右有空。",
+        "pinyin": "Nà wǒmen shénme shíhòu jiànmiàn? Wǒ sì diǎn zuǒyòu yǒukòng.",
+        "translation": "Then when shall we meet? I’m free around four.",
+        "note": "左右 makes four o’clock approximate. This describes Lin’s availability, not yet the exact time of their joint meeting."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我三點半有課，四點半下課。我一下課就去找你。",
+        "pinyin": "Wǒ sān diǎn bàn yǒu kè, sì diǎn bàn xiàkè. Wǒ yí xiàkè jiù qù zhǎo nǐ.",
+        "translation": "I have class at three thirty and finish at four thirty. I’ll come find you as soon as class ends.",
+        "note": "一…就… links the visit immediately to the end of class. It overrides any assumption that being free around four guarantees a four o’clock meeting."
+      },
+      {
+        "speaker": "Lin",
+        "text": "好，我在圖書館門口等你。我們先喝茶，再吃飯。",
+        "pinyin": "Hǎo, wǒ zài túshūguǎn ménkǒu děng nǐ. Wǒmen xiān hē chá, zài chīfàn.",
+        "translation": "Okay, I’ll wait at the library entrance. We’ll have tea first and then eat.",
+        "note": "門口 fixes the meeting point at the entrance, not inside. 先…再… orders two shared activities after they meet."
+      },
+      {
+        "speaker": "Mei",
+        "text": "太好了！我也很想和你一起吃飯。",
+        "pinyin": "Tài hǎo le! Wǒ yě hěn xiǎng hé nǐ yìqǐ chīfàn.",
+        "translation": "Great! I’m really looking forward to eating with you too.",
+        "note": "The enthusiastic response accepts the arrangement and expresses a shared wish. It does not move the meeting to an earlier time."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What triggers Mei’s visit?",
+        "options": [
+          "The start of her class",
+          "Finishing class at four thirty",
+          "Lin becoming free at four",
+          "The start of the language exchange"
+        ],
+        "answer": 1,
+        "evidence": [
+          4,
+          5
+        ],
+        "explanation": "Mei says she will go as soon as class ends, and explicitly places that end at four thirty."
+      },
+      {
+        "prompt": "Who teaches Spanish in the exchange?",
+        "options": [
+          "Lin teaches Mei",
+          "Mei teaches the friend",
+          "Mei teaches Lin",
+          "The helpful friend teaches Mei"
+        ],
+        "answer": 3,
+        "evidence": [
+          2,
+          3
+        ],
+        "explanation": "The friend is the subject of 他教我西班牙文, while Mei teaches Chinese in return."
+      },
+      {
+        "prompt": "Where and in what activity order will they meet?",
+        "options": [
+          "Library entrance; tea then food",
+          "Inside class; food then tea",
+          "Dormitory; Spanish then Chinese",
+          "Library entrance; food then tea"
+        ],
+        "answer": 0,
+        "evidence": [
+          6
+        ],
+        "explanation": "The agreed entrance and the 先…再… sequence together identify the correct arrangement."
+      },
+      {
+        "prompt": "Why is “exactly four o’clock” not a good summary?",
+        "options": [
+          "The library closes at four",
+          "They meet in the morning",
+          "Lin gives an approximate time and Mei finishes later",
+          "Mei cancels the visit"
+        ],
+        "answer": 2,
+        "evidence": [
+          4,
+          5
+        ],
+        "explanation": "左右 makes Lin’s time approximate, while Mei’s class ends at four thirty and the visit follows that event."
+      }
+    ],
+    "tips": [
+      "An event trigger can determine a plan more precisely than someone’s approximate availability.",
+      "In reciprocal exchanges, re-check the subject of each clause rather than assuming one person is always the teacher."
+    ],
+    "grammarFocus": [
+      "As soon as… with 一…就…",
+      "Tell clock time with 點 and 分",
+      "First…, then… with 先…再…"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-41-dense",
+    "unitId": "unit-41",
+    "title": "Birthday dinner: ordered or only suggested?",
+    "kind": "LINE-style messages",
+    "presentation": "messages",
+    "setup": "Read a birthday group chat. Distinguish what is already ordered, what someone will bring, and what is only proposed.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "明天是Mei的生日。我訂了豬腳麵線，也訂了蛋糕。",
+        "pinyin": "Míngtiān shì Mei de shēngrì. Wǒ dìng le zhūjiǎo miànxiàn, yě dìng le dàngāo.",
+        "translation": "Tomorrow is Mei’s birthday. I’ve ordered pork-knuckle noodles and a cake.",
+        "note": "了 after 訂 marks completed ordering. The food may be eaten tomorrow even though the order has already been placed."
+      },
+      {
+        "speaker": "Chen",
+        "text": "你是不是也訂了牛肉麵？",
+        "pinyin": "Nǐ shì bú shì yě dìng le niúròu miàn?",
+        "translation": "Did you also order beef noodles?",
+        "note": "是不是 requests confirmation of a possible additional order. The question itself is not evidence that beef noodles are included."
+      },
+      {
+        "speaker": "Lin",
+        "text": "沒有，我沒訂牛肉麵。Mei什麼都吃，可是她最喜歡麵線。",
+        "pinyin": "Méiyǒu, wǒ méi dìng niúròu miàn. Mei shénme dōu chī, kěshì tā zuì xǐhuān miànxiàn.",
+        "translation": "No, I didn’t order beef noodles. Mei eats everything, but her favorite is thin noodles.",
+        "note": "沒 negates a completed action without retaining verbal 了. 什麼都 expresses an inclusive range, while 最 still allows a favorite within it."
+      },
+      {
+        "speaker": "Chen",
+        "text": "我買了一本書，明天給她。",
+        "pinyin": "Wǒ mǎi le yì běn shū, míngtiān gěi tā.",
+        "translation": "I bought a book; I’ll give it to her tomorrow.",
+        "note": "The purchase is completed, but the giving is scheduled for tomorrow. Keep the two actions and their times separate."
+      },
+      {
+        "speaker": "Mei",
+        "text": "謝謝你們！你們跟我的家人一樣，都很熱心。",
+        "pinyin": "Xièxie nǐmen! Nǐmen gēn wǒ de jiārén yíyàng, dōu hěn rèxīn.",
+        "translation": "Thank you! You’re like my family—both so helpful.",
+        "note": "跟…一樣 compares the friends with Mei’s family, and 都很熱心 specifies the shared quality. It does not claim the friends are relatives."
+      },
+      {
+        "speaker": "Lin",
+        "text": "不必客氣。明天晚上六點在我家吃飯。",
+        "pinyin": "Bú bì kèqì. Míngtiān wǎnshang liù diǎn zài wǒ jiā chīfàn.",
+        "translation": "You’re welcome. Dinner is at my home at six tomorrow evening.",
+        "note": "Time precedes location and the meal action. The speaker’s 我家 identifies Lin’s home rather than Mei’s or Chen’s."
+      },
+      {
+        "speaker": "Chen",
+        "text": "吃飯以後，我們唱歌，好不好？",
+        "pinyin": "Chīfàn yǐhòu, wǒmen chànggē, hǎo bù hǎo?",
+        "translation": "Shall we sing after dinner?",
+        "note": "以後 places the proposed activity after eating. 好不好 seeks agreement; no following message explicitly accepts the singing plan."
+      },
+      {
+        "speaker": "Lin",
+        "text": "Mei，祝你生日快樂，心想事成！",
+        "pinyin": "Mei, zhù nǐ shēngrì kuàilè, xīn xiǎng shì chéng!",
+        "translation": "Mei, happy birthday! May your wishes come true!",
+        "note": "祝 introduces wishes directed to the recipient. A birthday wish closes the chat warmly but does not answer every earlier planning question."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which items has Lin already ordered?",
+        "options": [
+          "Beef noodles and a book",
+          "Only a cake",
+          "Pork-knuckle noodles and a cake",
+          "A book and thin noodles"
+        ],
+        "answer": 2,
+        "evidence": [
+          0,
+          1,
+          2
+        ],
+        "explanation": "Lin explicitly names the two completed orders and denies ordering beef noodles."
+      },
+      {
+        "prompt": "Which part of Chen’s gift plan is already completed?",
+        "options": [
+          "Buying the book",
+          "Giving Mei the book",
+          "Reading it together",
+          "Wrapping the cake"
+        ],
+        "answer": 0,
+        "evidence": [
+          3
+        ],
+        "explanation": "買了 marks the purchase as completed; 明天 places giving the book in the future."
+      },
+      {
+        "prompt": "At whose home is dinner?",
+        "options": [
+          "Mei’s",
+          "Chen’s",
+          "A family member’s, not identified",
+          "Lin’s"
+        ],
+        "answer": 3,
+        "evidence": [
+          5
+        ],
+        "explanation": "Lin is the speaker who says 我家, so the home belongs to Lin in the conversation."
+      },
+      {
+        "prompt": "Which activity remains a proposal without an explicit acceptance?",
+        "options": [
+          "Dinner at six",
+          "Singing after dinner",
+          "Buying the gift book",
+          "Ordering the cake"
+        ],
+        "answer": 1,
+        "evidence": [
+          6,
+          7
+        ],
+        "explanation": "Chen proposes singing with 好不好. The final birthday wish does not explicitly confirm that proposal."
+      }
+    ],
+    "tips": [
+      "An action can be completed before a future celebration: ordering today and eating tomorrow are compatible.",
+      "Resolve “my home” from the speaker label, and distinguish warm replies from explicit acceptance of a plan."
+    ],
+    "grammarFocus": [
+      "Completed action with verbal 了",
+      "不 vs. 沒（有）",
+      "Confirmation questions with 是不是",
+      "Comparison with 跟…一樣",
+      "All-inclusive question words with 都 / 也"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-44-dense",
+    "unitId": "unit-44",
+    "title": "The weather update changes the outing",
+    "kind": "Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read a weather note and the conversation it prompts. Compare today with yesterday, then identify the group’s final plan.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Weather note",
+        "text": "今天有颱風。風比昨天更大，雨也很大。",
+        "pinyin": "Jīntiān yǒu táifēng. Fēng bǐ zuótiān gèng dà, yǔ yě hěn dà.",
+        "translation": "There is a typhoon today. The wind is even stronger than yesterday, and the rain is heavy too.",
+        "note": "比 sets yesterday as the comparison baseline. 更 emphasizes a further increase; the rain is described as heavy without an explicit yesterday comparison."
+      },
+      {
+        "speaker": "Weather note",
+        "text": "今天沒有昨天那麼冷，可是外面很濕。",
+        "pinyin": "Jīntiān méiyǒu zuótiān nàme lěng, kěshì wàimiàn hěn shī.",
+        "translation": "Today is not as cold as yesterday, but it is very wet outside.",
+        "note": "沒有…那麼… expresses a lower degree of cold. Milder temperature does not mean weaker wind or better conditions overall."
+      },
+      {
+        "speaker": "Lin · message",
+        "text": "我們今天還去山上看風景嗎？",
+        "pinyin": "Wǒmen jīntiān hái qù shānshàng kàn fēngjǐng ma?",
+        "translation": "Are we still going up the mountain to see the scenery today?",
+        "note": "還 asks whether a previous plan remains in effect. Asking about the trip is not the same as confirming that it will happen."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "不去了。我覺得這次颱風比上次更可怕。",
+        "pinyin": "Bú qù le. Wǒ juéde zhè cì táifēng bǐ shàng cì gèng kěpà.",
+        "translation": "We’re not going now. I think this typhoon is even scarier than the last one.",
+        "note": "Sentence-final 了 signals a changed plan. 我覺得 frames the comparison as Mei’s assessment, not a numerical weather measurement."
+      },
+      {
+        "speaker": "Lin · message",
+        "text": "那我們在家看電影吧。我有一部很好看的電影。",
+        "pinyin": "Nà wǒmen zài jiā kàn diànyǐng ba. Wǒ yǒu yí bù hěn hǎokàn de diànyǐng.",
+        "translation": "Then let’s watch a movie at home. I have a very good movie.",
+        "note": "那 connects an alternative to the cancellation. 在家 changes the location of the activity, rather than finding another outdoor destination."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "好啊。我先看新聞，再跟你看電影。",
+        "pinyin": "Hǎo a. Wǒ xiān kàn xīnwén, zài gēn nǐ kàn diànyǐng.",
+        "translation": "Sure. I’ll watch the news first, then watch the movie with you.",
+        "note": "好啊 accepts the indoor activity. 先…再… adds an order to the activities without reversing the cancellation of the mountain trip."
+      },
+      {
+        "speaker": "Lin · message",
+        "text": "雨要停了嗎？",
+        "pinyin": "Yǔ yào tíng le ma?",
+        "translation": "Is the rain about to stop?",
+        "note": "要…了 asks about an imminent change. Because this is a question, it does not establish that the rain is actually stopping."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "我不知道。要是你出去，一定要小心。",
+        "pinyin": "Wǒ bù zhīdào. Yàoshi nǐ chūqù, yídìng yào xiǎoxīn.",
+        "translation": "I don’t know. If you go out, be sure to be careful.",
+        "note": "The reply leaves the weather change unknown. 要是 introduces a conditional warning, not a new agreement to go outdoors together."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Compared with yesterday, what is stated about today?",
+        "options": [
+          "Colder with weaker wind",
+          "Less cold but stronger wind",
+          "Less wet with weaker wind",
+          "Colder and dry"
+        ],
+        "answer": 1,
+        "evidence": [
+          0,
+          1
+        ],
+        "explanation": "The wind comparison says stronger, while the temperature comparison says not as cold. These are different dimensions."
+      },
+      {
+        "prompt": "What is the agreed replacement activity?",
+        "options": [
+          "A shorter mountain trip",
+          "Visiting a friend outdoors",
+          "Going to the library",
+          "Watching a movie at home after the news"
+        ],
+        "answer": 3,
+        "evidence": [
+          3,
+          4,
+          5
+        ],
+        "explanation": "Mei cancels the trip and accepts the movie plan, adding that she will watch the news first."
+      },
+      {
+        "prompt": "Do they know the rain is about to stop?",
+        "options": [
+          "No; the question receives “I don’t know”",
+          "Yes; Lin confirms it",
+          "Yes; warmer weather proves it",
+          "No; they know it will never stop"
+        ],
+        "answer": 0,
+        "evidence": [
+          6,
+          7
+        ],
+        "explanation": "The question is explicitly answered with uncertainty. It cannot be used as evidence for an imminent weather change."
+      },
+      {
+        "prompt": "Which statement is specifically Mei’s personal comparison?",
+        "options": [
+          "Today’s rain is heavy",
+          "Today is less cold",
+          "This typhoon feels scarier than the last",
+          "The movie is already over"
+        ],
+        "answer": 2,
+        "evidence": [
+          3
+        ],
+        "explanation": "我覺得 marks Mei’s assessment of this typhoon compared with the previous one."
+      }
+    ],
+    "tips": [
+      "Compare one property at a time: less cold can coexist with stronger wind.",
+      "Do not turn a question about what might happen into a forecast that it will happen."
+    ],
+    "grammarFocus": [
+      "Comparison with 更 — even more",
+      "Not as…as with 沒有",
+      "Something is about to happen",
+      "Condition and consequence with 要是…就…"
+    ],
+    "glosses": {
+      "部": {
+        "pinyin": "bù",
+        "meaning": "measure word for films",
+        "note": "Reading-only support for counting one film.",
+        "unfamiliar": true
+      },
+      "電影": {
+        "pinyin": "diànyǐng",
+        "meaning": "movie; film",
+        "note": "The movie noun from the already-taught expression 看電影, to watch a movie."
+      }
+    }
+  },
+  {
+    "id": "reading-unit-47-dense",
+    "unitId": "unit-47",
+    "title": "A friend offers to come along",
+    "kind": "Extended dialogue",
+    "presentation": "dialogue",
+    "setup": "Read a conversation about feeling ill. This is language practice: follow the reported symptoms and the offer of help, not medical advice.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Mei",
+        "text": "你怎麼了？臉色不太好看。",
+        "pinyin": "Nǐ zěnme le? Liǎnsè bú tài hǎokàn.",
+        "translation": "What’s wrong? You don’t look very well.",
+        "note": "怎麼了 asks about a problem or changed situation. The observation concerns appearance and does not by itself establish a diagnosis."
+      },
+      {
+        "speaker": "Lin",
+        "text": "我昨天晚上肚子痛，吐了兩次。",
+        "pinyin": "Wǒ zuótiān wǎnshang dùzi tòng, tù le liǎng cì.",
+        "translation": "My stomach hurt last night, and I vomited twice.",
+        "note": "昨天晚上 supplies the time. 次 counts occurrences of vomiting, not the number of days the person has been ill."
+      },
+      {
+        "speaker": "Mei",
+        "text": "今天還痛嗎？你有沒有發燒？",
+        "pinyin": "Jīntiān hái tòng ma? Nǐ yǒu méiyǒu fāshāo?",
+        "translation": "Does it still hurt today? Do you have a fever?",
+        "note": "還 asks whether the earlier symptom continues. The second question asks about another symptom without asserting that it is present."
+      },
+      {
+        "speaker": "Lin",
+        "text": "今天還有一點痛，沒有發燒。我沒吃什麼東西。",
+        "pinyin": "Jīntiān hái yǒuyìdiǎn tòng, méiyǒu fāshāo. Wǒ méi chī shénme dōngxi.",
+        "translation": "It still hurts a little today, but I don’t have a fever. I haven’t eaten much.",
+        "note": "In a negative statement, 沒吃什麼東西 means not eating much or anything substantial; 什麼 is not asking the reader to name a food."
+      },
+      {
+        "speaker": "Mei",
+        "text": "你去看醫生了嗎？",
+        "pinyin": "Nǐ qù kàn yīshēng le ma?",
+        "translation": "Have you been to see a doctor?",
+        "note": "The question checks whether a visit has happened. It must be read together with the reply rather than assumed to confirm an earlier visit."
+      },
+      {
+        "speaker": "Lin",
+        "text": "還沒有。我有健康保險，等一下就去健康中心。",
+        "pinyin": "Hái méiyǒu. Wǒ yǒu jiànkāng bǎoxiǎn, děng yíxià jiù qù jiànkāng zhōngxīn.",
+        "translation": "Not yet. I have health insurance, and I’ll go to the health center shortly.",
+        "note": "還沒有 denies a completed visit. 等一下就 presents going to the health center as a near-future plan, not something that has already happened."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我陪你去。你看了醫生就跟我去拿藥，好不好？",
+        "pinyin": "Wǒ péi nǐ qù. Nǐ kàn le yīshēng jiù gēn wǒ qù ná yào, hǎo bù hǎo?",
+        "translation": "I’ll go with you. After you’ve seen the doctor, shall we go get medicine together?",
+        "note": "V了…就… sequences a proposed next action after the first is completed. Here 了 does not mean the doctor visit has already happened."
+      },
+      {
+        "speaker": "Lin",
+        "text": "謝謝。我的朋友等一下來，他陪我去。你不用陪我。",
+        "pinyin": "Xièxie. Wǒ de péngyǒu děng yíxià lái, tā péi wǒ qù. Nǐ bú yòng péi wǒ.",
+        "translation": "Thanks. My friend is coming shortly and will go with me. You don’t need to come along.",
+        "note": "Lin gives a reason for declining Mei’s offer: another friend will accompany him. The refusal concerns the companion, not whether to seek help."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What happened twice?",
+        "options": [
+          "Lin visited the clinic",
+          "Lin took medicine",
+          "Lin vomited last night",
+          "Mei called a doctor"
+        ],
+        "answer": 2,
+        "evidence": [
+          1
+        ],
+        "explanation": "兩次 counts the vomiting episodes. No completed doctor visits or medicine doses are counted in the passage."
+      },
+      {
+        "prompt": "Which description matches Lin today?",
+        "options": [
+          "Some stomach pain, no fever, little food",
+          "Fever but no stomach pain",
+          "No symptoms and a large lunch",
+          "Only a sore throat"
+        ],
+        "answer": 0,
+        "evidence": [
+          2,
+          3
+        ],
+        "explanation": "Lin’s reply says there is still some pain, denies fever and states that he has eaten little."
+      },
+      {
+        "prompt": "Has Lin already seen a doctor?",
+        "options": [
+          "Yes, twice",
+          "Yes, just before the chat",
+          "The passage says he never will",
+          "No; he says “not yet” and plans to go"
+        ],
+        "answer": 3,
+        "evidence": [
+          4,
+          5
+        ],
+        "explanation": "還沒有 directly answers the visit question. The proposed sequence in the next line is not proof of a completed visit."
+      },
+      {
+        "prompt": "Why does Lin decline Mei’s company?",
+        "options": [
+          "He decides not to go",
+          "Another friend is coming to accompany him",
+          "He is already at the pharmacy",
+          "He has no insurance"
+        ],
+        "answer": 1,
+        "evidence": [
+          7
+        ],
+        "explanation": "Lin says another friend will accompany him, so Mei’s help is unnecessary. He does not cancel the health-center plan."
+      }
+    ],
+    "tips": [
+      "Separate a symptom report from a question and from a diagnosis the passage never provides.",
+      "In a future sequence, V了…就… can describe what will happen after completing an action, not what has already happened."
+    ],
+    "grammarFocus": [
+      "V了…就… — do B right after completing A",
+      "Negative, non-specific question words",
+      "不 vs. 沒（有）"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-12-mini",
+    "unitId": "unit-12",
+    "title": "One order, two prices",
+    "kind": "Mini reading · Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read a small drink-order card. Use both the quantities and the prices.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Price card",
+        "text": "熱茶一杯二十塊，熱咖啡一杯四十塊。",
+        "pinyin": "Rè chá yì bēi èrshí kuài, rè kāfēi yì bēi sìshí kuài.",
+        "translation": "Hot tea is twenty dollars a cup; hot coffee is forty dollars a cup.",
+        "note": "Each 一杯 gives the price for one cup. The two prices belong to different drinks, not to two sizes of the same drink."
+      },
+      {
+        "speaker": "Order",
+        "text": "我要兩杯熱茶，一杯熱咖啡。",
+        "pinyin": "Wǒ yào liǎng bēi rè chá, yì bēi rè kāfēi.",
+        "translation": "I’d like two hot teas and one hot coffee.",
+        "note": "兩杯 counts the teas, while 一杯 counts the coffee. Keep those quantities with the correct prices on the card."
+      },
+      {
+        "speaker": "Customer",
+        "text": "都外帶。一共多少錢？",
+        "pinyin": "Dōu wàidài. Yígòng duōshǎo qián?",
+        "translation": "All to go. How much altogether?",
+        "note": "都 covers all three cups from the order. 一共 asks for the total, not the price of just the final cup."
+      },
+      {
+        "speaker": "Staff",
+        "text": "一共八十塊。謝謝！",
+        "pinyin": "Yígòng bāshí kuài. Xièxie!",
+        "translation": "Eighty dollars altogether. Thank you!",
+        "note": "Two teas cost forty, and one coffee costs another forty. The total therefore agrees with the prices and quantities above."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which calculation matches the order?",
+        "options": [
+          "20 + 40 = 60",
+          "20 + 20 + 40 = 80",
+          "40 + 40 + 20 = 100",
+          "20 + 20 = 40"
+        ],
+        "answer": 1,
+        "evidence": [
+          0,
+          1,
+          3
+        ],
+        "explanation": "There are two twenty-dollar teas and one forty-dollar coffee, giving the stated eighty-dollar total."
+      },
+      {
+        "prompt": "Which drinks are to go?",
+        "options": [
+          "Only the coffee",
+          "Only the teas",
+          "One tea and the coffee",
+          "All three drinks"
+        ],
+        "answer": 3,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "都 applies to the entire preceding order: the two teas and the coffee are all takeout."
+      }
+    ],
+    "tips": [
+      "Match each quantity to its item before calculating.",
+      "Scope words such as 都 can apply to several items named earlier."
+    ],
+    "grammarFocus": [
+      "Say a price",
+      "Ask for the whole order",
+      "Take your order with you"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-15-mini",
+    "unitId": "unit-15",
+    "title": "The noodle-shop order slip",
+    "kind": "Mini reading · Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read an order slip and the customer’s comment. Distinguish quantities from opinions.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Order",
+        "text": "牛肉麵兩碗，湯一碗。",
+        "pinyin": "Niúròu miàn liǎng wǎn, tāng yì wǎn.",
+        "translation": "Two bowls of beef noodles and one bowl of soup.",
+        "note": "Order slips can put the item before its quantity. 碗 counts bowls for both items, but their quantities are different."
+      },
+      {
+        "speaker": "Service",
+        "text": "內用，不外帶。",
+        "pinyin": "Nèiyòng, bú wàidài.",
+        "translation": "For here, not to go.",
+        "note": "The service line applies to the whole order. It does not change the food or the number of bowls listed above."
+      },
+      {
+        "speaker": "Customer",
+        "text": "我最喜歡這家店的牛肉麵，真好吃！",
+        "pinyin": "Wǒ zuì xǐhuān zhè jiā diàn de niúròu miàn, zhēn hǎochī!",
+        "translation": "This shop’s beef noodles are my favorite. They’re really delicious!",
+        "note": "最 identifies the customer’s strongest preference. 真好吃 is an opinion about taste, not a statement about price."
+      },
+      {
+        "speaker": "Companion",
+        "text": "我也喜歡牛肉麵。今天我想喝湯。",
+        "pinyin": "Wǒ yě xǐhuān niúròu miàn. Jīntiān wǒ xiǎng hē tāng.",
+        "translation": "I like beef noodles too. Today I feel like soup.",
+        "note": "The companion separates a general preference from today’s choice. This contrast does not remove the noodles already on the slip."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "How many bowls are listed altogether?",
+        "options": [
+          "Three",
+          "Two",
+          "One",
+          "Four"
+        ],
+        "answer": 0,
+        "evidence": [
+          0
+        ],
+        "explanation": "The slip lists two bowls of noodles plus one bowl of soup, so the total is three bowls."
+      },
+      {
+        "prompt": "What does the customer’s comment establish?",
+        "options": [
+          "The noodles are cheapest",
+          "The soup is free",
+          "The noodles are the customer’s favorite",
+          "Everything is takeout"
+        ],
+        "answer": 2,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "最喜歡 identifies a favorite. The comment gives no price comparison, and the service line says for here."
+      }
+    ],
+    "tips": [
+      "A slip often omits full sentence wording; item and quantity still stay paired.",
+      "A favorite food is a preference, not evidence about its price."
+    ],
+    "grammarFocus": [
+      "Use 點 for ordering food",
+      "Name your strongest preference",
+      "Drink the broth; react to the taste"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-18-mini",
+    "unitId": "unit-18",
+    "title": "Where is everyone now?",
+    "kind": "Mini reading · LINE-style messages",
+    "presentation": "messages",
+    "setup": "Read a short exchange during class time. Follow the correction and the two different people.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "你現在在學校外面嗎？",
+        "pinyin": "Nǐ xiànzài zài xuéxiào wàimiàn ma?",
+        "translation": "Are you outside the school now?",
+        "note": "現在 asks about current whereabouts. Because the location appears in a question, it is not yet an established fact."
+      },
+      {
+        "speaker": "Mei",
+        "text": "不，我在圖書館裡面看書。",
+        "pinyin": "Bù, wǒ zài túshūguǎn lǐmiàn kàn shū.",
+        "translation": "No, I’m reading inside the library.",
+        "note": "不 rejects the suggested location. 在圖書館裡面 comes before 看書 to place the reading activity inside the library."
+      },
+      {
+        "speaker": "Lin",
+        "text": "你姐姐也在那裡嗎？",
+        "pinyin": "Nǐ jiějie yě zài nàlǐ ma?",
+        "translation": "Is your older sister there too?",
+        "note": "那裡 points back to the library. 也 asks whether the sister shares Mei’s location, rather than asserting that she does."
+      },
+      {
+        "speaker": "Mei",
+        "text": "她不在圖書館，她在學校上課。",
+        "pinyin": "Tā bú zài túshūguǎn, tā zài xuéxiào shàngkè.",
+        "translation": "She isn’t in the library; she’s having class at school.",
+        "note": "不在 denies one location, and the second clause gives the sister’s activity. Mei and her sister are doing different things."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Who is reading in the library?",
+        "options": [
+          "Lin",
+          "Mei",
+          "Mei’s sister",
+          "Everyone"
+        ],
+        "answer": 1,
+        "evidence": [
+          1,
+          3
+        ],
+        "explanation": "Mei says she is reading there, while her sister is specifically said not to be in the library."
+      },
+      {
+        "prompt": "What does “there” in Lin’s second message refer to?",
+        "options": [
+          "Outside the school",
+          "A restaurant",
+          "Mei’s home",
+          "Inside the library"
+        ],
+        "answer": 3,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "The immediately preceding answer establishes the library as the location that 那裡 refers back to."
+      }
+    ],
+    "tips": [
+      "Do not treat a location question as a fact.",
+      "Resolve “there” from the last established location."
+    ],
+    "grammarFocus": [
+      "Put now before the location statement",
+      "Negate a location with 不在",
+      "Name a place for books",
+      "Say where an activity happens"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-21-mini",
+    "unitId": "unit-21",
+    "title": "The free hour is not the whole afternoon",
+    "kind": "Mini reading · Schedule and notes",
+    "presentation": "schedule",
+    "setup": "Read a short availability note and a reply. Find a meeting time inside the stated window.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Mei · availability",
+        "text": "明天從中午十二點到一點，我有空。",
+        "pinyin": "Míngtiān cóng zhōngwǔ shí’èr diǎn dào yì diǎn, wǒ yǒukòng.",
+        "translation": "Tomorrow I’m free from noon until one.",
+        "note": "從…到… gives both boundaries of availability. It does not say that Mei is free throughout the rest of the day."
+      },
+      {
+        "speaker": "Mei · location",
+        "text": "我在學校附近。我們在圖書館外面見面吧。",
+        "pinyin": "Wǒ zài xuéxiào fùjìn. Wǒmen zài túshūguǎn wàimiàn jiànmiàn ba.",
+        "translation": "I’ll be near school. Let’s meet outside the library.",
+        "note": "The first clause gives a broad area; the second proposes a more precise meeting point outside, rather than inside, the library."
+      },
+      {
+        "speaker": "Lin · proposal",
+        "text": "十二點二十分見面，好不好？",
+        "pinyin": "Shí’èr diǎn èrshí fēn jiànmiàn, hǎo bù hǎo?",
+        "translation": "Shall we meet at twelve twenty?",
+        "note": "The hour comes before 點 and the minutes before 分. This time falls within Mei’s stated noon-to-one window."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "沒問題。一點我要去上課。",
+        "pinyin": "Méi wèntí. Yì diǎn wǒ yào qù shàngkè.",
+        "translation": "No problem. At one I need to go to class.",
+        "note": "The reply accepts the proposed time and explains the end of the free window. Going to class limits how long the meeting can continue."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which appointment is accepted?",
+        "options": [
+          "12:20 outside the library",
+          "1:20 inside the library",
+          "12:00 inside the classroom",
+          "1:00 at home"
+        ],
+        "answer": 0,
+        "evidence": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "The place comes from Mei’s proposal, the time from Lin’s reply, and 沒問題 confirms their combination."
+      },
+      {
+        "prompt": "Why should they not assume Mei is free after one?",
+        "options": [
+          "The library closes",
+          "Lin goes home",
+          "Mei needs to go to class",
+          "Mei has not replied"
+        ],
+        "answer": 2,
+        "evidence": [
+          0,
+          3
+        ],
+        "explanation": "The window ends at one, and the last message gives class as the reason for that boundary."
+      }
+    ],
+    "tips": [
+      "Combine the time from one message with the place from another.",
+      "Check both ends of an availability window."
+    ],
+    "grammarFocus": [
+      "Tell clock time with 點 and 分",
+      "Mark a range with 從…到…",
+      "Put time before place"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-24-mini",
+    "unitId": "unit-24",
+    "title": "A faster train, a different choice",
+    "kind": "Mini reading · Extended dialogue",
+    "presentation": "dialogue",
+    "setup": "Two friends compare travel choices. A favorable description does not always tell you what they choose.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "明天你跟誰去玩？",
+        "pinyin": "Míngtiān nǐ gēn shéi qù wán?",
+        "translation": "Who are you going out with tomorrow?",
+        "note": "跟誰 asks about a companion. The time is tomorrow, so this is a plan rather than a completed trip."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我跟姐姐去。我們想坐火車。",
+        "pinyin": "Wǒ gēn jiějie qù. Wǒmen xiǎng zuò huǒchē.",
+        "translation": "I’m going with my older sister. We want to take the train.",
+        "note": "The first sentence answers who, and the second gives their transport preference. 姐姐 is the companion, not the destination."
+      },
+      {
+        "speaker": "Lin",
+        "text": "高鐵比較快，又快又舒服。",
+        "pinyin": "Gāotiě bǐjiào kuài, yòu kuài yòu shūfu.",
+        "translation": "High-speed rail is faster; it’s both fast and comfortable.",
+        "note": "比較 makes a contextual comparison, and 又…又… joins two favorable qualities. Lin has not yet changed Mei’s stated choice."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我知道，可是姐姐覺得高鐵車票太貴了。我們坐火車吧。",
+        "pinyin": "Wǒ zhīdào, kěshì jiějie juéde gāotiě chēpiào tài guì le. Wǒmen zuò huǒchē ba.",
+        "translation": "I know, but my sister thinks high-speed rail tickets are too expensive. Let’s take the regular train.",
+        "note": "可是 introduces the competing concern: price. The final suggestion keeps the regular train despite the high-speed option’s advantages."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Why does Mei still favor the regular train?",
+        "options": [
+          "Her sister cannot travel",
+          "The faster option is considered too expensive",
+          "The train has already left",
+          "Lin says it is fastest"
+        ],
+        "answer": 1,
+        "evidence": [
+          2,
+          3
+        ],
+        "explanation": "The fast, comfortable option loses out because the sister considers its ticket too expensive."
+      },
+      {
+        "prompt": "Who is Mei planning to travel with?",
+        "options": [
+          "Her teacher",
+          "Lin",
+          "Her brother",
+          "Her older sister"
+        ],
+        "answer": 3,
+        "evidence": [
+          0,
+          1
+        ],
+        "explanation": "Mei directly answers the companion question with 跟姐姐去. Lin discusses the plan but is not named as her companion."
+      }
+    ],
+    "tips": [
+      "Separate the best-described option from the option actually chosen.",
+      "A transport comparison and a companion question ask for different information."
+    ],
+    "grammarFocus": [
+      "Take transportation with 坐",
+      "Companionship with 跟",
+      "Implicit comparison with 比較",
+      "Both A and B with 又…又…"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-27-mini",
+    "unitId": "unit-27",
+    "title": "A recommendation is not a decision",
+    "kind": "Mini reading · LINE-style messages",
+    "presentation": "messages",
+    "setup": "Read a brief holiday-planning chat. Notice the difference between someone’s plan and a friend’s advice.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Mei",
+        "text": "放假的時候，我打算去玩兩個星期。",
+        "pinyin": "Fàngjià de shíhòu, wǒ dǎsuàn qù wán liǎng ge xīngqí.",
+        "translation": "During the holiday, I plan to go away for two weeks.",
+        "note": "的時候 locates the activity during a holiday. 兩個星期 follows the activity to state its duration rather than the date it begins."
+      },
+      {
+        "speaker": "Lin",
+        "text": "你應該去夜市。那裡的小吃很特別。",
+        "pinyin": "Nǐ yīnggāi qù yèshì. Nàlǐ de xiǎochī hěn tèbié.",
+        "translation": "You should visit the night market. The snacks there are special.",
+        "note": "應該 gives advice here. The description explains Lin’s recommendation without proving that Mei has agreed to follow it."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我有時候喜歡去商店，有時候喜歡在茶館喝茶。",
+        "pinyin": "Wǒ yǒushíhòu xǐhuān qù shāngdiàn, yǒushíhòu xǐhuān zài cháguǎn hē chá.",
+        "translation": "Sometimes I like going to shops; sometimes I like having tea at a tea house.",
+        "note": "有時候…有時候… describes alternate preferences across occasions. It does not schedule both activities on particular days of this trip."
+      },
+      {
+        "speaker": "Mei",
+        "text": "我沒有決定去哪裡。",
+        "pinyin": "Wǒ méiyǒu juédìng qù nǎlǐ.",
+        "translation": "I haven’t decided where to go yet.",
+        "note": "The final statement leaves the destination unsettled. It does not cancel the earlier two-week intention or turn the advice into a booking."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which part of the plan is stated, even though the destination is undecided?",
+        "options": [
+          "A two-week outing",
+          "A booked night-market visit",
+          "A fixed tea-house reservation",
+          "A return on Monday"
+        ],
+        "answer": 0,
+        "evidence": [
+          0,
+          3
+        ],
+        "explanation": "Mei gives a two-week duration but explicitly says the destination has not yet been decided."
+      },
+      {
+        "prompt": "What role does the night market play?",
+        "options": [
+          "A place Mei refuses to visit",
+          "A confirmed destination",
+          "Lin’s recommendation",
+          "The place they are currently in"
+        ],
+        "answer": 2,
+        "evidence": [
+          1,
+          3
+        ],
+        "explanation": "Lin recommends it with 應該, but Mei’s final message makes clear she has not settled on a destination."
+      }
+    ],
+    "tips": [
+      "A stated duration can coexist with an undecided destination.",
+      "Advice is not confirmation that the listener will follow it."
+    ],
+    "grammarFocus": [
+      "Say how long with a duration after the verb",
+      "Give a suggestion with 應該",
+      "Alternate possibilities with 有時候…有時候…"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-30-mini",
+    "unitId": "unit-30",
+    "title": "A photo and a guess",
+    "kind": "Mini reading · Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read a photo caption and two comments. Work out which claim the reply confirms.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Caption",
+        "text": "今天和朋友一起吃水果。芒果黃黃的，很香。",
+        "pinyin": "Jīntiān hé péngyǒu yìqǐ chī shuǐguǒ. Mángguǒ huánghuáng de, hěn xiāng.",
+        "translation": "Eating fruit with a friend today. The mango is yellow and fragrant.",
+        "note": "A caption can omit an understood subject. 黃黃的 presents a descriptive impression of the mango rather than a color comparison."
+      },
+      {
+        "speaker": "Lin · comment",
+        "text": "你今天穿紅色衣服吧？",
+        "pinyin": "Nǐ jīntiān chuān hóngsè yīfu ba?",
+        "translation": "You’re wearing red today, right?",
+        "note": "吧 marks a guess offered for confirmation. The guess concerns the person’s clothing today, not the color of the fruit."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "對！我很開心，朋友給我照相。",
+        "pinyin": "Duì! Wǒ hěn kāixīn, péngyǒu gěi wǒ zhàoxiàng.",
+        "translation": "Right! I’m very happy; my friend is taking a photo of me.",
+        "note": "對 confirms Lin’s identification. The friend is the photographer, while 我 is the person receiving that help."
+      },
+      {
+        "speaker": "Mei · reply",
+        "text": "這個芒果很甜，你也吃吃看。",
+        "pinyin": "Zhè ge mángguǒ hěn tián, nǐ yě chīchīkàn.",
+        "translation": "This mango is sweet; you should try some too.",
+        "note": "吃吃看 invites someone to try the food. The 看 in this pattern adds trying, rather than asking someone merely to look at the mango."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Who is identified as wearing red?",
+        "options": [
+          "The photographer",
+          "Mei",
+          "Lin’s teacher",
+          "Nobody; the guess is rejected"
+        ],
+        "answer": 1,
+        "evidence": [
+          1,
+          2
+        ],
+        "explanation": "Lin guesses that the person in red is Mei, and Mei answers 對 to confirm it."
+      },
+      {
+        "prompt": "What does Mei invite Lin to do?",
+        "options": [
+          "Take another picture",
+          "Change clothes",
+          "Only look at the mango",
+          "Try eating the mango"
+        ],
+        "answer": 3,
+        "evidence": [
+          3
+        ],
+        "explanation": "吃吃看 means to try eating it. It is not an instruction simply to look at the fruit."
+      }
+    ],
+    "tips": [
+      "Wait for the reply before treating a guess as confirmed.",
+      "Read VV看 as a whole try-it pattern."
+    ],
+    "grammarFocus": [
+      "Use 吧 to make a guess",
+      "Try an action with VV看",
+      "Give a subjective impression by reduplicating a state verb"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-33-mini",
+    "unitId": "unit-33",
+    "title": "The rent call has one loose end",
+    "kind": "Mini reading · LINE-style messages",
+    "presentation": "messages",
+    "setup": "Read a tenant–landlord exchange. One payment is confirmed, but a problem remains.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Tenant",
+        "text": "喂，房東，你收到房租了嗎？",
+        "pinyin": "Wéi, fángdōng, nǐ shōudào fángzū le ma?",
+        "translation": "Hello, landlord—have you received the rent?",
+        "note": "喂 opens a telephone-style exchange. The question checks receipt of the rent, not whether the tenant likes the room."
+      },
+      {
+        "speaker": "Landlord",
+        "text": "收到了，謝謝。住在這裡習慣了嗎？",
+        "pinyin": "Shōudào le, xièxie. Zhù zài zhèlǐ xíguàn le ma?",
+        "translation": "Yes, thank you. Have you got used to living here?",
+        "note": "收到了 leaves the understood rent unspoken. The following question shifts from payment to becoming accustomed to the home."
+      },
+      {
+        "speaker": "Tenant",
+        "text": "習慣了，不過熱水器好像有問題。",
+        "pinyin": "Xíguàn le, búguò rèshuǐqì hǎoxiàng yǒu wèntí.",
+        "translation": "Yes, but there seems to be a problem with the water heater.",
+        "note": "不過 introduces a qualification to the positive answer. 好像 makes the problem tentative rather than a precise technical diagnosis."
+      },
+      {
+        "speaker": "Landlord",
+        "text": "不好意思。我明天來看看。",
+        "pinyin": "Bù hǎoyìsi. Wǒ míngtiān lái kànkan.",
+        "translation": "Sorry about that. I’ll come take a look tomorrow.",
+        "note": "明天 places the visit in the future. Offering to inspect the heater is not a claim that the problem has already been fixed."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which matter is confirmed as completed?",
+        "options": [
+          "The rent has been received",
+          "The heater has been repaired",
+          "The landlord has visited today",
+          "The tenant has moved out"
+        ],
+        "answer": 0,
+        "evidence": [
+          0,
+          1
+        ],
+        "explanation": "The landlord directly confirms receiving the rent. The heater visit is still planned for tomorrow."
+      },
+      {
+        "prompt": "What is the promised next action?",
+        "options": [
+          "Replace the room",
+          "Refund all the rent",
+          "Come look at the heater tomorrow",
+          "Ask the tenant to leave"
+        ],
+        "answer": 2,
+        "evidence": [
+          2,
+          3
+        ],
+        "explanation": "The tenant raises a possible heater problem, and the landlord promises to come look tomorrow, without promising a specific repair."
+      }
+    ],
+    "tips": [
+      "Recover omitted objects from the previous question.",
+      "An inspection promised for tomorrow is not a repair completed today."
+    ],
+    "grammarFocus": [
+      "Introduce an indefinite subject with 有",
+      "Leave understood subjects and objects unspoken"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-36-mini",
+    "unitId": "unit-36",
+    "title": "Study first, then look for work",
+    "kind": "Mini reading · Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read a short personal plan. Distinguish the sequence from assumptions about how easy it will be.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Plan",
+        "text": "我想先念書，再找工作。",
+        "pinyin": "Wǒ xiǎng xiān niànshū, zài zhǎo gōngzuò.",
+        "translation": "I want to study first, then look for work.",
+        "note": "先…再… places the two activities in order. Looking for work is a future intention, not evidence that a job has already been found."
+      },
+      {
+        "speaker": "Reason",
+        "text": "我希望在這個國家上班，可是工作不好找。",
+        "pinyin": "Wǒ xīwàng zài zhè ge guójiā shàngbān, kěshì gōngzuò bù hǎo zhǎo.",
+        "translation": "I hope to work in this country, but jobs are not easy to find.",
+        "note": "不好找 describes difficulty finding work. It does not mean the jobs themselves are morally bad or necessarily unpleasant."
+      },
+      {
+        "speaker": "Next step",
+        "text": "念一年中文以後，我想試試。",
+        "pinyin": "Niàn yì nián Zhōngwén yǐhòu, wǒ xiǎng shìshi.",
+        "translation": "After studying Chinese for a year, I’d like to give it a try.",
+        "note": "以後 makes a year of study the earlier event and trying the later one. The understood thing to try is the job search from the preceding lines."
+      },
+      {
+        "speaker": "Friend",
+        "text": "加油！我也覺得學中文很有意思。",
+        "pinyin": "Jiāyóu! Wǒ yě juéde xué Zhōngwén hěn yǒuyìsi.",
+        "translation": "Keep going! I also find learning Chinese interesting.",
+        "note": "加油 encourages the plan. Enjoying Chinese is supportive, but the friend does not guarantee that finding a job will be easy."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "What does 不好找 mean here?",
+        "options": [
+          "The job is ugly",
+          "Jobs are difficult to find",
+          "The speaker refuses to work",
+          "The country has no jobs at all"
+        ],
+        "answer": 1,
+        "evidence": [
+          1
+        ],
+        "explanation": "好 or 不好 before 找 evaluates how easy finding something is; it does not evaluate the quality of the job itself."
+      },
+      {
+        "prompt": "Which sequence matches the plan?",
+        "options": [
+          "Start a job, then learn Chinese",
+          "Give up studying to work",
+          "Get a guaranteed job tomorrow",
+          "Study Chinese, then try looking for work"
+        ],
+        "answer": 3,
+        "evidence": [
+          0,
+          2
+        ],
+        "explanation": "Both the first-then statement and the 以後 statement place Chinese study before trying the job search."
+      }
+    ],
+    "tips": [
+      "Read 好/不好 + verb as an ease judgment when the taught pattern applies.",
+      "Encouragement supports an intention without guaranteeing its result."
+    ],
+    "grammarFocus": [
+      "After an event with …以後",
+      "Special meanings of 好 / 難 + verbs",
+      "First…, then… with 先…再…"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-39-mini",
+    "unitId": "unit-39",
+    "title": "A gift bought, a meal not ordered",
+    "kind": "Mini reading · LINE-style messages",
+    "presentation": "messages",
+    "setup": "Read a birthday-planning exchange. Keep buying and ordering separate.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Lin",
+        "text": "我買了禮物。你訂了豬腳麵線嗎？",
+        "pinyin": "Wǒ mǎi le lǐwù. Nǐ dìng le zhūjiǎo miànxiàn ma?",
+        "translation": "I bought a gift. Have you ordered pork-knuckle noodles?",
+        "note": "The first 了 marks a completed purchase. The second appears in a question, so it does not confirm a completed food order."
+      },
+      {
+        "speaker": "Mei",
+        "text": "還沒訂。我今天晚上訂。",
+        "pinyin": "Hái méi dìng. Wǒ jīntiān wǎnshang dìng.",
+        "translation": "Not yet. I’ll order tonight.",
+        "note": "沒訂 denies completion and does not keep verbal 了. The following time expression moves the ordering to a plan for this evening."
+      },
+      {
+        "speaker": "Lin",
+        "text": "好，我們明天一起吃飯。我想吃一點麵線。",
+        "pinyin": "Hǎo, wǒmen míngtiān yìqǐ chīfàn. Wǒ xiǎng chī yìdiǎn miànxiàn.",
+        "translation": "Okay, we’ll eat together tomorrow. I’d like a little thin-noodle dish.",
+        "note": "明天 dates the meal rather than the ordering. 一點 before the food is a small quantity here, not the clock time one o’clock."
+      },
+      {
+        "speaker": "Mei",
+        "text": "沒問題。禮物是什麼？",
+        "pinyin": "Méi wèntí. Lǐwù shì shénme?",
+        "translation": "No problem. What is the gift?",
+        "note": "The final question asks about the already-bought gift. Since no answer follows, its exact identity remains unknown to the reader."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which action is already completed?",
+        "options": [
+          "Buying the gift",
+          "Ordering the noodles",
+          "Eating tomorrow’s meal",
+          "Giving the gift"
+        ],
+        "answer": 0,
+        "evidence": [
+          0,
+          1
+        ],
+        "explanation": "Lin states 買了禮物, while Mei explicitly says the noodles have not yet been ordered."
+      },
+      {
+        "prompt": "What information is still missing?",
+        "options": [
+          "When Mei plans to order",
+          "When they plan to eat",
+          "What the gift actually is",
+          "Whether Lin wants some noodles"
+        ],
+        "answer": 2,
+        "evidence": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "Ordering time, meal time and Lin’s food preference are stated, but the gift question receives no answer."
+      }
+    ],
+    "tips": [
+      "A positive completed action and a question about another action carry different evidence.",
+      "Check whether 一點 is followed by a food or used as a clock time."
+    ],
+    "grammarFocus": [
+      "Completed action with verbal 了",
+      "不 vs. 沒（有）"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-42-mini",
+    "unitId": "unit-42",
+    "title": "Two seasons, two different activities",
+    "kind": "Mini reading · Notice and conversation",
+    "presentation": "notice",
+    "setup": "Read two friends’ seasonal notes. Weather preferences explain why their plans differ.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Mei",
+        "text": "冬天很冷，可是我喜歡冬天。",
+        "pinyin": "Dōngtiān hěn lěng, kěshì wǒ xǐhuān dōngtiān.",
+        "translation": "Winter is cold, but I like winter.",
+        "note": "可是 contrasts the cold weather with a positive preference. Cold does not automatically mean the speaker dislikes the season."
+      },
+      {
+        "speaker": "Mei",
+        "text": "山上下雪的時候，我想去滑雪。",
+        "pinyin": "Shānshàng xiàxuě de shíhòu, wǒ xiǎng qù huáxuě.",
+        "translation": "When it snows in the mountains, I want to go skiing.",
+        "note": "的時候 connects the intended activity to snowy conditions. 想 makes skiing a wish rather than a report of an already-completed trip."
+      },
+      {
+        "speaker": "Lin",
+        "text": "我不喜歡冷的天氣。我最喜歡夏天。",
+        "pinyin": "Wǒ bù xǐhuān lěng de tiānqì. Wǒ zuì xǐhuān xiàtiān.",
+        "translation": "I don’t like cold weather. Summer is my favorite.",
+        "note": "The speaker has changed, so this preference belongs to Lin rather than contradicting Mei’s winter preference."
+      },
+      {
+        "speaker": "Lin",
+        "text": "因為我喜歡游泳，所以夏天常和朋友去游泳池。",
+        "pinyin": "Yīnwèi wǒ xǐhuān yóuyǒng, suǒyǐ xiàtiān cháng hé péngyǒu qù yóuyǒngchí.",
+        "translation": "Because I like swimming, I often go to the pool with friends in summer.",
+        "note": "因為 introduces the reason and 所以 the habitual result. 常 describes frequency rather than a single appointment at a fixed time."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which pairing fits the two writers?",
+        "options": [
+          "Mei: summer swimming; Lin: winter skiing",
+          "Mei: winter skiing; Lin: summer swimming",
+          "Both dislike winter",
+          "Both plan a mountain trip tomorrow"
+        ],
+        "answer": 1,
+        "evidence": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "explanation": "Mei’s winter preference connects to skiing, while Lin’s summer preference connects to swimming."
+      },
+      {
+        "prompt": "Is Mei reporting a ski trip that already happened?",
+        "options": [
+          "Yes, last winter",
+          "Yes, yesterday",
+          "Yes, with Lin",
+          "No; she expresses a wish for snowy conditions"
+        ],
+        "answer": 3,
+        "evidence": [
+          1
+        ],
+        "explanation": "The line uses 想 and a when-it-snows condition. It gives no completed ski trip or past date."
+      }
+    ],
+    "tips": [
+      "Keep each preference attached to its speaker.",
+      "Separate a seasonal habit from a wish and from a completed event."
+    ],
+    "grammarFocus": [
+      "Give a reason with 因為…所以…",
+      "Connect two contrasting comments"
+    ],
+    "glosses": {}
+  },
+  {
+    "id": "reading-unit-45-mini",
+    "unitId": "unit-45",
+    "title": "Yesterday’s cold, today’s symptoms",
+    "kind": "Mini reading · Extended dialogue",
+    "presentation": "dialogue",
+    "setup": "Read a short symptom report. This is a comprehension exercise; the passage does not give a diagnosis.",
+    "version": 1,
+    "lines": [
+      {
+        "speaker": "Mei",
+        "text": "你今天怎麼樣？昨天天氣很冷。",
+        "pinyin": "Nǐ jīntiān zěnmeyàng? Zuótiān tiānqì hěn lěng.",
+        "translation": "How are you today? The weather was cold yesterday.",
+        "note": "今天 asks about the person now, while 昨天 describes earlier weather. The weather comment alone does not establish a cause of illness."
+      },
+      {
+        "speaker": "Lin",
+        "text": "我今天一直流鼻水，頭也很痛。",
+        "pinyin": "Wǒ jīntiān yìzhí liú bíshuǐ, tóu yě hěn tòng.",
+        "translation": "My nose keeps running today, and my head really hurts too.",
+        "note": "一直 presents the runny nose as continuing. 也 adds a second symptom, so the headache is not the only reported problem."
+      },
+      {
+        "speaker": "Mei",
+        "text": "你有沒有發燒？胃口怎麼樣？",
+        "pinyin": "Nǐ yǒu méiyǒu fāshāo? Wèikǒu zěnmeyàng?",
+        "translation": "Do you have a fever? How is your appetite?",
+        "note": "The first sentence asks whether fever is present, and the second asks about appetite. Neither question supplies its own answer."
+      },
+      {
+        "speaker": "Lin",
+        "text": "沒有發燒，可是胃口很差。我想去看醫生。",
+        "pinyin": "Méiyǒu fāshāo, kěshì wèikǒu hěn chà. Wǒ xiǎng qù kàn yīshēng.",
+        "translation": "I don’t have a fever, but my appetite is poor. I want to see a doctor.",
+        "note": "沒有 denies fever, while 可是 introduces a different problem. 想去 makes the doctor visit an intention, not a completed visit or diagnosis."
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "Which symptom does Lin explicitly deny?",
+        "options": [
+          "Fever",
+          "A runny nose",
+          "A headache",
+          "Poor appetite"
+        ],
+        "answer": 0,
+        "evidence": [
+          1,
+          2,
+          3
+        ],
+        "explanation": "Lin reports the runny nose, headache and poor appetite, but directly says there is no fever."
+      },
+      {
+        "prompt": "What can we conclude about seeing a doctor?",
+        "options": [
+          "The doctor diagnosed a cold",
+          "The visit happened yesterday",
+          "Lin wants to go, but no completed visit is stated",
+          "Mei is the doctor"
+        ],
+        "answer": 2,
+        "evidence": [
+          3
+        ],
+        "explanation": "Lin expresses a wish to see a doctor. The passage does not report that a visit or diagnosis has already happened."
+      }
+    ],
+    "tips": [
+      "Keep reported symptoms separate from symptoms mentioned only in questions.",
+      "An intention to seek help does not tell you the outcome of a visit."
+    ],
+    "grammarFocus": [],
+    "glosses": {}
   }
 ]

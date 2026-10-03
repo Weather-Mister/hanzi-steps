@@ -92,7 +92,7 @@ let server,browser,page;
  await dialog.getByRole('button',{name:'Try again with transcript hidden'}).click();assert.equal(await dialog.locator('.listening-transcript').count(),0);
  await page.keyboard.press('Escape');
  // Existing reading path launches the original gated reader.
- await practice();await page.getByRole('button',{name:/Reading Path Stories/}).click();assert.equal(await page.getByRole('button',{name:'Start reading',exact:true}).count(),44);
+ await practice();await page.getByRole('button',{name:/Reading Path Stories/}).click();assert.equal(await page.getByRole('button',{name:'Start reading',exact:true}).count(),69);
  await page.getByRole('button',{name:'Start reading',exact:true}).first().click();await page.getByRole('dialog').waitFor({state:'hidden'});await page.getByRole('heading',{name:'A plan everyone can enjoy',level:1}).waitFor();assert.equal(await page.locator('.reading-walkthrough').count(),0);
  await page.getByRole('button',{name:'Back to the unit',exact:true}).click();
  // Completed units expose both optional unit-scoped challenges side by side on mobile.

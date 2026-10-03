@@ -6,7 +6,7 @@ import {readingContracts,readingTokenStatus} from './learning-materials.ts';
 export type ReadingGloss = {pinyin:string; meaning:string; note?:string; unfamiliar?:boolean};
 export type ReadingLine = {text:string; pinyin:string; translation:string; note:string; speaker?:string; sourcePhraseId?:string};
 export type ReadingQuestion = {prompt:string; options:string[]; answer:number; evidence:number[]; explanation:string};
-export type ReadingCheckpoint = {id:string;unitId:string;title:string;kind:string;setup:string;version:number;lines:ReadingLine[];questions:ReadingQuestion[];tips:string[];grammarFocus:string[];glosses:Record<string,ReadingGloss>};
+export type ReadingCheckpoint = {id:string;unitId:string;title:string;kind:string;presentation?:'dialogue'|'messages'|'schedule'|'notice';setup:string;version:number;lines:ReadingLine[];questions:ReadingQuestion[];tips:string[];grammarFocus:string[];glosses:Record<string,ReadingGloss>};
 const readingUnitOrder=new Map(units.map((unit,index)=>[unit.id,index]));
 export const readingCheckpoints:ReadingCheckpoint[] = (rawReadings as ReadingCheckpoint[]).map((reading,index)=>({reading,index})).sort((a,b)=>(readingUnitOrder.get(a.reading.unitId)??Infinity)-(readingUnitOrder.get(b.reading.unitId)??Infinity)||a.index-b.index).map(entry=>entry.reading);
 export const readingsForUnit=(unitId:string)=>readingCheckpoints.filter(r=>r.unitId===unitId);

@@ -13,10 +13,10 @@ const legacy=[
 ];
 
 test('reading expansion keeps the three-per-milestone rhythm and preserved bonuses',()=>{
- assert.equal(readings.length,44);
- assert.equal(new Set(readings.map(r=>r.id)).size,44,'reading ids stay unique');
+ assert.equal(readings.length,69);
+ assert.equal(new Set(readings.map(r=>r.id)).size,69,'reading ids stay unique');
  for(const unitId of milestones)assert.equal(readingsForUnit(unitId).length,3,unitId);
- assert.equal(readingsForUnit('unit-44').length,1,'Unit 44 remains a bonus reading');
+ assert.equal(readingsForUnit('unit-44').filter(r=>!r.id.endsWith('-dense')).length,1,'Unit 44 retains its original bonus reading');
  assert.equal(readingsForUnit('unit-48').length,1,'Unit 48 remains a bonus reading');
  assert.equal(readingsForUnit('book-2-unit-4').length,3,'Book 2 Unit 4 gets a full reading set');
  for(const id of legacy){
@@ -25,12 +25,12 @@ test('reading expansion keeps the three-per-milestone rhythm and preserved bonus
   assert.equal(reading.version,1,id+' keeps its saved-answer version');
  }
  const keys=readings.map(r=>readingStorageKey('compat-user',r));
- assert.equal(new Set(keys).size,44,'every reading keeps independent saved progress');
+ assert.equal(new Set(keys).size,69,'every reading keeps independent saved progress');
 });
 
 test('new phrase-backed readings remain tied to canonical learner-facing course phrases',()=>{
  const old=new Set(legacy);
- for(const reading of readings.filter(r=>!old.has(r.id))){
+ for(const reading of readings.filter(r=>!old.has(r.id)&&!r.id.endsWith('-dense')&&!r.id.endsWith('-mini'))){
   assert.ok(reading.lines.length>=3,reading.id);
   assert.ok(reading.questions.length>=2,reading.id);
   for(const line of reading.lines)assert.ok(line.sourcePhraseId,reading.id+' line needs canonical source');

@@ -7,12 +7,12 @@ import {readingPrerequisites} from '../lib/curriculum-relations.ts';
 const index=JSON.parse(readFileSync(new URL('../course/index.json',import.meta.url),'utf8'));
 const order=index.order.map(row=>row[1]);
 const han=/\p{Script=Han}/u;
-test('44 unique checkpoints follow the three-reading milestone rhythm and preserve bonus readings',()=>{
- assert.equal(readingCheckpoints.length,44);
- assert.equal(new Set(readingCheckpoints.map(r=>r.id)).size,44);
+test('69 unique checkpoints preserve milestone sets and add dense interleaved readings',()=>{
+ assert.equal(readingCheckpoints.length,69);
+ assert.equal(new Set(readingCheckpoints.map(r=>r.id)).size,69);
  const milestones=[10,13,16,19,22,25,28,31,34,37,40,43,46].map(n=>`unit-${n}`);
  for(const unitId of milestones)assert.equal(readingCheckpoints.filter(r=>r.unitId===unitId).length,3,unitId);
- assert.equal(readingCheckpoints.filter(r=>r.unitId==='unit-44').length,1);
+ assert.equal(readingCheckpoints.filter(r=>r.unitId==='unit-44').length,2);
  assert.equal(readingCheckpoints.filter(r=>r.unitId==='unit-48').length,1);
  assert.equal(readingCheckpoints.filter(r=>r.unitId==='book-2-unit-4').length,3);
 });
@@ -36,7 +36,7 @@ for(const r of readingCheckpoints){
    }
   }
   assert.ok(unknown.size<=3,`Too many unfamiliar characters: ${[...unknown]}`);
-  assert.ok(r.lines.length>=5);assert.ok(r.questions.length>=4);
+  assert.ok(r.lines.length>=(r.id.endsWith('-mini')?4:5));assert.ok(r.questions.length>=(r.id.endsWith('-mini')?2:4));
   for(const line of r.lines){assert.ok(line.pinyin&&line.translation&&line.note);assert.ok(line.note.length>55)}
   for(const q of r.questions){assert.equal(new Set(q.options).size,q.options.length);assert.ok(Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.options.length);assert.ok(q.explanation.length>35);assert.ok(q.evidence.length);assert.ok(q.evidence.every(i=>Number.isInteger(i)&&i>=0&&i<r.lines.length));}
   assert.ok(r.tips.length>=2);
