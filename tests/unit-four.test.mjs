@@ -2,11 +2,13 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {characters,characterOrder,grammarRules,lessonAvailable,lessons,phrases,unitThreeLessons,unitFourLessons,unitFourCharacterOrder,units,validSession,vocabulary,wordMeaning} from '../lib/curriculum.ts';
+import {unitsInBook,assertUnitPalettes} from './helpers/course-scope.mjs';
 
 const unit=units.find(u=>u.id==='unit-4');
-const earlierUnits=units.filter(u=>u.number<4);
+const bookUnits=unitsInBook('book-1');
+const earlierUnits=bookUnits.filter(u=>u.number<4);
 const earlierLessons=lessons.filter(l=>earlierUnits.some(u=>u.id===l.unitId));
-const throughUnitFour=units.filter(u=>u.number<=4);
+const throughUnitFour=bookUnits.filter(u=>u.number<=4);
 const wordsThroughUnitFour=vocabulary.filter(w=>throughUnitFour.some(u=>u.lessonIds.includes(w.lessonId)));
 const hanzi=text=>[...text].filter(c=>/\p{Script=Han}/u.test(c));
 
@@ -28,8 +30,7 @@ test('Unit 4 stays close to Unit 3 in size and counts words separately from char
  assert.deepEqual(words.filter(w=>w.core).map(w=>w.text),['去','來','和','說','想','要','會']);
  for(const word of ['中文','英文','哪裡','學'])assert.equal(words.filter(w=>w.text===word).length,1);
  for(const component of ['中','文','英','哪'])assert.ok(!words.some(w=>w.text===component));
- // Each book has its own palette; Unit 7 reuses an existing theme without global CSS changes.
- for(const group of [units.filter(u=>!u.id.startsWith('book-2-')),units.filter(u=>u.id.startsWith('book-2-'))])assert.equal(new Set(group.map(u=>u.theme)).size,group.length);
+ assertUnitPalettes();
  const css=fs.readFileSync(new URL('../app/globals.css',import.meta.url),'utf8');
  assert.ok(css.includes(`[data-unit-theme="${unit.theme}"]`));
 });
@@ -82,7 +83,7 @@ test('Unit 4 introduces its vocabulary, grammar, and word-bank characters before
  }
  assert.deepEqual([...introduced].sort(),[...unit.grammarIds].sort());
  for(const word of vocabulary.filter(w=>unit.lessonIds.includes(w.lessonId)))assert.ok(seenWords.has(word.text),word.text);
- for(const other of units.filter(u=>u.number>1&&u.number<=5))assert.ok(other.grammarIds.every(id=>id.startsWith(`u${other.number}-`)),'Keep notes in their own unit');
+ for(const other of bookUnits.filter(u=>u.number>1&&u.number<=5))assert.ok(other.grammarIds.every(id=>id.startsWith(`u${other.number}-`)),'Keep notes in their own unit');
 });
 
 test('Unit 4 keeps all writing stages, explains every component, and avoids listening homophones',()=>{

@@ -1,12 +1,14 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {characters,characterOrder,grammarRules,lessonAvailable,lessons,phrases,unitOneLessons,unitTwoLessons,unitThreeLessons,unitThreeCharacterOrder,units,validSession,vocabulary,wordMeaning} from '../lib/curriculum.ts';
+import {characters,grammarRules,lessonAvailable,lessons,phrases,unitOneLessons,unitTwoLessons,unitThreeLessons,unitThreeCharacterOrder,units,validSession,vocabulary,wordMeaning} from '../lib/curriculum.ts';
+import {unitsInBook,assertUnitPalettes} from './helpers/course-scope.mjs';
 
 const unit=units.find(u=>u.id==='unit-3');
-const earlierUnits=units.filter(u=>u.number<3);
+const bookUnits=unitsInBook('book-1');
+const earlierUnits=bookUnits.filter(u=>u.number<3);
 const earlierLessons=[...unitOneLessons,...unitTwoLessons];
-const throughUnitThree=units.filter(u=>u.number<=3);
+const throughUnitThree=bookUnits.filter(u=>u.number<=3);
 const wordsThroughUnitThree=vocabulary.filter(w=>throughUnitThree.some(u=>u.lessonIds.includes(w.lessonId)));
 const hanzi=text=>[...text].filter(c=>/\p{Script=Han}/u.test(c));
 
@@ -29,8 +31,7 @@ test('Unit 3 adds six manageable lessons and a review toward the common-word goa
  assert.equal(wordsThroughUnitThree.filter(w=>w.core).length,25);
  for(const word of ['什麼','這裡','那裡'])assert.equal(words.filter(w=>w.text===word).length,1);
  for(const component of ['什','麼','裡'])assert.ok(!words.some(w=>w.text===component),'Do not count a word component as another word');
- // Each book has its own palette; Unit 7 reuses an existing theme without global CSS changes.
- for(const group of [units.filter(u=>!u.id.startsWith('book-2-')),units.filter(u=>u.id.startsWith('book-2-'))])assert.equal(new Set(group.map(u=>u.theme)).size,group.length);
+ assertUnitPalettes();
  const css=fs.readFileSync(new URL('../app/globals.css',import.meta.url),'utf8');
  assert.ok(css.includes(`[data-unit-theme="${unit.theme}"]`));
 });
@@ -83,7 +84,7 @@ test('Unit 3 explains its words and patterns before testing them',()=>{
  }
  assert.deepEqual([...introduced].sort(),[...unit.grammarIds].sort());
  for(const word of vocabulary.filter(w=>unit.lessonIds.includes(w.lessonId)))assert.ok(seenWords.has(word.text),word.text);
- for(const other of units.filter(u=>u.number>1&&u.number<=5))assert.ok(other.grammarIds.every(id=>id.startsWith(`u${other.number}-`)),'Notes must stay in their own unit');
+ for(const other of bookUnits.filter(u=>u.number>1&&u.number<=5))assert.ok(other.grammarIds.every(id=>id.startsWith(`u${other.number}-`)),'Notes must stay in their own unit');
 });
 
 test('Every new character has all writing stages, meaningful parts, and unambiguous listening',()=>{

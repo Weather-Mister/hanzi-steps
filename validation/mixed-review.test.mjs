@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 const fixture=JSON.parse(fs.readFileSync(new URL('./fixtures/mixed-review.json',import.meta.url),'utf8'));
+const maintenance=JSON.parse(fs.readFileSync(new URL('./fixtures/baseline-regression-amendment.json',import.meta.url),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(new URL('../course/manifest.json',import.meta.url),'utf8'));
 const modules=[];
 for(const b of manifest.books)for(const entry of b.units)modules.push((await import(new URL('../'+entry.path,import.meta.url))).default);
@@ -24,6 +25,17 @@ test('mixed review stays sparse and preserves teaching, ownership, and every che
   assert.ok(unit,id);
   const masked=structuredClone(unit);
   for(const l of masked.lessons)l.steps=l.steps.filter(s=>s.type!=='produce'&&!embeddedReadingChecks.has(s.id)).map(s=>selected.has(s.id)?{id:s.id,type:s.type}:s);
+  // Verify the whole reviewed character first, then restore only the changed
+  // explanation for this older topology snapshot. Do not mask any other field.
+  for(const [char,descriptions] of Object.entries(maintenance.componentDescriptionsBefore))if(masked.characters[char]){
+   const entry=masked.characters[char],revision=maintenance.records.characters[char];
+   assert.equal(hash(entry),revision.after,`${id}: reviewed ${char} record`);
+   for(const [label,description] of Object.entries(descriptions)){
+    const parts=entry.parts.filter(p=>p.label===label);assert.equal(parts.length,1,`${char}: ${label}`);
+    parts[0].description=description;
+   }
+   assert.equal(hash(entry),revision.before,`${id}: original ${char} record`);
+  }
   assert.equal(hash(masked),baseline.unchangedHash,id+': unrelated content or checkpoint topology changed');
  }
 });

@@ -2,11 +2,18 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {books,characters,grammarRules,lessonAvailable,lessons,phrases,unitFiveLessons,unitFiveCharacterOrder,units,vocabulary,validSession,wordMeaning} from '../lib/curriculum.ts';
+import {unitsInBook} from './helpers/course-scope.mjs';
 const hanzi=text=>[...text].filter(c=>/\p{Script=Han}/u.test(c));
 const unit=units.find(u=>u.id==='unit-5');
+const earlierUnits=unitsInBook('book-1').filter(u=>u.number<5);
 test('Book sections preserve earlier checkpoints',()=>{
- assert.deepEqual(books.map(b=>[b.number,b.available,b.unitIds.length]),[[1,true,8],[2,true,2],[3,false,0]]);
- assert.deepEqual(books[0].unitIds,units.filter(u=>!u.id.startsWith('book-2-')).map(u=>u.id));
+ assert.deepEqual(books.map(b=>[b.number,b.available]),[[1,true],[2,true],[3,false]]);
+ assert.deepEqual(books[0].unitIds.slice(0,8),Array.from({length:8},(_,i)=>`unit-${i+1}`));
+ assert.deepEqual(books[1].unitIds.slice(0,2),['book-2-unit-1','book-2-unit-2']);
+ assert.deepEqual(books[2].unitIds,[]);
+ const registered=books.flatMap(b=>b.unitIds);
+ assert.deepEqual(registered,units.map(u=>u.id));
+ assert.equal(new Set(registered).size,registered.length);
  assert.deepEqual(lessons.filter(l=>['unit-1','unit-2','unit-3','unit-4'].includes(l.unitId)),JSON.parse(fs.readFileSync(new URL('./fixtures/unit-four-and-earlier-checkpoints.json',import.meta.url))));
  assert.equal(unitFiveLessons.length,7);
  assert.equal(lessonAvailable('u5-drinks',new Set()),false);
@@ -14,9 +21,9 @@ test('Book sections preserve earlier checkpoints',()=>{
  for(const l of unitFiveLessons){assert.ok(lessonAvailable(l.id,completed));completed.add(l.id);assert.ok(validSession({id:'550e8400-e29b-41d4-a716-446655440015',lessonId:l.id,index:l.steps.length,independent:0,assisted:0,complete:true,updatedAt:1}));}
 });
 test('Book 1 gap unit teaches all vocabulary and patterns before exercises, including duplicate word tiles',()=>{
- const seenChars=new Set(units.filter(u=>u.number<5).flatMap(u=>u.chars));
- const seenWords=new Set(vocabulary.filter(w=>!w.lessonId.startsWith('u5-')).map(w=>w.text));
- const seenGrammar=new Set(units.filter(u=>u.number<5).flatMap(u=>u.grammarIds));
+ const seenChars=new Set(earlierUnits.flatMap(u=>u.chars));
+ const seenWords=new Set(vocabulary.filter(w=>earlierUnits.some(u=>u.lessonIds.includes(w.lessonId))).map(w=>w.text));
+ const seenGrammar=new Set(earlierUnits.flatMap(u=>u.grammarIds));
  const introduced=new Set();
  for(const lesson of unitFiveLessons)for(const step of lesson.steps){
   if(step.type==='intro'){assert.ok(!seenChars.has(step.char));seenChars.add(step.char);if(vocabulary.some(w=>w.text===step.char))seenWords.add(step.char);}

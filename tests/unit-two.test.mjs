@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {characters,grammarRules,lessonAvailable,lessons,phrases,unitOneLessons,unitTwoLessons,unitTwoCharacterOrder,units,validSession,vocabulary,wordMeaning} from '../lib/curriculum.ts';
+import {books,characters,grammarRules,lessonAvailable,lessons,phrases,unitOneLessons,unitTwoLessons,unitTwoCharacterOrder,units,validSession,vocabulary,wordMeaning} from '../lib/curriculum.ts';
 
 test('Unit 2 is a manageable expansion with words counted separately from characters',()=>{
  assert.equal(unitTwoLessons.length,7);
@@ -64,10 +64,12 @@ test('All new characters retain tracing, component learning, missing strokes, an
 
 test('Unit progression crosses the existing review boundary and every new checkpoint is valid',()=>{
  const done=new Set();
+ const bookStarts=new Set(books.filter(b=>b.available&&b.unitIds.length).map(b=>units.find(u=>u.id===b.unitIds[0]).lessonIds[0]));
+ for(const id of bookStarts)assert.equal(lessonAvailable(id,done),true,id);
  for(const lesson of lessons){
   assert.equal(lessonAvailable(lesson.id,done),true,lesson.id);
   const next=lessons[lessons.indexOf(lesson)+1];
-  if(next)assert.equal(lessonAvailable(next.id,done),next.id==='b2-ask',next.id);
+  if(next)assert.equal(lessonAvailable(next.id,done),bookStarts.has(next.id),next.id);
   done.add(lesson.id);
  }
  for(const lesson of unitTwoLessons)for(let index=0;index<=lesson.steps.length;index++)assert.ok(validSession({id:'550e8400-e29b-41d4-a716-446655440009',lessonId:lesson.id,index,independent:0,assisted:0,complete:index===lesson.steps.length,updatedAt:1}));

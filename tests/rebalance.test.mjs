@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {lessons,units,vocabulary,characters,grammarRules,phrases,characterOrder,unitLibraryCharacters,completedLessonIds,previousLessonLengths,validSession,lessonAvailable} from '../lib/curriculum.ts';
+import {lessons,units,vocabulary,characters,grammarRules,phrases,characterOrder,unitLibraryCharacters,completedLessonIds,previousLessonLengths,historicalLessonLengthsFor,validSession,lessonAvailable} from '../lib/curriculum.ts';
 
 test('Rebalanced units cap actual vocabulary and character load, without hidden extras',()=>{
  const targets=[['unit-7',10,13,123],['unit-8',8,12,112]];
@@ -23,14 +23,24 @@ test('Rebalanced units cap actual vocabulary and character load, without hidden 
  for(const c of '幾房相末打足泳常吧今明早玩起晚飯可')assert.ok(characters[c],`Retain independent practice for ${c}`);
 });
 
-test('Retired checkpoints retain exact bounds and are never reused by a revised lesson',()=>{
+test('Retired checkpoints retain exact bounds; appended lessons retain reviewed old completions',()=>{
  for(const [lessonId,length] of Object.entries(previousLessonLengths)){
-  assert.ok(!lessons.some(l=>l.id===lessonId));
+  const current=lessons.find(l=>l.id===lessonId);
+  const bound=current?.steps.length??length;
+  const history=historicalLessonLengthsFor(lessonId);
+  assert.ok(history.includes(length),lessonId);
+  if(current)assert.ok(length<=bound,lessonId);
+  else assert.match(lessonId,/^u[78]-/,'Only explicitly retired sequences may lack a current lesson');
   for(const index of [0,Math.floor(length/2),length]){
    const saved={id:'550e8400-e29b-41d4-a716-446655440050',lessonId,index,independent:0,assisted:0,complete:index===length,updatedAt:1};
    assert.ok(validSession(saved));
-   assert.ok(!validSession({...saved,index:length+1}));
-   assert.ok(!validSession({...saved,complete:!saved.complete}));
+   assert.ok(!validSession({...saved,index:bound+1}));
+   if(!current)assert.ok(!validSession({...saved,complete:!saved.complete}));
+  }
+  for(let index=0;index<=bound;index++){
+   const saved={id:'550e8400-e29b-41d4-a716-446655440050',lessonId,index,independent:0,assisted:0,updatedAt:1};
+   assert.equal(validSession({...saved,complete:false}),index<bound,`${lessonId}:${index} partial`);
+   assert.equal(validSession({...saved,complete:true}),index===bound||history.includes(index),`${lessonId}:${index} completion`);
   }
  }
  assert.ok(!validSession({id:'550e8400-e29b-41d4-a716-446655440050',lessonId:'toString',index:0,independent:0,assisted:0,complete:false,updatedAt:1}));

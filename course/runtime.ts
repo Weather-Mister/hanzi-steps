@@ -15,4 +15,8 @@ export const vocabulary:VocabularyWord[]=courseModules.flatMap(m=>m.newVocabular
 export const characters:Record<string,Character>=ordered(Object.assign({},...courseModules.map(m=>m.characters),legacyCharacters),order.characters);
 export const grammarRules:Record<string,GrammarRule>=ordered(Object.assign({},...courseModules.map(m=>m.grammarRules)),order.grammarRules);
 export const phrases:Record<string,Phrase>=ordered(Object.assign({},...courseModules.map(m=>m.phrases)),order.phrases);
-export const characterOrder:string[]=[...new Set(courseModules.flatMap(m=>m.unit.chars))];
+// The header reports guided handwriting, not every available character card.
+// Some later vocabulary cards are read-only in lessons and have independent
+// practice instead. Keep their cards/practice without an unreachable guided total.
+const guidedCharacters=new Set(lessons.flatMap(l=>l.steps.filter(s=>s.type==='intro').map(s=>s.char)));
+export const characterOrder:string[]=[...new Set(courseModules.flatMap(m=>m.unit.chars))].filter(c=>guidedCharacters.has(c));

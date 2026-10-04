@@ -1323,7 +1323,7 @@ const unit:UnitData = {
           "label": "丷",
           "name": "top dots",
           "role": "Top component",
-          "description": "The first two strokes form the paired 丷 top.",
+          "description": "The first two strokes form the small paired 丷 marks at the top. Keep them above the bow-like lower body, leaving room for its bends and final left sweep.",
           "strokes": [
             0,
             1

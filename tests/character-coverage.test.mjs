@@ -36,7 +36,9 @@ test('Supplemental explanations and independent handwriting practice are complet
   for(const s of l.steps){if(s.options)assert.ok(s.options.includes(s.answer));}
   for(let i=0;i<=l.steps.length;i++)assert.ok(validSession({id:'550e8400-e29b-41d4-a716-446655440020',lessonId:l.id,index:i,independent:0,assisted:0,complete:i===l.steps.length,updatedAt:1}));
  }
- for(const [c,py]of Object.entries({'以':'yǐ','覺':'jué','得':'de','漂':'piào','亮':'liàng','子':'zi','還':'hái','吃':'chī'}))assert.equal(characters[c].pinyin,py);
+ for(const [c,py]of Object.entries({'以':'yǐ','覺':'jué','得':'de','漂':'piào','亮':'liàng','子':'zǐ','還':'hái','吃':'chī'}))assert.equal(characters[c].pinyin,py);
+ assert.equal(characters['子'].example.pinyin,'bāozi','Dictionary zǐ and the neutral suffix zi must stay distinct');
+ assert.equal(characters['子'].audioText,'包子','Read the suffix in its taught word context');
  assert.equal(characters['以'].strokes,5);
  const ui=fs.readFileSync(new URL('../components/learning-app.tsx',import.meta.url),'utf8');
  assert.ok(ui.includes('const unitCharacters=unitLibraryCharacters(unit)'));

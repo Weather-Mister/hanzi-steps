@@ -1,20 +1,13 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createHash} from 'node:crypto';
-import {lessons,units,books,characters,grammarRules,phrases,vocabulary,characterOrder,lessonAvailable,validSession} from '../lib/curriculum.ts';
+import {units,characters,grammarRules,phrases,vocabulary,characterOrder,lessonAvailable,validSession} from '../lib/curriculum.ts';
 import {unitSixLessons,unitSixCharacterOrder,unitSixVocabulary,unitSixGrammar} from '../lib/unit-six.ts';
+import {assertFoundationPreserved} from './helpers/foundation-preservation.mjs';
 const hanzi=t=>[...t].filter(c=>/\p{Script=Han}/u.test(c));
-const digest=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const baseline=JSON.parse(fs.readFileSync(new URL('./fixtures/before-unit-six-hashes.json',import.meta.url)));
-test('Unit 6 preserves all existing lessons, units, words, character records, grammar, phrases, and Book 2/3',()=>{
- for(const [name,items] of Object.entries({lessons,units,vocabulary,characters,grammarRules,phrases})){
-  const current=Array.isArray(items)?Object.fromEntries(items.map(v=>[v.id||v.text,v])):items;
-  for(const [id,hash] of Object.entries(baseline[name]))assert.equal(digest(current[id]),hash,`${name}: ${id}`);
- }
- assert.equal(digest(books.slice(1).map(b=>({...b,unitIds:b.unitIds.filter(id=>id!=='book-2-unit-2')}))),baseline.otherBooks);
- const data=JSON.parse(fs.readFileSync(new URL('../lib/stroke-data.json',import.meta.url)));
- for(const [c,hash] of Object.entries(baseline.strokes))assert.equal(digest(data[c]),hash,c);
+test('Unit 6 preserves the earlier foundation through reviewed revisions and Book 2 retirement',()=>{
+ assertFoundationPreserved(baseline);
 });
 test('Unit 6 has only the approved vocabulary, 10 new characters, six lessons and a review',()=>{
  assert.deepEqual(unitSixVocabulary.map(w=>w.text),['家','家人','爸爸','媽媽','哥哥','姐姐','妹妹','誰','照片','張']);

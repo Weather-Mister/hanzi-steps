@@ -6,10 +6,30 @@ import {characters,characterOrder,unitOneCharacterOrder,unitOneLessons,lessons,p
 const data=JSON.parse(fs.readFileSync(new URL('../lib/stroke-data.json',import.meta.url),'utf8'));
 test('Every taught character has full Taiwan stroke geometry and complete component coverage',()=>{
  assert.deepEqual(unitOneCharacterOrder,['你','好','我','是','學','生','嗎']);
- for(const c of characterOrder){const d=data[c],meta=characters[c];assert.equal(d.strokes.length,meta.strokes,c);assert.equal(d.medians.length,meta.strokes,c);assert.deepEqual(meta.parts.flatMap(p=>p.strokes).sort((a,b)=>a-b),Array.from({length:meta.strokes},(_,i)=>i),c);for(const path of d.strokes)assert.ok(/^[MLCQZmlcqz0-9.,\s-]+$/.test(path),`Component bounds support commands in ${c}`)}
+ for(const c of Object.keys(characters)){const d=data[c],meta=characters[c];assert.equal(d.strokes.length,meta.strokes,c);assert.equal(d.medians.length,meta.strokes,c);assert.deepEqual(meta.parts.flatMap(p=>p.strokes).sort((a,b)=>a-b),Array.from({length:meta.strokes},(_,i)=>i),c);for(const path of d.strokes)assert.ok(/^[MLCQZmlcqz0-9.,\s-]+$/.test(path),`Component bounds support commands in ${c}`)}
 });
 test('Unit flow teaches each character before recall and only uses taught words in sentence exercises',()=>{
- const seen=new Set();const reading=new Set();for(const lesson of lessons){const ids=new Set();for(const s of lesson.steps){assert.ok(!ids.has(s.id));ids.add(s.id);if(s.type==='intro'){seen.add(s.char);reading.add(s.char);}if(s.type==='grammar')for(const w of grammarRules[s.grammar].words||[])for(const c of w)reading.add(c);if(['memory','trace','complete','build'].includes(s.type))assert.ok(seen.has(s.char));if(s.options)assert.ok(s.options.includes(s.answer),s.id);if(s.type==='order'){for(const c of phrases[s.phrase].tokens.join(''))assert.ok(reading.has(c),`${s.id} uses ${c} before teaching it`);for(const word of phrases[s.phrase].tokens)assert.ok(s.tokens.includes(word))}}}assert.equal(seen.size,characterOrder.length)
+ const seen=new Set(),reading=new Set();
+ for(const lesson of lessons){
+  const ids=new Set();
+  for(const s of lesson.steps){
+   assert.ok(!ids.has(s.id),s.id);ids.add(s.id);
+   if(s.type==='intro'){seen.add(s.char);reading.add(s.char);}
+   if(s.type==='grammar')for(const w of grammarRules[s.grammar].words||[])for(const c of w)reading.add(c);
+   // A read card explains its Chinese, pinyin and meaning before sentence recall;
+   // that does not grant handwriting credit ahead of a character introduction.
+   if(s.type==='phrase')for(const c of phrases[s.phrase].text)reading.add(c);
+   if(['memory','trace','complete','build'].includes(s.type))assert.ok(seen.has(s.char),s.id);
+   if(s.options)assert.ok(s.options.includes(s.answer),s.id);
+   if(s.type==='order'){
+    // Latin names (e.g. KTV) and punctuation are not Hanzi writing targets.
+    for(const c of phrases[s.phrase].tokens.join(''))if(/\p{Script=Han}/u.test(c))assert.ok(reading.has(c),`${s.id} uses ${c} before teaching it`);
+    const bank=[...s.tokens];
+    for(const word of phrases[s.phrase].tokens){const i=bank.indexOf(word);assert.notEqual(i,-1,`${s.id}: missing ${word}`);bank.splice(i,1);}
+   }
+  }
+ }
+ assert.equal(seen.size,characterOrder.length);
 });
 test('Every existing Unit 1 checkpoint keeps the same exercise, answer, and position',()=>{
  const original=JSON.parse(fs.readFileSync(new URL('./fixtures/unit-one-checkpoints.json',import.meta.url),'utf8'));
@@ -22,7 +42,7 @@ test('Checkpoint validation rejects malformed, out-of-range, and false completio
 test('Taiwan median data passes real handwriting recognition while reversed strokes and taps fail',()=>{
  // Exercise the installed engine with source geometry, without a browser or a fake canvas.
  const file=new URL('../node_modules/hanzi-writer/dist/index.cjs.js',import.meta.url);const source=fs.readFileSync(file,'utf8');const context={module:{exports:{}},global:{},setTimeout,clearTimeout};vm.runInNewContext(source+'\nmodule.exports={strokeMatches,parseCharData,Positioner};',context);const {strokeMatches,parseCharData,Positioner}=context.module.exports;
- let checked=0;for(const c of characterOrder){const parsed=parseCharData(c,data[c]);data[c].medians.forEach((median,i)=>{const points=median.map(([x,y])=>({x,y}));assert.ok(strokeMatches({points},parsed,i,{leniency:1.25}).isMatch,`${c} stroke ${i+1}`);assert.equal(strokeMatches({points:[points[0]]},parsed,i,{leniency:1.25}).isMatch,false);assert.equal(strokeMatches({points:[...points].reverse()},parsed,i,{leniency:1.25}).isMatch,false,`${c} backwards ${i+1}`);checked++})}
- assert.equal(checked,characterOrder.reduce((sum,c)=>sum+characters[c].strokes,0));
+ let checked=0;for(const c of Object.keys(characters)){const parsed=parseCharData(c,data[c]);data[c].medians.forEach((median,i)=>{const points=median.map(([x,y])=>({x,y}));assert.ok(strokeMatches({points},parsed,i,{leniency:1.25}).isMatch,`${c} stroke ${i+1}`);assert.equal(strokeMatches({points:[points[0]]},parsed,i,{leniency:1.25}).isMatch,false);assert.equal(strokeMatches({points:[...points].reverse()},parsed,i,{leniency:1.25}).isMatch,false,`${c} backwards ${i+1}`);checked++})}
+ assert.equal(checked,Object.values(characters).reduce((sum,c)=>sum+c.strokes,0));
  const positioner=new Positioner({width:316,height:316,padding:24});const scale=(316-48)/1024;for(const point of data['學'].medians.flat()){const [x,y]=point;const converted=positioner.convertExternalPoint({x:24+x*scale,y:24+900*scale-y*scale});assert.ok(Math.abs(converted.x-x)<.001&&Math.abs(converted.y-y)<.001,'Visible guide aligns with the engine coordinates')}
 });

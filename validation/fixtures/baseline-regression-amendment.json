@@ -1,0 +1,16 @@
+{
+  "reason": "Baseline regression repair: expand the short 丷 component explanation for 弟 without changing glyph data, stroke groups, IDs, lessons or practice checkpoints. See docs/baseline-regression-repair.md.",
+  "componentDescriptionsBefore": {
+    "弟": {
+      "丷": "The first two strokes form the paired 丷 top."
+    }
+  },
+  "records": {
+    "characters": {
+      "弟": {
+        "before": "fd5671b5d5977d09d46679fa1668f966411a30e4b4db81dd7bdcb867469ab15b",
+        "after": "80a88a8990e5f623ae2610eb521447402f53a191a29a70924caf7427b0449a60"
+      }
+    }
+  }
+}
