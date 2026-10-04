@@ -327,7 +327,7 @@
     background:
       radial-gradient(circle at 110% -20%,#ffffff24 0 72px,transparent 73px),
       var(--unit-accent);
-    color:#fff;
+    color:var(--unit-on-accent);
     box-shadow:0 5px 0 var(--unit-depth),0 16px 28px -28px var(--unit-accent);
   }
   .unit-overview-heading {
@@ -349,7 +349,7 @@
   .unit-overview-characters {
     flex:0 0 auto;
     max-width:105px;
-    color:#fff;
+    color:var(--unit-on-accent);
     font-size:2rem;
     line-height:1.1;
     text-align:right;
