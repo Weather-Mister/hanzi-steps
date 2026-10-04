@@ -11,33 +11,58 @@ const INDEX_URL=GITHUB_RAW+'course/index.json';
 const MANIFEST_URL=GITHUB_RAW+'course/manifest.json';
 
 const themeColors:Record<string,{accent:string,onAccent:string}> = {
-  blue:{accent:'#245ee8',onAccent:'#e6edff'},
-  teal:{accent:'#087f79',onAccent:'#e2f8f0'},
-  plum:{accent:'#8052b8',onAccent:'#f3ebff'},
-  amber:{accent:'#9c6200',onAccent:'#fff1cd'},
-  rose:{accent:'#b32e59',onAccent:'#fff0f4'},
-  cyan:{accent:'#087c91',onAccent:'#effcff'},
-  indigo:{accent:'#4d54b8',onAccent:'#ffffff'},
-  orange:{accent:'#ac480e',onAccent:'#ffffff'},
-  emerald:{accent:'#0b7a53',onAccent:'#eafff6'},
-  violet:{accent:'#6c45c2',onAccent:'#f6f0ff'},
-  coral:{accent:'#b4453a',onAccent:'#fff2ef'},
-  sky:{accent:'#156f9f',onAccent:'#edf9ff'},
-  gold:{accent:'#8a6500',onAccent:'#fff8dd'},
-  magenta:{accent:'#a02b7a',onAccent:'#fff0fa'},
-  forest:{accent:'#3f7334',onAccent:'#f0faed'},
-  cherry:{accent:'#a62a3b',onAccent:'#fff0f2'},
-};
+  blue:{accent:'#456f9f',onAccent:'#ffffff'},
+  teal:{accent:'#477f7a',onAccent:'#ffffff'},
+  plum:{accent:'#705b80',onAccent:'#ffffff'},
+  amber:{accent:'#d7ae34',onAccent:'#463600'},
+  rose:{accent:'#a94a67',onAccent:'#ffffff'},
+  indigo:{accent:'#58658e',onAccent:'#ffffff'},
+  cyan:{accent:'#3d7b86',onAccent:'#ffffff'},
+  orange:{accent:'#e08a3c',onAccent:'#402400'},
+  emerald:{accent:'#4a7a5b',onAccent:'#ffffff'},
+  violet:{accent:'#745a89',onAccent:'#ffffff'},
+  coral:{accent:'#b95443',onAccent:'#ffffff'},
+  sky:{accent:'#4a789c',onAccent:'#ffffff'},
+  gold:{accent:'#b45d24',onAccent:'#ffffff'},
+  magenta:{accent:'#8d3e6c',onAccent:'#ffffff'},
+  forest:{accent:'#647a38',onAccent:'#ffffff'},
+  cherry:{accent:'#b33d45',onAccent:'#ffffff'},
+  mint:{accent:'#75b39f',onAccent:'#17352f'},
+  cobalt:{accent:'#4564a6',onAccent:'#ffffff'},
+  lilac:{accent:'#82699c',onAccent:'#ffffff'},
+  raspberry:{accent:'#ad416f',onAccent:'#ffffff'},
+  lime:{accent:'#9ab74a',onAccent:'#243008'},
+  scarlet:{accent:'#c34e40',onAccent:'#ffffff'},
+  periwinkle:{accent:'#5f70a2',onAccent:'#ffffff'},
+  seafoam:{accent:'#78aaa3',onAccent:'#102d2a'},
+}
 
 const unitVisualThemes=[
   'blue','teal','plum','amber','rose','indigo','cyan','orange',
   'emerald','violet','coral','sky','gold','magenta','forest','cherry',
+  'mint','cobalt','lilac','raspberry','lime','scarlet','periwinkle','seafoam',
 ] as const;
 
 function visualUnitTheme(bookNumber:number,unitNumber:number){
   const bookOffset=Math.max(0,bookNumber-1)*8;
   const index=(Math.max(1,unitNumber)-1+bookOffset)%unitVisualThemes.length;
   return unitVisualThemes[index];
+}
+
+const authoredThemeCache=new Map<string,string>();
+async function authoredUnitTheme(path:string){
+  const cached=authoredThemeCache.get(path);
+  if(cached)return cached;
+  const response=await fetch(GITHUB_RAW+path,{signal:AbortSignal.timeout(10000)});
+  if(!response.ok)return null;
+  const source=await response.text();
+  const match=source.match(/["']theme["']\s*:\s*["']([a-z]+)["']/i);
+  const theme=match?.[1]?.toLowerCase()||'';
+  if(theme&&theme in themeColors){
+    authoredThemeCache.set(path,theme);
+    return theme;
+  }
+  return null;
 }
 
 type SessionRow={
@@ -168,7 +193,8 @@ Deno.serve(async(request:Request)=>{
 
     const currentMeta=manifestUnit(manifest,currentUnitId);
     if(!currentMeta)throw new Error('Current unit unavailable');
-    const currentTheme=visualUnitTheme(currentMeta.book.number,currentMeta.unit.order);
+    const currentTheme=(await authoredUnitTheme(currentMeta.unit.path))
+      || visualUnitTheme(currentMeta.book.number,currentMeta.unit.order);
     const palette=themeColors[currentTheme]||themeColors.blue;
 
     const learned=new Set<string>();
