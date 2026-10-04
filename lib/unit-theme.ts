@@ -1,7 +1,6 @@
 export const unitVisualThemes=[
   'blue','teal','plum','amber','rose','indigo','cyan','orange',
   'emerald','violet','coral','sky','gold','magenta','forest','cherry',
-  'mint','cobalt','lilac','raspberry','lime','scarlet','periwinkle','seafoam',
 ] as const;
 
 export type UnitVisualTheme=(typeof unitVisualThemes)[number];

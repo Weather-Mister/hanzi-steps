@@ -10,59 +10,34 @@ const GITHUB_RAW='https://raw.githubusercontent.com/Weather-Mister/hanzi-steps/m
 const INDEX_URL=GITHUB_RAW+'course/index.json';
 const MANIFEST_URL=GITHUB_RAW+'course/manifest.json';
 
-const themeColors:Record<string,{accent:string,onAccent:string,ink:string}> = {
-  blue:{accent:'#456f9f',onAccent:'#ffffff',ink:'#345477'},
-  teal:{accent:'#477f7a',onAccent:'#ffffff',ink:'#365f5c'},
-  plum:{accent:'#705b80',onAccent:'#ffffff',ink:'#574664'},
-  amber:{accent:'#d7ae34',onAccent:'#463600',ink:'#624c0f'},
-  rose:{accent:'#a94a67',onAccent:'#ffffff',ink:'#7f384d'},
-  indigo:{accent:'#58658e',onAccent:'#ffffff',ink:'#434c6c'},
-  cyan:{accent:'#3d7b86',onAccent:'#ffffff',ink:'#315f68'},
-  orange:{accent:'#e08a3c',onAccent:'#402400',ink:'#6b3f19'},
-  emerald:{accent:'#4a7a5b',onAccent:'#ffffff',ink:'#385c45'},
-  violet:{accent:'#745a89',onAccent:'#ffffff',ink:'#594568'},
-  coral:{accent:'#b95443',onAccent:'#ffffff',ink:'#8b4034'},
-  sky:{accent:'#4a789c',onAccent:'#ffffff',ink:'#385b76'},
-  gold:{accent:'#b45d24',onAccent:'#ffffff',ink:'#8d481c'},
-  magenta:{accent:'#8d3e6c',onAccent:'#ffffff',ink:'#6a3052'},
-  forest:{accent:'#647a38',onAccent:'#ffffff',ink:'#4c5d2b'},
-  cherry:{accent:'#b33d45',onAccent:'#ffffff',ink:'#872f35'},
-  mint:{accent:'#75b39f',onAccent:'#17352f',ink:'#315f50'},
-  cobalt:{accent:'#4564a6',onAccent:'#ffffff',ink:'#354f86'},
-  lilac:{accent:'#82699c',onAccent:'#ffffff',ink:'#654f79'},
-  raspberry:{accent:'#ad416f',onAccent:'#ffffff',ink:'#823154'},
-  lime:{accent:'#9ab74a',onAccent:'#243008',ink:'#46591d'},
-  scarlet:{accent:'#c34e40',onAccent:'#ffffff',ink:'#92392f'},
-  periwinkle:{accent:'#5f70a2',onAccent:'#ffffff',ink:'#49577e'},
-  seafoam:{accent:'#78aaa3',onAccent:'#102d2a',ink:'#335e5a'},
-}
+const themeColors:Record<string,{accent:string,onAccent:string}> = {
+  blue:{accent:'#245ee8',onAccent:'#e6edff'},
+  teal:{accent:'#087f79',onAccent:'#e2f8f0'},
+  plum:{accent:'#8052b8',onAccent:'#f3ebff'},
+  amber:{accent:'#9c6200',onAccent:'#fff1cd'},
+  rose:{accent:'#b32e59',onAccent:'#fff0f4'},
+  cyan:{accent:'#087c91',onAccent:'#effcff'},
+  indigo:{accent:'#4d54b8',onAccent:'#ffffff'},
+  orange:{accent:'#ac480e',onAccent:'#ffffff'},
+  emerald:{accent:'#0b7a53',onAccent:'#eafff6'},
+  violet:{accent:'#6c45c2',onAccent:'#f6f0ff'},
+  coral:{accent:'#b4453a',onAccent:'#fff2ef'},
+  sky:{accent:'#156f9f',onAccent:'#edf9ff'},
+  gold:{accent:'#8a6500',onAccent:'#fff8dd'},
+  magenta:{accent:'#a02b7a',onAccent:'#fff0fa'},
+  forest:{accent:'#3f7334',onAccent:'#f0faed'},
+  cherry:{accent:'#a62a3b',onAccent:'#fff0f2'},
+};
 
 const unitVisualThemes=[
   'blue','teal','plum','amber','rose','indigo','cyan','orange',
   'emerald','violet','coral','sky','gold','magenta','forest','cherry',
-  'mint','cobalt','lilac','raspberry','lime','scarlet','periwinkle','seafoam',
 ] as const;
 
 function visualUnitTheme(bookNumber:number,unitNumber:number){
   const bookOffset=Math.max(0,bookNumber-1)*8;
   const index=(Math.max(1,unitNumber)-1+bookOffset)%unitVisualThemes.length;
   return unitVisualThemes[index];
-}
-
-const authoredThemeCache=new Map<string,string>();
-async function authoredUnitTheme(path:string){
-  const cached=authoredThemeCache.get(path);
-  if(cached)return cached;
-  const response=await fetch(GITHUB_RAW+path,{signal:AbortSignal.timeout(10000)});
-  if(!response.ok)return null;
-  const source=await response.text();
-  const match=source.match(/["']theme["']\s*:\s*["']([a-z]+)["']/i);
-  const theme=match?.[1]?.toLowerCase()||'';
-  if(theme&&theme in themeColors){
-    authoredThemeCache.set(path,theme);
-    return theme;
-  }
-  return null;
 }
 
 type SessionRow={
@@ -193,8 +168,7 @@ Deno.serve(async(request:Request)=>{
 
     const currentMeta=manifestUnit(manifest,currentUnitId);
     if(!currentMeta)throw new Error('Current unit unavailable');
-    const currentTheme=(await authoredUnitTheme(currentMeta.unit.path))
-      || visualUnitTheme(currentMeta.book.number,currentMeta.unit.order);
+    const currentTheme=visualUnitTheme(currentMeta.book.number,currentMeta.unit.order);
     const palette=themeColors[currentTheme]||themeColors.blue;
 
     const learned=new Set<string>();
@@ -236,7 +210,6 @@ Deno.serve(async(request:Request)=>{
       unitTheme:currentTheme,
       unitColor:palette.accent,
       unitTextColor:palette.onAccent,
-      unitInkColor:palette.ink,
       nextCharacter,
       capturedAt:new Date(now).toISOString(),
     });
