@@ -1,15 +1,24 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {units,characters,unitLibraryCharacters} from '../lib/curriculum.ts';
+import {books,units,vocabulary,characters,unitLibraryCharacters} from '../lib/curriculum.ts';
 import {validateCharacterCoverage} from '../scripts/check-character-coverage.mjs';
 
 test('Every implemented unit has exactly its first-time vocabulary characters',()=>{
  const {errors,report}=validateCharacterCoverage();
  assert.deepEqual(errors,[]);
- assert.deepEqual(report.map(row=>[row.unit,row.count]),[
+ assert.deepEqual(report.slice(0,8).map(row=>[row.unit,row.count]),[
   ['unit-1',7],['unit-2',11],['unit-3',13],['unit-4',13],['unit-5',9],
-  ['unit-6',10],['unit-7',13],['unit-8',12],['book-2-unit-1',12],['book-2-unit-2',8]
+  ['unit-6',10],['unit-7',13],['unit-8',12]
  ]);
+ assert.deepEqual(report.map(row=>row.unit),books.flatMap(b=>b.unitIds));
+ const taught=new Set();
+ for(const row of report){
+  const unit=units.find(u=>u.id===row.unit);
+  const required=new Set(vocabulary.filter(w=>unit.lessonIds.includes(w.lessonId)).flatMap(w=>[...w.text].filter(c=>/\p{Script=Han}/u.test(c)&&!taught.has(c))));
+  assert.equal(row.count,required.size,row.unit);
+  assert.deepEqual([...row.characters].sort(),[...required].sort(),row.unit);
+  for(const c of required)taught.add(c);
+ }
  const list=id=>unitLibraryCharacters(units.find(unit=>unit.id===id));
  assert.ok(list('unit-8').includes('以'));
  assert.ok(list('unit-7').includes('師'));

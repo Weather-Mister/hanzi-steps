@@ -1,10 +1,12 @@
-const {chromium}=require(process.env.HANZI_PLAYWRIGHT||'playwright');const {spawn}=require('child_process');const fs=require('fs');const assert=require('node:assert/strict');
 let server,browser;
 (async()=>{
+ const {chromium}=await import(process.env.HANZI_PLAYWRIGHT?`${process.env.HANZI_PLAYWRIGHT}/index.mjs`:'playwright');
+ const {spawn}=await import('node:child_process');const fs=(await import('node:fs')).default;const assert=(await import('node:assert/strict')).default;
  server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--config','vite.pages.config.ts','--host','127.0.0.1','--port','4175'],{stdio:['ignore','pipe','pipe']});
  for(let i=0;i<100;i++){try{if((await fetch('http://127.0.0.1:4175/hanzi-steps/',{signal:AbortSignal.timeout(1000)})).ok)break}catch{}await new Promise(r=>setTimeout(r,200));}
  browser=await chromium.launch({headless:true,executablePath:process.env.HANZI_CHROMIUM||undefined,args:['--no-sandbox','--disable-gpu','--disable-dev-shm-usage']});
  const {lessons,phrases}=await import('../../lib/curriculum.ts');const baseline=JSON.parse(fs.readFileSync('validation/fixtures/production-append-baseline.json')).lessons;
+ const guidedTotal=new Set(lessons.flatMap(l=>l.steps.filter(s=>s.type==='intro').map(s=>s.char))).size;
  const targets=lessons.flatMap(l=>l.steps.map((s,index)=>({l,s,index}))).filter(x=>x.s.type==='produce');
  console.log('Browser started');const errors=[];fs.mkdirSync('test-results/production',{recursive:true});
  async function open(target,width=390,cloud=false){
@@ -27,10 +29,11 @@ let server,browser;
   const page=await context.newPage();page.on('pageerror',e=>{errors.push(e.message);if(cloud)console.error('cloud page error',e.message)});await page.goto('http://127.0.0.1:4175/hanzi-steps/',{waitUntil:'domcontentloaded'});
   async function resume(){if(width>=600)await page.locator('.book-switcher').getByRole('button',{name:/^Book 1/}).click();await page.getByRole('button',{name:/Change book or unit/}).click();if(width<600)await page.getByRole('button',{name:'Book 1',exact:true}).click();await page.getByRole('button',{name:new RegExp(`^Unit ${Number(target.l.unitId.split('-')[1])} ·`)}).click();await page.getByRole('dialog').waitFor({state:'hidden'});await page.getByRole('button',{name:`Practice again: ${target.l.title}`,exact:true}).click();await page.locator('.production-exercise').waitFor();}
   if(cloud)await page.waitForFunction(()=>document.querySelector('.unit-picker-trigger')&&!document.querySelector('.username-login')&&!document.querySelector('.path-node:disabled')); 
+  await page.waitForFunction(total=>document.querySelector('.learned-count')?.getAttribute('aria-label')===`${total} of ${total} characters practiced`,guidedTotal);
   try{await resume()}catch(e){await page.screenshot({path:'test-results/production/failure.png',fullPage:true});console.error((await page.locator('body').innerText()).slice(0,2000));throw e}return {context,page,partial,resume,requests,remote};
  }
  const target=targets.find(x=>x.s.id==='u11-produce-one-tea');
- const {context,page,partial,resume}=await open(target);
+ const {context,page,partial}=await open(target);
  const input=page.getByRole('textbox',{name:'Your Chinese response'}),check=page.getByRole('button',{name:'Check answer',exact:true});
  assert.equal(await check.isDisabled(),true);assert.equal(await page.locator('.word-bank').count(),0);assert.equal(await page.locator('.exercise-pattern-help').count(),0);assert.equal(/\p{Script=Han}/u.test(await page.locator('.production-exercise').innerText()),false);
  await input.fill('我要一杯茶。');await input.dispatchEvent('compositionstart');assert.equal(await check.isDisabled(),true);await input.press('Enter');assert.equal(await page.locator('.exercise-footer.success').count(),0);await input.dispatchEvent('compositionend');await check.click();await page.getByText('You produced it independently!',{exact:true}).waitFor();
@@ -69,5 +72,5 @@ let server,browser;
  const attempt=synced.requests.find(r=>r.p_item_id==='phrase:u11-one-tea');assert.ok(attempt);assert.equal(attempt.p_mode,'sentence');assert.equal(attempt.p_assisted,true);assert.equal(attempt.p_correct,true);assert.ok(attempt.p_attempt_id);
  await synced.page.reload();await synced.page.getByRole('button',{name:/Change book or unit/}).waitFor();assert.ok(synced.remote.get(synced.partial.id).complete);await synced.context.close();
  const desktop=await open(target,1365);await desktop.page.screenshot({path:'test-results/production/desktop.png',fullPage:true});assert.equal(await desktop.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await desktop.context.close();
- assert.deepEqual(errors,[]);console.log('PASS production browser: mobile/desktop, IME, accepted answers, help/fallback, deduplication, reload, mastery, signed-in RPC sync and historical progress.');
+ assert.deepEqual(errors,[]);console.log('PASS production browser: attainable guided total, mobile/desktop, IME, accepted answers, help/fallback, deduplication, reload, mastery, signed-in RPC sync and historical progress.');
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.kill();});

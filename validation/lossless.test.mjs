@@ -4,20 +4,14 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import * as current from '../lib/curriculum.ts';
 import {readJSON,root} from './course-io.mjs';
+import {assertReviewedRecord} from './record-preservation.mjs';
 const baseline=readJSON('validation/fixtures/live-before-refactor.json');
 // Explicitly reviewed first-teaching moves; retain the immutable migration snapshot.
 const amendment=readJSON('validation/fixtures/book1-first-teaching-amendment.json');
 const lesson10Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson10.json');
-const correctionAmendment=readJSON('validation/fixtures/units26-31-correction-amendment.json');
-const spotlightAmendment=readJSON('validation/fixtures/spotlight-word-amendment.json');
 const lesson11Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson11.json');
-const polishAmendment=readJSON('validation/fixtures/units29-33-polish-amendment.json');
 const lesson13Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson13.json');
 const lesson15Amendment=readJSON('validation/fixtures/book1-first-teaching-amendment-lesson15.json');
-const characterQualityAmendment=readJSON('validation/fixtures/book1-character-quality-amendment.json');
-const selfContainedAmendment=readJSON('validation/fixtures/book1-self-contained-learner-amendment.json');
-const grammarAmendment=readJSON('validation/fixtures/book1-grammar-clarity-amendment.json');
-const teachingAmendment=readJSON('validation/fixtures/teaching-quality-amendment.json');
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
@@ -25,42 +19,7 @@ test('All live curriculum records, answers, checkpoint sequences and card order 
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){
-   const first=amendment.records[key]?.[id];
-   if(first)assert.equal(first.before,digest,`amendment must identify original ${key} ${id}`);
-   const firstExpected=first?.after??digest;
-   const later=lesson10Amendment.records?.[key]?.[id];
-   if(later)assert.equal(later.before,firstExpected,`Lesson 10 amendment must identify prior ${key} ${id}`);
-   const priorExpected=later?.after??firstExpected;
-   const correction=correctionAmendment.records?.[key]?.[id];
-   if(correction)assert.equal(correction.before,priorExpected,`correction must identify prior ${key} ${id}`);
-   const correctedExpected=correction?.after??priorExpected;
-   const spotlight=spotlightAmendment.records?.[key]?.[id];
-   if(spotlight)assert.equal(spotlight.before,correctedExpected,`spotlight amendment must identify prior ${key} ${id}`);
-   const spotlightExpected=spotlight?.after??correctedExpected;
-   const lesson11=lesson11Amendment.records?.[key]?.[id];
-   if(lesson11)assert.equal(lesson11.before,spotlightExpected,`Lesson 11 amendment must identify prior ${key} ${id}`);
-   const lesson11Expected=lesson11?.after??spotlightExpected;
-   const polish=polishAmendment.records?.[key]?.[id];
-   if(polish)assert.equal(polish.before,lesson11Expected,`Units 29-33 polish amendment must identify prior ${key} ${id}`);
-   const polishExpected=polish?.after??lesson11Expected;
-   const lesson13=lesson13Amendment.records?.[key]?.[id];
-   if(lesson13)assert.equal(lesson13.before,polishExpected,`Lesson 13 amendment must identify prior ${key} ${id}`);
-   const lesson13Expected=lesson13?.after??polishExpected;
-   const lesson15=lesson15Amendment.records?.[key]?.[id];
-   if(lesson15)assert.equal(lesson15.before,lesson13Expected,`Lesson 15 amendment must identify prior ${key} ${id}`);
-   const lesson15Expected=lesson15?.after??lesson13Expected;
-   const characterQuality=characterQualityAmendment.records?.[key]?.[id];
-   if(characterQuality)assert.equal(characterQuality.before,lesson15Expected,`character quality amendment must identify prior ${key} ${id}`);
-   const characterQualityExpected=characterQuality?.after??lesson15Expected;
-   const selfContained=selfContainedAmendment.records?.[key]?.[id];
-   if(selfContained)assert.equal(selfContained.before,characterQualityExpected,`self-contained amendment must identify prior ${key} ${id}`);
-   const previous=selfContained?.after??characterQualityExpected;
-   const grammar=grammarAmendment.records?.[key]?.[id];
-   if(grammar)assert.equal(grammar.before,previous,`grammar amendment must identify prior ${key} ${id}`);
-   const grammarExpected=grammar?.after??previous;
-   const teaching=teachingAmendment.records?.[key]?.[id];
-   if(teaching)assert.equal(teaching.before,grammarExpected,`teaching amendment must identify prior ${key} ${id}`);
-   assert.equal(hash(actual[id]),teaching?.after??grammarExpected,`${key} ${id}`);
+   assertReviewedRecord(key,id,digest,actual[id]);
   }
  }
  assert.deepEqual(current.units.filter(u=>baseline.order.includes(u.id)).map(u=>u.id),baseline.order);

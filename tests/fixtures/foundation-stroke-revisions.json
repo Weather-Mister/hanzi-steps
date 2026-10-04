@@ -1,0 +1,13 @@
+{
+  "reason": "The early whole-course snapshots predate later published canonical geometry. Pin only the two changed datasets; every other surviving dataset retains its original hash. These hashes are from already-published commit 9f593da77d283bf26bb041e556d8998b58bfe826, not a regenerated snapshot of this repair.",
+  "strokes": {
+    "口": {
+      "before": "a60f007e527c47a42f50e94659459212322d266895f7af626ec14ee28b9385d0",
+      "after": "136b7eef2c62482c2c0e89a984d90d5460fbba229f01ed38dd545970b51fa6af"
+    },
+    "直": {
+      "before": "ee402d29becf4707b9fc111e42ae699505e55b1101174373c8f96f427c71554d",
+      "after": "b686b7ecccc8bd1ff155d599f4f7d18ecffca395b42b8796963d2135b5278e7f"
+    }
+  }
+}
