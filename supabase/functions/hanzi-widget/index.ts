@@ -11,22 +11,22 @@ const INDEX_URL=GITHUB_RAW+'course/index.json';
 const MANIFEST_URL=GITHUB_RAW+'course/manifest.json';
 
 const themeColors:Record<string,{accent:string,onAccent:string}> = {
-  blue:{accent:'#245ee8',onAccent:'#e6edff'},
-  teal:{accent:'#087f79',onAccent:'#e2f8f0'},
-  plum:{accent:'#8052b8',onAccent:'#f3ebff'},
-  amber:{accent:'#9c6200',onAccent:'#fff1cd'},
-  rose:{accent:'#b32e59',onAccent:'#fff0f4'},
-  cyan:{accent:'#087c91',onAccent:'#effcff'},
-  indigo:{accent:'#4d54b8',onAccent:'#ffffff'},
-  orange:{accent:'#ac480e',onAccent:'#ffffff'},
-  emerald:{accent:'#0b7a53',onAccent:'#eafff6'},
-  violet:{accent:'#6c45c2',onAccent:'#f6f0ff'},
-  coral:{accent:'#b4453a',onAccent:'#fff2ef'},
-  sky:{accent:'#156f9f',onAccent:'#edf9ff'},
-  gold:{accent:'#8a6500',onAccent:'#fff8dd'},
-  magenta:{accent:'#a02b7a',onAccent:'#fff0fa'},
-  forest:{accent:'#3f7334',onAccent:'#f0faed'},
-  cherry:{accent:'#a62a3b',onAccent:'#fff0f2'},
+  blue:{accent:'#456f9f',onAccent:'#ffffff'},
+  teal:{accent:'#477f7a',onAccent:'#ffffff'},
+  plum:{accent:'#705b80',onAccent:'#ffffff'},
+  amber:{accent:'#b45d24',onAccent:'#ffffff'},
+  rose:{accent:'#a94a67',onAccent:'#ffffff'},
+  indigo:{accent:'#58658e',onAccent:'#ffffff'},
+  cyan:{accent:'#477f8a',onAccent:'#ffffff'},
+  orange:{accent:'#b55a1a',onAccent:'#ffffff'},
+  emerald:{accent:'#4a7a5b',onAccent:'#ffffff'},
+  violet:{accent:'#745a89',onAccent:'#ffffff'},
+  coral:{accent:'#b95443',onAccent:'#ffffff'},
+  sky:{accent:'#4a789c',onAccent:'#ffffff'},
+  gold:{accent:'#b45d24',onAccent:'#ffffff'},
+  magenta:{accent:'#8d3e6c',onAccent:'#ffffff'},
+  forest:{accent:'#647a38',onAccent:'#ffffff'},
+  cherry:{accent:'#b33d45',onAccent:'#ffffff'},
 };
 
 const unitVisualThemes=[
