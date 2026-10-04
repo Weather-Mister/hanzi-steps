@@ -1022,6 +1022,33 @@ const unit:UnitData = {
           ],
           "answer": "對",
           "explanation": "對 is duì, first character of 對了."
+        },
+        {
+          "id": "u21-produce-nine-twenty",
+          "type": "produce",
+          "phrase": "u21-nine-twenty",
+          "prompt": "Arrange a meeting: We meet at 9:20.",
+          "answer": "我們九點二十分見面。",
+          "explanation": "Hour first, then minutes.",
+          "grammarIds": [
+            "u21-clock-time"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "九點二十分我們見面。"
+            ],
+            "grammarHint": "Put the clock time before meet; include both the hour and the minutes.",
+            "keyVocabulary": [
+              "九",
+              "點",
+              "二十",
+              "分",
+              "見面"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include we and use Chinese number words; time may come before or after we. Add no day or place."
+          }
         }
       ]
     },
@@ -1270,6 +1297,28 @@ const unit:UnitData = {
           "grammarIds": [
             "u21-clock-time"
           ]
+        },
+        {
+          "id": "u21-produce-help-teach",
+          "type": "produce",
+          "phrase": "u21-help-teach",
+          "prompt": "Ask a teacher: Please teach me a little.",
+          "answer": "請你教教我。",
+          "explanation": "教教 softens the request; 我 remains outside the repeated verb.",
+          "grammarIds": [
+            "u21-softened-action"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Repeating the verb makes the short request lighter.",
+            "keyVocabulary": [
+              "請",
+              "教"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use please + you + the repeated teach verb + me, with no extra details."
+          }
         }
       ]
     }

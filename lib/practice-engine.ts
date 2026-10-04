@@ -658,7 +658,14 @@ export function unitComplete(completed:Set<string>,unitId:string):boolean{
 
 export function practiceAttemptForStep(step:{type:string;char?:string;phrase?:string}):{itemId:string;mode:PracticeMode}|null{
  if(step.phrase){
-  if(step.type==='order')return {itemId:'phrase:'+step.phrase,mode:'sentence'};
+  if(step.type==='produce'){
+   // Fixed expressions may already be canonical vocabulary. Follow the same
+   // surface deduplication as learnedPracticeItems instead of orphaning a phrase row.
+   const phrase=phrases[step.phrase];
+   const word=phrase&&vocabularyLookup.find(item=>normalizePracticeSurface(item.traditional)===normalizePracticeSurface(phrase.text));
+   if(word)return {itemId:word.id,mode:'input'};
+  }
+  if(step.type==='order'||step.type==='produce')return {itemId:'phrase:'+step.phrase,mode:'sentence'};
   return null;
  }
  if(!step.char)return null;

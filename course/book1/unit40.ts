@@ -516,6 +516,35 @@ const unit:UnitData = {
           ],
           "answer": "Celebrating according to the Gregorian calendar.",
           "explanation": "Traditional birthdays could follow the lunar calendar, while most people today use the Gregorian calendar."
+        },
+        {
+          "id": "u40-produce-nowhere",
+          "type": "produce",
+          "phrase": "u40-nowhere",
+          "prompt": "Say you did not go anywhere yesterday.",
+          "answer": "昨天我哪裡都沒去。",
+          "explanation": "Negative total exclusion: 哪裡 + 都 + 沒.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我昨天哪裡都沒去。",
+              "昨天我哪裡都沒有去。",
+              "我昨天哪裡都沒有去。"
+            ],
+            "grammarHint": "The question word means any place under totality and negation; it is not a question here.",
+            "keyVocabulary": [
+              "昨天",
+              "哪裡",
+              "都",
+              "沒",
+              "去"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and yesterday, using the course’s anywhere + all + did-not + go frame. Put yesterday before or after I; either did-not form is accepted."
+          }
         }
       ]
     },
@@ -793,6 +822,36 @@ const unit:UnitData = {
           ],
           "answer": "少買東西",
           "explanation": "Pre-verbal 少 means do less."
+        },
+        {
+          "id": "u40-produce-nothing",
+          "type": "produce",
+          "phrase": "u40-nothing",
+          "prompt": "Say you do not want to eat anything today.",
+          "answer": "我今天什麼也不想吃。",
+          "explanation": "Negative total exclusion with 什麼 + 也 + 不.",
+          "grammarIds": [
+            "u40-questionword-totality"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "今天我什麼也不想吃。",
+              "我今天什麼都不想吃。",
+              "今天我什麼都不想吃。"
+            ],
+            "grammarHint": "The object comes before the totality adverb and negated wish.",
+            "keyVocabulary": [
+              "今天",
+              "什麼",
+              "也",
+              "不",
+              "想",
+              "吃"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and today; use the anything + either/all + not + want + eat frame. Put today before or after I; either totality adverb is allowed."
+          }
         }
       ]
     }

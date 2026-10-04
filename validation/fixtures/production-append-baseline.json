@@ -1,0 +1,1815 @@
+{
+  "commit": "3fc810f",
+  "lessons": [
+    {
+      "id": "hello",
+      "length": 17,
+      "stepsHash": "4916dd358662067e5975784bba28d3b767cf417da8bd439c43e04118068cbeb5"
+    },
+    {
+      "id": "identity",
+      "length": 14,
+      "stepsHash": "858bc12dfd451b8c011a0b30dfc261f551468fff5188076fbaa563b108818a3f"
+    },
+    {
+      "id": "student",
+      "length": 16,
+      "stepsHash": "3d703b2c986ce6684efea0731aaf3374275a2212429ac238b94b33192f543883"
+    },
+    {
+      "id": "question",
+      "length": 10,
+      "stepsHash": "ec54889f470c30c8f50105cb6371799ee2f3c67b3526c854f87d8c449e4c20a5"
+    },
+    {
+      "id": "review",
+      "length": 11,
+      "stepsHash": "0495336e551ae814faabf2e8ad1a618ba8e126511ddf61990fc411b5902e35a4"
+    },
+    {
+      "id": "u2-people",
+      "length": 14,
+      "stepsHash": "9436cccd6ca2c75d9b20355f2b06d1a5281dcd644fd2a7951b6aeafb4138dae2"
+    },
+    {
+      "id": "u2-together",
+      "length": 15,
+      "stepsHash": "0fbb115271feff1bd61cfdcceda374eeb0b8e1b1dcf1f89b4f9e84738c6d8dd5"
+    },
+    {
+      "id": "u2-not",
+      "length": 10,
+      "stepsHash": "f4cc7a46c9c42b9375b4bb8c3a08ac6d97ed54648f5cf90c1fd16d9902b42ef6"
+    },
+    {
+      "id": "u2-mine",
+      "length": 10,
+      "stepsHash": "26ad10217694e26db2b369e21c5d92f3e4ba46619c74df96a08773f041285106"
+    },
+    {
+      "id": "u2-count",
+      "length": 21,
+      "stepsHash": "1edbf521c0c224781773365dac48a8e8a2f9233d98e2f884ed25740951bc1b04"
+    },
+    {
+      "id": "u2-have",
+      "length": 17,
+      "stepsHash": "88f7476258a0b12a16644ab66e325553116fe365c1a8c5f4eaef8849a5920a41"
+    },
+    {
+      "id": "u2-review",
+      "length": 13,
+      "stepsHash": "ca45f1714756745f1d041880f226a0917d82bc8e34f5b23972a6a5baa12c79d7"
+    },
+    {
+      "id": "u3-point",
+      "length": 15,
+      "stepsHash": "c6e533dc4299ac2e43871ee772069912af3252f1e79a35fb8f690d5b98fb7e21"
+    },
+    {
+      "id": "u3-what",
+      "length": 21,
+      "stepsHash": "c52bb41e22713776f255f6707ad2ce401d462b2538a5d5cc132f3dbaebd9542d"
+    },
+    {
+      "id": "u3-books",
+      "length": 16,
+      "stepsHash": "b735c391d89eef33ca18d15bcf070dbe09660ec08713d5da42f2958b12c60160"
+    },
+    {
+      "id": "u3-size",
+      "length": 21,
+      "stepsHash": "05e151e250931ffbbe7dcc90ea898e6fcd73c2b3eb8acafd7338c1131a5e13de"
+    },
+    {
+      "id": "u3-here",
+      "length": 16,
+      "stepsHash": "57408a8ee77322bcd1c20f098573e422757bb9e2a4232c0f23b698e6803688d1"
+    },
+    {
+      "id": "u3-all",
+      "length": 10,
+      "stepsHash": "bf9cfd71d64e29a99483c63968eaa612987e6b681b1d80ccc0f04f32b3443f57"
+    },
+    {
+      "id": "u3-review",
+      "length": 14,
+      "stepsHash": "8d472949e35064f5561ae655bc01b3c364f5625cfcdd677b9298bc4a8566b6e0"
+    },
+    {
+      "id": "u4-go",
+      "length": 21,
+      "stepsHash": "fb37a0eb49081c278d67e1569d4925f376670de9e990cc89c68334533223ebd2"
+    },
+    {
+      "id": "u4-read",
+      "length": 16,
+      "stepsHash": "247e46d8aa53b62288c9912d0d1de7464098f7b2f71bed16c07799ce80e4466c"
+    },
+    {
+      "id": "u4-language",
+      "length": 21,
+      "stepsHash": "541b2babf307fa1ecc5fb0e38843eed2e790625363380b74446ad0e75d274b4b"
+    },
+    {
+      "id": "u4-speak",
+      "length": 16,
+      "stepsHash": "a6b30c1602d7ea7fc3b037bb3e02790ea4de0145d029070bb58aa3909ad97557"
+    },
+    {
+      "id": "u4-want",
+      "length": 19,
+      "stepsHash": "941ef65e04659ce41bcdaf1931770c45436ad94bf286d31f774cf5cdf872eea0"
+    },
+    {
+      "id": "u4-can",
+      "length": 12,
+      "stepsHash": "bb62a985a42541fc1e6e4b31932ea32a0f6d545422bb24ed31fd1e3771eaca4e"
+    },
+    {
+      "id": "u4-review",
+      "length": 14,
+      "stepsHash": "1b01f441841cf98782312c9166cab6ae311a96e8196136249972a8eb1373b4e4"
+    },
+    {
+      "id": "u5-drinks",
+      "length": 16,
+      "stepsHash": "0e8306bfc97d8e28259de742edcd634edd53457954804b296391d7b5c285f1af"
+    },
+    {
+      "id": "u5-please",
+      "length": 11,
+      "stepsHash": "c8efae1b2c371d6695c761b2fb54d8a411927312466547427c5882184204fa78"
+    },
+    {
+      "id": "u5-likes",
+      "length": 16,
+      "stepsHash": "96167ebe84d21bbba5eff705989e8578a3ad4577386608fcf135c64b1088db42"
+    },
+    {
+      "id": "u5-coffee",
+      "length": 18,
+      "stepsHash": "0848259a7afbd422c77c329a5419dfdf4e893c0ca36b7330437aca2313208402"
+    },
+    {
+      "id": "u5-follow-up",
+      "length": 11,
+      "stepsHash": "6e3d93452b587a5e6311e7d41902cd2a0ce7cde9031832b23a3aa3f56a068911"
+    },
+    {
+      "id": "u5-thanks",
+      "length": 11,
+      "stepsHash": "c7421204ebb6003197974b01fb23844b4ac1dd9c65e9579ba2dfb536d40fd88f"
+    },
+    {
+      "id": "u5-review",
+      "length": 14,
+      "stepsHash": "edf824be49bf657d45ef86c0e7a4df383728ba5fe53c15d7bfdf14b7220829d9"
+    },
+    {
+      "id": "u6-family",
+      "length": 23,
+      "stepsHash": "e5f916ac14492a6185a1b19605da4f7730bd2fccca7dffc951767de3472eb5d3"
+    },
+    {
+      "id": "u6-siblings",
+      "length": 21,
+      "stepsHash": "b840784226ae71b8af15e569ae68c8b9a21f239e8b81f440cdfe7f9b145436c7"
+    },
+    {
+      "id": "u6-who",
+      "length": 11,
+      "stepsHash": "8f8281d62d1779f667154d431d260b5274f1682f7b00e526b7d26eb3b8e70934"
+    },
+    {
+      "id": "u6-photos",
+      "length": 22,
+      "stepsHash": "a3e37e8323061d64ec2c3bffd1f1da21074c5b916cb0f4384cd2ed51e70e123c"
+    },
+    {
+      "id": "u6-whose",
+      "length": 8,
+      "stepsHash": "da3bdc20888f19b663d1ec8a6b32e84b78a8b247914c901fd31c84db5430ff80"
+    },
+    {
+      "id": "u6-close-family",
+      "length": 7,
+      "stepsHash": "87a48fcac75b24af25a6a9cb567c2762aae452a585837096dace2b33154ea0cb"
+    },
+    {
+      "id": "u6-review",
+      "length": 11,
+      "stepsHash": "72c08e4548bd7a817de800abcfd5ef72d8ef5474e90aff705b96a45b0b15a2ec"
+    },
+    {
+      "id": "u7-v2-numbers",
+      "length": 22,
+      "stepsHash": "bcca73ba536e675864c543029291684a2662e96894b866b6e2c5f26fcb66dbe4"
+    },
+    {
+      "id": "u7-v2-describe",
+      "length": 21,
+      "stepsHash": "e67574fe6683c1cdfc8fbd386af3609d6ef3c184ae12ee4c692f0a8ba0e375e4"
+    },
+    {
+      "id": "u7-v2-hobbies",
+      "length": 19,
+      "stepsHash": "1c4ea841720198b0e3ca32eecc8be1d8ea55ca212073d67ddda8e800d7caabd3"
+    },
+    {
+      "id": "u7-v2-activities",
+      "length": 18,
+      "stepsHash": "9d71fdd9dd5692551cbf3d4c543fa08ba2206fee3fe3e7707925c6d79bd8d806"
+    },
+    {
+      "id": "u7-v2-often",
+      "length": 15,
+      "stepsHash": "dc9f494036bf43c119f7ce7c7c53686a781a1cc654fec7f02b7cc99bcb58fe39"
+    },
+    {
+      "id": "u7-v2-plans",
+      "length": 13,
+      "stepsHash": "cc3e09d1136f31fd6dee04cfcb6e473a4a9082a6d18a9a3564809ddd3daa3ee1"
+    },
+    {
+      "id": "u7-v2-review",
+      "length": 14,
+      "stepsHash": "4e69fd495020715c3e073e8e5aaa88da6d2a9008bf3da2401e79b90336efa087"
+    },
+    {
+      "id": "u8-v2-time",
+      "length": 19,
+      "stepsHash": "e7214c31a6d60a41f592c6d9ceefe5ea3cb767c411cfa30d69ede76aba37ab0c"
+    },
+    {
+      "id": "u8-v2-opinions",
+      "length": 21,
+      "stepsHash": "166fef85214da873fd8e5cb268fc771cf7ced63bc52eb39cabc57db68ac0f6e0"
+    },
+    {
+      "id": "u8-v2-together",
+      "length": 12,
+      "stepsHash": "cd20e15d7414731fbfecb0276a1e61eb96db9ec6ad265bddf516440eccd0ae72"
+    },
+    {
+      "id": "u8-v2-invite",
+      "length": 20,
+      "stepsHash": "f71621a982dd4c1d5b5584c291c71b2a936680453268b47063501a734c48d9d3"
+    },
+    {
+      "id": "u8-v2-possible",
+      "length": 15,
+      "stepsHash": "257d9e71f7489de087db2a820ad06b3a12674432360f32bf146de584526f9ed4"
+    },
+    {
+      "id": "u8-v2-agree",
+      "length": 9,
+      "stepsHash": "e828a2c76ce13e872d036b4ade35b2099a05026f6c7dfc3139891a04aa7a03c2"
+    },
+    {
+      "id": "u8-v2-review",
+      "length": 15,
+      "stepsHash": "ab546fda2a079e4eef84cc25fbad4f386a61abccb45c3db567b597c5dda2e82c"
+    },
+    {
+      "id": "u9-music",
+      "length": 17,
+      "stepsHash": "910cf31633610b811db4c2bdac96b96ae4bb40521abe135f672988c541e3c8ff"
+    },
+    {
+      "id": "u9-exercise",
+      "length": 19,
+      "stepsHash": "2c4c159dc309b5475e3e38c7adf21ec489b463f139cc9bb9c05838ab1f50dc09"
+    },
+    {
+      "id": "u9-basketball",
+      "length": 20,
+      "stepsHash": "77c139c034f2240a84011436b1f1a564fd49c2f6807cf69c30e21e689ee57478"
+    },
+    {
+      "id": "u9-soccer",
+      "length": 19,
+      "stepsHash": "afa03c6fa5740d600aeceb260d81aeb1e86bc3901c20762e6b0185f97487ca9c"
+    },
+    {
+      "id": "u9-choices",
+      "length": 18,
+      "stepsHash": "caadbd3d7329ec5d6080235a584588c19adda1f26a9cb710c3233af76c3a5243"
+    },
+    {
+      "id": "u9-preferences",
+      "length": 13,
+      "stepsHash": "2e5c80b7a145a0cfaf72ba996ba703c95f329492512fc79510c7704a7f8cb63d"
+    },
+    {
+      "id": "u9-review",
+      "length": 16,
+      "stepsHash": "d9f3c591dcb2d043e45e05f5301116ed56a70f8ccc8ae009ee813afb2a5c61b6"
+    },
+    {
+      "id": "u10-another-group",
+      "length": 15,
+      "stepsHash": "8f6a57e4b0875f37889b67b54d9e4f54a0863e4125300946729ede9c788ab6f5"
+    },
+    {
+      "id": "u10-shared-habits",
+      "length": 16,
+      "stepsHash": "44f188de6293e41d7ccdeca9d39c52ccf1906c8cd64c962d4d99bf6aa846c8c2"
+    },
+    {
+      "id": "u10-not-have-either",
+      "length": 14,
+      "stepsHash": "42680ea2b9d1a596d6f98abbe1b5f0a48a1e95e7a24097baba24d12338987390"
+    },
+    {
+      "id": "u10-none",
+      "length": 16,
+      "stepsHash": "a421953fd90f45c5088b4dab40357c06c12039838647146d62bc0e66e66f6e4c"
+    },
+    {
+      "id": "u10-not-all",
+      "length": 16,
+      "stepsHash": "8e3dc0a01b141a13fd6c842a93fe2614d821b9208bee84906d486ce52cb42034"
+    },
+    {
+      "id": "u10-common-ground",
+      "length": 13,
+      "stepsHash": "f9205edf7b35264550c77870d572fdef083b32032e698d4f91038563c74ba429"
+    },
+    {
+      "id": "u10-challenge",
+      "length": 15,
+      "stepsHash": "1ba02f37bcbe2884018a3914fd511a91f4531c095a3373221593aec2011e3d6f"
+    },
+    {
+      "id": "u11-cups",
+      "length": 14,
+      "stepsHash": "87f67174acce572fe518119a6a720bbecd6683fcc414985e1d94459f90c14368"
+    },
+    {
+      "id": "u11-hot",
+      "length": 14,
+      "stepsHash": "554782cfee243a5354af14161ceaeead1dd672e3e7b8fed58bd8c1f7c050d51e"
+    },
+    {
+      "id": "u11-size",
+      "length": 18,
+      "stepsHash": "266286cac5a6b5b6884c20bbf6114ebf24fde24f82faa2822be0c310b44bb60e"
+    },
+    {
+      "id": "u11-takeout",
+      "length": 18,
+      "stepsHash": "5d073f4c69478ff427feb8e436eb5ba726d3da0d6a46fe9aff7e478ac687b7cf"
+    },
+    {
+      "id": "u11-here",
+      "length": 19,
+      "stepsHash": "8f37c4017c47f15ac92201ad2354c5e25b8098d2f74d8401568dcecb04829a83"
+    },
+    {
+      "id": "u11-order",
+      "length": 13,
+      "stepsHash": "fb836124c8ee05cd4ee5454134c59fa10f68ddaf6a1cc3ffa0151cf32f2c751c"
+    },
+    {
+      "id": "u11-challenge",
+      "length": 16,
+      "stepsHash": "e61d315e0df3c3a492898470bb79fb8bd9882ff86fcafa05256dbaa4d04e6ef0"
+    },
+    {
+      "id": "u12-two-four",
+      "length": 20,
+      "stepsHash": "271ea48f63be73676a2c8d6b3bc469528553041e24e2614793e92e3a4148283b"
+    },
+    {
+      "id": "u12-five-seven",
+      "length": 19,
+      "stepsHash": "e979784973ec00de864b74b34c2803491465c1b4b69f18cf9f18a0693d9fd797"
+    },
+    {
+      "id": "u12-eight-tens",
+      "length": 26,
+      "stepsHash": "a8043b8383b87218c0d490f35373dfac4b85bc1d3fd4b99f53fcd2647f1f8149"
+    },
+    {
+      "id": "u12-prices",
+      "length": 19,
+      "stepsHash": "d7f091dac064b9d03eba425f8bb9fae676e7cfcd689ccc5f8b93725dd6f028cc"
+    },
+    {
+      "id": "u12-how-much",
+      "length": 18,
+      "stepsHash": "dbe7d24dd5a3f87a6f506a7732ddb2bffbe732d33765b7499e61aa34a6c8a4e1"
+    },
+    {
+      "id": "u12-total",
+      "length": 17,
+      "stepsHash": "a7f99aa5ef761a0d1ae6f9e61b1d61ac3f962ac07bd9ee4a91816ad870988971"
+    },
+    {
+      "id": "u12-challenge",
+      "length": 21,
+      "stepsHash": "3bc49a40cae310bb11694971479e715c15ec4668af7009fbfa1f3c0ef36bfca8"
+    },
+    {
+      "id": "u13-ask",
+      "length": 17,
+      "stepsHash": "6c5a566468a6f52be8f192c33eaf89c689042dc04c3bf04e7865c9b6d772e2f3"
+    },
+    {
+      "id": "u13-buns",
+      "length": 18,
+      "stepsHash": "80bca2a30fa0735d633192b1401acb7af915f446ab677394b1050c11a4850227"
+    },
+    {
+      "id": "u13-help",
+      "length": 24,
+      "stepsHash": "e891585e8a4dd142bcebe3ccced6d7a1164356f82cf24ee96163fdb5dcea7908"
+    },
+    {
+      "id": "u13-hundreds",
+      "length": 20,
+      "stepsHash": "b10b4e9e0b520314a86832e42a05708e5d92a45ab1c0406018a2687340803f7c"
+    },
+    {
+      "id": "u13-thousands",
+      "length": 20,
+      "stepsHash": "9592207f668bcf143870df2ed6182a845d6f1fe02629daf3da659998f812f21c"
+    },
+    {
+      "id": "u13-sell",
+      "length": 16,
+      "stepsHash": "1896fb35da8d5c8557e783e1f5ed7d89bd852cb0e78072601b2439a44c82a797"
+    },
+    {
+      "id": "u13-challenge",
+      "length": 11,
+      "stepsHash": "9743b8a2edde593911c65072ec4a978198f2fe807575b95d4530a66617207926"
+    },
+    {
+      "id": "u14-phones",
+      "length": 22,
+      "stepsHash": "7097686a62ca3d63692fe7ff8f49434bcd25258bd24a5f1469a0be1471d81904"
+    },
+    {
+      "id": "u14-new-old",
+      "length": 18,
+      "stepsHash": "4a7355a395a3f66377008998a181172728fba85923268f3e17e14fb6088e48f4"
+    },
+    {
+      "id": "u14-prices",
+      "length": 24,
+      "stepsHash": "810941cf880f6b4aba919876d9f0137c548e434795b25bc16072ca4bc1982e37"
+    },
+    {
+      "id": "u14-which-kind",
+      "length": 17,
+      "stepsHash": "fa2c78155e39acde050ac67798d30a4cf2343bdd4b001764a330f7472313cf97"
+    },
+    {
+      "id": "u14-too-why",
+      "length": 25,
+      "stepsHash": "8f2a09399e662026e43aa17397be0be291ddf0415aa2d0d0c10a074abc39b5de"
+    },
+    {
+      "id": "u14-can",
+      "length": 16,
+      "stepsHash": "4abcec7290f880883c1fcde6186841b02a7d783db8e0faebf32bf6db60ed8654"
+    },
+    {
+      "id": "u14-challenge",
+      "length": 12,
+      "stepsHash": "12b504544c88a920ff1fcb7e302d60ac5647cf8c070aa2c1144e21ac31a55c7c"
+    },
+    {
+      "id": "u15-noodles",
+      "length": 23,
+      "stepsHash": "72220fa45064ba5f167885d692e3a893b46283095ddbfa11c69aaa4e2c0d603a"
+    },
+    {
+      "id": "u15-soup",
+      "length": 19,
+      "stepsHash": "a575b5f13c005c4423772936e6f04673d22bc35de804460840e0da425287b19f"
+    },
+    {
+      "id": "u15-shops",
+      "length": 19,
+      "stepsHash": "fd168811cd8cd7f06f4a30593d6eb17a5b7e73c4db450f225b36471bae417694"
+    },
+    {
+      "id": "u15-favorite",
+      "length": 14,
+      "stepsHash": "86e0a580a0eddac770b85121f36e86ee86d25ea2babbe751808e5e12b5e28c82"
+    },
+    {
+      "id": "u15-order",
+      "length": 21,
+      "stepsHash": "4afe5fe484694185b7b88a65d743d073493b0b8dc932521f7a6e6acbe964ac1a"
+    },
+    {
+      "id": "u15-about-prices",
+      "length": 11,
+      "stepsHash": "74c2b0d729a857b5fb677c658d1a6db78ef6d66ed8640bd0836df32b5c1eb6b7"
+    },
+    {
+      "id": "u15-challenge",
+      "length": 12,
+      "stepsHash": "156b229e76c19098cdb26f6ccc741006d2ccbb2c6c8c5d909582224b736d671b"
+    },
+    {
+      "id": "u16-restaurant",
+      "length": 26,
+      "stepsHash": "082179d1c0e4d5805a604f8c50953198416239ec73f95d4bf4efc6392d81277a"
+    },
+    {
+      "id": "u16-spicy",
+      "length": 20,
+      "stepsHash": "ffbf9cd5e6eeb7fc089ccf9595c051967b91581cae98d55971e387388a5050bf"
+    },
+    {
+      "id": "u16-cook",
+      "length": 24,
+      "stepsHash": "25a1210b8d339ac5f0f75484c9c50364bee60b018dbf482b1291b8ec3de3c95d"
+    },
+    {
+      "id": "u16-desserts",
+      "length": 19,
+      "stepsHash": "8e493d5e560fbeaa373c03fc3697acfddc8590f0b0171e13c3f9a788d7869bcf"
+    },
+    {
+      "id": "u16-how-well",
+      "length": 16,
+      "stepsHash": "acce125c84de30ec38c07688c8483f26420d00e0f61be6754406e844ce35aae8"
+    },
+    {
+      "id": "u16-teach",
+      "length": 15,
+      "stepsHash": "25b642c93a46d617b6c9f83f93fba883f09ac7158f3160159825a43d10dcebce"
+    },
+    {
+      "id": "u16-challenge",
+      "length": 15,
+      "stepsHash": "ed675e2e70a723f432c0b5b4602439a7d6f0316f6954da5d179026e5a41f9485"
+    },
+    {
+      "id": "u17-dumplings",
+      "length": 13,
+      "stepsHash": "e809aac0c7a9e9ee58323538acd97d58f0fd2f327cbeab8443a865becfbae5d2"
+    },
+    {
+      "id": "u17-tofu",
+      "length": 22,
+      "stepsHash": "07e6a8feb9587265e70891bd6b86f63ad374c635685b5d2edf46f4ffc1875362"
+    },
+    {
+      "id": "u17-quantity",
+      "length": 14,
+      "stepsHash": "7c85afab0b152f08135082efc5115ee77b04bff12c5137825734f0bee1dd6ed8"
+    },
+    {
+      "id": "u17-know",
+      "length": 19,
+      "stepsHash": "5da61464fcd7a5d3061adb6ee69936bbb72e853a6bc9d426e610faa5c4b9e908"
+    },
+    {
+      "id": "u17-react",
+      "length": 10,
+      "stepsHash": "2ffdfa6626591fd8cfe26b4eec89eea5862960ba87f4cad634a6b8118d1b6bd3"
+    },
+    {
+      "id": "u17-recommend",
+      "length": 14,
+      "stepsHash": "dcaa42691c6a7999ce453ae9de3e2f3db5d5c4157e92c3bf1955ef3f2f629fe4"
+    },
+    {
+      "id": "u17-review",
+      "length": 15,
+      "stepsHash": "d766503d232c49ee75b3c1b4cd8f9fbb50ff8f705737121f2f363c5dda47a9f5"
+    },
+    {
+      "id": "u18-school",
+      "length": 19,
+      "stepsHash": "d36f22862e001efde2365247c1388768c343c6708b7ff1837bb6eb0991474acb"
+    },
+    {
+      "id": "u18-landscape",
+      "length": 19,
+      "stepsHash": "388891c8e0733c4882fc32b4423040bdb280a29bb6b84d42bbfcf0f424e014c3"
+    },
+    {
+      "id": "u18-scenery",
+      "length": 24,
+      "stepsHash": "7c8ee78079cf7ccfecf11ffdb41f9a394927c203dec1dacaf3a93e8535dded38"
+    },
+    {
+      "id": "u18-inside-outside",
+      "length": 25,
+      "stepsHash": "ce6e6462cd5759deca5f16677093250d48900cc67e8c54e454564ed0517a9a33"
+    },
+    {
+      "id": "u18-library",
+      "length": 22,
+      "stepsHash": "f993a48b5eaacdda54ca6344e1875a9f15da4f789748b3e80a2d7d1f378036af"
+    },
+    {
+      "id": "u18-study",
+      "length": 18,
+      "stepsHash": "90152cb0c6d88c0a11ee42bc1e3d85b9f7e570c9187d0114b98451096df9fea8"
+    },
+    {
+      "id": "u18-review",
+      "length": 20,
+      "stepsHash": "a96312bedfdfe7f7f2fca1dc4ab5383dbeee589ca43cde4a03df24ea410ce6f2"
+    },
+    {
+      "id": "u19-visit",
+      "length": 24,
+      "stepsHash": "d27819deaf859043bc5dadbc84a1013ddcc89679ac7dfb0b82dc36b1f949105a"
+    },
+    {
+      "id": "u19-meet",
+      "length": 17,
+      "stepsHash": "368de868f20b0f628f750463bd1801343b6db8dfbce0a5a820c533c79d421e72"
+    },
+    {
+      "id": "u19-distance",
+      "length": 22,
+      "stepsHash": "c751899e516cdf59612f82ad7c6a89698762c4643bdced7b789dc633005c37f3"
+    },
+    {
+      "id": "u19-nearby",
+      "length": 16,
+      "stepsHash": "3fa3ece850abc92965da0efc4995d644c30d4402dccf40d84f18f02d203d9486"
+    },
+    {
+      "id": "u19-shopping",
+      "length": 24,
+      "stepsHash": "a44070339b62a121f6459d413c02f30513623025c1717bd32f348f85485b485c"
+    },
+    {
+      "id": "u19-meal",
+      "length": 12,
+      "stepsHash": "5b08593c1cf10cd755d099525cd6ffa112b82aea5ff5d37b0fb68156f0f5dcf5"
+    },
+    {
+      "id": "u19-review",
+      "length": 14,
+      "stepsHash": "99deaf63ab3e736556cc5c10c46e040efe764d95a06909ae3c711ef5bb5145af"
+    },
+    {
+      "id": "u20-dorm",
+      "length": 26,
+      "stepsHash": "b233e49ba789efdf27e3527d292f98e79a80b46e8374232d660e9ce0cc5786f5"
+    },
+    {
+      "id": "u20-up-down",
+      "length": 18,
+      "stepsHash": "b25345baa5519cbd4ed1c0708102c388f802d2270dc29aa485e044562195326f"
+    },
+    {
+      "id": "u20-buildings",
+      "length": 16,
+      "stepsHash": "288fa6b2e7fc2b650b32597733116482689e5503b4807106049eef789a82e5af"
+    },
+    {
+      "id": "u20-front-back",
+      "length": 23,
+      "stepsHash": "02a075ab48248b438a6ddea8b1120348fbbc6b2a9bc925cfc7ea3b2ade8af87c"
+    },
+    {
+      "id": "u20-classroom",
+      "length": 30,
+      "stepsHash": "6f7a2b43cf553b312e4fc7e06ecb8bddbf54efdd4b7d1d84e833e0a95e700c8c"
+    },
+    {
+      "id": "u20-welcome",
+      "length": 23,
+      "stepsHash": "288528a7025a694b904147d16ef0cd10bf60bb5ccc58ae7296422f4f08fb3e4e"
+    },
+    {
+      "id": "u20-review",
+      "length": 17,
+      "stepsHash": "349fb7cbe400fa781a10ca0611590fcce9f19f4ce76e928bd60e83b95e4b4b5d"
+    },
+    {
+      "id": "u21-soften",
+      "length": 13,
+      "stepsHash": "92ea55f52c88bff283e1c5cfcf50e31d8ab09578f8b0694d238f2a27984e8a40"
+    },
+    {
+      "id": "u21-karaoke",
+      "length": 22,
+      "stepsHash": "6829c66ec19d0390f998b9a627106884422a5dd6921032b57f81b1bd44a8acfc"
+    },
+    {
+      "id": "u21-clock",
+      "length": 12,
+      "stepsHash": "e5bea9d6821e5d37b1c564bb3487e0ee8bcf5b287a23ef71d9fc166185c4186a"
+    },
+    {
+      "id": "u21-time-place",
+      "length": 23,
+      "stepsHash": "dfea018e05aa87b3511c5a4b6a3f4a44c236a4112aeb15d5db1b1649bf2a2b4c"
+    },
+    {
+      "id": "u21-from-to",
+      "length": 20,
+      "stepsHash": "0e1d10c2160dd3d163a42ca4950191fb84dec739123f0c37d6d9e0f5c2db0cff"
+    },
+    {
+      "id": "u21-conversation",
+      "length": 27,
+      "stepsHash": "aacbc700a27a5259b029a28374573ae30509656a96aad3010c601a2b66cdeb6e"
+    },
+    {
+      "id": "u21-review",
+      "length": 20,
+      "stepsHash": "333c50e3969106107e92ad1efcc0990b8c10f43f6b1bb3f9b689bbb9a6e43505"
+    },
+    {
+      "id": "u22-afternoon",
+      "length": 13,
+      "stepsHash": "9393986aa7c12446fb2dd6e5ea2a0b5adbeff9708147e62c517d6dc51923ddef"
+    },
+    {
+      "id": "u22-half",
+      "length": 22,
+      "stepsHash": "aed403046222359be7aeb6fcb34e46bcb740863f0cfd5b26686fa1b9f7973cda"
+    },
+    {
+      "id": "u22-start-end",
+      "length": 30,
+      "stepsHash": "285f50100cf2ce5525a5d78347f650b44efdf8b362f730ab699b169e571a17fb"
+    },
+    {
+      "id": "u22-progressive",
+      "length": 16,
+      "stepsHash": "5b67339b3f2b2004027c4179a9b0a799bf6a1b1db70ec45fa021c930b6a36725"
+    },
+    {
+      "id": "u22-routine",
+      "length": 26,
+      "stepsHash": "461fb6c60803f99fcf912ffc1cb7e39bad2b8324523b274b052af7ce0f426f41"
+    },
+    {
+      "id": "u22-calligraphy",
+      "length": 14,
+      "stepsHash": "6057995d6e9be8bd99208f7ca0e435b2f8dee5a56b9a3665eab4a36cddf587a9"
+    },
+    {
+      "id": "u22-review",
+      "length": 20,
+      "stepsHash": "a05047f0b641e76165fa266287453f7df34e448fdeab393afe9dcd3f4a462424"
+    },
+    {
+      "id": "u23-method",
+      "length": 9,
+      "stepsHash": "4ba5a766804a95ff362342928b8f2ec4f322d4187c5f72e716c98cfb5dfe4529"
+    },
+    {
+      "id": "u23-do",
+      "length": 18,
+      "stepsHash": "b8d8a3b44a8845b296536d409144d5e9a24fd7124b70876d23c5a6eb7ccb03f5"
+    },
+    {
+      "id": "u23-play",
+      "length": 26,
+      "stepsHash": "a5d0750f3bff9f6427d663c11dd781ca83a8fa47fd88b82c61f31f1ee5e63a91"
+    },
+    {
+      "id": "u23-contrast",
+      "length": 7,
+      "stepsHash": "dfa77a7d896620a4f9c01386d376533fb919e9861334490a29adb13a3ad47d59"
+    },
+    {
+      "id": "u23-order",
+      "length": 9,
+      "stepsHash": "a7a723396cb35146d87131ade34a4415865eca4f5aab51492e2a8bf9a1fa3a5a"
+    },
+    {
+      "id": "u23-transfer",
+      "length": 14,
+      "stepsHash": "a6835fb7eac5d33c7b955f849d7e9bd2021432d7d81718aa1cddcb90ef486b05"
+    },
+    {
+      "id": "u23-review",
+      "length": 19,
+      "stepsHash": "59a77070b282f3649154eb713fa08db92685fa164d6b65c4738023f5ca026491"
+    },
+    {
+      "id": "u24-frame",
+      "length": 21,
+      "stepsHash": "cbd5395a4dadceb18e819b411a0bfc88520da3b72c480373fd1b10bac23d1ca1"
+    },
+    {
+      "id": "u24-price",
+      "length": 11,
+      "stepsHash": "b6235b7bbe8b97302541cc51b35e67041a18d5cadc9ffa986705db0a9be9cf38"
+    },
+    {
+      "id": "u24-distance",
+      "length": 7,
+      "stepsHash": "4c4616c28e89a60270ffd81d3778744de4ed7be6e3c57988e75d41e7fe5e2f2b"
+    },
+    {
+      "id": "u24-degree",
+      "length": 27,
+      "stepsHash": "8a2b230f7d682a4e3f434733f5cc107b393987a44bb906fd13029d5faf20cccb"
+    },
+    {
+      "id": "u24-negation",
+      "length": 22,
+      "stepsHash": "dbfb14f751686ae4f43fed20bcf97460e517297fb29551688526de7656d3c132"
+    },
+    {
+      "id": "u24-questions",
+      "length": 26,
+      "stepsHash": "fd470cda37a691da55a122e613e9d7f27c6cb415c4ff4f7bd894491f05dd724b"
+    },
+    {
+      "id": "u24-review",
+      "length": 20,
+      "stepsHash": "96b28ecd43d0d5ec5ea7098372d7f77d1f49d366b678137ed6639390ae1e3794"
+    },
+    {
+      "id": "u25-transport",
+      "length": 23,
+      "stepsHash": "55d9de2a95bf4688454b2db4c7b420c3d59ef84cb69e3f895c9eea8f6b73b195"
+    },
+    {
+      "id": "u25-rides",
+      "length": 31,
+      "stepsHash": "6abb50a960b4131b3f49c1424d042df4528a015d42321a0e6c9f322b50d9f296"
+    },
+    {
+      "id": "u25-visit",
+      "length": 21,
+      "stepsHash": "274e3597356df95cd35d6d51e182d47d20b94901647f1b34f735d62b19073335"
+    },
+    {
+      "id": "u25-compare",
+      "length": 8,
+      "stepsHash": "ed16786c8971076814f6cfc2524d4b094f17c84c5c924cb128bd44e7e6d7edd5"
+    },
+    {
+      "id": "u25-negative",
+      "length": 8,
+      "stepsHash": "d9f9fc1e7243da5b94d5a95af42f0670baf5409d247785ad88bd79e9f2fb5d34"
+    },
+    {
+      "id": "u25-choices",
+      "length": 7,
+      "stepsHash": "7fd22239d82ada4ca626628d0ad9cac40528fec6055d61e9b88e7f722ea2ae4f"
+    },
+    {
+      "id": "u25-review",
+      "length": 19,
+      "stepsHash": "888404be7077e627dbaf439b960815af238c4f40acb4b6c70280af6b74c48399"
+    },
+    {
+      "id": "u26-tail",
+      "length": 21,
+      "stepsHash": "6571173cc9d149808055f6ea88500fc0067dbe30c4f54fd2cb876a8129943a3e"
+    },
+    {
+      "id": "u26-break",
+      "length": 25,
+      "stepsHash": "78f203611eb9298ddac257a6a13a09a0b3703fafcbbf2b26ec17f96686228a7f"
+    },
+    {
+      "id": "u26-return",
+      "length": 20,
+      "stepsHash": "994465b0cbabed75b356092d1c765f9078710bb893b8b9bb905a33e27ff77a6b"
+    },
+    {
+      "id": "u26-plan",
+      "length": 15,
+      "stepsHash": "559bb8cb9afe2ae4f3cffea93d7ff616de059cef3b31652cde8065a908325069"
+    },
+    {
+      "id": "u26-home",
+      "length": 16,
+      "stepsHash": "138efc51f2bbba44df2f38536a12d10d33ef967f4c1867ce5408a3a944a8a242"
+    },
+    {
+      "id": "u26-when",
+      "length": 11,
+      "stepsHash": "f919c745d1b89e39a00bc0d087086104051b7f36b1add4f43eddbfa44afbd08e"
+    },
+    {
+      "id": "u26-review",
+      "length": 20,
+      "stepsHash": "de352558de2ba926c9abe466cec0bcbe5f3588dc1293c05098cc53d1185b83c0"
+    },
+    {
+      "id": "u27-duration",
+      "length": 12,
+      "stepsHash": "bf5766dcea1bedd0b5cf31d8c61596ba40dff83a82b2ca8865f864124bfd8694"
+    },
+    {
+      "id": "u27-when",
+      "length": 7,
+      "stepsHash": "45340e4d6676f8e96b3dde609d5ae5ec736a8684423532f7a15a9d442dfd46ce"
+    },
+    {
+      "id": "u27-sometimes",
+      "length": 5,
+      "stepsHash": "38fec55677e334ddb4c20913c779a19d818ebfeb2e8fe798aac26f46ae3d753d"
+    },
+    {
+      "id": "u27-suggest",
+      "length": 27,
+      "stepsHash": "5caa29126baac6658e0d5d890f858d52bf246e428314b490aa766ec8a3d711ee"
+    },
+    {
+      "id": "u27-places",
+      "length": 25,
+      "stepsHash": "30dd89e514944f2f18ad7a6bfb8e868b965bde625146ac66add5889cccb94d0d"
+    },
+    {
+      "id": "u27-decide",
+      "length": 17,
+      "stepsHash": "f95651d75d2c58a3184008dddcdec47adc9369a3060d44ff64e13b79544b97b1"
+    },
+    {
+      "id": "u27-review",
+      "length": 22,
+      "stepsHash": "1435a1dd16de7b777d7c7c591d3835d6d784972a9c215b6646a1f5db38e8d37c"
+    },
+    {
+      "id": "u28-film",
+      "length": 16,
+      "stepsHash": "95aa70ae5272ce875065c1f35135d4430da35198c4509139f496e68da6f216df"
+    },
+    {
+      "id": "u28-years-days",
+      "length": 21,
+      "stepsHash": "c5a89f4555f703918bac8f01f9570b2a4999009e1f99f8de729f3018e22447cc"
+    },
+    {
+      "id": "u28-hours",
+      "length": 19,
+      "stepsHash": "81b616a28e84fb1a09cf62a7e74c01236d5aa7e4d6f1443f56287852475ae00d"
+    },
+    {
+      "id": "u28-object",
+      "length": 13,
+      "stepsHash": "2f9fb31a1350ffb294acaf2a2032e62f5b46f281870a986cbd979482113ebb84"
+    },
+    {
+      "id": "u28-negation",
+      "length": 12,
+      "stepsHash": "26cae8965259877ca61f7ea629dbdbdb62647d937d0c5165c18199acfb20c625"
+    },
+    {
+      "id": "u28-separable",
+      "length": 8,
+      "stepsHash": "a0f7fd040afa67dbc9c3b61bb545acea0695ba0963dba3678eb5219eec15cb20"
+    },
+    {
+      "id": "u28-review",
+      "length": 22,
+      "stepsHash": "d29edb8ef98a13485ae400378b31aaa43d0e9524d0515cdb634fc88b8b80bc4e"
+    },
+    {
+      "id": "u29-date",
+      "length": 27,
+      "stepsHash": "668146ad98c2e34236aef12b14ef55182e5d46bd37142074522c199d24ae2417"
+    },
+    {
+      "id": "u29-hai",
+      "length": 17,
+      "stepsHash": "168d2ff40864751116f05569b75ee72a70d26be10543962912c888850e21d24f"
+    },
+    {
+      "id": "u29-maokong",
+      "length": 16,
+      "stepsHash": "79d66bfa5c01aaf9a7592e4daf3f3c956093d4dfa3915fc652df5bf06839cf82"
+    },
+    {
+      "id": "u29-condition",
+      "length": 17,
+      "stepsHash": "a6950677e9db04356ff6614e065d4df957941fe5d94d1cb7b6c3f3a645ab02bb"
+    },
+    {
+      "id": "u29-negative",
+      "length": 6,
+      "stepsHash": "e512093595853626a612d953493d6ed828e09973a1cb9620218ae1cb463ef02f"
+    },
+    {
+      "id": "u29-integrate",
+      "length": 8,
+      "stepsHash": "19d5f878c624c07b545036fa0ede0389a5a471b19bca271b10e956494f08b5dd"
+    },
+    {
+      "id": "u29-review",
+      "length": 22,
+      "stepsHash": "3ed76159a6813bc2d13c86dda02cf46dfb4b7817b2f0349fc84d78d6c24e60eb"
+    },
+    {
+      "id": "u30-fruit",
+      "length": 13,
+      "stepsHash": "545f86b1d006020a5746f32176185c421d8154cab6bf6e2d2180ca9dfbf92fd7"
+    },
+    {
+      "id": "u30-guess",
+      "length": 6,
+      "stepsHash": "d9c95dfa765c3011810515bc1608711aa13effa84658005c29f63541bd353ea2"
+    },
+    {
+      "id": "u30-try",
+      "length": 8,
+      "stepsHash": "7d715d666dc6e06711a10998536df3af8415f29d562603a93898d287877b66db"
+    },
+    {
+      "id": "u30-taste",
+      "length": 6,
+      "stepsHash": "0f11ef50117cb77a8ef70e285448611f726f9ea1bd330139cfa9c8341313ef5f"
+    },
+    {
+      "id": "u30-photo",
+      "length": 19,
+      "stepsHash": "525ca7d116166033454b48ff15bf50c4e00f4a3aac4cd84fde17a1156e3fb77d"
+    },
+    {
+      "id": "u30-clothes",
+      "length": 15,
+      "stepsHash": "cef49ec09f0f6f2a3660d6a01a6f44a1c109741ee9e128231b02929fcae58648"
+    },
+    {
+      "id": "u30-review",
+      "length": 23,
+      "stepsHash": "7b7fc20d7da559451147a4de0b1f90bc85dda0d085857859c4cae8e4f9993984"
+    },
+    {
+      "id": "u31-hotel",
+      "length": 10,
+      "stepsHash": "90ccdb7905d9ac6b176ba678fca1971ed636b2e341181adf53244aac2e908212"
+    },
+    {
+      "id": "u31-people",
+      "length": 20,
+      "stepsHash": "eb00c06017da28d2509cddca4291c2c90d8c8a42532f69bca0bb389bc5c06f2e"
+    },
+    {
+      "id": "u31-photos",
+      "length": 12,
+      "stepsHash": "271cd8de698848ef8f33188829931983cafe09beefdbda6f2841b6688bbeffdd"
+    },
+    {
+      "id": "u31-change",
+      "length": 22,
+      "stepsHash": "aa91436711e03d15f4701b1b7a4e1f95f3d2a8d95e71441e9f7558b68d6cdf04"
+    },
+    {
+      "id": "u31-toward",
+      "length": 9,
+      "stepsHash": "faf53cf3a109700eeff6fe5be5aef6f11d9a8c5fe784e7c9c003074ef36d6576"
+    },
+    {
+      "id": "u31-because",
+      "length": 10,
+      "stepsHash": "d0c4cfa00a421a662ee18bd5108f931259fda082c903b3f5559495d512ba79bb"
+    },
+    {
+      "id": "u31-review",
+      "length": 22,
+      "stepsHash": "3d9391fea548050d7e1eb95a98294becd0b2a797ed354146b8df57121fbd6518"
+    },
+    {
+      "id": "u32-rent",
+      "length": 18,
+      "stepsHash": "e713487895031269528525d3130f6ed6973039fb83e6b320323058fd9e805f49"
+    },
+    {
+      "id": "u32-rooms",
+      "length": 18,
+      "stepsHash": "01bd333d6e9d885fe973e3c81a9248eb64e6e58e8241cd0b4caaced4a0b68536"
+    },
+    {
+      "id": "u32-sides",
+      "length": 22,
+      "stepsHash": "2b8ddf394a7cc1bf736de311b5e3bb26b597880c6fefcdb70d8c634885fd1ead"
+    },
+    {
+      "id": "u32-nearby",
+      "length": 18,
+      "stepsHash": "99858075061f663af42bacc78e019495208a7dbe9ca2dc302697c4ef49443d42"
+    },
+    {
+      "id": "u32-come",
+      "length": 18,
+      "stepsHash": "cac10d02ccdf5947aff008b78453c2dc353667c6606e53658e388672a7bcfc8d"
+    },
+    {
+      "id": "u32-quick",
+      "length": 5,
+      "stepsHash": "0b0a0a8c7e3dedb3b5ae12560d5ff5493816a793d3b16c1cb6e9390fc6b64b2c"
+    },
+    {
+      "id": "u32-review",
+      "length": 22,
+      "stepsHash": "472ab0de76f349118e63fb901de3824c81c3341217ee27e0ca1108c65a9096f4"
+    },
+    {
+      "id": "u33-call",
+      "length": 14,
+      "stepsHash": "fe7d6a5e8241552a454530e3bc054387bc59024a04a67aea4198630eb8382e23"
+    },
+    {
+      "id": "u33-settled",
+      "length": 24,
+      "stepsHash": "871c47ae3bb686ba14d818ba2dc206564846abdf7cd7075666447833331d945e"
+    },
+    {
+      "id": "u33-heater",
+      "length": 13,
+      "stepsHash": "80e1b980c6d24bdfd04f0f38655a125cd01b12733ea8678fd71030a854c3842c"
+    },
+    {
+      "id": "u33-install",
+      "length": 25,
+      "stepsHash": "ab65ecabc1018fdd12a88ae7e9677d97216e217f2a827523709b9b6de2582879"
+    },
+    {
+      "id": "u33-exists",
+      "length": 19,
+      "stepsHash": "2e1c6bfec2b5aa8263ad61bb7e4fd72327b605f87f04fc779b1d930899fa1d7b"
+    },
+    {
+      "id": "u33-will-omit",
+      "length": 8,
+      "stepsHash": "c0947122b4f2e01d6be0d11d0ba5db236b29ac59f9be7a68539d2bedab44463f"
+    },
+    {
+      "id": "u33-review",
+      "length": 22,
+      "stepsHash": "ac90dcf079828833b021a6f6c1bcfa06231ded2d582512efd8e540bc75ebc2f6"
+    },
+    {
+      "id": "u34-plan",
+      "length": 19,
+      "stepsHash": "494e1e9a390e6e90a56df96152efd4292b310f882e5261f048ff494624ab6ea2"
+    },
+    {
+      "id": "u34-sequence",
+      "length": 14,
+      "stepsHash": "30fb548bfe2a74d86601b8f9312a71ccc0d6bd0ce83f648618b8c787146d5506"
+    },
+    {
+      "id": "u34-center",
+      "length": 14,
+      "stepsHash": "06b6ec15b6842c0db55ef9e9923282fbe707b66d244bb87fa8f88b83414776df"
+    },
+    {
+      "id": "u34-need",
+      "length": 9,
+      "stepsHash": "3989bfb676bc4d58c080aba1b07c7f3c6a52c001870b755d209cbe5a1051d107"
+    },
+    {
+      "id": "u34-money",
+      "length": 19,
+      "stepsHash": "b13e8b04eeb25a4bc7fde1526f43bb6b2bb55b83b1c8df07ad4dc30d2404aafd"
+    },
+    {
+      "id": "u34-grades",
+      "length": 13,
+      "stepsHash": "efdb1dbade1b02e1e75c04c0613fe605b8ff12125935a97dbabf37e70599fa6e"
+    },
+    {
+      "id": "u34-review",
+      "length": 22,
+      "stepsHash": "9cd9a6b3e026a21ff9caf07816c84319c9057d8d64adcb68de7f55d1b13d8cf3"
+    },
+    {
+      "id": "u35-tuition",
+      "length": 19,
+      "stepsHash": "e8ab16edafa6692c071d9da79d2684b94f08e0c97b06d7f9942430f323a02776"
+    },
+    {
+      "id": "u35-focus",
+      "length": 15,
+      "stepsHash": "a3fb81167da91d79dfb8bd7e0ca38d59519b8cd504a2a6b23036e9d644c4ab52"
+    },
+    {
+      "id": "u35-decision",
+      "length": 5,
+      "stepsHash": "3a8fe08296de8714d5d2788534051c5f30dc9d99de384c39ced338ffcb66b1eb"
+    },
+    {
+      "id": "u35-future",
+      "length": 19,
+      "stepsHash": "2071e706b8823f4fd9d0c4fbaf039409d244f84dd7d37b903e8548de74bae537"
+    },
+    {
+      "id": "u35-workstudy",
+      "length": 9,
+      "stepsHash": "006b142bd98d74d6ba93e3f75091727f4562bfc423d4faac01811e826648da8e"
+    },
+    {
+      "id": "u35-cheer",
+      "length": 17,
+      "stepsHash": "6065e7efa53a7724175c07e29e0a9b5940fae97113619a2fc051f9901e00b265"
+    },
+    {
+      "id": "u35-review",
+      "length": 27,
+      "stepsHash": "de9dca8deb6e11178a33149520e1006fcd544ee34f098adb915d09bcc0df4693"
+    },
+    {
+      "id": "u36-work",
+      "length": 15,
+      "stepsHash": "edd7ef58dd03be56ba4f2d3878566cab9e33dcd341571a1705ae2003b332c806"
+    },
+    {
+      "id": "u36-business",
+      "length": 7,
+      "stepsHash": "ebd81da14902c5c3638ca2287a2380ccac4402968fca6249bf0d3882b8701c64"
+    },
+    {
+      "id": "u36-after",
+      "length": 8,
+      "stepsHash": "4d5ea727d8febb9493fb755b9f2d8bfc66205b43774ec684d6482051c759c46a"
+    },
+    {
+      "id": "u36-job",
+      "length": 12,
+      "stepsHash": "00346ebdd19b6b919a05fe5ca60c9616110c8e865f291a79b6d01f891aa7a098"
+    },
+    {
+      "id": "u36-try",
+      "length": 9,
+      "stepsHash": "c385d3f1b0cfd43d73a27bc55c64e0fb264cd094f1d9f8a3bd3079ce1a85603d"
+    },
+    {
+      "id": "u36-hard",
+      "length": 8,
+      "stepsHash": "edec02d9f6022bfde11cad6f84130d344540025fde92b3def71868bb84132936"
+    },
+    {
+      "id": "u36-review",
+      "length": 28,
+      "stepsHash": "0d5ba2b7d7931c070da8d023cdf5a258ff883f31a884b113b80d2534ccab345a"
+    },
+    {
+      "id": "u37-phone",
+      "length": 8,
+      "stepsHash": "57fc7254810eb1f7f3bdd481d842df7761ecb315fbc270901da6ee62eaedcf9e"
+    },
+    {
+      "id": "u37-birthday",
+      "length": 7,
+      "stepsHash": "8afc897ebc6699717480e85621ee200dbdc729ba1167a6a7d6c4fb41bf246aed"
+    },
+    {
+      "id": "u37-return",
+      "length": 6,
+      "stepsHash": "859a3065603ab4935c180ff59ea8042cee203d6799e894a73807cdcebdcb7bac"
+    },
+    {
+      "id": "u37-forget",
+      "length": 11,
+      "stepsHash": "b915230b12a93d0575b47a2fb64c610eddf3a33e013bc49ecb580babfab9dd01"
+    },
+    {
+      "id": "u37-remember",
+      "length": 10,
+      "stepsHash": "230b2cc3df1a5b06e23ed65f7ab0d100ffd850af9d53531f10383d59a628c1ce"
+    },
+    {
+      "id": "u37-of-course",
+      "length": 18,
+      "stepsHash": "220c23e947a194dae1d4df83a2f4ec769f75026231ca728c3d14ea49b8ff7ba6"
+    },
+    {
+      "id": "u37-review",
+      "length": 19,
+      "stepsHash": "99c99c0062cecb0e489c094b7c63998776a090fb1f43dd426d13e0c492828883"
+    },
+    {
+      "id": "u38-exchange",
+      "length": 14,
+      "stepsHash": "76ac29d7ab965a15df387dace42e235ba9ce91b72ae9ffa7f8311ff3348974c7"
+    },
+    {
+      "id": "u38-enthusiastic",
+      "length": 10,
+      "stepsHash": "1f73e7b2eec5a3b393d7549ae1a67ecc69506a4c62ae9f5ff8df5593be9e950a"
+    },
+    {
+      "id": "u38-polite",
+      "length": 15,
+      "stepsHash": "d3c05070c70a502be3c4304857972eeee848ea6acef2022907daf5059e2d044a"
+    },
+    {
+      "id": "u38-celebrate",
+      "length": 4,
+      "stepsHash": "f90d472b5f9edc0fb13eb2cc76a1918a011d9a4fa06952a308de05eef7261c6f"
+    },
+    {
+      "id": "u38-as-soon",
+      "length": 9,
+      "stepsHash": "1de63a627c0bcad9acf870c915fa95d5302383711fad8a326d9e0bfbea623d34"
+    },
+    {
+      "id": "u38-meet",
+      "length": 16,
+      "stepsHash": "994fc163da7f67b91641c9d68cb594d2865bdb97f396aacc21a48d8e294aa2f1"
+    },
+    {
+      "id": "u38-review",
+      "length": 20,
+      "stepsHash": "11e510214cd8a688fac99ed594a8db7e425c79c93241a1d9b717ad1e3e512126"
+    },
+    {
+      "id": "u39-gift",
+      "length": 14,
+      "stepsHash": "557ad9615d5f5749b9866831de2497476452c84718b70266c794bd45e23a1cda"
+    },
+    {
+      "id": "u39-this-year",
+      "length": 6,
+      "stepsHash": "ce7406b15a3c893a566dce4b35839f0af1d8d4e26ce5bbf1552e736012ce4e9b"
+    },
+    {
+      "id": "u39-ordered",
+      "length": 10,
+      "stepsHash": "319f2d82198b269c150f5986df7a10f79931cf57d53691044c70accbcc7659c2"
+    },
+    {
+      "id": "u39-food",
+      "length": 20,
+      "stepsHash": "e5d902b79d0735008ebbee88d3ff20b18ea95154ebc98d5eb4a24a830f375b5c"
+    },
+    {
+      "id": "u39-a-little",
+      "length": 5,
+      "stepsHash": "0d9f6f76f6813b7098250188ff43e5490fb1a9f410748157e9e6c780068cafac"
+    },
+    {
+      "id": "u39-negation",
+      "length": 8,
+      "stepsHash": "79b3d38ca6953ff0d0e2d2635052b81af5ce946bbad813d9057b517766d21cdf"
+    },
+    {
+      "id": "u39-review",
+      "length": 21,
+      "stepsHash": "1ad6b1d471c1b91d5aa7be232cd6a5e01a5560982a22abe6ac9850237cd3ab81"
+    },
+    {
+      "id": "u40-everything",
+      "length": 8,
+      "stepsHash": "d9dc048db0f659ca0351b6fb5385173a73cb07481f51b17b3f9917fdba7c0f57"
+    },
+    {
+      "id": "u40-nothing",
+      "length": 6,
+      "stepsHash": "22a73cba20c7a4f8126e0bb48314da67c142218c5c7c4c60ef983565b5a22c15"
+    },
+    {
+      "id": "u40-tradition",
+      "length": 14,
+      "stepsHash": "6e3e2264c0ec02075d0d381516726efae538e55ca2e4fc44bf4159a28153e384"
+    },
+    {
+      "id": "u40-most-young",
+      "length": 14,
+      "stepsHash": "3eee7ff092ab10cfe26186a54b1231becefb55ef4e8f7370c310875a608a7537"
+    },
+    {
+      "id": "u40-more-less",
+      "length": 7,
+      "stepsHash": "ab9fa8cba793070f86887053b1450ea2ebf65509d35ebec42a3c0195b5c9a6ef"
+    },
+    {
+      "id": "u40-customs",
+      "length": 6,
+      "stepsHash": "1923a2148c1c4ad7fdc4b3042b8079c6efad3734812cbfe685b97a11804b5498"
+    },
+    {
+      "id": "u40-review",
+      "length": 20,
+      "stepsHash": "4d1b0bf4a6cf8c6d3a348fececfc06b35c84a66cf7a4e113035ef296e41dda25"
+    },
+    {
+      "id": "u41-cake",
+      "length": 9,
+      "stepsHash": "3e8a352beda1f6be32e806208c1796925125404b090f03277ea2c428de3356c3"
+    },
+    {
+      "id": "u41-confirm",
+      "length": 6,
+      "stepsHash": "e426b4b992269e631c8e2f17dd52b6f1b087b858adaa9bbadd24c9ba205b9458"
+    },
+    {
+      "id": "u41-same",
+      "length": 6,
+      "stepsHash": "53e830ff55ee4e2bb12384535d7a9aa1e11a2386d453a8ac2cf9e6bb560a4437"
+    },
+    {
+      "id": "u41-different",
+      "length": 6,
+      "stepsHash": "b5763f69add1c7383cc4a7328f28e838bb4729671574afe4e00f12cd430c1f00"
+    },
+    {
+      "id": "u41-wishes",
+      "length": 17,
+      "stepsHash": "fb36c00bf9a4f7edd0ae25ea26ec1ceb62f98f3b7d5bc01d362e82a39980d988"
+    },
+    {
+      "id": "u41-capstone",
+      "length": 8,
+      "stepsHash": "afa42134e49b9fcdd8b171a2ab777f61dbb0d454ea8013e1c32f4ec60906112a"
+    },
+    {
+      "id": "u41-review",
+      "length": 22,
+      "stepsHash": "880e310f50746fc7a1299d588163b0f0a802abe7dcdca49c71effc6c86389c83"
+    },
+    {
+      "id": "u42-weather",
+      "length": 13,
+      "stepsHash": "f42e646c94488faa1c22c9bec7a02e6be9523fc17aeddf97455a48dd66f4f692"
+    },
+    {
+      "id": "u42-snow",
+      "length": 18,
+      "stepsHash": "30c68c1f6080701ed7016780ec3618909b58effc2a85ad4eb84ed01a3be38e92"
+    },
+    {
+      "id": "u42-spring-winter",
+      "length": 18,
+      "stepsHash": "8cdf2d866bab33afb01d6aa45198045b39e41190f9570a64c716c0b177f9a822"
+    },
+    {
+      "id": "u42-summer-autumn",
+      "length": 17,
+      "stepsHash": "10e1e8425c3d9d4dfad943545d1d7a64a2207b169887c71c4e8157db3930246e"
+    },
+    {
+      "id": "u42-rain",
+      "length": 14,
+      "stepsHash": "1802d47215982653a68d6de06506b066a5a16e7c6fc52862524d3fda998c543b"
+    },
+    {
+      "id": "u42-seasons",
+      "length": 11,
+      "stepsHash": "37469ab34a13eb7e438a65bc0205e3b9c67f52a98edffc02b1ce536a9a21453e"
+    },
+    {
+      "id": "u42-review",
+      "length": 26,
+      "stepsHash": "65f4919e1a10ae7ae442d525893c714600cbf39dc42fb635c7201ef343b8403e"
+    },
+    {
+      "id": "u43-finished-duration",
+      "length": 17,
+      "stepsHash": "04432b0b1fcee252ef13abd796571f9d694c1b781a4e4261e2b4e39eb5a48ddf"
+    },
+    {
+      "id": "u43-duration-now",
+      "length": 14,
+      "stepsHash": "798f8015ed9b2cb6a169dd3a6a3e90becf0522f6bfe1b498edc8e48e002fae0b"
+    },
+    {
+      "id": "u43-new-year",
+      "length": 23,
+      "stepsHash": "b189d13e8060e181a9ce495cdcaacda8add9011f54332610b31c90ba5cd6508b"
+    },
+    {
+      "id": "u43-stopping",
+      "length": 10,
+      "stepsHash": "7ef4a866f9021f15a60aea6781d7d0a5338e94bb90d5e74d78254de4450393b8"
+    },
+    {
+      "id": "u43-return-plan",
+      "length": 11,
+      "stepsHash": "d8f9457d1847e2bdf31eb6aa325b44603e0b6e36344a94f98fa88ea90f2e2886"
+    },
+    {
+      "id": "u43-next-year",
+      "length": 13,
+      "stepsHash": "ac58b0a135a7dfe878cce3231e8e976cb51f08f86c62f2efb0363ecd350b96c6"
+    },
+    {
+      "id": "u43-review",
+      "length": 28,
+      "stepsHash": "8fbc1091657d938a05e49a5d216a37516676fceed6d4dd86c45c8c0d795e1de2"
+    },
+    {
+      "id": "u44-umbrella",
+      "length": 12,
+      "stepsHash": "87b34f6f0cf6601e55274ddfc961683593038a6ca53bdfeab02835b39f7dcd82"
+    },
+    {
+      "id": "u44-typhoon",
+      "length": 16,
+      "stepsHash": "7e3a784e13cb51e26ab0c75a440f6257f3f025c485e04e1b62357bad36966f27"
+    },
+    {
+      "id": "u44-wet",
+      "length": 23,
+      "stepsHash": "477f1c8a5c95f5d2d7e8033dc827b88d4f177d0d069a7c4bf4449d6e3ea6c110"
+    },
+    {
+      "id": "u44-news",
+      "length": 16,
+      "stepsHash": "55d33cb2183fc8a9349acd0343e11820b3347502fc0c6b111da571ef5024a828"
+    },
+    {
+      "id": "u44-even-more",
+      "length": 16,
+      "stepsHash": "d19da050182fe050be350f32a6062efca6da3e858e84bdbdd176f879abc576d0"
+    },
+    {
+      "id": "u44-not-as",
+      "length": 15,
+      "stepsHash": "0d72120c41ef28e3331d918cfb3df323eeb32fc1f3afea013e99a6843ed881b7"
+    },
+    {
+      "id": "u44-review",
+      "length": 41,
+      "stepsHash": "e85c93aea3fdd197977c602b34e7fda07f6cb853badbb6cfa4bbcc1cdf48d3ca"
+    },
+    {
+      "id": "u45-doctor",
+      "length": 12,
+      "stepsHash": "9f94e4b29e37e744d1970f521b43514b0aeb3749bd8fcb909089db7804f8fa52"
+    },
+    {
+      "id": "u45-runny-nose",
+      "length": 25,
+      "stepsHash": "5bb4adbf2128268f70993acefe51eb7a4ff5662ec34bb6a9f71ae5daa7f73177"
+    },
+    {
+      "id": "u45-head-appetite",
+      "length": 23,
+      "stepsHash": "6d210204da896af0bd324a955cfefb1ac44026d4df13d305ea84bc1fabba17b0"
+    },
+    {
+      "id": "u45-throat",
+      "length": 32,
+      "stepsHash": "408d8aeb74118c6028f0698cc4e258bc5fb620dab6745ef1d0334f68be243b9c"
+    },
+    {
+      "id": "u45-sick-fever",
+      "length": 20,
+      "stepsHash": "d20b1880c26f6ff4e5d98a82ebb6220329a964464ce1e67b5bcd4d9287cd3092"
+    },
+    {
+      "id": "u45-how-long",
+      "length": 9,
+      "stepsHash": "fbc869f4e2be4a985dc974bc10970dcfb6e5da839c6bef6aa98307bb6efa87f8"
+    },
+    {
+      "id": "u45-review",
+      "length": 32,
+      "stepsHash": "6bcf58df7610cf71c07cdf9614a1570b39b18f21c828c4b7b66a209a8a6d3c5c"
+    },
+    {
+      "id": "u46-cold",
+      "length": 18,
+      "stepsHash": "e777749682d7e33ffdd927d2c3c16be55de31921adbf9487a8c8e4b417aa0348"
+    },
+    {
+      "id": "u46-nonspecific",
+      "length": 9,
+      "stepsHash": "6ebfe8995d5cc29cf321c65c9eeeac0874430e86b10f8d4c93d84f1d7524b204"
+    },
+    {
+      "id": "u46-medicine",
+      "length": 29,
+      "stepsHash": "34a9c55203964cb0657ea5cb0813de4e321e12afa8a6a193dcbe9d4692b32fff"
+    },
+    {
+      "id": "u46-ba",
+      "length": 17,
+      "stepsHash": "a3c3f56af38afd30195e59272c4b3db799cc6543ac23a73b1ef835ffab1c2ff2"
+    },
+    {
+      "id": "u46-recover",
+      "length": 28,
+      "stepsHash": "8649e0e42c4f0c6d168e3b690cb320a6b007e32ebff1687e6c555d9de8f3c93f"
+    },
+    {
+      "id": "u46-doctor-visit",
+      "length": 22,
+      "stepsHash": "16203e06217c783dfcd30a70761e51c6150db00518904311884d95d6c8933b58"
+    },
+    {
+      "id": "u46-review",
+      "length": 34,
+      "stepsHash": "0b36404e3de72ce86c528dbf66f0963f37b7e7a0fdd4cd8976f6dfcf1c3391ba"
+    },
+    {
+      "id": "u47-whats-wrong",
+      "length": 14,
+      "stepsHash": "f5f0a138a3ff1a9162890879c53b2282005565cf282039f558d0f1a92d29e2d1"
+    },
+    {
+      "id": "u47-stomach",
+      "length": 23,
+      "stepsHash": "27ce656d0c0e588741a4c932ac8267c71eca9c51906c28a9c4782b947eb6e629"
+    },
+    {
+      "id": "u47-vle-jiu",
+      "length": 11,
+      "stepsHash": "4926dc22ca227a4a94698fc6770bb8b5fc46830cddf9a32f23b7f7d8596d829d"
+    },
+    {
+      "id": "u47-accompany",
+      "length": 15,
+      "stepsHash": "9aaabff3b3f9a70c18264aca4c1ad952c2ff028bc48c2f02badd55f1f4fd563a"
+    },
+    {
+      "id": "u47-health-center",
+      "length": 40,
+      "stepsHash": "23ab94a318f1c6625e6b490226b6aa0aa236d99dd86056409d80fc7e6d297a5b"
+    },
+    {
+      "id": "u47-refuse-help",
+      "length": 10,
+      "stepsHash": "f74f028cec5bab39f9b9c2868eeb2e3a98741861394322b4d7a1ca4bb166c3df"
+    },
+    {
+      "id": "u47-review",
+      "length": 34,
+      "stepsHash": "742e3603a26bad16b6378f0237d6d8399603c52451d10e5dadcb4f08f7cfce7f"
+    },
+    {
+      "id": "u48-advice",
+      "length": 33,
+      "stepsHash": "452643c7a323b82452e058753fc15397d6b03c9e33467a2de57bd030734eb7b9"
+    },
+    {
+      "id": "u48-a-little",
+      "length": 11,
+      "stepsHash": "5830bbe83d629a2f5ddc36af6634ceb2cc81d3fe6e26638aa19b2b28d3db7da2"
+    },
+    {
+      "id": "u48-action-compare",
+      "length": 16,
+      "stepsHash": "1c391dfab99e801f0865af9dc52e88dbf745b729590fa76c50b38bbda618d3f5"
+    },
+    {
+      "id": "u48-degree-compare",
+      "length": 15,
+      "stepsHash": "8b1bcd1711d005c75b214d60ce7bc4e9ab49f550b66edeb55c6661058bbb3c7e"
+    },
+    {
+      "id": "u48-separable",
+      "length": 11,
+      "stepsHash": "0a1738179b666174bfcb939b1b62a6553f05f26db191a0e9aaad086c2de94444"
+    },
+    {
+      "id": "u48-prescription",
+      "length": 9,
+      "stepsHash": "addbf00ae931ee93a4cb14181f8d006d6540feb6d044df19a69aecbd4d990786"
+    },
+    {
+      "id": "u48-review",
+      "length": 59,
+      "stepsHash": "5054cb1aa8226a5b4cd68461853f6d6144598cad7d2fae6f1bf005c6d82035ee"
+    },
+    {
+      "id": "b2u1-l1-lesson",
+      "length": 12,
+      "stepsHash": "d82ca056675672a2f1c521fa1276e65fdad27b318849c35793cf05fc1babf291"
+    },
+    {
+      "id": "b2u1-l2-lesson",
+      "length": 8,
+      "stepsHash": "fab358fcc31da5f198613602b6c13a6f443e0911a1e41f80c5306a7894af095d"
+    },
+    {
+      "id": "b2u1-l3-lesson",
+      "length": 8,
+      "stepsHash": "8a7c7cf4ae9fc7585d955b27264084632e88abf2b0494f4992b28f020dca1062"
+    },
+    {
+      "id": "b2u1-l4-lesson",
+      "length": 10,
+      "stepsHash": "f2bc47ca4b2c75899d8d88866d78c320bee6a6e21d287b4cee42d454fb6c6f64"
+    },
+    {
+      "id": "b2u1-l5-lesson",
+      "length": 13,
+      "stepsHash": "c5b4b35b0aeafeaefa764fc2c7d1ebcc534cd38ae141ed46ce6e1b30acb6c4ac"
+    },
+    {
+      "id": "b2u1-l6-lesson",
+      "length": 8,
+      "stepsHash": "b237e8af81ae29cbc783c6c4fe57852c0568722a7d572b0ef0404c85e4617357"
+    },
+    {
+      "id": "b2u1-l7-lesson",
+      "length": 28,
+      "stepsHash": "ef0333425f6fb214173057a704789349eea21c1ac6a0365f811e50fb666386e6"
+    },
+    {
+      "id": "b2u2-l1-lesson",
+      "length": 15,
+      "stepsHash": "a065634fdb030587da5dd4328b322cc6b5bd1cd46c9af64dc90d5c6aab04326c"
+    },
+    {
+      "id": "b2u2-l2-lesson",
+      "length": 20,
+      "stepsHash": "b000d977633949f360f009c7a86c747271dafa69af7eb648b7495a2ebdfdb77e"
+    },
+    {
+      "id": "b2u2-l3-lesson",
+      "length": 8,
+      "stepsHash": "8301e16c53aa3bbb3c8ca67f5bfd88ab4850c91dc27d97998de955c768c74f13"
+    },
+    {
+      "id": "b2u2-l4-lesson",
+      "length": 19,
+      "stepsHash": "085d503797641ee647ae16b0e5a681db44053b8eec0cd2582dc7895d4e7a4e14"
+    },
+    {
+      "id": "b2u2-l5-lesson",
+      "length": 18,
+      "stepsHash": "18364d5bcf09df94ed1c629554fb4376ae3d0ebdf4ce4bc3cfb5c8c8d2256ab0"
+    },
+    {
+      "id": "b2u2-l6-lesson",
+      "length": 17,
+      "stepsHash": "103b0fa35012799678dbc8c344c1bc0d1257e1948de579706aa76655cac1298d"
+    },
+    {
+      "id": "b2u2-l7-lesson",
+      "length": 40,
+      "stepsHash": "2fdc2d717bc9ae1e15bb2c39838bb77ff6bde79469cb349b9d6208688d2e1dc0"
+    },
+    {
+      "id": "b2u3-l1-lesson",
+      "length": 5,
+      "stepsHash": "2cb6104e4610bc81ea5afd29c01515e55d8b4df1719cfc4a86023949180fae23"
+    },
+    {
+      "id": "b2u3-l2-lesson",
+      "length": 6,
+      "stepsHash": "b21d967bc353739e9d7edfe68ec606dd04285b01f82fe1797f42724cac55ad3a"
+    },
+    {
+      "id": "b2u3-l3-lesson",
+      "length": 15,
+      "stepsHash": "b92f0c8a32438c14278f385757a5677c61fcee877416a6bd88512883cb47f9c2"
+    },
+    {
+      "id": "b2u3-l4-lesson",
+      "length": 11,
+      "stepsHash": "2fe6697208c307112c23421db8722fc6388cae1801a61409b34f823cf7f4f72c"
+    },
+    {
+      "id": "b2u3-l5-lesson",
+      "length": 13,
+      "stepsHash": "0d2b71001f8eb1df5b9cedb7767c94dc5fbb3ea683f2267be5e265e2b0f384b8"
+    },
+    {
+      "id": "b2u3-l6-lesson",
+      "length": 8,
+      "stepsHash": "5695602498737d3a3183292b41c2fb84fabd9fbf743b79f707a43c30f6351fbe"
+    },
+    {
+      "id": "b2u3-l7-lesson",
+      "length": 28,
+      "stepsHash": "2ae6e0045784126e1d61fbc2ee67fab861f6f86ddbb88e6ea274caef9184fb83"
+    },
+    {
+      "id": "b2u4-l1-lesson",
+      "length": 10,
+      "stepsHash": "a50afb70cb0d221f98bd5669588208898200ef3f283f3b369b251c8bdfa431b4"
+    },
+    {
+      "id": "b2u4-l2-lesson",
+      "length": 10,
+      "stepsHash": "5136644748a28f97af693c5e32e73b480f39d1f3c57daef2f1676eeef8637189"
+    },
+    {
+      "id": "b2u4-l3-lesson",
+      "length": 15,
+      "stepsHash": "8563616b6fa7ff1bc4fca6b7d8b2315635280d2465437841bb04d63702034324"
+    },
+    {
+      "id": "b2u4-l4-lesson",
+      "length": 18,
+      "stepsHash": "4a2b11d10eecfa86faf2d158b8edbe90a446832185ad5bc2477a10f9ad54efbc"
+    },
+    {
+      "id": "b2u4-l5-lesson",
+      "length": 20,
+      "stepsHash": "2b67572048155a93c0856a66baa354f9df72df9999a7bddce574bc7827ba0083"
+    },
+    {
+      "id": "b2u4-l6-lesson",
+      "length": 10,
+      "stepsHash": "e8f62da107ddd1ccfe9c11bdd4a422db6ff238a9d41ebee607ed80a2b8eb3c64"
+    },
+    {
+      "id": "b2u4-l7-lesson",
+      "length": 42,
+      "stepsHash": "b090fe5fa8a28af619ec18dd0757456ba99220985d3c7093dd23543116d1052f"
+    }
+  ]
+}

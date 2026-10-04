@@ -51,7 +51,7 @@ test('old completed reviews stay complete after embedded reading checks are appe
  let i=0;
  for(const [lessonId,oldLength] of Object.entries(historical)){
   const lesson=findLesson(lessonId);
-  assert.equal(lesson.steps.length,oldLength+1,lessonId);
+  assert.equal(lesson.steps.filter(s=>s.type!=='produce').length,oldLength+1,lessonId);
   const base={id:'550e8400-e29b-41d4-a716-44665544'+String(i++).padStart(4,'0'),lessonId,index:oldLength,independent:0,assisted:0,updatedAt:1};
   assert.equal(validSession({...base,complete:true}),true,lessonId+' historical completion');
   assert.equal(validSession({...base,complete:false}),true,lessonId+' historical draft can continue into appended check');

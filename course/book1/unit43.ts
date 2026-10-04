@@ -709,6 +709,30 @@ const unit:UnitData = {
             "因為我們只放十天的假",
             "所以一月五號回來"
           ]
+        },
+        {
+          "id": "u43-produce-finished-stay",
+          "type": "produce",
+          "phrase": "u43-finished-stay",
+          "prompt": "Report a finished stay: I lived in Taiwan for one year.",
+          "answer": "我在臺灣住了一年。",
+          "explanation": "In this example, the speaker is reporting a completed one-year stay. 了 follows 住 and 一年 gives the duration. Without that context, the sentence alone does not prove the speaker has left Taiwan.",
+          "grammarIds": [
+            "u43-completed-duration"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": ["我在台灣住了一年。"],
+            "grammarHint": "The single marker attaches to live; a second final marker would change the time interpretation.",
+            "keyVocabulary": [
+              "臺灣",
+              "住",
+              "了",
+              "年"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted. Both 臺灣 and the Traditional Taiwan spelling 台灣 are explicitly reviewed.",
+            "constraints": "Include I and use location + live + completed-action marker + one-year duration. Do not add the continuing-up-to-now final marker."
+          }
         }
       ]
     },
@@ -825,6 +849,30 @@ const unit:UnitData = {
             "不過",
             "我想明年秋天去看紅葉"
           ]
+        },
+        {
+          "id": "u43-produce-duration-question",
+          "type": "produce",
+          "phrase": "u43-duration-question",
+          "prompt": "Ask how long your friend has lived in Taiwan up to now.",
+          "answer": "你在臺灣住了多久了？",
+          "explanation": "多久 asks how long; final 了 asks about the duration reached up to now. Compare 住了一年, a reported one-year span, with 住了一年了, a year reached so far.",
+          "grammarIds": [
+            "u43-duration-to-now"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": ["你在台灣住了多久了？"],
+            "grammarHint": "The final marker is essential to the duration continuing to now.",
+            "keyVocabulary": [
+              "臺灣",
+              "住",
+              "多久",
+              "了"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted. Both 臺灣 and the Traditional Taiwan spelling 台灣 are explicitly reviewed.",
+            "constraints": "Include you and use location + live + completed marker + how-long + continuing final marker. No extra details."
+          }
         }
       ]
     },
@@ -1146,6 +1194,32 @@ const unit:UnitData = {
             "我打網球",
             "打了兩個鐘頭"
           ]
+        },
+        {
+          "id": "u43-produce-stopping",
+          "type": "produce",
+          "phrase": "u43-stopping",
+          "prompt": "Write a short update: The rain is about to stop.",
+          "answer": "雨快要停了。",
+          "explanation": "Delayed retrieval of the imminence pattern with the new verb 停.",
+          "grammarIds": [
+            "u43-imminent"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "雨快停了。"
+            ],
+            "grammarHint": "The imminent-event marker precedes stop, with the change marker at the end.",
+            "keyVocabulary": [
+              "雨",
+              "快",
+              "停",
+              "了"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted. Both 臺灣 and the Traditional Taiwan spelling 台灣 are explicitly reviewed.",
+            "constraints": "Use rain + the course’s about-to pattern + stop + final change marker. Either the full about-to pattern or its short soon version is accepted."
+          }
         }
       ]
     }

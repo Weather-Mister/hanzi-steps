@@ -806,6 +806,31 @@ const unit:UnitData = {
             "因為我怕冷",
             "所以我比較喜歡春天"
           ]
+        },
+        {
+          "id": "u42-produce-home-country-model",
+          "type": "produce",
+          "phrase": "u42-home-country-model",
+          "prompt": "Describe the climate: In my country, summer is hot and winter is cold.",
+          "answer": "我的國家夏天很熱，冬天很冷。",
+          "explanation": "Personal transfer: This sentence is only a model. Before continuing, describe the climate of your own home country/place in Chinese using the seasons you know. Then say which season you personally like most and least, and explain your own reason with 因為…所以…. Say the answer aloud or write it on paper; do not copy the model unless it is genuinely true for you.",
+          "grammarIds": [],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我的國家冬天很冷，夏天很熱。"
+            ],
+            "grammarHint": "Keep each season with its own temperature description.",
+            "keyVocabulary": [
+              "國家",
+              "夏天",
+              "熱",
+              "冬天",
+              "冷"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Name my country first, then give both ordinary season statements in either order. Add no extra wording."
+          }
         }
       ]
     },
@@ -1085,6 +1110,30 @@ const unit:UnitData = {
           ],
           "answer": "The speaker prefers spring because of the cold, but often skis when it snows.",
           "explanation": "The first line gives the spring preference and reason; the second adds a habitual activity during snow."
+        },
+        {
+          "id": "u42-produce-spring-source",
+          "type": "produce",
+          "phrase": "u42-spring-source",
+          "prompt": "Describe your preferences in two short statements: I am sensitive to cold. I prefer spring.",
+          "answer": "我怕冷。我比較喜歡春天。",
+          "explanation": "怕冷 means be sensitive to or dislike the cold. 比較喜歡 expresses a relative preference: the speaker prefers spring, with the alternative understood from the conversation.",
+          "grammarIds": [],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我比較喜歡春天。我怕冷。"
+            ],
+            "grammarHint": "Give the sensitivity and the comparative preference as separate short statements.",
+            "keyVocabulary": [
+              "怕",
+              "冷",
+              "比較",
+              "春天"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I in both statements, using the course’s comparative-preference verb. Either statement order is allowed; add no extra wording."
+          }
         }
       ]
     }

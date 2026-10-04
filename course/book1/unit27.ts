@@ -781,6 +781,29 @@ const unit:UnitData = {
           ],
           "answer": "女朋友",
           "explanation": "女朋友 means girlfriend; 朋友 is the broader word friend."
+        },
+        {
+          "id": "u27-produce-one-week",
+          "type": "produce",
+          "phrase": "u27-one-week",
+          "prompt": "Answer how long you want to travel/play: I want to travel/play for one week.",
+          "answer": "我想玩一個星期。",
+          "explanation": "The duration 一個星期 follows the verb 玩.",
+          "grammarIds": [
+            "u27-duration-basic"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The duration follows the activity, using the week measure phrase.",
+            "keyVocabulary": [
+              "想",
+              "玩",
+              "星期"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with I and use want + play + one-week duration. No other details."
+          }
         }
       ]
     },
@@ -1065,6 +1088,30 @@ const unit:UnitData = {
           ],
           "answer": "女朋友",
           "explanation": "女朋友 means girlfriend."
+        },
+        {
+          "id": "u27-produce-break-when",
+          "type": "produce",
+          "phrase": "u27-break-when",
+          "prompt": "Explain your holiday plan: When I have time off, I want to go out and have fun.",
+          "answer": "放假的時候，我想出去玩。",
+          "explanation": "放假的時候 sets the time for the main clause.",
+          "grammarIds": [
+            "u27-de-shihou"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Turn the holiday activity into a time frame, then give the plan.",
+            "keyVocabulary": [
+              "放假",
+              "時候",
+              "出去",
+              "玩"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s when-frame; put the time-off clause first and I in the main clause."
+          }
         }
       ]
     }

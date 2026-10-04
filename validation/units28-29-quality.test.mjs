@@ -19,7 +19,7 @@ test('Units 28-29 are rebalanced without padding novelty',()=>{
   for(const m of [u28,u29]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
-    assert.ok(review.steps.length>=18&&review.steps.length<=22,m.unit.id);
+    assert.ok(review.steps.filter(s=>s.type!=='produce').length>=18&&review.steps.filter(s=>s.type!=='produce').length<=22,m.unit.id);
     assert.ok(review.steps.filter(s=>s.type==='listen').length>=3,m.unit.id);
   }
   for(const word of ['非常','但是','站','或是','便利商店','公共汽車','中國'])
@@ -36,7 +36,7 @@ test('Published Units 28-29 step prefixes and every historical completion bound 
     for(let index=0;index<ids.length;index++)assert.ok(validSession(sample(id,index,false)),`${id} partial ${index}`);
     const history=historicalLessonLengthsFor(id);
     assert.ok(history.includes(ids.length),`${id}: original published length missing from history`);
-    assert.ok(history.includes(lesson.steps.length),`${id}: rebalanced published length missing from history`);
+    assert.ok(history.includes(lesson.steps.filter(s=>s.type!=='produce').length),`${id}: rebalanced published length missing from history`);
     for(const length of history)assert.ok(validSession(sample(id,length,true)),`${id} historical completion ${length}`);
     assert.ok(validSession(sample(id,lesson.steps.length,true)),`${id} current completion`);
     if(lesson.steps.length>ids.length)assert.ok(validSession(sample(id,ids.length,false)),`${id} first appended step`);

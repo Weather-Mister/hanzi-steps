@@ -42,7 +42,7 @@ test('Unit 37 matches the frozen Phase 2 topology and load',()=>{
     'u37-phone','u37-birthday','u37-return','u37-forget','u37-remember','u37-of-course','u37-review'
   ]);
   const review=u37.lessons.find(l=>l.id===u37.reviewLessonId);
-  assert.equal(review.steps.length,19);
+  assert.equal(review.steps.filter(s=>s.type!=='produce').length,19);
   assert.equal(review.steps.filter(s=>s.type==='listen').length,3);
 });
 

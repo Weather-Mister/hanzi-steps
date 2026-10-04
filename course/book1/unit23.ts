@@ -811,6 +811,30 @@ const unit:UnitData = {
           "grammarIds": [
             "u23-permission-questions"
           ]
+        },
+        {
+          "id": "u23-produce-can-i-game-ma",
+          "type": "produce",
+          "phrase": "u23-can-i-game-ma",
+          "prompt": "Ask permission to go watch the game.",
+          "answer": "我可以去看比賽嗎？",
+          "explanation": "The statement frame keeps 可以 before the action and adds 嗎 at the end.",
+          "grammarIds": [
+            "u23-permission-questions"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "我可不可以去看比賽？"
+            ],
+            "grammarHint": "Choose one question strategy; do not combine both.",
+            "keyVocabulary": [
+              "可以",
+              "比賽"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and use the course’s can/permission verb. Either the yes/no ending or the can/not-can question is allowed. No extra details."
+          }
         }
       ]
     },
@@ -1028,6 +1052,30 @@ const unit:UnitData = {
           "grammarIds": [
             "u23-permission-keyi"
           ]
+        },
+        {
+          "id": "u23-produce-may-not-sing",
+          "type": "produce",
+          "phrase": "u23-may-not-sing",
+          "prompt": "Tell a visitor: You may not sing here.",
+          "answer": "你不可以在這裡唱歌。",
+          "explanation": "不可以 prohibits the following action.",
+          "grammarIds": [
+            "u23-permission-negative"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Not goes before the permission verb, then the location before the action.",
+            "keyVocabulary": [
+              "不",
+              "可以",
+              "這裡",
+              "唱歌"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include you and place here before singing. Use the negative permission construction."
+          }
         }
       ]
     }

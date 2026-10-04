@@ -883,6 +883,30 @@ const unit:UnitData = {
             "u24-bijiao",
             "u24-you-you"
           ]
+        },
+        {
+          "id": "u25-produce-mrt-faster",
+          "type": "produce",
+          "phrase": "u25-mrt-faster",
+          "prompt": "A friend is choosing transport. Say: Taking the MRT is faster than taking the train.",
+          "answer": "坐捷運比坐火車快。",
+          "explanation": "A 比 B + property explicitly compares A with B.",
+          "grammarIds": [
+            "u25-bi-comparison"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Name the faster option first, then the comparison marker and the other option.",
+            "keyVocabulary": [
+              "捷運",
+              "比",
+              "火車",
+              "快"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s comparison frame, with both complete take-transport phrases."
+          }
         }
       ]
     },
@@ -1122,6 +1146,30 @@ const unit:UnitData = {
           ],
           "answer": "我同學騎機車載我。",
           "explanation": "騎機車 describes riding the scooter; 載我 says the classmate gives you the ride."
+        },
+        {
+          "id": "u25-produce-bus-not-faster",
+          "type": "produce",
+          "phrase": "u25-bus-not-faster",
+          "prompt": "Correct a claim: Taking the bus is not faster than taking a taxi.",
+          "answer": "坐公車不比坐計程車快。",
+          "explanation": "不 goes before 比 to deny that taking the bus is faster than taking a taxi. 不比…快 allows equal speed or a slower speed; it does not by itself assert that the bus is definitely slower.",
+          "grammarIds": [
+            "u25-bi-negation"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Not belongs before the comparison marker. This does not necessarily mean slower.",
+            "keyVocabulary": [
+              "公車",
+              "不",
+              "比",
+              "計程車"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the negative comparison frame and both complete take-transport phrases."
+          }
         }
       ]
     }

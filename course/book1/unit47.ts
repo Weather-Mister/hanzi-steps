@@ -964,6 +964,33 @@ const unit:UnitData = {
           "answer": "that the person really will not see a doctor",
           "explanation": "The question confirms refusal to go see a doctor.",
           "semanticAnswer": true
+        },
+        {
+          "id": "u47-produce-g3-order",
+          "type": "produce",
+          "phrase": "u47-g3-order",
+          "prompt": "Report the sequence: After he took medicine, he went to sleep.",
+          "answer": "他吃了藥以後，就睡覺。",
+          "explanation": "吃了藥以後 sets the first event as completed before sleeping. 就 links the following action closely to it. The same subject 他 is understood in both parts.",
+          "grammarIds": [
+            "u47-vle-jiu"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "他吃了藥以後，他就睡覺。"
+            ],
+            "grammarHint": "The medicine event precedes after; the consequence begins with the immediate-sequence marker.",
+            "keyVocabulary": [
+              "吃",
+              "藥",
+              "以後",
+              "就",
+              "睡覺"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include he before the medicine action; repeat he in the second clause if you wish. Use the completed-action marker, after, then the immediate-sequence marker. No other details."
+          }
         }
       ]
     },
@@ -1348,6 +1375,29 @@ const unit:UnitData = {
           ],
           "answer": "別把我的藥吃了。",
           "explanation": "Delayed retrieval of the 把 pattern."
+        },
+        {
+          "id": "u47-produce-accompany-source",
+          "type": "produce",
+          "phrase": "u47-accompany-source",
+          "prompt": "Offer help: You feel this unwell; I will accompany you to see a doctor, OK?",
+          "answer": "你這麼不舒服，我陪你去看病，好不好？",
+          "explanation": "The first clause acknowledges how unwell the listener feels. 陪你去看病 offers to accompany them to see a doctor; 好不好 asks whether they agree to the proposal.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Give the reason first, then accompany + you + go + see-doctor, followed by the response invitation.",
+            "keyVocabulary": [
+              "這麼",
+              "不舒服",
+              "陪",
+              "看病",
+              "好不好"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s this-degree symptom wording and the OK/not-OK ending. Include you in the first clause and I in the second. No extra details."
+          }
         }
       ]
     }

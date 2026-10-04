@@ -608,6 +608,29 @@ const unit:UnitData = {
             "穿紅色的衣服",
             "我朋友"
           ]
+        },
+        {
+          "id": "u30-produce-try",
+          "type": "produce",
+          "phrase": "u30-try",
+          "prompt": "Encourage a friend to try fruit: This fruit is sweet; try eating it.",
+          "answer": "這個水果很甜，你吃吃看。",
+          "explanation": "The object is established before the VV看 expression; 吃吃看 is not followed by another food object.",
+          "grammarIds": [
+            "u30-vv-kan"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Describe the fruit first; repeat eat before the try-and-see ending.",
+            "keyVocabulary": [
+              "水果",
+              "甜",
+              "吃"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use this + fruit measure word + fruit, the ordinary sweet statement, then you + the course’s repeated-verb try-it pattern."
+          }
         }
       ]
     },
@@ -915,6 +938,30 @@ const unit:UnitData = {
           ],
           "answer": "My friend is wearing red, and I am treating you to fruit.",
           "explanation": "穿紅色的衣服 describes the friend’s clothing; 請你吃水果 uses 請 in the treating-someone sense."
+        },
+        {
+          "id": "u30-produce-yellow-clothes",
+          "type": "produce",
+          "phrase": "u30-yellow-clothes",
+          "prompt": "Describe what you are wearing: I am wearing yellow clothes today.",
+          "answer": "我今天穿黃色的衣服。",
+          "explanation": "穿 is the verb wear; 衣服 is clothing.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "今天我穿黃色的衣服。"
+            ],
+            "grammarHint": "Time comes before wear; the color modifies clothes.",
+            "keyVocabulary": [
+              "今天",
+              "穿",
+              "黃色",
+              "衣服"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I, Chinese color + modifier + clothes, and today before or after I. No other details."
+          }
         }
       ]
     }

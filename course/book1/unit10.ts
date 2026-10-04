@@ -1062,6 +1062,31 @@ const unit:UnitData = {
           "grammarIds": [
             "u10-how-about"
           ]
+        },
+        {
+          "id": "u10-produce-none-want-dinner",
+          "type": "produce",
+          "phrase": "u10-none-want-dinner",
+          "prompt": "Translate: None of them wants to eat dinner.",
+          "answer": "他們都不想吃晚飯。",
+          "explanation": "都不 makes the negative apply to every person in 他們.",
+          "grammarIds": [
+            "u10-none",
+            "u10-eat-dinner"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "All before not gives every person the negative wish.",
+            "keyVocabulary": [
+              "都",
+              "想",
+              "吃",
+              "晚飯"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with they and use all + not + want + eat + dinner."
+          }
         }
       ]
     }

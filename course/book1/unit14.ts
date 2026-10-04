@@ -1222,6 +1222,30 @@ const unit:UnitData = {
           "grammarIds": [
             "u14-too"
           ]
+        },
+        {
+          "id": "u14-produce-can-online",
+          "type": "produce",
+          "phrase": "u14-can-online",
+          "prompt": "Translate: Can this phone access the internet?",
+          "answer": "這支手機能上網嗎？",
+          "explanation": "能 asks about the phone's capability; 上網 means go online. 嗎 makes the whole claim a yes/no question. Answer 能 or 不能.",
+          "grammarIds": [
+            "u14-capability"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "Keep the phone noun phrase intact; the capability verb comes before the activity.",
+            "keyVocabulary": [
+              "支",
+              "手機",
+              "能",
+              "上網"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use this + phone measure word + phone, then the course’s capability verb and the yes/no ending."
+          }
         }
       ]
     }

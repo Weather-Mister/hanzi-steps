@@ -754,6 +754,31 @@ const unit:UnitData = {
           ],
           "answer": "以前",
           "explanation": "以前 refers to an earlier time or the past."
+        },
+        {
+          "id": "u29-produce-if-free",
+          "type": "produce",
+          "phrase": "u29-if-free",
+          "prompt": "A friend invites you out. Say: If I am free, then I will go together with you.",
+          "answer": "要是我有空，我就跟你一起去。",
+          "explanation": "要是 presents the condition and 就 presents the consequence.",
+          "grammarIds": [
+            "u29-yaoshi-jiu"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "我要是有空，我就跟你一起去。"
+            ],
+            "grammarHint": "The condition comes first; the consequence begins with the subject and then the consequence marker. Put with-you before together + go.",
+            "keyVocabulary": [
+              "有空",
+              "跟",
+              "一起"
+            ],
+            "reviewNote": "Both taught subject placements before/after 要是 are accepted. Both subjects, 就, 跟 and 一起 are required by the prompt.",
+            "constraints": "Use the course’s if…then… visit pattern; include I in both clauses and together. The first I may come before or after if."
+          }
         }
       ]
     },
@@ -1026,6 +1051,30 @@ const unit:UnitData = {
           ],
           "answer": "我給你一塊水果。水果很香，也很甜。",
           "explanation": "給 means give; 香 describes a pleasant smell; 甜 describes a sweet taste."
+        },
+        {
+          "id": "u29-produce-if-not-free",
+          "type": "produce",
+          "phrase": "u29-if-not-free",
+          "prompt": "Your friend may be busy. Say: If you are not free, then we will not go to the night market.",
+          "answer": "你要是沒空，我們就不去夜市。",
+          "explanation": "The condition is negative, and 就 still introduces the consequence.",
+          "grammarIds": [
+            "u29-yaoshi-jiu"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "要是你沒空，我們就不去夜市。"
+            ],
+            "grammarHint": "Not-free belongs in the condition. Not-go belongs in the consequence, after its consequence marker.",
+            "keyVocabulary": [
+              "沒空",
+              "夜市"
+            ],
+            "reviewNote": "Accepts both 要是 placements. The short 沒空 constraint excludes other not-free paraphrases; negating the consequence uses 不去.",
+            "constraints": "Use the course’s if…then… pattern and include you and we. Put you before or after if; use the short negative form for not free."
+          }
         }
       ]
     }

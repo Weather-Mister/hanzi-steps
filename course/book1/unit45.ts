@@ -703,6 +703,27 @@ const unit:UnitData = {
             "有一點",
             "發炎"
           ]
+        },
+        {
+          "id": "u45-produce-runny-source",
+          "type": "produce",
+          "phrase": "u45-runny-source",
+          "prompt": "Describe one symptom: I keep having a runny nose.",
+          "answer": "我一直流鼻水。",
+          "explanation": "一直 comes before 流鼻水 and says the symptom keeps happening. 鼻水 is nasal mucus; 流鼻水 is the expression for having a runny nose.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Continuously modifies the symptom action; keep the symptom object after flow.",
+            "keyVocabulary": [
+              "一直",
+              "流",
+              "鼻水"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and use the course’s continuously + flow + nasal-water wording. Add no duration or other symptoms."
+          }
         }
       ]
     },
@@ -940,6 +961,30 @@ const unit:UnitData = {
           ],
           "answer": "ask where it hurts → describe symptoms → ask duration → examine throat",
           "explanation": "That is the communicative arc of the opening doctor visit."
+        },
+        {
+          "id": "u45-produce-head-appetite-source",
+          "type": "produce",
+          "phrase": "u45-head-appetite-source",
+          "prompt": "Describe two symptoms without a subject: My head hurts and my appetite is poor.",
+          "answer": "頭很痛，胃口很差。",
+          "explanation": "The two clauses report different problems. 頭很痛 describes head pain; 胃口很差 describes poor appetite, not stomach pain. 差 is chā here.",
+          "grammarIds": [],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "胃口很差，頭很痛。"
+            ],
+            "grammarHint": "Keep the head with pain and appetite with poor quality.",
+            "keyVocabulary": [
+              "頭",
+              "痛",
+              "胃口",
+              "差"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the two ordinary short quality statements in either order. No extra wording."
+          }
         }
       ]
     },

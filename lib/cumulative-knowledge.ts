@@ -140,14 +140,14 @@ export function interleaveKnowledge(base:PracticeQuestion[],completed:Set<string
  return remaining;
 }
 export function knowledgeAttemptTargets(step:Step,completed:Set<string>,lessonId?:string):{itemId:string;mode:PracticeMode}[]{
- if(!['select','listen','order','memory'].includes(step.type))return [];
+ if(!['select','listen','order','produce','memory'].includes(step.type))return [];
  const ids=[...new Set([...(step.grammarIds||[]),...(step.phrase?phraseConceptGrammar(step.phrase):[])])];
  const current=lessonId?lessons.find(l=>l.id===lessonId):undefined;
  const index=current?.steps.findIndex(s=>s.id===step.id)??-1;
  const taughtHere=(id:string)=>index>0&&Boolean(current?.steps.slice(0,index).some(s=>s.type==='grammar'&&s.grammar===id));
- const targets=ids.filter(id=>taughtGrammar(id,completed)||taughtHere(id)).map(id=>({itemId:'grammar:'+id,mode:(step.type==='order'?'sentence':'recognition') as PracticeMode}));
+ const targets=ids.filter(id=>taughtGrammar(id,completed)||taughtHere(id)).map(id=>({itemId:'grammar:'+id,mode:((step.type==='order'||step.type==='produce')?'sentence':'recognition') as PracticeMode}));
  if(step.phrase){
-  for(const c of knowledgeForPhrase(step.phrase,completed).filter(c=>c.kind==='usage'))targets.push({itemId:c.id,mode:step.type==='order'?'sentence':'recognition'});
+  for(const c of knowledgeForPhrase(step.phrase,completed).filter(c=>c.kind==='usage'))targets.push({itemId:c.id,mode:(step.type==='order'||step.type==='produce')?'sentence':'recognition'});
  }
  return targets;
 }

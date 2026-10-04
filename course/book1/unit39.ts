@@ -566,6 +566,32 @@ const unit:UnitData = {
           ],
           "answer": "That 了 is sentence-final changed-situation 了.",
           "explanation": "The two 了 functions are distinct."
+        },
+        {
+          "id": "u39-produce-le-negative",
+          "type": "produce",
+          "phrase": "u39-le-negative",
+          "prompt": "Reply about dinner: I did not eat dinner.",
+          "answer": "我沒吃晚飯。",
+          "explanation": "Negation uses 沒 before the verb and removes verbal 了.",
+          "grammarIds": [
+            "u39-verbal-le",
+            "u39-bu-vs-mei"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我沒有吃晚飯。"
+            ],
+            "grammarHint": "Negate the completed event; do not retain its affirmative completion marker.",
+            "keyVocabulary": [
+              "沒",
+              "吃",
+              "晚飯"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with I and use the completed-action negative, without a final change-of-situation marker. The longer did-not negative is also accepted."
+          }
         }
       ]
     },
@@ -849,6 +875,32 @@ const unit:UnitData = {
           ],
           "answer": "a little; some amount",
           "explanation": "一點 is the quantity expression 'a little / some amount' here."
+        },
+        {
+          "id": "u39-produce-le-question",
+          "type": "produce",
+          "phrase": "u39-le-question",
+          "prompt": "Ask a friend whether they ate dinner.",
+          "answer": "你吃了晚飯沒有？",
+          "explanation": "Lesson-appropriate completed-action yes/no question with 沒有 at the end.",
+          "grammarIds": [
+            "u39-verbal-le"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "你吃了晚飯沒？"
+            ],
+            "grammarHint": "Keep the completed-action marker after eat; put the negative question ending after dinner.",
+            "keyVocabulary": [
+              "吃",
+              "了",
+              "晚飯",
+              "沒有"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include you and use the taught completed-action question ending in the no-have form; its shorter no form is also accepted. Add no other details."
+          }
         }
       ]
     }

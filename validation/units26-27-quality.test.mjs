@@ -15,7 +15,7 @@ test('Units 26-27 keep the intended honest novelty and review sizes',()=>{
   for(const m of [u26,u27]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
-    assert.ok(review.steps.length>=18&&review.steps.length<=22,m.unit.id);
+    assert.ok(review.steps.filter(s=>s.type!=='produce').length>=18&&review.steps.filter(s=>s.type!=='produce').length<=22,m.unit.id);
     assert.ok(review.steps.filter(s=>s.type==='listen').length>=3,m.unit.id);
   }
 });

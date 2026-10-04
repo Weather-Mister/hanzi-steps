@@ -26,7 +26,7 @@ test('Unit 34 keeps balanced novelty and full lesson/review structure',()=>{
   assert.equal(u34.newCharacters.length,13);
   assert.equal(u34.lessons.length,7);
   const review=u34.lessons.find(l=>l.id===u34.reviewLessonId);
-  assert.equal(review.steps.length,22);
+  assert.equal(review.steps.filter(s=>s.type!=='produce').length,22);
   assert.ok(review.steps.filter(s=>s.type==='listen').length>=3);
   assert.ok(review.steps.filter(s=>s.type==='memory'||s.type==='parts').length>=2);
 });

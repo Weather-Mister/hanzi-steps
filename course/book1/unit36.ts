@@ -578,6 +578,34 @@ const unit:UnitData = {
           "grammarIds": [
             "u36-hao-nan-verb"
           ]
+        },
+        {
+          "id": "u36-produce-after-class",
+          "type": "produce",
+          "phrase": "u36-after-class",
+          "prompt": "Describe a habit: After I finish class, I often use the internet in the library.",
+          "answer": "我下課以後，常在圖書館上網。",
+          "explanation": "下課以後 means “after class ends.” The following clause describes a habit, so 以後 does not by itself make the sentence a one-time future event.",
+          "grammarIds": [
+            "u36-yihou-after"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "下課以後，我常在圖書館上網。",
+              "我下課以後，我常在圖書館上網。"
+            ],
+            "grammarHint": "The finished-class time frame precedes the habitual activity and its location.",
+            "keyVocabulary": [
+              "下課",
+              "以後",
+              "常",
+              "圖書館",
+              "上網"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s after-frame, often and location-before-action order. I may appear before finish-class or after the time clause, or in both."
+          }
         }
       ]
     },
@@ -924,6 +952,29 @@ const unit:UnitData = {
           ],
           "answer": "The company does business with Taiwanese people.",
           "explanation": "The 因為 sentence supplies the reason; the boss therefore hopes everyone can speak Chinese."
+        },
+        {
+          "id": "u36-produce-good-job",
+          "type": "produce",
+          "phrase": "u36-good-job",
+          "prompt": "Comment on a job search: A good job is hard to find.",
+          "answer": "好工作很難找。",
+          "explanation": "this pattern example: 難 + action verb means 'hard to do'.",
+          "grammarIds": [
+            "u36-hao-nan-verb"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The thing being judged comes before the hard + find quality phrase.",
+            "keyVocabulary": [
+              "工作",
+              "難",
+              "找"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s good + job, then the ordinary hard-to-find quality pattern. No extra wording."
+          }
         }
       ]
     }

@@ -739,6 +739,30 @@ const unit:UnitData = {
           ],
           "answer": "旅行 is an ordinary verb here; 放假 is separable",
           "explanation": "Ordinary verb duration follows the verb phrase; a separable verb can take the duration inside its verb-object pair."
+        },
+        {
+          "id": "u28-produce-three-day-break",
+          "type": "produce",
+          "phrase": "u28-three-day-break",
+          "prompt": "Tell a friend: We have three days of holiday.",
+          "answer": "我們放三天的假。",
+          "explanation": "放假 is separable here: 放 + 三天的 + 假.",
+          "grammarIds": [
+            "u28-separable-duration"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Insert three + day + linking particle between the verb and holiday noun.",
+            "keyVocabulary": [
+              "放",
+              "三",
+              "天",
+              "假"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include we, use Chinese number words and the course’s holiday verb with duration inside the verb-object phrase."
+          }
         }
       ]
     },
@@ -1018,6 +1042,29 @@ const unit:UnitData = {
           ],
           "answer": "站 = station；便利商店 = convenience store；公共汽車 = bus",
           "explanation": "站 is station, 便利商店 is convenience store, and 公共汽車 is bus."
+        },
+        {
+          "id": "u28-produce-three-hours-song",
+          "type": "produce",
+          "phrase": "u28-three-hours-song",
+          "prompt": "Report: I sing for three hours.",
+          "answer": "我唱三個鐘頭的歌。",
+          "explanation": "唱歌 is separable: 唱 + duration + 的 + 歌.",
+          "grammarIds": [
+            "u28-separable-duration"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Put three + hours inside sing-song, linked to song by the noun modifier particle.",
+            "keyVocabulary": [
+              "唱",
+              "鐘頭",
+              "歌"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I; use Chinese number words and the taught separable-verb duration frame. Add no completed-action marker."
+          }
         }
       ]
     }

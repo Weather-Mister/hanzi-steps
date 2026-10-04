@@ -30,7 +30,7 @@ test('Units 32-33 keep balanced novelty and full lesson/review structure',()=>{
   for(const m of [u32,u33]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
-    assert.equal(review.steps.length,22);
+    assert.equal(review.steps.filter(s=>s.type!=='produce').length,22);
     assert.ok(review.steps.filter(s=>s.type==='listen').length>=3);
     assert.ok(review.steps.some(s=>s.type==='memory'||s.type==='parts'));
   }

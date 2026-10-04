@@ -829,6 +829,26 @@ const unit:UnitData = {
           ],
           "answer": "當然記得！",
           "explanation": "當然記得 is the natural transfer of the unit's remembering language."
+        },
+        {
+          "id": "u37-produce-happy-birthday",
+          "type": "produce",
+          "phrase": "u37-happy-birthday",
+          "prompt": "Write the short birthday greeting meaning Happy birthday!",
+          "answer": "生日快樂！",
+          "explanation": "Fixed birthday greeting. 樂 is pronounced lè here; compare earlier 音樂 yīnyuè.",
+          "grammarIds": [],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "The event comes first, then the happy wish.",
+            "keyVocabulary": [
+              "生日",
+              "快樂"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use only the greeting, without a name or extra wishes."
+          }
         }
       ]
     }

@@ -1164,6 +1164,30 @@ const unit:UnitData = {
           "grammarIds": [
             "u15-many"
           ]
+        },
+        {
+          "id": "u15-produce-order-noodles",
+          "type": "produce",
+          "phrase": "u15-order-noodles",
+          "prompt": "Translate: I would like to order one bowl of beef noodles.",
+          "answer": "我想點一碗牛肉麵。",
+          "explanation": "想點 means would like to order. 一碗牛肉麵 is one bowl of beef noodles: number + bowl measure + food.",
+          "grammarIds": [
+            "u15-order"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "The ordering verb precedes one + bowl measure word + dish.",
+            "keyVocabulary": [
+              "想",
+              "點",
+              "碗",
+              "牛肉麵"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use I + want-to + order, then the bowl phrase; add no service or size details."
+          }
         }
       ]
     }

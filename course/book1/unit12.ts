@@ -1290,6 +1290,29 @@ const unit:UnitData = {
             "u12-price",
             "u12-total"
           ]
+        },
+        {
+          "id": "u12-produce-total-question",
+          "type": "produce",
+          "phrase": "u12-total-question",
+          "prompt": "Ask: How much altogether?",
+          "answer": "一共多少錢？",
+          "explanation": "The order is understood from context.",
+          "grammarIds": [
+            "u12-total"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "Altogether comes before how-much + money.",
+            "keyVocabulary": [
+              "一共",
+              "多少",
+              "錢"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the short total-price question, with no greeting or other details."
+          }
         }
       ]
     }
