@@ -1596,10 +1596,10 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  --unit-border:#c7d8e4; --unit-line:#8aaec8; --unit-text:#385b76;
 }
 [data-unit-theme="gold"] {
- --unit-accent:#96700e; --unit-hover:#86640d; --unit-depth:#71540b;
- --unit-edge:#b29240; --unit-focus:#594308; --unit-on-accent:#ffffff;
- --unit-tint:#f7f0d9; --unit-tint-hover:#efe3b9; --unit-surface:#fcfaf4;
- --unit-border:#e9dbaa; --unit-line:#cbb164; --unit-text:#71550d;
+ --unit-accent:#ffe145; --unit-hover:#f4d742; --unit-depth:#d1b939;
+ --unit-edge:#ffe663; --unit-focus:#6b5f1d; --unit-on-accent:#4b3f00;
+ --unit-tint:#fffade; --unit-tint-hover:#fff6c7; --unit-surface:#fffdf4;
+ --unit-border:#fff5be; --unit-line:#ffeb81; --unit-text:#6b5f1d;
 }
 [data-unit-theme="magenta"] {
  --unit-accent:#8d3e6c; --unit-hover:#7e3761; --unit-depth:#6a2f52;
