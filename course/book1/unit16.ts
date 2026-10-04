@@ -1245,6 +1245,30 @@ const unit:UnitData = {
             "餐",
             "甜"
           ]
+        },
+        {
+          "id": "u16-produce-review-teach",
+          "type": "produce",
+          "phrase": "u16-review-teach",
+          "prompt": "Translate: Can you teach me to make desserts?",
+          "answer": "你可以教我做甜點嗎？",
+          "explanation": "教 + person + skill identifies what is taught to whom: 教我做甜點. 可以…嗎 makes this a request asking whether you can teach me.",
+          "grammarIds": [
+            "u16-teach",
+            "u16-teaching-request"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "Teach takes me, followed by the complete make-desserts activity.",
+            "keyVocabulary": [
+              "可以",
+              "教",
+              "甜點"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s permission/possibility verb, start with you, and end as a yes/no question."
+          }
         }
       ]
     }

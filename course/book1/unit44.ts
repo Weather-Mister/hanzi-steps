@@ -1316,6 +1316,32 @@ const unit:UnitData = {
             "我在臺灣",
             "住了一年"
           ]
+        },
+        {
+          "id": "u44-produce-more-model",
+          "type": "produce",
+          "phrase": "u44-more-model",
+          "prompt": "Compare seasons: This summer is even hotter than last summer.",
+          "answer": "今年夏天比去年夏天更熱。",
+          "explanation": "comparison review 更 comparison model.",
+          "grammarIds": [
+            "u44-even-more"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The even-more marker follows the comparison standard, before the quality.",
+            "keyVocabulary": [
+              "今年",
+              "夏天",
+              "比",
+              "去年",
+              "更",
+              "熱"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use both full season phrases, the comparison marker and even-more. No extra details."
+          }
         }
       ]
     }

@@ -152,5 +152,5 @@ test('Units 34–36 keep published lesson/activity topology stable while content
     'unit-36':[['u36-work',15],['u36-business',7],['u36-after',8],['u36-job',12],['u36-try',9],['u36-hard',8],['u36-review',28]],
   };
   for(const module of units)
-    assert.deepEqual(module.lessons.map(l=>[l.id,l.steps.length]),expected[module.unit.id],module.unit.id+' topology changed');
+    assert.deepEqual(module.lessons.map(l=>[l.id,l.steps.filter(s=>s.type!=='produce').length]),expected[module.unit.id],module.unit.id+' topology changed');
 });

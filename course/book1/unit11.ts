@@ -1141,6 +1141,28 @@ const unit:UnitData = {
           "type": "memory",
           "char": "內",
           "id": "u11-challenge-16"
+        },
+        {
+          "id": "u11-produce-one-tea",
+          "type": "produce",
+          "phrase": "u11-one-tea",
+          "prompt": "Translate: I would like one cup of tea.",
+          "answer": "我要一杯茶。",
+          "explanation": "Use the drink measure word 杯.",
+          "grammarIds": [
+            "u11-cup"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "Put the person first, then want, then one + the cup measure word + tea.",
+            "keyVocabulary": [
+              "杯",
+              "茶"
+            ],
+            "reviewNote": "Constrained recall of the cup measure word. The specified short frame excludes wish-to-buy and omitted-subject paraphrases.",
+            "constraints": "Use the short I + want + quantity + drink pattern, with no extra details."
+          }
         }
       ]
     }

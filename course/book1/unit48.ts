@@ -475,6 +475,49 @@ const unit:UnitData = {
           "answer": "whether the person feels a little better",
           "explanation": "The health check uses 一點 for a small degree.",
           "semanticAnswer": true
+        },
+        {
+          "id": "u48-produce-d2t08",
+          "type": "produce",
+          "phrase": "u48-d2t08",
+          "prompt": "Write a short message: I want to go home and rest. Please tell the teacher that I am sick and cannot attend class.",
+          "answer": "我想回家休息。請你跟老師說，我生病了，不能上課。",
+          "explanation": "想回家休息 gives the plan to go home and rest. 請你跟老師說 asks the listener to tell the teacher; 跟 marks the addressee. The final clause gives the message: being ill and unable to attend class.",
+          "grammarIds": [],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我想回家休息。請跟老師說，我生病了，不能上課。",
+              "我想回家休息。請你跟老師說，我生病了，我不能上課。",
+              "我想回家休息。請跟老師說，我生病了，我不能上課。"
+            ],
+            "grammarHint": "Start with want + go-home + rest. In the request, put the recipient before say; then give the sickness and inability to attend.",
+            "keyVocabulary": [
+              "回家",
+              "休息",
+              "跟",
+              "生病",
+              "上課"
+            ],
+            "fallbackTokens": [
+              "我",
+              "想",
+              "回家",
+              "休息",
+              "請",
+              "你",
+              "跟",
+              "老師",
+              "說",
+              "我",
+              "生病",
+              "了",
+              "不能",
+              "上課"
+            ],
+            "reviewNote": "Accepts explicit/omitted 你 after 請 and repeated/omitted 我 before 不能, while requiring all three communicative facts and the taught 跟-recipient frame.",
+            "constraints": "Use the course’s tell-to recipient pattern and cannot-attend wording. Start both statements about yourself with I; you after please is optional. Add no other details."
+          }
         }
       ]
     },
@@ -937,6 +980,32 @@ const unit:UnitData = {
             "八個小時",
             "的覺"
           ]
+        },
+        {
+          "id": "u48-produce-d2t12",
+          "type": "produce",
+          "phrase": "u48-d2t12",
+          "prompt": "Report: After I took one packet of medicine, I slept better than yesterday.",
+          "answer": "我吃了一包藥以後，睡得比昨天好。",
+          "explanation": "吃了一包藥以後 sets the earlier event. 睡得 introduces how well the sleeping went; 比昨天好 means better than yesterday. The comparison is about quality, not the number of hours.",
+          "grammarIds": [
+            "u48-action-comparison-de"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我吃了一包藥以後，我睡得比昨天好。"
+            ],
+            "grammarHint": "Finish the medicine action with its completed-action marker before after. To compare sleep quality, attach the degree marker to sleep before the comparison.",
+            "keyVocabulary": [
+              "包",
+              "藥",
+              "睡",
+              "昨天"
+            ],
+            "reviewNote": "Accepts either shared or repeated 我. Keeps completed taking, packet count, 以後, and 睡得比…好; does not accept a duration comparison.",
+            "constraints": "Use the course’s after-taking and action-quality comparison frames. Keep the medicine clause first; repeating I before slept is optional. Add no other details."
+          }
         }
       ]
     },
@@ -1038,6 +1107,33 @@ const unit:UnitData = {
           "answer": "30 minutes after meals",
           "explanation": "飯後三十分鐘 gives the timing.",
           "semanticAnswer": true
+        },
+        {
+          "id": "u48-produce-cap3",
+          "type": "produce",
+          "phrase": "u48-cap3",
+          "prompt": "Give three brief suggestions directly to a friend: drink more water, rest more, and go to sleep a little earlier.",
+          "answer": "多喝水，多休息，早一點睡覺。",
+          "explanation": "多 before 喝水 and 休息 advises doing more of those activities. 早一點 before 睡覺 advises an earlier bedtime. It does not specify a number of hours of sleep.",
+          "grammarIds": [],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "多喝水，早一點睡覺，多休息。",
+              "多休息，多喝水，早一點睡覺。",
+              "多休息，早一點睡覺，多喝水。",
+              "早一點睡覺，多喝水，多休息。",
+              "早一點睡覺，多休息，多喝水。"
+            ],
+            "grammarHint": "More comes before drink/rest; a-little modifies earlier before the sleep action. Keep each suggestion intact.",
+            "keyVocabulary": [
+              "水",
+              "休息",
+              "睡覺"
+            ],
+            "reviewNote": "All six clause orders are individually authored. The short-imperative constraint excludes extra subjects, 應該/最好, and alternative earlier-sleep wording.",
+            "constraints": "Use the course’s short suggestions without a subject or modal verb. Give all three in any order, with no extra details."
+          }
         }
       ]
     },

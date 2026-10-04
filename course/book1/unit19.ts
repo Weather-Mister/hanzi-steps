@@ -1166,6 +1166,29 @@ const unit:UnitData = {
           "id": "u19-review-14",
           "type": "memory",
           "char": "東"
+        },
+        {
+          "id": "u19-produce-nearby-question",
+          "type": "produce",
+          "phrase": "u19-nearby-question",
+          "prompt": "You need somewhere to eat. Ask whether there is a restaurant near the school.",
+          "answer": "學校附近有沒有餐廳？",
+          "explanation": "有沒有 asks whether the named location contains a restaurant. 學校附近 identifies the area being asked about, not the restaurant's name.",
+          "grammarIds": [
+            "u19-nearby-there-is"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Start with the location, then the existence question and the place type.",
+            "keyVocabulary": [
+              "學校",
+              "附近",
+              "餐廳"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with school + nearby and use the have/not-have question, with no extra details."
+          }
         }
       ],
       "unitId": "unit-19",

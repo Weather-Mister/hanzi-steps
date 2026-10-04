@@ -28,7 +28,7 @@ test('Six smaller lessons and review have valid progression, checkpoints, and sp
  assert.equal(lessonAvailable('u8-v2-time',new Set()),false);
  const done=new Set(['u7-v2-review']);
  for(const l of added){assert.ok(lessonAvailable(l.id,done));done.add(l.id);for(let i=0;i<=l.steps.length;i++)assert.ok(validSession({id:'550e8400-e29b-41d4-a716-446655440017',lessonId:l.id,index:i,independent:0,assisted:0,complete:i===l.steps.length,updatedAt:1}));}
- assert.deepEqual([...new Set(added.flatMap(l=>l.steps).map(s=>s.type))].sort(),['intro','trace','build','complete','memory','match','parts','listen','grammar','phrase','order','select'].sort());
+ assert.deepEqual([...new Set(added.flatMap(l=>l.steps).map(s=>s.type))].sort(),['intro','trace','build','complete','memory','match','parts','listen','grammar','phrase','order','select','produce'].sort());
  for(const w of words)assert.ok(!vocabulary.some(old=>!old.lessonId.startsWith('u8-')&&old.text===w.text),`not new: ${w.text}`);
 });
 test('Unit 8 teaches all tested spellings, words, writing targets, and grammar before recall',()=>{

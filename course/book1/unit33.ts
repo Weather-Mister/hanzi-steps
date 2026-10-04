@@ -738,6 +738,28 @@ const unit:UnitData = {
           "grammarIds": [
             "u33-zero-pronoun"
           ]
+        },
+        {
+          "id": "u33-produce-received",
+          "type": "produce",
+          "phrase": "u33-received",
+          "prompt": "Confirm receipt: I have already received the rent.",
+          "answer": "我已經收到房租了。",
+          "explanation": "房租 is the rent payment for a room or house; 收到 means receive. Compare 租房, which means to rent a place.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Already precedes the completed receiving action; preserve the final marker.",
+            "keyVocabulary": [
+              "已經",
+              "收到",
+              "房租",
+              "了"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I, already, receive and rent, ending with the course’s completion marker. No other details."
+          }
         }
       ]
     },
@@ -936,6 +958,32 @@ const unit:UnitData = {
           "id": "u33-review-p11",
           "type": "phrase",
           "phrase": "u33-then"
+        },
+        {
+          "id": "u33-produce-will-check",
+          "type": "produce",
+          "phrase": "u33-will-check",
+          "prompt": "Reply to a tenant: Today I will go take a look.",
+          "answer": "今天我會去看看。",
+          "explanation": "In this sentence, 會 predicts a visit: “will go and see him.” It is not describing the learned ability to visit someone.",
+          "grammarIds": [
+            "u33-hui-likelihood"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "我今天會去看看。"
+            ],
+            "grammarHint": "Time comes before will + go + softened repeated look.",
+            "keyVocabulary": [
+              "今天",
+              "會",
+              "去",
+              "看"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Put today before or after I; use the course’s will verb and repeated look verb. No other details."
+          }
         }
       ]
     }

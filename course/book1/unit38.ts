@@ -851,6 +851,35 @@ const unit:UnitData = {
           ],
           "answer": "五點左右",
           "explanation": "左右 follows the time."
+        },
+        {
+          "id": "u38-produce-as-soon-source",
+          "type": "produce",
+          "phrase": "u38-as-soon-source",
+          "prompt": "Promise: Tomorrow, as soon as I finish class, I will go to your school to see you.",
+          "answer": "明天我一下課，就去你們學校找你。",
+          "explanation": "一下課 gives the trigger, as soon as class ends. 就去…找你 gives the immediate following action. 明天 makes this a future plan, and 你們學校 is the destination.",
+          "grammarIds": [
+            "u38-yi-jiu"
+          ],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "我明天一下課，就去你們學校找你。",
+              "明天我一下課，我就去你們學校找你。",
+              "我明天一下課，我就去你們學校找你。"
+            ],
+            "grammarHint": "The immediate-action trigger precedes the consequence marker and the destination/purpose.",
+            "keyVocabulary": [
+              "明天",
+              "下課",
+              "就",
+              "學校",
+              "找"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s as-soon-as…then… frame and find-you wording. Put tomorrow first or after the first I; repeating I in the main clause is optional. No extra details."
+          }
         }
       ]
     }

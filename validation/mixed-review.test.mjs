@@ -23,7 +23,7 @@ test('mixed review stays sparse and preserves teaching, ownership, and every che
   const unit=modules.find(m=>m.unit.id===id);
   assert.ok(unit,id);
   const masked=structuredClone(unit);
-  for(const l of masked.lessons)l.steps=l.steps.filter(s=>!embeddedReadingChecks.has(s.id)).map(s=>selected.has(s.id)?{id:s.id,type:s.type}:s);
+  for(const l of masked.lessons)l.steps=l.steps.filter(s=>s.type!=='produce'&&!embeddedReadingChecks.has(s.id)).map(s=>selected.has(s.id)?{id:s.id,type:s.type}:s);
   assert.equal(hash(masked),baseline.unchangedHash,id+': unrelated content or checkpoint topology changed');
  }
 });

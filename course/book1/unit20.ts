@@ -1359,6 +1359,29 @@ const unit:UnitData = {
           "id": "u20-review-17",
           "type": "memory",
           "char": "邊"
+        },
+        {
+          "id": "u20-produce-which-floor",
+          "type": "produce",
+          "phrase": "u20-which-floor",
+          "prompt": "Ask a friend: Which floor are you on?",
+          "answer": "你在幾樓？",
+          "explanation": "幾樓 asks for a numbered floor and goes after 在. An answer such as 二樓 gives the location; 幾 already makes this an information question.",
+          "grammarIds": [
+            "u20-floor-question"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The location verb precedes how-many + floor.",
+            "keyVocabulary": [
+              "在",
+              "幾",
+              "樓"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include you and use the question-word form, with no yes/no ending."
+          }
         }
       ],
       "unitId": "unit-20",

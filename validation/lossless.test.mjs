@@ -21,7 +21,7 @@ const teachingAmendment=readJSON('validation/fixtures/teaching-quality-amendment
 const hash=x=>createHash('sha256').update(typeof x==='string'?x:JSON.stringify(x)).digest('hex');
 
 test('All live curriculum records, answers, checkpoint sequences and card order are lossless',()=>{
- const data={...current,cards:Object.fromEntries(current.units.map(u=>[u.id,current.unitLibraryCharacters(u)]))};
+ const data={...current,lessons:current.lessons.map(l=>({...l,steps:l.steps.filter(s=>s.type!=='produce')})),cards:Object.fromEntries(current.units.map(u=>[u.id,current.unitLibraryCharacters(u)]))};
  for(const [key,records]of Object.entries(baseline.records)){
   const actual=Array.isArray(data[key])?Object.fromEntries(data[key].map(v=>[v.id||v.text,v])):data[key];
   for(const [id,digest]of Object.entries(records)){

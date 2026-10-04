@@ -1008,6 +1008,29 @@ const unit:UnitData = {
           "answer": "whether they have to take medicine",
           "explanation": "得 děi expresses necessity.",
           "semanticAnswer": true
+        },
+        {
+          "id": "u46-produce-ji-expansion",
+          "type": "produce",
+          "phrase": "u46-ji-expansion",
+          "prompt": "Describe her small circle: She does not have many friends.",
+          "answer": "她沒有幾個朋友。",
+          "explanation": "幾 jǐ asked “how many?” in Unit 7. It can also mean “a few / several” in a statement. Here 沒有幾個朋友 means “does not have many friends / has only a few friends.” It is not a question and does not mean “has no friends.” Keep 個 before 朋友.",
+          "grammarIds": [],
+          "production": {
+            "level": "later",
+            "acceptedAnswers": [
+              "她沒幾個朋友。"
+            ],
+            "grammarHint": "The question word in this negative statement suggests a small number, not a request for a count.",
+            "keyVocabulary": [
+              "沒有",
+              "幾",
+              "朋友"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use she + no-have + a-few/how-many word + people measure + friends. Both no-have forms are accepted. This is a statement, not a question."
+          }
         }
       ]
     },
@@ -1380,6 +1403,28 @@ const unit:UnitData = {
           ],
           "answer": "大概多久了？／已經四、五天了。",
           "explanation": "This is delayed retrieval of the duration-to-now question and answer."
+        },
+        {
+          "id": "u46-produce-pharmacy-source",
+          "type": "produce",
+          "phrase": "u46-pharmacy-source",
+          "prompt": "Tell a friend to get medicine: Go to the pharmacy to get medicine.",
+          "answer": "你到藥局去拿藥。",
+          "explanation": "到藥局去 gives the destination, the pharmacy. 拿藥 is the purpose, getting the medicine. 拿 identifies getting it rather than taking a dose.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The destination comes before go + the purpose action.",
+            "keyVocabulary": [
+              "到",
+              "藥局",
+              "拿",
+              "藥"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include you and use the course’s arrive-at + pharmacy + go + get + medicine sequence. No extra wording."
+          }
         }
       ]
     }

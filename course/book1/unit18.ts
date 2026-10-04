@@ -1319,6 +1319,32 @@ const unit:UnitData = {
             "u18-inside-outside",
             "u18-there-is"
           ]
+        },
+        {
+          "id": "u18-produce-study-now",
+          "type": "produce",
+          "phrase": "u18-study-now",
+          "prompt": "Tell a friend: I am reading inside the library now.",
+          "answer": "我現在在圖書館裡面看書。",
+          "explanation": "The order is subject, time, place, action: 我 + 現在 + 在圖書館裡面 + 看書. 在 introduces the library location here.",
+          "grammarIds": [
+            "u18-location-action"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "現在我在圖書館裡面看書。"
+            ],
+            "grammarHint": "Time and location both precede the activity.",
+            "keyVocabulary": [
+              "現在",
+              "圖書館",
+              "裡面",
+              "看書"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and now; put now before or after I. Use the explicit inside-the-library location before read-books."
+          }
         }
       ]
     }

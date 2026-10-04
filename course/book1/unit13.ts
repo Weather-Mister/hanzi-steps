@@ -1194,6 +1194,29 @@ const unit:UnitData = {
           "answer": "How many cups of tea you want",
           "explanation": "幾杯 asks the cup count.",
           "grammarIds": []
+        },
+        {
+          "id": "u13-produce-buy-help",
+          "type": "produce",
+          "phrase": "u13-buy-help",
+          "prompt": "Ask someone: Please help me buy two buns.",
+          "answer": "請幫我買兩個包子。",
+          "explanation": "請幫我 asks someone to help by doing the purchase for me. 兩個包子 is two buns; the requested action is 買, not 賣.",
+          "grammarIds": [
+            "u13-help"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "The person being helped comes before buy + quantity + noun.",
+            "keyVocabulary": [
+              "幫",
+              "買",
+              "包子"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use please + help + me + buy, with no extra wording."
+          }
         }
       ]
     }

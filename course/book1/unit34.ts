@@ -883,6 +883,33 @@ const unit:UnitData = {
           "id": "u34-review-m2",
           "type": "memory",
           "char": "績"
+        },
+        {
+          "id": "u34-produce-sequence-simple",
+          "type": "produce",
+          "phrase": "u34-sequence-simple",
+          "prompt": "Explain your study sequence: I first study Chinese, then attend university.",
+          "answer": "我先念中文，再念大學。",
+          "explanation": "先 marks the first action and 再 marks the next action.",
+          "grammarIds": [
+            "u34-first-then"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "我先念中文，我再念大學。"
+            ],
+            "grammarHint": "Put first before the first study action; then introduces the second one.",
+            "keyVocabulary": [
+              "先",
+              "念",
+              "中文",
+              "再",
+              "大學"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s study/attend verb in both clauses and first…then…. Repeat I in the second clause if you wish."
+          }
         }
       ]
     }

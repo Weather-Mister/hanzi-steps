@@ -1,10 +1,11 @@
+import {normalizeProductionAnswer} from '../lib/production-answer.ts';
 // Pure structural validation. No network, textbook analysis or content repair.
 export const han = text => [...text].filter(c => /\p{Script=Han}/u.test(c));
 const generic = /^\s*remember the shape(?:[.!:\s]|$)|follow the highlighted groups in order|keep the whole character balanced inside the square|practice all \d+ strokes of .+ in the displayed Traditional stroke order before writing it from memory|is introduced here through .+: /i;
 const object = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const text = x => typeof x === 'string' && x.trim().length > 0;
 const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
-const types = new Set(['intro','trace','complete','memory','select','parts','build','match','phrase','order','listen','grammar','visual']);
+const types = new Set(['intro','trace','complete','memory','select','parts','build','match','phrase','order','listen','grammar','visual','produce']);
 
 export function validateCourse(manifest, modules, geometry = {}) {
  const errors = [], seen = {book:new Set(),unit:new Set(),lesson:new Set(),activity:new Set(),phrase:new Set(),grammar:new Set(),word:new Map(),character:new Map(),concept:new Set()}, memories=new Map();
@@ -137,6 +138,27 @@ export function validateCourse(manifest, modules, geometry = {}) {
     }
     if(s.phrase&&!allPhrases[s.phrase])fail(sa,`missing phrase reference ${s.phrase}`);
     if(['phrase','order'].includes(s.type)&&!allPhrases[s.phrase])fail(sa,'missing required phrase');
+    if(s.production!==undefined&&s.type!=='produce')fail(sa,'production metadata requires a produce step');
+    if(s.type==='produce'){
+     required(s,['prompt','answer','explanation','phrase'],sa);
+     const p=s.production,phrase=allPhrases[s.phrase];
+     if(!object(p))fail(sa,'missing production contract');
+     else{
+      required(p,['constraints','grammarHint','reviewNote'],sa);
+      if(han((p.constraints||'')+' '+(p.grammarHint||'')).length)fail(sa,'production constraints and first hint must not reveal Chinese answer material');
+      if(!['early','middle','later'].includes(p.level))fail(sa,'invalid production difficulty');
+      if(strings(p.acceptedAnswers,sa+' acceptedAnswers')){
+       const answers=[s.answer,...p.acceptedAnswers].filter(text).map(normalizeProductionAnswer);
+       if(new Set(answers).size!==answers.length)fail(sa,'duplicate normalized production answer');
+       if(answers.some(a=>!a||!/^[\p{Script=Han}]+$/u.test(a)))fail(sa,'production answers must be full Chinese responses');
+      }
+      if(p.fallbackTokens){if(strings(p.fallbackTokens,sa+' fallbackTokens',{empty:false,unique:false})&&normalizeProductionAnswer(p.fallbackTokens.join(''))!==normalizeProductionAnswer(s.answer||''))fail(sa,'production fallback must reconstruct the canonical answer');}
+      if(strings(p.keyVocabulary,sa+' keyVocabulary',{empty:false})&&p.keyVocabulary.some(w=>!phrase?.text.includes(w)))fail(sa,'production help must use vocabulary from the canonical phrase');
+     }
+     if(!phrase||phrase.practice===false||(p?.fallbackTokens||phrase.tokens).length<2||s.answer!==phrase.text)fail(sa,'production must reference a productive canonical phrase');
+     if(s.options||s.tokens||s.audioText)fail(sa,'production must not expose an initial answer bank or audio');
+     if(han(s.prompt||'').length)fail(sa,'production prompt must not reveal Chinese answer material');
+    }
     if(s.type==='order'&&allPhrases[s.phrase]){
      if(strings(s.tokens,`${sa} tokens`,{empty:false,unique:false})){
       const bank=[...s.tokens];for(const token of allPhrases[s.phrase].tokens||[]){const j=bank.indexOf(token);if(j<0)fail(sa,`no valid correct answer; bank missing ${token}`);else bank.splice(j,1);}

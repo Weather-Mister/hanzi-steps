@@ -13,7 +13,7 @@ const dense=readingCheckpoints.filter(r=>r.id.endsWith('-dense'));
 
 test('all 44 existing readings and every lesson step remain byte-for-byte equivalent to the reviewed baseline',()=>{
  assert.equal(hash(raw.filter(r=>!/-dense$|-mini$/.test(r.id))),'09c1678074e7617f768c7a1824aa9adb4ced603d6192822699d19cb18111f901');
- assert.equal(hash(lessons.map(l=>({id:l.id,unitId:l.unitId,steps:l.steps}))),'d5158c9ff7b3bd3b9d24eb860d66774ce11a09d6d0c11bc6ecb60e603c6302ab');
+ assert.equal(hash(lessons.map(l=>({id:l.id,unitId:l.unitId,steps:l.steps.filter(s=>s.type!=='produce')}))),'d5158c9ff7b3bd3b9d24eb860d66774ce11a09d6d0c11bc6ecb60e603c6302ab');
 });
 test('dense readings are interleaved, connected, evidence-based and fully classified',()=>{
  assert.deepEqual(dense.map(r=>r.unitId),[11,14,17,20,23,26,29,32,35,38,41,44,47].map(n=>'unit-'+n));

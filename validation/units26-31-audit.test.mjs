@@ -13,7 +13,7 @@ test('Six-unit repair preserves every published position and completed checkpoin
  for(const u of units)for(const l of u.lessons){
   const oldIds=baseline[l.id],extra=appended[l.id]||[];
   assert.deepEqual(l.steps.slice(0,oldIds.length).map(s=>s.id),oldIds,l.id);
-  assert.deepEqual(l.steps.slice(oldIds.length).map(s=>s.id),extra,l.id+' appended checks');
+  assert.deepEqual(l.steps.slice(oldIds.length).filter(s=>s.type!=='produce').map(s=>s.id),extra,l.id+' appended checks');
   if(extra.length)assert.ok(validSession({id:'550e8400-e29b-41d4-a716-446655440030',lessonId:l.id,index:oldIds.length,complete:true,independent:0,assisted:0,updatedAt:1}),l.id+' historical completion');
   for(let index=0;index<=l.steps.length;index++){
    const complete=index===l.steps.length;

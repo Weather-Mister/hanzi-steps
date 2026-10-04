@@ -1078,6 +1078,28 @@ const unit:UnitData = {
           ],
           "answer": "豆",
           "explanation": "豆 is dòu, a falling fourth tone, as in 臭豆腐."
+        },
+        {
+          "id": "u17-produce-recommend-dish",
+          "type": "produce",
+          "phrase": "u17-recommend-dish",
+          "prompt": "Recommend this shop’s soup dumplings: You definitely have to eat this shop’s soup dumplings.",
+          "answer": "你一定要吃這家的小籠包。",
+          "explanation": "一定要 before 吃 makes a strong recommendation: you really must try it. 這家的小籠包 means this establishment's xiaolongbao, with 店 understood.",
+          "grammarIds": [
+            "u17-recommend"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "Definitely comes before the strong recommendation; this-shop’s modifies the food.",
+            "keyVocabulary": [
+              "一定",
+              "小籠包"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s definitely + want/must pattern and include you."
+          }
         }
       ]
     }

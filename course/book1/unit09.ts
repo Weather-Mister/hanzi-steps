@@ -1189,6 +1189,28 @@ const unit:UnitData = {
             "u9-both-topics"
           ],
           "id": "u9-review-16"
+        },
+        {
+          "id": "u9-produce-exercise-not-often",
+          "type": "produce",
+          "phrase": "u9-exercise-not-often",
+          "prompt": "Translate: I do not exercise often.",
+          "answer": "我不常運動。",
+          "explanation": "不常 means not often, so 不 negates the frequency 常. This allows occasional exercise; it does not mean never exercising.",
+          "grammarIds": [
+            "u9-frequency"
+          ],
+          "production": {
+            "level": "early",
+            "acceptedAnswers": [],
+            "grammarHint": "Negate the frequency before the activity. This allows occasional exercise.",
+            "keyVocabulary": [
+              "常",
+              "運動"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with I and use the short not + often + exercise pattern."
+          }
         }
       ],
       "unitId": "unit-9",

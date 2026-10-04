@@ -30,7 +30,7 @@ test('Units 30-31 keep intended novelty, lesson count and review depth',()=>{
   for(const m of [u30,u31]){
     assert.equal(m.lessons.length,7);
     const review=m.lessons.find(l=>l.id===m.reviewLessonId);
-    assert.ok(review.steps.length>=18&&review.steps.length<=23,m.unit.id);
+    assert.ok(review.steps.filter(s=>s.type!=='produce').length>=18&&review.steps.filter(s=>s.type!=='produce').length<=23,m.unit.id);
     assert.ok(review.steps.filter(s=>s.type==='listen').length>=3,m.unit.id);
     assert.ok(review.steps.some(s=>s.type==='memory'||s.type==='parts'),m.unit.id+' lacks handwriting/component retrieval');
   }

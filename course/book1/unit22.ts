@@ -1039,6 +1039,29 @@ const unit:UnitData = {
           ],
           "answer": "法",
           "explanation": "法 is fǎ, the second character of 書法."
+        },
+        {
+          "id": "u22-produce-writing",
+          "type": "produce",
+          "phrase": "u22-writing",
+          "prompt": "Someone asks what you are doing now. Say: I am writing Chinese.",
+          "answer": "我在寫中文。",
+          "explanation": "Here 在 marks an ongoing action, not a location.",
+          "grammarIds": [
+            "u22-progressive-zai"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The ongoing marker sits before write + Chinese.",
+            "keyVocabulary": [
+              "在",
+              "寫",
+              "中文"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and the course’s ongoing-action marker; add no time word."
+          }
         }
       ]
     },
@@ -1280,6 +1303,29 @@ const unit:UnitData = {
             "u22-event-start-end",
             "u22-half-time"
           ]
+        },
+        {
+          "id": "u22-produce-not-every",
+          "type": "produce",
+          "phrase": "u22-not-every",
+          "prompt": "Correct the idea that you attend every day: I do not have class every day.",
+          "answer": "我不是每天都上課。",
+          "explanation": "不是每…都… means the statement is not true every time.",
+          "grammarIds": [
+            "u22-every-negation"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Negate the everyday claim, rather than saying that every day has no class.",
+            "keyVocabulary": [
+              "不是",
+              "每天",
+              "上課"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with I and use the not-be + every-day + all frame."
+          }
         }
       ]
     }

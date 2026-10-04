@@ -691,6 +691,27 @@ const unit:UnitData = {
             "就到了",
             "走路五分鐘"
           ]
+        },
+        {
+          "id": "u32-produce-rent",
+          "type": "produce",
+          "phrase": "u32-rent",
+          "prompt": "Tell a landlord: I want to rent a suite.",
+          "answer": "我想租套房。",
+          "explanation": "租 is the verb rent; 套房 here is a suite/room with its own bathroom.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Want-to precedes rent and its room type.",
+            "keyVocabulary": [
+              "想",
+              "租",
+              "套房"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use I + want-to + rent + suite, without a quantity or extra details."
+          }
         }
       ]
     },
@@ -899,6 +920,28 @@ const unit:UnitData = {
           ],
           "answer": "think it over",
           "explanation": "Here reduplicated 想想 means think it over; earlier 想 + VP often meant want to do something."
+        },
+        {
+          "id": "u32-produce-internet",
+          "type": "produce",
+          "phrase": "u32-internet",
+          "prompt": "Ask a landlord: Can one use the internet inside the room?",
+          "answer": "房間裡面可以上網嗎？",
+          "explanation": "the conversation reuses 裡面, 可以 and 上網 while practicing the new rental noun 房間.",
+          "grammarIds": [],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The location comes first, then can + internet activity, and finally the question marker.",
+            "keyVocabulary": [
+              "房間",
+              "裡面",
+              "可以",
+              "上網"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with room + inside and use the permission/possibility verb plus the yes/no ending. Add no subject or other details."
+          }
         }
       ]
     }

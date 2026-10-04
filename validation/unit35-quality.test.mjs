@@ -26,7 +26,7 @@ test('Unit 35 keeps coherent novelty and full lesson/review structure',()=>{
   assert.equal(u35.newCharacters.length,9);
   assert.equal(u35.lessons.length,7);
   const review=u35.lessons.find(l=>l.id===u35.reviewLessonId);
-  assert.equal(review.steps.length,27);
+  assert.equal(review.steps.filter(s=>s.type!=='produce').length,27);
   assert.ok(review.steps.filter(s=>s.type==='listen').length>=3);
   assert.ok(review.steps.filter(s=>s.type==='memory'||s.type==='parts').length>=2);
 });

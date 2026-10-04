@@ -720,6 +720,32 @@ const unit:UnitData = {
           "grammarIds": [
             "u35-shi-de"
           ]
+        },
+        {
+          "id": "u35-produce-focus-manner",
+          "type": "produce",
+          "phrase": "u35-focus-manner",
+          "prompt": "Someone asks how you came to class. Emphasize: I came to class by bus.",
+          "answer": "我是坐公車來上課的。",
+          "explanation": "是 directly precedes the focused manner phrase 坐公車.",
+          "grammarIds": [
+            "u35-shi-de"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Use the focus frame around the means of travel and the already-known arrival action.",
+            "keyVocabulary": [
+              "是",
+              "坐",
+              "公車",
+              "來",
+              "上課",
+              "的"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s is…final-marker focus frame and the complete take-bus phrase. Add no other details."
+          }
         }
       ]
     },
@@ -1018,6 +1044,31 @@ const unit:UnitData = {
           "grammarIds": [
             "u35-shi-de"
           ]
+        },
+        {
+          "id": "u35-produce-focus-who",
+          "type": "produce",
+          "phrase": "u35-focus-who",
+          "prompt": "Find out who called: Who called you?",
+          "answer": "是誰打電話給你的？",
+          "explanation": "A past-event 是…的 wh-question can ask who.",
+          "grammarIds": [
+            "u35-shi-de"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Focus the unknown caller at the beginning; keep the final focus marker.",
+            "keyVocabulary": [
+              "是",
+              "誰",
+              "打電話",
+              "給",
+              "的"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s is…final-marker focus frame and phone + give/to + you. No other details."
+          }
         }
       ]
     }

@@ -1071,6 +1071,31 @@ const unit:UnitData = {
             "回國",
             "我大概下個星期"
           ]
+        },
+        {
+          "id": "u26-produce-plan-travel",
+          "type": "produce",
+          "phrase": "u26-plan-travel",
+          "prompt": "Tell a friend: I plan to travel with friends.",
+          "answer": "我打算跟朋友去旅行。",
+          "explanation": "打算 introduces the planned action; 跟朋友 marks the companions.",
+          "grammarIds": [
+            "u26-dasuan-plan",
+            "u24-gen-company"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Plan-to precedes the companion phrase and the travel action.",
+            "keyVocabulary": [
+              "打算",
+              "跟",
+              "朋友",
+              "旅行"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with I and use the course’s plan-to verb and its with-companion pattern. Add no destination or time."
+          }
         }
       ]
     }

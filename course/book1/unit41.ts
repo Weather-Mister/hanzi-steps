@@ -830,6 +830,29 @@ const unit:UnitData = {
           ],
           "answer": "Use 跟…一樣 / 不一樣 to compare birthday customs.",
           "explanation": "The final objective requires comparison."
+        },
+        {
+          "id": "u41-produce-same-height",
+          "type": "produce",
+          "phrase": "u41-same-height",
+          "prompt": "Tell a friend: I am the same height as you.",
+          "answer": "我跟你一樣高。",
+          "explanation": "跟你 identifies the person compared with 我. 一樣高 means equally tall: 一樣 comes before the property 高.",
+          "grammarIds": [
+            "u41-gen-yiyang"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The other person precedes same + height; this is equality rather than greater height.",
+            "keyVocabulary": [
+              "跟",
+              "一樣",
+              "高"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the course’s with-you + same + height equality frame. Start with I; no extra details."
+          }
         }
       ]
     }

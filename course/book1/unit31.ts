@@ -677,6 +677,33 @@ const unit:UnitData = {
             "所以旅館不太貴",
             "因為現在去玩的人比較少"
           ]
+        },
+        {
+          "id": "u31-produce-red-person",
+          "type": "produce",
+          "phrase": "u31-red-person",
+          "prompt": "Identify someone: The person wearing red clothes is my friend.",
+          "answer": "穿紅色衣服的人是我朋友。",
+          "explanation": "穿紅色衣服 describes the person by what they are wearing. Put this description before 的人: the person wearing red clothes. 是我朋友 then identifies that person as my friend.",
+          "grammarIds": [
+            "u31-clause-modifier"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "穿紅色衣服的人是我的朋友。"
+            ],
+            "grammarHint": "The description comes before the person noun, then identify the person with is.",
+            "keyVocabulary": [
+              "穿",
+              "紅色",
+              "衣服",
+              "人",
+              "朋友"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Use the wearing-clothes modifier before person; my friend may include or omit its possessive particle."
+          }
         }
       ]
     },
@@ -983,6 +1010,30 @@ const unit:UnitData = {
             "u31-yinwei-suoyi",
             "u31-clause-modifier"
           ]
+        },
+        {
+          "id": "u31-produce-no-longer",
+          "type": "produce",
+          "phrase": "u31-no-longer",
+          "prompt": "Explain a change: I no longer live here.",
+          "answer": "我不住這裡了。",
+          "explanation": "The negative describes the new situation; final 了 marks the change.",
+          "grammarIds": [
+            "u31-sentential-le"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "Use the present negative, keeping the change marker at the end.",
+            "keyVocabulary": [
+              "不",
+              "住",
+              "這裡",
+              "了"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Include I and use the negative statement with the course’s change-of-situation ending."
+          }
         }
       ]
     }

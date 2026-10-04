@@ -23,7 +23,7 @@ test('Units 38–41 match the frozen Lesson 13 topology and load',()=>{
     assert.equal(u.lessons.length,7,'Unit '+n+' lesson count');
     assert.equal(u.newVocabulary.length,e.v,'Unit '+n+' vocabulary count');
     assert.equal(u.newCharacters.length,e.c,'Unit '+n+' character count');
-    assert.equal(review.steps.length,e.r,'Unit '+n+' review count');
+    assert.equal(review.steps.filter(s=>s.type!=='produce').length,e.r,'Unit '+n+' review count');
     assert.equal(review.steps.filter(s=>s.type==='listen').length,e.l,'Unit '+n+' listening count');
     assert.deepEqual(u.unit.grammarIds,e.g,'Unit '+n+' grammar IDs');
   }

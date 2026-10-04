@@ -748,6 +748,29 @@ const unit:UnitData = {
           ],
           "answer": "鐵",
           "explanation": "鐵 is tiě, the second character of 高鐵."
+        },
+        {
+          "id": "u24-produce-train-school",
+          "type": "produce",
+          "phrase": "u24-train-school",
+          "prompt": "Answer how you get to school: I take the train to school.",
+          "answer": "我坐火車去學校。",
+          "explanation": "坐 + vehicle gives the mode of transportation.",
+          "grammarIds": [
+            "u24-zuo-transport"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [],
+            "grammarHint": "The transport action comes before go + destination.",
+            "keyVocabulary": [
+              "坐",
+              "火車",
+              "學校"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Start with I and use take + train + go + school. No other details."
+          }
         }
       ]
     },
@@ -963,6 +986,32 @@ const unit:UnitData = {
           ],
           "answer": "舒",
           "explanation": "舒 is shū: comfortable; relaxed."
+        },
+        {
+          "id": "u24-produce-fast-comfortable",
+          "type": "produce",
+          "phrase": "u24-fast-comfortable",
+          "prompt": "Describe high-speed rail: It is both fast and comfortable.",
+          "answer": "高鐵又快又舒服。",
+          "explanation": "又 is repeated before each property.",
+          "grammarIds": [
+            "u24-you-you"
+          ],
+          "production": {
+            "level": "middle",
+            "acceptedAnswers": [
+              "高鐵又舒服又快。"
+            ],
+            "grammarHint": "Use the linking adverb before each quality.",
+            "keyVocabulary": [
+              "高鐵",
+              "又",
+              "快",
+              "舒服"
+            ],
+            "reviewNote": "The prompt specifies the taught construction and required details; only the authored full responses are accepted.",
+            "constraints": "Name high-speed rail and use the repeated both…and… quality pattern. Either quality order is allowed."
+          }
         }
       ]
     },
