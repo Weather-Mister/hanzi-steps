@@ -14,8 +14,8 @@ const widgetSource=fs.readFileSync(new URL('../supabase/functions/hanzi-widget/i
 const palettes=new Map([...css.matchAll(/\[data-unit-theme="([a-z]+)"\]\s*\{([^}]+)\}/g)]
  .filter(([, ,body])=>body.includes('--unit-accent:'))
  .map(([,name,body])=>[name,Object.fromEntries([...body.matchAll(/--unit-([a-z-]+):\s*(#[\da-f]{6});/g)].map(([,key,value])=>[key,value]))]));
-const widgetPalettes=new Map([...widgetSource.matchAll(/^\s*([a-z]+):\{accent:'(#[\da-f]{6})',onAccent:'(#[\da-f]{6})'\},$/gm)]
- .map(([,name,accent,onAccent])=>[name,{accent,onAccent}]));
+const widgetPalettes=new Map([...widgetSource.matchAll(/^\s*([a-z]+):\{accent:'(#[\da-f]{6})',onAccent:'(#[\da-f]{6})',ink:'(#[\da-f]{6})'\},$/gm)]
+ .map(([,name,accent,onAccent,ink])=>[name,{accent,onAccent,ink}]));
 const rgb=hex=>hex.slice(1).match(/../g).map(value=>parseInt(value,16)/255);
 const luminance=hex=>rgb(hex).map(value=>value<=.04045?value/12.92:((value+.055)/1.055)**2.4)
  .reduce((sum,value,index)=>sum+value*[.2126,.7152,.0722][index],0);
@@ -51,5 +51,6 @@ test('Widget colors match the web palette exactly',()=>{
   const web=palettes.get(name),widget=widgetPalettes.get(name);
   assert.equal(widget.accent,web.accent,`${name}: widget accent`);
   assert.equal(widget.onAccent,web['on-accent'],`${name}: widget foreground`);
+  assert.equal(widget.ink,web.text,`${name}: widget ink`);
  }
 });
