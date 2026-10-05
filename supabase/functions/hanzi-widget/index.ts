@@ -178,12 +178,13 @@ Deno.serve(async(request:Request)=>{
     }
 
     const candidates=characterCandidates(index,currentOrder);
-    const next=candidates.find(item=>!learned.has(item.character))||candidates[0]||null;
-    let nextCharacter=null;
-    if(next){
+    const upcomingCandidates=candidates.filter(item=>!learned.has(item.character)).slice(0,2);
+    if(!upcomingCandidates.length&&candidates[0])upcomingCandidates.push(candidates[0]);
+
+    const nextCharacters=upcomingCandidates.map(next=>{
       const nextOrder=index.order[next.orderIndex];
       const nextBook=manifest.books.find(book=>book.id===next.bookId);
-      nextCharacter={
+      return {
         character:next.character,
         pinyin:next.pinyin,
         meaning:next.meaning,
@@ -191,7 +192,8 @@ Deno.serve(async(request:Request)=>{
         unit:nextOrder?.[2]??1,
         unitId:next.unitId,
       };
-    }
+    });
+    const nextCharacter=nextCharacters[0]||null;
 
     return reply({
       version:2,
@@ -211,6 +213,7 @@ Deno.serve(async(request:Request)=>{
       unitColor:palette.accent,
       unitTextColor:palette.onAccent,
       nextCharacter,
+      nextCharacters,
       capturedAt:new Date(now).toISOString(),
     });
   }catch{
