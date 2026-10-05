@@ -27,6 +27,15 @@ test('Week 2 handwriting targets include the supplied Traditional forms',()=>{
  }
 });
 
+test('Week 3 handwriting targets include every supplied Traditional form',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===3);
+ assert.ok(set);
+ const chars=new Set(examStudyItems(set).flatMap(item=>item.characters));
+ for(const char of ['早','趙','小','姐','張','好','久','不','見','啊','很','謝','也','這','太','你','們','我','他']){
+  assert.ok(chars.has(char),`Week 3 must include ${char}`);
+ }
+});
+
 test('stroke geometry validator accepts repaired data and rejects inverted 國 guides',()=>{
  assert.equal(strokeGeometryLooksAligned(strokeData['人']),true);
  const guo=strokeData['國'];
