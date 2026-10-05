@@ -60,6 +60,30 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'華人',pinyin:'Huárén',meaning:'Ethnic Chinese; overseas Chinese; citizen of Chinese origin'},
   ],
  },
+ {
+  id:3,
+  title:'Week 3',
+  words:[
+   {traditional:'早',pinyin:'zǎo',meaning:'Good morning / to be early'},
+   {traditional:'趙',pinyin:'Zhào',meaning:'a common Chinese surname'},
+   {traditional:'小姐',pinyin:'xiǎojiě',meaning:'Miss'},
+   {traditional:'張',pinyin:'Zhāng',meaning:'a common Chinese surname'},
+   {traditional:'好久不見',pinyin:'hǎojiǔbújiàn',meaning:'Long time no see.'},
+   {traditional:'好',pinyin:'hǎo',meaning:'very, quite, so'},
+   {traditional:'久',pinyin:'jiǔ',meaning:'to be a long time'},
+   {traditional:'見',pinyin:'jiàn',meaning:'to see, to meet'},
+   {traditional:'啊',pinyin:'a',meaning:'a phrase final particle, indicating affirmation, exclamation, etc; an interrogative final particle, used when the answer is assumed.'},
+   {traditional:'很',pinyin:'hěn',meaning:'very'},
+   {traditional:'謝謝',pinyin:'xièxie',meaning:'to thank, to thank you'},
+   {traditional:'也',pinyin:'yě',meaning:'also'},
+   {traditional:'這',pinyin:'zhè / zhèi',meaning:'this'},
+   {traditional:'太太',pinyin:'tàitai',meaning:'Mrs., wife'},
+   {traditional:'你們',pinyin:'nǐmen',meaning:'you (plural)'},
+   {traditional:'們',pinyin:'men',meaning:'used after pronouns 我, 你, 他 or certain nouns denoting a group of persons'},
+   {traditional:'我們',pinyin:'wǒmen',meaning:'we, us'},
+   {traditional:'他們',pinyin:'tāmen',meaning:'they, them'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
