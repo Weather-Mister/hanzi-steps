@@ -39,6 +39,38 @@ test('Week 2 exam list exactly matches supplied textbook vocabulary and is isola
  assert.ok(items.every(item=>item.characters.length>0));
 });
 
+test('Week 3 exam list exactly matches supplied textbook vocabulary and is isolated',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===3);
+ assert.ok(set);
+ assert.equal(set.title,'Week 3');
+ assert.deepEqual(set.words,[
+  {traditional:'早',pinyin:'zǎo',meaning:'Good morning / to be early'},
+  {traditional:'趙',pinyin:'Zhào',meaning:'a common Chinese surname'},
+  {traditional:'小姐',pinyin:'xiǎojiě',meaning:'Miss'},
+  {traditional:'張',pinyin:'Zhāng',meaning:'a common Chinese surname'},
+  {traditional:'好久不見',pinyin:'hǎojiǔbújiàn',meaning:'Long time no see.'},
+  {traditional:'好',pinyin:'hǎo',meaning:'very, quite, so'},
+  {traditional:'久',pinyin:'jiǔ',meaning:'to be a long time'},
+  {traditional:'見',pinyin:'jiàn',meaning:'to see, to meet'},
+  {traditional:'啊',pinyin:'a',meaning:'a phrase final particle, indicating affirmation, exclamation, etc; an interrogative final particle, used when the answer is assumed.'},
+  {traditional:'很',pinyin:'hěn',meaning:'very'},
+  {traditional:'謝謝',pinyin:'xièxie',meaning:'to thank, to thank you'},
+  {traditional:'也',pinyin:'yě',meaning:'also'},
+  {traditional:'這',pinyin:'zhè / zhèi',meaning:'this'},
+  {traditional:'太太',pinyin:'tàitai',meaning:'Mrs., wife'},
+  {traditional:'你們',pinyin:'nǐmen',meaning:'you (plural)'},
+  {traditional:'們',pinyin:'men',meaning:'used after pronouns 我, 你, 他 or certain nouns denoting a group of persons'},
+  {traditional:'我們',pinyin:'wǒmen',meaning:'we, us'},
+  {traditional:'他們',pinyin:'tāmen',meaning:'they, them'},
+ ]);
+
+ const items=examStudyItems(set);
+ assert.equal(items.length,18);
+ assert.equal(new Set(items.map(item=>item.id)).size,18);
+ assert.ok(items.every(item=>item.lessonId==='exam-study-3'));
+ assert.ok(items.every(item=>item.characters.length>0));
+});
+
 test('Exam Study sets use Mega Challenge queue semantics without progress state',()=>{
  for(const set of examStudySets){
   const items=examStudyItems(set);
