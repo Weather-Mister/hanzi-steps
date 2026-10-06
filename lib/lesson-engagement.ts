@@ -6,11 +6,9 @@ export type CumulativeEncounter={
  id:string;
  unitNumber:number;
  title:string;
- targetMeaning:string;
- targetText:string;
- lines:Array<{unitNumber:number;text:string;pinyin:string;meaning:string}>;
+ blockUnitNumbers:[number,number,number];
+ readingId:string;
 };
-
 const ENGAGEMENT_MIN_UNIT=11;
 const ENGAGEMENT_MAX_UNIT=48;
 
@@ -84,29 +82,21 @@ export function isRepairEngagement(step:Step,lesson:Lesson):boolean{
 }
 
 /**
- * Thirteen non-overlapping three-unit cumulative encounters:
- * 10–12, 13–15, ... 46–48. They reuse only canonical unit goals that have
- * already been taught by the time the owning unit review is complete.
+ * Thirteen non-overlapping three-unit encounter anchors:
+ * 10–12, 13–15, ... 46–48. Each points to an already-reviewed reading
+ * checkpoint owned by the closing unit, so no new Chinese or grading contract
+ * is invented by the engagement layer.
  */
-export function cumulativeEncounterForUnit(unit:Unit,allUnits:Unit[]):CumulativeEncounter|undefined{
+export function cumulativeEncounterForUnit(unit:Unit,_allUnits:Unit[]):CumulativeEncounter|undefined{
  const number=unitNumber(unit.id);
  if(number===null||number<12||number>48||(number-12)%3!==0)return undefined;
- const block=[number-2,number-1,number]
-  .map(n=>allUnits.find(candidate=>candidate.id===`unit-${n}`))
-  .filter((candidate):candidate is Unit=>Boolean(candidate));
- if(block.length!==3)return undefined;
+ const readingId=number===48?'reading-unit-48':`reading-unit-${number}-mini`;
  return {
   id:`cumulative-${number-2}-${number}`,
   unitNumber:number,
   title:`Three-unit encounter · Units ${number-2}–${number}`,
-  targetMeaning:unit.goal.meaning,
-  targetText:unit.goal.text,
-  lines:block.map(candidate=>({
-   unitNumber:candidate.number,
-   text:candidate.goal.text,
-   pinyin:candidate.goal.pinyin,
-   meaning:candidate.goal.meaning,
-  })),
+  blockUnitNumbers:[number-2,number-1,number],
+  readingId,
  };
 }
 
