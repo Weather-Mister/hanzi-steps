@@ -38,7 +38,7 @@ import {unitSourceReference} from '@/lib/unit-source-reference';
 import {ProductionExercise} from './production-exercise';
 import {SentenceBuilder} from './sentence-builder';
 import {buildLessonOrderBank,lessonOrderUnitNumber} from '@/lib/lesson-order-bank';
-import {engagementPrompt} from '@/lib/lesson-engagement';
+import {cumulativeEncounterForUnit,engagementFrame,engagementPrompt,isRepairEngagement} from '@/lib/lesson-engagement';
 
 type Preferences={pinyin:boolean};
 function CharacterParts({character,compact=false}:{character:Character;compact?:boolean}){
@@ -73,6 +73,8 @@ function Exercise({step,lesson,prefs,onAdvance,onAttempt,completed,sessionSeed}:
  function result(ok:boolean,text:string,assisted=false){const masteryAssisted=ok&&(assisted||hadHelpRef.current||step.type==='trace'||step.type==='complete');onAttempt?.(step,ok,masteryAssisted);if(assisted)support();if(!ok)support();feel(ok?'success':'retry');setFeedback(ok?'good':'wrong');setExplanation(text)}
  useEffect(()=>{heading.current?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'})},[step.id]);
  const engagedPrompt=engagementPrompt(step,lesson,phrases);
+ const frame=engagementFrame(step,lesson);
+ const repairEngagement=isRepairEngagement(step,lesson);
  const prompts:Record<string,string>={intro:'Meet a new character',trace:'Trace the character',complete:'Finish the missing strokes',memory:'Write it from memory',parts:step.prompt||'Look inside the character',build:'Build the character',match:'Match the pairs',phrase:'Put it into words',grammar:'A useful pattern',visual:step.prompt||'Use the source role prompt',order:engagedPrompt||'Build the translation',listen:engagedPrompt||(step.semanticAnswer?'Choose the meaning you hear':textCue?'Match the pinyin':'Which character do you hear?'),select:engagedPrompt||'Choose the character'};
  const choices=shuffled(step.options||[],step.id);const parts=c?.parts||[];const partOrder=shuffled(parts.map((_,i)=>i),step.id+'parts');const baseTokens=step.tokens||[];
  const orderUnit=lessonOrderUnitNumber(step.id);
@@ -118,7 +120,7 @@ function Exercise({step,lesson,prefs,onAdvance,onAttempt,completed,sessionSeed}:
   window.addEventListener('keydown',onKeyDown);
   return ()=>window.removeEventListener('keydown',onKeyDown);
  },[ready,introduction,feedback,selected,picked,retry,step.id]);
- return <><section className="exercise-body"><div className="exercise-kind">{writing?<PenLine size={16}/>:step.type==='intro'||step.type==='parts'||step.type==='build'?<Shapes size={16}/>:step.type==='listen'?<Volume2 size={16}/>:<BookOpen size={16}/>}<span>{step.type==='memory'?'Independent writing':step.type==='trace'?'Guided writing':step.type==='complete'?'Fading the guide':introduction?'Learn':'Practice'}</span></div><h1 ref={heading} tabIndex={-1} className="exercise-prompt">{prompts[step.type]}</h1>
+ return <><section className="exercise-body"><div className="exercise-kind">{writing?<PenLine size={16}/>:step.type==='intro'||step.type==='parts'||step.type==='build'?<Shapes size={16}/>:step.type==='listen'?<Volume2 size={16}/>:<BookOpen size={16}/>}<span>{step.type==='memory'?'Independent writing':step.type==='trace'?'Guided writing':step.type==='complete'?'Fading the guide':introduction?'Learn':'Practice'}</span></div>{frame&&<div className={`engagement-frame engagement-${frame.kind}`}><span>{frame.label}</span><p>{frame.cue}</p></div>}<h1 ref={heading} tabIndex={-1} className="exercise-prompt">{prompts[step.type]}</h1>
  {step.type==='intro'&&c&&<><div className="character-intro"><div><WritingPad char={c.hanzi} mode="intro"/></div><div className="character-definition"><span className="character-label">TRADITIONAL CHARACTER</span><h2 lang="zh-Hant-TW">{c.hanzi}</h2><Phonetics character={c} prefs={prefs}/><h3>{c.meaning}</h3><AudioButton text={c.audioText||c.hanzi}/><p>{c.note}</p></div></div><CharacterParts character={c}/><CharacterMeanings hanzi={c.hanzi} completed={completed} showPinyin={prefs.pinyin}/><KnowledgeNotes word={c.hanzi} completed={completed} showPinyin={prefs.pinyin}/></>}
  {writing&&c&&<><div className="writing-cue">{step.type!=='memory'&&<span lang="zh-Hant-TW">{c.hanzi}</span>}<div><strong>{c.pinyin}</strong><p>{c.meaning}</p></div><AudioButton text={c.audioText||c.hanzi}/></div><WritingPad char={c.hanzi} mode={step.type as 'trace'|'complete'|'memory'} onComplete={help=>result(true,step.type==='memory'?(help?'You finished with support. Another round will help it stick.':'You wrote the character from memory, in stroke order.'):'You completed every stroke in order.',help)}/></>}
  {(step.type==='select'||step.type==='parts'||step.type==='listen')&&<>{step.type==='parts'&&c&&<CharacterArt char={c.hanzi} className="question-character"/>}{step.type==='listen'&&<div className="listening-cue" data-feedback="quiet"><button className="listen-large" onClick={()=>void listen()} disabled={playing}><Volume2 size={32}/><span>{playing?'Playing…':'Play audio'}</span></button><button className="text-button" onClick={()=>void listen(true)} disabled={playing}>Play slowly</button>{(textCue||hint)&&<p className="pinyin-cue" lang={step.semanticAnswer?'zh-Hant-TW':undefined}>{step.semanticAnswer?step.audioText:c!.pinyin}</p>}{message&&<p className="exercise-note">{message}</p>}{!textCue&&!hint&&<button className="text-button" onClick={()=>{setTextCue(true);support()}}>{step.semanticAnswer?'Use text instead':'Use pinyin instead'}</button>}</div>}<div className={`choice-grid ${choices.some(x=>x.length>5)?'long-options':''}`}>{choices.map((option,i)=><button key={option} disabled={!!feedback||(step.type==='listen'&&!heard&&!textCue)} className={`choice ${selected===option?'selected':''} ${selected===option&&feedback?feedback==='good'?'correct':'wrong':''}`} onClick={()=>setSelected(option)} aria-pressed={selected===option}><span className="choice-key">{i+1}</span><span className={Array.from(option).length===1&&/[\u3400-\u9fff]/.test(option)?'choice-character hanzi':''} lang={/[\u3400-\u9fff]/.test(option)?'zh-Hant-TW':undefined}>{option}</span>{selected===option&&feedback==='good'&&<Check size={20}/>}</button>)}</div></>}
@@ -130,7 +132,28 @@ function Exercise({step,lesson,prefs,onAdvance,onAttempt,completed,sessionSeed}:
  {step.type==='phrase'&&phrase&&<KnowledgeNotes phraseId={step.phrase} completed={completed} showPinyin={prefs.pinyin}/>}
  {step.type==='order'&&phrase&&<><div className="translation-prompt"><BookOpen size={24}/><h2>{phrase.meaning}</h2></div><SentenceBuilder tokens={tokens} order={tokenOrder} picked={picked} disabled={!!feedback} onPick={i=>setPicked(p=>[...p,i])} onRemove={position=>setPicked(p=>p.filter((_,j)=>j!==position))}/><button className="text-button translation-hint" onClick={()=>{setHint(true);support()}}><Lightbulb size={16}/>Show a hint</button>{hint&&<p className="hint-copy">{phrase.pinyin}<br/>{phrase.note}</p>}</>}
  {!introduction&&!!(step.grammarIds||phrase?.grammarIds)?.length&&<details className="exercise-pattern-help" onToggle={event=>{if(event.currentTarget.open)support()}}><summary><Lightbulb size={16}/>Review the pattern</summary>{(step.grammarIds||phrase?.grammarIds)!.map(id=><GrammarCard key={id} rule={grammarRules[id]} prefs={prefs}/>)}</details>}
- </section><footer className={`exercise-footer ${feedback==='good'?'success':feedback==='wrong'?'error':''}`}><div className="feedback-area" aria-live="polite">{feedback?<><span className="feedback-icon">{feedback==='good'?<Check size={27}/>:<RotateCcw size={25}/>}</span><div><strong>{feedback==='good'?(hadHelp?'Good practice!':'Nicely done!'):'Let’s try that again'}</strong><p>{explanation}</p></div></>:<p>{introduction?(step.type==='intro'?'Take your time. Learn the shape and its parts.':'Notice the pattern. You will use it next.'):writing?'One stroke at a time. You have unlimited tries.':'Take your time. There is no timer.'}</p>}</div><button className="primary-button continue-button" disabled={!ready} onClick={introduction||feedback?proceed:check}>{feedback==='wrong'?'Try again':introduction||feedback==='good'?'Continue':'Check answer'}<ArrowRight size={19}/></button></footer></>
+ </section><footer className={`exercise-footer ${feedback==='good'?'success':feedback==='wrong'?'error':''}`}><div className="feedback-area" aria-live="polite">{feedback?<><span className="feedback-icon">{feedback==='good'?<Check size={27}/>:<RotateCcw size={25}/>}</span><div><strong>{feedback==='good'?(hadHelp?'Good practice!':'Nicely done!'):repairEngagement?'Repair the exchange':'Let’s try that again'}</strong><p>{explanation}</p></div></>:<p>{introduction?(step.type==='intro'?'Take your time. Learn the shape and its parts.':'Notice the pattern. You will use it next.'):writing?'One stroke at a time. You have unlimited tries.':'Take your time. There is no timer.'}</p>}</div><button className="primary-button continue-button" disabled={!ready} onClick={introduction||feedback?proceed:check}>{feedback==='wrong'?(repairEngagement?'Repair it':'Try again'):introduction||feedback==='good'?'Continue':'Check answer'}<ArrowRight size={19}/></button></footer></>
+}
+
+
+function CumulativeEncounter({unit,onOpen}:{unit:Unit;onOpen:(reading:Reading)=>void}){
+ const encounter=cumulativeEncounterForUnit(unit,units);
+ const reading=encounter?readingsForUnit(unit.id).find(item=>item.id===encounter.readingId):undefined;
+ const [selected,setSelected]=useState<number|null>(null);
+ const [showPinyin,setShowPinyin]=useState(false);
+ if(!encounter||!reading)return null;
+ const question=reading.questions[0];
+ if(!question)return null;
+ const correct=selected===question.answer;
+ const previewLines=reading.lines.slice(0,Math.min(3,reading.lines.length));
+ return <section className={`cumulative-encounter cumulative-${reading.presentation||'reading'}`} aria-label={encounter.title}>
+  <div className="cumulative-encounter-heading"><div><p>THREE-UNIT ENCOUNTER</p><h3>{reading.title}</h3><small>{encounter.title} · {reading.kind}</small></div><Sparkles size={22}/></div>
+  <p className="cumulative-encounter-setup">{reading.setup}</p>
+  <div className="cumulative-encounter-snapshot">{previewLines.map((line,index)=><div key={index} className="cumulative-encounter-line">{line.speaker&&<strong>{line.speaker}</strong>}<span lang="zh-Hant-TW">{line.text}</span>{showPinyin&&<small>{line.pinyin}</small>}</div>)}</div>
+  <fieldset className="cumulative-encounter-question"><legend>{question.prompt}</legend>{question.options.map((option,index)=><button key={option} className={selected===index?(index===question.answer?'correct':'wrong'):''} onClick={()=>setSelected(index)} aria-pressed={selected===index}>{option}</button>)}</fieldset>
+  {selected!==null&&<p className={`cumulative-encounter-feedback ${correct?'correct':'retry'}`}>{correct?question.explanation:'Not quite — reread the snapshot and try another answer.'}</p>}
+  <div className="cumulative-encounter-actions"><button className="text-button" onClick={()=>setShowPinyin(value=>!value)}>{showPinyin?'Hide pinyin':'Reveal pinyin'}</button><button className="secondary-button" onClick={()=>onOpen(reading)}>Open full reading<ArrowRight size={16}/></button></div>
+ </section>;
 }
 
 type BonusStageKind='daily'|'mixed'|'mega';
@@ -281,6 +304,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
         </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
        })}
        {completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<UnitChallengePair unitNumber={unit.displayNumber??unit.number} onMega={()=>openUnitChallenge('handwriting',unit)} onPinyin={()=>openUnitChallenge('pinyin',unit)}/>}
+       {completed.has(unit.lessonIds[unit.lessonIds.length-1])&&cumulativeEncounterForUnit(unit,units)&&<CumulativeEncounter unit={unit} onOpen={openReading}/>}
        {unitReadings.map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
        {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
       </section><aside className="course-sidebar">
@@ -304,6 +328,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
   <div className="completion-characters" lang="zh-Hant-TW">{current.chars.map(c=><button key={c} onClick={()=>setDetail(c)}>{c}</button>)}</div><div className="completion-stats"><div><strong>{active.independent}</strong><span>Without retries or hints</span></div><div><strong>{active.assisted}</strong><span>With learning support</span></div></div><p className="completion-note">Guided tracing is practice. Writing from memory is a separate step.</p>{!needsSignIn&&saveState==='error'&&<p className="storage-notice" role="status">{saveError||loadError}</p>}
   {current.review&&<div className="final-phrase"><p lang="zh-Hant-TW">{currentUnit.goal.text}</p><span>{currentUnit.goal.meaning}</span><AudioButton text={currentUnit.goal.text}/></div>}
   {current.review&&<UnitChallengePair completion unitNumber={currentUnit.displayNumber??currentUnit.number} onMega={()=>openUnitChallenge('handwriting',currentUnit)} onPinyin={()=>openUnitChallenge('pinyin',currentUnit)}/>}
+  {current.review&&cumulativeEncounterForUnit(currentUnit,units)&&<CumulativeEncounter unit={currentUnit} onOpen={openReading}/>}
   {current.review&&readingsForUnit(currentUnit.id).map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
   <button className="primary-button" onClick={()=>{if(current.review&&followingUnit)chooseUnit(followingUnit.id);home()}}>{current.review&&followingUnit?`Continue to Unit ${followingUnit.displayNumber??followingUnit.number}`:'Back to the unit'}<ArrowRight size={19}/></button><button className={`sync-state ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button>
  </main> : current ? <main className="lesson-main">

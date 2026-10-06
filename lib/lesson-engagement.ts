@@ -1,37 +1,105 @@
-import type {Lesson,Phrase,Step} from '../course/schema.ts';
+import type {Lesson,Phrase,Step,Unit} from '../course/schema.ts';
 
-const LABELS=['Situation','Quick reply','Context check','Make the call','In the moment'] as const;
+export type EngagementKind='situation'|'reply'|'voice'|'repair'|'context';
+export type EngagementFrame={kind:EngagementKind;label:string;cue:string};
+export type CumulativeEncounter={
+ id:string;
+ unitNumber:number;
+ title:string;
+ blockUnitNumbers:[number,number,number];
+ readingId:string;
+};
+const ENGAGEMENT_MIN_UNIT=11;
+const ENGAGEMENT_MAX_UNIT=48;
 
+function unitNumber(unitId?:string):number|null{
+ const match=unitId?.match(/^unit-(\d+)$/);
+ return match?Number(match[1]):null;
+}
 function hash(text:string):number{
  let value=2166136261;
  for(let i=0;i<text.length;i++){value^=text.charCodeAt(i);value=Math.imul(value,16777619)}
  return value>>>0;
 }
-function labelFor(id:string):string{return LABELS[hash(id)%LABELS.length]}
+function inEngagementRange(lesson:Lesson):boolean{
+ const number=unitNumber(lesson.unitId);
+ return number!==null&&number>=ENGAGEMENT_MIN_UNIT&&number<=ENGAGEMENT_MAX_UNIT;
+}
+function assessedCandidates(lesson:Lesson):Step[]{
+ return lesson.steps.filter(step=>step.type==='select'||step.type==='order'||step.type==='listen');
+}
+function repairStepId(lesson:Lesson):string|undefined{
+ const candidates=assessedCandidates(lesson);
+ return candidates.length?candidates[hash(lesson.id)%candidates.length]?.id:undefined;
+}
+function chineseChoice(step:Step):boolean{
+ const values=[step.answer,...(step.options||[])].filter((value):value is string=>Boolean(value));
+ return values.length>=3&&values.every(value=>/[\u3400-\u9fff]/.test(value));
+}
 
 /**
- * Learner-facing framing only. This never mutates or replaces curriculum data.
- * Call it at render time so authored steps, progress indexes and regression
- * baselines remain byte-for-byte stable.
+ * Render-only engagement metadata. Canonical curriculum objects are never
+ * mutated: IDs, indexes, answers, options, accepted production answers and
+ * ownership remain exactly as authored.
+ */
+export function engagementFrame(step:Step,lesson:Lesson):EngagementFrame|undefined{
+ if(!inEngagementRange(lesson)||!['select','order','listen'].includes(step.type))return undefined;
+ if(repairStepId(lesson)===step.id){
+  return {kind:'repair',label:'Repair challenge',cue:`If the first attempt misses, repair the exchange using the same ${lesson.subtitle.toLowerCase()}`};
+ }
+ if(step.type==='listen')return {kind:'voice',label:'Voice note',cue:`Listen for the detail that matters here: ${lesson.subtitle}`};
+ if(step.type==='order')return {kind:'reply',label:'Your reply',cue:`Respond in Chinese to this situation: ${lesson.subtitle}`};
+ if(chineseChoice(step))return {kind:'reply',label:'Choose the reply',cue:`Pick the Chinese response that fits: ${lesson.subtitle}`};
+ return hash(step.id)%2===0
+  ? {kind:'situation',label:'In the situation',cue:`Use the language from this lesson: ${lesson.subtitle}`}
+  : {kind:'context',label:'Meaning in context',cue:`Read the whole situation before choosing: ${lesson.subtitle}`};
+}
+
+/**
+ * Learner-facing wording only. It is computed at render time so authored
+ * steps and regression baselines stay byte-for-byte stable.
  */
 export function engagementPrompt(step:Step,lesson:Lesson,phrases:Record<string,Phrase>):string|undefined{
- const match=lesson.unitId?.match(/^unit-(\d+)$/);
- const unit=match?Number(match[1]):null;
- if(unit===null||unit<11||unit>48||step.type==='produce'||step.type==='visual')return step.prompt;
+ if(!inEngagementRange(lesson)||step.type==='produce'||step.type==='visual')return step.prompt;
  const original=step.prompt?.trim();
  if(step.type==='order'){
   const phrase=step.phrase?phrases[step.phrase]:undefined;
-  if(original)return `${labelFor(step.id)} · ${original}`;
-  if(phrase?.meaning)return `${labelFor(step.id)} · Build the Chinese for “${phrase.meaning}”`;
-  return `${labelFor(step.id)} · Build the reply`;
+  if(original)return original;
+  if(phrase?.meaning)return `Build the Chinese response for “${phrase.meaning}”`;
+  return 'Build the reply';
  }
- if(step.type==='select'){
-  return original?`${labelFor(step.id)} · ${original}`:`${labelFor(step.id)} · Choose what fits this lesson: ${lesson.subtitle}`;
- }
+ if(step.type==='select')return original||'Choose what fits this situation';
  if(step.type==='listen'){
-  if(original)return `Listen in · ${original}`;
-  if(step.semanticAnswer)return 'Listen in · Choose the meaning that matches the whole message';
-  return 'Listen in · Choose exactly what you hear';
+  if(original)return original;
+  if(step.semanticAnswer)return 'Choose the meaning that matches the whole message';
+  return 'Choose exactly what you hear';
  }
  return step.prompt;
+}
+
+export function isRepairEngagement(step:Step,lesson:Lesson):boolean{
+ return engagementFrame(step,lesson)?.kind==='repair';
+}
+
+/**
+ * Thirteen non-overlapping three-unit encounter anchors:
+ * 10–12, 13–15, ... 46–48. Each points to an already-reviewed reading
+ * checkpoint owned by the closing unit, so no new Chinese or grading contract
+ * is invented by the engagement layer.
+ */
+export function cumulativeEncounterForUnit(unit:Unit,_allUnits:Unit[]):CumulativeEncounter|undefined{
+ const number=unitNumber(unit.id);
+ if(number===null||number<12||number>48||(number-12)%3!==0)return undefined;
+ const readingId=number===48?'reading-unit-48':`reading-unit-${number}-mini`;
+ return {
+  id:`cumulative-${number-2}-${number}`,
+  unitNumber:number,
+  title:`Three-unit encounter · Units ${number-2}–${number}`,
+  blockUnitNumbers:[number-2,number-1,number],
+  readingId,
+ };
+}
+
+export function cumulativeEncounterUnitNumbers():number[]{
+ return Array.from({length:13},(_,index)=>12+index*3);
 }
