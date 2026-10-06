@@ -113,6 +113,27 @@ let server,browser,page;
  await page.getByText('Unit 4 only.',{exact:false}).waitFor();
  await page.keyboard.press('Escape');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ // Every third unit block exposes a compact cumulative reading encounter without changing course progress.
+ await page.getByRole('button',{name:/^Change book or unit\./}).click();
+ await page.getByRole('searchbox',{name:'Search units by number or topic'}).fill('unit 12');
+ await page.getByRole('button',{name:/^Unit 12 ·/}).click();
+ const encounter=page.locator('.cumulative-encounter');
+ await encounter.getByRole('heading',{name:'One order, two prices',exact:true}).waitFor();
+ assert.equal(await encounter.locator('.cumulative-encounter-line small').count(),0);
+ assert.ok(await encounter.locator('.cumulative-encounter-line').count()>=2);
+ assert.ok(await encounter.locator('.cumulative-encounter-question button').count()>=3);
+ await encounter.getByRole('button',{name:'Reveal pinyin',exact:true}).click();
+ assert.ok(await encounter.locator('.cumulative-encounter-line small').count()>=2);
+ const readingData=require('../../course/readings/checkpoints.json');
+ const mini=readingData.find(item=>item.id==='reading-unit-12-mini');
+ assert.ok(mini&&mini.questions[0]);
+ const answerText=mini.questions[0].options[mini.questions[0].answer];
+ await encounter.getByRole('button',{name:answerText,exact:true}).click();
+ await encounter.locator('.cumulative-encounter-feedback.correct').waitFor();
+ await encounter.getByRole('button',{name:'Open full reading',exact:true}).click();
+ await page.getByRole('heading',{name:'One order, two prices',level:1,exact:true}).waitFor();
+ await page.getByRole('button',{name:'Back to the unit',exact:true}).click();
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  // The recent statistics dashboard must remain contained and usable on mobile.
  await page.getByRole('button',{name:'Statistics',exact:true}).click();
  await page.getByRole('heading',{name:'Learning statistics',exact:true}).waitFor();
