@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {courseModules} from '../course/registry.generated.ts';
 import {lessons,phrases,units} from '../course/runtime.ts';
+import {readingCheckpoints} from '../lib/reading-checkpoints.ts';
 import {
  cumulativeEncounterForUnit,
  cumulativeEncounterUnitNumbers,
@@ -69,26 +70,24 @@ test('generated order framing is grounded in canonical phrase meaning',()=>{
  }
 });
 
-test('cumulative layer creates exactly 13 non-overlapping three-unit encounters from taught canonical goals',()=>{
+test('cumulative layer creates exactly 13 non-overlapping three-unit encounters from vetted readings',()=>{
  const numbers=cumulativeEncounterUnitNumbers();
  assert.deepEqual(numbers,[12,15,18,21,24,27,30,33,36,39,42,45,48]);
  const encounters=units.map(unit=>cumulativeEncounterForUnit(unit,units)).filter(Boolean);
  assert.equal(encounters.length,13);
  assert.deepEqual(encounters.map(encounter=>encounter.unitNumber),numbers);
+ const covered=[];
  for(const encounter of encounters){
-  assert.equal(encounter.lines.length,3);
-  assert.deepEqual(encounter.lines.map(line=>line.unitNumber),[encounter.unitNumber-2,encounter.unitNumber-1,encounter.unitNumber]);
-  const current=units.find(unit=>unit.id===`unit-${encounter.unitNumber}`);
-  assert.ok(current);
-  assert.equal(encounter.targetText,current.goal.text);
-  assert.equal(encounter.targetMeaning,current.goal.meaning);
-  for(const line of encounter.lines){
-   const source=units.find(unit=>unit.id===`unit-${line.unitNumber}`);
-   assert.ok(source);
-   assert.equal(line.text,source.goal.text);
-   assert.equal(line.pinyin,source.goal.pinyin);
-   assert.equal(line.meaning,source.goal.meaning);
-   assert.ok(line.unitNumber<=encounter.unitNumber,`${encounter.id} leaked a future unit`);
-  }
+  assert.deepEqual(encounter.blockUnitNumbers,[encounter.unitNumber-2,encounter.unitNumber-1,encounter.unitNumber]);
+  covered.push(...encounter.blockUnitNumbers);
+  const reading=readingCheckpoints.find(candidate=>candidate.id===encounter.readingId);
+  assert.ok(reading,`${encounter.id} references a missing reading`);
+  assert.equal(reading.unitId,`unit-${encounter.unitNumber}`,`${encounter.id} reading belongs to the wrong unit`);
+  assert.ok(reading.lines.length>=2,`${encounter.readingId} is too thin for a snapshot`);
+  assert.ok(reading.questions.length>=1,`${encounter.readingId} has no comprehension check`);
+  const question=reading.questions[0];
+  assert.ok(question.options.length>=3,`${encounter.readingId} needs meaningful deterministic choices`);
+  assert.ok(Number.isInteger(question.answer)&&question.answer>=0&&question.answer<question.options.length,`${encounter.readingId} has an invalid answer key`);
  }
+ assert.deepEqual(covered,Array.from({length:39},(_,index)=>10+index));
 });
