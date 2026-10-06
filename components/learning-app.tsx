@@ -136,18 +136,23 @@ function Exercise({step,lesson,prefs,onAdvance,onAttempt,completed,sessionSeed}:
 }
 
 
-function CumulativeEncounter({unit}:{unit:Unit}){
+function CumulativeEncounter({unit,onOpen}:{unit:Unit;onOpen:(reading:Reading)=>void}){
  const encounter=cumulativeEncounterForUnit(unit,units);
- const [selected,setSelected]=useState('');
+ const reading=encounter?readingsForUnit(unit.id).find(item=>item.id===encounter.readingId):undefined;
+ const [selected,setSelected]=useState<number|null>(null);
  const [showPinyin,setShowPinyin]=useState(false);
- if(!encounter)return null;
- const options=shuffled(encounter.lines,encounter.id);
- const correct=selected===encounter.targetText;
- return <section className="cumulative-encounter" aria-label={encounter.title}>
-  <div className="cumulative-encounter-heading"><div><p>THREE-UNIT ENCOUNTER</p><h3>{encounter.title}</h3></div><Sparkles size={22}/></div>
-  <p className="cumulative-encounter-prompt">Which Chinese line means <strong>“{encounter.targetMeaning}”</strong>?</p>
-  <div className="cumulative-encounter-options">{options.map(line=><button key={line.text} className={selected===line.text?(line.text===encounter.targetText?'correct':'wrong'):''} onClick={()=>setSelected(line.text)} aria-pressed={selected===line.text}><span lang="zh-Hant-TW">{line.text}</span>{showPinyin&&<small>{line.pinyin}</small>}</button>)}</div>
-  <div className="cumulative-encounter-actions"><button className="text-button" onClick={()=>setShowPinyin(value=>!value)}>{showPinyin?'Hide pinyin':'Reveal pinyin'}</button>{selected&&<span className={correct?'correct':'retry'}>{correct?'That is the current unit goal.':'Not this one — compare the three lines and try again.'}</span>}</div>
+ if(!encounter||!reading)return null;
+ const question=reading.questions[0];
+ if(!question)return null;
+ const correct=selected===question.answer;
+ const previewLines=reading.lines.slice(0,Math.min(3,reading.lines.length));
+ return <section className={`cumulative-encounter cumulative-${reading.presentation||'reading'}`} aria-label={encounter.title}>
+  <div className="cumulative-encounter-heading"><div><p>THREE-UNIT ENCOUNTER</p><h3>{reading.title}</h3><small>{encounter.title} · {reading.kind}</small></div><Sparkles size={22}/></div>
+  <p className="cumulative-encounter-setup">{reading.setup}</p>
+  <div className="cumulative-encounter-snapshot">{previewLines.map((line,index)=><div key={index} className="cumulative-encounter-line">{line.speaker&&<strong>{line.speaker}</strong>}<span lang="zh-Hant-TW">{line.text}</span>{showPinyin&&<small>{line.pinyin}</small>}</div>)}</div>
+  <fieldset className="cumulative-encounter-question"><legend>{question.prompt}</legend>{question.options.map((option,index)=><button key={option} className={selected===index?(index===question.answer?'correct':'wrong'):''} onClick={()=>setSelected(index)} aria-pressed={selected===index}>{option}</button>)}</fieldset>
+  {selected!==null&&<p className={`cumulative-encounter-feedback ${correct?'correct':'retry'}`}>{correct?question.explanation:'Not quite — reread the snapshot and try another answer.'}</p>}
+  <div className="cumulative-encounter-actions"><button className="text-button" onClick={()=>setShowPinyin(value=>!value)}>{showPinyin?'Hide pinyin':'Reveal pinyin'}</button><button className="secondary-button" onClick={()=>onOpen(reading)}>Open full reading<ArrowRight size={16}/></button></div>
  </section>;
 }
 
@@ -299,7 +304,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
         </div>{bonusVisible&&i===bonusAfterIndex&&bonusKind&&<BonusStage kind={bonusKind} onStart={()=>openBonusStage(bonusKind)}/>}</Fragment>
        })}
        {completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<UnitChallengePair unitNumber={unit.displayNumber??unit.number} onMega={()=>openUnitChallenge('handwriting',unit)} onPinyin={()=>openUnitChallenge('pinyin',unit)}/>}
-       {completed.has(unit.lessonIds[unit.lessonIds.length-1])&&cumulativeEncounterForUnit(unit,units)&&<CumulativeEncounter unit={unit}/>}
+       {completed.has(unit.lessonIds[unit.lessonIds.length-1])&&cumulativeEncounterForUnit(unit,units)&&<CumulativeEncounter unit={unit} onOpen={openReading}/>}
        {unitReadings.map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
        {nextUnit&&completed.has(unit.lessonIds[unit.lessonIds.length-1])&&<button className="primary-button next-unit-button" onClick={()=>chooseUnit(nextUnit.id)}>Continue to Unit {nextUnit.displayNumber??nextUnit.number}<ArrowRight size={19}/></button>}
       </section><aside className="course-sidebar">
@@ -323,7 +328,7 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
   <div className="completion-characters" lang="zh-Hant-TW">{current.chars.map(c=><button key={c} onClick={()=>setDetail(c)}>{c}</button>)}</div><div className="completion-stats"><div><strong>{active.independent}</strong><span>Without retries or hints</span></div><div><strong>{active.assisted}</strong><span>With learning support</span></div></div><p className="completion-note">Guided tracing is practice. Writing from memory is a separate step.</p>{!needsSignIn&&saveState==='error'&&<p className="storage-notice" role="status">{saveError||loadError}</p>}
   {current.review&&<div className="final-phrase"><p lang="zh-Hant-TW">{currentUnit.goal.text}</p><span>{currentUnit.goal.meaning}</span><AudioButton text={currentUnit.goal.text}/></div>}
   {current.review&&<UnitChallengePair completion unitNumber={currentUnit.displayNumber??currentUnit.number} onMega={()=>openUnitChallenge('handwriting',currentUnit)} onPinyin={()=>openUnitChallenge('pinyin',currentUnit)}/>}
-  {current.review&&cumulativeEncounterForUnit(currentUnit,units)&&<CumulativeEncounter unit={currentUnit}/>}
+  {current.review&&cumulativeEncounterForUnit(currentUnit,units)&&<CumulativeEncounter unit={currentUnit} onOpen={openReading}/>}
   {current.review&&readingsForUnit(currentUnit.id).map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
   <button className="primary-button" onClick={()=>{if(current.review&&followingUnit)chooseUnit(followingUnit.id);home()}}>{current.review&&followingUnit?`Continue to Unit ${followingUnit.displayNumber??followingUnit.number}`:'Back to the unit'}<ArrowRight size={19}/></button><button className={`sync-state ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button>
  </main> : current ? <main className="lesson-main">
