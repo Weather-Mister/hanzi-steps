@@ -4,7 +4,6 @@ import {courseModules} from './registry.generated.ts';
 import legacyCharacters from './legacy/characters.json' with {type:'json'};
 import order from './legacy/registry-order.json' with {type:'json'};
 import type {Character,GrammarRule,Phrase,Lesson,Unit,VocabularyWord} from './schema.ts';
-import {engageLesson} from '../lib/lesson-engagement.ts';
 
 function ordered<T>(records:Record<string,T>,keys:string[]):Record<string,T>{
  return Object.fromEntries([...new Set([...keys,...Object.keys(records)])].filter(k=>k in records).map(k=>[k,records[k]]));
@@ -14,8 +13,8 @@ export const books=manifest.books.map(({units:entries,...book})=>({id:book.id,nu
 export const vocabulary:VocabularyWord[]=courseModules.flatMap(m=>m.newVocabulary);
 export const characters:Record<string,Character>=ordered(Object.assign({},...courseModules.map(m=>m.characters),legacyCharacters),order.characters);
 export const grammarRules:Record<string,GrammarRule>=ordered(Object.assign({},...courseModules.map(m=>m.grammarRules)),order.grammarRules);
+export const lessons:Lesson[]=courseModules.flatMap(m=>m.lessons.map(l=>({...l,unitId:m.unit.id,review:l.id===m.reviewLessonId})));
 export const phrases:Record<string,Phrase>=ordered(Object.assign({},...courseModules.map(m=>m.phrases)),order.phrases);
-export const lessons:Lesson[]=courseModules.flatMap(m=>m.lessons.map(l=>engageLesson({...l,unitId:m.unit.id,review:l.id===m.reviewLessonId},m.unit,phrases)));
 // The header reports guided handwriting, not every available character card.
 // Some later vocabulary cards are read-only in lessons and have independent
 // practice instead. Keep their cards/practice without an unreachable guided total.
