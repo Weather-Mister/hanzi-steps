@@ -115,8 +115,10 @@ let server,browser,page;
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  // Every third unit block exposes a compact cumulative reading encounter without changing course progress.
  await page.getByRole('button',{name:/^Change book or unit\./}).click();
- await page.getByRole('searchbox',{name:'Search units by number or topic'}).fill('unit 12');
- await page.getByRole('button',{name:/^Unit 12 ·/}).click();
+ const picker=page.getByRole('dialog');
+ await picker.getByRole('button',{name:'Book 1',exact:true}).click();
+ await picker.getByRole('searchbox',{name:'Search units by number or topic'}).fill('unit 12');
+ await picker.getByRole('button',{name:/^Unit 12 ·/}).click();
  const encounter=page.locator('.cumulative-encounter');
  await encounter.getByRole('heading',{name:'One order, two prices',exact:true}).waitFor();
  assert.equal(await encounter.locator('.cumulative-encounter-line small').count(),0);
