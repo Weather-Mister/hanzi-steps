@@ -84,6 +84,20 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'他們',pinyin:'tāmen',meaning:'they, them'},
   ],
  },
+ {
+  id:4,
+  title:'Week 4',
+  words:[
+   {traditional:'天氣',pinyin:'tiānqì / tiānci',meaning:'weather'},
+   {traditional:'熱',pinyin:'rè',meaning:'to be hot'},
+   {traditional:'忙',pinyin:'máng',meaning:'to be busy'},
+   {traditional:'太',pinyin:'tài',meaning:'too'},
+   {traditional:'去',pinyin:'qù / cyù',meaning:'to go'},
+   {traditional:'上課',pinyin:'shàngkè',meaning:'to go to class; to attend class'},
+   {traditional:'再見',pinyin:'zàijiàn',meaning:'Good-bye. (lit. See you again.)'},
+   {traditional:'冷',pinyin:'lěng',meaning:'to be cold'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
