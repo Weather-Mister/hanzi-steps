@@ -71,6 +71,29 @@ test('Week 3 exam list exactly matches supplied textbook vocabulary and is isola
  assert.ok(items.every(item=>item.characters.length>0));
 });
 
+
+test('Week 4 exam list exactly matches supplied textbook vocabulary and is isolated',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===4);
+ assert.ok(set);
+ assert.equal(set.title,'Week 4');
+ assert.deepEqual(set.words,[
+  {traditional:'天氣',pinyin:'tiānqì / tiānci',meaning:'weather'},
+  {traditional:'熱',pinyin:'rè',meaning:'to be hot'},
+  {traditional:'忙',pinyin:'máng',meaning:'to be busy'},
+  {traditional:'太',pinyin:'tài',meaning:'too'},
+  {traditional:'去',pinyin:'qù / cyù',meaning:'to go'},
+  {traditional:'上課',pinyin:'shàngkè',meaning:'to go to class; to attend class'},
+  {traditional:'再見',pinyin:'zàijiàn',meaning:'Good-bye. (lit. See you again.)'},
+  {traditional:'冷',pinyin:'lěng',meaning:'to be cold'},
+ ]);
+
+ const items=examStudyItems(set);
+ assert.equal(items.length,8);
+ assert.equal(new Set(items.map(item=>item.id)).size,8);
+ assert.ok(items.every(item=>item.lessonId==='exam-study-4'));
+ assert.ok(items.every(item=>item.characters.length>0));
+});
+
 test('Exam Study sets use Mega Challenge queue semantics without progress state',()=>{
  for(const set of examStudySets){
   const items=examStudyItems(set);
