@@ -76,8 +76,8 @@ let browser,server;
   }
   return {context,page,choose};
  }
- const mobile=await open(390);
- for(const unit of extraUnits){
+ await Promise.all(extraUnits.map(async unit=>{
+  const mobile=await open(390);
   await mobile.choose(unit);
   assert.equal(await mobile.page.locator('.lesson-path .path-node:disabled').count(),0);
   await mobile.page.screenshot({path:'test-results/extras/'+unit.id+'-mobile.png',fullPage:true});
@@ -132,7 +132,8 @@ let browser,server;
    await mobile.page.getByRole('button',{name:'Back to the unit',exact:true}).click();
   }
   await mobile.page.getByText('All '+unit.lessonIds.length+' lessons complete.',{exact:false}).waitFor();
- }
+  await mobile.context.close();
+ }));
  // Reopen from a separate device context: completion comes from remote rows.
  const desktop=await open(1365);await desktop.choose(extraUnits[1]);
  assert.equal(await desktop.page.locator('.path-row.completed').count(),extraUnits[1].lessonIds.length);
@@ -167,7 +168,7 @@ let browser,server;
  await desktop.page.getByRole('button',{name:'Statistics',exact:true}).click();
  await desktop.page.getByText('Extra units completed',{exact:false}).waitFor();
  assert.equal(await desktop.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
- await desktop.context.close();await mobile.context.close();
+ await desktop.context.close();
  assert.equal(uploads.filter(s=>s.complete).length,extraLessons.length+1);
  assert.deepEqual(errors,[]);
  console.log('PASS: required handwriting, sentence ordering, mixed matching, normal character cards, focused character practice, all extra steps, every lesson completion, wrong-answer assistance, mobile layout, listening, both matching modes, cloud sync and second-device readback.');
