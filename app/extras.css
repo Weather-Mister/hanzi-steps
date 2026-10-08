@@ -5,3 +5,6 @@
 .unit-picker-books-mobile{grid-template-columns:repeat(3,minmax(0,1fr))}
 .extra-word-card button:focus-visible,.extra-unit-switcher button:focus-visible,.extra-glyph-buttons button:focus-visible{outline:3px solid var(--unit-focus,var(--unit-accent));outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.extra-choice,.extra-unit-switcher button{transition:none}}
+
+.extra-exercise .extra-text-options .extra-choice-word{font-size:clamp(1rem,3vw,1.35rem);overflow-wrap:anywhere;line-height:1.4}
+.extra-exercise .phrase-tokens small{display:block;color:var(--muted)}

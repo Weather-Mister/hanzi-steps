@@ -1,0 +1,9 @@
+'use client';
+import {useState} from 'react';
+import {Shapes,ChevronRight,Lightbulb} from 'lucide-react';
+import type {Character} from '../course/schema';
+import {CharacterArt} from './character-art';
+export function CharacterParts({character,compact=false,characterData}:{character:Character;compact?:boolean;characterData?:{strokes:string[];medians:number[][][]}}){
+ const [selected,setSelected]=useState<number|null>(null);
+ return <div className={`character-parts ${compact?'compact':''}`}><div className="parts-heading"><Shapes size={18}/><h3>Inside the character</h3><span>{character.layoutLabel||(character.layout==='whole'?'Whole shape':character.layout==='side'?'Left + right':'Top to bottom')}</span></div><div className="parts-explorer"><div className="parts-main"><CharacterArt char={character.hanzi} characterData={characterData} highlight={selected===null?undefined:character.parts[selected].strokes}/></div><div className="parts-list">{character.parts.map((part,i)=><button key={i} className={`part-card ${selected===i?'selected':''}`} onClick={()=>setSelected(selected===i?null:i)} aria-pressed={selected===i}><CharacterArt char={character.hanzi} characterData={characterData} only={part.strokes} className="component-thumbnail"/><span><span className="part-role">{part.role}</span><strong>{part.name}</strong></span><ChevronRight size={16}/></button>)}</div></div><p className="part-explanation">{selected===null?character.note:character.parts[selected].description}</p>{!compact&&<div className="memory-note"><Lightbulb size={19}/><div><strong>Remember {character.hanzi}</strong><p>{character.memory}</p></div></div>}</div>
+}

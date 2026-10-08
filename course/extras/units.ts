@@ -55,6 +55,27 @@ function introductionSteps(prefix:string,words:ExtraWord[]):Step[]{
   ...(index>0?[step(prefix+'-recall-'+word.id,'word',words.slice(0,index+1).map(w=>w.id),words[index-1].id)]:[]),
  ]);
 }
+
+const glyphs=(word:ExtraWord)=>Array.from(word.text).filter(c=>/[\u3400-\u9fff]/.test(c));
+function writingSteps(prefix:string,word:ExtraWord,chars=glyphs(word)):Step[]{
+ return chars.flatMap(glyph=>['trace','complete','memory'].map(writeMode=>step(prefix+'-'+glyph+'-'+writeMode,'writing',[],word.id,{extra:{mode:'writing',wordId:word.id,glyph,writeMode:writeMode as 'trace'|'complete'|'memory'}})));
+}
+function sentenceSteps(prefix:string,kind:'clothing'|'fruits',word:ExtraWord,count=1):Step[]{
+ const number=['','一','兩','三'][count],numberPinyin=['','yī','liǎng','sān'][count];
+ const verb=kind==='clothing'?'有':'想買';
+ const englishNouns:Record<string,string[]>={
+ tshirt:['T-shirt','T-shirts'],shirt:['shirt','shirts'],jacket:['jacket','jackets'],sweater:['sweater','sweaters'],trousers:['pair of trousers','pairs of trousers'],skirt:['skirt','skirts'],dress:['dress','dresses'],shoes:['pair of shoes','pairs of shoes'],socks:['pair of socks','pairs of socks'],hat:['hat','hats'],
+ apple:['apple','apples'],banana:['banana','bananas'],orange:['mandarin orange','mandarin oranges'],grapes:['bunch of grapes','bunches of grapes'],watermelon:['watermelon','watermelons'],pineapple:['pineapple','pineapples'],mango:['mango','mangoes'],strawberry:['strawberry','strawberries'],pear:['pear','pears'],papaya:['papaya','papayas'],
+ };
+ const sentence={text:'我'+verb+countedPhrase(word,count)+'。',pinyin:(kind==='clothing'?'Wǒ yǒu ':'Wǒ xiǎng mǎi ')+(count===1?word.countedPinyin:numberPinyin+' '+word.measurePinyin+' '+word.pinyin)+'.',meaning:(kind==='clothing'?'I have ':'I want to buy ')+['','one','two','three'][count]+' '+englishNouns[word.id][count===1?0:1]+'.',tokens:kind==='clothing'?['我','有',number,word.measure,word.text]:['我','想','買',number,word.measure,word.text],note:(kind==='clothing'?'我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item.':'我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item.')+' Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. '+word.note,support:[{text:'我',pinyin:'wǒ',meaning:'I'},...(kind==='clothing'?[{text:'有',pinyin:'yǒu',meaning:'have'}]:[{text:'想',pinyin:'xiǎng',meaning:'want to'},{text:'買',pinyin:'mǎi',meaning:'buy'}]),{text:number,pinyin:numberPinyin,meaning:String(count)},{text:word.measure,pinyin:word.measurePinyin,meaning:'counting word'},{text:word.text,pinyin:word.pinyin,meaning:word.meaning}]};
+ return ['sentence-learn','sentence-order'].map(mode=>step(prefix+'-'+mode,mode as 'sentence-learn'|'sentence-order',[],word.id,{extra:{mode:mode as 'sentence-learn'|'sentence-order',wordId:word.id,sentence}}));
+}
+function mixedStep(prefix:string,words:ExtraWord[]):Step{
+ const chosen=words.slice(0,4);
+ const pairs=chosen.map((word,i)=>({id:word.id,wordId:word.id,left:i===2?word.counted:i===3?'一 __ '+word.text:word.text,...(i===0?{pictureId:word.id}:i===3?{right:word.measure}:{right:i===2?'one '+(word.measure==='雙'?'pair of ':word.measure==='串'?'bunch of ':'')+word.meaning:word.meaning})}));
+ return step(prefix,'mixed-match',chosen.map(w=>w.id),undefined,{extra:{mode:'mixed-match',wordIds:chosen.map(w=>w.id),pairs}});
+}
+
 function makeUnit(kind:'clothing'|'fruits',number:number,words:ExtraWord[],title:string,hanzi:string,pinyin:string):{unit:Unit;lessons:Lesson[]}{
  const prefix='extra-'+kind;
  const groups=[words.slice(0,4),words.slice(4,7),words.slice(7)];
@@ -77,17 +98,51 @@ function makeUnit(kind:'clothing'|'fruits',number:number,words:ExtraWord[],title
  // Every lesson is directly accessible, so each practice lesson must teach its
  // entire answer bank even when no earlier extra lesson has been completed.
  for(const lesson of lessons.slice(3))lesson.steps.unshift(step(lesson.id+'-collection','learn',words.map(w=>w.id)));
- return {unit:{id:prefix,number,theme:kind==='clothing'?'indigo':'orange',label:kind==='clothing'?'Clothing':'Fruits',title,description:'Optional and always available. Learn by looking, listening, and matching. Every completed lesson counts toward your streak and extra-unit progress.',chars:[...new Set(words.flatMap(w=>Array.from(w.text).filter(c=>/[\u3400-\u9fff]/.test(c))))],lessonIds:lessons.map(l=>l.id),banner:{text:hanzi,pinyin},goal:{text:hanzi,pinyin,meaning:kind==='clothing'?'Recognize everyday clothing and count garments, pairs, and hats.':'Recognize everyday fruit and count whole fruits, bananas, and bunches.'},grammarIds:[]},lessons};
+
+ // Extend the published tails only: saved partial positions keep their meaning.
+ // Every lesson now combines visual work with standard retrieval and handwriting.
+ const written=new Set<string>();
+ groups.forEach((group,index)=>{
+  const lesson=lessons[index];
+  lesson.steps.push(...group.map(word=>step(lesson.id+'-text-'+word.id,'text-word',group.map(w=>w.id),word.id)));
+  for(const word of group){
+   const fresh=glyphs(word).filter(char=>!written.has(char));
+   lesson.steps.push(...writingSteps(lesson.id+'-write',word,fresh));fresh.forEach(char=>written.add(char));
+  }
+  lesson.steps.push(...sentenceSteps(lesson.id+'-sentence',kind,group[0],index+1));
+  lesson.minutes='10–15 min';
+  lesson.subtitle+=' · recognition, handwriting, and a short sentence';
+ });
+ for(const [index,lesson] of lessons.slice(3).entries()){
+  const word=words[[1,0,4,7][index]];
+  lesson.steps.push(...words.slice(index,index+3).map(w=>step(lesson.id+'-meaning-'+w.id,index===2?'listen-word':'meaning',words.map(w=>w.id),w.id)));
+  lesson.steps.push(mixedStep(lesson.id+'-mixed',index===3?[words[7],words[8],words[9],words[0]]:words.slice(0,4)));
+  if(index===1){
+   for(const measure of [...new Set(words.map(w=>w.measure))]){
+    const example=words.find(w=>w.measure===measure)!;
+    lesson.steps.push(...writingSteps(lesson.id+'-write-measure',example,[measure]));
+   }
+  }else lesson.steps.push(...writingSteps(lesson.id+'-write',word,[glyphs(word)[0]]));
+  lesson.steps.push(...sentenceSteps(lesson.id+'-sentence',kind,word,index%2+1));
+  lesson.minutes=index===1?'10–15 min':'7–10 min';
+ }
+
+ return {unit:{id:prefix,number,theme:kind==='clothing'?'indigo':'orange',label:kind==='clothing'?'Clothing':'Fruits',title,description:'Optional and always available. Learn through pictures, listening, matching, handwriting, and short sentences. Every completed lesson counts toward your streak and extra-unit progress.',chars:[...new Set(words.flatMap(w=>Array.from(w.text+w.measure).filter(c=>/[\u3400-\u9fff]/.test(c))))],lessonIds:lessons.map(l=>l.id),banner:{text:hanzi,pinyin},goal:{text:hanzi,pinyin,meaning:kind==='clothing'?'Recognize everyday clothing and count garments, pairs, and hats.':'Recognize everyday fruit and count whole fruits, bananas, and bunches.'},grammarIds:[]},lessons};
 }
 const collections=[makeUnit('clothing',1,clothingWords,'Open your wardrobe.','衣服','yīfu'),makeUnit('fruits',2,fruitWords,'A stop at the fruit stall.','水果','shuǐguǒ')];
 export const extraUnits=collections.map(c=>c.unit);
 export const extraLessons=collections.flatMap(c=>c.lessons);
-export const isExtraLesson=(id:string)=>extraLessons.some(lesson=>lesson.id===id);
+export const extraPracticeLessons:Lesson[]=[...new Set(extraWords.flatMap(word=>Array.from(word.text+word.measure).filter(c=>/[\u3400-\u9fff]/.test(c))))].map(glyph=>{
+ const word=extraWords.find(word=>word.text.includes(glyph)||word.measure===glyph)!;
+ return {id:'extra-practice-'+glyph,unitId:clothingWords.includes(word)?'extra-clothing':'extra-fruits',title:'Practice '+glyph,subtitle:'Trace, finish the strokes, and write from memory.',chars:[glyph],minutes:'3–4 min',steps:[step('extra-practice-'+glyph+'-learn','learn',[],word.id),...writingSteps('extra-practice-'+glyph,word,[glyph])]};
+});
+export const isExtraLesson=(id:string)=>[...extraLessons,...extraPracticeLessons].some(lesson=>lesson.id===id);
 export const wordsForExtraUnit=(unitId:string)=>unitId==='extra-clothing'?clothingWords:unitId==='extra-fruits'?fruitWords:[];
 export function extraUnitComplete(unit:Unit,completed:Set<string>){return unit.lessonIds.every(id=>completed.has(id));}
 export function extraChoices(step:Step):string[]{
  const activity=step.extra!,word=extraWord(activity.wordId||'');
- if(activity.mode==='learn')return [];
+ if(['learn','sentence-learn','sentence-order','writing'].includes(activity.mode))return [];
+ if(activity.mode==='mixed-match')return activity.pairs!.map(pair=>pair.id);
  if(activity.mode==='measure'){
   // Alternatives can be natural in real speech; never offer them as wrong.
   const incompatible=(step.options||[]).filter(m=>!acceptedExtraMeasure(word!,m));

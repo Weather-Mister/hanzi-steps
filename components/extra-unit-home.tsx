@@ -5,6 +5,7 @@ import type {Lesson,Session,Unit} from '../course/schema';
 import {extraLessons,extraUnitComplete,extraUnits,wordsForExtraUnit} from '../course/extras/units';
 import {ExtraPicture} from './extra-picture';
 import {ExtraWordCard} from './extra-exercise';
+import {ExtraCharacterLibrary} from './extra-character-library';
 import '../app/extras.css';
 
 export function ExtraUnitHome({unit,completed,sessions,loading,pinyin,onStart,onSelect,onNotes}:{unit:Unit;completed:Set<string>;sessions:Session[];loading:boolean;pinyin:boolean;onStart:(lesson:Lesson)=>void;onSelect:(id:string)=>void;onNotes:()=>void}){
@@ -20,7 +21,7 @@ export function ExtraUnitHome({unit,completed,sessions,loading,pinyin,onStart,on
     {extraUnitComplete(unit,completed)&&<p className="extra-complete-note" role="status"><Check size={18}/>All seven lessons complete. Your collection is always here for another round.</p>}
    </section><aside className="course-sidebar"><section className="sidebar-card"><div className="card-heading"><h2>Your collection</h2><span>{words.length} words</span></div><div className="extra-collection-preview">{words.map(w=><div key={w.id}><ExtraPicture id={w.id}/><span lang="zh-Hant-TW">{w.text}</span></div>)}</div><button className="text-button" onClick={onNotes}>Words & measure words<ArrowRight size={16}/></button></section><section className="sidebar-card unit-goal"><PenLine size={23}/><p className="eyebrow">BY THE END OF THIS UNIT</p><h3 lang="zh-Hant-TW">{unit.goal.text}</h3>{pinyin&&<p className="pinyin">{unit.goal.pinyin}</p>}<p>{unit.goal.meaning}</p></section></aside></div>
   </TabsContent>
-  <TabsContent value="characters"><div className="character-page-heading"><p className="eyebrow">OPTIONAL EXTRA · CHARACTERS</p><h1>Recognize the shapes in each word.</h1><p>Study the character notes and explore stroke order. These extras keep your main-course introductions in their usual lessons.</p></div><div className="extra-study-grid">{words.map(w=><ExtraWordCard key={w.id} word={w} pinyin={pinyin} writing/>)}</div></TabsContent>
+  <TabsContent value="characters"><ExtraCharacterLibrary unit={unit} sessions={sessions} pinyin={pinyin} onStart={onStart}/></TabsContent>
   <TabsContent value="notes"><div className="character-page-heading"><p className="eyebrow">OPTIONAL EXTRA · WORDS & COUNTING</p><h1>A word, a picture, a way to count it.</h1><p>一 = one, 兩 = two before a measure word, 三 = three. Put the number first, then the measure word, then the noun. Measure words depend on what you are counting; these cards explain the context.</p></div><div className="extra-study-grid">{words.map(w=><ExtraWordCard key={w.id} word={w} pinyin={pinyin}/>)}</div></TabsContent>
  </>;
 }
