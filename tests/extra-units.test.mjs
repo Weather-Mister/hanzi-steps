@@ -1,22 +1,22 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {acceptedExtraMeasure,extraUnits,extraLessons,extraPracticeLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete} from '../course/extras/units.ts';
+import {acceptedExtraMeasure,extraUnits,extraLessons,extraPracticeLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete,ambiguousExtraPair} from '../course/extras/units.ts';
 import {lessons,units,vocabulary,characters,findLesson,lessonAvailable,validSession,completedLessonIds} from '../lib/curriculum.ts';
 import {learnedPracticeItems} from '../lib/practice-engine.ts';
 import {streakFromDays,taipeiDay} from '../lib/streak.ts';
 
 test('extras coexist without entering canonical ownership or prerequisites',()=>{
  const completed=new Set(extraLessons.map(l=>l.id));
- assert.equal(extraUnits.length,2);assert.equal(extraWords.length,20);
- assert.equal(extraLessons.length,14);
+ assert.equal(extraUnits.length,3);assert.equal(extraWords.length,56);
+ assert.equal(extraLessons.length,85);
  assert.equal(extraLessons.filter(l=>lessons.some(core=>core.id===l.id)).length,0);
  assert.equal(extraUnits.filter(u=>units.some(core=>core.id===u.id)).length,0);
  assert.equal(vocabulary.filter(w=>completed.has(w.lessonId)).length,0);
  assert.deepEqual(learnedPracticeItems(completed),learnedPracticeItems(new Set()));
  assert.equal(lessonAvailable('u2-people',completed),false);
  assert.equal(lessonAvailable('u31-because',completed),false);
- assert.equal(completedLessonIds(completed).size,14);
+ assert.equal(completedLessonIds(completed).size,85);
  for(const lesson of extraLessons){
   assert.equal(lessonAvailable(lesson.id,new Set()),true);
   assert.equal(findLesson(lesson.id),lesson);
@@ -32,7 +32,7 @@ test('every directly accessible assessed lesson teaches its targets before testi
   for(const step of lesson.steps){
    const activity=step.extra;
    assert.equal(step.type,'extra');
-   if(activity.mode==='learn'||activity.mode==='sentence-learn'){
+   if(activity.mode==='learn'||activity.mode==='sentence-learn'||activity.mode==='character-learn'){
     for(const id of activity.wordId?[activity.wordId]:(activity.wordIds||[]))taught.add(id);
    }else{
     for(const id of activity.mode==='match'||activity.mode==='measure-match'||activity.mode==='mixed-match'?activity.wordIds:[activity.wordId]){
@@ -46,7 +46,7 @@ test('every directly accessible assessed lesson teaches its targets before testi
 test('choice banks are distinct and contain exactly one authored answer',()=>{
  for(const lesson of extraLessons)for(const step of lesson.steps){
   const {mode}=step.extra;
-  if(['learn','sentence-learn','sentence-order','writing'].includes(mode))continue;
+  if(['learn','character-learn','sentence-learn','sentence-order','writing'].includes(mode))continue;
   const choices=extraChoices(step);
   assert.equal(new Set(choices).size,choices.length,step.id);
   assert.ok(choices.every(choice=>typeof choice==='string'&&choice.length>0),step.id);
@@ -103,8 +103,8 @@ test('supplementary glyphs and meanings do not overwrite canonical records',()=>
  const before=JSON.stringify(characters);
  for(const word of extraWords){
   assert.ok(word.glyphNotes.length>0);
-  assert.ok(word.counted.includes(word.measure+word.text));
-  assert.ok(word.pinyin&&word.countedPinyin&&word.measurePinyin);
+  assert.ok(word.pinyin);
+  if(word.measure){assert.ok(word.counted.includes(word.measure+word.text));assert.ok(word.countedPinyin&&word.measurePinyin)}else{assert.ok(word.swatch);assert.equal(word.counted,'');assert.equal(word.countedPinyin,'');assert.equal(word.measurePinyin,'');}
  }
  assert.equal(JSON.stringify(characters),before);
  const art=fs.readFileSync(new URL('../components/extra-picture.tsx',import.meta.url),'utf8');
@@ -134,7 +134,7 @@ test('all noun and measure-word glyphs receive the normal required writing lifec
     if(step.extra.mode==='sentence-order'){
      const sentence=step.extra.sentence;
      assert.ok(taughtSentences.has(sentence.text),step.id);
-     assert.equal(sentence.tokens.join('')+'。',sentence.text);
+     assert.equal(sentence.tokens.join(''),sentence.text.replace(/[。？]$/,''));
      assert.ok(sentence.support.every(token=>token.pinyin&&token.meaning),step.id);
     }
    }
@@ -156,11 +156,50 @@ test('all noun and measure-word glyphs receive the normal required writing lifec
 });
 test('published extra positions and completed credit are preserved',()=>{
  const prefixes=JSON.parse(fs.readFileSync(new URL('./fixtures/extra-published-prefixes.json',import.meta.url),'utf8'));
- for(const lesson of extraLessons){
-  const prefix=prefixes[lesson.id];
+ for(const [id,prefix] of Object.entries(prefixes)){
+  const lesson=extraLessons.find(l=>l.id===id);
   assert.deepEqual(lesson.steps.slice(0,prefix.length).map(s=>s.id),prefix,lesson.id);
   const checkpoint={id:'550e8400-e29b-41d4-a716-446655440000',lessonId:lesson.id,index:prefix.length,complete:true,independent:0,assisted:0,updatedAt:Date.now()};
   assert.ok(validSession(checkpoint),lesson.id+' historical completion');
   assert.ok(validSession({...checkpoint,complete:false}),lesson.id+' prior-end partial remains resumable');
+ }
+});
+
+test('word worksheets cover every entry and new sections remain self-contained',()=>{
+ for(const unit of extraUnits){
+  const words=extraWords.filter(word=>unit.id==='extra-colors'?!!word.swatch:unit.id==='extra-fruits'?word.id==='apple'||extraLessons.some(l=>l.id==='extra-fruits-word-'+word.id):extraLessons.some(l=>l.id==='extra-clothing-word-'+word.id));
+  assert.equal(words.length,unit.id==='extra-colors'?16:20);
+  assert.equal(unit.lessonIds.length,unit.id==='extra-colors'?21:32);
+  for(const word of words){
+   const lesson=extraLessons.find(l=>l.id===unit.id+'-word-'+word.id);
+   assert.ok(lesson,word.id);
+   assert.ok(lesson.steps.some(s=>s.extra.mode==='sentence-order'));
+   assert.ok(lesson.steps.some(s=>s.extra.mode==='listen-word'));
+   for(const glyph of Array.from(word.text).filter(c=>/[\u3400-\u9fff]/.test(c)))for(const mode of ['trace','complete','memory'])assert.ok(lesson.steps.some(s=>s.extra.glyph===glyph&&s.extra.writeMode===mode),lesson.id+' '+glyph+' '+mode);
+  }
+ }
+ for(const lesson of extraLessons)for(const step of lesson.steps){
+  const a=step.extra;
+  if(['picture','word','listen-picture'].includes(a.mode)){
+   const options=extraChoices(step);
+   assert.ok(options.every(id=>id===a.wordId||!ambiguousExtraPair(id,a.wordId)),step.id);
+  }
+  if(a.mode==='color-object'){
+   assert.ok(lesson.steps.some(s=>s.extra.mode==='learn'&&s.extra.wordIds.includes(a.nounId)));
+   assert.ok(extraWord(a.wordId).swatch);
+   assert.ok(extraChoices(step).every(id=>extraWord(id).swatch));
+  }
+  if(a.mode==='question'||a.mode==='listen-question')assert.ok(step.prompt&&step.explanation&&step.answer&&(a.mode!=='listen-question'||step.audioText));
+ }
+ const words=extraWords.filter(w=>w.swatch);
+ assert.equal(new Set(words.map(w=>w.swatch)).size,16);
+ assert.ok(words.every(w=>/^#[0-9a-f]{6}$/i.test(w.swatch)));
+ assert.equal(extraWord('color-word').measure,'種');
+ assert.equal(words.filter(w=>w.measure).length,1);
+});
+test('complete published lesson payloads retain saved positions',()=>{
+ const published=JSON.parse(fs.readFileSync(new URL('./fixtures/extra-before-workbooks.json',import.meta.url),'utf8'));
+ for(const [id,steps] of Object.entries(published)){
+  const lesson=findLesson(id);assert.deepEqual(lesson.steps,steps,id);
  }
 });
