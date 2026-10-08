@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {acceptedExtraMeasure,extraUnits,extraLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete} from '../course/extras/units.ts';
+import {acceptedExtraMeasure,extraUnits,extraLessons,extraPracticeLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete} from '../course/extras/units.ts';
 import {lessons,units,vocabulary,characters,findLesson,lessonAvailable,validSession,completedLessonIds} from '../lib/curriculum.ts';
 import {learnedPracticeItems} from '../lib/practice-engine.ts';
 import {streakFromDays,taipeiDay} from '../lib/streak.ts';
@@ -32,10 +32,10 @@ test('every directly accessible assessed lesson teaches its targets before testi
   for(const step of lesson.steps){
    const activity=step.extra;
    assert.equal(step.type,'extra');
-   if(activity.mode==='learn'){
+   if(activity.mode==='learn'||activity.mode==='sentence-learn'){
     for(const id of activity.wordId?[activity.wordId]:(activity.wordIds||[]))taught.add(id);
    }else{
-    for(const id of activity.mode==='match'||activity.mode==='measure-match'?activity.wordIds:[activity.wordId]){
+    for(const id of activity.mode==='match'||activity.mode==='measure-match'||activity.mode==='mixed-match'?activity.wordIds:[activity.wordId]){
      assert.ok(taught.has(id),lesson.id+': target '+id+' was not taught first');
     }
    }
@@ -46,11 +46,11 @@ test('every directly accessible assessed lesson teaches its targets before testi
 test('choice banks are distinct and contain exactly one authored answer',()=>{
  for(const lesson of extraLessons)for(const step of lesson.steps){
   const {mode}=step.extra;
-  if(mode==='learn')continue;
+  if(['learn','sentence-learn','sentence-order','writing'].includes(mode))continue;
   const choices=extraChoices(step);
   assert.equal(new Set(choices).size,choices.length,step.id);
   assert.ok(choices.every(choice=>typeof choice==='string'&&choice.length>0),step.id);
-  if(mode==='match'||mode==='measure-match'){
+  if(mode==='match'||mode==='measure-match'||mode==='mixed-match'){
    assert.ok(choices.length>=3);
    if(mode==='measure-match')assert.equal(new Set(choices.map(id=>extraWord(id).measure)).size,choices.length);
   }else{
@@ -115,10 +115,52 @@ test('supplementary glyphs and meanings do not overwrite canonical records',()=>
 
 test('backend registration has the exact extra lesson lengths',()=>{
  const sql=fs.readFileSync(new URL('../course/extras/progress.sql',import.meta.url),'utf8');
- for(const lesson of extraLessons){
-  const match=sql.match(new RegExp("\\('"+lesson.id+"',\\s*(\\d+)\\)"));
+ for(const lesson of [...extraLessons,...extraPracticeLessons]){
+  const match=sql.match(new RegExp("\\('"+lesson.id+"',\\s*(\\d+),"));
   assert.ok(match,'missing backend lesson: '+lesson.id);
   assert.equal(Number(match[1]),lesson.steps.length,lesson.id);
  }
- assert.equal((sql.match(/\('extra-/g)||[]).length,extraLessons.length);
+ assert.equal((sql.match(/\('extra-/g)||[]).length,extraLessons.length+extraPracticeLessons.length);
+});
+
+test('all noun and measure-word glyphs receive the normal required writing lifecycle',()=>{
+ for(const unit of extraUnits){
+  const unitLessons=extraLessons.filter(l=>l.unitId===unit.id);
+  for(const lesson of unitLessons){
+   assert.ok(lesson.steps.some(s=>s.extra.mode==='writing'),lesson.id);
+   const taughtSentences=new Set();
+   for(const step of lesson.steps){
+    if(step.extra.mode==='sentence-learn')taughtSentences.add(step.extra.sentence.text);
+    if(step.extra.mode==='sentence-order'){
+     const sentence=step.extra.sentence;
+     assert.ok(taughtSentences.has(sentence.text),step.id);
+     assert.equal(sentence.tokens.join('')+'。',sentence.text);
+     assert.ok(sentence.support.every(token=>token.pinyin&&token.meaning),step.id);
+    }
+   }
+  }
+  for(const glyph of unit.chars){
+   for(const writeMode of ['trace','complete','memory'])assert.ok(unitLessons.some(l=>l.steps.some(s=>s.extra.mode==='writing'&&s.extra.glyph===glyph&&s.extra.writeMode===writeMode)),unit.id+': '+glyph+' '+writeMode);
+  }
+ }
+ const strokes=JSON.parse(fs.readFileSync(new URL('../course/extras/strokes.json',import.meta.url),'utf8'));
+ const info=fs.readFileSync(new URL('../course/extras/character-info.ts',import.meta.url),'utf8');
+ for(const glyph of new Set(extraUnits.flatMap(unit=>unit.chars))){
+  assert.ok(strokes[glyph]?.strokes.length>0,glyph);
+  assert.equal(strokes[glyph].strokes.length,strokes[glyph].medians.length,glyph);
+  assert.ok(info.includes("'"+glyph+"'"),glyph);
+  const practice=extraPracticeLessons.find(l=>l.id==='extra-practice-'+glyph);
+  assert.equal(practice.steps.length,4);assert.equal(findLesson(practice.id),practice);
+  assert.equal(lessonAvailable(practice.id,new Set()),true);
+ }
+});
+test('published extra positions and completed credit are preserved',()=>{
+ const prefixes=JSON.parse(fs.readFileSync(new URL('./fixtures/extra-published-prefixes.json',import.meta.url),'utf8'));
+ for(const lesson of extraLessons){
+  const prefix=prefixes[lesson.id];
+  assert.deepEqual(lesson.steps.slice(0,prefix.length).map(s=>s.id),prefix,lesson.id);
+  const checkpoint={id:'550e8400-e29b-41d4-a716-446655440000',lessonId:lesson.id,index:prefix.length,complete:true,independent:0,assisted:0,updatedAt:Date.now()};
+  assert.ok(validSession(checkpoint),lesson.id+' historical completion');
+  assert.ok(validSession({...checkpoint,complete:false}),lesson.id+' prior-end partial remains resumable');
+ }
 });

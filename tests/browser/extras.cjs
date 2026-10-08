@@ -4,7 +4,7 @@ let browser,server;
  const {spawn}=await import('node:child_process');
  const assert=(await import('node:assert/strict')).default;
  const fs=(await import('node:fs')).default;
- const {extraUnits,extraLessons,extraAnswer,extraChoices}=await import('../../course/extras/units.ts');
+ const {extraUnits,extraLessons,extraPracticeLessons,extraAnswer,extraChoices}=await import('../../course/extras/units.ts');
  const {validSession}=await import('../../lib/curriculum.ts');
  server=spawn(process.execPath,['node_modules/vite/bin/vite.js','preview','--config','vite.pages.config.ts','--host','127.0.0.1','--port','4176'],{stdio:'inherit'});
  let serving=false;
@@ -12,6 +12,30 @@ let browser,server;
  assert.ok(serving,'preview did not serve');
  browser=await chromium.launch({headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
  fs.mkdirSync('test-results/extras',{recursive:true});
+ const coreStrokes=JSON.parse(fs.readFileSync('lib/stroke-data.json','utf8'));
+ const supplementaryStrokes=JSON.parse(fs.readFileSync('course/extras/strokes.json','utf8'));
+ async function drawWriting(page,step){
+  const activity=step.extra,geometry=coreStrokes[activity.glyph]||supplementaryStrokes[activity.glyph];
+  const check=page.getByRole('button',{name:'Check answer',exact:true});
+  assert.equal(await check.isDisabled(),true,'writing cannot advance before completion');
+  await page.waitForFunction(()=>!document.querySelector('.writing-area .pad-overlay'));
+  assert.equal(await page.locator('.writing-area .pad-overlay').count(),0);
+  const box=await page.locator('.writing-target').boundingBox(),scale=(box.width-48)/1024;
+  const start=activity.writeMode==='complete'?Math.max(0,geometry.medians.length-3):0;
+  for(let index=start;index<geometry.medians.length;index++){
+   const points=geometry.medians[index];
+   let accepted=false;
+   for(let retry=0;retry<3&&!accepted;retry++){
+    const pos=point=>({x:box.x+24+point[0]*scale,y:box.y+24+900*scale-point[1]*scale});
+    const first=pos(points[0]);await page.mouse.move(first.x,first.y);await page.mouse.down();
+    for(const point of points.slice(1)){const next=pos(point);await page.mouse.move(next.x,next.y,{steps:2});}
+    await page.mouse.up();
+    try{await page.waitForFunction(({next,last})=>last?!!document.querySelector('.writing-frame.is-done'):document.querySelector('.stroke-status')?.textContent.startsWith(next+' of'),{next:index+2,last:index===geometry.medians.length-1},{timeout:2000});accepted=true}catch{}
+   }
+   assert.ok(accepted,step.id+' stroke '+index+' was not accepted');
+  }
+  await page.getByText('You got it.',{exact:true}).waitFor();
+ }
  const remote=new Map(),errors=[],uploads=[];
  const key='account-v1-'+'a'.repeat(64);
  async function open(width){
@@ -62,17 +86,31 @@ let browser,server;
    for(const step of lesson.steps){
     await mobile.page.locator('[data-extra-step="'+step.id+'"]').waitFor();
     const mode=step.extra.mode;
-    if(mode==='learn'){await mobile.page.getByRole('button',{name:'Continue',exact:true}).click();continue;}
+    if(mode==='learn'||mode==='sentence-learn'){await mobile.page.getByRole('button',{name:'Continue',exact:true}).click();continue;}
+    if(mode==='writing'){
+     await drawWriting(mobile.page,step);
+     assert.equal(await mobile.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,step.id);
+     await mobile.page.getByRole('button',{name:'Continue',exact:true}).click();continue;
+    }
     const check=mobile.page.getByRole('button',{name:'Check answer',exact:true});
-    if(mode==='match'||mode==='measure-match'){
-     for(const id of step.extra.wordIds){
+    if(mode==='match'||mode==='measure-match'||mode==='mixed-match'){
+     for(const id of mode==='mixed-match'?step.extra.pairs.map(pair=>pair.id):step.extra.wordIds){
       await mobile.page.locator('[data-extra-match-side="left"][data-extra-word="'+id+'"]').click();
       const rightId=step.id==='extra-fruits-measure-match'?(id==='apple'?'strawberry':id==='strawberry'?'apple':id):id;
       await mobile.page.locator('[data-extra-match-side="right"][data-extra-word="'+rightId+'"]').click();
      }
+    }else if(mode==='sentence-order'){
+     assert.equal(await check.isDisabled(),true);
+     const bank=mobile.page.locator('.word-bank');
+     if(step.id==='extra-clothing-learn-1-sentence-sentence-order'){
+      await bank.getByRole('button',{name:'有',exact:true}).click();
+      await check.click();await mobile.page.getByRole('button',{name:'Try again',exact:true}).click();
+     }
+     for(const token of step.extra.sentence.tokens)await bank.getByRole('button',{name:token,exact:true}).click();
+     await check.click();
     }else{
      assert.equal(await check.isDisabled(),true);
-     if(mode==='listen-picture')await mobile.page.getByRole('button',{name:'Play the word',exact:true}).click();
+     if(mode==='listen-picture'||mode==='listen-word')await mobile.page.getByRole('button',{name:'Play the word',exact:true}).click();
      // Exercise a wrong answer and recovery without counting it as clean.
      if(step.id==='extra-clothing-1-picture-tshirt'){
       const wrong=extraChoices(step).find(value=>value!==extraAnswer(step));
@@ -89,7 +127,7 @@ let browser,server;
    await mobile.page.waitForFunction(()=>document.querySelector('.completion-main .sync-state.saved'));
    const saved=[...remote.values()].find(s=>s.lessonId===lesson.id&&s.complete);
    assert.ok(saved,lesson.id+' did not save');assert.equal(saved.index,lesson.steps.length);
-   if(lesson.id==='extra-clothing-learn-1')assert.equal(saved.assisted,1);
+   if(lesson.id==='extra-clothing-learn-1')assert.ok(saved.assisted>=1);
    await mobile.page.getByRole('button',{name:'Back to the unit',exact:true}).click();
   }
   await mobile.page.getByText('All seven lessons complete.',{exact:false}).waitFor();
@@ -97,6 +135,23 @@ let browser,server;
  // Reopen from a separate device context: completion comes from remote rows.
  const desktop=await open(1365);await desktop.choose(extraUnits[1]);
  assert.equal(await desktop.page.locator('.path-row.completed').count(),7);
+ await desktop.page.getByRole('tab',{name:'Characters',exact:true}).click();
+ assert.equal(await desktop.page.locator('.character-library .library-card').count(),extraUnits[1].chars.length);
+ assert.equal(await desktop.page.locator('.extra-word-card').count(),0);
+ await desktop.page.locator('.library-card').filter({hasText:'berry'}).first().click();
+ await desktop.page.getByRole('dialog').waitFor();
+ assert.ok(await desktop.page.locator('.character-parts').count());
+ await desktop.page.getByRole('button',{name:'Practice this character',exact:true}).click();
+ const focused=extraPracticeLessons.find(lesson=>lesson.id==='extra-practice-莓');
+ for(const step of focused.steps){
+  await desktop.page.locator('[data-extra-step="'+step.id+'"]').waitFor();
+  if(step.extra.mode==='writing')await drawWriting(desktop.page,step);
+  await desktop.page.getByRole('button',{name:'Continue',exact:true}).click();
+ }
+ await desktop.page.locator('.completion-main').waitFor();
+ await desktop.page.waitForFunction(()=>document.querySelector('.completion-main .sync-state.saved'));
+ assert.ok([...remote.values()].some(session=>session.lessonId===focused.id&&session.complete));
+ await desktop.page.getByRole('button',{name:'Back to the unit',exact:true}).click();
  await desktop.page.getByRole('tab',{name:'Notes',exact:true}).click();
  assert.equal(await desktop.page.locator('.extra-word-card').count(),10);
  await desktop.page.screenshot({path:'test-results/extras/fruits-notes-desktop.png',fullPage:true});
@@ -104,7 +159,7 @@ let browser,server;
  await desktop.page.getByText('Extra units completed',{exact:false}).waitFor();
  assert.equal(await desktop.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await desktop.context.close();await mobile.context.close();
- assert.equal(uploads.filter(s=>s.complete).length,14);
+ assert.equal(uploads.filter(s=>s.complete).length,15);
  assert.deepEqual(errors,[]);
- console.log('PASS: all extra steps, every lesson completion, wrong-answer assistance, mobile layout, listening, both matching modes, cloud sync and second-device readback.');
+ console.log('PASS: required handwriting, sentence ordering, mixed matching, normal character cards, focused character practice, all extra steps, every lesson completion, wrong-answer assistance, mobile layout, listening, both matching modes, cloud sync and second-device readback.');
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.kill();});

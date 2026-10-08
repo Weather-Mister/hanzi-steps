@@ -1,6 +1,21 @@
 // Retired sequences keep their original checkpoint bounds. Never reinterpret an
 // old index as a position in a different lesson or rewrite an existing session.
 export const previousLessonLengths:Record<string,number>={
+ // Optional-unit standard practice extends published tails without resetting credit.
+ 'extra-clothing-learn-1':11,
+ 'extra-clothing-learn-2':8,
+ 'extra-clothing-learn-3':8,
+ 'extra-clothing-images':9,
+ 'extra-clothing-measures':20,
+ 'extra-clothing-listening':11,
+ 'extra-clothing-review':21,
+ 'extra-fruits-learn-1':11,
+ 'extra-fruits-learn-2':8,
+ 'extra-fruits-learn-3':8,
+ 'extra-fruits-images':9,
+ 'extra-fruits-measures':20,
+ 'extra-fruits-listening':11,
+ 'extra-fruits-review':21,
  // Book 2 self-containment repair appends practice without moving old checkpoints.
  'b2u1-l4-lesson':8,
  'b2u1-l6-lesson':6,

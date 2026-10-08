@@ -7,10 +7,10 @@ import {createWriterTarget} from '@/lib/writer-target';
 import {strokeGeometryLooksAligned} from '@/lib/stroke-data-validation';
 import {useInteractionFeedback} from './interaction-feedback';
 export type WriteMode='intro'|'trace'|'complete'|'memory';
-export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterMisses,completionDelayMs=0,validateStrokeGeometry=false,assistanceControls=true}:{char:string;mode:WriteMode;onComplete?:(assisted:boolean)=>void;strict?:boolean;revealStrokeAfterMisses?:number;completionDelayMs?:number;validateStrokeGeometry?:boolean;assistanceControls?:boolean}){
+export function WritingPad({char,mode,onComplete,strict=false,revealStrokeAfterMisses,completionDelayMs=0,validateStrokeGeometry=false,assistanceControls=true,characterData}:{char:string;mode:WriteMode;onComplete?:(assisted:boolean)=>void;strict?:boolean;revealStrokeAfterMisses?:number;completionDelayMs?:number;validateStrokeGeometry?:boolean;assistanceControls?:boolean;characterData?:{strokes:string[];medians:number[][][]}}){
  const {feedback:feel}=useInteractionFeedback();
  const host=useRef<HTMLDivElement>(null);const writer=useRef<HanziWriter|null>(null);const callback=useRef(onComplete);callback.current=onComplete;const completionTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
- const rawLocalStrokeData=strokeData[char];
+ const rawLocalStrokeData=strokeData[char]||characterData;
  const localStrokeData=rawLocalStrokeData&&(!validateStrokeGeometry||strokeGeometryLooksAligned(rawLocalStrokeData))?rawLocalStrokeData:undefined;
  const start=mode==='complete'?Math.max(0,(localStrokeData?.strokes.length??0)-3):0;
  const [next,setNext]=useState(start);const nextRef=useRef(start);const [strokeCount,setStrokeCount]=useState(localStrokeData?.strokes.length??0);const [runtimeMedians,setRuntimeMedians]=useState<number[][][]>(localStrokeData?.medians??[]);const [ready,setReady]=useState(false);const [failed,setFailed]=useState(false);const [done,setDone]=useState(false);const [busy,setBusy]=useState(false);const [guide,setGuide]=useState(false);const [message,setMessage]=useState('');const [studyReady,setStudyReady]=useState(false);const [size,setSize]=useState(320);const helped=useRef(false);const misses=useRef(0);const strokeMisses=useRef(0);const mounted=useRef(true);const [reset,setReset]=useState(0);const marker=useId().replace(/:/g,'');
