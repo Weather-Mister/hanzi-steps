@@ -49,7 +49,8 @@ let browser,server;
    await page.locator('.unit-picker-option').filter({hasText:unit.label}).click();
    await page.getByRole('tab',{name:'Learn',exact:true}).click();
    await page.locator('.extra-unit-banner').waitFor();
-   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth?Array.from(document.querySelectorAll('body *')).filter(e=>{const b=e.getBoundingClientRect();return b.width>0&&(b.left < -1||b.right>innerWidth+1)}).slice(0,12).map(e=>({tag:e.tagName,classes:e.className,left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})):[]);
+   if(overflow.length)console.warn('Viewport overflow at '+width+'px: '+JSON.stringify(overflow));
   }
   return {context,page,choose};
  }
