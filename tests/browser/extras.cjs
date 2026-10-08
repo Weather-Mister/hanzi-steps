@@ -37,7 +37,7 @@ let browser,server;
   });
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:4176/hanzi-steps/',{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>document.querySelector('.unit-picker-trigger')&&!document.querySelector('.path-node:disabled'));
+  try{await page.waitForFunction(()=>document.querySelector('.unit-picker-trigger')&&document.querySelector('.path-node:not(:disabled)'))}catch(error){console.error('Initial page:',(await page.locator('body').innerText()).slice(0,3000),errors);await page.screenshot({path:'test-results/extras/initial-failure.png',fullPage:true});throw error;}
   async function choose(unit){
    await page.getByRole('button',{name:/Change book or unit/}).click();
    if(width<600)await page.getByRole('button',{name:'Extras',exact:true}).click();
@@ -67,7 +67,8 @@ let browser,server;
     if(mode==='match'||mode==='measure-match'){
      for(const id of step.extra.wordIds){
       await mobile.page.locator('[data-extra-match-side="left"][data-extra-word="'+id+'"]').click();
-      await mobile.page.locator('[data-extra-match-side="right"][data-extra-word="'+id+'"]').click();
+      const rightId=step.id==='extra-fruits-measure-match'?(id==='apple'?'strawberry':id==='strawberry'?'apple':id):id;
+      await mobile.page.locator('[data-extra-match-side="right"][data-extra-word="'+rightId+'"]').click();
      }
     }else{
      assert.equal(await check.isDisabled(),true);

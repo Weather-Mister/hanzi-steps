@@ -33,6 +33,15 @@ export const fruitWords:ExtraWord[]=[
 ];
 export const extraWords=[...clothingWords,...fruitWords];
 export const extraWord=(id:string)=>extraWords.find(word=>word.id===id);
+export function acceptedExtraMeasure(word:ExtraWord,measure:string):boolean{
+ if(word.measure===measure)return true;
+ // The illustrations fix the counting context: a bunch of grapes and pairs
+ // of footwear, but individual whole fruits and one whole skirt.
+ if(word.id==='banana')return ['根','條','個'].includes(measure);
+ if(word.id==='skirt')return ['條','件'].includes(measure);
+ if(fruitWords.includes(word)&&word.id!=='grapes')return ['個','顆'].includes(measure);
+ return false;
+}
 const numbers=['','一','兩','三'];
 export function countedPhrase(word:ExtraWord,count:number){return numbers[count]+word.measure+word.text;}
 function step(id:string,mode:NonNullable<Step['extra']>['mode'],wordIds:string[],wordId?:string,other:Partial<Step>={}):Step{
@@ -58,12 +67,12 @@ function makeUnit(kind:'clothing'|'fruits',number:number,words:ExtraWord[],title
   ...words.filter((word,i)=>words.findIndex(w=>w.measure===word.measure)===i).map(word=>step(prefix+'-measure-intro-'+word.id,'learn',[],word.id)),
   ...words.map(word=>step(prefix+'-measure-'+word.id,'measure',[],word.id,{options:kind==='clothing'?(word.id==='skirt'?['條','雙','頂']:['件','條','雙','頂']):(word.id==='banana'?['根','串','雙']:['個','串','雙'])})),
   step(prefix+'-measure-match','measure-match',words.filter((word,i)=>words.findIndex(w=>w.measure===word.measure)===i).map(w=>w.id)),
-  ...words.slice(0,4).map((word,i)=>({...step(prefix+'-count-'+word.id,'count',[],word.id),extra:{mode:'count' as const,wordId:word.id,count:i%2+2}})),
+  ...(kind==='clothing'?['tshirt','trousers','shoes','hat']:['apple','banana','grapes','strawberry']).map((id,i)=>({...step(prefix+'-count-'+id,'count',[],id),extra:{mode:'count' as const,wordId:id,count:i%2+2}})),
  ]});
  lessons.push({id:prefix+'-listening',unitId:prefix,title:'Hear it, find it',subtitle:'Listen to the noun and choose its picture. Text support is available.',chars:[],minutes:'4–5 min',steps:words.map(word=>step(prefix+'-listen-'+word.id,'listen-picture',words.map(w=>w.id),word.id))});
- lessons.push({id:prefix+'-review',unitId:prefix,title:'Your collection check',subtitle:'A mixed review of pictures, characters, and counting.',chars:[],minutes:'5–7 min',review:true,steps:words.flatMap((word,i)=>[
+ lessons.push({id:prefix+'-review',unitId:prefix,title:'Your collection check',subtitle:'A mixed review of pictures, characters, listening, and counting.',chars:[],minutes:'5–7 min',review:true,steps:words.flatMap((word,i)=>[
   step(prefix+'-review-picture-'+word.id,i%2===0?'word':'picture',words.map(w=>w.id),word.id),
-  step(prefix+'-review-glyph-'+word.id,'character',words.map(w=>w.id),word.id,{extra:{mode:'character',wordId:word.id,wordIds:words.map(w=>w.id),glyph:Array.from(word.text).find(c=>/[\u3400-\u9fff]/.test(c))}}),
+  i%2===0?step(prefix+'-review-glyph-'+word.id,'character',words.map(w=>w.id),word.id,{extra:{mode:'character',wordId:word.id,wordIds:words.map(w=>w.id),glyph:Array.from(word.text).find(c=>/[\u3400-\u9fff]/.test(c))}}):i<6?step(prefix+'-review-listen-'+word.id,'listen-picture',words.map(w=>w.id),word.id):step(prefix+'-review-count-'+word.id,'count',[],word.id,{extra:{mode:'count',wordId:word.id,count:2}}),
  ])});
  // Every lesson is directly accessible, so each practice lesson must teach its
  // entire answer bank even when no earlier extra lesson has been completed.
@@ -81,7 +90,7 @@ export function extraChoices(step:Step):string[]{
  if(activity.mode==='learn')return [];
  if(activity.mode==='measure'){
   // Alternatives can be natural in real speech; never offer them as wrong.
-  const incompatible=(step.options||[]).filter(m=>m!==word!.measure&&!(word!.measure==='個'&&m==='顆')&&!(word!.measure==='顆'&&m==='個'));
+  const incompatible=(step.options||[]).filter(m=>!acceptedExtraMeasure(word!,m));
   return [word!.measure,...incompatible];
  }
  if(activity.mode==='count')return [1,2,3].map(count=>countedPhrase(word!,count));

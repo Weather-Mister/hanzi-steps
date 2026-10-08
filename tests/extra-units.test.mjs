@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {extraUnits,extraLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete} from '../course/extras/units.ts';
+import {acceptedExtraMeasure,extraUnits,extraLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete} from '../course/extras/units.ts';
 import {lessons,units,vocabulary,characters,findLesson,lessonAvailable,validSession,completedLessonIds} from '../lib/curriculum.ts';
 import {learnedPracticeItems} from '../lib/practice-engine.ts';
 import {streakFromDays,taipeiDay} from '../lib/streak.ts';
@@ -82,6 +82,20 @@ test('extra completion requires all lessons, including when review is done first
   assert.equal(extraUnitComplete(unit,reviewOnly),false);
   assert.equal(extraUnitComplete(unit,new Set(unit.lessonIds)),true);
   assert.equal(extraUnitComplete(unit,new Set(unit.lessonIds.slice(1))),false);
+ }
+});
+
+test('natural alternative classifiers are accepted in matching, but counting context is preserved',()=>{
+ assert.ok(acceptedExtraMeasure(extraWord('apple'),'顆'));
+ assert.ok(acceptedExtraMeasure(extraWord('strawberry'),'個'));
+ assert.ok(acceptedExtraMeasure(extraWord('banana'),'個'));
+ assert.ok(acceptedExtraMeasure(extraWord('skirt'),'件'));
+ assert.equal(acceptedExtraMeasure(extraWord('grapes'),'顆'),false,'a bunch is not an individual grape');
+ assert.equal(acceptedExtraMeasure(extraWord('shoes'),'隻'),false,'a pair is not a single shoe');
+ assert.equal(acceptedExtraMeasure(extraWord('hat'),'條'),false);
+ for(const lesson of extraLessons)for(const step of lesson.steps.filter(s=>s.extra.mode==='measure')){
+  const word=extraWord(step.extra.wordId);
+  assert.ok(extraChoices(step).filter(value=>value!==word.measure).every(value=>!acceptedExtraMeasure(word,value)),step.id);
  }
 });
 
