@@ -25,6 +25,17 @@ jobs:
       - name: Run curriculum regression tests
         run: npm run test:curriculum
       - run: npm run build:pages
+      - name: Check optional-unit responsive layout
+        run: |
+          npm install --prefix /tmp/hanzi-layout-tools --no-save --package-lock=false playwright@1.62.1
+          node /tmp/hanzi-layout-tools/node_modules/playwright/cli.js install --with-deps chromium
+          HANZI_PLAYWRIGHT=/tmp/hanzi-layout-tools/node_modules/playwright node --experimental-strip-types tests/browser/extras-layout.cjs
+      - name: Upload optional-unit layout captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: optional-unit-layout
+          path: test-results/extras
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist-pages

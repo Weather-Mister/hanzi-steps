@@ -9,4 +9,4 @@
 .extra-exercise .extra-text-options .extra-choice-word{font-size:clamp(1rem,3vw,1.35rem);overflow-wrap:anywhere;line-height:1.4}
 .extra-exercise .phrase-tokens small{display:block;color:var(--muted)}
 
-.extra-section-heading{grid-column:1/-1;font-family:var(--font-heading);font-size:21px;margin:28px 0 12px}.extra-unit-switcher{flex-wrap:wrap}.extra-unit-switcher button{min-width:150px}.extra-color-swatch{padding:4px}@media(max-width:600px){.extra-unit-switcher button{min-width:calc(50% - 12px)}.extra-section-heading{font-size:19px}}
+.extra-section-heading{font-size:21px;line-height:1.35;margin:28px 0 12px;overflow-wrap:anywhere}.extra-unit-switcher{flex-wrap:wrap}.extra-unit-switcher button{min-width:150px}.extra-color-swatch{padding:4px}@media(max-width:600px){.extra-unit-switcher button{min-width:calc(50% - 12px)}.extra-section-heading{font-size:19px}}
