@@ -73,12 +73,30 @@ jobs:
       - name: Validate notification reading sentences
         run: node --experimental-strip-types --test tests/notification-sentences.test.mjs
 
+      - name: Validate optional extras and ownership isolation
+        run: node --experimental-strip-types --test tests/extra-units.test.mjs
+
       # Build is also much cheaper than the exhaustive regression sweep, so catch
       # bundling/import failures before starting the longest step.
       - name: Build Pages bundle
         run: npm run build:pages
 
       - name: Run regression tests
+        # Browser QA uses a temporary package prefix; repository dependency
+        # inputs and the lockfile stay unchanged.
+        run: |
+          npm install --prefix /tmp/hanzi-extras-tools --no-save --package-lock=false playwright@1.62.1
+          node /tmp/hanzi-extras-tools/node_modules/playwright/cli.js install --with-deps chromium
+          HANZI_PLAYWRIGHT=/tmp/hanzi-extras-tools/node_modules/playwright node --experimental-strip-types tests/browser/extras.cjs
+
+      - name: Upload optional-unit browser captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: optional-unit-browser
+          path: test-results/extras
+
+      - name: Run curriculum regression tests
         run: node --experimental-strip-types --test tests/order-answer.test.mjs tests/vocabulary-lookup.test.mjs tests/mega-challenge.test.mjs tests/practice-engine.test.mjs tests/practice-content.test.mjs tests/exam-study.test.mjs tests/exam-stroke-guidance.test.mjs validation/*.test.mjs
 
       - name: Commit generated curriculum artifacts
@@ -93,3 +111,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Generate curriculum artifacts"
           git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+
