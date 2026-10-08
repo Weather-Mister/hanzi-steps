@@ -71,6 +71,7 @@ let browser,server;
     await page.getByRole('button',{name:/Change book or unit/}).click();
    }
    await page.locator('.unit-picker-option').filter({hasText:unit.label}).click();
+   await page.getByRole('tab',{name:'Learn',exact:true}).click();
    await page.locator('.extra-unit-banner').waitFor();
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   }

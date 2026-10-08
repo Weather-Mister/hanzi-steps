@@ -49,7 +49,7 @@ function wordWorksheet(kind:Kind,word:ExtraWord,words:ExtraWord[],index:number):
  const count=['','一','兩','三'][number],countPinyin=['','', 'liǎng','sān'][number];
  if(kind==='colors'){
   const tokens=word.id==='color-word'?['我','喜歡','這','種',word.text]:['我','喜歡',word.text];
-  steps.push(...sentence(id+'-sentence',words,tokens,word.id==='color-word'?'Wǒ xǐhuān zhè zhǒng yánsè.':'Wǒ xǐhuān '+word.pinyin+'.',word.id==='color-word'?'I like this kind of color.':'I like '+word.meaning+'.','我 = I; 喜歡 = like. A color name can follow 喜歡 directly. 這種顏色 means this kind of color; 種 counts kinds, not garments.'));
+  steps.push(...sentence(id+'-sentence',words,tokens,word.id==='color-word'?'Wǒ xǐhuān zhè zhǒng yánsè.':'Wǒ xǐhuān '+word.pinyin+'.',word.id==='color-word'?'I like this kind of color.':'I like '+(word.id==='color-gold'||word.id==='color-silver'?'the color '+word.meaning.replace('-colored',''):word.meaning)+'.','我 = I; 喜歡 = like. A color name can follow 喜歡 directly. 這種顏色 means this kind of color; 種 counts kinds, not garments.'));
  }else{
   const tokens=kind==='clothing'?['我','有',count,word.measure,word.text]:['我','想','買',count,word.measure,word.text];
   steps.push(...sentence(id+'-sentence',words,tokens,(kind==='clothing'?'Wǒ yǒu ':'Wǒ xiǎng mǎi ')+(number===1?word.countedPinyin:countPinyin+' '+word.measurePinyin+' '+word.pinyin)+'.',(kind==='clothing'?'I have ':'I want to buy ')+['','one','two','three'][number]+' '+english[word.id][number===1?0:1]+'.','Subject → 有 (have), or 想 + 買 (want to buy) → number + measure word + noun. Use 兩 before a measure word for two. '+word.note));
