@@ -57,7 +57,7 @@ export const extraCharacterInfo:Record<string,{pinyin:string;meaning:string;note
 '包':{"pinyin":"bāo","meaning":"bag; wrap","note":"背包 means backpack. Notice the outer 勹 wrapping 巳."},
 '穿':{"pinyin":"chuān","meaning":"wear clothing or footwear","note":"Use 穿 for garments and shoes. 穴 sits above 牙."},
 '戴':{"pinyin":"dài","meaning":"wear an accessory","note":"Use 戴 for hats, scarves, gloves, and eyeglasses. Follow the stroke demonstration to distinguish its dense upper and lower parts."},
-'隻':{"pinyin":"zhī","meaning":"measure word for one individual item","note":"一隻鞋子 is one shoe; 一雙 and names a pair. 隹 sits above 又."},
+'隻':{"pinyin":"zhī","meaning":"measure word for one individual item","note":"一隻鞋子 is one shoe; 一雙鞋子 names a pair. 隹 sits above 又."},
 '芭':{"pinyin":"bā","meaning":"guava character","note":"芭樂 is a common Taiwan word for guava. 艹 sits above 巴."},
 '樂':{"pinyin":"lè","meaning":"guava character; joy","note":"Read 樂 as lè in 芭樂. It has other readings in other words. Notice 木 at the bottom."},
 '火':{"pinyin":"huǒ","meaning":"fire","note":"火龍果 means dragon fruit. Notice its central strokes and two side dots."},

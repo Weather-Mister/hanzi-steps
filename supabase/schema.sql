@@ -2294,7 +2294,7 @@ insert into hanzi_private.lesson_lengths as existing (lesson_id, steps, historic
   ('extra-clothing-single-pair', 19, ARRAY[]::integer[]),
   ('extra-clothing-have-want', 12, ARRAY[]::integer[]),
   ('extra-clothing-names', 12, ARRAY[]::integer[]),
-  ('extra-clothing-full-review', 63, ARRAY[]::integer[]),
+  ('extra-clothing-full-review', 64, ARRAY[]::integer[]),
   ('extra-fruits-learn-1', 41, ARRAY[11]::integer[]),
   ('extra-fruits-learn-2', 28, ARRAY[8]::integer[]),
   ('extra-fruits-learn-3', 22, ARRAY[8]::integer[]),

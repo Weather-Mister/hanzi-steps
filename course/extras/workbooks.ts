@@ -66,7 +66,7 @@ function finalReview(kind:Kind,words:ExtraWord[]):Lesson{
  const steps:Step[]=[primer(id+'-study',words)];
  for(const [index,word] of words.entries()){
   const bank=bankFor(word,words);
-  steps.push(activity(id+'-recognize-'+word.id,word.id==='color-word'?'meaning':index%2?'picture':'word',word,bank),activity(id+'-listen-'+word.id,'listen-word',word,bank),...write(id+'-memory-'+word.id,word,[Array.from(word.text)[0]]).filter(step=>step.extra!.writeMode==='memory'));
+  steps.push(activity(id+'-recognize-'+word.id,word.id==='color-word'?'meaning':index%2?'picture':'word',word,bank),activity(id+'-listen-'+word.id,'listen-word',word,bank),...write(id+'-memory-'+word.id,word,[Array.from(word.text).find(char=>/[\u3400-\u9fff]/.test(char))!]).filter(step=>step.extra!.writeMode==='memory'));
  }
  const target=words[0];
  steps.push(mixed(id+'-mixed',bankFor(target,words)));
