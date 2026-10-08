@@ -5,8 +5,8 @@ const rows=new Map([...migration.matchAll(/\('([^']+)', (\d+), ARRAY\[([^\]]*)\]
 test('Supabase metadata matches every current and reviewed historical curriculum bound',()=>{
  for(const l of lessons){assert.equal(rows.get(l.id)?.current,l.steps.length,l.id);assert.deepEqual(rows.get(l.id)?.history,historicalLessonLengthsFor(l.id),l.id);}
 });
-test('Fresh schema installs include exactly the tested compatibility migration',()=>{
- const schema=fs.readFileSync(new URL('../supabase/schema.sql',import.meta.url),'utf8');assert.ok(schema.endsWith(migration));
+test('Fresh schema installs include the exact compatibility migration and optional lesson metadata',()=>{
+ const schema=fs.readFileSync(new URL('../supabase/schema.sql',import.meta.url),'utf8');const extras=fs.readFileSync(new URL('../course/extras/progress.sql',import.meta.url),'utf8');assert.ok(schema.endsWith(extras));assert.ok(schema.slice(0,schema.length-extras.length).trimEnd().endsWith(migration.trimEnd()));
  // This migration changes curriculum bounds/save validation only. All existing
  // auth functions, table grants/RLS and practice RPCs remain the deployed ones.
  assert.equal(/(?:grant|revoke|drop|delete)\s/i.test(migration),false);

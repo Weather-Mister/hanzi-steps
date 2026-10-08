@@ -36,6 +36,10 @@ import {usePracticeMastery} from '@/lib/use-practice-mastery';
 import {useMegaMastery} from '@/lib/use-mega-mastery';
 import {unitSourceReference} from '@/lib/unit-source-reference';
 import {ProductionExercise} from './production-exercise';
+import {ExtraExercise} from './extra-exercise';
+import {ExtraUnitHome} from './extra-unit-home';
+import {extraUnits,extraLessons,extraUnitComplete,isExtraLesson,wordsForExtraUnit} from '../course/extras/units';
+import '@/app/extras.css';
 import {SentenceBuilder} from './sentence-builder';
 import {buildLessonOrderBank,lessonOrderUnitNumber} from '@/lib/lesson-order-bank';
 import {cumulativeEncounterForUnit,engagementFrame,engagementPrompt,isRepairEngagement} from '@/lib/lesson-engagement';
@@ -208,19 +212,23 @@ export function LearningApp({userKey,accountPanel,signInPanel,notificationSettin
 function LearningExperience({userKey,accountPanel,signInPanel,notificationSettings}:AppProps){
  const {preferences:feedbackPrefs,updatePreferences:updateFeedbackPrefs,soundAvailable,reducedMotion,feedback:feel,stopFeedback}=useInteractionFeedback();
  const {sessions,loading,loadError,saveError,saveState:writeState,needsSignIn,save,retrySave:retryWrite,reload,studyDays}=useProgress(userKey);const practiceMastery=usePracticeMastery(userKey);const megaMastery=useMegaMastery(userKey);const saveState=needsSignIn?'error':loading?'saving':loadError?'error':writeState;const retrySave=()=>needsSignIn?setSettings(true):loadError?reload():retryWrite();const [active,setActive]=useState<Session|null>(null);const [tab,setTab]=useState('learn');const [settings,setSettings]=useState(false);const [practiceOpen,setPracticeOpen]=useState(false);const [practiceStart,setPracticeStart]=useState<PracticeEntry>('hub');const [megaOpen,setMegaOpen]=useState(false);const [reverseMegaOpen,setReverseMegaOpen]=useState(false);const [unitMegaTarget,setUnitMegaTarget]=useState<UnitChallengeTarget|null>(null);const [unitPinyinTarget,setUnitPinyinTarget]=useState<UnitChallengeTarget|null>(null);const [examStudyOpen,setExamStudyOpen]=useState(false);const [statsOpen,setStatsOpen]=useState(false);const [searchOpen,setSearchOpen]=useState(false);const [exitOpen,setExitOpen]=useState(false);const [detail,setDetail]=useState<string|null>(null);const [freePractice,setFreePractice]=useState<string|null>(null);const [prefs,setPrefs]=useState<Preferences>({pinyin:true});
- const [bookId,setBookId]=useState('book-1');const book=books.find(b=>b.id===bookId)||books[0];
+ const [bookId,setBookId]=useState('book-1');
+ const extraBook={id:'extras',number:0,title:'Optional extras',available:true,unitIds:extraUnits.map(u=>u.id)};
+ const navigationBooks=[...books.filter(b=>b.number!==3),extraBook];
+ const isExtras=bookId==='extras';
+ const book=isExtras?extraBook:books.find(b=>b.id===bookId)||books[0];
  const [reading,setReading]=useState<Reading|null>(null);
  const [readingPathOpen,setReadingPathOpen]=useState(false),[listeningPathOpen,setListeningPathOpen]=useState(false);
  const [unitId,setUnitId]=useState('unit-1');const unitChosen=useRef(false);
  useEffect(()=>{try{const p=JSON.parse(localStorage.getItem('hanzi-steps-preferences')||'null');if(p&&typeof p.pinyin==='boolean')setPrefs({pinyin:p.pinyin})}catch{}},[]);
  function updatePrefs(next:Preferences){setPrefs(next);try{localStorage.setItem('hanzi-steps-preferences',JSON.stringify(next))}catch{}}
  const completed=completedLessonIds(sessions.filter(s=>s.complete&&!s.lessonId.startsWith('practice-')).map(s=>s.lessonId));
- const bookUnits=units.filter(u=>book.unitIds.includes(u.id));
+ const bookUnits=(isExtras?extraUnits:units).filter(u=>book.unitIds.includes(u.id));
  const unit=bookUnits.find(u=>u.id===unitId)||bookUnits[0]||units[0];
- const sourceReference=unitSourceReference(unit,book.number);
+ const sourceReference=isExtras?undefined:unitSourceReference(unit,book.number);
  const unitReadings=readingsForUnit(unit.id);
  const nextUnit=bookUnits[bookUnits.findIndex(u=>u.id===unit.id)+1];
- const finishedBookUnits=bookUnits.filter(u=>completed.has(u.lessonIds[u.lessonIds.length-1])).length;
+ const finishedBookUnits=bookUnits.filter(u=>isExtras?extraUnitComplete(u,completed):completed.has(u.lessonIds[u.lessonIds.length-1])).length;
  const unitLessons=lessons.filter(l=>l.unitId===unit.id);
  const learned=characterOrder.filter(c=>lessons.some(l=>!l.review&&l.chars.includes(c)&&completed.has(l.id)));
  const unitCharacters=unitLibraryCharacters(unit);
@@ -244,12 +252,13 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
  const bonusAfterIndex=Math.max(0,Math.min(unitLessons.length-2,Math.floor((unitLessons.length-1)/2)));
  const bonusVisible=Boolean(bonusKind&&completed.has(unitLessons[bonusAfterIndex]?.id));
  const current=active?findLesson(active.lessonId):undefined;
- const currentUnit=units.find(u=>u.id===current?.unitId)||(current?.id.startsWith('practice-')?units.find(u=>unitLibraryCharacters(u).includes(current.chars[0])):undefined)||unit;
- const currentBook=books.find(b=>b.unitIds.includes(currentUnit.id));
+ const currentExtra=Boolean(current&&isExtraLesson(current.id));
+ const currentUnit=[...units,...extraUnits].find(u=>u.id===current?.unitId)||(current?.id.startsWith('practice-')?units.find(u=>unitLibraryCharacters(u).includes(current.chars[0])):undefined)||unit;
+ const currentBook=navigationBooks.find(b=>b.unitIds.includes(currentUnit.id));
  const currentTheme=visualUnitTheme(currentUnit,currentBook?.number??1);
- const followingUnit=units.find(u=>u.id===currentBook?.unitIds[(currentBook?.unitIds.indexOf(currentUnit.id)??-1)+1]);
+ const followingUnit=[...units,...extraUnits].find(u=>u.id===currentBook?.unitIds[(currentBook?.unitIds.indexOf(currentUnit.id)??-1)+1]);
  useEffect(()=>{if(loading||unitChosen.current)return;unitChosen.current=true;const done=completedLessonIds(sessions.filter(s=>s.complete).map(s=>s.lessonId));const next=lessons.find(l=>!done.has(l.id));setUnitId(next?.unitId||units[units.length-1].id);setBookId(books.find(b=>b.unitIds.includes(next?.unitId||units[units.length-1].id))?.id||'book-1')},[loading,sessions]);
- function chooseUnit(id:string){setBookId(books.find(b=>b.unitIds.includes(id))?.id||'book-1');unitChosen.current=true;setUnitId(id)}
+ function chooseUnit(id:string){setBookId(navigationBooks.find(b=>b.unitIds.includes(id))?.id||'book-1');unitChosen.current=true;setUnitId(id)}
  function start(lesson:Lesson){if(loading)return;if(lesson.id.startsWith('practice-')){const char=lesson.id.slice(9);if(!characterPracticeAvailable(char,completed))return}else if(!lessonAvailable(lesson.id,completed))return;const checkpoint=sessions.find(s=>s.lessonId===lesson.id&&!s.complete);const s=checkpoint||{id:crypto.randomUUID(),lessonId:lesson.id,index:0,independent:0,assisted:0,complete:false,updatedAt:Date.now()};setDetail(null);setReading(null);setActive(s);if(!checkpoint)save(s);window.scrollTo({top:0,behavior:'instant'})}
  function advance(assessed:boolean,assisted:boolean){if(!active||!current)return;const next={...active,index:active.index+1,independent:active.independent+Number(assessed&&!assisted),assisted:active.assisted+Number(assessed&&assisted),complete:active.index+1===current.steps.length,updatedAt:Date.now()};setActive(next);save(next);if(next.complete)feel('complete')}
  function openReading(value:Reading){if(loading||!readingAvailable(value,completed))return;setActive(null);setReading(value);window.scrollTo({top:0,behavior:'instant'})}
@@ -277,17 +286,17 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
      <div className="course-navigation-heading"><span>COURSE</span><strong>Taiwanese Mandarin</strong></div>
      <section className="course-navigation-section course-navigation-books">
       <p className="course-navigation-label">Book</p>
-      <nav className="book-switcher" aria-label="Choose a book">{books.filter(b=>b.number!==3).map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>Book {b.number}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
+      <nav className="book-switcher" aria-label="Choose a book">{navigationBooks.map(b=><button key={b.id} aria-pressed={bookId===b.id} className={bookId===b.id?'selected':''} onClick={()=>setBookId(b.id)}><BookOpen size={19}/><span><strong>{b.id==='extras'?'Extras':`Book ${b.number}`}</strong><small>{b.available?`${b.unitIds.length} ${b.unitIds.length===1?'unit':'units'}`:'Coming later'}</small></span></button>)}</nav>
      </section>
      {book.available&&<section className="course-navigation-section">
       <p className="course-navigation-label">Unit</p>
-      <UnitPicker unit={unit} units={bookUnits} allUnits={units} books={books.filter(b=>b.number!==3)} bookId={bookId} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
-      <div className="course-milestone"><div><span>Book {book.number} progress</span><strong>{finishedBookUnits}<small> / {book.unitIds.length}</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={`Available Book ${book.number} units completed`}/></div>
+      <UnitPicker unit={unit} units={bookUnits} allUnits={[...units,...extraUnits]} books={navigationBooks} bookId={bookId} bookNumber={book.number} completed={completed} loading={loading} onSelect={chooseUnit}/>
+      <div className="course-milestone"><div><span>{isExtras?'Extra-unit':`Book ${book.number}`} progress</span><strong>{finishedBookUnits}<small> / {book.unitIds.length}</small></strong></div><Progress value={finishedBookUnits/book.unitIds.length*100} aria-label={isExtras?'Optional units completed':`Available Book ${book.number} units completed`}/></div>
      </section>}
      {book.available&&<section className="course-navigation-section course-navigation-tabs"><TabsList className="main-tabs"><TabsTrigger value="learn"><BookOpen size={18}/>Learn</TabsTrigger><TabsTrigger value="characters"><PenLine size={18}/>Characters</TabsTrigger><TabsTrigger value="notes"><Lightbulb size={18}/>Notes</TabsTrigger></TabsList></section>}
     </aside>
     <div className="course-content">
-     {book.available ? <>
+     {isExtras ? <ExtraUnitHome unit={unit} completed={completed} sessions={sessions} loading={loading} pinyin={prefs.pinyin} onStart={start} onSelect={chooseUnit} onNotes={()=>setTab('notes')}/> : book.available ? <>
      <TabsContent value="learn">
       <div className="unit-banner mobile-unit-banner"><div><p className="eyebrow">UNIT {String(unit.displayNumber??unit.number).padStart(2,'0')} <span>·</span> {unit.label.toUpperCase()}</p><h1>{unit.title}</h1><p>{unit.description}</p></div><div className="banner-characters" lang="zh-Hant-TW" aria-hidden="true">{unit.banner.text}<span>{unit.banner.pinyin}</span></div></div>
       {sourceReference&&<p className="unit-source-footer mobile-source-footer">{sourceReference}</p>}
@@ -324,15 +333,15 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
   {!needsSignIn&&(loadError||saveError)&&<div className="storage-notice" role="status"><p>{loadError||saveError}</p><button className="text-button" onClick={()=>void retrySave()}>Try again</button></div>}
   <div className="home-footer"><span>One unit at a time. As many tries as you need.</span><button className={`sync-state ${saveState}`} onClick={()=>saveState==='error'?void retrySave():undefined} disabled={saveState!=='error'}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button></div>
  </main> : active.complete&&current ? <main className="completion-main">
-  <div className="completion-medal">{current.review?<Trophy size={54}/>:<Check size={58}/>}</div><p className="eyebrow">{current.review?`UNIT ${String(currentUnit.number).padStart(2,'0')} COMPLETE`:current.id.startsWith('practice-')?'PRACTICE COMPLETE':'LESSON COMPLETE'}</p><h1>{current.review?(currentUnit.number===1?'Your first conversation starts here.':'More words. More ways to connect.'):'One step closer.'}</h1><p>You practiced {current.chars.length===1?'one character':`${current.chars.length} characters`} through shapes, strokes, and meaning.</p>
-  <div className="completion-characters" lang="zh-Hant-TW">{current.chars.map(c=><button key={c} onClick={()=>setDetail(c)}>{c}</button>)}</div><div className="completion-stats"><div><strong>{active.independent}</strong><span>Without retries or hints</span></div><div><strong>{active.assisted}</strong><span>With learning support</span></div></div><p className="completion-note">Guided tracing is practice. Writing from memory is a separate step.</p>{!needsSignIn&&saveState==='error'&&<p className="storage-notice" role="status">{saveError||loadError}</p>}
+  <div className="completion-medal">{current.review?<Trophy size={54}/>:<Check size={58}/>}</div><p className="eyebrow">{currentExtra?(current.review?'EXTRA REVIEW COMPLETE':'EXTRA LESSON COMPLETE'):current.review?`UNIT ${String(currentUnit.number).padStart(2,'0')} COMPLETE`:current.id.startsWith('practice-')?'PRACTICE COMPLETE':'LESSON COMPLETE'}</p><h1>{currentExtra?'Your collection is growing.':current.review?(currentUnit.number===1?'Your first conversation starts here.':'More words. More ways to connect.'):'One step closer.'}</h1><p>{currentExtra?`You practiced ${currentUnit.label.toLowerCase()} through pictures, characters, listening, and counting.`:<>You practiced {current.chars.length===1?'one character':`${current.chars.length} characters`} through shapes, strokes, and meaning.</>}</p>
+  <div className="completion-characters" lang="zh-Hant-TW">{!currentExtra&&current.chars.map(c=><button key={c} onClick={()=>setDetail(c)}>{c}</button>)}</div><div className="completion-stats"><div><strong>{active.independent}</strong><span>Without retries or hints</span></div><div><strong>{active.assisted}</strong><span>With learning support</span></div></div><p className="completion-note">{currentExtra?`${currentUnit.lessonIds.filter(id=>completed.has(id)).length} / ${currentUnit.lessonIds.length} extra lessons complete. Each completed lesson counts toward your streak.`:'Guided tracing is practice. Writing from memory is a separate step.'}</p>{currentExtra&&<div className="extra-completion-words" lang="zh-Hant-TW">{wordsForExtraUnit(currentUnit.id).map(word=><span key={word.id}>{word.text}</span>)}</div>}{!needsSignIn&&saveState==='error'&&<p className="storage-notice" role="status">{saveError||loadError}</p>}
   {current.review&&<div className="final-phrase"><p lang="zh-Hant-TW">{currentUnit.goal.text}</p><span>{currentUnit.goal.meaning}</span><AudioButton text={currentUnit.goal.text}/></div>}
-  {current.review&&<UnitChallengePair completion unitNumber={currentUnit.displayNumber??currentUnit.number} onMega={()=>openUnitChallenge('handwriting',currentUnit)} onPinyin={()=>openUnitChallenge('pinyin',currentUnit)}/>}
+  {current.review&&!currentExtra&&<UnitChallengePair completion unitNumber={currentUnit.displayNumber??currentUnit.number} onMega={()=>openUnitChallenge('handwriting',currentUnit)} onPinyin={()=>openUnitChallenge('pinyin',currentUnit)}/>}
   {current.review&&cumulativeEncounterForUnit(currentUnit,units)&&<CumulativeEncounter unit={currentUnit} onOpen={openReading}/>}
   {current.review&&readingsForUnit(currentUnit.id).map(item=><ReadingStage key={userKey+item.id} reading={item} available={!loading&&readingAvailable(item,completed)} userKey={userKey} onStart={()=>openReading(item)}/>)}
-  <button className="primary-button" onClick={()=>{if(current.review&&followingUnit)chooseUnit(followingUnit.id);home()}}>{current.review&&followingUnit?`Continue to Unit ${followingUnit.displayNumber??followingUnit.number}`:'Back to the unit'}<ArrowRight size={19}/></button><button className={`sync-state ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button>
+  <button className="primary-button" onClick={()=>{if(currentExtra)chooseUnit(currentUnit.id);else if(current.review&&followingUnit)chooseUnit(followingUnit.id);home()}}>{!currentExtra&&current.review&&followingUnit?`Continue to Unit ${followingUnit.displayNumber??followingUnit.number}`:'Back to the unit'}<ArrowRight size={19}/></button><button className={`sync-state ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()}>{saveState==='saved'?<CloudCheck size={16}/>:<CloudUpload size={16}/>}{saveLabel}</button>
  </main> : current ? <main className="lesson-main">
-  <div className="lesson-topline"><button className="icon-button" aria-label="Pause this lesson" onClick={()=>setExitOpen(true)}><X size={23}/></button><div><div className="lesson-progress-label"><span>{current.title}</span><span>{active.index+1} / {current.steps.length}</span></div><Progress className="lesson-progress" value={active.index/current.steps.length*100} aria-label="Lesson progress"/></div><button className={`sync-indicator ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()} aria-label={saveLabel}>{saveState==='saved'?<CloudCheck size={19}/>:<CloudUpload size={19}/>}</button></div>{!needsSignIn&&saveState==='error'&&<div className="save-inline" role="status">{saveError||loadError||'Your progress has not synced yet.'} <button onClick={()=>void retrySave()}>Try again</button></div>}{current.steps[active.index].type==='produce'?<ProductionExercise userKey={userKey} key={`${active.id}-${active.index}`} step={current.steps[active.index]} sessionSeed={active.id} onAdvance={advance} onAttempt={recordLessonAttempt}/>: <Exercise completed={completed} key={`${active.id}-${active.index}`} step={current.steps[active.index]} lesson={current} prefs={prefs} sessionSeed={active.id} onAdvance={advance} onAttempt={recordLessonAttempt}/>}
+  <div className="lesson-topline"><button className="icon-button" aria-label="Pause this lesson" onClick={()=>setExitOpen(true)}><X size={23}/></button><div><div className="lesson-progress-label"><span>{current.title}</span><span>{active.index+1} / {current.steps.length}</span></div><Progress className="lesson-progress" value={active.index/current.steps.length*100} aria-label="Lesson progress"/></div><button className={`sync-indicator ${saveState}`} disabled={saveState!=='error'} onClick={()=>void retrySave()} aria-label={saveLabel}>{saveState==='saved'?<CloudCheck size={19}/>:<CloudUpload size={19}/>}</button></div>{!needsSignIn&&saveState==='error'&&<div className="save-inline" role="status">{saveError||loadError||'Your progress has not synced yet.'} <button onClick={()=>void retrySave()}>Try again</button></div>}{current.steps[active.index].type==='extra'?<ExtraExercise key={`${active.id}-${active.index}`} step={current.steps[active.index]} sessionSeed={active.id} pinyin={prefs.pinyin} onAdvance={advance}/>:current.steps[active.index].type==='produce'?<ProductionExercise userKey={userKey} key={`${active.id}-${active.index}`} step={current.steps[active.index]} sessionSeed={active.id} onAdvance={advance} onAttempt={recordLessonAttempt}/>: <Exercise completed={completed} key={`${active.id}-${active.index}`} step={current.steps[active.index]} lesson={current} prefs={prefs} sessionSeed={active.id} onAdvance={advance} onAttempt={recordLessonAttempt}/>}
  </main> : null}
  <SmartPractice key={userKey} open={practiceOpen} onOpenChange={setPracticeOpen} completed={completed} theme={currentTheme} mastery={practiceMastery} megaMastery={megaMastery} startMode={practiceStart} onOpenMegaChallenge={()=>setMegaOpen(true)} onOpenReverseMegaChallenge={()=>setReverseMegaOpen(true)} onOpenExamStudy={()=>setExamStudyOpen(true)} onOpenReadingPath={()=>setReadingPathOpen(true)} onOpenListeningPath={()=>setListeningPathOpen(true)}/>
  <ReadingPath key={userKey+'-readings'} open={readingPathOpen} onOpenChange={setReadingPathOpen} completed={completed} userKey={userKey} theme={currentTheme} onRead={openReading}/>
@@ -350,4 +359,5 @@ function LearningExperience({userKey,accountPanel,signInPanel,notificationSettin
  <UnguidedWritingPractice char={freePractice} open={!!freePractice} onOpenChange={open=>!open&&setFreePractice(null)} theme={currentTheme} completedRounds={freePractice?unguidedPracticeCount(practiceMastery.states,freePractice):0} onPracticeComplete={assisted=>{if(!freePractice)return;void practiceMastery.record({itemId:unguidedPracticeItemId(freePractice),mode:'handwriting',correct:true,assisted,sessionKind:'lesson'})}}/>
  </div>
 }
+
 

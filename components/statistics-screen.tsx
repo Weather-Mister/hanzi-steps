@@ -6,6 +6,7 @@ import {characterOrder,units,type Session} from '@/lib/curriculum';
 import type {PracticeStateMap} from '@/lib/practice-engine';
 import {completionTimestamp,taipeiDay} from '@/lib/streak';
 import {learningStatistics} from '@/lib/statistics';
+import {extraUnits,extraLessons,extraUnitComplete} from '../course/extras/units';
 
 function formatDay(day:string|null){
  if(!day)return '—';
@@ -133,6 +134,8 @@ export function StatisticsScreen({
      <div className="statistics-progress-list">
       <div><span>Characters learned <b>{stats.learnedCharacters}/{characterOrder.length}</b></span><i><b style={{width:`${charRate}%`}}/></i></div>
       <div><span>Units completed <b>{stats.completedUnits}/{units.length}</b></span><i><b style={{width:`${unitRate}%`}}/></i></div>
+      <div><span>Extra units completed <b>{extraUnits.filter(unit=>extraUnitComplete(unit,completed)).length}/{extraUnits.length}</b></span><i><b style={{width:`${extraUnits.filter(unit=>extraUnitComplete(unit,completed)).length/extraUnits.length*100}%`}}/></i></div>
+      <div><span>Extra lessons completed <b>{extraLessons.filter(lesson=>completed.has(lesson.id)).length}/{extraLessons.length}</b></span><i><b style={{width:`${extraLessons.filter(lesson=>completed.has(lesson.id)).length/extraLessons.length*100}%`}}/></i></div>
      </div>
     </section>
 
@@ -182,3 +185,4 @@ export function StatisticsScreen({
   </DialogContent>
  </Dialog>;
 }
+

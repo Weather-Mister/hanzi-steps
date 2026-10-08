@@ -2,6 +2,7 @@
 import {characters,characterOrder,lessons,units,books,vocabulary} from '../course/runtime.ts';
 import type {Step,Lesson,Session,Unit} from '../course/schema.ts';
 import {courseModules} from '../course/registry.generated.ts';
+import {extraLessons,isExtraLesson} from '../course/extras/units.ts';
 import {completedLessonIds,previousLessonLengths,historicalLessonLengthsFor} from './lesson-revisions.ts';
 export {completedLessonIds,previousLessonLengths,additionalPreviousLessonLengths,historicalLessonLengthsFor} from './lesson-revisions.ts';
 export * from '../course/schema.ts';
@@ -19,12 +20,12 @@ function characterSteps(c:string):Step[]{
  select.options=[c,...characterOrder.filter(x=>x!==c).slice(0,3)];
  return list.map((step,i)=>({...step,id:`${c}-${i}`}));
 }
-export function lessonAvailable(lessonId:string,completed:Set<string>){const done=completedLessonIds(completed);const i=lessons.findIndex(l=>l.id===lessonId);return i>=0&&(done.has(lessonId)||books.some(b=>units.find(u=>u.id===b.unitIds[0])?.lessonIds[0]===lessonId)||done.has(lessons[i-1]?.id));}
+export function lessonAvailable(lessonId:string,completed:Set<string>){if(isExtraLesson(lessonId))return true;const done=completedLessonIds(completed);const i=lessons.findIndex(l=>l.id===lessonId);return i>=0&&(done.has(lessonId)||books.some(b=>units.find(u=>u.id===b.unitIds[0])?.lessonIds[0]===lessonId)||done.has(lessons[i-1]?.id));}
 export function characterPracticeAvailable(char:string,_completed:Set<string>){
  return Boolean(characters[char]);
 }
 export function practiceLesson(char:string):Lesson {return {id:`practice-${char}`,title:`Practice ${char}`,subtitle:characters[char].meaning,chars:[char],minutes:'3–4 min',steps:characterSteps(char)}}
-export function findLesson(id:string){return lessons.find(x=>x.id===id)||(id.startsWith('practice-')&&characters[id.slice(9)]?practiceLesson(id.slice(9)):undefined)}
+export function findLesson(id:string){return lessons.find(x=>x.id===id)||extraLessons.find(x=>x.id===id)||(id.startsWith('practice-')&&characters[id.slice(9)]?practiceLesson(id.slice(9)):undefined)}
 export function shuffled<T>(items:T[],seed:string):T[]{
  let n=Array.from(seed).reduce((a,c)=>Math.imul(a^c.charCodeAt(0),16777619)>>>0,2166136261);
  const copy=[...items];for(let i=copy.length-1;i>0;i--){n=(Math.imul(n,1664525)+1013904223)>>>0;const j=n%(i+1);[copy[i],copy[j]]=[copy[j],copy[i]]}return copy;
@@ -54,3 +55,4 @@ export const unitFiveCharacters=courseModules.find(m=>m.unit.id==='unit-5')!.cha
 export const unitFiveGrammar=courseModules.find(m=>m.unit.id==='unit-5')!.grammarRules;
 export const unitFivePhrases=courseModules.find(m=>m.unit.id==='unit-5')!.phrases;
 export const unitFiveVocabulary=courseModules.find(m=>m.unit.id==='unit-5')!.newVocabulary;
+

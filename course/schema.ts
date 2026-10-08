@@ -3,7 +3,8 @@ export type Part = { label:string; name:string; role:string; description:string;
 export type Character = { practiceBuild?:boolean; audioText?:string; layoutLabel?:string; partOrderLabel?:string; hanzi:string; pinyin:string; zhuyin:string; meaning:string; strokes:number; note:string; memory:string; parts:Part[]; layout:'side'|'stack'|'whole'; example:{text:string;pinyin:string;meaning:string}; partQuestion?:{prompt:string;options:string[];answer:string;explanation:string} };
 export type Phrase={text:string;pinyin:string;meaning:string;note:string;tokens:string[];acceptedTokenOrders?:string[][];practice?:boolean;grammarIds?:string[]};
 export type Production = {level:'early'|'middle'|'later';constraints:string;acceptedAnswers:string[];fallbackTokens?:string[];grammarHint:string;keyVocabulary:string[];reviewNote:string};
-export type Step = {id:string;audioText?:string;semanticAnswer?:boolean;type:'intro'|'trace'|'complete'|'memory'|'select'|'parts'|'build'|'match'|'phrase'|'order'|'listen'|'grammar'|'visual'|'produce';production?:Production;char?:string;prompt?:string;options?:string[];answer?:string;explanation?:string;phrase?:string;chars?:string[];tokens?:string[];strictOrder?:boolean;grammar?:string;grammarIds?:string[];visualRole?:string;visualInstruction?:string;visualClosing?:string;visualSuggestions?:string[];visualSource?:string;visualScene?:'restroom'|'bed'|'throat';visualCue?:string};
+export type ExtraActivity={mode:'learn'|'picture'|'word'|'listen-picture'|'match'|'measure-match'|'measure'|'character'|'count';wordId?:string;wordIds?:string[];count?:number;glyph?:string};
+export type Step = {id:string;audioText?:string;semanticAnswer?:boolean;type:'intro'|'trace'|'complete'|'memory'|'select'|'parts'|'build'|'match'|'phrase'|'order'|'listen'|'grammar'|'visual'|'produce'|'extra';extra?:ExtraActivity;production?:Production;char?:string;prompt?:string;options?:string[];answer?:string;explanation?:string;phrase?:string;chars?:string[];tokens?:string[];strictOrder?:boolean;grammar?:string;grammarIds?:string[];visualRole?:string;visualInstruction?:string;visualClosing?:string;visualSuggestions?:string[];visualSource?:string;visualScene?:'restroom'|'bed'|'throat';visualCue?:string};
 export type Lesson={id:string;title:string;subtitle:string;chars:string[];minutes:string;steps:Step[];unitId?:string;review?:boolean};
 export type GrammarRule={id:string;title:string;pattern:string;explanation:string;examples:{text:string;pinyin:string;meaning:string}[];remember:string;words?:string[]};
 export type VocabularyWord={text:string;pinyin:string;meaning:string;lessonId:string;core:boolean;note?:string};
@@ -19,3 +20,4 @@ export type UnitData = {
  phrases:Record<string,Phrase>; revisionStepIds:string[];
 };
 export type Manifest = {schemaVersion:1;books:{id:string;number:number;title:string;available:boolean;units:{id:string;order:number;title:string;path:string}[]}[]};
+
