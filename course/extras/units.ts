@@ -1,13 +1,17 @@
 import type {Lesson,Step,Unit} from '../schema.ts';
+import {moreClothingWords,moreFruitWords,colorWords} from './word-lists.ts';
+import {buildWorkbookLessons,buildColorUnit} from './workbooks.ts';
+export {colorWords};
 
 // Supplementary exposure only. Never assemble these into courseModules,
 // canonical vocabulary, characters, phrases, or first-teaching indexes.
 export type ExtraWord={
+ swatch?:string;
  id:string;text:string;pinyin:string;meaning:string;measure:string;measurePinyin:string;
  counted:string;countedPinyin:string;note:string;glyphNotes:string[];
 };
 const w=(id:string,text:string,pinyin:string,meaning:string,measure:string,measurePinyin:string,counted:string,countedPinyin:string,note:string,glyphNotes:string[]):ExtraWord=>({id,text,pinyin,meaning,measure,measurePinyin,counted,countedPinyin,note,glyphNotes});
-export const clothingWords:ExtraWord[]=[
+const baseClothingWords:ExtraWord[]=[
  w('tshirt','T恤','T xù','T-shirt','件','jiàn','一件T恤','yí jiàn T xù','T恤 is a common written label. Also called T恤衫. 件 counts an individual garment.',['恤: the Chinese character in T恤; keep the Latin T.']),
  w('shirt','襯衫','chènshān','button-up shirt','件','jiàn','一件襯衫','yí jiàn chènshān','A button-up shirt; distinguish it from a T恤.',['襯: first character of 襯衫.','衫: a shirt or light upper garment.']),
  w('jacket','外套','wàitào','jacket; coat','件','jiàn','一件外套','yí jiàn wàitào','An outer layer, including jackets and coats.',['外: outside; outer.','套: in 外套, part of the word for an outer garment.']),
@@ -19,7 +23,7 @@ export const clothingWords:ExtraWord[]=[
  w('socks','襪子','wàzi','socks','雙','shuāng','一雙襪子','yì shuāng wàzi','雙 counts a pair of socks. One individual sock can use 隻.',['襪: sock; note the clothing radical 衤.','子: neutral-tone noun suffix in 襪子.']),
  w('hat','帽子','màozi','hat; cap','頂','dǐng','一頂帽子','yì dǐng màozi','頂 counts hats and caps.',['帽: hat.','子: neutral-tone noun suffix in 帽子.']),
 ];
-export const fruitWords:ExtraWord[]=[
+const baseFruitWords:ExtraWord[]=[
  w('apple','蘋果','píngguǒ','apple','個','ge','一個蘋果','yí ge píngguǒ','個 is a common way to count whole apples; 顆 is also possible.',['蘋: recognize it in 蘋果; grass radical 艹 at the top.','果: fruit.']),
  w('banana','香蕉','xiāngjiāo','banana','根','gēn','一根香蕉','yì gēn xiāngjiāo','根 highlights one elongated banana. 條 and 個 can also occur; a bunch is a different counting context.',['香: fragrant; here in 香蕉.','蕉: recognize it in 香蕉; grass radical 艹 at the top.']),
  w('orange','橘子','júzi','mandarin orange; tangerine','個','ge','一個橘子','yí ge júzi','橘子 usually means a mandarin or tangerine. 柳橙 is the usual Taiwan word for a sweet orange.',['橘: mandarin orange; wood radical 木 on the left.','子: neutral-tone noun suffix in 橘子.']),
@@ -31,7 +35,9 @@ export const fruitWords:ExtraWord[]=[
  w('pear','梨子','lízi','pear','個','ge','一個梨子','yí ge lízi','梨子 means pear; 梨 also occurs by itself and in 鳳梨.',['梨: pear; 木 is at the bottom.','子: neutral-tone noun suffix in 梨子.']),
  w('papaya','木瓜','mùguā','papaya','個','ge','一個木瓜','yí ge mùguā','Count a whole papaya here; sliced pieces have a different measure word.',['木: tree or wood; here in the fruit name 木瓜.','瓜: melon or gourd; also seen in 西瓜.']),
 ];
-export const extraWords=[...clothingWords,...fruitWords];
+export const clothingWords=[...baseClothingWords,...moreClothingWords];
+export const fruitWords=[...baseFruitWords,...moreFruitWords];
+export const extraWords=[...clothingWords,...fruitWords,...colorWords];
 export const extraWord=(id:string)=>extraWords.find(word=>word.id===id);
 export function acceptedExtraMeasure(word:ExtraWord,measure:string):boolean{
  if(word.measure===measure)return true;
@@ -129,19 +135,32 @@ function makeUnit(kind:'clothing'|'fruits',number:number,words:ExtraWord[],title
 
  return {unit:{id:prefix,number,theme:kind==='clothing'?'indigo':'orange',label:kind==='clothing'?'Clothing':'Fruits',title,description:'Optional and always available. Learn through pictures, listening, matching, handwriting, and short sentences. Every completed lesson counts toward your streak and extra-unit progress.',chars:[...new Set(words.flatMap(w=>Array.from(w.text+w.measure).filter(c=>/[\u3400-\u9fff]/.test(c))))],lessonIds:lessons.map(l=>l.id),banner:{text:hanzi,pinyin},goal:{text:hanzi,pinyin,meaning:kind==='clothing'?'Recognize everyday clothing and count garments, pairs, and hats.':'Recognize everyday fruit and count whole fruits, bananas, and bunches.'},grammarIds:[]},lessons};
 }
-const collections=[makeUnit('clothing',1,clothingWords,'Open your wardrobe.','衣服','yīfu'),makeUnit('fruits',2,fruitWords,'A stop at the fruit stall.','水果','shuǐguǒ')];
+const collections=[makeUnit('clothing',1,baseClothingWords,'Open your wardrobe.','衣服','yīfu'),makeUnit('fruits',2,baseFruitWords,'A stop at the fruit stall.','水果','shuǐguǒ')];
+for(const [i,collection] of collections.entries()){
+ const words=i===0?clothingWords:fruitWords;
+ collection.lessons.forEach(lesson=>{lesson.extraSection='Starter path'});
+ const worksheets=buildWorkbookLessons(i===0?'clothing':'fruits',words);
+ collection.lessons.push(...worksheets);
+ collection.unit.lessonIds=collection.lessons.map(lesson=>lesson.id);
+ collection.unit.chars=[...new Set([...words.flatMap(word=>Array.from(word.text+word.measure)),...worksheets.flatMap(lesson=>lesson.steps.filter(step=>step.extra?.mode==='writing').map(step=>step.extra!.glyph!))].filter(char=>/[\u3400-\u9fff]/.test(char)))];
+ collection.unit.description='A complete optional word-list workbook: '+words.length+' words, '+collection.lessons.length+' lessons, visual recognition, handwriting, counting, listening, and useful sentences. Everything is always available.';
+}
+collections.push(buildColorUnit(colorWords,clothingWords));
 export const extraUnits=collections.map(c=>c.unit);
 export const extraLessons=collections.flatMap(c=>c.lessons);
-export const extraPracticeLessons:Lesson[]=[...new Set(extraWords.flatMap(word=>Array.from(word.text+word.measure).filter(c=>/[\u3400-\u9fff]/.test(c))))].map(glyph=>{
- const word=extraWords.find(word=>word.text.includes(glyph)||word.measure===glyph)!;
- return {id:'extra-practice-'+glyph,unitId:clothingWords.includes(word)?'extra-clothing':'extra-fruits',title:'Practice '+glyph,subtitle:'Trace, finish the strokes, and write from memory.',chars:[glyph],minutes:'3–4 min',steps:[step('extra-practice-'+glyph+'-learn','learn',[],word.id),...writingSteps('extra-practice-'+glyph,word,[glyph])]};
+export const extraPracticeLessons:Lesson[]=[...new Set(collections.flatMap(collection=>collection.unit.chars))].map(glyph=>{
+ const word=extraWords.find(word=>word.text.includes(glyph)||word.measure===glyph)||wordsForCollectionGlyph(glyph)[0];
+ const unitId=collections.find(collection=>collection.unit.chars.includes(glyph))!.unit.id;
+ return {id:'extra-practice-'+glyph,unitId,title:'Practice '+glyph,subtitle:'Trace, finish the strokes, and write from memory.',chars:[glyph],minutes:'3–4 min',steps:[step('extra-practice-'+glyph+'-learn','character-learn',[],word.id,{extra:{mode:'character-learn',wordId:word.id,glyph}}),...writingSteps('extra-practice-'+glyph,word,[glyph])]};
 });
+function wordsForCollectionGlyph(glyph:string){const unit=collections.find(collection=>collection.unit.chars.includes(glyph))!.unit.id;return unit==='extra-clothing'?clothingWords:unit==='extra-fruits'?fruitWords:colorWords;}
 export const isExtraLesson=(id:string)=>[...extraLessons,...extraPracticeLessons].some(lesson=>lesson.id===id);
-export const wordsForExtraUnit=(unitId:string)=>unitId==='extra-clothing'?clothingWords:unitId==='extra-fruits'?fruitWords:[];
+export const wordsForExtraUnit=(unitId:string)=>unitId==='extra-clothing'?clothingWords:unitId==='extra-fruits'?fruitWords:unitId==='extra-colors'?colorWords:[];
 export function extraUnitComplete(unit:Unit,completed:Set<string>){return unit.lessonIds.every(id=>completed.has(id));}
 export function extraChoices(step:Step):string[]{
  const activity=step.extra!,word=extraWord(activity.wordId||'');
- if(['learn','sentence-learn','sentence-order','writing'].includes(activity.mode))return [];
+ if(['learn','character-learn','sentence-learn','sentence-order','writing'].includes(activity.mode))return [];
+ if(activity.mode==='question'||activity.mode==='listen-question')return step.options||[];
  if(activity.mode==='mixed-match')return activity.pairs!.map(pair=>pair.id);
  if(activity.mode==='measure'){
   // Alternatives can be natural in real speech; never offer them as wrong.
@@ -155,8 +174,13 @@ export function extraChoices(step:Step):string[]{
  }
  if(activity.mode==='match'||activity.mode==='measure-match')return activity.wordIds||[];
  // Rotate across the collection; the target must always be in the bank.
- const bank=activity.wordIds||[];
+ const visual=['picture','word','listen-picture','color-object'].includes(activity.mode);
+ const bank=(activity.wordIds||[]).filter(id=>!visual||id===activity.wordId||!ambiguousExtraPair(activity.wordId!,id));
  const index=Math.max(0,bank.indexOf(activity.wordId!));
  return [...new Set([activity.wordId!,...bank.slice(index+1),...bank.slice(0,index)])].slice(0,4);
 }
-export function extraAnswer(step:Step){const activity=step.extra!;const word=extraWord(activity.wordId||'');return activity.mode==='measure'?word!.measure:activity.mode==='count'?countedPhrase(word!,activity.count!):activity.mode==='character'?activity.glyph!:activity.wordId!;}
+export function ambiguousExtraPair(a:string,b:string):boolean{
+ const families=[['trousers','shorts','jeans'],['shoes','sneakers'],['jacket','raincoat'],['orange','sweetorange'],['color-blue','color-darkblue'],['color-blue','color-lightblue'],['color-yellow','color-gold'],['color-gray','color-silver']];
+ return a!==b&&(families.some(family=>family.includes(a)&&family.includes(b))||(a==='color-word'||b==='color-word')&&(a.startsWith('color-')&&b.startsWith('color-')));
+}
+export function extraAnswer(step:Step){const activity=step.extra!;const word=extraWord(activity.wordId||'');return activity.mode==='question'||activity.mode==='listen-question'?step.answer!:activity.mode==='measure'?word!.measure:activity.mode==='count'?countedPhrase(word!,activity.count!):activity.mode==='character'?activity.glyph!:activity.wordId!;}

@@ -1,0 +1,6633 @@
+{
+  "extra-clothing-learn-1": [
+    {
+      "id": "extra-clothing-1-learn-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-1-picture-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-1-learn-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-1-picture-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-1-recall-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-1-learn-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-1-picture-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-1-recall-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-1-learn-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-1-picture-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-1-recall-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-text-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-text-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-text-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-text-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-恤-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "tshirt",
+        "glyph": "恤",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-恤-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "tshirt",
+        "glyph": "恤",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-恤-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "tshirt",
+        "glyph": "恤",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-襯-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "襯",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-襯-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "襯",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-襯-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "襯",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-衫-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "衫",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-衫-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "衫",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-衫-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "衫",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-外-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "jacket",
+        "glyph": "外",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-外-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "jacket",
+        "glyph": "外",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-外-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "jacket",
+        "glyph": "外",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-套-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "jacket",
+        "glyph": "套",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-套-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "jacket",
+        "glyph": "套",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-套-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "jacket",
+        "glyph": "套",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-毛-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "sweater",
+        "glyph": "毛",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-毛-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "sweater",
+        "glyph": "毛",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-毛-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "sweater",
+        "glyph": "毛",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-衣-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "sweater",
+        "glyph": "衣",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-衣-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "sweater",
+        "glyph": "衣",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-write-衣-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "sweater",
+        "glyph": "衣",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "tshirt",
+        "sentence": {
+          "text": "我有一件T恤。",
+          "pinyin": "Wǒ yǒu yí jiàn T xù.",
+          "meaning": "I have one T-shirt.",
+          "tokens": [
+            "我",
+            "有",
+            "一",
+            "件",
+            "T恤"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. T恤 is a common written label. Also called T恤衫. 件 counts an individual garment.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "件",
+              "pinyin": "jiàn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "T恤",
+              "pinyin": "T xù",
+              "meaning": "T-shirt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-learn-1-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "tshirt",
+        "sentence": {
+          "text": "我有一件T恤。",
+          "pinyin": "Wǒ yǒu yí jiàn T xù.",
+          "meaning": "I have one T-shirt.",
+          "tokens": [
+            "我",
+            "有",
+            "一",
+            "件",
+            "T恤"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. T恤 is a common written label. Also called T恤衫. 件 counts an individual garment.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "件",
+              "pinyin": "jiàn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "T恤",
+              "pinyin": "T xù",
+              "meaning": "T-shirt"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-clothing-learn-2": [
+    {
+      "id": "extra-clothing-2-learn-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-2-picture-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-2-learn-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-2-picture-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-2-recall-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "trousers",
+          "skirt"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-2-learn-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "dress"
+      }
+    },
+    {
+      "id": "extra-clothing-2-picture-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "dress"
+      }
+    },
+    {
+      "id": "extra-clothing-2-recall-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-text-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-text-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-text-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ],
+        "wordId": "dress"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-褲-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "褲",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-褲-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "褲",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-褲-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "褲",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-子-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "子",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-子-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "子",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-子-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "子",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-裙-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "skirt",
+        "glyph": "裙",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-裙-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "skirt",
+        "glyph": "裙",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-裙-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "skirt",
+        "glyph": "裙",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-洋-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "dress",
+        "glyph": "洋",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-洋-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "dress",
+        "glyph": "洋",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-洋-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "dress",
+        "glyph": "洋",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-裝-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "dress",
+        "glyph": "裝",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-裝-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "dress",
+        "glyph": "裝",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-write-裝-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "dress",
+        "glyph": "裝",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "trousers",
+        "sentence": {
+          "text": "我有兩條褲子。",
+          "pinyin": "Wǒ yǒu liǎng tiáo kùzi.",
+          "meaning": "I have two pairs of trousers.",
+          "tokens": [
+            "我",
+            "有",
+            "兩",
+            "條",
+            "褲子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 條 counts the whole garment, even though it has two legs. 子 is neutral tone.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "條",
+              "pinyin": "tiáo",
+              "meaning": "counting word"
+            },
+            {
+              "text": "褲子",
+              "pinyin": "kùzi",
+              "meaning": "trousers; pants"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-learn-2-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "trousers",
+        "sentence": {
+          "text": "我有兩條褲子。",
+          "pinyin": "Wǒ yǒu liǎng tiáo kùzi.",
+          "meaning": "I have two pairs of trousers.",
+          "tokens": [
+            "我",
+            "有",
+            "兩",
+            "條",
+            "褲子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 條 counts the whole garment, even though it has two legs. 子 is neutral tone.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "條",
+              "pinyin": "tiáo",
+              "meaning": "counting word"
+            },
+            {
+              "text": "褲子",
+              "pinyin": "kùzi",
+              "meaning": "trousers; pants"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-clothing-learn-3": [
+    {
+      "id": "extra-clothing-3-learn-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-3-picture-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-3-learn-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "socks"
+      }
+    },
+    {
+      "id": "extra-clothing-3-picture-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "socks"
+      }
+    },
+    {
+      "id": "extra-clothing-3-recall-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "shoes",
+          "socks"
+        ],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-3-learn-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "hat"
+      }
+    },
+    {
+      "id": "extra-clothing-3-picture-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "hat"
+      }
+    },
+    {
+      "id": "extra-clothing-3-recall-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "socks"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-text-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-text-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "socks"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-text-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "hat"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-鞋-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "鞋",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-鞋-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "鞋",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-鞋-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "鞋",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-襪-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "socks",
+        "glyph": "襪",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-襪-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "socks",
+        "glyph": "襪",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-襪-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "socks",
+        "glyph": "襪",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-帽-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "hat",
+        "glyph": "帽",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-帽-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "hat",
+        "glyph": "帽",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-write-帽-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "hat",
+        "glyph": "帽",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "shoes",
+        "sentence": {
+          "text": "我有三雙鞋子。",
+          "pinyin": "Wǒ yǒu sān shuāng xiézi.",
+          "meaning": "I have three pairs of shoes.",
+          "tokens": [
+            "我",
+            "有",
+            "三",
+            "雙",
+            "鞋子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 雙 counts a pair: one pair contains two shoes. An individual shoe can use 隻.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "三",
+              "pinyin": "sān",
+              "meaning": "3"
+            },
+            {
+              "text": "雙",
+              "pinyin": "shuāng",
+              "meaning": "counting word"
+            },
+            {
+              "text": "鞋子",
+              "pinyin": "xiézi",
+              "meaning": "shoes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-learn-3-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "shoes",
+        "sentence": {
+          "text": "我有三雙鞋子。",
+          "pinyin": "Wǒ yǒu sān shuāng xiézi.",
+          "meaning": "I have three pairs of shoes.",
+          "tokens": [
+            "我",
+            "有",
+            "三",
+            "雙",
+            "鞋子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 雙 counts a pair: one pair contains two shoes. An individual shoe can use 隻.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "三",
+              "pinyin": "sān",
+              "meaning": "3"
+            },
+            {
+              "text": "雙",
+              "pinyin": "shuāng",
+              "meaning": "counting word"
+            },
+            {
+              "text": "鞋子",
+              "pinyin": "xiézi",
+              "meaning": "shoes"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-clothing-images": [
+    {
+      "id": "extra-clothing-images-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-recognize-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-recognize-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-recognize-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-recognize-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-recognize-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-match-0",
+      "type": "extra",
+      "extra": {
+        "mode": "match",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-match-1",
+      "type": "extra",
+      "extra": {
+        "mode": "match",
+        "wordIds": [
+          "trousers",
+          "skirt",
+          "dress"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-match-2",
+      "type": "extra",
+      "extra": {
+        "mode": "match",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-images-meaning-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-images-meaning-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-images-meaning-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-images-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "pairs": [
+          {
+            "id": "tshirt",
+            "wordId": "tshirt",
+            "left": "T恤",
+            "pictureId": "tshirt"
+          },
+          {
+            "id": "shirt",
+            "wordId": "shirt",
+            "left": "襯衫",
+            "right": "button-up shirt"
+          },
+          {
+            "id": "jacket",
+            "wordId": "jacket",
+            "left": "一件外套",
+            "right": "one jacket; coat"
+          },
+          {
+            "id": "sweater",
+            "wordId": "sweater",
+            "left": "一 __ 毛衣",
+            "right": "件"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-images-write-襯-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "襯",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-images-write-襯-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "襯",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-images-write-襯-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shirt",
+        "glyph": "襯",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-images-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "shirt",
+        "sentence": {
+          "text": "我有一件襯衫。",
+          "pinyin": "Wǒ yǒu yí jiàn chènshān.",
+          "meaning": "I have one shirt.",
+          "tokens": [
+            "我",
+            "有",
+            "一",
+            "件",
+            "襯衫"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. A button-up shirt; distinguish it from a T恤.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "件",
+              "pinyin": "jiàn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "襯衫",
+              "pinyin": "chènshān",
+              "meaning": "button-up shirt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-images-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "shirt",
+        "sentence": {
+          "text": "我有一件襯衫。",
+          "pinyin": "Wǒ yǒu yí jiàn chènshān.",
+          "meaning": "I have one shirt.",
+          "tokens": [
+            "我",
+            "有",
+            "一",
+            "件",
+            "襯衫"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. A button-up shirt; distinguish it from a T恤.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "件",
+              "pinyin": "jiàn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "襯衫",
+              "pinyin": "chènshān",
+              "meaning": "button-up shirt"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-clothing-measures": [
+    {
+      "id": "extra-clothing-measures-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-measure-intro-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-measure-intro-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-measure-intro-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-measure-intro-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "hat"
+      }
+    },
+    {
+      "id": "extra-clothing-measure-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "tshirt"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "shirt"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "jacket"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "sweater"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "trousers"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "skirt"
+      },
+      "options": [
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "dress"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "shoes"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "socks"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "hat"
+      },
+      "options": [
+        "件",
+        "條",
+        "雙",
+        "頂"
+      ]
+    },
+    {
+      "id": "extra-clothing-measure-match",
+      "type": "extra",
+      "extra": {
+        "mode": "measure-match",
+        "wordIds": [
+          "tshirt",
+          "trousers",
+          "shoes",
+          "hat"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-count-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "tshirt",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-clothing-count-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "trousers",
+        "count": 3
+      }
+    },
+    {
+      "id": "extra-clothing-count-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "shoes",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-clothing-count-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "hat",
+        "count": 3
+      }
+    },
+    {
+      "id": "extra-clothing-measures-meaning-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-meaning-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-meaning-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "pairs": [
+          {
+            "id": "tshirt",
+            "wordId": "tshirt",
+            "left": "T恤",
+            "pictureId": "tshirt"
+          },
+          {
+            "id": "shirt",
+            "wordId": "shirt",
+            "left": "襯衫",
+            "right": "button-up shirt"
+          },
+          {
+            "id": "jacket",
+            "wordId": "jacket",
+            "left": "一件外套",
+            "right": "one jacket; coat"
+          },
+          {
+            "id": "sweater",
+            "wordId": "sweater",
+            "left": "一 __ 毛衣",
+            "right": "件"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-件-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "tshirt",
+        "glyph": "件",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-件-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "tshirt",
+        "glyph": "件",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-件-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "tshirt",
+        "glyph": "件",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-條-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "條",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-條-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "條",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-條-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "條",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-雙-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "雙",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-雙-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "雙",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-雙-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "雙",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-頂-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "hat",
+        "glyph": "頂",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-頂-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "hat",
+        "glyph": "頂",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-write-measure-頂-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "hat",
+        "glyph": "頂",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-measures-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "tshirt",
+        "sentence": {
+          "text": "我有兩件T恤。",
+          "pinyin": "Wǒ yǒu liǎng jiàn T xù.",
+          "meaning": "I have two T-shirts.",
+          "tokens": [
+            "我",
+            "有",
+            "兩",
+            "件",
+            "T恤"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. T恤 is a common written label. Also called T恤衫. 件 counts an individual garment.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "件",
+              "pinyin": "jiàn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "T恤",
+              "pinyin": "T xù",
+              "meaning": "T-shirt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-measures-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "tshirt",
+        "sentence": {
+          "text": "我有兩件T恤。",
+          "pinyin": "Wǒ yǒu liǎng jiàn T xù.",
+          "meaning": "I have two T-shirts.",
+          "tokens": [
+            "我",
+            "有",
+            "兩",
+            "件",
+            "T恤"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. T恤 is a common written label. Also called T恤衫. 件 counts an individual garment.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "件",
+              "pinyin": "jiàn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "T恤",
+              "pinyin": "T xù",
+              "meaning": "T-shirt"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-clothing-listening": [
+    {
+      "id": "extra-clothing-listening-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-listen-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "dress"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "socks"
+      }
+    },
+    {
+      "id": "extra-clothing-listen-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "hat"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-meaning-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-meaning-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-meaning-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater"
+        ],
+        "pairs": [
+          {
+            "id": "tshirt",
+            "wordId": "tshirt",
+            "left": "T恤",
+            "pictureId": "tshirt"
+          },
+          {
+            "id": "shirt",
+            "wordId": "shirt",
+            "left": "襯衫",
+            "right": "button-up shirt"
+          },
+          {
+            "id": "jacket",
+            "wordId": "jacket",
+            "left": "一件外套",
+            "right": "one jacket; coat"
+          },
+          {
+            "id": "sweater",
+            "wordId": "sweater",
+            "left": "一 __ 毛衣",
+            "right": "件"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-listening-write-褲-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "褲",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-write-褲-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "褲",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-write-褲-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "trousers",
+        "glyph": "褲",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-listening-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "trousers",
+        "sentence": {
+          "text": "我有一條褲子。",
+          "pinyin": "Wǒ yǒu yì tiáo kùzi.",
+          "meaning": "I have one pair of trousers.",
+          "tokens": [
+            "我",
+            "有",
+            "一",
+            "條",
+            "褲子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 條 counts the whole garment, even though it has two legs. 子 is neutral tone.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "條",
+              "pinyin": "tiáo",
+              "meaning": "counting word"
+            },
+            {
+              "text": "褲子",
+              "pinyin": "kùzi",
+              "meaning": "trousers; pants"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-listening-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "trousers",
+        "sentence": {
+          "text": "我有一條褲子。",
+          "pinyin": "Wǒ yǒu yì tiáo kùzi.",
+          "meaning": "I have one pair of trousers.",
+          "tokens": [
+            "我",
+            "有",
+            "一",
+            "條",
+            "褲子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 條 counts the whole garment, even though it has two legs. 子 is neutral tone.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "條",
+              "pinyin": "tiáo",
+              "meaning": "counting word"
+            },
+            {
+              "text": "褲子",
+              "pinyin": "kùzi",
+              "meaning": "trousers; pants"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-clothing-review": [
+    {
+      "id": "extra-clothing-review-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "tshirt"
+      }
+    },
+    {
+      "id": "extra-clothing-review-glyph-tshirt",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "tshirt",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "glyph": "恤"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-review-listen-shirt",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shirt"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "jacket"
+      }
+    },
+    {
+      "id": "extra-clothing-review-glyph-jacket",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "jacket",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "glyph": "外"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-review-listen-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-review-glyph-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "trousers",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "glyph": "褲"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-review-listen-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "dress"
+      }
+    },
+    {
+      "id": "extra-clothing-review-glyph-dress",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "dress",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "glyph": "洋"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "shoes"
+      }
+    },
+    {
+      "id": "extra-clothing-review-count-shoes",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "shoes",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "socks"
+      }
+    },
+    {
+      "id": "extra-clothing-review-glyph-socks",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "socks",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "glyph": "襪"
+      }
+    },
+    {
+      "id": "extra-clothing-review-picture-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "hat"
+      }
+    },
+    {
+      "id": "extra-clothing-review-count-hat",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "hat",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-clothing-review-meaning-sweater",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "sweater"
+      }
+    },
+    {
+      "id": "extra-clothing-review-meaning-trousers",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "trousers"
+      }
+    },
+    {
+      "id": "extra-clothing-review-meaning-skirt",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "tshirt",
+          "shirt",
+          "jacket",
+          "sweater",
+          "trousers",
+          "skirt",
+          "dress",
+          "shoes",
+          "socks",
+          "hat"
+        ],
+        "wordId": "skirt"
+      }
+    },
+    {
+      "id": "extra-clothing-review-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "shoes",
+          "socks",
+          "hat",
+          "tshirt"
+        ],
+        "pairs": [
+          {
+            "id": "shoes",
+            "wordId": "shoes",
+            "left": "鞋子",
+            "pictureId": "shoes"
+          },
+          {
+            "id": "socks",
+            "wordId": "socks",
+            "left": "襪子",
+            "right": "socks"
+          },
+          {
+            "id": "hat",
+            "wordId": "hat",
+            "left": "一頂帽子",
+            "right": "one hat; cap"
+          },
+          {
+            "id": "tshirt",
+            "wordId": "tshirt",
+            "left": "一 __ T恤",
+            "right": "件"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-clothing-review-write-鞋-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "鞋",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-clothing-review-write-鞋-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "鞋",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-clothing-review-write-鞋-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "shoes",
+        "glyph": "鞋",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-clothing-review-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "shoes",
+        "sentence": {
+          "text": "我有兩雙鞋子。",
+          "pinyin": "Wǒ yǒu liǎng shuāng xiézi.",
+          "meaning": "I have two pairs of shoes.",
+          "tokens": [
+            "我",
+            "有",
+            "兩",
+            "雙",
+            "鞋子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 雙 counts a pair: one pair contains two shoes. An individual shoe can use 隻.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "雙",
+              "pinyin": "shuāng",
+              "meaning": "counting word"
+            },
+            {
+              "text": "鞋子",
+              "pinyin": "xiézi",
+              "meaning": "shoes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-clothing-review-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "shoes",
+        "sentence": {
+          "text": "我有兩雙鞋子。",
+          "pinyin": "Wǒ yǒu liǎng shuāng xiézi.",
+          "meaning": "I have two pairs of shoes.",
+          "tokens": [
+            "我",
+            "有",
+            "兩",
+            "雙",
+            "鞋子"
+          ],
+          "note": "我 (wǒ) = I; 有 (yǒu) = have. Put the owner first, then 有, then the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 雙 counts a pair: one pair contains two shoes. An individual shoe can use 隻.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "有",
+              "pinyin": "yǒu",
+              "meaning": "have"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "雙",
+              "pinyin": "shuāng",
+              "meaning": "counting word"
+            },
+            {
+              "text": "鞋子",
+              "pinyin": "xiézi",
+              "meaning": "shoes"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-learn-1": [
+    {
+      "id": "extra-fruits-1-learn-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-1-picture-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-1-learn-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-1-picture-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-1-recall-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-1-learn-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-1-picture-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-1-recall-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-1-learn-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-1-picture-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-1-recall-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-text-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-text-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-text-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-text-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-蘋-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "蘋",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-蘋-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "蘋",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-蘋-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "蘋",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-果-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "果",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-果-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "果",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-果-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "果",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-香-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "香",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-香-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "香",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-香-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "香",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-蕉-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "蕉",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-蕉-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "蕉",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-蕉-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "蕉",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-橘-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "orange",
+        "glyph": "橘",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-橘-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "orange",
+        "glyph": "橘",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-橘-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "orange",
+        "glyph": "橘",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-子-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "orange",
+        "glyph": "子",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-子-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "orange",
+        "glyph": "子",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-子-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "orange",
+        "glyph": "子",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-葡-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "葡",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-葡-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "葡",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-葡-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "葡",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-萄-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "萄",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-萄-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "萄",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-write-萄-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "萄",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "apple",
+        "sentence": {
+          "text": "我想買一個蘋果。",
+          "pinyin": "Wǒ xiǎng mǎi yí ge píngguǒ.",
+          "meaning": "I want to buy one apple.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "一",
+            "個",
+            "蘋果"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 is a common way to count whole apples; 顆 is also possible.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "蘋果",
+              "pinyin": "píngguǒ",
+              "meaning": "apple"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-learn-1-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "apple",
+        "sentence": {
+          "text": "我想買一個蘋果。",
+          "pinyin": "Wǒ xiǎng mǎi yí ge píngguǒ.",
+          "meaning": "I want to buy one apple.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "一",
+            "個",
+            "蘋果"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 is a common way to count whole apples; 顆 is also possible.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "蘋果",
+              "pinyin": "píngguǒ",
+              "meaning": "apple"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-learn-2": [
+    {
+      "id": "extra-fruits-2-learn-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-2-picture-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-2-learn-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-2-picture-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-2-recall-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "watermelon",
+          "pineapple"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-2-learn-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "mango"
+      }
+    },
+    {
+      "id": "extra-fruits-2-picture-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "mango"
+      }
+    },
+    {
+      "id": "extra-fruits-2-recall-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-text-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-text-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-text-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ],
+        "wordId": "mango"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-西-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "西",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-西-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "西",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-西-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "西",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-瓜-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "瓜",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-瓜-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "瓜",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-瓜-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "瓜",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-鳳-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "pineapple",
+        "glyph": "鳳",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-鳳-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "pineapple",
+        "glyph": "鳳",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-鳳-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "pineapple",
+        "glyph": "鳳",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-梨-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "pineapple",
+        "glyph": "梨",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-梨-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "pineapple",
+        "glyph": "梨",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-梨-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "pineapple",
+        "glyph": "梨",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-芒-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "mango",
+        "glyph": "芒",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-芒-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "mango",
+        "glyph": "芒",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-write-芒-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "mango",
+        "glyph": "芒",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "watermelon",
+        "sentence": {
+          "text": "我想買兩個西瓜。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng ge xīguā.",
+          "meaning": "I want to buy two watermelons.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "兩",
+            "個",
+            "西瓜"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 counts a whole watermelon. A slice or piece uses 片 or 塊 instead.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "西瓜",
+              "pinyin": "xīguā",
+              "meaning": "watermelon"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-learn-2-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "watermelon",
+        "sentence": {
+          "text": "我想買兩個西瓜。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng ge xīguā.",
+          "meaning": "I want to buy two watermelons.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "兩",
+            "個",
+            "西瓜"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 counts a whole watermelon. A slice or piece uses 片 or 塊 instead.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "西瓜",
+              "pinyin": "xīguā",
+              "meaning": "watermelon"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-learn-3": [
+    {
+      "id": "extra-fruits-3-learn-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-3-picture-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-3-learn-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pear"
+      }
+    },
+    {
+      "id": "extra-fruits-3-picture-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pear"
+      }
+    },
+    {
+      "id": "extra-fruits-3-recall-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "strawberry",
+          "pear"
+        ],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-3-learn-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "papaya"
+      }
+    },
+    {
+      "id": "extra-fruits-3-picture-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "papaya"
+      }
+    },
+    {
+      "id": "extra-fruits-3-recall-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pear"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-text-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-text-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pear"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-text-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "text-word",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "papaya"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-草-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "草",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-草-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "草",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-草-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "草",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-莓-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "莓",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-莓-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "莓",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-莓-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "莓",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-木-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "papaya",
+        "glyph": "木",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-木-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "papaya",
+        "glyph": "木",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-write-木-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "papaya",
+        "glyph": "木",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "strawberry",
+        "sentence": {
+          "text": "我想買三顆草莓。",
+          "pinyin": "Wǒ xiǎng mǎi sān kē cǎoméi.",
+          "meaning": "I want to buy three strawberries.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "三",
+            "顆",
+            "草莓"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 顆 counts a small round item. 個 is also possible in everyday speech.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "三",
+              "pinyin": "sān",
+              "meaning": "3"
+            },
+            {
+              "text": "顆",
+              "pinyin": "kē",
+              "meaning": "counting word"
+            },
+            {
+              "text": "草莓",
+              "pinyin": "cǎoméi",
+              "meaning": "strawberry"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-learn-3-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "strawberry",
+        "sentence": {
+          "text": "我想買三顆草莓。",
+          "pinyin": "Wǒ xiǎng mǎi sān kē cǎoméi.",
+          "meaning": "I want to buy three strawberries.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "三",
+            "顆",
+            "草莓"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 顆 counts a small round item. 個 is also possible in everyday speech.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "三",
+              "pinyin": "sān",
+              "meaning": "3"
+            },
+            {
+              "text": "顆",
+              "pinyin": "kē",
+              "meaning": "counting word"
+            },
+            {
+              "text": "草莓",
+              "pinyin": "cǎoméi",
+              "meaning": "strawberry"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-images": [
+    {
+      "id": "extra-fruits-images-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-recognize-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-recognize-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-recognize-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-recognize-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-recognize-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-match-0",
+      "type": "extra",
+      "extra": {
+        "mode": "match",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-match-1",
+      "type": "extra",
+      "extra": {
+        "mode": "match",
+        "wordIds": [
+          "watermelon",
+          "pineapple",
+          "mango"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-match-2",
+      "type": "extra",
+      "extra": {
+        "mode": "match",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-images-meaning-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-images-meaning-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-images-meaning-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-images-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "pairs": [
+          {
+            "id": "apple",
+            "wordId": "apple",
+            "left": "蘋果",
+            "pictureId": "apple"
+          },
+          {
+            "id": "banana",
+            "wordId": "banana",
+            "left": "香蕉",
+            "right": "banana"
+          },
+          {
+            "id": "orange",
+            "wordId": "orange",
+            "left": "一個橘子",
+            "right": "one mandarin orange; tangerine"
+          },
+          {
+            "id": "grapes",
+            "wordId": "grapes",
+            "left": "一 __ 葡萄",
+            "right": "串"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-images-write-香-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "香",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-images-write-香-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "香",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-images-write-香-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "香",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-images-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "banana",
+        "sentence": {
+          "text": "我想買一根香蕉。",
+          "pinyin": "Wǒ xiǎng mǎi yì gēn xiāngjiāo.",
+          "meaning": "I want to buy one banana.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "一",
+            "根",
+            "香蕉"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 根 highlights one elongated banana. 條 and 個 can also occur; a bunch is a different counting context.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "根",
+              "pinyin": "gēn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "香蕉",
+              "pinyin": "xiāngjiāo",
+              "meaning": "banana"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-images-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "banana",
+        "sentence": {
+          "text": "我想買一根香蕉。",
+          "pinyin": "Wǒ xiǎng mǎi yì gēn xiāngjiāo.",
+          "meaning": "I want to buy one banana.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "一",
+            "根",
+            "香蕉"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 根 highlights one elongated banana. 條 and 個 can also occur; a bunch is a different counting context.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "根",
+              "pinyin": "gēn",
+              "meaning": "counting word"
+            },
+            {
+              "text": "香蕉",
+              "pinyin": "xiāngjiāo",
+              "meaning": "banana"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-measures": [
+    {
+      "id": "extra-fruits-measures-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-measure-intro-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-measure-intro-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-measure-intro-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-measure-intro-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-measure-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "apple"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "banana"
+      },
+      "options": [
+        "根",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "orange"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "grapes"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "watermelon"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "pineapple"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "mango"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "strawberry"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "pear"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "measure",
+        "wordIds": [],
+        "wordId": "papaya"
+      },
+      "options": [
+        "個",
+        "串",
+        "雙"
+      ]
+    },
+    {
+      "id": "extra-fruits-measure-match",
+      "type": "extra",
+      "extra": {
+        "mode": "measure-match",
+        "wordIds": [
+          "apple",
+          "banana",
+          "grapes",
+          "strawberry"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-count-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "apple",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-fruits-count-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "banana",
+        "count": 3
+      }
+    },
+    {
+      "id": "extra-fruits-count-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "grapes",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-fruits-count-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "strawberry",
+        "count": 3
+      }
+    },
+    {
+      "id": "extra-fruits-measures-meaning-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-meaning-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-meaning-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "pairs": [
+          {
+            "id": "apple",
+            "wordId": "apple",
+            "left": "蘋果",
+            "pictureId": "apple"
+          },
+          {
+            "id": "banana",
+            "wordId": "banana",
+            "left": "香蕉",
+            "right": "banana"
+          },
+          {
+            "id": "orange",
+            "wordId": "orange",
+            "left": "一個橘子",
+            "right": "one mandarin orange; tangerine"
+          },
+          {
+            "id": "grapes",
+            "wordId": "grapes",
+            "left": "一 __ 葡萄",
+            "right": "串"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-個-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "個",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-個-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "個",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-個-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "apple",
+        "glyph": "個",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-根-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "根",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-根-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "根",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-根-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "banana",
+        "glyph": "根",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-串-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "串",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-串-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "串",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-串-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "grapes",
+        "glyph": "串",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-顆-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "顆",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-顆-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "顆",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-write-measure-顆-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "顆",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-measures-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "apple",
+        "sentence": {
+          "text": "我想買兩個蘋果。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng ge píngguǒ.",
+          "meaning": "I want to buy two apples.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "兩",
+            "個",
+            "蘋果"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 is a common way to count whole apples; 顆 is also possible.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "蘋果",
+              "pinyin": "píngguǒ",
+              "meaning": "apple"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-measures-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "apple",
+        "sentence": {
+          "text": "我想買兩個蘋果。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng ge píngguǒ.",
+          "meaning": "I want to buy two apples.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "兩",
+            "個",
+            "蘋果"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 is a common way to count whole apples; 顆 is also possible.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "蘋果",
+              "pinyin": "píngguǒ",
+              "meaning": "apple"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-listening": [
+    {
+      "id": "extra-fruits-listening-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-listen-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "mango"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pear"
+      }
+    },
+    {
+      "id": "extra-fruits-listen-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "papaya"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-meaning-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-meaning-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-meaning-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes"
+        ],
+        "pairs": [
+          {
+            "id": "apple",
+            "wordId": "apple",
+            "left": "蘋果",
+            "pictureId": "apple"
+          },
+          {
+            "id": "banana",
+            "wordId": "banana",
+            "left": "香蕉",
+            "right": "banana"
+          },
+          {
+            "id": "orange",
+            "wordId": "orange",
+            "left": "一個橘子",
+            "right": "one mandarin orange; tangerine"
+          },
+          {
+            "id": "grapes",
+            "wordId": "grapes",
+            "left": "一 __ 葡萄",
+            "right": "串"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-listening-write-西-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "西",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-write-西-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "西",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-write-西-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "watermelon",
+        "glyph": "西",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-listening-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "watermelon",
+        "sentence": {
+          "text": "我想買一個西瓜。",
+          "pinyin": "Wǒ xiǎng mǎi yí ge xīguā.",
+          "meaning": "I want to buy one watermelon.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "一",
+            "個",
+            "西瓜"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 counts a whole watermelon. A slice or piece uses 片 or 塊 instead.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "西瓜",
+              "pinyin": "xīguā",
+              "meaning": "watermelon"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-listening-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "watermelon",
+        "sentence": {
+          "text": "我想買一個西瓜。",
+          "pinyin": "Wǒ xiǎng mǎi yí ge xīguā.",
+          "meaning": "I want to buy one watermelon.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "一",
+            "個",
+            "西瓜"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 個 counts a whole watermelon. A slice or piece uses 片 or 塊 instead.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "一",
+              "pinyin": "yī",
+              "meaning": "1"
+            },
+            {
+              "text": "個",
+              "pinyin": "ge",
+              "meaning": "counting word"
+            },
+            {
+              "text": "西瓜",
+              "pinyin": "xīguā",
+              "meaning": "watermelon"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "extra-fruits-review": [
+    {
+      "id": "extra-fruits-review-collection",
+      "type": "extra",
+      "extra": {
+        "mode": "learn",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "apple"
+      }
+    },
+    {
+      "id": "extra-fruits-review-glyph-apple",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "apple",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "glyph": "蘋"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-review-listen-banana",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "banana"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "orange"
+      }
+    },
+    {
+      "id": "extra-fruits-review-glyph-orange",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "orange",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "glyph": "橘"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-review-listen-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-review-glyph-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "watermelon",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "glyph": "西"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-review-listen-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "listen-picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "mango"
+      }
+    },
+    {
+      "id": "extra-fruits-review-glyph-mango",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "mango",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "glyph": "芒"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "strawberry"
+      }
+    },
+    {
+      "id": "extra-fruits-review-count-strawberry",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "strawberry",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "word",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pear"
+      }
+    },
+    {
+      "id": "extra-fruits-review-glyph-pear",
+      "type": "extra",
+      "extra": {
+        "mode": "character",
+        "wordId": "pear",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "glyph": "梨"
+      }
+    },
+    {
+      "id": "extra-fruits-review-picture-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "picture",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "papaya"
+      }
+    },
+    {
+      "id": "extra-fruits-review-count-papaya",
+      "type": "extra",
+      "extra": {
+        "mode": "count",
+        "wordId": "papaya",
+        "count": 2
+      }
+    },
+    {
+      "id": "extra-fruits-review-meaning-grapes",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "grapes"
+      }
+    },
+    {
+      "id": "extra-fruits-review-meaning-watermelon",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "watermelon"
+      }
+    },
+    {
+      "id": "extra-fruits-review-meaning-pineapple",
+      "type": "extra",
+      "extra": {
+        "mode": "meaning",
+        "wordIds": [
+          "apple",
+          "banana",
+          "orange",
+          "grapes",
+          "watermelon",
+          "pineapple",
+          "mango",
+          "strawberry",
+          "pear",
+          "papaya"
+        ],
+        "wordId": "pineapple"
+      }
+    },
+    {
+      "id": "extra-fruits-review-mixed",
+      "type": "extra",
+      "extra": {
+        "mode": "mixed-match",
+        "wordIds": [
+          "strawberry",
+          "pear",
+          "papaya",
+          "apple"
+        ],
+        "pairs": [
+          {
+            "id": "strawberry",
+            "wordId": "strawberry",
+            "left": "草莓",
+            "pictureId": "strawberry"
+          },
+          {
+            "id": "pear",
+            "wordId": "pear",
+            "left": "梨子",
+            "right": "pear"
+          },
+          {
+            "id": "papaya",
+            "wordId": "papaya",
+            "left": "一個木瓜",
+            "right": "one papaya"
+          },
+          {
+            "id": "apple",
+            "wordId": "apple",
+            "left": "一 __ 蘋果",
+            "right": "個"
+          }
+        ]
+      }
+    },
+    {
+      "id": "extra-fruits-review-write-草-trace",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "草",
+        "writeMode": "trace"
+      }
+    },
+    {
+      "id": "extra-fruits-review-write-草-complete",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "草",
+        "writeMode": "complete"
+      }
+    },
+    {
+      "id": "extra-fruits-review-write-草-memory",
+      "type": "extra",
+      "extra": {
+        "mode": "writing",
+        "wordId": "strawberry",
+        "glyph": "草",
+        "writeMode": "memory"
+      }
+    },
+    {
+      "id": "extra-fruits-review-sentence-sentence-learn",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-learn",
+        "wordId": "strawberry",
+        "sentence": {
+          "text": "我想買兩顆草莓。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng kē cǎoméi.",
+          "meaning": "I want to buy two strawberries.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "兩",
+            "顆",
+            "草莓"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 顆 counts a small round item. 個 is also possible in everyday speech.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "顆",
+              "pinyin": "kē",
+              "meaning": "counting word"
+            },
+            {
+              "text": "草莓",
+              "pinyin": "cǎoméi",
+              "meaning": "strawberry"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "extra-fruits-review-sentence-sentence-order",
+      "type": "extra",
+      "extra": {
+        "mode": "sentence-order",
+        "wordId": "strawberry",
+        "sentence": {
+          "text": "我想買兩顆草莓。",
+          "pinyin": "Wǒ xiǎng mǎi liǎng kē cǎoméi.",
+          "meaning": "I want to buy two strawberries.",
+          "tokens": [
+            "我",
+            "想",
+            "買",
+            "兩",
+            "顆",
+            "草莓"
+          ],
+          "note": "我 (wǒ) = I; 想 (xiǎng) = want to; 買 (mǎi) = buy. Put 我 + 想 + 買 before the item. Count it with number + measure word + noun. Use 兩, rather than 二, for two before a measure word. 顆 counts a small round item. 個 is also possible in everyday speech.",
+          "support": [
+            {
+              "text": "我",
+              "pinyin": "wǒ",
+              "meaning": "I"
+            },
+            {
+              "text": "想",
+              "pinyin": "xiǎng",
+              "meaning": "want to"
+            },
+            {
+              "text": "買",
+              "pinyin": "mǎi",
+              "meaning": "buy"
+            },
+            {
+              "text": "兩",
+              "pinyin": "liǎng",
+              "meaning": "2"
+            },
+            {
+              "text": "顆",
+              "pinyin": "kē",
+              "meaning": "counting word"
+            },
+            {
+              "text": "草莓",
+              "pinyin": "cǎoméi",
+              "meaning": "strawberry"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

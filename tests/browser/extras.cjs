@@ -71,22 +71,24 @@ let browser,server;
     await page.getByRole('button',{name:/Change book or unit/}).click();
    }
    await page.locator('.unit-picker-option').filter({hasText:unit.label}).click();
+   await page.getByRole('tab',{name:'Learn',exact:true}).click();
    await page.locator('.extra-unit-banner').waitFor();
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   }
   return {context,page,choose};
  }
- const mobile=await open(390);
- for(const unit of extraUnits){
+ await Promise.all(extraUnits.map(async unit=>{
+  const mobile=await open(390);
   await mobile.choose(unit);
   assert.equal(await mobile.page.locator('.lesson-path .path-node:disabled').count(),0);
   await mobile.page.screenshot({path:'test-results/extras/'+unit.id+'-mobile.png',fullPage:true});
   for(const lesson of extraLessons.filter(l=>l.unitId===unit.id)){
+   console.log('Browser lesson '+lesson.id+' ('+lesson.steps.length+' steps)');
    await mobile.page.getByRole('button',{name:'Start: '+lesson.title,exact:true}).click();
    for(const step of lesson.steps){
     await mobile.page.locator('[data-extra-step="'+step.id+'"]').waitFor();
     const mode=step.extra.mode;
-    if(mode==='learn'||mode==='sentence-learn'){await mobile.page.getByRole('button',{name:'Continue',exact:true}).click();continue;}
+    if(mode==='learn'||mode==='sentence-learn'||mode==='character-learn'){await mobile.page.getByRole('button',{name:'Continue',exact:true}).click();continue;}
     if(mode==='writing'){
      await drawWriting(mobile.page,step);
      assert.equal(await mobile.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,step.id);
@@ -110,7 +112,7 @@ let browser,server;
      await check.click();
     }else{
      assert.equal(await check.isDisabled(),true);
-     if(mode==='listen-picture'||mode==='listen-word')await mobile.page.getByRole('button',{name:'Play the word',exact:true}).click();
+     if(mode==='listen-picture'||mode==='listen-word'||mode==='listen-question')await mobile.page.getByRole('button',{name:mode==='listen-question'?'Play the sentence':'Play the word',exact:true}).click();
      // Exercise a wrong answer and recovery without counting it as clean.
      if(step.id==='extra-clothing-1-picture-tshirt'){
       const wrong=extraChoices(step).find(value=>value!==extraAnswer(step));
@@ -130,11 +132,12 @@ let browser,server;
    if(lesson.id==='extra-clothing-learn-1')assert.ok(saved.assisted>=1);
    await mobile.page.getByRole('button',{name:'Back to the unit',exact:true}).click();
   }
-  await mobile.page.getByText('All seven lessons complete.',{exact:false}).waitFor();
- }
+  await mobile.page.getByText('All '+unit.lessonIds.length+' lessons complete.',{exact:false}).waitFor();
+  await mobile.context.close();
+ }));
  // Reopen from a separate device context: completion comes from remote rows.
  const desktop=await open(1365);await desktop.choose(extraUnits[1]);
- assert.equal(await desktop.page.locator('.path-row.completed').count(),7);
+ assert.equal(await desktop.page.locator('.path-row.completed').count(),extraUnits[1].lessonIds.length);
  await desktop.page.getByRole('tab',{name:'Characters',exact:true}).click();
  assert.equal(await desktop.page.locator('.character-library .library-card').count(),extraUnits[1].chars.length);
  assert.equal(await desktop.page.locator('.extra-word-card').count(),0);
@@ -153,13 +156,21 @@ let browser,server;
  assert.ok([...remote.values()].some(session=>session.lessonId===focused.id&&session.complete));
  await desktop.page.getByRole('button',{name:'Back to the unit',exact:true}).click();
  await desktop.page.getByRole('tab',{name:'Notes',exact:true}).click();
- assert.equal(await desktop.page.locator('.extra-word-card').count(),10);
+ assert.equal(await desktop.page.locator('.extra-word-card').count(),20);
  await desktop.page.screenshot({path:'test-results/extras/fruits-notes-desktop.png',fullPage:true});
+ await desktop.choose(extraUnits[2]);
+ await desktop.page.getByRole('tab',{name:'Notes',exact:true}).click();
+ assert.equal(await desktop.page.locator('.extra-word-card').count(),16);
+ assert.equal(await desktop.page.locator('.extra-measure-label').count(),1);
+ await desktop.page.screenshot({path:'test-results/extras/colors-notes-desktop.png',fullPage:true});
+ await desktop.page.getByRole('tab',{name:'Characters',exact:true}).click();
+ assert.equal(await desktop.page.locator('.library-card').count(),extraUnits[2].chars.length);
+ await desktop.page.screenshot({path:'test-results/extras/colors-characters-desktop.png',fullPage:true});
  await desktop.page.getByRole('button',{name:'Statistics',exact:true}).click();
  await desktop.page.getByText('Extra units completed',{exact:false}).waitFor();
  assert.equal(await desktop.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
- await desktop.context.close();await mobile.context.close();
- assert.equal(uploads.filter(s=>s.complete).length,15);
+ await desktop.context.close();
+ assert.equal(uploads.filter(s=>s.complete).length,extraLessons.length+1);
  assert.deepEqual(errors,[]);
  console.log('PASS: required handwriting, sentence ordering, mixed matching, normal character cards, focused character practice, all extra steps, every lesson completion, wrong-answer assistance, mobile layout, listening, both matching modes, cloud sync and second-device readback.');
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.kill();});
