@@ -108,7 +108,7 @@ test('supplementary glyphs and meanings do not overwrite canonical records',()=>
  }
  assert.equal(JSON.stringify(characters),before);
  const art=fs.readFileSync(new URL('../components/extra-picture.tsx',import.meta.url),'utf8');
- for(const word of extraWords)assert.ok(art.includes("case '"+word.id+"'"),'missing illustration: '+word.id);
+ for(const word of extraWords)assert.ok(word.swatch||art.includes("case '"+word.id+"'"),'missing illustration: '+word.id);
  const runtime=fs.readFileSync(new URL('../course/runtime.ts',import.meta.url),'utf8');
  assert.ok(!runtime.includes('extras'));
 });

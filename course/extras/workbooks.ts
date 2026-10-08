@@ -40,7 +40,7 @@ function wordWorksheet(kind:Kind,word:ExtraWord,words:ExtraWord[],index:number):
  const id='extra-'+kind+'-word-'+word.id,bank=bankFor(word,words),number=index%3+1;
  const steps:Step[]=[primer(id+'-study',bank)];
  if(word.id!=='color-word')steps.push(activity(id+'-picture','picture',word,bank),activity(id+'-word','word',word,bank),activity(id+'-listen-picture','listen-picture',word,bank));
- steps.push(activity(id+'-meaning','meaning',word,bank),activity(id+'-text','text-word',word,bank),activity(id+'-listen-word','listen-word',word,bank),...write(id+'-write',word));
+ steps.push(activity(id+'-meaning','meaning',word,bank),activity(id+'-text','text-word',word,bank),activity(id+'-listen-word','listen-word',word,bank),...write(id+'-write',word,[...new Set([...Array.from(word.text),...(word.measure&&words.findIndex(item=>item.measure===word.measure)===index?Array.from(word.measure):[])])]));
  if(word.measure){
   const incompatible=['件','條','雙','頂','副','串','根','種'].filter(measure=>measure!==word.measure&&!(word.id==='banana'&&['條','個'].includes(measure))&&!(word.id==='skirt'&&measure==='件')).slice(0,3);
   steps.push(activity(id+'-measure','measure',word,[],{options:[word.measure,...incompatible]}));
