@@ -35,10 +35,16 @@ dependency reason in its source/audit note.
 
 The three generated outputs are committed too, but never hand edited:
 `course/registry.generated.ts`, `course/index.json`, `lib/stroke-data.json`.
-No renderer, progress, navigation, auth, CSS or deployment configuration changes
-are needed. The generated runtime module lets Vite bundle curriculum; there is no per-unit
-HTTP fetch at startup. Authoring-only indexes/review declarations are excluded
-from production, and repeated long strings share build-time constants. `lib/curriculum.ts` is a stable app adapter, not an authoring file.
+No renderer, navigation, auth, CSS or deployment configuration changes are normally
+needed. **Progress registration is required:** every newly published lesson ID and every
+new `practice-字` handwriting lesson must be present in
+`hanzi_private.lesson_lengths` with its exact current step count via a Supabase
+migration. Without that registration, the Pages build can succeed while
+`hanzi_save_progress` rejects the learner checkpoint as invalid. The generated runtime
+module lets Vite bundle curriculum; there is no per-unit HTTP fetch at startup.
+Authoring-only indexes/review declarations are excluded from production, and repeated
+long strings share build-time constants. `lib/curriculum.ts` is a stable app adapter,
+not an authoring file.
 
 ## UnitData contract
 
@@ -152,6 +158,22 @@ npm run build:pages
 Generation validates before writing. Validation fails if generated files are stale.
 The targeted check validates the curriculum graph, the changed unit's navigation/checkpoints/practice,
 and the lossless compatibility fixtures.
+
+### Progress backend gate
+
+For every curriculum addition or lesson step-count change:
+
+1. Add a versioned Supabase migration that upserts each affected lesson into
+   `hanzi_private.lesson_lengths(lesson_id, steps)`.
+2. Include `practice-字` for every newly introduced character. Its step count must match
+   `practiceLesson(字).steps.length`, not a hand-assumed constant.
+3. Apply the migration to production before or together with the GitHub Pages release.
+4. Keep `validation/supabase-progress-coverage.test.mjs` green. It compares the current
+   curriculum and handwriting lessons with the checked-in Supabase registrations.
+
+A Pages-only release is incomplete when it adds lesson IDs but omits this database
+registration: the UI still works, but checkpoint saves return HTTP 400 / SQLSTATE 22023
+(`Invalid lesson checkpoint`).
 
 ### Remote/autonomous path — REQUIRED when no local shell is available
 
