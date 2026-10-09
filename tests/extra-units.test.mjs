@@ -1,22 +1,23 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {acceptedExtraMeasure,extraUnits,extraLessons,extraPracticeLessons,extraWords,extraChoices,extraAnswer,extraWord,extraUnitComplete,ambiguousExtraPair} from '../course/extras/units.ts';
+import {acceptedExtraMeasure,extraUnits,extraLessons,extraPracticeLessons,extraWords,wordsForExtraUnit,extraChoices,extraAnswer,extraWord,extraUnitComplete,ambiguousExtraPair} from '../course/extras/units.ts';
 import {lessons,units,vocabulary,characters,findLesson,lessonAvailable,validSession,completedLessonIds} from '../lib/curriculum.ts';
 import {learnedPracticeItems} from '../lib/practice-engine.ts';
+import {extraCharacterInfo} from '../course/extras/character-info.ts';
 import {streakFromDays,taipeiDay} from '../lib/streak.ts';
 
 test('extras coexist without entering canonical ownership or prerequisites',()=>{
  const completed=new Set(extraLessons.map(l=>l.id));
- assert.equal(extraUnits.length,3);assert.equal(extraWords.length,56);
- assert.equal(extraLessons.length,85);
+ assert.equal(extraUnits.length,6);assert.equal(extraWords.length,116);
+ assert.equal(extraLessons.length,160);
  assert.equal(extraLessons.filter(l=>lessons.some(core=>core.id===l.id)).length,0);
  assert.equal(extraUnits.filter(u=>units.some(core=>core.id===u.id)).length,0);
  assert.equal(vocabulary.filter(w=>completed.has(w.lessonId)).length,0);
  assert.deepEqual(learnedPracticeItems(completed),learnedPracticeItems(new Set()));
  assert.equal(lessonAvailable('u2-people',completed),false);
  assert.equal(lessonAvailable('u31-because',completed),false);
- assert.equal(completedLessonIds(completed).size,85);
+ assert.equal(completedLessonIds(completed).size,160);
  for(const lesson of extraLessons){
   assert.equal(lessonAvailable(lesson.id,new Set()),true);
   assert.equal(findLesson(lesson.id),lesson);
@@ -104,11 +105,11 @@ test('supplementary glyphs and meanings do not overwrite canonical records',()=>
  for(const word of extraWords){
   assert.ok(word.glyphNotes.length>0);
   assert.ok(word.pinyin);
-  if(word.measure){assert.ok(word.counted.includes(word.measure+word.text));assert.ok(word.countedPinyin&&word.measurePinyin)}else{assert.ok(word.swatch);assert.equal(word.counted,'');assert.equal(word.countedPinyin,'');assert.equal(word.measurePinyin,'');}
+  if(word.measure){assert.ok(word.counted.includes(word.measure+word.text));assert.ok(word.countedPinyin&&word.measurePinyin)}else{assert.ok(word.swatch||word.category==='countries'||word.category==='actions');assert.equal(word.counted,'');assert.equal(word.countedPinyin,'');assert.equal(word.measurePinyin,'');}
  }
  assert.equal(JSON.stringify(characters),before);
- const art=fs.readFileSync(new URL('../components/extra-picture.tsx',import.meta.url),'utf8');
- for(const word of extraWords)assert.ok(word.swatch||art.includes("case '"+word.id+"'"),'missing illustration: '+word.id);
+ const art=['extra-picture.tsx','extra-supplement-picture.tsx'].map(file=>fs.readFileSync(new URL('../components/'+file,import.meta.url),'utf8')).join('\n');
+ for(const word of extraWords)assert.ok(word.swatch||art.includes('\''+word.id+'\':')||art.includes("case '"+word.id+"'"),'missing illustration: '+word.id);
  const runtime=fs.readFileSync(new URL('../course/runtime.ts',import.meta.url),'utf8');
  assert.ok(!runtime.includes('extras'));
 });
@@ -144,11 +145,11 @@ test('all noun and measure-word glyphs receive the normal required writing lifec
   }
  }
  const strokes=JSON.parse(fs.readFileSync(new URL('../course/extras/strokes.json',import.meta.url),'utf8'));
- const info=fs.readFileSync(new URL('../course/extras/character-info.ts',import.meta.url),'utf8');
+
  for(const glyph of new Set(extraUnits.flatMap(unit=>unit.chars))){
   assert.ok(strokes[glyph]?.strokes.length>0,glyph);
   assert.equal(strokes[glyph].strokes.length,strokes[glyph].medians.length,glyph);
-  assert.ok(info.includes("'"+glyph+"'"),glyph);
+  assert.ok(extraCharacterInfo[glyph]?.pinyin&&extraCharacterInfo[glyph]?.note,glyph);
   const practice=extraPracticeLessons.find(l=>l.id==='extra-practice-'+glyph);
   assert.equal(practice.steps.length,4);assert.equal(findLesson(practice.id),practice);
   assert.equal(lessonAvailable(practice.id,new Set()),true);
@@ -167,9 +168,9 @@ test('published extra positions and completed credit are preserved',()=>{
 
 test('word worksheets cover every entry and new sections remain self-contained',()=>{
  for(const unit of extraUnits){
-  const words=extraWords.filter(word=>unit.id==='extra-colors'?!!word.swatch:unit.id==='extra-fruits'?word.id==='apple'||extraLessons.some(l=>l.id==='extra-fruits-word-'+word.id):extraLessons.some(l=>l.id==='extra-clothing-word-'+word.id));
+  const words=wordsForExtraUnit(unit.id);
   assert.equal(words.length,unit.id==='extra-colors'?16:20);
-  assert.equal(unit.lessonIds.length,unit.id==='extra-colors'?21:32);
+  assert.equal(unit.lessonIds.length,unit.id==='extra-colors'?21:['extra-clothing','extra-fruits'].includes(unit.id)?32:25);
   for(const word of words){
    const lesson=extraLessons.find(l=>l.id===unit.id+'-word-'+word.id);
    assert.ok(lesson,word.id);
@@ -201,5 +202,47 @@ test('complete published lesson payloads retain saved positions',()=>{
  const published=JSON.parse(fs.readFileSync(new URL('./fixtures/extra-before-workbooks.json',import.meta.url),'utf8'));
  for(const [id,steps] of Object.entries(published)){
   const lesson=findLesson(id);assert.deepEqual(lesson.steps,steps,id);
+ }
+});
+
+test('new collections use suitable counting contexts and do not count named places or actions',()=>{
+ for(const kind of ['vegetables','countries','actions']){
+  const words=wordsForExtraUnit('extra-'+kind);
+  assert.equal(words.length,20);
+  for(const word of words){
+   assert.equal(word.category,kind);
+   if(kind==='vegetables'){
+    assert.ok(word.measure&&word.counted&&word.countedPinyin,word.id);
+    for(const alternative of word.acceptedMeasures)assert.ok(acceptedExtraMeasure(word,alternative));
+   }else{
+    assert.equal(word.measure,'');
+    for(const step of extraLessons.filter(l=>l.id==='extra-'+kind+'-word-'+word.id).flatMap(l=>l.steps))assert.ok(!['measure','count','measure-match'].includes(step.extra.mode));
+   }
+  }
+ }
+ assert.ok(ambiguousExtraPair('veg-cauliflower','veg-broccoli'));
+ assert.ok(ambiguousExtraPair('veg-spinach','veg-water-spinach'));
+ assert.equal(extraWord('action-rest').pinyin,'xiūxí');
+ assert.equal(extraWord('country-italy').text,'義大利');
+ assert.equal(extraWord('country-new-zealand').text,'紐西蘭');
+ assert.ok(extraWord('action-listen').glyphNotes.some(note=>note.includes('yuè')));
+ assert.ok(extraWord('action-sleep').glyphNotes.some(note=>note.includes('jiào')));
+});
+
+test('new lesson answer and distractor banks are introduced before retrieval',()=>{
+ for(const lesson of extraLessons.filter(l=>['extra-vegetables','extra-countries','extra-actions'].includes(l.unitId))){
+  const taught=new Set();
+  for(const step of lesson.steps){
+   const a=step.extra;
+   if(a.mode==='learn')for(const id of a.wordId?[a.wordId]:a.wordIds)taught.add(id);
+   if(!['learn','writing','sentence-learn','sentence-order'].includes(a.mode))for(const id of a.wordIds||[])assert.ok(taught.has(id),step.id+' untaught bank word '+id);
+  }
+ }
+});
+
+test('action translations keep the speaker’s own hands and teeth',()=>{
+ for(const id of ['action-wash-hands','action-brush-teeth']){
+  const sentence=extraLessons.find(l=>l.id==='extra-actions-word-'+id).steps.find(s=>s.extra.mode==='sentence-learn').extra.sentence;
+  assert.ok(sentence.meaning.includes('my '));assert.ok(!sentence.meaning.includes('your '));
  }
 });

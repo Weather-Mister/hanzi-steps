@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {lessons,units,vocabulary,characters,grammarRules,phrases,characterOrder,unitLibraryCharacters,completedLessonIds,previousLessonLengths,historicalLessonLengthsFor,validSession,lessonAvailable} from '../lib/curriculum.ts';
+import {lessons,units,vocabulary,characters,grammarRules,phrases,characterOrder,unitLibraryCharacters,completedLessonIds,previousLessonLengths,historicalLessonLengthsFor,findLesson,validSession,lessonAvailable} from '../lib/curriculum.ts';
 
 test('Rebalanced units cap actual vocabulary and character load, without hidden extras',()=>{
  const targets=[['unit-7',10,13,123],['unit-8',8,12,112]];
@@ -25,7 +25,7 @@ test('Rebalanced units cap actual vocabulary and character load, without hidden 
 
 test('Retired checkpoints retain exact bounds; appended lessons retain reviewed old completions',()=>{
  for(const [lessonId,length] of Object.entries(previousLessonLengths)){
-  const current=lessons.find(l=>l.id===lessonId);
+  const current=findLesson(lessonId);
   const bound=current?.steps.length??length;
   const history=historicalLessonLengthsFor(lessonId);
   assert.ok(history.includes(length),lessonId);

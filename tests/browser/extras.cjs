@@ -77,12 +77,14 @@ let browser,server;
   }
   return {context,page,choose};
  }
- await Promise.all(extraUnits.map(async unit=>{
+ const requestedLessons=process.env.HANZI_EXTRA_LESSONS?.split(',');
+ const selectedUnits=process.env.HANZI_EXTRA_UNITS?extraUnits.filter(u=>process.env.HANZI_EXTRA_UNITS.split(',').includes(u.id)):extraUnits;
+ await Promise.all(selectedUnits.map(async unit=>{
   const mobile=await open(390);
   await mobile.choose(unit);
   assert.equal(await mobile.page.locator('.lesson-path .path-node:disabled').count(),0);
   await mobile.page.screenshot({path:'test-results/extras/'+unit.id+'-mobile.png',fullPage:true});
-  for(const lesson of extraLessons.filter(l=>l.unitId===unit.id)){
+  for(const lesson of extraLessons.filter(l=>l.unitId===unit.id&&(!requestedLessons||requestedLessons.includes(l.id)))){
    console.log('Browser lesson '+lesson.id+' ('+lesson.steps.length+' steps)');
    await mobile.page.getByRole('button',{name:'Start: '+lesson.title,exact:true}).click();
    for(const step of lesson.steps){
@@ -132,12 +134,27 @@ let browser,server;
    if(lesson.id==='extra-clothing-learn-1')assert.ok(saved.assisted>=1);
    await mobile.page.getByRole('button',{name:'Back to the unit',exact:true}).click();
   }
-  await mobile.page.getByText('All '+unit.lessonIds.length+' lessons complete.',{exact:false}).waitFor();
+  if(!requestedLessons)await mobile.page.getByText('All '+unit.lessonIds.length+' lessons complete.',{exact:false}).waitFor();
   await mobile.context.close();
  }));
+ // New references must have their own usage copy and complete local visuals.
+ for(const unit of extraUnits.filter(u=>u.number>=4)){
+  const reference=await open(390);await reference.choose(unit);
+  if(selectedUnits.includes(unit))assert.equal(await reference.page.locator('.path-row.completed').count(),extraLessons.filter(l=>l.unitId===unit.id&&(!requestedLessons||requestedLessons.includes(l.id))).length,'second-device extra completion readback');
+  await reference.page.getByRole('tab',{name:'Notes',exact:true}).click();
+  assert.equal(await reference.page.locator('.extra-word-card').count(),20);
+  assert.equal(await reference.page.locator('.extra-measure-label').count(),unit.id==='extra-vegetables'?20:0);
+  for(const img of await reference.page.locator('.extra-country-flag').all())assert.ok(await img.evaluate(img=>img.complete&&img.naturalWidth>0),'local flag failed to load');
+  await reference.page.screenshot({path:'test-results/extras/'+unit.id+'-notes.png',fullPage:true});
+  await reference.page.getByRole('tab',{name:'Characters',exact:true}).click();
+  assert.equal(await reference.page.locator('.library-card').count(),unit.chars.length);
+  await reference.page.locator('.library-card').first().click();
+  assert.ok(await reference.page.locator('.character-parts').count());
+  await reference.context.close();
+ }
  // Reopen from a separate device context: completion comes from remote rows.
  const desktop=await open(1365);await desktop.choose(extraUnits[1]);
- assert.equal(await desktop.page.locator('.path-row.completed').count(),extraUnits[1].lessonIds.length);
+ if(selectedUnits.includes(extraUnits[1]))assert.equal(await desktop.page.locator('.path-row.completed').count(),extraUnits[1].lessonIds.length);
  await desktop.page.getByRole('tab',{name:'Characters',exact:true}).click();
  assert.equal(await desktop.page.locator('.character-library .library-card').count(),extraUnits[1].chars.length);
  assert.equal(await desktop.page.locator('.extra-word-card').count(),0);
@@ -170,7 +187,7 @@ let browser,server;
  await desktop.page.getByText('Extra units completed',{exact:false}).waitFor();
  assert.equal(await desktop.page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
  await desktop.context.close();
- assert.equal(uploads.filter(s=>s.complete).length,extraLessons.length+1);
+ assert.equal(uploads.filter(s=>s.complete).length,extraLessons.filter(l=>selectedUnits.some(u=>u.id===l.unitId)&&(!requestedLessons||requestedLessons.includes(l.id))).length+1);
  assert.deepEqual(errors,[]);
  console.log('PASS: required handwriting, sentence ordering, mixed matching, normal character cards, focused character practice, all extra steps, every lesson completion, wrong-answer assistance, mobile layout, listening, both matching modes, cloud sync and second-device readback.');
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.kill();});

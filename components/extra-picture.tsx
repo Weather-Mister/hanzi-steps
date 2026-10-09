@@ -1,5 +1,6 @@
 'use client';
 import type {ReactNode} from 'react';
+import {ExtraSupplementPicture} from './extra-supplement-picture';
 import {extraWord} from '../course/extras/units';
 
 // Small local illustrations: stable on every device, available offline, and
@@ -7,6 +8,7 @@ import {extraWord} from '../course/extras/units';
 export function ExtraPicture({id,label,color,className=''}:{id:string;label?:string;color?:string;className?:string}){
  let art:ReactNode;
  const word=extraWord(id);
+ if(word?.category)return <ExtraSupplementPicture word={word} label={label} className={className}/>;
  if(word?.swatch){
   const topic=id==='color-word';
   return <svg className={'extra-picture extra-color-swatch '+className} viewBox="0 0 120 130" role="img" aria-label={label||word.meaning}>{topic?<>{['#dd3d3d','#f58a26','#ffe033','#269653','#286ed4','#8455b5'].map((fill,i)=><path key={fill} d={`M60 65L${60+46*Math.cos(i*Math.PI/3)} ${65+46*Math.sin(i*Math.PI/3)}A46 46 0 0 1 ${60+46*Math.cos((i+1)*Math.PI/3)} ${65+46*Math.sin((i+1)*Math.PI/3)}Z`} fill={fill}/>)}<circle cx="60" cy="65" r="12" fill="#fff"/></>:<><rect x="15" y="20" width="90" height="90" rx="20" fill={word.swatch} stroke="#455459" strokeWidth="2"/>{(id==='color-gold'||id==='color-silver')&&<path d="M25 78L78 25M42 103L102 43" stroke="#fff" strokeWidth="13" opacity=".32"/>}</>}</svg>;
