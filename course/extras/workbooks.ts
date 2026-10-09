@@ -2,38 +2,38 @@ import type {ExtraWord} from './units.ts';
 import type {ExtraSentence,Lesson,Step,Unit} from '../schema.ts';
 type Kind='clothing'|'fruits'|'colors';
 const support:Record<string,{pinyin:string;meaning:string}>={
-'我':{pinyin:'wǒ',meaning:'I'},'你':{pinyin:'nǐ',meaning:'you'},'這':{pinyin:'zhè',meaning:'this'},'是':{pinyin:'shì',meaning:'is; be'},'有':{pinyin:'yǒu',meaning:'have'},'沒有':{pinyin:'méiyǒu',meaning:'do not have'},'想':{pinyin:'xiǎng',meaning:'want to'},'買':{pinyin:'mǎi',meaning:'buy'},'穿':{pinyin:'chuān',meaning:'wear clothing or footwear'},'戴':{pinyin:'dài',meaning:'wear an accessory'},'背':{pinyin:'bēi',meaning:'carry on the back'},'喜歡':{pinyin:'xǐhuān',meaning:'like'},'吃':{pinyin:'chī',meaning:'eat'},'不':{pinyin:'bù',meaning:'not'},'的':{pinyin:'de',meaning:'links a description to its noun'},'一':{pinyin:'yī',meaning:'one; changes tone in a phrase'},'兩':{pinyin:'liǎng',meaning:'two before a measure word'},'三':{pinyin:'sān',meaning:'three'},
+'去':{pinyin:'qù',meaning:'go to'},'人':{pinyin:'rén',meaning:'person; nationality suffix'},'國家':{pinyin:'guójiā',meaning:'country'},'在':{pinyin:'zài',meaning:'be at; marks an action in progress'},'現在':{pinyin:'xiànzài',meaning:'now'},'先':{pinyin:'xiān',meaning:'first'},'再':{pinyin:'zài',meaning:'then; afterwards'},'棵':{pinyin:'kē',meaning:'whole plant'},'把':{pinyin:'bǎ',meaning:'handful or bunch'},'朵':{pinyin:'duǒ',meaning:'flower or mushroom measure word'},'我':{pinyin:'wǒ',meaning:'I'},'你':{pinyin:'nǐ',meaning:'you'},'這':{pinyin:'zhè',meaning:'this'},'是':{pinyin:'shì',meaning:'is; be'},'有':{pinyin:'yǒu',meaning:'have'},'沒有':{pinyin:'méiyǒu',meaning:'do not have'},'想':{pinyin:'xiǎng',meaning:'want to'},'買':{pinyin:'mǎi',meaning:'buy'},'穿':{pinyin:'chuān',meaning:'wear clothing or footwear'},'戴':{pinyin:'dài',meaning:'wear an accessory'},'背':{pinyin:'bēi',meaning:'carry on the back'},'喜歡':{pinyin:'xǐhuān',meaning:'like'},'吃':{pinyin:'chī',meaning:'eat'},'不':{pinyin:'bù',meaning:'not'},'的':{pinyin:'de',meaning:'links a description to its noun'},'一':{pinyin:'yī',meaning:'one; changes tone in a phrase'},'兩':{pinyin:'liǎng',meaning:'two before a measure word'},'三':{pinyin:'sān',meaning:'three'},
 '件':{pinyin:'jiàn',meaning:'individual garment'},'條':{pinyin:'tiáo',meaning:'long item or garment'},'雙':{pinyin:'shuāng',meaning:'pair'},'頂':{pinyin:'dǐng',meaning:'hat measure word'},'個':{pinyin:'ge',meaning:'general counting word'},'顆':{pinyin:'kē',meaning:'small round item'},'根':{pinyin:'gēn',meaning:'long thin item'},'串':{pinyin:'chuàn',meaning:'bunch or string'},'副':{pinyin:'fù',meaning:'set; eyeglasses measure word'},'隻':{pinyin:'zhī',meaning:'one individual shoe or glove'},'片':{pinyin:'piàn',meaning:'slice'},'塊':{pinyin:'kuài',meaning:'piece; chunk'},'盒':{pinyin:'hé',meaning:'box'},'斤':{pinyin:'jīn',meaning:'Taiwan market weight unit: 600 g'},'公斤':{pinyin:'gōngjīn',meaning:'kilogram: 1,000 g'},'種':{pinyin:'zhǒng',meaning:'kind; type'},'什麼':{pinyin:'shénme',meaning:'what'},
 };
 const english:Record<string,string[]>={
 tshirt:['T-shirt','T-shirts'],shirt:['shirt','shirts'],jacket:['jacket','jackets'],sweater:['sweater','sweaters'],trousers:['pair of trousers','pairs of trousers'],skirt:['skirt','skirts'],dress:['dress','dresses'],shoes:['pair of shoes','pairs of shoes'],socks:['pair of socks','pairs of socks'],hat:['hat','hats'],shorts:['pair of shorts','pairs of shorts'],jeans:['pair of jeans','pairs of jeans'],sneakers:['pair of sneakers','pairs of sneakers'],raincoat:['raincoat','raincoats'],swimsuit:['swimsuit','swimsuits'],scarf:['scarf','scarves'],gloves:['pair of gloves','pairs of gloves'],belt:['belt','belts'],glasses:['set of eyeglasses','sets of eyeglasses'],backpack:['backpack','backpacks'],
 apple:['apple','apples'],banana:['banana','bananas'],orange:['mandarin orange','mandarin oranges'],grapes:['bunch of grapes','bunches of grapes'],watermelon:['watermelon','watermelons'],pineapple:['pineapple','pineapples'],mango:['mango','mangoes'],strawberry:['strawberry','strawberries'],pear:['pear','pears'],papaya:['papaya','papayas'],guava:['guava','guavas'],dragonfruit:['dragon fruit','dragon fruits'],kiwi:['kiwifruit','kiwifruit'],sweetorange:['sweet orange','sweet oranges'],lemon:['lemon','lemons'],peach:['peach','peaches'],plum:['plum','plums'],cherry:['cherry','cherries'],lychee:['lychee','lychees'],pomelo:['pomelo','pomelos'],
 };
-function activity(id:string,mode:NonNullable<Step['extra']>['mode'],word:ExtraWord,words:ExtraWord[]=[],other:Partial<Step>={}):Step{
+export function activity(id:string,mode:NonNullable<Step['extra']>['mode'],word:ExtraWord,words:ExtraWord[]=[],other:Partial<Step>={}):Step{
  return {id,type:'extra',extra:{mode,wordId:word.id,wordIds:words.map(word=>word.id)},...other};
 }
-function primer(id:string,words:ExtraWord[]):Step{return {id,type:'extra',extra:{mode:'learn',wordIds:words.map(word=>word.id)}};}
-function write(id:string,word:ExtraWord,chars=Array.from(word.text)):Step[]{
+export function primer(id:string,words:ExtraWord[]):Step{return {id,type:'extra',extra:{mode:'learn',wordIds:words.map(word=>word.id)}};}
+export function write(id:string,word:ExtraWord,chars=Array.from(word.text)):Step[]{
  return chars.filter(char=>/[\u3400-\u9fff]/.test(char)).flatMap(glyph=>['trace','complete','memory'].map(writeMode=>activity(id+'-'+glyph+'-'+writeMode,'writing',word,[],{extra:{mode:'writing',wordId:word.id,glyph,writeMode:writeMode as 'trace'|'complete'|'memory'}})));
 }
-function sentence(id:string,words:ExtraWord[],tokens:string[],pinyin:string,meaning:string,note:string,question=false):Step[]{
+export function sentence(id:string,words:ExtraWord[],tokens:string[],pinyin:string,meaning:string,note:string,question=false):Step[]{
  const word=words.find(word=>tokens.includes(word.text))||words[0];
  const data:ExtraSentence={text:tokens.join('')+(question?'？':'。'),tokens,pinyin,meaning,note,support:tokens.map(text=>{const word=words.find(word=>word.text===text);const info=word?{pinyin:word.pinyin,meaning:word.meaning}:support[text];if(!info)throw new Error('Unexplained sentence token '+text);return {text,...info};})};
  return ['sentence-learn','sentence-order'].map(mode=>activity(id+'-'+mode,mode as 'sentence-learn'|'sentence-order',word,[],{extra:{mode:mode as 'sentence-learn'|'sentence-order',wordId:word.id,sentence:data}}));
 }
-function question(id:string,word:ExtraWord,prompt:string,options:string[],answer:string,explanation:string,audioText?:string):Step{
+export function question(id:string,word:ExtraWord,prompt:string,options:string[],answer:string,explanation:string,audioText?:string):Step{
  return activity(id,audioText?'listen-question':'question',word,[],{prompt,options,answer,explanation,...(audioText?{audioText}:{})});
 }
 function safePair(a:string,b:string){
- return ![['trousers','shorts','jeans'],['shoes','sneakers'],['jacket','raincoat'],['orange','sweetorange'],['color-blue','color-darkblue'],['color-blue','color-lightblue'],['color-yellow','color-gold'],['color-gray','color-silver']].some(family=>a!==b&&family.includes(a)&&family.includes(b))&&!(a!==b&&(a==='color-word'||b==='color-word')&&a.startsWith('color-')&&b.startsWith('color-'));
+ return ![['trousers','shorts','jeans'],['shoes','sneakers'],['jacket','raincoat'],['orange','sweetorange'],['veg-cauliflower','veg-broccoli'],['veg-spinach','veg-water-spinach'],['color-blue','color-darkblue'],['color-blue','color-lightblue'],['color-yellow','color-gold'],['color-gray','color-silver']].some(family=>a!==b&&family.includes(a)&&family.includes(b))&&!(a!==b&&(a==='color-word'||b==='color-word')&&a.startsWith('color-')&&b.startsWith('color-'));
 }
-function bankFor(word:ExtraWord,words:ExtraWord[]){
+export function bankFor(word:ExtraWord,words:ExtraWord[]){
  if(word.id==='color-word')return [word,...words.filter(item=>item.id!==word.id).slice(0,3)];
  const bank=[word];
  for(const item of words)if(bank.length<4&&!bank.some(w=>w.id===item.id)&&bank.every(w=>safePair(w.id,item.id)))bank.push(item);
  return bank;
 }
-function mixed(id:string,words:ExtraWord[]):Step{
+export function mixed(id:string,words:ExtraWord[]):Step{
  return {id,type:'extra',extra:{mode:'mixed-match',wordIds:words.map(word=>word.id),pairs:words.map((word,i)=>({id:word.id,wordId:word.id,left:i===2&&word.measure?word.counted:i===3&&word.measure?'一 __ '+word.text:word.text,...(i===0&&word.id!=='color-word'?{pictureId:word.id}:i===3&&word.measure?{right:word.measure}:{right:i===2?(word.measure?word.countedPinyin:word.pinyin):word.meaning})}))}};
 }
 function wordWorksheet(kind:Kind,word:ExtraWord,words:ExtraWord[],index:number):Lesson{

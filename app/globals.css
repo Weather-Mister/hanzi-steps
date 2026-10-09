@@ -2545,3 +2545,6 @@ body { padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) en
  .cumulative-encounter-actions{align-items:stretch;flex-direction:column}
  .cumulative-encounter-actions>*{width:100%}
 }
+
+/* Keep the existing header tools on screen at intermediate tablet widths. */
+@media(min-width:701px) and (max-width:1000px){.topbar{flex-wrap:wrap;gap:14px}.header-tools{flex:1 1 100%;justify-content:flex-end;flex-wrap:wrap}.header-tools .streak-button{margin-right:auto}}

@@ -1,5 +1,7 @@
 // Isolated display metadata; does not register main-course introductions.
+import {supplementaryCharacterInfo} from './new-character-info.ts';
 export const extraCharacterInfo:Record<string,{pinyin:string;meaning:string;note:string}>={
+...supplementaryCharacterInfo,
 '恤':{pinyin:'xù',meaning:'T-shirt character',note:'Recognize 恤 after the Latin T in T恤. 忄 is the heart radical on the left; 血 is on the right. The garment word is the full T恤, not 恤 alone.'},
 '件':{pinyin:'jiàn',meaning:'measure word for garments',note:'Use 件 for individual garments such as 襯衫 and 外套. 亻 is on the left; 牛 is on the right.'},
 '襯':{pinyin:'chèn',meaning:'shirt character; lining',note:'The first character in 襯衫. 衤 is the clothing radical on the left; 親 is on the right.'},
@@ -59,7 +61,7 @@ export const extraCharacterInfo:Record<string,{pinyin:string;meaning:string;note
 '戴':{"pinyin":"dài","meaning":"wear an accessory","note":"Use 戴 for hats, scarves, gloves, and eyeglasses. Follow the stroke demonstration to distinguish its dense upper and lower parts."},
 '隻':{"pinyin":"zhī","meaning":"measure word for one individual item","note":"一隻鞋子 is one shoe; 一雙鞋子 names a pair. 隹 sits above 又."},
 '芭':{"pinyin":"bā","meaning":"guava character","note":"芭樂 is a common Taiwan word for guava. 艹 sits above 巴."},
-'樂':{"pinyin":"lè","meaning":"guava character; joy","note":"Read 樂 as lè in 芭樂. It has other readings in other words. Notice 木 at the bottom."},
+'樂':{"pinyin":"lè","meaning":"guava character; joy","note":"Read 樂 as lè in 芭樂. In 音樂 (yīnyuè, music), 樂 is yuè. Notice 木 at the bottom."},
 '火':{"pinyin":"huǒ","meaning":"fire","note":"火龍果 means dragon fruit. Notice its central strokes and two side dots."},
 '龍':{"pinyin":"lóng","meaning":"dragon","note":"The middle character of 火龍果. Study the traditional form 龍 in stroke order."},
 '奇':{"pinyin":"qí","meaning":"unusual; kiwi character","note":"奇異果 means kiwifruit. 大 sits above 可."},

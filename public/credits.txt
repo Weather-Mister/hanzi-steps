@@ -204,3 +204,7 @@ Eighteen unmodified Taiwan Traditional AnimCJK glyph records, source commit
 ec5e17cca76c87587790bcbce5ea0b4d4fb753d6, are retained in /stroke-source/unit-23-graphics.txt and
 /stroke-source/unit-24-graphics.txt with matching dictionary files. Existing
 AnimCJK, Arphic Public License and LGPL v3+ attribution applies.
+
+Extras country flag SVGs: flag-icons by Lipis, MIT License.
+Source: https://github.com/lipis/flag-icons
+License: extras/flags/LICENSE

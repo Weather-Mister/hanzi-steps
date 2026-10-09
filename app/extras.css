@@ -10,3 +10,11 @@
 .extra-exercise .phrase-tokens small{display:block;color:var(--muted)}
 
 .extra-section-heading{font-size:21px;line-height:1.35;margin:28px 0 12px;overflow-wrap:anywhere}.extra-unit-switcher{flex-wrap:wrap}.extra-unit-switcher button{min-width:150px}.extra-color-swatch{padding:4px}@media(max-width:600px){.extra-unit-switcher button{min-width:calc(50% - 12px)}.extra-section-heading{font-size:19px}}
+
+.extra-country-flag{border:1px solid #c6cdd5;border-radius:5px;object-fit:contain;align-self:center}.extra-unit-switcher button{min-width:0;flex:1 1 calc(33.333% - 12px)}.extra-unit-switcher button>span{min-width:0;overflow-wrap:anywhere}.extra-unit-switcher .extra-picture{flex-shrink:0}@media(max-width:600px){.extra-unit-switcher button{flex-basis:calc(50% - 12px);min-width:0}.extra-unit-switcher strong{font-size:14px}.extra-unit-switcher small{font-size:11px}}
+
+.exercise-footer .extra-feedback{display:block;min-width:0;overflow-wrap:anywhere}.exercise-footer .extra-feedback>p{text-align:left;margin-top:6px;color:inherit;line-height:1.6}.extra-feedback+.continue-button{flex-shrink:0}@media(max-width:700px){.exercise-footer .extra-feedback{flex-basis:100%}}
+
+.extra-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.extra-choice{min-width:0}.extra-text-options .extra-choice{padding:24px 16px 16px}.extra-choice-word{min-width:0;overflow-wrap:anywhere}
+/* A flowing mobile footer keeps feedback and the full button reachable. */
+@media(max-width:700px){.extra-exercise-footer{position:static;flex-direction:column;align-items:stretch}.extra-exercise-footer .extra-feedback{flex:0 1 auto;width:100%;max-width:none;min-width:0}.extra-exercise-footer .continue-button{flex:0 0 auto}}

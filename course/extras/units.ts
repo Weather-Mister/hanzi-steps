@@ -1,12 +1,14 @@
 import type {Lesson,Step,Unit} from '../schema.ts';
 import {moreClothingWords,moreFruitWords,colorWords} from './word-lists.ts';
 import {buildWorkbookLessons,buildColorUnit} from './workbooks.ts';
-export {colorWords};
+import {vegetableWords,countryWords,actionWords} from './new-word-lists.ts';
+import {buildSupplementaryUnit} from './new-workbooks.ts';
+export {colorWords,vegetableWords,countryWords,actionWords};
 
 // Supplementary exposure only. Never assemble these into courseModules,
 // canonical vocabulary, characters, phrases, or first-teaching indexes.
 export type ExtraWord={
- swatch?:string;
+ swatch?:string;category?:'vegetables'|'countries'|'actions';acceptedMeasures?:string[];
  id:string;text:string;pinyin:string;meaning:string;measure:string;measurePinyin:string;
  counted:string;countedPinyin:string;note:string;glyphNotes:string[];
 };
@@ -37,10 +39,11 @@ const baseFruitWords:ExtraWord[]=[
 ];
 export const clothingWords=[...baseClothingWords,...moreClothingWords];
 export const fruitWords=[...baseFruitWords,...moreFruitWords];
-export const extraWords=[...clothingWords,...fruitWords,...colorWords];
+export const extraWords=[...clothingWords,...fruitWords,...colorWords,...vegetableWords,...countryWords,...actionWords];
 export const extraWord=(id:string)=>extraWords.find(word=>word.id===id);
 export function acceptedExtraMeasure(word:ExtraWord,measure:string):boolean{
- if(word.measure===measure)return true;
+ if(!word.measure)return false;
+ if(word.measure===measure||word.acceptedMeasures?.includes(measure))return true;
  // The illustrations fix the counting context: a bunch of grapes and pairs
  // of footwear, but individual whole fruits and one whole skirt.
  if(word.id==='banana')return ['根','條','個'].includes(measure);
@@ -49,7 +52,20 @@ export function acceptedExtraMeasure(word:ExtraWord,measure:string):boolean{
  return false;
 }
 const numbers=['','一','兩','三'];
-export function countedPhrase(word:ExtraWord,count:number){return numbers[count]+word.measure+word.text;}
+export function extraCountingContext(word:ExtraWord){
+ if(word.measure==='雙')return 'one pair (two individual items)';
+ if(word.measure==='串')return 'one bunch of grapes';
+ if(word.measure==='種')return 'one kind of color';
+ if(word.measure==='把')return 'one tied bunch';
+ if(word.measure==='棵')return 'one whole plant';
+ if(word.measure==='朵')return 'one whole mushroom';
+ if(word.measure==='塊')return 'one piece';
+ if(word.id==='veg-corn')return 'one ear of corn';
+ if(word.id==='veg-garlic')return 'one whole garlic bulb';
+ if(['veg-cabbage','veg-cauliflower','veg-broccoli'].includes(word.id))return 'one whole head';
+ return 'one whole item';
+}
+export function countedPhrase(word:ExtraWord,count:number){if(!word.measure||!numbers[count])throw new Error('Invalid counted phrase for '+word.id);return numbers[count]+word.measure+word.text;}
 function step(id:string,mode:NonNullable<Step['extra']>['mode'],wordIds:string[],wordId?:string,other:Partial<Step>={}):Step{
  return {id,type:'extra',extra:{mode,wordIds,...(wordId?{wordId}:{})},...other};
 }
@@ -145,7 +161,7 @@ for(const [i,collection] of collections.entries()){
  collection.unit.chars=[...new Set([...words.flatMap(word=>Array.from(word.text+word.measure)),...worksheets.flatMap(lesson=>lesson.steps.filter(step=>step.extra?.mode==='writing').map(step=>step.extra!.glyph!))].filter(char=>/[\u3400-\u9fff]/.test(char)))];
  collection.unit.description='A complete optional word-list workbook: '+words.length+' words, '+collection.lessons.length+' lessons, visual recognition, handwriting, counting, listening, and useful sentences. Everything is always available.';
 }
-collections.push(buildColorUnit(colorWords,clothingWords));
+collections.push(buildColorUnit(colorWords,clothingWords),buildSupplementaryUnit('vegetables',vegetableWords),buildSupplementaryUnit('countries',countryWords),buildSupplementaryUnit('actions',actionWords));
 export const extraUnits=collections.map(c=>c.unit);
 export const extraLessons=collections.flatMap(c=>c.lessons);
 export const extraPracticeLessons:Lesson[]=[...new Set(collections.flatMap(collection=>collection.unit.chars))].map(glyph=>{
@@ -153,9 +169,9 @@ export const extraPracticeLessons:Lesson[]=[...new Set(collections.flatMap(colle
  const unitId=collections.find(collection=>collection.unit.chars.includes(glyph))!.unit.id;
  return {id:'extra-practice-'+glyph,unitId,title:'Practice '+glyph,subtitle:'Trace, finish the strokes, and write from memory.',chars:[glyph],minutes:'3–4 min',steps:[step('extra-practice-'+glyph+'-learn','character-learn',[],word.id,{extra:{mode:'character-learn',wordId:word.id,glyph}}),...writingSteps('extra-practice-'+glyph,word,[glyph])]};
 });
-function wordsForCollectionGlyph(glyph:string){const unit=collections.find(collection=>collection.unit.chars.includes(glyph))!.unit.id;return unit==='extra-clothing'?clothingWords:unit==='extra-fruits'?fruitWords:colorWords;}
+function wordsForCollectionGlyph(glyph:string){const unit=collections.find(collection=>collection.unit.chars.includes(glyph))!.unit.id;return wordsForExtraUnit(unit);}
 export const isExtraLesson=(id:string)=>[...extraLessons,...extraPracticeLessons].some(lesson=>lesson.id===id);
-export const wordsForExtraUnit=(unitId:string)=>unitId==='extra-clothing'?clothingWords:unitId==='extra-fruits'?fruitWords:unitId==='extra-colors'?colorWords:[];
+export function wordsForExtraUnit(unitId:string){return unitId==='extra-clothing'?clothingWords:unitId==='extra-fruits'?fruitWords:unitId==='extra-colors'?colorWords:unitId==='extra-vegetables'?vegetableWords:unitId==='extra-countries'?countryWords:unitId==='extra-actions'?actionWords:[];}
 export function extraUnitComplete(unit:Unit,completed:Set<string>){return unit.lessonIds.every(id=>completed.has(id));}
 export function extraChoices(step:Step):string[]{
  const activity=step.extra!,word=extraWord(activity.wordId||'');
@@ -180,7 +196,7 @@ export function extraChoices(step:Step):string[]{
  return [...new Set([activity.wordId!,...bank.slice(index+1),...bank.slice(0,index)])].slice(0,4);
 }
 export function ambiguousExtraPair(a:string,b:string):boolean{
- const families=[['trousers','shorts','jeans'],['shoes','sneakers'],['jacket','raincoat'],['orange','sweetorange'],['color-blue','color-darkblue'],['color-blue','color-lightblue'],['color-yellow','color-gold'],['color-gray','color-silver']];
+ const families=[['trousers','shorts','jeans'],['shoes','sneakers'],['jacket','raincoat'],['orange','sweetorange'],['veg-cauliflower','veg-broccoli'],['veg-spinach','veg-water-spinach'],['color-blue','color-darkblue'],['color-blue','color-lightblue'],['color-yellow','color-gold'],['color-gray','color-silver']];
  return a!==b&&(families.some(family=>family.includes(a)&&family.includes(b))||(a==='color-word'||b==='color-word')&&(a.startsWith('color-')&&b.startsWith('color-')));
 }
 export function extraAnswer(step:Step){const activity=step.extra!;const word=extraWord(activity.wordId||'');return activity.mode==='question'||activity.mode==='listen-question'?step.answer!:activity.mode==='measure'?word!.measure:activity.mode==='count'?countedPhrase(word!,activity.count!):activity.mode==='character'?activity.glyph!:activity.wordId!;}
