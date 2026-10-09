@@ -1,5 +1,5 @@
 import type {Session} from '../lib/curriculum';
-import {supabase} from './supabase';
+import {supabase,SUPABASE_URL,SUPABASE_PUBLIC_KEY} from './supabase';
 import {broadcastWidgetProgress} from './widget-notify';
 
 // Best-effort notification for Übersicht. Only the account-scoped topic is
@@ -10,7 +10,7 @@ function notifyDesktopWidgets(account:string){
  if(notificationTimers.has(account))return;
  notificationTimers.set(account,setTimeout(()=>{
   notificationTimers.delete(account);
-  void broadcastWidgetProgress(account,supabase.supabaseUrl,supabase.supabaseKey);
+  void broadcastWidgetProgress(account,SUPABASE_URL,SUPABASE_PUBLIC_KEY);
  },250));
 }
 
