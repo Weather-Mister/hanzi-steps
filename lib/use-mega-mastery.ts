@@ -1,6 +1,6 @@
 'use client';
 import {useCallback,useEffect,useState} from 'react';
-import {supabase} from '@/pages/supabase';
+import {backend} from '@/pages/backend';
 
 const storageKey=(userKey:string)=>'hanzi-steps-mastered-v1-'+userKey;
 const reversePrefix='reverse:';
@@ -32,7 +32,7 @@ export function useMegaMastery(userKey:string){
    return()=>{cancelled=true};
   }
   setLoading(true);
-  void supabase.rpc('hanzi_read_mastered',{expected_account:userKey}).then(({data,error:readError})=>{
+  void backend.rpc('hanzi_read_mastered',{expected_account:userKey}).then(({data,error:readError})=>{
    if(cancelled)return;
    if(readError){
     setError('Mastered words could not sync. Your local list is still available.');
@@ -62,7 +62,7 @@ export function useMegaMastery(userKey:string){
   applyLocal(id,value);
   if(userKey==='signed-out')return true;
   setSaving(true);
-  const {error:saveError}=await supabase.rpc('hanzi_set_mastered',{
+  const {error:saveError}=await backend.rpc('hanzi_set_mastered',{
    expected_account:userKey,
    p_vocab_id:id,
    p_mastered:value,

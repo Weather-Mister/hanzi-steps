@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 import {Bell,BookOpen,Flame,Send,Sparkles} from 'lucide-react';
 import {SettingsToggle} from '@/components/settings-toggle';
-import {supabase} from './supabase';
+import {backend} from './backend';
 
 const BASE_URL=import.meta.env.BASE_URL;
 
@@ -60,7 +60,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
    try{
     const subscription=await existingSubscription();
     if(cancelled||!subscription)return;
-    const {data,error}=await supabase.rpc('hanzi_push_read',{expected_account:accountKey,expected_endpoint:subscription.endpoint});
+    const {data,error}=await backend.rpc('hanzi_push_read',{expected_account:accountKey,expected_endpoint:subscription.endpoint});
     if(error)throw error;
     if(cancelled||!data)return;
     setPrefs({
@@ -82,7 +82,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
   if(!accountKey)throw new Error('Sign in first.');
   const json=subscription.toJSON();
   if(!json.endpoint||!json.keys?.p256dh||!json.keys?.auth)throw new Error('This browser did not provide a complete push subscription.');
-  const {error}=await supabase.rpc('hanzi_push_upsert',{
+  const {error}=await backend.rpc('hanzi_push_upsert',{
    expected_account:accountKey,
    push_subscription:{endpoint:json.endpoint,keys:{p256dh:json.keys.p256dh,auth:json.keys.auth}},
    push_preferences:{
@@ -110,7 +110,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
     return;
    }
    const registration=await activeRegistration();
-   const {data:publicKey,error:keyError}=await supabase.rpc('hanzi_push_public_key');
+   const {data:publicKey,error:keyError}=await backend.rpc('hanzi_push_public_key');
    if(keyError||typeof publicKey!=='string'||!publicKey)throw new Error('Push notifications are still being prepared. Try again in a moment.');
    let subscription=await registration.pushManager.getSubscription();
    if(!subscription){
@@ -130,7 +130,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
   try{
    const subscription=await existingSubscription();
    if(subscription&&accountKey){
-    const {error}=await supabase.rpc('hanzi_push_disable',{expected_account:accountKey,expected_endpoint:subscription.endpoint});
+    const {error}=await backend.rpc('hanzi_push_disable',{expected_account:accountKey,expected_endpoint:subscription.endpoint});
     if(error)throw error;
     await subscription.unsubscribe();
    }
@@ -164,7 +164,7 @@ export function NotificationSettings({accountKey}:{accountKey:string|null}){
   try{
    const subscription=await existingSubscription();
    if(!subscription)throw new Error('Push subscription is missing. Turn notifications off and on again.');
-   const {data,error}=await supabase.functions.invoke('hanzi-push',{
+   const {data,error}=await backend.functions.invoke('hanzi-push',{
     body:{action:'test',expectedAccount:accountKey,endpoint:subscription.endpoint},
    });
    if(error)throw error;

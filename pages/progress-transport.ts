@@ -1,5 +1,6 @@
 import type {Session} from '../lib/curriculum';
-import {supabase,SUPABASE_URL,SUPABASE_PUBLIC_KEY} from './supabase';
+import {SUPABASE_URL,SUPABASE_PUBLIC_KEY} from './supabase';
+import {backend} from './backend';
 import {broadcastWidgetProgress} from './widget-notify';
 
 // Best-effort notification for Übersicht. Only the account-scoped topic is
@@ -16,8 +17,8 @@ function notifyDesktopWidgets(account:string){
 
 export async function progressRequest(method:'GET'|'PUT', account:string, body:Session|undefined, signal:AbortSignal){
  const call=method==='GET'
-  ?supabase.rpc('hanzi_read_progress',{expected_account:account})
-  :supabase.rpc('hanzi_save_progress',{expected_account:account,checkpoint:body});
+  ?backend.rpc('hanzi_read_progress',{expected_account:account})
+  :backend.rpc('hanzi_save_progress',{expected_account:account,checkpoint:body});
  const {data,error,status}=await call.abortSignal(signal);
  if(error){
   const unauthorized=error.code==='28000'||status===401;

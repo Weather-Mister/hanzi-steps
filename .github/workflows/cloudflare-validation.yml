@@ -1,0 +1,39 @@
+name: Validate Cloudflare backend
+on:
+  pull_request:
+    paths:
+      - 'cloudflare/**'
+      - 'pages/**'
+      - 'lib/use-*mastery.ts'
+      - 'scripts/*cloudflare*'
+      - 'tests/cloudflare.test.mjs'
+      - 'vite.pages.config.ts'
+      - '.github/workflows/cloudflare-validation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run cloudflare:generate
+      - run: git diff --exit-code -- cloudflare/lesson-lengths.sql
+      - run: npm run cloudflare:check
+      - run: npm run cloudflare:test
+      - run: npm run cloudflare:build
+      - name: Build Cloudflare-only frontend
+        run: npm run build:pages
+        env:
+          VITE_HANZI_API_URL: https://hanzi-api.example.test
+      - name: Verify provider isolation
+        run: |
+          if rg -l 'supabase|evckshjtzikuusnkdnjn' dist-pages/assets/*.js; then
+            echo 'Cloudflare build still contains the old provider'
+            exit 1
+          fi

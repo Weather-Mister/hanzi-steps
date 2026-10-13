@@ -44,3 +44,7 @@ next-env.d.ts
 /work/
 
 /dist-pages/
+
+# Cloudflare-local staging, logs and generated bundles
+/cloudflare/work/
+/cloudflare/.wrangler/
