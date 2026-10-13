@@ -22,7 +22,7 @@ Preserve the existing `hanzi_push_config` VAPID public/private key and subject
 as Worker secrets (`VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`).
 Do not generate a new signing key: installed PWA subscriptions are tied to the
 old key. Never place the private key, subscriptions, snapshots, imports or
-learner records in Git, Actions artifacts, client env values or logs.
+learner records in plaintext Git files, Actions artifacts, client env values or logs.
 
 Username-only profiles preserve the current access model. The Worker accepts
 only existing account mappings, validates checkpoints against server metadata,
@@ -90,6 +90,26 @@ The user can configure this from their own authenticated browser:
 
 This is provisioning only. Complete the final source freeze, private transfer,
 remote field comparison and activation below before setting `HANZI_API_URL`.
+
+The `Migrate Hanzi data to Cloudflare` workflow supports a sealed transfer when
+credentials remain exclusively in GitHub secrets. Its `prepare` step creates
+a 3072-bit RSA key pair in the inactive D1 and emits only the public manifest.
+`scripts/cloudflare-sealed-transfer.mjs` encrypts the final Hanzi snapshot and
+existing VAPID settings with RSA-OAEP-SHA256 plus AES-256-GCM, bound to that
+specific database, Worker URL and key. Only the encrypted envelope may be
+committed as `cloudflare/migration-transfer.sealed.json`; plaintext stays in
+ignored private working storage. The private decryption key remains in D1.
+
+The `import` step refuses unfrozen/stale sources, decrypts in memory, imports
+using transactional chunks with resumable cursors, compares every field,
+tests an imported historical attempt retry, validates current/historical lesson
+bounds and uploads the original signing settings through stdin. It logs only
+table counts and validation results. `activate` opens readiness and checks all
+imported profiles, progress, mastery and widget responses, closes readiness
+if those checks fail, and removes the temporary private decryption key after
+success. `enable-push` is a separate step after cutover; the original source
+scheduler remains disabled. The encrypted envelope can then be removed from
+the current tree. Do not add plaintext transfers or private key artifacts.
 
 ## Final cutover
 

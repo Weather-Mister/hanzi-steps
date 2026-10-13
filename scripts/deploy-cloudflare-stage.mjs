@@ -40,11 +40,17 @@ export async function deployStage({accountId,token,send=fetch,run=runWrangler,wo
  const output=await run(['deploy','--config',configPath],{accountId,token});
  const url=output.match(/https:\/\/hanzi-steps-api\.[a-z0-9-]+\.workers\.dev\b/i)?.[0];
  if(!url)throw new Error('Deployment did not report a workers.dev URL. Complete Workers onboarding in Cloudflare and rerun staging.');
- const health=await send(url+'/health');const status=await health.json();
- if(!health.ok||status.backend!=='cloudflare')throw new Error('The deployed backend health check failed.');
+ await waitForHealth(url,send);
  console.log('Cloudflare staging backend:',url);
  console.log('Production stays on Supabase. No learner data or signing keys were imported, and notifications remain disabled.');
  return {url,databaseId:database.uuid};
+}
+export async function waitForHealth(url,send=fetch,pause=ms=>new Promise(resolve=>setTimeout(resolve,ms))){
+ for(let attempt=0;attempt<12;attempt++){
+  try{const response=await send(url+'/health');if(response.ok&&(await response.json()).backend==='cloudflare')return;}catch{}
+  if(attempt<11)await pause(5000);
+ }
+ throw new Error('The Worker was uploaded, but its public health check is not ready. Retry staging after Cloudflare finishes propagating the address.');
 }
 async function runWrangler(args,{accountId,token}){
  return await new Promise((resolve,reject)=>{

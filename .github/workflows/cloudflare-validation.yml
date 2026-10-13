@@ -7,6 +7,9 @@ on:
       - 'lib/use-*mastery.ts'
       - 'scripts/*cloudflare*'
       - 'tests/cloudflare.test.mjs'
+      - 'tests/cloudflare-stage.test.mjs'
+      - 'tests/cloudflare-transfer.test.mjs'
+      - '.github/workflows/cloudflare-migrate.yml'
       - 'vite.pages.config.ts'
       - '.github/workflows/cloudflare-validation.yml'
   workflow_dispatch:

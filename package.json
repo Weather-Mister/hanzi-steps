@@ -22,7 +22,7 @@
     "build:pages": "npm run course:generate && npm run course:check && npm run check:characters && vite build --config vite.pages.config.ts",
     "dev:pages": "vite --config vite.pages.config.ts",
     "cloudflare:generate": "node --experimental-strip-types scripts/generate-cloudflare-lessons.mjs",
-    "cloudflare:test": "node --experimental-strip-types --test tests/cloudflare.test.mjs tests/cloudflare-stage.test.mjs",
+    "cloudflare:test": "node --experimental-strip-types --test tests/cloudflare.test.mjs tests/cloudflare-stage.test.mjs tests/cloudflare-transfer.test.mjs",
     "cloudflare:check": "tsc -p cloudflare/tsconfig.json --noEmit",
     "cloudflare:build": "wrangler deploy --dry-run --config cloudflare/wrangler.jsonc"
   },
