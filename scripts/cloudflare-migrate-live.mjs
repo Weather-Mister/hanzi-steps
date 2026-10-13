@@ -94,7 +94,7 @@ async function importSnapshot(query,batch,uploadSecrets){
  await batch([set('transfer_verified',hash),set('sourceFrozen','true'),set('sourceCronPaused','true')]);
  console.log('Remote field comparison, historical retry, '+ids.size+' current lesson bounds and VAPID transfer passed. Readiness remains closed.');
 }
-async function smoke(query){
+async function smoke(query,batch){
  await waitForHealth(workerUrl);
  const profiles=await query('SELECT username,legacy_user_id FROM username_accounts ORDER BY username');
  if(!profiles.length)throw new Error('No imported profiles.');
@@ -111,6 +111,39 @@ async function smoke(query){
   const widget=await fetch(workerUrl+'/widget?account='+claimed);if(!widget.ok||!(await widget.json()).version)throw new Error('Live widget read failed.');
  }
  console.log('All '+profiles.length+' imported profiles resolve; live progress, mastery and widgets pass.');
+ const rpc=async(name,args)=>fetch(workerUrl+'/rpc/'+name,{method:'POST',headers:{'Content-Type':'application/json',Origin:'https://weather-mister.github.io'},body:JSON.stringify(args)});
+ const accounts=[],suffix=crypto.randomUUID().slice(0,8);let socket;
+ try{
+  for(const letter of ['a','b']){
+   const response=await rpc('hanzi_claim_username',{p_username:'migration_probe_'+letter+'_'+suffix});
+   if(!response.ok)throw new Error('Live save probe profile could not be created.');accounts.push(await response.json());
+  }
+  const account=accounts[0],other=accounts[1];
+  const lesson=(await query('SELECT lesson_id,steps FROM lesson_lengths WHERE steps>1 ORDER BY lesson_id LIMIT 1'))[0];
+  if(!lesson)throw new Error('No curriculum lesson for the live save probe.');
+  const checkpoint={id:crypto.randomUUID(),lessonId:lesson.lesson_id,index:1,independent:1,assisted:0,complete:false,updatedAt:Date.now()};
+  socket=new WebSocket(workerUrl.replace('https:','wss:')+'/widgets/events?account='+account);
+  const event=type=>new Promise((resolve,reject)=>{
+   const timeout=setTimeout(()=>reject(new Error('Live widget '+type+' timed out.')),15000);
+   if(type==='open'){socket.addEventListener('open',()=>{clearTimeout(timeout);resolve();},{once:true});socket.addEventListener('error',()=>{clearTimeout(timeout);reject(new Error('Live widget connection failed.'));},{once:true});}
+   else socket.addEventListener('message',function listener(message){let data;try{data=JSON.parse(message.data);}catch{return;}if(data.event===type||data.type===type){socket.removeEventListener('message',listener);clearTimeout(timeout);resolve(data);}});
+  });
+  await event('open');const changed=event('progress');
+  const saved=await rpc('hanzi_save_progress',{expected_account:account,checkpoint});
+  if(!saved.ok||!(await saved.json()).saved)throw new Error('Live checkpoint save failed.');await changed;
+  const cross=await rpc('hanzi_save_progress',{expected_account:other,checkpoint:{...checkpoint,index:Math.min(2,lesson.steps-1)}});if(cross.status!==409)throw new Error('Live cross-account checkpoint isolation failed.');
+  const delayed=await rpc('hanzi_save_progress',{expected_account:account,checkpoint:{...checkpoint,index:0,independent:0}});if(!delayed.ok)throw new Error('Live delayed checkpoint receipt failed.');
+  const reloaded=await rpc('hanzi_read_progress',{expected_account:account});const read=await reloaded.json();if(read.sessions.find(row=>row.id===checkpoint.id)?.index!==1)throw new Error('Live delayed save regressed a checkpoint.');
+  const done=await rpc('hanzi_save_progress',{expected_account:account,checkpoint:{...checkpoint,index:lesson.steps,complete:true}});const receipt=await done.json();if(!done.ok||!receipt.studyDays?.includes(new Date(Date.now()+8*3600000).toISOString().slice(0,10)))throw new Error('Live completion/study day check failed.');
+  const attempt={expected_account:account,p_attempt_id:crypto.randomUUID(),p_item_id:'word:一',p_mode:'recognition',p_correct:true,p_assisted:false,p_session_kind:'daily'};
+  for(let i=0;i<2;i++){const response=await rpc('hanzi_record_practice_attempt',attempt);if(!response.ok||(await response.json()).attempts!==1)throw new Error('Live practice retry counted twice.');}
+  console.log('Live save/reload, delayed retry, completion day, account isolation, practice idempotency and widget event delivery pass.');
+ }finally{
+  socket?.close();
+  // Only ephemeral profiles created by this check are removed; imported
+  // learner rows are never mutated by the live save probe.
+  for(const account of accounts)await batch(['hanzi_sessions','practice_attempt_events','practice_skill_state','mastered_vocab','hanzi_push_subscriptions','hanzi_push_log'].map(table=>({sql:'DELETE FROM '+table+' WHERE user_id=?',params:[account]})).concat([{sql:'DELETE FROM username_accounts WHERE legacy_user_id=?',params:[account]}]));
+ }
 }
 async function wrangler(args,input){
  return new Promise((resolve,reject)=>{
@@ -138,13 +171,13 @@ export async function migrate(mode){
  const state=await settings(query);if(!state.transfer_verified||state.transfer_verified!==state.transfer_digest||state.sourceFrozen!=='true'||state.sourceCronPaused!=='true')throw new Error('Import verification is incomplete.');
  if(mode==='activate'){
   await batch([set('ready','true')]);
-  try{await smoke(query);}catch(error){await batch([set('ready','false')]);throw error;}
+  try{await smoke(query,batch);}catch(error){await batch([set('ready','false')]);throw error;}
   // Remove the private transfer key only after successful activation. This
   // cannot be used to decrypt the committed encrypted bundle afterwards.
   await batch([{sql:"DELETE FROM migration_state WHERE key='transfer_private'"}]);
- }else if(mode==='verify'){if(state.ready!=='true')throw new Error('Backend is inactive.');await smoke(query);}
+ }else if(mode==='verify'){if(state.ready!=='true')throw new Error('Backend is inactive.');await smoke(query,batch);}
  else if(mode==='enable-push'){
-  if(state.ready!=='true')throw new Error('Backend is inactive.');await smoke(query);
+  if(state.ready!=='true')throw new Error('Backend is inactive.');await smoke(query,batch);
   config.vars.PUSH_ENABLED='true';await writeFile(configPath,JSON.stringify(config));await wrangler(['deploy','--config',configPath]);await waitForHealth(workerUrl);await batch([set('pushEnabled','true')]);
  }else throw new Error('Unknown migration mode.');
  console.log('Cloudflare migration step complete: '+mode);
