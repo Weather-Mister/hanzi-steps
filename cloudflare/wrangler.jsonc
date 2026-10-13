@@ -9,8 +9,8 @@
     "PUSH_ENABLED": "false"
   },
   "d1_databases": [{
-    "binding": "DB", "database_name": "hanzi-steps",
-    "database_id": "REPLACE_WITH_CREATED_D1_ID",
+    "binding": "DB", "database_name": "hanzi-steps-migration",
+    "database_id": "eb12d6dd-e8f7-4636-b0e9-c6ba772896bb",
     "migrations_dir": "migrations"
   }],
   "durable_objects": {"bindings": [{"name":"WIDGET_EVENTS","class_name":"WidgetEvents"}]},

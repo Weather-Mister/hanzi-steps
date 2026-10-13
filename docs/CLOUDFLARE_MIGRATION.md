@@ -1,5 +1,35 @@
 # Hanzi Steps → Cloudflare Workers + D1
 
+## Live deployment — 13 October 2026
+
+Backend: `https://hanzi-steps-api.weatherisgood06.workers.dev`.
+D1: `hanzi-steps-migration` (`eb12d6dd-e8f7-4636-b0e9-c6ba772896bb`).
+The repository variable `HANZI_API_URL` selects Cloudflare for production Pages.
+
+The final source snapshot at 02:31:21 UTC passed local and remote field
+comparisons: 4 username profiles, 1,232 lesson metadata rows, 311 sessions,
+169 mastered entries, 956 mastery states, 1,950 practice events, 9 push
+subscriptions and 39 notification history rows. All 1,218 current lesson
+bounds and previous/historical bounds passed validation. The original VAPID
+signing settings were transferred, and the temporary decryption key was
+removed after activation. Live profile reads, save/reload, monotonic delayed
+saves, completion days, cross-account isolation, practice retry idempotency
+and widget event delivery passed using isolated ephemeral probe profiles.
+
+Only Hanzi writes are frozen in the source through
+`hanzi_cloudflare_write_freeze` triggers. Only `hanzi-push-hourly` is paused.
+The shared Supabase project continues serving the other applications.
+The legacy `hanzi-widget` endpoint forwards to Cloudflare and retains
+`verify_jwt=true`; existing polling widgets and schedule proxies keep their
+old URL. External Realtime listeners still need to use the Cloudflare
+WebSocket URL for immediate updates.
+
+`Deploy Cloudflare production backend` updates Worker code and curriculum
+bounds while retaining the stored notification activation state. GitHub
+Pages keeps its existing origin and PWA scope. The old source data and
+rollback definitions are retained; never unfreeze source writes after
+Cloudflare has new learner writes without reconciling them first.
+
 The GitHub Pages application can switch to a standalone Cloudflare backend.
 The default build remains on Supabase until the verified cutover. Set the
 GitHub Actions repository variable `HANZI_API_URL` to the deployed Worker URL

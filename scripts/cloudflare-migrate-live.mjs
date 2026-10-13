@@ -176,6 +176,13 @@ export async function migrate(mode){
   // cannot be used to decrypt the committed encrypted bundle afterwards.
   await batch([{sql:"DELETE FROM migration_state WHERE key='transfer_private'"}]);
  }else if(mode==='verify'){if(state.ready!=='true')throw new Error('Backend is inactive.');await smoke(query,batch);}
+ else if(mode==='deploy'){
+  if(state.ready!=='true')throw new Error('Backend is inactive.');
+  const metadata=(await readFile(path.join(root,'cloudflare/lesson-lengths.sql'),'utf8')).split(';').filter(sql=>sql.trim());
+  for(let i=0;i<metadata.length;i+=15)await batch(metadata.slice(i,i+15).map(sql=>({sql})));
+  config.vars.PUSH_ENABLED=state.pushEnabled==='true'?'true':'false';await writeFile(configPath,JSON.stringify(config));
+  await wrangler(['deploy','--config',configPath]);await smoke(query,batch);
+ }
  else if(mode==='enable-push'){
   if(state.ready!=='true')throw new Error('Backend is inactive.');await smoke(query,batch);
   config.vars.PUSH_ENABLED='true';await writeFile(configPath,JSON.stringify(config));await wrangler(['deploy','--config',configPath]);await waitForHealth(workerUrl);await batch([set('pushEnabled','true')]);

@@ -1,7 +1,7 @@
 // Transitional read-only bridge for installed widgets and the schedule proxy.
 // Substitute the verified Worker URL before deploying as hanzi-widget. Keep the
 // existing platform JWT setting. This reads no Supabase tables or secrets.
-const BACKEND_URL='REPLACE_WITH_DEPLOYED_WORKER_URL';
+const BACKEND_URL='https://hanzi-steps-api.weatherisgood06.workers.dev';
 Deno.serve(async(request:Request)=>{
  const headers={'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};
  if(request.method!=='GET')return new Response(JSON.stringify({error:'GET required.'}),{status:405,headers});
