@@ -1,7 +1,7 @@
 import {FormEvent,useEffect,useRef,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {LearningApp} from '../components/learning-app';
-import {supabase} from './supabase';
+import {backend} from './backend';
 import {NotificationSettings} from './notification-settings';
 import '../app/globals.css';
 import '../app/desktop.css';
@@ -27,7 +27,7 @@ function App(){
   const version=++attempt.current;
   setBusy(true);setError('');
   try{
-   const {data,error:claimError}=await supabase.rpc('hanzi_claim_username',{p_username:name});
+   const {data,error:claimError}=await backend.rpc('hanzi_claim_username',{p_username:name});
    if(claimError)throw claimError;
    if(typeof data!=='string'||!/^account-v1-[a-f0-9]{64}$/.test(data))throw new Error('Invalid account');
    if(version!==attempt.current)return;

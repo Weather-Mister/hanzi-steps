@@ -1,6 +1,6 @@
 'use client';
 import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
-import {supabase} from '@/pages/supabase';
+import {backend} from '@/pages/backend';
 import {
  practiceSkillKey,
  updatePracticeState,
@@ -148,7 +148,7 @@ export function usePracticeMastery(userKey:string){
   try{
    while(activeKeyRef.current===key&&pendingRef.current.length){
     const attempt=pendingRef.current[0];
-    const {data,error:saveError}=await supabase.rpc('hanzi_record_practice_attempt',{
+    const {data,error:saveError}=await backend.rpc('hanzi_record_practice_attempt',{
      expected_account:key,
      p_attempt_id:attempt.attemptId,
      p_item_id:attempt.itemId,
@@ -201,7 +201,7 @@ export function usePracticeMastery(userKey:string){
   }
 
   setLoading(true);
-  void supabase.rpc('hanzi_read_practice_state',{expected_account:userKey}).then(({data,error:readError})=>{
+  void backend.rpc('hanzi_read_practice_state',{expected_account:userKey}).then(({data,error:readError})=>{
    if(cancelled||activeKeyRef.current!==userKey)return;
    if(readError){
     setError('Practice history could not sync. Local practice still works.');
@@ -274,7 +274,7 @@ export function usePracticeMastery(userKey:string){
    return;
   }
   setSaving(true);
-  const {data,error:readError}=await supabase.rpc('hanzi_read_practice_state',{expected_account:userKey});
+  const {data,error:readError}=await backend.rpc('hanzi_read_practice_state',{expected_account:userKey});
   setSaving(false);
   if(readError){
    setError('Practice history could not sync. Local practice still works.');
