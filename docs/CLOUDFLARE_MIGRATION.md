@@ -67,6 +67,30 @@ Wrangler commands must be checked against the installed CLI's `--help` before
 running, especially for D1 file imports, secret upload and deployment. The
 checked-in database ID is deliberately a placeholder until provisioning.
 
+## Deployment when the shared browser cannot sign in
+
+Use the prepared `Deploy Cloudflare staging backend` GitHub Actions workflow.
+The user can configure this from their own authenticated browser:
+
+1. Cloudflare → **My Profile → API Tokens → Create Token → Create Custom Token**.
+   Name it `Hanzi Steps deployment`. Scope it to the intended Cloudflare account
+   and grant **Account / Workers Scripts / Edit**, **Account / D1 / Edit**, and
+   **Account / Account Settings / Read**. No zone, DNS, billing, global API key,
+   mail or unrelated application permissions are needed. An expiry can be set
+   after the migration window.
+2. In `Weather-Mister/hanzi-steps` → **Settings → Secrets and variables → Actions**,
+   add repository secrets `CLOUDFLARE_API_TOKEN` (the scoped token) and
+   `CLOUDFLARE_ACCOUNT_ID` (the 32-character account ID from Cloudflare).
+   Keep token values out of chats, code, logs and screenshots.
+3. Once the workflow is on the default branch, trigger it. It creates/reuses
+   only the dedicated `hanzi-steps-migration` staging D1, refuses unrelated or
+   active databases, applies the schema and deploys the inactive Worker.
+   Its summary reports the backend URL and D1 ID. It imports no learner data,
+   leaves the readiness gate closed, disables push, and does not switch Pages.
+
+This is provisioning only. Complete the final source freeze, private transfer,
+remote field comparison and activation below before setting `HANZI_API_URL`.
+
 ## Final cutover
 
 Complete these steps as one controlled handoff; a preliminary snapshot alone
