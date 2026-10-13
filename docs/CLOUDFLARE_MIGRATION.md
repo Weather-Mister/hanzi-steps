@@ -20,9 +20,17 @@ Only Hanzi writes are frozen in the source through
 `hanzi_cloudflare_write_freeze` triggers. Only `hanzi-push-hourly` is paused.
 The shared Supabase project continues serving the other applications.
 The legacy `hanzi-widget` endpoint forwards to Cloudflare and retains
-`verify_jwt=true`; existing polling widgets and schedule proxies keep their
-old URL. External Realtime listeners still need to use the Cloudflare
-WebSocket URL for immediate updates.
+`verify_jwt=true`. However, requests to the old Supabase endpoint currently
+return HTTP 402 with `exceed_cached_egress_quota`; the platform blocks the
+request before the bridge executes. Move widgets and schedule proxies to
+the direct Cloudflare `/widget` URL. External Realtime listeners also need
+the Cloudflare WebSocket URL for immediate updates. Installed widget and
+schedule files have not yet been updated; see `CLOUDFLARE_HANDOFF.md`.
+
+Production Worker and Pages deployment workflows passed. Cloudflare reminder
+activation passed in run `38338492704`; original subscriptions/signing keys
+are preserved. Physical PWA delivery and installed-device refresh have not
+been observed from this environment.
 
 `Deploy Cloudflare production backend` updates Worker code and curriculum
 bounds while retaining the stored notification activation state. GitHub
