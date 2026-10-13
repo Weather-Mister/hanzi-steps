@@ -24,3 +24,14 @@ Remaining work:
 5. Confirm actual notification delivery on the user's subscribed device if needed; backend encryption/scheduling checks passed, but physical delivery was not observed.
 
 Do not rerun migration preparation/import, create a replacement database, regenerate VAPID keys, or migrate unrelated apps. The production workflow preserves reminder activation and updates curriculum bounds. Keep everything on free plans. Finish with a precise account of what works and any remaining user device steps.
+
+## Follow-up — 13 October 2026: GitHub schedule widget cutover
+
+- GitHub-hosted NTU schedule source is in `Weather-Mister/ntu-mail-push`, not this repository or the retired alternate schedule host.
+- PR [#82](https://github.com/Weather-Mister/ntu-mail-push/pull/82) was **merged** as `940f76f23ece63d892e78b94885ab400bcb7089e`.
+- Eren's **modern** `sites/eren/app.js` and **skeuomorphic** `sites/eren/skeuo-runtime.js` now fetch `https://hanzi-steps-api.weatherisgood06.workers.dev/widget?username=eren` **directly**, bypassing the quota-blocked Supabase bridge and the schedule's unrelated paired API. No schedule appearance changes; other mail, task, transfer and class API calls remain paired as before.
+- GitHub Pages production [deploy run 38339639812](https://github.com/Weather-Mister/ntu-mail-push/actions/runs/38339639812) **succeeded**, including the **live Cloudflare widget response and GitHub Pages CORS smoke check** and existing application validation. The schedule PWA's asset and service-worker revisions were incremented; the origin/storage/registration are preserved.
+- The **current Scriptable widget source** was provided by the user in chat. It uses `shortcuts://run-shortcut?name=OpenHanzi`, file cache `hanzi-widget-cache-v4.json`, and a Supabase JSON endpoint. A complete Cloudflare-adjusted JS replacement was created and syntax/mock-runtime-tested in that conversation. **It must still be copied into Scriptable on the user's device**; ChatGPT cannot edit locally installed Scriptable files remotely. To modify the original instead, change only `DATA_URL` to the Worker `/widget?username=eren` endpoint and remove the Supabase `ANON_KEY` and `Authorization`/`apikey` headers; preserve the cache name and widget designs.
+- Per the user's latest instruction, **Übersicht is out of scope**; leave it unchanged.
+- The remaining independent device checks are **published app sign-in and display of imported progress**, **installed Hanzi PWA refresh and queued offline-save reconciliation without clearing storage**, and **actual subscribed-device notification delivery**. Backend save/reload, imported account reads, preserved VAPID and reminder activation were already verified in the main migration, but physical device behavior cannot be claimed without observation.
+- Do **not** unfreeze old Hanzi writes or restart the old Hanzi reminders. Do **not** stop the shared Supabase project, which other applications still use.
