@@ -28,7 +28,7 @@ test('live statistics merge local completed sessions before remote study-day syn
 test('mastery changes update local state before the network save and roll back on failure',async()=>{
  const source=await readFile(root+'lib/use-mega-mastery.ts','utf8');
  const apply=source.indexOf('applyLocal(id,value);');
- const rpc=source.indexOf("supabase.rpc('hanzi_set_mastered'");
+ const rpc=source.indexOf("backend.rpc('hanzi_set_mastered'");
  const rollback=source.indexOf('applyLocal(id,!value);');
  assert.ok(apply>=0&&rpc>apply,'mastery should update locally before saving');
  assert.ok(rollback>rpc,'failed mastery saves should roll back the optimistic state');
