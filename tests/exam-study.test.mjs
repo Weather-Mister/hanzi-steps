@@ -94,6 +94,34 @@ test('Week 4 exam list exactly matches supplied textbook vocabulary and is isola
  assert.ok(items.every(item=>item.characters.length>0));
 });
 
+test('Week 5 exam list exactly matches photographed Practical Audio-Visual Chinese vocabulary and is isolated',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===5);
+ assert.ok(set);
+ assert.equal(set.title,'Week 5');
+ assert.deepEqual(set.words,[
+  {traditional:'喜歡',pinyin:'xǐhuān / sǐhuān',meaning:'to like'},
+  {traditional:'看',pinyin:'kàn',meaning:'to watch, to read, to look at'},
+  {traditional:'電影',pinyin:'diànyǐng',meaning:'movie'},
+  {traditional:'電視',pinyin:'diànshì / diànshih',meaning:'television, TV, TV set'},
+  {traditional:'都',pinyin:'dōu',meaning:'all, both'},
+  {traditional:'有',pinyin:'yǒu',meaning:'to have; there is, there are'},
+  {traditional:'沒',pinyin:'méi',meaning:'not (have)'},
+  {traditional:'要',pinyin:'yào',meaning:'to want'},
+  {traditional:'汽車',pinyin:'qìchē / cìchē',meaning:'automobile, car'},
+  {traditional:'車',pinyin:'chē',meaning:'vehicle, car'},
+  {traditional:'買',pinyin:'mǎi',meaning:'to buy'},
+  {traditional:'好看',pinyin:'hǎokàn',meaning:'to be good-looking'},
+  {traditional:'可是',pinyin:'kěshì / kěshih',meaning:'but'},
+ ]);
+
+ const items=examStudyItems(set);
+ assert.equal(items.length,13); // 12 numbered entries and supplementary 車.
+ assert.equal(new Set(items.map(item=>item.id)).size,13);
+ assert.ok(items.every(item=>item.lessonId==='exam-study-5'));
+ assert.ok(items.every(item=>item.characters.length>0));
+ assert.ok(items.every(item=>item.unitId===undefined&&item.bookId===undefined));
+});
+
 test('Exam Study sets use Mega Challenge queue semantics without progress state',()=>{
  for(const set of examStudySets){
   const items=examStudyItems(set);
