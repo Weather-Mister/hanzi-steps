@@ -46,6 +46,15 @@ test('Week 4 handwriting targets include every supplied Traditional form',()=>{
  }
 });
 
+test('Week 5 handwriting targets contain all the photographed Traditional characters, including supplementary 車',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===5);
+ assert.ok(set);
+ const chars=new Set(examStudyItems(set).flatMap(item=>item.characters));
+ for(const char of ['喜','歡','看','電','影','視','都','有','沒','要','汽','車','買','好','可','是']){
+  assert.ok(chars.has(char),`Week 5 must include ${char}`);
+ }
+});
+
 test('stroke geometry validator accepts repaired data and rejects inverted 國 guides',()=>{
  assert.equal(strokeGeometryLooksAligned(strokeData['人']),true);
  const guo=strokeData['國'];

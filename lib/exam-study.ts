@@ -98,6 +98,25 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'冷',pinyin:'lěng',meaning:'to be cold'},
   ],
  },
+ {
+  id:5,
+  title:'Week 5',
+  words:[
+   {traditional:'喜歡',pinyin:'xǐhuān / sǐhuān',meaning:'to like'},
+   {traditional:'看',pinyin:'kàn',meaning:'to watch, to read, to look at'},
+   {traditional:'電影',pinyin:'diànyǐng',meaning:'movie'},
+   {traditional:'電視',pinyin:'diànshì / diànshih',meaning:'television, TV, TV set'},
+   {traditional:'都',pinyin:'dōu',meaning:'all, both'},
+   {traditional:'有',pinyin:'yǒu',meaning:'to have; there is, there are'},
+   {traditional:'沒',pinyin:'méi',meaning:'not (have)'},
+   {traditional:'要',pinyin:'yào',meaning:'to want'},
+   {traditional:'汽車',pinyin:'qìchē / cìchē',meaning:'automobile, car'},
+   {traditional:'車',pinyin:'chē',meaning:'vehicle, car'},
+   {traditional:'買',pinyin:'mǎi',meaning:'to buy'},
+   {traditional:'好看',pinyin:'hǎokàn',meaning:'to be good-looking'},
+   {traditional:'可是',pinyin:'kěshì / kěshih',meaning:'but'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
