@@ -81,3 +81,5 @@ claimed historical etymologies. Strokes follow AnimCJK's Taiwan-specific variant
 
 Follow [ADDING_A_UNIT.md](ADDING_A_UNIT.md). Normal additions change one unit
 module, its glyph file and one manifest entry; generated outputs are automatic.
+
+<!-- Pages republish trigger: restored public repository visibility, 2026-10-20. -->
