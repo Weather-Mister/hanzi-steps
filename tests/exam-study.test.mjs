@@ -122,6 +122,37 @@ test('Week 5 exam list exactly matches photographed Practical Audio-Visual Chine
  assert.ok(items.every(item=>item.unitId===undefined&&item.bookId===undefined));
 });
 
+test('Week 6 exam list faithfully includes numbered and supplementary vocabulary from pages 87–88',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===6);
+ assert.ok(set);
+ assert.equal(set.title,'Week 6');
+ assert.deepEqual(set.words,[
+  {traditional:'貴',pinyin:'guì / guèi',meaning:'to be expensive'},
+  {traditional:'書',pinyin:'shū',meaning:'book'},
+  {traditional:'日本',pinyin:'Rìběn / Rìhben',meaning:'Japan; Japanese'},
+  {traditional:'筆',pinyin:'bǐ',meaning:'pen'},
+  {traditional:'德國',pinyin:'Déguó',meaning:'Germany; German'},
+  {traditional:'報',pinyin:'bào',meaning:'newspaper(s)'},
+  {traditional:'法文',pinyin:'Fǎwén / Fǎwún',meaning:'the French language'},
+  {traditional:'法',pinyin:'Fǎ',meaning:'transliteration of the F in France'},
+  {traditional:'法國',pinyin:'Fǎguó',meaning:'France; French'},
+  {traditional:'文',pinyin:'wén / wún',meaning:'written language'},
+  {traditional:'英文',pinyin:'Yīngwén / Yīngwún',meaning:'the English language'},
+  {traditional:'中文',pinyin:'Zhōngwén / Jhōngwún',meaning:'the Chinese language'},
+  {traditional:'華文',pinyin:'Huáwén / Huáwún',meaning:'the Chinese language'},
+  {traditional:'德文',pinyin:'Déwén / Déwún',meaning:'the German language'},
+  {traditional:'日文',pinyin:'Rìwén / Rìhwún',meaning:'the Japanese language'},
+  {traditional:'東西',pinyin:'dōngxī, dōngxi / dōngsī, dōngsi',meaning:'thing'},
+  {traditional:'懂',pinyin:'dǒng',meaning:'to know; to understand'},
+ ]);
+ const items=examStudyItems(set);
+ assert.equal(items.length,17); // 9 numbered entries plus 8 supplementary language entries.
+ assert.equal(new Set(items.map(item=>item.id)).size,17);
+ assert.ok(items.every(item=>item.lessonId==='exam-study-6'));
+ assert.ok(items.every(item=>item.characters.length>0));
+ assert.ok(items.every(item=>item.unitId===undefined&&item.bookId===undefined));
+});
+
 test('Exam Study sets use Mega Challenge queue semantics without progress state',()=>{
  for(const set of examStudySets){
   const items=examStudyItems(set);
