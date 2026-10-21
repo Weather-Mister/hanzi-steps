@@ -117,6 +117,29 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'可是',pinyin:'kěshì / kěshih',meaning:'but'},
   ],
  },
+ {
+  id:6,
+  title:'Week 6',
+  words:[
+   {traditional:'貴',pinyin:'guì / guèi',meaning:'to be expensive'},
+   {traditional:'書',pinyin:'shū',meaning:'book'},
+   {traditional:'日本',pinyin:'Rìběn / Rìhben',meaning:'Japan; Japanese'},
+   {traditional:'筆',pinyin:'bǐ',meaning:'pen'},
+   {traditional:'德國',pinyin:'Déguó',meaning:'Germany; German'},
+   {traditional:'報',pinyin:'bào',meaning:'newspaper(s)'},
+   {traditional:'法文',pinyin:'Fǎwén / Fǎwún',meaning:'the French language'},
+   {traditional:'法',pinyin:'Fǎ',meaning:'transliteration of the F in France'},
+   {traditional:'法國',pinyin:'Fǎguó',meaning:'France; French'},
+   {traditional:'文',pinyin:'wén / wún',meaning:'written language'},
+   {traditional:'英文',pinyin:'Yīngwén / Yīngwún',meaning:'the English language'},
+   {traditional:'中文',pinyin:'Zhōngwén / Jhōngwún',meaning:'the Chinese language'},
+   {traditional:'華文',pinyin:'Huáwén / Huáwún',meaning:'the Chinese language'},
+   {traditional:'德文',pinyin:'Déwén / Déwún',meaning:'the German language'},
+   {traditional:'日文',pinyin:'Rìwén / Rìhwún',meaning:'the Japanese language'},
+   {traditional:'東西',pinyin:'dōngxī, dōngxi / dōngsī, dōngsi',meaning:'thing'},
+   {traditional:'懂',pinyin:'dǒng',meaning:'to know; to understand'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
