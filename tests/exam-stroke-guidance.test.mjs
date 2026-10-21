@@ -55,6 +55,16 @@ test('Week 5 handwriting targets contain all the photographed Traditional charac
  }
 });
 
+test('Week 6 handwriting practice includes every Traditional character from both photographed pages',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===6);
+ assert.ok(set);
+ const chars=new Set(examStudyItems(set).flatMap(item=>item.characters));
+ for(const char of ['貴','書','日','本','筆','德','國','報','法','文','英','中','華','東','西','懂']){
+  assert.ok(chars.has(char),`Week 6 must include ${char}`);
+ }
+ assert.equal(chars.size,16);
+});
+
 test('stroke geometry validator accepts repaired data and rejects inverted 國 guides',()=>{
  assert.equal(strokeGeometryLooksAligned(strokeData['人']),true);
  const guo=strokeData['國'];
