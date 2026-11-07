@@ -6,9 +6,7 @@ import {readingCheckpoints} from '../lib/reading-checkpoints.ts';
 import {
  cumulativeEncounterForUnit,
  cumulativeEncounterUnitNumbers,
- engagementFrame,
  engagementPrompt,
- isRepairEngagement,
 } from '../lib/lesson-engagement.ts';
 
 const runtimeById=new Map(lessons.map(lesson=>[lesson.id,lesson]));
@@ -23,37 +21,15 @@ test('engagement layer leaves the published curriculum runtime untouched',()=>{
  }
 });
 
-test('every Book 1 unit 11-48 receives varied render-only contextual treatment',()=>{
- for(const module of courseModules.filter(module=>module.bookId==='book-1'&&module.order>=11&&module.order<=48)){
-  const framed=module.lessons.flatMap(lesson=>{
-   const runtime=runtimeById.get(lesson.id);
-   return lesson.steps.map(step=>({lesson:runtime,step,frame:engagementFrame(step,runtime)})).filter(row=>row.frame);
-  });
-  assert.ok(framed.length>0,`unit ${module.order} has no engagement frames`);
-  const kinds=new Set(framed.map(row=>row.frame.kind));
-  assert.ok(kinds.size>=2,`unit ${module.order} needs more than one interaction treatment: ${[...kinds]}`);
-  assert.ok(framed.some(row=>row.frame.kind==='repair'),`unit ${module.order} has no deterministic repair encounter`);
-  for(const {lesson,step} of module.lessons.flatMap(lesson=>lesson.steps.filter(step=>step.type==='produce'||step.type==='visual').map(step=>({lesson:runtimeById.get(lesson.id),step})))){
-   assert.equal(engagementPrompt(step,lesson,phrases),step.prompt,`${step.id} protected prompt changed`);
-   assert.equal(engagementFrame(step,lesson),undefined,`${step.id} protected step received an engagement frame`);
-  }
- }
-});
-
-test('each eligible lesson has at most one repair target and repair never changes grading data',()=>{
- for(const lesson of lessons){
-  const match=lesson.unitId?.match(/^unit-(\d+)$/);
-  const number=match?Number(match[1]):0;
-  if(number<11||number>48)continue;
-  const repairs=lesson.steps.filter(step=>isRepairEngagement(step,lesson));
-  assert.ok(repairs.length<=1,`${lesson.id} has multiple repair targets`);
-  for(const step of repairs){
-   const source=courseModules.flatMap(module=>module.lessons).find(candidate=>candidate.id===lesson.id).steps.find(candidate=>candidate.id===step.id);
-   assert.ok(source,`missing source step ${step.id}`);
-   assert.equal(step.answer,source.answer,`${step.id} repair changed answer`);
-   assert.deepEqual(step.options,source.options,`${step.id} repair changed options`);
-   assert.deepEqual(step.production,source.production,`${step.id} repair changed production contract`);
-  }
+test('ordinary practice no longer wraps exercises in generic situation or reply cards',async()=>{
+ const {readFile}=await import('node:fs/promises');
+ const ui=await readFile(new URL('../components/learning-app.tsx',import.meta.url),'utf8');
+ const metadata=await readFile(new URL('../lib/lesson-engagement.ts',import.meta.url),'utf8');
+ assert.ok(!ui.includes('engagement-frame'));
+ assert.ok(!metadata.includes('Respond in Chinese to this situation'));
+ assert.ok(!metadata.includes('lesson.subtitle'));
+ for(const lesson of lessons)for(const step of lesson.steps.filter(step=>step.type==='produce'||step.type==='visual')){
+  assert.equal(engagementPrompt(step,lesson,phrases),step.prompt);
  }
 });
 
