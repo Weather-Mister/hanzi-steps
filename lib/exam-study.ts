@@ -160,6 +160,33 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'那',pinyin:'nà / nèi',meaning:'that'},
   ],
  },
+ {
+  id:8,
+  title:'Week 8',
+  words:[
+   {traditional:'枝',pinyin:'zhī / jhīh',meaning:'measure word for stick-like things'},
+   {traditional:'多少',pinyin:'duōshǎo',meaning:'how much; how many'},
+   {traditional:'多',pinyin:'duō',meaning:'many; more'},
+   {traditional:'少',pinyin:'shǎo',meaning:'few; less'},
+   {traditional:'錢',pinyin:'qián / cián',meaning:'money'},
+   {traditional:'種',pinyin:'zhǒng / jhǒng',meaning:'kind; type (measure word)'},
+   {traditional:'一',pinyin:'yī',meaning:'one'},
+   {traditional:'二',pinyin:'èr',meaning:'two (number; used in counting)'},
+   {traditional:'三',pinyin:'sān',meaning:'three'},
+   {traditional:'四',pinyin:'sì / sìh',meaning:'four'},
+   {traditional:'五',pinyin:'wǔ',meaning:'five'},
+   {traditional:'六',pinyin:'liù / liòu',meaning:'six'},
+   {traditional:'七',pinyin:'qī / cī',meaning:'seven'},
+   {traditional:'八',pinyin:'bā',meaning:'eight'},
+   {traditional:'九',pinyin:'jiǔ / jiǒu',meaning:'nine'},
+   {traditional:'十',pinyin:'shí / shíh',meaning:'ten'},
+   {traditional:'塊',pinyin:'kuài',meaning:'measure word for dollar'},
+   {traditional:'幾',pinyin:'jǐ',meaning:'a few; several; how many'},
+   {traditional:'兩',pinyin:'liǎng',meaning:'two (used before measure words)'},
+   {traditional:'零錢',pinyin:'língqián / língcián',meaning:'change; coins'},
+   {traditional:'零',pinyin:'líng',meaning:'zero'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
