@@ -140,6 +140,26 @@ export const examStudySets:ExamStudySet[]=[
    {traditional:'懂',pinyin:'dǒng',meaning:'to know; to understand'},
   ],
  },
+ {
+  id:7,
+  title:'Week 7',
+  words:[
+   {traditional:'給',pinyin:'gěi',meaning:'to give'},
+   {traditional:'請',pinyin:'qǐng / cǐng',meaning:'to invite; to request (please...)'},
+   {traditional:'找錢',pinyin:'zhǎoqián / jhǎocián',meaning:'to give change to someone after a purchase'},
+   {traditional:'找',pinyin:'zhǎo / jhǎo',meaning:'to give change after a purchase'},
+   {traditional:'個',pinyin:'ge',meaning:'an all-purpose measure word, especially for nouns without a specific measure word of their own'},
+   {traditional:'和',pinyin:'hàn / hé',meaning:'and; together with'},
+   {traditional:'杯',pinyin:'bēi',meaning:'cup of (measure word)'},
+   {traditional:'一共',pinyin:'yígòng',meaning:'altogether'},
+   {traditional:'毛',pinyin:'máo',meaning:'dime; ten cents (unit of money)'},
+   {traditional:'分',pinyin:'fēn',meaning:'cent (unit of money)'},
+   {traditional:'半',pinyin:'bàn',meaning:'half'},
+   {traditional:'位',pinyin:'wèi',meaning:'polite measure word for people'},
+   {traditional:'本',pinyin:'běn',meaning:'volume; measure word for books, notebooks, etc.'},
+   {traditional:'那',pinyin:'nà / nèi',meaning:'that'},
+  ],
+ },
 ];
 
 const hanziPattern=/[\u3400-\u9fff\uf900-\ufaff]/;
