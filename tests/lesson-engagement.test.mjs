@@ -7,6 +7,7 @@ import {
  cumulativeEncounterForUnit,
  cumulativeEncounterUnitNumbers,
  engagementPrompt,
+ sentenceOrderHeading,
 } from '../lib/lesson-engagement.ts';
 
 const runtimeById=new Map(lessons.map(lesson=>[lesson.id,lesson]));
@@ -29,21 +30,21 @@ test('ordinary practice no longer wraps exercises in generic situation or reply 
  assert.ok(!metadata.includes('Respond in Chinese to this situation'));
  assert.ok(!metadata.includes('lesson.subtitle'));
  for(const lesson of lessons)for(const step of lesson.steps.filter(step=>step.type==='produce'||step.type==='visual')){
-  assert.equal(engagementPrompt(step,lesson,phrases),step.prompt);
+  assert.equal(engagementPrompt(step,lesson),step.prompt);
  }
 });
 
-test('generated order framing is grounded in canonical phrase meaning',()=>{
+test('sentence-building instructions leave the target meaning to the translation card',()=>{
  for(const lesson of lessons){
-  const match=lesson.unitId?.match(/^unit-(\d+)$/);
-  const number=match?Number(match[1]):0;
-  if(number<11||number>48)continue;
-  for(const step of lesson.steps.filter(step=>step.type==='order'&&step.phrase&&!step.prompt)){
-   const phrase=phrases[step.phrase];
-   assert.ok(phrase,`missing phrase ${step.phrase}`);
-   assert.ok(engagementPrompt(step,lesson,phrases)?.includes(phrase.meaning),`${step.id} framing is not grounded in its canonical meaning`);
+  for(const step of lesson.steps.filter(step=>step.type==='order')){
+   const meaning=phrases[step.phrase]?.meaning;
+   assert.ok(meaning,step.id);
+   const heading=sentenceOrderHeading(step.prompt);
+   assert.equal(heading,step.prompt?.trim()||'Build the sentence in Chinese',step.id);
+   assert.ok(!heading.includes(meaning),step.id);
   }
  }
+ assert.equal(sentenceOrderHeading('Use the polite form'),'Use the polite form');
 });
 
 test('cumulative layer creates exactly 13 non-overlapping three-unit encounters from vetted readings',()=>{

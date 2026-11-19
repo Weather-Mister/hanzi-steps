@@ -1,4 +1,4 @@
-import type {Lesson,Phrase,Step,Unit} from '../course/schema.ts';
+import type {Lesson,Step,Unit} from '../course/schema.ts';
 
 export type CumulativeEncounter={
  id:string;
@@ -19,19 +19,17 @@ function inEngagementRange(lesson:Lesson):boolean{
  return number!==null&&number>=ENGAGEMENT_MIN_UNIT&&number<=ENGAGEMENT_MAX_UNIT;
 }
 
+export function sentenceOrderHeading(prompt?:string):string{
+ return prompt?.trim()||'Build the sentence in Chinese';
+}
+
 /**
  * Learner-facing wording only. It is computed at render time so authored
  * steps and regression baselines stay byte-for-byte stable.
  */
-export function engagementPrompt(step:Step,lesson:Lesson,phrases:Record<string,Phrase>):string|undefined{
+export function engagementPrompt(step:Step,lesson:Lesson):string|undefined{
  if(!inEngagementRange(lesson)||step.type==='produce'||step.type==='visual')return step.prompt;
  const original=step.prompt?.trim();
- if(step.type==='order'){
-  const phrase=step.phrase?phrases[step.phrase]:undefined;
-  if(original)return original;
-  if(phrase?.meaning)return `Build the Chinese sentence for “${phrase.meaning}”`;
-  return 'Build the sentence';
- }
  if(step.type==='select')return original||'Choose the answer';
  if(step.type==='listen'){
   if(original)return original;

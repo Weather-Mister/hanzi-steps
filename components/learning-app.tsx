@@ -43,7 +43,7 @@ import {extraUnits,extraLessons,extraUnitComplete,isExtraLesson,wordsForExtraUni
 import '@/app/extras.css';
 import {SentenceBuilder} from './sentence-builder';
 import {buildLessonOrderBank,lessonOrderUnitNumber} from '@/lib/lesson-order-bank';
-import {cumulativeEncounterForUnit,engagementPrompt} from '@/lib/lesson-engagement';
+import {cumulativeEncounterForUnit,engagementPrompt,sentenceOrderHeading} from '@/lib/lesson-engagement';
 import {lineExerciseForStep} from '@/lib/line-exercises';
 import {LineMessage} from './line-message';
 
@@ -76,9 +76,9 @@ function Exercise({step,lesson,prefs,onAdvance,onAttempt,completed,sessionSeed}:
  const support=()=>{setHadHelp(true);hadHelpRef.current=true};
  function result(ok:boolean,text:string,assisted=false){const masteryAssisted=ok&&(assisted||hadHelpRef.current||step.type==='trace'||step.type==='complete');onAttempt?.(step,ok,masteryAssisted);if(assisted)support();if(!ok)support();feel(ok?'success':'retry');setFeedback(ok?'good':'wrong');setExplanation(text)}
  useEffect(()=>{heading.current?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'})},[step.id]);
- const engagedPrompt=engagementPrompt(step,lesson,phrases);
+ const engagedPrompt=engagementPrompt(step,lesson);
  const lineExercise=lineExerciseForStep(step,lesson,phrases);
- const prompts:Record<string,string>={intro:'Meet a new character',trace:'Trace the character',complete:'Finish the missing strokes',memory:'Write it from memory',parts:step.prompt||'Look inside the character',build:'Build the character',match:'Match the pairs',phrase:'Put it into words',grammar:'A useful pattern',visual:step.prompt||'Use the source role prompt',order:engagedPrompt||'Build the translation',listen:engagedPrompt||(step.semanticAnswer?'Choose the meaning you hear':textCue?'Match the pinyin':'Which character do you hear?'),select:engagedPrompt||'Choose the character'};
+ const prompts:Record<string,string>={intro:'Meet a new character',trace:'Trace the character',complete:'Finish the missing strokes',memory:'Write it from memory',parts:step.prompt||'Look inside the character',build:'Build the character',match:'Match the pairs',phrase:'Put it into words',grammar:'A useful pattern',visual:step.prompt||'Use the source role prompt',order:sentenceOrderHeading(step.prompt),listen:engagedPrompt||(step.semanticAnswer?'Choose the meaning you hear':textCue?'Match the pinyin':'Which character do you hear?'),select:engagedPrompt||'Choose the character'};
  const choices=shuffled(step.options||[],step.id);const parts=c?.parts||[];const partOrder=shuffled(parts.map((_,i)=>i),step.id+'parts');const baseTokens=step.tokens||[];
  const orderUnit=lessonOrderUnitNumber(step.id);
  const learnedOrderItems=useMemo(()=>step.type==='order'&&phrase?learnedPracticeItems(completed):[],[step.id,phrase,completed]);

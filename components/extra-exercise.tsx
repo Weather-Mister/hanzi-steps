@@ -2,6 +2,7 @@
 import {useEffect,useRef,useState} from 'react';
 import {Check,Lightbulb,Volume2} from 'lucide-react';
 import type {Step} from '../course/schema';
+import {sentenceOrderHeading} from '../lib/lesson-engagement';
 import {shuffled} from '../lib/curriculum';
 import {extraCountingContext,acceptedExtraMeasure,extraAnswer,extraChoices,extraWord,extraWords,type ExtraWord} from '../course/extras/units';
 import {useSpeech} from '../lib/use-speech';
@@ -87,7 +88,7 @@ export function ExtraExercise({step,sessionSeed,pinyin=true,onAdvance}:{step:Ste
   'listen-word':'Listen and choose the written word',
   'mixed-match':'Match pictures, words, meanings, and counting',
   'sentence-learn':'A short sentence you can use',
-  'sentence-order':'Build the sentence',
+  'sentence-order':sentenceOrderHeading(),
   writing:activity.writeMode==='trace'?'Trace the character':activity.writeMode==='complete'?'Finish the missing strokes':'Write it from memory',
  };
  const explanation=step.explanation|| (writing?'You completed the character in stroke order.':sentence?sentence.text+' '+sentence.pinyin+' — '+sentence.meaning+' '+sentence.note:word?(mode==='measure'?word.counted+' · '+word.countedPinyin+'. '+word.note:mode==='character'?activity.glyph+' appears in '+word.text+' ('+word.pinyin+'), '+word.meaning+'.':mode==='count'?extraAnswer(step)+' — '+activity.count+(word.measure==='雙'?' pairs of ':word.measure==='串'||word.measure==='把'?' bunches of ':word.measure==='棵'?' plants of ':word.measure==='塊'?' pieces of ':' ')+word.meaning+'.':word.text+' ('+word.pinyin+') — '+word.meaning+'.'):'Every word found its picture.');
