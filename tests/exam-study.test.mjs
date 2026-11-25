@@ -153,6 +153,27 @@ test('Week 6 exam list faithfully includes numbered and supplementary vocabulary
  assert.ok(items.every(item=>item.unitId===undefined&&item.bookId===undefined));
 });
 
+test('Week 9 covers all numbered and supplementary entries on pages 129–131',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===9);
+ assert.ok(set);
+ assert.equal(set.title,'Week 9');
+ const items=examStudyItems(set);
+ assert.deepEqual(items.map(({traditional,pinyin})=>[traditional,pinyin.split(' / ')[0]]),[
+  ['家','jiā'],['爸爸','bàba'],['媽媽','māma'],['的','de'],['相片','xiàngpiàn'],
+  ['像片','xiàngpiàn'],['兒','-r'],['老師','lǎoshī'],['對','duì'],['張','zhāng'],
+  ['哥哥','gēge'],['還是','háishì'],['弟弟','dìdi'],['女孩子','nǚháizi'],['女','nǚ'],
+  ['女人','nǚrén'],['女朋友','nǚpéngyǒu'],['孩子','háizi'],['子','zi'],['姐姐','jiějie'],
+  ['姊姊','jiějie'],['朋友','péngyǒu'],['這些','zhèixiē'],
+ ]);
+ assert.equal(new Set(items.map(item=>item.id)).size,items.length);
+ for(const item of items){
+  assert.deepEqual(item.characters,[...item.traditional]);
+  assert.equal(item.lessonId,'exam-study-9');
+  assert.equal(item.unitId,undefined);
+  assert.equal(item.bookId,undefined);
+ }
+});
+
 test('Exam Study sets use Mega Challenge queue semantics without progress state',()=>{
  for(const set of examStudySets){
   const items=examStudyItems(set);

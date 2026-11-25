@@ -4,12 +4,16 @@ import {ArrowLeft,Check,GraduationCap,RotateCcw,Trophy} from 'lucide-react';
 import {Dialog,DialogContent,DialogDescription,DialogTitle} from '@/components/ui/dialog';
 import {advanceMegaQueue,combineWordPerfect,makeMegaQueue,restoreMegaWord} from '@/lib/mega-challenge';
 import {examStudyItems,examStudySets} from '@/lib/exam-study';
+import examStrokeData from '@/lib/exam-stroke-data.json';
 import type {VocabularyLookupItem} from '@/lib/vocabulary-lookup';
 import {WritingPad} from './writing-pad';
 
 type Result={item:VocabularyLookupItem;perfect:boolean};
 type View='challenge'|'mastered';
 type StoredMastery={savedAt:number;ids:string[]};
+
+// AnimCJK graphicsZhHant.txt covers exam characters outside the course stroke data.
+const examStrokes:Record<string,{strokes:string[];medians:number[][][]}>=examStrokeData;
 
 const MASTERED_STORAGE_PREFIX='hanzi-steps:exam-study:mastered:v1:';
 const MASTERED_TTL_MS=7*24*60*60*1000;
@@ -249,6 +253,7 @@ export function ExamStudy({
       revealStrokeAfterMisses={gaveUp?undefined:5}
       completionDelayMs={900}
       validateStrokeGeometry
+      characterData={examStrokes[currentChar]}
       onComplete={assisted=>finishCharacter(gaveUp||assisted)}
      />
      {result?<div className={'mega-inline-result '+(result.perfect?'is-perfect':'is-retry')} role="status" aria-live="polite">

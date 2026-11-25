@@ -5,13 +5,14 @@ import {strokeGeometryLooksAligned} from '../lib/stroke-data-validation.ts';
 import {examStudyItems,examStudySets} from '../lib/exam-study.ts';
 
 const strokeData=JSON.parse(fs.readFileSync(new URL('../lib/stroke-data.json',import.meta.url),'utf8'));
+const examStrokeData=JSON.parse(fs.readFileSync(new URL('../lib/exam-stroke-data.json',import.meta.url),'utf8'));
 
 test('every Exam Study set has valid handwriting coverage or safe fallback',()=>{
  for(const set of examStudySets){
   const chars=[...new Set(examStudyItems(set).flatMap(item=>item.characters))];
   assert.ok(chars.length>0,`Exam Study ${set.id} must contain handwriting characters`);
   for(const char of chars){
-   const local=strokeData[char];
+   const local=strokeData[char]??examStrokeData[char];
    if(!local)continue; // Hanzi Writer fallback is intentional for exam-only chars without bundled guides.
    assert.equal(strokeGeometryLooksAligned(local),true,`${char} must have aligned local guides`);
   }
@@ -63,6 +64,18 @@ test('Week 6 handwriting practice includes every Traditional character from both
   assert.ok(chars.has(char),`Week 6 must include ${char}`);
  }
  assert.equal(chars.size,16);
+});
+
+test('every Week 9 handwriting target has local stroke guides',()=>{
+ const set=examStudySets.find(candidate=>candidate.id===9);
+ assert.ok(set);
+ const chars=new Set(examStudyItems(set).flatMap(item=>item.characters));
+ for(const char of chars){
+  assert.ok(strokeData[char]??examStrokeData[char],`Week 9 is missing local guides for ${char}`);
+ }
+ for(const [char,count] of [['兒',8],['孩',9],['姊',8]]){
+  assert.equal(examStrokeData[char].strokes.length,count);
+ }
 });
 
 test('stroke geometry validator accepts repaired data and rejects inverted 國 guides',()=>{
